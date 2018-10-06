@@ -1,6 +1,0 @@
-[MidLeft][LoadArya][FarRight][LoadPlayer]
-What now?[A]
-[MidLeft]We have to get out of here![A]
-[FarRight]But Xexim...[A]
-[MidLeft]He knew the risks. We killed Rex.[NL]
-We just need to get out! Run![A][X]

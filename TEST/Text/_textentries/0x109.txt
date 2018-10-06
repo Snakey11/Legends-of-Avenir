@@ -1,3 +1,0 @@
-[FarLeft][LoadGovernor]Dammit, Maximus. You told[NL]
-me your men could take them...[A][NL]
-It falls to me![A][X]

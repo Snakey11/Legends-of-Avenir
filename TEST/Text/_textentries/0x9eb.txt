@@ -1,6 +1,0 @@
-[MidLeft][LoadDerek][MidRight][LoadPlayer]
-Go ahead and get some rest, Derek. I know[NL]
-it's been hard going for you. All of[A][NL]
-this traveling has me tired.[NL]
-I can't imagine how you feel.[A]
-[MidLeft][Smile]Thanks, [Tact].[A][X]

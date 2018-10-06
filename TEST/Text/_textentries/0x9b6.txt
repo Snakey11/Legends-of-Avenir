@@ -1,3 +1,0 @@
-[FarLeft][LoadZalius]You've made it this far, eh?[NL]
-For the glory of Cesaria,[A][NL]
-I will kill you.[A][X]

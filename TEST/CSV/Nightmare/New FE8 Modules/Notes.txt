@@ -1,9 +1,0 @@
-These Nightmare Modules have been ported from their Blazing Sword counterparts in order to expand upon the functionality of Nightmare for Sacred Stones.
-
-A Class Editor Module is included here, as the original Terrain Type editor pointed to the avoid and defence given by terrain in the wrong order. 
-Copy the Class editor module and the Terrain Bonus Type file over wherever you have them installed.
-
-
-Feel free to rehost and modify these files as long as credit is given to the creators.
-
--Vennobennu

@@ -1,5 +1,0 @@
-[FarRight][LoadJasper]
-Is this...[.] my blood?[NL]
-No...[....] I don't want[A][NL]
-to die here...[NL]
-Not...[CloseEyes][....] now...[A][X]

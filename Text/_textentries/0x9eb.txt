@@ -1,6 +1,0 @@
-[FarRight][LoadUzkalis]What's the matter, Captain?[NL]
-Did you underestimate my power?[A]
-[FarLeft][LoadMaximus]Urgh... Tiger Brigade, fall back![NL]
-Dammit, Lux, where are you?![A]
-[FarRight]Press the assault![NL]
-Kill Maximus![A][X]

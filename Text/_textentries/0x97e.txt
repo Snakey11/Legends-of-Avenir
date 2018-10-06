@@ -1,7 +1,0 @@
-[MidRight][LoadCurrent][MidLeft][LoadVillagerGirl1]
-The Cesarians have come to defile the temple.[NL]
-They have rejected the Higher Beings...[A][NL]
-Like all of the Outer Lands, we of Shizon[NL]
-are more in touch with the truth of these[A][NL]
-deities than any other. You must not[NL]
-let the Cesarians capture the temple.[A][X]

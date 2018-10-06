@@ -1,8 +1,0 @@
-[FarLeft][LoadUzkalis]Captain Maximus of the[NL]
-Tiger Brigade...[Smile][A][NL]
-I've been waiting for this.[A][ClearFace]
-[FarRight][LoadMaximus]You predicted our strategy...[NL]
-We're cut off![A][ClearFace]
-[FarLeft][LoadUzkalis]Let's bring this to a[NL]
-swift end. Come on![A][ClearFace]
-[FarRight][LoadMaximus]For Cesaria![A][X]

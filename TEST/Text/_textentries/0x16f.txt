@@ -1,8 +1,0 @@
-[MidLeft][LoadSoldier][MidRight][LoadAdlez]
-I am surprised you are receiving[NL]
-us on such a short notice...[A]
-[MidLeft]Receiving you? You speak[NL]
-as though you are guests.[A]
-[MidRight]Are we not...?[A]
-[MidLeft]Of course not. You are prisoners.[NL]
-To arms! Eradicate these bandit scum![A][X]

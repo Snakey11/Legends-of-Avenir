@@ -1,5 +1,0 @@
-[FarLeft][LoadHenning]Who the hell are you!?[NL]
-You've demolished my men![A][ClearFace]
-[FarRight][LoadPlayer]I am [Tact].[NL]
-You made the mistake of[A][NL]
-attacking me.[....] Now come![A][X]

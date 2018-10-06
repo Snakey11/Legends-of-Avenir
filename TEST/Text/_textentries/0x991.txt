@@ -1,4 +1,0 @@
-[FarLeft][LoadConnor]Hmm... You've made it further[NL]
-than I expected. But I'm in[A][NL]
-command for a reason![NL]
-Die![A][X]

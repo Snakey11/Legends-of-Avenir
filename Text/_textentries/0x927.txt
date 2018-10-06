@@ -1,4 +1,0 @@
-[FarRight][LoadVal]
-I can't fall here...[....][NL]
-[Tact], finish the[A][NL]
-mission. I'm pulling out.[A][X]

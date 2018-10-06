@@ -1,7 +1,0 @@
-[MidLeft][LoadPlayer][FarRight][LoadVal][Right][LoadHelmer]
-Zalius! Dammit.[A]
-[FarRight]Helm-[A]
-[MidLeft]Now's not the time, Val. I don't know what[NL]
-reason you have for your hatred of[A][NL]
-the Cesarians, but I'd advise[NL]
-fighting the loyal ones first.[A][X]

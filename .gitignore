@@ -1,10 +1,25 @@
-ups # Avoid including ups folder
-EA Avenir # Avoid including Event Assembler
+ups/
 *.sav
 *.sgm
 *.gba
 *.exe
+!EA Avenir/*.exe
+*.txt
+!ParseDefinitions.txt
+!EA Avenr/*txt
+CSV/Nightmare/
+CSV/Tables/*.event
+CSV/Tables/**/*.event
 *.ups
+CG List.png
+Animation Assembler/
+CSA Creator/
+Later Maps/
+Map Data/*.event
+Map Data/*dmp
+Map Data/Pictures
+TEST/
+BROKE.txt
 _textentries/
 devkitPro/
 Install Text Data.event
@@ -13,3 +28,5 @@ textdump.event
 Animation Assembler/
 Battle Palettes/*.png
 Spells/Spells/**/*.png
+FE8 Template.event
+Testing.event

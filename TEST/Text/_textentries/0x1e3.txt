@@ -1,3 +1,0 @@
-Increases the weapon[NL]
-level of the equiped[NL]
-weapon type[X]

@@ -1,2 +1,0 @@
-Armored Blow: +5 Def[N]
-when initiating battle.[X]

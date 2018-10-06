@@ -1,4 +1,0 @@
-[MidLeft][LoadEfil]
-The Wanderers are here? This is...[....][NL]
-unexpected. I suppose it is time for[A][NL]
-me to put my sword arm back to use.[A][X]

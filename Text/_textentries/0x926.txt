@@ -1,4 +1,0 @@
-[FarRight][LoadBaret]
-I'm...[.][.] wounded? Dammit...[.][NL]
-I can't go on like this.[A][NL]
-Finish this, [Tact][A][X]

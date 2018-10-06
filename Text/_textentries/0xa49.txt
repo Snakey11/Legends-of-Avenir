@@ -1,4 +1,0 @@
-[MidLeft][LoadArya][MidRight][LoadVicar]
-You all might want to hurry.[NL]
-The Wanderers are on their way.[A]
-[MidLeft]We'd better find Efil, then. Quickly.[A][X]

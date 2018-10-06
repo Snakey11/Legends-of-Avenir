@@ -1,4 +1,0 @@
-[FarLeft][LoadPlayer][Left][LoadUzkalis][MidRight][LoadEmperor]
-Leyos... Do with me what you will.[A]
-[Left]I think I'll do just that. No reason[NL]
-to keep you alive after all.[A][X]

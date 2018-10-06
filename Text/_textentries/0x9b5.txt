@@ -1,5 +1,0 @@
-[MidRight][LoadCurrent][MidLeft][LoadVillagerMan2]
-This battle is sure to make[NL]
-business bad... What are you[A][NL]
-doing standing there? Get out! You[NL]
-warmongers have no place here.[A][X]

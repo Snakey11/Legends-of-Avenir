@@ -1,4 +1,0 @@
-[FarLeft][LoadPlayer][Left][LoadArya]
-That's-[A]
-[FarLeft]A slot in the wall?[A]
-[Left]But we can't get there...[A][X]

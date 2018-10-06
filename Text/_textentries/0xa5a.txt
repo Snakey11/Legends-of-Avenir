@@ -1,4 +1,0 @@
-[MidLeft][LoadXavus]
-You think to face me? The[NL]
-most powerful dark mage on[A][NL]
-the continent? Learn your place.[A][X]

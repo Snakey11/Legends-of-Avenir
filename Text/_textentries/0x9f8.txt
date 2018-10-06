@@ -1,4 +1,0 @@
-[FarRight][LoadPlayer][Right][LoadBaret]That's kind of the idea...[A]
-[FarRight]So this is banditry, eh?[A]
-[Right]Welcome to the business, [Tact].[NL]
-We've got work to do.[A][X]

@@ -1,6 +1,0 @@
-#define csvmacro011(arg000,arg001,arg002,arg003,arg004) "BYTE arg000 arg001 arg002 arg003 arg004 "
-
-PUSH
-ORG 0x29405
-csvmacro011(0xbc,0x8,0x47,OceanSealList|IsPointer,0x70)
-POP

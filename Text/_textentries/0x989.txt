@@ -1,4 +1,0 @@
-[FarLeft][LoadXexim]Rex is gone. We have to get out[NL]
-of here before the full brunt[A][NL]
-of their force catches us![A]
-[FarRight][LoadPlayer]Understood! Let's go![A][X]

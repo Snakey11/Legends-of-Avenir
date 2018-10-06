@@ -1,5 +1,0 @@
-[FarRight][LoadPlayer]I don't want to kill you.[A][ClearFace]
-[FarLeft][LoadArc]You are a bandit. I don't need[NL]
-your sympathy. If you will not[A][NL]
-fight, then I will kill you first![A][ClearFace]
-[FarRight][LoadPlayer]Wait![A][X]

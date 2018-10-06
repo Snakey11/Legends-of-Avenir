@@ -1,9 +1,0 @@
-8
-0x00 player, none
-0x04 player, vertical
-0x08 player, horizontical
-0x0C player, both 
-0x10 enemy, none
-0x14 enemy, vertical
-0x18 enemy, horizontical
-0x1C enemy, both
