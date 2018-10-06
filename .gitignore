@@ -1,21 +1,15 @@
-# Tools that should not be part of the repo.
-Event Assembler
-devkitARM
-ups
-*.exe
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-#rom stuff
-$ Legends_of_Avenir.gba
-.ups
+ups # Avoid including ups folder
+EA Avenir # Avoid including Event Assembler
 *.sav
 *.sgm
-*.ini
+*.gba
+*.exe
+*.ups
+Text/_textentries/
+devkitPro/
+Install Text Data.event
+Text Definitions.event
+textdump.event
+Animation Assembler/
+Battle Palettes/*.png
+Spells/Spells/**/*.png
