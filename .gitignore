@@ -5,7 +5,7 @@ EA Avenir # Avoid including Event Assembler
 *.gba
 *.exe
 *.ups
-Text/_textentries/
+_textentries/
 devkitPro/
 Install Text Data.event
 Text Definitions.event
