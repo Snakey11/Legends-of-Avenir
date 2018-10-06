@@ -11,6 +11,9 @@ ALIGN 16
 #include "Weapon Rank on Levelup/Weapon Rank on Levelup.event"
 */
 
+ALIGN 4
+#include "PC_and_Generic_Music_FE8.event" // Basically boss music
+
 ALIGN 16
 
 #include "Arms Scroll FE8/EA Installer.event"

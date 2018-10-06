@@ -1,1 +1,0 @@
-[MidLeft][LoadNarrator]Yes?[A][X]

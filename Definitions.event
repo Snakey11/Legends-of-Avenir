@@ -220,6 +220,7 @@
 #define Mayor 0x64
 #define Bacrunian 0x65
 #define Harken 0x66
+#define Hawken Harken
 #define Mason 0x67
 #define Hunter 0x68
 #define Daniel 0x69
@@ -496,6 +497,14 @@
 #define PatMageKnightPaletteID 0x49
 #define RexPaladinPaletteID 0x4A
 #define RobertBerserkerPaletteID 0x4B
+#define GuardianSpiritPaletteID 0x4C
+#define DanielSwordmasterPaletteID 0x4D
+#define HarkenHeoPaletteID 0x4E
+#define MasonRangerPaletteID 0x4F
+#define RogerMercenaryPaletteID 0x50
+#define TyroneWarriorPaletteID 0x51
+#define MayorCavalierPaletteID 0x52
+#define WestonMercenaryPaletteID 0x53
 //EndLabel
 
 //Label Maps, Map Changes, & Events
@@ -970,6 +979,8 @@
 //EndLabel
 
 //Label Misc.
+#define SetChapterData(ChapterID,ObjectType1,ObjectType2,PaletteID,TileConfig,MapID,MapPointer,Anims1,Anims2,MapChanges) "PUSH; ORG ChapterDataTable+(ChapterID*148)+4; BYTE ObjectType1 ObjectType2 PaletteID TileConfig MapID Anims1 Anims2 MapChanges; EventPointerTable(MapID,MapPointer); POP"
+
 #define DeathQuote(Character,Chapter,EventID,TextID) "SHORT Character; BYTE 0xFF Chapter; SHORT EventID TextID 0 0"
 #define AllChapters 0xFF
 
@@ -1019,10 +1030,10 @@
 
 #define MercenaryNarratorFight(TactX,TactY) "SVAL 0xB Coords(TactX,TactY) ; CALL MercenaryNarratorFightEvents"
 // You still need to set up the battle first!
+//EndLabel
 
 #define EndUnit UNIT // Necessary for folding
 #define EndA2 ENDA
-//EndLabel
 
 /*
 #define LoadingMercenary(Index,UnitPointer)

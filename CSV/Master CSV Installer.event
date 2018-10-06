@@ -6,8 +6,6 @@ ALIGN 16
 
 #include "EA Files/Animation Reference.event"
 
-ALIGN 4
-#include "Tables/Music/PC_and_Generic_Music_FE8.event" // Basically boss music
 
 /*
 ALIGN 16

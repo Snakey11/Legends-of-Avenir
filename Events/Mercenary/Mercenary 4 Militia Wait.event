@@ -256,8 +256,8 @@ Turn8Units:
 UNIT Guardian Cavalier Adlez Level(6,Enemy,True) [0,16] 0x00 0x00 0x1 REDA1R16 [SteelLance] [0]
 UNIT Guardian Myrmidon Adlez Level(5,Enemy,True) [0,14] 0x00 0x00 0x00 0x00 [Zanbato] [0]
 UNIT Guardian Mercenary Adlez Level(6,Enemy,True) [0,15] 0x00 0x00 0x1 REDA2R15 [SteelSword] [0]
-UNIT Guardian Knight Adlez Level(8,Enemy,True) [14,9] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
-UNIT Guardian Knight Adlez Level(6,Enemy,True) [0,12] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
+UNIT Guardian Knight Adlez Level(8,Enemy,True) [14,9] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Guardian Knight Adlez Level(6,Enemy,True) [0,12] 0x00 0x00 0x00 0x00 [Javelin] NoAI
 UNIT Guardian Cavalier Adlez Level(7,Enemy,True) [14,15] 0x00 0x00 0x00 0x00 [DragonSpear] [0]
 UNIT Guardian Cavalier Adlez Level(6,Enemy,True) [14,16] 0x00 0x00 0x01 REDA13R16 [SteelSword,Javelin] [0]
 UNIT

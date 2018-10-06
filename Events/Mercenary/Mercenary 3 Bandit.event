@@ -138,7 +138,6 @@ UNIT Haedrican Cavalier Haedrican Level(7,Enemy,True) [12,13] 0x00 0x00 0x00 0x0
 UNIT Haedrican Cavalier Haedrican Level(9,Enemy,True) [13,12] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
 UNIT Haedrican Cavalier Haedrican Level(7,Enemy,True) [4,14] 0x00 0x00 0x00 0x00 [Zanbato,IronLance] AttackInRangeAI
 UNIT Haedrican Cavalier Haedrican Level(8,Enemy,True) [3,13] 0x00 0x00 0x00 0x00 [KillerLance] AttackInRangeAI
-UNIT Haedrican Myrmidon Haedrican Level(6,Enemy,True) [6,11] 0x00 0x00 0x00 0x00 [SlimSword] ChaseOnceApproachedAI
 UNIT Haedrican Myrmidon Haedrican Level(7,Enemy,True) [8,10] Drop 0x00 0x00 0x00 [SteelSword] ChaseOnceApproachedAI
 UNIT Haedrican Hero Haedrican Level(2,Enemy,True) [8,10] Drop 0x00 0x00 0x00 [SteelAxe,IronBlade] AttackInRangeAI
 UNIT Haedrican Archer Haedrican Level(5,Enemy,True) [14,15] 0x0 0x00 0x00 0x00 [IronBow] ChaseOnceApproachedAI

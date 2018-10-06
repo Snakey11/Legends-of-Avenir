@@ -258,6 +258,10 @@ ConnorRangerPalette:
 #incbin "Connor Ranger.dmp"
 
 ALIGN 4
+DanielSwordmasterPallete:
+#incbin "Daniel Swordmaster.dmp"
+
+ALIGN 4
 DerekKnightPalette:
 #incbin "Derek Knight.dmp"
 
@@ -308,6 +312,14 @@ GhostSwordmasterPalette:
 ALIGN 4
 GrantRangerPalette:
 #incbin "Grant Ranger.dmp"
+
+ALIGN 4
+GuardianSpiritHarbinderPalette:
+#incbin "Gardian Spirit Harbinger.dmp"
+
+ALIGN 4
+HarkenHeroPalette:
+#incbin "Harken Hero.dmp"
 
 ALIGN 4
 HelmerSoldierPalette:
@@ -384,6 +396,10 @@ LuxMageKnightPalette:
 ALIGN 4
 LuxSagePalette:
 #incbin "Lux Sage.dmp"
+
+ALIGN 4
+MasonRanger:
+#incbin "Mason Ranger.dmp"
 
 ALIGN 4
 MaximusSagePalette:
