@@ -88,13 +88,30 @@ FADI 0x5
 STAL 0x40
 EndConvo
 STAL 0x20
-// Load Rex and/or Xavus... idk what to do about that yet. Just gonna skip to where the narrator kills [Tact] and Adlez for now.
+CHECK_ALIVE Rex
+BEQ 0x0 0x0 0xC
+	LOAD1 0x1 EndingRex
+LABEL 0x0
+CHECK_ALIVE Xavus
+BEQ 0x1 0x0 0xC
+	LOAD1 0x1 EndingXavus
+LABEL 0x1
 ENUN
 TEXTSHOW Merc7BanditBanditBadEndingRexXavusHereText
 TEXTEND
 MOVE 0x0 Arya [7,5] // Move Arya to block Rex and Xavus
 ENUN
 TEXTCONT
+CHECK_ALIVE Rex
+BEQ 0x0 0x0 0xC
+	TEXTSHOW Merc7BanditBanditBadEndingRexLineText
+LABEL 0x0
+CHECK_ALIVE Xavus
+BEQ 0x1 0x0 0xC
+	TEXTSHOW Merc7BanditBanditBadEndingXavusLineText
+LABEL 0x1
+TEXTSHOW Merc7BanditBanditBadEndingRexXavusLastLineText
+TEXTEND
 TEXTEND
 STAL 0x10
 FADI 0x5
@@ -373,6 +390,14 @@ UNIT
 BadEndingFriends:
 UNIT Adlez Myrmidon_F PlayerMArcher Level(1,Ally,True) [6,4] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 UNIT Arya Myrmidon_F PlayerMArcher Level(1,Ally,True) [9,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT
+
+EndingRex:
+UNIT Rex GrandPaladin Rex Level(1,Enemy,True) [6,9] 0x00 0x00 0x01 REDA6R6 [IronAxe,Vulnerary] NoAI 
+UNIT
+
+EndingXavus:
+UNIT Xavus Druid Xavus Level(1,Enemy,True) [8,9] 0x00 0x00 0x01 REDA8R6 [IronAxe,Vulnerary] NoAI 
 UNIT
 
 LoadAdlezBadEnding:

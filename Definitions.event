@@ -417,6 +417,7 @@
 #define ArtifactDoorCutscene 0x5D
 #define MercenaryBandit2 0x5E // Should fix the NO DATA chapter name glitch
 #define BacrunRuins1Cutscene 0x5F
+#define BacrunRuins2Cutscene 0x60
 //EndLabel
 
 //Label Palette Definitions

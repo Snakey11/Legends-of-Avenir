@@ -8,9 +8,9 @@
 
 	#define FreeSpace
 	#define Free_Space
-	#define FreeSpaceA $B2A610
-	#define FreeSpaceB $E47200
-	#define EndofROM $FE4000
+		#define FreeSpaceA $B2A610
+		#define FreeSpaceB $E47200
+		#define EndofROM $FE4000
 	#define BLRange $1C2270
 	#define FreeSpaceBLRange BLRange
 	#define BlRange BLRange
@@ -88,7 +88,9 @@
 		//ASM
 		#include "ASM/Master ASM Installer.event"
 		MESSAGE Assembly data ends at CURRENTOFFSET
-	
+		
+		ALIGN 16
+		WORD 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Prevent NUPS from cutting off the last 6 bytes
 	#endif
 	
 #else
