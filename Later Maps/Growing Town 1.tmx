@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="17" height="17" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="0E000F10" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/0E000F10.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="17" height="17">
+  <properties>
+   <property name="Main" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJx1k01KA0EQhbtriJDkFLowwXgKR/xLLqHEgCvBGyjRe6gooptcYaJx4S0momDAO/geXUVXhCw+uqenfl5VdX/GEDYkhAiqEMI05LXEWY21hs0bmOC7AY6LEE7AJrgD85jsvP8LznqSv9dj2jPGE/aX8LsCe2BapP+kVB0W6wjfPy5WrTEWMWlhrK+Y1trlsny1xiEtyXEmkuPTf4C1D85XcCE5Rlv3vytsaTNETadgVCRtfVnW0XBaTK9p5Z42Y/heg5si5yRd9Tc+4jI9Wc5DrD7G3mLN4BvM2V/Js7xXvaQpqT+zmPJXrr88b8B2DQhoulm+go7mq/7V7PWVGn8gOaenLflOUPOt09iWPG+fY6b3wttaPuaqnEabCWNvK9Yv5q/0jtJ2of0oXSzvb/NmHzugW6Q4fu423yHOHsCjex9+3uzjPjhwdVq/zH7MWsG709SS/BZspe5D/c93Xkh+G6Xbc620Ln+3+prfv0/TwHt4BnbArsY2rf7emH3temD+z6jxD3AOi1k=
+  </data>
+ </layer>
+ <layer name="Bottom House" width="17" height="17" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="7"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="9"/>
+   <property name="Y" value="13"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDDbQyjzQLqAfAACB4QCJ
+  </data>
+ </layer>
+ <layer name="Broken Bottom House" width="17" height="17" visible="0">
+  <properties>
+   <property name="Height" value="2"/>
+   <property name="ID" value="6"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="8"/>
+   <property name="Y" value="12"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUUAs8ZmJgUGFmYFBlJt8MZqBeFyB2pcCMoQQA/YoByg==
+  </data>
+ </layer>
+ <layer name="MidLeft House" width="17" height="17" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="5"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="2"/>
+   <property name="Y" value="11"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2BkgVbmgXbBKEAGANkBAIk=
+  </data>
+ </layer>
+ <layer name="Broken MidLeft House" width="17" height="17" visible="0">
+  <properties>
+   <property name="Height" value="2"/>
+   <property name="ID" value="4"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="1"/>
+   <property name="Y" value="10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2BogKdMDAzPgPg5E/lmsDIzMLABMTsz9dw1CigDACdAAtQ=
+  </data>
+ </layer>
+ <layer name="MidRight House" width="17" height="17" visible="0">
+  <properties>
+   <property name="ID" value="3"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="12"/>
+   <property name="Y" value="8"/>
+   <property name="height" value="1"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4B6oJV5oF0wCoYaAAAwMACJ
+  </data>
+ </layer>
+ <layer name="Broken MidRight House" width="17" height="17" visible="0">
+  <properties>
+   <property name="Height" value="2"/>
+   <property name="ID" value="2"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="11"/>
+   <property name="Y" value="7"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4CB4TETA8MzIH7ORL4ZzMwMDGxAzM5MPXeNguEPAO0TAtA=
+  </data>
+ </layer>
+ <layer name="Top House" width="17" height="17" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="16"/>
+   <property name="Y" value="1"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBh40Mo80C4YBaNgFAwUAAAknwCJ
+  </data>
+ </layer>
+ <layer name="Broken Top House" width="17" height="17" visible="0">
+  <properties>
+   <property name="Height" value="2"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="15"/>
+   <property name="Y" value="0"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYCAfPGRiYHjGRIEBQMDIzMDAxkyZGaNgFIyCoQsA4msB2Q==
+  </data>
+ </layer>
+</map>

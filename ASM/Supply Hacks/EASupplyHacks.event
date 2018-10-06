@@ -1,0 +1,17 @@
+#include "Extensions/Hack Installation.txt"
+PUSH
+ORG		$23F9C; BL(MapHack)				//bls to hack
+ORG		$23F38; BL(MapHack2)			//bls to hack
+
+
+
+ORG $1C2270
+MapHack:			
+#incbin MapHack.dmp
+
+ALIGN 4
+MapHack2:								//allows other people to use the supply next to ephraim as well as eirika
+#incbin MapHack2.dmp
+ORG		$31644							//allows supply to be used on chapter #0x00 (removes check that disables supply if chapter is less than 1)
+SHORT	$E008
+POP

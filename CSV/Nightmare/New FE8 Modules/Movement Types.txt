@@ -1,0 +1,49 @@
+80B808 - Lord, Sniper, Hero, Swordmaster
+80B849 - Non-Axe Infantry (Mercenary, Bonewalker, Recruit, Archer...)
+80B88A - Armor (Knight, General)
+80B8CB - Journeyman, Fighter, Warrior, Cyclops
+80B90C - Berserker
+80B94D - Brigand, Bael, Elder Bael
+80B98E - Pirate, Fleet
+80B9CF - Thief, Assassin, Rogue
+80BA10 – Infantry Mages, Gorgon
+80BA51 - Civilians
+80BA92 - Horse A Unpromoted (Cavalier, Troubadour)
+80BAD3 - Horse A Promoted (Paladin, Great Lord, Valkyrie...)
+80BB14 - Horse B Unpromoted (Tarvos, Mauthe Doog)
+80BB55 - Horse B Promoted (Maelduin, Gwyllgi, Ranger)
+80BB96 – Fliers, Manaketes, Phantoms
+80BBD7 - Demon King
+80BC18 - [Unused]
+80BC59 - [Rain] Lord, Sniper, Hero, Swordmaster
+80BC9A - [Rain] Non-Axe Infantry (Mercenary, Bonewalker, Recruit, Archer...)
+80BCDB - [Rain] Armor (Knight, General)
+80BD1C - [Rain] Journeyman, Fighter, Warrior, Cyclops
+80BD5D - [Rain] Berserker
+80BD9E - [Rain] Brigand, Bael, Elder Bael
+80BDDF - [Rain] Pirate, Fleet
+80BE20 - [Rain] Thief, Assassin, Rogue
+80BE61 – [Rain] Infantry Mages, Gorgon
+80BEA2 - [Rain] Civilians
+80BEE3 - [Rain] Horse A Unpromoted (Cavalier, Troubadour)
+80BF24 - [Rain] Horse A Promoted (Paladin, Great Lord, Valkyrie...)
+80BF65 - [Rain] Horse B Unpromoted (Tarvos, Mauthe Doog)
+80BFA6 - [Rain] Horse B Promoted (Maelduin, Gwyllgi, Ranger)
+80BFE7 – [Rain] Fliers, Manaketes, Phantoms
+80C028 - [Unused]
+80C069 - [Snow] Lord, Sniper, Hero, Swordmaster
+80C0AA - [Snow] Non-Axe Infantry (Mercenary, Bonewalker, Recruit, Archer...)
+80C0EB - [Snow] Armor (Knight, General)
+80C12C - [Snow] Journeyman, Fighter, Warrior, Cyclops
+80C16D - [Snow] Berserker
+80C1AE - [Snow] Brigand, Bael, Elder Bael
+80C1EF - [Snow] Pirate, Fleet
+80C230 - [Snow] Thief, Assassin, Rogue
+80C271 – [Snow] Infantry Mages, Gorgon
+80C2B2 - [Snow] Civilians
+80C2F3 - [Snow] Horse A Unpromoted (Cavalier, Troubadour)
+80C334 - [Snow] Horse A Promoted (Great Knight, Great Lord, Valkyrie...)
+80C375 - [Snow] Horse B Unpromoted (Tarvos, Mauthe Doog)
+80C3B6 - [Snow] Horse B Promoted (Maelduin, Gwyllgi, Ranger)
+80C3F7 – [Snow] Fliers, Manaketes, Phantoms
+80C438 - [Unused]

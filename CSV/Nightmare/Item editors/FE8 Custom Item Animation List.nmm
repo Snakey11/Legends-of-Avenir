@@ -1,0 +1,88 @@
+#FE8 Custom Item Animation List
+#
+
+1
+FE8 Custom Item Animation List
+0xE70700
+255
+16
+NULL
+NULL
+
+Item/Weapon Number
+0
+1
+NDHU
+Item List.txt
+
+End of List?
+1
+1
+NEHU
+NULL
+
+No. of Chars to Display (1 or 2)
+2
+1
+NEDU
+NULL
+
+Zero
+3
+1
+NEHU
+NULL
+
+Ranged Animation to Use
+4
+1
+NDHU
+FE8_Ranged_Attack_Animations.txt
+
+Ranged Animation Enabled
+5
+1
+NDHU
+OnOff.txt
+
+Zero
+6
+1
+NEHU
+NULL
+
+Zero
+7
+1
+NEHU
+NULL
+
+Alternate Pointer
+8
+4
+NEHU
+NULL
+
+***UNKNOWN*** (Use 0x01 if unsure)
+12
+1
+NEHU
+NULL
+
+***UNKNOWN*** (Use 0x00 if unsure)
+13
+1
+NEHU
+NULL
+
+***UNKNOWN*** (Use 0x00 if unsure)
+14
+1
+NEHU
+NULL
+
+Zero
+15
+1
+NEHU
+NULL

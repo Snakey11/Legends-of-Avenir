@@ -1,0 +1,5 @@
+[FarLeft][LoadMason]
+What kind of demons are you?[NL]
+It doesn't matter![A][NL]
+Nobody stands between[NL]
+me and a bounty![A][X]

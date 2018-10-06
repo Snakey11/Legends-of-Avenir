@@ -1,0 +1,34 @@
+
+PUSH
+ORG $2BA04
+jumpToHack(SummonEXPHack)
+
+ORG $2C528
+WORD 0x0 0x0// Remove that stupid hardcoded phantom check in the EXP routine that kept setting the phantom's EXP to 0 when it hit.
+POP
+
+//#runext DMPAssembleARM SummonEXP.dmp
+
+ALIGN 4
+#inctext lyn "StructCopy.elf" // Copies a character struct with r0 = origin, and r1 = target offset
+
+ALIGN 4
+#inctext lyn "GetClass.elf" // Goes from character struct to class ID
+
+ALIGN 4
+#inctext lyn "SummonEXP.elf"
+
+ALIGN 4
+#inctext lyn "SummonLevel.elf" "Hook1.elf"
+
+ALIGN 4
+#inctext lyn "PostBattle.elf" "Hook2.elf"
+
+ALIGN 4
+#inctext lyn "PostBattleAnimsOn.elf" "Hook3.elf"
+
+PhantomSummonerLink:
+BYTE Ewan 0x00 // Character ID of summoner here
+
+PhantomIDSummonASM:
+BYTE GhostFighter 0x00

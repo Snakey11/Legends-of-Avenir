@@ -1,0 +1,112 @@
+
+## DefeatBossText
+Defeat Boss[X]
+
+## DefendText
+Defend[X]
+
+## DefeatAllText
+Defeat All[X]
+
+## UnknownText
+???[X]
+
+## ReachLeonText
+Reach Leon[X]
+
+## ReachEfilText
+Reach Efil[X]
+
+## ReachCommandersText
+Reach the Commanders[X]
+
+## Merc1StatusText
+Defeat Henning.[X]
+
+## Merc2MilitiaStatusText
+Defend Danann[NL]
+and try to[NL]
+kill Gerwick.[X]
+
+## Merc3MilitiaWaitStatusText
+Defeat Connor.[X]
+
+## Merc4MilitiaWaitStatusText
+Defeat Adlez and[NL]
+recover the artifact.[X]
+
+## Merc5MilitiaWaitArcanaeStatusText
+Defeat William.[X]
+
+## Merc6MilitiaWaitArcanaeStatusText
+Fight through the[NL]
+capital and defeat Rex.[X]
+
+## Merc7MilitiaWaitArcanaeStatusText
+Defeat Leyos, the[NL]
+emperor's guardian.[X]
+
+## Merc5MilitiaWaitCesariaStatusText
+Rout the enemy[NL]
+from the oasis.[X]
+
+## Merc6MilitiaWaitCesariaStatusText
+Break through the[NL]
+bridge and defeat Pat.[X]
+
+## Merc7MilitiaWaitCesariaStatusText
+Rescue Maximus and[NL]
+defeat Uzkalis.[X]
+
+## Merc3MilitiaKillStatusText
+Defeat Weston.[X]
+
+## Merc4MilitiaKillStatusText
+Defeat Robert.[X]
+
+## Merc5MilitiaKillStatusText
+Fight and learn more[NL]
+about your enemy.[X]
+
+## Merc6MilitiaKillStatusText
+Defend the Shizonians.[X]
+
+## Merc7MilitiaKillStatusText
+Assassinate Rex.[X]
+
+## Merc2BanditStatusText
+Raid Danaan and[NL]
+defeat Arc.[X]
+
+## Merc3BanditStatusText
+Defeat Roger.[X]
+
+## Merc4BanditStatusText
+Raid the town and[NL]
+defeat Tyrone and[NL]
+potentially the Mayor.[X]
+
+## Merc5BanditBanditStatusText
+Reach Leon's throne room.[X]
+
+## Merc6BanditBanditStatusText
+Defeat Harken and[NL]
+capture Bacrun.[X]
+
+## Merc7BanditBanditStatusText
+Talk to both Rex and[NL]
+Xavus. Survive as[NL]
+long as you can.[X]
+
+## Merc5BanditDisbandStatusText
+Defeat Mason.[X]
+
+## Merc6BanditDisbandStatusText
+Fight through Vathrylians[NL]
+and avoid Wanderers[NL]
+to reach Efil.[X]
+
+## Merc7BanditDisbandStatusText
+Talk to both Maximus[NL]
+and Xavus while avoiding[NL]
+conflict where possible.[X]

@@ -1,0 +1,52 @@
+#FE8 Stat Bonuses Editor by SpyroDi
+#
+
+1
+FE8 Stat Bonuses Editor by SpyroDi (please consult Stat Bonuses.txt)
+0xE50000
+100
+16
+Stat Bonus Pointers.txt
+NULL
+
+HP Bonus
+0
+1
+NEDS
+NULL
+
+STR/MGC Bonus
+1
+1
+NEDS
+NULL
+
+SKL Bonus
+2
+1
+NEDS
+NULL
+
+SPD Bonus
+3
+1
+NEDS
+NULL
+
+LCK Bonus
+6
+1
+NEDS
+NULL
+
+DEF Bonus
+4
+1
+NEDS
+NULL
+
+MDF Bonus
+5
+1
+NEDS
+NULL

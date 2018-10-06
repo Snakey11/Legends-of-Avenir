@@ -1,0 +1,18 @@
+//include this under free space
+
+PUSH
+ORG $89624
+jumpToHack(ChnameASM)
+POP
+
+ChnameASM:
+#incbin "fe8_chapter_names.dmp"
+ALIGN 4
+POIN ChFontASM
+POIN ChTableASM
+
+ChFontASM:
+#incext Png2Dmp "font.png" --lz77
+
+ChTableASM:
+#incbin "chartable.dmp"

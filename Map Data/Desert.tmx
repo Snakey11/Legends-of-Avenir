@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="19" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="42004344" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/42004344.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="19" height="19">
+  <properties>
+   <property name="Anims" value="42Anims"/>
+   <property name="ChapterID" value="MercenaryMilitiaWaitCesaria5"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesiD" value="DesertChanges"/>
+   <property name="MapID" value="DesertMap"/>
+   <property name="ObjectType" value="0x42"/>
+   <property name="PaletteID" value="0x43"/>
+   <property name="TileConfig" value="0x44"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxtlDtKBEEQhvsRiCY+du8gCKIYegJNVAZU0L2AiZj4ANcDmHoGMR4nUEM32R0QhEFRLyC6maKooVV0FVNT3cFPb9d0ffVXb81k1phCacmH9RVUglZgv+bDmtPKsQJU0Z7zP50xGf0eCEZOZ3OR0xL7B8h7dIGpPUmdgSZ9WFPeMP8LON8uxGRfF4qjueid45LJfvE5PhuC+rbus6KeNTNL1GCPhbibPd88z+u7MWYW1mnB7pnYf584q76Oy/PIORd6Ay3YIMlE7RKDY+zlA/bLtslZdDGXc/BO5FywnwnFYG258B/JGPY+JOa9mgvd1xHkb4M6oFvQhotrzAkfOENtX98zn0EPJ8SQQvahYI6Ku2klOKj1BIe1KVjj1E9F8yfvaMeH3nT+MairOAMTz5tkpfxg/hXUuAbd+NgTzzxqRrD2qX6XvByQjydgPINefO0ps/EczBMrVZv1A7Ff0J8PnFMf94cex2y6dkrM6am7qlyzR127pPw70AicmVLvjX7XcX8pzrIyyitphvT3je+7Te/zP5ax2Yk=
+  </data>
+ </layer>
+ <layer name="West Village" width="19" height="19" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="12"/>
+   <property name="Y" value="15"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRgA1MZR5oFzAwAABUAQCZ
+  </data>
+ </layer>
+ <layer name="East Village" width="19" height="19" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="5"/>
+   <property name="Y" value="17"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjILBC6YyD7QLBhYAAJ2hAJk=
+  </data>
+ </layer>
+</map>

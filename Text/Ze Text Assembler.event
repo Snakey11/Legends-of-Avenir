@@ -1,0 +1,52 @@
+
+#include "Replacement Assembler.event"
+
+#include "Skill System/Stat Screen Text.event"
+
+# 0x0094
+HP Bars[.][X]
+
+# 0x00B2
+Set health bar display[X]
+
+# 0x903 RaidNameText
+ Raid[X]
+
+## RaidDescText
+Pillage this building[NL]
+for its items or wealth.[.][X]
+
+## WinNameText
+ Win[X]
+
+## WinDescText
+Skip this chapter.[X]
+
+## DebugNameText
+ Debug[X]
+ 
+## PromoteNameText
+ Promote[X]
+ 
+## PromoteDescText
+This unit is eligible to[NL]
+promote to a new class.[X]
+
+#include "Chapters/Chapter Text Assembler.event"
+
+#include "Items/Item Text Assembler.event"
+
+#include "Characters/Character Text Assembler.event"
+
+#include "Classes/Class Text Assembler.event"
+
+## DV1Desc
+Freeze all enemies[N]
+for one turn[X]
+
+#include "Skill System/Unit Menu Text.event"
+
+#include "Skill System/Skill Desc.event"
+
+## FinalTextID
+[X]

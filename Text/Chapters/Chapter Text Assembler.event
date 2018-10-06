@@ -1,0 +1,12 @@
+
+#include "Chapters/Prologue Text Assembler.event"
+
+#include "Chapters/Mercenary/Mercenary Text Assembler.event"
+
+#include "Chapters/Military/Military Text Assembler.event"
+
+#include "Chapters/Mage/Mage Text Assembler.event"
+
+#include "Chapters/Chapter Names.event"
+
+#include "Chapters/Chapter Objectives.event"

@@ -1,0 +1,3 @@
+[FarLeft][LoadGerwick]Where do you gather[NL]
+your strength?[A][NL]
+You've obliterated us![A][X]

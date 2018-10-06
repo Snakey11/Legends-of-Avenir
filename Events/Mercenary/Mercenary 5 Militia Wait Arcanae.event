@@ -1,0 +1,212 @@
+
+EventPointerTable(Merc5MilitiaWaitArcanaeEvents,ThisChapter)
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0x0,FinocHere,3)
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Village(0x11,VillagePlace,4,12)
+Village(0x0,InnPlace,1,10)
+END_MAIN
+
+MiscBasedEvents:
+DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+BLST [7,14] 0x35
+ENDTRAP
+
+ALIGN 4
+
+Units:
+UNIT
+
+BeginningScene:
+MUSC Advance
+REMU Finoc
+LOAD1 0x1 GovernorDude
+LOAD2 0x1 BeginingConvoPeople
+CAM1 William
+LOAD3 0x1 PlayerLoading1
+SetBackground(0x1B)
+TEXTSHOW Merc5MilitiaWaitArcanaeBeginningText
+TEXTEND
+MUSC Ties_of_Friendship
+TEXTCONT
+TEXTEND
+FADI 0x5
+REMA
+SetBackground(0x1D)
+TEXTSHOW Merc5MilitiaWaitArcanaeMountainPassText
+TEXTEND
+EndConvo
+MUSC Advance
+STAL 0x50
+FADI 0x5
+SetBackground(0x03)
+TEXTSHOW Merc5MilitiaWaitArcanaeMeetGovernorText
+TEXTEND
+MUSC Lost_Heart
+TEXTCONT
+TEXTEND
+EndConvo
+MUSC Tension
+TurnEnemy(William)
+LOAD1 0x1 CoupleCesarians
+STAL 0x10
+MOVE 0x0 Elanil [7,5]
+MOVE 0x0 Luke [7,6]
+MoveMercenary(7,7)
+STAL 0x10
+FADI 0x5
+CLEA Luke
+CLEE Cesarian
+LOAD3 0x1 PlayerLoading2
+LOAD2 0x1 StartAllies
+LOAD1 0x1 ValHelmer
+LOAD1 0x1 StartEnemies
+ENUN
+SetBackground(0x1D)
+Text(Merc5MilitiaWaitArcanaeReturnText)
+EndConvo
+NoFade
+ENDA
+
+EndingScene:
+FADI 0x5
+MUSC Into_the_Shadow_of_Victory
+SetBackground(0x03)
+Text(Merc5MilitiaWaitArcanaeEndingText)
+MoveToChapter(MercenaryMilitiaWaitArcanae6)
+ENDA
+
+FinocHere:
+CHECK_ALIVE Finoc
+BEQ 0x0 0x0 0xC
+	_0x2620 0x1700
+	LOAD1 0x1 LoadFinoc
+	ENUN
+	REVEAL Finoc
+	SVAL 0x1 0x1
+	SET_STATE Finoc
+	ENUN
+	CAM1 [7,7]
+	Text(Merc5MilitiaWaitArcanaeFinocHereText)
+LABEL 0x0
+NoFade
+ENDA
+
+VillagePlace:
+MUSI
+Text(0x2,Merc5MilitiaWaitArcanaeHouse1Text)
+GiveItem(HeroCrest,0xFFFF)
+MUNO
+NoFade
+ENDA
+
+InnPlace:
+MUSI
+Text(0x1,Merc5MilitiaWaitArcanaeHouse2Text)
+MUNO
+NoFade
+ENDA
+
+	/*UNIT DATA*/
+
+PlayerLoading1:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [12,14] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [12,14] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [12,14] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [12,14] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [12,14] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [12,14] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [12,14] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [12,14] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+PlayerLoading2:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [6,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [6,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [6,3] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [6,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [6,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [6,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [6,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [6,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+GovernorDude:
+UNIT William General William Level(1,NPC,True) [12,12] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] GuardAI
+UNIT
+
+BeginingConvoPeople:
+UNIT Elanil Archer_F Elanil Level(1,Ally,True) [11,13] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Luke Monk Luke Level(1,Ally,True) [13,13] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT
+
+CoupleCesarians:
+UNIT Cesarian Knight William Level(9,Enemy,True) [10,8] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] GuardAI
+UNIT Cesarian Knight William Level(10,Enemy,True) [5,8] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] GuardAI
+UNIT Cesarian Paladin William Level(4,Enemy,True) [4,15] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] GuardAI
+UNIT Cesarian Mercenary William Level(9,Enemy,True) [1,10] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] GuardAI
+UNIT
+
+StartAllies:
+UNIT Arc Monk Luke Level(1,Ally,True) [6,2] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Luke Monk Luke Level(1,Ally,True) [7,2] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Elanil Monk Luke Level(1,Ally,True) [5,1] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT
+
+ValHelmer:
+UNIT Val Shaman_F Val Level(9,Ally,True) [6,1] 0x00 0x00 0x00 0x00 [Worm,Nosferatu] [0]
+UNIT Helmer Soldier Helmer Level(11,Ally,True) [7,3] 0x00 0x00 0x00 0x00 [SteelLance,KnightCrest] [0]
+UNIT
+
+StartEnemies:
+UNIT William General William Level(5,Enemy,True) [12,12] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] GuardAI
+UNIT Cesarian Archer William Level(10,Enemy,True) [7,14] 0x00 0x00 0x00 0x00 [SteelBow] AttackInRangeAI
+UNIT Cesarian Archer William Level(11,Enemy,True) [10,11] 0x00 0x00 0x00 0x00 [SteelLongbow] AttackInRangeAI
+UNIT Cesarian Paladin William Level(2,Enemy,True) [6,13] 0x00 0x00 0x00 0x00 [SteelLance] ChaseOnceApproachedAI
+UNIT Cesarian Knight William Level(10,Enemy,True) [9,7] 0x00 0x00 0x00 0x00 [Javelin] GuardAI
+UNIT Cesarian Knight William Level(8,Enemy,True) [8,8] 0x00 0x00 0x00 0x00 [SteelLance] GuardAI
+UNIT Cesarian Shaman William Level(7,Enemy,True) [7,11] Drop 0x00 0x00 0x00 [Slime,GuidingRing] AttackInRangeAI
+UNIT Cesarian Mercenary William Level(9,Enemy,True) [6,9] 0x00 0x00 0x00 0x00 [DevilSword] [0]
+UNIT Cesarian Warrior William Level(3,Enemy,True) [7,10] Drop 0x00 0x00 0x00 [KillerAxe,IronBow] [0]
+UNIT Cesarian Mercenary William Level(8,Enemy,True) [9,9] Drop 0x00 0x00 0x00 [IronBlade] [0]
+UNIT Cesarian Myrmidon William Level(10,Enemy,True) [3,13] Drop 0x00 0x00 0x00 [IronSword,EnergyRing] ChaseOnceApproachedAI
+UNIT Cesarian Sentinel William Level(3,Enemy,True) [8,13] 0x00 0x00 0x00 0x00 [Spear] GuardAI
+UNIT Cesarian Fighter William Level(11,Enemy,True) [10,14] Drop 0x00 0x00 0x00 [Halberd] ChaseOnceApproachedAI
+UNIT Cesarian Soldier William Level(6,Enemy,True) [10,12] 0x00 0x00 0x00 0x00 [KillerLance] ChaseOnceApproachedAI
+UNIT Cesarian Soldier William Level(9,Enemy,True) [4,14] Drop 0x00 0x00 0x00 [HeavySpear] AttackInRangeAI
+UNIT Cesarian Cavalier William Level(11,Enemy,True) [0,11] 0x00 0x00 0x00 0x00 [LightBrand] [0]
+UNIT Cesarian Cavalier William Level(10,Enemy,True) [0,12] 0x00 0x00 0x00 0x00 [SteelLance,SteelSword] [0]
+UNIT
+
+LoadFinoc:
+UNIT Finoc WyvernRider Finoc Level(1,Ally,True) [0,4] 0x00 0x00 0x1 REDA3R7 [BraveLance,HandAxe] GuardAI
+UNIT

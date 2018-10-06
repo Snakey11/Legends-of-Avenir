@@ -1,0 +1,85 @@
+
+#include "EA Files/Effectiveness.event"
+
+ALIGN 16
+#include "Tables/Table Installer.event"
+
+#include "EA Files/Animation Reference.event"
+
+ALIGN 4
+#include "Tables/Music/PC_and_Generic_Music_FE8.event" // Basically boss music
+
+/*
+ALIGN 16
+#incbin "EA Files/Item Table.dmp"
+
+#include "EA Files/Item Table.event"
+
+ALIGN 16
+#include "EA Files/Character Table.event"
+
+#undef ClassTable
+ALIGN 16
+#include "EA Files/Class Table.event"
+
+ALIGN 16
+WORD 0 0
+
+SpellAssociationTable:
+#include "EA Files/Spell Association Table.event"
+
+ALIGN 16
+#include "EA Files/Chapter Data Table.event"
+*/
+//#include "EA Files/Map Bytes.event"
+
+
+ALIGN 16
+#include "EA Files/Promotion Item Lists.event"
+
+PUSH
+ORG 0x29408
+POIN OceanSealList|IsPointer
+POP
+
+/*
+ALIGN 16
+SHORT 0x0 0x0 0x0
+PromotionBranchTable:
+#include "EA Files/Promotion Branch Table.event"
+
+PUSH
+
+#include "EA Files/Promotion Item Table.event"
+#include "EA Files/Ocean Seal Table.event"
+*/
+
+/*
+PUSH
+ORG 0x2BA78
+BYTE 15 // Set level cap
+POP
+*/
+
+/*
+ALIGN 16
+StandingSpriteTable:
+#include "EA Files/Standing Map Sprite Table.event"
+ALIGN 16
+#include "EA Files/Moving Map Sprite Table.event"
+*/
+
+ALIGN 16
+WORD 0x0 0x0 0x0
+DeathQuoteTable:
+#include "EA Files/Death Quote Table.event"
+
+ALIGN 16
+WORD 0x0 0x0 0x0
+BattleQuoteTable:
+#include "EA Files/Battle Quote Table.event"
+
+#include "EA Files/Repointers.event"
+
+WeaponDebuffTable:
+defWeaponDebuffs(0,0,0,0,0,0,0) //0x0: let 0-index entry be no debuffs.

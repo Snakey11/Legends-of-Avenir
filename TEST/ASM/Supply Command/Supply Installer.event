@@ -1,0 +1,8 @@
+#include "Extensions/Hack Installation.txt"
+
+//add in [Amount]# of [ItemID]s with [Durability] uses
+#define Supply(ItemID,Durability,Amount) "_SETVAL 0x02 ItemID; _SETVAL 0x03 Durability; _SETVAL 0x04 Amount; ASMC SupplyGive|1"
+
+
+SupplyGive:
+#incbin "SupplyASM.dmp"

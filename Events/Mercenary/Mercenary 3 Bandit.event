@@ -1,0 +1,148 @@
+
+EventPointerTable(Merc3BanditEvents,ThisChapter)
+
+//Label ThisChapter
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN EndMainPointer EndMainPointer EndMainPointer
+POIN EndMainPointer
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+//EndLabel
+
+//Label TurnBasedEvents
+TurnBasedEvents:
+END_MAIN
+
+//Label CharacterBasedEvents
+ALIGN 32
+CharacterBasedEvents:
+END_MAIN
+
+//Label LocationBasedEvents
+LocationBasedEvents:
+END_MAIN
+
+//Label MiscBasedEvents
+MiscBasedEvents:
+DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+END_MAIN
+
+//Label TrapData
+TrapData:
+ENDTRAP
+ALIGN 4
+
+//Label Units
+Units:
+EndUnit
+
+//Label BeginningScene
+BeginningScene:
+MUSC Into_the_Shadow_of_Victory
+CAM1 [8,6]
+LOAD1 0x1 LoadArya
+LOAD1 0x1 LoadConnor
+LOAD2 0x1 BanditFriends
+LOAD1 0x1 CaravanPeople
+ENUN
+LOAD3 0x1 PlayerLoading1
+ENUN
+SetBackground(0x27)
+Text(Merc3BanditBeginningText)
+MUSC Reunion
+SetBackground(0x11)
+Text(Merc3BanditPlanningText)
+FadeOutMusic
+FADI 0x5
+STAL 0x30
+MUSC Advance
+STAL 0x20
+SetBackground(0x1D)
+Text(Merc3BanditAryaHereText)
+FADI 0x5
+STAL 0x20
+CLEN Connor
+STAL 0x30
+SetBackground(0x1D)
+Text(Merc3BanditWalterVicarAryaText)
+EndConvo
+MUSC Tension
+CAM1 [9,13]
+STAL 0x10
+Text(Merc3RogerNoticesText)
+DISA Xena
+CAM1 [8,6]
+Text(Merc3BanditFormUpText)
+NoFade
+ENDA
+
+//Label EndingScene
+EndingScene:
+FADI 0x5
+MUSC Victory
+SetBackground(0x1D)
+Text(Merc3BanditEndingText)
+MoveToChapter(MercenaryBandit4)
+ENDA
+
+	/*UNIT DATA*/
+
+//Label PlayerLoading
+PlayerLoading1:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [8,4] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [8,4] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [8,4] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [8,4] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [8,4] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [8,4] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [8,4] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [8,4] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+EndUnit
+
+//Label LoadArya
+LoadArya:
+UNIT Arya Myrmidon_F PlayerMArcher Level(7,Ally,True) [10,3] 0x00 0x00 0x00 0x00 [SteelSword,Shamshir,Vulnerary] NoAI
+EndUnit
+
+//Label LoadConnor
+LoadConnor:
+UNIT Connor Mercenary PlayerMArcher Level(7,NPC,True) [8,0] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
+
+//Label BanditFriends
+BanditFriends:
+UNIT Baret Myrmidon PlayerMArcher Level(6,Ally,True) [9,2] 0x00 0x00 0x00 0x00 [SteelSword] [0] 
+UNIT Vicar Warrior PlayerMArcher Level(2,Ally,True) [7,3] 0x00 0x00 0x00 0x00 [SteelAxe,KillerAxe] [0]
+UNIT Walter Archer PlayerMArcher Level(4,Ally,True) [7,2] 0x00 0x00 0x00 0x00 [IronBow,Vulnerary] [0] 
+EndUnit
+
+//Label CaravanPeople
+CaravanPeople:
+UNIT Roger Mercenary Roger Level(4,Enemy,True) [16,13] 0x00 0x00 0x00 0x00 [SteelBlade] GuardAI
+UNIT Haedrican Fighter Haedrican Level(6,Enemy,True) [8,6] 0x00 0x00 0x00 0x00 [HandAxe] GuardAI
+UNIT Haedrican Fighter Haedrican Level(7,Enemy,True) [9,7] 0x00 0x00 0x00 0x00 [IronAxe] GuardAI
+UNIT Haedrican Mercenary Haedrican Level(6,Enemy,True) [7,7] 0x00 0x00 0x00 0x00 [IronBlade] GuardAI
+UNIT Haedrican Fighter Haedrican Level(7,Enemy,True) [4,4] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT Haedrican Myrmidon Haedrican Level(5,Enemy,True) [4,6] 0x00 0x00 0x00 0x00 [IronSword] NoAI
+UNIT Haedrican Archer Haedrican Level(4,Enemy,True) [3,8] 0x00 0x00 0x00 0x00 [DevilBow] AttackInRangeAI
+UNIT Haedrican Soldier Haedrican Level(6,Enemy,True) [12,4] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Haedrican Mage Haedrican Level(6,Enemy,True) [11,6] 0x00 0x00 0x00 0x00 [Wind] NoAI
+UNIT Haedrican Cavalier Haedrican Level(7,Enemy,True) [12,13] 0x00 0x00 0x00 0x00 [IronSword,Javelin] NoAI
+UNIT Haedrican Cavalier Haedrican Level(9,Enemy,True) [13,12] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Haedrican Cavalier Haedrican Level(7,Enemy,True) [4,14] 0x00 0x00 0x00 0x00 [Zanbato,IronLance] AttackInRangeAI
+UNIT Haedrican Cavalier Haedrican Level(8,Enemy,True) [3,13] 0x00 0x00 0x00 0x00 [KillerLance] AttackInRangeAI
+UNIT Haedrican Myrmidon Haedrican Level(6,Enemy,True) [6,11] 0x00 0x00 0x00 0x00 [SlimSword] ChaseOnceApproachedAI
+UNIT Haedrican Myrmidon Haedrican Level(7,Enemy,True) [8,10] Drop 0x00 0x00 0x00 [SteelSword] ChaseOnceApproachedAI
+UNIT Haedrican Hero Haedrican Level(2,Enemy,True) [8,10] Drop 0x00 0x00 0x00 [SteelAxe,IronBlade] AttackInRangeAI
+UNIT Haedrican Archer Haedrican Level(5,Enemy,True) [14,15] 0x0 0x00 0x00 0x00 [IronBow] ChaseOnceApproachedAI
+UNIT Haedrican Soldier Haedrican Level(6,Enemy,True) [15,14] 0x0 0x00 0x00 0x00 [ShortSpear] ChaseOnceApproachedAI
+UNIT Haedrican Pirate Haedrican Level(7,Enemy,True) [15,12] 0x0 0x00 0x00 0x00 [SteelAxe] ChaseOnceApproachedAI
+UNIT Xena Civilian Xena Level(1,Enemy,True) [16,14] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit

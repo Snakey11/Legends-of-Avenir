@@ -1,0 +1,373 @@
+﻿
+EventPointerTable(Merc6MilitiaKillEvents,ThisChapter)
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0x12,Wave1Done,1,0xFF)
+TurnEventPlayer(0x13,Wave2Done,1,0xFF)//All starting values were 1
+TurnEventPlayer(0x11,Wave3Done,1,0xFF)
+TurnEventPlayer(0x0,EndingScene,15)
+TurnEventPlayer(0x11,EndCheck,1,0xFF)
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Village(0x14,RedHouse1,8,2)
+Village(0x15,RedHouse2,15,9)
+Village(0x16,RedHouse3,12,12)
+Village(0x0,WhiteHouse1,10,7)
+Village(0x0,WhiteHouse2,17,12)
+Armory(ArmoryData,16,12)
+Vendor(ShopData,16,15)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+Units:
+UNIT
+
+BeginningScene:
+MUSC Raid
+SVAL 0x6 0x1
+REMU Arya
+REMU Luke
+LOAD3 0x1 PlayerLoading1
+LOAD2 0x1 ArcKendrickStart
+LOAD1 0x1 Others
+SetBackground(0x5)
+Text(Merc6MilitiaKillBeginningText)
+EndConvo
+NoFade
+ENDA
+
+Wave1Done:
+CHECK_ENEMIES
+SETVAL 0x4 6
+BLE 0x10 0x4 0xC
+	CHECK_ALIVE Luke
+	BEQ 0x1 0x0 0xC
+		MUSS Tension
+		_0x2620 0x1700
+		FADI 0x5
+		LOAD1 0x1 LoadLuke
+		ENUN
+		REVEAL Luke
+		SVAL 0x1 0x1
+		SET_STATE Luke
+		CAM1 [10,9]
+		SetBackground(0x5)
+		Text(Merc6MilitiaKillLukeHereText)
+		EndConvo
+	LABEL 0x1
+	LOAD1 0x1 Wave1Units
+	ENUN
+	MURE 0x5
+GOTO 0x11
+LABEL 0x10
+	ENUF 0x12
+LABEL 0x11
+NoFade
+ENDA
+
+Wave2Done:
+CHECK_ENEMIES
+SETVAL 0x4 5
+BLE 0x13 0x4 0xC
+	CHECK_ALIVE Arya
+	BEQ 0x0 0x0 0xC
+		MUSS Tension
+		_0x2620 0x1700
+		LOAD1 0x1 LoadArya
+		ENUN
+		REVEAL Arya
+		SVAL 0x1 0x1
+		SET_STATE Arya
+		CAM1 [9,6]
+		Text(Merc6MilitiaKillAryaHereText)
+		LOAD1 0x1 Wave2Units
+		ENUN
+		STAL 0x20
+		CAM1 [5,12]
+		Text(Merc6MilitiaKillJurgenHereText)
+		MURE 0x5
+		GOTO 0x14
+	LABEL 0x0
+		MUSI
+		LOAD1 0x1 Wave2Units
+		ENUN
+		STAL 0x20
+		CAM1 [5,13]
+		Text(Merc6MilitiaKillJurgenHereText)
+		MUNO
+GOTO 0x14
+LABEL 0x13
+	ENUF 0x13
+LABEL 0x14
+NoFade
+ENDA
+
+Wave3Done:
+CHECK_ENEMIES
+SETVAL 0x4 5
+BLE 0x15 0x4 0xC
+	MUSS Tension
+	Text(Merc6MilitiaKillJurgenText)
+	LOAD1 0x1 Wave3Units
+	ENUN
+	MURE 0x5
+GOTO 0x16
+LABEL 0x15
+	ENUF 0x11
+LABEL 0x16
+NoFade
+ENDA
+
+EndCheck:
+CHECK_ENEMIES
+SVAL 0x4 7
+BLE 0x17 0x4 0xC
+	FadeOutMusic
+	CAM1 Jurgen
+	Text(Merc6MilitiaKillJurgenLeavesText)
+	EndingScene:
+	FadeOutMusic
+	FADI 0x5
+	STAL 0x10
+	MUSC Into_the_Shadow_of_Victory
+	CLEE Cesarian
+	CLEA Kendrick
+	CLEN Shizonian
+	STAL 0x20
+	SVAL 0xB Coords(8,5)
+	LOMA ShizonShrineCutscene
+	LOAD1 0x1 LoadXexim
+	STAL 0x40
+	FADU 0x5
+	STAL 0x20
+	LOAD3 0x1 PlayerLoading2
+	LOAD2 0x1 EndingPeople
+	FADI 0x5
+	ENUN
+	STAL 0x80
+	SetBackground(0x2E)
+	TEXTSHOW Merc6MilitiaKillEndingText
+	TEXTEND
+	FadeOutMusic
+	TEXTCONT
+	TEXTEND
+	MUSC LyonTheme
+	TEXTCONT
+	TEXTEND
+	MoveToChapter(MercenaryMilitiaKill7)
+LABEL 0x17
+ENUF 0x11
+NoFade
+ENDA
+
+RedHouse1:
+MUSI
+Text(0x1,Merc6MilitiaKillHouse1Text)
+GiveItem(OceanSeal,0xFFFF)
+MUNO
+NoFade
+ENDA
+
+RedHouse2:
+MUSI
+Text(0x1,Merc6MilitiaKillHouse2Text)
+GiveItem(Tomahawk,0xFFFF)
+MUNO
+NoFade
+ENDA
+
+RedHouse3:
+MUSI
+Text(0x1,Merc6MilitiaKillHouse3Text)
+GiveItem(Artemis,0xFFFF)
+MUNO
+NoFade
+ENDA
+
+WhiteHouse1:
+MUSI
+Text(0x1,Merc6MilitiaKillHouse4Text)
+MUNO
+NoFade
+ENDA
+
+WhiteHouse2:
+MUSI
+Text(0x1,0x85) // NEEDS TEXT
+MUNO
+NoFade
+ENDA
+
+ArmoryData:
+SHLI SteelSword SteelLance ShortSpear SteelAxe ShortAxe SteelBow SteelLongbow
+ALIGN 4
+
+ShopData:
+SHLI Vulnerary Elixir Elfire Elwind Elthunder Elaqua Worm Exordium Divine Mend
+ALIGN 4
+
+	/*UNIT DATA*/
+	
+PlayerLoading1:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [15,6] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [15,6] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [15,6] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [15,6] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [15,6] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [15,6] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [15,6] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [15,6] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+ArcKendrickStart:
+UNIT Arc Fighter PlayerMArcher Level(1,Ally,True) [16,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Kendrick Pirate PlayerMArcher Level(1,Ally,True) [17,6] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+Others:
+UNIT Cesarian GreatKnight Jurgen Level(5,Enemy,True) [6,15] Drop 0x00 0x00 0x00 [SilverAxe] [0]
+UNIT Cesarian GreatKnight Jurgen Level(4,Enemy,True) [4,13] 0x00 0x00 0x00 0x00 [Javelin,SteelSword] [0]
+UNIT Cesarian Mercenary Jurgen Level(11,Enemy,True) [11,10] 0x00 0x00 0x00 0x00 [SteelSword] [0]
+UNIT Cesarian Mercenary Jurgen Level(10,Enemy,True) [5,7] 0x00 0x00 0x00 0x00 [DevilSword] [0]
+UNIT Cesarian Soldier Jurgen Level(13,Enemy,True) [3,2] 0x00 0x00 0x00 0x00 [SteelLance] [0]
+UNIT Cesarian Soldier Jurgen Level(8,Enemy,True) [3,4] 0x00 0x00 0x00 0x00 [Javelin] [0]
+UNIT Cesarian Sage Jurgen Level(4,Enemy,True) [9,14] 0x00 0x00 0x00 0x00 [Arcthunder] AttackInRangeAI
+UNIT Cesarian Paladin Jurgen Level(3,Enemy,True) [16,13] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT Cesarian Bishop Jurgen Level(5,Enemy,True) [6,4] 0x00 0x00 0x00 0x00 [Divine,Mend] [0]
+UNIT Cesarian Cavalier Jurgen Level(10,Enemy,True) [8,0] 0x00 0x00 0x00 0x00 [KillingEdge,ShortSpear] AttackInRangeAI
+UNIT Shizonian Myrmidon Shizonian Level(11,NPC,True) [14,5] 0x00 0x00 0x00 0x00 [KillingEdge] [0]
+UNIT Shizonian Archer Shizonian Level(9,NPC,True) [16,7] 0x00 0x00 0x00 0x00 [SteelLongbow] [0]
+UNIT Shizonian Warrior Shizonian Level(1,NPC,True) [14,7] 0x00 0x00 0x00 0x00 [SteelAxe,SteelBow] [0]
+UNIT
+
+LoadLuke:
+UNIT Luke Monk PlayerMArcher Level(1,Ally,True) [17,10] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+LoadArya:
+UNIT Arya Myrmidon_F PlayerMArcher Level(1,Ally,True) [9,0] 0x00 0x00 0x1 REDA21 [IronAxe,Vulnerary] [0] 
+UNIT
+
+Wave1Units:
+UNIT Cesarian Soldier Jurgen Level(8,Enemy,True) [8,14] 0x00 0x00 0x1 REDA2 [Javelin] ChaseOnceApproachedAI
+UNIT Cesarian Soldier Jurgen Level(7,Enemy,True) [9,14] 0x00 0x00 0x1 REDA3 [SteelLance] ChaseOnceApproachedAI
+UNIT Cesarian Cavalier Jurgen Level(12,Enemy,True) [0,8] 0x00 0x00 0x00 0x00 [LightBrand] [0]
+UNIT Cesarian Paladin Jurgen Level(6,Enemy,True) [17,13] 0x00 0x00 0x00 0x00 [IronLance,SteelBlade] ChaseOnceApproachedAI
+UNIT Cesarian Hero Jurgen Level(4,Enemy,True) [0,4] 0x00 0x00 0x00 0x00 [Tomahawk] [0]
+UNIT Cesarian Warrior Jurgen Level(3,Enemy,True) [5,15] 0x00 0x00 0x1 REDA5 [DevilAxe,SteelBow] [0]
+UNIT Cesarian Sentinel Jurgen Level(4,Enemy,True) [9,14] 0x00 0x00 0x1 REDA6 [HeavySpear] AttackInRangeAI
+UNIT Cesarian Shaman Jurgen Level(12,Enemy,True) [7,15] Drop 0x00 0x00 0x00 [Nosferatu,Eclipse,GuidingRing] ChaseOnceApproachedAI
+UNIT Cesarian Knight Jurgen Level(9,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [DevilLance] AttackInRangeAI
+UNIT
+
+Wave2Units:
+UNIT Jurgen SpearHero Jurgen Level(13,Enemy,True) [5,16] Drop 0x00 0x1 REDA1 [SilverLance,HandAxe,AngelicRobe] GuardAI
+UNIT Cesarian Soldier Jurgen Level(12,Enemy,True) [0,8] 0x00 0x00 0x1 REDA7 [IronLance] [0]
+UNIT Cesarian Soldier Jurgen Level(13,Enemy,True) [0,8] 0x00 0x00 0x1 REDA8 [ShortSpear] [0]
+UNIT Cesarian Soldier Jurgen Level(9,Enemy,True) [0,8] 0x00 0x00 0x1 REDA9 [SteelLance] [0]
+UNIT Cesarian Sniper Jurgen Level(4,Enemy,True) [13,16] 0x00 0x00 0x00 0x00 [SteelShortbow] ChaseOnceApproachedAI
+UNIT Cesarian MageKnight Jurgen Level(3,Enemy,True) [11,16] 0x00 0x00 0x00 0x00 [Elwind,Heal] [0]
+UNIT Cesarian Ranger Jurgen Level(4,Enemy,True) [0,4] 0x00 0x00 0x1 REDA10 [SteelBlade,IronBow] [0]
+UNIT Cesarian Mage Jurgen Level(10,Enemy,True) [0,3] 0x00 0x00 0x1 REDA11 [Elaqua] AttackInRangeAI
+UNIT Cesarian Myrmidon Jurgen Level(11,Enemy,True) [9,16] Drop 0x00 0x1 REDA12 [SteelSword] AttackInRangeAI
+UNIT Cesarian PegasusKnight Jurgen Level(10,Enemy,True) [0,15] 0x00 0x00 0x00 0x00 [SlimLance] [0]
+UNIT Cesarian PegasusKnight Jurgen Level(12,Enemy,True) [1,16] 0x00 0x00 0x00 0x00 [IronLance] [0]
+UNIT
+
+Wave3Units:
+UNIT Cesarian Soldier Jurgen Level(11,Enemy,True) [0,8] 0x00 0x00 0x00 0x00 [KillerLance] [0]
+UNIT Cesarian GreatKnight Jurgen Level(5,Enemy,True) [6,15] 0x00 0x00 0x1 REDA13 [KillingEdge,Javelin] ChaseOnceApproachedAI
+UNIT Cesarian General Jurgen Level(4,Enemy,True) [6,16] 0x00 0x00 0x1 REDA14 [SilverLance,ShortAxe] GuardAI
+UNIT Cesarian WyvernRider Jurgen Level(9,Enemy,True) [1,16] 0x00 0x00 0x00 0x00 [SteelLance] [0]
+UNIT Cesarian WyvernRider Jurgen Level(10,Enemy,True) [0,15] 0x00 0x00 0x00 0x00 [SteelLance] [0]
+UNIT Cesarian Troubadour Jurgen Level(11,Enemy,True) [9,16] 0x00 0x00 0x00 0x00 [Mend] [0]
+UNIT Cesarian Monk Jurgen Level(9,Enemy,True) [0,5] 0x00 0x00 0x00 0x00 [Artimes,Heal] [0]
+UNIT Cesarian Berserker Jurgen Level(3,Enemy,True) [10,16] 0x00 0x00 0x1 REDA15 [SteelAxe] ChaseOnceApproachedAI
+UNIT Cesarian Fighter Jurgen Level(10,Enemy,True) [0,3] 0x00 0x00 0x00 0x00 [ShortAxe] [0]
+UNIT Cesarian Halberdier Jurgen Level(6,Enemy,True) [1,3] 0x00 0x00 0x00 0x00 [BraveLance] [0]
+UNIT
+
+LoadXexim:
+UNIT Xexim XeximClass PlayerMArcher Level(1,NPC,True) [8,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+EndingPeople:
+UNIT Arc Fighter PlayerMArcher Level(1,Ally,True) [6,9] 0x00 0x00 0x1 REDA7R5 [IronAxe,Vulnerary] [0] 
+UNIT Kendrick Pirate PlayerMArcher Level(1,Ally,True) [9,9] 0x00 0x00 0x1 REDA9R5 [IronAxe,Vulnerary] [0] 
+UNIT Arya Myrmidon_F PlayerMArcher Level(1,Ally,True) [8,9] 0x00 0x00 0x1 REDA8R6 [IronAxe,Vulnerary] [0] 
+UNIT Luke Monk PlayerMArcher Level(1,Ally,True) [10,9] 0x00 0x00 0x1 REDA10R5 [IronAxe,Vulnerary] [0] 
+UNIT
+
+PlayerLoading2:
+UNIT PlayerFMercenary Mercenary_F PlayerMArcher Level(1,Ally,True) [8,9] 0x00 0x00 0x1 REDA8R5 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon Myrmidon_F PlayerMArcher Level(1,Ally,True) [8,9] 0x00 0x00 0x1 REDA8R5 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight PlayerMArcher Level(1,Ally,True) [8,9] 0x00 0x00 0x1 REDA8R5 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary Mercenary PlayerMArcher Level(1,Ally,True) [8,9] 0x00 0x00 0x1 REDA8R5 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon Myrmidon PlayerMArcher Level(1,Ally,True) [8,9] 0x00 0x00 0x1 REDA8R5 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter PlayerMArcher Level(1,Ally,True) [8,9] 0x00 0x00 0x1 REDA8R5 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate PlayerMArcher Level(1,Ally,True) [8,9] 0x00 0x00 0x1 REDA8R5 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand PlayerMArcher Level(1,Ally,True) [8,9] 0x00 0x00 0x1 REDA8R5 [IronAxe,Vulnerary] [0] 
+UNIT
+
+REDA1:
+REDA [5,13] 0x0 0x0 0x0 0x0
+REDA2:
+REDA [11,13] 0x0 0x0 0x0 0x0
+REDA3:
+REDA [9,13] 0x0 0x0 0x0 0x0
+REDA5:
+REDA [5,13] 0x0 0x0 0x0 0x0
+REDA6:
+REDA [10,12] 0x0 0x0 0x0 0x0
+REDA7:
+REDA [1,7] 0x0 0x0 0x0 0x0
+REDA8:
+REDA [1,9] 0x0 0x0 0x0 0x0
+REDA9:
+REDA [2,8] 0x0 0x0 0x0 0x0
+REDA10:
+REDA [2,4] 0x0 0x0 0x0 0x0
+REDA11:
+REDA [1,3] 0x0 0x0 0x0 0x0
+REDA12:
+REDA [9,11] 0x0 0x0 0x0 0x0
+REDA13:
+REDA [6,14] 0x0 0x0 0x0 0x0
+REDA14:
+REDA [6,12] 0x0 0x0 0x0 0x0
+REDA15:
+REDA [10,13] 0x0 0x0 0x0 0x0
+REDA21:
+REDA [12,5] 0x0 0x0 0x0 0x0

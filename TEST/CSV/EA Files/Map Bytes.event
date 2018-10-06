@@ -1,0 +1,74 @@
+// TILESETS: 00 00 00 00= ObjectSet1 ObjectSet2(Always 0) Palette TileConfig
+
+//SetTilesetData(Chapter,ObjectType,Palette,TileConfig,TileAnimations,BattleTileset)
+SetTilesetData(PrologueChapter,0x88,0x89,0x8A,88Anims,LagdouSet)//Prologue
+SetTilesetData(Mage1,0x6C,0xA3,0x6E,6CAnims,LagdouSet)//Ruin
+SetTilesetData(MageEscape2,0x2E,0x2F,0x30,2EAnims,NormalSet)//Cliff
+SetTilesetData(MageEscape3,0x2E,0x2F,0x30,2EAnims,NormalSet)//Walled Town
+SetTilesetData(MageEscape4,0x79,0x7A,0x7B,79Anims,NormalSet)//Defense Hall
+SetTilesetData(MageEscape5,0x6C,0x6D,0x6E,6CAnims,NormalSet)//Rivery
+SetTilesetData(MageEscapeXavus6,0x42,0x43,0x44,42Anims,DesertSet)//Deserty
+SetTilesetData(MageEscapeXavus7,0x3C,0x3D,0x3E,3CAnims,NormalSet)//ArcanaeCapital
+SetTilesetData(MageInvestigate2,0x88,0x89,0x8A,88Anims,LagdouSet)//Underground Ruin
+SetTilesetData(MageInvestigate3,0x01,0x5B,0x03,01Anims,NormalSet)//Skirmish
+SetTilesetData(MageInvestigate4,0x01,0x4C,0x03,01Anims,NormalSet)//Mountainy
+SetTilesetData(MageInvestigate5,0x5F,0x60,0x61,5FAnims,LagdouSet)//Haedric Venefront
+SetTilesetData(MageInvestigate6,0x01,0x4C,0x03,01Anims,NormalSet)//Cliffy River
+SetTilesetData(MageInvestigate7,0x50,0x51,0x52,50Anims,LavaSet)//Venefront Lava
+SetTilesetData(MageEscapeCesaria6,0x01,0x38,0x03,01Anims,NormalSet)//Lakey
+SetTilesetData(MageEscapeCesaria7,0x3C,0x3D,0x3E,3CAnims,NormalSet)//Arcanaean Capital
+SetTilesetData(Military1,0x0E,0x0F,0x10,0EAnims,NormalSet)//Training Fortress
+SetTilesetData(MilitaryPromotion2,0x01,0x5B,0x03,01Anims,NormalSet)//Skirmish
+SetTilesetData(MilitaryPromotion3,0x3C,0xCE,0x3E,3CAnims,NormalSet)//Fortress
+SetTilesetData(MilitaryPromotionHold4,0x3C,0x68,0x3E,3CAnims,NormalSet)//Arcanae Outpost
+SetTilesetData(MilitaryPromotionHold5,0x01,0x4C,0x03,01Anims,NormalSet)//Cliffy River
+SetTilesetData(MilitaryPromotionHold6,0x01,0x38,0x03,01Anims,NormalSet)//Lakey
+SetTilesetData(MilitaryPromotionHold7,0x3C,0x3D,0x3E,3CAnims,NormalSet)//Arcanaean Capital
+SetTilesetData(MilitaryPromotionRetreat4,0x79,0x7A,0x7B,79Anims,NormalSet)//Cesarian Capital
+SetTilesetData(MilitaryPromotionRetreatLeave5,0x79,0x7A,0x7B,79Anims,NormalSet)//Cesarian Capital
+SetTilesetData(MilitaryPromotionRetreatLeave6GrowingTown1,0x0E,0x0F,0x10,0EAnims,CitySet)//Growing Town
+SetTilesetData(MilitaryPromotionRetreatLeave7,0x0E,0x72,0x10,0EAnims,CitySet)//Big Boat Dock
+SetTilesetData(MilitaryPromotionRetreatHelp5,0x01,0x5B,0x03,01Anims,NormalSet)//Big Path
+SetTilesetData(MilitaryPromotionRetreatHelp6,0x2E,0x2F,0x30,2EAnims,NormalSet)//Farmy Town
+SetTilesetData(MilitaryPromotionRetreatHelp7,0x3C,0x3D,0x3E,3CAnims,NormalSet)//Arcanaean Capital
+SetTilesetData(MilitaryPass2,0x01,0x5B,0x03,01Anims,NormalSet)//Bandit Pass
+SetTilesetData(MilitaryPass3,0x01,0x4C,0x03,01Anims,NormalSet)//Mountainy Lake
+SetTilesetData(MilitaryPass4,0x3C,0x3D,0x3E,3CAnims,NormalSet)//Castle Entrance
+SetTilesetData(MilitaryPass5,0x6C,0x6D,0x6E,6CAnims,LagdouSet)//Haedric Hideout
+SetTilesetData(MilitaryPass6,0x0E,0x72,0x10,0EAnims,CitySet)//Haedric City
+SetTilesetData(MilitaryPass7,0x3C,0xCE,0x3E,3CAnims,NormalSet)//Haedric Castle
+SetTilesetData(Mercenary1,0x2E,0x34,0x30,2EAnims,NormalSet)//Plains
+SetTilesetData(MercenaryMilitia2,0x2E,0x34,0x30,2EAnims,NormalSet)//Mountains
+SetTilesetData(MercenaryMilitiaWait3,0x18,0x19,0x1A,18Anims,NormalSet)//Castle Hall
+SetTilesetData(MercenaryMilitiaWait4,0x18,0x19,0x1A,18Anims,NormalSet)//Underground
+SetTilesetData(MercenaryMilitiaWaitArcanae5,0x01,0x4C,0x03,01Anims,NormalSet)//Mountainy
+SetTilesetData(MercenaryMilitiaWaitArcanae6,0x79,0x7A,0x7B,79Anims,NormalSet)//Cesarian Capital
+SetTilesetData(MercenaryMilitiaWaitArcanae7,0x50,0x51,0x52,50Anims,LavaSet)//Lava
+SetTilesetData(MercenaryMilitiaWaitCesaria5,0x42,0x43,0x44,42Anims,DesertSet)//Desert
+SetTilesetData(MercenaryMilitiaWaitCesaria6,0x0E,0x0F,0x10,0EAnims,NormalSet)//Big Bridge
+SetTilesetData(MercenaryMilitiaWaitCesaria7,0x42,0x43,0x44,42Anims,DesertSet)//Desert with Grass
+SetTilesetData(MercenaryMilitiaKill3,0x6C,0x6D,0x6E,6CAnims,NormalSet)//Haedric Hideout
+SetTilesetData(MercenaryMilitiaKill4,0x0E,0x0F,0x10,0EAnims,CitySet)//Boats at Sea
+SetTilesetData(MercenaryMilitiaKill5,0x01,0x38,0x03,01Anims,NormalSet)//Assassin Test
+SetTilesetData(MercenaryMilitiaKill6,0x0E,0x72,0x10,0EAnims,NormalSet)//Shizon Defense
+SetTilesetData(MercenaryMilitiaKill7,0x79,0x7A,0x7B,79Anims,NormalSet)//Cesarian Capital
+SetTilesetData(MercenaryBandit2,0x2E,0x34,0x30,2EAnims,NormalSet)//Plains
+SetTilesetData(MercenaryBandit3,0x01,0x5B,0x03,01Anims,NormalSet)//Caravan Path
+SetTilesetData(MercenaryBandit4,0x01,0x02,0x03,01Anims,NormalSet)//Mayor's Village
+SetTilesetData(MercenaryBanditBandit5,0x3C,0xCE,0x3E,3CAnims,NormalSet)//Haedric Castle
+SetTilesetData(MercenaryBanditBandit6,0x18,0xB9,0x1A,18Anims,NormalSet)//Bacrun Capital
+SetTilesetData(MercenaryBanditBandit7,0x0E,0x72,0x10,0EAnims,CitySet)//Bacrun City
+SetTilesetData(MercenaryBanditDisband5,0x0E,0x72,0x10,0EAnims,CitySet)//Bacrun City 2
+SetTilesetData(MercenaryBanditDisband6,0x6C,0x6D,0x6E,6CAnims,LagdouSet)//Lots of Rooms
+SetTilesetData(MercenaryBanditDisband7,0x01,0x38,0x03,01Anims,NormalSet)//Big Battleground
+SetTilesetData(MilitaryPromotionRetreatLeave6GrowingTown2,0x0E,0x0F,0x10,0EAnims,CitySet)//Growing Town 2
+SetTilesetData(MilitaryPromotionRetreatLeave6GrowingTown3,0x0E,0x0F,0x10,0EAnims,CitySet)//Groting Town 3
+SetTilesetData(ShizonShrineCutscene,0x88,0x89,0x8A,88Anims,LagdouSet)
+SetTilesetData(LeavingShizonCutscene,0x01,0x5B,0x03,01Anims,NormalSet)
+SetTilesetData(LeavingUndergroundCutscene,0x42,0x43,0x44,42Anims,DesertSet)
+SetTilesetData(OutsideTempleCutscene,0x3C,0x68,0x3E,3CAnims,DesertSet)
+SetTilesetData(MercenaryCampCutscene,0x42,0x43,0x44,42Anims,DesertSet)
+SetTilesetData(MaximusUzkalisCutscene,0x42,0x43,0x44,42Anims,DesertSet)
+SetTilesetData(HaedricCastleCutscene,0x18,0x19,0x1A,18Anims,NormalSet)
+SetTilesetData(OutsideKilthelCutscene,0x3C,0xCE,0x3E,3CAnims,NormalSet)
+SetTilesetData(ArtifactDoorCutscene,0x6C,0xA3,0x6E,6CAnims,LagdouSet)

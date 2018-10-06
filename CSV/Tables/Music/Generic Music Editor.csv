@@ -1,0 +1,95 @@
+0 ; POP ; ALIGN 4 ; GenericMusicTable:,Player Phase,Enemy Phase
+00 Prologue,Attack,Defense
+01 Mage1,Attack,Defense
+02 MageEscape2,Attack,Defense
+03 MageEscape3,Attack,Defense
+04 MageEscape4,Attack,Defense
+05 MageEscape5,Attack,Defense
+06 MageEscapeXavus6,Attack,Defense
+07 MageEscapeXavus7,Attack,Defense
+08 MageInvestigate2,Attack,Defense
+09 MageInvestigate3,Attack,Defense
+0A MageInvestigate4,Attack,Defense
+0B MageInvestigate5,Attack,Defense
+0C MageInvestigate6,Attack,Defense
+0D MageInvestigate7,Attack,Defense
+0E MageEscapeCesaria6,Attack,Defense
+0F MageEscapeCesaria7,Attack,Defense
+10 Military1,Attack,Defense
+11 MilitaryPromotion2,Attack,Defense
+12 MilitaryPromotion3,Attack,Defense
+13 MilitaryPromotionHold4,Attack,Defense
+14 MilitaryPromotionHold5,Attack,Defense
+15 MilitaryPromotionHold6,Attack,Defense
+16 MilitaryPromotionHold7,Attack,Defense
+17 MilitaryPromotionRetreat4,Attack,Defense
+18 MilitaryPromotionRetreatLeave5,Attack,Defense
+19 MilitaryPromotionRetreatLeave6(GrowingTown1Map),Attack,Defense
+1A MilitaryPromotionRetreatLeave7,Attack,Defense
+1B MilitaryPromotionRetreatHelp5,Attack,Defense
+1C MilitaryPromotionRetreatHelp6,Attack,Defense
+1D MilitaryPromotionRetreatHelp7,Attack,Defense
+1E MilitaryPass2,Attack,Defense
+1F MilitaryPass3,Attack,Defense
+20 MilitaryPass4,Attack,Defense
+21 MilitaryPass5,Attack,Defense
+22 MilitaryPass6,Attack,Defense
+23 MilitaryPass7,Attack,Defense
+24 Tower of Valni 1,Attack,Defense
+25 Tower of Valni 2,Attack,Defense
+26 Tower of Valni 3,Attack,Defense
+27 Tower of Valni 4,Attack,Defense
+28 Tower of Valni 5,Attack,Defense
+29 Tower of Valni 6,Attack,Defense
+2A Tower of Valni 7,Attack,Defense
+2B Tower of Valni 8,Attack,Defense
+2C Tower of Valni 8 Clone,Attack,Defense
+2D Tower of Valni 8 Clone,Attack,Defense
+2E Lagdou Ruins 1,Attack,Defense
+2F Lagdou Ruins 2,Attack,Defense
+30 Lagdou Ruins 3,Attack,Defense
+31 Lagdou Ruins 4,Attack,Defense
+32 Lagdou Ruins 5,Attack,Defense
+33 Lagdou Ruins 6,Attack,Defense
+34 Lagdou Ruins 7,Attack,Defense
+35 Lagdou Ruins 8,Attack,Defense
+36 Lagdou Ruins 9,Attack,Defense
+37 Lagdou Ruins 10,Attack,Defense
+38 Lords split up (glitchy map),Attack,Defense
+39 Melkaen Coast,Attack,Defense
+3A Link Arena,Attack,Defense
+3B Merceary1,Attack,Defense
+3C MercenaryMilitia2,Attack,Defense
+3D MercenaryMilitiaSurvival3,Attack,Defense
+3E MercenaryMilitiaSurvival4,Attack,Defense
+3F MercenaryMilitiaSurvivalArcanae5,Attack,Defense
+40 MercenaryMilitiaSurvivalArcanae6,Attack,Defense
+41 MercenaryMilitiaSurvivalArcanae7,Attack,Defense
+42 MercenaryMilitiaSurvivalCesaria5,Attack,Defense
+43 MercenaryMilitiaSurvivalCesaria6,Attack,Defense
+44 MercenaryMilitiaSurvivalCesaria7,Attack,Defense
+45 MercenaryMilitiaKill3,Attack,Defense
+46 MercenaryMilitiaKill4,Attack,Defense
+47 MercenaryMilitiaKill5,Attack,Defense
+48 MercenaryMilitiaKill6,Attack,Defense
+49 MercenaryMilitiaKill7,Attack,Defense
+4A MercenaryBandit2,Attack,Defense
+4B MercenaryBandit3,Attack,Defense
+4C MercenaryBandit4,Attack,Defense
+4D MercenaryBanditBandit5,Attack,Defense
+4E MercenaryBanditBandit6,Attack,Defense
+4F MercenaryBanditBandit7,Attack,Defense
+50 MercenaryBanditDisband5,Attack,Defense
+51 MercenaryBanditDisband6,Attack,Defense
+52 MercenaryBanditDisband7,Attack,Defense
+53 MilitaryPromotionRetreatLeave6(GrowingTown2),Attack,Defense
+54 MilitaryPromotionRetreatLeave6(GrowingTown3),Attack,Defense
+55 ShizonShrineCutscene,Attack,Defense
+56 LeavingShizonCutscene,Attack,Defense
+57 Leaving Underground Cutscene,Attack,Defense
+58 OutsideTempleCutscene,Attack,Defense
+59 Mercenary Camp Cutscene,Attack,Defense
+5A Maximus Uzkalis Cutscene,Attack,Defense
+5B HaedricCastleCutscene,Attack,Defense
+5C Kilthel Cutscene,Attack,Defense
+5D Artifact Door Cutscene,Attack,Defense ; PUSH

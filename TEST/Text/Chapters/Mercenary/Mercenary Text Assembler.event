@@ -1,0 +1,50 @@
+
+#include "Chapters/Mercenary/Death Quotes.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 1.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 2 Militia.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 3 Militia Kill.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 4 Militia Kill.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 5 Militia Kill.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 6 Militia Kill.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 7 Militia Kill.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 3 Militia Wait.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 4 Militia Wait.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 5 Militia Wait Arcanae.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 6 Militia Wait Arcanae.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 7 Militia Wait Arcanae.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 5 Militia Wait Cesaria.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 6 Militia Wait Cesaria.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 7 Militia Wait Cesaria.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 2 Bandit.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 3 Bandit.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 4 Bandit.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 5 Bandit Bandit.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 6 Bandit Bandit.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 7 Bandit Bandit.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 5 Bandit Disband.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 6 Bandit Disband.event"
+
+#include "Chapters/Mercenary/Chapters/Mercenary 7 Bandit Disband.event"

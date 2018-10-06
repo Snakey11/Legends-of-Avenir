@@ -1,0 +1,246 @@
+
+EventPointerTable(Merc6MilitiaWaitArcanaeEvents,ThisChapter)
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+DOOR 0x10 [14,8] 0x12
+DOOR 0x10 [15,8] 0x12
+DOOR 0x10 [16,8] 0x12
+DOOR 0x10 [14,9] 0x12
+DOOR 0x10 [15,9] 0x12
+DOOR 0x10 [16,9] 0x12
+Chest(OrionBolt,0,16)
+Chest(Dragonshield,0,17)
+Chest(ElysianWhip,0,19)
+Chest(KillingEdge,0,20)
+END_MAIN
+
+MiscBasedEvents:
+DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+Units:
+UNIT
+
+BeginningScene:
+MUSC Indignation
+LOAD1 0x1 RexZaliusCutscene
+LOAD2 0x1 FriendlyPeople
+LOAD3 0x1 PlayerLoading1
+ENUN
+CAM1 [15,5]
+SetBackground(0x24)
+Text(Merc6MilitiaWaitArcanaeBeginningText)
+MURE 0x5
+SetBackground(0x16)
+TEXTSHOW Merc6MilitiaWaitArcanaeScoutsBackText
+TEXTEND
+MUSC Confront_the_Past
+TEXTCONT
+TEXTEND
+FADI 0x5
+STAL 0x30
+SetBackground(0x12)
+Text(Merc6MilitiaWaitArcanaeInsideText)
+EndConvo
+MUSC Solve_the_Riddle
+STAL 0x40
+Text(Merc6MilitiaWaitArcanaeSpiesText)
+STAL 0x20
+CAM1 Helmer
+STAL 0x40
+FADI 0x5
+CLEE Zalius
+LOAD1 0x1 MoveZaliusCesarians
+LOAD1 0x1 CesarianGroup2
+ENUN
+MUSC Tension
+SetBackground(0x12)
+Text(Merc6MilitiaWaitArcanaeZaliusHere)
+EndConvo
+MOVE 0x0 Zalius [4,14]
+STAL 0x20
+CAM1 Helmer
+Text(Merc6MilitiaWaitArcanaeEndingBeginningText)
+NoFade
+ENDA
+
+EndingScene:
+FADI 0x5
+MUSC Into_the_Shadow_of_Victory
+CLEE Cesarian
+CLEA Val
+CLEA Helmer
+LOAD3 0x1 PlayerLoading2
+LOAD2 0x1 EndingPeople
+LOAD1 0x1 EndingRex
+ENUN
+SVAL 0x1 0x5
+SET_HP Rex
+CAM1 Rex
+FADU 0x5
+STAL 0x30
+Text(Merc6MilitiWaitArcanaeWatchRexText)
+MoveMercenary(15,9)
+CAM1 Elanil
+STAL 0x20
+Text(Merc6MilitiaWaitArcanaeSearchText)
+STAL 0x8
+MOVE 0x0 Elanil [25,10]
+MOVE 0x0 Finoc [25,11]
+STAL 0x20
+FADI 0x5
+CAM1 [15,5]
+LOAD2 0x1 MoveLukeArc
+LoadingMercenary(2,PlayerLoading2)
+ENUN
+MUSC Binding_Vow
+SetBackground(0xA)
+Text(Merc6MilitiaWaitArcanaeValHelmerText)
+EndConvo
+MUSC From_the_Darkness
+STAL 0x40
+Text(Merc6MilitiaWaitArcanaeRexDiesText)
+STAL 0x10
+MOVE 0x0 Rex [15,4]
+ENUN
+StartBattle
+MissedAttack(1,0)
+NormalDamage(0,10)
+FIG1 Arc Rex 0x0
+KillUnit(15,4)
+STAL 0x40
+MOVE 0x0 Elanil [16,6]
+ENUN
+Text(Merc6MilitiaWaitArcanaeEndingText)
+MoveToChapter(MercenaryMilitiaWaitArcanae7)
+ENDA
+
+
+	/*UNIT DATA*/
+
+PlayerLoading1:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [21,24] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [21,24] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [21,24] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [21,24] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [21,24] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [21,24] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [21,24] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [21,24] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+PlayerLoading2:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [15,5] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [15,5] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [15,5] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [15,5] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [15,5] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [15,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [15,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [15,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+RexZaliusCutscene:
+UNIT Rex GrandPaladin Rex Level(1,Enemy,True) [15,1] Drop 0x00 0x00 0x00 [SilverLance,WindSword,KillerAxe,MasterSeal] GuardAI
+UNIT Zalius Swordmaster Zalius Level(1,Enemy,True) [15,3] Drop 0x00 0x00 0x00 [SilverBlade,MasterSeal] GuardAI 
+UNIT
+
+FriendlyPeople:
+UNIT Arc Monk Luke Level(1,Ally,True) [22,23] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Luke Monk Luke Level(1,Ally,True) [24,23] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Elanil Monk Luke Level(1,Ally,True) [23,24] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Finoc Monk Luke Level(1,Ally,True) [25,24] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Val Shaman_F Val Level(9,Ally,True) [24,25] 0x00 0x00 0x00 0x00 [Worm,Nosferatu] [0]
+UNIT Helmer Soldier Helmer Level(11,Ally,True) [22,25] 0x00 0x00 0x00 0x00 [SteelLance,KnightCrest] [0]
+UNIT
+
+MoveZaliusCesarians:
+UNIT Rex GrandPaladin Rex Level(14,Enemy,True) [15,1] Drop 0x00 0x00 0x00 [SilverLance,WindSword,KillerAxe,MasterSeal] GuardAI
+UNIT Zalius Swordmaster Zalius Level(13,Enemy,True) [19,24] Drop 0x00 0x00 0x00 [SilverBlade,DoorKey] GuardAI 
+UNIT Cesarian Sniper Rex Level(5,Enemy,True) [15,20] 0x00 0x00 0x00 0x00 [SilverLongbow] AttackInRangeAI
+UNIT Cesarian Archer Rex Level(12,Enemy,True) [6,15] 0x00 0x00 0x00 0x00 [DevilBow] AttackInRangeAI
+UNIT Cesarian Archer Rex Level(11,Enemy,True) [6,20] 0x00 0x00 0x00 0x00 [IronLongbow] AttackInRangeAI
+UNIT Cesarian Archer Rex Level(11,Enemy,True) [20,19] 0x00 0x00 0x00 0x00 [SteelLongbow] AttackInRangeAI
+UNIT Cesarian Archer Rex Level(10,Enemy,True) [21,20] Drop 0x00 0x00 0x00 [SteelLongbow] AttackInRangeAI
+UNIT Cesarian Mercenary Rex Level(12,Enemy,True) [4,21] 0x00 0x00 0x00 0x00 [IronBlade] ChaseOnceApproachedAI
+UNIT Cesarian Hero Rex Level(5,Enemy,True) [2,18] Drop 0x00 0x00 0x00 [Tomahawk,SteelSword,ChestKey_5] GuardAI
+UNIT Cesarian Knight Rex Level(9,Enemy,True) [3,19] 0x00 0x00 0x00 0x00 [SteelLance] GuardAI
+UNIT Cesarian Knight Rex Level(13,Enemy,True) [4,19] 0x00 0x00 0x00 0x00 [SteelLance] GuardAI
+UNIT Cesarian Archer Rex Level(8,Enemy,True) [9,20] 0x00 0x00 0x00 0x00 [IronLongbow] AttackInRangeAI
+UNIT Cesarian Mage Rex Level(11,Enemy,True) [5,18] Drop 0x00 0x00 0x00 [Elaqua,GuidingRing] AttackInRangeAI
+UNIT Cesarian Sage Rex Level(4,Enemy,True) [3,16] Drop 0x00 0x00 0x00 [Arcfire,Mend] AttackInRangeAI
+UNIT Cesarian Cavalier Rex Level(11,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [KillerLance] AttackInRangeAI	
+UNIT Cesarian Cavalier Rex Level(12,Enemy,True) [10,10] 0x00 0x00 0x00 0x00 [SteelBlade,HeavySpear] AttackInRangeAI
+UNIT Cesarian Shaman Rex Level(10,Enemy,True) [0,21] Drop 0x00 0x00 0x00 [Nosferatu,ArmsScroll] AttackInRangeAI
+UNIT Cesarian Soldier Rex Level(9,Enemy,True) [12,23] 0x00 0x00 0x00 0x00 [IronLance] [0]
+UNIT Cesarian Soldier Rex Level(11,Enemy,True) [13,24] 0x00 0x00 0x00 0x00 [Javelin] [0]
+UNIT Cesarian Halberdier Rex Level(6,Enemy,True) [9,23] 0x00 0x00 0x00 0x00 [DragonSpear] ChaseOnceApproachedAI
+UNIT Cesarian Sentinel Rex Level(5,Enemy,True) [9,25] 0x00 0x00 0x00 0x00 [ShortSpear] ChaseOnceApproachedAI
+UNIT
+
+CesarianGroup2:
+UNIT Cesarian Soldier Rex Level(9,Enemy,True) [12,25] 0x00 0x00 0x00 0x00 [SteelLance] [0]
+UNIT Cesarian Soldier Rex Level(10,Enemy,True) [11,24] 0x00 0x00 0x00 0x00 [SteelLance] [0]
+UNIT Cesarian Paladin Rex Level(10,Enemy,True) [3,23] 0x00 0x00 0x00 0x00 [BraveLance] AttackInRangeAI
+UNIT Cesarian Paladin Rex Level(4,Enemy,True) [3,25] 0x00 0x00 0x00 0x00 [SteelBlade] AttackInRangeAI
+UNIT Cesarian Ranger Rex Level(5,Enemy,True) [1,24] 0x00 0x00 0x00 0x00 [SteelBow,SteelSword] AttackInRangeAI
+UNIT Cesarian Bishop Rex Level(3,Enemy,True) [14,14] Drop 0x00 0x00 0x00 [Artimes] AttackInRangeAI
+UNIT Cesarian Mage Rex Level(9,Enemy,True) [16,14] 0x00 0x00 0x00 0x00 [Elthunder] AttackInRangeAI
+UNIT Cesarian Mercenary Rex Level(11,Enemy,True) [2,12] 0x00 0x00 0x00 0x00 [LightBrand] AttackInRangeAI
+UNIT Cesarian Mercenary Rex Level(12,Enemy,True) [5,12] 0x00 0x00 0x00 0x00 [IronSword] AttackInRangeAI
+UNIT Cesarian Fighter Rex Level(13,Enemy,True) [3,11] 0x00 0x00 0x00 0x00 [HandAxe] AttackInRangeAI
+UNIT Cesarian Fighter Rex Level(12,Enemy,True) [4,11] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
+UNIT Cesarian General Rex Level(6,Enemy,True) [15,10] 0x00 0x00 0x00 0x00 [Spear] GuardAI
+UNIT Cesarian Soldier Rex Level(11,Enemy,True) [11,15] 0x00 0x00 0x00 0x00 [ShortSpear] GuardAI
+UNIT Cesarian Soldier Rex Level(12,Enemy,True) [19,15] 0x00 0x00 0x00 0x00 [SlimLance] GuardAI
+UNIT Cesarian Warrior Rex Level(4,Enemy,True) [20,11] 0x00 0x00 0x00 0x00 [Hammer,IronBow] [0]
+UNIT Cesarian Pirate Rex Level(14,Enemy,True) [19,10] 0x00 0x00 0x00 0x00 [BraveAxe] [0]
+UNIT
+
+EndingPeople:
+UNIT Arc Monk Luke Level(1,Ally,True) [18,3] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Luke Monk Luke Level(1,Ally,True) [17,4] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Elanil Monk Luke Level(1,Ally,True) [15,11] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Finoc Monk Luke Level(1,Ally,True) [16,10] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT
+
+EndingRex:
+UNIT Rex GrandPaladin Rex Level(13,Enemy,True) [15,2] 0x00 0x00 0x00 0x00 [SilverLance] GuardAI
+UNIT
+
+MoveLukeArc:
+UNIT Arc Monk Luke Level(1,Ally,True) [14,4] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Luke Monk Luke Level(1,Ally,True) [17,3] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT
+	

@@ -1,0 +1,6 @@
+[MidLeft][LoadArya][CloseEyes][TMM] [.......]... [.......][TMM][A]
+[FarFarRight]You![A]
+[MidLeft][OpenEyes]Ah![A]
+[FarRight][LoadBandit1]The boss says you're up.[NL]
+Get moving![A][ClearFace]
+[MidLeft][CloseEyes][TMM] [.......]... [.......][TMM][OpenEyes][A][X]

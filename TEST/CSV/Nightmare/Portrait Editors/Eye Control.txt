@@ -1,0 +1,3 @@
+2
+0x01 Normal
+0x06 Closed

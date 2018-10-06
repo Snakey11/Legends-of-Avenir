@@ -1,0 +1,3 @@
+2
+0x00 Custom Animation for a Weapon
+0x01 All Weapons for a Weapon Type

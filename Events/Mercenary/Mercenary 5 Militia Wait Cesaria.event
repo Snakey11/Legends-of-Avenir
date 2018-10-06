@@ -1,0 +1,310 @@
+
+EventPointerTable(Merc5MilitiaWaitCesariaEvents,ThisChapter)
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0x0,FinocElanilHere,2)
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Armory(ShopList,5,12)
+Village(0x11,NVillage,12,15)
+Village(0x12,SVillage,5,17)
+House(0x0,NHouse,15,15)
+House(0x0,SHouse,14,16)
+END_MAIN
+
+MiscBasedEvents:
+AREA 0x13 MendPickup [11,2] [14,3]
+AREA 0x14 AircaliburPickup [9,0] [10,3]
+AREA 0x15 TalismanPickup [2,5] [5,6]
+AREA 0x16 SteelLongbowPickup [18,17] [18,18]
+CauseGameOverIfLordDies
+DefeatAll(EndingScene)
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+Units:
+UNIT
+
+BeginningScene:
+REMU Finoc
+REMU Elanil
+SVAL 0xB Coords(7,5)
+LOMA LeavingUndergroundCutscene
+LOAD3 0x1 PlayerLoading1
+LOAD2 0x1 LukeStart
+SetBackground(0x30)
+Text(Merc5MilitiaWaitCesariaBeginningText)
+EndConvo
+STAL 0x10
+MoveMercenary(5,4)
+STAL 0x10
+LOAD1 0x1 MaximusCutscene
+ENUN
+EnterStop
+STAL 0x8
+FADI 0x5
+MUSC Advance
+LOAD1 0x1 JasperDerek
+SetBackground(0x30)
+Text(Merc5MilitiaWaitCesariaPlansText)
+EndConvo
+STAL 0x10
+MoveMercenary(9,6)
+FADI 0x5
+MUSC Sorrow
+CLEN Maximus
+SVAL 0xB Coords(6,6)
+LOMA MercenaryMilitiaWaitCesaria5
+LOAD3 0x1 PlayerLoading2
+LOAD1 0x1 Meanies
+LOAD2 0x1 Allies
+ENUN
+SetBackground(0x30)
+Text(Merc5MilitiaWaitCesariaArcPlayerText)
+FADI 0x5
+MUSC Advance
+STAL 0x20
+SetBackground(0x30)
+Text(Merc5MilitiaWaitJasperDerekText)
+EndConvo
+STAL 0x30
+CAM1 [12,14]
+EnterStop
+Text(Merc5MilitiaWaitCesariaGrantText)
+NoFade
+ENDA
+
+EndingScene:
+FADI 0x5
+MUSC Victory
+SetBackground(0x30)
+Text(Merc5MilitiaWaitCesariaEndingText)
+MoveToChapter(MercenaryMilitiaWaitCesaria6)
+ENDA
+
+FinocElanilHere:
+MUSS Comrades
+_0x2620 0x1700
+LOAD1 0x1 LoadFinoc
+ENUN
+REVEAL Finoc
+SVAL 0x1 0x1
+SET_STATE Finoc
+_0x2620 0x1700
+LOAD1 0x1 LoadElanil
+ENUN
+REVEAL Elanil
+SVAL 0x1 0x1
+SET_STATE Elanil
+CAM1 [6,9]
+ENUN
+STAL 0x20
+Text(Merc5MilitiaWaitCesariaElanilFinocHereText)
+MURE 0x5
+NoFade
+ENDA
+
+ShopList:
+SHLI SteelSword SteelLance SteelAxe SteelBow Elwind Elthunder Divine 0x0
+ALIGN 4
+
+NVillage:
+MUSI
+Text(0x2,Merc5MilitiaWaitCesariaHouse1Text)
+GiveItem(ElysianWhip,0xFFFF)
+MUNO
+NoFade
+ENDA
+
+SVillage:
+MUSI
+Text(0x2,Merc5MilitiaWaitCesariaHouse2Text)
+GiveItem(BraveAxe,0xFFFF)
+MUNO
+NoFade
+ENDA
+
+NHouse:
+MUSI
+Text(0x85) // NEEDS TEXT
+MUNO
+NoFade
+ENDA
+
+SHouse:
+MUSI
+Text(0x85) // NEEDS TEXT
+MUNO
+NoFade
+ENDA
+
+MendPickup:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x10 0x0 0xC
+	//If allied
+	RANDOMNUMBER 20
+	SADD 0xC01 // Moves the random number to slot 1
+	CHECK_LUCK 0xFFFF
+	BGE 0x10 0x1 0xC // Branch if 0x1 is less than 0xC?
+		GiveItem(Mend,0xFFFF)
+GOTO 0x11
+LABEL 0x10
+	ENUF 0x13
+LABEL 0x11
+NoFade
+ENDA
+
+AircaliburPickup:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x12 0x0 0xC
+	//If allied
+	RANDOMNUMBER 20
+	SADD 0xC01 // Moves the random number to slot 1
+	CHECK_LUCK 0xFFFF
+	BGE 0x12 0x1 0xC // Branch if 0x1 is less than 0xC?
+		GiveItem(Aircalibur,0xFFFF)
+GOTO 0x13
+LABEL 0x12
+	ENUF 0x14
+LABEL 0x13
+NoFade
+ENDA
+
+TalismanPickup:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x14 0x0 0xC
+	//If allied
+	RANDOMNUMBER 20
+	SADD 0xC01 // Moves the random number to slot 1
+	CHECK_LUCK 0xFFFF
+	BLE 0x14 0x1 0xC // Branch if 0x1 is less than 0xC?
+		GiveItem(Talisman,0xFFFF)
+GOTO 0x15
+LABEL 0x14
+	ENUF 0x15
+LABEL 0x15
+NoFade
+ENDA
+
+SteelLongbowPickup:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x16 0x0 0xC
+	//If allied
+	RANDOMNUMBER 20
+	SADD 0xC01 // Moves the random number to slot 1
+	CHECK_LUCK 0xFFFF
+	BGT 0x16 0x1 0xC // Branch if 0x1 is less than 0xC
+		GiveItem(SteelLongbow,0xFFFF)
+GOTO 0x17
+LABEL 0x16
+	ENUF 0x16
+LABEL 0x17
+NoFade
+ENDA
+
+	/*UNIT DATA*/
+
+PlayerLoading1:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(4,Ally,True) [8,9] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(4,Ally,True) [8,9] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(4,Ally,True) [8,9] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(4,Ally,True) [8,9] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(4,Ally,True) [8,9] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(4,Ally,True) [8,9] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(4,Ally,True) [8,9] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(4,Ally,True) [8,9] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT	
+	
+PlayerLoading2:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(4,Ally,True) [4,1] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(4,Ally,True) [4,1] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(4,Ally,True) [4,1] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(4,Ally,True) [4,1] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(4,Ally,True) [4,1] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(4,Ally,True) [4,1] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(4,Ally,True) [4,1] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(4,Ally,True) [4,1] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT
+
+LukeStart:
+UNIT Luke Monk Luke Level(4,Ally,True) [7,8] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT
+
+MaximusCutscene:
+UNIT Maximus Sage Maximus Level(4,NPC,True) [0,1] 0x00 0x00 0x1 REDA4R3 [IronSword,Vulnerary] NoAI 
+UNIT Lux Mage_F Lux Level(10,Ally,True) [1,0] 0x00 0x00 0x1 REDA5R2 [Elaqua,Fire] NoAI 
+UNIT
+
+Meanies:
+UNIT Grant Ranger Grant Level(4,Enemy,True) [17,16] Drop 0x00 0x00 0x00 [SteelShortbow,Armorslayer,HeroCrest] AttackInRangeAI
+UNIT Arcanian Hero Grant Level(3,Enemy,True) [16,12] 0x00 0x00 0x00 0x00 [Wyrmslayer] AttackInRangeAI
+UNIT Arcanian Mage Grant Level(10,Enemy,True) [17,11] 0x00 0x00 0x00 0x00 [Elfire] AttackInRangeAI
+UNIT Arcanian MageKnight Grant Level(2,Enemy,True) [15,18] 0x00 0x00 0x00 0x00 [Arcaqua,Mend] ChaseOnceApproachedAI
+UNIT Arcanian Soldier Grant Level(9,Enemy,True) [0,15] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Arcanian Fighter Grant Level(9,Enemy,True) [1,14] 0x00 0x00 0x00 0x00 [Halberd] NoAI
+UNIT Arcanian Pirate Grant Level(8,Enemy,True) [2,15] 0x00 0x00 0x00 0x00 [HandAxe] ChaseOnceApproachedAI
+UNIT Arcanian Myrmidon Grant Level(8,Enemy,True) [3,16] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
+UNIT Arcanian Druid Grant Level(4,Enemy,True) [1,17] Drop 0x00 0x00 0x00 [Slime,Wind,GuidingRing] AttackInRangeAI
+UNIT Arcanian PegasusKnight Grant Level(11,Enemy,True) [16,18] 0x00 0x00 0x00 0x00 [SlimLance] NoAI
+UNIT Arcanian WyvernRider Grant Level(11,Enemy,True) [17,17] 0x00 0x00 0x00 0x00 [SilverLance] NoAI
+UNIT Arcanian PegasusKnight Grant Level(10,Enemy,True) [18,16] 0x00 0x00 0x00 0x00 [HeavySpear] NoAI
+UNIT Arcanian Knight Grant Level(7,Enemy,True) [6,6] 0x00 0x00 0x00 0x00 [Javelin] GuardAI
+UNIT Arcanian Sentinel Grant Level(2,Enemy,True) [7,5] 0x00 0x00 0x00 0x00 [SteelLance] GuardAI
+UNIT Arcanian Mage Grant Level(6,Enemy,True) [8,4] 0x00 0x00 0x00 0x00 [Thunder] GuardAI
+UNIT Arcanian Archer Grant Level(8,Enemy,True) [8,8] 0x00 0x00 0x00 0x00 [SteelShortbow] AttackInRangeAI
+UNIT Arcanian Archer Grant Level(9,Enemy,True) [9,7] 0x00 0x00 0x00 0x00 [DevilBow] AttackInRangeAI
+UNIT Arcanian Pirate Grant Level(8,Enemy,True) [7,15] 0x00 0x00 0x00 0x00 [Tomahawk] ChaseOnceApproachedAI
+UNIT Arcanian Mage Grant Level(9,Enemy,True) [15,6] 0x00 0x00 0x00 0x00 [Elwind] AttackInRangeAI
+UNIT Arcanian Halberdier Grant Level(3,Enemy,True) [15,4] 0x00 0x00 0x00 0x00 [ShortSpear] AttackInRangeAI
+UNIT Arcanian Halberdier Grant Level(3,Enemy,True) [13,6] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT Arcanian Cavalier Grant Level(7,Enemy,True) [7,10] 0x00 0x00 0x00 0x00 [SteelLance,Zanbato] NoAI
+UNIT Arcanian Cavalier Grant Level(9,Enemy,True) [6,11] 0x00 0x00 0x00 0x00 [DragonSpear] NoAI
+UNIT Arcanian GreatKnight Grant Level(2,Enemy,True) [9,17] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] ChaseOnceApproachedAI
+UNIT Arcanian Monk Grant Level(10,Enemy,True) [3,10] Drop 0x00 0x00 0x00 [Shine] AttackInRangeAI
+UNIT Arcanian Mercenary Grant Level(9,Enemy,True) [16,8] 0x00 0x00 0x00 0x00 [IronSword] AttackInRangeAI
+UNIT
+
+Allies:
+UNIT Lux Mage_F Lux Level(4,Ally,True) [1,2] 0x00 0x00 0x00 0x00 [Elaqua,Fire] NoAI 
+UNIT Arc Mage_F Lux Level(4,Ally,True) [2,1] 0x00 0x00 0x00 0x00 [Elaqua,Fire] NoAI 
+UNIT Luke Mage_F Lux Level(4,Ally,True) [3,2] 0x00 0x00 0x00 0x00 [Elaqua,Fire] NoAI 
+
+JasperDerek:
+UNIT Jasper Cavalier Lux Level(9,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [SteelSword,Javelin] NoAI 
+UNIT Derek Knight Lux Level(8,Ally,True) [3,2] 0x00 0x00 0x00 0x00 [SteelLance,HeavySpear,KnightCrest] NoAI 
+UNIT
+
+LoadFinoc:
+UNIT Finoc Cavalier Lux Level(6,Ally,True) [0,8] 0x00 0x00 0x00 0x00 [SteelSword,Javelin] NoAI 
+UNIT
+
+LoadElanil:
+UNIT Elanil Cavalier Lux Level(6,Ally,True) [0,7] 0x00 0x00 0x00 0x00 [SteelSword,Javelin] NoAI 
+UNIT

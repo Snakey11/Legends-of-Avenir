@@ -1,0 +1,7 @@
+
+//modify CHAI to be able to change 3 and 4, not just 1 and 2
+ORG $10644
+jumpToHack(New_CHAI)
+ALIGN 4
+New_CHAI:
+#incbin "New_CHAI.dmp

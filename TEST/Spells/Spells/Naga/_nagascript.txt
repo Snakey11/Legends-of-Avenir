@@ -1,0 +1,67 @@
+/// - Naga
+C00
+C00
+C00
+C00
+C00
+C00
+C00
+//C081029
+CFFCC29
+///100% brightness
+///80% opacity
+O  blank.png
+B  naga_001.png
+3
+O  blank.png
+B  naga_002.png
+4
+C00DC48
+///mamkute transform
+O  blank.png
+B  naga_003.png
+5
+O  blank.png
+B  naga_004.png
+5
+O  blank.png
+B  naga_005.png
+6
+O  blank.png
+B  naga_006.png
+14
+O  blank.png
+B  naga_007.png
+20
+O  blank.png
+B  naga_008.png
+4
+C010148
+//purge strike sfx
+O  blank.png
+B  naga_009.png
+4
+O  blank.png
+B  naga_010.png
+4
+C00001A
+C1F
+///Spell hits or misses on this frame
+O  blank.png
+B  naga_011.png
+5
+O  blank.png
+B  naga_012.png
+6
+O  blank.png
+B  naga_013.png
+8
+O  blank.png
+B  naga_014.png
+14
+~~~
+O  blank.png
+B  naga_014.png
+1
+~~
+/// - End Animation

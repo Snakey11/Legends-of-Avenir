@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="17" height="18" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="01005B03" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/01005B03.png" width="512" height="512"/>
+  <tile id="633">
+   <properties>
+    <property name="Main" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="17" height="18">
+  <properties>
+   <property name="Anims" value="01Anims"/>
+   <property name="ChapterID" value="MercenaryBandit3"/>
+   <property name="MapID" value="CaravanPathMap"/>
+   <property name="ObjectType" value="0x01"/>
+   <property name="PaletteID" value="0x5B"/>
+   <property name="TileConfig" value="0x03"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxNVDsvRFEQPvdsEBsbIipUxCNiNx6hobyFiMIqkCj3Jl6NR4GCSisSjVq3FBuPvyBZEktW/AEKlbUi0fsm55ucU3yZc+fOfPPN3DN3zhpTjIypASXaUfgSY0wrzkNAAedr2Cf4v2DXYFuAe5zXYTPAJXMrwCtwjJySdRzfwpXyPBnmDwNXzJshh2rIWxcv6MPzA2wWmCHvD3nmgHKgf9M6m2cPomMbtXeBE/hjPJ+SZwQxF8bzbFinX2dQogbJ7wDuyFGFfxX+LfIUyCU8H5yB6o/5/ob5oqdO/yiex1KOK0ef9PUZzLBoXT3lidnTcTDTxHidO+xV9OTZg8S2MVZykoAjpk/ndEaM004Z/x3CfvbB2w304jwFu2d9n7fAm3VWej6UeGqImSs5S9brFyyTcxpYtE6X1jnC+z9ggvUPrNMr83sJOMpAO2b3TD6tEzNfMUm/aGpAfL/cUzzXgSzOA0A6cpz6nZIgfyWoWTUufz7Yg9/IzT5LjtZg/spxDjTxbkvMd+T2QjmUpxk56ZSr00i+TqALqAGD8OXoz1m/S7qPyiP15S7JPi0wvmp9H6JXe6hwl8TOwvbw/Bv5u6f3KAkwz/9C2IPs43vkefVu6zy0/yLrywxkBx6D/8Fs8J8RX116CHb0H9gWkt4=
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="22" height="20" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="6C006D6E" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/6C006D6E.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="22" height="20">
+  <properties>
+   <property name="Anims" value="6CAnims"/>
+   <property name="ChapterID" value="MercenaryMilitiaKill3"/>
+   <property name="MapID" value="HaedricHideoutMap"/>
+   <property name="ObjectType" value="0x6C"/>
+   <property name="PaletteID" value="0x6D"/>
+   <property name="TileConfig" value="0x6E"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJyVlF9Kw0AQxkP2oeCLx9iX3iKB1oeAhzA2IBUPYX1QanuHILSlFp/UE1il/nnzCEUoQo/gLPmWTIZpTB9+bDKZ+XZmMzutIAhagjFxQuRYHQND34grU7WnWJfMliuaDkt0mZ/Dkt6NKdZU0ZH7eK0LwHNeM/875NsYiskQ63RGTJvnPCXfCZEQ58T3P2RBtd6ecs6ON/J9JfrEgvgixjW4mFhoT4Oyjlx8G0L3gdjW4OvnsWfEQthi7OF0b5muFc9el/dPynS4XebLdR/D4tn1ynNY6lqclRXx0r5GzvIcXJ88hQUHLN9r4gcr19Xssch3rvyvOXRniJ8J3V32e5bvu/K/vG2F+JWI1+wu3w96/2zQDxtT/OcN4hPcB/d+yOyeX/QxP19/x06ZPWI9+kL0MR+Oca/byqzgPS/7W8P79KDZxV4jpr3cEet6NIJ/Aq1U+ERMv409JorWpVLDkDhSfAdmv7nl700HZ2dBjtzlfaibKZyOKWvLsFpxtlFQve9N8LNLzsRI2PbV3QpdX/sfTfzdHA==
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,222 @@
+Nothing
+Iron Sword
+Thin Sword
+Steel Sword
+Silver Sword
+Iron Blade
+Steel Blade
+Silver Blade
+Poison Sword
+Rapier
+Mani Katti (DUMMY)
+Hero Sword
+Shamshir
+Killer Sword
+Armour Killer
+Dragon Killer
+Light Sword
+Rune Sword
+Lancebuster
+Long Sword
+Iron Spear
+Thin Spear
+Steel Spear
+Silver Spear
+Poison Spear
+Hero Spear
+Killer Lance
+Horse Killer
+Javelin
+Slender Spear
+Axebuster
+Iron Axe
+Steel Axe
+Silver Axe
+Poison Axe
+Hero Axe
+Killer Axe
+Halberd
+Hammer
+Devil Axe
+Hand Axe
+Tomahawk
+Swordbuster
+Sword Killer
+Trainee Axe
+Iron Bow
+Steel Bow
+Silver Bow
+Poison Bow
+Killer Bow
+Hero Bow
+Short Bow
+Longbow
+Ballista
+Iron Ballista
+Killer Ballista
+Fire
+Thunder
+Elfire
+Thunderstorm
+Fimbulvetr
+Forblaze (DUMMY)
+Excalibur
+Lightning
+Shine
+Divine
+Purge
+Aura
+Luce (DUMMY)
+Flux
+Luna
+Nosferatu
+Eclipse
+Fenrir
+Gleipnir
+Live
+Relive
+Recover
+Libro
+Reserve
+Restore
+Silence
+Sleep
+Berserk
+Warp
+Rescue
+Torch
+Hammerne
+Unlock
+Barrier
+Dragon Axe
+Angelic Robe
+Energy Ring
+Secret Book
+Speedwings
+Goddess Icon
+Dragon Shield
+Talisman
+Boots
+Body Ring
+Hero's Crest
+Knight's Crest
+Orion's Bolt
+Elysian Whip
+Guiding Ring
+Chest Key
+Door Key
+Thief Key
+Vulnerary
+Elixir
+Pure Water
+Antitoxin
+Torch
+Delphi Shield
+Member Card
+Silver Card
+White Gem
+Blue Gem
+Red Gem
+Gold
+Reginleif
+Chest Key (5)
+Mine (DUMMY)
+Light Rune (DUMMY)
+Hopron Shield
+Filla's Might (DUMMY)
+Ninis's Grace (DUMMY)
+Thor's Ire (DUMMY)
+Set's Litany (DUMMY)
+Shadow Killer
+Bright Lance
+Fiend Cleaver
+Beacon Bow
+Sieglind
+Battle Axe
+Ivaldi
+Master Proof
+Metis's Tome
+Heaven Seal (DUMMY)
+Sharp Claw
+Latona
+Dragon Lance
+Vidofnir
+Naglfal
+Decaying Breath
+Audomra
+Siegmund
+Garm
+Nidhogg
+Heavy Lance
+Short Spear
+Ocean Seal
+Moon Bracelet
+Sun Bracelet
+1G
+5G
+10G
+50G
+100G
+3000G
+5000G
+Wind Sword
+Arms Scroll
+Vulnerary (green note)
+Vulnerary (red note)
+Dance
+Nightmare
+Demon Stone
+Demon Light
+Ravager
+Holy Dragon Stone
+Demon Surge
+Shadowshot
+Rotten Claw
+Fetid Claw
+Poison Claw
+Long Poison Claw
+Fire Fang
+Hell Fang
+Evil Eye
+Bloody Eye
+Stone
+Aircalibur
+Juna Fruit
+150G
+200G
+Black Gem
+Gold Gem
+Aqua Edge
+Arcthunder
+Bolagnone
+New Excalibur
+Dasher
+Ragnorak
+Shaver
+Thoron
+Tornado
+Wind
+Dulam
+Slime
+Swarm
+Worm
+Artimes
+Thani
+Exordium
+Starlight
+Devil Sword
+Devil Spear
+Devil Bow
+Flare
+Steel Longbow
+Silver Longbow
+Steel Shortbow
+Silver Shortbow
+Elthunder
+Arcfire
+Lanceslayer
+Axeslayer
+Arms Scorll
+Elaqua
+Arcaqua
+Meteor

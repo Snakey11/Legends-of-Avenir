@@ -1,0 +1,1082 @@
+
+//Label Item defenitions
+#define Spears Lances
+#define IronSpear IronLance
+#define SteelSpear SteelLance
+#define BraveSpear BraveLance
+#define SilverSpear SilverLance
+//#define MasterSeal MasterProof
+#define SwordSlayer Swordslayer
+#define LanceSlayer Lanceslayer
+#define AxeSlayer Axeslayer
+#define DevilLance DevilSpear
+#define RuneSword Runesword
+#define SwordReaver Swordreaver
+#define LanceReaver Lancereaver
+#define AxeReaver Axereaver
+//#define OceanSeal ConquerorsProof
+#define Dragonspear DragonSpear
+#define ArmorSlayer 0x0E
+//#define Armorslayer 0x0E
+//#define Zanbato 0x13
+#define ShortAxe 0x2C
+#define IronShortbow 0x33
+#define IronLongbow 0x34
+#define Speedwing 0x5E
+#define ArmsScroll 0xA2
+#define Aqua 0xBC
+#define Arcthunder 0xBD
+#define Bolganone 0xBE
+#define Arcwind 0xBF
+#define Dasher 0xC0
+#define Ragnorak 0xC1
+#define Elwind 0xC2
+#define Thoron 0xC3
+#define Tornado 0xC4
+#define Wind 0xC5
+#define Dulam 0xC6
+#define Slime 0xC7	
+#define Swarm 0xC8
+#define Worm 0xC9
+#define Artimes 0xCA
+#define Artemis Artimes
+#define Thani 0xCB
+#define Exordium 0xCC
+#define Starlight 0xCD
+#define DevilSword 0xCE
+#define DevilSpear 0xCF
+#define DevilBow 0xD0
+#define Flare 0xD1
+#define SteelLongbow 0xD2
+#define SilverLongbow 0xD3
+#define SteelShortbow 0xD4
+#define SilverShortbow 0xD5
+#define Elthunder 0xD6
+#define Arcfire 0xD7
+#define Lanceslayer 0xD8
+#define Axeslayer 0xD9
+//#define ArmsScroll 0xDA
+#define Elaqua 0xDB
+#define Arcaqua 0xDC
+#define Meteor 0xDD
+//EndLabel
+
+//Label Class defenitions
+#define Patriarch 0x52
+#define Matriarch 0x53
+#define DarkKnightM 0x54
+#define DarkKnightF 0x55
+#define MagusM 0x56
+#define Magus MagusM
+#define MagusF 0x57
+#define MasterKnightF 0x58
+#define Commander 0x59
+#define Impaler 0x5A
+#define WyvernGeneral 0x5B
+#define Hunter 0x5C
+#define MasterKnightM 0x5D
+#define Champion 0x5E
+#define TruebladeF 0x5F
+#define Shadow 0x5F
+#define TruebladeM 0x60
+#define Trueblade 0x60
+#define MountedBrigand 0x61
+#define Maurader 0x61
+#define Mountainier 0x63
+#define BlackFalcoknight 0x64
+#define MageM2 0x73
+#define MageF2 0x74
+#define ShamanM2 0x75
+#define ShamanF2 0x76
+#define MonkM2 0x77
+#define MonkF2 0x78
+#define CavalierM2 0x79
+#define CavalierF2 0x7A
+#define Knight2 0x7B
+#define Soldier2 0x7C
+#define WyvernRider2 0x7D
+#define ArcherM2 0x7E
+#define ArcherF2 0x7F
+#define MercenaryM2 0x80
+#define MercenaryF2 0x81
+#define Fighter2 0x82
+#define Brigand2 0x83
+#define Pirate2 0x84
+#define MyrmidonM2 0x85
+#define MyrmidonF2 0x86
+#define PegasusKnight2 0x87
+#define Halberdier 0x88
+#define Sentinel 0x89
+#define JacketHero 0x8A
+#define Gladiator 0x8B
+#define Basileus Gladiator
+#define HectorClass 0x8C
+#define Hector HectorClass
+#define Truerblade 0x8D
+#define GaidenSage 0x8E
+#define IzukClass 0x8F
+#define Nomad 0x90
+#define NarratorClass 0x91
+#define Warlock 0x92
+#define SpearHero 0x93
+#define XeximClass 0x94
+#define GrandPaladin 0x95
+//EndLabel
+
+//Label Character definitions
+#undef Hunter
+#define PlayerMMonk 0x1
+#define PlayerMShaman 0x2 
+#define PlayerMMage 0x3
+#define PlayerFMonk 0x4
+#define PlayerFShaman 0x5
+#define PlayerFMage 0x6
+#define PlayerMCavalier 0x7
+#define PlayerMKnight 0x8
+#define PlayerMSoldier 0x9
+#define PlayerMWyvernRider 0xA
+#define PlayerFCavalier 0xB
+#define PlayerFKnight 0xC
+#define PlayerFSoldier 0xD
+#define PlayerFWyvernRider 0xE
+#define PlayerMMercenary 0xF
+#define PlayerMFighter 0x10
+#define PlayerMBrigand 0x11
+#define PlayerMPirate 0x12
+#define PlayerMMyrmidon 0x13
+#define PlayerFMercenary 0x14
+#define PlayerFMyrmidon 0x15
+#define PlayerFPegasusKnight 0x16
+#define Xena 0x17
+#define Vicar 0x18
+#define Walter 0x19
+#define Baret 0x1A
+#define Val 0x1B
+#define Helmer 0x1C
+#define Xavus 0x1D
+#define Dunlas 0x1E
+#define Johnathan 0x1F
+#define Elanil 0x20
+#define Izuk 0x21
+#define Maximus 0x22
+#define Jurgen 0x23
+#define Leon 0x24
+#define Jasper 0x25
+#define Derek 0x26
+#define Lux 0x27
+#define Yvette 0x28
+#define Zalius 0x29
+#define Leyos 0x2A
+#define Clara 0x2B
+#define Luke 0x2C
+#define Arc 0x2D
+#define Efil 0x2E
+#define Uzkailis 0x2F
+#define Arya 0x30
+#define Kendrick 0x31
+#define Connor 0x32
+#define Adlez 0x33
+#define Muriel 0x34
+#define Brady 0x35
+#define Forrest 0x36
+#define Cougar 0x37
+#define Shannon 0x38
+#define PlayerMArcher 0x39
+#define PlayerFArcher 0x3A
+#define Finoc 0x3B
+#define Xexim 0x3C
+#define Uzkalis 0x3D
+#define Rex 0x3E
+
+#define Henning 0x43
+#define Gerwick 0x44
+#define Militiaman 0x45
+#define Weston 0x46
+#define GerwickBandit 0x47
+#define WestonBandit 0x48
+#define KendrickFriend 0x49
+#define Robert 0x4A
+#define RobertPirate 0x4B
+#define BossGhost 0x4C
+#define TankGhost 0x4D
+#define FastGhost 0x4E
+#define StrongGhost 0x4F
+#define MageGhost 0x50
+#define Aaron 0x52
+#define Cesarian 0x53
+#define Shizonian 0x54
+#define Narrator 0x56
+#define Arcanian 0x58
+#define Guardian 0x5A
+#define William 0x5B
+#define Emperor 0x5C
+#define Grant 0x5D
+#define Pat 0x5E
+#define BossUzkalis 0x5F
+#define BossArc 0x60
+#define Roger 0x61
+#define Haedrican 0x62
+#define Tyrone 0x63
+#define Mayor 0x64
+#define Bacrunian 0x65
+#define Harken 0x66
+#define Mason 0x67
+#define Hunter 0x68
+#define Daniel 0x69
+#define Wanderer 0x6A
+#define MageMAvatar 0x6B
+#define MageFAvatar 0x6C
+#define MercenaryMAvatar 0x6D
+#define MercenaryFAvatar 0x6E
+#define MilitaryMAvatar 0x6F
+#define MilitaryFAvatar 0x70
+//EndLabel
+
+//Label Portrait Defenitions
+#define setCardEntry(cardEntry,cardLocation,cardPaletteLocation) "PUSH; ORG PortraitTable+cardEntry*0x1C; POIN 0 0 cardPaletteLocation 0 cardLocation; POP"
+
+#define MaleMageMug 0x3
+#define FemaleMageMug 0x4
+#define MaleMercMug 0x5
+#define FemaleMercMug 0x6
+#define MaleMilitaryMug 0x7
+#define FemaleMilitaryMug 0x8
+#define XenaMug 0x09
+#define VicarMug 0x0A
+#define WalterMug 0x0B
+#define BaretMug 0x0C
+#define ValMug 0x0D
+#define HelmerMug 0x0E
+#define XavusMug 0x0F
+#define DunlasMug 0x10
+#define JohnathanMug 0x11
+#define ElanilMug 0x12
+#define IzukMug 0x13
+#define MaximusMug 0x14
+#define JurgenMug 0x15
+#define LeonMug 0x16
+#define JasperMug 0x17
+#define DerekMug 0x18
+#define LuxMug 0x19
+#define YvetteMug 0x1A
+#define ZaliusMug 0x1B
+#define LeyosMug 0x1C
+#define ClaraMug 0x1D
+#define LukeMug 0x1E
+#define ArcMug 0x1F
+#define EfilMug 0x20
+#define UzkalisMug 0x21
+#define AryaMug 0x22
+#define KendrickMug 0x23
+#define LukasMug 0x24
+#define AdlezMug 0x25
+#define MurielMug 0x26
+#define BradyMug 0x27
+#define ForestMug 0x28
+#define CougarMug 0x29
+#define ShannonMug 0x2A
+#define MerchantMug 0x2B
+#define HenningMug 0x39
+#define GerwickMug 0x32
+#define InkeeperMug 0x2E
+#define MilitiaManMug 0x2F
+#define WestonMug 0x30
+#define ConnorMug 0x31
+#define EscortMug 0x32
+#define OfficialMug 0x33
+#define RobertMug 0x34
+#define XeximMug 0x35
+#define HalberdierCard 0x36
+#define SentinelCard 0x37
+#define EmperorMug 0x39
+#define AssassinCard 0x3A
+#define NarratorMug 0x3B
+#define RexMug 0x3C
+#define FinocMug 0x3E
+#define AaronMug 0x3F
+#define WilliamMug 0x40
+#define GrantMug 0x41
+#define PatMug 0x42
+#define RogerMug 0x43
+#define TyroneMug 0x44
+#define MayorMug 0x45
+#define HarkenMug 0x46
+#define MasonMug 0x47
+#define DanielMug 0x48
+//EndLabel
+
+//Label Spell Definitions
+#define HandAxeAnim 0x01
+#define ArrowAnim 0x02
+#define AquaAnim 0x48
+#define ArcthunderAnim 0x49
+#define BolganoneAnim 0x4A
+#define ArcwindAnim 0x4B
+#define DasherAnim 0x4C
+#define MeteorAnim 0x4D
+#define RagnorakAnim 0x4E
+#define ElwindAnim 0x4F
+#define ThoronAnim 0x50
+#define TornadoAnim 0x51
+#define WindAnim 0x52
+#define DulamAnim 0x53
+#define SlimeAnim 0x54
+#define SwarmAnim 0x55
+#define WormAnim 0x56
+#define ArtimesAnim 0x57
+#define ArtemisAnim ArtimesAnim
+#define AuraAnim 0x58
+#define ExordiumAnim 0x59
+#define LightArrowAnim 0x5A
+#define StarlightAnim 0x5B
+#define ThunderAnim 0x5C
+#define ElthunderAnim 0x5D
+#define ArcfireAnim 0x5E
+#define ElaquaAnim 0x5F
+#define ArcaquaAnim 0x60
+
+#define WhiteFlash 0x0
+#define DarkFlash 0x1
+#define RedFlash 0x2
+#define GreenFlash 0x3
+#define BlueFlash 0x4
+#define YellowFlash 0x5
+//EndLabel
+
+//Label Chapter Defenitions
+#define PrologueChapter 0x0
+#define Mage1 0x1
+#define MageEscape2 0x2
+#define MageEscape3 0x3
+#define MageEscape4 0x4
+#define MageEscape5 0x5
+#define MageEscapeXavus6 0x6
+#define MageEscapeXavus7 0x7
+#define MageInvestigate2 0x8
+#define MageInvestigate3 0x9
+#define MageInvestigate4 0xA
+#define MageInvestigate5 0xB
+#define MageInvestigate6 0xC
+#define MageInvestigate7 0xD
+#define MageEscapeCesaria6 0xE
+#define MageEscapeCesaria7 0xF
+#define Military1 0x10
+#define MilitaryPromotion2 0x11
+#define MilitaryPromotion3 0x12
+#define MilitaryPromotionHold4 0x13
+#define MilitaryPromotionHold5 0x14
+#define MilitaryPromotionHold6 0x15
+#define MilitaryPromotionHold7 0x16
+#define MilitaryPromotionRetreat4 0x17
+#define MilitaryPromotionRetreatLeave5 0x18
+#define MilitaryPromotionRetreatLeave6GrowingTown1 0x19
+#define MilitaryPromotionRetreatLeave7 0x1A
+#define MilitaryPromotionRetreatHelp5 0x1B
+#define MilitaryPromotionRetreatHelp6 0x1C
+#define MilitaryPromotionRetreatHelp7 0x1D
+#define MilitaryPass2 0x1E
+#define MilitaryPass3 0x1F
+#define MilitaryPass4 0x20
+#define MilitaryPass5 0x21
+#define MilitaryPass6 0x22
+#define MilitaryPass7 0x23
+#define Mercenary1 0x3B
+#define MercenaryMilitia2 0x3C
+#define MercenaryMilitiaWait3 0x3D
+#define MercenaryMilitiaWait4 0x3E
+#define MercenaryMilitiaWaitArcanae5 0x3F
+#define MercenaryMilitiaWaitArcanae6 0x40
+#define MercenaryMilitiaWaitArcanae7 0x41
+#define MercenaryMilitiaWaitCesaria5 0x42
+#define MercenaryMilitiaWaitCesaria6 0x43
+#define MercenaryMilitiaWaitCesaria7 0x44
+#define MercenaryMilitiaKill3 0x45
+#define MercenaryMilitiaKill4 0x46
+#define MercenaryMilitiaKill5 0x47
+#define MercenaryMilitiaKill6 0x48
+#define MercenaryMilitiaKill7 0x49
+//#define MercenaryBandit2 0x4A
+#define MercenaryBandit3 0x4B
+#define MercenaryBandit4 0x4C
+#define MercenaryBanditBandit5 0x4D
+#define MercenaryBanditBandit6 0x4E
+#define MercenaryBanditBandit7 0x4F
+#define MercenaryBanditDisband5 0x50
+#define MercenaryBanditDisband6 0x51
+#define MercenaryBanditDisband7 0x52
+#define MilitaryPromotionRetreatLeave6GrowingTown2 0x53
+#define MilitaryPromotionRetreatLeave6GrowingTown3 0x54
+#define ShizonShrineCutscene 0x55
+#define LeavingShizonCutscene 0x56
+#define LeavingUndergroundCutscene 0x57
+#define OutsideTempleCutscene 0x58
+#define MercenaryCampCutscene 0x59
+#define MaximusUzkalisCutscene 0x5A
+#define HaedricCastleCutscene 0x5B
+#define OutsideKilthelCutscene 0x5C
+#define ArtifactDoorCutscene 0x5D
+#define MercenaryBandit2 0x5E // Should fix the NO DATA chapter name glitch
+#define BacrunRuins1Cutscene 0x5F
+//EndLabel
+
+//Label Palette Definitions
+#define AdlezBrigandPaletteID 0x01
+#define AdlezBerserkerPaletteID 0x02
+#define AdlezWarriorPaletteID 0x03
+#define ArcFighterPaletteID 0x04
+#define ArcHeroPaletteID 0x05
+#define ArcWarriorPaletteID 0x06
+#define AryaMyrmidonPaletteID 0x07
+#define AryaAssassinPaletteID 0x08
+#define AryaSwordmasterPaletteID 0x09
+#define BaretMyrmidonPaletteID 0x0A
+#define BaretAssassinPaletteID 0x0B
+#define BaretSwordmasterPaletteID 0x0C
+#define ConnorMercenaryPaletteID 0x0D
+#define ConnorHeroPaletteID 0x0E
+#define ConnorRangerPaletteID 0x0F
+#define DerekKnightPaletteID 0x10
+#define DerekGeneralPaletteID 0x11
+#define DerekGreatKnightPaletteID 0x12
+#define EfilTruerbladePaletteID 0x13
+#define ElanilArcherPaletteID 0x14
+#define ElanilRangerPaletteID 0x15
+#define ElanilSniperPaletteID 0x16
+#define FinocWyvernRiderPaletteID 0x17
+#define FinocWyvernKnightPaletteID 0x18
+#define FinocWyvernLordPaletteID 0x19
+#define HelmerSoldierPaletteID 0x1A
+#define HelmerHalberdierPaletteID 0x1B
+#define HelmerSentinelPaletteID 0x1C
+#define JasperCavalierPaletteID 0x1D
+#define JasperGreatKnightPaletteID 0x1E
+#define JasperPaladinPaletteID 0x1F
+#define KendrickPiratePaletteID 0x20
+#define KendrickBerserkerPaletteID 0x21
+#define KendrickWarriorPaletteID 0x22
+#define LeonBasileusPaletteID 0x23
+#define LukeMonkPaletteID 0x24
+#define LukeBishopPaletteID 0x25
+#define LukeSagePaletteID 0x26
+#define LuxMagePaletteID 0x26
+#define LuxSagePaletteID 0x27
+#define LuxMageKnightPaletteID 0x28
+#define MaximusSagePaletteID 0x2A
+#define UzkalisGaidenSagePaletteID 0x2B
+#define ValShamanPaletteID 0x2C
+#define ValDruidPaletteID 0x2D
+#define ValSummonerPaletteID 0x2E
+#define VicarWarriorPaletteID 0x2F
+#define WalterArcherPaletteID 0x30
+#define WalterRangerPaletteID 0x31
+#define WalterSniperPaletteID 0x32
+#define MercenaryMMercenaryPaletteID 0x33
+#define MercenaryMMyrmidonPaletteID 0x34
+#define MercenaryMFighterPaletteID 0x35
+#define MercenaryMPiratePaletteID 0x36
+#define MercenaryMBrigandPaletteID 0x37
+#define MercenaryMChampionPaletteID 0x38
+#define MercenaryMTruebladePaletteID 0x39
+#define MercenaryMWarlockPaletteID 0x3A
+#define MercenaryMMountainierPaletteID 0x3B
+#define MercenaryMMauraderPaletteID 0x3C
+#define MercenaryFMercenaryPaletteID 0x3D
+#define MercenaryFMyrmidonPaletteID 0x3E
+#define MercenaryFPegasusKnightPaletteID 0x3F
+#define MercenaryFNomadPaletteID 0x40
+#define MercenaryFShadowPaletteID 0x41
+#define MercenaryFBlackFalcoknightPaletteID 0x42
+#define GerwickPiratePaletteID 0x43
+#define GhostSwordmasterPaletteID 0x44
+#define GrantRangerPaletteID 0x45
+#define HenningFighterPaletteID 0x46
+#define JurgenHeroPaletteID 0x47
+#define LeyosGuardianPaletteID 0x48
+#define PatMageKnightPaletteID 0x49
+#define RexPaladinPaletteID 0x4A
+#define RobertBerserkerPaletteID 0x4B
+//EndLabel
+
+//Label Maps, Map Changes, & Events
+#define EnterMap(ID) "PUSH;ORG EventPointerListOffset+(ID*4);POIN Map;POP"
+#define EnterChanges(ID) "PUSH;ORG EventPointerListOffset+(ID*4);POIN MapChanges;POP"
+
+#define ArcanaeCapitalMap 0x04
+#define ArcanaeOutpostMap 0x06
+#define AssassinTestMap 0x07
+#define BanditPassMap 0x08
+#define BigBattlegroundMap 0x09
+#define BigBoatDockMap 0x0A
+#define BigBridgeMap 0x0B
+#define BigPathMap 0x0C
+#define BoatsAtSeaMap 0x0D
+#define CaravanPathMap 0x11
+#define CastleEntranceMap 0x13
+#define CastleHallMap 0x14
+#define CesarianCapitalAssassinMap 0x15
+#define CliffMap 0x16
+#define CliffyRiverMap 0x17
+#define DefenseHallMap 0x1B
+#define DesertWithGrassMap 0x1D
+#define DesertyMap 0x1F
+#define FarmyTownMap 0x20
+#define FortressMap 0x21
+#define GrowingTown1Map 0x22
+#define GrowingTown2Map 0x23
+#define GrowingTown3Map 0x24
+#define HaedricHideoutMap 0x25
+#define HaedricCastleMap 0x26
+#define HaedricCityMap 0x27
+#define HaedricVenefrontMap 0x28
+#define LakeyMap 0x29
+#define LavaMap 0x2A
+#define LotsOfRoomsMap 0x2B
+#define LowerTempleMap 0x2C
+#define MayorsVillageMap 0x2D
+#define MountainsMap 0x31
+#define MountainyLakeMap 0x32
+#define MountainyMap 0x33
+#define PlainsMap 0x35
+#define PrologueMap 0x64
+#define RiveryMap 0x36
+#define RuinMap 0x37
+#define SkirmishMap 0x39
+#define TrainingFortressMap 0x3A
+#define UndergroundRuinMap 0x3B
+#define UndergroundMap 0x3F
+#define VenefrontLavaMap 0x40
+#define WalledTownMap 0x41
+#define ShizonDefenseMap 0x70
+#define ShizonShrineMap 0x73
+#define LeavingShizonMap 0x9F
+#define LeavingUndergroundMap 0x78
+#define CesarianCapitalMercenaryArcanaeMap 0x85
+#define OutsideTempleMap 0x87
+#define DesertMap 0x8B
+#define MaximusUzkalisCutsceneMap 0x8C
+#define HaedricCastleCutsceneMap 0x93
+#define BacrunCastleMap 0x94
+#define BacrunCityMap 0x96
+#define BacrunCity2Map 0x9B
+#define OutsideKilthelMap 0x9D
+#define ArtifactSlotMap 0x9E
+#define BacrunRuins1CutsceneMap 0xA1
+#define BacrunRuins2CutsceneMap 0xA2
+
+//Map Changes
+
+#define ArcanaeCapitalChanges 0x45
+#define BanditPassChanges 0x46
+#define BigBoatDockChanges 0x47
+#define BigBridgeChanges 0x49
+#define CastleEntranceChanges 0x4A
+#define CastleHallChanges 0x4B
+#define CesarianCapitalAssassinChanges 0x4D
+#define DefenseHallChanges 0x4E
+#define DesertChanges 0x4F
+#define GrowingTown1Changes 0x53
+#define GrowingTown23Changes 0x55
+#define HaedricCastleChanges 0x56
+#define HaedricCityChanges 0x58
+#define LavaChanges 0x59
+#define LotsOfRoomsChanges 0x5A
+#define LowerTempleChanges 0x5C
+#define MayorsVillageChanges 0x5D
+#define MountainsChanges 0x5E
+#define PlainsChanges 0x62
+#define UndergroundChanges 0x63
+#define ShizonDefenseChanges 0x74
+#define MountainyChanges 0x81
+#define CesarianCapitalMercenaryArcanaeChanges 0x86
+#define BacrunCastleChanges 0x95
+#define BacrunCityChanges 0x97
+#define BacrunCity2Changes 0x9C
+#define ArtifactSlotChanges 0xA0
+
+//Event Pointer References
+// Good until 0xA3
+
+#define PrologueEvent 0x65
+#define Merc1Events 0x66
+#define Merc2MilitiaEvents 0x67
+#define Merc3MilitiaKillEvents 0x69
+#define Merc4MilitiaKillEvents 0x6A
+#define Merc5MilitiaKillEvents 0x6B
+#define Merc6MilitiaKillEvents 0x6F
+#define Merc7MilitiaKillEvents 0x75
+#define Merc3MilitiaWaitEvents 0x76
+#define Merc4MilitiaWaitEvents 0x77
+#define Merc5MilitiaWaitArcanaeEvents 0x7C
+#define Merc6MilitiaWaitArcanaeEvents 0x7E
+#define Merc7MilitiaWaitArcanaeEvents 0x80
+#define Merc5MilitiaWaitCesariaEvents 0x82
+#define Merc6MilitiaWaitCesariaEvents 0x83
+#define Merc7MilitiaWaitCesariaEvents 0x84
+#define Merc2BanditEvents 0x8D
+#define Merc3BanditEvents 0x8E
+#define Merc4BanditEvents 0x8F
+#define Merc5BanditBanditEvents 0x90
+#define Merc6BanditBanditEvents 0x91
+#define Merc7BanditBanditEvents 0x92
+#define Merc5BanditDisbandEvents 0x98
+#define Merc6BanditDisbandEvents 0x99
+#define Merc7BanditDisbandEvents 0x9A
+//EndLabel
+
+//Label Tileset stuff
+#define SetTilesetData(Index,ObjectSet,Palette,TileConfig,TileAnims,BattleSet) "PUSH;ORG (ChapterDataEditor+(Index*148)+4);SHORT ObjectSet;BYTE Palette TileConfig;ORG (ChapterDataEditor+(Index*148)+9);BYTE TileAnims;ORG (ChapterDataEditor+(Index*148)+19);BYTE BattleSet;POP"
+
+//Battle Tilesets
+
+#define NormalSet 0x0
+#define LavaSet 0x2
+#define CitySet 0x6
+#define DesertSet 0x9
+#define LagdouSet 0xE
+#define MountainSet 0x12
+
+//Tile Animations
+
+#define 01Anims "0x05"
+#define 0EAnims "0x12"
+#define 18Anims "0x1C"
+#define 2EAnims "0x05"
+#define 3CAnims "0x00"
+#define 42Anims "0x05"
+#define 50Anims "0x00"
+#define 5FAnims "0x00"
+#define 6CAnims "0x05"
+#define 79Anims "0x7D"
+#define 88Anims "0x00"
+//EndLabel
+
+//Label Map Sprites
+#define Large 0x02
+#define Medium 0x01
+#define Small 0x00
+
+#define BlackFalcoknightSprite 0x6B
+#define ChampionSprite 0x6C
+#define CommanderSprite  0x6D
+#define DarkKnightSprite  0x6E
+#define GladiatorSprite 0x6F
+#define HalberdierSprite 0x70
+#define HectorSprite 0x71
+#define HunterSprite 0x72
+#define ImpalerSprite 0x73
+#define IzukSprite 0x74
+#define MagusMSprite 0x75
+#define MagusFSprite 0x76
+#define MatriarchSprite 0x77
+#define MonkFSprite 0x78
+#define MountedBrigandSprite 0x79
+#define NomadSprite 0x7A
+#define PatriarchSprite 0x7B
+#define SentinelSprite 0x7C
+#define TruebladeSprite 0x7D
+#define TruerbladeSprite 0x7E
+#define WarlockSprite 0x7F
+//EndLabel
+
+//Label Battle Animations
+/*#define SwordAnim(Animation) "BYTE 0x00 0x01 Animation 0x00"
+#define SpearAnim(Animation) "BYTE 0x01 0x01 Animation 0x00"
+#define AxeAnim(Animation) "BYTE 0x02 0x01 Animation 0x00"
+#define HandAxeAnim(Animation) "BYTE HandAxe 0x00 Animation 0x00 Tomahawk 0x00 Animation 0x00 ShortAxe 0x00 Animation 0x00"
+#define BowAnim(Animation) "BYTE 0x03 0x01 Animation 0x00"
+#define StaffAnim(Animation) "BYTE 0x04 0x01 Animation 0x00"
+#define AnimaAnim(Animation) "BYTE 0x05 0x01 Animation 0x00"
+#define LightAnim(Animation) "BYTE 0x06 0x01 Animation 0x00"
+#define DarkAnim(Animation) "BYTE 0x07 0x01 Animation 0x00"
+#define UnarmedAnim(Animation) "BYTE 0x09 0x01 Animation 0x00"*/
+#define SwordAnim(Animation) "BYTE Swords 0x01 ; SHORT Animation"
+#define SpearAnim(Animation) "BYTE Spears 0x01 ; SHORT Animation"
+#define AxeAnim(Animation) "BYTE Axes 0x01 ; SHORT Animation"
+#define HandAxeAnim(Animation) "BYTE HandAxe 0x00 ; SHORT Animation ; BYTE Tomahawk 0x00 ; SHORT Animation ; BYTE ShortAxe 0x00 ; SHORT Animation"
+#define BowAnim(Animation) "BYTE Bows 0x01 ; SHORT Animation"
+#define StaffAnim(Animation) "BYTE Staves 0x01 ; SHORT Animation"
+#define AnimaAnim(Animation) "BYTE Anima 0x01 ; SHORT Animation"
+#define LightAnim(Animation) "BYTE Light 0x01 ; SHORT Animation"
+#define DarkAnim(Animation) "BYTE Dark 0x01 ; SHORT Animation"
+#define UnarmedAnim(Animation) "BYTE Item 0x01 ; SHORT Animation"
+#define SpecialAnim(Animation,Weapon) "BYTE Weapon 0x00 ; SHORT Animation"
+#define BerserkerSword 0x01
+#define BerserkerAxe 0x23
+#define BerserkerHandAxe 0x24
+#define BerserkerUnarmed 0x25
+#define BlackFalcoknightSpear 0x02
+#define BlackFalcoknightSword 0x03
+#define BlackFalcoknightUnarmed 0x04
+#define ChampionSword 0x05
+#define ChampionAxe 0x06
+#define ChampionHandAxe 0x07
+#define ChampionUnarmed 0x08
+#define CommanderSpear 0x09
+#define CommanderUnarmed 0x0A
+#define MonkMagic 0x7D
+#define MonkStaff 0x7F
+#define MonkFStaff 0x80
+#define AssassinSword 0x8B
+#define AssassinUnarmed 0x8C
+#define DarkKnightMMagic 0x92
+#define DarkKnightMStaff 0x93
+#define DarkKnightFMagic 0x94
+#define DarkKnightFStaff 0x95
+#define GaidenSageMagic 0x96
+#define GaidenSageStaff 0x97
+#define GladiatorAxe 0xA1
+#define GladiatorHandAxe 0xA2
+#define GladiatorUnarmed 0xA3
+#define HalberdierSpear 0xA4
+#define HalberdierUnarmed 0xA5
+#define HectorSword 0xA6
+#define HectorAxe 0xA7
+#define HectorHandAxe 0xA8
+#define HectorUnarmed 0xA9
+#define HunterBow 0xAA
+#define HunterUnarmed 0xAB
+#define ImpalerSpear 0xAC
+#define ImpalerUnarmed 0xAD
+#define IzukMagic 0xAE
+#define JacketHeroSword 0xD4
+#define JacketHeroAxe 0xD5
+#define JacketHeroHandAxe 0xD6
+#define JacketHeroUnarmed 0xD7
+#define MagusMMagic 0xAF
+#define MagusMStaff 0xB0
+#define MagusFMagic 0xB1
+#define MagusFStaff 0xB2
+#define MasterKnightMSword 0x3A
+#define MasterKnightMSpear 0x3B
+#define MasterKnightMAxe 0xD8
+#define MasterKnightMHandAxe 0xD9
+#define MasterKnightMUnarmed 0x3C
+#define MasterKnightFSword 0xDA
+#define MasterKnightFSpear 0xDB
+#define MasterKnightFAxe 0xDC
+#define MasterKnightFHandAxe 0xDD
+#define MasterKnightFUnarmed 0xDE
+#define MatriarchMagic 0xB3
+#define MatriarchStaff 0xB4
+#define MonkFMagic 0xD3
+#define MountedBrigandAxe 0xB5
+#define MountedBrigandHandAxe 0xB6
+#define MountedBrigandBow 0xB7
+#define MountedBrigandUnarmed 0xB8
+#define NecromancerMagic 0x9D
+#define NecromancerStaff 0x9E
+#define NomadSword 0xDF
+#define NomadBow 0xE0
+#define NomadUnarmed 0xE1
+#define PatriarchMagic 0xB9
+#define PatriarchStaff 0xBA
+#define SentinelSpear 0xBB
+#define SentinelUnarmed 0xBC
+#define TruebladeMSword 0xBD
+#define TruebladeMUnarmed 0xBE
+#define ShadowSword 0xBF
+#define ShadowUnarmed 0xC0
+#define TruerbladeSword 0xC1
+#define TruerbladeUnarmed 0xCA
+#define WarlockAxe 0xCB
+#define WarlockHandAxe 0xCC
+#define WarlockUnarmed 0xCD
+#define WyvernGeneralSword 0xCE
+#define WyvernGeneralSpear 0xCF
+#define WyvernGeneralAxe 0xD0
+#define WyvernGeneralHandAxe 0xD1
+#define WyvernGeneralBow 0xD2
+#define WyvernGeneralUnarmed 0x61
+#define NarratorSword1 0xE2
+#define NarratorSword2 0xE3
+#define SpearHeroSpear 0xE4
+#define XeximSword 0xE5
+#define XeximBow 0xE6
+#define XeximUnarmed 0xE7
+#define GrandPaladinSword 0xE8
+#define GrandPaladinLance 0xE9
+#define GrandPaladinAxe 0xEA
+#define GrandPaladinHandAxe 0xEB
+#define GrandPaladinUnarmed 0xEC
+//EndLabel
+
+//Label Skill Definitions
+#define AcrobatID 1 //Thief, Assassin, Rogue
+#define PassID 2 //Assassin
+#define CantoPlusID 3 //Ranger
+#define WaryFighterID 4 //General
+#define SureShotID 5 //Sniper
+#define ProvokeID 6 //Knight, General, GreatKnight
+#define SaviorID 7 //FalcoKnight
+#define MercyID 8  //Patriarch, Matriarch
+#define FrenzyID 9 //Mountainier
+#define AdeptID 10 //Mage, Sage, MageKnight
+#define CantoID 11 //All the mounted shit
+#define CunningID 12 //display only: Thief, Rogue, Assassin
+#define LethalityID 13 //display only: Assassin
+#define LunaID 14 //GreatKnight
+#define SolID 15 //Paladin
+#define AetherID 16 //Truerblade
+#define AstraID 17 //Swordmaster
+#define DisciplineID 18 //Cavalier, Paladin
+#define SwordbreakerID 19 //WyvernLord
+#define LancebreakerID 20 //Nomad
+#define AxebreakerID 21 //Hero
+#define BowbreakerID 22 //Hector
+#define TomebreakerID 23 //Druid
+#define AegisID 24 //Izuk
+#define PaviseID 25 //General, Hero
+#define DuelistsBlowID 26 //Myrmidon, Swordmaster
+#define DeathBlowID 27 //Warrior
+#define DartingBlowID 28 //PegasusKnight, FalcoKnight
+#define WardingBlowID 29 //FalcoKnight
+#define CertainBlowID 30 //Archer, Sniper, Ranger
+#define ArmoredBlowID 31 //GreatKnight
+#define VantageID 32 //Myrmidon, Swordmaster
+#define DesperationID 33 //Fighter, Warrior
+#define WrathID 34 //Soldier, Halberdier, Sentinel
+#define CounterID 35 //Hector, Champion
+#define CounterMagicID 36 //Bishop
+#define MiracleID 37 //Monk, Bishop
+#define SwordfaireID 38 //Swordmaster
+#define LancefaireID 39 //WyvernKnight
+#define AxefaireID 40 //Berserker
+#define BowfaireID 41 //Sniper
+#define TomefaireID 42 //Sage
+#define CritUpID 43 //display only: SwordMaster, Berserker
+#define SlayerID 44 //display only
+#define SummonID 45 //display only: Summoner
+#define DanceID 46 //display only: Dancer
+#define LifetakerID 47 //DarkKnight
+#define GaleforceID 48 //Ranger
+#define RenewalID 49 //Izuk
+#define NiceThighsID 50 //DONE
+#define DemoiselleID 51 //Troubadour, Valkyrie
+#define GentilhommeID 52 //DONE
+#define MaleficAuraID 53 //Shaman, Druid, Summoner
+#define InspirationID 54 //Halberdier
+#define CharmID 55 //Valkyrie
+#define VoiceOfPeaceID 56 //Troubadour, Valkyrie
+#define AmaterasuID 57 //Patriarch
+#define SpurStrID 58 //MountedBrigand
+#define SpurMagID 59 //Magus
+#define SpurSpdID 60 //Hunter
+#define SpurDefID 61 //Sentinel
+#define SpurResID 62 //Valkyrie
+#define NihilID 63 //this is a giant pain tbh
+#define NullifyID 64
+#define ParagonID 65 //DONE
+#define ImpaleID 66 //Impaler
+#define ColossusID 67 //Warrior, Gladiator
+#define RallyStrID 68 //Mercenary, Hero
+#define RallyMagID 69 // (requires str mag split)
+#define RallySklID 70 //Paladin
+#define RallySpdID 71 //PegasusKnight, FalcoKnight
+#define RallyLukID 72 //MageKnight
+#define RallyDefID 73 //BlackFalcoKnight
+#define RallyResID 74 //MageKnight
+#define RallyMovID 75 //WyvernKnight
+#define RallySpectrumID 76 //GaidenSage
+#define BowRangeUpID 77
+#define StaffSavantID 78 //half done (mag/2 only)
+#define LiveToServeID 79 //Bishop
+#define IgnisID 80 //Sage, GaidenSage
+#define LifeAndDeathID 81 //Shaman, Druid, Summoner
+#define LockTouchID 82 //Display only: Rogue
+#define LungeID 83 //Rogue, Champion
+#define IntimidateID 84 //Brigand
+#define OpportunistID 85 // Warlock
+#define TrampleID 86 // MountedBrigand
+#define CamaraderieID 87 //Pirate, Berserker
+#define ForeignPrincessID 88
+#define SavageBlowID 89 //WyvernLord
+#define ReliefID 90 //WyvernGeneral
+#define TantivyID 91 //WyvernRider, WyvernLord, WyvernKnight
+#define FocusID 92 //Magus
+#define BondID 93 //Izuk
+#define AnathemaID 94 //Summoner
+#define LilysPoiseID 95 //JacketHero
+#define ExpertiseID 96 // Gladiator
+#define CelerityID 97 //Rogue
+#define FieryBloodID 98 //Fighter, Warrior
+#define ElbowRoomID 99 //Cavalier, Paladin
+#define NaturalCoverID 100 //Knight, General, GreatKnight
+#define SealStrID 101 //Druid
+#define SealSklID 102 //Pirate, Berserker
+#define SealSpdID 103 //Mercenary, Hero
+#define SealLukID 104 //Mountainier
+#define SealDefID 105 //Brigand
+#define SealResID 106 //Monk, Bishop
+#define DragonsBloodID 107 //DONE
+#define GambleID 108 //Hunter
+#define PersonalityID 109 //DONE
+#define QuickDrawID 110 //Archer, Sniper, Ranger, Hunter
+#define WindDiscipleID 111 //Soldier, Sentinel, Halberdier, Impaler
+#define StrongRiposteID 112 //Sentinel
+#define PatienceID 113 //Hector
+#define PursuitID 114 //BlackFalcoknight
+#define LightWeightID 115 //DMyrmidon, Swordmaster, Trueblade
+#define KillingMachineID 116 //Trueblade
+#define CriticalForceID 117 //Halberdier
+#define ChivalryID 118 //MasterKnight
+#define PragmaticID 119 //Warlock
+#define ArmsthriftID 120 //Assassin
+#define MoonbowID 121 //Mage, Sage, MageKnight, Magus
+#define ShoveID 122 //DONE
+#define SmiteID 123 //DONE
+#define BaneID 124 //DONE
+#define DownWithArchID 125 //DONE
+#define UpWithArchID 126 //DONE
+#define RightfulArchID 127 //DONE
+#define RightfulKingID 128 //DONE
+#define RightfulGodID 129 //DONE
+#define LuckySevenID 130 //DONE
+#define OddRhythmID 131 //DONE
+#define EvenRhythmID 132 //DONE
+#define QuickBurnID 133 //DONE
+#define SlowBurnID 134 //Shadow
+#define DespoilID 135//DONE
+#define PivotID 136 //DONE
+#define RepositionID 137 //DONE
+#define SwapID 138 //DONE
+#define BreathOfLifeID 139 //DONE
+#define FuryID 140 //DONE
+#define DazzleID 141 //DONE
+#define TriAdeptID 142 //not done
+#define SupplyID 143 //Display only
+#define Roll12ID 144 //DONE
+#define TraceID 145 //DONE
+#define RandomMugID 146 //DONE
+#define IdentityProblemsID 147 //DONE
+#define CharismaID 148 //DONE
+#define HeroesDeathBlowID 149 //DONE
+#define HeroesLifeAndDeathID 150 //DONE
+#define CatchEmAllID 151 //DONE
+#define VantagePlusID 152 //DONE
+#define HawkeyeID 153 //wip
+#define SolidarityID 154 //DONE
+#define BracingStanceID 155 //DONE
+#define DartingStanceID 156 //DONE
+#define FierceStanceID 157 //DONE
+#define KestrelStanceID 158 //DONE
+#define MirrorStanceID 159 //DONE
+#define ReadyStanceID 160 //DONE
+#define SteadyStanceID 161 //DONE
+#define SturdyStanceID 162 //DONE
+#define SwiftStanceID 163 //DONE
+#define WardingStanceID 164 //DONE
+#define SpectrumStanceID 165 //DONE
+//EndLabel
+
+//Label Misc.
+#define DeathQuote(Character,Chapter,EventID,TextID) "SHORT Character; BYTE 0xFF Chapter; SHORT EventID TextID 0 0"
+#define AllChapters 0xFF
+
+#define SpecifiedBattleConvo(Character1,Character2,Chapter,EventID,TextID) "BYTE Character1 0x0 Character2 0x0 Chapter 0x0 0x0 EventID ; SHORT TextID 0x0 0x0 0x0"
+#define UnspecifiedBattleConvo(Character,Chapter,EventID,TextID) "BYTE Character 0x0 0x0 0x0 Chapter 0x0 EventID 0x0 ; SHORT TextID 0x0 0x0 0x0 ; BYTE 0x0 0x0 Character 0x0 Chapter 0x0 EventID 0x0 ; SHORT TextID 0x0 0x0 0x0"
+
+#define MoveMercenary(X,Y) "MOVE 0x0 PlayerMMercenary [X,Y];MOVE 0x0 PlayerMMyrmidon [X,Y];MOVE 0x0 PlayerMPirate [X,Y];MOVE 0x0 PlayerMFighter [X,Y];MOVE 0x0 PlayerMBrigand [X,Y];MOVE 0x0 PlayerFMercenary [X,Y];MOVE 0x0 PlayerFMyrmidon [X,Y];MOVE 0x0 PlayerFPegasusKnight [X,Y]"
+#define MoveMercenarySlow(X,Y) "MOVE 0x1 PlayerMMercenary [X,Y];MOVE 0x1 PlayerMMyrmidon [X,Y];MOVE 0x1 PlayerMPirate [X,Y];MOVE 0x1 PlayerMFighter [X,Y];MOVE 0x1 PlayerMBrigand [X,Y];MOVE 0x1 PlayerFMercenary [X,Y];MOVE 0x1 PlayerFMyrmidon [X,Y];MOVE 0x1 PlayerFPegasusKnight [X,Y]"
+
+#define ClearMercenary "CLEA PlayerMMercenary;CLEA PlayerMMyrmidon;CLEA PlayerMFighter;CLEA PlayerMPirate;CLEA PlayerMBrigand;CLEA PlayerFMercenary;CLEA PlayerFMyrmidon;CLEA PlayerFPegasusKnight"
+
+// In order of FMercenaryStart , FmyrmidonStart, FPegasusKnghtStart , MMercenaryStart , MMyrmidonStart , MFighterStart , MPirateStart , MBrigandStart. Uses 0x8 cond. IDs
+#define LoadingMercenary(Index,UnitPointer) "CHECK_EVENTID 0x66;BNE (0x0 + 0x8 * Index) 0xC 0x0;CHECK_EVENTID 0x69;BEQ (0x2 + 0x8 * Index) 0xC 0x0;LOAD2 0x1 (UnitPointer);GOTO (0x1 + 0x8 * Index);LABEL (0x2 + 0x8 * Index);CHECK_EVENTID 0x6A;BEQ (0x3 + 0x8 * Index) 0xC 0x0;LOAD2 0x1 (UnitPointer + 40);GOTO (0x1 + 0x8 * Index);LABEL (0x3 + 0x8 * Index);LOAD2 0x1 (UnitPointer + 80);GOTO (0x1 + 0x8 * Index);LABEL (0x0 + 0x8 * Index);CHECK_EVENTID 0x69;BEQ (0x4 + 0x8 * Index) 0xC 0x0;LOAD2 0x1 (UnitPointer + 120);GOTO (0x1 + 0x8 * Index);LABEL (0x4 + 0x8 * Index);CHECK_EVENTID 0x6A;BEQ (0x5 + 0x8 * Index) 0xC 0x0;LOAD2 0x1 (UnitPointer + 160);GOTO (0x1 + 0x8 * Index);LABEL (0x5 + 0x8 * Index);CHECK_EVENTID 0x6B;BEQ (0x6 + 0x8 * Index) 0xC 0x0;LOAD2 0x1 (UnitPointer + 200);GOTO (0x1 + 0x8 * Index);LABEL (0x6 + 0x8 * Index);CHECK_EVENTID 0x6C;BEQ 0x7 0xC 0x0;LOAD2 0x1 (UnitPointer + 240);GOTO (0x1 + 0x8 * Index);LABEL (0x7 + 0x8 * Index);LOAD2 0x1 (UnitPointer + 280);LABEL (0x1 + 0x8 * Index)"
+
+#define GuardAI GuardTileAI
+#define ChapterDataEditor ChapterDataTable
+
+#define GiveItem(Item,Character) "SMOV 0x3 Item ; GIVEITEMTO Character"
+//#define GiveMoney
+
+#define EndConvo "CALL $9EE2C4"
+
+#define Drop 0x2
+
+#define HealAlliesAI HealUnits
+
+#define Every2Turns(CondID1,CondID2,EventID,Pointer) "CHECK_EVENTID EventID;BNE CondID1 0x0 0xC;CALL Pointer;ENUT EventID;GOTO CondID2;LABEL CondID1;ENUF EventID;LABEL CondID2"
+#define Every3Turns(CondID1,CondID2,CondID3,EventID1,EventID2,Pointer) "CHECK_EVENTID EventID1;BNE CondID1 0x0 0xC;CHECK_EVENTID EventID2;BNE CondID2 0x0 0xC;CALL Pointer;ENUT EventID1;ENUT EventID2;GOTO CondID3;LABEL CondID2;ENUF EventID2;GOTO CondID3;LABEL CondID1;ENUF EventID1;LABEL CondID3"
+#define Every4Turns(CondID1,CondID2,CondID3,EventID1,EventID2,Pointer) "CHECK_EVENTID EventID1;BNE CondID1 0x0 0xC;CHECK_EVENTID EventID2;BNE CondID2 0x0 0xC;CALL Pointer;ENUT EventID1;ENUT EventID2;GOTO CondID3;LABEL CondID2;ENUT EventID1;ENUF EventID2;GOTO CondID3;LABEL CondID1;ENUF EventID1;LABEL CondID3"
+
+#define EnterStop "EVBIT_T 0x4"
+
+#define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
+
+#define KillUnit(X,Y) "SVAL 0xB Coords(X,Y) ; SET_SOMETHING 0xFFFE ; DISA_IF 0xFFFE"
+
+#define Raid(EventID,Pointer,X,Y) "LOCA EventID Pointer [X,Y] 0x21"
+#define TileChange(X,Y) "SETVAL 0xB Coords(X,Y) ; TILECHANGE 0xFFFF"
+
+#define CamON "EVBIT_T 0x9"
+#define CamOFF "EVBIT_F 0x9"
+
+#define WarpIn(X,Y,UnitPointer) "SVAL 0xB Coords(X,Y) ; WARP_IN ; LOAD1 0x1 UnitPointer ; ENUN"
+#define WarpOut(X,Y) "SVAL 0xB Coords(X,Y) ; WARP_OUT ; DISA [X,Y]"
+
+#define FadeOutMusic "MUSCMID 0x7FFF"
+
+#define MercenaryNarratorFight(TactX,TactY) "SVAL 0xB Coords(TactX,TactY) ; CALL MercenaryNarratorFightEvents"
+// You still need to set up the battle first!
+
+#define EndUnit UNIT // Necessary for folding
+#define EndA2 ENDA
+//EndLabel
+
+/*
+#define LoadingMercenary(Index,UnitPointer)
+CHECK_EVENTID 0x66
+BNE (0x0 + 0x8 * Index) 0xC 0x0
+	CHECK_EVENTID 0x69 // Female
+	BEQ (0x2 + 0x8 * Index) 0xC 0x0
+		LOAD2 0x1 (UnitPointer) // Mercenary
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x2 + 0x8 * Index)
+	CHECK_EVENTID 0x6A
+	BEQ (0x3 + 0x8 * Index) 0xC 0x0
+		LOAD2 0x1 (UnitPointer + 40) // Myrmidon
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x3 + 0x8 * Index)
+		LOAD2 0x1 (UnitPointer + 80) // Pregasus Knight
+	GOTO (0x1 + 0x8 * Index)
+LABEL (0x0 + 0x8 * Index)
+	CHECK_EVENTID 0x69 // Male
+	BEQ (0x4 + 0x8 * Index) 0xC 0x0
+		LOAD2 0x1 (UnitPointer + 120) // Mercenary
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x4 + 0x8 * Index)
+	CHECK_EVENTID 0x6A
+	BEQ (0x5 + 0x8 * Index) 0xC 0x0
+		LOAD2 0x1 (UnitPointer + 160) // Myrmidon
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x5 + 0x8 * Index)
+	CHECK_EVENTID 0x6B
+	BEQ (0x6 + 0x8 * Index) 0xC 0x0
+		LOAD2 0x1 (UnitPointer + 200) // Fighter
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x6 + 0x8 * Index)
+	CHECK_EVENTID 0x6C
+	BEQ (0x7 + 0x8 * Index) 0xC 0x0
+		LOAD2 0x1 (UnitPointer + 240) // Pirate
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x7 + 0x8 * Index)
+		LOAD2 0x1 (UnitPointer + 280) // Brigand
+LABEL (0x1 + 0x8 * Index)
+*/
+
+/*
+rem _AssembleAll.bat: Calls _AssembleARM.bat for all .asm files in folder & subfolders
+
+set FILE_MATCH=*.asm
+set ASSEMBLE_BAT=%~dp0AssembleARM.bat
+
+for /R %%F in (%FILE_MATCH%) do (
+    echo Assembling "%%~nxF"...
+    cd "%%~dpF"
+    (echo: | (call "%ASSEMBLE_BAT%" "%%~nxF")) > nul
+)
+*/
+
+// In text, 0x97F is my magical number to start at.
+
+//#inctext PFinder Clean.gba (Vanilla memory location) NewTableLabel

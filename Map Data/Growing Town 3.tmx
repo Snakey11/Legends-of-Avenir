@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="27" height="27" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="0E000F10" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/0E000F10.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="27" height="27">
+  <properties>
+   <property name="Anims" value="0EAnims"/>
+   <property name="ChapterID" value="MilitaryPromotionRetreatLeave6GrowingTown3"/>
+   <property name="Main" value=""/>
+   <property name="MapID" value="GrowingTown3Map"/>
+   <property name="ObjectType" value="0x0E"/>
+   <property name="PaletteID" value="0x0F"/>
+   <property name="TileConfig" value="0x10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJx9Vd1KVUEUnpnDCdQ3qG6OF2nHoOuohNOJfrQXCLtRLIqCIqibrrZoJt5Eb6BiRAb5CvuYBfbzBl1sIyHBJ0iob7HXx6wZD158zJ69Z69vrW/9zC/v3HBwzgOlc67n4trFuwprhTOfgE3sm8B0w7kZ4AywCowCZ/Vsx9droc9LWBeB83je1W+WZwPvxkLct3z9LFzv8FzA9hxwDegBN4BJ8VfsOfXPpTyClqKrcZFzAvs/hrNSrn1fxyacv329ToZo38ZkeU43YkzkpN2eYjBEvs0Q/RCeWyHy2HiE58DwCC6A63Hoj6chcg3p88ExZzuqn+joMy6J6a+vbc3i+S5wrxE1sXE1TWyMn7G31DZrSDhFwy8u5SHXPPYLwMtGjEEwqjzEjk9hc1m5yCl8313KQy7aov7ia1tyAuwBu1InIdb4msYvGAg1xkKsd9Fy3dU5slyS521fx8M6bOn7Js6eAAIwYGp8CxhRv0qNaSKk8S7j3e2My+bE6iI9MKGxMgaLoRB7pdLztCPfDvpwiVYrRpuhEPugNPWxrX1lz1q/2iYX5OqnYWm0YQ3Kv+cUtCHxlDoz5Oy+5kt6nj3eVG3zuA7VJ/an5WEfSD2M6MxrhrQfKpfW4aDp7Q3gMNQ8p6T2gVns14G3Ic4/2wdSD9d15lHfnvGRdd5W7TraY/L+p6u5LgKXgXnJBfA5xP+Fi7OOq2h0U7/LvdAItT3y2Z5nj5FrCpjROuIclLVUPW0Pc4ZzRnSNBqNav/16nlwvgDngAb5dAa6qr9TI9h3tsk85+4TnPbTdAD40Uj7BIs7dB14Bd4ClUN9hwyHmeNfk2vpJfbyPNb4Djq/AN8O1rzM152JM7Ec716ilnc3CyRq3dW71ps/U8KRyWU0ql95BzLnU5J7OZrG1AqwCazpbyMu80t+cqxtSDtYvdWtqr9p7sZQcAlvGNiH7QvOQc3V8qlvbaE5frR2bT1srld79XBfMnUKu/F/ew5VL7wi7t5p7f9QPy0Mu6a8nIcVD4FH27k04eu5HiHcwY+H9L/fkP59ySX9NA+NmHc/2sr6G3UvZ980Q66cwXAt69+dcEleh/xaZrUJ5ZP0Yar1zLmrHGUie/O6f0rjGj0HOn3NRM38Mj+AZ8Bz4D/FqaNY=
+  </data>
+ </layer>
+</map>

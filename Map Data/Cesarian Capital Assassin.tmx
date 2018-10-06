@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="27" height="23" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="79007A7B" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/79007A7B.png" width="512" height="512"/>
+  <tile id="482">
+   <properties>
+    <property name="Main" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="27" height="23">
+  <properties>
+   <property name="Anims" value="79Anims"/>
+   <property name="ChapterID" value="MercenaryMilitiaKill7"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="CesarianCapitalAssassinChanges"/>
+   <property name="MapID" value="CesarianCapitalAssassinMap"/>
+   <property name="ObjectType" value="0x79"/>
+   <property name="PaletteID" value="0x7A"/>
+   <property name="TileConfig" value="0x7B"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJyllLlOA0EMhmeJoOMoOCREQwhCSFwFZwtRlDwBUJICiY4OkGhAAgqeAnEIyFtAy0uw2eU5+K3YiuN4l4gUn2bG9vr3eGanFIUwHkKYAJNgCTyBAo+LodNfQvwD+ArdkO+bGAghJqIWCebpQMu/jrgNsAlOWGOOR1prf79aH+CR+cA3P2CGx8/Q9hH9au0i7oa5BVtgG+yAF+X77HNfFczLVDszDfbBATgEU8pHuseIL4AhpTnItsofWveIrYNnhvZ1Bs7BBecXXzO04l/Bu+GNfXlajdDZk5jzXqr8uk+NHK0Ga83iEhfBHCgx84VuLa1ndXrVkp5qqOfkt/YR2EbBmOPrRes0+DQc2wpYBWsZ8QnypQ6i5fn+C51300F8whBra5vExo7dG4lhztNUc6tzF3w94sg5U6Iedccvh3aNMtf+GuvUMvZWjvyzKDtaune2ZtGqGS1dt+S0fRG7t2/6Vu4l3UWJ9bR03VqL+hIbLW/f1iaxVdapmh6Kf09p6X7smVr02V5Hfq6U9ZKMXGnGGaQmTnLKP+dp6e+8XFKrnJ9dpyZn4uQTO82LGfdd16rPR6917FXk/w967wtR5z3yarJ3wdPK+h9O+b18c943rSvnfJWx9rB3I+9ts9r2nc57t727kccvmaiA7g==
+  </data>
+ </layer>
+ <layer name="S Chest" width="27" height="23">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="2"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="23"/>
+   <property name="Y" value="18"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwUgATAPtgFFAEQAADTQAAw==
+  </data>
+ </layer>
+ <layer name="N Door" width="27" height="23" visible="0">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="5"/>
+   <property name="X" value="4"/>
+   <property name="Y" value="8"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AU0AuwMTIwLATiRVDMykg7uwoYUO0qoJ1VDE+B5j9Gwk9p6K9RMApGwSgYqQAAgX8JNg==
+  </data>
+ </layer>
+</map>

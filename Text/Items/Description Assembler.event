@@ -1,0 +1,23 @@
+
+## ArmsScrollDescText
+Increases one weapon level[X]
+
+## ArmsScrollUseText
+Increases the weapon[NL]
+level of the equiped[NL]
+weapon type[X]
+
+## LanceslayerDescText
+Effective against lancefighters[X]
+
+## AxeslayerDescText
+Effective against axefighters[X]
+
+## SlimeDescText
+Poisons the enemy[X]
+
+## WindDescText
+Effective against pegasi[X]
+
+## WaterDescText
+Effective against mages[X]

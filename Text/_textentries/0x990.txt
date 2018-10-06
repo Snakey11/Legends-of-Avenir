@@ -1,0 +1,7 @@
+[FarLeft][LoadAdlez]Gerwick! What the[FarRight][LoadGerwick][FarLeft] hell are you[NL]
+doing back so soon?[A]
+[FarRight][MoveRight]Some mercenary helped out Arc at Danaan.[NL]
+I didn't want to risk more losses. Don't[A][NL]
+worry, I think I threw them off my trail.[A]
+[FarLeft]You were to burn Danaan to the ground.[A][CloseSpeech][MoveLeft]
+Do you think I give a damn about losses?[A][X]

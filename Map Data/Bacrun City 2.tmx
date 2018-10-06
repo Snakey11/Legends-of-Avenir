@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="18" height="23" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="0E007210" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/0E007210.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="18" height="23">
+  <properties>
+   <property name="Anims" value="0EAnims"/>
+   <property name="ChapterID" value="MercenaryBanditDisband5"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="BacrunCity2Changes"/>
+   <property name="MapID" value="BacrunCity2Map"/>
+   <property name="ObjectType" value="0x0E"/>
+   <property name="PaletteID" value="0x72"/>
+   <property name="TileConfig" value="0x10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxtVDtOAzEU9O4qEgpH4AakoKdMOvYCiBrScgOklSDHQCIhTUKREyAtv4JPEaCLRJEiEpFA0ANinuwhE7PFyF6vPe/Ne2N3MueaiXOt1I9T59wW5qvhu3B+5HyE9QNggu81nN3AeOP8uSKMem5FeBnDYDzHgUe59tP/+ATqQAMYR//egXPhMWyDa1yBJ6CTeDxX/HuJeCaiuxSNtlavqFHfeQ1fFTyF6F/HeJt41FKPhtTJYhnXDPjB+iZy2wG+ZY9xzOW8wniNr5Cch8BH4BwAr4kHNTxU1LwWNFre1F9Kf229C/RS3+cy+IN5xPlRM3M7xdgH2sAFcBl4psLD+FvCd4JadIFe5rmugGugI/Wph3jkycV7reCnEucvgMtsuQfUVgQe+zeSfmsP4tozR2ql75UnTxf3hF5SjlWJTa2FxJsHXdQyFU/uYu8e0M6Wa0et9By1jKJcGOMQe4/svmSL2qkOjWG5PVZ4J9Zk5+l9rscx1D/U3hBNrO0A8yFwli3HYG/IY7Wi9hyYhXh/nsT8DrjP/N5etuBpSb9YR+0zoTrzUA/1FN9NfUfj96MUr2n8ufTLdL1JjeN3KH4bFWX0rtOX2nP2kv+Zg959vim879yv+ecSg3eJ82bq8Qv0/LfD
+  </data>
+ </layer>
+ <layer name="Bottom Red House" width="18" height="23" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="2"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="8"/>
+   <property name="Y" value="17"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjILhDY4zD7QLRgEyAABCJADL
+  </data>
+ </layer>
+ <layer name="Right Red House" width="18" height="23" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="17"/>
+   <property name="Y" value="13"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjARwnHmgXTAKRgEEAAAJCwDL
+  </data>
+ </layer>
+ <layer name="Top Red House" width="18" height="23" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="12"/>
+   <property name="Y" value="10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2DkguPMA+2CUTAKRh4AAMNDAMs=
+  </data>
+ </layer>
+</map>

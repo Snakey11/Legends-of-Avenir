@@ -1,0 +1,70 @@
+#FE8 Chapter Unit Editor
+#
+
+1
+Chapter 14B - Part 1
+0x8C5FBC
+12
+20
+NULL
+NULL
+
+Character Reference Number
+0
+1
+NEHU
+NULL
+
+Starting Class
+1
+1
+NDHU
+Class Hex List.txt
+
+**UNKNOWN**
+2
+1
+NEHU
+NULL
+
+Starting Level/Alliance
+3
+1
+NDHU
+Starting Level.txt
+
+X Co-ordinate
+4
+1
+NEDS
+NULL
+
+Y Co-ordinate
+5
+1
+NEDS
+NULL
+
+Slot Item 1
+12
+1
+NDHU
+Item List.txt
+
+Slot Item 2
+13
+1
+NDHU
+Item List.txt
+
+Slot Item 3
+14
+1
+NDHU
+Item List.txt
+
+Slot Item 4
+15
+1
+NDHU
+Item List.txt

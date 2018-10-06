@@ -1,0 +1,75 @@
+
+	
+PUSH
+#define WalkingSoundsTable1 0x78D90
+#define WalkingSoundsTable2 0x78E90
+#define WalkingSound(Class,SoundID) "ORG (WalkingSoundsTable1 + Class ) ; BYTE SoundID"
+#define FootSound 0x0
+#define HorseSound 0x1
+#define WyvernSound 0x2
+#define PegasusSound 0x3
+#define ArmorSound 0x4
+
+ORG WalkingSoundsTable1
+#incbin walking_sounds_class_dict.dmp
+ORG WalkingSoundsTable2
+#incbin walking_sounds_pointer_table.dmp
+
+ORG 0x78D78
+BYTE 0x03 0x49 0x08 0x5C 0x03 0x49 0x80 0x00 0x09 0x18 0x0D 0x68 0x33 0xE1 0xC0 0x46
+POIN WalkingSoundsTable1
+POIN WalkingSoundsTable2
+
+WalkingSound(Patriarch,FootSound)
+WalkingSound(Matriarch,FootSound)
+WalkingSound(DarkKnightM,FootSound)
+WalkingSound(DarkKnightF,FootSound)
+WalkingSound(MagusM,FootSound)
+WalkingSound(MagusF,FootSound)
+WalkingSound(MasterKnightF,HorseSound)
+WalkingSound(Commander,ArmorSound)
+WalkingSound(Impaler,FootSound)
+WalkingSound(WyvernGeneral,WyvernSound)
+WalkingSound(Hunter,FootSound)
+WalkingSound(MasterKnightM,HorseSound)
+WalkingSound(Champion,FootSound)
+WalkingSound(TruebladeF,FootSound)
+WalkingSound(TruebladeM,FootSound)
+WalkingSound(MountedBrigand,HorseSound)
+WalkingSound(Mountainier,FootSound)
+WalkingSound(BlackFalcoknight,PegasusSound)
+WalkingSound(MageM2,FootSound)
+WalkingSound(MageF2,FootSound)
+WalkingSound(ShamanM2,FootSound)
+WalkingSound(ShamanF2,FootSound)
+WalkingSound(MonkM2,FootSound)
+WalkingSound(MonkF2,FootSound)
+WalkingSound(CavalierM2,HorseSound)
+WalkingSound(CavalierF2,HorseSound)
+WalkingSound(Knight2,ArmorSound)
+WalkingSound(Soldier2,FootSound)
+WalkingSound(WyvernRider2,WyvernSound)
+WalkingSound(ArcherM2,FootSound)
+WalkingSound(ArcherF2,FootSound)
+WalkingSound(MercenaryM2,FootSound)
+WalkingSound(MercenaryF2,FootSound)
+WalkingSound(Fighter2,FootSound)
+WalkingSound(Brigand2,FootSound)
+WalkingSound(Pirate2,FootSound)
+WalkingSound(MyrmidonM2,FootSound)
+WalkingSound(MyrmidonF2,FootSound)
+WalkingSound(PegasusKnight2,PegasusSound)
+WalkingSound(Halberdier,FootSound)
+WalkingSound(Sentinel,ArmorSound)
+WalkingSound(JacketHero,FootSound)
+WalkingSound(Gladiator,FootSound)
+WalkingSound(HectorClass,ArmorSound)
+WalkingSound(Truerblade,FootSound)
+WalkingSound(GaidenSage,FootSound)
+WalkingSound(IzukClass,FootSound)
+WalkingSound(Nomad,HorseSound)
+WalkingSound(NarratorClass,FootSound)
+WalkingSound(Warlock,FootSound)
+	
+POP
+	

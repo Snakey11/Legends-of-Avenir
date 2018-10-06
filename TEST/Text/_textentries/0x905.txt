@@ -1,0 +1,2 @@
+The staircase is blocked[NL]
+from the other side.[X]

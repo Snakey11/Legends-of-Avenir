@@ -1,0 +1,4 @@
+[FarRight][LoadVicar][Right][LoadArya][FarLeft][LoadDaniel]I must thank you... You opened the[NL]
+way to that heathen you call a "hero."[A]
+[FarRight]Dammit... We'll have to[NL]
+fight our way through them![A][X]

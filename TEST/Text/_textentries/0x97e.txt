@@ -1,0 +1,4 @@
+[FarRight][LoadXexim][Right][LoadArya][MidLeft][LoadPlayer]It looks like there's nobody around...[A]
+[Right]That's odd... It's as if...[A]
+[FarRight]... They know we're coming.[A][Right][MoveMidRight][MidLeft][MoveRight][ClearFace][LoadPlayer]
+[FarLeft][LoadSoldier1]Hey! Who are you?[A][X]

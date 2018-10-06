@@ -1,0 +1,140 @@
+/// - Start Animation
+C00
+C00
+C00
+C00
+C00
+C00
+C00
+C101029
+O p- blank.PNG
+B p- blankbg.PNG
+2
+C00F148
+O p- blank.png
+B p- bolganone01.PNG
+3 
+O p- blank.png
+B p- bolganone02.PNG
+3 
+O p- blank.png
+B p- bolganone03.PNG
+3 
+O p- blank.png
+B p- bolganone04.PNG
+3 
+O p- blank.png
+B p- bolganone05.PNG
+3 
+O p- blank.png
+B p- bolganone06.PNG
+3 
+O p- blank.png
+B p- bolganone07.PNG
+3 
+O p- blank.png
+B p- bolganone08.PNG
+3 
+O p- blank.png
+B p- bolganone09.PNG
+3 
+O p- blank.png
+B p- bolganone10.PNG
+3 
+C00F148
+O p- blank.png
+B p- bolganone11.PNG
+3 
+O p- blank.png
+B p- bolganone12.PNG
+3 
+O p- blank.png
+B p- bolganone13.PNG
+3 
+O p- blank.png
+B p- bolganone14.PNG
+3 
+O p- blank.png
+B p- bolganone15.PNG
+3 
+O p- blank.png
+B p- bolganone16.PNG
+3 
+O p- blank.png
+B p- bolganone17.PNG
+3 
+O p- blank.png
+B p- bolganone18.PNG
+3 
+C000040
+O p- blank.PNG
+B p- blankbg.PNG
+40
+C00F148
+O p- blank.png
+B p- bolganone19.PNG
+3 
+O p- blank.png
+B p- bolganone20.PNG
+3 
+O p- blank.png
+B p- bolganone21.PNG
+3 
+O p- blank.png
+B p- bolganone22.PNG
+3 
+O p- blank.png
+B p- bolganone23.PNG
+3 
+O p- blank.png
+B p- bolganone24.PNG
+3 
+C1F
+C00001A
+O p- blank.png
+B p- bolganone25.PNG
+3 
+O p- blank.png
+B p- bolganone26.PNG
+3 
+O p- blank.png
+B p- bolganone27.PNG
+3 
+O p- blank.png
+B p- bolganone28.PNG
+3 
+O p- blank.png
+B p- bolganone29.PNG
+3 
+O p- blank.png
+B p- bolganone30.PNG
+3 
+O p- blank.png
+B p- bolganone31.PNG
+3 
+O p- blank.png
+B p- bolganone32.PNG
+3 
+O p- blank.png
+B p- bolganone33.PNG
+3 
+O p- blank.png
+B p- bolganone34.PNG
+3 
+O p- blank.png
+B p- bolganone35.PNG
+3 
+O p- blank.png
+B p- bolganone36.PNG
+3 
+O p- blank.png
+B p- bolganone37.PNG
+3 
+O p- blank.png
+B p- bolganone38.PNG
+3 
+O p- blank.png
+B p- bolganone39.PNG
+3 
+~~~
+/// - End Animation

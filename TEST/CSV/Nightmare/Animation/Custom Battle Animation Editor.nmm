@@ -1,0 +1,106 @@
+#FE8 Stat Bonuses Editor by SpyroDi
+#
+
+1
+FE8 Custom Battle Animation Editor by SpyroDi (please consult Custom Animations.txt)
+0xE60000
+100
+16
+Battle Animation Pointers.txt
+NULL
+
++00 Weapon Type
+0
+1
+NDHU
+Item List.txt
+
++01 All weapons or a certain one?
+1
+1
+NDDU
+Weapon Animation Type.txt
+
++02 Animation Played
+2
+1
+NDHU
+Animation List.txt
+
++03 Separator (always zero)
+3
+1
+NEDU
+NULL
+
++04 Weapon Type
+4
+1
+NDHU
+Item List.txt
+
++05 All weapons or a certain one?
+5
+1
+NDDU
+Weapon Animation Type.txt
+
++06 Animation Played
+6
+1
+NDHU
+Animation List.txt
+
++07 Separator (always zero)
+7
+1
+NEDU
+NULL
+
++08 Weapon Type
+8
+1
+NDHU
+Item List.txt
+
++09 All weapons or a certain one?
+9
+1
+NDDU
+Weapon Animation Type.txt
+
++0A Animation Played
+10
+1
+NDHU
+Animation List.txt
+
++0B Separator (always zero)
+11
+1
+NEDU
+NULL
+
++0C Weapon Type
+12
+1
+NDHU
+Item List.txt
+
++0D All weapons or a certain one?
+13
+1
+NDDU
+Weapon Animation Type.txt
+
++0E Animation Played
+14
+1
+NDHU
+Animation List.txt
+
++0F Separator (always zero)
+15
+1
+NEDU
+NULL

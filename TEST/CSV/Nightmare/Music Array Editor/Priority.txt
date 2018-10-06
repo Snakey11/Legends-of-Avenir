@@ -1,0 +1,9 @@
+8
+0x00000000 - Highest (BGM)
+0x00010001 - High (Map Music)
+0x00020002 - Mid-High
+0x00030003 - Medium
+0x00040004 - Medium
+0x00050005 - Mid-Low
+0x00060006 - Low (SFX)
+0x00070007 - Lowest (SFX)

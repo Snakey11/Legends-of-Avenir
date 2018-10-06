@@ -1,0 +1,6 @@
+[MidLeft][LoadNarrator]Very well then. Now you will select[NL]
+your class.[.....] You can speak to the images[A][NL]
+of your potential classes to select it.[....][NL]
+If you wish to ask me any questions[A][NL]
+for more depth on the world,[.][NL]
+I will also be here.[A][X]

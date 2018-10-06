@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="42004344" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/42004344.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="10">
+  <properties>
+   <property name="Anims" value="42Anims"/>
+   <property name="ChapterID" value="LeavingUndergroundCutscene"/>
+   <property name="MapID" value="LeavingUndergroundMap"/>
+   <property name="ObjectType" value="0x42"/>
+   <property name="PaletteID" value="0x43"/>
+   <property name="TileConfig" value="0x44"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxlkTEKwkAQRSfJFbyD2kTMKaxT2WhjH7BQG8EiKSzFS0hsxKAHsBDxJEHEO/iX/UPGWHxmNjNv/mQ3DURGkcg+8EqQz6GMcQcNmMc8u3iGavGM5V2fnaG9cUszsH30p+Q0qm9idsg4o0T9CBVgP9BNGl9VxThE/4n7Hkx9FXrvmnxl/Cuzh+pp8k3o+YJ8z/lAL/n3V90ZJ+CmZHPxO7j8LX5G19196z9S8gtwa+OtsnN0J/Xv8E20Niaf87yMGtblBd/D3ukF36/RL2/77ZwHuS19v5+ES9k=
+  </data>
+ </layer>
+</map>

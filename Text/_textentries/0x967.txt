@@ -1,0 +1,6 @@
+[FarLeft][LoadRobert]You! Kendrick![A][ClearFace]
+[FarRight][LoadKendrick]Come on. You can't really[NL]
+believe all this, can you?[A][ClearFace]
+[FarLeft][LoadRobert]I always knew you were[NL]
+never loyal to our cause.[A][NL]
+For Altorosk![A][X]

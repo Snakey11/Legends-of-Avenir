@@ -1,0 +1,26 @@
+//Show Heal Amount (FE7/8)
+//By Tequila
+
+
+
+	#endif
+	#define Arrow_Text_ID 0x184 //currently just a hyphen; make a text id with '->' and put it here (DON'T CHANGE THE VANILLA ONE)
+	
+	#include "Extensions/Hack Installation.txt"
+	
+	PUSH
+	
+	ORG $24670
+	jumpToHack(FE8_Show_Heal_Amount)
+	
+	POP
+	
+	TxtData0x184:
+	#incext ParseFile "Arrow.txt"
+	setText(0x184,TxtData0x184)
+	
+	ALIGN 4
+	FE8_Show_Heal_Amount:
+	#incbin "FE8-Show Heal Amount.dmp"
+	WORD Arrow_Text_ID
+	

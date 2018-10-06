@@ -1,0 +1,83 @@
+#ifndef ClassAnimTable
+    #define ClassAnimTable (0xc00008-0x20)
+#endif
+
+
+#define AnimTableEntry(index) "ORG ClassAnimTable + (index * 0x20)"
+//////////////Installed animations go here
+
+
+#include "Impaler Spear.event"
+
+#include "Impaler Unarmed.event"
+
+
+#include "Izuk Magic.event"
+
+
+#include "Jacket Hero Sword.event"
+
+#include "Jacket Hero Axe.event"
+
+#include "Jacket Hero Hand Axe.event"
+
+#include "Jacket Hero Unarmed.event"
+
+
+#include "Monk F Magic.event"
+
+
+#include "Magus M Magic.event"
+
+#include "Magus M Staff.event"
+
+#include "Magus F Magic.event"
+
+#include "Magus F Staff.event"
+
+
+#include "Master Knight M Axe.event"
+
+#include "Master Knight M Hand Axe.event"
+
+#include "Master Knight F Sword.event"
+
+#include "Master Knight F Spear.event"
+
+#include "Master Knight F Axe.event"
+
+#include "Master Knight F Hand Axe.event"
+
+#include "Master Knight F Unarmed.event"
+
+
+#include "Matriarch Magic.event"
+
+#include "Matriarch Staff.event"
+
+
+#include "Mounted Brigand Axe.event"
+
+#include "Mounted Brigand Hand Axe.event"
+
+#include "Mounted Brigand Bow.event"
+
+#include "Mounted Brigand Unarmed.event"
+
+
+#include "Necromancer Magic.event"
+
+#include "Necromancer Staff.event"
+
+
+#include "Nomad Sword.event"
+
+#include "Nomad Bow.event"
+
+#include "Nomad Unarmed.event"
+
+
+#include "Patriarch Magic.event"
+
+#include "Patriarch Staff.event"
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="42004344" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/42004344.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="10">
+  <properties>
+   <property name="Anims" value="42Anims"/>
+   <property name="ChapterID" value="MaximusUzkalisCutscene"/>
+   <property name="MapID" value="MaximusUzkalisCutsceneMap"/>
+   <property name="ObjectType" value="0x42"/>
+   <property name="PaletteID" value="0x43"/>
+   <property name="TileConfig" value="0x44"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxdkD8OQUEQxnffdirEHSRCglto3xU8B+AML69U7BkQ0ZBNnl4novAniAMI0SkEnW/tyA7FL7O7s9/MNxMLIR5SiBDMcNbSYe8X3CuIRZAHc9xj0AQ9Fo9MY8BT+nxMeUP6iL0f8PYCt8D33UuXT8CO5bNUM6Ked+qnGSnpbd0pm6cknS5hdQ3Th0RKuiv+1KSjDLagEfi6mumN/N1Zhvn8zBG4aHXrwGt4f828fndsfZ5AC5o+3oegq4SYgLb6nZv7KYAl23Gd8iMwJv1GeR//HqrkPyH9mXwNSL8CHeV7aprLnhf4m6P+b1oMVpA=
+  </data>
+ </layer>
+</map>

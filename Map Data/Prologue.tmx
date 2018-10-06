@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="8800898A" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/8800898A.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="10">
+  <properties>
+   <property name="Anims" value="88Anims"/>
+   <property name="ChapterID" value="PrologueChapter"/>
+   <property name="Main" value=""/>
+   <property name="MapID" value="PrologueMap"/>
+   <property name="ObjectType" value="0x88"/>
+   <property name="PaletteID" value="0x89"/>
+   <property name="TileConfig" value="0x8A"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzTZWJg4GBgYGAjEesC9WUzMjB0ANndDMSZAVObBdTnAcQrgOzVROqFqfUG6ktiIE9vEsPA6t06QHq/AvE3EvBvJL3kYgDoxiyf
+  </data>
+ </layer>
+</map>

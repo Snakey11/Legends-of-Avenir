@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="19" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="5F006061" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/5F006061.png" width="512" height="512"/>
+  <tile id="623">
+   <properties>
+    <property name="Main" value=""/>
+   </properties>
+  </tile>
+  <tile id="655">
+   <properties>
+    <property name="Main" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="19" height="19">
+  <data encoding="base64" compression="zlib">
+   eJyNk0FOQkEMhoch6hFeTNy4IHkXeCaC5yDxBMrODVcggbhwwwkEdqw4ghFW7NR4AnasIJGlfzNtbErHx+LPTPtev7SdtmyG0IcWrNLYT/HPrhzfJ1Q0kiS2yrBeEDdWtvYJ54pZz4Zl7ZyE8wDuI9SD5vC9Q0to1Uy25DWFLqCB8pXMuQWnDV1C11AXvrVhrU2Ntu6S83mFBopDdWwNa8tx1F+pxbIopzfDWfzDov5KT7y8CsMh7eOxJJ8K/99kWMKR+fhQ86JP4hxCCD/Bz0vnI/OxZx/ZchLnrpFYX8yzrLp5sTP8HZK6pvc0JzPDtntBHJrfCTSERqondhdy8yKce8RuoPN4/NansqSuicOxLL3Tctf73GFOK/ozo1l6z+Wu8zqLKZ/CySfXE+8bxbSc/ui9rpN+01xdO96BXczf5ZQYr67cLNb98wsulLnR
+  </data>
+ </layer>
+</map>

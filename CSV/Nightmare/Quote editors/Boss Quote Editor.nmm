@@ -1,0 +1,40 @@
+#FE8 Boss Quote Editor by flyingace24
+#
+
+1
+FE8 Boss Quote Editor by flyingace24
+0x9EC6BC
+104
+16
+NULL
+NULL
+
+Initiator
+0
+1
+NDHU
+Characters.txt
+
+Receiver
+2
+1
+NDHU
+Characters.txt
+
+Chapter/Map
+4
+1
+NDHU
+Chapters.txt
+
+Trigger ID 
+6
+1
+NEHU
+NULL
+
+Text ID
+8
+2
+NEHU
+NULL

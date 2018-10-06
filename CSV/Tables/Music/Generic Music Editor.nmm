@@ -1,0 +1,22 @@
+#FE8 Character Music Editor by circleseverywhere
+#based on Arch's FE7 Character Music Editor for Cam's patch
+
+1
+FE8 Generic Music Editor
+0xE47940
+254
+2
+FE8 Chapter List.txt
+NULL
+
+Player Phase
+0
+1
+NDHU
+Music.txt
+
+Enemy Phase
+1
+1
+NDHU
+Music.txt

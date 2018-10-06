@@ -1,0 +1,360 @@
+
+EventPointerTable(Merc3MilitiaKillEvents,ThisChapter)
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0x0,AryaAI,5)
+TurnEventPlayer(0x0,Reinforcements1,6)
+TurnEventPlayer(0x0,Reinforcements2,13)
+TurnEventPlayer(0x0,Reinforcements3,10,3)
+END_MAIN
+
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+CharacterBasedEvents:
+CHAR 0x10 ArcArya [Arc,Arya] 0x0
+CHAR 0x10 LukeArya [Luke,Arya] 0x0
+CHAR 0x10 PlayerArya [PlayerMMercenary,Arya] 0x0
+CHAR 0x10 PlayerArya [PlayerMMyrmidon,Arya] 0x0
+CHAR 0x10 PlayerArya [PlayerMFighter,Arya] 0x0
+CHAR 0x10 PlayerArya [PlayerMPirate,Arya] 0x0
+CHAR 0x10 PlayerArya [PlayerMBrigand,Arya] 0x0
+CHAR 0x10 PlayerArya [PlayerFMercenary,Arya] 0x0
+CHAR 0x10 PlayerArya [PlayerFMyrmidon,Arya] 0x0
+CHAR 0x10 PlayerArya [PlayerFPegasusKnight,Arya] 0x0
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+AFEV 0x12 EndingScene 0x02
+AFEV 0x15 IDStuff 0x14
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+GAST [16,7] 0x0 [1,1]
+GAST [17,8] 0x2 [1,1]
+GAST [18,8] 0x2 [1,1]
+GAST [19,7] 0x1 [1,1]
+ENDTRAP
+
+ALIGN 4
+
+Units:
+UNIT
+
+BeginningScene:
+MUSC Advance
+SETVAL 0xB 0x060007
+LOMA MercenaryMilitia2
+LOAD3 0x1 PlayerLoading1
+LOAD2 0x1 StartLukeArc1
+ENUN
+FADU 0x5
+STAL 0x30
+FADI 0x5
+CLEA Luke
+SETVAL 0xB 0x060006
+LOMA MercenaryMilitiaKill3
+LOAD3 0x1 PlayerLoading2
+LOAD2 0x1 StartLukeArc2
+ENUN
+SetBackground(0x3)
+Text(Merc3MilitiaKillBeginningText)
+EndConvo
+STAL 0x30
+FADI 0x5
+MUSI
+STAL 0x30
+MUNO
+SetBackground(0x29)
+TEXTSHOW Merc3MilitiaKillRuinsText
+TEXTEND
+FadeOutMusic
+TEXTCONT
+TEXTEND
+EndConvo
+MUSC Tension
+LOAD1 0x1 BanditPeople1
+STAL 0x30
+MOVE 0x0 Luke [6,5]
+MoveMercenary(5,5)
+ENUN
+STAL 0x20
+Text(0x29,Merc3MilitiaKillWestonHereText)
+LOAD1 0x1 BanditPeople2
+STAL 0x10
+MOVE 0x0 Weston [11,14]
+STAL 0x10
+CAM1 Arya
+ENUN
+STAL 0x10
+Text(0x13,Merc3MilitiaKillWestonAryaText)
+MOVE 0x0 Weston [18,6]
+STAL 0x20
+CAM1 [5,5]
+MOVE 0x0 Luke [2,4]
+MoveMercenary(4,4)
+ENUN
+NoFade
+ENDA
+
+EndingScene:
+MUSC Indignation
+FADI 0x5
+STAL 0x10
+CAM1 [14,14]
+CLEAN
+LOAD3 0x1 PlayerLoading3
+LOAD2 0x1 EndingStuff
+CHECK_EVENTID 0x10
+BEQ 0x19 0x0 0xC
+	LOAD1 0x1 AryaRecruited
+	ENUN
+	FADU 0x5
+	STAL 0x20
+	SetBackground(0x13)
+	Text(Merc3MilitiaKillEndingText)
+GOTO 0x1A
+LABEL 0x19
+	LOAD1 0x1 AryaNotRecruited
+	ENUN
+	FADU 0x5
+	STAL 0x20
+	SetBackground(0x13)
+	Text(Merc3MilitiaKillEndingNoAryaText)
+	TurnAlly(Arya)
+LABEL 0x1A
+FadeOutMusic
+FADI 0x5
+STAL 0x50
+MUSC Indignation
+SetBackground(0x2)
+TEXTSHOW Merc3MilitiaKillCheckpointText
+TEXTEND
+MUSC Advance
+TEXTCONT
+TEXTEND
+MoveToChapter(MercenaryMilitiaKill4)
+ENDA
+
+IDStuff:
+ENUT 0x14
+NoFade
+ENDA
+
+AryaAI:
+MUSI
+CAM1 Arya
+Text(0x13,Merc3MilitiaKillAryaAIText)
+SETVAL 0x1 0x0006
+CHAI Arya
+MUNO
+NoFade
+ENDA
+
+Reinforcements1:
+LOAD1 0x1 LoadReinforcements1
+ENUN
+NoFade
+ENDA
+
+Reinforcements2:
+LOAD1 0x1 LoadReinforcements2
+ENUN
+NoFade
+ENDA
+
+Reinforcements3:
+LOAD1 0x1 LoadReinforcements3
+ENUN
+NoFade
+ENDA
+
+ArcArya:
+MUSS Comrades
+Text(Merc3MilitiaKillAryaArcText)
+TurnAlly(Arya)
+ENUT 0x11
+MURE 0x5
+NoFade
+ENDA
+
+LukeArya:
+MUSS Comrades
+Text(Merc3MilitiaKillAryaLukeText)
+TurnAlly(Arya)
+ENUT 0x11
+MURE 0x5
+NoFade
+ENDA
+
+PlayerArya:
+MUSS Comrades
+Text(Merc3MilitiaKillAryaPlayerText)
+TurnAlly(Arya)
+ENUT 0x11
+MURE 0x5
+NoFade
+ENDA
+
+
+	/*UNIT DATA*/
+
+PlayerLoading1:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(4,Ally,True) [10,6] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(4,Ally,True) [10,6] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(4,Ally,True) [10,6] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(4,Ally,True) [10,6] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(4,Ally,True) [10,6] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(4,Ally,True) [10,6] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(4,Ally,True) [10,6] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(4,Ally,True) [10,6] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+PlayerLoading2:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(4,Ally,True) [5,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(4,Ally,True) [5,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(4,Ally,True) [5,3] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(4,Ally,True) [5,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(4,Ally,True) [5,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(4,Ally,True) [5,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(4,Ally,True) [5,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(4,Ally,True) [5,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+PlayerLoading3:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(4,Ally,True) [18,15] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(4,Ally,True) [18,15] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(4,Ally,True) [18,15] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(4,Ally,True) [18,15] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(4,Ally,True) [18,15] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(4,Ally,True) [18,15] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(4,Ally,True) [18,15] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(4,Ally,True) [18,15] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+StartLukeArc1:
+UNIT Arc Brigand PlayerMArcher Level(4,Ally,True) [9,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+//UNIT Luke Brigand PlayerMArcher Level(4,Ally,True) [9,7] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+StartLukeArc2:
+UNIT Arc Brigand PlayerMArcher Level(4,Ally,True) [3,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Luke Brigand PlayerMArcher Level(4,Ally,True) [6,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+BanditPeople1:
+UNIT Weston Mercenary Weston Level(9,Enemy,True) [0,13] 0x00 0x00 0x1 REDA1 [IronBlade] AttackInRangeAI
+UNIT WestonBandit Brigand Weston Level(2,Enemy,True) [0,12] 0x00 0x00 0x1 REDA2 [HandAxe] [0]
+UNIT WestonBandit Brigand Weston Level(2,Enemy,True) [0,14] 0x00 0x00 0x1 REDA3 [SteelAxe] [0]
+UNIT WestonBandit Monk Weston Level(2,Enemy,True) [0,13] Drop 0x00 0x1 REDA4 [Exordium,Heal] ChaseOnceApproachedAI
+UNIT
+
+BanditPeople2:
+UNIT Arya Myrmidon_F Weston Level(7,Enemy,True) [21,14] 0x00 0x00 0x1 AryaREDA [KillingEdge,SteelSword,HeroCrest] AttackInRangeAI
+UNIT WestonBandit Archer Weston Level(7,Enemy,True) [0,12] 0x00 0x00 0x1 REDA5 [IronLongbow] GuardAI
+UNIT WestonBandit Archer Weston Level(6,Enemy,True) [0,12] 0x00 0x00 0x1 REDA6 [SteelLongbow] GuardAI
+UNIT WestonBandit Pirate Weston Level(5,Enemy,True) [0,13] 0x00 0x00 0x1 REDA7 [HandAxe] AttackInRangeAI
+UNIT WestonBandit Soldier Weston Level(8,Enemy,True) [0,13] 0x00 0x00 0x1 REDA8 [SteelLance] AttackInRangeAI
+UNIT WestonBandit Knight Weston Level(9,Enemy,True) [0,14] 0x00 0x00 0x1 REDA9 [Javelin] GuardAI
+UNIT WestonBandit Brigand Weston Level(6,Enemy,True) [0,15] 0x00 0x00 0x1 REDA10 [SwordSlayer] [0]
+UNIT WestonBandit Fighter Weston Level(7,Enemy,True) [21,13] 0x00 0x00 0x1 REDA11 [IronAxe] ChaseOnceApproachedAI
+UNIT WestonBandit Archer Weston Level(5,Enemy,True) [11,1] 0x00 0x00 0x0 0x0 [SteelLongbow] GuardAI
+UNIT WestonBandit Cavalier Weston Level(4,Enemy,True) [21,8] 0x00 0x00 0x0 0x0 [SteelLance] AttackInRangeAI
+UNIT WestonBandit Shaman Weston Level(7,Enemy,True) [21,10] 0x00 0x00 0x1 REDA13 [Worm] AttackInRangeAI 
+UNIT
+
+LoadReinforcements1:
+UNIT WestonBandit Cavalier Weston Level(6,Enemy,True) [8,19] 0x00 0x00 0x1 REDA14 [Lancereaver] PursueWithoutHeedAI
+UNIT WestonBandit Cavalier Weston Level(5,Enemy,True) [7,19] 0x00 0x00 0x1 REDA15 [SteelSword,Javelin] PursueWithoutHeedAI
+UNIT WestonBandit Mage Weston Level(5,Enemy,True) [9,19] 0x00 0x00 0x1 REDA16 [Elaqua] [0] 
+UNIT WestonBandit Mercenary Weston Level(4,Enemy,True) [8,19] 0x00 0x00 0x1 REDA17 [IronBlade] ChaseOnceApproachedAI
+UNIT WestonBandit Mercenary Weston Level(7,Enemy,True) [9,19] 0x00 0x00 0x1 REDA18 [ArmorSlayer] ChaseOnceApproachedAI
+UNIT
+
+LoadReinforcements2:
+UNIT WestonBandit Pirate Weston Level(6,Enemy,True) [18,7] 0x00 0x00 0x1 REDA19 [ShortAxe] PursueWithoutHeedAI
+UNIT WestonBandit Myrmidon Weston Level(5,Enemy,True) [18,7] 0x00 0x00 0x1 REDA20 [LanceSlayer] PursueWithoutHeedAI
+UNIT WestonBandit Mage Weston Level(5,Enemy,True) [18,7] 0x0 0x00 0x1 REDA22 [Wind] [0]
+UNIT
+
+LoadReinforcements3:
+UNIT WestonBandit Soldier Weston Level(5,Enemy,True) [18,7] 0x00 0x00 0x0 0x0 [SteelLance] [0]
+UNIT
+
+EndingStuff:
+UNIT Arc Brigand PlayerMArcher Level(4,Ally,True) [17,16] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Luke Brigand PlayerMArcher Level(4,Ally,True) [19,16] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+AryaRecruited:
+UNIT Arya Myrmidon_F Weston Level(6,Ally,True) [18,18] 0x00 0x00 0x0 0x0 [KillingEdge,IronSword] [0]
+UNIT
+
+AryaNotRecruited:
+UNIT Arya Myrmidon_F Weston Level(6,Enemy,True) [18,20] 0x00 0x00 0x0 0x0 [KillingEdge,SteelSword] [0]
+UNIT
+
+REDA1:
+REDA [4,7] 0x0 0x0 0x0 0x0
+REDA2:
+REDA [3,8] 0x0 0x0 0x0 0x0
+REDA3:
+REDA [5,8] 0x0 0x0 0x0 0x0
+REDA4:
+REDA [4,11] 0x0 0x0 0x0 0x0
+AryaREDA:
+REDA [12,14] 0x0 0x0 0x0 0x0
+REDA5:
+REDA [1,8] 0x0 0x0 0x0 0x0
+REDA6:
+REDA [7,8] 0x0 0x0 0x0 0x0
+REDA7:
+REDA [10,8] 0x0 0x0 0x0 0x0
+REDA8:
+REDA [6,13] 0x0 0x0 0x0 0x0
+REDA9:
+REDA [5,14] 0x0 0x0 0x0 0x0
+REDA10:
+REDA [1,15] 0x0 0x0 0x0 0x0
+REDA11:
+REDA [15,13] 0x0 0x0 0x0 0x0
+REDA13:
+REDA [19,10] 0x0 0x0 0x0 0x0
+REDA14:
+REDA [8,18] 0x0 0x0 0x0 0x0
+REDA15:
+REDA [7,18] 0x0 0x0 0x0 0x0
+REDA16:
+REDA [11,18] 0x0 0x0 0x0 0x0
+REDA17:
+REDA [20,17] 0x0 0x0 0x0 0x0
+REDA18:
+REDA [18,17] 0x0 0x0 0x0 0x0
+REDA19:
+REDA [15,5] 0x0 0x0 0x0 0x0
+REDA20:
+REDA [20,5] 0x0 0x0 0x0 0x0
+REDA21:
+REDA [17,4] 0x0 0x0 0x0 0x0
+REDA22:
+REDA [19,4] 0x0 0x0 0x0 0x0

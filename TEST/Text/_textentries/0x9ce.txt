@@ -1,0 +1,4 @@
+[MidLeft][LoadLuke][Tact], wake up![A][NL]
+[MidRight]Huh?[A]
+[MidLeft]Maximus[MidRight][LoadPlayer][MidLeft] wants to speak with us.[A]
+[MidRight]Oh, sorry, I'm on my way.[A][X]

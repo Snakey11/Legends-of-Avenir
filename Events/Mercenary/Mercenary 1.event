@@ -1,0 +1,247 @@
+
+EventPointerTable(Merc1Events,ThisChapter)
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+House(0x0,Home4,8,14)
+House(0x0,Home2,0,1)
+House(0x11,Home1,0,5)
+SHOP 0x0 ShopData [6,2] 0x17
+END_MAIN
+
+MiscBasedEvents:
+//CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+Units:
+UNIT
+
+BeginningScene:
+MUSC Distant_Roads
+#define Index 0
+#define UnitPointer PlayerLoading1
+CHECK_EVENTID 0x6E
+BNE (0x0 + 0x8 * Index) 0xC 0x0
+	CHECK_EVENTID 0x69
+	BEQ (0x2 + 0x8 * Index) 0xC 0x0
+		LOAD1 0x1 (UnitPointer)
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x2 + 0x8 * Index)
+	CHECK_EVENTID 0x6A
+	BEQ (0x3 + 0x8 * Index) 0xC 0x0
+		LOAD1 0x1 (UnitPointer + 40)
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x3 + 0x8 * Index)
+		LOAD1 0x1 (UnitPointer + 80)
+	GOTO (0x1 + 0x8 * Index)
+LABEL (0x0 + 0x8 * Index)
+	CHECK_EVENTID 0x69
+	BEQ (0x4 + 0x8 * Index) 0xC 0x0
+		LOAD1 0x1 (UnitPointer + 120)
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x4 + 0x8 * Index)
+	CHECK_EVENTID 0x6A
+	BEQ (0x5 + 0x8 * Index) 0xC 0x0
+		LOAD1 0x1 (UnitPointer + 160)
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x5 + 0x8 * Index)
+	CHECK_EVENTID 0x6B
+	BEQ (0x6 + 0x8 * Index) 0xC 0x0
+		LOAD1 0x1 (UnitPointer + 200)
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x6 + 0x8 * Index)
+	CHECK_EVENTID 0x6C
+	BEQ 0x7 0xC 0x0
+		LOAD1 0x1 (UnitPointer + 240)
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x7 + 0x8 * Index)
+		LOAD1 0x1 (UnitPointer + 280)
+LABEL (0x1 + 0x8 * Index)
+#undef Index
+#undef UnitPointer
+LOAD1 0x1 XenaStuff
+CAM1 [7,10]
+FADU 0x5
+STAL 0x30
+Text(Merc1OpeningText)//Convo with merchant
+SVAL 0x3 500
+GIVEITEMTOMAIN 0x0
+MOVE 0x0 Xena [8,4]
+ENUN
+DISA Xena
+Text(Merc1CampText)//Saying stuff about camp
+STAL 0x30
+FADI 0x5
+STAL 0x30
+
+MOVE 0x0 PlayerMMercenary [9,13]
+MOVE 0x0 PlayerMMyrmidon [9,13]
+MOVE 0x0 PlayerMPirate [9,13]
+MOVE 0x0 PlayerMFighter [9,13]
+MOVE 0x0 PlayerMBrigand [9,13]
+MOVE 0x0 PlayerFMercenary [9,13]
+MOVE 0x0 PlayerFMyrmidon [9,13]
+MOVE 0x0 PlayerFPegasusKnight [9,13]
+ENUN
+
+CHECK_EVENTID 0x6B
+BEQ 0x8 0xC 0x0
+	CHECK_EVENTID 0x6E
+	BNE 0x8 0xC 0x0
+		LOAD1 0x1 SwordBandits //For peg. knight
+	GOTO 0x8
+GOTO 0x9
+LABEL 0x8
+	LOAD1 0x1 AxeBandits
+LABEL 0x9
+
+ENUN
+MUSC Shadow_of_the_Enemy
+STAL 0x30
+FADU 0x5
+Text(Merc1HenningHereText)//Convo with Bandits
+MOVE 0x0 Henning [4,0]
+STAL 0x10
+Text(Merc1VulneraryText)//Text about vulneraries
+
+//LOAD1 0x1 TestPeople
+
+NoFade
+ENDA
+
+EndingScene:
+MUSC Victory
+EVBIT_T 0x4
+Text(Merc1PreMenuText)//Convo : Bandits flee
+ENUN
+STAL 0x10
+EVBIT_F 0x2
+ASMC CallMerc1Menu+1
+MUSC Advance
+BNE 0xA 0xC 0x0
+	Text(Merc1HelpDanaanText)//Text if helping Danaan
+	MoveToChapter(MercenaryMilitia2)
+GOTO 0xB
+LABEL 0xA
+	Text(Merc1JoinBanditsText)//Text if joining Bandits
+	MoveToChapter(MercenaryBandit2)
+LABEL 0xB
+ENDA
+
+ShopData:
+SHLI IronSword IronLance IronAxe
+ALIGN 4
+ENDA
+
+Home1:
+MUSI
+VillageEventItem(Merc1House1Text,0x01,Vulnerary)
+MUNO
+NoFade
+ENDA
+
+Home2:
+MUSI
+HouseEvent(0x85,0x01) // NEEDS TEXT
+MUNO
+NoFade
+ENDA
+
+Home4:
+MUSI
+HouseEvent(Merc1House2Text,0x01)
+TileChange(0,5)
+NoFade
+MUNO
+ENDA
+
+
+	/*UNIT DATA*/
+
+PlayerLoading1:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+XenaStuff:
+UNIT Xena Civilian Xena Level(1,NPC,True) [8,10] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT
+
+SwordBandits:
+UNIT Henning 0x6F Henning Level(3,Enemy,True) [9,11] 0x00 0x00 0x00 0x00 [SteelSword] GuardTileAI
+UNIT GerwickBandit Myrmidon Henning Level(2,Enemy,True) [2,7] 0x00 0x00 0x00 0x00 [IronSword] AttackInRangeAI
+UNIT GerwickBandit Mercenary Henning Level(1,Enemy,True) [7,10] 0x00 0x00 0x00 0x00 [IronSword] [0] 
+UNIT GerwickBandit PegasusKnight Henning Level(1,Enemy,True) [13,2] 0x00 0x00 0x00 0x00 [Javelin] [0] 
+UNIT
+
+AxeBandits:
+UNIT Henning Fighter Henning Level(3,Enemy,True) [9,11] 0x00 0x00 0x00 0x00 [SteelAxe] GuardAI
+UNIT GerwickBandit Brigand Henning Level(2,Enemy,True) [7,10] 0x00 0x00 0x00 0x00 [HandAxe] [0]
+UNIT GerwickBandit Brigand Henning Level(1,Enemy,True) [13,2] 0x00 0x00 0x00 0x00 [IronAxe] [0]
+UNIT GerwickBandit Mercenary Henning Level(2,Enemy,True) [2,7] 0x00 0x00 0x00 0x00 [IronSword] AttackInRangeAI
+UNIT
+
+TestPeople:
+//UNIT GerwickBandit Mage Henning Level(2,Enemy,True) [8,9] 0x00 0x00 0x00 0x00 [Wind] NoAI
+//UNIT GerwickBandit Mage Henning Level(2,Enemy,True) [8,10] 0x00 0x00 0x00 0x00 [Arcthunder] NoAI
+//UNIT GerwickBandit Shaman Henning Level(2,Enemy,True) [9,10] 0x00 0x00 0x00 0x00 [Dulam] NoAI
+UNIT GerwickBandit Mage Henning Level(2,Enemy,True) [10,10] 0x00 0x00 0x00 0x00 [Fire] NoAI
+UNIT Ewan Summoner Henning Level(5,Ally,True) [8,11] 0x00 0x00 0x00 0x00 [Flux] NoAI
+//UNIT Kendrick Pirate Henning Level(1,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
+//UNIT Xena Druid Henning Level(15,Ally,True) [9,9] 0x00 0x00 0x00 0x00 [Flux] NoAI
+//UNIT Lux Sage Henning Level(15,Ally,True) [9,10] 0x00 0x00 0x00 0x00 [Fire] NoAI
+//UNIT Luke Bishop Henning Level(15,Ally,True) [9,11] 0x00 0x00 0x00 0x00 [Lightning] NoAI
+UNIT
+
+
+PUSH
+//ORG $DB2A
+ORG $DB14
+//SHORT $46C0 $46C0
+POP
+
+//Game over called at 0x08085374. bled from 0x0800DB2E
+// The check for this seems to be in that vblank swi 0x5 thing. That thing is at 0x08000AE0.

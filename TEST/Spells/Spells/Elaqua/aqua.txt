@@ -1,0 +1,120 @@
+//aqua
+//feed this script to circleseverywhere's CSA Creator; not compatible with FEditor!
+C000000
+O blank.png
+B blankbg.png
+2
+C000040
+O blank.png
+B blankbg.png
+4
+
+C081029
+O blank.png
+B frame01.png
+1
+
+C010048
+//sfx
+
+C0c1029
+O blank.png
+B frame01.png
+1
+C0e1029
+O blank.png
+B frame02.png
+1
+C101029
+O blank.png
+B frame03.png
+1
+O frame03o.png
+B frame04.png
+1
+C0d1029
+O frame04o.png
+B frame05.png
+1
+C101029
+O frame05o.png
+B blank.png
+1
+O frame06o.png
+B blank.png
+1
+O frame07o.png
+B blank.png
+1
+O frame08o.png
+B blank.png
+1
+O frame09o.png
+B blank.png
+1
+O frame10o.png
+B blank.png
+1
+O frame11o.png
+B blank.png
+1
+O frame12o.png
+B blank.png
+1
+O frame13o.png
+B blank.png
+1
+O frame14o.png
+B blank.png
+1
+O frame15o.png
+B blank.png
+1
+C00001A
+C00001F
+~
+//hit; hit sfx; miss terminator
+
+C013348
+//splash!!!!!!!
+
+C100b29
+O frame16o.png
+B frame16.png
+1
+C100d29
+O frame16o.png
+B frame16.png
+1
+C100e29
+O frame17o.png
+B frame17.png
+1
+C100f29
+O frame17o.png
+B frame17.png
+1
+C0f1029
+O frame18o.png
+B frame18.png
+1
+C0e1029
+O frame19o.png
+B frame19.png
+1
+C0d1029
+O frame20o.png
+B frame20.png
+1
+C0b1029
+O frame21o.png
+B frame21.png
+1
+C081029
+O blank.png
+B frame21.png
+1
+O blank.png
+B blankbg.png
+2
+~

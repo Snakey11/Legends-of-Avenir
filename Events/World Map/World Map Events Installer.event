@@ -1,0 +1,29 @@
+{
+  #define PrologueWMEventsID 0x1
+  ALIGN 4
+  #include "WM_Prologue.event"
+}
+{
+  ALIGN 4
+  #include "WM2_Prologue.event"
+}
+
+PUSH//Skip very begining world map
+ORG $A39768
+EVBIT_MODIFY 0x1
+SKIPWN
+ENDA
+
+ORG $CC20C 	// Skip health and safety screen
+BYTE 0x0 0x0
+
+ORG $C4928  // Skip new game text
+BYTE 0xC0 0x46
+
+ORG $C6714  // Skip intro cutscene
+BYTE 0xC0 0x46
+
+ORG $C63AD
+BYTE 0xE0
+
+POP

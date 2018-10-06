@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="17" height="17" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="01005B03" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/01005B03.png" width="512" height="512"/>
+  <tile id="162">
+   <properties>
+    <property name="Main" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="17" height="17">
+  <data encoding="base64" compression="zlib">
+   eJxtkj9LA0EQxdfb3rMREcsgFne2ImKXIlcoopgotldoYaHoBVshoJ0i6hdIESsL/V4Wgr1v2HlkbpLix+7O7pu/2w0hdMFYV2Fk9usxrT1wYe6uYf/NQriJbU0ep9ra+KGedupfsH7HpBf7MfZ9MIgpJ7EfYn8ECpen+PhS/djc3eLcgGGcraPQ85K5E10Dhqb+V9y/gfeY8pL8S+UKVK5vO+BPyeO0dsbz/ROejB/R98EJWDa+exqvdP2T9U59PIMtsOr8j7Tuwthy7WWjGsm3o6y5eZXmzN7T/65qT1XHPGyfmG/l5t81sVdcfybgw7z7zNI6Uf/8X9uqZ86j0K7T/2POqVC71/PNvP9h/3Otb0R/ZvK38Yo58Zn3/ULSdsyc+Za1+l5ZRF9mKe659rlys/F68Vvrmx/oF3G+zNp+xdcjOAAPYfav2T1z2MzacTmnDdWz5+wlz8xhD+yDf5BaZuE=
+  </data>
+ </layer>
+</map>

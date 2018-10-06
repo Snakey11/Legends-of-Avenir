@@ -1,0 +1,5 @@
+[MidRight][LoadCurrent][MidLeft][LoadVillagerWoman]
+Danaan's such a small town...[NL]
+Why would they want to[A][NL]
+attack us? Our treasury barely[NL]
+has anything worth taking.[A][X]

@@ -1,0 +1,212 @@
+
+MountainierAnim:
+SwordAnim(BerserkerSword)
+AxeAnim(BerserkerAxe)
+HandAxeAnim(BerserkerHandAxe)
+UnarmedAnim(BerserkerUnarmed)
+WORD 0x0 0x0
+
+BlackFalcoknightAnim:
+SwordAnim(BlackFalcoknightSword)
+SpearAnim(BlackFalcoknightSpear)
+UnarmedAnim(BlackFalcoknightUnarmed)
+WORD 0x0 0x0
+
+ChampionAnim:
+SwordAnim(ChampionSword)
+AxeAnim(ChampionAxe)
+HandAxeAnim(ChampionHandAxe)
+UnarmedAnim(ChampionUnarmed)
+WORD 0x0 0x0
+
+CommanderAnim:
+SpearAnim(CommanderSpear)
+UnarmedAnim(CommanderUnarmed)
+WORD 0x0 0x0
+
+DarkKnightMAnim:
+StaffAnim(DarkKnightMStaff)
+DarkAnim(DarkKnightMMagic)
+UnarmedAnim(DarkKnightMMagic)
+WORD 0x0 0x0
+
+DarkKnightFAnim:
+StaffAnim(DarkKnightFStaff)
+DarkAnim(DarkKnightFMagic)
+UnarmedAnim(DarkKnightFMagic)
+WORD 0x0 0x0
+
+GaidenSageAnim:
+StaffAnim(GaidenSageStaff)
+AnimaAnim(GaidenSageMagic)
+LightAnim(GaidenSageMagic)
+UnarmedAnim(GaidenSageMagic)
+WORD 0x0 0x0
+
+GladiatorAnim:
+AxeAnim(GladiatorAxe)
+HandAxeAnim(GladiatorHandAxe)
+UnarmedAnim(GladiatorUnarmed)
+WORD 0x0 0x0
+
+GrandPaladinAnim:
+SwordAnim(GrandPaladinSword)
+SpearAnim(GrandPaladinLance)
+AxeAnim(GrandPaladinAxe)
+HandAxeAnim(GrandPaladinHandAxe)
+UnarmedAnim(GrandPaladinUnarmed)
+WORD 0x0 0x0
+
+HalberdierAnim:
+SpearAnim(HalberdierSpear)
+UnarmedAnim(HalberdierUnarmed)
+WORD 0x0 0x0
+
+HectorAnim:
+SwordAnim(HectorSword)
+AxeAnim(HectorAxe)
+HandAxeAnim(HectorHandAxe)
+UnarmedAnim(HectorUnarmed)
+WORD 0x0 0x0
+
+HunterAnim:
+BowAnim(HunterBow)
+UnarmedAnim(HunterUnarmed)
+WORD 0x0 0x0
+
+ImpalerAnim:
+SpearAnim(ImpalerSpear)
+UnarmedAnim(ImpalerUnarmed)
+WORD 0x0 0x0
+
+IzukAnim:
+AnimaAnim(IzukMagic)
+DarkAnim(IzukMagic)
+UnarmedAnim(IzukMagic)
+WORD 0x0 0x0
+
+JacketHeroAnim:
+SwordAnim(JacketHeroSword)
+AxeAnim(JacketHeroAxe)
+HandAxeAnim(JacketHeroHandAxe)
+UnarmedAnim(JacketHeroUnarmed)
+WORD 0x0 0x0
+
+MagusMAnim:
+StaffAnim(MagusMStaff)
+AnimaAnim(MagusMMagic)
+LightAnim(MagusMMagic)
+UnarmedAnim(MagusMMagic)
+WORD 0x0 0x0
+
+MagusFAnim:
+StaffAnim(MagusFStaff)
+AnimaAnim(MagusFMagic)
+LightAnim(MagusFMagic)
+UnarmedAnim(MagusFMagic)
+WORD 0x0 0x0
+
+MasterKnightMAnim:
+SwordAnim(MasterKnightMSword)
+SpearAnim(MasterKnightMSpear)
+AxeAnim(MasterKnightMAxe)
+HandAxeAnim(MasterKnightMHandAxe)
+UnarmedAnim(MasterKnightMUnarmed)
+WORD 0x0 0x0
+
+MasterKnightFAnim:
+SwordAnim(MasterKnightFSword)
+SpearAnim(MasterKnightFSpear)
+AxeAnim(MasterKnightFAxe)
+HandAxeAnim(MasterKnightFHandAxe)
+UnarmedAnim(MasterKnightFUnarmed)
+WORD 0x0 0x0
+
+MatriarchAnim:
+StaffAnim(MatriarchStaff)
+LightAnim(MatriarchMagic)
+UnarmedAnim(MatriarchMagic)
+WORD 0x0 0x0
+
+MonkMAnim:
+StaffAnim(MonkStaff)
+LightAnim(MonkMagic)
+UnarmedAnim(MonkMagic)
+WORD 0x0 0x0
+
+MonkFAnim:
+StaffAnim(MonkFStaff)
+LightAnim(MonkFMagic)
+UnarmedAnim(MonkFMagic)
+WORD 0x0 0x0
+
+MountedBrigandAnim:
+AxeAnim(MountedBrigandAxe)
+HandAxeAnim(MountedBrigandHandAxe)
+BowAnim(MountedBrigandBow)
+UnarmedAnim(MountedBrigandUnarmed)
+WORD 0x0 0x0
+
+NarratorClassAnim:
+SwordAnim(NarratorSword1)
+WORD 0x0 0x0
+
+NomadAnim:
+SwordAnim(NomadSword)
+BowAnim(NomadBow)
+UnarmedAnim(NomadUnarmed)
+WORD 0x0 0x0
+
+PatriarchAnim:
+StaffAnim(PatriarchStaff)
+LightAnim(PatriarchMagic)
+UnarmedAnim(PatriarchMagic)
+WORD 0x0 0x0
+
+SentinelAnim:
+SpearAnim(SentinelSpear)
+UnarmedAnim(SentinelUnarmed)
+WORD 0x0 0x0
+
+TruebladeMAnim:
+SwordAnim(TruebladeMSword)
+UnarmedAnim(TruebladeMUnarmed)
+WORD 0x0 0x0
+
+ShadowAnim:
+SwordAnim(ShadowSword)
+UnarmedAnim(ShadowUnarmed)
+WORD 0x0 0x0
+
+SpearHeroAnim:
+SwordAnim(0x0D)
+SpearAnim(SpearHeroSpear)
+AxeAnim(0x0E)
+HandAxeAnim(0x0F)
+WORD 0x0 0x0
+
+TruerbladeAnim:
+SwordAnim(TruerbladeSword)
+UnarmedAnim(TruerbladeUnarmed)
+WORD 0x0 0x0
+
+WarlockAnim:
+AxeAnim(WarlockAxe)
+HandAxeAnim(WarlockHandAxe)
+UnarmedAnim(WarlockUnarmed)
+WORD 0x0 0x0
+
+WyvernGeneralAnim:
+SwordAnim(WyvernGeneralSword)
+SpearAnim(WyvernGeneralSpear)
+AxeAnim(WyvernGeneralAxe)
+HandAxeAnim(WyvernGeneralHandAxe)
+BowAnim(WyvernGeneralBow)
+UnarmedAnim(WyvernGeneralUnarmed)
+WORD 0x0 0x0
+
+XeximAnim:
+SwordAnim(XeximSword)
+BowAnim(XeximBow)
+UnarmedAnim(XeximUnarmed)
+WORD 0x0 0x0

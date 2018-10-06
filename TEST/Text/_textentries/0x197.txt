@@ -1,0 +1,4 @@
+[FarLeft][LoadKendrick][Right][LoadArya][FarRight][LoadAdlez][Left][LoadPlayer]
+Get inside of the temple! Now![A]
+[Right]I'll pull up the rear and make[NL]
+sure everyone makes it in! Go![A][X]

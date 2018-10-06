@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="1800B91A" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/1800B91A.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="10">
+  <properties>
+   <property name="Anims" value="18Anims"/>
+   <property name="ChapterID" value="BacrunRuins2Cutscene"/>
+   <property name="MapID" value="BacrunRuins2CutsceneMap"/>
+   <property name="ObjectType" value="0x18"/>
+   <property name="PaletteID" value="0xB9"/>
+   <property name="TileConfig" value="0x1A"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJyFj00KwjAQhSf1BMYr1Lt4lB6lFxA8QhB1Kbis0NqtvYFCF7p37xs6gfgacPGRn/e+IWkKkSvYikiLdbkQ2WB9OZE9eLvprPed9RpzzvKLR6citzJ3R90PoW5Nbm3uJdPXN6VuIDeQm/Zj5o2e3J7yYO5QzLM1uXr2NPteTG5JmfLA3QieNFcpzYuwu0rgbMi4uf2/TDniXwfjBFpwA52bZ/GvXynMU6g=
+  </data>
+ </layer>
+</map>

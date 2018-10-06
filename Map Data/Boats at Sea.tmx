@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="25" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="0E000F10" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/0E000F10.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="19" height="25">
+  <properties>
+   <property name="Anims" value="0EAnims"/>
+   <property name="ChapterID" value="MercenaryMilitiaKill4"/>
+   <property name="Main" value=""/>
+   <property name="MapID" value="BoatsAtSeaMap"/>
+   <property name="ObjectType" value="0x0E"/>
+   <property name="PaletteID" value="0x0F"/>
+   <property name="TileConfig" value="0x10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJyFlUlOw0AQRd3JFQgLwnQD1k4gcASWICwBAilcgDCGOYQDQJikHAQWuYglOIgZqkh9+buxk8VTyl2/fw3CJnFBkBixMF1KnzXm56icxnym3FusHhq/kqZaytZIPA08UOszSO9o/E73VBN7vUDDZ/D6CNIzjd/c/xkwt9ZkTWZeOf8KsvG38BNka8auWKO5quqEGdMgnhXmXNYv8fTQzJtXXVgUOqZZEq6FhrBMWswB/Wop1axYnQ3VCQulrGbbZbV/dcupvmF3tIct8zoRTi0fWX+qu6QYWtZvWu5MuLB91uR3YDXa5Atd27R1m3GK9Ko5F0LL12jGZzfk1sBzSH2xHnsNKbdj+YHVabi0ptIV9ow76ht0KXdlZ75GaRb0tWtElJ8QKsL6GC+8X/C6Mfq0r335bQkHVA+eft2I9ts0dG/IPwg94ZHq9c2L6+I9gVfHgFfd+wblzci75d2rByjy6pAH4tCl7zXvd83iScqDSo4OWmh4v4fCkXDM/Vh/rRxdi7Sxt98nN/xbfvH6Ur9ejg5a/xuNGN9n/h768xYRF+h9v1G5vLux5+17+c8x3UOu6P/ZqFngMW7evLNfQuUWDw==
+  </data>
+ </layer>
+</map>

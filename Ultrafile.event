@@ -1,0 +1,98 @@
+
+#ifdef _FE8_
+
+	#include "Tools/Tool Helpers.txt"
+	#include "EAstdlib.event"
+	#include "Extensions/Hack Installation.txt"
+	#include "Definitions.event"
+
+	#define FreeSpace
+	#define Free_Space
+	#define FreeSpaceA $B2A610
+	#define FreeSpaceB $E47200
+	#define EndofROM $FE4000
+	#define BLRange $1C2270
+	#define FreeSpaceBLRange BLRange
+	#define BlRange BLRange
+	
+	#define IncludeBigStuff
+	#define SkillSystemIncluded
+	#define __DEBUG__
+	//#define TESTING
+
+	#ifdef TESTING // For clean-ROM-style testing
+	
+		#include "TEST/Test Buildfile.event"
+		
+	#else
+		
+	
+		ORG FreeSpaceA
+		
+		#ifdef IncludeBigStuff
+			#include "Graphics/Battle Animations/Battle Animations 2.event"
+		#endif
+		
+		MESSAGE Data animation block ends at CURRENTOFFSET
+		MESSAGE There is $BFFFFF - CURRENTOFFSET of space available
+		ASSERT $BFFFFF - CURRENTOFFSET
+		MESSAGE
+		
+		ORG FreeSpaceB
+		#ifdef IncludeBigStuff
+			#include "Graphics/Battle Animations/Battle Animations 1.event"
+		#endif
+		
+		MESSAGE Second battle animation block ends at CURRENTOFFSET
+		MESSAGE There is $EE0000 - CURRENTOFFSET of space available
+		ASSERT $EE0000 - CURRENTOFFSET
+		MESSAGE
+		
+		
+		ORG EndofROM
+		#ifdef IncludeBigStuff
+			#include "Graphics/Battle Animations/Battle Animations 3.event"
+		#endif
+		
+		MESSAGE Third battle animation block ends at CURRENTOFFSET
+		MESSAGE
+
+		ALIGN 16
+		//Text
+		#include "Text/Install Text Data.event"
+		MESSAGE Text data ends at CURRENTOFFSET
+		MESSAGE Final text ID is FinalTextID . Repoint is required at 0xD4B.
+		
+		ALIGN 16
+		//CSV
+		#include "CSV/Master CSV Installer.event"
+		MESSAGE Tables end at CURRENTOFFSET
+		MESSAGE Chapter Data Table is at ChapterDataTable
+		
+		ALIGN 16
+		//Miscellaneous Graphical
+		#include "Graphics/Master Graphical Installer.event"
+		MESSAGE Misc. graphical data ends at CURRENTOFFSET
+		
+		ALIGN 16
+		//Maps
+		#include "Map Data/Master Map Installer.event"	
+		MESSAGE Map data ends at CURRENTOFFSET
+		
+		ALIGN 16
+		//Events
+		#include "Events/Master Event Installer.event"
+		MESSAGE Events end at CURRENTOFFSET
+
+		ALIGN 16	
+		//ASM
+		#include "ASM/Master ASM Installer.event"
+		MESSAGE Assembly data ends at CURRENTOFFSET
+	
+	#endif
+	
+#else
+
+	ERROR You stupid! Write FE8 events!
+
+#endif

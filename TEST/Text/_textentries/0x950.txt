@@ -1,0 +1,7 @@
+[MidRight][LoadCurrent][MidLeft][LoadVillagerMan3]
+Gerwick is back? Dammit... I broke[NL]
+my arm hauling wood last week,[A][NL]
+otherwise I'd leap to your aid.[NL]
+Here, take this. I had been[A][NL]
+planning to use it myself, but[NL]
+it looks like you need it more.[A][X]

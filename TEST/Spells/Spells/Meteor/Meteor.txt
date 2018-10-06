@@ -1,0 +1,96 @@
+/// - Meteor Animation
+C00
+C00
+C00
+C00
+C00
+C00
+C00
+C00
+C00
+C000040
+C00
+C00
+C00
+C00
+C00
+C00
+C000153
+C101029
+O blank.png
+B M37.png
+2
+O blank.png
+B M38.png
+2
+O blank.png
+B M39.png
+2
+O blank.png
+B M40.png
+2
+O blank.png
+B M41.png
+2
+O blank.png
+B M42.png
+2
+O blank.png
+B M43.png
+2
+O blank.png
+B M44.png
+2
+O blank.png
+B M45.png
+2
+C00AB48
+O blank.png
+B M46.png
+2
+O blank.png
+B M47.png
+2
+O blank.png
+B M48.png
+2
+C00AB48
+O blank.png
+B M49.png
+2
+O blank.png
+B M50.png
+2
+O blank.png
+B M51.png
+2
+C00AB48
+O blank.png
+B M52.png
+2
+O blank.png
+B M53.png
+2
+O blank.png
+B M54.png
+2
+O blank.png
+B M55.png
+2
+O blank.png
+B M55.png
+2
+O blank.png
+B M57.png
+2
+C00001A
+C1F
+~~~
+C51
+C100029
+O blank.PNG
+B blankbg.PNG
+5
+C00012A
+C000053
+/// - End Animation

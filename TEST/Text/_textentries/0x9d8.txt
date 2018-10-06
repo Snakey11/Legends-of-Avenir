@@ -1,0 +1,8 @@
+[MidRight][LoadCurrent][MidLeft][LoadVillagerMan4]
+Starting a battle in Draterus... The[NL]
+Wanderers may not take too kindly[A][NL]
+to that... You'll want to end this[NL]
+quickly and get out. For your sake,[A][NL]
+for their sake, and for our sake.[NL]
+I suppose it's fair I help you out.[NL]
+Just a little bit though. Take this.[A][X]

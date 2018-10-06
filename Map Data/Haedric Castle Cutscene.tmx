@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="1800191A" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/1800191A.png" width="512" height="512"/>
+  <tile id="719">
+   <properties>
+    <property name="Main" value=""/>
+   </properties>
+  </tile>
+  <tile id="751">
+   <properties>
+    <property name="Main" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="10">
+  <properties>
+   <property name="Anims" value="18Anims"/>
+   <property name="ChapterID" value="HaedricCastleCutscene"/>
+   <property name="MapID" value="HaedricCastleCutsceneMap"/>
+   <property name="ObjectType" value="0x18"/>
+   <property name="PaletteID" value="0x19"/>
+   <property name="TileConfig" value="0x1A"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJy7xMTAcAkJn2ZkYLiIJoZL/AITRAxGE9KLrP4DEH9BojWBWIsJVT+yGLJ6dPMvQzEhMRBezYiJPdDUeOBQ1wQUb2RCpTOA+ChQ7jgQH2OE8NHVgOhFQLwQjV6BpncFFjUg+gkafgTEJ9D0gviPsai1ZMaOzZAwMWpIxQA98F+U
+  </data>
+ </layer>
+</map>

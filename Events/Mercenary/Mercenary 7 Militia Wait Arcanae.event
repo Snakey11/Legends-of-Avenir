@@ -1,0 +1,427 @@
+
+EventPointerTable(Merc7MilitiaWaitArcanaeEvents,ThisChapter)
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Door(10,3)
+Door(8,4)
+Chest(Tomahawk,9,2)
+Chest(BodyRing,9,0)
+END_MAIN
+
+MiscBasedEvents:
+DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+FIRE [11,6] 0x0 [1,1] 
+FIRE [5,6] 0x0 [1,1] 
+FIRE [5,8] 0x0 [1,1] 
+FIRE [2,19] 0x0 [1,1] 
+FIRE [5,22] 0x0 [1,1] 
+ENDTRAP
+
+ALIGN 4
+
+Units:
+UNIT
+
+BeginningScene:
+ENUT 0x12
+MUSC Sorrow
+SVAL 0xB Coords(7,4)
+LOMA OutsideTempleCutscene
+LOAD1 0x1 EmperorOutsidePeople
+ENUN
+FADU 0x5
+STAL 0x30
+Text(Merc7MilitiaWaitArcanaeBeginningText)
+MUSC Solve_the_Riddle
+WARP_IN // rB is already set
+LOAD1 0x1 LoadUzkalisTemple
+ENUN
+STAL 0x20
+Text(Merc7MilitiaWaitArcanaeUzkalisHereText)
+WARP_OUT // rB is already set
+CLEN Uzkalis
+STAL 0x20
+Text(Merc7MilitiaWaitArcanaeUzkalisGoneText)
+FADI 0x5
+CLEE Maximus
+CLEN Uzkalis
+SVAL 0xB Coords(8,11)
+LOMA MercenaryCampCutscene
+LOAD2 0x1 MercenaryCampUnits
+LOAD3 0x1 PlayerLoading1
+MUSC Advance
+SetBackground(0x30)
+Text(Merc7MilitiaWaitArcanaeDesertText)
+EndConvo
+MUSC Indignation
+MOVE 0x0 Finoc [3,0]
+STAL 0x20
+SVAL 0xB Coords(4,11)
+WARP_IN
+LOAD1 0x1 LoadUzkalisCamp
+ENUN
+STAL 0x10
+FADI 0x5
+CLEA Finoc
+CLEN Uzkalis
+SVAL 0xB Coords(7,5)
+LOMA OutsideTempleCutscene
+LOAD2 0x1 OutsideTempleAllies
+LOAD3 0x1 PlayerLoading2
+SetBackground(0x30)
+Text(Merc7MilitiaWaitArcanaeUzkalisJoinsText)
+EndConvo
+STAL 0x20
+Text(Merc7MilitiaWaitArcanaeInCaveText)
+FADI 0x5
+CLEA Finoc
+SVAL 0xB Coords(16,19)
+LOMA MercenaryMilitiaWaitArcanae7
+LOAD1 0x1 InsideTempleMeanies
+LOAD1 0x1 CesarianGroup2
+ENUN
+FADU 0x5
+STAL 0x20
+Text(0x2E,Merc7MilitiaWaitArcanaeCesariaInCaveText)
+STAL 0x8
+CAM1 [14,11]
+STAL 0x10
+LOAD2 0x1 LoadTempleAllies
+LOAD1 0x1 LoadUzkalisInside
+DISA Maximus
+ENUN
+LOAD1 0x1 MoveMaximus
+LOAD3 0x1 PlayerLoading3
+ENUN
+Text(Merc7MilitiaWaitArcanaeEndingBeginningText)
+NoFade
+ENDA
+
+EndingScene:
+ENUF 0x12
+FADI 0x5
+MUSC Victory
+CLEE Cesarian
+CLEA Arc
+CAM1 [14,20]
+LOAD3 0x1 PlayerLoading4
+LOAD2 0x1 EndingAllies
+LOAD1 0x1 EndingMeanies
+ENUN
+FADU 0x5
+STAL 0x10
+Text(Merc7MilitiaWaitArcanaeLeyosDeadText)
+StartBattle
+CriticalHit(0,40)
+EndAttack
+FIG1 Uzkalis Emperor 0x0
+KillUnit(21,21)
+STAL 0x10
+Text(0x2E,Merc7MilitiaWaitArcanaeEmperorDeadText)
+STAL 0x10
+MoveMercenary(3,22)
+STAL 0x10
+FADI 0x5
+MURE 0x5
+ENUN
+CLEA Finoc
+SVAL 0xB Coords(7,5)
+LOMA OutsideTempleCutscene
+LOAD3 0x1 PlayerLoading2
+ENUN
+FADU 0x5
+STAL 0x20
+FADI 0x5
+LOAD1 0x1 NarratorHere
+SetBackground(0x30)
+TEXTSHOW Merc7MilitiaWaitArcanaeNarratorHereText
+TEXTEND
+MUSC Return_of_the_Demon_King
+TEXTCONT
+TEXTEND
+EndConvo
+MOVE 0x0 Narrator [7,6]
+ENUN
+StartBattle
+NormalDamage(0,10)
+CriticalHit(1,60)
+EndAttack
+#define Index 5
+CHECK_EVENTID 0x6E
+BNE (0x0 + 0x8 * Index) 0xC 0x0
+	CHECK_EVENTID 0x69 // Female
+	BEQ (0x2 + 0x8 * Index) 0xC 0x0
+		FIG1 PlayerFMercenary Narrator 0x0
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x2 + 0x8 * Index)
+	CHECK_EVENTID 0x6A
+	BEQ (0x3 + 0x8 * Index) 0xC 0x0
+		FIG1 PlayerFMyrmidon Narrator 0x0
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x3 + 0x8 * Index)
+		FIG1 PlayerFPegasusKnight Narrator 0x0
+	GOTO (0x1 + 0x8 * Index)
+LABEL (0x0 + 0x8 * Index)
+	CHECK_EVENTID 0x69 // Male
+	BEQ (0x4 + 0x8 * Index) 0xC 0x0
+		FIG1 PlayerMMercenary Narrator 0x0
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x4 + 0x8 * Index)
+	CHECK_EVENTID 0x6A
+	BEQ (0x5 + 0x8 * Index) 0xC 0x0
+		FIG1 PlayerMMyrmidon Narrator 0x0
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x5 + 0x8 * Index)
+	CHECK_EVENTID 0x6B
+	BEQ (0x6 + 0x8 * Index) 0xC 0x0
+		FIG1 PlayerMFighter Narrator 0x0
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x6 + 0x8 * Index)
+	CHECK_EVENTID 0x6C
+	BEQ 0x7 0xC 0x0
+		FIG1 PlayerMPirate Narrator 0x0
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x7 + 0x8 * Index)
+		FIG1 PlayerMBrigand Narrator 0x0
+LABEL (0x1 + 0x8 * Index)
+#undef Index
+KillUnit(7,5)
+#define Index 6
+CHECK_EVENTID 0x6E
+BNE (0x0 + 0x8 * Index) 0xC 0x0
+	CHECK_EVENTID 0x69 // Female
+	BEQ (0x2 + 0x8 * Index) 0xC 0x0
+		TurnNPC(PlayerFMercenary)
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x2 + 0x8 * Index)
+	CHECK_EVENTID 0x6A
+	BEQ (0x3 + 0x8 * Index) 0xC 0x0
+		TurnNPC(PlayerFMyrmidon)
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x3 + 0x8 * Index)
+		TurnNPC(PlayerFPegasusKnight)
+	GOTO (0x1 + 0x8 * Index)
+LABEL (0x0 + 0x8 * Index)
+	CHECK_EVENTID 0x69 // Male
+	BEQ (0x4 + 0x8 * Index) 0xC 0x0
+		TurnNPC(PlayerMMercenary)
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x4 + 0x8 * Index)
+	CHECK_EVENTID 0x6A
+	BEQ (0x5 + 0x8 * Index) 0xC 0x0
+		TurnNPC(PlayerMMyrmidon)
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x5 + 0x8 * Index)
+	CHECK_EVENTID 0x6B
+	BEQ (0x6 + 0x8 * Index) 0xC 0x0
+		TurnNPC(PlayerMFighter)
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x6 + 0x8 * Index)
+	CHECK_EVENTID 0x6C
+	BEQ 0x7 0xC 0x0
+		TurnNPC(PlayerMPirate)
+	GOTO (0x1 + 0x8 * Index)
+	LABEL (0x7 + 0x8 * Index)
+		TurnNPC(PlayerMBrigand)
+LABEL (0x1 + 0x8 * Index)
+#undef Index
+ENUF 0x6E
+ENUF 0x67
+ENUF 0x68
+ENUF 0x69
+ENUF 0x6A
+ENUF 0x6B
+ENUF 0x6C
+ENUF 0x6D
+ENUT 0x78
+TurnNPC(Arc)
+TurnNPC(Luke)
+TurnNPC(Finoc)
+TurnNPC(Elanil)
+TurnNPC(Val)
+TurnNPC(Helmer)
+TurnNPC(Uzkalis)
+MoveToChapter(PrologueChapter)
+ENDA
+
+	/*UNIT DATA*/
+
+PlayerLoading1:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [7,10] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [7,10] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [7,10] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [7,10] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [7,10] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [7,10] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [7,10] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [7,10] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+PlayerLoading2:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [7,5] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [7,5] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [7,5] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [7,5] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [7,5] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [7,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [7,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [7,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+PlayerLoading3:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [20,10] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [20,10] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [20,10] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [20,10] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [20,10] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [20,10] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [20,10] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [20,10] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+PlayerLoading4:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [19,23] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [19,23] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [19,23] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [19,23] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [19,23] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [19,23] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [19,23] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [19,23] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+EmperorOutsidePeople:
+UNIT Emperor 0x6F Emperor Level(1,Enemy,True) [7,7] 0x00 0x00 0x00 0x00 [0] GuardAI
+UNIT Leyos HectorClass Emperor Level(1,Enemy,True) [6,6] 0x00 0x00 0x00 0x00 [SilverSword,Tomahawk] GuardAI
+UNIT Maximus Sage Maximus Level(1,Enemy,True) [8,6] 0x00 0x00 0x00 0x00 [Thoron,Bolganone] GuardAI
+UNIT
+
+MercenaryCampUnits:
+UNIT Arc Monk Luke Level(1,Ally,True) [6,11] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Luke Monk Luke Level(1,Ally,True) [5,10] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Elanil Monk Luke Level(1,Ally,True) [6,9] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Finoc Monk Luke Level(1,Ally,True) [7,8] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Val Shaman_F Val Level(9,Ally,True) [5,8] 0x00 0x00 0x00 0x00 [Worm,Nosferatu] [0]
+UNIT Helmer Soldier Helmer Level(11,Ally,True) [6,8] 0x00 0x00 0x00 0x00 [SteelLance,KnightCrest] [0]
+UNIT
+
+LoadUzkalisTemple:
+UNIT Uzkalis GaidenSage Uzkalis Level(11,NPC,True) [7,4] 0x00 0x00 0x00 0x00 [SteelLance,KnightCrest] [0]
+UNIT
+
+LoadUzkalisCamp:
+UNIT Uzkalis GaidenSage Uzkalis Level(11,NPC,True) [4,11] 0x00 0x00 0x00 0x00 [SteelLance,KnightCrest] [0]
+UNIT
+
+OutsideTempleAllies:
+UNIT Arc Monk Luke Level(1,Ally,True) [8,6] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Luke Monk Luke Level(1,Ally,True) [6,6] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Elanil Monk Luke Level(1,Ally,True) [5,7] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Finoc Monk Luke Level(1,Ally,True) [4,6] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Val Shaman_F Val Level(9,Ally,True) [10,6] 0x00 0x00 0x00 0x00 [Worm,Nosferatu] [0]
+UNIT Helmer Soldier Helmer Level(11,Ally,True) [11,5] 0x00 0x00 0x00 0x00 [SteelLance,KnightCrest] [0]
+UNIT
+
+InsideTempleMeanies:
+UNIT Emperor 0x6F Emperor Level(1,Enemy,True) [21,21] 0x00 0x00 0x00 0x00 [0] GuardAI
+UNIT Leyos HectorClass Emperor Level(15,Enemy,True) [17,22] 0x00 0x00 0x00 0x00 [SilverSword,Tomahawk] GuardAI
+UNIT Maximus Sage Maximus Level(14,Enemy,True) [20,23] 0x00 0x00 0x00 0x00 [Thoron,Bolganone] GuardAI
+UNIT Cesarian General Maximus Level(8,Enemy,True) [15,9] Drop 0x00 0x00 0x00 [SteelBlade,DoorKey] GuardAI
+UNIT Cesarian Knight Maximus Level(15,Enemy,True) [19,13] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT Cesarian GreatKnight Maximus Level(6,Enemy,True) [18,14] 0x00 0x00 0x00 0x00 [SilverLance,HandAxe] [0]
+UNIT Cesarian Cavalier Maximus Level(14,Enemy,True) [17,13] Drop 0x00 0x00 0x00 [Wyrmslayer] [0]
+UNIT Cesarian Cavalier Maximus Level(14,Enemy,True) [19,15] 0x00 0x00 0x00 0x00 [DevilLance] [0]
+UNIT Cesarian MageKnight Maximus Level(7,Enemy,True) [10,5] 0x00 0x00 0x00 0x00 [Tornado] AttackInRangeAI
+UNIT Cesarian Mage Maximus Level(13,Enemy,True) [12,9] 0x00 0x00 0x00 0x00 [Arcaqua] AttackInRangeAI
+UNIT Cesarian Swordmaster Maximus Level(5,Enemy,True) [11,8] 0x00 0x00 0x00 0x00 [SteelSword] [0]
+UNIT Cesarian Halberdier Maximus Level(6,Enemy,True) [9,8] 0x00 0x00 0x00 0x00 [SilverLance] AttackInRangeAI
+UNIT Cesarian Soldier Maximus Level(13,Enemy,True) [10,9] 0x00 0x00 0x00 0x00 [Javelin] [0]
+UNIT Cesarian Fighter Maximus Level(14,Enemy,True) [10,7] 0x00 0x00 0x00 0x00 [ShortAxe] [0]
+UNIT Cesarian Sniper Maximus Level(7,Enemy,True) [11,1] Drop 0x00 0x00 0x00 [BraveBow,ChestKey] AttackInRangeAI
+UNIT Cesarian Sentinel Maximus Level(8,Enemy,True) [12,6] Drop 0x00 0x00 0x00 [Spear,DoorKey] GuardAI
+UNIT Cesarian Ranger Maximus Level(5,Enemy,True) [3,7] 0x00 0x00 0x00 0x00 [SteelLongbow] AttackInRangeAI
+UNIT
+
+CesarianGroup2:
+UNIT Cesarian Valkyrie Maximus Level(6,Enemy,True) [4,9] 0x00 0x00 0x00 0x00 [Divine,Sleep] AttackInRangeAI
+UNIT Cesarian WyvernRider Maximus Level(12,Enemy,True) [7,0] 0x00 0x00 0x00 0x00 [IronLance] [0]
+UNIT Cesarian WyvernRider Maximus Level(12,Enemy,True) [5,2] 0x00 0x00 0x00 0x00 [SteelLance] [0]
+UNIT Cesarian WyvernLord Maximus Level(6,Enemy,True) [5,0] 0x00 0x00 0x00 0x00 [KillerLance] AttackInRangeAI
+UNIT Cesarian Hero Maximus Level(5,Enemy,True) [5,4] 0x00 0x00 0x00 0x00 [ShortAxe] GuardAI
+UNIT Cesarian Archer Maximus Level(13,Enemy,True) [6,7] 0x00 0x00 0x00 0x00 [SilverShortbow] [0]
+UNIT Cesarian Paladin Maximus Level(8,Enemy,True) [6,10] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
+UNIT Cesarian GreatKnight Maximus Level(7,Enemy,True) [4,14] 0x00 0x00 0x00 0x00 [BraveAxe] GuardAI
+UNIT Cesarian Hero Maximus Level(7,Enemy,True) [3,18] 0x00 0x00 0x00 0x00 [SilverAxe] ChaseOnceApproachedAI
+UNIT Cesarian Hero Maximus Level(6,Enemy,True) [5,18] 0x00 0x00 0x00 0x00 [Zanbato] ChaseOnceApproachedAI
+UNIT Cesarian General Maximus Level(7,Enemy,True) [12,23] 0x00 0x00 0x00 0x00 [Spear] AttackInRangeAI
+UNIT Cesarian General Maximus Level(9,Enemy,True) [12,20] 0x00 0x00 0x00 0x00 [SilverSword,HandAxe] AttackInRangeAI
+UNIT Cesarian Halberdier Maximus Level(8,Enemy,True) [6,20] 0x00 0x00 0x00 0x00 [BraveLance] [0]
+UNIT Cesarian GreatKnight Maximus Level(7,Enemy,True) [2,21] 0x00 0x00 0x00 0x00 [ShortSpear] AttackInRangeAI
+UNIT Cesarian Warrior Maximus Level(6,Enemy,True) [2,24] 0x00 0x00 0x00 0x00 [Tomahawk] [0]
+UNIT Cesarian Warrior Maximus Level(7,Enemy,True) [7,22] 0x00 0x00 0x00 0x00 [SteelAxe,SteelLongbow] AttackInRangeAI
+UNIT Cesarian Druid Maximus Level(8,Enemy,True) [9,19] 0x00 0x00 0x00 0x00 [Fenrir,Silence] GuardAI
+UNIT
+
+LoadTempleAllies:
+UNIT Arc Monk Luke Level(1,Ally,True) [21,11] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Luke Monk Luke Level(1,Ally,True) [21,9] 0x00 0x00 0x1 REDA19R9 [BraveLance,HandAxe] [0]
+UNIT Elanil Monk Luke Level(1,Ally,True) [21,9] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Finoc Monk Luke Level(1,Ally,True) [21,8] 0x00 0x00 0x1 REDA20R8 [BraveLance,HandAxe] [0]
+UNIT Val Shaman_F Val Level(9,Ally,True) [21,12] 0x00 0x00 0x00 0x00 [Worm,Nosferatu] [0]
+UNIT Helmer Soldier Helmer Level(11,Ally,True) [21,13] 0x00 0x00 0x00 0x00 [SteelLance,KnightCrest] [0]
+UNIT
+
+LoadUzkalisInside:
+UNIT Uzkalis GaidenSage Uzkalis Level(8,Ally,True) [21,10] 0x00 0x00 0x00 0x00 [Thoron,Arcwind] [0]
+UNIT
+
+MoveMaximus:
+UNIT Maximus Sage Maximus Level(14,Enemy,True) [4,11] 0x00 0x00 0x00 0x00 [Thoron,Bolganone] GuardAI
+UNIT
+
+EndingAllies:
+UNIT Arc Monk Luke Level(1,Ally,True) [19,21] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Luke Monk Luke Level(1,Ally,True) [18,22] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Elanil Monk Luke Level(1,Ally,True) [16,22] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Finoc Monk Luke Level(1,Ally,True) [20,24] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Val Shaman_F Val Level(9,Ally,True) [19,24] 0x00 0x00 0x00 0x00 [Worm,Nosferatu] [0]
+UNIT Helmer Soldier Helmer Level(11,Ally,True) [18,23] 0x00 0x00 0x00 0x00 [SteelLance,KnightCrest] [0]
+UNIT
+
+EndingMeanies:
+UNIT Emperor 0x6F Emperor Level(1,Enemy,True) [21,21] 0x00 0x00 0x00 0x00 [0] GuardAI
+UNIT Uzkalis Sage Uzkalis Level(10,Ally,True) [21,23] 0x00 0x00 0x00 0x00 [HandAxe] GuardAI
+UNIT
+
+NarratorHere:
+UNIT Narrator NarratorClass Narrator Level(1,NPC,True) [7,7] 0x00 0x00 0x00 0x00 [SilverSword] GuardAI
+UNIT

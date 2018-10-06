@@ -1,0 +1,109 @@
+
+## Merc1HelpDanaanMenuText
+Warn Danaan of the attack[X]
+
+## Merc1JoinBanditsMenuText
+Join the bandits[X]
+
+## Merc1HelpDanaanText
+[MidLeft][LoadPlayer]I'll go help Danaan. [Smile]They'll likely pay me,[NL]
+not to mention it'll be a new connection[A][NL]
+to have for clients.[Smile] I'd better get going[NL]
+before the bandits get there though.[A][X]
+
+## Merc1JoinBanditsText
+[MidLeft][LoadPlayer][Smile]Just think about the loot I could get[NL]
+from this. It's a border town, so[NL][A]
+it will look like a simple border skirmish.[NL][Smile]
+I need to catch up with them![A][X]
+
+## Merc1OpeningText
+[MidLeft][LoadPlayer][MidRight][LoadMerchant][Smile]Thanks again for your help![....] Once[NL]
+I'm across the border,[.] some of[A][NL]
+Haedric's troops should be able to escort[NL]
+me the rest of the way to Danaan.[A][NL]
+[MidLeft][Smile]You're very welcome.[Smile][.....] Be careful on the[NL]
+Rosk Highway,[.] though.[.....] There's tension[A][NL]
+there between Haedric and Arcanae.[A][NL]
+[MidRight]I'll keep that in mind.[....] Here's half of[NL]
+your payment for now,[.] and I'll make[A][NL]
+arrangements for you to be paid in full[NL]
+later.[....] Will that suffice?[A][NL]
+[MidLeft][Smile]That'll be fine.[......] Bacrun merchants[NL]
+always keep their word.[A][NL]
+[MidRight]Farewell,[.] and may we meet again.[A][X]
+
+## Merc1CampText
+[MidRight][LoadPlayer][Smile]That was pretty easy.[.....] [Smile]It's getting[NL]
+a little late for my taste.[A][NL]
+I'll set up camp here tonight.[A][X]
+
+## Merc1HenningHereText
+[MidRight][LoadPlayer][MidLeft][LoadHenning]Hey you![A][NL]
+[MidRight]What?[.......] Who are you?[A][NL]
+[MidLeft]Forget it.[....] Hand over your valuables![A][NL]
+[MidRight]What makes you think I have valuables?[A][NL]
+[MidLeft]You're a freelancer. You guys always get[NL]
+interesting treasures from the jobs[A][NL]
+you do.[.....] Come now,[.] hand them over.[A][NL]
+[MidRight]I think not.[......] In fact,[NL]
+I'd rather rob you.[A][NL]
+[MidLeft]You think you,[.] as an individual,[NL]
+can defeat our group?[.....] Bring it on![A][NL][X]
+
+## Merc1VulneraryText
+[MidRight][LoadPlayer]I have to be careful.[....] I have a few vulneraries[NL]
+left over,[.] but I can't let myself get too[A][NL]
+confident...[.......] I should try to take them on[NL]
+one at a time,[.] rather than try to hold[A][NL]
+them all off at once.[....] Maybe these houses[NL]
+will have something useful for me[A][NL]
+if I get desperate.[A][X]
+
+## Merc1HenningBattleText
+[FarLeft][LoadHenning]Who the hell are you!?[NL]
+You've demolished my men![A][ClearFace]
+[FarRight][LoadPlayer]I am [Tact].[NL]
+You made the mistake of[A][NL]
+attacking me.[....] Now come![A][X]
+
+## Merc1PreMenuText
+[FarLeft][LoadBandit1]Dammit![.....] You're tougher than you look.[NL]
+Come on boys![A][NL]
+Let's regroup in Danaan[NL]
+[FarRight][LoadPlayer][FarLeft]for the attack![A][ClearFace]
+[FarRight]Danaan?[....] Wait![....] I'm not done with you![A][CloseSpeech][MoveFarLeft][.......][.......][ClearFace][FarLeft][LoadPlayer][.......][NL]
+Damn,[.] they got away.[....] I wonder...[.......][.......][.......] What if I[NL]
+were to join the attack?[.......] No...[.......][.......] Well,[A][NL]
+it could be fairly profitable.[....] I doubt[NL]
+Haedric will do anything about it.[A][NL]
+However,[.] helping Danaan and having them[NL]
+in my debt could be helpful as well.[A][X]
+
+## Merc1HenningDeathText
+[FarLeft][LoadHenning]I wish we had someone[NL]
+like you on our side.[A][NL]
+That was pretty gutsy[NL]
+attacking us...[CloseEyes][.......][A][NL]
+We could have really used[NL]
+someone like you.[A][X]
+
+## Merc1House1Text
+[MidRight][LoadCurrent][MidLeft][LoadVillagerWoman]
+Highwaymen? There's always bunches of[NL]
+them out and about at this time of[A][NL]
+the year. You're a freelancer? Take[NL]
+care fighting them. This should help.[A][X]
+
+## Merc1House2Text
+[MidRight][LoadCurrent][MidLeft][LoadVillagerMan4]
+The constant turmoil in Haedric gives[NL]
+rise to a lot of the highwaymen and[A][NL]
+bandits we see these days... People[NL]
+feel like their independence gives[A][NL]
+them more free reign than it truly[NL]
+does. The lack of a structured[A][NL]
+government hurts people's feelings[NL]
+of loyalty towards Basileus Leon[A][NL]
+or the Warlords too...[....][NL]
+These are dark times...[A][X]

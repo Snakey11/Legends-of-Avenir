@@ -1,0 +1,5 @@
+[MidRight][LoadCurrent][MidLeft][LoadVillagerWoman]
+Highwaymen? There's always bunches of[NL]
+them out and about at this time of[A][NL]
+the year. You're a freelancer? Take[NL]
+care fighting them. This should help.[A][X]

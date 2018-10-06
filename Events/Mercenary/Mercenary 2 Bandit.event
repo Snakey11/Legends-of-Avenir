@@ -1,0 +1,222 @@
+
+EventPointerTable(Merc2BanditEvents,ThisChapter)
+//Label ThisChapter
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN EndMainPointer EndMainPointer EndMainPointer
+POIN EndMainPointer
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+//EndLabel
+
+//Label TurnBasedEvents
+TurnBasedEvents:
+TurnEventPlayer(0x0,EnterWalter,2)
+END_MAIN
+
+//Label CharacterBasedEvents
+ALIGN 32
+CharacterBasedEvents:
+END_MAIN
+
+//Label LocationEvents
+LocationBasedEvents:
+Raid(0x12,DHouse1,13,6)
+Raid(0x13,DHouse2,14,7)
+Raid(0x14,DHouse3,11,8)
+Raid(0x15,DHouse4,12,9)
+Raid(0x11,DArmory,12,7)
+END_MAIN
+
+//Label MiscBasedEvents
+MiscBasedEvents:
+DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+END_MAIN
+
+TrapData:
+ENDTRAP
+ALIGN 4
+
+Units:
+EndUnit
+
+//Label BeginningScene
+BeginningScene:
+SVAL 0xB Coords(7,9)
+LOMA MilitaryPass2
+LOAD1 0x1 BanditFriends
+ENUN
+LOAD3 0x1 PlayerLoading1
+FADU 0x5
+ENUN
+FADI 0x5
+SetBackground(0x18)
+TEXTSHOW Merc2BanditTactMeetsOthersText // [Tact] cathces up with others
+TEXTEND
+MUSC Comrades
+TEXTCONT
+TEXTEND
+EndConvo
+STAL 0x40
+FADI 0x5
+MUSC Advance
+CLEN Baret
+SVAL 0xB Coords(7,10)
+LOMA MercenaryBandit2
+LOAD3 0x1 PlayerLoading2
+LOAD1 0x1 OutsideDanaanFriends
+LOAD1 0x1 MilitiaMen
+ENUN
+SetBackground(0x1B)
+Text(Merc2BanditTactMeetsAdlezText) // Meets Adlez
+SetBackground(0x03)
+Text(Merc2BanditAlmostDanaanText) // Danaan is just ahead
+EndConvo
+MUSC Tension
+STAL 0x20
+TEXTSHOW Merc2BanditArcHereText
+TEXTEND
+LOAD1 0x1 LoadArc
+ENUN
+TEXTCONT
+TEXTEND
+REMA
+MOVE 0x0 BossArc [10,1]
+ENUN
+STAL 0x20
+Text(Merc2BanditEndingBeginningSceneText)
+NoFade
+ENDA
+
+//Label EndingScene
+EndingScene:
+MUSC Into_the_Shadow_of_Victory
+SetBackground(0x03)
+Text(Merc2BanditEndingText)
+MoveToChapter(MercenaryBandit3)
+ENDA
+
+//Label EnterWalter
+EnterWalter:
+LOAD1 0x1 LoadWalter
+ENUN
+Text(Merc2BanditWalterHereText)
+NoFade
+ENDA
+
+//Label RaidEvents
+DHouse1:
+GiveMoney(2000)
+SETVAL 0xB Coords(13,6)	//Tile Change ID
+TILECHANGE 0xFFFF
+//ENUT 0x12
+NoFade
+EndA2
+
+DHouse2:
+GiveItem(KillingEdge,0xFFFF)
+SETVAL 0xB Coords(14,7)	//Tile Change ID
+TILECHANGE 0xFFFF
+//ENUT 0x13
+NoFade
+EndA2
+
+DHouse3:
+GiveItem(HeroCrest,0xFFFF)
+SETVAL 0xB Coords(11,8)	//Tile Change ID
+TILECHANGE 0xFFFF
+//ENUT 0x14
+NoFade
+EndA2
+
+DHouse4:
+GiveItem(EnergyRing,0xFFFF)
+SETVAL 0xB Coords(12,9)	//Tile Change ID
+TILECHANGE 0xFFFF
+//ENUT 0x15
+NoFade
+EndA2
+
+DArmory:
+GiveItem(IronLongbow,0xFFFF)
+SETVAL 0xB Coords(12,7)	//Tile Change ID
+TILECHANGE 0xFFFF
+//ENUT 0x11
+NoFade
+ENDA
+
+	/*UNIT DATA*/
+	
+//Label PlayerLoading
+PlayerLoading1:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [5,7] 0x00 0x00 0x1 REDA11R11 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [5,7] 0x00 0x00 0x1 REDA11R11 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [5,7] 0x00 0x00 0x1 REDA11R11 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [5,7] 0x00 0x00 0x1 REDA11R11 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [5,7] 0x00 0x00 0x1 REDA11R11 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [5,7] 0x00 0x00 0x1 REDA11R11 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [5,7] 0x00 0x00 0x1 REDA11R11 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [5,7] 0x00 0x00 0x1 REDA11R11 [IronAxe,Vulnerary] [0] 
+UNIT
+
+PlayerLoading2:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [11,13] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [11,13] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [11,13] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [11,13] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [11,13] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [11,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [11,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [11,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+EndUnit
+
+//Label BanditFriends
+BanditFriends:
+UNIT Vicar Warrior PlayerMArcher Level(1,NPC,True) [11,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Walter Archer PlayerMArcher Level(1,NPC,True) [13,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Baret Myrmidon PlayerMArcher Level(1,NPC,True) [14,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+EndUnit
+
+//Label OutsideDanaanFriends
+OutsideDanaanFriends:
+UNIT Baret Myrmidon PlayerMArcher Level(6,Ally,True) [12,14] 0x00 0x00 0x00 0x00 [SteelSword] [0] 
+UNIT Vicar Warrior PlayerMArcher Level(2,Ally,True) [13,12] 0x00 0x00 0x00 0x00 [SteelAxe,KillerAxe] [0]
+EndUnit
+
+//Label MilitiaMen
+MilitiaMen:
+//UNIT Arc Fighter BossArc Level(1,Enemy,True) [7,14] 0x00 0x00 0x1 REDA9R13 [SteelAxe,ShortAxe] GuardAI
+UNIT Militiaman Knight BossArc Level(6,Enemy,True) [7,13] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
+UNIT Militiaman Myrmidon BossArc Level(5,Enemy,True) [4,13] 0x00 0x00 0x00 0x00 [SlimSword] [0]
+UNIT Militiaman Fighter BossArc Level(5,Enemy,True) [3,11] 0x00 0x00 0x00 0x00 [HandAxe] AttackInRangeAI
+UNIT Militiaman Fighter BossArc Level(4,Enemy,True) [3,8] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
+UNIT Militiaman Mage BossArc Level(3,Enemy,True) [1,9] 0x00 0x00 0x00 0x00 [Thunder] AttackInRangeAI
+UNIT Militiaman Cavalier BossArc Level(5,Enemy,True) [0,6] 0x00 0x00 0x00 0x00 [SteelLance,IronSword] ChaseOnceApproachedAI
+UNIT Militiaman Soldier BossArc Level(6,Enemy,True) [7,7] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
+UNIT Militiaman Soldier BossArc Level(5,Enemy,True) [7,5] 0x00 0x00 0x00 0x00 [IronLance] AttackInRangeAI
+UNIT Militiaman Fighter BossArc Level(4,Enemy,True) [9,5] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
+UNIT Militiaman Mercenary BossArc Level(7,Enemy,True) [8,4] 0x00 0x00 0x00 0x00 [IronSword] NoAI
+UNIT Militiaman Mercenary BossArc Level(2,Enemy,True) [11,6] 0x00 0x00 0x00 0x00 [SteelSword] ChaseOnceApproachedAI
+UNIT Militiaman Fighter BossArc Level(5,Enemy,True) [9,3] 0x00 0x00 0x00 0x00 [IronAxe] AttackInRangeAI
+UNIT Militiaman Soldier BossArc Level(6,Enemy,True) [11,3] 0x00 0x00 0x00 0x00 [DevilLance] AttackInRangeAI
+UNIT Militiaman Knight BossArc Level(8,Enemy,True) [10,4] 0x00 0x00 0x00 0x00 [Javelin] GuardAI
+EndUnit
+
+//Label LoadArc
+LoadArc:
+UNIT BossArc Fighter BossArc Level(7,Enemy,True) [5,14] 0x00 0x00 0x1 SlowREDA [SteelAxe,ShortAxe] GuardAI
+EndUnit
+
+//Label LoadWalter
+LoadWalter:
+UNIT Walter Archer PlayerMArcher Level(5,Ally,True) [14,14] 0x00 0x00 0x1 REDA11R13 [IronBow,Vulnerary] [0] 
+EndUnit
+
+SlowREDA:
+REDA [6,13] 0x0 0x1 0x0 0x0

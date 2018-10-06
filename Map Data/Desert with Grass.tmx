@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="24" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="42004344" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/42004344.png" width="512" height="512"/>
+  <tile id="66">
+   <properties>
+    <property name="Main" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="19" height="24">
+  <properties>
+   <property name="Anims" value="42Anims"/>
+   <property name="ChapterID" value="MercenaryMilitiaWaitCesaria7"/>
+   <property name="MapID" value="DesertWithGrassMap"/>
+   <property name="ObjectType" value="0x42"/>
+   <property name="PaletteID" value="0x43"/>
+   <property name="TileConfig" value="0x44"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJx9lM9OwkAQxne7T2D0HeTUxGfgIIkx9SFqRI2Rd+CAxuChzwDin4QDCncOgPVGxEdA1BgTRe/OpDPZ6bJw+KXtdObb2W+2jYxSEVABOlqpvlIq0dm9C8fHgf99hbSQtrE1yHeQ1+B13LX4uU093cJ9aPJ5yZKrey+ZAY/a7nNAsSGQirqZo+X2+KStX4knpynysO+Rk1MyVot9ikxeA72ROj3quyX6mFKvXIPvQ2eWvIcB7bNHz7gm7vmdPOEeRjSnOTABbnTmf9sszijxzJuv3EdKORvGerxqVrwH1g1Jj/Pk/lJRd7VkVmtU23fO9JvKe94lj6bkk2+uPn3UidVi/jjI13Ro7r7z/gH1oc50GsrGm+R9ZYn3UqcA3EPeA9A1mVas7FnivGud/5bcXng/z5AzAV4cLdkDfwcck/8E1qkCc8j5Bf6EVkpnl7+/nseTLW19QXaBM5wbcKlsnP3B9eU3lpDOp8hljoFToAWURRz3w35Jb9Yh/gPxAbAdLOq5HAX2/+Wb+RfkTHF9yNsHhjR79KtMsVqQ6bwqe+6lVkH4U6V61DyAmrqo5Z6KlBcZ/8yZC8ffoqgtOqw6e8gdcAiUREzq1GmeNbX67DEnNK+q2DPqnAObAn4vz16D8mPxntmhHvYcHeQfqmAIQw==
+  </data>
+ </layer>
+</map>

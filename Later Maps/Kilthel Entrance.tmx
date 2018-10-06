@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="3C00CE3E" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/3C00CE3E.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="10">
+  <properties>
+   <property name="Anims" value="3CAnims"/>
+   <property name="ChapterID" value="OutsideKilthelCutscene"/>
+   <property name="Main" value=""/>
+   <property name="MapID" value="OutsideKilthelCutsceneMap"/>
+   <property name="ObjectType" value="0x3C"/>
+   <property name="PaletteID" value="0xCE"/>
+   <property name="TileConfig" value="0x3E"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJwLYmRgCCISawDxSwYE/xWQ7QmknzOgqjPCotcDiPWR+KeAetiB9CUgnQmk1aHiJ4B8TTS9JUDMiWb2C6C6HiDdwgDBuowQt3BisRumHqRuNSMmfgrEfkj2PsWiBoR3oOHtQHwbiI8C8XEgPgbl78SidjDp/Y2m9zcOvZbM2LEZEsalBgB8oVD4
+  </data>
+ </layer>
+</map>

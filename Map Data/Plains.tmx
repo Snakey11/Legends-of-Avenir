@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="15" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="2E003430" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/2E003430.png" width="512" height="512"/>
+  <tile id="774">
+   <properties>
+    <property name="Height" value="1"/>
+    <property name="ID" value="0"/>
+    <property name="Width" value="1"/>
+    <property name="X" value="12"/>
+    <property name="Y" value="9"/>
+   </properties>
+  </tile>
+  <tile id="870">
+   <properties>
+    <property name="Height" value="1"/>
+    <property name="ID" value="1"/>
+    <property name="Width" value="1"/>
+    <property name="X" value="12"/>
+    <property name="Y" value="7"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="15">
+  <properties>
+   <property name="Anims" value="2EAnims"/>
+   <property name="ChapterID" value="MercenaryMilitia2"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="PlainsChanges"/>
+   <property name="MapID" value="PlainsMap"/>
+   <property name="ObjectType" value="0x2E"/>
+   <property name="PaletteID" value="0x34"/>
+   <property name="PlainsChanges" value=""/>
+   <property name="TileConfig" value="0x30"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxNk00rxFEUh+//3mbYkBRRVooNUZSSJQsZZbLwUrITJclCKC8hyctM8wGUZCjvS9laCGNMKd/AwkbKJ/Cc7pnuLJ7uufd/fvec87szCWNMGoacMUk4Ix6zxkzCNvE+ZwdwCClIO5+7AHd8z0AfZKFX4xXr10tyruAabuDW+TypsQczsEzuktVzvj9Yf88rcQ7eIA/v2ltWa8q6Ru4GTOgdUvfMhLxUZMyp8XNIP5XO19zWGUV7DKswCgXtI4auuUQ7jy4D7c7nSH+L6lHWhJkkvwldPPJnRV/udO6ixxKPWz9vnvhZ6wygS6hW9nEXehcqnO+NxeTgBaoi31MLa6v2vKO6GOuIC3rxQ/q+h07ib/G/pP8pF+bZJOcvCvpfvWNcZ+6CT+iBcxf0j/r9Jwr6gg2/C6m3rtoamZOzLfiyPhZvG1k/0B45vy9AnbyZ6oRuOCl57wTsii/o8lBtfW15j3KohFrV1osXMKgzzUEZvJFzC+/QoXrxSTyWPPG9Dablf6HvndX9rPUzi/4GhlUvnss7N6hXT3ABSejX+v9EQGzl
+  </data>
+ </layer>
+ <layer name="House2" width="15" height="15" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="6"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="12"/>
+   <property name="Y" value="9"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4A6gJ15oF0wNAEAD7EACw==
+  </data>
+ </layer>
+ <layer name="DHouse4" width="15" height="15" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="5"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="12"/>
+   <property name="Y" value="9"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4A6IJ15oF0wNAEAhLEAaw==
+  </data>
+ </layer>
+ <layer name="House1" width="15" height="15" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="4"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="11"/>
+   <property name="Y" value="8"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFowAC2JkH2gUjEwAAEjEACw==
+  </data>
+ </layer>
+ <layer name="DHouse3" width="15" height="15" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="3"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="11"/>
+   <property name="Y" value="8"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFowAC0pkH2gUjEwAAnzEAaw==
+  </data>
+ </layer>
+ <layer name="DHouse2" width="15" height="15" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="2"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="14"/>
+   <property name="Y" value="7"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFwxW0Mw+0C0YBMQAA6BEAiw==
+  </data>
+ </layer>
+ <layer name="DArmory" width="15" height="15" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="12"/>
+   <property name="Y" value="7"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFww2kMw+0C0YBKQAAtmEAaw==
+  </data>
+ </layer>
+ <layer name="DHouse1" width="15" height="15" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="13"/>
+   <property name="Y" value="6"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFgxW0Mw+0C0YBPQAACqAAiw==
+  </data>
+ </layer>
+</map>

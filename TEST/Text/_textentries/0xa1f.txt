@@ -1,0 +1,5 @@
+[Left][LoadPlayer][FarLeft][LoadAdlez]
+It seems they know we're coming...[A]
+[Left]It's too late now. We have to commit.[NL]
+Otherwise, we leave Leon for dead.[A]
+[FarLeft]Right. No turning back now.[A][X]

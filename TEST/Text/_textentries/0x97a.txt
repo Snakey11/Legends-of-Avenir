@@ -1,0 +1,5 @@
+[MidRight][LoadCurrent][MidLeft][LoadVillagerOldMan]
+Shizon has not been attacked in eons...[NL]
+Will today be the day our order fals?[A][NL]
+I cannot join you on the battlefield,[NL]
+but take this. It should help.[A][X]

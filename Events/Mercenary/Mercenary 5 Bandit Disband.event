@@ -1,0 +1,204 @@
+
+EventPointerTable(Merc5BanditDisbandEvents,ThisChapter)
+
+//Label ThisChapter
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN EndMainPointer EndMainPointer EndMainPointer
+POIN EndMainPointer
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+//EndLabel
+
+//Label TurnBasedEvents
+TurnBasedEvents:
+END_MAIN
+
+//Label CharacterBasedEvents
+ALIGN 32
+CharacterBasedEvents:
+END_MAIN
+
+//Label LocationBasedEvents
+LocationBasedEvents:
+Armory(ArmoryList,16,9)
+Vendor(ShopList,0,9)
+Village(0x12,TopRedHouse,12,10)
+Village(0x13,RightRedHouse,17,13)
+Village(0x14,BottomRedHouse,8,17)
+Village(0x0,WhiteHouse,10,17)
+Village(0x0,VisitInn,15,17)
+END_MAIN
+
+//Label MiscBasedEvents
+MiscBasedEvents:
+DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+END_MAIN
+
+//Label TrapData
+TrapData:
+ENDTRAP
+ALIGN 4
+
+//Label Units
+Units:
+EndUnit
+
+//Label BeginingScene
+BeginningScene:
+MUSC Ties_of_Friendship
+LOAD3 0x1 PlayerLoading1
+LOAD2 0x1 ChapterFriends
+LOAD1 0x1 MasonKendrickMeanies
+LOAD1 0x1 HunterGroup2
+ENUN
+CAM1 [12,11]
+SetBackground(0x1C)
+Text(Merc5BanditDisbandDraterusIsMeanText)
+MUSC Combat_Preparation
+SetBackground(0x05)
+TEXTSHOW Merc5BanditDisbandTalkWithMerchantText
+TEXTEND
+MUSC Laughter
+TEXTCONT
+TEXTEND
+MUSC Comrades
+TEXTCONT
+TEXTEND
+EndConvo
+MUSC Tension
+Text(Merc5BanditDisbandMasonReturnsText)
+EnterStop
+MOVE 0x0 Mason [1,21]
+STAL 0x20
+NoFade
+ENDA
+
+//Label EndingScene
+EndingScene:
+FADI 0x5
+MUSC Victory
+SetBackground(0x05)
+Text(Merc5BanditDisbandEndingText)
+MoveToChapter(MercenaryBanditDisband6)
+ENDA
+
+//Label HouseEvents
+ArmoryList:
+SHLI SteelSword IronBlade SteelLance ShortSpear SteelAxe ShortAxe SteelBow SteelLongbow SteelShortbow 0x0
+ALIGN 4
+
+ShopList:
+SHLI Elfire Elthunder Elwind Elaqua Exordium Divine Worm Nosferatu Mend Vulnerary Elixir PureWater 0x0
+ALIGN 4
+
+TopRedHouse:
+MUSI
+Text(0x2,0x85) // NEEDS TEXT
+GiveItem(Halberd,0xFFFF)
+MUNO
+NoFade
+EndA2
+
+RightRedHouse:
+MUSI
+Text(0x2,0x85)
+GiveItem(Elixir,0xFFFF)
+MUNO
+NoFade
+EndA2
+
+BottomRedHouse:
+MUSI
+Text(0x2,0x85)
+GiveItem(SteelBlade,0xFFFF)
+MUNO
+NoFade
+EndA2
+
+WhiteHouse:
+MUSI
+Text(0x2,0x85) // NEEDS TEXT
+MUNO
+NoFade
+EndA2
+
+VisitInn:
+MUSI
+Text(0x1,0x85) // NEEDS TEXT
+MUNO
+NoFade
+ENDA
+
+	/*UNIT DATA*/
+
+//Label PlayerUnitsAndMason
+PlayerLoading1:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
+UNIT
+
+ChapterFriends:
+UNIT Vicar Brigand2 PlayerMArcher Level(4,Ally,True) [7,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
+UNIT Walter Brigand2 PlayerMArcher Level(4,Ally,True) [6,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
+UNIT Baret Brigand2 PlayerMArcher Level(4,Ally,True) [6,10] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
+UNIT Arya Brigand2 PlayerMArcher Level(4,Ally,True) [6,8] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
+UNIT Adlez Brigand2 PlayerMArcher Level(4,Ally,True) [8,10] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
+EndUnit
+
+//Label Kendrick and Meanies
+MasonKendrickMeanies:
+UNIT Kendrick Pirate Kendrick Level(9,Ally,True) [8,12] 0x00 0x00 0x00 0x00 [ShortAxe,Swordreaver,Vulnerary] NoAI
+UNIT Mason Ranger Mason Level(6,Enemy,True) [9,11] 0x00 0x00 0x00 0x00 [SteelBlade,SteelBow] GuardAI
+UNIT Hunter Fighter Mason Level(10,Enemy,True) [10,6] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
+UNIT Hunter Myrmidon Mason Level(12,Enemy,True) [12,8] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT Hunter Fighter Mason Level(8,Enemy,True) [14,8] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
+UNIT Hunter Hero Mason Level(4,Enemy,True) [16,10] 0x00 0x00 0x00 0x00 [SteelBlade] AttackInRangeAI
+UNIT Hunter Cavalier Mason Level(10,Enemy,True) [14,11] 0x00 0x00 0x00 0x00 [LightBrand,IronLance] NoAI
+UNIT Hunter Cavalier Mason Level(9,Enemy,True) [14,12] 0x00 0x00 0x00 0x00 [DragonSpear] NoAI
+UNIT Hunter Mercenary Mason Level(9,Enemy,True) [12,11] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
+UNIT Hunter Mercenary Mason Level(11,Enemy,True) [13,12] 0x00 0x00 0x00 0x00 [KillingEdge] AttackInRangeAI
+UNIT Hunter Pirate Mason Level(10,Enemy,True) [10,15] 0x00 0x00 0x00 0x00 [ShortAxe] NoAI
+UNIT Hunter PegasusKnight Mason Level(9,Enemy,True) [17,15] 0x00 0x00 0x00 0x00 [SlimLance] AttackInRangeAI
+UNIT Hunter Sniper Mason Level(6,Enemy,True) [14,14] 0x00 0x00 0x00 0x00 [SteelBow] AttackInRangeAI
+UNIT Hunter Soldier Mason Level(9,Enemy,True) [13,16] 0x00 0x00 0x00 0x00 [SteelLance] ChaseOnceApproachedAI
+UNIT Hunter Soldier Mason Level(11,Enemy,True) [12,18] 0x00 0x00 0x00 0x00 [ShortSpear] NoAI
+UNIT Hunter Myrmidon Mason Level(8,Enemy,True) [15,19] 0x00 0x00 0x00 0x00 [WindSword] AttackInRangeAI
+UNIT Hunter Archer Mason Level(7,Enemy,True) [19,18] 0x00 0x00 0x00 0x00 [SteelShortbow] AttackInRangeAI
+UNIT Hunter Knight Mason Level(9,Enemy,True) [9,19] 0x00 0x00 0x00 0x00 [KillerLance] GuardAI
+UNIT Hunter Mercenary Mason Level(13,Enemy,True) [10,20] 0x00 0x00 0x00 0x00 [IronSword] ChaseOnceApproachedAI
+UNIT
+
+HunterGroup2:
+UNIT Hunter Mage Mason Level(12,Enemy,True) [6,19] 0x00 0x00 0x00 0x00 [Fire] AttackInRangeAI
+UNIT Hunter Archer Mason Level(13,Enemy,True) [6,17] 0x00 0x00 0x00 0x00 [IronLongbow] AttackInRangeAI
+UNIT Hunter Halberdier Mason Level(5,Enemy,True) [8,21] 0x00 0x00 0x00 0x00 [Horseslayer] AttackInRangeAI
+UNIT Hunter Soldier Mason Level(9,Enemy,True) [6,5] 0x00 0x00 0x00 0x00 [SteelLance] GuardAI
+UNIT Hunter Soldier Mason Level(8,Enemy,True) [7,5] 0x00 0x00 0x00 0x00 [HeavySpear] GuardAI
+UNIT Hunter Archer Mason Level(10,Enemy,True) [5,4] 0x00 0x00 0x00 0x00 [IronBow] ChaseOnceApproachedAI
+UNIT Hunter Pirate Mason Level(9,Enemy,True) [8,4] 0x00 0x00 0x00 0x00 [DragonAxe] ChaseOnceApproachedAI
+UNIT Hunter Mage Mason Level(9,Enemy,True) [6,1] 0x00 0x00 0x00 0x00 [Elwind] ChaseOnceApproachedAI
+UNIT Hunter Swordmaster Mason Level(3,Enemy,True) [7,1] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
+UNIT Hunter Mercenary Mason Level(11,Enemy,True) [3,4] 0x00 0x00 0x00 0x00 [SlimSword] NoAI
+UNIT Hunter Fighter Mason Level(10,Enemy,True) [3,6] 0x00 0x00 0x00 0x00 [ShortAxe] AttackInRangeAI
+UNIT Hunter Cavalier Mason Level(8,Enemy,True) [0,5] 0x00 0x00 0x00 0x00 [SteelLance,Zanbato] ChaseOnceApproachedAI
+UNIT Hunter Cavalier Mason Level(9,Enemy,True) [0,6] 0x00 0x00 0x00 0x00 [ShortSpear] ChaseOnceApproachedAI
+UNIT Hunter Hero Mason Level(6,Enemy,True) [2,9] 0x00 0x00 0x00 0x00 [RuneSword] GuardAI
+UNIT Hunter Troubadour Mason Level(13,Enemy,True) [2,11] 0x00 0x00 0x00 0x00 [Mend] HealAlliesAI
+UNIT Hunter Pirate Mason Level(9,Enemy,True) [0,13] 0x00 0x00 0x00 0x00 [Hammer] AttackInRangeAI
+UNIT Hunter Shaman Mason Level(11,Enemy,True) [3,13] 0x00 0x00 0x00 0x00 [Slime] AttackInRangeAI
+UNIT Hunter Knight Mason Level(8,Enemy,True) [2,16] 0x00 0x00 0x00 0x00 [Javelin] GuardAI
+UNIT Hunter Sentinel Mason Level(7,Enemy,True) [1,18] 0x00 0x00 0x00 0x00 [BraveLance] ChaseOnceApproachedAI
+EndUnit

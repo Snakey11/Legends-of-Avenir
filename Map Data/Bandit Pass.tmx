@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="15" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="01005B03" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/01005B03.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="15">
+  <properties>
+   <property name="Anims" value="01Anims"/>
+   <property name="ChapterID" value="MilitaryPass2"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="BanditPassChanges"/>
+   <property name="MapID" value="BanditPassMap"/>
+   <property name="ObjectType" value="0x01"/>
+   <property name="PaletteID" value="0x5B"/>
+   <property name="TileConfig" value="0x03"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxtk01KA0EQhat7tsaoRxBCjEaQOYMLDXFhrjBZGDGL6BFm7SFcBHVhkPEKgj84LjyEojAYPIGvqNdME118NN1dr+tVTU3hRB5FZKokIhnWHS/SBwdkG4y5XiK+BK+gIKo/hHZA/RxnDcQugXtnb42pnYEbMEfcJ1hxptkFQ+Zepvbd2ar6K+bsefNZUauaDew7YBPcRrnDek1d19e5zpl3D5p90KN31b9EevXQZe3NxPJNWPMR9iNwnPz1EGo4Ye0Ze/wBUtwPwCnI//EQetBn3h/Gae4WY77F1thDHvWwQb32O2X+IWvPyIOYB/WVL3yDC7HvVIEn7L+i+lXbdtb/PPLUTOr+ar/Xvc3Kmre4LIpt4fxNal8Z50+9tBE/8pY76MO7ocZ8gVDTjJqKc1ay/invJ8hxRg+qa+B+VefM1X4rzmlFVK/zXYC7pP5POpz/Z7EZC/0qSXhD/adR77SOLWfzr/pffAljVw==
+  </data>
+ </layer>
+ <layer name="Closed S Village" width="15" height="15" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="3"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="8"/>
+   <property name="Y" value="7"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFQx0oDrQDRgFFAAA9RAAi
+  </data>
+ </layer>
+ <layer name="Destroyed S Village" width="15" height="15" visible="0">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="2"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="7"/>
+   <property name="Y" value="5"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF1AAdzAwMnUDcxUy63hVAPSuBeBUZek8A9ZwE4lNk6B0FgwMAANbGBg0=
+  </data>
+ </layer>
+ <layer name="Closed N Village" width="15" height="15" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="5"/>
+   <property name="Y" value="5"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFlADFgXbAKBjyAABOSAAi
+  </data>
+ </layer>
+ <layer name="Destroyed N Village" width="15" height="15" visible="0">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="4"/>
+   <property name="Y" value="3"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBj6oIOZgaETiLuYSde7AqhnJRCvIkPvCaCek0B8igy9o2AUwAAA9SMGDQ==
+  </data>
+ </layer>
+</map>

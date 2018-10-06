@@ -1,0 +1,215 @@
+
+EventPointerTable(Merc2MilitiaEvents,ThisChapter)
+
+//Label ThisChapter
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+//EndLabel
+
+//Label Turn events
+TurnBasedEvents:
+TurnEventEnemy(0x0,EndingScene,6)
+END_MAIN
+
+//Label Character events
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+CharacterBasedEvents:
+END_MAIN
+
+//Label Location events
+LocationBasedEvents:
+LOCA 0x10 Home1 [12,9] 0x10 // Luke
+LOCA 0x11 Home2 [11,8] 0x10 // Item house
+LOCA 0x0 Home3 [13,6] 0x10 // Tavern ; Text w/ innkeeper
+LOCA 0x0 Home4 [14,7] 0x10 // Text only house
+Armory(ShopData,12,7)
+END_MAIN
+
+//Label Misc events
+MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatBoss(BossDead)
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+Units:
+UNIT
+
+//Label Beginning scene
+BeginningScene:
+MUSC Advance
+LOAD3 0x1 PlayerLoading1 //FMercenaryStart, FMyrmidonStart, FPegasusKnightStart, MMercenaryStart, MMyrmidonStart, MFighterStart, MPirateStart, MBRigandStart.
+ENUN
+
+FADU 0x5
+STAL 0x30
+Text(Merc2MilitiaTheresDanaanText)//Opening text: will go into the tavern
+MoveMercenary(13,6)
+ENUN
+ClearMercenary
+STAL 0x20
+FADI 0x5
+LOAD1 0x1 Bandits
+SetBackground(0x9)
+TEXTSHOW Merc2MilitiaInnText
+TEXTEND
+MUSC Tension
+TEXTCONT
+TEXTEND
+EndConvo
+STAL 0x20
+LOAD3 0x1 PlayerLoading2 //FMercenaryStart, FMyrmidonStart, FPegasusKnightStart, MMercenaryStart, MMyrmidonStart, MFighterStart, MPirateStart, MBRigandStart.
+LOAD1 0x1 ArcStuff
+ENUN
+Text(Merc2MilitiaOutsideText)
+NoFade
+ENDA
+
+//Label Boss dead
+BossDead:
+MUSC Into_the_Shadow_of_Victory
+SetBackground(0x3)
+CHECK_EVENTID 0x10
+BEQ 0x14 0x0 0xC
+	Text(Merc2MilitiaGerwickDeadText) // Only if Luke was gotten
+GOTO 0x15
+LABEL 0x14
+	Text(Merc2MilitiaGerwickDeadNoLukeText)
+LABEL 0x15
+MoveToChapter(MercenaryMilitiaKill3)
+ENDA
+
+//Label EndingScene
+EndingScene: // So survival
+MUSC Into_the_Shadow_of_Victory
+FADI 0x5
+CLEE GerwickBandit
+CLEN Militiaman
+SetBackground(0x3)
+CHECK_EVENTID 0x10
+BEQ 0x12 0x0 0xC
+	Text(Merc2MilitiaGerwickLeavesText) // Only if Luke was gotten
+	FADI 0x5
+GOTO 0x13
+LABEL 0x12
+	Text(Merc2MilitiaGerwickLeavesNoLukeText)
+	LOAD1 0x1 LukeStuff2
+LABEL 0x13
+MoveToChapter(MercenaryMilitiaWait3)
+ENDA
+
+//Label Visit events
+Home1:
+MUSS Comrades
+SETVAL 0x1 Arc
+CHECK_ACTIVE
+BNE 0x10 0xC 0x1
+	Text(0x2E,Merc2MilitiaGetLukeArcText)//Arc text
+GOTO 0x11
+LABEL 0x10
+	Text(0x2E,Merc2MilitiaGetLukePlayerText)//Player text
+LABEL 0x11
+LOAD1 0x1 LukeStuff
+ENUN
+//TileChange(12,9)
+MURE 0x5
+NoFade
+EndA2
+
+Home2:
+MUSI
+VillageEventItem(Merc2MilitiaHouse1Text,0x1,Speedwing)//House text
+//TileChange(11,8)
+MUNO
+EndA2
+
+Home3:
+MUSI
+HouseEvent(Merc2MilitiaHouse2Text,0x9)
+MUNO
+EndA2
+
+Home4:
+MUSI
+HouseEvent(Merc2MilitiaHouse3Text,0x1)
+MUNO
+ENDA
+
+ShopData:
+SHLI IronSword IronSpear IronAxe Javelin HandAxe Vulnerary
+ALIGN 4
+
+
+	/*UNIT DATA*/
+
+//Label PlayerLoading
+PlayerLoading1:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(4,Ally,True) [6,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(4,Ally,True) [6,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(4,Ally,True) [6,7] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(4,Ally,True) [6,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(4,Ally,True) [6,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(4,Ally,True) [6,7] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(4,Ally,True) [6,7] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(4,Ally,True) [6,7] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+PlayerLoading2:	
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(4,Ally,True) [13,6] 0x00 0x00 0x01 REDA10R6 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(4,Ally,True) [13,6] 0x00 0x00 0x01 REDA10R6 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(4,Ally,True) [13,6] 0x00 0x00 0x01 REDA10R6 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(4,Ally,True) [13,6] 0x00 0x00 0x01 REDA10R6 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(4,Ally,True) [13,6] 0x00 0x00 0x01 REDA10R6 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(4,Ally,True) [13,6] 0x00 0x00 0x01 REDA10R6 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(4,Ally,True) [13,6] 0x00 0x00 0x01 REDA10R6 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(4,Ally,True) [13,6] 0x00 0x00 0x01 REDA10R6 [IronAxe,Vulnerary] [0] 
+EndUnit
+
+//Label Other units
+Bandits:
+UNIT Gerwick Pirate Gerwick Level(6,Enemy,True) [5,13] 0x02 0x00 0x0 0x0 [ShortAxe,RedGem] GuardTileAI 
+UNIT GerwickBandit Soldier Gerwick Level(6,Enemy,True) [8,5] 0x00 0x00 0x0 0x0 [Javelin] [0] 
+UNIT GerwickBandit Soldier Gerwick Level(5,Enemy,True) [7,6] 0x00 0x00 0x0 0x0 [IronLance] [0] 
+UNIT GerwickBandit Pirate Gerwick Level(2,Enemy,True) [1,3] 0x00 0x00 0x0 0x0 [IronAxe] [0] 
+UNIT GerwickBandit Archer Gerwick Level(1,Enemy,True) [0,8] 0x00 0x00 0x0 0x0 [IronBow] ChaseOnceApproachedAI 
+UNIT GerwickBandit Brigand Gerwick Level(4,Enemy,True) [4,7] 0x00 0x00 0x0 0x0 [SteelAxe] BrigandAI
+UNIT GerwickBandit Fighter Gerwick Level(3,Enemy,True) [12,12] 0x00 0x00 0x0 0x0 [IronAxe] PursueWithoutHeedAI 
+UNIT GerwickBandit Fighter Gerwick Level(2,Enemy,True) [11,13] 0x00 0x00 0x0 0x0 [IronAxe] PursueWithoutHeedAI
+UNIT GerwickBandit Myrmidon Gerwick Level(3,Enemy,True) [7,14] 0x00 0x00 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT GerwickBandit Mercenary Gerwick Level(1,Enemy,True) [3,10] 0x00 0x00 0x0 0x0 [IronSword] [0] 
+UNIT Militiaman Knight Arc Level(2,NPC,True) [10,3] 0x00 0x00 0x0 0x0 [IronLance] GuardTileAI 
+UNIT Militiaman Soldier Arc Level(3,NPC,True) [12,4] 0x00 0x00 0x0 0x0 [IronLance] ChaseOnceApproachedAI
+UNIT Militiaman Fighter Arc Level(2,NPC,True) [1,5] 0x00 0x00 0x0 0x0 [IronAxe] GuardTileAI 
+UNIT Militiaman Fighter Arc Level(2,NPC,True) [2,6] 0x00 0x00 0x0 0x0 [HandAxe] GuardTileAI
+UNIT
+
+ArcStuff:
+UNIT Arc Fighter Arc Level(1,Ally,True) [13,6] 0x00 0x00 0x1 REDA11R5 [IronAxe,Elixir] [0]
+UNIT
+
+LukeStuff:
+UNIT Luke Monk Arc Level(1,Ally,True) [12,9] 0x00 0x00 0x1 REDA10R9 [Lightning,Vulnerary] [0]
+UNIT
+
+LukeStuff2:
+UNIT Luke Monk Arc Level(1,Ally,True) [12,9] 0x00 0x00 0x0 0x0 [Lightning,Vulnerary] [0]
+EndUnit

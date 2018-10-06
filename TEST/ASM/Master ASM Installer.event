@@ -1,0 +1,222 @@
+
+/*
+#include "Supply Hacks/EASupplyHacks.event"
+
+ALIGN 16
+
+#include "Supply Command/Supply Installer.event"
+
+ALIGN 16
+
+#include "Weapon Rank on Levelup/Weapon Rank on Levelup.event"
+*/
+
+ALIGN 16
+
+//#include "Arms Scroll FE8/EA Installer.event"
+
+ALIGN 16
+
+#include "Show Heal Amount/Show Heal Amount.event"
+
+ALIGN 16
+
+//#include "Events as Supports/Events As Supports.event"
+
+ALIGN 16
+
+#include "FE8 Always Display Ranged Animation/Ranged Animation by Table Installer.event"
+
+ALIGN 16
+
+#include "Display All Weapon Level Ups/Promotion Ranks Fix Installer.event"
+
+ALIGN 16
+
+//#include "FE8 New CHAI/New CHAI.event"
+
+ALIGN 16
+
+/*
+PUSH
+
+ORG $1C2270
+
+ReversePortrait:
+#incbin "ReversePortrait/ReversePortrait.dmp"
+
+ORG $7856
+
+BL(ReversePortrait)
+
+POP
+*/
+ALIGN 16
+
+#ifdef SkillSystemIncluded
+	#include "Skill System/Skill System Installer.event"
+#else
+	#define SkillTester 0
+	#include "Delete with Skills.event"
+	#include "Skill System/Engine Hacks/Skill System/skill_lists.event"
+	#include "Skill System/Engine Hacks/Skill System/Proc Skills/Proc Skills Installer.event"
+	ALIGN 16
+	#include "FE8 Battle Stats with Anims Off/FE8-Battle Stats.event"
+#endif
+
+ALIGN 16
+
+#include "Menus/Menu Commands.event"
+
+
+ALIGN 16
+#inctext lyn "PortraitSelectASM/SelectPortrait.elf" "PortraitSelectASM/Definitions.elf"
+
+
+ALIGN 16
+#inctext lyn "DoubleEXP/NewDoubleEXP.elf" "DoubleEXP/Definitions.elf"
+
+
+ALIGN 16
+#inctext lyn "LevelUP/LevelUP.elf" "LevelUp/Definitions.elf"
+
+
+/*PUSH
+ORG EndOfCurrentBLRange
+ALIGN 16
+AnimaTriangle:
+//#inctext lyn "AnimaTriangle/AnimaTriangle.elf" "AnimaTriangle/Definitions.elf"
+#incbin "AnimaTriangle/AnimaTriangle.dmp"
+
+ORG 0x2C83E
+BL(AnimaTriangle)
+POP*/
+
+ALIGN 16
+#inctext lyn "AnimaTriangle/NewAnimaTriangle.elf" "AnimaTriangle/Definitions.elf"
+
+FireList:
+BYTE Fire Elfire Arcfire Bolganone Meteor Flare 0x00
+
+ThunderList:
+BYTE Thunder Elthunder Arcthunder Thoron Bolting 0x00
+
+WindList:
+BYTE Wind Elwind Arcwind Tornado Aircalibur WindSword 0x00
+
+ALIGN 16
+//#include "SummonStuff/Summon.event"
+
+ALIGN 16
+//#inctext lyn "AutoPromote/AutoPromote.elf" "AutoPromote/Definitions.elf"
+
+ALIGN 16
+#include "Class Expansion.event"
+
+ALIGN 16
+#include "Chapter Names/fe8_chnames.event"
+
+ALIGN 16
+#include "Raid/Raid.event"
+
+ALIGN 16
+#include "FE8 Walking Sounds Fix/FE8-Walking Sounds EA.event"
+
+//Enabling name selection
+PUSH
+ORG $44800
+BYTE 0x8 //max name length
+ORG $482BA
+BYTE 0x8 //max cursor position
+
+//Allow Visit from any tile
+ORG $23072
+SHORT $e00d
+
+ORG $BD070
+BYTE 0xB8 0xE0
+
+//Fix convo face positions
+ORG $591574
+BYTE 0x07
+ORG $591578
+BYTE 0x0B
+ORG $59157C
+BYTE 0x14
+ORG $591580
+BYTE 0x17
+
+//Skip very begining world map
+ORG $A39768
+EVBIT_MODIFY 0x1
+SKIPWN
+ENDA
+
+ORG $CC20C 	// Skip health and safety screen
+BYTE 0x0 0x0
+
+ORG $C4928  // Skip new game text
+BYTE 0xC0 0x46
+
+ORG $C6714  // Skip intro cutscene
+BYTE 0xC0 0x46
+
+ORG $C63AD
+BYTE 0xE0
+
+ORG 0xBA54
+WORD 0x203EE80
+
+ORG 0xFA34
+WORD 0x203EE80
+
+ORG 0xD5B80
+WORD 0x203EE80
+
+/*00016C94	2c 2a 02 dc 2b 2a 00 db - Original	Slayer?  Involves both 2b and 2c IDs.
+ c4 f0 66 f9 01 e0 c0 46 - Patched
+
+00023E90	33 28 03 d0 - Original -----\
+ b7 f0 68 f8 - Patched       |
+
+
+ORG 0x16C94
+BYTE 0x00 0x2a 0x02 0xdc 0x00 0x2a 0x00 0xdb // Eliminate slayer???
+
+ORG 0x23E90
+BYTE 0x33 0x28 0x03 0xd0
+*/
+
+ORG $16C94	// For real eliminate slayer
+BYTE 0x00
+ORG $16C98
+BYTE 0x00
+
+
+ORG (TextTable+(4*TactNameText))
+WORD 0x8202bd10//tactician name
+
+
+// MNC2 Fix
+ORG 0xBD070
+SHORT 0xE0B8
+//Fixes the world map chapter ID being loaded instead of the actual chapter ID.
+ORG 0x897B2
+SHORT 0 0
+//Fixes the game considering some chapters postgame.
+ORG 0x897C4
+//SHORT 0x200E 0x5620 //mov r0, #0x0E; ldsb r0, [r4, r0]
+
+
+ORG 0xBA30 // Fix debuff bug
+WORD 0x203EE80
+
+
+ORG $2FEC6 // Change vulnerary heal amount
+BYTE 15
+
+
+ORG $3328A // Fix party leader stuff
+BYTE 0xC0 0x46
+
+POP

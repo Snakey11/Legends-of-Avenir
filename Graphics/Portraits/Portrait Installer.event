@@ -1,0 +1,122 @@
+
+MercMAvatarPortrait:
+#incext PortraitFormatter "Male Merc Avatar.png"
+MercFAvatarPortrait:
+#incext PortraitFormatter "Female Merc Avatar.png"
+ArcPortrait:
+#incext PortraitFormatter "Arc.png"
+AdlezPortrait:
+#incext PortraitFormatter "Adlez.png"
+AryaPortrait:
+#incext PortraitFormatter "Arya.png"
+BaretPortrait:
+#incext PortraitFormatter "Baret.png"
+ConnorPortrait:
+#incext PortraitFormatter "Connor.png"
+DerekPortrait:
+#incext PortraitFormatter "Derek.png"
+EfilPortrait:
+#incext PortraitFormatter "Efil.png"
+ElanilPortrait:
+#incext PortraitFormatter "Elanil.png"
+EmperorPortrait:
+#incext PortraitFormatter "Emperor.png"
+FinocPortrait:
+#incext PortraitFormatter "Finoc.png"
+HelmerPortrait:
+#incext PortraitFormatter "Helmer.png"
+JasperPortrait:
+#incext PortraitFormatter "Jasper.png"
+KendrickPortrait:
+#incext PortraitFormatter "Kendrick.png"
+LeonPortrait:
+#incext PortraitFormatter "Leon.png"
+LeyosPortrait:
+#incext PortraitFormatter "Leyos.png"
+LukePortrait:
+#incext PortraitFormatter "Luke.png"
+LuxPortrait:
+#incext PortraitFormatter "Lux.png"
+MaximusPortrait:
+#incext PortraitFormatter "Maximus.png"
+NarratorPortrait:
+#incext PortraitFormatter "Narrator.png"
+RexPortrait:
+#incext PortraitFormatter "Rex.png"
+UzkalisPortrait:
+#incext PortraitFormatter "Uzkalis.png"
+ValPortrait:
+#incext PortraitFormatter "Val.png"
+VicarPortrait:
+#incext PortraitFormatter "Vicar.png"
+WalterPortrait:
+#incext PortraitFormatter "Walter.png"
+XavusPortrait:
+#incext PortraitFormatter "Xavus.png"
+ZaliusPortrait:
+#incext PortraitFormatter "Zalius.png"
+
+
+/*
+SentinelPortrait:
+#incext Png2Dmp "Sentinel.png"
+HalberdierPortrait:
+#incext Png2Dmp "Halberdier.png"
+AssassinPortrait:
+#incext Png2Dmp "Assassin.png"
+*/
+
+SentinelPortrait:
+#incext png2dmp "Sentinel.png" --lz77
+SentinelPortraitPalette:
+#incext png2dmp "Sentinel.png" --palette-only
+HalberdierPortrait:
+#incext png2dmp "Halberdier.png" --lz77
+HalberdierPortraitPalette:
+#incext png2dmp "Halberdier.png" --palette-only
+AssassinPortrait:
+#incext png2dmp "Assassin.png" --lz77
+AssassinPortraitPalette:
+#incext png2dmp "Assassin.png" --palette-only
+
+
+//setMugEntry(MugEntry,MugOffset,MouthX,MouthY,EyeX,EyeY)
+
+setMugEntry(MaleMercMug,MercMAvatarPortrait,3,5,3,3)
+setMugEntry(FemaleMercMug,MercFAvatarPortrait,3,6,3,4)
+setMugEntry(AdlezMug,AdlezPortrait,2,5,2,3)
+setMugEntry(ArcMug,ArcPortrait,2,4,2,2)
+setMugEntry(AryaMug,AryaPortrait,2,6,3,4)
+setMugEntry(BaretMug,BaretPortrait,3,5,3,3)
+setMugEntry(ConnorMug,ConnorPortrait,3,5,3,3)
+setMugEntry(DerekMug,DerekPortrait,2,5,2,3)
+setMugEntry(EfilMug,EfilPortrait,3,5,3,3)
+setMugEntry(ElanilMug,ElanilPortrait,4,5,4,3)
+setMugEntry(EmperorMug,EmperorPortrait,3,5,3,3)
+setMugEntry(FinocMug,FinocPortrait,3,4,3,2)
+setMugEntry(HelmerMug,HelmerPortrait,2,5,3,4)
+setMugEntry(JasperMug,JasperPortrait,3,5,3,3)
+setMugEntry(KendrickMug,KendrickPortrait,3,6,3,4)
+setMugEntry(LeonMug,LeonPortrait,2,4,2,2)
+setMugEntry(LeyosMug,LeyosPortrait,3,5,3,3)
+setMugEntry(LukeMug,LukePortrait,2,6,3,4)
+setMugEntry(LuxMug,LuxPortrait,2,6,3,4)
+setMugEntry(MaximusMug,MaximusPortrait,3,4,3,2)
+setMugEntry(NarratorMug,NarratorPortrait,3,5,3,3)
+setMugEntry(RexMug,RexPortrait,2,5,2,3)
+setMugEntry(UzkalisMug,UzkalisPortrait,3,5,3,3)
+setMugEntry(ValMug,ValPortrait,3,5,3,4)
+setMugEntry(VicarMug,VicarPortrait,2,4,3,2)
+setMugEntry(WalterMug,WalterPortrait,3,5,3,3)
+setMugEntry(XavusMug,XavusPortrait,2,5,3,3)
+setMugEntry(ZaliusMug,ZaliusPortrait,2,5,3,3)
+
+/*
+setMugEntry(SentinelCard,SentinelPortrait,0,0,0,0)
+setMugEntry(HalberdierCard,HalberdierPortrait,0,0,0,0)
+setMugEntry(AssassinCard,AssassinPortrait,0,0,0,0)
+*/
+
+setCardEntry(SentinelCard,SentinelPortrait,SentinelPortraitPalette)
+setCardEntry(HalberdierCard,HalberdierPortrait,HalberdierPortraitPalette)
+setCardEntry(AssassinCard,AssassinPortrait,AssassinPortraitPalette)

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="01005B03" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/01005B03.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="10">
+  <properties>
+   <property name="Anims" value="01Anims"/>
+   <property name="ChapterID" value="LeavingShizonCutscene"/>
+   <property name="Main" value=""/>
+   <property name="MapID" value="LeavingShizonMap"/>
+   <property name="ObjectType" value="0x01"/>
+   <property name="PaletteID" value="0x5B"/>
+   <property name="TileConfig" value="0x03"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJx1kT1OAlEURi/zFjA0Rki0pjAxWIgJugASLfgJAQtrC7VkpCIxU7gOKtAEGtZgSUNkAxLsNIQVeG7encxkEouTeT/fue++N0+ByHtB5AdmsIcTEanBGrrQgzKsyC6cSMz4FR6ZT8gvzV/BhHVnNMRnW8571+ZN4QZ3ap76S+btIHUr0IRTq/EAc+2HTBXecObQYhwifLA3gmO4tzNC6zU2L4LfgnfPgnTvyu56l3OUGbnbTHYXpBn9lsxVLmAAzzAkd2lnarZNtuPS90jqHWV8pQ+HmT5e8D/t3fWOdTiHKPOP1uYkNTUX43yL9wa5bJ6knvb9Zf0WnT/rPyfPAWxhgz+GP8XyTcU=
+  </data>
+ </layer>
+</map>

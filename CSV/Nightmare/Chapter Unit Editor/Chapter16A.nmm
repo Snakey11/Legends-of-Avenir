@@ -1,0 +1,112 @@
+#FE8 Chapter Unit Editor
+#
+
+1
+Chapter 16A Unit Editor
+0x8BCE58
+96
+20
+NULL
+NULL
+
+Character Reference Number
+0
+1
+NDHU
+Character List.txt
+
+Starting Class
+1
+1
+NDHU
+Class Hex List.txt
+
+***UNKNOWN*** (Usually Zero)
+2
+1
+NEHU
+NULL
+
+Starting Level/Alliance
+3
+1
+NDHU
+Starting Level.txt
+
+X Co-ordinate
+4
+1
+NEDU
+NULL
+
+Y Co-ordinate
+5
+1
+NEDU
+NULL
+
+***UNKNOWN***
+6
+1
+NEHU
+NULL
+
+Reinforcement Placement?
+7
+1
+NEHU
+NULL
+
+Reinforcement Pointer?
+8
+4
+NEHU
+NULL
+
+Slot Item 1
+12
+1
+NDHU
+Item List.txt
+
+Slot Item 2
+13
+1
+NDHU
+Item List.txt
+
+Slot Item 3
+14
+1
+NDHU
+Item List.txt
+
+Slot Item 4
+15
+1
+NDHU
+Item List.txt
+
+AI 1
+16
+1
+NDHU
+NPCAI1.txt
+
+AI 2
+17
+1
+NDHU
+NPCAI2.txt
+
+AI 3
+18
+1
+NDHU
+NPCAI3.txt
+
+AI 4
+19
+1
+NDHU
+NPCAI4.txt

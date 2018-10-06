@@ -1,0 +1,13 @@
+0x880C479 Ground avoid
+0x880C4BA Ground defence
+0x880C4FB Ground resistance
+0x880C53C Flier avoid
+0x880C57D Flier defence
+0x880C5BE Flier resistance
+0x880C5FF Unknown 1
+0x880C640 Unknown 2
+0x880C681 Unknown 3
+0x880C6C2 Unknown 4
+0x880C703 Unknown 5
+0x880C744 Health Regen (%)
+0x880C785 Unknown 6 (Status Recovery?)

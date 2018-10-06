@@ -1,0 +1,4 @@
+3
+0x00 Disabled
+0x01 Solo Ending
+0x02 Paired Ending

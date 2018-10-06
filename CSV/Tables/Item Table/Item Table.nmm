@@ -1,0 +1,130 @@
+#FE8 Item Editor by SpyroDi
+#
+
+1
+FE8 Item Editor
+0xC0C0C0
+222
+36
+_ItemEditorList.txt
+NULL
+
+Name
+0
+2
+NEHU
+NULL
+
+Description
+2
+2
+NEHU
+NULL
+
+Use Description
+4
+2
+NEHU
+NULL
+
+Item Number
+6
+1
+NEHU
+NULL
+
+Weapon Type
+7
+1
+NEHU
+NULL
+
+Attributes
+8
+4
+NEHU
+NULL
+
+Stat Bonuses Pointer
+12
+4
+NEHU
+NULL
+
+Effectiveness Pointer
+16
+4
+NEHU
+NULL
+
+Durability
+20
+1
+NEDU
+NULL
+
+Might
+21
+1
+NEDU
+NULL
+
+Hit
+22
+1
+NEDU
+NULL
+
+Weight
+23
+1
+NEDU
+NULL
+
+Crit
+24
+1
+NEDU
+NULL
+
+Range (Min-Max)
+25
+1
+NEHU
+NULL
+
+Cost Per Use
+26
+2
+NEDU
+NULL
+
+Weapon Rank
+28
+1
+NEDU
+NULL
+
+Item Icon Index
+29
+1
+NEHU
+NULL
+
+Staff/Use Effect
+30
+1
+NEHU
+NULL
+
+Weapon Effect
+31
+1
+NEDU
+NULL
+
+Weapon Experience
+32
+1
+NEDU
+NULL

@@ -1,0 +1,34 @@
+#Fire Emblem 8 (Paired) Endings Editor (by Icy Toast)
+#
+
+1
+Fire Emblem 8 (Paired) Endings Editor (by Icy Toast)
+0xA3CD68
+135
+8
+EndingsList.txt
+NULL
+
+Ending Type
+0
+1
+NDHU
+EndingTypeList.txt
+
+Character 1
+1
+1
+NDHU
+EndingPartnerList.txt
+
+Character 2
+2
+1
+NDHU
+EndingPartnerList.txt
+
+Ending Text Ref.
+4
+2
+NEHU
+NULL

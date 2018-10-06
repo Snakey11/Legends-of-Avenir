@@ -1,0 +1,65 @@
+
+#include "Berserker Sword.event"
+
+
+#include "Black Falcoknight Sword.event"
+
+#include "Black Falcoknight Lance.event"
+
+#include "Black Falcoknight Disarmed.event"
+
+
+#include "Champion Sword.event"
+
+#include "Champion Axe.event"
+
+#include "Champion Hand Axe.event"
+
+#include "Champion Unarmed.event"
+
+
+#include "Commander Spear.event"
+
+#include "Commander Unarmed.event"
+
+
+#include "Dark Knight M Magic.event"
+
+#include "Dark Knight M Staff.event"
+
+
+#include "Dark Knight F Magic.event"
+
+#include "Dark Knight F Staff.event"
+
+
+#include "Gaiden Sage Magic.event"
+
+#include "Gaiden Sage Staff.event"
+
+
+#include "Gladiator Axe.event"
+
+#include "Gladiator Hand Axe.event"
+
+#include "Gladiator Unarmed.event"
+
+
+#include "Halberdier Spear.event"
+
+#include "Halberdier Unarmed.event"
+
+
+#include "Hector Sword.event"
+
+#include "Hector Axe.event"
+
+#include "Hector Hand Axe.event"
+
+#include "Hector Unarmed.event"
+
+
+#include "Hunter Bow.event"
+
+#include "Hunter Unarmed.event"
+//End of free space block

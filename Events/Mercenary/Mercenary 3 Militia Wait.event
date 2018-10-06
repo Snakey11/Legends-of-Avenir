@@ -1,0 +1,265 @@
+
+EventPointerTable(Merc3MilitiaWaitEvents,ThisChapter)
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0x0,AltiaHere,7)
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+CHAR 0x10 ArcRecruit Arc Elanil 0x0
+CHAR 0x10 ArcRecruit Arc Finoc 0x0
+CHAR 0x10 LukeRecruit Luke Elanil 0x0
+CHAR 0x10 LukeRecruit Luke Finoc 0x0
+CHAR 0x10 AvatarRecruit PlayerMMercenary Elanil 0x0
+CHAR 0x10 AvatarRecruit PlayerMMyrmidon Elanil 0x0
+CHAR 0x10 AvatarRecruit PlayerMFighter Elanil 0x0
+CHAR 0x10 AvatarRecruit PlayerMPirate Elanil 0x0
+CHAR 0x10 AvatarRecruit PlayerMBrigand Elanil 0x0
+CHAR 0x10 AvatarRecruit PlayerFMercenary Elanil 0x0
+CHAR 0x10 AvatarRecruit PlayerFMyrmidon Elanil 0x0
+CHAR 0x10 AvatarRecruit PlayerFPegasusKnight Elanil 0x0
+CHAR 0x10 AvatarRecruit PlayerMMercenary Finoc 0x0
+CHAR 0x10 AvatarRecruit PlayerMMyrmidon Finoc 0x0
+CHAR 0x10 AvatarRecruit PlayerMFighter Finoc 0x0
+CHAR 0x10 AvatarRecruit PlayerMPirate Finoc 0x0
+CHAR 0x10 AvatarRecruit PlayerMBrigand Finoc 0x0
+CHAR 0x10 AvatarRecruit PlayerFMercenary Finoc 0x0
+CHAR 0x10 AvatarRecruit PlayerFMyrmidon Finoc 0x0
+CHAR 0x10 AvatarRecruit PlayerFPegasusKnight Finoc 0x0
+END_MAIN
+
+LocationBasedEvents:
+Door(9,6)
+Door(2,6)
+Chest(Horseslayer,13,5)
+Chest(Heal,13,8)
+END_MAIN
+
+MiscBasedEvents:
+DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+Units:
+UNIT
+
+BeginningScene:
+MUSC Advance
+LOAD1 0x1 GerwickAdlez
+SetBackground(0x1B)
+Text(Merc3MilitiaWaitBeginningText)
+EndConvo
+MUSC Solve_the_Riddle
+STAL 0x50
+Text(Merc3MilitiaWaitAdlezGerwickText)
+MOVE 0x0 Adlez [2,3]
+ENUN
+StartBattle
+NormalDamage(0,18)
+MissedAttack(1,0)
+NormalDamage(0,18)
+EndAttack
+FIG1 Adlez Gerwick 0x00
+MURE 0x5
+KillUnit(2,4)
+FADI 0x5
+CLEE Adlez
+LOAD1 0x1 ConnorStuff
+ENUN
+SetBackground(0x26)
+Text(Merc3MilitiaWaitAdlezConnorText)
+EndConvo
+MOVE 0x0 Connor [2,2]
+CAM1 [7,8]
+LOAD3 0x1 PlayerLoading1
+LOAD2 0x1 ArcLuke
+Text(Merc3MilitiaWaitTheyreHereText)
+NoFade
+ENDA
+
+EndingScene:
+FADI 0x5
+MUSC Into_the_Shadow_of_Victory
+CLEE GerwickBandit
+TurnAlly(Finoc)
+TurnAlly(Elanil)
+CLEA Arc
+LOAD3 0x1 PlayerLoading2
+LOAD2 0x1 EndingPeople
+ENUN
+FADU 0x5
+STAL 0x60
+FADI 0x5
+CLEA Finoc
+LOAD3 0x1 PlayerLoading3
+SetBackground(0x26)
+CHECK_EVENTID 0x10
+BEQ 0x19 0x0 0xC
+	Text(Merc3MilitiaWaitEndingText)//If recruited
+GOTO 0x1A
+LABEL 0x19
+	Text(Merc3MilitiaWaitEndingNoRecruitText)//If not recruited
+LABEL 0x1A
+MUSI
+FADI 0x5
+STAL 0x40
+EndConvo
+MUNO
+LOAD2 0x1 LoadFinoc
+ENUN
+TEXTSHOW Merc3MilitiaWaitFindLukeText
+TEXTEND
+LOAD2 0x1 LoadArc
+ENUN
+TEXTCONT
+TEXTEND
+MoveToChapter(MercenaryMilitiaWait4)
+ENDA
+
+AltiaHere:
+LOAD1 0x1 AltiaPeople
+ENUN
+CAM1 Finoc
+STAL 0x20
+Text(Merc3MilitiaWaitFinocElanilHereText)
+NoFade
+ENDA
+
+ArcRecruit:
+MUSS Comrades
+Text(Merc3MilitiaWaitArcRecruitText)
+TurnAlly(Elanil)
+TurnAlly(Finoc)
+MURE 0x5
+NoFade
+ENDA
+
+LukeRecruit:
+MUSS Comrades
+Text(Merc3MilitiaWaitLukeRecruitText)
+TurnAlly(Elanil)
+TurnAlly(Finoc)
+MURE 0x5
+NoFade
+ENDA
+
+AvatarRecruit:
+MUSS Comrades
+Text(Merc3MilitiaWaitPlayerRecruitText)
+TurnAlly(Elanil)
+TurnAlly(Finoc)
+MURE 0x5
+NoFade
+ENDA
+
+	/*UNIT DATA*/
+
+GerwickAdlez:
+UNIT Adlez Brigand Adlez Level(1,Enemy,True) [2,2] 0x00 0x00 0x00 0x00 [KillerAxe] [0]
+UNIT Gerwick Pirate Adlez Level(1,Enemy,True) [2,4] 0x00 0x00 0x00 0x00 [ShortAxe] [0]
+UNIT
+
+ConnorStuff:
+UNIT Connor Mercenary Connor Level(5,Enemy,True) [2,4] 0x00 0x00 0x00 0x00 [IronBlade] GuardAI
+UNIT GerwickBandit Fighter Connor Level(5,Enemy,True) [8,11] Drop 0x00 0x00 0x00 [HandAxe,DoorKey] [0]
+UNIT GerwickBandit Fighter Connor Level(6,Enemy,True) [8,12] 0x00 0x00 0x00 0x00 [IronAxe] [0]
+UNIT GerwickBandit Fighter Connor Level(5,Enemy,True) [7,6] 0x00 0x00 0x00 0x00 [SteelAxe] [0]
+UNIT GerwickBandit Mercenary Connor Level(8,Enemy,True) [11,1] 0x00 0x00 0x00 0x00 [SteelSword] [0]
+UNIT GerwickBandit Brigand Connor Level(6,Enemy,True) [8,3] 0x00 0x00 0x00 0x00 [KillerAxe] [0]
+UNIT GerwickBandit Brigand Connor Level(5,Enemy,True) [14,2] 0x00 0x00 0x00 0x00 [IronAxe] [0]
+UNIT GerwickBandit Myrmidon Connor Level(6,Enemy,True) [16,5] 0x00 0x00 0x00 0x00 [IronSword] GuardAI
+UNIT GerwickBandit Soldier Connor Level(4,Enemy,True) [1,4] 0x00 0x00 0x00 0x00 [IronLance] [0]
+UNIT GerwickBandit Soldier Connor Level(3,Enemy,True) [3,4] 0x00 0x00 0x00 0x00 [Javelin] [0]
+UNIT GerwickBandit Mage Connor Level(5,Enemy,True) [17,7] 0x00 0x00 0x00 0x00 [Thunder] [0]
+UNIT GerwickBandit Soldier Connor Level(4,Enemy,True) [16,11] 0x00 0x00 0x00 0x00 [SteelLance] [0]
+UNIT GerwickBandit Soldier Connor Level(6,Enemy,True) [15,12] Drop 0x00 0x00 0x00 [IronLance,ChestKey] [0]
+UNIT GerwickBandit Archer Connor Level(7,Enemy,True) [12,7] Drop 0x00 0x00 0x00 [SteelBow,ChestKey] [0]
+UNIT GerwickBandit Mage Connor Level(6,Enemy,True) [4,7] Drop 0x00 0x00 0x00 [Elfire,DoorKey] GuardAI
+UNIT GerwickBandit Cavalier Connor Level(4,Enemy,True) [0,8] 0x00 0x00 0x00 0x00 [SteelLance] ChaseOnceApproachedAI
+UNIT GerwickBandit Pirate Connor Level(4,Enemy,True) [8,3] 0x00 0x00 0x00 0x00 [IronAxe] AttackInRangeAI
+UNIT GerwickBandit Mercenary Connor Level(4,Enemy,True) [6,4] 0x00 0x00 0x00 0x00 [Lancereaver] AttackInRangeAI
+UNIT GerwickBandit Fighter Connor Level(4,Enemy,True) [7,6] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
+UNIT
+
+PlayerLoading1:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(4,Ally,True) [0,12] 0x00 0x00 0x1 REDA3R12 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(4,Ally,True) [0,12] 0x00 0x00 0x1 REDA3R12 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(4,Ally,True) [0,12] 0x00 0x00 0x1 REDA3R12 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(4,Ally,True) [0,12] 0x00 0x00 0x1 REDA3R12 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(4,Ally,True) [0,12] 0x00 0x00 0x1 REDA3R12 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(4,Ally,True) [0,12] 0x00 0x00 0x1 REDA3R12 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(4,Ally,True) [0,12] 0x00 0x00 0x1 REDA3R12 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(4,Ally,True) [0,12] 0x00 0x00 0x1 REDA3R12 [IronAxe,Vulnerary] [0] 
+UNIT
+
+PlayerLoading2:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+PlayerLoading3:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+ArcLuke:
+UNIT Arc Fighter Arc Level(1,Ally,True) [0,13] 0x00 0x00 0x1 REDA3R13 [IronAxe,Elixir] [0]
+UNIT Luke Monk Arc Level(1,Ally,True) [0,11] 0x00 0x00 0x1 REDA2R11 [Lightning,Vulnerary] [0]
+UNIT
+
+AltiaPeople:
+UNIT Finoc WyvernRider Finoc Level(7,NPC,True) [18,0] 0x00 0x00 0x00 0x00 [SteelLance,Vulnerary] [0]
+UNIT Elanil Archer_F Elanil Level(7,NPC,True) [18,1] 0x00 0x00 0x00 0x00 [SteelBow,IronShortbow] [0]
+UNIT
+
+EndingPeople:
+UNIT Finoc WyvernRider Finoc Level(1,Ally,True) [1,5] 0x00 0x00 0x00 0x00 [IronAxe,Elixir] AttackInRangeAI
+UNIT Elanil Archer_F Elanil Level(1,Ally,True) [3,5] 0x00 0x00 0x00 0x00 [IronAxe,Elixir] AttackInRangeAI
+UNIT Arc Fighter Arc Level(1,Ally,True) [0,4] 0x00 0x00 0x00 0x00 [IronAxe,Elixir] [0]
+UNIT Luke Monk Arc Level(1,Ally,True) [0,3] 0x00 0x00 0x00 0x00 [Lightning,Vulnerary] [0]
+UNIT
+
+LoadFinoc:
+UNIT Finoc WyvernRider Finoc Level(1,Ally,True) [0,8] 0x00 0x00 0x1 REDA2R5 [IronAxe,Elixir] AttackInRangeAI
+UNIT
+
+LoadArc:
+UNIT Arc Fighter Arc Level(1,Ally,True) [0,8] 0x00 0x00 0x1 REDA2R6 [IronAxe,Elixir] [0]
+UNIT
+

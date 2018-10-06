@@ -1,0 +1,298 @@
+﻿
+EventPointerTable(Merc4BanditEvents,ThisChapter)
+
+//Label ThisChapter
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN EndMainPointer EndMainPointer EndMainPointer
+POIN EndMainPointer
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+//EndLabel
+
+//Label TurnBasedEvents
+TurnBasedEvents:
+END_MAIN
+
+//Label CharacterBasedEvents
+ALIGN 32
+CharacterBasedEvents:
+END_MAIN
+
+//Label LocationBasedEvents
+LocationBasedEvents:
+Raid(0x10,DVillage1,7,2)
+Raid(0x11,DVillage2,12,2)
+Raid(0x12,DArmory,19,3)
+Raid(0x13,DHouse1,4,4)
+Raid(0x14,DHouse2,1,8)
+Raid(0x15,DVillage3,8,11)
+Raid(0x16,DHouse3,16,12)
+Raid(0x17,DVillage4,12,13)
+END_MAIN
+
+//Label MiscBasedEvents
+MiscBasedEvents:
+AREA 0x18 Approaching [6,3] [13,5]
+DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+END_MAIN
+
+//Label TrapData
+TrapData:
+BLST [19,9] 0x35
+ENDTRAP
+ALIGN 4
+
+//Label Units
+Units:
+EndUnit
+
+//Label BeginingScene
+BeginningScene:
+MUSC Solve_the_Riddle
+SVAL 0xB Coords(7,6)
+LOMA MercenaryMilitiaWait3
+//TileChange(1,6)
+LOAD2 0x1 ThronePeople
+LOAD1 0x1 ConnorAdlezThrone
+LOAD3 0x1 PlayerLoading1
+ENUN
+Text(0x26,Merc4BanditBeginningText)
+STAL 0x20
+MOVE 0x0 Arya [6,7]
+STAL 0x8
+//MOVE 0x0 Adlez [0,3]
+//MOVE 0x0 Connor [0,2]
+//ENUN
+//CLEN Adlez
+MUSI
+ENUN
+STAL 0x20
+Text(Merc4BanditAryaListensText)
+STAL 0x30
+//MOVE 0x0 Arya [4,7]
+MUNO
+FADI 0x5
+CLEA Arya
+CLEN Adlez
+CAM1 [11,8]
+LOAD2 0x1 VicarWalterBaretConvoPeople
+ENUN
+MUSC Reunion
+STAL 0x20
+FADU 0x5
+Text(Merc4BanditPoliticsText)
+STAL 0x10
+MOVE 0x0 Vicar [16,3]
+STAL 0x10
+CAM1 [11,5]
+ENUN
+MUSC Binding_Vow
+STAL 0x8
+Text(Merc4BanditVicarFindsAryaText)
+FADI 0x5
+CLEA Arya
+SVAL 0xB Coords(14,5)
+LOMA MercenaryBandit4
+LOAD1 0x1 StartingVillage
+ENUN
+MUSC Tension
+FADU 0x5
+STAL 0x40
+Text(0x03,Merc4BanditTyroneMayorText)
+STAL 0x8
+MOVE 0x0 Mayor [17,1]
+MUSC Advance
+LOAD2 0x1 BanditPeople
+LOAD1 0x1 LoadAdlez
+LOAD3 0x1 PlayerLoading2
+ENUN
+CAM1 [13,13]
+STAL 0x20
+Text(0x03,Merc4BanditEndingBeginningText)
+STAL 0x10
+NoFade
+ENDA
+
+//Label EndingScene
+EndingScene:
+MUSC Into_the_Shadow_of_Victory
+SetBackground(0x04)
+SETVAL 0x2 Mayor
+CHECK_ALIVE 0xFFFD
+BNE 0x10 0x0 0xC
+	// Mayor is dead
+	Text(Merc4BanditEndingBanditText)
+	MoveToChapter(MercenaryBanditBandit5)
+GOTO 0x11
+LABEL 0x10
+	// Mayor is alive
+	Text(Merc4BanditEndingDisbandText)
+	MoveToChapter(MercenaryBanditDisband5)
+LABEL 0x11
+NoFade
+ENDA
+
+//Label Raid Events
+DVillage1:
+GiveItem(ShortAxe,0xFFFF)
+TileChange(7,2)
+//ENUT 0x10
+NoFade
+EndA2
+
+DVillage2:
+GiveItem(ArmsScroll,0xFFFF)
+TileChange(12,2)
+//ENUT 0x11
+NoFade
+EndA2
+
+DArmory:
+GiveItem(BlueGem,0xFFFF)
+TileChange(19,3)
+//ENUT 0x12
+NoFade
+EndA2
+
+DHouse1:
+GiveItem(Lanceslayer,0xFFFF)
+TileChange(4,4)
+//ENUT 0x13
+NoFade
+EndA2
+
+DHouse2:
+GiveItem(HeroCrest,0xFFFF)
+TileChange(1,8)
+//ENUT 0x14
+NoFade
+EndA2
+
+DVillage3:
+GiveItem(Elixir,0xFFFF)
+TileChange(8,11)
+//ENUT 0x15
+NoFade
+EndA2
+
+DHouse3:
+GiveItem(SteelShortbow,0xFFFF)
+TileChange(16,12)
+//ENUT 0x16
+NoFade
+EndA2
+
+DVillage4:
+GiveItem(Talisman,0xFFFF)
+TileChange(12,13)
+//ENUT 0x17
+NoFade
+ENDA
+
+//Label Approaching
+Approaching:
+SVAL 0x1 0x2
+CHECK_ALLEGIANCE 0xFFFF
+BEQ 0x12 0x1 0xC
+	// Player unit
+	CAM1 [13,5]
+	Text(Merc4BanditAreaMayorText)
+GOTO 0x13
+LABEL 0x12
+	ENUF 0x18
+LABEL 0x13
+NoFade
+ENDA
+
+	/*UNIT DATA*/
+
+//Label PlayerLoading
+PlayerLoading1:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [1,5] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [1,5] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [1,5] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [1,5] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [1,5] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [1,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [1,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [1,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT
+
+PlayerLoading2:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [20,16] 0x00 0x00 0x1 REDA18R16 [IronSword,Vulnerary] NoAI 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [20,16] 0x00 0x00 0x1 REDA18R16 [IronSword,Vulnerary] NoAI 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [20,16] 0x00 0x00 0x1 REDA18R16 [IronLance,Vulnerary] NoAI 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [20,16] 0x00 0x00 0x1 REDA18R16 [IronSword,Vulnerary] NoAI 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [20,16] 0x00 0x00 0x1 REDA18R16 [IronSword,Vulnerary] NoAI 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [20,16] 0x00 0x00 0x1 REDA18R16 [IronAxe,Vulnerary] NoAI 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [20,16] 0x00 0x00 0x1 REDA18R16 [IronAxe,Vulnerary] NoAI 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [20,16] 0x00 0x00 0x1 REDA18R16 [IronAxe,Vulnerary] NoAI 
+EndUnit
+
+//Label Throne
+ThronePeople:
+UNIT Vicar Warrior Vicar Level(1,Ally,True) [0,4] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+//UNIT Baret Myrmidon Baret Level(1,Ally,True) [3,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+//UNIT Walter Archer Walter Level(1,Ally,True) [4,4] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT Arya Myrmidon_F Arya Level(1,Ally,True) [3,7] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT
+
+ConnorAdlezThrone:
+UNIT Adlez Brigand Adlez Level(1,NPC,True) [1,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT Connor Mercenary Connor Level(1,NPC,True) [3,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT
+
+VicarWalterBaretConvoPeople:
+UNIT Vicar Warrior Vicar Level(1,Ally,True) [13,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT Baret Myrmidon Baret Level(1,Ally,True) [12,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT Walter Archer Walter Level(1,Ally,True) [12,10] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+EndUnit
+
+//Label StartingVillage
+StartingVillage:
+UNIT Tyrone Warrior Tyrone Level(6,Enemy,True) [19,5] 0x00 0x00 0x00 0x00 [SilverAxe,SteelLongbow] GuardAI 
+UNIT Mayor Cavalier Mayor Level(15,Enemy,True) [18,4] 0x00 0x00 0x00 0x00 [SteelLance,LightBrand] GuardAI 
+UNIT Militiaman Archer Militiaman Level(6,Enemy,True) [19,9] 0x00 0x00 0x00 0x00 [SteelBow] NoAI
+UNIT Militiaman Archer Militiaman Level(7,Enemy,True) [16,13] 0x00 0x00 0x00 0x00 [IronLongbow] AttackInRangeAI
+UNIT Militiaman Soldier Militiaman Level(11,Enemy,True) [14,16] 0x00 0x00 0x00 0x00 [DevilLance] NoAI
+UNIT Militiaman Fighter Militiaman Level(8,Enemy,True) [13,14] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
+UNIT Militiaman Fighter Militiaman Level(10,Enemy,True) [11,15] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT Militiaman Myrmidon Militiaman Level(8,Enemy,True) [9,13] 0x00 0x00 0x00 0x00 [IronBlade] AttackInRangeAI
+UNIT Militiaman Cavalier Militiaman Level(10,Enemy,True) [10,11] 0x00 0x00 0x00 0x00 [ShortSpear,IronSword] AttackInRangeAI
+UNIT Militiaman Pirate Militiaman Level(11,Enemy,True) [6,12] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
+UNIT Militiaman Knight Militiaman Level(9,Enemy,True) [5,10] 0x00 0x00 0x00 0x00 [BraveLance] GuardAI
+UNIT Militiaman Archer Militiaman Level(10,Enemy,True) [4,8] 0x00 0x00 0x00 0x00 [SteelShortbow] AttackInRangeAI
+UNIT Militiaman Mage Militiaman Level(8,Enemy,True) [4,6] 0x00 0x00 0x00 0x00 [Elwind] ChaseOnceApproachedAI
+UNIT Militiaman Berserker Militiaman Level(3,Enemy,True) [5,6] 0x00 0x00 0x00 0x00 [KillerAxe,HandAxe] GuardAI
+UNIT Militiaman Soldier Militiaman Level(10,Enemy,True) [5,4] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
+UNIT Militiaman Myrmidon Militiaman Level(11,Enemy,True) [7,5] 0x00 0x00 0x00 0x00 [Wyrmslayer] ChaseOnceApproachedAI
+UNIT Militiaman Monk Militiaman Level(11,Enemy,True) [8,3] 0x00 0x00 0x00 0x00 [Divine] GuardAI
+UNIT Militiaman Cavalier Militiaman Level(10,Enemy,True) [9,1] 0x00 0x00 0x00 0x00 [SteelLance,Armorslayer] ChaseOnceApproachedAI
+UNIT Militiaman Fighter Militiaman Level(9,Enemy,True) [10,4] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT Militiaman Mercenary Militiaman Level(10,Enemy,True) [12,3] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
+UNIT Militiaman Soldier Militiaman Level(10,Enemy,True) [13,4] 0x00 0x00 0x00 0x00 [HeavySpear] NoAI
+UNIT Militiaman Halberdier Militiaman Level(4,Enemy,True) [15,3] 0x00 0x00 0x00 0x00 [ShortSpear] GuardAI
+UNIT Militiaman Archer Militiaman Level(10,Enemy,True) [18,2] 0x00 0x00 0x00 0x00 [KillerBow] AttackInRangeAI
+UNIT Militiaman Fighter Militiaman Level(11,Enemy,True) [17,4] 0x00 0x00 0x00 0x00 [HandAxe] ChaseOnceApproachedAI
+UNIT Militiaman PegasusKnight Militiaman Level(9,Enemy,True) [14,5] 0x00 0x00 0x00 0x00 [SlimLance] ChaseOnceApproachedAI
+UNIT Militiaman PegasusKnight Militiaman Level(10,Enemy,True) [15,5] 0x00 0x00 0x00 0x00 [SteelLance] ChaseOnceApproachedAI
+EndUnit
+
+//Label BanditPeople
+BanditPeople:
+UNIT Vicar Warrior Vicar Level(1,Ally,True) [18,17] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT Baret Myrmidon Baret Level(1,Ally,True) [19,17] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT Walter Archer Walter Level(1,Ally,True) [19,16] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT Arya Myrmidon_F Arya Level(1,Ally,True) [20,15] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT
+
+LoadAdlez:
+UNIT Adlez Brigand Adlez Level(9,Ally,True) [20,16] 0x00 0x00 0x00 0x00 [KillerAxe,HandAxe,HeroCrest] NoAI 
+EndUnit

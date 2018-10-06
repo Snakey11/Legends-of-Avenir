@@ -1,0 +1,16 @@
+
+#include "Spells/Master Spell Installer.event"
+
+ALIGN 16
+#include "Portraits/Portrait Installer.event"
+
+
+#include "Item Icons/Item Icon Installer.event"
+
+ALIGN 16
+#include "Map Sprites/Map Sprite Installer.event"
+
+#ifdef IncludeBigStuff
+ALIGN 16
+#include "Battle Palettes/Battle Palette Installer.event"
+#endif

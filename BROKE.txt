@@ -1,0 +1,19 @@
+Fix up map sprites
+Many minor characters' portraits need to be inserted
+Too many swords given in Arcanae route
+Aircalibur has no item icon
+Update skill description table
+Also add updated skills in
+
+Pre-Chapter 4 Route Split
+Halberdiers don't give enough EXP
+Increase basically all WEXP
+
+Make the trick in 7 Assassin not an ambush spawn
+No Xexim Rex battle quote
+
+Weapon triange advantage sometimes happens between weapons and magic?
+
+Mercenary 3 Militia Wait and (allegedly) 4 don't end when you kill the boss. The win condition and death quotes are set, though...?
+
+4 Militia wait needs brand new unit placement

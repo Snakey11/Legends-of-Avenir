@@ -1,0 +1,134 @@
+/// - Start Animation
+C00
+C00
+C00
+C00
+C00
+C00
+C00
+C000153
+C100D29
+O blank.PNG
+B blankbg.PNG
+3
+C02C148
+O blank.png
+B thani01.png
+3
+O blank.png
+B thani02.png
+3
+O blank.png
+B thani03.png
+3
+O blank.png
+B thani04.png
+3
+O blank.png
+B thani05.png
+3
+O blank.png
+B thani06.png
+3
+O blank.png
+B thani07.png
+3
+C02C248
+O blank.png
+B thani08.png
+3
+O blank.png
+B thani09.png
+3
+O blank.png
+B thani10.png
+3
+O blank.png
+B thani11.png
+3
+O blank.png
+B thani12.png
+3
+O blank.png
+B thani13.png
+3
+O blank.png
+B thani14.png
+3
+O blank.PNG
+B blankbg.PNG
+20
+C000040
+O blank.PNG
+B blankbg.PNG
+20
+C02C148
+O blank.png
+B thani15.png
+3
+O blank.png
+B thani16.png
+3
+O blank.png
+B thani17.png
+3
+O blank.png
+B thani18.png
+3
+O blank.png
+B thani19.png
+3
+O blank.png
+B thani20.png
+3
+O blank.png
+B thani21.png
+3
+O blank.png
+B thani22.png
+3
+O blank.png
+B thani23.png
+3
+O blank.png
+B thani07.png
+5
+C012948
+O blank.png
+B thani24.png
+3
+O blank.png
+B thani25.png
+3
+C00001A
+~~~
+C00001F
+O blank.png
+B thani26.png
+3
+O blank.png
+B thani27.png
+3
+O blank.png
+B thani28.png
+3
+O blank.png
+B thani29.png
+3
+O blank.png
+B thani30.png
+3
+O blank.png
+B thani31.png
+3
+O blank.png
+B thani32.png
+3
+O blank.png
+B thani33.png
+3
+O blank.PNG
+B blankbg.PNG
+3
+C000053
+/// - End Animation

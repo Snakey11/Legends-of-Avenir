@@ -1,0 +1,208 @@
+#FE8 Chapter Data Editor by SpyroDi, updated by Nintenlord
+#
+
+1
+FE8 Chapter Data Editor by SpyroDi, updated by Nintenlord
+0x8B0890
+79
+148
+Chapter List.txt
+NULL
+
+Chapter Number Pointer
+0
+4
+NEHU
+NULL
+
+Object Type
+4
+2
+NDHU
+Pointers.txt
+#Object type.txt#
+
+Palette
+6
+1
+NDHU
+Pointers.txt
+#Palette.txt#
+
+Tile Configuration
+7
+1
+NDHU
+Pointers.txt
+#Tileconfiguration.txt#
+
+Map
+8
+1
+NDHU
+Pointers.txt
+#Chapter maps.txt#
+
+Tile Animation 1
+9
+1
+NDHU
+Pointers.txt
+
+Tile Animation 2
+10
+1
+NDHU
+Pointers.txt
+
+Triggerable Map Changes
+11
+1
+NDHU
+Pointers.txt
+#Map changes.txt#
+
+Fog of War sight level (0 = No fog)
+12
+1
+NEDU
+NULL
+
+Battle Preparations
+13
+1
+NDDU
+Battle Preparations.txt
+
+Weather Condition
+18
+1
+NDDU
+Weather Conditions.txt
+
+Battle tileset
+19
+1
+NDHU
+Battle tileset.txt
+
+Player Phase music
+22
+2
+NDHU
+Music List.txt
+
+Enemy Phase music
+24
+2
+NDHU
+Music List.txt
+
+NPC Phase music
+26
+2
+NDHU
+Music List.txt
+
+Player Phase music 2
+28
+2
+NDHU
+Music List.txt
+
+Enemy Phase music 2
+30
+2
+NDHU
+Music List.txt
+
+NPC Phase music 2
+32
+2
+NDHU
+Music List.txt
+
+Destructible Walls HP
+44
+1
+NEDU
+NULL
+
+Chapter Name ID
+45
+1
+NEDU
+NULL
+
+Chapter Name ID 2
+46
+1
+NEDU
+NULL
+
+Event Data Reference
+116
+1
+NDHU
+Pointers.txt
+#Chapter events.txt#
+
+Worldmap Chapter Prologue Scene
+117
+1
+NDHU
+World map prologue.txt
+
+No. of enemies left for Grasping at Victory
+134
+1
+NEDU
+NULL
+
+Chapter Title Display Fade-out
+135
+1
+NDHU
+Fade out.txt
+
+Status - Objective Text
+136
+2
+NEHU
+NULL
+
+Goal Window Text
+138
+2
+NEHU
+NULL
+
+Goal Window Information
+140
+1
+NDHU
+GoalWindow.txt
+
+Turns to count down to +1
+141
+1
+NEDU
+NULL
+
+Protect Character Marker
+142
+1
+NDHU
+Character List.txt
+
+Tile Marker - X-Coordinate
+143
+1
+NEDU
+NULL
+
+Tile Marker - Y-Coordinate
+144
+1
+NEDU
+NULL

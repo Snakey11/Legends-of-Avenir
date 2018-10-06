@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="17" height="17" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="79007A7B" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/79007A7B.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="17" height="17">
+  <properties>
+   <property name="Main" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJytkrFOAkEQhsdA7IGChFIIPVqINS9gpBBLeQKihZrQYGF3NbSSKOILSK1Pgkeu9RX8J8zmfoY7DQnFl5nb/ee/2d2ZHohMiTpYgjgH3X92NZ59elyDItG39V08GuBIUhr/eIxAwXgkjxVIjODhteo3wz8icAG64EfW2o67l/DNWs1nknrcgFvySNxdhm/WBo+Y+k0yaj152pF7gyYYw38i63NPLG863SGdV3sqgTKo2Bt8IC7Uw+LC1lkXyaZHCxyDE9N+In6BuqS5rrOOPfwZVfuE/VPQBmfgVbbf+6+7U20NNZegB65AleYsq+bcegox9HEH7sED9bHM0KvHwPIBeXwjfwFDizF5eD3PT4g6k2/Yfyfmks6q1+fN0S7rv7eIrUs=
+  </data>
+ </layer>
+ <layer name="Right Chest" width="17" height="17" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="2"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="9"/>
+   <property name="Y" value="3"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBhZgGmgHTAKRsEoQAEAC6wAAw==
+  </data>
+ </layer>
+ <layer name="Middle Chest" width="17" height="17" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="8"/>
+   <property name="Y" value="3"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBg5gGmgHTAKRsEowAAAC7QAAw==
+  </data>
+ </layer>
+ <layer name="Left Chest" width="17" height="17" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="7"/>
+   <property name="Y" value="3"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgZgGmgHTAKRsEowAoAC7wAAw==
+  </data>
+ </layer>
+</map>

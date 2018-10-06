@@ -1,0 +1,366 @@
+
+EventPointerTable(Merc7MilitiaKillEvents,ThisChapter)
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Chest(Elixir,21,17)
+Chest(SteelSword,22,18)
+DOOR 0x11 [5,9] 0x12
+DOOR 0x11 [6,9] 0x12
+DOOR 0x11 [7,9] 0x12
+DOOR 0x11 [5,8] 0x12
+DOOR 0x11 [6,8] 0x12
+DOOR 0x11 [7,8] 0x12
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
+AFEV 0x12 DoorOpened 0x11
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+Units:
+/*UNIT Rex Paladin Rex Level(1,Enemy,True) [12,1] 0x00 0x00 0x00 0x00 [Spear,RuneSword] GuardAI
+UNIT Cesarian Fighter Rex Level(1,Enemy,True) [2,5] 0x00 0x00 0x00 0x00 [HandAxe] [0]
+UNIT Cesarian Fighter Rex Level(1,Enemy,True) [3,5] 0x00 0x00 0x00 0x00 [KillerAxe] [0]
+UNIT Cesarian Warrior Rex Level(1,Enemy,True) [3,3] 0x00 0x00 0x00 0x00 [Tomahawk] [0]
+UNIT Cesarian Knight Rex Level(1,Enemy,True) [21,5] 0x00 0x00 0x00 0x00 [Axeslayer] [0]
+UNIT Cesarian Knight Rex Level(1,Enemy,True) [22,5] 0x00 0x00 0x00 0x00 [ShortSpear] [0]
+UNIT Cesarian GreatKnight Rex Level(1,Enemy,True) [22,3] 0x00 0x00 0x00 0x00 [SilverSword,SteelLance] [0]
+UNIT Cesarian Sage Rex Level(1,Enemy,True) [12,15] Drop 0x00 0x00 0x00 [Thoron] AttackInRangeAI
+UNIT Cesarian Bishop Rex Level(1,Enemy,True) [8,6] 0x00 0x00 0x00 0x00 [Purge,Divine] GuardAI
+UNIT Cesarian Bishop Rex Level(1,Enemy,True) [16,6] 0x00 0x00 0x00 0x00 [Aura,Silence] GuardAI
+UNIT Cesarian Mage Rex Level(1,Enemy,True) [7,11] 0x00 0x00 0x00 0x00 [Arcwind] ChaseOnceApproachedAI
+UNIT Cesarian Monk Rex Level(1,Enemy,True) [17,11] 0x00 0x00 0x00 0x00 [Divine] ChaseOnceApproachedAI
+UNIT Cesarian Cavalier Rex Level(1,Enemy,True) [8,13] 0x00 0x00 0x00 0x00 [SteelLance] [0]
+UNIT Cesarian Cavalier Rex Level(1,Enemy,True) [16,13] 0x00 0x00 0x00 0x00 [KillingEdge] [0]
+UNIT Cesarian Sniper Rex Level(1,Enemy,True) [4,17] Drop 0x00 0x00 0x00 [SilverBow,ChestKey] AttackInRangeAI
+UNIT Cesarian Sniper Rex Level(1,Enemy,True) [20,17] Drop 0x00 0x00 0x00 [SteelBow,ChestKey] AttackInRangeAI
+UNIT Cesarian Swordmaster Rex Level(1,Enemy,True) [1,17] 0x00 0x00 0x00 0x00 [SilverSword] AttackInRangeAI
+UNIT Cesarian General Rex Level(1,Enemy,True) [23,17] 0x00 0x00 0x00 0x00 [BraveLance] AttackInRangeAI
+UNIT Cesarian General Rex Level(1,Enemy,True) [12,11] 0x00 0x00 0x00 0x00 [SteelLance,ShortAxe] GuardAI
+UNIT Cesarian Hero Rex Level(1,Enemy,True) [5,14] 0x00 0x00 0x00 0x00 [LightBrand,SteelAxe] AttackInRangeAI
+UNIT Cesarian Hero Rex Level(1,Enemy,True) [19,14] 0x00 0x00 0x00 0x00 [BattleAxe,IronBlade] AttackInRangeAI
+UNIT Cesarian Soldier Rex Level(1,Enemy,True) [8,18] Drop 0x00 0x00 0x00 [SteelLance,DoorKey] [0]
+UNIT Cesarian Soldier Rex Level(1,Enemy,True) [16,18] 0x00 0x00 0x00 0x00 [SteelLance] [0]
+UNIT Cesarian Halberdier Rex Level(1,Enemy,True) [11,2] 0x00 0x00 0x00 0x00 [SilverLance] ChaseOnceApproachedAI
+UNIT Cesarian Halberdier Rex Level(1,Enemy,True) [13,2] 0x00 0x00 0x00 0x00 [Spear] ChaseOnceApproachedAI
+UNIT Arc Fighter PlayerMArcher Level(1,Ally,True) [9,24] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Kendrick Pirate PlayerMArcher Level(1,Ally,True) [10,23] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Luke Monk PlayerMArcher Level(1,Ally,True) [14,23] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Arya Myrmidon_F PlayerMArcher Level(1,Ally,True) [13,24] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Xexim Assassin PlayerMArcher Level(7,Ally,True) [12,23] 0x00 0x00 0x00 0x00 [SilverSword,Shamshir,Elixir] [0] 	
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [11,24] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] */
+UNIT
+
+BeginningScene:
+ENUT 0x10
+MUSC Indignation
+SETVAL 0xB 0x050007
+LOMA LeavingShizonCutscene
+LOAD3 0x1 PlayerLoading2
+LOAD2 0x1 StartingCutscenePeople
+FADU 0x5
+ENUN
+STAL 0x50
+FADI 0x5
+SetBackground(0x1F)
+Text(Merc7MilitiaKillBeginningText)
+FADI 0x5
+SETVAL 0xB 0x14000C
+LOMA MercenaryMilitiaKill7
+MUSC Distant_Roads
+STAL 0x30
+LOAD3 0x1 PlayerLoading1
+LOAD2 0x1 StartUnits
+LOAD1 0x1 DatSoldier
+ENUN
+SetBackground(0x15)
+Text(Merc7MilitiaKillLukeArcText)
+FADI 0x5
+STAL 0x40
+CAM1 [18,18]
+MUSC Twisted_ShadowsB
+SetBackground(0x2A)
+Text(Merc7MilitiaKillNoOnesHereText)
+EndConvo
+STAL 0x30
+MOVE 0x0 Xexim [18,19]
+ENUN
+StartBattle
+MissedAttack(1,0)
+CriticalHit(0,40)
+EndAttack
+FIG1 Xexim Cesarian 0x0
+SVAL 0xB 0x120012        //Coordinates of Cesarian
+SET_SOMETHING 0xFFFE
+DISA_IF 0xFFFE            //Kill unit
+STAL 0x20
+Text(Merc7MilitiaKillShameText)
+STAL 0x40
+LOAD1 0x1 StartEnemies
+STAL 0x20
+MOVE 0x0 Xexim [18,20]
+ENUN
+STAL 0x20
+FADI 0x5
+CLEE Cesarian
+CLEE Rex
+LOAD1 0x1 Enemies
+LOAD1 0x1 CesarianGroup2
+ENUN
+SetBackground(0x2A)
+Text(Merc7MilitiaKillRexHereText)
+EndConvo
+STAL 0x30
+MUSC Indignation
+CAM1 [6,5]
+STAL 0x30
+Text(0x0E,Merc7MilitiaKillThroneRoomText)
+NoFade
+ENDA
+
+EndingScene:
+ENUF 0x10 // Enables the special death quote that doesn't cause a game over to prevent the game over route looping glitch.
+FadeOutMusic
+STAL 0x20
+CHECK_ALIVE Xexim
+BEQ 0x21 0x0 0xC
+	Text(Merc7MilitiaKillRexDeadGoodEndingText)
+	GOTO 0x22
+LABEL 0x21
+	Text(Merc7MilitiaKillRexDeadBadEndingText)
+LABEL 0x22
+
+FADI 0x5
+CLEE Cesarian
+CLEA Arc
+SetBackground(0x1B)
+CHECK_ALIVE Xexim
+BEQ 0x23 0x0 0xC
+	MUSC Victory
+	Text(Merc7MilitiaKillGoodEndingText)
+	GOTO 0x24
+LABEL 0x23
+	MUSC Into_the_Shadow_of_Victory
+	Text(Merc7MilitiaKillBadEndingText)
+LABEL 0x24
+FadeOutMusic
+FADI 0x5
+SETVAL 0xB Coords(7,5)
+LOMA LeavingShizonCutscene
+LOAD3 0x1 PlayerLoading3
+MoveMercenary(7,2)
+EndConvo
+ENUN
+MUSC Return_of_the_Demon_King
+WarpIn(5,2,LoadNarrator)
+ENUN
+STAL 0x30
+CHECK_ALIVE Xexim
+BEQ 0x25 0x0 0xC
+	Text(Merc7MilitiaKillNarratorHereGoodEndingText)
+	GOTO 0x26
+LABEL 0x25
+	Text(Merc7MilitiaKillNarratorHereBadEndingText)
+LABEL 0x26
+MUSC Return_of_the_Demon_King
+TEXTCONT
+TEXTEND
+MOVE 0x0 Narrator [6,2]
+ENUN
+StartBattle
+CriticalHit(1,70)
+EndAttack
+MercenaryNarratorFight(7,2) // Calls the fight and kills [Tact], located at [7,2]
+DISA Xexim
+DISA Kendrick
+DISA Arya
+DISA Arc
+DISA Luke
+ENUF 0x6E
+ENUF 0x67
+ENUF 0x68
+ENUF 0x69
+ENUF 0x6A
+ENUF 0x6B
+ENUF 0x6C
+ENUF 0x6D
+//FADI 0x5
+//LOAD1 0x1 TestBoi
+ENUN
+MoveToChapter(PrologueChapter)
+ENDA
+
+TestBoi:
+UNIT MercenaryFAvatar 0x6E PlayerMArcher Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] [0]
+UNIT
+
+DoorOpened:
+LOAD1 0x1 DoorUnits
+ENUN
+Text(Merc7MilitiaKillGuardsHereText)
+NoFade
+ENDA
+
+	/*UNIT DATA*/
+
+PlayerLoading1:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [18,22] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [18,22] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [18,22] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [18,22] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [18,22] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [18,22] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [18,22] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [18,22] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+PlayerLoading2:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [7,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [7,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [7,2] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [7,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [7,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [7,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [7,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [7,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+PlayerLoading3:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [12,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [12,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [12,2] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [12,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [12,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [12,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [12,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [12,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+StartingCutscenePeople:
+UNIT Arc Fighter PlayerMArcher Level(1,Ally,True) [8,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Kendrick Pirate PlayerMArcher Level(1,Ally,True) [8,1] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Luke Monk PlayerMArcher Level(1,Ally,True) [9,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Arya Myrmidon_F PlayerMArcher Level(1,Ally,True) [9,1] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Xexim XeximClass PlayerMArcher Level(7,Ally,True) [10,2] 0x00 0x00 0x00 0x00 [Shamshir,SteelBow] [0] 
+UNIT
+
+StartUnits:
+UNIT Arc Fighter PlayerMArcher Level(1,Ally,True) [19,22] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Kendrick Pirate PlayerMArcher Level(1,Ally,True) [17,22] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Luke Monk PlayerMArcher Level(1,Ally,True) [17,21] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Arya Myrmidon_F PlayerMArcher Level(1,Ally,True) [19,21] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+DatSoldier:
+UNIT Xexim XeximClass PlayerMArcher Level(7,Ally,True) [18,20] 0x00 0x00 0x00 0x00 [Shamshir, SteelBow] [0] 	
+UNIT Cesarian Soldier PlayerMArcher Level(1,Enemy,True) [18,18] 0x00 0x00 0x00 0x00 [SteelLance] [0] 	
+UNIT
+
+StartEnemies:
+UNIT Rex GrandPaladin Rex Level(14,Enemy,True) [16,7] 0x00 0x00 0x1 REDA2 [SilverAxe,RuneSword] GuardAI
+UNIT Cesarian Cavalier Rex Level(15,Enemy,True) [15,5] 0x00 0x00 0x1 REDA3 [SteelLance] [0]
+UNIT Cesarian Cavalier Rex Level(15,Enemy,True) [16,5] 0x00 0x00 0x1 REDA4 [KillingEdge] [0]
+UNIT
+
+Enemies:
+UNIT Rex GrandPaladin Rex Level(14,Enemy,True) [6,1] 0x00 0x00 0x00 0x00 [Spear,RuneSword] GuardAI
+UNIT Cesarian Knight Rex Level(13,Enemy,True) [15,7] 0x00 0x00 0x00 0x00 [Axeslayer] [0]
+UNIT Cesarian Knight Rex Level(14,Enemy,True) [16,7] 0x00 0x00 0x00 0x00 [ShortSpear] [0]
+UNIT Cesarian GreatKnight Rex Level(7,Enemy,True) [15,5] 0x00 0x00 0x00 0x00 [SilverSword,SteelLance] [0]
+UNIT Cesarian GreatKnight Rex Level(6,Enemy,True) [16,5] 0x00 0x00 0x00 0x00 [KillerAxe,Javelin] [0]
+UNIT Cesarian Sage Rex Level(5,Enemy,True) [22,17] Drop 0x00 0x00 0x00 [Thoron,ChestKey] AttackInRangeAI
+UNIT Cesarian Bishop Rex Level(7,Enemy,True) [9,6] 0x00 0x00 0x00 0x00 [Purge,Shine] AttackInRangeAI
+UNIT Cesarian Bishop Rex Level(6,Enemy,True) [3,6] 0x00 0x00 0x00 0x00 [Aura,Silence] AttackInRangeAI
+UNIT Cesarian Mage Rex Level(13,Enemy,True) [7,14] 0x00 0x00 0x00 0x00 [Arcwind] AttackInRangeAI
+UNIT Cesarian Monk Rex Level(12,Enemy,True) [5,14] 0x00 0x00 0x00 0x00 [Artimes] AttackInRangeAI
+UNIT Cesarian Cavalier Rex Level(13,Enemy,True) [20,3] 0x00 0x00 0x00 0x00 [SteelLance] [0]
+UNIT Cesarian Cavalier Rex Level(13,Enemy,True) [20,1] 0x00 0x00 0x00 0x00 [KillingEdge] [0]
+UNIT Cesarian Sniper Rex Level(7,Enemy,True) [15,15] 0x0 0x00 0x00 0x00 [SilverLongbow] AttackInRangeAI
+UNIT Cesarian Sniper Rex Level(8,Enemy,True) [15,20] 0x0 0x00 0x00 0x00 [DevilBow] AttackInRangeAI
+UNIT Cesarian Sniper Rex Level(9,Enemy,True) [6,13] 0x0 0x00 0x00 0x00 [SteelBow] AttackInRangeAI
+UNIT Cesarian Sniper Rex Level(6,Enemy,True) [12,15] 0x0 0x00 0x00 0x00 [SilverShortbow] AttackInRangeAI
+UNIT
+
+CesarianGroup2:
+UNIT Cesarian Shaman Rex Level(13,Enemy,True) [6,20] 0x0 0x00 0x00 0x00 [Dulam,Eclipse] GuardAI
+UNIT Cesarian Swordmaster Rex Level(4,Enemy,True) [11,19] 0x00 0x00 0x00 0x00 [SilverSword] AttackInRangeAI
+UNIT Cesarian General Rex Level(6,Enemy,True) [6,10] 0x00 0x00 0x00 0x00 [BraveLance] AttackInRangeAI
+UNIT Cesarian General Rex Level(7,Enemy,True) [18,16] Drop 0x00 0x00 0x00 [SteelLance,ShortAxe,ChestKey] GuardAI
+UNIT Cesarian Hero Rex Level(6,Enemy,True) [20,9] 0x00 0x00 0x00 0x00 [LightBrand,SteelAxe] AttackInRangeAI
+UNIT Cesarian Soldier Rex Level(13,Enemy,True) [10,15] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT Cesarian Soldier Rex Level(12,Enemy,True) [2,15] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT Cesarian Halberdier Rex Level(8,Enemy,True) [5,2] 0x00 0x00 0x00 0x00 [SilverLance] ChaseOnceApproachedAI
+UNIT Cesarian Halberdier Rex Level(6,Enemy,True) [7,2] 0x00 0x00 0x00 0x00 [Spear] ChaseOnceApproachedAI
+UNIT Cesarian Sentinel Rex Level(7,Enemy,True) [6,5] 0x00 0x00 0x00 0x00 [SilverSpear] AttackInRangeAI
+UNIT Cesarian Sage Rex Level(6,Enemy,True) [23,11] 0x00 0x00 0x00 0x00 [Bolting] GuardAI
+UNIT Cesarian Fighter Rex Level(14,Enemy,True) [17,17] 0x00 0x00 0x00 0x00 [SteelAxe] [0]
+UNIT Cesarian Fighter Rex Level(13,Enemy,True) [19,17] 0x00 0x00 0x00 0x00 [Tomahawk] [0]
+UNIT Cesarian Myrmidon Rex Level(13,Enemy,True) [23,18] 0x00 0x00 0x00 0x00 [SteelSword] [0]
+UNIT Cesarian Soldier Rex Level(12,Enemy,True) [12,11] 0x00 0x00 0x00 0x00 [ShortSpear] ChaseOnceApproachedAI
+UNIT Cesarian Soldier Rex Level(11,Enemy,True) [12,12] 0x00 0x00 0x00 0x00 [DevilSpear] ChaseOnceApproachedAI
+UNIT Cesarian Warrior Rex Level(5,Enemy,True) [18,12] 0x00 0x00 0x00 0x00 [SilverAxe] [0]
+UNIT Cesarian Hero Rex Level(7,Enemy,True) [1,19] Drop 0x00 0x00 0x00 [Tomahawk,DoorKey] GuardAI
+UNIT Cesarian Paladin Rex Level(6,Enemy,True) [25,10] 0x00 0x00 0x00 0x00 [BraveLance] ChaseOnceApproachedAI
+UNIT 
+
+DoorUnits:
+UNIT Cesarian Soldier Rex Level(13,Enemy,True) [0,10] 0x00 0x00 0x00 0x00 [SteelLance] [0]
+UNIT Cesarian Soldier Rex Level(12,Enemy,True) [0,12] 0x00 0x00 0x00 0x00 [Javelin] [0]
+UNIT Cesarian Halberdier Rex Level(8,Enemy,True) [0,11] 0x00 0x00 0x1 REDA1 [ShortSpear] [0]
+UNIT Cesarian Paladin Rex Level(7,Enemy,True) [17,22] 0x00 0x00 0x00 0x00 [SilverLance] [0]
+UNIT Cesarian Paladin Rex Level(7,Enemy,True) [19,22] 0x00 0x00 0x00 0x00 [SteelBlade,Javelin] [0]
+UNIT Cesarian Cavalier Rex Level(13,Enemy,True) [26,12] 0x00 0x00 0x00 0x00 [SteelSword] [0]
+UNIT Cesarian Cavalier Rex Level(14,Enemy,True) [26,13] 0x00 0x00 0x00 0x00 [SteelLance] [0]
+UNIT Cesarian Cavalier Rex Level(14,Enemy,True) [26,14] 0x00 0x00 0x00 0x00 [ShortSpear] [0]
+UNIT Cesarian Cavalier Rex Level(12,Enemy,True) [26,15] 0x00 0x00 0x00 0x00 [SteelLance,SteelSword] [0]
+UNIT Cesarian Berserker Rex Level(6,Enemy,True) [0,18] 0x00 0x00 0x00 0x00 [BattleAxe,Swordreaver] [0]
+UNIT Cesarian Fighter Rex Level(15,Enemy,True) [0,19] 0x00 0x00 0x00 0x00 [SteelAxe] [0]
+UNIT Cesarian WyvernRider Rex Level(14,Enemy,True) [14,0] 0x00 0x00 0x00 0x00 [SteelLance] [0]
+UNIT Cesarian WyvernRider Rex Level(15,Enemy,True) [17,0] 0x00 0x00 0x00 0x00 [Javelin] [0]
+UNIT Cesarian WyvernKnight Rex Level(9,Enemy,True) [15,0] 0x00 0x00 0x00 0x00 [KillerLance] [0]
+UNIT Cesarian WyvernLord Rex Level(7,Enemy,True) [16,0] 0x00 0x00 0x00 0x00 [RuneSword] [0]
+UNIT
+
+LoadNarrator:
+UNIT Narrator NarratorClass Narrator Level(15,NPC,True) [5,2] 0x00 0x00 0x00 0x00 [SilverSword] [0]
+UNIT
+
+REDA1:
+REDA [1,11] 0x0 0x0 0x0 0x0
+REDA2:
+REDA [18,18] 0x0 0x0 0x0 0x0
+REDA3:
+REDA [19,17] 0x0 0x0 0x0 0x0
+REDA4:
+REDA [17,17] 0x0 0x0 0x0 0x0

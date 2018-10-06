@@ -1,0 +1,397 @@
+1
+FE8 Terrain Stat Editor by Vennobennu - With thanks to Blazer and Keriku
+0x80B808
+49
+65
+Movement Types.txt
+NULL
+
+Tile Movement Cost
+0
+1
+NEDU
+NULL
+
+Plains Movement Cost
+1
+1
+NEDU
+NULL
+
+Road Movement Cost
+2
+1
+NEDU
+NULL
+
+Village Entrance 1 Movement Cost
+3
+1
+NEDU
+NULL
+
+Village Entrance 2 Movement Cost
+4
+1
+NEDU
+NULL
+
+House Movement Cost
+5
+1
+NEDU
+NULL
+
+Armory Movement Cost
+6
+1
+NEDU
+NULL
+
+Vendor Movement Cost
+7
+1
+NEDU
+NULL
+
+Arena 1 Movement Cost
+8
+1
+NEDU
+NULL
+
+Unknown Movement Cost
+9
+1
+NEDU
+NULL
+
+Fort Movement Cost
+10
+1
+NEDU
+NULL
+
+Gate (Normal) Movement Cost
+11
+1
+NEDU
+NULL
+
+Forest Movement Cost
+12
+1
+NEDU
+NULL
+
+Thicket Movement Cost
+13
+1
+NEDU
+NULL
+
+Sand Movement Cost
+14
+1
+NEDU
+NULL
+
+Desert Movement Cost
+15
+1
+NEDU
+NULL
+
+River Movement Cost
+16
+1
+NEDU
+NULL
+
+Mountain Movement Cost
+17
+1
+NEDU
+NULL
+
+Peak Movement Cost
+18
+1
+NEDU
+NULL
+
+Bridge Movement Cost
+19
+1
+NEDU
+NULL
+
+Bridge 2 Movement Cost
+20
+1
+NEDU
+NULL
+
+Sea Movement Cost
+21
+1
+NEDU
+NULL
+
+Lake Movement Cost
+22
+1
+NEDU
+NULL
+
+Floor Movement Cost
+23
+1
+NEDU
+NULL
+
+Floor 2 Movement Cost
+24
+1
+NEDU
+NULL
+
+Fence 1 Movement Cost
+25
+1
+NEDU
+NULL
+
+Wall Movement Cost
+26
+1
+NEDU
+NULL
+
+Cracked Wall Movement Cost
+27
+1
+NEDU
+NULL
+
+Rubble Movement Cost
+28
+1
+NEDU
+NULL
+
+Pillar Movement Cost
+29
+1
+NEDU
+NULL
+
+Door Movement Cost
+30
+1
+NEDU
+NULL
+
+Throne Movement Cost
+31
+1
+NEDU
+NULL
+
+Chest 1 Movement Cost
+32
+1
+NEDU
+NULL
+
+Chest 2 Movement Cost
+33
+1
+NEDU
+NULL
+
+Roof Movement Cost
+34
+1
+NEDU
+NULL
+
+Gate 2 Movement Cost
+35
+1
+NEDU
+NULL
+
+Church Movement Cost
+36
+1
+NEDU
+NULL
+
+Ruins 1 Movement Cost
+37
+1
+NEDU
+NULL
+
+Cliff Movement Cost
+38
+1
+NEDU
+NULL
+
+Ballista  Movement Cost
+39
+1
+NEDU
+NULL
+
+Long Ballista  Movement Cost
+40
+1
+NEDU
+NULL
+
+Killer Ballista  Movement Cost
+41
+1
+NEDU
+NULL
+
+Flat Movement Cost
+42
+1
+NEDU
+NULL
+
+Wreck Movement Cost
+43
+1
+NEDU
+NULL
+
+Building 1 Movement Cost
+44
+1
+NEDU
+NULL
+
+Stairs Movement Cost
+45
+1
+NEDU
+NULL
+
+Building 2 Movement Cost
+46
+1
+NEDU
+NULL
+
+Glacier  Movement Cost
+47
+1
+NEDU
+NULL
+
+Arena  Movement Cost
+48
+1
+NEDU
+NULL
+
+Valley Movement Cost
+49
+1
+NEDU
+NULL
+
+Fence 2 Movement Cost
+50
+1
+NEDU
+NULL
+
+Snag Movement Cost
+51
+1
+NEDU
+NULL
+
+Snag Bridge Movement Cost
+52
+1
+NEDU
+NULL
+
+Sky Movement Cost
+53
+1
+NEDU
+NULL
+
+Deeps Movement Cost
+54
+1
+NEDU
+NULL
+
+Ruins 2 Movement Cost
+55
+1
+NEDU
+NULL
+
+Inn Movement Cost
+56
+1
+NEDU
+NULL
+
+Barrel Movement Cost
+57
+1
+NEDU
+NULL
+
+Bone Movement Cost
+58
+1
+NEDU
+NULL
+
+Dark Movement Cost
+59
+1
+NEDU
+NULL
+
+Water Movement Cost
+60
+1
+NEDU
+NULL
+
+Gunnels Movement Cost
+61
+1
+NEDU
+NULL
+
+Deck Movement Cost
+62
+1
+NEDU
+NULL
+
+Brace Movement Cost
+63
+1
+NEDU
+NULL
+
+Mast Movement Cost
+64
+1
+NEDU
+NULL

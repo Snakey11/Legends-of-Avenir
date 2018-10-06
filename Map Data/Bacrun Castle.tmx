@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="26" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="1800B91A" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/1800B91A.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="20" height="26">
+  <properties>
+   <property name="Anims" value="18Anims"/>
+   <property name="ChapterID" value="MercenaryBanditBandit6"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="BacrunCastleChanges"/>
+   <property name="MapID" value="BacrunCastleMap"/>
+   <property name="ObjectType" value="0x18"/>
+   <property name="PaletteID" value="0xB9"/>
+   <property name="TileConfig" value="0x1A"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJy1lb1KA0EQx/c2lXkAA5axStLYaMgb2Cb6ED6A2muprRFbBT8wNopKHsAvCIiKWthF7AS7nJDK/3Iz3GSym0sKix+zc7v3v52d2bkta8w2qIAiaJrEFpWfB9VcNqdY1yK9Pbx7HaATGTMv3nuyfr8VJZTht/HeNMY9su8mRevNqX2xL/egtXom9bVeCN5fFj9j6n3ZbD7Bt9Kbsv7vcv5G2VnYX9Ljc3f5W4ZdUoTyqSmQDp/7Ivw6bEPxESV5fQMxWZlbni+o+liBf4u5e0Wf1uvzyFP99AN6JwG9GZvW16tNz6FCejyv9R4Cehyn03vGmheiQ/uKKX7W43zUAvUS0zmVbHJHnCaP2+J+6HyE4PUbWL8JbqJ0zPcv9sTrKHlqMCb2MXdAejxeEFQ9ekfRcP3pe+D0uoE7ovWOo+H6q02A7lO+eMfpkb6+5PDFIe/3KuwaWM8l9ZzVT3wxyH66A78JdlUsj4Ee5vumzM0luHI9Qj13te16SdEM2opHT+bm3MUMLuzgc6dXJ+2GsFLP9/+Q/UfGeybWdKN0riz0OE+yvvh+342owcNodE1OUn+hmvxP/gBty+wI
+  </data>
+ </layer>
+ <layer name="OpenDoor" width="20" height="26" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="2"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="12"/>
+   <property name="Y" value="22"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGQSDzQLtgcAEAYV0AVQ==
+  </data>
+ </layer>
+ <layer name="RChest" width="20" height="26" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="11"/>
+   <property name="Y" value="20"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAroA5gG2gGjgGgAAAt4AAM=
+  </data>
+ </layer>
+ <layer name="LChest" width="20" height="26" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="13"/>
+   <property name="Y" value="20"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApoC5gG2gGjgGQAAAuIAAM=
+  </data>
+ </layer>
+</map>

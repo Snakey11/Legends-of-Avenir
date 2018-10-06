@@ -1,0 +1,130 @@
+//Master Animation Installer
+//Macros
+#define setCSATable(index, framedata, RTLFG, LTRFG, RTLBG, LTRBG) "PUSH; ORG CSATable+(index*20); POIN framedata RTLFG LTRFG RTLBG LTRBG; POP"
+#define setCustomSpell_dim(index) "PUSH; ORG SpellTable+(index*4); POIN CSAEngine_Dim|1; POP"
+#define setCustomSpell_nodim(index) "PUSH; ORG SpellTable+(index*4); POIN CSAEngine_NoDim|1; POP"
+
+  ALIGN 16
+  SpellTable:	 // Was $5d4e60
+  #incbin "Repointed Spell Table.dmp"
+
+  ALIGN 16
+  CSATable:
+  #incbin BlankCSATable.dmp
+  
+  PUSH
+  ORG $95d780
+  CSAEngine:
+  #incbin "CSA System_fe8.dmp" //the custom spell engine. All custom spells point here.
+  POIN CSATable //needed for the routine
+  POP
+  
+  #define CSAEngine_Dim $95d7ec
+  #define CSAEngine_NoDim $95d898 //the last word in the dmp, this should be updated if you edit the engine.
+
+  ALIGN 4
+  #inctext lyn "SpellFix.elf" "SpellFixHook.elf"   
+
+ALIGN 16
+
+#ifdef IncludeBigStuff
+
+	{
+	#include "Spells/Aqua/Aqua.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Arcaqua/Arcaqua.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Arcfire/Arcfire.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Arcthunder/Arcthunder.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Arcwind/Arcwind.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Artimes/Artimes.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Aura/Aura.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Bolganone/Bolganone.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Dulam/Dulam.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Elaqua/Elaqua.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Elwind/Elwind.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Exordium/Exordium.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Dasher/Dasher.event"
+	}
+	//ALIGN 16
+
+	//#include "Spells/Light Arrow/Light Arrow.event"
+	{
+	ALIGN 16
+	#include "Spells/Meteor/Meteor.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Ragnorak/Ragnorak.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Slime/Slime.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Starlight/Starlight.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Swarm/Swarm.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Thoron Elthunder/Elthunder.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Thoron Elthunder/Thoron.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Thunder/Thunder.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Tornado/Tornado.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Wind/Wind.event"
+	}
+	{
+	ALIGN 16
+	#include "Spells/Worm/Worm.event"
+	}
+#endif

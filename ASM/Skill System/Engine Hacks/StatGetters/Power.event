@@ -1,0 +1,31 @@
+#ifndef MODULAR_GETTER_POWER_EVENT
+#define MODULAR_GETTER_POWER_EVENT
+
+#include "_Common.event"
+
+pPowerModifiers: // Power
+	POIN prAddUnitPower prDebuffStr prAddEquipPower prRallyStr prLifeAndDeathBonus prSkillFury
+WORD 0
+
+prAddUnitPower:
+	rAdd(rSByteAt(UNIT_POWER))
+
+prAddEquipPower:
+	rAdd(rForUnitEquipped(rCallExternal(prGetItemPowBonus)))
+
+prDebuffStr:
+	#incbin "_asm/DebuffStr.bin"
+	WORD DebuffTable
+
+prRallyStr:
+	#incbin "_asm/RallyStr.bin"
+	WORD DebuffTable
+
+prLifeAndDeathBonus:
+_testSkill(HeroesLifeAndDeathID,5,0)
+
+prSkillFury:
+  rIfUnitHasSkill(FuryID)
+    rAddConst(2)
+
+#endif // MODULAR_GETTER_POWER_EVENT

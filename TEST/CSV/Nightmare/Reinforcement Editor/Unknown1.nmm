@@ -1,0 +1,46 @@
+#FE8 Reinforcement Editor
+#
+
+1
+FE8 Unknown1 Reinforcement Editor
+0x9EB5C4
+1
+12
+NULL
+NULL
+
+UNKNOWN
+0
+1
+NEHU
+NULL
+
+UNKNOWN
+2
+1
+NEHU
+NULL
+
+Pointer?
+4
+4
+NEHU
+NULL
+
+Starts Turn # (Turn # + 1)
+8
+1
+NEDU
+NULL
+
+Ends Turn # (Turn # + 1)
+9
+1
+NEDU
+NULL
+
+UNKNOWN
+10
+1
+NEHU
+NULL

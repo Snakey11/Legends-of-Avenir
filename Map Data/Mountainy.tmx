@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="16" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="01004C03" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/01004C03.png" width="512" height="512"/>
+  <tile id="32">
+   <properties>
+    <property name="Height" value="1"/>
+    <property name="ID" value="0"/>
+    <property name="Width" value="1"/>
+    <property name="X" value="4"/>
+    <property name="Y" value="12"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="16">
+  <properties>
+   <property name="Anims" value="01Anims"/>
+   <property name="ChapterID" value="MercenaryMilitiaWaitArcanae5"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="MountainyChanges"/>
+   <property name="MapID" value="MountainyMap"/>
+   <property name="ObjectType" value="0x01"/>
+   <property name="PaletteID" value="0x4C"/>
+   <property name="TileConfig" value="0x03"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxNkj0vRFEQhs+9t/C9rFpDsr6WglplC6xdwUZE1OwSKyGRUCloFCLRKUVEFFbiP4iG6+MnKJD4Wv/AMzuz2Vs8uWfeM++ZM3Nu0XfuwnOuBA8QwgzamHOuAPswTTwAReiE0cC5Fos/zSO8eJqfhBJ7f+YbNKTOt6f+tch5og3xbQ3U+0McI86Yrxi5Y5r1RESTusO+1jvCOwU5X+8n/mzE28M672tt0a6sZ/Hn8a1bv1V/M7yx3+WrfyziDa2Xkvn3zSv3yJlXuLTcgnlX/NqcKzMnnpXenfYvvbdEvFIjZ72swq955I2epT98dTBuc7tHO3XqlZwY3xvph7NTTlkK9K4H5i2YVt0vkz8HSbQBGIR6zol7ep5485H/Y5vcDhgxdmESTway0At90A+hq9WRGvPSB/o1vMCW/A/sHXvKONoEpOELvQmtGXas/xD9EZ7g3M59hzaZOdoKrFpvDWiNcILvTOaF/gtl8yYC1RPkzMIm3BG3yxsbpFRynqHbU1/c5lldtwd6B7n/R6TfBbtzynJvYc/Xt6vWlr1l1oeexjLbRZvTudXeYP/V4n//Xm0L
+  </data>
+ </layer>
+ <layer name="CloseVillage" width="15" height="16" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="4"/>
+   <property name="Y" value="12"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2D4AsWBdgCNAQAgoAAi
+  </data>
+ </layer>
+</map>

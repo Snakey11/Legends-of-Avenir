@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="3C00683E" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/3C00683E.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="10">
+  <properties>
+   <property name="Anims" value="3CAnims"/>
+   <property name="ChapterID" value="OutsideTempleCutscene"/>
+   <property name="MapID" value="OutsideTempleMap"/>
+   <property name="ObjectType" value="0x3C"/>
+   <property name="PaletteID" value="0x68"/>
+   <property name="TileConfig" value="0x3E"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJwLYmRgOAPEO4DYn4mB4SIQfwDiL0B8CYphfJg6XiBbG0i/YGBg8AOylzBC6ItIetAxsroWoL7FQJwH1XMDKH4UiI9jwccYIfIwdceB+pYwQNhHGCFm4NMLkoepCwbSJ6B6nzASZy9MHUhvEBBzALEgELMDsRDUPBeof0B4ERCrAvFpBoS6IDxYCMkcXqjZJxnw6xkKGADTIE2K
+  </data>
+ </layer>
+</map>

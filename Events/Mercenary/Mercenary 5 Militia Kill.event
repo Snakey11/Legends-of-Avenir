@@ -1,0 +1,281 @@
+
+EventPointerTable(Merc5MilitiaKillEvents,ThisChapter)
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0x0,Cycle1,3,10)
+TurnEventPlayer(0x0,Cycle2,4,10)
+TurnEventPlayer(0x0,Turn2,2)
+TurnEventPlayer(0x0,KendrickHere,4)
+TurnEventPlayer(0x0,Turn5,5)
+TurnEventPlayer(0x0,Reinforcements1,6)
+TurnEventPlayer(0x0,Reinforcements2,7)
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+Units:
+UNIT
+
+BeginningScene:
+MUSC Indignation
+LOAD2 0x1 VeryStartPeople
+LOAD3 0x1 PlayerLoading1
+ENUN
+REMU Kendrick
+SetBackground(0x23)
+Text(Merc5MilitiaKillBeginningText)
+FADI 0x5
+STAL 0x20
+EndConvo
+STAL 0x40
+FADI 0x5
+STAL 0x8
+MUSC Advance
+DISA Xexim
+SetBackground(0x23)
+Text(Merc5MilitiaKillDealWithThemText)
+EndConvo
+STAL 0x20
+FAWI 0x3
+LOAD1 0x1 Ghosts1
+ENUN
+FAWU 0x7
+NoFade
+ENDA
+
+EndingScene:
+MUSC Indignation
+FADI 0x5
+CLEA Arya
+CLEE StrongGhost
+STAL 0x20
+SetBackground(0x23)
+TEXTSHOW Merc5MilitiaKillEndingText
+TEXTEND
+MUSC Raid
+TEXTCONT
+TEXTEND
+EndConvo
+CHECK_EVENTID 0x6E
+BNE 0x0 0xC 0x0
+	CHECK_EVENTID 0x69 // Female
+	BEQ 0x2 0xC 0x0
+		GiveItem(HeroCrest,PlayerFMercenary) // Mercenary
+	GOTO 0x1
+	LABEL 0x2
+	CHECK_EVENTID 0x6A
+	BEQ 0x3 0xC 0x0
+		GiveItem(HeroCrest,PlayerFMyrmidon) // Myrmidon
+	GOTO 0x1
+	LABEL 0x3
+		GiveItem(ElysianWhip,PlayerFPegasusKnight) // Pregasus Knight
+	GOTO 0x1
+LABEL 0x0
+	CHECK_EVENTID 0x69 // Male
+	BEQ 0x4 0xC 0x0
+		GiveItem(HeroCrest,PlayerMMercenary) // Mercenary
+	GOTO 0x1
+	LABEL 0x4
+	CHECK_EVENTID 0x6A
+	BEQ 0x5 0xC 0x0
+		GiveItem(HeroCrest,PlayerMMyrmidon) // Myrmidon
+	GOTO 0x1
+	LABEL 0x5
+	CHECK_EVENTID 0x6B
+	BEQ 0x6 0xC 0x0
+		GiveItem(HeroCrest,PlayerMFighter) // Fighter
+	GOTO 0x1
+	LABEL 0x6
+	CHECK_EVENTID 0x6C
+	BEQ 0x7 0xC 0x0
+		GiveItem(OceanSeal,PlayerMPirate) // Pirate
+	GOTO 0x1
+	LABEL 0x7
+	CHECK_EVENTID 0x6D
+	BEQ 0x8 0x0 0xC
+		GiveItem(HeroCrest,PlayerMBrigand) // Brigand
+	LABEL 0x8
+LABEL 0x1
+STAL 0x80
+MoveToChapter(MercenaryMilitiaKill6)
+ENDA
+
+Turn2:
+MUSI
+CAM1 [7,5]
+Text(Merc5MilitiaKillWhatAreThese1Text)
+MUNO
+NoFade
+ENDA
+
+KendrickHere:
+MUSS Comrades
+//_0x2620 0x1700
+CHECK_ALIVE Kendrick
+BEQ 0x10 0x0 0xC
+	// So alive
+	LOAD1 0x1 LoadKendrick
+	ENUN
+	REVEAL Kendrick
+	SVAL 0x1 0x1
+	SET_STATE Kendrick
+	CAM1 Kendrick
+	Text(Merc5MilitiaKillKendrickHereText)
+	GOTO 0x11
+LABEL 0x10
+	// So dead
+	CAM1 [7,6]
+	Text(Merc5MilitiaKillKendrickHereDeadText)
+LABEL 0x11
+MURE 0x5
+NoFade
+ENDA
+
+Turn5:
+MUSI
+CAM1 [7,7]
+Text(Merc5MilitiaKillWhatAreThese2Text)
+MUNO
+NoFade
+ENDA
+
+Reinforcements1:
+LOAD1 0x1 LoadTroops1
+ENUN
+NoFade
+ENDA
+
+Reinforcements2:
+LOAD1 0x1 LoadTroops2
+ENUN
+NoFade
+ENDA
+
+Cycle1:
+Every2Turns(0x9,0x10,0x10,LoadPirates1)
+NoFade
+ENDA
+
+Cycle2:
+Every2Turns(0xA,0xB,0x10,LoadPirates2)
+NoFade
+ENDA
+
+LoadPirates1:
+LOAD1 0x1 FortPirates1
+NoFade
+ENDA
+
+LoadPirates2:
+LOAD1 0x1 FortPirates2
+NoFade
+ENDA
+
+	/*UNIT DATA*/
+
+PlayerLoading1:
+UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [12,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [12,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [12,2] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [12,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [12,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [12,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [12,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [12,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+VeryStartPeople:
+UNIT Arc Fighter PlayerMArcher Level(1,Ally,True) [12,0] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Luke Monk PlayerMArcher Level(1,Ally,True) [13,1] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Arya Myrmidon_F PlayerMArcher Level(1,Ally,True) [14,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Xexim XeximClass PlayerMArcher Level(1,NPC,True) [11,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
+Ghosts1:
+UNIT TankGhost Knight BossGhost Level(9,Enemy,True) [13,4] 0x00 0x00 0x00 0x00 [KillerLance] GuardAI
+UNIT TankGhost Sentinel BossGhost Level(3,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [ShortSpear] GuardAI
+UNIT TankGhost Knight BossGhost Level(10,Enemy,True) [9,8] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+
+UNIT FastGhost Assassin BossGhost Level(4,Enemy,True) [9,1] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI 
+UNIT FastGhost Halberdier BossGhost Level(3,Enemy,True) [8,7] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI 
+UNIT FastGhost Mercenary BossGhost Level(8,Enemy,True) [7,16] 0x00 0x00 0x00 0x00 [IronBlade] AttackInRangeAI 
+
+UNIT MageGhost Mage BossGhost Level(7,Enemy,True) [6,3] 0x00 0x00 0x00 0x00 [Arcaqua] ChaseOnceApproachedAI 
+UNIT MageGhost Mage BossGhost Level(5,Enemy,True) [3,8] 0x00 0x00 0x00 0x00 [Meteor] GuardAI
+UNIT MageGhost Druid BossGhost Level(3,Enemy,True) [8,10] 0x00 0x00 0x00 0x00 [Dulam] GuardAI
+UNIT MageGhost Troubadour BossGhost Level(11,Enemy,True) [3,18] 0x00 0x00 0x00 0x00 [Mend] HealAllies
+
+UNIT StrongGhost Swordmaster BossGhost Level(3,Enemy,True) [13,10] 0x00 0x00 0x00 0x00 [Runesword] AttackInRangeAI
+UNIT StrongGhost Fighter BossGhost Level(9,Enemy,True) [9,4] Drop 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT StrongGhost GreatKnight BossGhost Level(2,Enemy,True) [2,10] 0x00 0x00 0x00 0x00 [Tomahawk] ChaseOnceApproachedAI
+UNIT StrongGhost Sniper BossGhost Level(4,Enemy,True) [12,16] 0x00 0x00 0x00 0x00 [SilverLongbow] GuardAI 
+UNIT
+
+LoadKendrick:
+UNIT Kendrick Pirate PlayerMArcher Level(9,Ally,True) [8,0] 0x00 0x00 0x1 REDA1 [HandAxe,Swordreaver,Vulnerary] [0] 
+UNIT
+
+LoadTroops1:
+UNIT FastGhost Myrmidon BossGhost Level(10,Enemy,True) [14,9] 0x00 0x00 0x00 0x00 [SteelSword] [0] 
+UNIT FastGhost Ranger BossGhost Level(3,Enemy,True) [13,20] 0x00 0x00 0x00 0x00 [SteelLongbow,IronBlade] [0]
+UNIT TankGhost Knight BossGhost Level(9,Enemy,True) [0,16] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT StrongGhost Cavalier BossGhost Level(10,Enemy,True) [12,20] 0x00 0x00 0x00 0x00 [DevilSpear,IronSword] [0] 
+UNIT MageGhost Monk BossGhost Level(8,Enemy,True) [5,20] 0x00 0x00 0x00 0x00 [Divine] [0] 
+UNIT
+
+LoadTroops2:
+UNIT BossGhost Swordmaster BossGhost Level(5,Enemy,True) [12,20] 0x00 0x00 0x1 REDA2 [BraveSword] AttackInRangeAI 
+UNIT FastGhost Assassin BossGhost Level(3,Enemy,True) [14,20] 0x00 0x00 0x1 REDA3 [KillingEdge] [0] 
+UNIT StrongGhost Hero BossGhost Level(3,Enemy,True) [13,20] 0x00 0x00 0x1 REDA4 [SilverAxe] [0] 
+UNIT
+
+FortPirates1:
+UNIT StrongGhost Pirate BossGhost Level(5,Enemy,True) [4,0] 0x00 0x00 0x0 0x0 [IronAxe] [0] 
+UNIT
+
+FortPirates2:
+UNIT StrongGhost Pirate BossGhost Level(6,Enemy,True) [4,0] 0x00 0x00 0x0 0x0 [HandAxe] [0] 
+UNIT
+
+
+REDA1:
+REDA [8,1] 0x0 0x0 0x0 0x0
+REDA2:
+REDA [11,19] 0x0 0x0 0x0 0x0
+REDA3:
+REDA [12,18] 0x0 0x0 0x0 0x0
+REDA4:
+REDA [9,19] 0x0 0x0 0x0 0x0

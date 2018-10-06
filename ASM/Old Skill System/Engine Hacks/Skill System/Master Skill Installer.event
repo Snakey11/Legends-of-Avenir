@@ -1,0 +1,274 @@
+
+#include "Internals/SkillSystem.event"
+#include "skill_lists.event" //who learns what skills when
+#include "Battle Calculations.event" //battle calcs
+#include "charge_table.event"
+SkillIcons:
+#incext Png2Dmp "SkillIcons.png"
+PUSH
+
+//acrobat
+ORG $1a4cc
+jumpToHack(AcrobatCheck)
+
+//Pass
+ORG $800 //modifies movement ARM code
+WORD 0xE59FC000 0xE12FFF1C //ldr r12,Pass; bx r12
+POIN PassCheck|1
+
+//Post combat skills
+ORG $1D258
+callHack_r1(PostCombatSkills)
+SHORT 0x2800 0xD017 0xE006 //cmp r0,0; beq RetFalse; b NextPart
+
+//waryfighter
+ORG $2AF90
+#incbin "Teq Skills/Wary Fighter.dmp"
+POIN SkillTester
+WORD WaryFighterID
+
+//Provoke
+ORG $3DF78
+jumpToHack(Provoke)
+
+//Frenzy
+ORG $2AB4C
+callHack_r3(Frenzy)
+
+//renewal
+ORG $1a258
+jumpToHack(Renewal)
+
+ORG $2c13c
+callHack_r3(Discipline)
+
+//vantage
+ORG $2af7c
+jumpToHack(Vantage)
+
+//desperation
+ORG $2af0a
+SHORT 0
+jumpToHack(Desperation)
+
+//live to serve
+ORG $2ebd4
+jumpToHack(LiveToServe)
+
+//paragon
+ORG $2b960
+jumpToHack(Paragon)
+
+//lunge
+ORG $18744
+callHack_r3(Lunge)
+ORG $187b0
+jumpToHack(LungeUpdate)
+ORG $3a094
+jumpToHack(LungeAI)
+
+// //seal skills
+ORG $2c088
+jumpToHack(SealSkills)
+
+ORG $2c1f4
+jumpToHack(Armsthrift)
+POP
+
+FaireCheck: //added to fe8_calc_loop.event
+#incbin "Ross Skills/FaireCheck.dmp"
+POIN SkillTester
+POIN FaireIDList
+ALIGN 4
+
+FaireIDList:
+BYTE SwordfaireID LancefaireID AxefaireID BowfaireID TomefaireID TomefaireID TomefaireID TomefaireID
+ALIGN 4
+
+BreakerCheck: //added to fe8_calc_loop.event
+#incbin "Ross Skills/BreakerCheck.dmp"
+POIN SkillTester
+POIN BreakerIDList
+ALIGN 4
+
+BreakerIDList:
+BYTE SwordbreakerID LancebreakerID AxebreakerID BowbreakerID TomebreakerID TomebreakerID TomebreakerID TomebreakerID
+ALIGN 4
+
+BlowCheck:
+#incbin "Ross Skills/BlowCheck.dmp"
+POIN SkillTester
+POIN BlowIDList
+
+BlowIDList:
+BYTE DuelistsBlowID DeathBlowID DartingBlowID WardingBlowID CertainBlowID ArmoredBlowID QuickDrawID ChivalryID PragmaticID
+ALIGN 4
+
+DefendingCheck:
+#incbin "Blade Skills/Defending.dmp"
+POIN SkillTester
+POIN DefendingIDList
+
+DefendingIDList:
+BYTE StrongRiposteID PatienceID PursuitID ChivalryID PragmaticID
+ALIGN 4
+
+AcrobatCheck:
+#incbin "Teq Skills/Acrobat.dmp"
+POIN SkillTester
+WORD AcrobatID
+
+PassCheck:
+#incbin "Teq Skills/Pass.dmp"
+POIN SkillTester
+WORD PassID
+
+PostCombatSkills: //plus lifetaker
+#incbin "Post Combat Skills/CantoPlus_Galeforce.dmp"
+POIN SkillTester
+WORD CantoPlusID
+WORD CantoID
+WORD GaleforceID
+WORD LifetakerID
+WORD SavageBlowID
+POIN AuraSkillCheck
+
+Provoke:
+#incbin "Teq Skills/Provoke.dmp"
+POIN SkillTester
+WORD ProvokeID
+
+Frenzy:
+#incbin "Teq Skills/Frenzy.dmp"
+POIN SkillTester
+WORD FrenzyID
+
+Renewal://combined healing skills
+#incbin "Other Skills/RenewalAmaterasu.dmp"
+POIN SkillTester
+WORD RenewalID
+POIN AuraSkillCheck
+WORD AmaterasuID
+WORD CamaraderieID
+WORD ReliefID
+WORD BondID
+
+Discipline:
+#incbin "Other Skills/Discipline.dmp"
+POIN SkillTester
+WORD DisciplineID
+
+Vantage:
+#incbin "Other Skills/vantage.dmp"
+POIN SkillTester
+WORD VantageID
+
+Desperation:
+#incbin "Other Skills/desperation.dmp"
+POIN SkillTester
+WORD DesperationID
+
+Wrath:
+#incbin "Other Skills/wrath.dmp"
+POIN SkillTester
+WORD WrathID
+
+LiveToServe:
+#incbin "Other Skills/LiveToServe.dmp"
+POIN SkillTester
+WORD LiveToServeID
+
+Paragon:
+#incbin "Other Skills/Paragon.dmp"
+POIN SkillTester
+WORD ParagonID
+
+Lunge:
+#incbin "Teq Skills/lunge.dmp"
+LungeUsability:
+#incbin "Teq Skills/Lunge Usability.dmp"
+POIN SkillTester
+WORD LungeID
+LungeEffect:
+#incbin "Teq Skills/Lunge Effect.dmp"
+AttackEffect:
+#incbin "Teq Skills/Attack Effect.dmp"
+LungeAI:
+#incbin "Teq Skills/LungeAI.dmp"
+POIN SkillTester
+WORD LungeID
+LungeUpdate:
+#incbin "Teq Skills/lunge_updaterescuee.dmp"
+
+MercyUsability:
+#incbin "Teq Skills/Mercy Usability.dmp"
+POIN SkillTester
+WORD MercyID
+MercyEffect:
+#incbin "Teq Skills/Mercy Effect.dmp"
+
+SealSkills:
+#incbin "Seal Skills/SealSkills.dmp"
+POIN SkillTester
+POIN SealSkillList
+WORD DebuffTable
+SealSkillList:
+BYTE SealStrID SealSklID SealSpdID SealDefID SealResID SealLukID
+ALIGN 4
+
+ElbowRoom:
+#incbin "Other Skills/ElbowRoom.dmp"
+POIN SkillTester
+WORD ElbowRoomID
+
+NaturalCover:
+#incbin "Other Skills/NaturalCover.dmp"
+POIN SkillTester
+WORD NaturalCoverID
+
+GambleUsability:
+#incbin "Other Skills/Gamble Usability.dmp"
+POIN SkillTester
+WORD GambleID
+GambleEffect:
+#incbin "Other Skills/Gamble Effect.dmp"
+Gamble:
+#incbin "Other Skills/Gamble.dmp"
+
+FieryBlood:
+#incbin "Other Skills/FieryBlood.dmp"
+POIN SkillTester
+WORD FieryBloodID
+
+LifeAndDeath:
+#incbin "Other Skills/LifeAndDeath.dmp"
+POIN SkillTester
+WORD LifeAndDeathID
+
+WindDisciple:
+#incbin "Blade Skills/Winddisciple.dmp"
+POIN SkillTester
+WORD WindDiscipleID
+
+LightWeight:
+#incbin "Blade Skills/LightWeight.dmp"
+POIN SkillTester
+WORD LightWeightID
+
+CriticalCheck:
+#incbin "Blade Skills/Critical.dmp"
+POIN SkillTester
+POIN CriticalIDList
+
+CriticalIDList:
+BYTE CriticalForceID KillingMachineID
+ALIGN 4
+
+Armsthrift:
+#incbin "Other Skills/Armsthrift.dmp"
+POIN SkillTester
+WORD ArmsthriftID
+
+#include "Aura Skills/Aura Skills Installer.event"
+#include "Proc Skills/Proc Skills Installer.event"
+#include "Rally Skills/Rally Installer.event"

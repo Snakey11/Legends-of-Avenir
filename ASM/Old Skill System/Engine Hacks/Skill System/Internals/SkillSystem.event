@@ -1,0 +1,107 @@
+//Skill System replacing favouritism stat
+#include repointbuffer.event
+PUSH //let 203e884 + charnum*10 = skill area (bytes 1,2,3,4 NOT 0 tho)
+
+//This was done through trial and error.... 
+
+//PROBLEM: skills 1 and 2 get kept along with loss count
+
+/*
+ORG $a44c8 //bwl
+BYTE $70 $47
+ORG $a4534 //bwl
+BYTE $70 $47
+
+ORG $a41c8 //seems to be saving/loading
+BYTE $70 $47
+ORG $a421c //same here
+BYTE $70 $47 */
+ORG $a474c
+BYTE $70 $47
+ORG $a478c
+BYTE $70 $47
+ORG $a4a34
+BYTE $70 $47
+ORG $a4cfc
+BYTE $70 $47
+
+ORG $a464c //only save 1 byte when dying (as opposed to 3)
+BYTE 1
+
+ORG $a4140
+SHORT 0 //nop the 0x200000
+
+ORG $76018
+jumpToHack(SkillLearner)
+
+ORG $3730
+jumpToHack(AlternateIconPopup)
+
+ORG $75d64
+jumpToHack(AnimsOnPopupHack)
+
+ORG $17ef4
+jumpToHack(AddSkillsOnLoad)
+
+ORG $2B3EC
+jumpToHack(Rerun_Battle_Calcs)
+
+ORG $22862
+BL(Unset_Attack_Flag) //this is in masterhackinstaller
+
+ORG $18680
+jumpToHack(Unset_Attack_Flag_2)
+POP
+
+Skill_Getter: //gets a list of skills
+#incbin skillGetter.dmp
+POIN PersonalSkillTable
+POIN ClassSkillTable
+POIN LevelUpSkillTable
+
+SkillTester: //does unit have X skill?
+#incbin skillTester.dmp
+POIN Skill_Getter
+
+SkillDescGetter: //given skill number, get description text ID
+#incbin skillDescGetter.dmp
+POIN SkillDescTable
+POIN Skill_Getter
+WORD SS_SkillsDefaultRText
+
+SkillAdder: //given chardata in r0, skill in r1, add skill if possible
+#incbin addSkill.dmp
+
+SkillLearner:
+#incbin learnskill.dmp
+POIN LevelUpSkillTable
+POIN SkillAdder
+
+AlternateIconPopup:
+#incbin alternateicon_3732.dmp
+POIN SkillIcons
+
+AnimsOnPopupHack:
+#incbin "animsonhack_75ca8.dmp"
+WORD LearnedSkillText
+
+AddSkillsOnLoad:
+#incbin "unitloading.dmp"
+POIN LevelUpSkillTable
+POIN SkillAdder
+POIN ChargeupTable
+
+RTextLoop:
+#incbin "rtextloop.dmp"
+POIN Skill_Getter
+
+Rerun_Battle_Calcs:
+#incbin "Rerun_Battle_Calcs.dmp"
+
+Unset_Attack_Flag_2:
+#incbin "clearAttackFlag.dmp"
+
+#include "level_popups.event"
+#include "map_anims_routines.event"
+#include "popupdisplayroutines.event"
+#include "HPHealing.event"

@@ -1,0 +1,5 @@
+[FarRight][LoadLeon]
+You've slain me...[.] The[NL]
+Basileus of Haedric...[A][NL]
+Heh...[....] Guess I[NL]
+lost my edge...[A][X]

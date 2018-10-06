@@ -1,0 +1,122 @@
+
+#define AcrobatID 1 //Thief, Assassin, Rogue
+#define PassID 2 //Assassin
+#define CantoPlusID 3 //Ranger
+#define WaryFighterID 4 //General
+#define SureShotID 5 //Sniper
+#define ProvokeID 6 //Knight, General, GreatKnight
+#define SaviorID 7 //FalcoKnight
+#define MercyID 8  //Patriarch, Matriarch
+#define FrenzyID 9 //Mountainier
+#define AdeptID 10 //Mage, Sage, MageKnight
+#define CantoID 11 //All the mounted shit
+#define CunningID 12 //display only: Thief, Rogue, Assassin
+#define LethalityID 13 //display only: Assassin
+#define LunaID 14 //GreatKnight
+#define SolID 15 //Paladin
+#define AetherID 16 //Truerblade
+#define AstraID 17 //Swordmaster
+#define DisciplineID 18 //Cavalier, Paladin
+#define SwordbreakerID 19 //WyvernLord
+#define LancebreakerID 20 //Nomad
+#define AxebreakerID 21 //Hero
+#define BowbreakerID 22 //Hector
+#define TomebreakerID 23 //Druid
+#define AegisID 24 //Izuk
+#define PaviseID 25 //General, Hero
+#define DuelistsBlowID 26 //Myrmidon, Swordmaster
+#define DeathBlowID 27 //Warrior
+#define DartingBlowID 28 //PegasusKnight, FalcoKnight
+#define WardingBlowID 29 //FalcoKnight
+#define CertainBlowID 30 //Archer, Sniper, Ranger
+#define ArmoredBlowID 31 //GreatKnight
+#define VantageID 32 //Myrmidon, Swordmaster
+#define DesperationID 33 //Fighter, Warrior
+#define WrathID 34 //Soldier, Halberdier, Sentinel
+#define CounterID 35 //Hector, Champion
+#define CounterMagicID 36 //Bishop
+#define MiracleID 37 //Monk, Bishop
+#define SwordfaireID 38 //Swordmaster
+#define LancefaireID 39 //WyvernKnight
+#define AxefaireID 40 //Berserker
+#define BowfaireID 41 //Sniper
+#define TomefaireID 42 //Sage
+#define CritUpID 43 //display only: SwordMaster, Berserker
+#define SlayerID 44 //display only
+#define SummonID 45 //display only: Summoner
+#define DanceID 46 //display only: Dancer
+#define LifetakerID 47 //DarkKnight
+#define GaleforceID 48 //Ranger
+#define RenewalID 49 //Izuk
+#define NiceThighsID 50 //DONE
+#define DemoiselleID 51 //Troubadour, Valkyrie
+#define GentilhommeID 52 //DONE
+#define MaleficAuraID 53 //Shaman, Druid, Summoner
+#define InspirationID 54 //Halberdier
+#define CharmID 55 //Valkyrie
+#define VoiceOfPeaceID 56 //Troubadour, Valkyrie
+#define AmaterasuID 57 //Patriarch
+#define SpurStrID 58 //MountedBrigand
+#define SpurMagID 59 //Magus
+#define SpurSpdID 60 //Hunter
+#define SpurDefID 61 //Sentinel
+#define SpurResID 62 //Valkyrie
+#define NihilID 63 //this is a giant pain tbh
+#define NullifyID 64
+#define ParagonID 65 //DONE
+#define ImpaleID 66 //Impaler
+#define ColossusID 67 //Warrior, Gladiator
+#define RallyStrID 68 //Mercenary, Hero
+#define RallyMagID 69 // (requires str mag split)
+#define RallySklID 70 //Paladin
+#define RallySpdID 71 //PegasusKnight, FalcoKnight
+#define RallyLukID 72 //MageKnight
+#define RallyDefID 73 //BlackFalcoKnight
+#define RallyResID 74 //MageKnight
+#define RallyMovID 75 //WyvernKnight
+#define RallySpectrumID 76 //GaidenSage
+#define BowRangeUpID 77
+#define StaffSavantID 78 //half done (mag/2 only)
+#define LiveToServeID 79 //Bishop
+#define IgnisID 80 //Sage, GaidenSage
+#define LifeAndDeathID 81 //Shaman, Druid, Summoner
+#define LockTouchID 82 //Display only: Rogue
+#define LungeID 83 //Rogue, Champion
+#define IntimidateID 84 //Brigand
+#define OpportunistID 85 // Warlock
+#define TrampleID 86 // MountedBrigand
+#define CamaraderieID 87 //Pirate, Berserker
+#define ForeignPrincessID 88
+#define SavageBlowID 89 //WyvernLord
+#define ReliefID 90 //WyvernGeneral
+#define TantivyID 91 //WyvernRider, WyvernLord, WyvernKnight
+#define FocusID 92 //Magus
+#define BondID 93 //Izuk
+#define AnathemaID 94 //Summoner
+#define LilysPoiseID 95 //JacketHero
+#define ExpertiseID 96 // Gladiator
+#define CelerityID 97 //Rogue
+#define FieryBloodID 98 //Fighter, Warrior
+#define ElbowRoomID 99 //Cavalier, Paladin
+#define NaturalCoverID 100 //Knight, General, GreatKnight
+#define SealStrID 101 //Druid
+#define SealSklID 102 //Pirate, Berserker
+#define SealSpdID 103 //Mercenary, Hero
+#define SealLukID 104 //Mountainier
+#define SealDefID 105 //Brigand
+#define SealResID 106 //Monk, Bishop
+#define DragonsBloodID 107 //DONE
+#define GambleID 108 //Hunter
+#define PersonalityID 109 //DONE
+#define QuickDrawID 110 //Archer, Sniper, Ranger, Hunter
+#define WindDiscipleID 111 //Soldier, Sentinel, Halberdier, Impaler
+#define StrongRiposteID 112 //Sentinel
+#define PatienceID 113 //Hector
+#define PursuitID 114 //BlackFalcoknight
+#define LightWeightID 115 //DMyrmidon, Swordmaster, Trueblade
+#define KillingMachineID 116 //Trueblade
+#define CriticalForceID 117 //Halberdier
+#define ChivalryID 118 //MasterKnight
+#define PragmaticID 119 //Warlock
+#define ArmsthriftID 120 //Assassin
+#define MoonbowID 121 //Mage, Sage, MageKnight, Magus

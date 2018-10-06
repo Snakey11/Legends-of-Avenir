@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="15" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="2E003430" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/2E003430.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="15">
+  <properties>
+   <property name="Anims" value="2EAnims"/>
+   <property name="ChapterID" value="Mercenary1"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="MountainsChanges"/>
+   <property name="MapID" value="MountainsMap"/>
+   <property name="ObjectType" value="0x2E"/>
+   <property name="PaletteID" value="0x34"/>
+   <property name="TileConfig" value="0x30"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxdk7tKA0EUhmd3UZEYlBQ+gCCaFBLyCIrYhRjRF9BgiCBWFlrpNjY2EbUM3iApjBBFGzvBG17Q3tJgYRLxCfwOc5ZdLD7O3P45lznjG2OmYAV6YAzijjEP2AY2A1+y5xkzgfXhyDXmFtvFWhG7yfwUe6eaBnYAO8z+LFRgTvWfcML5A7iBQ3gzoZ9JznWwH9gcezMw6Ib6AIljHnb+nfN17Yf7vuEZEqqX9UC3q7o4xODdsWfOIc28DOOu1f9CnvUCrHt2nFZtjb26+thj/dXYO8T/kGv38hpbRbWBXrQdmGZchSTjF/Rn2Ccn9C13ZNxQ22aeZb4Fq8xj+l5tY+8tQAlaGkPrn/4S+rUOLWPrvq97EndJ865pDMVIfSXHRc7nIKvvcBXJSfx1VCt+RyQ3HSci+mX172u9gpwknyWNOeWG90iNrvX9pF+6nbAPRH/h2fvqGnMq8jZSw6r6lvPbjrUb2i++9lRQK8m3GaldoF/z7BvdG9u/x67t5SY8sj6K7VOSbqiX95e/0su4rPqgDxfgD6t8cMk=
+  </data>
+ </layer>
+ <layer name="Closed House" width="15" height="15" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="0"/>
+   <property name="Y" value="5"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFxAJ15oF2wSgYjgAAZfEAKw==
+  </data>
+ </layer>
+</map>

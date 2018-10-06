@@ -1,0 +1,490 @@
+#FE 8 battle screen editor
+#
+
+1
+Battle screen editor part 5 by Nintenlord
+0x802508
+1
+80
+NULL
+NULL
+
+Block (31,0)
+0
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,0)
+1
+1
+NDHU
+Palette_Flip.txt
+
+Block (-1,0)
+2
+1
+NDHU
+Block.txt
+
+Palette and Flipping (-1,0)
+3
+1
+NDHU
+Palette_Flip.txt
+
+Block  (31,1)
+4
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,1)
+5
+1
+NDHU
+Palette_Flip.txt
+
+Block (-1,1)
+6
+1
+NDHU
+Block.txt
+
+Palette and Flipping (-1,1)
+7
+1
+NDHU
+Palette_Flip.txt
+
+Block (31,2)
+8
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,2)
+9
+1
+NDHU
+Palette_Flip.txt
+
+Block (-1,2)
+10
+1
+NDHU
+Block.txt
+
+Palette and Flipping (-1,2)
+11
+1
+NDHU
+Palette_Flip.txt
+
+Block (31,3)
+12
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,3)
+13
+1
+NDHU
+Palette_Flip.txt
+
+Block (-1,3)
+14
+1
+NDHU
+Block.txt
+
+Palette and Flipping (-1,3)
+15
+1
+NDHU
+Palette_Flip.txt
+
+Block (31,4)
+16
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,4)
+17
+1
+NDHU
+Palette_Flip.txt
+
+Block (-1,4)
+18
+1
+NDHU
+Block.txt
+
+Palette and Flipping (-1,4)
+19
+1
+NDHU
+Palette_Flip.txt
+
+Block (31,5)
+20
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,5)
+21
+1
+NDHU
+Palette_Flip.txt
+
+Block (-1,5)
+22
+1
+NDHU
+Block.txt
+
+Palette and Flipping (-1,5)
+23
+1
+NDHU
+Palette_Flip.txt
+
+Block (31,6)
+24
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,6)
+25
+1
+NDHU
+Palette_Flip.txt
+
+Block (-1,6)
+26
+1
+NDHU
+Block.txt
+
+Palette and Flipping (-1,6)
+27
+1
+NDHU
+Palette_Flip.txt
+
+Block (31,7)
+28
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,7)
+29
+1
+NDHU
+Palette_Flip.txt
+
+Block (-1,7)
+30
+1
+NDHU
+Block.txt
+
+Palette and Flipping (-1,7)
+31
+1
+NDHU
+Palette_Flip.txt
+
+Block (31,8)
+32
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,8)
+33
+1
+NDHU
+Palette_Flip.txt
+
+Block (-1,8)
+34
+1
+NDHU
+Block.txt
+
+Palette and Flipping (-1,8)
+35
+1
+NDHU
+Palette_Flip.txt
+
+Block (31,9)
+36
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,9)
+37
+1
+NDHU
+Palette_Flip.txt
+
+Block (-1,9)
+38
+1
+NDHU
+Block.txt
+
+Palette and Flipping (-1,9)
+39
+1
+NDHU
+Palette_Flip.txt
+
+Block (31,10)
+40
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,10)
+41
+1
+NDHU
+Palette_Flip.txt
+
+Block (-1,10)
+42
+1
+NDHU
+Block.txt
+
+Palette and Flipping (-1,10)
+43
+1
+NDHU
+Palette_Flip.txt
+
+Block (31,11)
+44
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,1)
+45
+1
+NDHU
+Palette_Flip.txt
+
+Block (-1,11)
+46
+1
+NDHU
+Block.txt
+
+Palette and Flipping (-1,11)
+47
+1
+NDHU
+Palette_Flip.txt
+
+Block (31,12)
+48
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,12)
+49
+1
+NDHU
+Palette_Flip.txt
+
+Block (-1,12)
+50
+1
+NDHU
+Block.txt
+
+Palette and Flipping (-1,12)
+51
+1
+NDHU
+Palette_Flip.txt
+
+Block (31,13)
+52
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,13)
+53
+1
+NDHU
+Palette_Flip.txt
+
+Block (-1,13)
+54
+1
+NDHU
+Block.txt
+
+Palette and Flipping (-1,13)
+55
+1
+NDHU
+Palette_Flip.txt
+
+Block (31,14)
+56
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,14)
+57
+1
+NDHU
+Palette_Flip.txt
+
+Block (-1,14)
+58
+1
+NDHU
+Block.txt
+
+Palette and Flipping (-1,14)
+59
+1
+NDHU
+Palette_Flip.txt
+
+Block (31,15)
+60
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,15)
+61
+1
+NDHU
+Palette_Flip.txt
+
+Block (-1,15)
+62
+1
+NDHU
+Block.txt
+
+Palette and Flipping (-1,15)
+63
+1
+NDHU
+Palette_Flip.txt
+
+Block (31,16)
+64
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,16)
+65
+1
+NDHU
+Palette_Flip.txt
+
+Block (-1,16)
+66
+1
+NDHU
+Block.txt
+
+Palette and Flipping (-1,16)
+67
+1
+NDHU
+Palette_Flip.txt
+
+Block (31,17)
+68
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,17)
+69
+1
+NDHU
+Palette_Flip.txt
+
+Block (-1,17)
+70
+1
+NDHU
+Block.txt
+
+Palette and Flipping (-1,17)
+71
+1
+NDHU
+Palette_Flip.txt
+
+Block (31,18)
+72
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,18)
+73
+1
+NDHU
+Palette_Flip.txt
+
+Block (-1,18)
+74
+1
+NDHU
+Block.txt
+
+Palette and Flipping (-1,18)
+75
+1
+NDHU
+Palette_Flip.txt
+
+Block (31,19)
+76
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,19)
+77
+1
+NDHU
+Palette_Flip.txt
+
+Block (-1,19)
+78
+1
+NDHU
+Block.txt
+
+Palette and Flipping (-1,19)
+79
+1
+NDHU
+Palette_Flip.txt

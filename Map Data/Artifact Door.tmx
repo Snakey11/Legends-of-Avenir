@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="6C00A36E" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/6C00A36E.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="10">
+  <properties>
+   <property name="Anims" value="6CAnims"/>
+   <property name="ChapterID" value="ArtifactDoorCutscene"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="ArtifactSlotChanges"/>
+   <property name="MapID" value="ArtifactSlotMap"/>
+   <property name="ObjectType" value="0x6C"/>
+   <property name="PaletteID" value="0xA3"/>
+   <property name="TileConfig" value="0x6E"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjY2ZgYBsAzI4HRxKQl2LEjqWB+AVQ/icDbjViePAXJvzyMNzFTL66VWhi75kRGJ86ED6NJKYBZK9H0qvBjF0dDN9kJE7vTSz+ECNSLzIGANWHHTg=
+  </data>
+ </layer>
+ <layer name="PathHere" width="15" height="10" visible="0">
+  <properties>
+   <property name="Height" value="2"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="7"/>
+   <property name="Y" value="4"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFMPCeeWD0DkcAAD1oAeU=
+  </data>
+ </layer>
+ <layer name="OpenDoor" width="15" height="10" visible="0">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="5"/>
+   <property name="X" value="5"/>
+   <property name="Y" value="0"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYMAEaswMDBuA+D0UqzJjUYQDuKHpdSVBLztQLRdUPyczhD8KhiYAAFr5BvE=
+  </data>
+ </layer>
+</map>

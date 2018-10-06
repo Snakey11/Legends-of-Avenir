@@ -1,0 +1,4 @@
+[MidLeft][LoadPlayer]I'll go help Danaan. [Smile]They'll likely pay me,[NL]
+not to mention it'll be a new connection[A][NL]
+to have for clients.[Smile] I'd better get going[NL]
+before the bandits get there though.[A][X]

@@ -1,0 +1,2 @@
+Fierce Stance: +6 attack[NL]
+when foe initiates battle.[X]

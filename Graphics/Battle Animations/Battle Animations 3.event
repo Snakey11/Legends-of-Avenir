@@ -1,0 +1,58 @@
+
+#include "Shadow Sword.event"
+
+#include "Shadow Unarmed.event"
+
+#include "Truerblade Sword.event"
+
+#include "Truerblade Unarmed.event"
+
+
+#include "Warlock Axe.event"
+
+#include "Warlock Hand Axe.event"
+
+#include "Warlock Unarmed.event"
+
+
+#include "Wyvern General Axe.event"
+
+#include "Wyvern General Hand Axe.event"
+
+#include "Wyvern Lord Bow.event"
+
+
+#include "Narrator 1.event"
+
+#include "Narrator 2.event"
+
+
+#include "Sentinel Speal.event"
+
+#include "Sentinel Unarmed.event"
+
+
+#include "Trueblade M Sword.event"
+
+#include "Trueblade M Unarmed.event"
+
+
+#include "Grand Paladin Sword.event"
+
+#include "Grand Paladin Lance.event"
+
+#include "Grand Paladin Axe.event"
+
+#include "Grand Paladin Hand Axe.event"
+
+#include "Grand Paladin Unarmed.event"
+
+
+#include "Spear Hero.event"
+
+
+#include "Xexim Sword.event"
+
+#include "Xexim Bow.event"
+
+#include "Xexim Unarmed.event"

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="20" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="42004344" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/42004344.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="20">
+  <data encoding="base64" compression="zlib">
+   eJyNVMFtwzAMtMwJinSo/DyK1ujTyA5Ji74Ib9BH0SYvCckKQd5BO0BFhIRPtAz0QRAgj3ekSXkKXbcrNqlfM8vf+2UMbUPLPOI+uiVXCyeWG/mB2vinEn+m9f4j1bXY79rsppe0ttWTzGP4F9DPWmP+03Eb1s8y0qwptaPivop9hwfPDfDWT3J6DPMONPOKHUtsW/yb6plO1rpI9dzR1VsvA7UtKZ4dDztc1JzE94XvPczx6HiSxpCToZ+tfifkZ/AMvNin1cstJshn2AFqJqo1XmEXhpNZDuGRs5kYdmM3ILs8hblv1ju56o5PbnetNzJB/ej6w1vwt+rf4ED1tzG9c8lf+v+9f4Z7Ffsp2N++xuB/oMVzd/js9P4AMHCvsg==
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,52 @@
+#FE8 Event Tile Editor
+#
+
+1
+FE8 Ch 20B Event Tile Editor
+0x9EB2E0
+1
+12
+NULL
+NULL
+
+Type?
+0
+1
+NDHU
+Type List.txt
+
+UNKNOWN
+2
+1
+NEHU
+NULL
+
+Content/Last Pointer Piece
+4
+1
+NDHU
+Item List.txt
+
+Rest of Pointer (if any)
+5
+3
+NEHU
+NULL
+
+X Coordinate
+8
+1
+NEHU
+NULL
+
+Y Coordinate
+9
+1
+NEHU
+NULL
+
+Type
+10
+1
+NDHU
+Type List2.txt

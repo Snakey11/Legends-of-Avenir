@@ -1,0 +1,202 @@
+#FE 7 battle screen editor
+#
+
+1
+Battle screen editor part 4 by Nintenlord
+0x802348
+7
+32
+Coordinates2.txt
+NULL
+
+Block (16,Y)
+0
+1
+NDHU
+Block.txt
+
+Palette and Flipping (16,Y)
+1
+1
+NDHU
+Palette_Flip.txt
+
+Block (17,Y)
+2
+1
+NDHU
+Block.txt
+
+Palette and Flipping (17,Y)
+3
+1
+NDHU
+Palette_Flip.txt
+
+Block (18,Y)
+4
+1
+NDHU
+Block.txt
+
+Palette and Flipping (18,Y)
+5
+1
+NDHU
+Palette_Flip.txt
+
+Block (19,Y)
+6
+1
+NDHU
+Block.txt
+
+Palette and Flipping (19,Y)
+7
+1
+NDHU
+Palette_Flip.txt
+
+Block (20,Y)
+8
+1
+NDHU
+Block.txt
+
+Palette and Flipping (20,Y)
+9
+1
+NDHU
+Palette_Flip.txt
+
+Block (21,Y)
+10
+1
+NDHU
+Block.txt
+
+Palette and Flipping (21,Y)
+11
+1
+NDHU
+Palette_Flip.txt
+
+Block (22,Y)
+12
+1
+NDHU
+Block.txt
+
+Palette and Flipping (22,Y)
+13
+1
+NDHU
+Palette_Flip.txt
+
+Block (23,Y)
+14
+1
+NDHU
+Block.txt
+
+Palette and Flipping (23,Y)
+15
+1
+NDHU
+Palette_Flip.txt
+
+Block (24,Y)
+16
+1
+NDHU
+Block.txt
+
+Palette and Flipping (24,Y)
+17
+1
+NDHU
+Palette_Flip.txt
+
+Block (25,Y)
+18
+1
+NDHU
+Block.txt
+
+Palette and Flipping (25,Y)
+19
+1
+NDHU
+Palette_Flip.txt
+
+Block (26,Y)
+20
+1
+NDHU
+Block.txt
+
+Palette and Flipping (26,Y)
+21
+1
+NDHU
+Palette_Flip.txt
+
+Block (27,Y)
+22
+1
+NDHU
+Block.txt
+
+Palette and Flipping (27,Y)
+23
+1
+NDHU
+Palette_Flip.txt
+
+Block (28,Y)
+24
+1
+NDHU
+Block.txt
+
+Palette and Flipping (28,Y)
+25
+1
+NDHU
+Palette_Flip.txt
+
+Block (29,Y)
+26
+1
+NDHU
+Block.txt
+
+Palette and Flipping (29,Y)
+27
+1
+NDHU
+Palette_Flip.txt
+
+Block (30,Y)
+28
+1
+NDHU
+Block.txt
+
+Palette and Flipping (30,Y)
+29
+1
+NDHU
+Palette_Flip.txt
+
+Block (31,Y)
+30
+1
+NDHU
+Block.txt
+
+Palette and Flipping (31,Y)
+31
+1
+NDHU
+Palette_Flip.txt

@@ -1,0 +1,275 @@
+
+## NarratorDescText
+The current Guardian Spirit[NL]
+who keeps the world in order.[X]
+
+## PlayerMercenaryDescText
+A freelancer with a[NL]
+normal background.[X]
+
+## PrologueAvatarDescText
+A lost soul with[NL]
+boundless potential.[X]
+
+## XenaDescText
+A wise and supportive[NL]
+teacher for aspiring mages.[X]
+
+## VicarDescText
+A father-like leader of[NL]
+a small mercenary group.[X]
+
+## WalterDescText
+A rather lighthearted member[NL]
+of a small mercenary group.[X]
+
+## BaretDescText
+A spiteful, self-trained swordsman[NL]
+who lost his parents in childhood.[X]
+
+## ValDescText
+A loyal dark mage who cares for her[NL]
+friends but hates her enemies with passion.[X]
+
+## HelmerDescText
+A young, obedient soldier hoping[NL]
+to support his elderly parents.[X]
+
+## XavusDescText
+One of the Five Grand Magi[NL]
+who has been corrupted by power.[X]
+
+## DunlasDescText
+Xavus' extremely quiet[NL]
+personal bodyguard.[X]
+
+## JohnathanDescText
+A very skilled scout of Altia. He[NL]
+can be clumsy in other situations.[X]
+
+## ElanilDescText
+A friendly and[NL]
+professional Altian archer.[X]
+
+## IzukDescText
+The high preist of Altia with power[NL]
+on par with the Grand Magi of Arcanae.[X]
+
+## MaximusDescText
+Captian of the Cesarian Tiger[NL]
+Bigade. He's a master strategist[NL]
+known for stunning victories.[X]
+
+## JurgenDescText
+Captian of the Cesarian Lion Brigade and General[NL]
+Rex's former aide. Only fights if necessary.[X]
+
+## LeonDescText
+The Basileus of Haedric. Also[NL]
+an old friend of the Four Orden.[X]
+
+## JasperDescText
+A loyal Cesarian recruit.[NL]
+Can be lazy at times.[X]
+
+## DerekDescText
+A very loyal and simple-minded[NL]
+soldier of Cesaria.[X]
+
+## LuxDescText
+The young, yet assertive vice-[NL]
+captain of the Tiger Brigade[X]
+
+## YvetteDescText
+A quirky and cheerful Cesarian[NL]
+fighter originally from Altia.[X]
+
+## ZaliusDescText
+Captian of the Cesarian Cheetah Brigade.[NL]
+Very secretive and skilled in spying.[X]
+
+## LeyosDescText
+Former general of the Cesarian military now[NL]
+serving as the secret bodyguard of the emperor.[X]
+
+## ClaraDescText
+A kind and softspoken curate of Haedric[NL]
+who is not afraid to heal allies in battle.[X]
+
+## LukeDescText
+An open-minded monk of Haedric.[NL]
+He has many doubts about religion.[X]
+
+## ArcDescText
+A kindhearted militia captain who[NL]
+is serious when it comes to his job.[X]
+
+## MilitiaManDescText
+A Militiaman who valiantly[NL]
+protects his hometown.[X]
+
+## EfilDescText
+Guardian of the temple of Kilthel[NL]
+and a hero from the Great War[NL]
+years ago. Wishes for peace.[X]
+
+## UzkalisDescText
+Close ally of Xavus and[NL]
+yearns for power too.[X]
+
+## AryaDescText
+A reserved and shady[NL]
+assassin of Shizon.[X]
+
+## KendrickDescText
+A skilled yet shady[NL]
+merchant of many trades[X]
+
+## ConnorDescText
+A ruthless member of a bandit clan[NL]
+but cares for his fellow clanmembers.[X]
+
+## AdlezDescText
+Leader of a bandit clan. Only holds[NL]
+his position to live comfortably.[X]
+
+## MurielDescText
+A Grand Magus of Arcanae. She[NL]
+fights against Xavus and Uzaklis.[X]
+
+## BradyDescText
+An agressive fighter who[NL]
+often challenges leadership.[X]
+
+## ForestDescText
+A rider who prefers diplomacy[NL]
+and only fights when necessary.[X]
+
+## ShannonDescText
+A pacifist who wishes to[NL]
+avoid all conflict.[X]
+
+## CougarDescText
+A reserved and calm Altian rider.[NL]
+Cares deeply for duty to his nation.[X]
+
+## XeximDescText
+The extremely skilled leader of[NL]
+Shizon. Protects Shizon's secrets.[X]
+
+## GhostDescText
+A mysterious,[NL]
+lifeless creation.[X]
+
+## AaronDescText
+Blank[X]
+
+## CesarianDescText
+A soldier of the[NL]
+Cesarian army.[X]
+
+## ShizonianDescText
+An inhabitant of the[NL]
+mysterious island of Shizon.[X]
+
+## RexDescText
+The head general of[NL]
+the Cesarian military.[X]
+
+## FinocDescText
+A loyal, Altian scout and[NL]
+close freind of Elanil.[X]
+
+## ArcanianDescText
+A soldier of the[NL]
+Arcanian army.[X]
+
+## GuardianDescText
+A Vathrylian Guardian[NL]
+powered by pure vene.[X]
+
+## WilliamDescText
+The leader of a small,[NL]
+independant border town.[X]
+
+## EmperorDescText
+The emperor of Cesaria. Perhaps[NL]
+the most powerful mortal in Avenir.[X]
+
+## GrantDescText
+The commander of Uzkalis'[NL]
+Draterus excusion unit.[X]
+
+## PatDescText
+The commander of a small[NL]
+Arcanian squadron.[X]
+
+## GerwickDescText
+A former resident of Danaan[NL]
+who turned to petty banditry.[X]
+
+## GerwickBanditDescText
+A bandit subservient[NL]
+to Gerwick.[X]
+
+## WestonDescText
+A bandit who is in charge[NL]
+of guarding the hideout.[X]
+
+## WestonBanditDescText
+A bandit guarding the[NL]
+clan's headquarters.[X]
+
+## KendrickFriendDescText
+One of Kendrick's crew.[X]
+
+## RogerDescText
+A mercenary charged with[NL]
+guarding an important caravan.[X]
+
+## HaedricanDescText
+An inhabitant of Haedric.[X]
+
+## RobertDescText
+The leader of the[NL]
+cult of Altorosk.[X]
+
+## RobertPirateDescText
+A member of the[NL]
+cult of Altorosk.[X]
+
+## TyroneDescText
+The most powerful warlord[NL]
+of this region of Haedric.[X]
+
+## MayorDescText
+The political mayor of the village.[NL]
+He works closely with Warlord Tyrone.[X]
+
+## BacrunianDescText
+An inhabitant of Bacrun.[X]
+
+## HarkenDescText
+The leader of Bacrun'scout[NL]
+mercebary military force.[X]
+
+## MasonDescText
+A bounty hunter who will[NL]
+do anything for his pay.[X]
+
+## HunterDescText
+A bounty hunter[NL]
+looking bounties.[X]
+
+## DanielDescText
+The leader of a group[NL]
+of Wanderers. Hates Efil.[X]
+
+## WandererDescText
+A mysterious member of[NL]
+the Draterous group known[NL]
+as the Wanderers.[X]
+
+## HenningDescText
+The leader of a small[NL]
+group of highwaymen.[X]

@@ -1,0 +1,5 @@
+[FarRight][LoadDerek]
+No...[.] no, no, no...[....][NL]
+My armor is stronger[A][NL]
+than this...[.] I...[....][NL]
+can't fall here...[A][X]
