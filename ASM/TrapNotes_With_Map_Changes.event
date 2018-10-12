@@ -1,0 +1,162 @@
+tl;dr list of things that are traps:
+	Ballistas
+	Cracked Walls & Snags
+	Light Runes
+	Gorgon Eggs sometimes
+	Light (from a torch staff)
+	Triggered Map Changes (yes)
+	Actual traps
+	Lucius (thank Zane for bringing us this meaningful contribution)
+
+(FE8U) 0203A614 is the start of the trap data array, size: 0x200 bytes (0x40 entries max)
+
+6C at (FE8U) 0859BDA0 handles doing turn-based trap damage and probably animations as well
+
+TRAP ENTRY STRUCT: (size: 8 bytes)
+	00 | byte | x pos
+	01 | byte | y pos
+	02 | byte | trap type id
+			0: Nothing (unused entry)
+			1: Ballista
+			2: Wall/Snag
+			3: Map Change (yes those are actually traps)
+			4: Fire Trap
+			5: Gas Trap
+			6: Map Change too? game supports them but idk where it might be used
+			7: Arrow Trap
+			8: ? (used?)
+			9: ? (used?)
+			A: Light from Torch Staff
+			B: Mine
+			C: Gorgon Egg? (needs investigating as to in which circumstances)
+			D: Light Rune
+	03-07 | ext1-ext5
+		Generally:
+			ext2 is the initial value of ext4, ext1 is used for number display sometimes
+		
+		For Ballista:
+			ext1 = ballista item index
+			ext3 = 0?
+			ext4 = ballista item uses
+		
+		For Snags/Walls:
+			ext1 = HP
+		
+		For Map Changes (ID 3):
+			ext1 = Map Change Id
+		
+		For Fire Traps/Gas Traps/Arrow Traps:
+			ext2 = Initial Turn Counter?
+			ext3 = Turn Count to set when it gets to 0
+			ext4 = Turn Counter (goes down once a turn) (Trap is executed when this is 0)
+			ext5 = Damage?
+		
+		For Arrow Traps:
+			(y is 0)
+		
+		For Torch Light:
+			ext1 = turns left before wearing out
+		
+		For Light Rune:
+			ext1 = terrain id of the tile being replaced
+			ext4 = turns left before wearing out
+
+How the game gets a trap index from a pointer:
+	@ Taken from the Ride Ballista Routine
+	ldrb r0, [rUnit, #0x10]
+	ldrb r1, [rUnit, #0x11]
+	bl GetTrapAt
+	
+	mov r4, r0
+	
+	mov r0, #0
+	bl GetTrap
+	
+	sub r4, r0
+	asr r4, #3 @ r4 = (TrapPointer - TrapPointer(0)) / sizeof(TrapEntryStruct)
+	
+	strb r4, [rUnit, #0x1C]
+
+(FE8U) Trap related routines:
+	0802E2B8 | AddTrap      | Adds/Creates new trap
+				Arguments: r0 = x, r1 = y, r2 = trap type, r3 = extra byte 1
+				Returns:   r0 = Pointer to Trap Entry Struct
+	
+	0802E2E0 | AddTrapExt   | Adds/Creates new trap (with extra parameters) (used exclusively for fire/gas/arrow traps, trap 6 and gorgon eggs)
+				Arguments: r0 = x, r1 = y, r2 = trap type, r3 = ext1, [sp+0] = ext2&4, [sp+4] = ext3, [sp+8] = ext5
+				Returns:   r0 = Pointer to Trap Entry Struct
+	
+	0802E1F0 | GetTrapAt    | Looks for a trap at given position
+				Arguments: r0 = x, r1 = y
+				Returns:   r0 = Pointer to Trap Entry Struct (0 if no trap at given pos)
+	
+	0802E24C | GetSpecificTrapAt | Looks for a trap at given position with given type
+				Arguments: r0 = x, r1 = y, r2 = trap type
+				Returns:   r0 = Pointer to Trap Entry Struct (0 if none found)
+	
+	0802E1C8 | ResetTraps   | Resets Trap Array (Sets all trap ids to 0)
+				Arguments: nothing
+				Returns:   nothing
+	
+	0802EB8C | GetTrap      | Gets Trap Struct by Index
+				Arguments: r0 = Trap index (0-indexed position in trap data array)
+				Returns:   r0 = Pointer to Trap Entry Struct (= pTrapArrayStart + 8*i)
+
+	0802E2FC | RemoveTrap   | Removes Trap Struct from the array
+				Arguments: r0 = Trap Struct Entry Pointer
+				Returns:   nothing
+	
+(FE8U) Trap-specific routines:
+	08037A04 | AddBallista  | Adds/Creates Ballista
+				Arguments: r0 = x, r1 = y, r2 = Ballista Item Index
+				Returns:   r0 = Trap Struct Entry Pointer
+	
+	0802EA58 | AddLightRune | Adds/Creates Light Rune (fixed 3 turn duration) (Handles Terrain Changes too)
+				Arguments: r0 = x, r1 = y
+				Returns:   r0 = Trap Struct Entry Pointer
+	
+	0802EA90 | RemoveLightRune | Removes Light Rune (Handles Terrain Changes too)
+				Arguments: r0 = Trap Struct Entry Pointer
+				Returns:   nothing
+	
+	0802E470 | UpdateAllLightRunes | Goes through all light runes and changes terrain accordingly (used on load from suspend maybe?)
+	0802EB50 seems to do the exact same?
+				Arguments: nothing
+				Returns:   nothing
+	
+	0802E3A8 | AddSnagsAndWalls | Goes through the terrain map and adds all the snag & wall traps where relevant
+				Arguments: nothing
+				Returns:   nothing
+	
+	0802EAC0 | HandleTrapDecay | Handle Turn count down for Light Runes & Torch Lights
+				Arguments: nothing
+				Returns:   nothing
+	
+	0802E5F8 | TriggerMapChange | Adds a map change trap. /!\ it doesn't actually *apply* the map change, just sets the trigger on.
+				Arguments: r0 = Map Change Id
+				Returns:   nothing
+	
+	0802E60C | UntriggerMapChange | Removes a map change trap. /!\ it doesn't actually *apply* the map change, just sets the trigger off.
+				Arguments: r0 = Map Change Id
+				Returns: nothing
+	
+	0802E430 | ApplyTrapMapChanges | Applies all triggered map changes (used on suspend load maybe?)
+				Arguments: nothing
+				Returns:   nothing
+	
+	0802E350 | AddArrowTrap | Adds/Creates Arrow Trap
+				Arguments: r0 = x, r1 = Initial Turn Countdown, r2 = Reset Turn Countdown
+				Returns:   nothing
+	
+	0802E330 | AddGasTrap | Adds/Creates Gas Trap
+				Arguments: r0 = x, r1 = y, r2 = direction, r3 = Initial Turn Countdown, [sp+0] = Reset Turn Countdown
+				Returns:   nothing
+	
+	0802E314 | AddFireTrap | Adds/Creates Fire Trap
+				Arguments: r0 = x, r1 = y, r2 = Initial Turn Countdown, r3 = Reset Turn Countdown
+				Returns:   nothing
+	
+BONUS - Map Changes Routines: (FE8U)
+	0802E58C | ApplyMapChangesById  | Arguments: r0 = Map Change Id
+	0801A2EC | RevertMapChangesById | Arguments: r0 = Map Change Id
+	08019A64 | FlushTerrainData     | You need to call that in order to have the map changes properly applied?

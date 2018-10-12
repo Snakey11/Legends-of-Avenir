@@ -163,25 +163,11 @@ ALIGN 4
 
 //Label PlayerLoading
 PlayerLoading1:
-UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(4,Ally,True) [6,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(4,Ally,True) [6,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(4,Ally,True) [6,7] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
-UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(4,Ally,True) [6,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(4,Ally,True) [6,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerMFighter Fighter2 PlayerMArcher Level(4,Ally,True) [6,7] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT PlayerMPirate Pirate2 PlayerMArcher Level(4,Ally,True) [6,7] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(4,Ally,True) [6,7] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [6,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
 UNIT
 
 PlayerLoading2:	
-UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(4,Ally,True) [13,6] 0x00 0x00 0x01 REDA10R6 [IronSword,Vulnerary] [0] 
-UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(4,Ally,True) [13,6] 0x00 0x00 0x01 REDA10R6 [IronSword,Vulnerary] [0] 
-UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(4,Ally,True) [13,6] 0x00 0x00 0x01 REDA10R6 [IronLance,Vulnerary] [0] 
-UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(4,Ally,True) [13,6] 0x00 0x00 0x01 REDA10R6 [IronSword,Vulnerary] [0] 
-UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(4,Ally,True) [13,6] 0x00 0x00 0x01 REDA10R6 [IronSword,Vulnerary] [0] 
-UNIT PlayerMFighter Fighter2 PlayerMArcher Level(4,Ally,True) [13,6] 0x00 0x00 0x01 REDA10R6 [IronAxe,Vulnerary] [0] 
-UNIT PlayerMPirate Pirate2 PlayerMArcher Level(4,Ally,True) [13,6] 0x00 0x00 0x01 REDA10R6 [IronAxe,Vulnerary] [0] 
-UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(4,Ally,True) [13,6] 0x00 0x00 0x01 REDA10R6 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [13,6] 0x00 0x00 0x01 REDA10R6 [IronSword,Vulnerary] [0] 
 EndUnit
 
 //Label Other units

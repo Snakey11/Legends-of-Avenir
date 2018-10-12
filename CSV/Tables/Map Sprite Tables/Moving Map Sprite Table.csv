@@ -92,8 +92,8 @@ Impaler,ImpalerMv|IsPointer,0x81f49b8
 Wyvern General,0x81d504c,0x81d5e58
 Hunter,HunterMv|IsPointer,0x81f607c
 Master Knight,0x81c6a84,0x81c7428
-Champion,ChampionMv|IsPointer,0x81f7570
-TruebladeF,TruebladeMv|IsPointer,0x81f7e28
+Champion,ChampionMv|IsPointer,0x81cbd94
+Shadow,ShadowMv|IsPointer,0x81d0160
 Trueblade,TruebladeMv|IsPointer,0x81f876c
 MountedBrigand,MountedBrigandMv|IsPointer,0x81f90a0
 BUGGED,WarlockMv|IsPointer,0x81f95f4
@@ -143,7 +143,7 @@ Trueerblade,TruerbladeMv|IsPointer,0x81cd1bc
 Gaiden Sage,0x81d91e4,0x81d9b58
 Izuk,IzukMv|IsPointer,0x81d9b58
 Nomad,NomadMv|IsPointer,0x81db0f8
-NarratorClass,TruebladeMv|IsPointer,0x81f876c
+NarratorClass,HarbingerMv|IsPointer,0x81cd1bc
 Warlock,WarlockMv|IsPointer,0x81f95f4
 SpearHero,0x81cb438,0x81cbd94
 XeximClass,0x81cf040,0x81cf7e8

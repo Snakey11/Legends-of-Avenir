@@ -497,9 +497,9 @@
 #define PatMageKnightPaletteID 0x49
 #define RexPaladinPaletteID 0x4A
 #define RobertBerserkerPaletteID 0x4B
-#define GuardianSpiritPaletteID 0x4C
+#define GuardianSpiritHarbingerPaletteID 0x4C
 #define DanielSwordmasterPaletteID 0x4D
-#define HarkenHeoPaletteID 0x4E
+#define HarkenHeroPaletteID 0x4E
 #define MasonRangerPaletteID 0x4F
 #define RogerMercenaryPaletteID 0x50
 #define TyroneWarriorPaletteID 0x51
@@ -660,7 +660,7 @@
 #define 88Anims "0x00"
 //EndLabel
 
-//Label Map Sprites
+//Label Map Sprites (Standing)
 #define Large 0x02
 #define Medium 0x01
 #define Small 0x00
@@ -686,6 +686,8 @@
 #define TruebladeSprite 0x7D
 #define TruerbladeSprite 0x7E
 #define WarlockSprite 0x7F
+#define ShadowSprite 0x80
+#define HarbingerSprite 0x81
 //EndLabel
 
 //Label Battle Animations
@@ -808,6 +810,10 @@
 #define GrandPaladinAxe 0xEA
 #define GrandPaladinHandAxe 0xEB
 #define GrandPaladinUnarmed 0xEC
+#define HarbingerSword 0xED
+#define HarbingerAxe 0xEE
+#define HarbingerHandAxe 0xEF
+#define HarbingerUnarmed 0xF0
 //EndLabel
 
 //Label Skill Definitions

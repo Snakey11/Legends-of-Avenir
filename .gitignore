@@ -3,6 +3,7 @@ ups/
 *.sgm
 *.gba
 *.exe
+*.bat
 !EA Avenir/*.exe
 *.txt
 !ParseDefinitions.txt

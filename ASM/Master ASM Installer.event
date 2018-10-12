@@ -36,6 +36,11 @@ ALIGN 16
 
 ALIGN 16
 
+MESSAGE Make not dead is at CURRENTOFFSET
+#inctext lyn "MakeNotDead/MakeNotDead.elf"
+
+ALIGN 16
+
 //#include "FE8 New CHAI/New CHAI.event"
 
 ALIGN 16
@@ -96,6 +101,9 @@ BL(AnimaTriangle)
 POP*/
 
 ALIGN 16
+#inctext lyn "AnimaEffectiveness/AnimaEffectiveness.elf"
+
+ALIGN 16
 #inctext lyn "AnimaTriangle/NewAnimaTriangle.elf" "AnimaTriangle/Definitions.elf"
 
 FireList:
@@ -106,6 +114,12 @@ BYTE Thunder Elthunder Arcthunder Thoron Bolting 0x00
 
 WindList:
 BYTE Wind Elwind Arcwind Tornado Aircalibur WindSword 0x00
+
+WaterList:
+BYTE Aqua Elaqua Arcaqua Fimbulvetr 0x00
+
+ALIGN 16
+#inctext lyn "BowDebuff/BowDebuff.elf"
 
 //ALIGN 16
 //#include "SummonStuff/Summon.event"

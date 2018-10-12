@@ -15,7 +15,7 @@
    <property name="TileConfig" value="0x10"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJyFVbtOW0EQ3YfcOCKEGppUQbigRXTISInwD5DUIdDxE7FB+QukEOAzKCwRIAo1SUqj4CCBRAkFc7RztHP3XofiaO/dx5kzj509ds6tBedeCI7l+7VP44qMe2YEMH8mGAoWfcL76NyDz+B+cJ7Kdyfks1zrCy4U5AHmCi7Lh/Nt4WqFKme/4JjE9QH/IfsEvBIMfeKcpGdJQY5l5TmUvTdFTLD/UsZfgvWYsGRGcOA8tVhbu3Lmp2qY0zPY/1v+/7i6L+S4cwng+ChzG4IjwRvBfKzHgfqsL1fyP+2TP12NEWL9Wdb7gu+Ct4J3hotnGT/q+Ka1shpy7hY0b9zLsReUz5xvaS3a2lvQWiImcSEX4JrxqY6hoa17UDNffa6jH4LtAi9j2gv7q6qB+UFeaJt2rZ57nWcOPsW8j/50J6xPxWYtY59zMFBtY1+1jfVRsT5uiBE1tEN1jjGirqHxEevdhnNct7mg7WufdY9iPU8dY9P6DX83BVtat7TNOkI/AS/3dAQHgsOYdIxNbKhvR9Z2tW5RE2d6x4Avend3NL49wZXgJOZaQr00+W37Au7pbEz3l30RtvZd0tMztcReVfYJ2xd4L9eNDfAPtM+cuzpXrU+Eej98DNU+AE5b25Zr2ehjfxg19NmSk/Gw/Y5aWJMzPt/tfzIeFLxl/69Auf66/Mawrvc0n0eCW6P3f3yMwYl59+y7hbkVnQf/vntGn+EcuOpb2ArV95B6n+OzuRyYd7QdqneKOp8AXtQEjg==
+   eJyFVb1uk0EQvB+5cUSAmjSpiOKC1nIXORIIvwChhiQdLxEbi7eIREjyGCksBQKCmoTSUWIhEYmSFOzodnR7589yMbrvu9ubndvd2ztzzr0Mzq0IzuR73adxS8ZDMwKYvxBMBM98wk507p/PoD04v8h3J+S9XBsKfijIA6xVXJYP+9vC1Qol57DiWMT1Gv8hnwl4JJj4xLlIT1dBjp7ynIjt7yomsP8p46XgVUzomhEc2E8t1tdY9nxXDWu6B/ZX8v/LzZ+FHHcuARxvZO6t4FTwVLAR5+NAffYs1/L/0Kfz9DVGiPWBrA8FnwXPBS8MF/cyftTxSWtlO+TcbWreaMtxEJTP7G9pLdra29RaIhZxIRfgeuxTHUNDW21QMx99rqNvgncVVmOyhf9t1cD8IC/0Tb9Wz1+dZw52Y7bjefoL1h/EZi0zn3MwUm0zX/rG+rRanzXEiBraoZxjjKhrYs6I9X7DPq7bXND3rc+6p3E+Tx3js+ncPDt9s47QT8C7J2v7go7gWHASk46ZiQ310Rb3ADVxoXcM+KB3973GdyC4FpzHXEuoF3tu2I71HrA34J4+ien+si/C15FLegamlpb1Kt7rnukZXeUfaZ/56kou9grbd3inrI/7UPYBcNrarntm0XdCs+6ak/Gw/Q57YUd97Dd/FMdVTOr+X0B13LhcD6zrQ83nqfJO3XI+xuDcvHv23cLcls6D/8gt0Wc4R658C1uhfA+pdxmfjf3IvKPsa7xT1Pkf7yUHcQ==
   </data>
  </layer>
  <layer name="House5" width="20" height="25" visible="0">
@@ -36,10 +36,10 @@
    <property name="ID" value="4"/>
    <property name="Width" value="3"/>
    <property name="X" value="11"/>
-   <property name="Y" value="14"/>
+   <property name="Y" value="15"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIKBB0+ZGBieAfFzJuqYx8rMwMAGxOzM1DFvFIyCwQ4ALYgC1A==
+   eJxjYBgFo2AUjILhB54yMTA8A+LnTNQxj5WZgYENiNmZqWPeKBgF1AYAS4kC1A==
   </data>
  </layer>
  <layer name="House3" width="20" height="25" visible="0">

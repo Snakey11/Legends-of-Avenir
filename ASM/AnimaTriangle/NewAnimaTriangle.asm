@@ -1,4 +1,9 @@
 
+.macro blh to, reg
+    ldr \reg, =\to
+    mov lr, \reg
+    .short 0xF800
+.endm
 
 .thumb
 .global AnimaTriangle
@@ -19,12 +24,20 @@ push { r0 - r5 }
 mov r2, #0
 mov r3, #0
 ldr r0, =#0x203A4EC
-add r0, #0x48
-ldrb r0, [ r0 ] @ Get attacker's item in r0
+blh 0x08016B28, r2 @ Equiped weapon of the attacker in r1
+lsl r0, r0, #24
+lsr r0, r0, #24
+push { r0 }
+@add r0, #0x48
+@ldrb r0, [ r0 ] @ Get attacker's item in r0
 
-ldr r1, =#0x203A56C
-add r1, #0x48
-ldrb r1, [ r1 ] @ Get defender's item in r1
+ldr r0, =#0x203A56C
+blh 0x08016B28, r2 @ Equiped weapon of the defender in r1
+lsl r0, r0, #24
+lsr r1, r0, #24
+pop { r0 }
+@add r1, #0x48
+@ldrb r1, [ r1 ] @ Get defender's item in r1
 
 ldr r5, =#FireList
 FireLoopA:

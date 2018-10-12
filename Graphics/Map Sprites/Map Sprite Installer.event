@@ -55,6 +55,15 @@ HalberdierMv:
 WORD 0 0 0 0 ; ALIGN 16
 
 
+HarbingerSt:
+#incext Png2Dmp HarbingerSt.png --lz77
+WORD 0 0 0 0 ; ALIGN 16
+
+HarbingerMv:
+#incext Png2Dmp HarbingerMv.png --lz77
+WORD 0 0 0 0 ; ALIGN 16
+
+
 HectorSt:
 #incext Png2Dmp HectorSt.png --lz77
 WORD 0 0 0 0 ; ALIGN 16
@@ -160,6 +169,15 @@ WORD 0 0 0 0 ; ALIGN 16
 
 SentinelMv:
 #incext Png2Dmp SentinelMv.png --lz77
+WORD 0 0 0 0 ; ALIGN 16
+
+
+ShadowSt:
+#incext Png2Dmp ShadowSt.png --lz77
+WORD 0 0 0 0 ; ALIGN 16
+
+ShadowMv:
+#incext Png2Dmp ShadowMv.png --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 

@@ -62,6 +62,13 @@ SpearAnim(HalberdierSpear)
 UnarmedAnim(HalberdierUnarmed)
 WORD 0x0 0x0
 
+HarbingerAnim:
+SwordAnim(HarbingerSword)
+AxeAnim(HarbingerAxe)
+HandAxeAnim(HarbingerHandAxe)
+UnarmedAnim(HarbingerUnarmed)
+WORD 0x0 0x0
+
 HectorAnim:
 SwordAnim(HectorSword)
 AxeAnim(HectorAxe)

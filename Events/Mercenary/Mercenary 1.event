@@ -229,19 +229,9 @@ TestPeople:
 //UNIT GerwickBandit Mage Henning Level(2,Enemy,True) [8,10] 0x00 0x00 0x00 0x00 [Arcthunder] NoAI
 //UNIT GerwickBandit Shaman Henning Level(2,Enemy,True) [9,10] 0x00 0x00 0x00 0x00 [Dulam] NoAI
 UNIT GerwickBandit Mage Henning Level(2,Enemy,True) [10,10] 0x00 0x00 0x00 0x00 [Fire] NoAI
-UNIT Ewan Summoner Henning Level(5,Ally,True) [8,11] 0x00 0x00 0x00 0x00 [Flux] NoAI
+UNIT Ewan Mage Henning Level(5,Ally,True) [8,11] 0x00 0x00 0x00 0x00 [Fire,Wind,Thunder] NoAI
 //UNIT Kendrick Pirate Henning Level(1,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
 //UNIT Xena Druid Henning Level(15,Ally,True) [9,9] 0x00 0x00 0x00 0x00 [Flux] NoAI
 //UNIT Lux Sage Henning Level(15,Ally,True) [9,10] 0x00 0x00 0x00 0x00 [Fire] NoAI
 //UNIT Luke Bishop Henning Level(15,Ally,True) [9,11] 0x00 0x00 0x00 0x00 [Lightning] NoAI
 UNIT
-
-
-PUSH
-//ORG $DB2A
-ORG $DB14
-//SHORT $46C0 $46C0
-POP
-
-//Game over called at 0x08085374. bled from 0x0800DB2E
-// The check for this seems to be in that vblank swi 0x5 thing. That thing is at 0x08000AE0.

@@ -140,14 +140,7 @@ ENDA
 
 //Label PlayerUnitsAndMason
 PlayerLoading1:
-UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI
-UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI
-UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI
-UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI
-UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI
-UNIT PlayerMFighter Fighter2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
-UNIT PlayerMPirate Pirate2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
-UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
+UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI
 UNIT
 
 ChapterFriends:

@@ -220,36 +220,15 @@ ENDA
 	/*UNIT DATA*/
 
 PlayerLoading1:
-UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(4,Ally,True) [10,6] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(4,Ally,True) [10,6] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(4,Ally,True) [10,6] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
-UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(4,Ally,True) [10,6] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(4,Ally,True) [10,6] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerMFighter Fighter2 PlayerMArcher Level(4,Ally,True) [10,6] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT PlayerMPirate Pirate2 PlayerMArcher Level(4,Ally,True) [10,6] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(4,Ally,True) [10,6] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [10,6] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
 UNIT
 
 PlayerLoading2:
-UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(4,Ally,True) [5,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(4,Ally,True) [5,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(4,Ally,True) [5,3] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
-UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(4,Ally,True) [5,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(4,Ally,True) [5,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerMFighter Fighter2 PlayerMArcher Level(4,Ally,True) [5,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT PlayerMPirate Pirate2 PlayerMArcher Level(4,Ally,True) [5,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(4,Ally,True) [5,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [5,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
 UNIT
 
 PlayerLoading3:
-UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(4,Ally,True) [18,15] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(4,Ally,True) [18,15] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(4,Ally,True) [18,15] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
-UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(4,Ally,True) [18,15] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(4,Ally,True) [18,15] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerMFighter Fighter2 PlayerMArcher Level(4,Ally,True) [18,15] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT PlayerMPirate Pirate2 PlayerMArcher Level(4,Ally,True) [18,15] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(4,Ally,True) [18,15] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [18,15] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
 UNIT
 
 StartLukeArc1:

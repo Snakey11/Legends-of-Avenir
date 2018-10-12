@@ -56,3 +56,12 @@
 #include "Xexim Bow.event"
 
 #include "Xexim Unarmed.event"
+
+
+#include "Harbinger Sword.event"
+
+#include "Harbinger Axe.event"
+
+#include "Harbinger Hand Axe.event"
+
+#include "Harbinger Unarmed.event"

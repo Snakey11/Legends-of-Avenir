@@ -115,36 +115,15 @@ ENDA
 
 //Label PlayerLoading
 PlayerLoading1:
-UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [2,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [2,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [2,2] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
-UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [2,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [2,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [2,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [2,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [2,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [2,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
 UNIT
 
 PlayerLoading2:
-UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [6,9] 0x00 0x00 0x1 REDA6R5 [IronSword,Vulnerary] NoAI 
-UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [6,9] 0x00 0x00 0x1 REDA6R5 [IronSword,Vulnerary] NoAI 
-UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [6,9] 0x00 0x00 0x1 REDA6R5 [IronLance,Vulnerary] NoAI 
-UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [6,9] 0x00 0x00 0x1 REDA6R5 [IronSword,Vulnerary] NoAI 
-UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [6,9] 0x00 0x00 0x1 REDA6R5 [IronSword,Vulnerary] NoAI 
-UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [6,9] 0x00 0x00 0x1 REDA6R5 [IronAxe,Vulnerary] NoAI 
-UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [6,9] 0x00 0x00 0x1 REDA6R5 [IronAxe,Vulnerary] NoAI 
-UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [6,9] 0x00 0x00 0x1 REDA6R5 [IronAxe,Vulnerary] NoAI 
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [6,9] 0x00 0x00 0x1 REDA6R5 [IronSword,Vulnerary] NoAI 
 UNIT
 
 PlayerLoading3:
-UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [16,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [16,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [16,2] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
-UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [16,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [16,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [16,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [16,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [16,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [16,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
 EndUnit
 
 //Label Cutscenes
@@ -183,10 +162,10 @@ UNIT Bacrunian Soldier Harken Level(15,Enemy,True) [11,8] 0x00 0x00 0x00 0x00 [J
 UNIT Bacrunian Soldier Harken Level(13,Enemy,True) [13,8] 0x00 0x00 0x00 0x00 [IronLance] NoAI 
 UNIT Bacrunian GreatKnight Harken Level(6,Enemy,True) [14,11] 0x00 0x00 0x00 0x00 [SteelAxe,ShortSpear] AttackInRangeAI 
 UNIT Bacrunian Cavalier Harken Level(12,Enemy,True) [13,12] Drop 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
-UNIT Bacrunian Cavalier Harken Level(14,Enemy,True) [11,12] 0x00 0x00 0x00 0x00 [LightBrand] AttackInRangeAI
+UNIT Bacrunian Cavalier Harken Level(14,Enemy,True) [11,12] 0x00 0x00 0x00 0x00 [Zanbato] AttackInRangeAI
 UNIT Bacrunian Archer Harken Level(13,Enemy,True) [16,7] 0x00 0x00 0x00 0x00 [SteelLongbow] AttackInRangeAI
 UNIT Bacrunian Archer Harken Level(12,Enemy,True) [18,7] 0x00 0x00 0x00 0x00 [DevilBow] AttackInRangeAI
-UNIT Bacrunian Archer Harken Level(14,Enemy,True) [4,11] Drop 0x00 0x00 0x00 [SilverBow] AttackInRangeAI
+UNIT Bacrunian Archer Harken Level(8,Enemy,True) [4,11] Drop 0x00 0x00 0x00 [SilverBow] AttackInRangeAI
 UNIT Bacrunian Mage Harken Level(13,Enemy,True) [16,12] 0x00 0x00 0x00 0x00 [Elthunder] ChaseOnceApproachedAI
 UNIT Bacrunian Fighter Harken Level(12,Enemy,True) [13,15] 0x00 0x00 0x00 0x00 [HandAxe] ChaseOnceApproachedAI
 UNIT Bacrunian Fighter Harken Level(12,Enemy,True) [11,14] Drop 0x00 0x00 0x00 [DragonAxe] NoAI
@@ -204,7 +183,6 @@ UNIT Bacrunian General Harken Level(8,Enemy,True) [15,18] Drop 0x00 0x00 0x00 [S
 UNIT Bacrunian Halberdier Harken Level(7,Enemy,True) [17,19] 0x00 0x00 0x00 0x00 [AxeSlayer] AttackInRangeAI
 UNIT Bacrunian Monk Harken Level(12,Enemy,True) [18,18] 0x00 0x00 0x00 0x00 [Divine] AttackInRangeAI
 UNIT Bacrunian Myrmidon Harken Level(14,Enemy,True) [15,18] 0x00 0x00 0x00 0x00 [Zanbato] AttackInRangeAI
-UNIT Bacrunian WyvernRider Harken Level(12,Enemy,True) [17,15] 0x00 0x00 0x00 0x00 [SteelLance] ChaseOnceApproachedAI
 UNIT Bacrunian Shaman Harken Level(13,Enemy,True) [12,18] Drop 0x00 0x00 0x00 [Worm,Eclipse,ChestKey] AttackInRangeAI
 UNIT Bacrunian Archer Harken Level(13,Enemy,True) [10,20] 0x00 0x00 0x00 0x00 [SteelBow] AttackInRangeAI
 UNIT Bacrunian Fighter Harken Level(14,Enemy,True) [16,23] 0x00 0x00 0x00 0x00 [ShortAxe] NoAI

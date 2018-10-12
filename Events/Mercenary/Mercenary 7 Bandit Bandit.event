@@ -17,7 +17,14 @@ POIN BeginningScene EndingScene
 
 //Label TurnBasedEvents
 TurnBasedEvents:
-TurnEventPlayer(0x0,EndingScene,14) // Bad ending after 14 turns.
+TurnEventPlayer(0x0,ReinforcementLoop1,6)
+TurnEventPlayer(0x0,ReinforcementLoop2,7)
+TurnEventPlayer(0x0,LoadTurn3,3)
+TurnEventPlayer(0x0,LoadTurn4,4)
+TurnEventPlayer(0x0,LoadTurn8,8)
+TurnEventPlayer(0x0,LoadTurn11,11)
+TurnEventPlayer(0x0,LoadTurn12,12)
+TurnEventPlayer(0x0,EndingScene,16) // Bad ending after 14 turns.
 END_MAIN
 
 //Label CharacterBasedEvents
@@ -52,6 +59,9 @@ EndUnit
 //Label BeginingScene
 BeginningScene:
 ENUT 0x17
+ENUT 0x19
+ENUT 0x20
+ENUT 0x21
 MUSC Indignation
 CAM1 [11,12]
 LOAD3 0x1 PlayerLoading1
@@ -74,45 +84,55 @@ ENDA
 
 //Label EndingScene... aka bad ending
 EndingScene:
-ENUF 0x17
+ENUF 0x19
+ENUF 0x20
+MUSC Twisted_Shadows_A
 FADI 0x5
 CLEA Leon
 CLEE Cesarian
+SVAL 0x1 Adlez
+ASMC MakeNotDeadASM|1
+SVAL 0x1 Arya
+ASMC MakeNotDeadASM|1
 SVAL 0xB Coords(7,5)
 LOMA BacrunRuins1Cutscene
 LOAD3 0x1 PlayerLoading3
 LOAD2 0x1 BadEndingFriends
-SetBackground(0x06)
+SetBackground(0x05)
 Text(Merc7BanditBanditBadEndingText) // We gotta get out of here.
 FADI 0x5
 STAL 0x40
 EndConvo
 STAL 0x20
-CHECK_ALIVE Rex
-BEQ 0x0 0x0 0xC
+MUSC Solve_the_Riddle
+CHECK_EVENTID 0x10
+BNE 0x20 0x0 0xC
 	LOAD1 0x1 EndingRex
 LABEL 0x0
-CHECK_ALIVE Xavus
-BEQ 0x1 0x0 0xC
+CHECK_EVENTID 0x11
+BNE 0x21 0x0 0xC
 	LOAD1 0x1 EndingXavus
-LABEL 0x1
+LABEL 0x21
 ENUN
 TEXTSHOW Merc7BanditBanditBadEndingRexXavusHereText
 TEXTEND
 MOVE 0x0 Arya [7,5] // Move Arya to block Rex and Xavus
 ENUN
 TEXTCONT
-CHECK_ALIVE Rex
-BEQ 0x0 0x0 0xC
+TEXTEND
+CHECK_EVENTID 0x10
+BNE 0x22 0x0 0xC
 	TEXTSHOW Merc7BanditBanditBadEndingRexLineText
-LABEL 0x0
-CHECK_ALIVE Xavus
-BEQ 0x1 0x0 0xC
+	TEXTEND
+LABEL 0x22
+CHECK_EVENTID 0x11
+BNE 0x23 0x0 0xC
 	TEXTSHOW Merc7BanditBanditBadEndingXavusLineText
-LABEL 0x1
+	TEXTEND
+LABEL 0x23
 TEXTSHOW Merc7BanditBanditBadEndingRexXavusLastLineText
 TEXTEND
-TEXTEND
+REMA
 STAL 0x10
 FADI 0x5
 CLEE Rex
@@ -137,14 +157,15 @@ FIG1 Narrator Adlez 0x0
 KillUnit(4,6)
 STAL 0x10
 MoveMercenary(2,4)
+MUSC Return_of_the_Demon_King
 Text(Merc7BanditBanditBadEndingNarratorText)
 MOVE 0x0 Narrator [2,5]
 ENUN
 StartBattle
-NormalDamage(1,8)
-NormalDamage(0,39)
-MissedAttack(1,0)
-NormalDamage(0,40)
+NormalDamage(0,8)
+NormalDamage(1,39)
+MissedAttack(0,0)
+NormalDamage(1,40)
 EndAttack
 MercenaryNarratorFight(2,4)
 DISA Vicar
@@ -168,19 +189,28 @@ ENDA
 //Label GoodEnding
 GoodEnding:
 ENUF 0x17
+ENUF 0x19
+ENUF 0x21
 FADI 0x5
+SVAL 0x1 Adlez
+ASMC MakeNotDeadASM|1
+SVAL 0x1 Leon
+ASMC MakeNotDeadASM|1
+CAM1 [5,8]
 MUSC Victory
 CLEA Vicar
 CLEE Cesarian
 LOAD3 0x1 PlayerLoading3
 LOAD2 0x1 GoodEndingAdlezLeon
-SetBackground(0x06)
+ENUN
+SetBackground(0x05)
 Text(Merc7BanditBanditGoodEndingText)
 EndConvo
 STAL 0x10
 MUSC Return_of_the_Demon_King
 WarpIn(5,10,LoadNarrator1) // Loads with a not sword to kill Adlez and Leon without a battle animation.
-STAL 0x8
+ENUN
+STAL 0x20
 MOVE 0x0 Narrator [4,8]
 ENUN
 StartBattle
@@ -191,6 +221,7 @@ FIG1 Narrator Adlez 0x0
 KillUnit(4,7)
 STAL 0x10
 MOVE 0x0 Narrator [5,8]
+ENUN
 StartBattle
 MissedAttack(1,0)
 CriticalHit(0,70)
@@ -198,20 +229,21 @@ EndAttack
 FIG1 Narrator Leon 0x0
 KillUnit(6,8)
 STAL 0x10
+MUSC Return_of_the_Demon_King
 FADI 0x5
 CLEE Narrator
 LOAD1 0x1 LoadNarrator2
 ENUN
-SetBackground(0x06)
+SetBackground(0x05)
 Text(Merc7BanditBanditGoodEndingNarratorText)
 EndConvo
 STAL 0x10
 MOVE 0x0 Narrator [5,6]
 ENUN
 StartBattle
-NormalDamage(0,35)
+NormalDamage(0,30)
 NormalDamage(1,10)
-NormalDamage(0,35)
+NormalDamage(0,40)
 EndAttack
 MercenaryNarratorFight(5,5)
 DISA Vicar
@@ -241,6 +273,7 @@ BEQ 0x0 0x0 0xC
 		CALL GoodEnding
 LABEL 0x0
 ENUF 0x18
+NoFade
 ENDA
 
 //Label RaidEvents
@@ -279,55 +312,82 @@ TileChange(2,15)
 NoFade
 ENDA
 
+//Label ReinforcementLoops
+ReinforcementLoop1:
+Every3Turns(0x24,0x25,0x26,0x1A,0x1B,LoadLoopingReinforcements1)
+NoFade
+EndA2
+
+ReinforcementLoop2:
+Every3Turns(0x27,0x28,0x29,0x1C,0x1D,LoadLoopingReinforcements2)
+NoFade
+EndA2
+
+LoadLoopingReinforcements1:
+LOAD1 0x1 LoopTroops1
+ENUN
+NoFade
+EndA2
+
+LoadLoopingReinforcements2:
+LOAD1 0x1 LoopTroops2
+ENUN
+NoFade
+EndA2
+
+LoadTurn3:
+LOAD1 0x1 Turn3Units
+ENUN
+NoFade
+EndA2
+
+LoadTurn4:
+LOAD1 0x1 Turn4Units
+ENUN
+NoFade
+EndA2
+
+LoadTurn8:
+LOAD1 0x1 Turn8Units
+ENUN
+NoFade
+EndA2
+
+LoadTurn11:
+LOAD1 0x1 Turn11Units
+ENUN
+NoFade
+EndA2
+
+LoadTurn12:
+LOAD1 0x1 Turn12Units
+ENUN
+NoFade
+ENDA
+
 	/*UNIT DATA*/
 
 //Label PlayerLoading
 PlayerLoading1:
-UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [11,12] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [11,12] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [11,12] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
-UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [11,12] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [11,12] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [11,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [11,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [11,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [11,12] 0x00 0x00 0x00 0x00 [0] NoAI 
 UNIT
 
 PlayerLoading2:
-UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [5,5] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [5,5] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [5,5] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
-UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [5,5] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [5,5] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [5,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [5,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [5,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [5,5] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT
 
 PlayerLoading3:
-UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [7,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [7,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [7,3] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
-UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [7,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [7,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [7,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [7,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [7,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [5,4] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT
 
 PlayerLoading4:
-UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [6,9] 0x00 0x00 0x01 REDA3R5 [IronSword,Vulnerary] NoAI 
-UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [6,9] 0x00 0x00 0x01 REDA3R5 [IronSword,Vulnerary] NoAI 
-UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [6,9] 0x00 0x00 0x01 REDA3R5 [IronLance,Vulnerary] NoAI 
-UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [6,9] 0x00 0x00 0x01 REDA3R5 [IronSword,Vulnerary] NoAI 
-UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [6,9] 0x00 0x00 0x01 REDA3R5 [IronSword,Vulnerary] NoAI 
-UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [6,9] 0x00 0x00 0x01 REDA3R5 [IronAxe,Vulnerary] NoAI 
-UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [6,9] 0x00 0x00 0x01 REDA3R5 [IronAxe,Vulnerary] NoAI 
-UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [6,9] 0x00 0x00 0x01 REDA3R5 [IronAxe,Vulnerary] NoAI 
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [6,9] 0x00 0x00 0x01 REDA3R5 [0] NoAI 
 EndUnit
 
 //Label Starting units
 Friends:
 UNIT Vicar Warrior PlayerMArcher Level(1,Ally,True) [11,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT Baret Myrmidon PlayerMArcher Level(1,Ally,True) [13,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT Baret Myrmidon PlayerMArcher Level(1,Ally,True) [15,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 UNIT Walter Archer PlayerMArcher Level(1,Ally,True) [14,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 UNIT Arya Myrmidon_F PlayerMArcher Level(1,Ally,True) [8,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 UNIT Adlez Brigand PlayerMArcher Level(1,Ally,True) [9,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
@@ -342,16 +402,12 @@ UNIT Cesarian General Rex Level(7,Enemy,True) [5,5] 0x00 0x00 0x00 0x00 [ShortAx
 UNIT Cesarian GreatKnight Rex Level(9,Enemy,True) [3,3] 0x00 0x00 0x00 0x00 [DevilSword,DragonAxe] AttackInRangeAI
 UNIT Cesarian GreatKnight Rex Level(6,Enemy,True) [6,3] 0x00 0x00 0x00 0x00 [HeavySpear,LightBrand] AttackInRangeAI
 UNIT Cesarian Paladin Rex Level(5,Enemy,True) [2,1] 0x00 0x00 0x00 0x00 [SteelLance] ChaseOnceApproachedAI
-UNIT Cesarian Paladin Rex Level(6,Enemy,True) [3,0] 0x00 0x00 0x00 0x00 [Javelin,KillingEdge] ChaseOnceApproachedAI
-UNIT Cesarian Paladin Rex Level(5,Enemy,True) [7,0] 0x00 0x00 0x00 0x00 [SteelBlade] ChaseOnceApproachedAI
 UNIT Cesarian Paladin Rex Level(8,Enemy,True) [8,1] 0x00 0x00 0x00 0x00 [DragonSpear,SteelSword] ChaseOnceApproachedAI
 UNIT Cesarian Ranger Rex Level(7,Enemy,True) [1,2] 0x00 0x00 0x00 0x00 [SteelShortbow] NoAI
 UNIT Cesarian Ranger Rex Level(6,Enemy,True) [9,2] 0x00 0x00 0x00 0x00 [KillingEdge,DevilBow] NoAI
 UNIT Cesarian Hero Rex Level(5,Enemy,True) [10,6] 0x00 0x00 0x00 0x00 [Tomahawk] ChaseOnceApproachedAI
 UNIT Cesarian Mercenary Rex Level(14,Enemy,True) [10,8] 0x00 0x00 0x00 0x00 [IronBlade] NoAI
 UNIT Cesarian Fighter Rex Level(13,Enemy,True) [6,8] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
-UNIT Cesarian Soldier Rex Level(15,Enemy,True) [5,9] 0x00 0x00 0x00 0x00 [SlimLance] NoAI
-UNIT Cesarian Soldier Rex Level(14,Enemy,True) [2,10] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
 UNIT Cesarian Sentinel Rex Level(8,Enemy,True) [3,10] 0x00 0x00 0x00 0x00 [SilverLance] AttackInRangeAI
 UNIT Cesarian Cavalier Rex Level(15,Enemy,True) [12,7] 0x00 0x00 0x00 0x00 [SteelSword,Javelin] NoAI
 UNIT Cesarian Halberdier Rex Level(7,Enemy,True) [13,6] 0x00 0x00 0x00 0x00 [ShortSpear] ChaseOnceApproachedAI
@@ -362,8 +418,6 @@ UNIT
 ArcanianGroup2:
 UNIT Xavus Druid Xavus Level(15,Enemy,True) [11,22] 0x00 0x00 0x00 0x00 [Fenrir,Arcfire] GuardAI
 UNIT Arcanian Druid Xavus Level(8,Enemy,True) [11,18] 0x00 0x00 0x00 0x00 [Eclipse,Slime] AttackInRangeAI
-UNIT Arcanian Druid Xavus Level(9,Enemy,True) [10,19] 0x00 0x00 0x00 0x00 [Elfire,Nosferatu] AttackInRangeAI
-UNIT Arcanian Valkyrie Xavus Level(10,Enemy,True) [9,22] 0x00 0x00 0x00 0x00 [Divine] ChaseOnceApproachedAI
 UNIT Arcanian Valkyrie Xavus Level(6,Enemy,True) [13,22] 0x00 0x00 0x00 0x00 [Exordium,Physic] HealAlliesAI
 UNIT Arcanian Halberdier Xavus Level(7,Enemy,True) [14,20] 0x00 0x00 0x00 0x00 [DevilLance] AttackInRangeAI
 UNIT Arcanian Cavalier Xavus Level(15,Enemy,True) [16,21] 0x00 0x00 0x00 0x00 [IronSword] NoAI
@@ -371,11 +425,9 @@ UNIT Arcanian Cavalier Xavus Level(14,Enemy,True) [17,20] 0x00 0x00 0x00 0x00 [L
 UNIT Arcanian Cavalier Xavus Level(15,Enemy,True) [18,21] 0x00 0x00 0x00 0x00 [SteelLance,SteelSword] NoAI
 UNIT Arcanian Cavalier Xavus Level(12,Enemy,True) [17,22] 0x00 0x00 0x00 0x00 [ShortSpear] NoAI
 UNIT Arcanian Mage Xavus Level(14,Enemy,True) [2,18] 0x00 0x00 0x00 0x00 [Elwind] AttackInRangeAI
-UNIT Arcanian Mage Xavus Level(13,Enemy,True) [7,17] 0x00 0x00 0x00 0x00 [Arcaqua] NoAI 
 UNIT Arcanian Mage Xavus Level(13,Enemy,True) [8,16] 0x00 0x00 0x00 0x00 [Arcthunder] NoAI 
 UNIT Arcanian Soldier Xavus Level(15,Enemy,True) [6,18] 0x00 0x00 0x00 0x00 [Javelin] NoAI 
 UNIT Arcanian Soldier Xavus Level(14,Enemy,True) [9,15] 0x00 0x00 0x00 0x00 [IronLance] NoAI 
-UNIT Arcanian Warrior Xavus Level(8,Enemy,True) [4,18] 0x00 0x00 0x00 0x00 [DragonAxe,IronLongbow] AttackInRangeAI
 UNIT Arcanian WyvernRider Xavus Level(14,Enemy,True) [5,24] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
 UNIT Arcanian WyvernLord Xavus Level(10,Enemy,True) [6,24] 0x00 0x00 0x00 0x00 [BraveLance,SteelSword] AttackInRangeAI
 UNIT Arcanian WyvernRider Xavus Level(13,Enemy,True) [7,24] 0x00 0x00 0x00 0x00 [KillerLance] AttackInRangeAI
@@ -414,4 +466,52 @@ UNIT
 
 LoadNarrator3:
 UNIT Narrator NarratorClass PlayerMArcher Level(20,Enemy,True) [2,7] 0x00 0x00 0x00 0x00 [SilverBlade] NoAI 
+EndUnit
+
+//Label Reinforcements
+LoopTroops1:
+UNIT Cesarian Cavalier Rex Level(16,Enemy,True) [13,0] 0x00 0x00 0x00 0x00 [Javelin,SteelSword] NoAI 
+UNIT Cesarian Troubadour Rex Level(19,Enemy,True) [12,0] 0x00 0x00 0x00 0x00 [Mend] NoAI
+UNIT Cesarian Soldier Rex Level(15,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [SlimLance] NoAI
+UNIT Cesarian Soldier Rex Level(14,Enemy,True) [0,3] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT
+
+LoopTroops2:
+UNIT Arcanian MageKnight Xavus Level(5,Enemy,True) [19,24] 0x00 0x00 0x00 0x00 [Elwind] NoAI 
+UNIT Arcanian Cavalier Xavus Level(18,Enemy,True) [19,23] 0x00 0x00 0x00 0x00 [Lancereaver,KillingEdge] NoAI 
+UNIT Arcanian Ranger Xavus Level(3,Enemy,True) [18,24] 0x00 0x00 0x00 0x00 [SteelBow] NoAI 
+UNIT
+
+Turn3Units:
+UNIT Arcanian Shaman Xavus Level(18,Enemy,True) [9,24] 0x00 0x00 0x00 0x00 [Flux] NoAI 
+UNIT Arcanian Halberdier Xavus Level(4,Enemy,True) [11,24] 0x00 0x00 0x00 0x00 [SteelLance] NoAI 
+UNIT Arcanian Monk Xavus Level(11,Enemy,True) [10,24] 0x00 0x00 0x00 0x00 [Aura,Physic] NoAI 
+UNIT
+
+Turn4Units:
+UNIT Cesarian Fighter Rex Level(14,Enemy,True) [9,0] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI 
+UNIT Cesarian Berserker Rex Level(4,Enemy,True) [8,0] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI 
+UNIT Cesarian Hero Rex Level(6,Enemy,True) [10,0] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI 
+UNIT Cesarian Paladin Rex Level(5,Enemy,True) [8,0] 0x00 0x00 0x01 REDA8R1 [SteelBlade] ChaseOnceApproachedAI
+UNIT
+
+Turn8Units:
+UNIT Cesarian Swordmaster Rex Level(14,Enemy,True) [7,0] 0x00 0x00 0x00 0x00 [Wyrmslayer] NoAI 
+UNIT Cesarian GreatKnight Rex Level(4,Enemy,True) [8,0] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI 
+UNIT Arcanian Valkyrie Xavus Level(18,Enemy,True) [10,24] 0x00 0x00 0x00 0x00 [Divine] NoAI 
+UNIT Arcanian GreatKnight Xavus Level(4,Enemy,True) [11,24] 0x00 0x00 0x00 0x00 [SteelSword,HeavySpear] NoAI 
+UNIT Arcanian Druid Xavus Level(9,Enemy,True) [13,24] 0x00 0x00 0x00 0x00 [Elfire,Nosferatu] AttackInRangeAI
+UNIT
+
+Turn11Units:
+UNIT Arcanian Myrmidon Xavus Level(14,Enemy,True) [12,24] 0x00 0x00 0x00 0x00 [BraveSword] NoAI 
+UNIT Arcanian Sage Xavus Level(7,Enemy,True) [11,24] 0x00 0x00 0x00 0x00 [Bolganone] NoAI 
+UNIT Cesarian Mage Rex Level(4,Enemy,True) [8,0] 0x00 0x00 0x00 0x00 [Elfire] NoAI 
+UNIT Cesarian GreatKnight Rex Level(4,Enemy,True) [7,0] 0x00 0x00 0x00 0x00 [Spear] NoAI 
+UNIT
+
+Turn12Units:
+UNIT Cesarian Paladin Rex Level(8,Enemy,True) [7,0] 0x00 0x00 0x00 0x00 [DevilLance] NoAI 
+UNIT Cesarian MageKnight Rex Level(4,Enemy,True) [8,0] 0x00 0x00 0x00 0x00 [Arcwind] NoAI 
+UNIT Cesarian Paladin Rex Level(7,Enemy,True) [10,0] 0x00 0x00 0x00 0x00 [DragonSpear,IronBlade] NoAI 
 EndUnit

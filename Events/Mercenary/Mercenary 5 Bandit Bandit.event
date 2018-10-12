@@ -36,8 +36,8 @@ END_MAIN
 //Label LocationBasedEvents
 LocationBasedEvents:
 Chest(HeroCrest,20,12)
-Chest(BraveBow,18,7)
-Chest(AngelicRobe,16,7)
+Chest(BraveBow,18,9)
+Chest(AngelicRobe,16,9)
 Chest(KillerLance,11,11)
 Chest(OrionBolt,3,14)
 Chest(HeroCrest,1,14)
@@ -124,25 +124,11 @@ ENDA
 
 //Label PlayerLoading
 PlayerLoading1:
-UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [10,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [10,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [10,11] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
-UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [10,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [10,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [10,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [10,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [10,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [10,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
 UNIT
 
 PlayerLoading2:
-UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [17,16] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(1,Ally,True) [17,16] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(1,Ally,True) [17,16] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
-UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(1,Ally,True) [17,16] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(1,Ally,True) [17,16] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT PlayerMFighter Fighter2 PlayerMArcher Level(1,Ally,True) [17,16] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT PlayerMPirate Pirate2 PlayerMArcher Level(1,Ally,True) [17,16] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(1,Ally,True) [17,16] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [17,16] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI  
 EndUnit
 
 //Label City Units
@@ -155,7 +141,7 @@ UNIT Adlez Brigand PlayerMArcher Level(1,Ally,True) [9,10] 0x00 0x00 0x00 0x00 [
 UNIT
 
 HaedricCityPeople:
-UNIT Connor Mercenary PlayerMArcher Level(9,Ally,True) [11,10] 0x00 0x00 0x00 0x00 [SteelSword,Armorslayer] NoAI 
+UNIT Connor Mercenary PlayerMArcher Level(11,Ally,True) [11,10] 0x00 0x00 0x00 0x00 [SteelSword,Armorslayer] NoAI 
 UNIT Xena Soldier Xena Level(1,NPC,True) [1,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
 UNIT Xena Soldier Xena Level(1,NPC,True) [4,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
 UNIT Xena Soldier Xena Level(1,NPC,True) [14,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
