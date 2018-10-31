@@ -19,12 +19,11 @@ mov lr, r5
 VanillaLabel:
 pop { r4 - r6 } @ All from vanilla routine
 
-
 push { r0 - r5 }
 mov r2, #0
 mov r3, #0
 ldr r0, =#0x203A4EC
-blh 0x08016B28, r2 @ Equiped weapon of the attacker in r1
+blh 0x08016B28, r2 @ Equiped weapon of the attacker in r0
 lsl r0, r0, #24
 lsr r0, r0, #24
 push { r0 }
@@ -39,6 +38,10 @@ pop { r0 }
 @add r1, #0x48
 @ldrb r1, [ r1 ] @ Get defender's item in r1
 
+cmp r0, #0x00
+beq End @ If the attacker has no weapon, end.
+cmp r1, #0x00
+beq End @ If the defender has no weapon, end.
 ldr r5, =#FireList
 FireLoopA:
 ldrb r4, [ r5 ] @ Fire item in r4

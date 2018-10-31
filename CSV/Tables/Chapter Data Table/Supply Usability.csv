@@ -1,0 +1,98 @@
+0 ; POP ; ALIGN 4 ; SupplyUsabilityTable:,Pointer
+00 Prologue,0x00
+01 Mage1,0x00
+02 MageEscape2,0x00
+03 MageEscape3,0x00
+04 MageEscape4,0x00
+05 MageEscape5,0x00
+06 MageEscapeXavus6,0x00
+07 MageEscapeXavus7,0x00
+08 MageInvestigate2,0x00
+09 MageInvestigate3,0x00
+0A MageInvestigate4,0x00
+0B MageInvestigate5,0x00
+0C MageInvestigate6,0x00
+0D MageInvestigate7,0x00
+0E MageEscapeCesaria6,0x00
+0F MageEscapeCesaria7,0x00
+10 Military1,0x00
+11 MilitaryPromotion2,0x00
+12 MilitaryPromotion3,0x00
+13 MilitaryPromotionHold4,0x00
+14 MilitaryPromotionHold5,0x00
+15 MilitaryPromotionHold6,0x00
+16 MilitaryPromotionHold7,0x00
+17 MilitaryPromotionRetreat4,0x00
+18 MilitaryPromotionRetreatLeave5,0x00
+19 MilitaryPromotionRetreatLeave6(GrowingTown1Map),0x00
+1A MilitaryPromotionRetreatLeave7,0x00
+1B MilitaryPromotionRetreatHelp5,0x00
+1C MilitaryPromotionRetreatHelp6,0x00
+1D MilitaryPromotionRetreatHelp7,0x00
+1E MilitaryPass2,0x00
+1F MilitaryPass3,0x00
+20 MilitaryPass4,0x00
+21 MilitaryPass5,0x00
+22 MilitaryPass6,0x00
+23 MilitaryPass7,0x00
+24 Tower of Valni 1,0x00
+25 Tower of Valni 2,0x00
+26 Tower of Valni 3,0x00
+27 Tower of Valni 4,0x00
+28 Tower of Valni 5,0x00
+29 Tower of Valni 6,0x00
+2A Tower of Valni 7,0x00
+2B Tower of Valni 8,0x00
+2C Tower of Valni 8 Clone,0x00
+2D Tower of Valni 8 Clone,0x00
+2E Lagdou Ruins 1,0x00
+2F Lagdou Ruins 2,0x00
+30 Lagdou Ruins 3,0x00
+31 Lagdou Ruins 4,0x00
+32 Lagdou Ruins 5,0x00
+33 Lagdou Ruins 6,0x00
+34 Lagdou Ruins 7,0x00
+35 Lagdou Ruins 8,0x00
+36 Lagdou Ruins 9,0x00
+37 Lagdou Ruins 10,0x00
+38 Lords split up (glitchy map),0x00
+39 Melkaen Coast,0x00
+3A Link Arena,0x00
+3B Merceary1,0x00
+3C MercenaryMilitia2,0x00
+3D MercenaryMilitiaSurvival3,0x00
+3E MercenaryMilitiaSurvival4,0x00
+3F MercenaryMilitiaSurvivalArcanae5,NormalSupplyList|IsPointer
+40 MercenaryMilitiaSurvivalArcanae6,NormalSupplyList|IsPointer
+41 MercenaryMilitiaSurvivalArcanae7,NormalSupplyList|IsPointer
+42 MercenaryMilitiaSurvivalCesaria5,NormalSupplyList|IsPointer
+43 MercenaryMilitiaSurvivalCesaria6,NormalSupplyList|IsPointer
+44 MercenaryMilitiaSurvivalCesaria7,NormalSupplyList|IsPointer
+45 MercenaryMilitiaKill3,NormalSupplyList|IsPointer
+46 MercenaryMilitiaKill4,NormalSupplyList|IsPointer
+47 MercenaryMilitiaKill5,NormalSupplyList|IsPointer
+48 MercenaryMilitiaKill6,NormalSupplyList|IsPointer
+49 MercenaryMilitiaKill7,NormalSupplyList|IsPointer
+4A BUGGED,0x00
+4B MercenaryBandit3,NormalSupplyList|IsPointer
+4C MercenaryBandit4,NormalSupplyList|IsPointer
+4D MercenaryBanditBandit5,NormalSupplyList|IsPointer
+4E MercenaryBanditBandit6,NormalSupplyList|IsPointer
+4F MercenaryBanditBandit7,NormalSupplyList|IsPointer
+50 MercenaryBanditDisband5,NormalSupplyList|IsPointer
+51 MercenaryBanditDisband6,NormalSupplyList|IsPointer
+52 MercenaryBanditDisband7,NormalSupplyList|IsPointer
+53 MilitaryPromotionRetreatLeave6(GrowingTown2),0x00
+54 MilitaryPromotionRetreatLeave6(GrowingTown3),0x00
+55 ShizonShrineCutscene,0x00
+56 LeavingShizonCutscene,0x00
+57 Leaving Underground Cutscene,0x00
+58 OutsideTempleCutscene,0x00
+59 Mercenary Camp Cutscene,0x00
+5A Maximus Uzkalis Cutscene,0x00
+5B HaedricCastleCutscene,0x00
+5C Kilthel Cutscene,0x00
+5D Artifact Door Cutscene,0x00
+5E MercenaryBandit2,0x00
+5F BacrunRuins1Cutscene,0x00
+60 BacrunRuins2Cutscene,0x00 ; PUSH

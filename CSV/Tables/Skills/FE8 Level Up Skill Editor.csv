@@ -148,4 +148,6 @@ NarratorClass,TruebladeSkillList|IsPointer
 Warlock,WarlockSkillList|IsPointer
 SpearHero,HeroSkillList|IsPointer
 XeximClass,AssassinSkillList|IsPointer
-GrandPaladin,PaladinSkillList|IsPointer ; PUSH
+GrandPaladin,PaladinSkillList|IsPointer
+HolySage,SageSkillList|IsPointer
+WilSniper,SniperSkillList|IsPointer ; PUSH

@@ -10,7 +10,7 @@
  </tileset>
  <layer name="Tile Layer 1" width="17" height="18">
   <properties>
-   <property name="Anims" value="01Anims"/>
+   <property name="Anims" value="_01Anims"/>
    <property name="ChapterID" value="MercenaryBandit3"/>
    <property name="MapID" value="CaravanPathMap"/>
    <property name="ObjectType" value="0x01"/>

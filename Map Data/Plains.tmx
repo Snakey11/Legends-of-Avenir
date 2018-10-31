@@ -23,7 +23,7 @@
  </tileset>
  <layer name="Tile Layer 1" width="15" height="15">
   <properties>
-   <property name="Anims" value="2EAnims"/>
+   <property name="Anims" value="_2EAnims"/>
    <property name="ChapterID" value="MercenaryMilitia2"/>
    <property name="Main" value=""/>
    <property name="MapChangesID" value="PlainsChanges"/>

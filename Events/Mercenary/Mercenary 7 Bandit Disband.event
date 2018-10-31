@@ -17,42 +17,28 @@ POIN BeginningScene EndingScene
 
 //Label TurnBasedEvents
 TurnBasedEvents:
-TurnEventEnemy(0x0,MaximusNotices,2)
-TurnEventEnemy(0x0,XavusNotices,4)
-TurnEventPlayer(0x0,Turn3Units,3)
-TurnEventPlayer(0x0,Turn7Units,7)
-TurnEventPlayer(0x0,Turn10Units,10)
-TurnEventPlayer(0x0,Turn14Units,14)
 END_MAIN
 
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
-CHAR 0x10 TMaximus Efil Maximus 0x0
-CHAR 0x11 TXavus Efil Xavus 0x0
 END_MAIN
 
 //Label LocationBasedEvents
 LocationBasedEvents:
-House(0x0,House1,12,3)
-House(0x0,House2,6,12)
-House(0x0,House3,6,19)
-House(0x0,House4,7,21)
-House(0x0,House5,6,23)
-House(0x0,Tavern,1,23)
+Chest(Tomahawk,12,13)
+Chest(Elixir,12,16)
 END_MAIN
 
 //Label MiscBasedEvents
 MiscBasedEvents:
-AFEV 0x14 ChangeArcanianAI 0x13
-DefeatAll(EndingScene)
 CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
+AREA 0x10 EfilSpot [0,2] [4,5]
 END_MAIN
 
 //Label TrapData
 TrapData:
-BLST [6,26] 0x35
-BLST [5,27] 0x35
 ENDTRAP
 ALIGN 4
 
@@ -62,206 +48,194 @@ EndUnit
 
 //Label BeginingScene
 BeginningScene:
+ENUT 0x13
+SVAL 0xB Coords(7,5)
+LOAD2 0x1 EfilMaximusKilthelCutscene
+LOMA OutsideKilthelCutscene
 MUSC Indignation
-ENUT 0x11
-LOAD1 0x1 LoadEfil
-LOAD1 0x1 StartingEnemyUnits
-LOAD1 0x1 ArcanianGroup2
-LOAD2 0x1 BeginningCutsceneUnits
-LOAD3 0x1 PlayerLoading1
-ENUN
-FADU 0x5
-STAL 0x50
-FADI 0x5
-CAM1 [7,23]
-LOAD2 0x1 StartingPlayerUnits
-LOAD3 0x1 PlayerLoading2
-ENUN
-SetBackground(0x1B)
+SetBackground(0x0A)
 Text(Merc7BanditDisbandBeginningText)
-EndConvo
+FadeOutMusic
+FADI 0x10
+STAL 0x50
+MUSC Distant_Roads
+SetBackground(0x2D)
+Text(Merc7BanditDisbandStartFlashbackText)
 MUSC Advance
+SetBackground(0x26)
+Text(Merc7BanditDisbandMaximusHereFlashbackText)
+MUSC Raid
+SetBackground(0x2D)
+Text(Merc7BanditDisbandXyliaAttackingFlashbackText)
+FADI 0x5
+STAL 0x20
+EndConvo
+MUSC Land_of_Promise
+Text(Merc7BanditDisbandAtTempleFlashbackText)
 STAL 0x10
-Text(Merc7BanditDisbandMaximusBeginningText)
+WarpIn(6,4,UzkalisWarp)
+ENUN
+STAL 0x40
+Text(Merc7BanditDisbandUzkalisTempleFlashbackText)
+FADI 0x5
+FadeOutMusic
+CLEN 0x0
+SVAL 0xB Coords(7,5)
+LOMA KilthelFightCutscene
+LOAD1 0x1 StartingKilthelFightPeople
+ENUN
+STAL 0x40
+MUSC Lost_Heart
+FADU 0x5
+STAL 0x30
+SetBackground(0x2D)
+Text(Merc7BanditDisbandInTempleFlashbackText)
+EndConvo
+STAL 0x8
+MOVE 0x0 Uzkalis [10,2]
+ENUN
+StartBattle
+MissedAttack(1,0)
+CriticalHit(0,80)
+EndAttack
+FIG1 Uzkalis Arveldir 0x0
+KillUnit(8,2)
+STAL 0x20
+SetBackground(0x2D)
+Text(Merc7BanditDisbandArveldirDeadFlashbackText)
+EndConvo
+STAL 0x8
+MOVE 0x0 Servius [9,4]
+ENUN
+StartBattle
+NormalDamage(1,31)
+NormalDamage(0,27)
+MissedAttack(1,0)
+EndAttack
+FIG1 Maximus Servius 0x0
 STAL 0x10
-MUSC Solve_the_Riddle
-CAM1 [16,19]
+Text(Merc7BanditDisbandEfilPanicsFlashbackText)
+MOVE 0x0 Efil [9,3]
+ENUN
+StartBattle
+CriticalHit(0,70)
+EndAttack
+FIG1 Efil Servius 0x0
+STAL 0x8
+KillUnit(9,4)
+STAL 0x20
+SetBackground(0x2D)
+Text(Merc7BanditDisbandServiusDeadFlashbackText)
+EndConvo
+MOVE 0x0 Uzkalis [8,2]
+ENUN
+StartBattle
+NormalDamage(0,30)
+NormalDamage(1,24)
+EndAttack
+FIG1 Uzkalis Kilthel 0x0
 STAL 0x10
-Text(Merc7BanditDisbandXavusBeginningText)
-STAL 0x10
-MUSC The_Final_Battle
-CAM1 [10,13]
-STAL 0x10
-Text(Merc7BanditDisbandEndingBeginningText)
-NoFade
-ENDA
-
-//Label Talk Events
-TMaximus:
-MUSS Sorrow
-Text(Merc7BanditDisbandTalkMaximusText)
-ENUF 0x11
-MURE 0x5
-NoFade
-EndA2
-
-TXavus:
-MUSS Sorrow
-CHECK_ALIVE Maximus // Check if is Maximus is dead
-//BEQ 0x30 0x0 0xC
-	CHECK_ENEMIES
-	//SVAL 0x1 (Minimum number of enemies)
-	// Add conditional for reinforcements not showing up. SADD shit
-	//BLT 0x30 0x1 0xC // Set actual conditional ID
-		// Comment out conditional for bad ending
-		Text(Merc7BanditDisbandGoodTalkXavusText)
-		 //Good ending
-		 MUSC Victory
-		 FADI 0x5
-		 CLEE Cesarian
-		 CLEA Vicar
-		 STAL 0x40
-		 SVAL 0xB Coords(6,10)
-		 LOMA MilitaryPromotionRetreatHelp5 // Big path map
-		 LoadingMercenary(2,PlayerLoading3) // Spawn at [3,10]
-		 SetBackground(0x21)
-		 Text(Merc7BanditDisbandGoodEndingText) // Spawn at [1,10]
-		 EndConvo
-		 FadeOutMusic
-		 EnterStop
-		 STAL 0x10
-		 FADI 0x5
-		 LOAD1 0x1 LoadNarrator
-		 ENUN
-		 SetBackground(0x19)
-		 TEXTSHOW Merc7BanditDisbandGoodNarratorText
-		 TEXTEND
-		 MUSC Return_of_the_Demon_King
-		 TEXTCONT
-		 TEXTEND
-		 EndConvo
-		 GOTO 0x31
-	LABEL 0x30
-		Text(Merc7BanditDisbandBadTalkXavusText)
-		MURE 0x5
+MOVE 0x0 Efil [7,2]
+ENUN
+StartBattle
+MissedAttack(1,0)
+NormalDamage(0,20)
+CriticalHit(0,60)
+EndAttack
+FIG1 Efil Kilthel 0x0
+STAL 0x8
+KillUnit(7,1)
+STAL 0x30
+FadeOutMusic
+FADI 0x5
+CLEN 0x0
+SetBackground(0x2D)
+TEXTSTART
+TEXTSHOW Merc7BanditDisbandKilthelDeadText
+TEXTEND
+MUSC Lights_in_the_Dark
+TEXTCONT
+TEXTEND
+FadeOutMusic
+FADI 0x10
+SVAL 0xB Coords(7,25)
+LOMA MercenaryBanditDisband7
+LOAD1 0x1 LoadGuardians
+LOAD3 0x1 PlayerLoading1
+LOAD2 0x1 StartingFriends
+LOAD1 0x1 LoadEfil
+ENUN
+STAL 0x50
+MUSC Sorrow
+SetBackground(0x0A)
+Text(Merc7BanditDisbandLeaveFlashbackText)
+SetBackground(0x0D)
+Text(Merc7BanditDisbandVicarText)
+SetBackground(0x2A)
+Text(Merc7BanditDisbandAryaKendrickText)
+SetBackground(0x0A)
+Text(Merc7BanditDisbandBackWithEfilText)
+SetBackground(0x30)
+Text(Merc7BanditDisbandOutsideTempleText)
+EndConvo
+MUSC Raid
+STAL 0x20
+WarpIn(12,28,LoadXylia)
+ENUN
+STAL 0x20
+Text(Merc7BanditDisbandMeetXyliaText)
+STAL 0x8
+WarpOut(12,28,Xylia)
+STAL 0x30
+CAM1 [7,5]
+STAL 0x20
+WarpIn(12,1,LoadXyliaThrone)
+ENUN
+STAL 0x20
 NoFade
 ENDA
 
 //Label EndingScene
 EndingScene:
- //Bad ending
- MUSC Indignation
- FADI 0x5
- CLEE Cesarian
- CLEA Vicar
- SVAL 0xB Coords(6,10)
- LOMA MageInvestigate6 // Cliffy river map
- LOAD3 0x1 PlayerLoading3 // Spawn at [3,10]
- SetBackground(0x21)
- Text(Merc7BanditDisbandBadEndingText)
- MURE 0x5
- EndConvo
- EnterStop
- STAL 0x40
- FADI 0x5
- LOAD1 0x1 LoadNarrator // Spawn at [1,10]
- ENUN
- SetBackground(0x1F)
- TEXTSHOW Merc7BanditDisbandBadNarratorText
- TEXTEND
- MUSC Return_of_the_Demon_King
- TEXTCONT
- TEXTEND
- EndConvo
- 
-LABEL 0x31 // This stuff happens regardless of good or bad ending
-EnterStop
-MOVE 0x0 Narrator [2,10]
+ENUF 0x13
+FADI 0x5
+CLEA 0x0
+CLEE 0x0
+//MaxMercenaryHP(1)
+SVAL 0xB Coords(7,5)
+LOMA GuardianSpiritWallCutscene
+LOAD3 0x1 PlayerLoading2
+SetBackground(0x2E)
+CHECK_EVENTID 0x10
+BEQ 0x2 0x0 0xC
+	// Good ending
+	MUSC Sorrow
+	TEXTSHOW Merc7BanditDisbandGoodEndingText
+	TEXTEND
+	MUSC Victory
+	TEXTCONT
+	TEXTEND
+	GOTO 0x3
+LABEL 0x2
+	// Bad ending
+	MUSC Into_the_Shadow_of_Victory
+	Text(Merc7BanditDisbandBadEndingText)
+LABEL 0x3
+FadeOutMusic
+EndConvo
+Text(Merc7BanditDisbandHistoryText)
+MUSC Return_of_the_Demon_King
+WarpIn(5,3,LoadNarrator)
+ENUN
+STAL 0x20
+Text(0x2A,Merc7BanditDisbandNarratorHereText)
+MOVE 0x0 Narrator [6,3]
 ENUN
 StartBattle
-MissedAttack(0,0)
-CriticalHit(1,60)
+CriticalHit(1,80)
 EndAttack
-#define Index 4
-CHECK_EVENTID 0x6E
-BNE (0x0 + 0x8 * Index) 0xC 0x0
-	CHECK_EVENTID 0x69 // Female
-	BEQ (0x2 + 0x8 * Index) 0xC 0x0
-		FIG1 PlayerFMercenary Narrator 0x0
-	GOTO (0x1 + 0x8 * Index)
-	LABEL (0x2 + 0x8 * Index)
-	CHECK_EVENTID 0x6A
-	BEQ (0x3 + 0x8 * Index) 0xC 0x0
-		FIG1 PlayerFMyrmidon Narrator 0x0
-	GOTO (0x1 + 0x8 * Index)
-	LABEL (0x3 + 0x8 * Index)
-		FIG1 PlayerFPegasusKnight Narrator 0x0
-	GOTO (0x1 + 0x8 * Index)
-LABEL (0x0 + 0x8 * Index)
-	CHECK_EVENTID 0x69 // Male
-	BEQ (0x4 + 0x8 * Index) 0xC 0x0
-		FIG1 PlayerMMercenary Narrator 0x0
-	GOTO (0x1 + 0x8 * Index)
-	LABEL (0x4 + 0x8 * Index)
-	CHECK_EVENTID 0x6A
-	BEQ (0x5 + 0x8 * Index) 0xC 0x0
-		FIG1 PlayerMMyrmidon Narrator 0x0
-	GOTO (0x1 + 0x8 * Index)
-	LABEL (0x5 + 0x8 * Index)
-	CHECK_EVENTID 0x6B
-	BEQ (0x6 + 0x8 * Index) 0xC 0x0
-		FIG1 PlayerMFighter Narrator 0x0
-	GOTO (0x1 + 0x8 * Index)
-	LABEL (0x6 + 0x8 * Index)
-	CHECK_EVENTID 0x6C
-	BEQ 0x7 0xC 0x0
-		FIG1 PlayerMPirate Narrator 0x0
-	GOTO (0x1 + 0x8 * Index)
-	LABEL (0x7 + 0x8 * Index)
-		FIG1 PlayerMBrigand Narrator 0x0
-LABEL (0x1 + 0x8 * Index)
-#undef Index
-Text(Merc7BanditDisbandEndingText)
-KillUnit(3,10)
-#define Index 5
-CHECK_EVENTID 0x6E
-BNE (0x0 + 0x8 * Index) 0xC 0x0
-	CHECK_EVENTID 0x69 // Female
-	BEQ (0x2 + 0x8 * Index) 0xC 0x0
-		DISA PlayerFMercenary
-	GOTO (0x1 + 0x8 * Index)
-	LABEL (0x2 + 0x8 * Index)
-	CHECK_EVENTID 0x6A
-	BEQ (0x3 + 0x8 * Index) 0xC 0x0
-		DISA PlayerFMyrmidon
-	GOTO (0x1 + 0x8 * Index)
-	LABEL (0x3 + 0x8 * Index)
-		DISA PlayerFPegasusKnight
-	GOTO (0x1 + 0x8 * Index)
-LABEL (0x0 + 0x8 * Index)
-	CHECK_EVENTID 0x69 // Male
-	BEQ (0x4 + 0x8 * Index) 0xC 0x0
-		DISA PlayerMMercenary
-	GOTO (0x1 + 0x8 * Index)
-	LABEL (0x4 + 0x8 * Index)
-	CHECK_EVENTID 0x6A
-	BEQ (0x5 + 0x8 * Index) 0xC 0x0
-		DISA PlayerMMyrmidon
-	GOTO (0x1 + 0x8 * Index)
-	LABEL (0x5 + 0x8 * Index)
-	CHECK_EVENTID 0x6B
-	BEQ (0x6 + 0x8 * Index) 0xC 0x0
-		DISA PlayerMFighter
-	GOTO (0x1 + 0x8 * Index)
-	LABEL (0x6 + 0x8 * Index)
-	CHECK_EVENTID 0x6C
-	BEQ 0x7 0xC 0x0
-		DISA PlayerMPirate
-	GOTO (0x1 + 0x8 * Index)
-	LABEL (0x7 + 0x8 * Index)
-		DISA PlayerMBrigand
-LABEL (0x1 + 0x8 * Index)
-#undef Index
+MercenaryNarratorFight(7,3)
+STAL 0x20
 DISA Vicar
 DISA Walter
 DISA Baret
@@ -280,232 +254,115 @@ ENUF 0x6D
 MoveToChapter(PrologueChapter)
 ENDA
 
-//Label Turn Events
-MaximusNotices:
-MUSS Tension
-CAM1 [6,22]
-Text(Merc7BanditDisbandMaximusNoticesText)
-MURE 0x5
-NoFade
-EndA2
-
-XavusNotices:
-MUSS Tension
-CAM1 [16,19]
-Text(Merc7BanditDisbandXavusNoticesText)
-MURE 0x5
-NoFade
-EndA2
-
-Turn3Units:
-LOAD1 0x1 Load3Units
-ENUN
-NoFade
-EndA2
-
-Turn7Units:
-LOAD1 0x1 Load7Units
-ENUN
-NoFade
-EndA2
-
-Turn10Units:
-LOAD1 0x1 Load10Units
-ENUN
-NoFade
-EndA2
-
-Turn14Units:
-LOAD1 0x1 Load14Units
-ENUN
+//Label EfilSpot
+EfilSpot:
+CHECK_ACTIVE
+SVAL 0x1 Efil
+BNE 0x0 0x1 0xC
+	Text(Merc7BanditDisbandEfilReachesSpotText)
+	FADI 0x10
+	MUSS Sorrow
+	STAL 0x40
+	SetBackground(0x26)
+	Text(Merc7BanditDisbandChapterFlashbackText)
+	FADI 0x10
+	STAL 0x40
+	EndConvo
+	MURE 0x5
+	STAL 0x20
+	Text(Merc7BanditDisbandEndChapterFlashbackText)
+	GOTO 0x1
+LABEL 0x0
+	ENUF 0x10
+LABEL 0x1
 NoFade
 ENDA
-
-//Label Visit Events
-House1:
-Text(0x1,0x85) // NEEDS TEXT
-NoFade
-EndA2
-
-House2:
-Text(0x1,0x85)
-NoFade
-EndA2
-
-House3:
-Text(0x1,0x85)
-NoFade
-EndA2
-
-House4:
-Text(0x1,0x85)
-NoFade
-EndA2
-
-House5:
-Text(0x1,0x85)
-NoFade
-EndA2
-
-Tavern:
-Text(0x2,0x85)
-NoFade
-ENDA
-
-//Label AI Changing
-ChangeArcanianAI:
-SVAL 0x1 0x0300 // AttackInRangeAI
-CHAI Arcanian
-SVAL 0x1 0x0303 // GuardAI
-CHAI [13,13]
-CHAI [14,12]
-CHAI [14,14]
-CHAI [21,19]
-CHAI [20,20]
-CHAI [15,24]
-CHAI [15,26]
-NoFade
-ENDA
-
 
 	/*UNIT DATA*/
-
+	
 //Label PlayerLoading
 PlayerLoading1:
-UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [3,4] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [13,26] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 PlayerLoading2:
-UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [8,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [7,3] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit	
+
+//Label Cutscene people
+EfilMaximusKilthelCutscene:
+UNIT Efil Truerblade Efil Level(11,NPC,True) [5,2] 0x00 0x00 0x00 0x00 [SilverSword] NoAI
+UNIT Maximus BattleSage Maximus Level(12,NPC,True) [7,2] 0x00 0x00 0x00 0x00 [Bolganone] NoAI
 UNIT
 
-PlayerLoading3:
-UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [3,10] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-EndUnit
-
-//Label Cutscene Units
-LoadEfil:
-UNIT Efil Truerblade PlayerMArcher Level(12,Ally,True) [1,3] 0x00 0x00 0x00 0x00 [SteelSword,SilverSword] NoAI 
+UzkalisWarp:
+UNIT Uzkalis GaidenSage Uzkalis Level(12,NPC,True) [6,4] 0x00 0x00 0x00 0x00 [Thoron] NoAI
 UNIT
 
-BeginningCutsceneUnits:
-UNIT Vicar PegasusKnight2 PlayerMArcher Level(1,Ally,True) [5,4] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
-UNIT Walter PegasusKnight2 PlayerMArcher Level(1,Ally,True) [4,5] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
-UNIT Baret PegasusKnight2 PlayerMArcher Level(1,Ally,True) [5,6] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
-UNIT Arya PegasusKnight2 PlayerMArcher Level(1,Ally,True) [3,6] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
-UNIT Adlez PegasusKnight2 PlayerMArcher Level(1,Ally,True) [2,5] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
-UNIT Kendrick PegasusKnight2 PlayerMArcher Level(1,Ally,True) [2,2] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
+StartingKilthelFightPeople:
+UNIT Efil Truerblade Efil Level(11,NPC,True) [11,1] 0x00 0x00 0x00 0x00 [SilverSword] NoAI
+UNIT Maximus BattleSage Maximus Level(12,NPC,True) [10,4] 0x00 0x00 0x00 0x00 [Bolganone] NoAI
+UNIT Uzkalis GaidenSage Uzkalis Level(17,NPC,True)[12,3] 0x00 0x00 0x00 0x00 [Thoron] NoAI
+UNIT Kilthel GuardianSpirit Kilthel Level(15,Enemy,True) [7,1] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI
+UNIT Arveldir WilSniper Kilthel Level(15,Enemy,True) [8,2] 0x00 0x00 0x00 0x00 [SilverBow] NoAI
+UNIT Servius Trueblade Kilthel Level(15,Enemy,True) [7,3] 0x00 0x00 0x00 0x00 [SilverBlade] NoAI
+UNIT
+
+LoadXylia:
+UNIT Xylia HolySage Xylia Level(15,Enemy,True) [12,28] 0x00 0x00 0x00 0x00 [Thani] GuardAI
 UNIT
 
 LoadNarrator:
-UNIT Narrator NarratorClass Narrator Level(15,Enemy,True) [1,10] 0x00 0x00 0x00 0x00 [SilverSword] NoAI 
+UNIT Narrator NarratorClass Narrator Level(15,Enemy,True) [5,3] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI
 EndUnit
 
-//Label Chapter Units
-StartingPlayerUnits:
-UNIT Vicar PegasusKnight2 PlayerMArcher Level(1,Ally,True) [7,12] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
-UNIT Walter PegasusKnight2 PlayerMArcher Level(1,Ally,True) [7,10] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
-UNIT Baret PegasusKnight2 PlayerMArcher Level(1,Ally,True) [11,10] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
-UNIT Arya PegasusKnight2 PlayerMArcher Level(1,Ally,True) [8,9] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
-UNIT Adlez PegasusKnight2 PlayerMArcher Level(1,Ally,True) [10,11] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
-UNIT Kendrick PegasusKnight2 PlayerMArcher Level(1,Ally,True) [9,12] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
-UNIT Efil PegasusKnight2 PlayerMArcher Level(1,Ally,True) [9,10] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] NoAI 
+//Label ChapterPeople
+StartingFriends:
+UNIT Vicar HolySage Xylia Level(15,Ally,True) [11,24] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Walter HolySage Xylia Level(15,Ally,True) [14,23] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Baret HolySage Xylia Level(15,Ally,True) [12,25] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Arya HolySage Xylia Level(15,Ally,True) [12,23] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Adlez HolySage Xylia Level(15,Ally,True) [14,27] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Kendrick HolySage Xylia Level(15,Ally,True) [14,25] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
-StartingEnemyUnits:
-UNIT Maximus Sage Maximus Level(12,Enemy,True) [4,25] 0x00 0x00 0x00 0x00 [Bolganone] [0x07,0x03,0x00,0x20] // Sets Maximus' AI to stay in place and not attack Efil
-UNIT Cesarian Knight Maximus Level(14,Enemy,True) [8,17] 0x00 0x00 0x00 0x00 [Javelin] GuardAI 
-UNIT Cesarian General Maximus Level(8,Enemy,True) [9,18] 0x00 0x00 0x00 0x00 [SteelSword,ShortAxe] GuardAI 
-UNIT Cesarian Knight Maximus Level(13,Enemy,True) [11,18] 0x00 0x00 0x00 0x00 [Axereaver] GuardAI 
-UNIT Cesarian Warrior Maximus Level(9,Enemy,True) [7,19] 0x00 0x00 0x00 0x00 [DragonAxe] AttackInRangeAI
-UNIT Cesarian Ranger Maximus Level(7,Enemy,True) [8,21] 0x00 0x00 0x00 0x00 [SteelBlade,SteelBow] GuardAI
-UNIT Cesarian Mage Maximus Level(14,Enemy,True) [10,20] 0x00 0x00 0x00 0x00 [Elthunder] AttackInRangeAI
-UNIT Cesarian Hero Maximus Level(9,Enemy,True) [7,23] 0x00 0x00 0x00 0x00 [Tomahawk] AttackInRangeAI 
-UNIT Cesarian GreatKnight Maximus Level(7,Enemy,True) [10,23] 0x00 0x00 0x00 0x00 [LightBrand,KillerLance] AttackInRangeAI
-UNIT Cesarian Sentinel Maximus Level(6,Enemy,True) [11,25] 0x00 0x00 0x00 0x00 [Spear] GuardAI 
-UNIT Cesarian Shaman Maximus Level(13,Enemy,True) [9,25] 0x00 0x00 0x00 0x00 [Fenrir] AttackInRangeAI
-UNIT Cesarian Cavalier Maximus Level(12,Enemy,True) [10,27] 0x00 0x00 0x00 0x00 [Armorslayer] ChaseOnceApproachedAI
-UNIT Cesarian Archer Maximus Level(11,Enemy,True) [6,26] 0x00 0x00 0x00 0x00 [SilverLongbow] GuardAI 
-UNIT Cesarian Archer Maximus Level(12,Enemy,True) [5,27] 0x00 0x00 0x00 0x00 [KillerBow] GuardAI
-UNIT Cesarian Paladin Maximus Level(7,Enemy,True) [0,25] 0x00 0x00 0x00 0x00 [SteelLance,IronBlade] ChaseOnceApproachedAI
-UNIT Cesarian Paladin Maximus Level(8,Enemy,True) [2,27] 0x00 0x00 0x00 0x00 [LanceSlayer] ChaseOnceApproachedAI
-
-UNIT Xavus Druid Xavus Level(14,Enemy,True) [16,19] 0x00 0x00 0x00 0x00 [Fenrir] GuardAI 
-UNIT Arcanian General Xavus Level(12,Enemy,True) [13,13] 0x00 0x00 0x00 0x00 [ShortSpear,SteelAxe] GuardAI
-UNIT Arcanian Halberdier Xavus Level(13,Enemy,True) [14,12] 0x00 0x00 0x00 0x00 [SilverLance] GuardAI 
-UNIT Arcanian Halberdier Xavus Level(9,Enemy,True) [14,14] 0x00 0x00 0x00 0x00 [BraveLance] GuardAI 
-UNIT Arcanian Bishop Xavus Level(7,Enemy,True) [16,13] 0x00 0x00 0x00 0x00 [Artimes] GuardAI 
-UNIT Arcanian Sage Xavus Level(8,Enemy,True) [20,11] 0x00 0x00 0x00 0x00 [Arcthunder] GuardAI
+LoadEfil:
+UNIT Efil Truerblade Efil Level(11,Ally,True) [11,26] 0x00 0x00 0x00 0x00 [SilverSword,SteelBlade] NoAI
 UNIT
 
-ArcanianGroup2:
-UNIT Arcanian Myrmidon Xavus Level(14,Enemy,True) [17,15] 0x00 0x00 0x00 0x00 [SteelSword] GuardAI
-UNIT Arcanian FalcoKnight Xavus Level(9,Enemy,True) [19,14] 0x00 0x00 0x00 0x00 [BraveSword] GuardAI 
-UNIT Arcanian Soldier Xavus Level(13,Enemy,True) [18,12] 0x00 0x00 0x00 0x00 [HeavySpear] GuardAI 
-UNIT Arcanian Mage Xavus Level(15,Enemy,True) [22,12] 0x00 0x00 0x00 0x00 [Dasher] GuardAI 
-UNIT Arcanian Knight Xavus Level(13,Enemy,True) [23,14] 0x00 0x00 0x00 0x00 [SteelLance] GuardAI 
-UNIT Arcanian GreatKnight Xavus Level(8,Enemy,True) [22,15] 0x00 0x00 0x00 0x00 [Wyrmslayer,HandAxe] GuardAI 
-UNIT Arcanian GreatKnight Xavus Level(10,Enemy,True) [24,13] 0x00 0x00 0x00 0x00 [SilverAxe] GuardAI 
-UNIT Arcanian MageKnight Xavus Level(7,Enemy,True) [23,17] 0x00 0x00 0x00 0x00 [Thoron] GuardAI
-UNIT Arcanian Swordmaster Xavus Level(8,Enemy,True) [25,16] 0x00 0x00 0x00 0x00 [SilverSword] GuardAI 
-UNIT Arcanian Soldier Xavus Level(14,Enemy,True) [24,19] 0x00 0x00 0x00 0x00 [SlimLance] GuardAI 
-UNIT Arcanian Mercenary Xavus Level(13,Enemy,True) [25,18] 0x00 0x00 0x00 0x00 [IronBlade] GuardAI 
-UNIT Arcanian Druid Xavus Level(8,Enemy,True) [19,17] 0x00 0x00 0x00 0x00 [Dulam] GuardAI 
-UNIT Arcanian General Xavus Level(11,Enemy,True) [21,19] 0x00 0x00 0x00 0x00 [Spear] GuardAI 
-UNIT Arcanian Knight Xavus Level(12,Enemy,True) [20,20] 0x00 0x00 0x00 0x00 [Horseslayer] GuardAI 
-UNIT Arcanian Sniper Xavus Level(9,Enemy,True) [18,20] 0x00 0x00 0x00 0x00 [SteelShortbow] GuardAI 
-UNIT Arcanian Sage Xavus Level(10,Enemy,True) [15,21] 0x00 0x00 0x00 0x00 [Fimbulvetr] GuardAI 
-UNIT Arcanian Halberdier Xavus Level(7,Enemy,True) [23,21] 0x00 0x00 0x00 0x00 [Dragonspear] GuardAI 
-UNIT Arcanian Monk Xavus Level(12,Enemy,True) [25,22] 0x00 0x00 0x00 0x00 [Exordium] GuardAI 
-UNIT Arcanian Valkyrie Xavus Level(8,Enemy,True) [26,23] 0x00 0x00 0x00 0x00 [Divine,Mend] HealAlliesAI 
-UNIT Arcanian Sentinel Xavus Level(10,Enemy,True) [23,24] 0x00 0x00 0x00 0x00 [BraveSpear] GuardAI
-UNIT Arcanian Hero Xavus Level(5,Enemy,True) [24,25] 0x00 0x00 0x00 0x00 [SilverSword] GuardAI 
-UNIT Arcanian Druid Xavus Level(7,Enemy,True) [22,26] 0x00 0x00 0x00 0x00 [Luna,Flare] GuardAI 
-UNIT Arcanian GreatKnight Xavus Level(12,Enemy,True) [18,23] 0x00 0x00 0x00 0x00 [WindSword,SteelLance] GuardAI 
-UNIT Arcanian GreatKnight Xavus Level(9,Enemy,True) [18,26] 0x00 0x00 0x00 0x00 [ShortSpear,Hammer] GuardAI 
-UNIT Arcanian Paladin Xavus Level(7,Enemy,True) [17,27] 0x00 0x00 0x00 0x00 [KillerLance] GuardAI 
-UNIT Arcanian Ranger Xavus Level(8,Enemy,True) [19,24] 0x00 0x00 0x00 0x00 [BraveBow] GuardAI 
-UNIT Arcanian Sentinel Xavus Level(10,Enemy,True) [15,24] 0x00 0x00 0x00 0x00 [Axeslayer] GuardAI 
-UNIT Arcanian General Xavus Level(11,Enemy,True) [15,26] 0x00 0x00 0x00 0x00 [Spear,SteelAxe] GuardAI 
+LoadXyliaThrone:
+UNIT Xylia HolySage Xylia Level(15,Enemy,True) [12,1] 0x00 0x00 0x00 0x00 [Thani] GuardAI
+UNIT
+
+LoadGuardians:
+UNIT Guardian Sentinel Xylia Level(11,Enemy,True) [8,27] 0x00 0x00 0x00 0x00 [Spear] GuardAI
+UNIT Guardian Warrior Xylia Level(15,Enemy,True) [7,28] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI
+UNIT Guardian Sentinel Xylia Level(13,Enemy,True) [2,29] 0x00 0x00 0x00 0x00 [BraveLance] GuardAI
+UNIT Guardian Paladin Xylia Level(9,Enemy,True) [1,28] 0x00 0x00 0x00 0x00 [Wyrmslayer,Javelin] NoAI
+UNIT Guardian Paladin Xylia Level(9,Enemy,True) [0,27] 0x00 0x00 0x00 0x00 [RuneSword] NoAI
+UNIT Guardian GreatKnight Xylia Level(8,Enemy,True) [0,29] Drop 0x00 0x00 0x00 [BraveAxe] NoAI
+UNIT Guardian Berserker Xylia Level(9,Enemy,True) [2,25] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
+UNIT Guardian Mercenary Xylia Level(19,Enemy,True) [0,22] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
+UNIT Guardian Druid Xylia Level(11,Enemy,True) [2,22] 0x00 0x00 0x00 0x00 [Nosferatu] ChaseOnceApproachedAI
+UNIT Guardian General Xylia Level(15,Enemy,True) [5,20] 0x00 0x00 0x00 0x00 [HeavySpear,HandAxe] GuardAI
+UNIT Guardian Sage Xylia Level(10,Enemy,True) [7,21] Drop 0x00 0x00 0x00 [Elwind,ChestKey] AttackInRangeAI
+UNIT Guardian Warrior Xylia Level(8,Enemy,True) [8,17] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
+UNIT Guardian Halberdier Xylia Level(9,Enemy,True) [10,15] Drop 0x00 0x00 0x00 [SilverLance,ChestKey] AttackInRangeAI
+UNIT Guardian General Xylia Level(10,Enemy,True) [5,16] 0x00 0x00 0x00 0x00 [SilverBlade] GuardAI
+UNIT Guardian Monk Xylia Level(20,Enemy,True) [8,11] 0x00 0x00 0x00 0x00 [Divine] ChaseOnceApproachedAI
+UNIT Guardian Sentinel Xylia Level(7,Enemy,True) [10,12] 0x00 0x00 0x00 0x00 [Spear] AttackInRangeAI
+UNIT Guardian Ranger Xylia Level(9,Enemy,True) [3,17] 0x00 0x00 0x00 0x00 [IronBlade,SteelBow] AttackInRangeAI
+UNIT Guardian Swordmaster Xylia Level(9,Enemy,True) [0,14] 0x00 0x00 0x00 0x00 [Zanbato] AttackInRangeAI
+UNIT Guardian Fighter Xylia Level(18,Enemy,True) [2,12] 0x00 0x00 0x00 0x00 [KillerAxe] AttackInRangeAI
+UNIT Guardian MageKnight Xylia Level(7,Enemy,True) [0,3] 0x00 0x00 0x00 0x00 [Arcthunder] ChaseOnceApproachedAI
+UNIT Guardian Paladin Xylia Level(8,Enemy,True) [1,3] 0x00 0x00 0x00 0x00 [SteelBlade,SteelLance] ChaseOnceApproachedAI
+UNIT Guardian Cavalier Xylia Level(20,Enemy,True) [0,5] 0x00 0x00 0x00 0x00 [IronSword] AttackInRangeAI
+UNIT Guardian GreatKnight Xylia Level(11,Enemy,True) [1,5] 0x00 0x00 0x00 0x00 [BraveAxe,Javelin] AttackInRangeAI
+UNIT Guardian Sniper Xylia Level(9,Enemy,True) [4,6] 0x00 0x00 0x00 0x00 [SteelLongbow] NoAI
+UNIT Guardian Sniper Xylia Level(10,Enemy,True) [6,6] 0x00 0x00 0x00 0x00 [BraveBow] NoAI
+UNIT Guardian Mage Xylia Level(18,Enemy,True) [12,10] 0x00 0x00 0x00 0x00 [Elfire] ChaseOnceApproachedAI
+UNIT Guardian Druid Xylia Level(10,Enemy,True) [5,7] 0x00 0x00 0x00 0x00 [Physic] NoAI
+UNIT Guardian Swordmaster Xylia Level(10,Enemy,True) [11,6] 0x00 0x00 0x00 0x00 [BraveSword] AttackInRangeAI
+UNIT Guardian Archer Xylia Level(18,Enemy,True) [9,6] 0x00 0x00 0x00 0x00 [SilverShortbow] NoAI
+UNIT Guardian Knight Xylia Level(20,Enemy,True) [8,3] 0x00 0x00 0x00 0x00 [KillerLance] GuardAI
 EndUnit
-
-//Label Chapter Reinforcement Units
-Load3Units:
-UNIT Cesarian Cavalier Maximus Level(13,Enemy,True) [3,6] 0x00 0x00 0x00 0x00 [KillingEdge] NoAI 
-UNIT Cesarian Cavalier Maximus Level(14,Enemy,True) [5,4] 0x00 0x00 0x00 0x00 [Dragonspear,Lancereaver] NoAI 
-UNIT Cesarian Paladin Maximus Level(9,Enemy,True) [4,3] 0x00 0x00 0x00 0x00 [Spear] NoAI 
-UNIT Cesarian Paladin Maximus Level(6,Enemy,True) [2,5] 0x00 0x00 0x00 0x00 [BraveLance] NoAI 
-UNIT Cesarian Ranger Maximus Level(7,Enemy,True) [3,4] 0x00 0x00 0x00 0x00 [SilverShortbow] NoAI 
-UNIT Cesarian Valkyrie Maximus Level(8,Enemy,True) [2,3] 0x00 0x00 0x00 0x00 [Divine,Mend] NoAI 
-UNIT
-
-Load7Units:
-UNIT Cesarian WyvernRider Maximus Level(12,Enemy,True) [8,1] 0x00 0x00 0x00 0x00 [SteelLance] NoAI 
-UNIT Cesarian WyvernRider Maximus Level(14,Enemy,True) [10,1] 0x00 0x00 0x00 0x00 [Horseslayer] NoAI 
-UNIT Cesarian WyvernLord Maximus Level(12,Enemy,True) [9,0] 0x00 0x00 0x00 0x00 [KillerLance,WindSword] NoAI 
-UNIT Cesarian WyvernKnight Maximus Level(9,Enemy,True) [7,0] 0x00 0x00 0x00 0x00 [ShortSpear] NoAI 
-UNIT Cesarian WyvernKnight Maximus Level(8,Enemy,True) [11,0] 0x00 0x00 0x00 0x00 [HeavySpear,Javelin] NoAI 
-UNIT
-
-Load10Units:
-UNIT Cesarian MageKnight Maximus Level(11,Enemy,True) [2,5] 0x00 0x00 0x00 0x00 [Elfire,Heal] NoAI 
-UNIT Cesarian MageKnight Maximus Level(11,Enemy,True) [3,4] 0x00 0x00 0x00 0x00 [Arcaqua] NoAI 
-UNIT Cesarian GreatKnight Maximus Level(8,Enemy,True) [4,5] 0x00 0x00 0x00 0x00 [SilverLance,IronAxe] NoAI 
-UNIT Cesarian GreatKnight Maximus Level(7,Enemy,True) [3,6] 0x00 0x00 0x00 0x00 [BraveSword,ShortAxe] NoAI 
-UNIT Cesarian FalcoKnight Maximus Level(10,Enemy,True) [2,8] 0x00 0x00 0x00 0x00 [DevilLance,LightBrand] NoAI 
-UNIT
-
-Load14Units:
-UNIT Cesarian Paladin Maximus Level(9,Enemy,True) [4,8] 0x00 0x00 0x00 0x00 [Wyrmslayer,Javelin] NoAI 
-UNIT Cesarian Paladin Maximus Level(12,Enemy,True) [5,7] 0x00 0x00 0x00 0x00 [Axeslayer] NoAI 
-UNIT Cesarian Cavalier Maximus Level(15,Enemy,True) [2,7] 0x00 0x00 0x00 0x00 [IronSword,SteelLance] NoAI 
-UNIT Cesarian Cavalier Maximus Level(15,Enemy,True) [3,6] 0x00 0x00 0x00 0x00 [DevilLance] NoAI 
-UNIT Cesarian Cavalier Maximus Level(14,Enemy,True) [4,5] 0x00 0x00 0x00 0x00 [KillingEdge,SlimLance] NoAI 
-UNIT Cesarian Ranger Maximus Level(9,Enemy,True) [2,9] 0x00 0x00 0x00 0x00 [SteelBlade,IronLongbow] NoAI 
-UNIT Cesarian Ranger Maximus Level(10,Enemy,True) [6,5] 0x00 0x00 0x00 0x00 [SilverBow,SlimSword] NoAI 
-EndUnit
-
-PUSH
-ORG $5A8A00 // Sets AI1 byte 7 to not attack Efil.
-BYTE Efil
-POP

@@ -136,6 +136,15 @@ POIN ItemTable
 ORG $1C20E0
 POIN ItemTable
 
+ORG $28E88
+POIN ItemTargetTable
+
+ORG $288AC
+POIN ItemUsabilityTable
+
+ORG $2FC8C
+POIN ItemEffectTable
+
 ORG $19458
 POIN ClassTable
 ORG $18DAC

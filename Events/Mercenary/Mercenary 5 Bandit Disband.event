@@ -58,7 +58,7 @@ LOAD2 0x1 ChapterFriends
 LOAD1 0x1 MasonKendrickMeanies
 LOAD1 0x1 HunterGroup2
 ENUN
-CAM1 [12,11]
+CAM1 [10,10]
 SetBackground(0x1C)
 Text(Merc5BanditDisbandDraterusIsMeanText)
 MUSC Combat_Preparation
@@ -86,6 +86,11 @@ FADI 0x5
 MUSC Victory
 SetBackground(0x05)
 Text(Merc5BanditDisbandEndingText)
+FADI 0x5
+STAL 0x20
+MUSC Legacy
+FADU 0x5
+Text(Merc5BanditDisbandAryaKendrickText)
 MoveToChapter(MercenaryBanditDisband6)
 ENDA
 
@@ -159,17 +164,14 @@ UNIT Hunter Fighter Mason Level(10,Enemy,True) [10,6] 0x00 0x00 0x00 0x00 [HandA
 UNIT Hunter Myrmidon Mason Level(12,Enemy,True) [12,8] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
 UNIT Hunter Fighter Mason Level(8,Enemy,True) [14,8] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
 UNIT Hunter Hero Mason Level(4,Enemy,True) [16,10] 0x00 0x00 0x00 0x00 [SteelBlade] AttackInRangeAI
-UNIT Hunter Cavalier Mason Level(10,Enemy,True) [14,11] 0x00 0x00 0x00 0x00 [LightBrand,IronLance] NoAI
 UNIT Hunter Cavalier Mason Level(9,Enemy,True) [14,12] 0x00 0x00 0x00 0x00 [DragonSpear] NoAI
 UNIT Hunter Mercenary Mason Level(9,Enemy,True) [12,11] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
-UNIT Hunter Mercenary Mason Level(11,Enemy,True) [13,12] 0x00 0x00 0x00 0x00 [KillingEdge] AttackInRangeAI
 UNIT Hunter Pirate Mason Level(10,Enemy,True) [10,15] 0x00 0x00 0x00 0x00 [ShortAxe] NoAI
 UNIT Hunter PegasusKnight Mason Level(9,Enemy,True) [17,15] 0x00 0x00 0x00 0x00 [SlimLance] AttackInRangeAI
-UNIT Hunter Sniper Mason Level(6,Enemy,True) [14,14] 0x00 0x00 0x00 0x00 [SteelBow] AttackInRangeAI
 UNIT Hunter Soldier Mason Level(9,Enemy,True) [13,16] 0x00 0x00 0x00 0x00 [SteelLance] ChaseOnceApproachedAI
 UNIT Hunter Soldier Mason Level(11,Enemy,True) [12,18] 0x00 0x00 0x00 0x00 [ShortSpear] NoAI
 UNIT Hunter Myrmidon Mason Level(8,Enemy,True) [15,19] 0x00 0x00 0x00 0x00 [WindSword] AttackInRangeAI
-UNIT Hunter Archer Mason Level(7,Enemy,True) [19,18] 0x00 0x00 0x00 0x00 [SteelShortbow] AttackInRangeAI
+UNIT Hunter Archer Mason Level(7,Enemy,True) [19,18] Drop 0x00 0x00 0x00 [SteelShortbow,OrionsBolt] AttackInRangeAI
 UNIT Hunter Knight Mason Level(9,Enemy,True) [9,19] 0x00 0x00 0x00 0x00 [KillerLance] GuardAI
 UNIT Hunter Mercenary Mason Level(13,Enemy,True) [10,20] 0x00 0x00 0x00 0x00 [IronSword] ChaseOnceApproachedAI
 UNIT
@@ -188,7 +190,7 @@ UNIT Hunter Mercenary Mason Level(11,Enemy,True) [3,4] 0x00 0x00 0x00 0x00 [Slim
 UNIT Hunter Fighter Mason Level(10,Enemy,True) [3,6] 0x00 0x00 0x00 0x00 [ShortAxe] AttackInRangeAI
 UNIT Hunter Cavalier Mason Level(8,Enemy,True) [0,5] 0x00 0x00 0x00 0x00 [SteelLance,Zanbato] ChaseOnceApproachedAI
 UNIT Hunter Cavalier Mason Level(9,Enemy,True) [0,6] 0x00 0x00 0x00 0x00 [ShortSpear] ChaseOnceApproachedAI
-UNIT Hunter Hero Mason Level(6,Enemy,True) [2,9] 0x00 0x00 0x00 0x00 [RuneSword] GuardAI
+UNIT Hunter Hero Mason Level(6,Enemy,True) [2,9] 0x00 0x00 0x00 0x00 [Armorslayer] GuardAI
 UNIT Hunter Troubadour Mason Level(13,Enemy,True) [2,11] 0x00 0x00 0x00 0x00 [Mend] HealAlliesAI
 UNIT Hunter Pirate Mason Level(9,Enemy,True) [0,13] 0x00 0x00 0x00 0x00 [Hammer] AttackInRangeAI
 UNIT Hunter Shaman Mason Level(11,Enemy,True) [3,13] 0x00 0x00 0x00 0x00 [Slime] AttackInRangeAI

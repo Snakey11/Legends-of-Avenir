@@ -5,7 +5,7 @@
  </tileset>
  <layer name="Tile Layer 1" width="27" height="27">
   <properties>
-   <property name="Anims" value="0EAnims"/>
+   <property name="Anims" value="_0EAnims"/>
    <property name="ChapterID" value="MilitaryPromotionRetreatLeave6GrowingTown3"/>
    <property name="Main" value=""/>
    <property name="MapID" value="GrowingTown3Map"/>

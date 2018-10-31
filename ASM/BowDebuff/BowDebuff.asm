@@ -68,11 +68,11 @@ bl SetDebuff @ Reduce hit by 30
 b End
 
 SetDebuff: @ Put debuff amount in r0, byte offset in r1
-ldrb r2, [ r4, r1 ]
+ldrh r2, [ r4, r1 ]
 sub r2, r0
 cmp r2, #0x00
 bge NotNeg3
 	mov r0, #0x00
 NotNeg3:
-strb r2 [ r4, r1 ]
+strh r2, [ r4, r1 ]
 bx r14

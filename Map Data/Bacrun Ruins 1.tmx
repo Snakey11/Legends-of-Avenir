@@ -5,7 +5,7 @@
  </tileset>
  <layer name="Tile Layer 1" width="15" height="10">
   <properties>
-   <property name="Anims" value="18Anims"/>
+   <property name="Anims" value="_18Anims"/>
    <property name="ChapterID" value="BacrunRuins1Cutscene"/>
    <property name="MapID" value="BacrunRuins1CutsceneMap"/>
    <property name="ObjectType" value="0x18"/>

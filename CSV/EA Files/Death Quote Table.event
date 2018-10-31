@@ -29,7 +29,7 @@ DeathQuote(PlayerFMercenary,MercenaryMilitiaWaitCesaria7,0x12,Merc7MilitiaWaitCe
 DeathQuote(PlayerFMyrmidon,MercenaryMilitiaWaitCesaria7,0x12,Merc7MilitiaWaitCesariaPlayerDeathText)
 DeathQuote(PlayerFPegasusKnight,MercenaryMilitiaWaitCesaria7,0x12,Merc7MilitiaWaitCesariaPlayerDeathText)
 
-DeathQuote(PlayerMMercenary,MercenaryBanditBandit7,0x17,Merc7BanditBanditGoodEndingPlayerDeathText) // Bandit bandit
+DeathQuote(PlayerMMercenary,MercenaryBanditBandit7,0x17,Merc7BanditBanditGoodEndingPlayerDeathText) // Bandit Bandit
 DeathQuote(PlayerMMyrmidon,MercenaryBanditBandit7,0x17,Merc7BanditBanditGoodEndingPlayerDeathText)
 DeathQuote(PlayerMFighter,MercenaryBanditBandit7,0x17,Merc7BanditBanditGoodEndingPlayerDeathText)
 DeathQuote(PlayerMPirate,MercenaryBanditBandit7,0x17,Merc7BanditBanditGoodEndingPlayerDeathText)
@@ -46,23 +46,14 @@ DeathQuote(PlayerFMercenary,BacrunRuins2Cutscene,0x20,Merc7BanditBanditBadEnding
 DeathQuote(PlayerFMyrmidon,BacrunRuins2Cutscene,0x20,Merc7BanditBanditBadEndingPlayerDeathText)
 DeathQuote(PlayerFPegasusKnight,BacrunRuins2Cutscene,0x20,Merc7BanditBanditBadEndingPlayerDeathText)
 
-DeathQuote(PlayerMMercenary,MilitaryPromotionRetreatHelp5,0x12,PlayerDeathText) // Bandit disband
-DeathQuote(PlayerMMyrmidon,MilitaryPromotionRetreatHelp5,0x12,PlayerDeathText)
-DeathQuote(PlayerMFighter,MilitaryPromotionRetreatHelp5,0x12,PlayerDeathText)
-DeathQuote(PlayerMPirate,MilitaryPromotionRetreatHelp5,0x12,PlayerDeathText)
-DeathQuote(PlayerMBrigand,MilitaryPromotionRetreatHelp5,0x12,PlayerDeathText)
-DeathQuote(PlayerFMercenary,MilitaryPromotionRetreatHelp5,0x12,PlayerDeathText)
-DeathQuote(PlayerFMyrmidon,MilitaryPromotionRetreatHelp5,0x12,Merc1HenningDeathText)
-DeathQuote(PlayerFPegasusKnight,MilitaryPromotionRetreatHelp5,0x12,PlayerDeathText)
-DeathQuote(PlayerMMercenary,MageInvestigate6,0x12,PlayerDeathText)
-DeathQuote(PlayerMMyrmidon,MageInvestigate6,0x12,PlayerDeathText)
-DeathQuote(PlayerMFighter,MageInvestigate6,0x12,PlayerDeathText)
-DeathQuote(PlayerMPirate,MageInvestigate6,0x12,PlayerDeathText)
-DeathQuote(PlayerMBrigand,MageInvestigate6,0x12,PlayerDeathText)
-DeathQuote(PlayerFMercenary,MageInvestigate6,0x12,PlayerDeathText)
-DeathQuote(PlayerFMyrmidon,MageInvestigate6,0x12,Merc1HenningDeathText)
-DeathQuote(PlayerFPegasusKnight,MageInvestigate6,0x12,PlayerDeathText)
-
+DeathQuote(PlayerMMercenary,GuardianSpiritWallCutscene,0x13,Merc7BanditDisbandEndingPlayerDeathText) // Bandit Disband
+DeathQuote(PlayerMMyrmidon,GuardianSpiritWallCutscene,0x13,Merc7BanditDisbandEndingPlayerDeathText)
+DeathQuote(PlayerMFighter,GuardianSpiritWallCutscene,0x13,Merc7BanditDisbandEndingPlayerDeathText)
+DeathQuote(PlayerMPirate,GuardianSpiritWallCutscene,0x13,Merc7BanditDisbandEndingPlayerDeathText)
+DeathQuote(PlayerMBrigand,GuardianSpiritWallCutscene,0x13,Merc7BanditDisbandEndingPlayerDeathText)
+DeathQuote(PlayerFMercenary,GuardianSpiritWallCutscene,0x13,Merc7BanditDisbandEndingPlayerDeathText)
+DeathQuote(PlayerFMyrmidon,GuardianSpiritWallCutscene,0x13,Merc7BanditDisbandEndingPlayerDeathText)
+DeathQuote(PlayerFPegasusKnight,GuardianSpiritWallCutscene,0x13,Merc7BanditDisbandEndingPlayerDeathText)
 
 // Specific death quotes need to come first.
 DeathQuote(Henning,Mercenary1,0x02,Merc1HenningDeathText)
@@ -96,9 +87,8 @@ DeathQuote(Xavus,MercenaryBanditBandit7,0x11,Merc7BanditBanditXavusDeathText)
 DeathQuote(Rex,MercenaryBanditBandit7,0x10,Merc7BanditBanditRexDeathText)
 DeathQuote(Mason,MercenaryBanditDisband5,0x2,Merc5BanditDisbandMasonDeathText)
 DeathQuote(Daniel,MercenaryBanditDisband6,0x0,Merc6BanditDisbandDanielDeathText)
-DeathQuote(Maximus,MercenaryBanditDisband7,0x0,Merc7BanditDisbandMaximusDeathText)
-DeathQuote(Xavus,MercenaryBanditDisband7,0x0,Merc7BanditDisbandXavusDeathText)
-
+DeathQuote(Kilthel,KilthelFightCutscene,0x0,Merc7BanditDisbandKilthelDeathText)
+DeathQuote(Xylia,MercenaryBanditDisband7,0x2,Merc7BanditDisbandXyliaDeathText)
 
 // Nonspecific death quotes come after.
 DeathQuote(Vicar,AllChapters,0x00,VicarDeathText)
@@ -108,15 +98,15 @@ DeathQuote(Val,AllChapters,0x00,ValDeathText)
 DeathQuote(Helmer,AllChapters,0x00,HelmerDeathText)
 DeathQuote(Finoc,AllChapters,0x00,FinocDeathText)
 DeathQuote(Elanil,AllChapters,0x00,ElanilDeathText)
-DeathQuote(Maximus,AllChapters,0x00,MaximusDeathText)
-DeathQuote(Leon,AllChapters,0x00,LeonDeathText)
+DeathQuote(Maximus,AllChapters,0x65,MaximusDeathText)
+DeathQuote(Leon,AllChapters,0x65,LeonDeathText)
 DeathQuote(Jasper,AllChapters,0x00,JasperDeathText)
 DeathQuote(Derek,AllChapters,0x00,DerekDeathText)
 DeathQuote(Lux,AllChapters,0x00,LuxDeathText)
 DeathQuote(Luke,AllChapters,0x00,LukeDeathText)
 DeathQuote(Arc,AllChapters,0x00,ArcDeathText)
-DeathQuote(Efil,AllChapters,0x00,EfilDeathText)
-DeathQuote(Uzkalis,AllChapters,0x00,UzkalisDeathText)
+DeathQuote(Efil,AllChapters,0x65,EfilDeathText)
+DeathQuote(Uzkalis,AllChapters,0x65,UzkalisDeathText)
 DeathQuote(Arya,AllChapters,0x00,AryaDeathText)
 DeathQuote(Kendrick,AllChapters,0x00,KendrickDeathText)
 DeathQuote(Connor,AllChapters,0x00,ConnorDeathText)

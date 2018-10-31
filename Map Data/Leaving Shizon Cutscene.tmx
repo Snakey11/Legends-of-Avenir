@@ -5,7 +5,7 @@
  </tileset>
  <layer name="Tile Layer 1" width="15" height="10">
   <properties>
-   <property name="Anims" value="01Anims"/>
+   <property name="Anims" value="_01Anims"/>
    <property name="ChapterID" value="LeavingShizonCutscene"/>
    <property name="Main" value=""/>
    <property name="MapID" value="LeavingShizonMap"/>

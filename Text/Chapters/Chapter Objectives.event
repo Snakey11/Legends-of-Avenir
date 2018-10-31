@@ -17,42 +17,34 @@ Reach Leon[X]
 ## ReachEfilText
 Reach Efil[X]
 
-## ReachCommandersText
-Reach the Commanders[X]
-
 ## Merc1StatusText
 Defeat Henning.[X]
 
 ## Merc2MilitiaStatusText
-Defend Danann[NL]
-and try to[NL]
-kill Gerwick.[X]
+Defend Danann.[NL]
+Kill Gerwick[X]
 
 ## Merc3MilitiaWaitStatusText
 Defeat Connor.[X]
 
 ## Merc4MilitiaWaitStatusText
-Defeat Adlez and[NL]
-recover the artifact.[X]
+Defeat Adlez.[X]
 
 ## Merc5MilitiaWaitArcanaeStatusText
 Defeat William.[X]
 
 ## Merc6MilitiaWaitArcanaeStatusText
-Fight through the[NL]
-capital and defeat Rex.[X]
+Defeat Rex.[X]
 
 ## Merc7MilitiaWaitArcanaeStatusText
-Defeat Leyos, the[NL]
-emperor's guardian.[X]
+Defeat Leyos.[X]
 
 ## Merc5MilitiaWaitCesariaStatusText
 Rout the enemy[NL]
 from the oasis.[X]
 
 ## Merc6MilitiaWaitCesariaStatusText
-Break through the[NL]
-bridge and defeat Pat.[X]
+Defeat Pat.[X]
 
 ## Merc7MilitiaWaitCesariaStatusText
 Rescue Maximus and[NL]
@@ -69,10 +61,11 @@ Fight and learn more[NL]
 about your enemy.[X]
 
 ## Merc6MilitiaKillStatusText
-Defend the Shizonians.[X]
+Defend the town.[X]
 
 ## Merc7MilitiaKillStatusText
-Assassinate Rex.[X]
+Assassinate Rex[NL]
+then escape.[X]
 
 ## Merc2BanditStatusText
 Raid Danaan and[NL]
@@ -83,30 +76,25 @@ Defeat Roger.[X]
 
 ## Merc4BanditStatusText
 Raid the town and[NL]
-defeat Tyrone and[NL]
-potentially the Mayor.[X]
+defeat Tyrone.[X]
 
 ## Merc5BanditBanditStatusText
-Reach Leon's throne room.[X]
+Reach Leon's[NL]
+throne room.[X]
 
 ## Merc6BanditBanditStatusText
 Defeat Harken and[NL]
 capture Bacrun.[X]
 
 ## Merc7BanditBanditStatusText
-Talk to both Rex and[NL]
-Xavus. Survive as[NL]
-long as you can.[X]
+Defeat Rex[NL]
+and Xavus.[X]
 
 ## Merc5BanditDisbandStatusText
 Defeat Mason.[X]
 
 ## Merc6BanditDisbandStatusText
-Fight through Vathrylians[NL]
-and avoid Wanderers[NL]
-to reach Efil.[X]
+Reach Efil.[X]
 
 ## Merc7BanditDisbandStatusText
-Talk to both Maximus[NL]
-and Xavus while avoiding[NL]
-conflict where possible.[X]
+Defeat Xylia.[X]

@@ -134,7 +134,7 @@ MOVE 0x0 Henning [4,0]
 STAL 0x10
 Text(Merc1VulneraryText)//Text about vulneraries
 
-//LOAD1 0x1 TestPeople
+LOAD1 0x1 TestPeople
 
 NoFade
 ENDA
@@ -228,7 +228,8 @@ TestPeople:
 //UNIT GerwickBandit Mage Henning Level(2,Enemy,True) [8,9] 0x00 0x00 0x00 0x00 [Wind] NoAI
 //UNIT GerwickBandit Mage Henning Level(2,Enemy,True) [8,10] 0x00 0x00 0x00 0x00 [Arcthunder] NoAI
 //UNIT GerwickBandit Shaman Henning Level(2,Enemy,True) [9,10] 0x00 0x00 0x00 0x00 [Dulam] NoAI
-UNIT GerwickBandit Mage Henning Level(2,Enemy,True) [10,10] 0x00 0x00 0x00 0x00 [Fire] NoAI
+UNIT GerwickBandit Mage Henning Level(2,Enemy,True) [10,10] 0x00 0x00 0x00 0x00 [IronSword] NoAI
+UNIT GerwickBandit Mage Henning Level(2,Enemy,True) [11,10] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Ewan Mage Henning Level(5,Ally,True) [8,11] 0x00 0x00 0x00 0x00 [Fire,Wind,Thunder] NoAI
 //UNIT Kendrick Pirate Henning Level(1,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
 //UNIT Xena Druid Henning Level(15,Ally,True) [9,9] 0x00 0x00 0x00 0x00 [Flux] NoAI

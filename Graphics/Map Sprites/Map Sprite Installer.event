@@ -2,209 +2,209 @@
 ALIGN 16
 
 BlackFalcoknightSt:
-#incext Png2Dmp BlackFalcoknightSt.png --lz77
+#incext Png2Dmp "BlackFalcoknightSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 BlackFalcoknightMv:
-#incext Png2Dmp BlackFalcoknightMv.png --lz77
+#incext Png2Dmp "BlackFalcoknightMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 ChampionSt:
-#incext Png2Dmp ChampionSt.png --lz77
+#incext Png2Dmp "ChampionSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 ChampionMv:
-#incext Png2Dmp ChampionMv.png --lz77
+#incext Png2Dmp "ChampionMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 CommanderSt:
-#incext Png2Dmp CommanderSt.png --lz77
+#incext Png2Dmp "CommanderSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 CommanderMv:
-#incext Png2Dmp CommanderMv.png --lz77
+#incext Png2Dmp "CommanderMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 DarkKnightSt:
-#incext Png2Dmp DarkKnightSt.png --lz77
+#incext Png2Dmp "DarkKnightSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 DarkKnightMv:
-#incext Png2Dmp DarkKnightMv.png --lz77
+#incext Png2Dmp "DarkKnightMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 GladiatorSt:
-#incext Png2Dmp GladiatorSt.png --lz77
+#incext Png2Dmp "GladiatorSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 GladiatorMv:
-#incext Png2Dmp GladiatorMv.png --lz77
+#incext Png2Dmp "GladiatorMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 HalberdierSt:
-#incext Png2Dmp HalberdierSt.png --lz77
+#incext Png2Dmp "HalberdierSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 HalberdierMv:
-#incext Png2Dmp HalberdierMv.png --lz77
+#incext Png2Dmp "HalberdierMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 HarbingerSt:
-#incext Png2Dmp HarbingerSt.png --lz77
+#incext Png2Dmp "HarbingerSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 HarbingerMv:
-#incext Png2Dmp HarbingerMv.png --lz77
+#incext Png2Dmp "HarbingerMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 HectorSt:
-#incext Png2Dmp HectorSt.png --lz77
+#incext Png2Dmp "HectorSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 HectorMv:
-#incext Png2Dmp HectorMv.png --lz77
+#incext Png2Dmp "HectorMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 HunterSt:
-#incext Png2Dmp HunterSt.png --lz77
+#incext Png2Dmp "HunterSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 HunterMv:
-#incext Png2Dmp HunterMv.png --lz77
+#incext Png2Dmp "HunterMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 ImaplerSt:
-#incext Png2Dmp ImpalerSt.png --lz77
+#incext Png2Dmp "ImpalerSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 ImpalerMv:
-#incext Png2Dmp ImpalerMv.png --lz77
+#incext Png2Dmp "ImpalerMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 IzukSt:
-#incext Png2Dmp IzukSt.png --lz77
+#incext Png2Dmp "IzukSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 IzukMv:
-#incext Png2Dmp IzukMv.png --lz77
+#incext Png2Dmp "IzukMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 MagusMSt:
-#incext Png2Dmp MagusMSt.png --lz77
+#incext Png2Dmp "MagusMSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 MagusMMv:
-#incext Png2Dmp MagusMMv.png --lz77
+#incext Png2Dmp "MagusMMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 MagusFSt:
-#incext Png2Dmp MagusFSt.png --lz77
+#incext Png2Dmp "MagusFSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 MagusFMv:
-#incext Png2Dmp MagusFMv.png --lz77
+#incext Png2Dmp "MagusFMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 MatriarchSt:
-#incext Png2Dmp MatriarchSt.png --lz77
+#incext Png2Dmp "MatriarchSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 MatriarchMv:
-#incext Png2Dmp MatriarchMv.png --lz77
+#incext Png2Dmp "MatriarchMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 MonkFSt:
-#incext Png2Dmp FemaleMonkSt.png --lz77
+#incext Png2Dmp "FemaleMonkSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 MonkFMv:
-#incext Png2Dmp FemaleMonkMv.png --lz77
+#incext Png2Dmp "FemaleMonkMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 MountedBrigandSt:
-#incext Png2Dmp MountedBrigandSt.png --lz77
+#incext Png2Dmp "MountedBrigandSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 MountedBrigandMv:
-#incext Png2Dmp MountedBrigandMv.png --lz77
+#incext Png2Dmp "MountedBrigandMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 NomadSt:
-#incext Png2Dmp NomadSt.png --lz77
+#incext Png2Dmp "NomadSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 NomadMv:
-#incext Png2Dmp NomadMv.png --lz77
+#incext Png2Dmp "NomadMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 PatriarchSt:
-#incext Png2Dmp PatriarchSt.png --lz77
+#incext Png2Dmp "PatriarchSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 PatriarchMv:
-#incext Png2Dmp PatriarchMv.png --lz77
+#incext Png2Dmp "PatriarchMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 SentinelSt:
-#incext Png2Dmp SentinelSt.png --lz77
+#incext Png2Dmp "SentinelSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 SentinelMv:
-#incext Png2Dmp SentinelMv.png --lz77
+#incext Png2Dmp "SentinelMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 ShadowSt:
-#incext Png2Dmp ShadowSt.png --lz77
+#incext Png2Dmp "ShadowSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 ShadowMv:
-#incext Png2Dmp ShadowMv.png --lz77
+#incext Png2Dmp "ShadowMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 TruebladeSt:
-#incext Png2Dmp TruebladeSt.png --lz77
+#incext Png2Dmp "TruebladeSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 TruebladeMv:
-#incext Png2Dmp TruebladeMv.png --lz77
+#incext Png2Dmp "TruebladeMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 TruerbladeSt:
-#incext Png2Dmp TruerbladeSt.png --lz77
+#incext Png2Dmp "TruerbladeSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 TruerbladeMv:
-#incext Png2Dmp TruerbladeMv.png --lz77
+#incext Png2Dmp "TruerbladeMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 
 WarlockSt:
-#incext Png2Dmp WarlockSt.png --lz77
+#incext Png2Dmp "WarlockSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 WarlockMv:
-#incext Png2Dmp WarlockMv.png --lz77
+#incext Png2Dmp "WarlockMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
 FMercenaryFix:

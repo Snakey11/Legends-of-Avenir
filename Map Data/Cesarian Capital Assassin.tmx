@@ -10,7 +10,7 @@
  </tileset>
  <layer name="Tile Layer 1" width="27" height="23">
   <properties>
-   <property name="Anims" value="79Anims"/>
+   <property name="Anims" value="_79Anims"/>
    <property name="ChapterID" value="MercenaryMilitiaKill7"/>
    <property name="Main" value=""/>
    <property name="MapChangesID" value="CesarianCapitalAssassinChanges"/>

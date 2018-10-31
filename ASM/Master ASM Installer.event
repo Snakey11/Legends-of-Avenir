@@ -1,49 +1,63 @@
 
-/*
-#include "Supply Hacks/EASupplyHacks.event"
-
-ALIGN 16
-
-#include "Supply Command/Supply Installer.event"
-
-ALIGN 16
-
-#include "Weapon Rank on Levelup/Weapon Rank on Levelup.event"
-*/
+ALIGN 4
+#include "Always Display Ranged Animation/Ranged Animation by Table Installer.event"
 
 ALIGN 4
-#include "PC_and_Generic_Music_FE8.event" // Basically boss music
+#inctext lyn "AnimaEffectiveness/AnimaEffectiveness.elf"
+ALIGN 4
+#inctext lyn "AnimaTriangle/NewAnimaTriangle.elf" "AnimaTriangle/Definitions.elf"
+FireList:
+BYTE Fire Elfire Arcfire Bolganone Meteor Flare 0x00
+ThunderList:
+BYTE Thunder Elthunder Arcthunder Thoron Bolting 0x00
+WindList:
+BYTE Wind Elwind Arcwind Tornado Aircalibur WindSword 0x00
+WaterList:
+BYTE Aqua Elaqua Arcaqua Fimbulvetr 0x00
 
-ALIGN 16
+ALIGN 4
+#include "Arms Scroll/EA Installer.event"
 
-#include "Arms Scroll FE8/EA Installer.event"
+//ALIGN 4
+//#inctext lyn "AutoPromote/AutoPromote.elf"
 
-ALIGN 16
+ALIGN 4
+#inctext lyn "BowDebuff/BowDebuff.elf"
 
-#include "Show Heal Amount/Show Heal Amount.event"
+ALIGN 4
+#include "Chapter Names/fe8_chnames.event"
 
-ALIGN 16
-
-//#include "Events as Supports/Events As Supports.event"
-
-ALIGN 16
-
-#include "FE8 Always Display Ranged Animation/Ranged Animation by Table Installer.event"
-
-ALIGN 16
-
+ALIGN 4
 #include "Display All Weapon Level Ups/Promotion Ranks Fix Installer.event"
 
-ALIGN 16
+ALIGN 4
+#inctext lyn "DoubleEXP/NewDoubleEXP.elf" "DoubleEXP/Definitions.elf"
 
-MESSAGE Make not dead is at CURRENTOFFSET
+ALIGN 4
+#inctext lyn "GiveToSupply/GiveToSupply.elf"
+
+ALIGN 4
+#inctext lyn "LevelUP/LevelUP.elf" "LevelUp/Definitions.elf"
+
+ALIGN 4
 #inctext lyn "MakeNotDead/MakeNotDead.elf"
 
-ALIGN 16
+ALIGN 4
+#include "Menus/Menu Commands.event"
 
-//#include "FE8 New CHAI/New CHAI.event"
+ALIGN 4
+#include "ModularMinimugBox/MMB Installer Default.event"
 
-ALIGN 16
+ALIGN 4
+//#define PortraitSelectionEntry(TruePortraitID,FalsePortraitID,EventID,ControlCode) "SHORT ControlCode PortraitID OtherPortraitID ; BYTE EventID 0x00"
+#inctext lyn "PortraitSelectASM/SelectPortrait.elf" "PortraitSelectASM/Definitions.elf"
+//PortraitSelectionTable:
+//PortraitSelectionEntry(0x02,0x10,0xE0E0)
+//SHORT 0x0 0x0 0x0 0x0
+
+
+ALIGN 4
+#include "Raid/Raid.event"
 
 /*
 PUSH
@@ -59,90 +73,44 @@ BL(ReversePortrait)
 
 POP
 */
-ALIGN 16
 
+ALIGN 4
+#include "Show Heal Amount/Show Heal Amount.event"
+
+ALIGN 4
 #ifdef SkillSystemIncluded
-	#include "Skill System/Skill System Installer.event"
+	#include "Skill System/Engine Hacks/_MasterHackInstaller.event"
 #else
 	#define SkillTester 0
 	#include "Delete with Skills.event"
 	#include "Skill System/Engine Hacks/Skill System/skill_lists.event"
 	#include "Skill System/Engine Hacks/Skill System/Proc Skills/Proc Skills Installer.event"
-	ALIGN 16
+	ALIGN 4
 	#include "FE8 Battle Stats with Anims Off/FE8-Battle Stats.event"
 #endif
 
-ALIGN 16
-
-#include "Menus/Menu Commands.event"
-
-
-ALIGN 16
-#inctext lyn "PortraitSelectASM/SelectPortrait.elf" "PortraitSelectASM/Definitions.elf"
-
-
-ALIGN 16
-#inctext lyn "DoubleEXP/NewDoubleEXP.elf" "DoubleEXP/Definitions.elf"
-
-
-ALIGN 16
-#inctext lyn "LevelUP/LevelUP.elf" "LevelUp/Definitions.elf"
-
-
-/*PUSH
-ORG EndOfCurrentBLRange
-ALIGN 16
-AnimaTriangle:
-//#inctext lyn "AnimaTriangle/AnimaTriangle.elf" "AnimaTriangle/Definitions.elf"
-#incbin "AnimaTriangle/AnimaTriangle.dmp"
-
-ORG 0x2C83E
-BL(AnimaTriangle)
-POP*/
-
-ALIGN 16
-#inctext lyn "AnimaEffectiveness/AnimaEffectiveness.elf"
-
-ALIGN 16
-#inctext lyn "AnimaTriangle/NewAnimaTriangle.elf" "AnimaTriangle/Definitions.elf"
-
-FireList:
-BYTE Fire Elfire Arcfire Bolganone Meteor Flare 0x00
-
-ThunderList:
-BYTE Thunder Elthunder Arcthunder Thoron Bolting 0x00
-
-WindList:
-BYTE Wind Elwind Arcwind Tornado Aircalibur WindSword 0x00
-
-WaterList:
-BYTE Aqua Elaqua Arcaqua Fimbulvetr 0x00
-
-ALIGN 16
-#inctext lyn "BowDebuff/BowDebuff.elf"
-
-//ALIGN 16
+//ALIGN 4
 //#include "SummonStuff/Summon.event"
 
-ALIGN 16
-MESSAGE Automatic promotion is at CURRENTOFFSET
-#inctext lyn "AutoPromote/AutoPromote.elf"
+ALIGN 4
+#inctext lyn "SupplyUsability/SupplyUsability.elf"
+NormalSupplyList:
+BYTE PlayerMMonk PlayerMShaman PlayerMMage PlayerFMonk PlayerFShaman PlayerFMage
+BYTE PlayerMCavalier PlayerMKnight PlayerMSoldier PlayerMWyvernRider PlayerMArcher PlayerFCavalier PlayerFKnight PlayerFSoldier PlayerFWyvernRider PlayerFArcher
+BYTE PlayerMMercenary PlayerMMyrmidon PlayerMFighter PlayerMPirate PlayerMBrigand PlayerFMercenary PlayerFMyrmidon PlayerFPegasusKnight 0x00
 
-ALIGN 16
+ALIGN 4
+#include "Walking Sounds Fix/FE8-Walking Sounds EA.event"
+
+ALIGN 4
 #include "Class Expansion.event"
 
-ALIGN 16
-#include "Chapter Names/fe8_chnames.event"
+ALIGN 4
+#include "PC_and_Generic_Music_FE8.event" // Basically boss music
 
-ALIGN 16
-#include "Raid/Raid.event"
 
-ALIGN 16
-#include "FE8 Walking Sounds Fix/FE8-Walking Sounds EA.event"
-
-//Enabling name selection
 PUSH
-ORG $44800
+ORG $44800 //Enabling name selection
 BYTE 0x8 //max name length
 ORG $482BA
 BYTE 0x8 //max cursor position
@@ -191,20 +159,6 @@ WORD 0x203EE80
 ORG 0xD5B80
 WORD 0x203EE80
 
-/*00016C94	2c 2a 02 dc 2b 2a 00 db - Original	Slayer?  Involves both 2b and 2c IDs.
- c4 f0 66 f9 01 e0 c0 46 - Patched
-
-00023E90	33 28 03 d0 - Original -----\
- b7 f0 68 f8 - Patched       |
-
-
-ORG 0x16C94
-BYTE 0x00 0x2a 0x02 0xdc 0x00 0x2a 0x00 0xdb // Eliminate slayer???
-
-ORG 0x23E90
-BYTE 0x33 0x28 0x03 0xd0
-*/
-
 ORG $16C94	// For real eliminate slayer
 BYTE 0x00
 ORG $16C98
@@ -231,16 +185,4 @@ BYTE 15
 
 ORG $3328A // Fix party leader stuff
 BYTE 0xC0 0x46
-
-//Prevent Game Over
-//ORG $d3a0
-//POIN EndingScene
-//ORG $d394
-//SHORT 0x2101
-//BL(0xd07c)
-//SHORT 0 0
-//ORG $837b2
-//SHORT 0
-//WORD 0 0 0 0 0 0
-
 POP

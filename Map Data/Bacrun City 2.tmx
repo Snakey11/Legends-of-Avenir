@@ -5,7 +5,7 @@
  </tileset>
  <layer name="Tile Layer 1" width="18" height="23">
   <properties>
-   <property name="Anims" value="0EAnims"/>
+   <property name="Anims" value="_0EAnims"/>
    <property name="ChapterID" value="MercenaryBanditDisband5"/>
    <property name="Main" value=""/>
    <property name="MapChangesID" value="BacrunCity2Changes"/>

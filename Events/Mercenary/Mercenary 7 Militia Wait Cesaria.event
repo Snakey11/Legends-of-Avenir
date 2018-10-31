@@ -64,8 +64,8 @@ TEXTCONT
 TEXTEND
 FADI 0x5
 MUSC Raid
-CLEA Finoc
-SVAL 0xB Coords(6,5)
+CLEA 0x0
+SVAL 0xB Coords(7,5)
 LOMA MercenaryMilitiaWaitCesaria7
 LOAD1 0x1 Cesarians
 LOAD1 0x1 Arcanians
@@ -113,6 +113,15 @@ CAM1 [9,14]
 CLEE Arcanian
 CLEN Cesarian
 CLEA Finoc
+MaxMercenaryHP(3)
+SET_HP Arc
+SET_HP Luke
+SET_HP Finoc
+SET_HP Elanil
+SET_HP Jasper
+SET_HP Derek
+SET_HP Lux
+SET_HP Maximus
 LOAD3 0x1 PlayerLoading3
 LOAD2 0x1 Friends
 ENUN
@@ -214,7 +223,7 @@ UNIT Finoc WyvernRider PlayerMArcher Level(1,Ally,True) [0,1] 0x00 0x00 0x1 REDA
 UNIT
 
 Cesarians:
-UNIT Maximus Sage Maximus Level(10,Ally,True) [5,2] 0x00 0x00 0x00 0x00 [Arcfire,Elwind,Mend] GuardAI
+UNIT Maximus BattleSage Maximus Level(10,Ally,True) [5,2] 0x00 0x00 0x00 0x00 [Arcfire,Elwind,Mend] GuardAI
 UNIT Cesarian GreatKnight Maximus Level(7,NPC,True) [6,7] 0x00 0x00 0x00 0x00 [BraveLance,ShortAxe] GuardAI
 UNIT Cesarian GreatKnight Maximus Level(9,NPC,True) [5,8] 0x00 0x00 0x00 0x00 [KillerAxe,Zanbato] GuardAI
 UNIT Cesarian Ranger Maximus Level(5,NPC,True) [5,6] 0x00 0x00 0x00 0x00 [SilverBow] AttackInRangeAI

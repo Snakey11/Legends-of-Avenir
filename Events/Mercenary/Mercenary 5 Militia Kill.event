@@ -229,7 +229,7 @@ UNIT FastGhost Mercenary BossGhost Level(8,Enemy,True) [7,16] 0x00 0x00 0x00 0x0
 UNIT MageGhost Mage BossGhost Level(7,Enemy,True) [6,3] 0x00 0x00 0x00 0x00 [Arcaqua] ChaseOnceApproachedAI 
 UNIT MageGhost Mage BossGhost Level(5,Enemy,True) [3,8] 0x00 0x00 0x00 0x00 [Meteor] GuardAI
 UNIT MageGhost Druid BossGhost Level(3,Enemy,True) [8,10] 0x00 0x00 0x00 0x00 [Dulam] GuardAI
-UNIT MageGhost Troubadour BossGhost Level(11,Enemy,True) [3,18] 0x00 0x00 0x00 0x00 [Mend] HealAllies
+UNIT MageGhost Troubadour BossGhost Level(11,Enemy,True) [3,18] 0x00 0x00 0x00 0x00 [Mend] HealAlliesAI
 
 UNIT StrongGhost Swordmaster BossGhost Level(3,Enemy,True) [13,10] 0x00 0x00 0x00 0x00 [Runesword] AttackInRangeAI
 UNIT StrongGhost Fighter BossGhost Level(9,Enemy,True) [9,4] Drop 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 

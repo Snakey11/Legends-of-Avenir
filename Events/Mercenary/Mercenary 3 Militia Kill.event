@@ -114,6 +114,10 @@ CAM1 [5,5]
 MOVE 0x0 Luke [2,4]
 MoveMercenary(4,4)
 ENUN
+GiveToSupplySilent(KillingEdge)
+GiveToSupplySilent(SteelAxe)
+GiveToSupplySilent(Shine)
+GiveToSupplySilent(SlimLance)
 NoFade
 ENDA
 

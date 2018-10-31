@@ -1,9 +1,8 @@
 
-MountainierAnim:
-SwordAnim(BerserkerSword)
-AxeAnim(BerserkerAxe)
-HandAxeAnim(BerserkerHandAxe)
-UnarmedAnim(BerserkerUnarmed)
+BattleSageAnim:
+AnimaAnim(BattleSageMagic)
+LightAnim(BattleSageMagic)
+UnarmedAnim(BattleSageMagic)
 WORD 0x0 0x0
 
 BlackFalcoknightAnim:
@@ -74,6 +73,12 @@ SwordAnim(HectorSword)
 AxeAnim(HectorAxe)
 HandAxeAnim(HectorHandAxe)
 UnarmedAnim(HectorUnarmed)
+WORD 0x0 0x0
+
+HolySageAnim:
+LightAnim(HolySageMagic)
+DarkAnim(HolySageMagic)
+StaffAnim(HolySageStaff)
 WORD 0x0 0x0
 
 HunterAnim:
@@ -147,6 +152,13 @@ LightAnim(MonkFMagic)
 UnarmedAnim(MonkFMagic)
 WORD 0x0 0x0
 
+MountainierAnim:
+SwordAnim(BerserkerSword)
+AxeAnim(BerserkerAxe)
+HandAxeAnim(BerserkerHandAxe)
+UnarmedAnim(BerserkerUnarmed)
+WORD 0x0 0x0
+
 MountedBrigandAnim:
 AxeAnim(MountedBrigandAxe)
 HandAxeAnim(MountedBrigandHandAxe)
@@ -202,6 +214,10 @@ AxeAnim(WarlockAxe)
 HandAxeAnim(WarlockHandAxe)
 UnarmedAnim(WarlockUnarmed)
 WORD 0x0 0x0
+
+WilSniperAnim:
+BowAnim(WilSniperBow)
+WORD 0x0
 
 WyvernGeneralAnim:
 SwordAnim(WyvernGeneralSword)

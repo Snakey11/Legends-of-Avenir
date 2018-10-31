@@ -98,6 +98,14 @@ STAL 0x30
 CAM1 [12,14]
 EnterStop
 Text(Merc5MilitiaWaitCesariaGrantText)
+GiveToSupplySilent(SteelSword)
+GiveToSupplySilent(Armorslayer)
+GiveToSupplySilent(ShortSpear)
+GiveToSupplySilent(IronLance)
+GiveToSupplySilent(ShortAxe)
+GiveToSupplySilent(SteelBow)
+GiveToSupplySilent(Elthunder)
+GiveToSupplySilent(Shine)
 NoFade
 ENDA
 
@@ -244,7 +252,7 @@ UNIT Luke Monk Luke Level(4,Ally,True) [7,8] 0x00 0x00 0x00 0x00 [IronSword,Vuln
 UNIT
 
 MaximusCutscene:
-UNIT Maximus Sage Maximus Level(4,NPC,True) [0,1] 0x00 0x00 0x1 REDA4R3 [IronSword,Vulnerary] NoAI 
+UNIT Maximus BattleSage Maximus Level(4,NPC,True) [0,1] 0x00 0x00 0x1 REDA4R3 [IronSword,Vulnerary] NoAI 
 UNIT Lux Mage_F Lux Level(10,Ally,True) [1,0] 0x00 0x00 0x1 REDA5R2 [Elaqua,Fire] NoAI 
 UNIT
 

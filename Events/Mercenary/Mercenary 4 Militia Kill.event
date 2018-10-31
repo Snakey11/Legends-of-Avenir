@@ -82,61 +82,15 @@ STAL 0x8
 Text(0x7,Merc4MilitiaKillKendrickHereText)
 STAL 0x20
 
-GiveItem(HandAxe,Arc)
-GiveItem(SteelAxe,Arc)
-GiveItem(Divine,Luke) // Artimes
-GiveItem(DevilSword,Arya)
-CHECK_EVENTID 0x6E
-BNE 0x0 0xC 0x0
-	CHECK_EVENTID 0x69 // Female
-	BEQ 0x2 0xC 0x0
-		GiveItem(SteelSword,PlayerFMercenary)
-		GiveItem(SteelBlade,PlayerFMercenary)// Mercenary
-	GOTO 0x1
-	LABEL 0x2
-	CHECK_EVENTID 0x6A
-	BEQ 0x3 0xC 0x0
-		GiveItem(SteelSword,PlayerFMyrmidon)
-		GiveItem(KillingEdge,PlayerFMyrmidon)// Myrmidon
-	GOTO 0x1
-	LABEL 0x3
-		GiveItem(SteelSpear,PlayerFPegasusKnight)
-		GiveItem(Axereaver,PlayerFPegasusKnight)// Pregasus Knight
-	GOTO 0x1
-LABEL 0x0
-	CHECK_EVENTID 0x69 // Male
-	BEQ 0x4 0xC 0x0
-		GiveItem(SteelSword,PlayerMMercenary)
-		GiveItem(SteelBlade,PlayerMMercenary)// Mercenary
-	GOTO 0x1
-	LABEL 0x4
-	CHECK_EVENTID 0x6A
-	BEQ 0x5 0xC 0x0
-		GiveItem(SteelSword,PlayerMMyrmidon)
-		GiveItem(KillingEdge,PlayerMMyrmidon)// Myrmidon
-	GOTO 0x1
-	LABEL 0x5
-	CHECK_EVENTID 0x6B
-	BEQ 0x6 0xC 0x0
-		GiveItem(SteelAxe,PlayerMFighter)
-		GiveItem(ShortAxe,PlayerMFighter)// Fighter
-	GOTO 0x1
-	LABEL 0x6
-	CHECK_EVENTID 0x6C
-	BEQ 0x7 0xC 0x0
-		GiveItem(SteelAxe,PlayerMPirate)
-		GiveItem(ShortAxe,PlayerMPirate)// Pirate
-	GOTO 0x1
-	LABEL 0x7
-	CHECK_EVENTID 0x6D
-	BEQ 0x1 0xC 0x0
-		GiveItem(SteelAxe,PlayerMBrigand)
-		GiveItem(DevilAxe,PlayerMBrigand)// Brigand
-LABEL 0x1
+GiveToSupplySilent(DevilSword)
+GiveToSupplySilent(ShortAxe)
+GiveToSupplySilent(Hammer)
+GiveToSupplySilent(Exordium)
+GiveToSupplySilent(Vulnerary)
+
 STAL 0x20
 FADI 0x5
 
-CLEAN
 SVAL 0xB 0x080007
 LOMA MercenaryMilitiaKill4
 LOAD3 0x1 PlayerLoading3

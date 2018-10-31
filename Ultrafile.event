@@ -10,6 +10,7 @@
 	#define Free_Space
 		#define FreeSpaceA $B2A610
 		#define FreeSpaceB $E47200
+		#define FreeSpaceC $EFB2E0
 		#define EndofROM $FE4000
 	#define BLRange $1C2270
 	#define FreeSpaceBLRange BLRange
@@ -18,7 +19,7 @@
 	#define IncludeBigStuff
 	#define SkillSystemIncluded
 	#define __DEBUG__
-	#define TESTING
+	//#define TESTING
 
 	#ifdef TESTING // For clean-ROM-style testing
 	
@@ -28,13 +29,12 @@
 		
 	
 		ORG FreeSpaceA
-		
 		#ifdef IncludeBigStuff
 			#include "Graphics/Battle Animations/Battle Animations 2.event"
 		#endif
 		
 		MESSAGE Data animation block ends at CURRENTOFFSET
-		MESSAGE There is $BFFFFF - CURRENTOFFSET of space available
+		MESSAGE There is ( $BFFFFF - CURRENTOFFSET ) of space available
 		ASSERT $BFFFFF - CURRENTOFFSET
 		MESSAGE
 		
@@ -44,24 +44,32 @@
 		#endif
 		
 		MESSAGE Second battle animation block ends at CURRENTOFFSET
-		MESSAGE There is $EE0000 - CURRENTOFFSET of space available
+		MESSAGE There is ( $EE0000 - CURRENTOFFSET ) of space available
 		ASSERT $EE0000 - CURRENTOFFSET
 		MESSAGE
 		
-		
-		ORG EndofROM
+		ORG FreeSpaceC
 		#ifdef IncludeBigStuff
 			#include "Graphics/Battle Animations/Battle Animations 3.event"
 		#endif
-		
 		MESSAGE Third battle animation block ends at CURRENTOFFSET
+		MESSAGE There is ( $FE0000 - CURRENTOFFSET ) of space available
+		ASSERT $FE0000 - CURRENTOFFSET
+		MESSAGE
+		
+		ORG EndofROM
+		#ifdef IncludeBigStuff
+			//#include "Graphics/Battle Animations/Battle Animations 4.event" // Currently empty
+		#endif
+		
+		MESSAGE Fourth battle animation block ends at CURRENTOFFSET
 		MESSAGE
 
 		ALIGN 16
 		//Text
 		#include "Text/Install Text Data.event"
 		MESSAGE Text data ends at CURRENTOFFSET
-		MESSAGE Final text ID is FinalTextID . Repoint is required at 0xD4B.
+		MESSAGE "Final text ID is FinalTextID . Repoint is required at 0xD4B."
 		
 		ALIGN 16
 		//CSV
@@ -72,7 +80,7 @@
 		ALIGN 16
 		//Miscellaneous Graphical
 		#include "Graphics/Master Graphical Installer.event"
-		MESSAGE Misc. graphical data ends at CURRENTOFFSET
+		MESSAGE Misc graphical data ends at CURRENTOFFSET
 		
 		ALIGN 16
 		//Maps
@@ -84,7 +92,7 @@
 		//Events
 		#include "Events/Master Event Installer.event"
 		MESSAGE Events end at CURRENTOFFSET
-
+		
 		ALIGN 16	
 		//ASM
 		#include "ASM/Master ASM Installer.event"
@@ -96,6 +104,6 @@
 	
 #else
 
-	ERROR You stupid! Write FE8 events!
+	ERROR "You stupid! Write FE8 events!"
 
 #endif

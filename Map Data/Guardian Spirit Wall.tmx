@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="6C006D6E" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/6C006D6E.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="10">
+  <properties>
+   <property name="Anims" value="_6CAnims"/>
+   <property name="ChapterID" value="GuardianSpiritWallCutscene"/>
+   <property name="MapID" value="GuardianSpiritWallCutsceneMap"/>
+   <property name="ObjectType" value="0x6C"/>
+   <property name="PaletteID" value="0x6D"/>
+   <property name="TileConfig" value="0x6E"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJybzMjAMAWIXzEwMLwG4jdArAXkBwFxMBCHALEOmvxkqJ5rzOTjCRTgDxRgLiA+CsTHgPg4EHMCMTsWjE2dNNDPV5gYGL4C8VUglgTypbBgbOquMpCP0d3WxoxdXSsWf0gA7c9gRmB1HHrVmVHViQL1WQDxXiDeB8T7mfDrRVZnCsQAjZVasg==
+  </data>
+ </layer>
+</map>

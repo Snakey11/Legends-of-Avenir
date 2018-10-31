@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="30" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="6C006D6E" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/6C006D6E.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="30">
+  <properties>
+   <property name="Anims" value="_6CAnims"/>
+   <property name="ChapterID" value="MercenaryBanditDisband7"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="XyliaTempleChanges"/>
+   <property name="MapID" value="XyliaTempleMap"/>
+   <property name="ObjectType" value="0x6C"/>
+   <property name="PaletteID" value="0x6D"/>
+   <property name="TileConfig" value="0x6E"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJyllD1OxDAQRq1ECrv0XABpQy4QrkDNIfiRqDgEFKHZS0ARIS0VnAAojMTeJFfgs5gRsx+eRIHiSc4kbzye2K7KECpDDTZgMByBZ/ACTs14jzg37iN4Ah34BGtwbcY5dL4PsAURPFA991SbB+fUmOa6AYsMt5n1KxpvnHU05C5Nb6yr486JD5SXv0nenfHZ9WpO4168Xp6vTI37lIfdKF4089o+5OY9AStxlFriUzWvxe3N3LXM6f13m3NV7tbMe3uZ+e+6b5NbiWfPhb4/KEI4DN+1aH90356V+XOh79vip18N1T92LgZxB8edopWaNzNd2yeFz35u/yTS3XEBLidI/dz+wT0udnsy5nJf2xkuf9NlerKQ+JTbO2tJcb5X7B2RiI4by9+9T/lewRt4n+nGf7iMd9/z3vbQM+c9j6FnzntWvgDjkR2x
+  </data>
+ </layer>
+ <layer name="South Chest" width="15" height="30">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="12"/>
+   <property name="Y" value="16"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjBTANNAOGAWjYBACAA04AAM=
+  </data>
+ </layer>
+ <layer name="North Chest" width="15" height="30">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="12"/>
+   <property name="Y" value="13"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUkAOYBtoBo2AUjAKqAAAOoAAD
+  </data>
+ </layer>
+</map>

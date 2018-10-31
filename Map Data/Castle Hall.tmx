@@ -10,7 +10,7 @@
  </tileset>
  <layer name="Tile Layer 1" width="19" height="14">
   <properties>
-   <property name="Anims" value="18Anims"/>
+   <property name="Anims" value="_18Anims"/>
    <property name="ChapterID" value="MercenaryMilitiaWait3"/>
    <property name="Main" value=""/>
    <property name="MapChangesID" value="CastleHallChanges"/>

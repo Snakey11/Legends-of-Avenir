@@ -1,7 +1,6 @@
 
 ## Merc4MilitiaKillBeginningText
 [FarRight][LoadArya]
-
 Here we are. Port Selsing. One of the key[NL]
 locations in Arcanae for the black market.[A]
 [Left][LoadPlayer][Smile]Arya![A][CloseSpeech]
@@ -135,7 +134,8 @@ officials like who we saw, but they're[A][NL]
 as corrupt as everyone else here.[A]
 [Right]I agree with Kendrick.[A]
 [FarLeft]You two both know better[NL]
-than us. Let's set sail.[A][X]
+than us. Let's grab a few[A][NL]
+supplies then set sail.[A][X]
 
 ## Merc4MilitiaKillPiratesHere
 [MidRight][LoadKendrick][Left][LoadPlayer]So who are you really, Kendrick?[NL]
@@ -144,7 +144,7 @@ I mean, what do you normally deal?[A]
 of different trade. My men are tough too,[A][NL]
 so sometimes we take mercenary jobs.[....][NL]
 I keep my work honest, though...[....][NL]
-so long as its proffitable.[A]
+so long as its profitable.[A]
 [FarLeft][LoadLuke]As long as it's profitable? That[NL]
 doesn't sound like honest work to me.[A][CloseSpeech][MidRight][MoveRight][FarRight][LoadArc]
 Mercenary merchant? You act more like[NL]

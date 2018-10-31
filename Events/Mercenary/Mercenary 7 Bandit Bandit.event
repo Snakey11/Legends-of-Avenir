@@ -90,6 +90,7 @@ MUSC Twisted_Shadows_A
 FADI 0x5
 CLEA Leon
 CLEE Cesarian
+MaxMercenaryHP(3)
 SVAL 0x1 Adlez
 ASMC MakeNotDeadASM|1
 SVAL 0x1 Arya
@@ -157,7 +158,6 @@ FIG1 Narrator Adlez 0x0
 KillUnit(4,6)
 STAL 0x10
 MoveMercenary(2,4)
-MUSC Return_of_the_Demon_King
 Text(Merc7BanditBanditBadEndingNarratorText)
 MOVE 0x0 Narrator [2,5]
 ENUN

@@ -78,6 +78,10 @@
 [LoadHawken] = [LoadFace][0x46][0x01]
 [LoadMason] = [LoadFace][0x47][0x01]
 [LoadDaniel] = [LoadFace][0x48][0x01]
+[LoadXylia] = [LoadFace][0x49][0x01]
+[LoadKilthel] = [LoadFace][0x4A][0x01]
+[LoadArveldir] = [LoadFace][0x4B][0x01]
+[LoadServius] = [LoadFace][0x4C][0x01]
 
 [LoadGuildsman] = [LoadFace][0x02][0x01]
 [LoadBandit1] = [LoadFace][0x4C][0x01]

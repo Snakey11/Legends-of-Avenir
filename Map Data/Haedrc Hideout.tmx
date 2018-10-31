@@ -5,7 +5,7 @@
  </tileset>
  <layer name="Tile Layer 1" width="22" height="20">
   <properties>
-   <property name="Anims" value="6CAnims"/>
+   <property name="Anims" value="_6CAnims"/>
    <property name="ChapterID" value="MercenaryMilitiaKill3"/>
    <property name="MapID" value="HaedricHideoutMap"/>
    <property name="ObjectType" value="0x6C"/>

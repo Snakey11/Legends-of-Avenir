@@ -260,7 +260,7 @@ UNIT Elanil Archer_F Elanil Level(7,Ally,True) [8,9] 0x00 0x00 0x1 REDA8R7 [Stee
 UNIT
 
 CesariaPeople:
-UNIT Maximus Sage Maximus Level(1,NPC,True) [0,2] 0x00 0x00 0x1 REDA6R6 [IronAxe,Vulnerary] [0] 
+UNIT Maximus BattleSage Maximus Level(1,NPC,True) [0,2] 0x00 0x00 0x1 REDA6R6 [IronAxe,Vulnerary] [0] 
 UNIT Cesarian Soldier Maximus Level(1,NPC,True) [0,2] 0x00 0x00 0x1 REDA4R6 [IronAxe,Vulnerary] [0] 
 UNIT Cesarian Soldier Maximus Level(1,NPC,True) [0,2] 0x00 0x00 0x1 REDA6R4 [IronAxe,Vulnerary] [0] 
 UNIT Cesarian Fighter Maximus Level(1,NPC,True) [6,0] 0x00 0x00 0x1 REDA7R2 [IronAxe,Vulnerary] [0] 

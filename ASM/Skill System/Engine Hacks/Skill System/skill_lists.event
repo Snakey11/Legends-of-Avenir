@@ -62,7 +62,10 @@ BYTE 00 00
 ALIGN 4
 
 AssassinSkillList:
-BYTE 255 AcrobatID
+BYTE 255 LightWeightID
+BYTE 255 DuelistsBlowID
+BYTE 255 VantageID
+BYTE 1 AcrobatID
 BYTE 5 ArmsthriftID
 BYTE 10 PassID
 BYTE 00 00

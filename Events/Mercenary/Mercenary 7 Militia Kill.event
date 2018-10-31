@@ -121,9 +121,7 @@ MissedAttack(1,0)
 CriticalHit(0,40)
 EndAttack
 FIG1 Xexim Cesarian 0x0
-SVAL 0xB 0x120012        //Coordinates of Cesarian
-SET_SOMETHING 0xFFFE
-DISA_IF 0xFFFE            //Kill unit
+KillUnit(12,12)
 STAL 0x20
 Text(Merc7MilitiaKillShameText)
 STAL 0x40
@@ -164,6 +162,7 @@ LABEL 0x22
 FADI 0x5
 CLEE Cesarian
 CLEA Arc
+MaxMercenaryHP(5)
 SetBackground(0x1B)
 CHECK_ALIVE Xexim
 BEQ 0x23 0x0 0xC

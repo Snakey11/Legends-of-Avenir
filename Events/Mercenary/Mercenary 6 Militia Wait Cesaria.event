@@ -152,7 +152,7 @@ UNIT Arcanian Halberdier Arcanian Level(4,Enemy,True) [4,0] 0x00 0x00 0x1 REDA5R
 UNIT
 
 MaximusPeople:
-UNIT Maximus Sage Maximus Level(4,NPC,True) [6,9] 0x00 0x00 0x1 REDA5R6 [IronAxe,Vulnerary] NoAI 
+UNIT Maximus BattleSage Maximus Level(4,NPC,True) [6,9] 0x00 0x00 0x1 REDA5R6 [IronAxe,Vulnerary] NoAI 
 UNIT Cesarian Cavalier Maximus Level(4,NPC,True) [10,9] 0x00 0x00 0x1 REDA10R6 [IronAxe,Vulnerary] NoAI 
 UNIT Cesarian Cavalier Maximus Level(4,NPC,True) [12,9] 0x00 0x00 0x1 REDA12R6 [IronAxe,Vulnerary] NoAI 
 UNIT Cesarian Valkyrie Maximus Level(4,NPC,True) [11,9] 0x00 0x00 0x1 REDA11R7 [IronAxe,Vulnerary] NoAI 

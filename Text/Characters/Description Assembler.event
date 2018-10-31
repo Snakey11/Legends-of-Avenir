@@ -90,8 +90,9 @@ Captian of the Cesarian Cheetah Brigade.[NL]
 Very secretive and skilled in spying.[X]
 
 ## LeyosDescText
-Former general of the Cesarian military now[NL]
-serving as the secret bodyguard of the emperor.[X]
+Former general of the Cesarian[NL]
+military now serving as the[NL]
+secret bodyguard of the emperor.[X]
 
 ## ClaraDescText
 A kind and softspoken curate of Haedric[NL]
@@ -260,7 +261,7 @@ do anything for his pay.[X]
 
 ## HunterDescText
 A bounty hunter[NL]
-looking bounties.[X]
+looking for bounties.[X]
 
 ## DanielDescText
 The leader of a group[NL]
@@ -274,3 +275,8 @@ as the Wanderers.[X]
 ## HenningDescText
 The leader of a small[NL]
 group of highwaymen.[X]
+
+## XyliaDescText
+One of the Four Orden.[NL]
+Locked in the temple of[NL]
+Sateenkaari for years.[X]

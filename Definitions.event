@@ -117,10 +117,14 @@
 #define IzukClass 0x8F
 #define Nomad 0x90
 #define NarratorClass 0x91
+#define GuardianSpirit NarratorClass
 #define Warlock 0x92
 #define SpearHero 0x93
 #define XeximClass 0x94
 #define GrandPaladin 0x95
+#define HolySage 0x96
+#define WilSniper 0x97
+#define BattleSage 0x98
 //EndLabel
 
 //Label Character definitions
@@ -231,6 +235,10 @@
 #define MercenaryFAvatar 0x6E
 #define MilitaryMAvatar 0x6F
 #define MilitaryFAvatar 0x70
+#define Kilthel 0x71
+#define Xylia 0x72
+#define Servius 0x73
+#define Arveldir 0x74
 //EndLabel
 
 //Label Portrait Defenitions
@@ -304,6 +312,10 @@
 #define HarkenMug 0x46
 #define MasonMug 0x47
 #define DanielMug 0x48
+#define XyliaMug 0x49
+#define KilthelMug 0x4A
+#define ArveldirMug 0x4B
+#define ServiusMug 0x4C
 //EndLabel
 
 //Label Spell Definitions
@@ -419,6 +431,8 @@
 #define MercenaryBandit2 0x5E // Should fix the NO DATA chapter name glitch
 #define BacrunRuins1Cutscene 0x5F
 #define BacrunRuins2Cutscene 0x60
+#define KilthelFightCutscene 0x61
+#define GuardianSpiritWallCutscene 0x62
 //EndLabel
 
 //Label Palette Definitions
@@ -572,6 +586,10 @@
 #define ArtifactSlotMap 0x9E
 #define BacrunRuins1CutsceneMap 0xA1
 #define BacrunRuins2CutsceneMap 0xA2
+#define XyliaTempleMap 0xA4
+#define KilthelFightCutsceneMap 0xA6
+#define GuardianSpiritWallCutsceneMap 0xA7
+#define MercenaryCampCutsceneMap 0xA8
 
 //Map Changes
 
@@ -602,6 +620,7 @@
 #define BacrunCityChanges 0x97
 #define BacrunCity2Changes 0x9C
 #define ArtifactSlotChanges 0xA0
+#define XyliaTempleChanges 0xA5
 
 //Event Pointer References
 // Good until 0xA3
@@ -647,17 +666,17 @@
 
 //Tile Animations
 
-#define 01Anims "0x05"
-#define 0EAnims "0x12"
-#define 18Anims "0x1C"
-#define 2EAnims "0x05"
-#define 3CAnims "0x00"
-#define 42Anims "0x05"
-#define 50Anims "0x00"
-#define 5FAnims "0x00"
-#define 6CAnims "0x05"
-#define 79Anims "0x7D"
-#define 88Anims "0x00"
+#define _01Anims "0x05"
+#define _0EAnims "0x12"
+#define _18Anims "0x1C"
+#define _2EAnims "0x05"
+#define _3CAnims "0x00"
+#define _42Anims "0x05"
+#define _50Anims "0x00"
+#define _5FAnims "0x00"
+#define _6CAnims "0x05"
+#define _79Anims "0x7D"
+#define _88Anims "0x00"
 //EndLabel
 
 //Label Map Sprites (Standing)
@@ -691,16 +710,6 @@
 //EndLabel
 
 //Label Battle Animations
-/*#define SwordAnim(Animation) "BYTE 0x00 0x01 Animation 0x00"
-#define SpearAnim(Animation) "BYTE 0x01 0x01 Animation 0x00"
-#define AxeAnim(Animation) "BYTE 0x02 0x01 Animation 0x00"
-#define HandAxeAnim(Animation) "BYTE HandAxe 0x00 Animation 0x00 Tomahawk 0x00 Animation 0x00 ShortAxe 0x00 Animation 0x00"
-#define BowAnim(Animation) "BYTE 0x03 0x01 Animation 0x00"
-#define StaffAnim(Animation) "BYTE 0x04 0x01 Animation 0x00"
-#define AnimaAnim(Animation) "BYTE 0x05 0x01 Animation 0x00"
-#define LightAnim(Animation) "BYTE 0x06 0x01 Animation 0x00"
-#define DarkAnim(Animation) "BYTE 0x07 0x01 Animation 0x00"
-#define UnarmedAnim(Animation) "BYTE 0x09 0x01 Animation 0x00"*/
 #define SwordAnim(Animation) "BYTE Swords 0x01 ; SHORT Animation"
 #define SpearAnim(Animation) "BYTE Spears 0x01 ; SHORT Animation"
 #define AxeAnim(Animation) "BYTE Axes 0x01 ; SHORT Animation"
@@ -785,7 +794,9 @@
 #define SentinelSpear 0xBB
 #define SentinelUnarmed 0xBC
 #define TruebladeMSword 0xBD
+#define TruebladeSword 0xBD
 #define TruebladeMUnarmed 0xBE
+#define TruebladeUnarmed 0xBE
 #define ShadowSword 0xBF
 #define ShadowUnarmed 0xC0
 #define TruerbladeSword 0xC1
@@ -814,6 +825,11 @@
 #define HarbingerAxe 0xEE
 #define HarbingerHandAxe 0xEF
 #define HarbingerUnarmed 0xF0
+#define HolySageMagic 0xF1
+#define HolySageStaff 0xF2
+#define WilSniperBow 0xF3
+#define WilSniperUnarmed 0xF4
+#define BattleSageMagic 0xF5
 //EndLabel
 
 //Label Skill Definitions
@@ -1030,12 +1046,24 @@
 #define CamOFF "EVBIT_F 0x9"
 
 #define WarpIn(X,Y,UnitPointer) "SVAL 0xB Coords(X,Y) ; WARP_IN ; LOAD1 0x1 UnitPointer ; ENUN"
-#define WarpOut(X,Y) "SVAL 0xB Coords(X,Y) ; WARP_OUT ; DISA [X,Y]"
+#define WarpOut(X,Y,Character) "SVAL 0xB Coords(X,Y) ; WARP_OUT ; DISA Character"
 
 #define FadeOutMusic "MUSCMID 0x7FFF"
 
+#define GiveToSupplySilent(Item) "SVAL 0x1 Item ; ASMC GiveToSupply|1"
+
+#define MaxMercenaryHP(Index) "SVAL 0x1 60;CHECK_EVENTID 0x66;BNE (0x0 + 0x8 * Index) 0xC 0x0;CHECK_EVENTID 0x69;BEQ (0x2 + 0x8 * Index) 0xC 0x0;SET_HP PlayerFMercenary;GOTO (0x1 + 0x8 * Index);LABEL (0x2 + 0x8 * Index);CHECK_EVENTID 0x6A;BEQ (0x3 + 0x8 * Index) 0xC 0x0;SET_HP PlayerFMyrmidon;GOTO (0x1 + 0x8 * Index);LABEL (0x3 + 0x8 * Index);SET_HP PlayerFPegasusKnight;GOTO (0x1 + 0x8 * Index);LABEL (0x0 + 0x8 * Index);CHECK_EVENTID 0x69;BEQ (0x4 + 0x8 * Index) 0xC 0x0;SET_HP PlayerMMercenary;GOTO (0x1 + 0x8 * Index);LABEL (0x4 + 0x8 * Index);CHECK_EVENTID 0x6A;BEQ (0x5 + 0x8 * Index) 0xC 0x0;SET_HP PlayerMMyrmidon;GOTO (0x1 + 0x8 * Index);LABEL (0x5 + 0x8 * Index);CHECK_EVENTID 0x6B;BEQ (0x6 + 0x8 * Index) 0xC 0x0;SET_HP PlayerMFighter;GOTO (0x1 + 0x8 * Index);LABEL (0x6 + 0x8 * Index);CHECK_EVENTID 0x6C;BEQ 0x7 0xC 0x0;SET_HP PlayerMPirate;GOTO (0x1 + 0x8 * Index);LABEL (0x7 + 0x8 * Index);SET_HP PlayerMBrigand;LABEL (0x1 + 0x8 * Index)"
+//#define MaxMercenaryHP "SVAL 0x1 60; SET_HP PlayerMMercenary ; SET_HP PlayerMMyrmidon ; SET_HP PlayerMFighter ; SET_HP PlayerMPirate ; SET_HP PlayerMBrigand ; SET_HP PlayerFMercenary ; SET_HP PlayerFMyrmidon ; SET_HP PlayerFPegasusKnight"
+
 #define MercenaryNarratorFight(TactX,TactY) "SVAL 0xB Coords(TactX,TactY) ; CALL MercenaryNarratorFightEvents"
 // You still need to set up the battle first!
+
+#define MoveToChapter(Chapter) "MNC2 Chapter"
+
+#define Twisted_Shadows_A 0x16
+#define Twisted_Shadows_B 0x17
+#define The_Battle_to_Be_Won 0x18
+#define Return_of_the_Demon_King 0x1E
 //EndLabel
 
 #define EndUnit UNIT // Necessary for folding

@@ -14,7 +14,7 @@
  </tileset>
  <layer name="Tile Layer 1" width="26" height="20">
   <properties>
-   <property name="Anims" value="3CAnims"/>
+   <property name="Anims" value="_3CAnims"/>
    <property name="ChapterID" value="MercenaryBanditBandit5"/>
    <property name="Main" value=""/>
    <property name="MapChangesID" value="HaedricCastleChanges"/>

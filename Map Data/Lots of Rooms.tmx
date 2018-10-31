@@ -5,7 +5,7 @@
  </tileset>
  <layer name="Tile Layer 1" width="25" height="21">
   <properties>
-   <property name="Anims" value="6CAnims"/>
+   <property name="Anims" value="_6CAnims"/>
    <property name="ChapterID" value="MercenaryBanditDisband6"/>
    <property name="Main" value=""/>
    <property name="MapChangesID" value="LotsOfRoomsChanges"/>
@@ -15,7 +15,7 @@
    <property name="TileConfig" value="0x6E"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJytVTtuwkAUtOyCe6SyfBRzD24Cil3R5QQ0yAVVyAWSFLbk3IQr5FnsSMPorXfzKUbYb4cd3mceTVUUO8PFcAs4GRrDJgGPcy0f3w+G2jDT/QuOFD+uIJdTSw5AF4kz8N3B4SK2phGLM17LO2cyfMkZYqwxyOfWqfWzvLeBu3e4BycP6LJ+qtYd3aPc2tFYq9UQeUatwH0q7riJxluZ1uB68zM4vfM7++p/8gDnbHg3fAR8hhg00Fv1Tlvl5zE6GqPk4fU2Z3aZ480Eeha7i2f3pfR3B+eqPszxYOfkpznH5iLmwRyfa4xzRT/Vp43wcL7Upk1oLD74yU70ePANfKVem6v8vZnquebOvdf/ncHpfaofsTrwGc/QRL3+627XGuXsdvYofLqmkeNPrZWncXL68Ft8AxVsNa0=
+   eJytVTsOglAQJFB4DyvCUfAe3kQjVnSewMZQWKkXUAtI9CZcwSWwyTjZ9/FTTIR94xt3582zyJJkKTgK+gl7QSGYBWBxzun7+1qQCx6w/4Aa6rUHsZycelBUjjpCv9sYXK35NFx1xCkdOZ3gSWtaQ42GPhfGrDf0Xk7clcFdG32oLuqHZl3BPszNDQ3frBrHs85KufNkRE8alzSsgfPGZ+Vsjd+5zf7Th3IOgqvgNuE+1VRDveXslFl8H62h0VIflrcxZxc51plQz1x74dndpfbdgb1yDmMyWBn9cc+uc+HKYEzOuYa9qp+c04J4uj7MpgxoDDn45E70ea654qw9svh7M+Q5947e8/9OY3gf8sM1B1zDM9SB17/e7TyjmLsdM6o59WnE5JNnZWnsDR++xQvTjTUe
   </data>
  </layer>
  <layer name="Layer1" width="25" height="21" visible="0">

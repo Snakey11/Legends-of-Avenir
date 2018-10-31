@@ -17,21 +17,21 @@ POIN BeginningScene EndingScene
 
 //Label TurnBasedEvents
 TurnBasedEvents:
-TurnEventPlayer(0x0,Turn3Wanderers,3)
-TurnEventPlayer(0x0,Turn5Wanderers,5)
-TurnEventPlayer(0x0,Turn6Wanderers,6)
-TurnEventPlayer(0x0,Turn7Wanderers,7)
-TurnEventPlayer(0x0,Turn9Wanderers,9)
-TurnEventPlayer(0x0,Turn11Wanderers,11)
-TurnEventPlayer(0x0,Turn12Wanderers,12)
-TurnEventPlayer(0x0,Turn13Wanderers,13)
+TurnEventPlayer(0x0,Turn3Wanderers,4)
+TurnEventPlayer(0x0,Turn5Wanderers,6)
+TurnEventPlayer(0x0,Turn6Wanderers,7)
+TurnEventPlayer(0x0,Turn7Wanderers,8)
+TurnEventPlayer(0x0,Turn9Wanderers,10)
+TurnEventPlayer(0x0,Turn11Wanderers,12)
+TurnEventPlayer(0x0,Turn12Wanderers,13)
+TurnEventPlayer(0x0,Turn13Wanderers,14)
 
-TurnEventPlayer(0x0,Turn15Wanderers,15)
-TurnEventPlayer(0x0,Turn16Wanderers,16)
-TurnEventPlayer(0x0,Turn17Wanderers,17)
+TurnEventPlayer(0x0,Turn15Wanderers,16)
+TurnEventPlayer(0x0,Turn16Wanderers,17)
+TurnEventPlayer(0x0,Turn17Wanderers,18)
 
-TurnEventPlayer(0x0,Cycle1,18,0xFF)
-TurnEventPlayer(0x0,Cycle2,20,0xFF)
+TurnEventPlayer(0x0,Cycle1,19,0xFF)
+TurnEventPlayer(0x0,Cycle2,21,0xFF)
 END_MAIN
 
 //Label CharacterBasedEvents
@@ -70,13 +70,12 @@ END_MAIN
 TrapData:
 GAST [2,9] Down [1,1]
 GAST [5,14] Up [1,1]
-GAST [6,15] Right [1,1]
 GAST [9,11] Up [1,1]
 GAST [15,6] Left [1,1]
 GAST [18,13] Down [1,1]
 GAST [24,10] Left [1,1]
 GAST [20,0] Down [1,1]
-GAST [15,2] Left [1,1]
+GAST [15,3] Left [1,1]
 GAST [0,7] Right [1,1]
 ENDTRAP
 ALIGN 4
@@ -96,6 +95,12 @@ ENUN
 SetBackground(0x24)
 Text(Merc6BanditDisbandKendrickSuppliesText)
 SetBackground(0x30)
+Text(Merc6BanditDisbandEnRouteText)
+FADI 0x5
+MUSI
+STAL 0x50
+MUNO
+
 TEXTSHOW Merc6BanditDisbandOutsideKilthelText
 TEXTEND
 MUSC Raid
@@ -118,8 +123,10 @@ MUSC LyonTheme
 SetBackground(0x2A)
 Text(Merc6BanditDisbandInsideKilthelText)
 EndConvo
+FadeOutMusic
 Text(Merc6BanditDisbandWhatsThatSlotText)
 TileChange(7,4)
+SOUN 0x00F7 // Play rumbling sound
 STAL 0x50
 MoveMercenary(7,3)
 STAL 0x8
@@ -128,6 +135,7 @@ MOVE 0x0 Kendrick [7,6]
 ENUN
 Text(Merc6BanditDisbandArtifactInsertionText)
 TileChange(5,0)
+SOUN 0x00F7 // Play rumbling sound
 STAL 0x20
 Text(Merc6BanditDisbandWallOpensText)
 LOAD2 0x1 WalterVicarBaretHere
@@ -138,6 +146,7 @@ MUSC Tension
 LOAD1 0x1 LeadWanderer
 ENUN
 Text(Merc6BanditDisbandWanderersHereText)
+STAL 0x20
 FADI 0x5
 EnterStop
 CLEE 0x0
@@ -166,6 +175,21 @@ EndingScene:
 MUSC Indignation
 SetBackground(0x2A)
 Text(Merc6BanditDisbandEndingText)
+MUSC Binding_Vow
+SetBackground(0x0A)
+Text(Merc6BanditDisbandHeWontHelpText)
+FADI 0x5
+MUSI
+STAL 0x40
+MUNO
+FADU 0x5
+Text(Merc6BanditDisbandBaretWalterText)
+FADI 0x5
+FadeOutMusic
+STAL 0x50
+MUSC LyonTheme
+SetBackground(0x2C)
+Text(Merc6BanditDisbandEfilKendrickText)
 MoveToChapter(MercenaryBanditDisband7)
 ENDA
 
@@ -179,7 +203,7 @@ BNE 0x0 0x0 0xC // 0x0 = Player. Compare to slot 0.
 	WarpIn(14,12,Guardian3)
 	ENUN ; STAL 0x10
 	WarpIn(13,14,Guardian4)
-	ENUN ; STAL 0x10
+	ENUN ; STAL 0x50
 	GOTO 0x1
 LABEL 0x0
 	ENUF 0x15
@@ -191,8 +215,8 @@ SpawnGuardians3:
 CHECK_ALLEGIANCE 0xFFFF
 BNE 0x2 0x0 0xC
 	CAM1 [18,15]
-	WarpIn(15,19,Guardian5)
-	ENUN ; STAL 0x10
+	//WarpIn(15,19,Guardian5)
+	//ENUN ; STAL 0x10
 	WarpIn(16,18,Guardian6)
 	ENUN ; STAL 0x10
 	WarpIn(18,16,Guardian7)
@@ -206,7 +230,7 @@ BNE 0x2 0x0 0xC
 	WarpIn(23,14,Guardian11)
 	ENUN ; STAL 0x10
 	WarpIn(23,18,Guardian12)
-	ENUN ; STAL 0x10
+	ENUN ; STAL 0x50
 	GOTO 0x3
 LABEL 0x2
 	ENUF 0x16
@@ -237,7 +261,7 @@ BNE 0x4 0x0 0xC
 	WarpIn(17,1,Guardian21)
 	ENUN ; STAL 0x10
 	WarpIn(23,11,Guardian22)
-	ENUN ; STAL 0x10
+	ENUN ; STAL 0x50
 	GOTO 0x5
 LABEL 0x4
 	ENUF 0x17
@@ -253,10 +277,10 @@ BNE 0x6 0x0 0xC
 	ENUN ; STAL 0x10
 	WarpIn(13,7,Guardian24)
 	ENUN ; STAL 0x10
-	WarpIn(11,5,Guardian25
+	WarpIn(11,5,Guardian25)
 	ENUN ; STAL 0x10
-	WarpIn(11,11,Guardian26)
-	ENUN ; STAL 0x10
+	//WarpIn(11,11,Guardian26)
+	//ENUN ; STAL 0x10
 	WarpIn(11,8,Guardian27)
 	ENUN ; STAL 0x10
 	WarpIn(8,7,Guardian28)
@@ -268,7 +292,8 @@ BNE 0x6 0x0 0xC
 	WarpIn(14,5,Guardian31)
 	ENUN ; STAL 0x10
 	WarpIn(9,1,Guardian32)
-	ENUN ; STAL 0x10
+	ENUN ; STAL 0x50
+	CAM1 [10,5]
 	WarpIn(8,2,Guardian33)
 	ENUN ; STAL 0x10
 	WarpIn(7,3,Guardian34)
@@ -280,7 +305,7 @@ BNE 0x6 0x0 0xC
 	WarpIn(13,2,Guardian37)
 	ENUN ; STAL 0x10
 	WarpIn(12,3,Guardian38)
-	ENUN ; STAL 0x10
+	ENUN ; STAL 0x50
 	GOTO 0x7
 LABEL 0x6
 	ENUF 0x18
@@ -358,35 +383,35 @@ EndUnit
 //Label Vathrylians
 StartingGuardians:
 UNIT Guardian Sage Guardian Level(6,Enemy,True) [1,11] Drop 0x00 0x00 0x00 [Arcfire,ChestKey_5] NoAI 
-UNIT Guardian Mercenary Guardian Level(12,Enemy,True) [1,12] 0x00 0x00 0x00 0x00 [Zanbato] NoAI 
+UNIT Guardian Mercenary Guardian Level(10,Enemy,True) [1,12] 0x00 0x00 0x00 0x00 [Zanbato] NoAI 
 UNIT Guardian Knight Guardian Level(10,Enemy,True) [3,10] 0x00 0x00 0x00 0x00 [Javelin] NoAI 
 UNIT Guardian Shaman Guardian Level(9,Enemy,True) [3,12] 0x00 0x00 0x00 0x00 [Nosferatu] NoAI 
 
-UNIT Guardian Mage Guardian Level(13,Enemy,True) [9,13] 0x00 0x00 0x00 0x00 [Elwind] NoAI 
-UNIT Guardian Archer Guardian Level(12,Enemy,True) [8,12] 0x00 0x00 0x00 0x00 [SteelLongbow] NoAI 
-UNIT Guardian Soldier Guardian Level(12,Enemy,True) [8,14] Drop 0x00 0x00 0x00 [Dragonspear] NoAI
+UNIT Guardian Mage Guardian Level(11,Enemy,True) [9,13] 0x00 0x00 0x00 0x00 [Elwind] NoAI 
+UNIT Guardian Archer Guardian Level(10,Enemy,True) [8,12] 0x00 0x00 0x00 0x00 [SteelLongbow] NoAI 
+UNIT Guardian Soldier Guardian Level(10,Enemy,True) [8,14] Drop 0x00 0x00 0x00 [Dragonspear] NoAI
  
-UNIT Guardian Sniper Guardian Level(5,Enemy,True) [8,18] 0x00 0x00 0x00 0x00 [SilverShortbow] NoAI 
-UNIT Guardian Mage Guardian Level(12,Enemy,True) [10,17] 0x00 0x00 0x00 0x00 [Thunder] NoAI 
-UNIT Guardian Halberdier Guardian Level(7,Enemy,True) [11,19] 0x00 0x00 0x00 0x00 [ShortSpear] NoAI 
-UNIT Guardian Pirate Guardian Level(11,Enemy,True) [12,17] 0x00 0x00 0x00 0x00 [KillerAxe] NoAI 
+UNIT Guardian Sniper Guardian Level(3,Enemy,True) [8,18] 0x00 0x00 0x00 0x00 [SteelShortbow] NoAI 
+UNIT Guardian Mage Guardian Level(11,Enemy,True) [10,17] 0x00 0x00 0x00 0x00 [Thunder] NoAI 
+UNIT Guardian Halberdier Guardian Level(5,Enemy,True) [11,19] 0x00 0x00 0x00 0x00 [ShortSpear] NoAI 
+UNIT Guardian Pirate Guardian Level(10,Enemy,True) [12,17] 0x00 0x00 0x00 0x00 [KillerAxe] NoAI 
 
-UNIT Guardian Mage Guardian Level(14,Enemy,True) [2,6] 0x00 0x00 0x00 0x00 [Thunder] NoAI 
-UNIT Guardian Fighter Guardian Level(12,Enemy,True) [5,5] 0x00 0x00 0x00 0x00 [KillerAxe] NoAI 
+UNIT Guardian Mage Guardian Level(14,Enemy,True) [2,6] 0x00 0x00 0x00 0x00 [Fimbulvetr] NoAI 
+UNIT Guardian Fighter Guardian Level(12,Enemy,True) [5,5] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI 
 UNIT
  
 Guardian2:
-UNIT Guardian Swordmaster Guardian Level(7,Enemy,True) [13,13] 0x00 0x00 0x00 0x00 [SteelSword] NoAI 
+UNIT Guardian Swordmaster Guardian Level(4,Enemy,True) [13,13] 0x00 0x00 0x00 0x00 [SteelSword] NoAI 
 UNIT
 Guardian3:
-UNIT Guardian Archer Guardian Level(9,Enemy,True) [14,12] 0x00 0x00 0x00 0x00 [BraveBow] NoAI 
+UNIT Guardian Archer Guardian Level(7,Enemy,True) [14,12] 0x00 0x00 0x00 0x00 [BraveBow] NoAI 
 UNIT
 Guardian4:
-UNIT Guardian Fighter Guardian Level(11,Enemy,True) [13,14] 0x00 0x00 0x00 0x00 [HandAxe] NoAI 
+UNIT Guardian Fighter Guardian Level(10,Enemy,True) [13,14] 0x00 0x00 0x00 0x00 [HandAxe] NoAI 
 UNIT
 
 Guardian5:
-UNIT Guardian General Guardian Level(6,Enemy,True) [15,19] 0x00 0x00 0x00 0x00 [SteelLance,SteelAxe,SteelSword] NoAI 
+UNIT Guardian General Guardian Level(5,Enemy,True) [15,19] 0x00 0x00 0x00 0x00 [SteelLance,SteelAxe,SteelSword] NoAI 
 UNIT
 Guardian6:
 UNIT Guardian Knight Guardian Level(13,Enemy,True) [16,18] 0x00 0x00 0x00 0x00 [Dragonspear] NoAI 
@@ -401,23 +426,23 @@ Guardian9:
 UNIT Guardian Soldier Guardian Level(15,Enemy,True) [20,18] 0x00 0x00 0x00 0x00 [SteelLance] NoAI 
 UNIT
 Guardian10:
-UNIT Guardian Warrior Guardian Level(5,Enemy,True) [21,19] 0x00 0x00 0x00 0x00 [SteelAxe,KillerBow] NoAI  
+UNIT Guardian Warrior Guardian Level(3,Enemy,True) [21,19] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI  
 UNIT
 Guardian11:
-UNIT Guardian Myrmidon Guardian Level(11,Enemy,True) [23,14] 0x00 0x00 0x00 0x00 [Wyrmslayer] NoAI 
+UNIT Guardian Myrmidon Guardian Level(9,Enemy,True) [23,14] 0x00 0x00 0x00 0x00 [Wyrmslayer] NoAI 
 UNIT
 Guardian12:
 UNIT Guardian Monk Guardian Level(9,Enemy,True) [23,18] 0x00 0x00 0x00 0x00 [Divine] NoAI 
 UNIT
 
 Guardian13:
-UNIT Guardian Knight Guardian Level(12,Enemy,True) [22,1] 0x00 0x00 0x00 0x00 [SteelLance] NoAI 
+UNIT Guardian Knight Guardian Level(10,Enemy,True) [22,1] 0x00 0x00 0x00 0x00 [SteelLance] NoAI 
 UNIT
 Guardian14:
-UNIT Guardian Monk Guardian Level(8,Enemy,True) [19,2] 0x00 0x00 0x00 0x00 [Shine] NoAI 
+UNIT Guardian Monk Guardian Level(7,Enemy,True) [19,2] 0x00 0x00 0x00 0x00 [Shine] NoAI 
 UNIT
 Guardian15:
-UNIT Guardian Myrmidon Guardian Level(10,Enemy,True) [20,3] 0x00 0x00 0x00 0x00 [Lancereaver] NoAI 
+UNIT Guardian Myrmidon Guardian Level(9,Enemy,True) [20,3] 0x00 0x00 0x00 0x00 [Lancereaver] NoAI 
 UNIT
 Guardian16:
 UNIT Guardian Archer Guardian Level(9,Enemy,True) [23,3] 0x00 0x00 0x00 0x00 [IronShortbow] NoAI 
@@ -426,38 +451,38 @@ Guardian17:
 UNIT Guardian Soldier Guardian Level(11,Enemy,True) [20,5] 0x00 0x00 0x00 0x00 [HeavySpear] NoAI 
 UNIT
 Guardian18:
-UNIT Guardian Shaman Guardian Level(11,Enemy,True) [18,6] Drop 0x00 0x00 0x00 [Worm,ChestKey] NoAI 
+UNIT Guardian Shaman Guardian Level(10,Enemy,True) [18,6] Drop 0x00 0x00 0x00 [Worm,ChestKey] NoAI 
 UNIT
 Guardian19:
-UNIT Guardian Mercenary Guardian Level(12,Enemy,True) [16,7] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI 
+UNIT Guardian Mercenary Guardian Level(11,Enemy,True) [16,7] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI 
 UNIT
 Guardian20:
-UNIT Guardian Berserker Guardian Level(6,Enemy,True) [23,7] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI 
+UNIT Guardian Berserker Guardian Level(4,Enemy,True) [23,7] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI 
 UNIT
 Guardian21:
-UNIT Guardian Sage Guardian Level(7,Enemy,True) [17,1] 0x00 0x00 0x00 0x00 [Meteor,Lightning] GuardAI
+UNIT Guardian Mage Guardian Level(10,Enemy,True) [17,1] 0x00 0x00 0x00 0x00 [Meteor,Fire] GuardAI
 UNIT
 Guardian22:
-UNIT Guardian Archer Guardian Level(12,Enemy,True) [23,11] 0x00 0x00 0x00 0x00 [SteelBow] NoAI 
+UNIT Guardian Archer Guardian Level(10,Enemy,True) [23,11] 0x00 0x00 0x00 0x00 [SteelBow] NoAI 
 UNIT	
 
 Guardian23:
-UNIT Guardian Fighter Guardian Level(12,Enemy,True) [12,10] 0x00 0x00 0x00 0x00 [Swordreaver] NoAI 
+UNIT Guardian Fighter Guardian Level(10,Enemy,True) [12,10] 0x00 0x00 0x00 0x00 [Swordreaver] NoAI 
 UNIT
 Guardian24:
 UNIT Guardian Pirate Guardian Level(13,Enemy,True) [13,7] 0x00 0x00 0x00 0x00 [ShortAxe] NoAI 
 UNIT
 Guardian25:
-UNIT Guardian General Guardian Level(5,Enemy,True) [11,5] 0x00 0x00 0x00 0x00 [KillerLance,LightBrand] NoAI 
+UNIT Guardian General Guardian Level(3,Enemy,True) [11,5] 0x00 0x00 0x00 0x00 [KillerLance] NoAI 
 UNIT
 Guardian26:
-UNIT Guardian Soldier Guardian Level(10,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [SlimLance] NoAI 
+UNIT Guardian Soldier Guardian Level(9,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [SlimLance] NoAI 
 UNIT
 Guardian27:
-UNIT Guardian Druid Guardian Level(6,Enemy,True) [11,8] 0x00 0x00 0x00 0x00 [Fenrir,Eclipse] NoAI 
+UNIT Guardian Druid Guardian Level(2,Enemy,True) [11,8] 0x00 0x00 0x00 0x00 [Luna,Eclipse] NoAI 
 UNIT
 Guardian28:
-UNIT Guardian Sentinel Guardian Level(5,Enemy,True) [8,7] 0x00 0x00 0x00 0x00 [BraveLance] NoAI 
+UNIT Guardian Sentinel Guardian Level(4,Enemy,True) [8,7] 0x00 0x00 0x00 0x00 [BraveLance] NoAI 
 UNIT
 Guardian29:
 UNIT Guardian Mercenary Guardian Level(9,Enemy,True) [8,5] 0x00 0x00 0x00 0x00 [IronSword] NoAI 
@@ -466,26 +491,26 @@ Guardian30:
 UNIT Guardian Myrmidon Guardian Level(8,Enemy,True) [14,9] Drop 0x00 0x00 0x00 [Armorslayer] NoAI 
 UNIT
 Guardian31:
-UNIT Guardian Warrior Guardian Level(7,Enemy,True) [14,5] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI 
+UNIT Guardian Warrior Guardian Level(4,Enemy,True) [14,5] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI 
 UNIT
 
 Guardian32:
-UNIT Guardian Berserker Guardian Level(8,Enemy,True) [9,1] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI 
+UNIT Guardian Berserker Guardian Level(5,Enemy,True) [9,1] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI 
 UNIT
 Guardian33:
 UNIT Guardian Soldier Guardian Level(7,Enemy,True) [8,2] 0x00 0x00 0x00 0x00 [Axeslayer] NoAI 
 UNIT
 Guardian34:
-UNIT Guardian Mage Guardian Level(13,Enemy,True) [7,3] 0x00 0x00 0x00 0x00 [Elthunder] NoAI 
+UNIT Guardian Mage Guardian Level(11,Enemy,True) [7,3] 0x00 0x00 0x00 0x00 [Elthunder] NoAI 
 UNIT
 Guardian35:
-UNIT Guardian Fighter Guardian Level(12,Enemy,True) [10,2] 0x00 0x00 0x00 0x00 [KillerAxe] NoAI 
+UNIT Guardian Fighter Guardian Level(11,Enemy,True) [10,2] 0x00 0x00 0x00 0x00 [KillerAxe] NoAI 
 UNIT
 Guardian36:
 UNIT Guardian Knight Guardian Level(9,Enemy,True) [11,1] 0x00 0x00 0x00 0x00 [Axereaver] NoAI 
 UNIT
 Guardian37:
-UNIT Guardian Bishop Guardian Level(6,Enemy,True) [13,2] 0x00 0x00 0x00 0x00 [Artimes] NoAI 
+UNIT Guardian Bishop Guardian Level(5,Enemy,True) [13,2] 0x00 0x00 0x00 0x00 [Artimes] NoAI 
 UNIT
 Guardian38:
 UNIT Guardian Myrmidon Guardian Level(10,Enemy,True) [12,3] 0x00 0x00 0x00 0x00 [SlimSword] NoAI 
@@ -570,7 +595,7 @@ EndA2
 Turn13Wanderers:
 LOAD1 0x1 LoadTurn13Wanderers
 ENUN
-CAM1 [7,15]
+CAM1 [7,16]
 Text(Merc6BanditDisbandDanielHereText)
 NoFade
 EndA2
@@ -595,30 +620,24 @@ EndA2
 
 LoadTurn3Wanderers:
 UNIT Wanderer Myrmidon Daniel Level(11,Enemy,True) [1,20] 0x00 0x00 0x00 0x00 [SteelSword] NoAI 
-UNIT Wanderer Archer Daniel Level(9,Enemy,True) [2,20] 0x00 0x00 0x00 0x00 [SteelShortbow] NoAI 
 UNIT Wanderer Warrior Daniel Level(4,Enemy,True) [4,20] 0x00 0x00 0x00 0x00 [Halberd] NoAI 
 UNIT Wanderer Mage Daniel Level(8,Enemy,True) [5,20] 0x00 0x00 0x00 0x00 [Fire] NoAI 
 UNIT
 
 LoadTurn5Wanderers:
-UNIT Wanderer Mercenary Daniel Level(7,Enemy,True) [1,20] 0x00 0x00 0x00 0x00 [LightBrand] NoAI 
 UNIT Wanderer Hero Daniel Level(5,Enemy,True) [3,20] 0x00 0x00 0x00 0x00 [IronBlade,ShortAxe] NoAI 
-UNIT Wanderer Fighter Daniel Level(9,Enemy,True) [5,20] 0x00 0x00 0x00 0x00 [HandAxe] NoAI 
 UNIT
 
 LoadTurn6Wanderers:
 UNIT Wanderer Shaman Daniel Level(10,Enemy,True) [1,20] 0x00 0x00 0x00 0x00 [Luna] NoAI 
-UNIT Wanderer Soldier Daniel Level(11,Enemy,True) [3,20] 0x00 0x00 0x00 0x00 [Dragonspear] NoAI 
 UNIT Wanderer Fighter Daniel Level(7,Enemy,True) [5,20] 0x00 0x00 0x00 0x00 [HandAxe] NoAI 
 UNIT
 
 LoadTurn7Wanderers:
-UNIT Wanderer Myrmidon Daniel Level(8,Enemy,True) [2,20] 0x00 0x00 0x00 0x00 [WindSword] NoAI 
-UNIT Wanderer Sniper Daniel Level(6,Enemy,True) [4,20] Drop 0x00 0x00 0x00 [KillerBow,OrionsBolt] NoAI 
+UNIT Wanderer Sniper Daniel Level(6,Enemy,True) [4,20] Drop 0x00 0x00 0x00 [IronBow] NoAI 
 UNIT
 
 LoadTurn9Wanderers:
-UNIT Wanderer Swordmaster Daniel Level(7,Enemy,True) [1,20] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI 
 UNIT Wanderer Pirate Daniel Level(10,Enemy,True) [2,20] 0x00 0x00 0x00 0x00 [Hammer] NoAI 
 UNIT Wanderer Mage Daniel Level(7,Enemy,True) [4,20] 0x00 0x00 0x00 0x00 [Elaqua] NoAI 
 UNIT Wanderer Mercenary Daniel Level(6,Enemy,True) [5,20] 0x00 0x00 0x00 0x00 [SteelSword] NoAI 
@@ -627,12 +646,10 @@ UNIT
 LoadTurn11Wanderers:
 UNIT Wanderer Myrmidon Daniel Level(8,Enemy,True) [1,20] 0x00 0x00 0x00 0x00 [SlimSword] NoAI 
 UNIT Wanderer Ranger Daniel Level(7,Enemy,True) [3,20] 0x00 0x00 0x00 0x00 [SteelLongbow,Zanbato] NoAI 
-UNIT Wanderer Fighter Daniel Level(12,Enemy,True) [5,20] 0x00 0x00 0x00 0x00 [IronAxe] NoAI 
 UNIT
 
 LoadTurn12Wanderers:
 UNIT Wanderer Knight Daniel Level(14,Enemy,True) [2,20] 0x00 0x00 0x00 0x00 [Javelin] NoAI 
-UNIT Wanderer Monk Daniel Level(8,Enemy,True) [4,20] 0x00 0x00 0x00 0x00 [Shine] NoAI 
 UNIT
 
 LoadTurn13Wanderers:
@@ -642,21 +659,17 @@ UNIT Wanderer MageKnight Daniel Level(4,Enemy,True) [5,20] 0x00 0x00 0x00 0x00 [
 UNIT
 
 LoadTurn15Wanderers:
-UNIT Wanderer Myrmidon Daniel Level(9,Enemy,True) [1,20] 0x00 0x00 0x00 0x00 [KillingEdge] NoAI 
 UNIT Wanderer Pirate Daniel Level(8,Enemy,True) [2,20] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI 
-UNIT Wanderer Shaman Daniel Level(11,Enemy,True) [4,20] 0x00 0x00 0x00 0x00 [Luna] NoAI 
 UNIT Wanderer Berserker Daniel Level(4,Enemy,True) [5,20] 0x00 0x00 0x00 0x00 [ShortAxe] NoAI 
 UNIT
 
 LoadTurn16Wanderers:
 UNIT Wanderer Mercenary Daniel Level(11,Enemy,True) [1,20] 0x00 0x00 0x00 0x00 [SteelSword] NoAI 
 UNIT Wanderer Assassin Daniel Level(7,Enemy,True) [2,20] 0x00 0x00 0x00 0x00 [Armorslayer] NoAI 
-UNIT Wanderer Fighter Daniel Level(9,Enemy,True) [4,20] 0x00 0x00 0x00 0x00 [DragonAxe] NoAI 
 UNIT Wanderer Mage Daniel Level(10,Enemy,True) [5,20] 0x00 0x00 0x00 0x00 [Elthunder] NoAI 
 UNIT
 
 LoadTurn17Wanderers:
-UNIT Wanderer Valkyrie Daniel Level(7,Enemy,True) [1,20] 0x00 0x00 0x00 0x00 [Artimes,Mend] HealAlliesAI
 UNIT Wanderer Knight Daniel Level(13,Enemy,True) [2,20] 0x00 0x00 0x00 0x00 [Horseslayer] NoAI 
 UNIT Wanderer Myrmidon Daniel Level(12,Enemy,True) [4,20] 0x00 0x00 0x00 0x00 [IronBlade] NoAI 
 UNIT Wanderer Soldier Daniel Level(15,Enemy,True) [5,20] 0x00 0x00 0x00 0x00 [ShortSpear] NoAI 

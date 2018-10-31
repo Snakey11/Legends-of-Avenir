@@ -27,5 +27,5 @@
 
 #ifdef _FE8_
 //Shockingly, FE8 does this the simplest way.
-#define MoveToChapter(chapter) "MNC2 chapter"
+//#define MoveToChapter(chapter) "MNCH chapter"
 #endif

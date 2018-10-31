@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="42004344" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/42004344.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="10">
+  <properties>
+   <property name="Anims" value="_42Anims"/>
+   <property name="ChapterID" value="MercenaryCampCutscene"/>
+   <property name="MapID" value="MercenaryCampCutsceneMap"/>
+   <property name="ObjectType" value="0x42"/>
+   <property name="PaletteID" value="0x43"/>
+   <property name="TileConfig" value="0x44"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJw7ysjAMAmKTwCxMDOCD8JcQJzCwMDwFIilgLiWAcJ/DcR6QLXHgfLHgHgbI6o+EBaA6oVhGSA2h7IDgHrzgDgQiI2YMfWC3YOk1wKIq6HsfGYIvoSm7yMTdv0SQBwBtRuk7xxU30Um7PZic/tkHG7Eho2A+BKa3hVE6EO30wqIvzFA5Jbh8CMMv4DqqYDq2w/EogyIeCXGzjqofeJAzA2VXwXERcyo9jwHYhFmhJ1mUPskgfgZEHMC1QEAlilMrw==
+  </data>
+ </layer>
+</map>

@@ -5,7 +5,7 @@
  </tileset>
  <layer name="Tile Layer 1" width="19" height="19">
   <properties>
-   <property name="Anims" value="42Anims"/>
+   <property name="Anims" value="_42Anims"/>
    <property name="ChapterID" value="MercenaryMilitiaWaitCesaria5"/>
    <property name="Main" value=""/>
    <property name="MapChangesiD" value="DesertChanges"/>

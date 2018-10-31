@@ -80,6 +80,14 @@ Text(Merc3RogerNoticesText)
 DISA Xena
 CAM1 [8,6]
 Text(Merc3BanditFormUpText)
+GiveToSupplySilent(Wyrmslayer)
+GiveToSupplySilent(Zanbato)
+GiveToSupplySilent(IronLance)
+GiveToSupplySilent(KillerLance)
+GiveToSupplySilent(SteelAxe)
+GiveToSupplySilent(HandAxe)
+GiveToSupplySilent(IronBow)
+GiveToSupplySilent(Vulnerary)
 NoFade
 ENDA
 
@@ -123,7 +131,6 @@ UNIT Haedrican Fighter Haedrican Level(6,Enemy,True) [8,6] 0x00 0x00 0x00 0x00 [
 UNIT Haedrican Fighter Haedrican Level(7,Enemy,True) [9,7] 0x00 0x00 0x00 0x00 [IronAxe] GuardAI
 UNIT Haedrican Mercenary Haedrican Level(6,Enemy,True) [7,7] 0x00 0x00 0x00 0x00 [IronBlade] GuardAI
 UNIT Haedrican Fighter Haedrican Level(7,Enemy,True) [4,4] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
-UNIT Haedrican Myrmidon Haedrican Level(5,Enemy,True) [4,6] 0x00 0x00 0x00 0x00 [IronSword] NoAI
 UNIT Haedrican Archer Haedrican Level(4,Enemy,True) [3,8] 0x00 0x00 0x00 0x00 [DevilBow] AttackInRangeAI
 UNIT Haedrican Soldier Haedrican Level(6,Enemy,True) [12,4] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
 UNIT Haedrican Mage Haedrican Level(6,Enemy,True) [11,6] 0x00 0x00 0x00 0x00 [Wind] NoAI

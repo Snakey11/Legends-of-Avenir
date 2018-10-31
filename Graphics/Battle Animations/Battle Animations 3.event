@@ -32,9 +32,9 @@
 #include "Sentinel Unarmed.event"
 
 
-#include "Trueblade M Sword.event"
+#include "Trueblade Sword.event"
 
-#include "Trueblade M Unarmed.event"
+#include "Trueblade Unarmed.event"
 
 
 #include "Grand Paladin Sword.event"
@@ -65,3 +65,16 @@
 #include "Harbinger Hand Axe.event"
 
 #include "Harbinger Unarmed.event"
+
+
+#include "Holy Sage Magic.event"
+
+#include "Holy Sage Staff.event"
+
+
+#include "Wil Sniper Bow.event"
+
+#include "Wil Sniper Unarmed.event"
+
+
+#include "Battle Sage Magic.event"

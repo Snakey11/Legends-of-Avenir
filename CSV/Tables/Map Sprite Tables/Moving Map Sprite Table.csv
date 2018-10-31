@@ -147,4 +147,7 @@ NarratorClass,HarbingerMv|IsPointer,0x81cd1bc
 Warlock,WarlockMv|IsPointer,0x81f95f4
 SpearHero,0x81cb438,0x81cbd94
 XeximClass,0x81cf040,0x81cf7e8
-GrandPaladin,0x81c6a84,0x81c7428 ; PUSH
+GrandPaladin,0x81c6a84,0x81c7428
+HolySage,0x81d91e4,0x81d9b58
+WilSniper,0x81d1520,0x81d1d48
+BattleSage,0x81d91e4,0x81d9b58 ; PUSH

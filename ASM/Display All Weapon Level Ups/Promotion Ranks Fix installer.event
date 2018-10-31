@@ -1,11 +1,3 @@
-#ifdef _FE8_
-
-#ifndef FreeSpace
-  #define FreeSpace 0xB2A610
-  ORG FreeSpace
-#endif
-
-#include "Extensions/Hack Installation.txt"
 
 PUSH
 ORG $75F74
@@ -45,7 +37,3 @@ DoRanksPopup:
 ALIGN 4
 ClearBodyRanks:
 SHORT 0x2100 0x2254 0x5281 0x4770
-
-#else
-    ERROR Less Annoying Fog is for FE8 only!
-#endif

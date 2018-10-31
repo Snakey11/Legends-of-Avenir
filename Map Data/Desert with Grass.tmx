@@ -10,7 +10,7 @@
  </tileset>
  <layer name="Tile Layer 1" width="19" height="24">
   <properties>
-   <property name="Anims" value="42Anims"/>
+   <property name="Anims" value="_42Anims"/>
    <property name="ChapterID" value="MercenaryMilitiaWaitCesaria7"/>
    <property name="MapID" value="DesertWithGrassMap"/>
    <property name="ObjectType" value="0x42"/>

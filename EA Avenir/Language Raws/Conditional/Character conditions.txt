@@ -1,7 +1,7 @@
 
 ##Branch if unit is not fielded.
 GOTO_IFNUF, 0x57, 12, -game:FE7 -indexMode:8
-	Unknown, 2, 2	
+	Unknown, 2, 2
 	Conditional ID, 4, 2
 ##Character to check.
 	Character, 8, 2
@@ -19,7 +19,7 @@ GOTO_IFCNA, 0x4E, 12, -game:FE7 -indexMode:8
 	Conditional ID, 4, 4
 ##Character to check.
 	Character, 8, 2
-	
+
 ##Branch if character is living (not dead)
 GOTO_IFCL, 0x55, 16, -game:FE7 -indexMode:8
 	Conditional ID, 4, 2
@@ -40,6 +40,9 @@ CHECK_ACTIVE, 0x2E21, 4, -game:FE8 -indexMode:8
 #Like all unit-targeting commands in FE8, special inputs are:
 # 0xFFFF: checks active unit (currently selected for moving/attacking, or set using SET_ACTIVE)
 # 0xFFFE: checks unit at coordinates stored to Memory slot 0xB
+#         Note, conditionals may hang if there is no unit at this co-ord.
+#         It may be useful to use CHECK_AT with 0xFFFF.
+#         See the node above CHECK_ALLEGIANCE.
 # 0xFFFD: checks unit of ID stored to Memory slot 0x2
 
 #Results of these commands are stored to Memory Slot 0xC.
@@ -62,7 +65,9 @@ CHECK_DEPLOYED, 0x3323, 4, -game:FE8 -indexMode:8
 CHECK_ACTIVEID, 0x3324, 4, -game:FE8 -indexMode:8
 	Character, 2, 2
 
-#Returns 0x0 for a player character, 0x2 for an enemy, 0x1 otherwise
+#Returns 0x0 for a player character, 0x2 for an enemy, 0x1 for Other team
+#Hangs if 0xFFFE mode is used and no character is at the coord.
+#Use CHECK_AT beforehand.
 CHECK_ALLEGIANCE, 0x3325, 4, -game:FE8 -indexMode:8
 	Character, 2, 2
 

@@ -21,7 +21,7 @@ FIGH, 0x49, 20, -game:FE6 -indexMode:8
 	Defender, 8, 4
 	Battle data pointer, 12, 4, -pointer:battleData
 ##Controls additional details about the battle.
-	Battle parameter, 16, 4, coordinate:4
+	Battle parameter, 16, 4, -coordinate:4
 
 FIGH, 0x49, 20, -game:FE6 -indexMode:8
 	Attacker, 4, 4
@@ -44,7 +44,7 @@ FIGH, 0x97, 20, -game:FE7 -indexMode:8
 	Attacker, 4, 2
 	Defender, 8, 2
 	Battle data pointer, 12, 4, -pointer:battleData
-	Battle parameter, 16, 4, coordinate:4
+	Battle parameter, 16, 4, -coordinate:4
 
 FIGH, 0x97, 20, -game:FE7 -indexMode:8
 	Attacker, 4, 2
@@ -126,7 +126,7 @@ BLDT, 0, 32, -game:FE6 -priority:battleData -indexMode:1
 BLDT, 0, 4, -game:FE6:FE7 -indexMode:8 -priority:battleData -end
 	0x800000, 0, 4, -fixed
 
-	
+
 ##Starts a fight between 2 units.
 FIG1, 0x3F40, 8, -game:FE8 -indexMode:8
 ##Character ID of the attacker.

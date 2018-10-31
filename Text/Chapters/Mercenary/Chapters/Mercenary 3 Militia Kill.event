@@ -9,8 +9,10 @@ heading to the capital?[A][NL]
 [MidLeft]Yeah. The other caravan didn't arrive,[NL]
 but we're going to head out anyway.[A][NL]
 Hopefully we'll meet them on the road.[A][NL]
-[Right]Sounds like a plan.[....] Let's get going.[A][NL]
-[FarRight]Yes.[....] Let's.[A][X]
+[Right]Sounds like a plan.[....] Let's get going.[NL]
+I've prepared a small convoy of useful[NL]
+useful weapons just in case.[A]
+[FarRight]Good. Let's head out.[A][X]
 
 ## Merc3MilitiaKillRuinsText
 [FarLeft][LoadLuke]This place is still standing after all of[NL]

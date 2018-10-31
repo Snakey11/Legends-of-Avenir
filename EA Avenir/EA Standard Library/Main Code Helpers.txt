@@ -137,5 +137,5 @@
 #define ConvoEvent(textID) "MUSI; TEXTSTART; TEXTSHOW textID; TEXTEND; REMA; MUNO; EVBIT_T 0x7; ENDA"
 #define LoadReinforcements(unitPtr) "SMOV 0x2 (unitPtr|0x8000000); CALL $9EE274"
 #define ReinforcementEvent(unitPtr) "SMOV 0x2 (unitPtr|0x8000000); CALL $9EE274; EVBIT_T 0x7; ENDA"
-#define GiveMoney(amount) "SMOV 0x3 amount; _GIVEITEMTOMAIN 0x0"
+#define GiveMoney(amount) "SMOV 0x3 amount; GIVEITEMTOMAIN 0x0"
 #endif
