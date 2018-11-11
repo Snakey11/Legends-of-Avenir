@@ -75,16 +75,20 @@ REMA
 NoFade
 ENDA
 
-WinButtonEvent:
-EVBIT_MODIFY 0x4
-TEXTSHOW WinButtonNarratorText
-TEXTEND
-SVAL 0x1 1
-BNE 0x5 0x1 0xC
-// They selected "yes."
-ASMC Win_Effect|1
 
-LABEL 0x5
-REMA
-NoFade
-ENDA
+#ifdef __DEBUG__
+	WinButtonEvent:
+	EVBIT_MODIFY 0x4
+	TEXTSHOW WinButtonNarratorText
+	TEXTEND
+	SVAL 0x1 1
+	BNE 0x5 0x1 0xC
+	// They selected "yes."
+	ASMC Win_Effect|1
+
+	LABEL 0x5
+	REMA
+	NoFade
+	ENDA
+#endif
+	
