@@ -25,6 +25,9 @@ ALIGN 4
 #inctext lyn "BowDebuff/BowDebuff.elf"
 
 ALIGN 4
+#inctext lyn "PrepForEnd/PrepForEnd.elf"
+
+ALIGN 4
 #include "Chapter Names/fe8_chnames.event"
 
 ALIGN 4
@@ -49,11 +52,30 @@ ALIGN 4
 #include "ModularMinimugBox/MMB Installer Default.event"
 
 ALIGN 4
-//#define PortraitSelectionEntry(TruePortraitID,FalsePortraitID,EventID,ControlCode) "SHORT ControlCode PortraitID OtherPortraitID ; BYTE EventID 0x00"
-#inctext lyn "PortraitSelectASM/SelectPortrait.elf" "PortraitSelectASM/Definitions.elf"
-//PortraitSelectionTable:
-//PortraitSelectionEntry(0x02,0x10,0xE0E0)
-//SHORT 0x0 0x0 0x0 0x0
+#define PortraitSelectionEntry(TruePortraitID,FalsePortraitID,EventIDPointerList,ControlCode) "POIN EventIDPointerList ; SHORT ControlCode TruePortraitID FalsePortraitID 0"
+//#inctext lyn "PortraitSelectASM/SelectPortrait.elf" "PortraitSelectASM/Definitions.elf"
+#inctext lyn "PortraitSelectASM/NewSelectPortrait.elf" "PortraitSelectASM/Definitions.elf"
+PortraitSelectionTable:
+PortraitSelectionEntry(MaleMilitaryMug,0x00,MaleMilitaryList,0xE0E0)
+PortraitSelectionEntry(FemaleMilitaryMug,0x00,FemaleMilitaryList,0xE0E0)
+PortraitSelectionEntry(MaleMercMug,0x00,MaleMercList,0xE0E0)
+PortraitSelectionEntry(FemaleMercMug,0x00,FemaleMercList,0xE0E0)
+PortraitSelectionEntry(MaleMageMug,0x00,MaleMageList,0xE0E0)
+PortraitSelectionEntry(FemaleMageMug,0x00,FemaleMageList,0xE0E0)
+SHORT 0x0 0x0 0x0 0x0 0x0 0x0
+
+MaleMilitaryList:
+BYTE 0x6E True  0x68 True  0x00 0x00
+FemaleMilitaryList:
+BYTE 0x6E False  0x68 True  0x00 0x00
+MaleMercList:
+BYTE 0x6E True  0x67 False  0x00 0x00
+FemaleMercList:
+BYTE 0x6E False  0x67 False  0x00 0x00
+MaleMageList:
+BYTE 0x6E True  0x67 True  0x00 0x00
+FemaleMageList:
+BYTE 0x6E False  0x67 True  0x00 0x00
 
 
 ALIGN 4
@@ -93,6 +115,7 @@ ALIGN 4
 //#include "SummonStuff/Summon.event"
 
 ALIGN 4
+MESSAGE Supply stuff is at CURRENTOFFSET
 #inctext lyn "SupplyUsability/SupplyUsability.elf"
 NormalSupplyList:
 BYTE PlayerMMonk PlayerMShaman PlayerMMage PlayerFMonk PlayerFShaman PlayerFMage

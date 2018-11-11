@@ -21,8 +21,7 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
-Chest(Elixir,21,17)
-Chest(SteelSword,22,18)
+Chest(Elixir,23,18)
 DOOR 0x11 [5,9] 0x12
 DOOR 0x11 [6,9] 0x12
 DOOR 0x11 [7,9] 0x12
@@ -121,7 +120,7 @@ MissedAttack(1,0)
 CriticalHit(0,40)
 EndAttack
 FIG1 Xexim Cesarian 0x0
-KillUnit(12,12)
+KillUnit(18,18)
 STAL 0x20
 Text(Merc7MilitiaKillShameText)
 STAL 0x40
@@ -148,6 +147,7 @@ NoFade
 ENDA
 
 EndingScene:
+ASMC PrepForEnd|1
 ENUF 0x10 // Enables the special death quote that doesn't cause a game over to prevent the game over route looping glitch.
 FadeOutMusic
 STAL 0x20
@@ -160,9 +160,8 @@ LABEL 0x21
 LABEL 0x22
 
 FADI 0x5
-CLEE Cesarian
-CLEA Arc
-MaxMercenaryHP(5)
+CLEE 0x0
+CLEA 0x0
 SetBackground(0x1B)
 CHECK_ALIVE Xexim
 BEQ 0x23 0x0 0xC
@@ -198,7 +197,7 @@ TEXTEND
 MOVE 0x0 Narrator [6,2]
 ENUN
 StartBattle
-CriticalHit(1,70)
+CriticalHit(1,80)
 EndAttack
 MercenaryNarratorFight(7,2) // Calls the fight and kills [Tact], located at [7,2]
 DISA Xexim
@@ -214,9 +213,6 @@ ENUF 0x6A
 ENUF 0x6B
 ENUF 0x6C
 ENUF 0x6D
-//FADI 0x5
-//LOAD1 0x1 TestBoi
-ENUN
 MoveToChapter(PrologueChapter)
 ENDA
 
@@ -300,7 +296,7 @@ UNIT Cesarian Soldier Rex Level(13,Enemy,True) [10,15] 0x00 0x00 0x00 0x00 [Stee
 UNIT Cesarian Soldier Rex Level(12,Enemy,True) [2,15] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
 UNIT Cesarian Halberdier Rex Level(8,Enemy,True) [5,2] 0x00 0x00 0x00 0x00 [SilverLance] ChaseOnceApproachedAI
 UNIT Cesarian Halberdier Rex Level(6,Enemy,True) [7,2] 0x00 0x00 0x00 0x00 [Spear] ChaseOnceApproachedAI
-UNIT Cesarian Sentinel Rex Level(7,Enemy,True) [6,5] 0x00 0x00 0x00 0x00 [SilverSpear] AttackInRangeAI
+UNIT Cesarian Sentinel Rex Level(7,Enemy,True) [6,5] 0x00 0x00 0x00 0x00 [SilverAxe] AttackInRangeAI
 UNIT Cesarian Sage Rex Level(6,Enemy,True) [23,11] 0x00 0x00 0x00 0x00 [Bolting] GuardAI
 UNIT Cesarian Fighter Rex Level(14,Enemy,True) [17,17] 0x00 0x00 0x00 0x00 [SteelAxe] [0]
 UNIT Cesarian Fighter Rex Level(13,Enemy,True) [19,17] 0x00 0x00 0x00 0x00 [Tomahawk] [0]

@@ -107,13 +107,14 @@ NoFade
 ENDA
 
 EndingScene:
+ASMC PrepForEnd|1
 FADI 0x5
 MUSC Victory
 CAM1 [9,14]
-CLEE Arcanian
-CLEN Cesarian
-CLEA Finoc
-MaxMercenaryHP(3)
+CLEE 0x0
+CLEN 0x0
+CLEA 0x0
+SVAL 0x1 60
 SET_HP Arc
 SET_HP Luke
 SET_HP Finoc
@@ -228,8 +229,8 @@ UNIT Cesarian GreatKnight Maximus Level(7,NPC,True) [6,7] 0x00 0x00 0x00 0x00 [B
 UNIT Cesarian GreatKnight Maximus Level(9,NPC,True) [5,8] 0x00 0x00 0x00 0x00 [KillerAxe,Zanbato] GuardAI
 UNIT Cesarian Ranger Maximus Level(5,NPC,True) [5,6] 0x00 0x00 0x00 0x00 [SilverBow] AttackInRangeAI
 UNIT Cesarian Cavalier Maximus Level(17,NPC,True) [2,5] 0x00 0x00 0x00 0x00 [SteelSword,Javelin] AttackInRangeAI
-UNIT Cesarian Sentinel Maximus Level(7,NPC,True) [4,3] 0x00 0x00 0x00 0x00 [BraveLance] AttackInRangeAI
-UNIT Cesarian Sentinel Maximus Level(8,NPC,True) [3,2] 0x00 0x00 0x00 0x00 [Horseslayer] AttackInRangeAI
+UNIT Cesarian Sentinel Maximus Level(7,NPC,True) [4,3] 0x00 0x00 0x00 0x00 [BraveSword,ShortSpear] AttackInRangeAI
+UNIT Cesarian Sentinel Maximus Level(8,NPC,True) [3,2] 0x00 0x00 0x00 0x00 [Horseslayer,SilverAxe] AttackInRangeAI
 UNIT Cesarian Myrmidon Maximus Level(16,NPC,True) [5,4] 0x00 0x00 0x00 0x00 [SteelSword] [0]
 UNIT Cesarian Bishop Maximus Level(6,NPC,True) [1,6] 0x00 0x00 0x00 0x00 [Divine,Physic] HealAlliesAI
 UNIT

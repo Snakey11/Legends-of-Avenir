@@ -78,5 +78,10 @@ Ready to fail?[NL]
 Just as I expected. You know where[NL]
 to find me when you're ready for more.[A][X]
 
+## WinButtonNarratorText
+[MidLeft][LoadNarrator]
+I didn't expect much, but a cheater?[NL]
+You sure?[Yes][X]
+
 ## FinalTextID
 [X]

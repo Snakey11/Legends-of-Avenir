@@ -18,9 +18,11 @@
 #include "Champion Unarmed.event"
 
 
-#include "Commander Spear.event"
+#include "Zelgius Sword.event"
 
-#include "Commander Unarmed.event"
+#include "Zelgius Lance.event"
+
+#include "Zelgius Unarmed.event"
 
 
 #include "Dark Knight M Magic.event"
@@ -49,17 +51,4 @@
 
 #include "Halberdier Unarmed.event"
 
-
-#include "Hector Sword.event"
-
-#include "Hector Axe.event"
-
-#include "Hector Hand Axe.event"
-
-#include "Hector Unarmed.event"
-
-
-#include "Hunter Bow.event"
-
-#include "Hunter Unarmed.event"
 //End of free space block

@@ -240,4 +240,11 @@ POIN BattleQuoteTable
 ORG $5B3F8
 POIN SpellTable
 
+ORG $2442C
+POIN SummonCharacterTable
+ORG $7AD54
+POIN SummonCharacterTable
+ORG $7AE00
+POIN SummonCharacterTable
+
 POP

@@ -169,6 +169,8 @@ ALIGN 4
 	  #incbin "autolevel.dmp"
 	  ALIGN 4
 	  
+	  #inctext lyn "WinAddition.elf"
+	  
 	  Win_Effect:
 	  #incbin "winbutton.dmp"
 	  PUSH
@@ -251,7 +253,7 @@ ALIGN 4
   UM_Trade
   UM_Supply
   #ifdef __DEBUG__
-  MenuCommand(WinNameText, WinDescText, GreenText, Win_Usability, Win_Effect)
+  MenuCommand(WinNameText, WinDescText, GreenText, Win_Usability, Win_Button)
   MenuCommand(DebugNameText, 0, GreenText, 0x4F449, DebugEffect)
   #endif
   UM_Wait

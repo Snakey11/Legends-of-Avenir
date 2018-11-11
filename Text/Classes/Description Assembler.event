@@ -61,15 +61,15 @@ most terrains. Equip: Swords, Axes.[X]
 
 ## DarkFalcoknightDescText
 Fliers who are extremely resistant[NL]
-to magic. Equip: Swords, Spears.[X]
+to magic. Equip: Swords, Lances.[X]
 
 ## HalberdierDescText
-Lightly armored soldiers known for[NL]
-speed and skill. Equip: Lances.[X]
+Expert fighters who have mastered
+their spearwork. Equip: Lances.[X]
 
 ## SentinelDescText
-Moderately armored solders with[NL]
-a balanced skill set. Equip: Lances.[X]
+Balanced and reliable soldiers.[NL]
+Equip: Swords, Lances, Axes.[X]
 
 ## GuardianClassDescText
 Bodyguard of an important figure[NL]
@@ -86,3 +86,15 @@ of common men. Equip: Axes, Bows.[X]
 ## BasileusDescText
 The strongest fighter in[NL]
 all of Haedric. Equip: Axes.[X]
+
+## XeximClassDescText
+Masters of the killing arts.[NL]
+Equip: Swords, Bows.[X]
+
+## SpearHeroDescText
+Seasoned veterans with remarkable[NL]
+skill. Equip: Swords, Lances, Axes.[X]
+
+## ArmoredWyvernLordDescText
+Wyvern-mounted knights of superior skill[NL]
+Equip: Swords, Lances, Axes, Bows.[X]

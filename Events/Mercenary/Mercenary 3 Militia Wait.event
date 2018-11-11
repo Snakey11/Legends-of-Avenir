@@ -103,11 +103,18 @@ ENDA
 
 EndingScene:
 FADI 0x5
+TileChange(2,6) // Open the door in case it wasn't
 MUSC Into_the_Shadow_of_Victory
-CLEE GerwickBandit
+CLEA 0x0
+CLEE 0x0
 TurnAlly(Finoc)
 TurnAlly(Elanil)
-CLEA Arc
+SVAL 0x1 60
+ASMC MaxMercenaryHP|1
+SET_HP Arc
+SET_HP Luke
+SET_HP Elanil
+SET_HP Finoc
 LOAD3 0x1 PlayerLoading2
 LOAD2 0x1 EndingPeople
 ENUN

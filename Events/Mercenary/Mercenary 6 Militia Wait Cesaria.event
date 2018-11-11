@@ -93,12 +93,21 @@ ENDA
 
 EndingScene:
 FADI 0x5
-MUSC Into_the_Shadow_of_Victory
-CLEE Arcanian
-CLEA Finoc
+CLEA 0x0
+CLEE 0x0
+SVAL 0x1 60
+ASMC MaxMercenaryHP|1
+SET_HP Arc
+SET_HP Luke
+SET_HP Elanil
+SET_HP Finoc
+SET_HP Lux
+SET_HP Jasper
+SET_HP Derek
 LOAD2 0x1 EndingFriends
 LOAD3 0x1 PlayerLoading2
 ENUN
+MUSC Into_the_Shadow_of_Victory
 FADU 0x5
 STAL 0x20
 TEXTSHOW Merc6MilitiaWaitCesariaEndingText
@@ -171,7 +180,7 @@ UNIT Arcanian Cavalier Pat Level(12,Enemy,True) [5,7] 0x00 0x00 0x00 0x00 [Drago
 UNIT Arcanian Sniper Pat Level(4,Enemy,True) [9,4] Drop 0x00 0x00 0x00 [KillerBow] AttackInRangeAI
 UNIT Arcanian Mercenary Pat Level(9,Enemy,True) [23,9] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI
 UNIT Arcanian Mercenary Pat Level(9,Enemy,True) [20,9] 0x00 0x00 0x00 0x00 [Lancereaver] NoAI
-UNIT Arcanian Sentinel Pat Level(5,Enemy,True) [21,8] Drop 0x00 0x00 0x00 [SteelSpear,DoorKey] GuardAI
+UNIT Arcanian Sentinel Pat Level(5,Enemy,True) [21,8] Drop 0x00 0x00 0x00 [BraveSword,HandAxe,DoorKey] GuardAI
 UNIT Arcanian General Pat Level(6,Enemy,True) [22,8] Drop 0x00 0x00 0x00 [SteelLance,BraveAxe,DoorKey] GuardAI
 UNIT Arcanian Berserker Pat Level(4,Enemy,True) [18,6] 0x00 0x00 0x00 0x00 [HandAxe] AttackInRangeAI
 UNIT Arcanian Shaman Pat Level(11,Enemy,True) [21,12] 0x00 0x00 0x00 0x00 [Dulam] ChaseOnceApproachedAI

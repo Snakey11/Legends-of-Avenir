@@ -219,7 +219,7 @@ UNIT
 
 Ghosts1:
 UNIT TankGhost Knight BossGhost Level(9,Enemy,True) [13,4] 0x00 0x00 0x00 0x00 [KillerLance] GuardAI
-UNIT TankGhost Sentinel BossGhost Level(3,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [ShortSpear] GuardAI
+UNIT TankGhost Sentinel BossGhost Level(3,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [Hammer,ShortSpear] GuardAI
 UNIT TankGhost Knight BossGhost Level(10,Enemy,True) [9,8] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
 
 UNIT FastGhost Assassin BossGhost Level(4,Enemy,True) [9,1] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI 

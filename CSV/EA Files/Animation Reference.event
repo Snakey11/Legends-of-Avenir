@@ -1,4 +1,13 @@
 
+ArmoredWyvernLordAnim:
+SwordAnim(ArmoredWyvernLordSword)
+LanceAnim(ArmoredWyvernLordLance)
+AxeAnim(ArmoredWyvernLordAxe)
+HandAxeAnim(ArmoredWyvernLordHandAxe)
+BowAnim(ArmoredWyvernLordBow)
+UnarmedAnim(ArmoredWyvernLordUnarmed)
+WORD 0x0 0x0
+
 BattleSageAnim:
 AnimaAnim(BattleSageMagic)
 LightAnim(BattleSageMagic)
@@ -19,6 +28,7 @@ UnarmedAnim(ChampionUnarmed)
 WORD 0x0 0x0
 
 CommanderAnim:
+SwordAnim(CommanderSword)
 SpearAnim(CommanderSpear)
 UnarmedAnim(CommanderUnarmed)
 WORD 0x0 0x0
@@ -70,6 +80,7 @@ WORD 0x0 0x0
 
 HectorAnim:
 SwordAnim(HectorSword)
+LanceAnim(HectorLance)
 AxeAnim(HectorAxe)
 HandAxeAnim(HectorHandAxe)
 UnarmedAnim(HectorUnarmed)
@@ -183,7 +194,10 @@ UnarmedAnim(PatriarchMagic)
 WORD 0x0 0x0
 
 SentinelAnim:
+SwordAnim(SentinelSword)
 SpearAnim(SentinelSpear)
+AxeAnim(SentinelAxe)
+HandAxeAnim(SentinelHandAxe)
 UnarmedAnim(SentinelUnarmed)
 WORD 0x0 0x0
 

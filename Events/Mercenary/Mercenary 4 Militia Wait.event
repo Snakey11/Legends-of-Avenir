@@ -83,7 +83,14 @@ ENDA
 EndingScene:
 FADI 0x5
 MUSC Indignation
-CLEE Guardian
+CLEA 0x0
+CLEE 0x0
+ASMC MaxMercenaryHP|1
+SVAL 0x1 60
+SET_HP Arc
+SET_HP Luke
+SET_HP Elanil
+SET_HP Finoc
 LOAD3 0x1 PlayerLoading2
 LOAD2 0x1 EndingThrone
 ENUN
@@ -113,27 +120,17 @@ EnterStop
 ASMC CallMerc4MilitiaWaitMenu+1
 FADI 0x5
 MUSC Advance
-CLEN Arcanian
-CLEN Uzkalis
-CLEA Elanil
-CLEA Finoc
-LOAD2 0x1 FinalArcLuke
+CLEA 0x0
+CLEE 0x0
+CLEN 0x0
 BNE 0x30 0xC 0x0
 	// Arcanae
-	LOAD3 0x1 PlayerLoading4
-	ENUN
-	CLEN Cesarian
-	CLEN Maximus
 	SetBackground(0x30)
 	Text(Merc4MilitiaWaitChooseArcanaeText)
-	EndConvo
-	Text(Merc4MilitiaWaitArcanaeEndingText)
 	MoveToChapter(MercenaryMilitiaWaitArcanae5)
 GOTO 0x31
 LABEL 0x30
 	// Cesaria
-	LOAD3 0x1 PlayerLoading4
-	ENUN
 	SetBackground(0x30)
 	Text(Merc4MilitiaWaitChooseCesariaText)
 	MoveToChapter(MercenaryMilitiaWaitCesaria5)
@@ -174,10 +171,6 @@ PlayerLoading3:
 UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [8,9] 0x00 0x00 0x1 REDA8R6 [IronSword,Vulnerary] [0] 
 UNIT
 
-PlayerLoading4:
-UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [8,6] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0]  
-UNIT
-
 StartingGuardians:
 UNIT Guardian Fighter Adlez Level(7,Enemy,True) [6,14] 0x00 0x00 0x00 0x00 [SteelAxe] [0]
 UNIT Guardian Fighter Adlez Level(7,Enemy,True) [6,16] Drop 0x00 0x00 0x00 [DragonAxe] [0]
@@ -210,7 +203,7 @@ UNIT Guardian Shaman Adlez Level(6,Enemy,True) [12,11] 0x00 0x00 0x00 0x00 [Dula
 UNIT Guardian Monk Adlez Level(7,Enemy,True) [3,11] 0x00 0x00 0x00 0x00 [Exordium] AttackInRangeAI
 UNIT Guardian Archer Adlez Level(8,Enemy,True) [3,7] Drop 0x00 0x00 0x00 [SteelBow,ChestKey] AttackInRangeAI
 UNIT Guardian Archer Adlez Level(6,Enemy,True) [12,6] 0x00 0x00 0x00 0x00 [IronLongbow] [0]
-UNIT Guardian Sentinel Adlez Level(1,Enemy,True) [5,5] 0x00 0x00 0x00 0x00 [Javelin] GuardAI
+UNIT Guardian Sentinel Adlez Level(1,Enemy,True) [5,5] 0x00 0x00 0x00 0x00 [Javelin,SteelSword] GuardAI
 UNIT Guardian Mercenary Adlez Level(7,Enemy,True) [0,5] 0x00 0x00 0x00 0x00 [Armorslayer] ChaseOnceApproachedAI
 UNIT Guardian Fighter Adlez Level(8,Enemy,True) [1,0] 0x00 0x00 0x00 0x00 [HandAxe] [0]
 UNIT Guardian Pirate Adlez Level(7,Enemy,True) [4,2] 0x00 0x00 0x00 0x00 [PoisonAxe] [0]
@@ -275,9 +268,4 @@ UNIT Cesarian Halberdier Maximus Level(1,NPC,True) [3,0] 0x00 0x00 0x1 REDA6R3 [
 UNIT Cesarian Halberdier Maximus Level(1,NPC,True) [3,0] 0x00 0x00 0x1 REDA5R4 [IronAxe,Vulnerary] [0] 
 UNIT Cesarian Paladin Maximus Level(1,NPC,True) [2,0] 0x00 0x00 0x1 REDA2R2 [IronAxe,Vulnerary] [0] 
 UNIT Cesarian Paladin Maximus Level(1,NPC,True) [2,0] 0x00 0x00 0x1 REDA3R1 [IronAxe,Vulnerary] [0] 
-UNIT
-
-FinalArcLuke:
-UNIT Arc Fighter PlayerMArcher Level(1,Ally,True) [7,7] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Luke Monk PlayerMArcher Level(1,Ally,True) [9,7] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
 UNIT

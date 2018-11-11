@@ -122,17 +122,23 @@ NoFade
 ENDA
 
 EndingScene:
-MUSC Indignation
 FADI 0x5
 STAL 0x10
 CAM1 [14,14]
-CLEAN
+CLEA 0x0
+CLEE 0x0
+ASMC MaxMercenaryHP|1
+SVAL 0x1 60
+SET_HP Arc
+SET_HP Luke
+MUSC Indignation
 LOAD3 0x1 PlayerLoading3
 LOAD2 0x1 EndingStuff
 CHECK_EVENTID 0x10
 BEQ 0x19 0x0 0xC
 	LOAD1 0x1 AryaRecruited
 	ENUN
+	SET_HP Arya
 	FADU 0x5
 	STAL 0x20
 	SetBackground(0x13)

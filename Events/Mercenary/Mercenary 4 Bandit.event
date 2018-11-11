@@ -124,8 +124,7 @@ ENDA
 EndingScene:
 MUSC Into_the_Shadow_of_Victory
 SetBackground(0x04)
-SETVAL 0x2 Mayor
-CHECK_ALIVE 0xFFFD
+CHECK_ALIVE Mayor
 BNE 0x10 0x0 0xC
 	// Mayor is dead
 	Text(Merc4BanditEndingBanditText)
@@ -169,7 +168,7 @@ NoFade
 EndA2
 
 DHouse2:
-GiveItem(HeroCrest,0xFFFF)
+GiveItem(KnightCrest,0xFFFF)
 TileChange(1,8)
 //ENUT 0x14
 NoFade

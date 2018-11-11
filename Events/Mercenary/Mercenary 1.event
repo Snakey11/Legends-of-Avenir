@@ -134,7 +134,7 @@ MOVE 0x0 Henning [4,0]
 STAL 0x10
 Text(Merc1VulneraryText)//Text about vulneraries
 
-LOAD1 0x1 TestPeople
+//LOAD1 0x1 TestPeople
 
 NoFade
 ENDA
@@ -165,24 +165,27 @@ ENDA
 
 Home1:
 MUSI
-VillageEventItem(Merc1House1Text,0x01,Vulnerary)
+SetBackground(0x01)
+Text(Merc1House2Text)
+EndConvo
 MUNO
 NoFade
 ENDA
 
 Home2:
 MUSI
-HouseEvent(0x85,0x01) // NEEDS TEXT
+Text(0x1,Merc1House3Text)
 MUNO
 NoFade
 ENDA
 
 Home4:
 MUSI
-HouseEvent(Merc1House2Text,0x01)
+Text(0x1,Merc1House1Text)
+GiveItem(Vulnerary,0xFFFF)
 TileChange(0,5)
-NoFade
 MUNO
+NoFade
 ENDA
 
 
@@ -211,7 +214,7 @@ UNIT Xena Civilian Xena Level(1,NPC,True) [8,10] 0x00 0x00 0x00 0x00 [0] [0]
 UNIT
 
 SwordBandits:
-UNIT Henning 0x6F Henning Level(3,Enemy,True) [9,11] 0x00 0x00 0x00 0x00 [SteelSword] GuardTileAI
+UNIT Henning Mercenary Henning Level(3,Enemy,True) [9,11] 0x00 0x00 0x00 0x00 [SteelSword] GuardTileAI
 UNIT GerwickBandit Myrmidon Henning Level(2,Enemy,True) [2,7] 0x00 0x00 0x00 0x00 [IronSword] AttackInRangeAI
 UNIT GerwickBandit Mercenary Henning Level(1,Enemy,True) [7,10] 0x00 0x00 0x00 0x00 [IronSword] [0] 
 UNIT GerwickBandit PegasusKnight Henning Level(1,Enemy,True) [13,2] 0x00 0x00 0x00 0x00 [Javelin] [0] 
@@ -225,14 +228,9 @@ UNIT GerwickBandit Mercenary Henning Level(2,Enemy,True) [2,7] 0x00 0x00 0x00 0x
 UNIT
 
 TestPeople:
-//UNIT GerwickBandit Mage Henning Level(2,Enemy,True) [8,9] 0x00 0x00 0x00 0x00 [Wind] NoAI
-//UNIT GerwickBandit Mage Henning Level(2,Enemy,True) [8,10] 0x00 0x00 0x00 0x00 [Arcthunder] NoAI
-//UNIT GerwickBandit Shaman Henning Level(2,Enemy,True) [9,10] 0x00 0x00 0x00 0x00 [Dulam] NoAI
-UNIT GerwickBandit Mage Henning Level(2,Enemy,True) [10,10] 0x00 0x00 0x00 0x00 [IronSword] NoAI
-UNIT GerwickBandit Mage Henning Level(2,Enemy,True) [11,10] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT Ewan Mage Henning Level(5,Ally,True) [8,11] 0x00 0x00 0x00 0x00 [Fire,Wind,Thunder] NoAI
-//UNIT Kendrick Pirate Henning Level(1,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
-//UNIT Xena Druid Henning Level(15,Ally,True) [9,9] 0x00 0x00 0x00 0x00 [Flux] NoAI
-//UNIT Lux Sage Henning Level(15,Ally,True) [9,10] 0x00 0x00 0x00 0x00 [Fire] NoAI
-//UNIT Luke Bishop Henning Level(15,Ally,True) [9,11] 0x00 0x00 0x00 0x00 [Lightning] NoAI
+UNIT Vicar HectorClass Henning Level(2,Ally,True) [10,11] 0x00 0x00 0x00 0x00 [SteelSword,SteelLance,SteelAxe,ShortAxe] NoAI
+UNIT Walter Sentinel Henning Level(2,Ally,True) [10,12] 0x00 0x00 0x00 0x00 [SteelSword,SteelLance,SteelAxe,ShortAxe] NoAI
+UNIT Baret Halberdier Henning Level(2,Ally,True) [11,11] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Adlez ArmoredWyvernLord Henning Level(2,Ally,True) [11,12] 0x00 0x00 0x00 0x00 [SteelSword,SteelLance,SteelAxe] NoAI
+UNIT Connor ArmoredWyvernLord Henning Level(2,Ally,True) [12,11] 0x00 0x00 0x00 0x00 [ShortAxe,SteelLongbow] NoAI
 UNIT

@@ -164,7 +164,7 @@ here and now![A][X]
 [FarLeft][LoadWeston]You! What have you done?[A][ClearFace]
 [FarRight][LoadArya]You broke the contract.[A][ClearFace]
 [FarLeft][LoadWeston]I hired you to kill![A][ClearFace]
-[FarRight][LoadArya]You hired to me kill one man.[NL]
+[FarRight][LoadArya]You hired me to kill one man.[NL]
 Not massacre a caravan.[A][NL]
 We of Shizon don't[NL]
 do bad business.[A][NL]
@@ -266,7 +266,7 @@ Get moving![A][ClearFace]
 ## Merc3MilitiaKillWestonDeathText
 [FarLeft][LoadWeston]Holy Hell. You guys are tough.[NL]
 Who would have thought you[A][NL]
-three could take on my army?[A][X]
+could take on my army?[A][X]
 
 ## Merc3MilitiaKillCheckpointText
 [MidLeft][LoadArya][FarRight][LoadLuke][Right][LoadArc]

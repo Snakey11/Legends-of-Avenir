@@ -27,7 +27,13 @@
 #include "Narrator 2.event"
 
 
-#include "Sentinel Speal.event"
+#include "Sentinel Sword.event"
+
+#include "Sentinel Lance.event"
+
+#include "Sentinel Axe.event"
+
+#include "Sentinel Hand Axe.event"
 
 #include "Sentinel Unarmed.event"
 
@@ -66,15 +72,3 @@
 
 #include "Harbinger Unarmed.event"
 
-
-#include "Holy Sage Magic.event"
-
-#include "Holy Sage Staff.event"
-
-
-#include "Wil Sniper Bow.event"
-
-#include "Wil Sniper Unarmed.event"
-
-
-#include "Battle Sage Magic.event"

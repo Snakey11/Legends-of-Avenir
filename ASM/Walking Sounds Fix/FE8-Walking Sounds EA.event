@@ -73,6 +73,9 @@ WalkingSound(Warlock,FootSound)
 WalkingSound(HolySage,FootSound)
 WalkingSound(WilSniper,FootSound)
 WalkingSound(BattleSage,FootSound)
+WalkingSound(LostSoulM,FootSound)
+WalkingSound(LostSoulF,FootSound)
+WalkingSound(ArmoredWyvernLord,WyvernSound)
 	
 POP
 	

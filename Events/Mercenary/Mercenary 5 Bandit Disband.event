@@ -105,7 +105,7 @@ ALIGN 4
 
 TopRedHouse:
 MUSI
-Text(0x2,0x85) // NEEDS TEXT
+Text(0x2,Merc5BanditDisbandHalberdHouseText)
 GiveItem(Halberd,0xFFFF)
 MUNO
 NoFade
@@ -113,7 +113,7 @@ EndA2
 
 RightRedHouse:
 MUSI
-Text(0x2,0x85)
+Text(0x2,Merc5BanditDisbandElixirHouseText)
 GiveItem(Elixir,0xFFFF)
 MUNO
 NoFade
@@ -121,7 +121,7 @@ EndA2
 
 BottomRedHouse:
 MUSI
-Text(0x2,0x85)
+Text(0x2,Merc5BanditDisbandSteelBladeHouseText)
 GiveItem(SteelBlade,0xFFFF)
 MUNO
 NoFade
@@ -129,14 +129,14 @@ EndA2
 
 WhiteHouse:
 MUSI
-Text(0x2,0x85) // NEEDS TEXT
+Text(0x2,Merc5BanditDisbandHouse1Text)
 MUNO
 NoFade
 EndA2
 
 VisitInn:
 MUSI
-Text(0x1,0x85) // NEEDS TEXT
+Text(0x1,Merc5BanditDisbandInnText)
 MUNO
 NoFade
 ENDA
@@ -171,7 +171,7 @@ UNIT Hunter PegasusKnight Mason Level(9,Enemy,True) [17,15] 0x00 0x00 0x00 0x00 
 UNIT Hunter Soldier Mason Level(9,Enemy,True) [13,16] 0x00 0x00 0x00 0x00 [SteelLance] ChaseOnceApproachedAI
 UNIT Hunter Soldier Mason Level(11,Enemy,True) [12,18] 0x00 0x00 0x00 0x00 [ShortSpear] NoAI
 UNIT Hunter Myrmidon Mason Level(8,Enemy,True) [15,19] 0x00 0x00 0x00 0x00 [WindSword] AttackInRangeAI
-UNIT Hunter Archer Mason Level(7,Enemy,True) [19,18] Drop 0x00 0x00 0x00 [SteelShortbow,OrionsBolt] AttackInRangeAI
+UNIT Hunter Archer Mason Level(7,Enemy,True) [16,21] Drop 0x00 0x00 0x00 [SteelShortbow,OrionsBolt] AttackInRangeAI
 UNIT Hunter Knight Mason Level(9,Enemy,True) [9,19] 0x00 0x00 0x00 0x00 [KillerLance] GuardAI
 UNIT Hunter Mercenary Mason Level(13,Enemy,True) [10,20] 0x00 0x00 0x00 0x00 [IronSword] ChaseOnceApproachedAI
 UNIT
@@ -195,5 +195,5 @@ UNIT Hunter Troubadour Mason Level(13,Enemy,True) [2,11] 0x00 0x00 0x00 0x00 [Me
 UNIT Hunter Pirate Mason Level(9,Enemy,True) [0,13] 0x00 0x00 0x00 0x00 [Hammer] AttackInRangeAI
 UNIT Hunter Shaman Mason Level(11,Enemy,True) [3,13] 0x00 0x00 0x00 0x00 [Slime] AttackInRangeAI
 UNIT Hunter Knight Mason Level(8,Enemy,True) [2,16] 0x00 0x00 0x00 0x00 [Javelin] GuardAI
-UNIT Hunter Sentinel Mason Level(7,Enemy,True) [1,18] 0x00 0x00 0x00 0x00 [BraveLance] ChaseOnceApproachedAI
+UNIT Hunter Sentinel Mason Level(7,Enemy,True) [1,18] 0x00 0x00 0x00 0x00 [BraveLance,IronAxe] ChaseOnceApproachedAI
 EndUnit

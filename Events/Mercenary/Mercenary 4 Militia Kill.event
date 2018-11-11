@@ -117,8 +117,15 @@ ENDA
 EndingScene:
 FADI 0x5
 MUSC Indignation
-CLEE RobertPirate
+CLEA 0x0
+CLEE 0x0
 CLEN 0x0
+ASMC MaxMercenaryHP|1
+SVAL 0x1 60
+SET_HP Arc
+SET_HP Luke
+SET_HP Arya
+SET_HP Kendrick
 CAM1 [11,8]
 LOAD1 0x1 EndingPeople
 LOAD3 0x1 PlayerLoading4
@@ -228,7 +235,7 @@ UNIT RobertPirate Mercenary Robert Level(8,Enemy,True) [10,11] 0x00 0x00 0x00 0x
 UNIT RobertPirate Pirate Robert Level(5,Enemy,True) [12,9] 0x00 0x00 0x00 0x00 [Halberd] PursueWithoutHeedAI
 UNIT RobertPirate Pirate Robert Level(7,Enemy,True) [17,11] 0x00 0x00 0x00 0x00 [DevilAxe] PursueWithoutHeedAI
 UNIT RobertPirate Archer Robert Level(8,Enemy,True) [18,10] 0x00 0x00 0x00 0x00 [SteelShortbow] AttackInRangeAI
-UNIT RobertPirate Sentinel Robert Level(1,Enemy,True) [18,7] 0x00 0x00 0x00 0x00 [SlimLance] [0]
+UNIT RobertPirate Sentinel Robert Level(1,Enemy,True) [18,7] 0x00 0x00 0x00 0x00 [SlimLance,HandAxe] [0]
 UNIT RobertPirate Mage Robert Level(5,Enemy,True) [12,15] 0x00 0x00 0x00 0x00 [Elthunder] AttackInRangeAI
 UNIT
 

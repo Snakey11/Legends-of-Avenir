@@ -417,14 +417,14 @@ UNIT
 
 
 MMageSelections:
-UNIT MageMAvatar 0x6D PlayerMArcher Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT MageMAvatar LostSoulM PlayerMArcher Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] [0] 
 UNIT PlayerMShaman Shaman Narrator Level(1,NPC,True) [7,3] 0x00 0x00 0x00 0x00 [Flux] GuardAI 
 UNIT PlayerMMage Mage Narrator Level(1,NPC,True) [5,5] 0x00 0x00 0x00 0x00 [Aqua] GuardAI 
 UNIT PlayerMMonk MonkF2 Narrator Level(1,NPC,True) [9,5] 0x00 0x00 0x00 0x00 [Lightning] GuardAI 
 UNIT
 
 MMercenarySelections:
-UNIT MercenaryMAvatar 0x6D PlayerMArcher Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] [0]
+UNIT MercenaryMAvatar LostSoulM PlayerMArcher Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] [0]
 UNIT PlayerMMercenary Mercenary Narrator Level(1,NPC,True) [7,3] 0x00 0x00 0x00 0x00 [IronSword] GuardAI 
 UNIT PlayerMMyrmidon Myrmidon Narrator Level(1,NPC,True) [6,4] 0x00 0x00 0x00 0x00 [IronSword] GuardAI 
 UNIT PlayerMFighter Fighter Narrator Level(1,NPC,True) [5,5] 0x00 0x00 0x00 0x00 [IronAxe] GuardAI 
@@ -433,7 +433,7 @@ UNIT PlayerMBrigand Brigand Narrator Level(1,NPC,True) [9,5] 0x00 0x00 0x00 0x00
 UNIT
 
 MMilitarySelections:
-UNIT MilitaryMAvatar 0x6D PlayerMArcher Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT MilitaryMAvatar LostSoulM PlayerMArcher Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] [0] 
 UNIT PlayerMCavalier Cavalier Narrator Level(1,NPC,True) [7,3] 0x00 0x00 0x00 0x00 [IronLance] GuardAI 
 UNIT PlayerMKnight Knight Narrator Level(1,NPC,True) [6,4] 0x00 0x00 0x00 0x00 [IronLance] GuardAI 
 UNIT PlayerMSoldier Soldier Narrator Level(1,NPC,True) [5,5] 0x00 0x00 0x00 0x00 [IronLance] GuardAI 
@@ -443,21 +443,21 @@ UNIT
 
 
 FMageSelections:
-UNIT MageFAvatar 0x6E PlayerMArcher Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT MageFAvatar LostSoulF PlayerMArcher Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] [0] 
 UNIT PlayerFShaman Shaman_F Narrator Level(1,NPC,True) [7,3] 0x00 0x00 0x00 0x00 [Flux] GuardAI 
 UNIT PlayerFMage Mage_F Narrator Level(1,NPC,True) [5,5] 0x00 0x00 0x00 0x00 [Aqua] GuardAI 
 UNIT PlayerFMonk MonkF2 Narrator Level(1,NPC,True) [9,5] 0x00 0x00 0x00 0x00 [Lightning] GuardAI 
 UNIT
 
 FMercenarySelections:
-UNIT MercenaryFAvatar 0x6E PlayerMArcher Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] [0]
+UNIT MercenaryFAvatar LostSoulF PlayerMArcher Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] [0]
 UNIT PlayerFMercenary Mercenary_F Narrator Level(1,NPC,True) [7,3] 0x00 0x00 0x00 0x00 [IronSword] GuardAI 
 UNIT PlayerFMyrmidon Myrmidon_F Narrator Level(1,NPC,True) [5,5] 0x00 0x00 0x00 0x00 [IronSword] GuardAI
-//UNIT PlayerFPegasusKnight PegasusKnight Narrator Level(1,NPC,True) [9,5] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
+UNIT PlayerFPegasusKnight PegasusKnight Narrator Level(1,NPC,True) [9,5] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
 UNIT
 
 FMilitarySelections:
-UNIT MilitaryFAvatar 0x6E PlayerMArcher Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT MilitaryFAvatar LostSoulF PlayerMArcher Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] [0] 
 UNIT PlayerFCavalier Cavalier_F Narrator Level(5,NPC,True) [7,3] 0x00 0x00 0x00 0x00 [IronLance] GuardAI 
 UNIT PlayerFKnight Knight_F Narrator Level(5,NPC,True) [6,4] 0x00 0x00 0x00 0x00 [IronLance] GuardAI 
 UNIT PlayerFSoldier Soldier Narrator Level(5,NPC,True) [5,5] 0x00 0x00 0x00 0x00 [IronLance] GuardAI 

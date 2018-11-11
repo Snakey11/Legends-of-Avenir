@@ -166,12 +166,12 @@ EndUnit
 BanditFriends:
 UNIT Vicar Warrior PlayerMArcher Level(1,NPC,True) [11,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
 UNIT Walter Archer PlayerMArcher Level(1,NPC,True) [13,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Baret Myrmidon PlayerMArcher Level(1,NPC,True) [14,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Baret Soldier PlayerMArcher Level(1,NPC,True) [14,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
 EndUnit
 
 //Label OutsideDanaanFriends
 OutsideDanaanFriends:
-UNIT Baret Myrmidon PlayerMArcher Level(6,Ally,True) [12,14] 0x00 0x00 0x00 0x00 [SteelSword] [0] 
+UNIT Baret Soldier PlayerMArcher Level(6,Ally,True) [12,14] 0x00 0x00 0x00 0x00 [SteelLance] [0] 
 UNIT Vicar Warrior PlayerMArcher Level(2,Ally,True) [13,12] 0x00 0x00 0x00 0x00 [SteelAxe,KillerAxe] [0]
 EndUnit
 

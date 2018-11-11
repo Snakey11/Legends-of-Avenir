@@ -18,7 +18,7 @@
 	
 	#define IncludeBigStuff
 	#define SkillSystemIncluded
-	#define __DEBUG__
+	//#define __DEBUG__
 	//#define TESTING
 
 	#ifdef TESTING // For clean-ROM-style testing
@@ -30,17 +30,17 @@
 	
 		ORG FreeSpaceA
 		#ifdef IncludeBigStuff
-			#include "Graphics/Battle Animations/Battle Animations 2.event"
+			#include "Graphics/Battle Animations/Battle Animations 2.event" // FULL!
 		#endif
 		
 		MESSAGE Data animation block ends at CURRENTOFFSET
 		MESSAGE There is ( $BFFFFF - CURRENTOFFSET ) of space available
-		ASSERT $BFFFFF - CURRENTOFFSET
+		ASSERT $C00000 - CURRENTOFFSET
 		MESSAGE
 		
 		ORG FreeSpaceB
 		#ifdef IncludeBigStuff
-			#include "Graphics/Battle Animations/Battle Animations 1.event"
+			#include "Graphics/Battle Animations/Battle Animations 1.event" // FULL!
 		#endif
 		
 		MESSAGE Second battle animation block ends at CURRENTOFFSET
@@ -50,7 +50,7 @@
 		
 		ORG FreeSpaceC
 		#ifdef IncludeBigStuff
-			#include "Graphics/Battle Animations/Battle Animations 3.event"
+			#include "Graphics/Battle Animations/Battle Animations 3.event" // FULL!
 		#endif
 		MESSAGE Third battle animation block ends at CURRENTOFFSET
 		MESSAGE There is ( $FE0000 - CURRENTOFFSET ) of space available
@@ -59,7 +59,7 @@
 		
 		ORG EndofROM
 		#ifdef IncludeBigStuff
-			//#include "Graphics/Battle Animations/Battle Animations 4.event" // Currently empty
+			#include "Graphics/Battle Animations/Battle Animations 4.event"
 		#endif
 		
 		MESSAGE Fourth battle animation block ends at CURRENTOFFSET

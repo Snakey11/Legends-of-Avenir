@@ -28,8 +28,8 @@ Archer,0x0
 Archer (F),0x0
 Sniper,0x0
 Sniper (F),0x0
-Forrest Knight,0x0
-Forrest Knight (F),0x0
+Forrest Knight,CantoID
+Forrest Knight (F),CantoID
 Dragon Knight,CantoID
 Dragon Knight (F),CantoID
 Dragon Master,CantoID

@@ -13,7 +13,7 @@ push { r4 - r7, lr }
 ldr r0, =#0x0202BCF0
 ldrb r0, [ r0, #0x0E ] @ Current chapter ID in r0.
 ldr r1, =SupplyUsabilityTable
-lsl r0, r0, #2 @ Multiply by 2
+lsl r0, r0, #2 @ Multiply by 4
 ldr r4, [ r1, r0 ] @ r4 has the pointer to this chapter's list of characters that can use the supply.
 cmp r4, #0x00
 beq EndFalse
@@ -28,7 +28,7 @@ beq EndTrue
 @ If the current character can't use the supply, check if an adjacent unit can.
 ldrb r6, [ r5, #0x10 ] @ Current X coord
 ldrb r7, [ r5, #0x11 ] @ Current Y coord
-sub r0, r0, #0x01
+sub r0, r6, #0x01
 mov r1, r7
 bl DoesUnitExist @ If there is a unit at the coords, outputs their character struct. Ohterwise outputs 0.
 cmp r0, #0x00
@@ -38,7 +38,7 @@ beq NoLeft
  cmp r0, #0x01
  beq EndTrue
 NoLeft:
-add r0, r0, #0x01
+add r0, r6, #0x01
 mov r1, r7
 bl DoesUnitExist
 cmp r0, #0x00
@@ -82,19 +82,20 @@ pop { r1 }
 bx r1
 
 DoesCharacterHaveSupply: @ r0 = character struct, r1 = supply list.
-push { lr }
+push { r1, lr }
 ldr r0, [ r0 ] @ Pointer to current ROM character data in r0.
 ldr r1, =CharacterTable
 sub r0, r0, r1 @ r0 has number of bytes from the beginning of the character table.
 mov r1, #52 @ Bytes per entry
 blh 0x080D18FC, r2 @ r0 has character ID.
+pop { r1 }
 sub r1, r1, #1
 CharacterLoop:
 add r1, r1, #1
 ldrb r2, [ r1 ]
-cmp r1, #0x00
+cmp r2, #0x00
 beq NoSupply
-cmp r0, r1
+cmp r0, r2
 bne CharacterLoop
 mov r0, #0x01
 b EndSupplyCheck
@@ -119,6 +120,7 @@ ldrb r3, [ r2, #0x11 ]
 cmp r1, r3
 bne StartExistLoop @ Y coords don't match.
 ldrb r3, [ r2, #0x0B ]
+lsr r3, r3, #6
 cmp r3, #0x00
 bne StartExistLoop @ If not an ally, go back.
 mov r0, r2

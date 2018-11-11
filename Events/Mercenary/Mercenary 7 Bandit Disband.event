@@ -197,11 +197,11 @@ ENDA
 
 //Label EndingScene
 EndingScene:
+ASMC PrepForEnd|1
 ENUF 0x13
 FADI 0x5
 CLEA 0x0
 CLEE 0x0
-//MaxMercenaryHP(1)
 SVAL 0xB Coords(7,5)
 LOMA GuardianSpiritWallCutscene
 LOAD3 0x1 PlayerLoading2
@@ -335,9 +335,9 @@ UNIT Xylia HolySage Xylia Level(15,Enemy,True) [12,1] 0x00 0x00 0x00 0x00 [Thani
 UNIT
 
 LoadGuardians:
-UNIT Guardian Sentinel Xylia Level(11,Enemy,True) [8,27] 0x00 0x00 0x00 0x00 [Spear] GuardAI
+UNIT Guardian Sentinel Xylia Level(11,Enemy,True) [8,27] 0x00 0x00 0x00 0x00 [BattleAxe,LightBrand] GuardAI
 UNIT Guardian Warrior Xylia Level(15,Enemy,True) [7,28] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI
-UNIT Guardian Sentinel Xylia Level(13,Enemy,True) [2,29] 0x00 0x00 0x00 0x00 [BraveLance] GuardAI
+UNIT Guardian Sentinel Xylia Level(13,Enemy,True) [2,29] 0x00 0x00 0x00 0x00 [SilverSword,BraveLance] GuardAI
 UNIT Guardian Paladin Xylia Level(9,Enemy,True) [1,28] 0x00 0x00 0x00 0x00 [Wyrmslayer,Javelin] NoAI
 UNIT Guardian Paladin Xylia Level(9,Enemy,True) [0,27] 0x00 0x00 0x00 0x00 [RuneSword] NoAI
 UNIT Guardian GreatKnight Xylia Level(8,Enemy,True) [0,29] Drop 0x00 0x00 0x00 [BraveAxe] NoAI
@@ -350,7 +350,7 @@ UNIT Guardian Warrior Xylia Level(8,Enemy,True) [8,17] 0x00 0x00 0x00 0x00 [Hand
 UNIT Guardian Halberdier Xylia Level(9,Enemy,True) [10,15] Drop 0x00 0x00 0x00 [SilverLance,ChestKey] AttackInRangeAI
 UNIT Guardian General Xylia Level(10,Enemy,True) [5,16] 0x00 0x00 0x00 0x00 [SilverBlade] GuardAI
 UNIT Guardian Monk Xylia Level(20,Enemy,True) [8,11] 0x00 0x00 0x00 0x00 [Divine] ChaseOnceApproachedAI
-UNIT Guardian Sentinel Xylia Level(7,Enemy,True) [10,12] 0x00 0x00 0x00 0x00 [Spear] AttackInRangeAI
+UNIT Guardian Sentinel Xylia Level(7,Enemy,True) [10,12] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
 UNIT Guardian Ranger Xylia Level(9,Enemy,True) [3,17] 0x00 0x00 0x00 0x00 [IronBlade,SteelBow] AttackInRangeAI
 UNIT Guardian Swordmaster Xylia Level(9,Enemy,True) [0,14] 0x00 0x00 0x00 0x00 [Zanbato] AttackInRangeAI
 UNIT Guardian Fighter Xylia Level(18,Enemy,True) [2,12] 0x00 0x00 0x00 0x00 [KillerAxe] AttackInRangeAI

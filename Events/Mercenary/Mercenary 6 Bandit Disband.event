@@ -482,7 +482,7 @@ Guardian27:
 UNIT Guardian Druid Guardian Level(2,Enemy,True) [11,8] 0x00 0x00 0x00 0x00 [Luna,Eclipse] NoAI 
 UNIT
 Guardian28:
-UNIT Guardian Sentinel Guardian Level(4,Enemy,True) [8,7] 0x00 0x00 0x00 0x00 [BraveLance] NoAI 
+UNIT Guardian Sentinel Guardian Level(4,Enemy,True) [8,7] 0x00 0x00 0x00 0x00 [BraveLance,Halberd] NoAI 
 UNIT
 Guardian29:
 UNIT Guardian Mercenary Guardian Level(9,Enemy,True) [8,5] 0x00 0x00 0x00 0x00 [IronSword] NoAI 

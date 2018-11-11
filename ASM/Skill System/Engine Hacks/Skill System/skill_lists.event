@@ -114,7 +114,7 @@ ALIGN 4
 
 MageSkillList:
 BYTE 5 MoonbowID
-BYTE 10 AdeptID
+BYTE 10 SolidarityID
 BYTE 00 00
 ALIGN 4
 
@@ -215,6 +215,7 @@ ALIGN 4
 BerserkerSkillList:
 BYTE 255 CamaraderieID
 BYTE 255 SealSklID
+
 BYTE 10 AxefaireID
 BYTE 00 00
 ALIGN 4
@@ -411,7 +412,7 @@ HalberdierSkillList:
 BYTE 255 WindDiscipleID
 BYTE 255 WrathID
 BYTE 5 InspirationID
-BYTE 10 LancefaireID
+BYTE 10 SpurDefID
 BYTE 00 00
 ALIGN 4
 
@@ -419,7 +420,7 @@ SentinelSkillList:
 BYTE 255 WindDiscipleID
 BYTE 255 WrathID
 BYTE 5 StrongRiposteID
-BYTE 10 SpurDefID
+BYTE 10 LancefaireID
 BYTE 00 00
 ALIGN 4
 

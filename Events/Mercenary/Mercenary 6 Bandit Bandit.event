@@ -155,7 +155,7 @@ UNIT Bacrunian Sage Harken Level(5,Enemy,True) [7,21] 0x00 0x00 0x00 0x00 [Arcwi
 UNIT Bacrunian Mage Harken Level(12,Enemy,True) [1,21] 0x00 0x00 0x00 0x00 [Aqua,Meteor] AttackInRangeAI 
 UNIT Bacrunian Mercenary Harken Level(13,Enemy,True) [11,21] Drop 0x00 0x00 0x00 [SteelSword,ChestKey] NoAI 
 UNIT Bacrunian Knight Harken Level(10,Enemy,True) [4,15] 0x00 0x00 0x00 0x00 [DevilLance] AttackInRangeAI
-UNIT Bacrunian Sentinel Harken Level(6,Enemy,True) [12,9] Drop 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT Bacrunian Sentinel Harken Level(6,Enemy,True) [12,9] Drop 0x00 0x00 0x00 [SilverSword,SteelLance] AttackInRangeAI
 UNIT Bacrunian Soldier Harken Level(14,Enemy,True) [11,6] 0x00 0x00 0x00 0x00 [SlimLance] NoAI 
 UNIT Bacrunian Soldier Harken Level(13,Enemy,True) [13,6] 0x00 0x00 0x00 0x00 [IronLance] NoAI 
 UNIT Bacrunian Soldier Harken Level(15,Enemy,True) [11,8] 0x00 0x00 0x00 0x00 [Javelin] NoAI 

@@ -131,23 +131,20 @@ NoFade
 ENDA
 
 EndingScene:
+ASMC PrepForEnd|1
 ENUF 0x12
 FADI 0x5
 MUSC Victory
-CLEE Cesarian
-CLEA Arc
-SVAL 0x1 Arc
-ASMC MakeNotDeadASM|1
-SVAL 0x1 Luke
-ASMC MakeNotDeadASM|1
-SVAL 0x1 Finoc
-ASMC MakeNotDeadASM|1
-SVAL 0x1 Elanil
-ASMC MakeNotDeadASM|1
-SVAL 0x1 Helmer
-ASMC MakeNotDeadASM|1
-SVAL 0x1 Val
-ASMC MakeNotDeadASM|1
+CLEA 0x0
+CLEE 0x0
+SVAL 0x1 60
+SET_HP Arc
+SET_HP Luke
+SET_HP Elanil
+SET_HP Finoc
+SET_HP Val
+SET_HP Helmer
+SET_HP Uzkalis
 CAM1 [14,20]
 LOAD3 0x1 PlayerLoading4
 LOAD2 0x1 EndingAllies
@@ -277,7 +274,7 @@ UNIT Cesarian Halberdier Maximus Level(6,Enemy,True) [9,8] 0x00 0x00 0x00 0x00 [
 UNIT Cesarian Soldier Maximus Level(13,Enemy,True) [10,9] 0x00 0x00 0x00 0x00 [Javelin] [0]
 UNIT Cesarian Fighter Maximus Level(14,Enemy,True) [10,7] 0x00 0x00 0x00 0x00 [ShortAxe] [0]
 UNIT Cesarian Sniper Maximus Level(7,Enemy,True) [11,1] Drop 0x00 0x00 0x00 [BraveBow,ChestKey] AttackInRangeAI
-UNIT Cesarian Sentinel Maximus Level(8,Enemy,True) [12,6] Drop 0x00 0x00 0x00 [Spear,DoorKey] GuardAI
+UNIT Cesarian Sentinel Maximus Level(8,Enemy,True) [12,6] Drop 0x00 0x00 0x00 [Spear,DevilSword,DoorKey] GuardAI
 UNIT Cesarian Ranger Maximus Level(5,Enemy,True) [3,7] 0x00 0x00 0x00 0x00 [SteelLongbow] AttackInRangeAI
 UNIT
 
@@ -315,7 +312,7 @@ UNIT Uzkalis GaidenSage Uzkalis Level(8,Ally,True) [21,10] 0x00 0x00 0x00 0x00 [
 UNIT
 
 MoveMaximus:
-UNIT Maximus Sage Maximus Level(14,Enemy,True) [4,11] 0x00 0x00 0x00 0x00 [Thoron,Bolganone] GuardAI
+UNIT Maximus BattleSage Maximus Level(14,Enemy,True) [4,11] 0x00 0x00 0x00 0x00 [Thoron,Bolganone] GuardAI
 UNIT
 
 EndingAllies:

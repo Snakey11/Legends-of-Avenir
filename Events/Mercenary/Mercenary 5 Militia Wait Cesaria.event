@@ -270,7 +270,7 @@ UNIT Arcanian PegasusKnight Grant Level(11,Enemy,True) [16,18] 0x00 0x00 0x00 0x
 UNIT Arcanian WyvernRider Grant Level(11,Enemy,True) [17,17] 0x00 0x00 0x00 0x00 [SilverLance] NoAI
 UNIT Arcanian PegasusKnight Grant Level(10,Enemy,True) [18,16] 0x00 0x00 0x00 0x00 [HeavySpear] NoAI
 UNIT Arcanian Knight Grant Level(7,Enemy,True) [6,6] 0x00 0x00 0x00 0x00 [Javelin] GuardAI
-UNIT Arcanian Sentinel Grant Level(2,Enemy,True) [7,5] 0x00 0x00 0x00 0x00 [SteelLance] GuardAI
+UNIT Arcanian Sentinel Grant Level(2,Enemy,True) [7,5] 0x00 0x00 0x00 0x00 [KillerAxe,SteelLance] GuardAI
 UNIT Arcanian Mage Grant Level(6,Enemy,True) [8,4] 0x00 0x00 0x00 0x00 [Thunder] GuardAI
 UNIT Arcanian Archer Grant Level(8,Enemy,True) [8,8] 0x00 0x00 0x00 0x00 [SteelShortbow] AttackInRangeAI
 UNIT Arcanian Archer Grant Level(9,Enemy,True) [9,7] 0x00 0x00 0x00 0x00 [DevilBow] AttackInRangeAI

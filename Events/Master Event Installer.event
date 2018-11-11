@@ -75,9 +75,9 @@
 {
 #include "Mercenary/Mercenary 7 Bandit Disband.event"
 }
-{
+
 #include "Sassy.event"
-}
+
 #include "Mercenary/Narrator Fight.event"
 EndMainPointer:
 END_MAIN

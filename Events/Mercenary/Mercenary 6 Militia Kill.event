@@ -18,7 +18,7 @@ TurnEventPlayer(0x12,Wave1Done,1,0xFF)
 TurnEventPlayer(0x13,Wave2Done,1,0xFF)//All starting values were 1
 TurnEventPlayer(0x11,Wave3Done,1,0xFF)
 TurnEventPlayer(0x0,EndingScene,15)
-TurnEventPlayer(0x11,EndCheck,1,0xFF)
+TurnEventPlayer(0x18,EndCheck,1,0xFF)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -27,7 +27,7 @@ END_MAIN
 
 LocationBasedEvents:
 Village(0x14,RedHouse1,8,2)
-Village(0x15,RedHouse2,15,9)
+Village(0x17,RedHouse2,15,9)
 Village(0x16,RedHouse3,12,12)
 Village(0x0,WhiteHouse1,10,7)
 Village(0x0,WhiteHouse2,17,12)
@@ -162,13 +162,19 @@ BLE 0x17 0x4 0xC
 	FADI 0x5
 	STAL 0x10
 	MUSC Into_the_Shadow_of_Victory
-	CLEE Cesarian
-	CLEA Kendrick
-	CLEN Shizonian
+	CLEA 0x0
+	CLEE 0x0
+	CLEN 0x0
 	STAL 0x20
 	SVAL 0xB Coords(8,5)
 	LOMA ShizonShrineCutscene
 	LOAD1 0x1 LoadXexim
+	ASMC MaxMercenaryHP|1
+	SVAL 0x1 60
+	SET_HP Arc
+	SET_HP Luke
+	SET_HP Arya
+	SET_HP Kendrick
 	STAL 0x40
 	FADU 0x5
 	STAL 0x20
@@ -280,7 +286,7 @@ UNIT Cesarian Cavalier Jurgen Level(12,Enemy,True) [0,8] 0x00 0x00 0x00 0x00 [Li
 UNIT Cesarian Paladin Jurgen Level(6,Enemy,True) [17,13] 0x00 0x00 0x00 0x00 [IronLance,SteelBlade] ChaseOnceApproachedAI
 UNIT Cesarian Hero Jurgen Level(4,Enemy,True) [0,4] 0x00 0x00 0x00 0x00 [Tomahawk] [0]
 UNIT Cesarian Warrior Jurgen Level(3,Enemy,True) [5,15] 0x00 0x00 0x1 REDA5 [DevilAxe,SteelBow] [0]
-UNIT Cesarian Sentinel Jurgen Level(4,Enemy,True) [9,14] 0x00 0x00 0x1 REDA6 [HeavySpear] AttackInRangeAI
+UNIT Cesarian Sentinel Jurgen Level(4,Enemy,True) [9,14] 0x00 0x00 0x1 REDA6 [Hammer,Dragonspear] AttackInRangeAI
 UNIT Cesarian Shaman Jurgen Level(12,Enemy,True) [7,15] Drop 0x00 0x00 0x00 [Nosferatu,Eclipse,GuidingRing] ChaseOnceApproachedAI
 UNIT Cesarian Knight Jurgen Level(9,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [DevilLance] AttackInRangeAI
 UNIT

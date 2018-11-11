@@ -1,0 +1,42 @@
+
+
+#include "Hector Sword.event"
+
+#include "Hector Lance.event"
+
+#include "Hector Axe.event"
+
+#include "Hector Hand Axe.event"
+
+#include "Hector Unarmed.event"
+
+
+#include "Hunter Bow.event"
+
+#include "Hunter Unarmed.event"
+
+
+#include "Armored Wyvern Lord Sword.event"
+
+#include "Armored Wyvern Lord Lance.event"
+
+#include "Armored Wyvern Lord Axe.event"
+
+#include "Armored Wyvern Lord Hand Axe.event"
+
+#include "Armored Wyvern Lord Bow.event"
+
+#include "Armored Wyvern Lord Unarmed.event"
+
+
+#include "Wil Sniper Bow.event"
+
+#include "Wil Sniper Unarmed.event"
+
+
+#include "Battle Sage Magic.event"
+
+
+#include "Holy Sage Magic.event"
+
+#include "Holy Sage Staff.event"

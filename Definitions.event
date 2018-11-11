@@ -62,6 +62,7 @@
 //EndLabel
 
 //Label Class defenitions
+#define Phantom 0x51
 #define Patriarch 0x52
 #define Matriarch 0x53
 #define DarkKnightM 0x54
@@ -125,6 +126,9 @@
 #define HolySage 0x96
 #define WilSniper 0x97
 #define BattleSage 0x98
+#define LostSoulM 0x99
+#define LostSoulF 0x9A
+#define ArmoredWyvernLord 0x9B
 //EndLabel
 
 //Label Character definitions
@@ -229,16 +233,17 @@
 #define Hunter 0x68
 #define Daniel 0x69
 #define Wanderer 0x6A
-#define MageMAvatar 0x6B
-#define MageFAvatar 0x6C
-#define MercenaryMAvatar 0x6D
-#define MercenaryFAvatar 0x6E
+#define MercenaryMAvatar 0x6B
+#define MercenaryFAvatar 0x6C
+#define MageFAvatar 0x6D
+#define MageMAvatar 0x6E
 #define MilitaryMAvatar 0x6F
 #define MilitaryFAvatar 0x70
 #define Kilthel 0x71
 #define Xylia 0x72
 #define Servius 0x73
 #define Arveldir 0x74
+#define ValSummon 0x75
 //EndLabel
 
 //Label Portrait Defenitions
@@ -445,9 +450,9 @@
 #define AryaMyrmidonPaletteID 0x07
 #define AryaAssassinPaletteID 0x08
 #define AryaSwordmasterPaletteID 0x09
-#define BaretMyrmidonPaletteID 0x0A
-#define BaretAssassinPaletteID 0x0B
-#define BaretSwordmasterPaletteID 0x0C
+#define BaretSoldierPaletteID 0x0A
+#define BaretHalberdierPaletteID 0x0B
+#define BaretSentinelPaletteID 0x0C
 #define ConnorMercenaryPaletteID 0x0D
 #define ConnorHeroPaletteID 0x0E
 #define ConnorRangerPaletteID 0x0F
@@ -519,6 +524,7 @@
 #define TyroneWarriorPaletteID 0x51
 #define MayorCavalierPaletteID 0x52
 #define WestonMercenaryPaletteID 0x53
+#define ZaliusSwordmasterPaletteID 0x54
 //EndLabel
 
 //Label Maps, Map Changes, & Events
@@ -712,6 +718,7 @@
 //Label Battle Animations
 #define SwordAnim(Animation) "BYTE Swords 0x01 ; SHORT Animation"
 #define SpearAnim(Animation) "BYTE Spears 0x01 ; SHORT Animation"
+#define LanceAnim(Animation) "BYTE Spears 0x1 ; SHORT Animation"
 #define AxeAnim(Animation) "BYTE Axes 0x01 ; SHORT Animation"
 #define HandAxeAnim(Animation) "BYTE HandAxe 0x00 ; SHORT Animation ; BYTE Tomahawk 0x00 ; SHORT Animation ; BYTE ShortAxe 0x00 ; SHORT Animation"
 #define BowAnim(Animation) "BYTE Bows 0x01 ; SHORT Animation"
@@ -732,6 +739,7 @@
 #define ChampionAxe 0x06
 #define ChampionHandAxe 0x07
 #define ChampionUnarmed 0x08
+#define CommanderLance 0x09
 #define CommanderSpear 0x09
 #define CommanderUnarmed 0x0A
 #define MonkMagic 0x7D
@@ -792,6 +800,7 @@
 #define PatriarchMagic 0xB9
 #define PatriarchStaff 0xBA
 #define SentinelSpear 0xBB
+#define SentinelLance 0xBB
 #define SentinelUnarmed 0xBC
 #define TruebladeMSword 0xBD
 #define TruebladeSword 0xBD
@@ -830,6 +839,17 @@
 #define WilSniperBow 0xF3
 #define WilSniperUnarmed 0xF4
 #define BattleSageMagic 0xF5
+#define SentinelSword 0xF6
+#define SentinelAxe 0xF7
+#define SentinelHandAxe 0xF8
+#define HectorLance 0xF9
+#define CommanderSword 0xFA
+#define ArmoredWyvernLordSword 0xFB
+#define ArmoredWyvernLordLance 0xFC
+#define ArmoredWyvernLordAxe 0xFD
+#define ArmoredWyvernLordHandAxe 0xFE
+#define ArmoredWyvernLordBow 0xFF
+#define ArmoredWyvernLordUnarmed 0x100
 //EndLabel
 
 //Label Skill Definitions
@@ -986,7 +1006,7 @@
 #define CatchEmAllID 151 //DONE
 #define VantagePlusID 152 //DONE
 #define HawkeyeID 153 //wip
-#define SolidarityID 154 //DONE
+#define SolidarityID 154 //Mage
 #define BracingStanceID 155 //DONE
 #define DartingStanceID 156 //DONE
 #define FierceStanceID 157 //DONE
@@ -1052,7 +1072,6 @@
 
 #define GiveToSupplySilent(Item) "SVAL 0x1 Item ; ASMC GiveToSupply|1"
 
-#define MaxMercenaryHP(Index) "SVAL 0x1 60;CHECK_EVENTID 0x66;BNE (0x0 + 0x8 * Index) 0xC 0x0;CHECK_EVENTID 0x69;BEQ (0x2 + 0x8 * Index) 0xC 0x0;SET_HP PlayerFMercenary;GOTO (0x1 + 0x8 * Index);LABEL (0x2 + 0x8 * Index);CHECK_EVENTID 0x6A;BEQ (0x3 + 0x8 * Index) 0xC 0x0;SET_HP PlayerFMyrmidon;GOTO (0x1 + 0x8 * Index);LABEL (0x3 + 0x8 * Index);SET_HP PlayerFPegasusKnight;GOTO (0x1 + 0x8 * Index);LABEL (0x0 + 0x8 * Index);CHECK_EVENTID 0x69;BEQ (0x4 + 0x8 * Index) 0xC 0x0;SET_HP PlayerMMercenary;GOTO (0x1 + 0x8 * Index);LABEL (0x4 + 0x8 * Index);CHECK_EVENTID 0x6A;BEQ (0x5 + 0x8 * Index) 0xC 0x0;SET_HP PlayerMMyrmidon;GOTO (0x1 + 0x8 * Index);LABEL (0x5 + 0x8 * Index);CHECK_EVENTID 0x6B;BEQ (0x6 + 0x8 * Index) 0xC 0x0;SET_HP PlayerMFighter;GOTO (0x1 + 0x8 * Index);LABEL (0x6 + 0x8 * Index);CHECK_EVENTID 0x6C;BEQ 0x7 0xC 0x0;SET_HP PlayerMPirate;GOTO (0x1 + 0x8 * Index);LABEL (0x7 + 0x8 * Index);SET_HP PlayerMBrigand;LABEL (0x1 + 0x8 * Index)"
 //#define MaxMercenaryHP "SVAL 0x1 60; SET_HP PlayerMMercenary ; SET_HP PlayerMMyrmidon ; SET_HP PlayerMFighter ; SET_HP PlayerMPirate ; SET_HP PlayerMBrigand ; SET_HP PlayerFMercenary ; SET_HP PlayerFMyrmidon ; SET_HP PlayerFPegasusKnight"
 
 #define MercenaryNarratorFight(TactX,TactY) "SVAL 0xB Coords(TactX,TactY) ; CALL MercenaryNarratorFightEvents"

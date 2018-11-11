@@ -25,9 +25,9 @@ setPalette(ArcWarriorPaletteID,ArcWarriorPalette)
 setPalette(AryaMyrmidonPaletteID,AryaMyrmidonPalette)
 setPalette(AryaAssassinPaletteID,AryaAssassinPalette)
 setPalette(AryaSwordmasterPaletteID,AryaSwordmasterPalette)
-setPalette(BaretMyrmidonPaletteID,BaretMyrmidonPalette)
-setPalette(BaretAssassinPaletteID,BaretAssassinPalette)
-setPalette(BaretSwordmasterPaletteID,BaretSwordmasterPalette)
+setPalette(BaretSoldierPaletteID,BaretSoldierPalette)
+setPalette(BaretHalberdierPaletteID,BaretHalberdierPalette)
+setPalette(BaretSentinelPaletteID,BaretSentinelPalette)
 setPalette(ConnorMercenaryPaletteID,ConnorMercenaryPalette)
 setPalette(ConnorHeroPaletteID,ConnorHeroPalette)
 setPalette(ConnorRangerPaletteID,ConnorRangerPalette)
@@ -46,7 +46,7 @@ setPalette(GerwickPiratePaletteID,GerwickPiratePalette)
 setPalette(GhostSwordmasterPaletteID,GhostSwordmasterPalette)
 setPalette(GrantRangerPaletteID,GrantRangerPalette)
 setPalette(GuardianSpiritHarbingerPaletteID,GuardianSpiritHarbingerPalette)
-setPalette(HarkenHeroPaletteID,HarkenHeroPaletteID)	
+setPalette(HarkenHeroPaletteID,HarkenHeroPalette)	
 setPalette(HelmerSoldierPaletteID,HelmerSoldierPalette)
 setPalette(HelmerHalberdierPaletteID,HelmerHalberdierPalette)
 setPalette(HelmerSentinelPaletteID,HelmerSentinelPalette)
@@ -79,6 +79,8 @@ setPalette(VicarWarriorPaletteID,VicarWarriorPalette)
 setPalette(WalterArcherPaletteID,WalterArcherPalette)
 setPalette(WalterRangerPaletteID,WalterRangerPalette)
 setPalette(WalterSniperPaletteID,WalterSniperPalette)
+setPalette(ZaliusSwordmasterPaletteID,ZaliusSwordmasterPalette)
+setPalette(WestonMercenaryPaletteID,WestonMercenaryPalette)
 setPalette(MercenaryMMercenaryPaletteID,MercenaryMMercenaryPalette)
 setPalette(MercenaryMMyrmidonPaletteID,MercenaryMMyrmidonPalette)
 setPalette(MercenaryMFighterPaletteID,MercenaryMFighterPalette)
@@ -96,10 +98,36 @@ setPalette(MercenaryFNomadPaletteID,MercenaryFNomadPalette)
 setPalette(MercenaryFShadowPaletteID,MercenaryFShadowPalette)
 setPalette(MercenaryFBlackFalcoknightPaletteID,MercenaryFBlackFalcoknightPalette)
 
+setPalette(0x55,0x00)
+setPalette(0x56,0x00)
+setPalette(0x57,0x00)
+setPalette(0x58,0x00)
+setPalette(0x59,0x00)
+setPalette(0x5A,0x00)
+setPalette(0x5B,0x00)
+setPalette(0x5C,0x00)
+setPalette(0x5D,0x00)
+setPalette(0x5E,0x00)
+setPalette(0x5F,0x00)
+setPalette(0x60,0x00)
+setPalette(0x61,0x00)
+setPalette(0x62,0x00)
+setPalette(0x63,0x00)
+setPalette(0x64,0x00)
+setPalette(0x65,0x00)
+setPalette(0x66,0x00)
+setPalette(0x67,0x00)
+setPalette(0x68,0x00)
+setPalette(0x69,0x00)
+setPalette(0x6A,0x00)
+setPalette(0x6B,0x00)
+setPalette(0x6C,0x00)
+setPalette(0x6D,0x00)
+
 SetPaletteFull(Adlez,AdlezBrigandPaletteID,Brigand,AdlezBerserkerPaletteID,Berserker,AdlezWarriorPaletteID,Warrior)
 SetPaletteFull(Arc,ArcFighterPaletteID,Fighter,ArcHeroPaletteID,Hero,ArcWarriorPaletteID,Warrior)
 SetPaletteFull(Arya,AryaMyrmidonPaletteID,Myrmidon_F,AryaAssassinPaletteID,Assassin_F,AryaSwordmasterPaletteID,Swordmaster_F)
-SetPaletteFull(Baret,BaretMyrmidonPaletteID,Myrmidon,BaretAssassinPaletteID,Assassin,BaretSwordmasterPaletteID,Swordmaster)
+SetPaletteFull(Baret,BaretSoldierPaletteID,Soldier,BaretHalberdierPaletteID,Halberdier,BaretSentinelPaletteID,Sentinel)
 SetPaletteFull(Connor,ConnorMercenaryPaletteID,Mercenary,ConnorHeroPaletteID,Hero,ConnorRangerPaletteID,Ranger)
 SetPaletteFull(Daniel,0x00,0x00,DanielSwordmasterPaletteID,Swordmaster,0x00,0x00)
 SetPaletteFull(Derek,DerekKnightPaletteID,Knight,DerekGeneralPaletteID,General,DerekGreatKnightPaletteID,GreatKnight)
@@ -129,6 +157,8 @@ SetPaletteFull(Uzkalis,0x00,0x00,UzkalisGaidenSagePaletteID,GaidenSage,0x00,0x00
 SetPaletteFull(Val,ValShamanPaletteID,Shaman_F,ValDruidPaletteID,Druid_F,ValSummonerPaletteID,Summoner)
 SetPaletteFull(Vicar,0x00,0x00,VicarWarriorPaletteID,Warrior,0x00,0x00)
 SetPaletteFull(Walter,WalterArcherPaletteID,Archer,WalterRangerPaletteID,Ranger,WalterSniperPaletteID,Sniper)
+SetPaletteFull(Weston,WestonMercenaryPaletteID,Mercenary,0x00,0x00,0x00,0x00)
+SetPaletteFull(Zalius,0x00,0x00,ZaliusSwordmasterPaletteID,Swordmaster,0x00,0x00)
 SetPaletteFull(PlayerMMercenary,MercenaryMMercenaryPaletteID,MercenaryM2,MercenaryMChampionPaletteID,Champion,0x00,0x00)
 SetPaletteFull(PlayerMMyrmidon,MercenaryMMyrmidonPaletteID,MyrmidonM2,MercenaryMTruebladePaletteID,Trueblade,0x00,0x00)
 SetPaletteFull(PlayerMFighter,MercenaryMFighterPaletteID,Fighter2,MercenaryMWarlockPaletteID,Warlock,0x00,0x00)
@@ -241,16 +271,16 @@ AryaSwordmasterPalette:
 #incbin "Arya Swordmaster.dmp"
 
 ALIGN 4
-BaretMyrmidonPalette:
-#incbin "Baret Myrmidon.dmp"
+BaretSoldierPalette:
+#incbin "Baret Soldier.dmp"
 
 ALIGN 4
-BaretAssassinPalette:
-#incbin "Baret Assassin.dmp"
+BaretHalberdierPalette:
+#incbin "Baret Halberdier.dmp"
 
 ALIGN 4
-BaretSwordmasterPalette:
-#incbin "Baret Swordmaster.dmp"
+BaretSentinelPalette:
+#incbin "Baret Sentinel.dmp"
 
 ALIGN 4
 ConnorMercenaryPalette:
@@ -455,6 +485,10 @@ WalterRangerPalette:
 ALIGN 4
 WalterSniperPalette:
 #incbin "Walter Sniper.dmp"
+
+ALIGN 4
+WestonMercenaryPalette:
+#incbin "Weston Mercenary.dmp"
 
 ALIGN 4
 ZaliusSwordmasterPalette:

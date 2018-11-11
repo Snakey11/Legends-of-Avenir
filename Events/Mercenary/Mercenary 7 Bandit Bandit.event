@@ -84,13 +84,13 @@ ENDA
 
 //Label EndingScene... aka bad ending
 EndingScene:
+ASMC PrepForEnd|1
 ENUF 0x19
 ENUF 0x20
 MUSC Twisted_Shadows_A
 FADI 0x5
 CLEA Leon
 CLEE Cesarian
-MaxMercenaryHP(3)
 SVAL 0x1 Adlez
 ASMC MakeNotDeadASM|1
 SVAL 0x1 Arya
@@ -131,7 +131,7 @@ BNE 0x23 0x0 0xC
 	TEXTSHOW Merc7BanditBanditBadEndingXavusLineText
 	TEXTEND
 LABEL 0x23
-TEXTSHOW Merc7BanditBanditBadEndingRexXavusLastLineText
+TEXTSHOW2 Merc7BanditBanditBadEndingRexXavusLastLineText
 TEXTEND
 REMA
 STAL 0x10
@@ -188,6 +188,7 @@ ENDA
 
 //Label GoodEnding
 GoodEnding:
+ASMC PrepForEnd|1
 ENUF 0x17
 ENUF 0x19
 ENUF 0x21
@@ -261,6 +262,7 @@ ENUF 0x6A
 ENUF 0x6B
 ENUF 0x6C
 ENUF 0x6D
+MoveToChapter(PrologueChapter)
 ENDA
 
 //Label EndCheck
@@ -377,7 +379,7 @@ UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [5,5] 0x00 0x00 0x00 0x00 [0] N
 UNIT
 
 PlayerLoading3:
-UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [5,4] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [5,5] 0x00 0x00 0x00 0x00 [0] NoAI 
 UNIT
 
 PlayerLoading4:
@@ -461,7 +463,7 @@ UNIT Narrator NarratorClass PlayerMArcher Level(20,Enemy,True) [5,10] 0x00 0x00 
 UNIT
 
 LoadNarrator2:
-UNIT Narrator NarratorClass PlayerMArcher Level(20,Enemy,True) [5,8] 0x00 0x00 0x00 0x00 [SilverBlade] NoAI 
+UNIT Narrator NarratorClass PlayerMArcher Level(20,Enemy,True) [5,8] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI 
 UNIT
 
 LoadNarrator3:

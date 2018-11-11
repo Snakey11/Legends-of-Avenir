@@ -57,6 +57,7 @@
 //Ability 2 definitions:
 #define IsPromoted 0x01
 #define IsSupply 0x02
+#define CantTrade 0x2
 #define HorseIcon 0x04
 #define DragonIcon 0x08
 #define PegIcon 0x10
