@@ -16,6 +16,7 @@
 #define AxeReaver Axereaver
 //#define OceanSeal ConquerorsProof
 #define Dragonspear DragonSpear
+#define HoplonGuard HoplonShield
 #define ArmorSlayer 0x0E
 //#define Armorslayer 0x0E
 //#define Zanbato 0x13
@@ -129,6 +130,8 @@
 #define LostSoulM 0x99
 #define LostSoulF 0x9A
 #define ArmoredWyvernLord 0x9B
+#define EdgySwordmaster 0x9C
+#define EmperorClass 0x9D
 //EndLabel
 
 //Label Character definitions
@@ -179,7 +182,7 @@
 #define Luke 0x2C
 #define Arc 0x2D
 #define Efil 0x2E
-#define Uzkailis 0x2F
+#define Uzkalis 0x2F
 #define Arya 0x30
 #define Kendrick 0x31
 #define Connor 0x32
@@ -193,23 +196,18 @@
 #define PlayerFArcher 0x3A
 #define Finoc 0x3B
 #define Xexim 0x3C
-#define Uzkalis 0x3D
-#define Rex 0x3E
+#define Rex 0x3D
 
-#define Henning 0x43
-#define Gerwick 0x44
-#define Militiaman 0x45
-#define Weston 0x46
-#define GerwickBandit 0x47
-#define WestonBandit 0x48
-#define KendrickFriend 0x49
+#define Henning 0x47
+#define Gerwick 0x48
+#define Militiaman 0x49
 #define Robert 0x4A
 #define RobertPirate 0x4B
 #define BossGhost 0x4C
 #define TankGhost 0x4D
 #define FastGhost 0x4E
-#define StrongGhost 0x4F
-#define MageGhost 0x50
+#define MageGhost 0x4F
+#define StrongGhost 0x50
 #define Aaron 0x52
 #define Cesarian 0x53
 #define Shizonian 0x54
@@ -244,6 +242,11 @@
 #define Servius 0x73
 #define Arveldir 0x74
 #define ValSummon 0x75
+#define Weston 0x76
+#define GerwickBandit 0x77
+#define WestonBandit 0x78
+#define KendrickFriend 0x79
+#define Sylvaine 0x7A
 //EndLabel
 
 //Label Portrait Defenitions
@@ -321,6 +324,7 @@
 #define KilthelMug 0x4A
 #define ArveldirMug 0x4B
 #define ServiusMug 0x4C
+#define SylvaineMug 0x4E
 //EndLabel
 
 //Label Spell Definitions
@@ -690,6 +694,8 @@
 #define Medium 0x01
 #define Small 0x00
 
+#define EmperorSprite 0x62
+
 #define BlackFalcoknightSprite 0x6B
 #define ChampionSprite 0x6C
 #define CommanderSprite  0x6D
@@ -713,6 +719,7 @@
 #define WarlockSprite 0x7F
 #define ShadowSprite 0x80
 #define HarbingerSprite 0x81
+#define EdgySwordmasterSprite 0x82
 //EndLabel
 
 //Label Battle Animations
@@ -850,31 +857,42 @@
 #define ArmoredWyvernLordHandAxe 0xFE
 #define ArmoredWyvernLordBow 0xFF
 #define ArmoredWyvernLordUnarmed 0x100
+#define EdgySwordmasterSword 0x101
+#define EdgySwordmasterUnarmed 0x102
+#define EmperorSword 0x103
+#define EmperorUnarmed 0x104
+#define PhantomAxe 0x105
+#define PhantomHandAxe 0x106
+#define PhantomUnarmed 0x107
 //EndLabel
 
 //Label Skill Definitions
 #define AcrobatID 1 //Thief, Assassin, Rogue
 #define PassID 2 //Assassin
 #define CantoPlusID 3 //Ranger
-#define WaryFighterID 4 //General
+#define WaryFighterID 4 //UNUSED
 #define SureShotID 5 //Sniper
-#define ProvokeID 6 //Knight, General, GreatKnight
+#define ProvokeID 6 //UNUSED
 #define SaviorID 7 //FalcoKnight
 #define MercyID 8  //Patriarch, Matriarch
 #define FrenzyID 9 //Mountainier
-#define AdeptID 10 //Mage, Sage, MageKnight
+#define AdeptID 10 //Emperor							Lux
 #define CantoID 11 //All the mounted shit
 #define CunningID 12 //display only: Thief, Rogue, Assassin
 #define LethalityID 13 //display only: Assassin
 #define LunaID 14 //GreatKnight
 #define SolID 15 //Paladin
-#define AetherID 16 //Truerblade
+#define AetherID 16 //Truerblade						Xexim
 #define AstraID 17 //Swordmaster
 #define DisciplineID 18 //Cavalier, Paladin
 #define SwordbreakerID 19 //WyvernLord
-#define LancebreakerID 20 //Nomad
+#define SwordBreakerID SwordbreakerID
+#define LancebreakerID 20 //Nomad						Zalius
+#define LanceBreakerID LancebreakerID
 #define AxebreakerID 21 //Hero
-#define BowbreakerID 22 //Hector
+#define AxeBreakerID AxebreakerID
+#define BowbreakerID 22 //Wyvern Rider, Wyvern Lord, Wyvern Knight
+#define BowBreakerID BowbreakerID
 #define TomebreakerID 23 //Druid
 #define AegisID 24 //Izuk
 #define PaviseID 25 //General, Hero
@@ -907,17 +925,17 @@
 #define GentilhommeID 52 //DONE
 #define MaleficAuraID 53 //Shaman, Druid, Summoner
 #define InspirationID 54 //Halberdier
-#define CharmID 55 //Valkyrie
+#define CharmID 55 //Valkyrie							Kendrick
 #define VoiceOfPeaceID 56 //Troubadour, Valkyrie
 #define AmaterasuID 57 //Patriarch
-#define SpurStrID 58 //MountedBrigand
+#define SpurStrID 58 //MountedBrigand					Adlez
 #define SpurMagID 59 //Magus
 #define SpurSpdID 60 //Hunter
 #define SpurDefID 61 //Sentinel
 #define SpurResID 62 //Valkyrie
 #define NihilID 63 //this is a giant pain tbh
 #define NullifyID 64
-#define ParagonID 65 //DONE
+#define ParagonID 65 //Unused
 #define ImpaleID 66 //Impaler
 #define ColossusID 67 //Warrior, Gladiator
 #define RallyStrID 68 //Mercenary, Hero
@@ -936,8 +954,8 @@
 #define LifeAndDeathID 81 //Shaman, Druid, Summoner
 #define LockTouchID 82 //Display only: Rogue
 #define LungeID 83 //Rogue, Champion
-#define IntimidateID 84 //Brigand
-#define OpportunistID 85 // Warlock
+#define IntimidateID 84 //Brigand							Gerwick
+#define OpportunistID 85 // Warlock							Pat
 #define TrampleID 86 // MountedBrigand
 #define CamaraderieID 87 //Pirate, Berserker
 #define ForeignPrincessID 88
@@ -949,7 +967,7 @@
 #define AnathemaID 94 //Summoner
 #define LilysPoiseID 95 //JacketHero
 #define ExpertiseID 96 // Gladiator
-#define CelerityID 97 //Rogue
+#define CelerityID 97 //WyvernGeneral
 #define FieryBloodID 98 //Fighter, Warrior
 #define ElbowRoomID 99 //Cavalier, Paladin
 #define NaturalCoverID 100 //Knight, General, GreatKnight
@@ -965,59 +983,84 @@
 #define QuickDrawID 110 //Archer, Sniper, Ranger, Hunter
 #define WindDiscipleID 111 //Soldier, Sentinel, Halberdier, Impaler
 #define StrongRiposteID 112 //Sentinel
-#define PatienceID 113 //Hector
+#define PatienceID 113 //Hector								Tyrone
 #define PursuitID 114 //BlackFalcoknight
 #define LightWeightID 115 //DMyrmidon, Swordmaster, Trueblade
 #define KillingMachineID 116 //Trueblade
 #define CriticalForceID 117 //Halberdier
 #define ChivalryID 118 //MasterKnight
 #define PragmaticID 119 //Warlock
-#define ArmsthriftID 120 //Assassin
-#define MoonbowID 121 //Mage, Sage, MageKnight, Magus
+#define ArmsthriftID 120 //DONE
+#define MoonbowID 121 //Unused
 #define ShoveID 122 //DONE
-#define SmiteID 123 //DONE
+#define SmiteID 123 //Champion
 #define BaneID 124 //DONE
 #define DownWithArchID 125 //DONE
 #define UpWithArchID 126 //DONE
 #define RightfulArchID 127 //DONE
-#define RightfulKingID 128 //DONE
-#define RightfulGodID 129 //DONE
+#define RightfulKingID 128 //MasterKnight, Emperor
+#define RightfulGodID 129 //Guardian Spirit
 #define LuckySevenID 130 //DONE
 #define OddRhythmID 131 //DONE
-#define EvenRhythmID 132 //DONE
-#define QuickBurnID 133 //DONE
+#define EvenRhythmID 132 //DONE						Mayor
+#define QuickBurnID 133 //Berserker
 #define SlowBurnID 134 //Shadow
-#define DespoilID 135//DONE
+#define DespoilID 135//Thief, Rogue
 #define PivotID 136 //DONE
-#define RepositionID 137 //DONE
+#define RepositionID 137 //Mage Knight
 #define SwapID 138 //DONE
 #define BreathOfLifeID 139 //DONE
 #define FuryID 140 //DONE
-#define DazzleID 141 //DONE
+#define DazzleID 141 //Trueblade
 #define TriAdeptID 142 //not done
 #define SupplyID 143 //Display only
-#define Roll12ID 144 //DONE
-#define TraceID 145 //DONE
+#define Roll12ID 144 //Guardian Spirit
+#define TraceID 145 //Dark Knight
 #define RandomMugID 146 //DONE
 #define IdentityProblemsID 147 //DONE
-#define CharismaID 148 //DONE
+#define CharismaID 148 //							Rex
 #define HeroesDeathBlowID 149 //DONE
 #define HeroesLifeAndDeathID 150 //DONE
 #define CatchEmAllID 151 //DONE
-#define VantagePlusID 152 //DONE
+#define VantagePlusID 152 //Trueblade
 #define HawkeyeID 153 //wip
-#define SolidarityID 154 //Mage
-#define BracingStanceID 155 //DONE
-#define DartingStanceID 156 //DONE
-#define FierceStanceID 157 //DONE
-#define KestrelStanceID 158 //DONE
-#define MirrorStanceID 159 //DONE
-#define ReadyStanceID 160 //DONE
+#define SolidarityID 154 //Mage, Sage, MageKnight
+#define BracingStanceID 155 //DONE					Hawken
+#define DartingStanceID 156 //						Elanil
+#define FierceStanceID 157 //Baselius
+#define KestrelStanceID 158 //Jacket Hero
+#define MirrorStanceID 159 //						Maximus
+#define ReadyStanceID 160 //Impaler
 #define SteadyStanceID 161 //DONE
-#define SturdyStanceID 162 //DONE
-#define SwiftStanceID 163 //DONE
+#define SturdyStanceID 162 //Knight
+#define SwiftStanceID 163 //Mage, Sage, MageKnight
 #define WardingStanceID 164 //DONE
-#define SpectrumStanceID 165 //DONE
+#define SpectrumStanceID 165 //Guardian Spirit
+#define StealID 166 //DONE
+#define StealPlusID 167 //Rogue
+#define BlackMagicID 169 //Summoner
+#define CaptureID 168 //DONE
+#define FortressDefenseID 170 //DONE
+#define FortressResistanceID 171 //DONE
+#define ForesightID 172 //Commander					Helmer
+#define AxeFaithID 173 //							Arc
+#define AxefaithID AxeFaithID //Alias
+#define ArmorMarchID 174 //Unused
+#define VigorDanceID 175 //DONE
+#define InspiringTuneID 175 //Alias
+#define ForagerID 176 //Nomad
+#define FullMetalBodyID 177 //						Derek
+#define LiquidOozeID 178 //							William
+#define ShadowgiftID 179 //Unused
+#define LuminaID 180 //Unused
+#define DevilsLuckID 181 //DONE
+#define DevilsPactID 182 //DONE
+#define DevilsWhimID 183 //DONE
+#define PoisonStrikeID 184 //Emperor				Baret
+#define GrislyWoundID 185 //						Arya
+#define HexID 186 //								Xavus
+#define BarricadeID 187 //General
+#define BarricadePlusID 188 //Commander
 //EndLabel
 
 //Label Misc.
@@ -1026,8 +1069,10 @@
 #define DeathQuote(Character,Chapter,EventID,TextID) "SHORT Character; BYTE 0xFF Chapter; SHORT EventID TextID 0 0"
 #define AllChapters 0xFF
 
-#define SpecifiedBattleConvo(Character1,Character2,Chapter,EventID,TextID) "BYTE Character1 0x0 Character2 0x0 Chapter 0x0 0x0 EventID ; SHORT TextID 0x0 0x0 0x0"
-#define UnspecifiedBattleConvo(Character,Chapter,EventID,TextID) "BYTE Character 0x0 0x0 0x0 Chapter 0x0 EventID 0x0 ; SHORT TextID 0x0 0x0 0x0 ; BYTE 0x0 0x0 Character 0x0 Chapter 0x0 EventID 0x0 ; SHORT TextID 0x0 0x0 0x0"
+//#define SpecifiedBattleConvo(Character1,Character2,Chapter,EventID,TextID) "BYTE Character1 0x0 Character2 0x0 Chapter 0x0 EventID 0x0 ; SHORT TextID 0x0 0x0 0x0 ; BYTE Character2 0x0 Character1 0x0 Chapter 0x0 EventID 0x0 ; SHORT TextID 0x0 0x0 0x0"
+#define SpecifiedBattleConvo(Character1,Character2,Chapter,EventID,TextID) "SHORT Character1 Character2 Chapter EventID TextID 0x0 0x0 0x0; SHORT Character2 Character1 Chapter EventID TextID 0x0 0x0 0x0"
+//#define UnspecifiedBattleConvo(Character,Chapter,EventID,TextID) "BYTE Character 0x0 0x0 0x0 Chapter 0x0 EventID 0x0; SHORT TextID 0x0 0x0 0x0 ; BYTE 0x0 0x0 Character 0x0 Chapter 0x0 0x0 EventID ; SHORT TextID 0x0 0x0 0x0"
+#define UnspecifiedBattleConvo(Character,Chapter,EventID,TextID) "SHORT Character 0x0 Chapter EventID TextID 0x0 0x0 0x0; SHORT 0x0 Character Chapter EventID TextID 0x0 0x0 0x0"
 
 #define MoveMercenary(X,Y) "MOVE 0x0 PlayerMMercenary [X,Y];MOVE 0x0 PlayerMMyrmidon [X,Y];MOVE 0x0 PlayerMPirate [X,Y];MOVE 0x0 PlayerMFighter [X,Y];MOVE 0x0 PlayerMBrigand [X,Y];MOVE 0x0 PlayerFMercenary [X,Y];MOVE 0x0 PlayerFMyrmidon [X,Y];MOVE 0x0 PlayerFPegasusKnight [X,Y]"
 #define MoveMercenarySlow(X,Y) "MOVE 0x1 PlayerMMercenary [X,Y];MOVE 0x1 PlayerMMyrmidon [X,Y];MOVE 0x1 PlayerMPirate [X,Y];MOVE 0x1 PlayerMFighter [X,Y];MOVE 0x1 PlayerMBrigand [X,Y];MOVE 0x1 PlayerFMercenary [X,Y];MOVE 0x1 PlayerFMyrmidon [X,Y];MOVE 0x1 PlayerFPegasusKnight [X,Y]"
@@ -1037,7 +1082,7 @@
 // In order of FMercenaryStart , FmyrmidonStart, FPegasusKnghtStart , MMercenaryStart , MMyrmidonStart , MFighterStart , MPirateStart , MBrigandStart. Uses 0x8 cond. IDs
 #define LoadingMercenary(Index,UnitPointer) "CHECK_EVENTID 0x66;BNE (0x0 + 0x8 * Index) 0xC 0x0;CHECK_EVENTID 0x69;BEQ (0x2 + 0x8 * Index) 0xC 0x0;LOAD2 0x1 (UnitPointer);GOTO (0x1 + 0x8 * Index);LABEL (0x2 + 0x8 * Index);CHECK_EVENTID 0x6A;BEQ (0x3 + 0x8 * Index) 0xC 0x0;LOAD2 0x1 (UnitPointer + 40);GOTO (0x1 + 0x8 * Index);LABEL (0x3 + 0x8 * Index);LOAD2 0x1 (UnitPointer + 80);GOTO (0x1 + 0x8 * Index);LABEL (0x0 + 0x8 * Index);CHECK_EVENTID 0x69;BEQ (0x4 + 0x8 * Index) 0xC 0x0;LOAD2 0x1 (UnitPointer + 120);GOTO (0x1 + 0x8 * Index);LABEL (0x4 + 0x8 * Index);CHECK_EVENTID 0x6A;BEQ (0x5 + 0x8 * Index) 0xC 0x0;LOAD2 0x1 (UnitPointer + 160);GOTO (0x1 + 0x8 * Index);LABEL (0x5 + 0x8 * Index);CHECK_EVENTID 0x6B;BEQ (0x6 + 0x8 * Index) 0xC 0x0;LOAD2 0x1 (UnitPointer + 200);GOTO (0x1 + 0x8 * Index);LABEL (0x6 + 0x8 * Index);CHECK_EVENTID 0x6C;BEQ 0x7 0xC 0x0;LOAD2 0x1 (UnitPointer + 240);GOTO (0x1 + 0x8 * Index);LABEL (0x7 + 0x8 * Index);LOAD2 0x1 (UnitPointer + 280);LABEL (0x1 + 0x8 * Index)"
 
-#define GuardAI GuardTileAI
+#define GuardAI NeverMoveAI
 #define ChapterDataEditor ChapterDataTable
 
 #define GiveItem(Item,Character) "SMOV 0x3 Item ; GIVEITEMTO Character"
@@ -1081,7 +1126,7 @@
 
 #define Twisted_Shadows_A 0x16
 #define Twisted_Shadows_B 0x17
-#define The_Battle_to_Be_Won 0x18
+#define The_Battle_to_Be_Won 0x1B
 #define Return_of_the_Demon_King 0x1E
 //EndLabel
 

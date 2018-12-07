@@ -298,10 +298,13 @@ ENUF 0x6B
 ENUF 0x6C
 EVBIT_T 0x4
 LOAD1 0x1 LoadNarrator
+ENUN
 ENUF 0x6E
 ENUF 0x67
 ENUF 0x68
 STAL 0x30
+FADU 0x5
+STAL 0x40
 Text(PrologueOpeningNarratorText)
 FADI 0x5
 DISA Narrator
@@ -412,7 +415,7 @@ ENDA
 	/*UNIT DATA*/
 
 LoadNarrator:
-UNIT Narrator NarratorClass Narrator Level(1,NPC,False) [7,1] 0x00 0x00 0x00 0x00 [SilverSword] [0]
+UNIT Narrator NarratorClass Narrator Level(15,NPC,False) [7,1] 0x00 0x00 0x00 0x00 [SilverSword] [0]
 UNIT
 
 

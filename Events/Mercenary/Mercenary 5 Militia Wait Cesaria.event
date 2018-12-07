@@ -72,11 +72,13 @@ STAL 0x8
 FADI 0x5
 MUSC Advance
 LOAD1 0x1 JasperDerek
+ENUN
+CLEN 0x0
 SetBackground(0x30)
 Text(Merc5MilitiaWaitCesariaPlansText)
 EndConvo
 STAL 0x10
-MoveMercenary(9,6)
+MoveMercenary(8,6)
 FADI 0x5
 MUSC Sorrow
 CLEN Maximus
@@ -106,6 +108,7 @@ GiveToSupplySilent(ShortAxe)
 GiveToSupplySilent(SteelBow)
 GiveToSupplySilent(Elthunder)
 GiveToSupplySilent(Shine)
+GiveToSupplySilent(Mend)
 NoFade
 ENDA
 

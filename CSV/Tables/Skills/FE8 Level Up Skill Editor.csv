@@ -140,14 +140,20 @@ Sentinel,SentinelSkillList|IsPointer
 Jacket Hero,JacketHeroSkillList|IsPointer
 Gladiator,GladiatorSkillList|IsPointer
 Hector,HectorSkillList|IsPointer
-Trueerblade,TruebladeSkillList|IsPointer
+Trueerblade,TruerbladeSkillList|IsPointer
 Gaiden Sage,GaidenSageSkillList|IsPointer
 Izuk,IzukSkillList|IsPointer
 Nomad,NomadSkillList|IsPointer
-NarratorClass,TruebladeSkillList|IsPointer
+Guardian Spirit,GuardianSpiritSkillList|IsPointer
 Warlock,WarlockSkillList|IsPointer
 SpearHero,HeroSkillList|IsPointer
 XeximClass,AssassinSkillList|IsPointer
 GrandPaladin,PaladinSkillList|IsPointer
 HolySage,SageSkillList|IsPointer
-WilSniper,SniperSkillList|IsPointer ; PUSH
+WilSniper,SniperSkillList|IsPointer
+BattleSage,SageSkillList|IsPointer
+LostSoulM,0x0
+LostSoulF,0x0
+ArmoredWyvernLord,WyvernLordSkillList|IsPointer
+EdgySwordmaster,SwordmasterSkillList|IsPointer
+EmperorClass,EmperorClassSkillList|IsPointer ; PUSH

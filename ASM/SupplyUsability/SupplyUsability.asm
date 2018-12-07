@@ -20,6 +20,18 @@ beq EndFalse
 
 ldr r0, =#0x03004E50
 ldr r5, [ r0 ]
+
+mov r0, r5
+ldr r0, [ r0, #0x04 ] @ Pointer to current ROM class data in r0.
+ldr r1, =ClassTable
+sub r0, r0, r1 @ r0 has the number of bytes from the beginning of the class table.
+mov r1, #84
+blh 0x080D18FC, r2 @ r0 has class ID.
+ldr r1, =SupplyUsabilityPhantomIDLink
+ldrb r1, [ r1 ]
+cmp r0, r1
+beq EndFalse
+
 mov r0, r5
 mov r1, r4
 bl DoesCharacterHaveSupply

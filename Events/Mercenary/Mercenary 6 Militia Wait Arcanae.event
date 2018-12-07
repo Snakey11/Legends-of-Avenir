@@ -69,6 +69,7 @@ MUSC Confront_the_Past
 TEXTCONT
 TEXTEND
 FADI 0x5
+REMA
 STAL 0x30
 SetBackground(0x12)
 Text(Merc6MilitiaWaitArcanaeInsideText)
@@ -97,7 +98,10 @@ ENDA
 
 EndingScene:
 FADI 0x5
-TileChange(14,8) // Open the door if it wasn't
+#ifdef __DEBUG__
+	ENUT 0x12
+	TileChange(14,8) // Open the door if it wasn't opened
+#endif
 MUSC Into_the_Shadow_of_Victory
 CLEA 0x0
 CLEE 0x0
@@ -127,10 +131,15 @@ STAL 0x8
 MOVE 0x0 Elanil [25,10]
 MOVE 0x0 Finoc [25,11]
 STAL 0x20
+ENUN
+REMU Elanil
+REMU Finoc
 FADI 0x5
+REVEAL Elanil
+REVEAL Finoc
 CAM1 [15,5]
 LOAD2 0x1 MoveLukeArc
-LoadingMercenary(2,PlayerLoading2)
+LOAD3 0x1 PlayerLoading2
 ENUN
 MUSC Binding_Vow
 SetBackground(0xA)
@@ -151,6 +160,8 @@ STAL 0x40
 MOVE 0x0 Elanil [16,6]
 ENUN
 Text(Merc6MilitiaWaitArcanaeEndingText)
+SetBackground(0x0D)
+Text(Merc6MilitiaWaitArcanaeFinocElanilEndingText)
 MoveToChapter(MercenaryMilitiaWaitArcanae7)
 ENDA
 
@@ -167,7 +178,7 @@ UNIT
 
 RexZaliusCutscene:
 UNIT Rex GrandPaladin Rex Level(1,Enemy,True) [15,1] Drop 0x00 0x00 0x00 [SilverLance,WindSword,KillerAxe,MasterSeal] GuardAI
-UNIT Zalius Swordmaster Zalius Level(1,Enemy,True) [15,3] Drop 0x00 0x00 0x00 [SilverBlade,MasterSeal] GuardAI 
+UNIT Zalius EdgySwordmaster Zalius Level(1,Enemy,True) [15,3] Drop 0x00 0x00 0x00 [SilverBlade,MasterSeal] GuardAI 
 UNIT
 
 FriendlyPeople:
@@ -180,8 +191,8 @@ UNIT Helmer Soldier Helmer Level(11,Ally,True) [22,25] 0x00 0x00 0x00 0x00 [Stee
 UNIT
 
 MoveZaliusCesarians:
-UNIT Rex GrandPaladin Rex Level(14,Enemy,True) [15,1] Drop 0x00 0x00 0x00 [SilverLance,WindSword,KillerAxe,MasterSeal] GuardAI
-UNIT Zalius Swordmaster Zalius Level(13,Enemy,True) [19,24] Drop 0x00 0x00 0x00 [SilverBlade,DoorKey] GuardAI 
+UNIT Rex GrandPaladin Rex Level(14,Enemy,True) [15,1] Drop 0x00 0x00 0x00 [SilverLance,WindSword,KillerAxe] GuardAI
+UNIT Zalius EdgySwordmaster Zalius Level(13,Enemy,True) [19,24] Drop 0x00 0x00 0x00 [SilverBlade,DoorKey] GuardAI 
 UNIT Cesarian Sniper Rex Level(5,Enemy,True) [15,20] 0x00 0x00 0x00 0x00 [SilverLongbow] AttackInRangeAI
 UNIT Cesarian Archer Rex Level(12,Enemy,True) [6,15] 0x00 0x00 0x00 0x00 [DevilBow] AttackInRangeAI
 UNIT Cesarian Archer Rex Level(11,Enemy,True) [6,20] 0x00 0x00 0x00 0x00 [IronLongbow] AttackInRangeAI
@@ -197,8 +208,8 @@ UNIT Cesarian Sage Rex Level(4,Enemy,True) [3,16] Drop 0x00 0x00 0x00 [Arcfire,M
 UNIT Cesarian Cavalier Rex Level(11,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [KillerLance] AttackInRangeAI	
 UNIT Cesarian Cavalier Rex Level(12,Enemy,True) [10,10] 0x00 0x00 0x00 0x00 [SteelBlade,HeavySpear] AttackInRangeAI
 UNIT Cesarian Shaman Rex Level(10,Enemy,True) [0,21] Drop 0x00 0x00 0x00 [Nosferatu,ArmsScroll] AttackInRangeAI
-UNIT Cesarian Soldier Rex Level(9,Enemy,True) [12,23] 0x00 0x00 0x00 0x00 [IronLance] [0]
-UNIT Cesarian Soldier Rex Level(11,Enemy,True) [13,24] 0x00 0x00 0x00 0x00 [Javelin] [0]
+UNIT Cesarian Soldier Rex Level(9,Enemy,True) [12,23] 0x00 0x00 0x00 0x00 [IronLance] AttackInRangeAI
+UNIT Cesarian Soldier Rex Level(11,Enemy,True) [13,24] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
 UNIT Cesarian Halberdier Rex Level(6,Enemy,True) [9,23] 0x00 0x00 0x00 0x00 [DragonSpear] ChaseOnceApproachedAI
 UNIT Cesarian Sentinel Rex Level(5,Enemy,True) [9,25] 0x00 0x00 0x00 0x00 [ShortSpear,BraveAxe] ChaseOnceApproachedAI
 UNIT

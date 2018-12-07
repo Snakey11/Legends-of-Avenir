@@ -25,11 +25,10 @@
   ALIGN 4
   #inctext lyn "SpellFix.elf" "SpellFixHook.elf"   
 
-ALIGN 16
-
 #ifdef IncludeBigStuff
 
 	{
+	ALIGN 16
 	#include "Spells/Aqua/Aqua.event"
 	}
 	{

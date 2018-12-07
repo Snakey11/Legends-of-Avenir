@@ -28,6 +28,20 @@ Skip this chapter.[X]
 ## PromoteNameText
  Promote[X]
  
+## EscapeNameText
+ Escape[X]
+
+## EscapeDescText
+Have this unit[NL]
+leave this chapter.[X]
+
+## ArriveNameText
+ Arrive[X]
+
+## ArriveDescText
+Complete this chapter[NL]
+by having this unit arrive.[X]
+ 
 ## PromoteDescText
 This unit is eligible to[NL]
 promote to a new class.[X]

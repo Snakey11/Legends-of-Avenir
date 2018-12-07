@@ -92,4 +92,9 @@
 5A Maximus Uzkalis Cutscene,Attack,Defense
 5B HaedricCastleCutscene,Attack,Defense
 5C Kilthel Cutscene,Attack,Defense
-5D Artifact Door Cutscene,Attack,Defense ; PUSH
+5D Artifact Door Cutscene,Attack,Defense
+5E MercenaryBandit2,Attack,Defense
+5F BacrunRuins1Cutscene,Attack,Defense
+60 BacrunRuins2Cutscene,Attack,Defense
+61 Kilthel Fight Cutscene,Attack,Defense
+62 Guardian Spirit Wall,Attack,Defense ; PUSH

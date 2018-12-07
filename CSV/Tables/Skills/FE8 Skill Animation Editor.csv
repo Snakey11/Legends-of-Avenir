@@ -4,7 +4,7 @@ AcrobatID 1 ,0
 PassID 2 ,0
 CantoPlusID 3 ,0
 WaryFighterID 4 ,0
-SureShotID 5 ,0
+SureShotID 5 ,SureShotAnim|IsPointer
 ProvokeID 6 ,0
 SaviorID 7 ,0
 MercyID 8  ,0
@@ -23,8 +23,8 @@ LancebreakerID 20 ,0
 AxebreakerID 21 ,0
 BowbreakerID 22 ,0
 TomebreakerID 23 ,0
-AegisID 24 ,0
-PaviseID 25 ,0
+AegisID 24 ,AegisAnim|IsPointer
+PaviseID 25 ,PaviseAnim|IsPointer
 DuelistsBlowID 26 ,0
 DeathBlowID 27 ,0
 DartingBlowID 28 ,0

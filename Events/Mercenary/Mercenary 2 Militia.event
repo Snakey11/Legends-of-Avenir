@@ -94,6 +94,7 @@ BEQ 0x14 0x0 0xC
 GOTO 0x15
 LABEL 0x14
 	Text(Merc2MilitiaGerwickDeadNoLukeText)
+	LOAD1 0x1 LukeStuff2
 LABEL 0x15
 MoveToChapter(MercenaryMilitiaKill3)
 ENDA
@@ -130,27 +131,28 @@ LABEL 0x10
 LABEL 0x11
 LOAD1 0x1 LukeStuff
 ENUN
-//TileChange(12,9)
+TileChange(11,9)
 MURE 0x5
 NoFade
 EndA2
 
 Home2:
 MUSI
-VillageEventItem(Merc2MilitiaHouse1Text,0x1,Speedwing)//House text
-//TileChange(11,8)
+Text(0x1,Merc2MilitiaHouse1Text)
+GiveItem(Speedwing,0xFFFF)
+TileChange(10,8)
 MUNO
 EndA2
 
 Home3:
 MUSI
-HouseEvent(Merc2MilitiaHouse2Text,0x9)
+Text(0x2,Merc2MilitiaHouse2Text)
 MUNO
 EndA2
 
 Home4:
 MUSI
-HouseEvent(Merc2MilitiaHouse3Text,0x1)
+Text(0x1,Merc2MilitiaHouse3Text)
 MUNO
 ENDA
 
@@ -197,5 +199,5 @@ UNIT Luke Monk Arc Level(1,Ally,True) [12,9] 0x00 0x00 0x1 REDA10R9 [Lightning,V
 UNIT
 
 LukeStuff2:
-UNIT Luke Monk Arc Level(1,Ally,True) [12,9] 0x00 0x00 0x0 0x0 [Lightning,Vulnerary] [0]
+UNIT Luke Monk Arc Level(5,Ally,True) [12,9] 0x00 0x00 0x0 0x0 [Lightning,Vulnerary] [0]
 EndUnit

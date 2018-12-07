@@ -37,6 +37,15 @@ DarkKnightMv:
 WORD 0 0 0 0 ; ALIGN 16
 
 
+EdgySwordmasterSt:
+#incext Png2Dmp "EdgySwordmasterSt.png" --lz77
+WORD 0 0 0 0 ; ALIGN 16
+
+EdgySwordmasterMv:
+#incext Png2Dmp "EdgySwordmasterMv.png" --lz77
+WORD 0 0 0 0 ; ALIGN 16
+
+
 GladiatorSt:
 #incext Png2Dmp "GladiatorSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
@@ -207,9 +216,11 @@ WarlockMv:
 #incext Png2Dmp "WarlockMv.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
 
+
 FMercenaryFix:
 #incext Png2Dmp "Female Mercenary Fix.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16
+
 
 ALIGN 16
 HectorAnimationData:
@@ -218,51 +229,3 @@ HectorAnimationData:
 ALIGN 16
 GladiatorAnimationData:
 #incbin "Gladiator Animation Data.dmp"
-
-/*
-SetMovingMapSprite(BlackFalcoknight,$1C3D7C,BlackFalcoknightMv)
-SetMovingMapSprite(Champion,$1C3D7C,ChampionMv)
-SetMovingMapSprite(Commander,$1C3D7C,CommanderMv)
-SetMovingMapSprite(DarkKnightM,$1C3D7C,DarkKnightMv)
-SetMovingMapSprite(DarkKnightF,$1C3D7C,DarkKnightMv)
-SetMovingMapSprite(Gladiator,$1C3D7C,GladiatorMv)
-SetMovingMapSprite(Halberdier,$1C3D7C,HalberdierMv)
-SetMovingMapSprite(Hector,$1C3D7C,HectorMv)
-SetMovingMapSprite(Hunter,$1C3D7C,HunterMv)
-SetMovingMapSprite(Impaler,$1C3D7C,ImaplerMv)
-SetMovingMapSprite(Izuk,$1C3D7C,IzukMv)
-SetMovingMapSprite(MagusM,$1C3D7C,MagusMMv)
-SetMovingMapSprite(MagusF,$1C3D7C,MagusFMv)
-SetMovingMapSprite(Matriarch,$1C3D7C,MatriarchMv)
-SetMovingMapSprite(MonkF2,$1C3D7C,MonkFMv)
-SetMovingMapSprite(MountedBrigand,$1C3D7C,MountedBrigandMv)
-SetMovingMapSprite(Nomad,$1C3D7C,NomadMv)
-SetMovingMapSprite(Patriarch,$1C3D7C,PatriarchMv)
-SetMovingMapSprite(Sentinel,$1C3D7C,SentinelMv)
-SetMovingMapSprite(TruebladeM,$1C3D7C,TruebladeMv)
-SetMovingMapSprite(TruebladeF,$1C3D7C,TruebladeMv)
-SetMovingMapSprite(Truerblade,$1C3D7C,TruerbladeMv)
-SetMovingMapSprite(Warlock,$1C3D7C,WarlockMv)
-
-SetStandingMapSprite(BlackFalcoknightSprite,Medium,BlackFalcoknightSt)
-SetStandingMapSprite(ChampionSprite,Small,ChampionSt)
-SetStandingMapSprite(CommanderSprite,Medium,CommanderSt)
-SetStandingMapSprite(DarkKnightSprite,Medium,DarkKnightSt)
-SetStandingMapSprite(GladiatorSprite,Medium,GladiatorSt)
-SetStandingMapSprite(HalberdierSprite,Medium,HalberdierSt)
-SetStandingMapSprite(HectorSprite,Medium,HectorSt)
-SetStandingMapSprite(HunterSprite,Small,HunterSt)
-SetStandingMapSprite(ImpalerSprite,Medium,ImaplerSt)
-SetStandingMapSprite(IzukSprite,Small,IzukSt)
-SetStandingMapSprite(MagusMSprite,Small,MagusMSt)
-SetStandingMapSprite(MagusFSprite,Small,MagusFSt)
-SetStandingMapSprite(MatriarchSprite,Medium,MatriarchSt)
-SetStandingMapSprite(MonkFSprite,Small,MonkFSt)
-SetStandingMapSprite(MountedBrigandSprite,Medium,MountedBrigandSt)
-SetStandingMapSprite(NomadSprite,Medium,NomadSt)
-SetStandingMapSprite(PatriarchSprite,Medium,PatriarchSt)
-SetStandingMapSprite(SentinelSprite,Small,SentinelSt)
-SetStandingMapSprite(TruebladeSprite,Small,TruebladeSt)
-SetStandingMapSprite(TruerbladeSprite,Small,TruerbladeSt)
-SetStandingMapSprite(WarlockSprite,Medium,WarlockSt)
-*/

@@ -30,6 +30,7 @@ END_MAIN
 MiscBasedEvents:
 DefeatBoss(EndingScene)
 CauseGameOverIfLordDies
+AREA 0x18 LeyosAI [17,21] [21,24]
 END_MAIN
 
 Dunno:
@@ -53,6 +54,7 @@ UNIT
 
 BeginningScene:
 ENUT 0x12
+ENUT 0x16
 MUSC Sorrow
 SVAL 0xB Coords(7,4)
 LOMA OutsideTempleCutscene
@@ -135,8 +137,6 @@ ASMC PrepForEnd|1
 ENUF 0x12
 FADI 0x5
 MUSC Victory
-CLEA 0x0
-CLEE 0x0
 SVAL 0x1 60
 SET_HP Arc
 SET_HP Luke
@@ -146,49 +146,102 @@ SET_HP Val
 SET_HP Helmer
 SET_HP Uzkalis
 CAM1 [14,20]
-LOAD3 0x1 PlayerLoading4
-LOAD2 0x1 EndingAllies
-LOAD1 0x1 EndingMeanies
-ENUN
-FADU 0x5
-STAL 0x10
-Text(Merc7MilitiaWaitArcanaeLeyosDeadText)
-StartBattle
-CriticalHit(0,40)
-EndAttack
-FIG1 Uzkalis Emperor 0x0
-KillUnit(21,21)
-STAL 0x10
-Text(0x2E,Merc7MilitiaWaitArcanaeEmperorDeadText)
-STAL 0x10
-MoveMercenary(3,22)
-STAL 0x10
-FADI 0x5
-MURE 0x5
-ENUN
-CLEA Finoc
-SVAL 0xB Coords(7,5)
-LOMA OutsideTempleCutscene
-LOAD3 0x1 PlayerLoading2
-ENUN
-FADU 0x5
-STAL 0x20
-FADI 0x5
-LOAD1 0x1 NarratorHere
-SetBackground(0x30)
-TEXTSHOW Merc7MilitiaWaitArcanaeNarratorHereText
-TEXTEND
-MUSC Return_of_the_Demon_King
-TEXTCONT
-TEXTEND
-EndConvo
-MOVE 0x0 Narrator [7,6]
-ENUN
-StartBattle
-NormalDamage(0,10)
-CriticalHit(1,60)
-EndAttack
-MercenaryNarratorFight(7,5)
+
+CHECK_ALIVE Emperor
+BEQ 0x0 0x0 0xC
+	// Emperor is alive. Good ending.
+	ENUF 0x12
+	CLEA 0x0
+	CLEE 0x0
+	LOAD3 0x1 PlayerLoading4
+	LOAD2 0x1 EndingAllies
+	ENUN
+	LOAD1 0x1 LoadEmperor
+	ENUN
+	FADU 0x5
+	STAL 0x40
+	FADI 0x5
+	CLEA 0x0
+	CLEE 0x0
+	SVAL 0xB Coords(7,5)
+	LOMA OutsideTempleCutscene
+	LOAD3 0x1 PlayerLoading5
+	ENUN
+	SetBackground(0x2E)
+	Text(Merc7MilitiaWaitArcanaeGoodEndingText)
+	FADI 0x5
+	FadeOutMusic
+	STAL 0x40
+	EndConvo
+	STAL 0x40
+	FADI 0x5
+	LOAD1 0x1 GoodEndingNarrator
+	ENUN
+	SetBackground(0x30)
+	TEXTSHOW Merc7MilitiaWaitArcanaeGoodEndingNarratorText
+	TEXTEND
+	MUSC Return_of_the_Demon_King
+	TEXTCONT
+	TEXTEND
+	EndConvo
+	STAL 0x10
+	MOVE 0x0 Narrator [7,4]
+	ENUN
+	StartBattle
+	MissedAttack(1,0)
+	NormalDamage(1,30)
+	NormalDamage(0,9)
+	CriticalHit(1,60)
+	EndAttack
+	MercenaryNarratorFight(7,3)
+	GOTO 0x1
+LABEL 0x0
+	// Emperor is dead. Bad ending.
+	ENUF 0x16
+	CLEA 0x0
+	CLEE 0x0
+	LOAD3 0x1 PlayerLoading4
+	LOAD2 0x1 EndingAllies
+	ENUN
+	FADU 0x5
+	STAL 0x40
+	FADI 0x5
+	SVAL 0xB Coords(7,5)
+	LOMA OutsideTempleCutscene
+	LOAD3 0x1 PlayerLoading6
+	LOAD1 0x1 BadEndingFriends
+	ENUN
+	SetBackground(0x2E)
+	Text(Merc7MilitiaWaitArcanaeBadEndingText)
+	FADI 0x5
+	MUSI
+	STAL 0x40
+	EndConvo
+	Text(Merc7MilitiaWaitArcanaeBadEndingLukeArcText)
+	STAL 0x10
+	MOVE 0x0 Luke [14,7]
+	MOVE 0x0 Arc [14,8]
+	ENUN
+	DISA Luke
+	DISA Arc
+	FadeOutMusic
+	MUNO
+	STAL 0x30
+	Text(Merc7MilitiaWaitArcanaeBadEndingTactText)
+	STAL 0x10
+	MUSC Return_of_the_Demon_King
+	WarpIn(9,7,BadEndingNarrator)
+	STAL 0x20
+	Text(Merc7MilitiaWaitArcanaeBadEndingNarratorText)
+	STAL 0x10
+	MOVE 0x0 Narrator [9,8]
+	ENUN
+	StartBattle
+	MissedAttack(0,0)
+	CriticalHit(1,60)
+	EndAttack
+	MercenaryNarratorFight(9,9)	
+LABEL 0x1
 DISA Arc
 DISA Luke
 DISA Elanil
@@ -206,6 +259,19 @@ ENUF 0x6C
 ENUF 0x6D
 ENUT 0x78
 MoveToChapter(PrologueChapter)
+ENDA
+
+LeyosAI:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x0 0x0 0xC
+	Text(Merc7MilitiaWaitArcanaeLeyosAIText)
+	SVAL 0x1 0x00000300 // Move to attack in range AI
+	CHAI Leyos
+	GOTO 0x1
+LABEL 0x0
+	ENUF 0x18
+LABEL 0x1
+NoFade
 ENDA
 
 	/*UNIT DATA*/
@@ -226,8 +292,16 @@ PlayerLoading4:
 UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [19,23] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
 UNIT
 
+PlayerLoading5:
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [7,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT
+
+PlayerLoading6:
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [9,9] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT
+
 EmperorOutsidePeople:
-UNIT Emperor 0x6F Emperor Level(1,Enemy,True) [7,7] 0x00 0x00 0x00 0x00 [0] GuardAI
+UNIT Emperor EmperorClass Emperor Level(1,Enemy,True) [7,7] 0x00 0x00 0x00 0x00 [0] GuardAI
 UNIT Leyos HectorClass Emperor Level(1,Enemy,True) [6,6] 0x00 0x00 0x00 0x00 [SilverSword,Tomahawk] GuardAI
 UNIT Maximus BattleSage Maximus Level(1,Enemy,True) [8,6] 0x00 0x00 0x00 0x00 [Thoron,Bolganone] GuardAI
 UNIT
@@ -259,9 +333,9 @@ UNIT Helmer Soldier Helmer Level(11,Ally,True) [11,5] 0x00 0x00 0x00 0x00 [Steel
 UNIT
 
 InsideTempleMeanies:
-UNIT Emperor 0x6F Emperor Level(1,Enemy,True) [21,21] 0x00 0x00 0x00 0x00 [0] GuardAI
-UNIT Leyos HectorClass Emperor Level(15,Enemy,True) [17,22] 0x00 0x00 0x00 0x00 [SilverSword,Tomahawk] GuardAI
-UNIT Maximus BattleSage Maximus Level(14,Enemy,True) [20,23] 0x00 0x00 0x00 0x00 [Thoron,Bolganone] GuardAI
+UNIT Emperor EmperorClass Emperor Level(12,Enemy,True) [21,21] 0x00 0x00 0x00 0x00 [SilverSword] GuardAI
+UNIT Leyos HectorClass Emperor Level(15,Enemy,True) [16,23] 0x00 0x00 0x00 0x00 [SilverSword,Tomahawk] GuardTileAI
+UNIT Maximus BattleSage Maximus Level(14,Enemy,True) [20,23] 0x00 0x00 0x00 0x00 [Bolganone,Thoron] GuardAI
 UNIT Cesarian General Maximus Level(8,Enemy,True) [15,9] Drop 0x00 0x00 0x00 [SteelBlade,DoorKey] GuardAI
 UNIT Cesarian Knight Maximus Level(15,Enemy,True) [19,13] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
 UNIT Cesarian GreatKnight Maximus Level(6,Enemy,True) [18,14] 0x00 0x00 0x00 0x00 [SilverLance,HandAxe] [0]
@@ -308,11 +382,11 @@ UNIT Helmer Soldier Helmer Level(11,Ally,True) [21,13] 0x00 0x00 0x00 0x00 [Stee
 UNIT
 
 LoadUzkalisInside:
-UNIT Uzkalis GaidenSage Uzkalis Level(8,Ally,True) [21,10] 0x00 0x00 0x00 0x00 [Thoron,Arcwind] [0]
+UNIT Uzkalis GaidenSage Uzkalis Level(12,Ally,True) [21,12] 0x00 0x00 0x00 0x00 [Thoron,Arcwind] [0]
 UNIT
 
 MoveMaximus:
-UNIT Maximus BattleSage Maximus Level(14,Enemy,True) [4,11] 0x00 0x00 0x00 0x00 [Thoron,Bolganone] GuardAI
+UNIT Maximus BattleSage Maximus Level(14,Enemy,True) [4,11] 0x00 0x00 0x00 0x00 [Bolganone,Thoron] GuardAI
 UNIT
 
 EndingAllies:
@@ -322,13 +396,22 @@ UNIT Elanil Monk Luke Level(1,Ally,True) [16,22] 0x00 0x00 0x00 0x00 [BraveLance
 UNIT Finoc Monk Luke Level(1,Ally,True) [20,24] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
 UNIT Val Shaman_F Val Level(9,Ally,True) [19,24] 0x00 0x00 0x00 0x00 [Worm,Nosferatu] [0]
 UNIT Helmer Soldier Helmer Level(11,Ally,True) [18,23] 0x00 0x00 0x00 0x00 [SteelLance,KnightCrest] [0]
+UNIT Uzkalis GaidenSage Uzkalis Level(11,Ally,True) [21,23] 0x00 0x00 0x00 0x00 [0] [0]
 UNIT
 
-EndingMeanies:
-UNIT Emperor 0x6F Emperor Level(1,Enemy,True) [21,21] 0x00 0x00 0x00 0x00 [0] GuardAI
-UNIT Uzkalis Sage Uzkalis Level(10,Ally,True) [21,23] 0x00 0x00 0x00 0x00 [HandAxe] GuardAI
+LoadEmperor:
+UNIT Emperor EmperorClass Emperor Level(12,Enemy,True) [21,21] 0x00 0x00 0x00 0x00 [SilverSword] NoAI
 UNIT
 
-NarratorHere:
-UNIT Narrator NarratorClass Narrator Level(1,Enemy,True) [7,7] 0x00 0x00 0x00 0x00 [SilverSword] GuardAI
+BadEndingFriends:
+UNIT Arc Monk Luke Level(1,Ally,True) [9,7] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Luke Monk Luke Level(1,Ally,True) [10,8] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT
+
+GoodEndingNarrator:
+UNIT Narrator GuardianSpirit Narrator Level(15,Enemy,True) [7,6] 0x00 0x00 0x00 0x00 [BraveSword] NoAI
+UNIT
+
+BadEndingNarrator:
+UNIT Narrator GuardianSpirit Narrator Level(15,Enemy,True) [9,7] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI
 UNIT

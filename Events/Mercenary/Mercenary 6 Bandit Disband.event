@@ -100,7 +100,7 @@ FADI 0x5
 MUSI
 STAL 0x50
 MUNO
-
+FADU 0x5
 TEXTSHOW Merc6BanditDisbandOutsideKilthelText
 TEXTEND
 MUSC Raid
@@ -167,6 +167,16 @@ CAM1 [7,5]
 LOAD1 0x1 EfilHere
 ENUN
 Text(Merc6BanditDisbandEfilHereText)
+STAL 0x40
+MOVE 0x0 Efil [2,5]
+ENUN
+STAL 0x10
+StartBattle
+MissedAttack(1,0)
+CriticalHit(0,60)
+EndAttack
+FIG1 Efil Guardian 0x0
+STAL 0x30
 NoFade
 ENDA
 

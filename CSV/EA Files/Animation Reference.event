@@ -45,6 +45,16 @@ DarkAnim(DarkKnightFMagic)
 UnarmedAnim(DarkKnightFMagic)
 WORD 0x0 0x0
 
+EdgySwordmasterAnim:
+SwordAnim(EdgySwordmasterSword)
+UnarmedAnim(EdgySwordmasterUnarmed)
+WORD 0x0 0x0
+
+EmperorAnim:
+SwordAnim(EmperorSword)
+UnarmedAnim(EmperorUnarmed)
+WORD 0x0 0x0
+
 GaidenSageAnim:
 StaffAnim(GaidenSageStaff)
 AnimaAnim(GaidenSageMagic)
@@ -191,6 +201,12 @@ PatriarchAnim:
 StaffAnim(PatriarchStaff)
 LightAnim(PatriarchMagic)
 UnarmedAnim(PatriarchMagic)
+WORD 0x0 0x0
+
+PhantomAnim:
+AxeAnim(PhantomAxe)
+HandAxeAnim(PhantomHandAxe)
+UnarmedAnim(PhantomUnarmed)
 WORD 0x0 0x0
 
 SentinelAnim:

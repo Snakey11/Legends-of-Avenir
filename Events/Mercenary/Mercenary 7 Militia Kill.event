@@ -14,13 +14,23 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x18,LoadDoorOpenedUnits,0,255) // Occurs the turn after the door is opened.
+TurnEventPlayer(0x19,RexDeadUnits1,0,255) // Occurs the turn after Rex is killed.
+TurnEventPlayer(0x20,RexDeadSkip1,0,255)
+TurnEventPlayer(0x24,RexDeadSkip2,0,255)
+TurnEventPlayer(0x25,RexDeadUnits2,0,255)
+TurnEventPlayer(0x00,RexDeadUnitsLoop,0,255) // Every 3 turns infinite unit spawn loop
 END_MAIN
-ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+ALIGN 32
 
 CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+Seize(0x16,EndingScene,17,22)
+Seize(0x16,EndingScene,18,22)
+Seize(0x16,EndingScene,19,22)
+Seize(0x16,EndingScene,20,22)
 Chest(Elixir,23,18)
 DOOR 0x11 [5,9] 0x12
 DOOR 0x11 [6,9] 0x12
@@ -32,8 +42,8 @@ END_MAIN
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
-DefeatBoss(EndingScene)
 AFEV 0x12 DoorOpened 0x11
+AFEV 0x17 RexDead 0x2
 END_MAIN
 
 Dunno:
@@ -48,43 +58,21 @@ ENDTRAP
 ALIGN 4
 
 Units:
-/*UNIT Rex Paladin Rex Level(1,Enemy,True) [12,1] 0x00 0x00 0x00 0x00 [Spear,RuneSword] GuardAI
-UNIT Cesarian Fighter Rex Level(1,Enemy,True) [2,5] 0x00 0x00 0x00 0x00 [HandAxe] [0]
-UNIT Cesarian Fighter Rex Level(1,Enemy,True) [3,5] 0x00 0x00 0x00 0x00 [KillerAxe] [0]
-UNIT Cesarian Warrior Rex Level(1,Enemy,True) [3,3] 0x00 0x00 0x00 0x00 [Tomahawk] [0]
-UNIT Cesarian Knight Rex Level(1,Enemy,True) [21,5] 0x00 0x00 0x00 0x00 [Axeslayer] [0]
-UNIT Cesarian Knight Rex Level(1,Enemy,True) [22,5] 0x00 0x00 0x00 0x00 [ShortSpear] [0]
-UNIT Cesarian GreatKnight Rex Level(1,Enemy,True) [22,3] 0x00 0x00 0x00 0x00 [SilverSword,SteelLance] [0]
-UNIT Cesarian Sage Rex Level(1,Enemy,True) [12,15] Drop 0x00 0x00 0x00 [Thoron] AttackInRangeAI
-UNIT Cesarian Bishop Rex Level(1,Enemy,True) [8,6] 0x00 0x00 0x00 0x00 [Purge,Divine] GuardAI
-UNIT Cesarian Bishop Rex Level(1,Enemy,True) [16,6] 0x00 0x00 0x00 0x00 [Aura,Silence] GuardAI
-UNIT Cesarian Mage Rex Level(1,Enemy,True) [7,11] 0x00 0x00 0x00 0x00 [Arcwind] ChaseOnceApproachedAI
-UNIT Cesarian Monk Rex Level(1,Enemy,True) [17,11] 0x00 0x00 0x00 0x00 [Divine] ChaseOnceApproachedAI
-UNIT Cesarian Cavalier Rex Level(1,Enemy,True) [8,13] 0x00 0x00 0x00 0x00 [SteelLance] [0]
-UNIT Cesarian Cavalier Rex Level(1,Enemy,True) [16,13] 0x00 0x00 0x00 0x00 [KillingEdge] [0]
-UNIT Cesarian Sniper Rex Level(1,Enemy,True) [4,17] Drop 0x00 0x00 0x00 [SilverBow,ChestKey] AttackInRangeAI
-UNIT Cesarian Sniper Rex Level(1,Enemy,True) [20,17] Drop 0x00 0x00 0x00 [SteelBow,ChestKey] AttackInRangeAI
-UNIT Cesarian Swordmaster Rex Level(1,Enemy,True) [1,17] 0x00 0x00 0x00 0x00 [SilverSword] AttackInRangeAI
-UNIT Cesarian General Rex Level(1,Enemy,True) [23,17] 0x00 0x00 0x00 0x00 [BraveLance] AttackInRangeAI
-UNIT Cesarian General Rex Level(1,Enemy,True) [12,11] 0x00 0x00 0x00 0x00 [SteelLance,ShortAxe] GuardAI
-UNIT Cesarian Hero Rex Level(1,Enemy,True) [5,14] 0x00 0x00 0x00 0x00 [LightBrand,SteelAxe] AttackInRangeAI
-UNIT Cesarian Hero Rex Level(1,Enemy,True) [19,14] 0x00 0x00 0x00 0x00 [BattleAxe,IronBlade] AttackInRangeAI
-UNIT Cesarian Soldier Rex Level(1,Enemy,True) [8,18] Drop 0x00 0x00 0x00 [SteelLance,DoorKey] [0]
-UNIT Cesarian Soldier Rex Level(1,Enemy,True) [16,18] 0x00 0x00 0x00 0x00 [SteelLance] [0]
-UNIT Cesarian Halberdier Rex Level(1,Enemy,True) [11,2] 0x00 0x00 0x00 0x00 [SilverLance] ChaseOnceApproachedAI
-UNIT Cesarian Halberdier Rex Level(1,Enemy,True) [13,2] 0x00 0x00 0x00 0x00 [Spear] ChaseOnceApproachedAI
-UNIT Arc Fighter PlayerMArcher Level(1,Ally,True) [9,24] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Kendrick Pirate PlayerMArcher Level(1,Ally,True) [10,23] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Luke Monk PlayerMArcher Level(1,Ally,True) [14,23] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Arya Myrmidon_F PlayerMArcher Level(1,Ally,True) [13,24] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Xexim Assassin PlayerMArcher Level(7,Ally,True) [12,23] 0x00 0x00 0x00 0x00 [SilverSword,Shamshir,Elixir] [0] 	
-UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(1,Ally,True) [11,24] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] */
 UNIT
 
+//Label BeginningScene
 BeginningScene:
 ENUT 0x10
+ENUT 0x16 // Disables escape until Rex dies
+ENUT 0x18 // Disallows the turn event to occur the turn after the door is opened.
+ENUT 0x19 // Disallows the turn event to occur the turn after Rex is killed.
+ENUT 0x20
+ENUT 0x24
+ENUT 0x25 // Disables the turn event to occur a few turns after Rex is killed.
+ENUT 0x26 // Disables the infinite unit spawn loop after Rex dies4
+ENUT 0x22 // Enables Escape
 MUSC Indignation
-SETVAL 0xB 0x050007
+SVAL 0xB Coords(7,5)
 LOMA LeavingShizonCutscene
 LOAD3 0x1 PlayerLoading2
 LOAD2 0x1 StartingCutscenePeople
@@ -95,7 +83,7 @@ FADI 0x5
 SetBackground(0x1F)
 Text(Merc7MilitiaKillBeginningText)
 FADI 0x5
-SETVAL 0xB 0x14000C
+SETVAL 0xB Coords(12,20)
 LOMA MercenaryMilitiaKill7
 MUSC Distant_Roads
 STAL 0x30
@@ -143,6 +131,7 @@ MUSC Indignation
 CAM1 [6,5]
 STAL 0x30
 Text(0x0E,Merc7MilitiaKillThroneRoomText)
+//LOAD1 0x1 TestGui
 NoFade
 ENDA
 
@@ -151,13 +140,6 @@ ASMC PrepForEnd|1
 ENUF 0x10 // Enables the special death quote that doesn't cause a game over to prevent the game over route looping glitch.
 FadeOutMusic
 STAL 0x20
-CHECK_ALIVE Xexim
-BEQ 0x21 0x0 0xC
-	Text(Merc7MilitiaKillRexDeadGoodEndingText)
-	GOTO 0x22
-LABEL 0x21
-	Text(Merc7MilitiaKillRexDeadBadEndingText)
-LABEL 0x22
 
 FADI 0x5
 CLEE 0x0
@@ -216,14 +198,67 @@ ENUF 0x6D
 MoveToChapter(PrologueChapter)
 ENDA
 
-TestBoi:
-UNIT MercenaryFAvatar 0x6E PlayerMArcher Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] [0]
-UNIT
-
 DoorOpened:
+ENUF 0x18
+NoFade
+ENDA
+
+LoadDoorOpenedUnits:
 LOAD1 0x1 DoorUnits
 ENUN
 Text(Merc7MilitiaKillGuardsHereText)
+NoFade
+ENDA
+
+//Label RexDead units
+RexDead:
+ENUF 0x16 // Enables escape points
+ENUF 0x19 // Enables reinforcements immediately after Rex is killed.
+CHECK_ALIVE Xexim
+BEQ 0x00 0x0 0xC
+	Text(Merc7MilitiaKillRexDeadGoodText) // Let's get out of here!
+	GOTO 0x01
+LABEL 0x00
+	Text(Merc7MilitiaKillRexDeadBadText)
+LABEL 0x01
+NoFade
+EndA2
+
+RexDeadUnits1:
+ENUF 0x20
+LOAD1 0x1 LoadRexDeadUnits1
+ENUN
+NoFade
+EndA2
+
+RexDeadSkip1:
+ENUF 0x24
+NoFade
+EndA2
+
+RexDeadSkip2:
+ENUF 0x25
+NoFade
+EndA2
+
+RexDeadUnits2:
+ENUF 0x26
+LOAD1 0x1 LoadRexDeadUnits2
+ENUN
+NoFade
+EndA2
+
+RexDeadUnitsLoop:
+CHECK_EVENTID 0x26
+BNE 0x3 0x0 0xC
+	Every3Turns(0x00,0x01,0x02,0x27,0x28,RexDeadUnitsFinal)
+LABEL 0x3
+NoFade
+EndA2
+
+RexDeadUnitsFinal:
+LOAD1 0x1 LoadRexDeadUnitsFinal
+ENUN
 NoFade
 ENDA
 
@@ -328,6 +363,32 @@ UNIT
 
 LoadNarrator:
 UNIT Narrator NarratorClass Narrator Level(15,NPC,True) [5,2] 0x00 0x00 0x00 0x00 [SilverSword] [0]
+UNIT
+
+LoadRexDeadUnits1:
+UNIT Cesarian MageKnight Rex Level(7,Enemy,True) [20,0] 0x00 0x00 0x00 0x00 [Dasher] NoAI
+UNIT Cesarian Swordmaster Rex Level(7,Enemy,True) [17,0] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI
+UNIT Cesarian Hero Rex Level(7,Enemy,True) [14,0] 0x00 0x00 0x00 0x00 [HandAxe,SteelBlade] NoAI
+UNIT Cesarian Berserker Rex Level(7,Enemy,True) [26,9] 0x00 0x00 0x1 REDA22R9 [BattleAxe] ChaseOnceApproachedAI
+UNIT Cesarian Cavalier Rex Level(7,Enemy,True) [26,22] 0x00 0x00 0x00 0x00 [Javelin] ChaseOnceApproachedAI
+UNIT
+
+LoadRexDeadUnits2:
+UNIT Cesarian Ranger Rex Level(7,Enemy,True) [0,10] 0x00 0x00 0x00 0x00 [IronSword,SilverBow] NoAI
+UNIT Cesarian Ranger Rex Level(7,Enemy,True) [0,13] 0x00 0x00 0x00 0x00 [SteelLongbow,Zanbato] NoAI
+UNIT Cesarian Fighter Rex Level(7,Enemy,True) [5,0] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT Cesarian Fighter Rex Level(7,Enemy,True) [7,0] 0x00 0x00 0x00 0x00 [ShortAxe] NoAI
+UNIT
+
+LoadRexDeadUnitsFinal:
+UNIT Cesarian Paladin Rex Level(7,Enemy,True) [20,0] 0x00 0x00 0x00 0x00 [Wyrmslayer] NoAI
+UNIT Cesarian GreatKnight Rex Level(7,Enemy,True) [26,16] 0x00 0x00 0x00 0x00 [KillerAxe,ShortSpear] NoAI
+UNIT Cesarian Sentinel Rex Level(7,Enemy,True) [15,0] 0x00 0x00 0x00 0x00 [SteelSword,SteelLance,SteelAxe] NoAI
+UNIT Cesarian Sentinel Rex Level(7,Enemy,True) [16,0] 0x00 0x00 0x00 0x00 [DragonSpear] NoAI
+UNIT
+
+TestGui:
+UNIT Xexim XeximClass Xexim Level(7,Ally,True) [6,3] 0x00 0x00 0x00 0x00 [Shamshir] NoAI
 UNIT
 
 REDA1:

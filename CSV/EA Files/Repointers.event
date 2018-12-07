@@ -167,22 +167,22 @@ POIN SpellAssociationTable
 ORG $78240
 POIN SpellAssociationTable
 
-	ORG $CC7C8
-	POIN (PromotionBranchTable-1)
-	ORG $CC7D0
-	POIN (PromotionBranchTable-2)
-	ORG $CC824
-	POIN (PromotionBranchTable-2)
-	ORG $CC860
-	POIN (PromotionBranchTable-2)
-	ORG $CC8A4
-	POIN (PromotionBranchTable-2)
-	ORG $CC8EC
-	POIN (PromotionBranchTable-2)
-	ORG $CCE8C
-	POIN (PromotionBranchTable-2)
-	ORG $CDB74
-	POIN (PromotionBranchTable-2)
+ORG $CC7C8
+POIN (PromotionBranchTable-1)
+ORG $CC7D0
+POIN (PromotionBranchTable-2)
+ORG $CC824
+POIN (PromotionBranchTable-2)
+ORG $CC860
+POIN (PromotionBranchTable-2)
+ORG $CC8A4
+POIN (PromotionBranchTable-2)
+ORG $CC8EC
+POIN (PromotionBranchTable-2)
+ORG $CCE8C
+POIN (PromotionBranchTable-2)
+ORG $CDB74
+POIN (PromotionBranchTable-2)
 
 ORG $3462C
 POIN ChapterDataTable

@@ -116,6 +116,23 @@ MOVE 0x0 Finoc [16,0]
 ENUN
 TEXTCONT
 TEXTEND
+MOVE 0x0 Luke [14,3]
+STAL 0x30
+TEXTCONT
+TEXTEND
+MOVE 0x0 Luke [5,3]
+STAL 0x40
+TEXTCONT
+TEXTEND
+ENUN // Wait for Luke to actually arrive before his line.
+TEXTCONT
+TEXTEND
+GiveToSupplySilent(Wyrmslayer)
+GiveToSupplySilent(ShortSpear)
+GiveToSupplySilent(ShortAxe)
+GiveToSupplySilent(Hammer)
+GiveToSupplySilent(SteelLongbow)
+GiveToSupplySilent(Mend)
 MoveToChapter(MercenaryMilitiaWaitCesaria7)
 ENDA
 

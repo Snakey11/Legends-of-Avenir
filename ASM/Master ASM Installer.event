@@ -37,6 +37,9 @@ ALIGN 4
 #inctext lyn "DoubleEXP/NewDoubleEXP.elf" "DoubleEXP/Definitions.elf"
 
 ALIGN 4
+#include "Escape-Arrive/Escape Installer.event"
+
+ALIGN 4
 #inctext lyn "GiveToSupply/GiveToSupply.elf"
 
 ALIGN 4
@@ -77,7 +80,6 @@ BYTE 0x6E True  0x67 True  0x00 0x00
 FemaleMageList:
 BYTE 0x6E False  0x67 True  0x00 0x00
 
-
 ALIGN 4
 #include "Raid/Raid.event"
 
@@ -101,7 +103,7 @@ ALIGN 4
 
 ALIGN 4
 #ifdef SkillSystemIncluded
-	#include "Skill System/Engine Hacks/_MasterHackInstaller.event"
+	#include "Skill System/_MasterHackInstaller.event"
 #else
 	#define SkillTester 0
 	#include "Delete with Skills.event"
@@ -115,12 +117,13 @@ ALIGN 4
 //#include "SummonStuff/Summon.event"
 
 ALIGN 4
-MESSAGE Supply stuff is at CURRENTOFFSET
 #inctext lyn "SupplyUsability/SupplyUsability.elf"
 NormalSupplyList:
 BYTE PlayerMMonk PlayerMShaman PlayerMMage PlayerFMonk PlayerFShaman PlayerFMage
 BYTE PlayerMCavalier PlayerMKnight PlayerMSoldier PlayerMWyvernRider PlayerMArcher PlayerFCavalier PlayerFKnight PlayerFSoldier PlayerFWyvernRider PlayerFArcher
 BYTE PlayerMMercenary PlayerMMyrmidon PlayerMFighter PlayerMPirate PlayerMBrigand PlayerFMercenary PlayerFMyrmidon PlayerFPegasusKnight 0x00
+SupplyUsabilityPhantomIDLink:
+BYTE Phantom
 
 ALIGN 4
 #include "Walking Sounds Fix/FE8-Walking Sounds EA.event"

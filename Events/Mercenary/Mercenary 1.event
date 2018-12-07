@@ -28,7 +28,7 @@ SHOP 0x0 ShopData [6,2] 0x17
 END_MAIN
 
 MiscBasedEvents:
-//CauseGameOverIfLordDies
+CauseGameOverIfLordDies
 DefeatBoss(EndingScene)
 END_MAIN
 
@@ -165,9 +165,9 @@ ENDA
 
 Home1:
 MUSI
-SetBackground(0x01)
-Text(Merc1House2Text)
-EndConvo
+Text(0x01,Merc1House1Text)
+GiveItem(Vulnerary,0xFFFF)
+TileChange(0,5)
 MUNO
 NoFade
 ENDA
@@ -181,9 +181,7 @@ ENDA
 
 Home4:
 MUSI
-Text(0x1,Merc1House1Text)
-GiveItem(Vulnerary,0xFFFF)
-TileChange(0,5)
+Text(0x01,Merc1House2Text)
 MUNO
 NoFade
 ENDA
@@ -228,9 +226,8 @@ UNIT GerwickBandit Mercenary Henning Level(2,Enemy,True) [2,7] 0x00 0x00 0x00 0x
 UNIT
 
 TestPeople:
-UNIT Vicar HectorClass Henning Level(2,Ally,True) [10,11] 0x00 0x00 0x00 0x00 [SteelSword,SteelLance,SteelAxe,ShortAxe] NoAI
-UNIT Walter Sentinel Henning Level(2,Ally,True) [10,12] 0x00 0x00 0x00 0x00 [SteelSword,SteelLance,SteelAxe,ShortAxe] NoAI
-UNIT Baret Halberdier Henning Level(2,Ally,True) [11,11] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
-UNIT Adlez ArmoredWyvernLord Henning Level(2,Ally,True) [11,12] 0x00 0x00 0x00 0x00 [SteelSword,SteelLance,SteelAxe] NoAI
-UNIT Connor ArmoredWyvernLord Henning Level(2,Ally,True) [12,11] 0x00 0x00 0x00 0x00 [ShortAxe,SteelLongbow] NoAI
+UNIT Vicar Warrior Vicar Level(6,Ally,True) [10,12] 0x00 0x00 0x00 0x00 [SteelAxe,SteelLongbow,SteelBow] NoAI
+UNIT Adlez Warrior Vicar Level(6,Ally,True) [11,12] 0x00 0x00 0x00 0x00 [SteelAxe,SteelLongbow,SteelBow] NoAI
+UNIT GerwickBandit Swordmaster Vicar Level(20,Enemy,True) [10,10] 0x00 0x00 0x00 0x00 [SlimSword] NoAI
+UNIT GerwickBandit Sniper Vicar Level(20,Enemy,True) [9,10] 0x00 0x00 0x00 0x00 [SteelBow] NoAI
 UNIT

@@ -145,7 +145,7 @@ Wrath: If HP < 50%,[N]
 Counter: Reflect physical damage[N]
 when attacked at 1-2 range.[X]
 
-## SD_Countermagic
+## SD_CounterMagic
 Countermagic: Reflect magic damage[N]
 when attacked at 1-2 range.[X]
 
@@ -442,15 +442,15 @@ Nice Personality: This unit has[N]
 a deep and engaging character,[N]
 bursting at the seams with development.[X]
 
-## SD_Quickdraw
+## SD_QuickDraw
 Quick Draw: +4 Damage[N]
 when initiating battle.[X]
 
-## SD_Winddisciple
+## SD_WindDisciple
 Wind Disciple: +10 Hit and[N]
 Avoid when HP is not at max.[X]
 
-## SD_Strongriposte
+## SD_StrongRiposte
 Strong Riposte: When under[N]
 attack, damage +3. [X]
 
@@ -669,6 +669,105 @@ Warding Stance: +6 resistance[NL]
 when foe initiates battle.[X]
 
 ## SD_Spectrum_Stance
-Spectrum Stance: +2 attack,
+Spectrum Stance: +2 attack,[NL]
 speed, defense, and resistance[NL]
 when foe initiates battle.[X]
+
+## SD_Steal
+Steal: Unit can steal items.[X]
+
+## SD_StealPlus
+Steal+: Unit can steal unequipped[N]
+weapons and staffs if con>weight.[X]
+
+## SD_Capture
+Capture: Capture an enemy after[N]
+defeating it with reduced stats.[X]
+
+## SD_BlackMagic
+Black Magic: Skill% chance to[N]
+inflict a random status.[X]
+
+## SD_FortressDefense
+Fortress Defense:[N]
++5 Def, -3 Atk/Mag[X]
+
+## SD_FortressResistance
+Fortress Resistance:[N]
++5 Res, -3 Atk/Mag[X]
+
+## SD_Foresight
+Foresight: Avoid the damage[N]
+from enemy Critical Hits and[N]
+Skill Activations.[X]
+
+## SD_Axefaith
+Axefaith: Grants +Luck*1.5[NL]
+hit when wielding axes.[X]
+
+## SD_ArmorMarch
+Armor March: At start of turn, if unit[N]
+is adjacent to an armor ally, unit and[N]
+adjacent armor allies gain +2 Mov.[X]
+
+## SD_VigorDance
+Inspiring Tune: Refreshing a unit grants[N]
+them +2 Pow/Def until the next turn.[X]
+
+## SD_Forager
+Forager: Recover 20% HP each turn[N]
+if on a Plain, Forest or Mountain.[X]
+
+## SD_FullMetalBody
+Full Metal Body: This unit is[N]
+immune to all the Seal skills.[X]
+
+## SD_LiquidOoze
+Liquid Ooze: Attackers trying to gain HP[N]
+from attacking this unit lose it instead.[X]
+
+## SD_Shadowgift
+Shadowgift: Allows the user to use[N]
+Dark Magic. (Uses highest Magic Rank)[X]
+
+## SD_Lumina
+Lumina: Allows the user to use[N]
+Light Magic. (Uses highest Magic Rank)[X]
+
+## SD_DevilsLuck
+Devil's Luck: Immune to Devil Reversal.[N]
+Gives unit's Devil Reversal to the enemy.[N]
+(31-Luck % chance of Devil Reversal).[X]
+
+## SD_DevilsPact
+Devil's Pact: Immune to Devil Reversal.[N]
+Curses the enemy with Devil Reversal.[N]
+(31-Luck % chance of Devil Reversal).[X]
+
+## SD_DevilsWhim
+Devil's Whim: This unit is cursed, but[N]
+the curse spreads to the enemy as well.[N]
+(31-Luck % chance of Devil Reversal).[X]
+
+## SD_Poison_Strike
+Poison Strike: Deals damage equal to[NL]
+20% of the enemy's max HP after[NL]
+battle this unit initiates.[X]
+
+## SD_Grisly_Wound
+Grisly Wound: Deals damage equal[NL]
+to 20% of the enemy's max[NL]
+HP after every battle.[X]
+
+## SD_Hex
+Hex: -15 avoid to all[NL]
+adjacent enemies.[X]
+
+## SD_Barricade
+Barricade: Damage taken is[NL]
+halved after first being struck.[X]
+
+## SD_BarricadePlus
+Barricade+: In combat, damage[NL]
+recieved equals half of the[NL]
+damage when struck last.[X]

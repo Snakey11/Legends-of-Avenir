@@ -40,3 +40,20 @@
 #include "Holy Sage Magic.event"
 
 #include "Holy Sage Staff.event"
+
+
+#include "Edgy Swordmaster Sword.event"
+
+//#include "Edgy Swordmaster Unarmed.event" // Doesn't exist reee
+
+
+#include "Emperor Sword.event"
+
+//#include "Emperor Unarmed.event"
+
+
+#include "Phantom Axe.event"
+
+#include "Phantom Hand Axe.event"
+
+#include "Phantom Unarmed.event"

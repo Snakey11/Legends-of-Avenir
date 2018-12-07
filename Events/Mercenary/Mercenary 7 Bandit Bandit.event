@@ -37,7 +37,7 @@ LocationBasedEvents:
 Raid(0x12,House1,18,6)
 Raid(0x13,House2,1,12)
 Raid(0x14,House3,19,13)
-Raid(0x15,House4,12,15)
+Raid(0x15,House4,12,16)
 Raid(0x16,House5,3,16)
 END_MAIN
 

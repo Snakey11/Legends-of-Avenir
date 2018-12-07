@@ -48,6 +48,8 @@ UNIT
 BeginningScene:
 MUSC Tension
 ENUT 0x12
+ENUT 0x13
+ENUT 0x14
 SVAL 0xB Coords(7,5)
 LOMA MaximusUzkalisCutscene
 LOAD3 0x1 PlayerLoading1
@@ -56,24 +58,24 @@ LOAD2 0x1 FinocEntersCutscene
 FADU 0x5
 ENUN
 STAL 0x8
+FADI 0x5
+CLEA 0x0
+SVAL 0xB Coords(7,9)
+LOMA MercenaryMilitiaWaitCesaria7
+LOAD1 0x1 Cesarians
+LOAD1 0x1 Arcanians
+LOAD1 0x1 Arcanians2
+ENUN
 SetBackground(0x30)
 TEXTSHOW Merc7MilitiaWaitCesariaBeginningText
 TEXTEND
 MUSC Reunion
 TEXTCONT
 TEXTEND
-FADI 0x5
+EndConvo
 MUSC Raid
-CLEA 0x0
-SVAL 0xB Coords(7,5)
-LOMA MercenaryMilitiaWaitCesaria7
-LOAD1 0x1 Cesarians
-LOAD1 0x1 Arcanians
-LOAD1 0x1 Arcanians2
-ENUN
-FADU 0x5
-STAL 0x50
-MOVE 0x0 Uzkalis [7,2]
+STAL 0x40
+MOVE 0x0 Uzkalis [7,9]
 ENUN
 StartBattle
 MissedAttack(1,0)
@@ -81,27 +83,25 @@ NormalDamage(0,10)
 NormalDamage(1,15)
 EndAttack
 FIG1 Maximus Uzkalis 0x0
-ENUF 0x11
+ENUF 0x13
 Text(Merc7MilitiaWaitCesariaMaximusWoundedText)
 MOVE 0x0 Maximus [4,5]
 STAL 0x8
-MOVE 0x0 Uzkalis [16,3]
-ENUN
-STAL 0x20
+MOVE 0x0 Uzkalis [12,21]
+STAL 0x40
 MUSC Binding_Vow
 LOAD2 0x1 LoadFinocStart
-LOAD2 0x1 LoadFriendPeople
+ENUN
+LOAD2 0x1 LoadElanilStart
 ENUN
 Text(Merc7MilitiaWaitCesariaFinocHereText)
-CAM1 [11,19]
-STAL 0x10
-LOAD3 0x1 PlayerLoading2
-ENUN
-LOAD2 0x1 LoadFinocStart
-DISA Uzkalis
-LOAD1 0x1 FakeUzkalis
-ENUN
 MUSC Tension
+CAM1 [9,7]
+LOAD3 0x1 PlayerLoading2
+LOAD2 0x1 LoadFriendPeople
+ENUN
+SVAL 0x1 60
+SET_HP Uzkalis
 Text(Merc7MilitiaWaitCesariaRestHereText)
 NoFade
 ENDA
@@ -109,7 +109,6 @@ ENDA
 EndingScene:
 ASMC PrepForEnd|1
 FADI 0x5
-MUSC Victory
 CAM1 [9,14]
 CLEE 0x0
 CLEN 0x0
@@ -123,50 +122,84 @@ SET_HP Jasper
 SET_HP Derek
 SET_HP Lux
 SET_HP Maximus
-LOAD3 0x1 PlayerLoading3
-LOAD2 0x1 Friends
-ENUN
-FADU 0x5
-STAL 0x80
-FADI 0x5
-DISA Finoc
-DISA Elanil
-SetBackground(0x30)
-Text(Merc7MilitiaWaitCesariaEndingText)
-MUSC Epilogue
-TEXTCONT
-TEXTEND
-EndConvo
-MOVE 0x0 Jasper [8,23]
-STAL 0x30
-MOVE 0x0 Arc [9,23]
-STAL 0x8
-MOVE 0x0 Luke [9,24]
-STAL 0x10
-MOVE 0x0 Maximus [0,0]
-STAL 0x3
-MOVE 0x0 Lux [0,1]
-STAL 0x20
-Text(Merc7MilitiaWaitCesariaDerekLeavesText)
-MOVE 0x0 Derek [5,23]
-ENUN
-WarpIn(11,11,LoadNarrator)
-MUSC Return_of_the_Demon_King
-STAL 0x30
-Text(0x30,Merc7MilitiaWaitCesariaNarratorHereText)
-MOVE 0x0 Narrator [11,12]
-ENUN
-ENUF 0x12
-StartBattle
-NormalDamage(0,10)
-CriticalHit(1,60)
-EndAttack
+CHECK_ALIVE Maximus
+BEQ 0x0 0x0 0xC
+	// Maximus is alive
+	ENUF 0x12
+	MUSC Victory
+	LOAD3 0x1 PlayerLoading3
+	LOAD2 0x1 GoodEndingFriends
+	ENUN
+	FADU 0x5
+	STAL 0x80
+	FADI 0x5
+	DISA Finoc
+	DISA Elanil
+	SetBackground(0x30)
+	Text(Merc7MilitiaWaitCesariaGoodEndingText)
+	MUSC Epilogue
+	TEXTCONT
+	TEXTEND
+	EndConvo
+	MOVE 0x0 Jasper [8,23]
+	STAL 0x30
+	MOVE 0x0 Arc [9,23]
+	STAL 0x8
+	MOVE 0x0 Luke [9,24]
+	STAL 0x10
+	MOVE 0x0 Maximus [0,0]
+	STAL 0x3
+	MOVE 0x0 Lux [0,1]
+	STAL 0x20
+	Text(Merc7MilitiaWaitCesariaDerekLeavesText)
+	MOVE 0x0 Derek [5,23]
+	ENUN
+	WarpIn(11,11,LoadNarrator)
+	MUSC Return_of_the_Demon_King
+	STAL 0x30
+	Text(0x30,Merc7MilitiaWaitCesariaGoodEndingNarratorHereText)
+	MOVE 0x0 Narrator [11,12]
+	ENUN
+	DISA Maximus
+	StartBattle
+	NormalDamage(0,10)
+	CriticalHit(1,60)
+	EndAttack
+	GOTO 0x1
+LABEL 0x0
+	// Maximus is dead.
+	ENUF 0x14
+	MUSC Into_the_Shadow_of_Victory
+	LOAD3 0x1 PlayerLoading3
+	LOAD2 0x1 BadEndingFriends
+	ENUN
+	FADU 0x5
+	STAL 0x40
+	FADI 0x5
+	CLEA 0x0
+	LOAD3 0x1 PlayerLoading3
+	ENUN
+	SetBackground(0x30)
+	Text(Merc7MilitiaWaitCesariaBadEndingText)
+	EndConvo
+	STAL 0x20
+	WarpIn(11,11,LoadNarrator)
+	MUSC Return_of_the_Demon_King
+	STAL 0x30
+	Text(0x30,Merc7MilitiaWaitCesariaBadEndingNarratorHereText)
+	MOVE 0x0 Narrator [11,12]
+	ENUN
+	StartBattle
+	NormalDamage(1,31)
+	MissedAttack(0,0)
+	NormalDamage(1,60)
+	EndAttack
+LABEL 0x1
 MercenaryNarratorFight(11,13)
 DISA Arc
 DISA Luke
 DISA Jasper
 DISA Derek
-DISA Maximus
 DISA Lux
 ENUF 0x6E
 ENUF 0x67
@@ -203,7 +236,7 @@ UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [5,5] 0x00 0x00 0x00 0x00 [Iron
 UNIT
 
 PlayerLoading2:
-UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [18,21] 0x00 0x00 0x1 REDA15R21 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [18,2] 0x00 0x00 0x1 REDA14R2 [IronSword,Vulnerary] [0] 
 UNIT
 
 PlayerLoading3:
@@ -224,68 +257,67 @@ UNIT Finoc WyvernRider PlayerMArcher Level(1,Ally,True) [0,1] 0x00 0x00 0x1 REDA
 UNIT
 
 Cesarians:
-UNIT Maximus BattleSage Maximus Level(10,Ally,True) [5,2] 0x00 0x00 0x00 0x00 [Arcfire,Elwind,Mend] GuardAI
-UNIT Cesarian GreatKnight Maximus Level(7,NPC,True) [6,7] 0x00 0x00 0x00 0x00 [BraveLance,ShortAxe] GuardAI
-UNIT Cesarian GreatKnight Maximus Level(9,NPC,True) [5,8] 0x00 0x00 0x00 0x00 [KillerAxe,Zanbato] GuardAI
+UNIT Maximus BattleSage Maximus Level(10,Ally,True) [7,8] 0x00 0x00 0x00 0x00 [Arcfire,Elwind,Mend] GuardAI
+UNIT Cesarian GreatKnight Maximus Level(6,NPC,True) [6,7] 0x00 0x00 0x00 0x00 [BraveLance,ShortAxe] GuardAI
+UNIT Cesarian GreatKnight Maximus Level(7,NPC,True) [5,8] 0x00 0x00 0x00 0x00 [KillerAxe,Zanbato] GuardAI
 UNIT Cesarian Ranger Maximus Level(5,NPC,True) [5,6] 0x00 0x00 0x00 0x00 [SilverBow] AttackInRangeAI
 UNIT Cesarian Cavalier Maximus Level(17,NPC,True) [2,5] 0x00 0x00 0x00 0x00 [SteelSword,Javelin] AttackInRangeAI
-UNIT Cesarian Sentinel Maximus Level(7,NPC,True) [4,3] 0x00 0x00 0x00 0x00 [BraveSword,ShortSpear] AttackInRangeAI
-UNIT Cesarian Sentinel Maximus Level(8,NPC,True) [3,2] 0x00 0x00 0x00 0x00 [Horseslayer,SilverAxe] AttackInRangeAI
-UNIT Cesarian Myrmidon Maximus Level(16,NPC,True) [5,4] 0x00 0x00 0x00 0x00 [SteelSword] [0]
+UNIT Cesarian Sentinel Maximus Level(6,NPC,True) [4,3] 0x00 0x00 0x00 0x00 [BraveSword,ShortSpear] AttackInRangeAI
+UNIT Cesarian Sentinel Maximus Level(6,NPC,True) [3,2] 0x00 0x00 0x00 0x00 [Horseslayer,SilverAxe] AttackInRangeAI
 UNIT Cesarian Bishop Maximus Level(6,NPC,True) [1,6] 0x00 0x00 0x00 0x00 [Divine,Physic] HealAlliesAI
 UNIT
 
 Arcanians:
-UNIT Uzkalis GaidenSage BossUzkalis Level(13,Enemy,True) [8,1] 0x00 0x00 0x00 0x00 [Thoron,Bolganone] GuardAI
-UNIT Arcanian General BossUzkalis Level(8,Enemy,True) [6,1] 0x00 0x00 0x00 0x00 [WindSword,SteelLance] GuardAI
-UNIT Arcanian Druid BossUzkalis Level(7,Enemy,True) [2,0] 0x00 0x00 0x00 0x00 [Fenrir,Elfire] [0]
-UNIT Arcanian Paladin BossUzkalis Level(7,Enemy,True) [9,2] 0x00 0x00 0x00 0x00 [DragonSpear] [0]
-UNIT Arcanian Sniper BossUzkalis Level(6,Enemy,True) [13,5] 0x00 0x00 0x00 0x00 [SteelLongbow] AttackInRangeAI
-UNIT Arcanian Sniper BossUzkalis Level(8,Enemy,True) [2,10] 0x00 0x00 0x00 0x00 [BraveBow] AttackInRangeAI
-UNIT Arcanian Sniper BossUzkalis Level(7,Enemy,True) [3,14] 0x00 0x00 0x00 0x00 [SilverLongbow] AttackInRangeAI
-UNIT Arcanian Sniper BossUzkalis Level(7,Enemy,True) [12,17] 0x00 0x00 0x00 0x00 [DevilBow] AttackInRangeAI
-UNIT Arcanian MageKnight BossUzkalis Level(5,Enemy,True) [8,11] 0x00 0x00 0x00 0x00 [Elthunder,Elfire] ChaseOnceApproachedAI
-UNIT Arcanian Halberdier BossUzkalis Level(9,Enemy,True) [10,9] 0x00 0x00 0x00 0x00 [Spear] [0]
-UNIT Arcanian Mercenary BossUzkalis Level(15,Enemy,True) [8,20] 0x00 0x00 0x00 0x00 [IronBlade] AttackInRangeAI
-UNIT Arcanian Mercenary BossUzkalis Level(14,Enemy,True) [8,9] 0x00 0x00 0x00 0x00 [KillingEdge] [0]
-UNIT Arcanian FalcoKnight BossUzkalis Level(7,Enemy,True) [15,14] 0x00 0x00 0x00 0x00 [BraveLance] [0]
-UNIT Arcanian Halberdier BossUzkalis Level(9,Enemy,True) [10,10] 0x00 0x00 0x00 0x00 [KillerLance] [0]
-UNIT Arcanian Hero BossUzkalis Level(9,Enemy,True) [14,10] 0x00 0x00 0x00 0x00 [SilverAxe] [0]
+UNIT Uzkalis GaidenSage Uzkalis Level(14,Enemy,True) [7,12] 0x00 0x00 0x00 0x00 [Thoron] GuardAI
+UNIT Arcanian MageKnight Uzkalis Level(7,Enemy,True) [16,20] 0x00 0x00 0x00 0x00 [Arcfire] AttackInRangeAI
+UNIT Arcanian MageKnight Uzkalis Level(8,Enemy,True) [16,22] 0x00 0x00 0x00 0x00 [Arcaqua] AttackInRangeAI
+UNIT Arcanian Cavalier Uzkalis Level(20,Enemy,True) [6,22] 0x00 0x00 0x00 0x00 [LightBrand] NoAI
+UNIT Arcanian Cavalier Uzkalis Level(18,Enemy,True) [8,22] 0x00 0x00 0x00 0x00 [SteelLance,IronBlade] NoAI
+UNIT Arcanian Hero Uzkalis Level(9,Enemy,True) [5,0] 0x00 0x00 0x00 0x00 [Hammer] NoAI
+UNIT Arcanian Mage Uzkalis Level(16,Enemy,True) [2,0] 0x00 0x00 0x00 0x00 [Dasher] NoAI
+UNIT Arcanian Fighter Uzkalis Level(19,Enemy,True) [7,2] 0x00 0x00 0x00 0x00 [DragonAxe] NoAI
+UNIT Arcanian Paladin Uzkalis Level(11,Enemy,True) [8,1] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI
+UNIT Arcanian Sentinel Uzkalis Level(4,Enemy,True) [11,2] 0x00 0x00 0x00 0x00 [Spear] GuardAI
+UNIT Arcanian Mercenary Uzkalis Level(15,Enemy,True) [12,0] 0x00 0x00 0x00 0x00 [BraveSword] NoAI
+UNIT Arcanian General Uzkalis Level(13,Enemy,True) [16,4] Drop 0x00 0x00 0x00 [ShortSpear,Elixir] GuardAI
 UNIT
 
 Arcanians2:
-UNIT Arcanian Myrmidon BossUzkalis Level(14,Enemy,True) [5,0] 0x00 0x00 0x00 0x00 [SteelBlade] [0]
-UNIT Arcanian Valkyrie BossUzkalis Level(6,Enemy,True) [5,22] Drop 0x00 0x00 0x00 [Artimes,Physic] [0]
-UNIT Arcanian Berserker BossUzkalis Level(7,Enemy,True) [12,0] 0x00 0x00 0x00 0x00 [Tomahawk] [0]
-UNIT Arcanian Sage BossUzkalis Level(7,Enemy,True) [9,22] Drop 0x00 0x00 0x00 [Arcthunder] NoAI
-UNIT Arcanian Hero BossUzkalis Level(6,Enemy,True) [10,20] Drop 0x00 0x00 0x00 [ShortAxe,SilverSword] AttackInRangeAI
-UNIT Arcanian Bishop BossUzkalis Level(8,Enemy,True) [9,15] 0x00 0x00 0x00 0x00 [Aura,Mend] HealAlliesAI
-UNIT Arcanian Sentinel BossUzkalis Level(9,Enemy,True) [11,23] 0x00 0x00 0x00 0x00 [SilverLance] AttackInRangeAI
-UNIT Arcanian Sage BossUzkalis Level(8,Enemy,True) [5,16] 0x00 0x00 0x00 0x00 [Elaqua,Divine] AttackInRangeAI
-UNIT Arcanian Soldier BossUzkalis Level(13,Enemy,True) [4,17] 0x00 0x00 0x00 0x00 [SteelLance] [0]
-UNIT Arcanian Druid BossUzkalis Level(7,Enemy,True) [1,19] 0x00 0x00 0x00 0x00 [Dulam,Eclipse] AttackInRangeAI
-UNIT Arcanian Cavalier BossUzkalis Level(7,Enemy,True) [7,13] 0x00 0x00 0x00 0x00 [Wyrmslayer] ChaseOnceApproachedAI
-UNIT Arcanian FalcoKnight BossUzkalis Level(7,Enemy,True) [13,13] 0x00 0x00 0x00 0x00 [BraveSword] AttackInRangeAI
+UNIT Arcanian Mage Uzkalis Level(6,Enemy,True) [11,9] 0x00 0x00 0x00 0x00 [Meteor,Aqua] AttackInRangeAI
+UNIT Arcanian Druid Uzkalis Level(8,Enemy,True) [9,11] 0x00 0x00 0x00 0x00 [Fimbulvetr,Dulam] GuardAI
+UNIT Arcanian Myrmidon Uzkalis Level(20,Enemy,True) [8,9] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT Arcanian Paladin Uzkalis Level(11,Enemy,True) [16,9] 0x00 0x00 0x00 0x00 [SilverLance] NoAI
+UNIT Arcanian Ranger Uzkalis Level(13,Enemy,True) [17,10] 0x00 0x00 0x00 0x00 [Armorslayer] NoAI
+UNIT Arcanian Berserker Uzkalis Level(8,Enemy,True) [15,13] 0x00 0x00 0x00 0x00 [DragonAxe] AttackInRangeAI
+UNIT Arcanian Sniper Uzkalis Level(9,Enemy,True) [2,14] 0x00 0x00 0x00 0x00 [SteelBow] AttackInRangeAI
+UNIT Arcanian Soldier Uzkalis Level(19,Enemy,True) [0,12] 0x00 0x00 0x00 0x00 [KillerLance] ChaseOnceApproachedAI
+UNIT Arcanian General Uzkalis Level(10,Enemy,True) [5,16] 0x00 0x00 0x00 0x00 [ShortAxe,KillingEdge] GuardAI
+UNIT Arcanian Sage Uzkalis Level(9,Enemy,True) [3,19] 0x00 0x00 0x00 0x00 [Arcthunder] AttackInRangeAI
+UNIT Arcanian Halberdier Uzkalis Level(8,Enemy,True) [2,20] 0x00 0x00 0x00 0x00 [SteelLance] ChaseOnceApproachedAI
+UNIT Arcanian FalcoKnight Uzkalis Level(10,Enemy,True) [17,16] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
+UNIT Arcanian PegasusKnight Uzkalis Level(18,Enemy,True) [16,17] 0x00 0x00 0x00 0x00 [SlimLance] AttackInRangeAI
+UNIT Arcanian Hero Uzkalis Level(6,Enemy,True) [12,16] 0x00 0x00 0x00 0x00 [Zanbato] AttackInRangeAI
+UNIT Arcanian Pirate Uzkalis Level(17,Enemy,True) [8,14] 0x00 0x00 0x00 0x00 [IronAxe] AttackInRangeAI
+UNIT Arcanian Valkyrie Uzkalis Level(10,Enemy,True) [14,15] 0x00 0x00 0x00 0x00 [Divine] AttackInRangeAI
 UNIT
 
 LoadFinocStart:
-UNIT Finoc WyvernRider PlayerMArcher Level(1,Ally,True) [0,7] 0x00 0x00 0x1 REDA3R5 [IronAxe,Vulnerary] [0] 
+UNIT Finoc WyvernRider PlayerMArcher Level(1,Ally,True) [0,7] 0x00 0x00 0x1 REDA3R6 [IronAxe,Vulnerary] [0] 
+UNIT
+
+LoadElanilStart:
+UNIT Elanil Archer PlayerMArcher Level(1,Ally,True) [3,5] 0x00 0x00 0x1 REDA4R7 [IronAxe,Vulnerary] [0] 
 UNIT
 	
 LoadFriendPeople:
-UNIT Arc Brigand2 PlayerMArcher Level(1,Ally,True) [17,21] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Luke Brigand2 PlayerMArcher Level(1,Ally,True) [18,20] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Elanil Brigand2 PlayerMArcher Level(1,Ally,True) [18,22] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Lux Brigand2 PlayerMArcher Level(1,Ally,True) [17,23] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Jasper Brigand2 PlayerMArcher Level(1,Ally,True) [16,20] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Derek Brigand2 PlayerMArcher Level(1,Ally,True) [16,22] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Arc Brigand2 PlayerMArcher Level(1,Ally,True) [15,0] 0x00 0x00 0x1 REDA15R1 [IronAxe,Vulnerary] [0] 
+UNIT Luke Brigand2 PlayerMArcher Level(1,Ally,True) [18,2] 0x00 0x00 0x1 REDA17R2 [IronAxe,Vulnerary] [0] 
+UNIT Lux Brigand2 PlayerMArcher Level(1,Ally,True) [16,0] 0x00 0x00 0x1 REDA16R1 [IronAxe,Vulnerary] [0] 
+UNIT Jasper Brigand2 PlayerMArcher Level(1,Ally,True) [15,0] 0x00 0x00 0x1 REDA14R3 [IronAxe,Vulnerary] [0] 
+UNIT Derek Brigand2 PlayerMArcher Level(1,Ally,True) [14,0] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
 UNIT
 
-FakeUzkalis:
-UNIT BossUzkalis GaidenSage BossUzkalis Level(13,Enemy,True) [15,1] 0x00 0x00 0x00 0x00 [Thoron,Bolganone] GuardAI
-UNIT
-
-Friends:
+GoodEndingFriends:
 UNIT Arc Brigand2 PlayerMArcher Level(1,Ally,True) [12,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
 UNIT Luke Brigand2 PlayerMArcher Level(1,Ally,True) [9,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
 UNIT Elanil Brigand2 PlayerMArcher Level(1,Ally,True) [7,14] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
@@ -296,28 +328,38 @@ UNIT Maximus Brigand2 PlayerMArcher Level(1,Ally,True) [11,15] 0x00 0x00 0x00 0x
 UNIT Finoc Brigand2 PlayerMArcher Level(1,Ally,True) [8,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
 UNIT
 
+BadEndingFriends:
+UNIT Arc Brigand2 PlayerMArcher Level(1,Ally,True) [10,14] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Luke Brigand2 PlayerMArcher Level(1,Ally,True) [8,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Finoc Brigand2 PlayerMArcher Level(1,Ally,True) [13,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Elanil Brigand2 PlayerMArcher Level(1,Ally,True) [13,14] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Lux Brigand2 PlayerMArcher Level(1,Ally,True) [11,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Jasper Brigand2 PlayerMArcher Level(1,Ally,True) [10,10] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Derek Brigand2 PlayerMArcher Level(1,Ally,True) [12,10] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT
+
 LoadNarrator:
 UNIT Narrator NarratorClass Narrator Level(1,NPC,True) [11,11] 0x00 0x00 0x00 0x00 [SilverBlade] [0] 
 UNIT
 
 Turn3Units:
-UNIT Arcanian Ranger BossUzkalis Level(6,Enemy,True) [18,10] 0x00 0x00 0x00 0x00 [SteelBow] NoAI
-UNIT Arcanian Cavalier BossUzkalis Level(16,Enemy,True) [18,9] 0x00 0x00 0x00 0x00 [Runesword] NoAI
-UNIT Arcanian Valkyrie BossUzkalis Level(7,Enemy,True) [18,11] 0x00 0x00 0x00 0x00 [Divine] NoAI
-UNIT Arcanian Swordmaster BossUzkalis Level(8,Enemy,True) [18,1] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
-UNIT Arcanian Warrior BossUzkalis Level(8,Enemy,True) [18,2] 0x00 0x00 0x00 0x00 [IronLongbow,SteelAxe] NoAI
+UNIT Arcanian Ranger Uzkalis Level(6,Enemy,True) [18,10] 0x00 0x00 0x00 0x00 [SteelBow] NoAI
+UNIT Arcanian Cavalier Uzkalis Level(16,Enemy,True) [18,9] 0x00 0x00 0x00 0x00 [Runesword] NoAI
+UNIT Arcanian Valkyrie Uzkalis Level(7,Enemy,True) [18,11] 0x00 0x00 0x00 0x00 [Divine] NoAI
+UNIT Arcanian Swordmaster Uzkalis Level(8,Enemy,True) [18,1] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT Arcanian Warrior Uzkalis Level(8,Enemy,True) [18,2] 0x00 0x00 0x00 0x00 [IronLongbow,SteelAxe] NoAI
 UNIT
 
 Turn6Units:
-UNIT Arcanian Paladin BossUzkalis Level(4,Enemy,True) [18,11] 0x00 0x00 0x00 0x00 [SilverBlade] NoAI
-UNIT Arcanian Paladin BossUzkalis Level(8,Enemy,True) [18,9] 0x00 0x00 0x00 0x00 [SteelLance,KillingEdge] NoAI
-UNIT Arcanian Cavalier BossUzkalis Level(19,Enemy,True) [18,2] 0x00 0x00 0x00 0x00 [HeavySpear] NoAI
-UNIT Arcanian Hero BossUzkalis Level(8,Enemy,True) [18,1] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI
+UNIT Arcanian Paladin Uzkalis Level(4,Enemy,True) [18,11] 0x00 0x00 0x00 0x00 [SilverBlade] NoAI
+UNIT Arcanian Paladin Uzkalis Level(8,Enemy,True) [18,9] 0x00 0x00 0x00 0x00 [SteelLance,KillingEdge] NoAI
+UNIT Arcanian Cavalier Uzkalis Level(19,Enemy,True) [18,2] 0x00 0x00 0x00 0x00 [HeavySpear] NoAI
+UNIT Arcanian Hero Uzkalis Level(8,Enemy,True) [18,1] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI
 UNIT
 
 Turn10Units:
-UNIT Arcanian WyvernLord BossUzkalis Level(5,Enemy,True) [0,0] 0x00 0x00 0x00 0x00 [Javelin] NoAI
-UNIT Arcanian Sage BossUzkalis Level(8,Enemy,True) [18,9] 0x00 0x00 0x00 0x00 [Bolganone] NoAI
-UNIT Arcanian WyvernKnight BossUzkalis Level(6,Enemy,True) [18,11] 0x00 0x00 0x00 0x00 [DevilLance] NoAI
-UNIT Arcanian Berserker BossUzkalis Level(10,Enemy,True) [0,18] 0x00 0x00 0x00 0x00 [BraveAxe] NoAI
+UNIT Arcanian WyvernLord Uzkalis Level(5,Enemy,True) [0,0] 0x00 0x00 0x00 0x00 [Javelin] NoAI
+UNIT Arcanian Sage Uzkalis Level(8,Enemy,True) [18,9] 0x00 0x00 0x00 0x00 [Bolganone] NoAI
+UNIT Arcanian WyvernKnight Uzkalis Level(6,Enemy,True) [18,11] 0x00 0x00 0x00 0x00 [DevilLance] NoAI
+UNIT Arcanian Berserker Uzkalis Level(10,Enemy,True) [0,18] 0x00 0x00 0x00 0x00 [BraveAxe] NoAI
 UNIT

@@ -86,8 +86,9 @@ A quirky and cheerful Cesarian[NL]
 fighter originally from Altia.[X]
 
 ## ZaliusDescText
-Captian of the Cesarian Cheetah Brigade.[NL]
-Very secretive and skilled in spying.[X]
+Captian of the Cesarian Cheetah[NL]
+Brigade. Very secretive[NL]
+and skilled in spying.[X]
 
 ## LeyosDescText
 Former general of the Cesarian[NL]
@@ -180,7 +181,7 @@ the Cesarian military.[X]
 
 ## FinocDescText
 A loyal, Altian scout and[NL]
-close freind of Elanil.[X]
+close friend of Elanil.[X]
 
 ## ArcanianDescText
 A soldier of the[NL]
@@ -280,3 +281,8 @@ group of highwaymen.[X]
 One of the Four Orden.[NL]
 Locked in the temple of[NL]
 Sateenkaari for years.[X]
+
+## SylvaineDescText
+A young Cesarian captain[NL]
+who is passionate about[NL]
+her loyalty.[X]

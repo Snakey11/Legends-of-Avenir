@@ -14,8 +14,8 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TurnEventPlayer(0x0,LoadLooter,5)
-TurnEventPlayer(0x0,Turn8Stuff,9)
+TurnEventPlayer(0x0,LoadLooter,3)
+TurnEventPlayer(0x0,Turn8Stuff,10)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -192,35 +192,31 @@ UNIT Adlez Brigand Adlez Level(8,Enemy,True) [13,5] 0x00 0x00 0x00 0x00 [Swordsl
 UNIT
 
 ChapterGuardians:
-UNIT Guardian Soldier Adlez Level(9,Enemy,True) [9,14] 0x00 0x00 0x00 0x00 [ShortSpear] AttackInRangeAI
-UNIT Guardian Soldier Adlez Level(8,Enemy,True) [10,15] 0x00 0x00 0x00 0x00 [SteelLance] [0]
 UNIT Guardian Soldier Adlez Level(8,Enemy,True) [12,16] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
 UNIT Guardian Mage Adlez Level(7,Enemy,True) [13,14] 0x00 0x00 0x00 0x00 [Elwind] AttackInRangeAI
-UNIT Guardian Mercenary Adlez Level(7,Enemy,True) [8,11] 0x00 0x00 0x00 0x00 [SteelSword] [0]
 UNIT Guardian Myrmidon Adlez Level(6,Enemy,True) [12,9] 0x00 0x00 0x00 0x00 [SlimSword] AttackInRangeAI
-UNIT Guardian Mage Adlez Level(6,Enemy,True) [9,6] 0x00 0x00 0x00 0x00 [Thunder] ChaseOnceApproachedAI
-UNIT Guardian Shaman Adlez Level(6,Enemy,True) [12,11] 0x00 0x00 0x00 0x00 [Dulam] [0]
+UNIT Guardian Mage Adlez Level(5,Enemy,True) [9,6] 0x00 0x00 0x00 0x00 [Thunder] ChaseOnceApproachedAI
+UNIT Guardian Shaman Adlez Level(6,Enemy,True) [12,11] 0x00 0x00 0x00 0x00 [Flux] NoAI
 UNIT Guardian Monk Adlez Level(7,Enemy,True) [3,11] 0x00 0x00 0x00 0x00 [Exordium] AttackInRangeAI
 UNIT Guardian Archer Adlez Level(8,Enemy,True) [3,7] Drop 0x00 0x00 0x00 [SteelBow,ChestKey] AttackInRangeAI
-UNIT Guardian Archer Adlez Level(6,Enemy,True) [12,6] 0x00 0x00 0x00 0x00 [IronLongbow] [0]
-UNIT Guardian Sentinel Adlez Level(1,Enemy,True) [5,5] 0x00 0x00 0x00 0x00 [Javelin,SteelSword] GuardAI
+UNIT Guardian Archer Adlez Level(6,Enemy,True) [12,6] 0x00 0x00 0x00 0x00 [IronLongbow] NoAI
+UNIT Guardian Sentinel Adlez Level(1,Enemy,True) [5,5] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
 UNIT Guardian Mercenary Adlez Level(7,Enemy,True) [0,5] 0x00 0x00 0x00 0x00 [Armorslayer] ChaseOnceApproachedAI
-UNIT Guardian Fighter Adlez Level(8,Enemy,True) [1,0] 0x00 0x00 0x00 0x00 [HandAxe] [0]
-UNIT Guardian Pirate Adlez Level(7,Enemy,True) [4,2] 0x00 0x00 0x00 0x00 [PoisonAxe] [0]
-UNIT Guardian Myrmidon Adlez Level(5,Enemy,True) [3,0] 0x00 0x00 0x00 0x00 [LightBrand] AttackInRangeAI
+UNIT Guardian Pirate Adlez Level(7,Enemy,True) [4,2] 0x00 0x00 0x00 0x00 [PoisonAxe] NoAI
+UNIT Guardian Myrmidon Adlez Level(9,Enemy,True) [3,0] 0x00 0x00 0x00 0x00 [LightBrand] AttackInRangeAI
 UNIT Guardian Shaman Adlez Level(9,Enemy,True) [8,1] 0x00 0x00 0x00 0x00 [Slime] AttackInRangeAI
 UNIT Guardian Knight Adlez Level(8,Enemy,True) [13,1] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
 UNIT Guardian Hero Adlez Level(1,Enemy,True) [12,2] 0x00 0x00 0x00 0x00 [Swordreaver] AttackInRangeAI
 UNIT
 
 GimmeAThief:
-UNIT Guardian Thief Adlez Level(3,Enemy,True) [0,2] 0x00 0x00 0x00 Drop [SlimSword,Lockpick] LootingThiefAI
+UNIT Guardian Thief Adlez Level(3,Enemy,True) [14,1] 0x00 0x00 0x00 Drop [SlimSword,Lockpick] LootingThiefAI
 UNIT
 
 Turn8Units:
 UNIT Guardian Cavalier Adlez Level(6,Enemy,True) [0,16] 0x00 0x00 0x1 REDA1R16 [SteelLance] [0]
 UNIT Guardian Myrmidon Adlez Level(5,Enemy,True) [0,14] 0x00 0x00 0x00 0x00 [Zanbato] [0]
-UNIT Guardian Mercenary Adlez Level(6,Enemy,True) [0,15] 0x00 0x00 0x1 REDA2R15 [SteelSword] [0]
+UNIT Guardian Mercenary Adlez Level(6,Enemy,True) [0,15] Drop 0x00 0x1 REDA2R15 [SteelSword] [0]
 UNIT Guardian Knight Adlez Level(8,Enemy,True) [14,9] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
 UNIT Guardian Knight Adlez Level(6,Enemy,True) [0,12] 0x00 0x00 0x00 0x00 [Javelin] NoAI
 UNIT Guardian Cavalier Adlez Level(7,Enemy,True) [14,15] 0x00 0x00 0x00 0x00 [DragonSpear] [0]
@@ -235,7 +231,7 @@ UNIT Elanil Archer_F Elanil Level(7,Ally,True) [12,3] 0x00 0x00 0x00 0x00 [Steel
 UNIT
 
 ArcanaePeople:
-UNIT Uzkalis GaidenSage Uzkalis Level(1,NPC,True) [9,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Arcanian GaidenSage Uzkalis Level(1,NPC,True) [9,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] // Not Uzkalis to avoid the boss icon
 UNIT Arcanian Mage Uzkalis Level(1,NPC,True) [8,4] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
 UNIT Arcanian Mage Uzkalis Level(1,NPC,True) [10,6] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
 UNIT Arcanian Druid Uzkalis Level(1,NPC,True) [10,4] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
@@ -253,7 +249,7 @@ UNIT Elanil Archer_F Elanil Level(7,Ally,True) [8,9] 0x00 0x00 0x1 REDA8R7 [Stee
 UNIT
 
 CesariaPeople:
-UNIT Maximus BattleSage Maximus Level(1,NPC,True) [0,2] 0x00 0x00 0x1 REDA6R6 [IronAxe,Vulnerary] [0] 
+UNIT Cesarian BattleSage Maximus Level(1,NPC,True) [0,2] 0x00 0x00 0x1 REDA6R6 [IronAxe,Vulnerary] [0] // Not Maximus to avoid the boss icon
 UNIT Cesarian Soldier Maximus Level(1,NPC,True) [0,2] 0x00 0x00 0x1 REDA4R6 [IronAxe,Vulnerary] [0] 
 UNIT Cesarian Soldier Maximus Level(1,NPC,True) [0,2] 0x00 0x00 0x1 REDA6R4 [IronAxe,Vulnerary] [0] 
 UNIT Cesarian Fighter Maximus Level(1,NPC,True) [6,0] 0x00 0x00 0x1 REDA7R2 [IronAxe,Vulnerary] [0] 

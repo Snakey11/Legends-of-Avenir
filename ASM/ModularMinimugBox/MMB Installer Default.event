@@ -30,7 +30,7 @@ After each set of module options are definitions that you can use to adjust the 
 // Tilemap options
 
 	// In 8x8 pixel tiles
-	#define MMBHeight 8
+	#define MMBHeight 9
 	#define MMBWidth 13
 	#define MMBTilemapPaletteIndex 3
 
@@ -43,7 +43,8 @@ After each set of module options are definitions that you can use to adjust the 
 	// The tilemap is 'upside-down' with the bottom row being first
 	// and the top row being last
 
-	SHORT $28 $29 $29 $29 $29 $29 $29 $29 $29 $29 $29 $29 $29 //$29 $29 $29 $29 $2A // Row 8 (Bottom)
+	SHORT $28 $29 $29 $29 $29 $29 $29 $29 $29 $29 $29 $29 $29 //$29 $29 $29 $29 $2A // Row 9 (Bottom)
+	SHORT $0B $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E //$0E $0E $0E $0E $0F // Row 8
 	SHORT $0B $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E //$0E $0E $0E $0E $0F // Row 7
 	SHORT $0B $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E //$0E $0E $0E $0E $0F // Row 6
 	SHORT $0B $0E $0E $0E $0E $63 $64 $64 $64 $64 $64 $64 $65 //$0E $0E $0E $0E $0F // Row 5
@@ -111,7 +112,7 @@ After each set of module options are definitions that you can use to adjust the 
 	//#define MMBHPStatus
 	//#define MMBDEFRES
 	//#define MMBAVODOD
-	//#define MMBHP
+	#define MMBHP
 
 
 // Combination options
@@ -119,12 +120,12 @@ After each set of module options are definitions that you can use to adjust the 
 	// Coordinates are in 8x8 pixel tiles
 
 	// HP/Status options
-	#define MMBHPStatusX 11
-	#define MMBHPStatusY 5
+	#define MMBHPStatusX 3
+	#define MMBHPStatusY 7
 
 	// HP options
-	#define MMBHPX 1
-	#define MMBHPY 5
+	#define MMBHPX 3
+	#define MMBHPY 7
 
 	// DEF/RES options
 	#define MMBDEFRESX 9

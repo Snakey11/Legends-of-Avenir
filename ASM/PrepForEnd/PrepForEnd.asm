@@ -100,7 +100,7 @@ NotLight:
 
 GoodWeapon: @ Cool. What else needs to be done...? It would be nice to automatically max Tact's HP... Actually, let's just integrate both of these functions together.
 ldrb r1, [ r4, #0x12 ]
-ldrb r1, [ r4, #0x13 ]
+strb r1, [ r4, #0x13 ]
 pop { r4, r5 }
 pop { r0 }
 bx r0

@@ -280,7 +280,7 @@ Byte 0x2:
 	0x10 
 
 Byte 0x3 is damage
-Dismount is at 0x08B97BA4
+
 ############
 ACTION STRUCT (203A958) (FE7: 203A85C) (FE6: 203956C)
 
@@ -436,6 +436,7 @@ Weapon icons start at 5926F4, palette at 5996F4
 
 Memory slots start at $030004B8 + (memory slot*4). Maximum memory slot is 0xD.
 
+FE8 stores permanent Event IDs at $03005250 and temporary Event IDs at $03005270.
 
 
 
@@ -658,7 +659,7 @@ Returns: Total value of item
 Params: r0=char data ptr, r1=item id to search for
 Returns: True if character has item
 
-
+[203A5EC..203A608]!!
 
 ? is a break on read
 !! is a break on write

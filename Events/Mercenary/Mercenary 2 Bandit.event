@@ -53,8 +53,9 @@ LOMA MilitaryPass2
 LOAD1 0x1 BanditFriends
 ENUN
 LOAD3 0x1 PlayerLoading1
-FADU 0x5
 ENUN
+FADU 0x5
+STAL 0x40
 FADI 0x5
 SetBackground(0x18)
 TEXTSHOW Merc2BanditTactMeetsOthersText // [Tact] cathces up with others
@@ -96,6 +97,15 @@ ENDA
 
 //Label EndingScene
 EndingScene:
+#ifdef __DEBUG__
+	FADI 0x5
+	SVAL 0x1 1
+	CHECK_TURNS
+	BNE 0x0 0x0 0xC
+		LOAD1 0x1 EnterWalter
+		ENUN
+	LABEL 0x0
+#endif
 MUSC Into_the_Shadow_of_Victory
 SetBackground(0x03)
 Text(Merc2BanditEndingText)
@@ -104,6 +114,7 @@ ENDA
 
 //Label EnterWalter
 EnterWalter:
+CAM1 [7,9]
 LOAD1 0x1 LoadWalter
 ENUN
 Text(Merc2BanditWalterHereText)

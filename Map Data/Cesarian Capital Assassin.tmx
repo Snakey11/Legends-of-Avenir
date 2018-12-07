@@ -8,7 +8,7 @@
    </properties>
   </tile>
  </tileset>
- <layer name="Tile Layer 1" width="27" height="23">
+ <layer name="Tile Layer 1" width="27" height="23" opacity="0.88">
   <properties>
    <property name="Anims" value="_79Anims"/>
    <property name="ChapterID" value="MercenaryMilitiaKill7"/>
@@ -20,7 +20,7 @@
    <property name="TileConfig" value="0x7B"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJyllLlOA0EMhmeJoOMoOCREQwhCSFwFZwtRlDwBUJICiY4OkGhAAgqeAnEIyFtAy0uw2eU5+K3YiuN4l4gUn2bG9vr3eGanFIUwHkKYAJNgCTyBAo+LodNfQvwD+ArdkO+bGAghJqIWCebpQMu/jrgNsAlOWGOOR1prf79aH+CR+cA3P2CGx8/Q9hH9au0i7oa5BVtgG+yAF+X77HNfFczLVDszDfbBATgEU8pHuseIL4AhpTnItsofWveIrYNnhvZ1Bs7BBecXXzO04l/Bu+GNfXlajdDZk5jzXqr8uk+NHK0Ga83iEhfBHCgx84VuLa1ndXrVkp5qqOfkt/YR2EbBmOPrRes0+DQc2wpYBWsZ8QnypQ6i5fn+C51300F8whBra5vExo7dG4lhztNUc6tzF3w94sg5U6Iedccvh3aNMtf+GuvUMvZWjvyzKDtaune2ZtGqGS1dt+S0fRG7t2/6Vu4l3UWJ9bR03VqL+hIbLW/f1iaxVdapmh6Kf09p6X7smVr02V5Hfq6U9ZKMXGnGGaQmTnLKP+dp6e+8XFKrnJ9dpyZn4uQTO82LGfdd16rPR6917FXk/w967wtR5z3yarJ3wdPK+h9O+b18c943rSvnfJWx9rB3I+9ts9r2nc57t727kccvmaiA7g==
+   eJyllLlOA0EMhmeJoOMoOCREQwgCCo6Cs4UoSp4AKEmBREcHSDQgAQVPgTgE5C2g5SXY7PIc/FZsxXG8S0SKTzNje/17PLNTikIYDyFMgEmwCJ5Agcel0OkvIf4BfIVuyPdNDIQQE1GLBPN0oOVfR9wG2AQnrDHHI621v1+tD/DIfOCbHzDD42do+4h+tXYRd8Pcgi2wDXbAi/J99rmvCuZlqp2ZBvvgAByCKeUj3WPEF8CQ0hxkW+UPrXvE1sEzQ/s6A+fggvOLrxla8a/g3fDGvjytRujsScx5L1V+3adGjlaDtWZxiYtgDpSY+UK3ltazOr1qSU811HPyW/sIbKNgzPH1onUafBqObQWsgrWM+AT5UgfR8nz/hc676SA+YYi1tU1iY8fujcQw52mqudW5C74eceScKVGPuuOXQ7tGmWt/jXVqGXsrR/5ZlB0t3Ttbs2jVjJauW3Lavojd2zd9K/eS7qLEelq6bq1FfYmNlrdva5PYKutUTQ/Fv6e0dD/2TC36bK8jP1fKeklGrjTjDFITJznln/O09HdeLqlVzs+uU5MzcfKJnebFjPuua9Xno9c69iry/we994Wo8x55Ndm74Gll/Q+n/F6+Oe+b1pVzvspYe9i7kfe2WW37Tue9297dyOMXcxiA6g==
   </data>
  </layer>
  <layer name="S Chest" width="27" height="23">

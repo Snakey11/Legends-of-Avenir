@@ -105,7 +105,9 @@ ALIGN 4
 
 TopRedHouse:
 MUSI
-Text(0x2,Merc5BanditDisbandHalberdHouseText)
+SetBackground(0x2)
+Text(Merc5BanditDisbandHalberdHouseText)
+EndConvo
 GiveItem(Halberd,0xFFFF)
 MUNO
 NoFade
@@ -113,7 +115,9 @@ EndA2
 
 RightRedHouse:
 MUSI
-Text(0x2,Merc5BanditDisbandElixirHouseText)
+SetBackground(0x2)
+Text(Merc5BanditDisbandElixirHouseText)
+EndConvo
 GiveItem(Elixir,0xFFFF)
 MUNO
 NoFade
@@ -121,7 +125,9 @@ EndA2
 
 BottomRedHouse:
 MUSI
-Text(0x2,Merc5BanditDisbandSteelBladeHouseText)
+SetBackground(0x2)
+Text(Merc5BanditDisbandSteelBladeHouseText)
+EndConvo
 GiveItem(SteelBlade,0xFFFF)
 MUNO
 NoFade
@@ -129,14 +135,18 @@ EndA2
 
 WhiteHouse:
 MUSI
-Text(0x2,Merc5BanditDisbandHouse1Text)
+SetBackground(0x2)
+Text(Merc5BanditDisbandHouse1Text)
+EndConvo
 MUNO
 NoFade
 EndA2
 
 VisitInn:
 MUSI
-Text(0x1,Merc5BanditDisbandInnText)
+SetBackground(0x1)
+Text(Merc5BanditDisbandInnText)
+EndConvo
 MUNO
 NoFade
 ENDA

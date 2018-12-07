@@ -41,12 +41,12 @@
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="6"/>
-   <property name="Width" value="1"/>
-   <property name="X" value="12"/>
+   <property name="Width" value="2"/>
+   <property name="X" value="11"/>
    <property name="Y" value="9"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo4A6gJ15oF0wNAEAD7EACw==
+   eJxjYBgFo4BysBSI2ZkH2hVDEwAA210AsA==
   </data>
  </layer>
  <layer name="DHouse4" width="15" height="15" visible="0">
@@ -61,12 +61,12 @@
    eJxjYBgFo4A6IJ15oF0wNAEAhLEAaw==
   </data>
  </layer>
- <layer name="House1" width="15" height="15" visible="0">
+ <layer name="House1" width="15" height="15">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="4"/>
-   <property name="Width" value="1"/>
-   <property name="X" value="11"/>
+   <property name="Width" value="2"/>
+   <property name="X" value="10"/>
    <property name="Y" value="8"/>
   </properties>
   <data encoding="base64" compression="zlib">

@@ -14,7 +14,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TurnEventPlayer(0x0,FinocHere,3)
+TurnEventPlayer(0x0,FinocHere,2)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -38,7 +38,6 @@ Tutorial:
 END_MAIN
 
 TrapData:
-BLST [7,14] 0x35
 ENDTRAP
 
 ALIGN 4
@@ -96,17 +95,48 @@ Text(Merc5MilitiaWaitArcanaeReturnText)
 EndConvo
 GiveToSupplySilent(SteelSword)
 GiveToSupplySilent(SteelLance)
-GiveToSupplySilent(DevilAxe)
+GiveToSupplySilent(SteelAxe)
 GiveToSupplySilent(SteelBow)
 GiveToSupplySilent(Luna)
+GiveToSupplySilent(Shine)
+GiveToSupplySilent(Mend)
+GiveToSupplySilent(Elfire)
 NoFade
 ENDA
 
 EndingScene:
 FADI 0x5
+#ifdef __DEBUG__
+	CHECK_TURNS
+	SVAL 0x1 2
+	BGE 0x0 0x1 0xC
+		REVEAL Finoc
+	LABEL 0x0
+#endif
+CLEA 0x0
+CLEE 0x0
+SVAL 0xB Coords(7,5)
+LOMA MercenaryMilitiaKill7
+TileChange(4,8)
+LOAD1 0x1 CesarianCaptains
+ENUN
 MUSC Into_the_Shadow_of_Victory
 SetBackground(0x03)
 Text(Merc5MilitiaWaitArcanaeEndingText)
+FADI 0x5
+FadeOutMusic
+STAL 0x60
+EndConvo
+MUSC Solve_the_Riddle
+STAL 0x40
+LOAD1 0x1 CesarianCutsceneSoldier
+ENUN
+STAL 0x20
+SetBackground(0x0E)
+Text(Merc5MilitiaWaitArcanaeCesarianPlansText)
+FADI 0x5
+FadeOutMusic
+STAL 0x40
 MoveToChapter(MercenaryMilitiaWaitArcanae6)
 ENDA
 
@@ -174,30 +204,41 @@ UNIT Elanil Monk Luke Level(1,Ally,True) [5,1] 0x00 0x00 0x00 0x00 [BraveLance,H
 UNIT
 
 ValHelmer:
-UNIT Val Shaman_F Val Level(9,Ally,True) [6,1] 0x00 0x00 0x00 0x00 [Worm,Nosferatu] [0]
-UNIT Helmer Soldier Helmer Level(11,Ally,True) [7,3] 0x00 0x00 0x00 0x00 [SteelLance,KnightCrest] [0]
+UNIT Val Shaman_F Val Level(12,Ally,True) [6,1] 0x00 0x00 0x00 0x00 [Worm,Nosferatu] [0]
+UNIT Helmer Soldier Helmer Level(13,Ally,True) [7,3] 0x00 0x00 0x00 0x00 [SteelLance,KnightCrest] [0]
 UNIT
 
 StartEnemies:
-UNIT William General William Level(5,Enemy,True) [12,12] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] GuardAI
+UNIT William General William Level(1,Enemy,True) [12,12] 0x00 0x00 0x00 0x00 [SteelLance,HandAxe] GuardAI
 UNIT Cesarian Archer William Level(10,Enemy,True) [7,14] 0x00 0x00 0x00 0x00 [SteelBow] AttackInRangeAI
 UNIT Cesarian Archer William Level(11,Enemy,True) [10,11] 0x00 0x00 0x00 0x00 [SteelLongbow] AttackInRangeAI
-UNIT Cesarian Paladin William Level(2,Enemy,True) [6,13] 0x00 0x00 0x00 0x00 [SteelLance] ChaseOnceApproachedAI
+UNIT Cesarian Paladin William Level(2,Enemy,True) [6,13] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
 UNIT Cesarian Knight William Level(10,Enemy,True) [9,7] 0x00 0x00 0x00 0x00 [Javelin] GuardAI
 UNIT Cesarian Knight William Level(8,Enemy,True) [8,8] 0x00 0x00 0x00 0x00 [SteelLance] GuardAI
-UNIT Cesarian Shaman William Level(7,Enemy,True) [7,11] Drop 0x00 0x00 0x00 [Slime,GuidingRing] AttackInRangeAI
-UNIT Cesarian Mercenary William Level(9,Enemy,True) [6,9] 0x00 0x00 0x00 0x00 [DevilSword] [0]
-UNIT Cesarian Warrior William Level(3,Enemy,True) [7,10] Drop 0x00 0x00 0x00 [KillerAxe,IronBow] [0]
-UNIT Cesarian Mercenary William Level(8,Enemy,True) [9,9] Drop 0x00 0x00 0x00 [IronBlade] [0]
+UNIT Cesarian Shaman William Level(7,Enemy,True) [7,11] Drop 0x00 0x00 0x00 [Slime,GuidingRing] NoAI
+UNIT Cesarian Cavalier William Level(7,Enemy,True) [7,11] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
 UNIT Cesarian Myrmidon William Level(10,Enemy,True) [3,13] Drop 0x00 0x00 0x00 [IronSword,EnergyRing] ChaseOnceApproachedAI
 UNIT Cesarian Sentinel William Level(3,Enemy,True) [8,13] 0x00 0x00 0x00 0x00 [Spear] GuardAI
 UNIT Cesarian Fighter William Level(11,Enemy,True) [10,14] Drop 0x00 0x00 0x00 [Halberd] ChaseOnceApproachedAI
 UNIT Cesarian Soldier William Level(6,Enemy,True) [10,12] 0x00 0x00 0x00 0x00 [KillerLance] ChaseOnceApproachedAI
 UNIT Cesarian Soldier William Level(9,Enemy,True) [4,14] Drop 0x00 0x00 0x00 [HeavySpear] AttackInRangeAI
-UNIT Cesarian Cavalier William Level(11,Enemy,True) [0,11] 0x00 0x00 0x00 0x00 [LightBrand] [0]
-UNIT Cesarian Cavalier William Level(10,Enemy,True) [0,12] 0x00 0x00 0x00 0x00 [SteelLance,SteelSword] [0]
+UNIT Cesarian Cavalier William Level(11,Enemy,True) [0,11] 0x00 0x00 0x00 0x00 [LightBrand] ChaseOnceApproachedAI
+UNIT Cesarian Cavalier William Level(10,Enemy,True) [0,12] 0x00 0x00 0x00 0x00 [SteelLance,SteelSword] ChaseOnceApproachedAI
 UNIT
 
 LoadFinoc:
 UNIT Finoc WyvernRider Finoc Level(1,Ally,True) [0,4] 0x00 0x00 0x1 REDA3R7 [BraveLance,HandAxe] GuardAI
+UNIT
+
+CesarianCaptains:
+UNIT Emperor EmperorClass Emperor Level(1,Enemy,True) [6,1] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Maximus BattleSage Emperor Level(1,Enemy,True) [5,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Zalius EdgySwordmaster Emperor Level(1,Enemy,True) [4,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Sylvaine ArmoredWyvernLord Emperor Level(1,Enemy,True) [7,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Leyos Hector Emperor Level(1,Enemy,True) [9,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Rex GrandPaladin Emperor Level(1,Enemy,True) [8,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+CesarianCutsceneSoldier:
+UNIT Cesarian Cavalier Cesarian Level(1,Enemy,True) [10,12] 0x00 0x00 0x01 REDA6R3 [0] NoAI
 UNIT

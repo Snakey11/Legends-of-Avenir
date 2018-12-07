@@ -29,6 +29,8 @@ HelmerPortrait:
 #incext PortraitFormatter "Helmer.png"
 JasperPortrait:
 #incext PortraitFormatter "Jasper.png"
+JurgenPortrait:
+#incext PortraitFormatter "Jurgen.png"
 KendrickPortrait:
 #incext PortraitFormatter "Kendrick.png"
 KilthelPortrait:
@@ -49,6 +51,8 @@ RexPortrait:
 #incext PortraitFormatter "Rex.png"
 ServiusPortrait:
 #incext PortraitFormatter "Servius.png"
+SylvainePortrait:
+#incext PortraitFormatter "Sylvaine.png"
 UzkalisPortrait:
 #incext PortraitFormatter "Uzkalis.png"
 ValPortrait:
@@ -59,6 +63,8 @@ WalterPortrait:
 #incext PortraitFormatter "Walter.png"
 XavusPortrait:
 #incext PortraitFormatter "Xavus.png"
+XeximPortrait:
+#incext PortraitFormatter "Xexim.png"
 XyliaPortrait:
 #incext PortraitFormatter "Xylia.png"
 ZaliusPortrait:
@@ -92,9 +98,10 @@ setMugEntry(DerekMug,DerekPortrait,2,5,2,3)
 setMugEntry(EfilMug,EfilPortrait,3,5,3,3)
 setMugEntry(ElanilMug,ElanilPortrait,4,5,4,3)
 setMugEntry(EmperorMug,EmperorPortrait,3,5,3,3)
-setMugEntry(FinocMug,FinocPortrait,3,4,3,2)
+setMugEntry(FinocMug,FinocPortrait,2,5,3,3)
 setMugEntry(HelmerMug,HelmerPortrait,2,5,3,4)
 setMugEntry(JasperMug,JasperPortrait,3,5,3,3)
+setMugEntry(JurgenMug,JurgenPortrait,2,6,3,3)
 setMugEntry(KendrickMug,KendrickPortrait,3,6,3,4)
 setMugEntry(KilthelMug,KilthelPortrait,3,5,3,3)
 setMugEntry(LeonMug,LeonPortrait,2,4,2,2)
@@ -105,13 +112,15 @@ setMugEntry(MaximusMug,MaximusPortrait,3,4,3,2)
 setMugEntry(NarratorMug,NarratorPortrait,3,5,3,3)
 setMugEntry(RexMug,RexPortrait,2,5,2,3)
 setMugEntry(ServiusMug,ServiusPortrait,3,5,3,3)
-setMugEntry(UzkalisMug,UzkalisPortrait,3,5,3,3)
+setMugEntry(SylvaineMug,SylvainePortrait,2,5,2,3)
+setMugEntry(UzkalisMug,UzkalisPortrait,2,6,2,3)
 setMugEntry(ValMug,ValPortrait,3,5,3,4)
 setMugEntry(VicarMug,VicarPortrait,2,4,3,2)
 setMugEntry(WalterMug,WalterPortrait,3,5,3,3)
 setMugEntry(XavusMug,XavusPortrait,2,5,3,3)
+setMugEntry(XeximMug,XeximPortrait,2,5,3,3)
 setMugEntry(XyliaMug,XyliaPortrait,3,6,3,4)
-setMugEntry(ZaliusMug,ZaliusPortrait,2,5,3,3)
+setMugEntry(ZaliusMug,ZaliusPortrait,3,5,3,3)
 
 /*
 setMugEntry(SentinelCard,SentinelPortrait,0,0,0,0)

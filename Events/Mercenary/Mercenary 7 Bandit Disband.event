@@ -304,12 +304,12 @@ UNIT Efil Truerblade Efil Level(11,NPC,True) [11,1] 0x00 0x00 0x00 0x00 [SilverS
 UNIT Maximus BattleSage Maximus Level(12,NPC,True) [10,4] 0x00 0x00 0x00 0x00 [Bolganone] NoAI
 UNIT Uzkalis GaidenSage Uzkalis Level(17,NPC,True)[12,3] 0x00 0x00 0x00 0x00 [Thoron] NoAI
 UNIT Kilthel GuardianSpirit Kilthel Level(15,Enemy,True) [7,1] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI
-UNIT Arveldir WilSniper Kilthel Level(15,Enemy,True) [8,2] 0x00 0x00 0x00 0x00 [SilverBow] NoAI
+UNIT Arveldir WilSniper Kilthel Level(10,Enemy,True) [8,2] 0x00 0x00 0x00 0x00 [SilverBow] NoAI
 UNIT Servius Trueblade Kilthel Level(15,Enemy,True) [7,3] 0x00 0x00 0x00 0x00 [SilverBlade] NoAI
 UNIT
 
 LoadXylia:
-UNIT Xylia HolySage Xylia Level(15,Enemy,True) [12,28] 0x00 0x00 0x00 0x00 [Thani] GuardAI
+UNIT Xylia HolySage Xylia Level(15,Enemy,True) [12,28] 0x00 0x00 0x00 0x00 [Thani,HoplonGuard] GuardAI
 UNIT
 
 LoadNarrator:
@@ -331,7 +331,7 @@ UNIT Efil Truerblade Efil Level(11,Ally,True) [11,26] 0x00 0x00 0x00 0x00 [Silve
 UNIT
 
 LoadXyliaThrone:
-UNIT Xylia HolySage Xylia Level(15,Enemy,True) [12,1] 0x00 0x00 0x00 0x00 [Thani] GuardAI
+UNIT Xylia HolySage Xylia Level(15,Enemy,True) [12,1] 0x00 0x00 0x00 0x00 [Thani,HoplonGuard] GuardAI
 UNIT
 
 LoadGuardians:

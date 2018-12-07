@@ -238,6 +238,7 @@ VicarWalterBaretConvoPeople:
 UNIT Vicar Warrior Vicar Level(1,Ally,True) [13,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 UNIT Baret Myrmidon Baret Level(1,Ally,True) [12,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 UNIT Walter Archer Walter Level(1,Ally,True) [12,10] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT Arya Myrmidon_F Walter Level(1,Ally,True) [16,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 EndUnit
 
 //Label StartingVillage
