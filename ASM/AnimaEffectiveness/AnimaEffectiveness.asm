@@ -15,7 +15,6 @@ ldr r2, =ClassTable
 sub r0, r1, r2
 mov r1, #84
 blh 0x080D18FC, r2
-add r0, #0x01
 mov r1, r0 @ r1 now has the class ID
 mov r0, r4
 push { r1 }

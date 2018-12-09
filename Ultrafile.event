@@ -18,7 +18,9 @@
 	
 	#define IncludeBigStuff
 	#define SkillSystemIncluded
-	#define __DEBUG__
+	#ifndef __PUBLIC__
+		#define __DEBUG__
+	#endif
 	//#define TESTING
 
 	#ifdef TESTING // For clean-ROM-style testing

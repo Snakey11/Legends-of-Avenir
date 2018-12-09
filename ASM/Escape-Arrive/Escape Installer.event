@@ -20,7 +20,6 @@ NewSeizeCheck:
 #incbin "NewSeizeCheck.dmp"
 
 ALIGN 4
-MESSAGE Escape lord is at CURRENTOFFSET
 EscapeLordUsability:
 #incbin "EscapeCheckLord.dmp"
 

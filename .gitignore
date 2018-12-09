@@ -4,6 +4,7 @@ ups/
 *.gba
 *.exe
 *.bat
+UPDATE.cmd
 !EA Avenir/*.exe
 *.txt
 !ParseDefinitions.txt

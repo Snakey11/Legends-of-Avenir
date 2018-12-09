@@ -31,7 +31,7 @@ Seize(0x16,EndingScene,17,22)
 Seize(0x16,EndingScene,18,22)
 Seize(0x16,EndingScene,19,22)
 Seize(0x16,EndingScene,20,22)
-Chest(Elixir,23,18)
+Chest(SilverSword,23,18)
 DOOR 0x11 [5,9] 0x12
 DOOR 0x11 [6,9] 0x12
 DOOR 0x11 [7,9] 0x12
@@ -122,6 +122,7 @@ CLEE Cesarian
 CLEE Rex
 LOAD1 0x1 Enemies
 LOAD1 0x1 CesarianGroup2
+LOAD1 0x1 CesarianGroup3
 ENUN
 SetBackground(0x2A)
 Text(Merc7MilitiaKillRexHereText)
@@ -221,6 +222,14 @@ BEQ 0x00 0x0 0xC
 LABEL 0x00
 	Text(Merc7MilitiaKillRexDeadBadText)
 LABEL 0x01
+CAM1 [18,18]
+STAL 0x10
+CUMO [7,22]
+CUMO [8,22]
+CUMO [9,22]
+CUMO [10,22]
+STAL 0x60
+CURE
 NoFade
 EndA2
 
@@ -314,24 +323,27 @@ UNIT Cesarian Bishop Rex Level(6,Enemy,True) [3,6] 0x00 0x00 0x00 0x00 [Aura,Sil
 UNIT Cesarian Mage Rex Level(13,Enemy,True) [7,14] 0x00 0x00 0x00 0x00 [Arcwind] AttackInRangeAI
 UNIT Cesarian Monk Rex Level(12,Enemy,True) [5,14] 0x00 0x00 0x00 0x00 [Artimes] AttackInRangeAI
 UNIT Cesarian Cavalier Rex Level(13,Enemy,True) [20,3] 0x00 0x00 0x00 0x00 [SteelLance] [0]
+UNIT
+
+CesarianGroup2:
 UNIT Cesarian Cavalier Rex Level(13,Enemy,True) [20,1] 0x00 0x00 0x00 0x00 [KillingEdge] [0]
 UNIT Cesarian Sniper Rex Level(7,Enemy,True) [15,15] 0x0 0x00 0x00 0x00 [SilverLongbow] AttackInRangeAI
 UNIT Cesarian Sniper Rex Level(8,Enemy,True) [15,20] 0x0 0x00 0x00 0x00 [DevilBow] AttackInRangeAI
 UNIT Cesarian Sniper Rex Level(9,Enemy,True) [6,13] 0x0 0x00 0x00 0x00 [SteelBow] AttackInRangeAI
 UNIT Cesarian Sniper Rex Level(6,Enemy,True) [12,15] 0x0 0x00 0x00 0x00 [SilverShortbow] AttackInRangeAI
-UNIT
-
-CesarianGroup2:
 UNIT Cesarian Shaman Rex Level(13,Enemy,True) [6,20] 0x0 0x00 0x00 0x00 [Dulam,Eclipse] GuardAI
 UNIT Cesarian Swordmaster Rex Level(4,Enemy,True) [11,19] 0x00 0x00 0x00 0x00 [SilverSword] AttackInRangeAI
 UNIT Cesarian General Rex Level(6,Enemy,True) [6,10] 0x00 0x00 0x00 0x00 [BraveLance] AttackInRangeAI
-UNIT Cesarian General Rex Level(7,Enemy,True) [18,16] Drop 0x00 0x00 0x00 [SteelLance,ShortAxe,ChestKey] GuardAI
+UNIT Cesarian General Rex Level(7,Enemy,True) [18,16] 0x00 0x00 0x00 0x00 [SteelLance,ShortAxe] GuardAI
 UNIT Cesarian Hero Rex Level(6,Enemy,True) [20,9] 0x00 0x00 0x00 0x00 [LightBrand,SteelAxe] AttackInRangeAI
 UNIT Cesarian Soldier Rex Level(13,Enemy,True) [10,15] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
 UNIT Cesarian Soldier Rex Level(12,Enemy,True) [2,15] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
 UNIT Cesarian Halberdier Rex Level(8,Enemy,True) [5,2] 0x00 0x00 0x00 0x00 [SilverLance] ChaseOnceApproachedAI
 UNIT Cesarian Halberdier Rex Level(6,Enemy,True) [7,2] 0x00 0x00 0x00 0x00 [Spear] ChaseOnceApproachedAI
 UNIT Cesarian Sentinel Rex Level(7,Enemy,True) [6,5] 0x00 0x00 0x00 0x00 [SilverAxe] AttackInRangeAI
+UNIT 
+
+CesarianGroup3:
 UNIT Cesarian Sage Rex Level(6,Enemy,True) [23,11] 0x00 0x00 0x00 0x00 [Bolting] GuardAI
 UNIT Cesarian Fighter Rex Level(14,Enemy,True) [17,17] 0x00 0x00 0x00 0x00 [SteelAxe] [0]
 UNIT Cesarian Fighter Rex Level(13,Enemy,True) [19,17] 0x00 0x00 0x00 0x00 [Tomahawk] [0]
@@ -341,7 +353,7 @@ UNIT Cesarian Soldier Rex Level(11,Enemy,True) [12,12] 0x00 0x00 0x00 0x00 [Devi
 UNIT Cesarian Warrior Rex Level(5,Enemy,True) [18,12] 0x00 0x00 0x00 0x00 [SilverAxe] [0]
 UNIT Cesarian Hero Rex Level(7,Enemy,True) [1,19] Drop 0x00 0x00 0x00 [Tomahawk,DoorKey] GuardAI
 UNIT Cesarian Paladin Rex Level(6,Enemy,True) [25,10] 0x00 0x00 0x00 0x00 [BraveLance] ChaseOnceApproachedAI
-UNIT 
+UNIT
 
 DoorUnits:
 UNIT Cesarian Soldier Rex Level(13,Enemy,True) [0,10] 0x00 0x00 0x00 0x00 [SteelLance] [0]
@@ -355,10 +367,6 @@ UNIT Cesarian Cavalier Rex Level(14,Enemy,True) [26,14] 0x00 0x00 0x00 0x00 [Sho
 UNIT Cesarian Cavalier Rex Level(12,Enemy,True) [26,15] 0x00 0x00 0x00 0x00 [SteelLance,SteelSword] [0]
 UNIT Cesarian Berserker Rex Level(6,Enemy,True) [0,18] 0x00 0x00 0x00 0x00 [BattleAxe,Swordreaver] [0]
 UNIT Cesarian Fighter Rex Level(15,Enemy,True) [0,19] 0x00 0x00 0x00 0x00 [SteelAxe] [0]
-UNIT Cesarian WyvernRider Rex Level(14,Enemy,True) [14,0] 0x00 0x00 0x00 0x00 [SteelLance] [0]
-UNIT Cesarian WyvernRider Rex Level(15,Enemy,True) [17,0] 0x00 0x00 0x00 0x00 [Javelin] [0]
-UNIT Cesarian WyvernKnight Rex Level(9,Enemy,True) [15,0] 0x00 0x00 0x00 0x00 [KillerLance] [0]
-UNIT Cesarian WyvernLord Rex Level(7,Enemy,True) [16,0] 0x00 0x00 0x00 0x00 [RuneSword] [0]
 UNIT
 
 LoadNarrator:

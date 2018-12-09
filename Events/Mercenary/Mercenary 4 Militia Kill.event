@@ -82,7 +82,7 @@ STAL 0x8
 Text(0x7,Merc4MilitiaKillKendrickHereText)
 STAL 0x20
 
-GiveToSupplySilent(DevilSword)
+GiveToSupplySilent(SteelSword)
 GiveToSupplySilent(ShortAxe)
 GiveToSupplySilent(Hammer)
 GiveToSupplySilent(Exordium)

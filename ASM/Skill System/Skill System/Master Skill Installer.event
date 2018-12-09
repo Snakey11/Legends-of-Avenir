@@ -86,8 +86,8 @@ ORG $2ebd4
 jumpToHack(LiveToServe)
 
 //paragon
-ORG $2b960
-jumpToHack(Paragon)
+//ORG $2b960
+//jumpToHack(Paragon)
 
 //lunge
 ORG $18744

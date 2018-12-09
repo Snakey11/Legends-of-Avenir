@@ -61,7 +61,7 @@
    eJxjYBgFo4A6IJ15oF0wNAEAhLEAaw==
   </data>
  </layer>
- <layer name="House1" width="15" height="15">
+ <layer name="House1" width="15" height="15" visible="0">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="4"/>
@@ -70,7 +70,7 @@
    <property name="Y" value="8"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYBgFowAC2JkH2gUjEwAAEjEACw==
+   eJxjYBgFo4CBYSkQszMPtCtGJgAABywAsA==
   </data>
  </layer>
  <layer name="DHouse3" width="15" height="15" visible="0">

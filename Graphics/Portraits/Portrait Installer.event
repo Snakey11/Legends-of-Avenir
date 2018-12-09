@@ -87,7 +87,7 @@ AssassinPortraitPalette:
 //setMugEntry(MugEntry,MugOffset,MouthX,MouthY,EyeX,EyeY)
 
 setMugEntry(MaleMercMug,MercMAvatarPortrait,3,5,3,3)
-setMugEntry(FemaleMercMug,MercFAvatarPortrait,3,6,3,4)
+setMugEntry(FemaleMercMug,MercFAvatarPortrait,3,5,3,4)
 setMugEntry(AdlezMug,AdlezPortrait,2,5,2,3)
 setMugEntry(ArcMug,ArcPortrait,2,4,2,2)
 setMugEntry(ArveldirMug,ArveldirPortrait,2,5,3,3)

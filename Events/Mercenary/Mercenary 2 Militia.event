@@ -142,18 +142,21 @@ Text(0x1,Merc2MilitiaHouse1Text)
 GiveItem(Speedwing,0xFFFF)
 TileChange(10,8)
 MUNO
+NoFade
 EndA2
 
 Home3:
 MUSI
 Text(0x2,Merc2MilitiaHouse2Text)
 MUNO
+NoFade
 EndA2
 
 Home4:
 MUSI
 Text(0x1,Merc2MilitiaHouse3Text)
 MUNO
+NoFade
 ENDA
 
 ShopData:
