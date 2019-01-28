@@ -45,6 +45,13 @@ ALIGN 4
 
 //Label Units
 Units:
+UNIT PlayerMMercenary 0x00 0x00 Level(1,Ally,True) [16,2] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Arya 0x00 0x00 Level(1,Ally,True) [15,1] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Adlez 0x00 0x00 Level(1,Ally,True) [14,3] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Connor 0x00 0x00 Level(1,Ally,True) [15,3] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Vicar 0x00 0x00 Level(1,Ally,True) [13,2] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Baret 0x00 0x00 Level(1,Ally,True) [17,3] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Walter 0x00 0x00 Level(1,Ally,True) [18,3] 0x00 0x00 0x00 0x00 [0] NoAI 
 EndUnit
 
 //Label BeginingScene
@@ -109,7 +116,7 @@ CAM1 [12,4]
 STAL 0x10
 Text(Merc6BanditBanditTheyKnowText) // They know we're here...
 NoFade
-ENDA
+GotoPrepScreen
 
 //Label EndingScene
 EndingScene:
@@ -123,15 +130,15 @@ ENDA
 
 //Label PlayerLoading
 PlayerLoading1:
-UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [2,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [2,2] 0x00 0x00 0x00 0x00 [0] NoAI 
 UNIT
 
 PlayerLoading2:
-UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [6,9] 0x00 0x00 0x1 REDA6R5 [IronSword,Vulnerary] NoAI 
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [6,9] 0x00 0x00 0x1 REDA6R5 [0] NoAI 
 UNIT
 
 PlayerLoading3:
-UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [16,2] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [16,2] 0x00 0x00 0x00 0x00 [0] NoAI 
 EndUnit
 
 //Label Cutscenes

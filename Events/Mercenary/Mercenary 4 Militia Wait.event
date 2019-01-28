@@ -45,6 +45,11 @@ ENDTRAP
 ALIGN 4
 
 Units:
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [3,16] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Arc 0x00 0x00 Level(1,Ally,True) [3,14] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Luke 0x00 0x00 Level(1,Ally,True) [2,15] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Finoc 0x00 0x00 Level(5,Ally,True) [0,15] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Elanil 0x00 0x00 Level(7,Ally,True) [1,14] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 BeginningScene:
@@ -78,7 +83,7 @@ SetBackground(0x0C)
 Text(Merc4MilitiaWaitAdlezGoneText)
 EndConvo
 NoFade
-ENDA
+GotoPrepScreen
 
 EndingScene:
 FADI 0x5
@@ -117,7 +122,7 @@ ENUN
 STAL 0x60
 Text(0x30,Merc4MilitiaWaitCesariaHereText)
 EnterStop
-ASMC CallMerc4MilitiaWaitMenu+1
+ASMC CallMerc4MilitiaWaitMenu|1
 FADI 0x5
 MUSC Advance
 CLEA 0x0
@@ -205,7 +210,7 @@ UNIT Guardian Mercenary Adlez Level(7,Enemy,True) [0,5] 0x00 0x00 0x00 0x00 [Arm
 UNIT Guardian Pirate Adlez Level(7,Enemy,True) [4,2] 0x00 0x00 0x00 0x00 [PoisonAxe] NoAI
 UNIT Guardian Myrmidon Adlez Level(9,Enemy,True) [3,0] 0x00 0x00 0x00 0x00 [LightBrand] AttackInRangeAI
 UNIT Guardian Shaman Adlez Level(9,Enemy,True) [8,1] 0x00 0x00 0x00 0x00 [Slime] AttackInRangeAI
-UNIT Guardian Knight Adlez Level(8,Enemy,True) [13,1] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
+UNIT Guardian Knight Adlez Level(8,Enemy,True) [13,1] 0x00 0x00 0x00 0x00 [IronLance,IronAxe] GuardAI
 UNIT Guardian Hero Adlez Level(1,Enemy,True) [12,2] 0x00 0x00 0x00 0x00 [Swordreaver] AttackInRangeAI
 UNIT
 
@@ -217,7 +222,7 @@ Turn8Units:
 UNIT Guardian Cavalier Adlez Level(6,Enemy,True) [0,16] 0x00 0x00 0x1 REDA1R16 [SteelLance] [0]
 UNIT Guardian Myrmidon Adlez Level(5,Enemy,True) [0,14] 0x00 0x00 0x00 0x00 [Zanbato] [0]
 UNIT Guardian Mercenary Adlez Level(6,Enemy,True) [0,15] Drop 0x00 0x1 REDA2R15 [SteelSword] [0]
-UNIT Guardian Knight Adlez Level(8,Enemy,True) [14,9] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Guardian Knight Adlez Level(8,Enemy,True) [14,9] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
 UNIT Guardian Knight Adlez Level(6,Enemy,True) [0,12] 0x00 0x00 0x00 0x00 [Javelin] NoAI
 UNIT Guardian Cavalier Adlez Level(7,Enemy,True) [14,15] 0x00 0x00 0x00 0x00 [DragonSpear] [0]
 UNIT Guardian Cavalier Adlez Level(6,Enemy,True) [14,16] 0x00 0x00 0x01 REDA13R16 [SteelSword,Javelin] [0]

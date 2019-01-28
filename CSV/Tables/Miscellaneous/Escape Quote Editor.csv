@@ -1,4 +1,4 @@
-0 ; POP ; ALIGN 4 ; EscapeQuoteTable:,Text ID
+INLINE EscapeQuoteTable,Text ID
 None,0x0
 PlayerMMonk,0x0
 PlyaerMShaman,0x0
@@ -254,4 +254,4 @@ KendrickFriend,0x0
 0x0,0x0
 0x0,0x0
 Wall,0x0
-Snag,0x0 ; PUSH
+Snag,0x0

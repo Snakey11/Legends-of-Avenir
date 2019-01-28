@@ -35,7 +35,7 @@
 			#include "Graphics/Battle Animations/Battle Animations 2.event" // FULL!
 		#endif
 		
-		MESSAGE Data animation block ends at CURRENTOFFSET
+		MESSAGE First data animation block ends at CURRENTOFFSET
 		MESSAGE There is ( $BFFFFF - CURRENTOFFSET ) of space available
 		ASSERT $C00000 - CURRENTOFFSET
 		MESSAGE
@@ -69,6 +69,8 @@
 
 		ALIGN 16
 		//Text
+		TextTable:
+		#incbin "Text/Vanilla Text Table.dmp"
 		#include "Text/Install Text Data.event"
 		MESSAGE Text data ends at CURRENTOFFSET
 		MESSAGE "Final text ID is FinalTextID . Repoint is required at 0xD4B."
@@ -77,7 +79,11 @@
 		//CSV
 		#include "CSV/Master CSV Installer.event"
 		MESSAGE Tables end at CURRENTOFFSET
-		MESSAGE Chapter Data Table is at ChapterDataTable
+		
+		ALIGN 16
+		//Music
+		#include "Music/Master Music Installer.event"
+		MESSAGE Music data ends at CURRENTOFFSET
 		
 		ALIGN 16
 		//Miscellaneous Graphical
@@ -87,6 +93,7 @@
 		ALIGN 16
 		//Maps
 		#define TMX2EA
+		#include "Map Data/FE8 Tilesets/Tileset Installer.event"
 		#include "Map Data/Master Map Installer.event"	
 		MESSAGE Map data ends at CURRENTOFFSET
 		

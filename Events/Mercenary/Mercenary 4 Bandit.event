@@ -11,7 +11,7 @@ POIN EndMainPointer EndMainPointer EndMainPointer
 POIN EndMainPointer
 POIN TrapData TrapData
 POIN Units Units
-POIN $0 $0 $0 $0 $0 $0
+POIN MayorDead $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 //EndLabel
 
@@ -51,6 +51,12 @@ ALIGN 4
 
 //Label Units
 Units:
+UNIT PlayerMMercenary 0x00 0x00 Level(1,Ally,True) [18,16] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Vicar 0x00 0x00 Level(1,Ally,True) [18,17] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Baret 0x00 0x00 Level(1,Ally,True) [19,17] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Walter 0x00 0x00 Level(1,Ally,True) [19,16] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Arya 0x00 0x00 Level(1,Ally,True) [20,15] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Adlez 0x00 0x00 Level(9,Ally,True) [20,16] 0x00 0x00 0x00 0x00 [0] NoAI 
 EndUnit
 
 //Label BeginingScene
@@ -118,9 +124,12 @@ STAL 0x20
 Text(0x03,Merc4BanditEndingBeginningText)
 STAL 0x10
 NoFade
-ENDA
+GotoPrepScreen
 
 //Label EndingScene
+MayorDead:
+FADI 0x5
+DISA Mayor
 EndingScene:
 MUSC Into_the_Shadow_of_Victory
 SetBackground(0x04)

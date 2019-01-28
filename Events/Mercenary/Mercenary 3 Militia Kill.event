@@ -136,8 +136,6 @@ LOAD3 0x1 PlayerLoading3
 LOAD2 0x1 EndingStuff
 CHECK_EVENTID 0x10
 BEQ 0x19 0x0 0xC
-	LOAD1 0x1 AryaRecruited
-	ENUN
 	SET_HP Arya
 	FADU 0x5
 	STAL 0x20
@@ -151,7 +149,6 @@ LABEL 0x19
 	STAL 0x20
 	SetBackground(0x13)
 	Text(Merc3MilitiaKillEndingNoAryaText)
-	TurnAlly(Arya)
 LABEL 0x1A
 FadeOutMusic
 FADI 0x5
@@ -264,7 +261,7 @@ UNIT WestonBandit Archer Weston Level(7,Enemy,True) [0,12] 0x00 0x00 0x1 REDA5 [
 UNIT WestonBandit Archer Weston Level(6,Enemy,True) [0,12] 0x00 0x00 0x1 REDA6 [SteelLongbow] GuardAI
 UNIT WestonBandit Pirate Weston Level(5,Enemy,True) [0,13] 0x00 0x00 0x1 REDA7 [HandAxe] AttackInRangeAI
 UNIT WestonBandit Soldier Weston Level(8,Enemy,True) [0,13] 0x00 0x00 0x1 REDA8 [SteelLance] AttackInRangeAI
-UNIT WestonBandit Knight Weston Level(9,Enemy,True) [0,14] 0x00 0x00 0x1 REDA9 [Javelin] GuardAI
+UNIT WestonBandit Knight Weston Level(9,Enemy,True) [0,14] 0x00 0x00 0x1 REDA9 [ShortAxe] GuardAI
 UNIT WestonBandit Brigand Weston Level(6,Enemy,True) [0,15] 0x00 0x00 0x1 REDA10 [SwordSlayer] [0]
 UNIT WestonBandit Fighter Weston Level(7,Enemy,True) [21,13] 0x00 0x00 0x1 REDA11 [IronAxe] ChaseOnceApproachedAI
 UNIT WestonBandit Archer Weston Level(5,Enemy,True) [11,1] 0x00 0x00 0x0 0x0 [SteelLongbow] GuardAI
@@ -293,14 +290,11 @@ UNIT
 EndingStuff:
 UNIT Arc Brigand PlayerMArcher Level(4,Ally,True) [17,16] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
 UNIT Luke Brigand PlayerMArcher Level(4,Ally,True) [19,16] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT
-
-AryaRecruited:
 UNIT Arya Myrmidon_F Weston Level(6,Ally,True) [18,18] 0x00 0x00 0x0 0x0 [KillingEdge,IronSword] [0]
 UNIT
 
 AryaNotRecruited:
-UNIT Arya Myrmidon_F Weston Level(6,Enemy,True) [18,20] 0x00 0x00 0x0 0x0 [KillingEdge,SteelSword] [0]
+UNIT Arya Myrmidon_F Weston Level(7,Ally,True) [0,0] 0x00 0x00 0x0 0x0 [KillingEdge,SteelSword] [0]
 UNIT
 
 REDA1:

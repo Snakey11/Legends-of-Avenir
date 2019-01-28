@@ -47,6 +47,10 @@ ENDTRAP
 ALIGN 4
 
 Units:
+UNIT PlayerMMercenary 0x00 0x00 Level(1,Ally,True) [12,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Arc 0x00 0x00 Level(1,Ally,True) [12,0] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Luke 0x00 0x00 Level(1,Ally,True) [13,1] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Arya 0x00 0x00 Level(1,Ally,True) [14,2] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 BeginningScene:
@@ -74,13 +78,14 @@ LOAD1 0x1 Ghosts1
 ENUN
 FAWU 0x7
 NoFade
-ENDA
+GotoPrepScreen
 
 EndingScene:
 MUSC Indignation
 FADI 0x5
-CLEA Arya
-CLEE StrongGhost
+CLEA 0x0
+CLEE 0x0
+REVEAL Kendrick
 STAL 0x20
 SetBackground(0x23)
 TEXTSHOW Merc5MilitiaKillEndingText
@@ -88,7 +93,7 @@ TEXTEND
 MUSC Raid
 TEXTCONT
 TEXTEND
-EndConvo
+REMA
 CHECK_EVENTID 0x6E
 BNE 0x0 0xC 0x0
 	CHECK_EVENTID 0x69 // Female
@@ -129,7 +134,6 @@ LABEL 0x0
 		GiveItem(HeroCrest,PlayerMBrigand) // Brigand
 	LABEL 0x8
 LABEL 0x1
-STAL 0x80
 MoveToChapter(MercenaryMilitiaKill6)
 ENDA
 
@@ -220,7 +224,7 @@ UNIT
 Ghosts1:
 UNIT TankGhost Knight BossGhost Level(9,Enemy,True) [13,4] 0x00 0x00 0x00 0x00 [KillerLance] GuardAI
 UNIT TankGhost Sentinel BossGhost Level(3,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [Hammer,ShortSpear] GuardAI
-UNIT TankGhost Knight BossGhost Level(10,Enemy,True) [9,8] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT TankGhost Knight BossGhost Level(10,Enemy,True) [9,8] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
 
 UNIT FastGhost Assassin BossGhost Level(4,Enemy,True) [9,1] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI 
 UNIT FastGhost Halberdier BossGhost Level(3,Enemy,True) [8,7] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI 

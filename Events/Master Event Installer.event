@@ -3,78 +3,116 @@
 {
 #include "Prologue.event"
 }
-{
-#include "Mercenary/Mercenary 1.event"
-}
-{
-#include "Mercenary/Mercenary 2 Militia.event"
-}
-{
-#include "Mercenary/Mercenary 3 Militia Kill.event"
-}
-{
-#include "Mercenary/Mercenary 4 Militia Kill.event"
-}
-{
-#include "Mercenary/Mercenary 5 Militia Kill.event"
-}
-{
-#include "Mercenary/Mercenary 6 Militia Kill.event"
-}
-{
-#include "Mercenary/Mercenary 7 Militia Kill.event"
-}
-{
-#include "Mercenary/Mercenary 3 Militia Wait.event"
-}
-{
-#include "Mercenary/Mercenary 4 Militia Wait.event"
-}
-{
-#include "Mercenary/Mercenary 5 Militia Wait Arcanae.event"
-}
-{
-#include "Mercenary/Mercenary 6 Militia Wait Arcanae.event"
-}
-{
-#include "Mercenary/Mercenary 7 Militia Wait Arcanae.event"
-}
-{
-#include "Mercenary/Mercenary 5 Militia Wait Cesaria.event"
-}
-{
-#include "Mercenary/Mercenary 6 Militia Wait Cesaria.event"
-}
-{
-#include "Mercenary/Mercenary 7 Militia Wait Cesaria.event"
-}
-{
-#include "Mercenary/Mercenary 2 Bandit.event"
-}
-{
-#include "Mercenary/Mercenary 3 Bandit.event"
-}
-{
-#include "Mercenary/Mercenary 4 Bandit.event"
-}
-{
-#include "Mercenary/Mercenary 5 Bandit Bandit.event"
-}
-{
-#include "Mercenary/Mercenary 6 Bandit Bandit.event"
-}
-{
-#include "Mercenary/Mercenary 7 Bandit Bandit.event"
-}
-{
-#include "Mercenary/Mercenary 5 Bandit Disband.event"
-}
-{
-#include "Mercenary/Mercenary 6 Bandit Disband.event"
-}
-{
-#include "Mercenary/Mercenary 7 Bandit Disband.event"
-}
+#ifndef __NO_MERCENARY__
+	{
+	#include "Mercenary/Mercenary 1.event"
+	}
+	{
+	#include "Mercenary/Mercenary 2 Militia.event"
+	}
+	{
+	#include "Mercenary/Mercenary 3 Militia Kill.event"
+	}
+	{
+	#include "Mercenary/Mercenary 4 Militia Kill.event"
+	}
+	{
+	#include "Mercenary/Mercenary 5 Militia Kill.event"
+	}
+	{
+	#include "Mercenary/Mercenary 6 Militia Kill.event"
+	}
+	{
+	#include "Mercenary/Mercenary 7 Militia Kill.event"
+	}
+	{
+	#include "Mercenary/Mercenary 3 Militia Wait.event"
+	}
+	{
+	#include "Mercenary/Mercenary 4 Militia Wait.event"
+	}
+	{
+	#include "Mercenary/Mercenary 5 Militia Wait Arcanae.event"
+	}
+	{
+	#include "Mercenary/Mercenary 6 Militia Wait Arcanae.event"
+	}
+	{
+	#include "Mercenary/Mercenary 7 Militia Wait Arcanae.event"
+	}
+	{
+	#include "Mercenary/Mercenary 5 Militia Wait Cesaria.event"
+	}
+	{
+	#include "Mercenary/Mercenary 6 Militia Wait Cesaria.event"
+	}
+	{
+	#include "Mercenary/Mercenary 7 Militia Wait Cesaria.event"
+	}
+	{
+	#include "Mercenary/Mercenary 2 Bandit.event"
+	}
+	{
+	#include "Mercenary/Mercenary 3 Bandit.event"
+	}
+	{
+	#include "Mercenary/Mercenary 4 Bandit.event"
+	}
+	{
+	#include "Mercenary/Mercenary 5 Bandit Bandit.event"
+	}
+	{
+	#include "Mercenary/Mercenary 6 Bandit Bandit.event"
+	}
+	{
+	#include "Mercenary/Mercenary 7 Bandit Bandit.event"
+	}
+	{
+	#include "Mercenary/Mercenary 5 Bandit Disband.event"
+	}
+	{
+	#include "Mercenary/Mercenary 6 Bandit Disband.event"
+	}
+	{
+	#include "Mercenary/Mercenary 7 Bandit Disband.event"
+	}
+#endif
+#ifndef __NO_MILITARY__	
+	{
+	#include "Military/Military 1.event"
+	}
+	{
+	#include "Military/Military 2 Pass.event"
+	}
+	{
+	#include "Military/Military 3 Pass.event"
+	}
+	{
+	#include "Military/Military 4 Pass.event"
+	}
+	{
+	#include "Military/Military 5 Pass Haedric.event"
+	}
+	{
+	#include "Military/Military 6 Pass Haedric.event"
+	}
+	{
+	#include "Military/Military 7 Pass Haedric.event"
+	}
+	{
+	#include "Military/Military 5 Pass Altia.event"
+	}
+	{
+	#include "Military/Military 6 Pass Altia.event"
+	}
+	{
+	//#include "Military/Military 7 Pass Altia.event"
+	}
+#endif
+#ifndef __NO_MAGE__
+	
+#endif
+#include "Split Events.event"
 
 #include "Sassy.event"
 

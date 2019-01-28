@@ -11,7 +11,7 @@ POIN EndMainPointer EndMainPointer EndMainPointer
 POIN EndMainPointer
 POIN TrapData TrapData
 POIN Units Units
-POIN $0 $0 $0 $0 $0 $0
+POIN GoodEnding EndingScene $0 $0 $0 $0
 POIN BeginningScene EndingScene
 //EndLabel
 
@@ -54,6 +54,14 @@ ALIGN 4
 
 //Label Units
 Units:
+UNIT PlayerMMercenary 0x00 0x00 Level(1,Ally,True) [11,12] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Vicar 0x00 0x00 Level(1,Ally,True) [11,13] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Baret 0x00 0x00 Level(1,Ally,True) [15,13] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Walter 0x00 0x00 Level(1,Ally,True) [14,12] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Arya 0x00 0x00 Level(1,Ally,True) [8,13] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Adlez 0x00 0x00 Level(1,Ally,True) [9,12] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Connor 0x00 0x00 Level(1,Ally,True) [7,12] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Leon 0x00 0x00 Level(11,Ally,True) [12,12] 0x00 0x00 0x00 0x00 [0] NoAI 
 EndUnit
 
 //Label BeginingScene
@@ -80,7 +88,7 @@ STAL 0x8
 CAM1 [6,4]
 Text(Merc7BanditBanditRexText) // Rex starting line
 NoFade
-ENDA
+GotoPrepScreen
 
 //Label EndingScene... aka bad ending
 EndingScene:
@@ -242,9 +250,9 @@ STAL 0x10
 MOVE 0x0 Narrator [5,6]
 ENUN
 StartBattle
-NormalDamage(0,30)
-NormalDamage(1,10)
-NormalDamage(0,40)
+NormalDamage(1,30)
+NormalDamage(0,10)
+NormalDamage(1,40)
 EndAttack
 MercenaryNarratorFight(5,5)
 DISA Vicar
@@ -302,7 +310,7 @@ EndA2
 
 House4:
 GiveItem(SteelBow,0xFFFF)
-TileChange(11,14)
+TileChange(11,15)
 //ENUT 0x15
 NoFade
 EndA2

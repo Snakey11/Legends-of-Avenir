@@ -68,4 +68,12 @@ UnspecifiedBattleConvo(Daniel,MercenaryBanditDisband6,0x10,Merc6BanditDisbandDan
 SpecifiedBattleConvo(Xylia,Efil,MercenaryBanditDisband7,0x11,Merc7BanditDisbandEfilXyliaBattleText)
 UnspecifiedBattleConvo(Xylia,MercenaryBanditDisband7,0x12,Merc7BanditDisbandXyliaBattleText)
 
+UnspecifiedBattleConvo(Christina,Military1,0x10,Military1ChristinaBattleText)
+UnspecifiedBattleConvo(Forrest,Military1,0x11,Military1ForrestBattleText)
+UnspecifiedBattleConvo(Sam,MilitaryPass2,0x12,Military2PassSamBattleText)
+UnspecifiedBattleConvo(Connor,MilitaryPass3,0x12,Military3PassConnorBattleText)
+UnspecifiedBattleConvo(Adlez,MilitaryPass3,0x13,Military3PassAdlezBattleText)
+SpecifiedBattleConvo(Richter,Sekar,MilitaryPassAltia5,0x10,Military5PassAltiaSekarRichterBattleText)
+UnspecifiedBattleConvo(Richter,MilitaryPassAltia5,0x11,Military5PassAltiaRichterBattleText)
+
 BYTE 0xFF 0xFF 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Terminator

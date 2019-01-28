@@ -1,3 +1,5 @@
 
 #define __PUBLIC__
+#define __NO_MILITARY__
+#define __NO_MAGE__
 #include Ultrafile.event

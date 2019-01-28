@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="26" height="28" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="Snowy Tileset Indoor" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/Snowy Tileset Indoor.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="26" height="28">
+  <properties>
+   <property name="Anims" value="0"/>
+   <property name="ChapterID" value="MilitaryPassAltia7"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="AltianCastleChanges"/>
+   <property name="MapID" value="AltianCastleMap"/>
+   <property name="ObjectType" value="IndoorSnowySet"/>
+   <property name="PaletteID" value="IndoorSnowyPalette"/>
+   <property name="TileConfig" value="IndoorSnowyTileConfig"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJyllL9rVEEQx9/bKxLl7tQ0ClbGIhh/cAQ5o0UERSLxCKedqHViTNDCK+wkjSJRQfQP8JoYIcEmpSIKeqLX5H8Qo3IxCqLp/A77Hd7cY99d1OLL7ps3O5+d2dkdcVE0HHnlomR+HPYatIH5z02qDP/DAT2CRqDz8DkK7YWORf77Xzg747AkzgXokhkvmtFyHnbYa7e91Oi7zLx2O59H2dg3jO+vwJ5rKZ8QU+zqbzk2jvr+7hBjMxyd27qFct+V+z9OqOah2mf1Urq2Ic512F9ivBmFR7suq5dsbbM44vMiytbf9nUn/5NGd6F75jurVllaTnHs+u3Qj9jHXYB6oNPkdKpp1lhGrGHoSNxuX8D3Cjkz5IjGoecdapoly7Hr3+F7KU5ymiDnTqqmIRWwZgdUjLv7HkDd9riEtYr5Iuzzpn6h+D3QEPSAWunCOYi48/BrQYPO11Fzuxrwfxv5+Ku6HvNDJp8qYsxBX1z7uhlymtAkOU2M56C62XuD/pVAjdbiJPZ67GMMuXb2Y9iuOJ/LB2g8tY9PZv9Ze626JLZytLfkXz1OanbWrJV7VIFu07dOfznLp4G9ql3OuEWmxOwz3CeGLRqFBqBn0DdTlyLWVJz3b5GlDK292Cdc0sNNci8btpyHMqYYf478WajkPEv8b+T8WQrjNb6nyZHa52g7hbHfeW4/Wd/N3RHOmDmbWybXEs/P5vcGKkAN9pHYPmKe555GOU7x7mjN75OVdXf0vErsmyIlrLxRnf2lPbyFeWnNJadr0GSHO5pP5ahM5SpjifnIea2RN0heupe0j+u0bYPv1ox35hW5X5nHe5ec4yjPSPPTGlZZC3vnmlHyzvRRjRTrhMlT86swtzOml1r8Lph7oTXdj3HAvGn6vvUG3tNZwyvyDW2ZvpD5GBn27dPel7X7GL/B982y0/mJ1uPkbVvk2TV516ZT909zkn3avHrZF8L7HLXbbK/8ATJgZLE=
+  </data>
+ </layer>
+ <layer name="Open Door" width="26" height="28" visible="0">
+  <properties>
+   <property name="ID" value="0"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFtAQlTAwMjHSw5ysU0xqU0sk/o2AUjIJRMApGwSgYBUMVAABahQLa
+  </data>
+ </layer>
+</map>

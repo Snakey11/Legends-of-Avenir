@@ -23,11 +23,11 @@
    <property name="Height" value="2"/>
    <property name="ID" value="5"/>
    <property name="Width" value="3"/>
-   <property name="X" value="2"/>
+   <property name="X" value="11"/>
    <property name="Y" value="15"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIKhBZ4wMTA8A+LnTNQxj4WZgYENiNmZqWPeKBgFAwEAq1UC0g==
+   eJxjYBgFo2AUjILhB54yMTA8A+LnTNQxj5WZgYENiNmZqWPeKBgF1AYAS4kC1A==
   </data>
  </layer>
  <layer name="House4" width="20" height="25" visible="0">
@@ -35,11 +35,11 @@
    <property name="Height" value="2"/>
    <property name="ID" value="4"/>
    <property name="Width" value="3"/>
-   <property name="X" value="11"/>
+   <property name="X" value="2"/>
    <property name="Y" value="15"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjILhB54yMTA8A+LnTNQxj5WZgYENiNmZqWPeKBgF1AYAS4kC1A==
+   eJxjYBgFo2AUjIKhBZ4wMTA8A+LnTNQxj4WZgYENiNmZqWPeKBgFAwEAq1UC0g==
   </data>
  </layer>
  <layer name="House3" width="20" height="25" visible="0">

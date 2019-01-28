@@ -11,11 +11,6 @@
 #include "Hector Unarmed.event"
 
 
-#include "Hunter Bow.event"
-
-#include "Hunter Unarmed.event"
-
-
 #include "Armored Wyvern Lord Sword.event"
 
 #include "Armored Wyvern Lord Lance.event"
@@ -57,3 +52,48 @@
 #include "Phantom Hand Axe.event"
 
 #include "Phantom Unarmed.event"
+
+
+#include "Wyvern Knight Lance.event"
+
+#include "Wyvern Knight Unarmed.event"
+
+
+#include "Knight Lance.event"
+
+#include "Knight Axe.event"
+
+#include "Knight Hand Axe.event"
+
+#include "Knight Unarmed.event"
+
+
+#include "Great Knight Sword.event"
+
+#include "Great Knight Lance.event"
+
+#include "Great Knight Axe.event"
+
+#include "Great Knight Hand Axe.event"
+
+#include "Great Knight Unarmed.event"
+
+
+#include "Monk Magic.event"
+
+#include "Monk Staff.event"
+
+
+#include "Muriel Sage Magic.event"
+
+
+#include "Soldier Lance.event"
+
+#include "Soldier Unarmed.event"
+
+
+#include "Cavalier Sword.event"
+
+#include "Cavalier Lance.event"
+
+#include "Cavalier Unarmed.event"

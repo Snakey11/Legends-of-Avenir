@@ -109,6 +109,15 @@ IzukMv:
 WORD 0 0 0 0 ; ALIGN 16
 
 
+KnightSt:
+#incext Png2Dmp "KnightSt.png" --lz77
+WORD 0 0 0 0 ; ALIGN 16
+
+KnightMv:
+#incext Png2Dmp "KnightMv.png" --lz77
+WORD 0 0 0 0 ; ALIGN 16
+
+
 MagusMSt:
 #incext Png2Dmp "MagusMSt.png" --lz77
 WORD 0 0 0 0 ; ALIGN 16

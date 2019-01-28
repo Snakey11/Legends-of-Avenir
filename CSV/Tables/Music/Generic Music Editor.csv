@@ -1,4 +1,4 @@
-0 ; POP ; ALIGN 4 ; GenericMusicTable:,Player Phase,Enemy Phase
+INLINE GenericMusicTable,Player Phase,Enemy Phase
 00 Prologue,Attack,Defense
 01 Mage1,Attack,Defense
 02 MageEscape2,Attack,Defense
@@ -97,4 +97,4 @@
 5F BacrunRuins1Cutscene,Attack,Defense
 60 BacrunRuins2Cutscene,Attack,Defense
 61 Kilthel Fight Cutscene,Attack,Defense
-62 Guardian Spirit Wall,Attack,Defense ; PUSH
+62 Guardian Spirit Wall,Attack,Defense

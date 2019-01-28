@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="22" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="0E000F10" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/0E000F10.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="20" height="22">
+  <properties>
+   <property name="Anims" value="_0EAnims"/>
+   <property name="ChangesID" value="BacrunCity3Changes"/>
+   <property name="ChapterID" value="MilitaryPass4"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="BacrunCity3Changes"/>
+   <property name="MapID" value="BacrunCity3Map"/>
+   <property name="ObjectType" value="0x0E"/>
+   <property name="PaletteID" value="0x0F"/>
+   <property name="TileConfig" value="0x10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJyNlU9LlUEUxuedQUmDvkC21bqXclu5EkHSG1zIFtKu0iBaCNoXyD+3pFbpF7h6FcsWfYVLGWEURa50pXQLr6hfIKLnMM/hPQ6XcvFjZt5z5jlnZs7MOxacGwfdYAksg97MuZ/Ouddgl6yD3965PtgvgA0X/YQXxm8WtjkwKD7gHVg1dsuK0dxGfwdcNfpfwTFogCbiNEjR5xp1jIOPyPgA/PG53vUQ9UfB+XAy/rCPemc59wf6d9G/B+4bzVfMQda6Rn3RvUO9GsYrYNVHTdGr43uG9gmYBjNgmbmKrR/9X2g/Ul/XKXrv4bMBPoAqxmfQ7tGmrWh7H3XE5xN4yhwryT5XGU/HnZi3mUX2wZss6kpec9x3PdveVnvOeHpGei66jxrrObiEPSqAh6a+2nzuu8uYNp7GLBm9KmtwCPOHwbypr7QupK6k5j5jfAv2EcNt8AXfh2C/SV+NJ7T5k31dr7RvMZ7E/CnD4xC/F2G/AtqpKfPHeLcehFzvHH1q2b/1qvS5zPhyZnq3KtxD2Z+yiwz+Jz+tmVqW14Cu1Z5HmesoU+8l5i8YFqm3Z/al4OP9bFLL6nWDAfQfoT1EO3EKjpin1o/Wjb4zdcbcwrdvp+B7iLWh9aN188zkb89e85ccpPY6W9gbvD9p3aZ7m/pvmlqz9ZHqpHp6j4pg38f3ugdcDLn+LO9GJdHr4vs3GnI9vUcl0GHe6xusVX1vW+V0jW+qUDBrbZp5TUOJb57etTSnPoNq6RypswPzdvXzrZp3+T+oK9Gw/AVBFedw
+  </data>
+ </layer>
+ <layer name="S House" width="20" height="22" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="3"/>
+   <property name="Y" value="19"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMNKA4kA7gA4AACREACI=
+  </data>
+ </layer>
+ <layer name="N House" width="20" height="22" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="13"/>
+   <property name="Y" value="8"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2BoAcWBdsAoGAWjYEgAAJCMACI=
+  </data>
+ </layer>
+</map>

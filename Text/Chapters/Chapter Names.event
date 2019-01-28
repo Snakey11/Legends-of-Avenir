@@ -73,3 +73,25 @@ Prologue[X]
 
 ## Merc7BanditDisbandNameText
 7: Ancient Resolve[X]
+
+
+## Military1NameText
+1: Training Day[X]
+
+## Military2PassNameText
+2: On the Border[X]
+
+## Military3PassNameText
+3: Next Step[X]
+
+## Military4PassNameText
+4: Negotiations[X]
+
+## Military5PassAltiaNameText
+5: Betrayal[X]
+
+## Military6PassAltiaNameText
+6: Mountain Pass[X]
+
+## Military7PassAltiaNameText
+7: Retaking Altia[X]

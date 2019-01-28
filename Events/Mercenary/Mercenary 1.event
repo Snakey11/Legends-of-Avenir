@@ -94,8 +94,7 @@ CAM1 [7,10]
 FADU 0x5
 STAL 0x30
 Text(Merc1OpeningText)//Convo with merchant
-SVAL 0x3 500
-GIVEITEMTOMAIN 0x0
+GiveGold(3000)
 MOVE 0x0 Xena [8,4]
 ENUN
 DISA Xena
@@ -104,14 +103,7 @@ STAL 0x30
 FADI 0x5
 STAL 0x30
 
-MOVE 0x0 PlayerMMercenary [9,13]
-MOVE 0x0 PlayerMMyrmidon [9,13]
-MOVE 0x0 PlayerMPirate [9,13]
-MOVE 0x0 PlayerMFighter [9,13]
-MOVE 0x0 PlayerMBrigand [9,13]
-MOVE 0x0 PlayerFMercenary [9,13]
-MOVE 0x0 PlayerFMyrmidon [9,13]
-MOVE 0x0 PlayerFPegasusKnight [9,13]
+MoveMercenary(9,13)
 ENUN
 
 CHECK_EVENTID 0x6B
@@ -140,12 +132,11 @@ NoFade
 ENDA
 
 EndingScene:
+EnterStop
 MUSC Victory
-EVBIT_T 0x4
 Text(Merc1PreMenuText)//Convo : Bandits flee
 ENUN
 STAL 0x10
-EVBIT_F 0x2
 ASMC CallMerc1Menu+1
 MUSC Advance
 BNE 0xA 0xC 0x0
@@ -190,25 +181,25 @@ ENDA
 	/*UNIT DATA*/
 
 PlayerLoading1:
-UNIT PlayerFMercenary MercenaryF2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMercenary MercenaryF2 0x00 Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [SteelSword,Vulnerary] [0] 
 UNIT
-UNIT PlayerFMyrmidon MyrmidonF2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerFMyrmidon MyrmidonF2 0x00 Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [SteelSword,Vulnerary] [0] 
 UNIT
-UNIT PlayerFPegasusKnight PegasusKnight2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
+UNIT PlayerFPegasusKnight PegasusKnight2 0x00 Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [SteelLance,Vulnerary] [0] 
 UNIT
-UNIT PlayerMMercenary MercenaryM2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMercenary MercenaryM2 0x00 Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [SteelSword,Vulnerary] [0] 
 UNIT
-UNIT PlayerMMyrmidon MyrmidonM2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMyrmidon MyrmidonM2 0x00 Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [SteelSword,Vulnerary] [0] 
 UNIT
-UNIT PlayerMFighter Fighter2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMFighter Fighter2 0x00 Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [SteelAxe,Vulnerary] [0] 
 UNIT
-UNIT PlayerMPirate Pirate2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMPirate Pirate2 0x00 Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [SteelAxe,Vulnerary] [0] 
 UNIT
-UNIT PlayerMBrigand Brigand2 PlayerMArcher Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT PlayerMBrigand Brigand2 0x00 Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [SteelAxe,Vulnerary] [0] 
 UNIT
 
 XenaStuff:
-UNIT Xena Civilian Xena Level(1,NPC,True) [8,10] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT Xena Civilian 0x00 Level(1,NPC,True) [8,10] 0x00 0x00 0x00 0x00 [0] [0] 
 UNIT
 
 SwordBandits:

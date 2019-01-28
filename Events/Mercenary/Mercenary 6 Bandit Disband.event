@@ -82,6 +82,13 @@ ALIGN 4
 
 //Label Units
 Units:
+UNIT PlayerMMercenary 0x00 0x00 Level(4,Ally,True) [3,16] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Vicar 0x00 0x00 Level(4,Ally,True) [2,15] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Walter 0x00 0x00 Level(4,Ally,True) [4,15] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Baret 0x00 0x00 Level(4,Ally,True) [5,16] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Arya 0x00 0x00 Level(4,Ally,True) [2,17] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Adlez 0x00 0x00 Level(4,Ally,True) [4,17] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Kendrick 0x00 0x00 Level(4,Ally,True) [3,18] 0x00 0x00 0x00 0x00 [0] NoAI 
 EndUnit
 
 //Label BeginingScene
@@ -176,9 +183,11 @@ MissedAttack(1,0)
 CriticalHit(0,60)
 EndAttack
 FIG1 Efil Guardian 0x0
-STAL 0x30
+STAL 0x8
+KillUnit(2,6)
+STAL 0x20
 NoFade
-ENDA
+GotoPrepScreen
 
 //Label EndingScene
 EndingScene:
@@ -197,7 +206,7 @@ Text(Merc6BanditDisbandBaretWalterText)
 FADI 0x5
 FadeOutMusic
 STAL 0x50
-MUSC LyonTheme
+MUSC Anchoret
 SetBackground(0x2C)
 Text(Merc6BanditDisbandEfilKendrickText)
 MoveToChapter(MercenaryBanditDisband7)
@@ -230,10 +239,6 @@ BNE 0x2 0x0 0xC
 	WarpIn(16,18,Guardian6)
 	ENUN ; STAL 0x10
 	WarpIn(18,16,Guardian7)
-	ENUN ; STAL 0x10
-	WarpIn(19,15,Guardian8)
-	ENUN ; STAL 0x10
-	WarpIn(20,18,Guardian9)
 	ENUN ; STAL 0x10
 	WarpIn(21,19,Guardian10)
 	ENUN ; STAL 0x10
@@ -285,12 +290,8 @@ BNE 0x6 0x0 0xC
 	CAM1 [10,9]
 	WarpIn(12,10,Guardian23)
 	ENUN ; STAL 0x10
-	WarpIn(13,7,Guardian24)
-	ENUN ; STAL 0x10
 	WarpIn(11,5,Guardian25)
 	ENUN ; STAL 0x10
-	//WarpIn(11,11,Guardian26)
-	//ENUN ; STAL 0x10
 	WarpIn(11,8,Guardian27)
 	ENUN ; STAL 0x10
 	WarpIn(8,7,Guardian28)
@@ -298,8 +299,6 @@ BNE 0x6 0x0 0xC
 	WarpIn(8,5,Guardian29)
 	ENUN ; STAL 0x10
 	WarpIn(14,9,Guardian30)
-	ENUN ; STAL 0x10
-	WarpIn(14,5,Guardian31)
 	ENUN ; STAL 0x10
 	WarpIn(9,1,Guardian32)
 	ENUN ; STAL 0x50
@@ -387,11 +386,14 @@ UNIT Kendrick Brigand2 PlayerMArcher Level(4,Ally,True) [3,18] 0x00 0x00 0x00 0x
 UNIT
 
 EfilHere:
-UNIT Efil Truerblade Efil Level(4,NPC,True) [3,0] 0x00 0x00 0x1 REDA3R3 [SteelSword,SilverSword] AttackInRangeAI
+UNIT Efil Truerblade Efil Level(11,NPC,True) [3,0] 0x00 0x00 0x1 REDA3R3 [SteelSword,SilverSword] AttackInRangeAI
 EndUnit
 
 //Label Vathrylians
 StartingGuardians:
+UNIT Guardian Mage Guardian Level(14,Enemy,True) [2,6] 0x00 0x00 0x00 0x00 [Fimbulvetr] NoAI 
+UNIT Guardian Fighter Guardian Level(12,Enemy,True) [5,5] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI 
+
 UNIT Guardian Sage Guardian Level(6,Enemy,True) [1,11] Drop 0x00 0x00 0x00 [Arcfire,ChestKey_5] NoAI 
 UNIT Guardian Mercenary Guardian Level(10,Enemy,True) [1,12] 0x00 0x00 0x00 0x00 [Zanbato] NoAI 
 UNIT Guardian Knight Guardian Level(10,Enemy,True) [3,10] 0x00 0x00 0x00 0x00 [Javelin] NoAI 
@@ -405,9 +407,6 @@ UNIT Guardian Sniper Guardian Level(3,Enemy,True) [8,18] 0x00 0x00 0x00 0x00 [St
 UNIT Guardian Mage Guardian Level(11,Enemy,True) [10,17] 0x00 0x00 0x00 0x00 [Thunder] NoAI 
 UNIT Guardian Halberdier Guardian Level(5,Enemy,True) [11,19] 0x00 0x00 0x00 0x00 [ShortSpear] NoAI 
 UNIT Guardian Pirate Guardian Level(10,Enemy,True) [12,17] 0x00 0x00 0x00 0x00 [KillerAxe] NoAI 
-
-UNIT Guardian Mage Guardian Level(14,Enemy,True) [2,6] 0x00 0x00 0x00 0x00 [Fimbulvetr] NoAI 
-UNIT Guardian Fighter Guardian Level(12,Enemy,True) [5,5] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI 
 UNIT
  
 Guardian2:
@@ -428,12 +427,6 @@ UNIT Guardian Knight Guardian Level(13,Enemy,True) [16,18] 0x00 0x00 0x00 0x00 [
 UNIT
 Guardian7:
 UNIT Guardian Druid Guardian Level(7,Enemy,True) [18,16] 0x00 0x00 0x00 0x00 [Slime,Luna] NoAI 
-UNIT
-Guardian8:
-UNIT Guardian Hero Guardian Level(4,Enemy,True) [19,15] 0x00 0x00 0x00 0x00 [SteelBlade,Hammer] NoAI 
-UNIT
-Guardian9:
-UNIT Guardian Soldier Guardian Level(15,Enemy,True) [20,18] 0x00 0x00 0x00 0x00 [SteelLance] NoAI 
 UNIT
 Guardian10:
 UNIT Guardian Warrior Guardian Level(3,Enemy,True) [21,19] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI  
@@ -479,9 +472,6 @@ UNIT
 Guardian23:
 UNIT Guardian Fighter Guardian Level(10,Enemy,True) [12,10] 0x00 0x00 0x00 0x00 [Swordreaver] NoAI 
 UNIT
-Guardian24:
-UNIT Guardian Pirate Guardian Level(13,Enemy,True) [13,7] 0x00 0x00 0x00 0x00 [ShortAxe] NoAI 
-UNIT
 Guardian25:
 UNIT Guardian General Guardian Level(3,Enemy,True) [11,5] 0x00 0x00 0x00 0x00 [KillerLance] NoAI 
 UNIT
@@ -500,10 +490,6 @@ UNIT
 Guardian30:
 UNIT Guardian Myrmidon Guardian Level(8,Enemy,True) [14,9] Drop 0x00 0x00 0x00 [Armorslayer] NoAI 
 UNIT
-Guardian31:
-UNIT Guardian Warrior Guardian Level(4,Enemy,True) [14,5] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI 
-UNIT
-
 Guardian32:
 UNIT Guardian Berserker Guardian Level(5,Enemy,True) [9,1] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI 
 UNIT

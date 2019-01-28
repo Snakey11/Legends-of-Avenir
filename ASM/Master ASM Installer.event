@@ -25,16 +25,10 @@ ALIGN 4
 #inctext lyn "BowDebuff/BowDebuff.elf"
 
 ALIGN 4
-#inctext lyn "PrepForEnd/PrepForEnd.elf"
-
-ALIGN 4
 #include "Chapter Names/fe8_chnames.event"
 
 ALIGN 4
 #include "Display All Weapon Level Ups/Promotion Ranks Fix Installer.event"
-
-ALIGN 4
-#inctext lyn "DoubleEXP/NewDoubleEXP.elf" "DoubleEXP/Definitions.elf"
 
 ALIGN 4
 #include "Escape-Arrive/Escape Installer.event"
@@ -50,6 +44,12 @@ ALIGN 4
 
 ALIGN 4
 #include "Menus/Menu Commands.event"
+
+ALIGN 4
+#inctext lyn "ModularEXP/ModularEXP.elf" "ModularEXP/Hooks.elf"
+#define ModularEXPEntry(Character,Chapter,EventID,Multiplier,Divisor) "BYTE Character Chapter EventID Multiplier Divisor 0x00 0x00 0x00"
+ModularEXPChapterTable:
+ModularEXPEntry(0,0,0,0,0)
 
 ALIGN 4
 #include "ModularMinimugBox/MMB Installer Default.event"
@@ -79,6 +79,20 @@ MaleMageList:
 BYTE 0x6E True  0x67 True  0x00 0x00
 FemaleMageList:
 BYTE 0x6E False  0x67 True  0x00 0x00
+
+ALIGN 4
+#inctext lyn "PoisonRework/PoisonRework.elf" "PoisonRework/Hooks.elf"
+
+ALIGN 4
+#inctext lyn "PrepForBattle/PrepForBattle.elf"
+
+ALIGN 4
+#inctext lyn "PrepForEnd/PrepForEnd.elf"
+PrepForEndItemList:
+BYTE SteelSword SteelLance SteelAxe SteelShortbow 0x00 Elwind Divine Worm
+
+ALIGN 4
+#inctext lyn "PrepScreen/PrepScreen.elf" "PrepScreen/Hooks.elf"
 
 ALIGN 4
 #include "Raid/Raid.event"
@@ -136,6 +150,11 @@ ALIGN 4
 
 
 PUSH
+ORG $96B1C
+SHORT 0xE00A
+ORG $96B3A
+SHORT 0xE003
+
 ORG $44800 //Enabling name selection
 BYTE 0x8 //max name length
 ORG $482BA
@@ -211,4 +230,9 @@ BYTE 15
 
 ORG $3328A // Fix party leader stuff
 BYTE 0xC0 0x46
+/*
+ORG 0x33750 // Allow repositioning of forced units
+BYTE 0x00 0x20 0x00 0x00
+ORG 0x9543E
+BYTE 0x00 0x20 0x00 0x00*/
 POP

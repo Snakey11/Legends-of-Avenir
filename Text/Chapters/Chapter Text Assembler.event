@@ -1,12 +1,78 @@
 
-#include "Chapters/Prologue Text Assembler.event"
+#include "Prologue Text Assembler.event"
 
-#include "Chapters/Mercenary/Mercenary Text Assembler.event"
+#include "Chapter Names.event"
 
-#include "Chapters/Military/Military Text Assembler.event"
+#include "Chapter Objectives.event"
 
-#include "Chapters/Mage/Mage Text Assembler.event"
 
-#include "Chapters/Chapter Names.event"
+#include "Death Quotes.event"
 
-#include "Chapters/Chapter Objectives.event"
+#include "Mercenary/Mercenary 1.event"
+
+#include "Mercenary/Mercenary 2 Militia.event"
+
+#include "Mercenary/Mercenary 3 Militia Kill.event"
+
+#include "Mercenary/Mercenary 4 Militia Kill.event"
+
+#include "Mercenary/Mercenary 5 Militia Kill.event"
+
+#include "Mercenary/Mercenary 6 Militia Kill.event"
+
+#include "Mercenary/Mercenary 7 Militia Kill.event"
+
+#include "Mercenary/Mercenary 3 Militia Wait.event"
+
+#include "Mercenary/Mercenary 4 Militia Wait.event"
+
+#include "Mercenary/Mercenary 5 Militia Wait Arcanae.event"
+
+#include "Mercenary/Mercenary 6 Militia Wait Arcanae.event"
+
+#include "Mercenary/Mercenary 7 Militia Wait Arcanae.event"
+
+#include "Mercenary/Mercenary 5 Militia Wait Cesaria.event"
+
+#include "Mercenary/Mercenary 6 Militia Wait Cesaria.event"
+
+#include "Mercenary/Mercenary 7 Militia Wait Cesaria.event"
+
+#include "Mercenary/Mercenary 2 Bandit.event"
+
+#include "Mercenary/Mercenary 3 Bandit.event"
+
+#include "Mercenary/Mercenary 4 Bandit.event"
+
+#include "Mercenary/Mercenary 5 Bandit Bandit.event"
+
+#include "Mercenary/Mercenary 6 Bandit Bandit.event"
+
+#include "Mercenary/Mercenary 7 Bandit Bandit.event"
+
+#include "Mercenary/Mercenary 5 Bandit Disband.event"
+
+#include "Mercenary/Mercenary 6 Bandit Disband.event"
+
+#include "Mercenary/Mercenary 7 Bandit Disband.event"
+
+
+#include "Military/Military 1.event"
+
+#include "Military/Military 2 Pass.event"
+
+#include "Military/Military 3 Pass.event"
+
+#include "Military/Military 4 Pass.event"
+
+#include "Military/Military 5 Pass Haedric.event"
+
+#include "Military/Military 6 Pass Haedric.event"
+
+#include "Military/Military 7 Pass Haedric.event"
+
+#include "Military/Military 5 Pass Altia.event"
+
+#include "Military/Military 6 Pass Altia.event"
+
+#include "Military/Military 7 Pass Altia.event"

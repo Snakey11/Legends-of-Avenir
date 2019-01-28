@@ -20,7 +20,7 @@
    <property name="TileConfig" value="0x1A"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJydkj0OwjAMhZ2wABMtnIANBiSGVnAWNm6GBBM/l+ACvUNRJzYugK02avRwDGL45Njxc52n5gOiPKLyRBnUrHrMhHn53+v/cnFEB9dGi7Gy8xTYc1/NfY+Ihnm67+8dct+G4xbQtJKPuP/sWmS3gmslkNLeuT7rdpaeIuoP56vr5wdEW3dxTmmt5kEGM28JLb5fOIGvjde1sSfBF21eqWjlvOZ4dL0v6Cd6G7QL+O7Sf3qH95ZX2s7a/tadUMF/gbnFitkZOfIGtdRZBg==
+   eJwTYmZgEELCF5gYGATRxPCJI2MBIP7MRLw4uXgNIwPDQkYIjQ9zYXGzMBpOAqp7DFT3BAk/A+I3jIT9ywFUZwGkLdEwNr0gPidQ/WpGCAa5zRQoZoaGcek9DBQXgboZpMYUST2MvZYRYT4Mg/Q+htJKDLj1YgsDQTQz1+HQi+5/EF6KFq7PmLDrRQ4TWLhgM28JI6ZeENsQKgcLF/TwRA9bmF5NNHu1mDDDDl0eX1hhczMyhrkBnxwIX0BLF+h8fFgPiKPx8NExAEVVWXI=
   </data>
  </layer>
  <layer name="Chest" width="15" height="17" visible="0">

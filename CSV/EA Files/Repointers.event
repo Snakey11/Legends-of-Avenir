@@ -242,9 +242,44 @@ POIN SpellTable
 
 ORG $2442C
 POIN SummonCharacterTable
+ORG $244A0
+POIN (SummonCharacterTable+1)
 ORG $7AD54
 POIN SummonCharacterTable
 ORG $7AE00
 POIN SummonCharacterTable
+ORG $7AE04
+POIN (SummonCharacterTable+1)
+
+ORG $A26C
+POIN TextTable
+ORG $A2A0
+POIN TextTable
+
+ORG $8483C
+POIN CharacterForcerTable
+
+ORG $1BC14
+POIN SoundRoom
+ORG $1BCC4
+POIN SoundRoom
+ORG $AECA8
+POIN SoundRoom
+ORG $AECD0
+POIN SoundRoom
+ORG $AED2C
+POIN SoundRoom
+ORG $AEEBC
+POIN SoundRoom
+ORG $AF438
+POIN SoundRoom
+ORG $AF830
+POIN SoundRoom
+ORG $AFE30
+POIN SoundRoom
+ORG $B0080
+POIN SoundRoom
+ORG $B042C
+POIN SoundRoom
 
 POP

@@ -78,6 +78,7 @@ WalkingSound(LostSoulF,FootSound)
 WalkingSound(ArmoredWyvernLord,WyvernSound)
 WalkingSound(EdgySwordmaster,FootSound)
 WalkingSound(EmperorClass,FootSound)
+WalkingSound(MurielSage,FootSound)
 	
 POP
 	

@@ -52,6 +52,9 @@ ENDTRAP
 ALIGN 4
 
 Units:
+UNIT PlayerMMercenary 0x00 0x00 Level(1,Ally,True) [15,6] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Arc 0x00 0x00 Level(1,Ally,True) [16,5] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Kendrick 0x00 0x00 Level(1,Ally,True) [17,6] 0x00 0x00 0x00 0x00 [0] NoAI 
 UNIT
 
 BeginningScene:
@@ -66,7 +69,7 @@ SetBackground(0x5)
 Text(Merc6MilitiaKillBeginningText)
 EndConvo
 NoFade
-ENDA
+GotoPrepScreen
 
 Wave1Done:
 CHECK_ENEMIES
@@ -165,6 +168,8 @@ BLE 0x17 0x4 0xC
 	CLEA 0x0
 	CLEE 0x0
 	CLEN 0x0
+	REVEAL Arya
+	REVEAL Luke
 	STAL 0x20
 	SVAL 0xB Coords(8,5)
 	LOMA ShizonShrineCutscene
@@ -209,7 +214,7 @@ ENDA
 RedHouse2:
 MUSI
 Text(0x1,Merc6MilitiaKillHouse2Text)
-GiveItem(Tomahawk,0xFFFF)
+GiveGold(4000)
 MUNO
 NoFade
 ENDA
@@ -288,7 +293,7 @@ UNIT Cesarian Hero Jurgen Level(4,Enemy,True) [0,4] 0x00 0x00 0x00 0x00 [Tomahaw
 UNIT Cesarian Warrior Jurgen Level(3,Enemy,True) [5,15] 0x00 0x00 0x1 REDA5 [DevilAxe,SteelBow] [0]
 UNIT Cesarian Sentinel Jurgen Level(4,Enemy,True) [9,14] 0x00 0x00 0x1 REDA6 [Hammer,Dragonspear] AttackInRangeAI
 UNIT Cesarian Shaman Jurgen Level(12,Enemy,True) [7,15] Drop 0x00 0x00 0x00 [Nosferatu,Eclipse,GuidingRing] ChaseOnceApproachedAI
-UNIT Cesarian Knight Jurgen Level(9,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [DevilLance] AttackInRangeAI
+UNIT Cesarian Knight Jurgen Level(9,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [DevilAxe] AttackInRangeAI
 UNIT
 
 Wave2Units:

@@ -102,19 +102,25 @@ NoFade
 ENDA
 
 EndingScene:
+#ifdef __DEBUG__
+	SVAL 0x1 7
+	CHECK_TURNS
+	BLT 0x0 0x1 0xC
+		LOAD1 0x1 AltiaAllies
+		ENUN
+	LABEL 0x0
+#endif
 FADI 0x5
-TileChange(2,6) // Open the door in case it wasn't
+TileChange(1,6) // Open the door in case it wasn't
 MUSC Into_the_Shadow_of_Victory
-CLEA 0x0
-CLEE 0x0
-TurnAlly(Finoc)
-TurnAlly(Elanil)
 SVAL 0x1 60
 ASMC MaxMercenaryHP|1
 SET_HP Arc
 SET_HP Luke
 SET_HP Elanil
 SET_HP Finoc
+CLEA 0x0
+CLEE 0x0
 LOAD3 0x1 PlayerLoading2
 LOAD2 0x1 EndingPeople
 ENUN
@@ -232,6 +238,11 @@ UNIT
 AltiaPeople:
 UNIT Finoc WyvernRider Finoc Level(7,NPC,True) [18,0] 0x00 0x00 0x00 0x00 [SteelLance,Vulnerary] [0]
 UNIT Elanil Archer_F Elanil Level(7,NPC,True) [18,1] 0x00 0x00 0x00 0x00 [SteelBow,IronShortbow] [0]
+UNIT
+
+AltiaAllies:
+UNIT Finoc WyvernRider Finoc Level(7,Ally,True) [0,13] 0x00 0x00 0x00 0x00 [SteelLance,Vulnerary] [0]
+UNIT Elanil Archer_F Elanil Level(7,Ally,True) [0,12] 0x00 0x00 0x00 0x00 [SteelBow,IronShortbow] [0]
 UNIT
 
 EndingPeople:

@@ -3,6 +3,10 @@ MercMAvatarPortrait:
 #incext PortraitFormatter "Male Merc Avatar.png"
 MercFAvatarPortrait:
 #incext PortraitFormatter "Female Merc Avatar.png"
+MilitaryMAvatarPortrait:
+#incext PortraitFormatter "Male Military Avatar.png"
+MilitaryFAvatarPortrait:
+#incext PortraitFormatter "Female Military Avatar.png"
 ArcPortrait:
 #incext PortraitFormatter "Arc.png"
 AdlezPortrait:
@@ -13,6 +17,8 @@ AryaPortrait:
 #incext PortraitFormatter "Arya.png"
 BaretPortrait:
 #incext PortraitFormatter "Baret.png"
+ChristinaPortrait:
+#incext PortraitFormatter "Christina.png"
 ConnorPortrait:
 #incext PortraitFormatter "Connor.png"
 DerekPortrait:
@@ -25,6 +31,8 @@ EmperorPortrait:
 #incext PortraitFormatter "Emperor.png"
 FinocPortrait:
 #incext PortraitFormatter "Finoc.png"
+ForrestPortrait:
+#incext PortraitFormatter "Forrest.png"
 HelmerPortrait:
 #incext PortraitFormatter "Helmer.png"
 JasperPortrait:
@@ -87,18 +95,22 @@ AssassinPortraitPalette:
 //setMugEntry(MugEntry,MugOffset,MouthX,MouthY,EyeX,EyeY)
 
 setMugEntry(MaleMercMug,MercMAvatarPortrait,3,5,3,3)
-setMugEntry(FemaleMercMug,MercFAvatarPortrait,3,5,3,4)
+setMugEntry(FemaleMercMug,MercFAvatarPortrait,3,5,3,3)
+setMugEntry(MaleMilitaryMug,MilitaryMAvatarPortrait,3,5,3,3)
+setMugEntry(FemaleMilitaryMug,MilitaryFAvatarPortrait,3,6,3,4)
 setMugEntry(AdlezMug,AdlezPortrait,2,5,2,3)
 setMugEntry(ArcMug,ArcPortrait,2,4,2,2)
 setMugEntry(ArveldirMug,ArveldirPortrait,2,5,3,3)
 setMugEntry(AryaMug,AryaPortrait,2,6,3,4)
 setMugEntry(BaretMug,BaretPortrait,3,5,3,3)
+setMugEntry(ChristinaMug,ChristinaPortrait,2,6,3,4)
 setMugEntry(ConnorMug,ConnorPortrait,3,5,3,3)
-setMugEntry(DerekMug,DerekPortrait,2,5,2,3)
+setMugEntry(DerekMug,DerekPortrait,3,5,3,3)
 setMugEntry(EfilMug,EfilPortrait,3,5,3,3)
 setMugEntry(ElanilMug,ElanilPortrait,4,5,4,3)
 setMugEntry(EmperorMug,EmperorPortrait,3,5,3,3)
 setMugEntry(FinocMug,FinocPortrait,2,5,3,3)
+setMugEntry(ForrestMug,ForrestPortrait,2,5,3,3)
 setMugEntry(HelmerMug,HelmerPortrait,2,5,3,4)
 setMugEntry(JasperMug,JasperPortrait,3,5,3,3)
 setMugEntry(JurgenMug,JurgenPortrait,2,6,3,3)

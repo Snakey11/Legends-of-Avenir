@@ -1,0 +1,374 @@
+﻿
+EventPointerTable(Military4PassEvents,ThisChapter)
+
+//Label ThisChapter
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN EndMainPointer EndMainPointer EndMainPointer
+POIN EndMainPointer
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+//EndLabel
+
+//Label TurnBasedEvents
+TurnBasedEvents:
+TurnEventPlayer(0x00,Turn3,3)
+TurnEventPlayer(0x00,Turn4,4)
+TurnEventPlayer(0x00,Turn5,5)
+TurnEventPlayer(0x00,Turn7,7)
+TurnEventPlayer(0x00,Turn9,9)
+TurnEventPlayer(0x00,Turn12,12)
+TurnEventEnemy(0x00,EndingScene,13)
+END_MAIN
+
+//Label CharacterBasedEvents
+ALIGN 32
+CharacterBasedEvents:
+END_MAIN
+
+//Label LocationBasedEvents
+LocationBasedEvents:
+Village(0x10,House1,13,8)
+House(0x00,House3,12,18)
+Village(0x11,House2,3,19)
+Armory(ArmoryList,2,5)
+Vendor(ShopList,9,4)
+END_MAIN
+
+//Label MiscBasedEvents
+MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatBoss(DunlasDead)
+END_MAIN
+
+//Label TrapData
+TrapData:
+ENDTRAP
+ALIGN 4
+
+//Label Units
+Units:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [4,8] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Jasper 0x00 0x00 Level(1,Ally,True) [5,7] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [3,7] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Elanil 0x00 0x00 Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Finoc 0x00 0x00 Level(1,Ally,True) [6,5] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Cougar 0x00 0x00 Level(1,Ally,True) [4,5] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Sekar 0x00 0x00 Level(1,Ally,True) [5,4] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Forrest 0x00 0x00 Level(11,Ally,True) [9,7] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI
+UNIT Christina 0x00 0x00 Level(12,Ally,True) [8,8] 0x00 0x00 0x00 0x00 [Javelin,SteelSword] NoAI
+UNIT Clara 0x00 0x00 Level(9,Ally,True) [6,8] 0x00 0x00 0x00 0x00 [Mend,Vulnerary] NoAI
+EndUnit
+
+//Label BeginingScene
+BeginningScene:
+EnterStop
+CAM1 [6,8]
+LOAD3 0x1 PlayerLoading1
+LOAD2 0x1 OldFriends
+LOAD1 0x1 LoadForrest
+ENUN
+MUSC Binding_Vow
+SetBackground(0x1D)
+Text(Military4PassBeginningText)
+MUSC Distant_Roads
+SetBackground(0x1B)
+Text(Military4PassSekarText)
+MUSC Advance
+SetBackground(0x18)
+Text(Military4PassPlanningText)
+FADI 0x5
+FadeOutMusic
+STAL 0x50
+MUSC Tension
+FADU 0x5
+Text(Military4PassWakeUpText)
+EndConvo
+STAL 0x40
+TEXTSHOW Military4PassStartBattleText
+TEXTEND
+LOAD1 0x1 LoadChristinaClara
+ENUN
+TEXTCONT
+TEXTEND
+REMA
+CAM1 [12,17]
+STAL 0x10
+LOAD1 0x1 StartingMeanies
+ENUN
+STAL 0x10
+Text(Military4PassDunlasHereText)
+GiveToSupplySilent(KnightCrest)
+GiveToSupplySilent(SteelLance)
+GiveToSupplySilent(Vulnerary)
+NoFade
+GotoPrepScreen
+	
+//Label EndingScene
+EndingScene: // Haedric
+FADI 0x5
+MUSC Into_the_Shadow_of_Victory
+CLEA 0x0
+CLEE 0x0
+CAM1 [7,6]
+LOAD3 0x1 PlayerLoading3
+LOAD2 0x1 HaedricFriends
+ENUN
+FADU 0x5
+STAL 0x10
+Text(Military4PassHaedricEndingText)
+STAL 0x20
+LOAD1 0x1 Haedricians
+ENUN
+STAL 0x20
+SetBackground(0x05)
+Text(Military4PassHaedricHaedriciansText)
+MoveToChapter(MilitaryPassHaedric5)
+NoFade
+EndA2
+
+DunlasDead: // Altia
+FADI 0x5
+MUSC Victory
+CLEA 0x0
+CLEE 0x0
+CAM1 [10,9]
+LOAD3 0x1 PlayerLoading2
+LOAD2 0x1 AltiaFriends
+ENUN
+FADU 0x5
+STAL 0x40
+Text(Military4PassAltiaEndingText)
+STAL 0x20
+MOVE 0x0 Christina [5,0]
+STAL 0x4
+MOVE 0x0 Forrest [6,0]
+MOVE 0x0 Sekar [7,0]
+STAL 0x4
+MOVE 0x0 Finoc [8,0]
+STAL 0x4
+MOVE 0x0 Elanil [9,0]
+ENUN
+STAL 0x50
+SetBackground(0x05)
+Text(Military4PassAltiaCommandersGoneText)
+MoveToChapter(MilitaryPassAltia5)
+NoFade
+ENDA
+
+//Label Turn Events
+Turn3:
+CamON
+LOAD1 0x1 Turn3Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn4:
+CamON
+LOAD1 0x1 Turn4Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn5:
+CamON
+LOAD1 0x1 Turn5Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn7:
+CamON
+LOAD1 0x1 Turn7Units
+ENUN
+CamON
+NoFade
+EndA2
+
+Turn9:
+CamON
+LOAD1 0x1 Turn9Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn12:
+CamON
+LOAD1 0x1 Turn12Units
+ENUN
+CamOFF
+NoFade
+ENDA
+
+//Label Location Events
+House1:
+MUSI
+Text(0x01,Military4PassHouse1Text)
+GiveItem(KnightCrest,0xFFFF)
+MUNO
+NoFade
+EndA2
+
+House2:
+MUSI
+Text(0x01,Military4PassHouse2Text)
+GiveItem(KillerAxe,0xFFFF)
+MUNO
+NoFade
+EndA2
+
+House3:
+MUSI
+Text(0x01,Military4PassHouse3Text)
+MUNO
+NoFade
+EndA2
+
+ArmoryList:
+SHLI SteelSword IronBlade SteelLance Javelin SteelAxe HandAxe SteelBow SteelLongbow SteelShortbow
+
+ShopList:
+SHLI Elwind Fire Elaqua Worm Divine Mend Vulnerary
+//EndLabel
+
+	/*UNIT DATA*/
+
+//Label PlayerLoading
+PlayerLoading1:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [4,8] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+PlayerLoading2:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [13,9] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+PlayerLoading3:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
+
+//Label Chapter Friends
+OldFriends:
+UNIT Jasper 0x00 0x00 Level(1,Ally,True) [5,7] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [3,7] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Elanil 0x00 0x00 Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Finoc 0x00 0x00 Level(1,Ally,True) [6,5] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Cougar 0x00 0x00 Level(1,Ally,True) [2,4] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Sekar 0x00 0x00 Level(1,Ally,True) [5,4] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+LoadForrest:
+UNIT Forrest Cavalier 0x00 Level(11,Ally,True) [9,7] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI
+UNIT
+
+LoadChristinaClara:
+UNIT Christina Cavalier_F 0x00 Level(12,Ally,True) [5,0] 0x00 0x00 0x01 REDA8R8 [Javelin,SteelSword] NoAI
+UNIT Clara Troubadour 0x00 Level(9,Ally,True) [6,0] 0x00 0x00 0x01 REDA6R8 [Mend,Vulnerary] NoAI
+EndUnit
+
+//Label Chapter Meanies
+StartingMeanies:
+UNIT Dunlas Halberdier Dunlas Level(4,Enemy,True) [11,21] 0x00 0x00 0x01 REDA11R20 [ShortSpear] GuardAI
+UNIT Arcanian Knight Dunlas Level(11,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [Dragonspear] AttackInRangeAI
+UNIT Arcanian Fighter Dunlas Level(12,Enemy,True) [0,12] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT Arcanian Soldier Dunlas Level(10,Enemy,True) [0,13] 0x00 0x00 0x01 REDA2R13 [IronLance] NoAI
+UNIT Arcanian Mage Dunlas Level(8,Enemy,True) [0,16] 0x00 0x00 0x01 REDA1R16 [Elthunder] AttackInRangeAI
+UNIT Arcanian Cavalier Dunlas Level(9,Enemy,True) [0,18] 0x00 0x00 0x00 0x00 [IronSword,SteelLance] AttackInRangeAI
+UNIT Arcanian GreatKnight Dunlas Level(2,Enemy,True) [0,20] 0x00 0x00 0x00 0x00 [BraveAxe] ChaseOnceApproachedAI
+UNIT Arcanian MageKnight Dunlas Level(3,Enemy,True) [6,21] 0x00 0x00 0x00 0x00 [Elfire] AttackInRangeAI
+UNIT Arcanian Soldier Dunlas Level(9,Enemy,True) [6,0] 0x00 0x00 0x00 0x00 [KillerLance] NoAI
+UNIT Arcanian Myrmidon Dunlas Level(10,Enemy,True) [8,0] 0x00 0x00 0x00 0x00 [SlimSword] NoAI
+UNIT Arcanian Shaman Dunlas Level(11,Enemy,True) [10,0] 0x00 0x00 0x00 0x00 [Luna] NoAI
+UNIT Arcanian Knight Dunlas Level(12,Enemy,True) [14,0] 0x00 0x00 0x01 REDA14R3 [SteelLance] GuardAI
+UNIT Arcanian Bishop Dunlas Level(6,Enemy,True) [10,21] 0x00 0x00 0x01 REDA11R16 [Divine,Physic] GuardAI
+UNIT Arcanian Mage Dunlas Level(11,Enemy,True) [19,13] 0x00 0x00 0x01 REDA12R13 [Aqua] AttackInRangeAI
+UNIT Arcanian Mercenary Dunlas Level(13,Enemy,True) [19,12] 0x00 0x00 0x01 REDA12R11 [IronSword] NoAI
+UNIT Arcanian Cavalier Dunlas Level(10,Enemy,True) [19,9] 0x00 0x00 0x00 0x00 [IronLance] NoAI
+UNIT Arcanian Pirate Dunlas Level(11,Enemy,True) [19,5] 0x00 0x00 0x01 REDA15R5 [SteelAxe] NoAI
+UNIT Arcanian Fighter Dunlas Level(9,Enemy,True) [19,7] 0x00 0x00 0x01 REDA18R7 [HandAxe] AttackInRangeAI
+UNIT Arcanian Shaman Dunlas Level(10,Enemy,True) [19,17] 0x00 0x00 0x01 REDA16R18 [Nosferatu] ChaseOnceApproachedAI
+EndUnit
+
+// Label Reinforcements
+Turn3Units:
+UNIT Arcanian Cavalier Dunlas Level(7,Enemy,True) [19,1] 0x00 0x00 0x00 0x00 [IronSword] NoAI
+UNIT Arcanian Monk Dunlas Level(8,Enemy,True) [6,21] 0x00 0x00 0x00 0x00 [Shine] NoAI
+UNIT Arcanian Mercenary Dunlas Level(10,Enemy,True) [19,10] Drop 0x00 0x00 0x00 [PoisonSword,HeroCrest] NoAI
+UNIT Arcanian Mercenary Dunlas Level(9,Enemy,True) [8,0] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT
+
+Turn4Units:
+UNIT Arcanian Knight Dunlas Level(8,Enemy,True) [11,21] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Arcanian Mage Dunlas Level(8,Enemy,True) [7,21] 0x00 0x00 0x00 0x00 [Elaqua] NoAI
+UNIT Arcanian Paladin Dunlas Level(8,Enemy,True) [4,21] 0x00 0x00 0x00 0x00 [PoisonLance,SteelSword] NoAI
+UNIT
+
+Turn5Units:
+UNIT Arcanian Shaman Dunlas Level(8,Enemy,True) [0,3] 0x00 0x00 0x00 0x00 [Slime] NoAI
+UNIT Arcanian Mage Dunlas Level(10,Enemy,True) [14,0] 0x00 0x00 0x00 0x00 [Wind] NoAI
+UNIT Arcanian Mage Dunlas Level(6,Enemy,True) [9,21] 0x00 0x00 0x00 0x00 [Dasher] NoAI
+UNIT Arcanian Soldier Dunlas Level(11,Enemy,True) [0,20] 0x00 0x00 0x00 0x00 [Javelin] NoAI
+UNIT Arcanian Soldier Dunlas Level(9,Enemy,True) [1,21] 0x00 0x00 0x00 0x00 [Dragonspear] NoAI
+UNIT
+
+Turn7Units:
+UNIT Arcanian WyvernRider Dunlas Level(9,Enemy,True) [19,21] 0x00 0x00 0x00 0x00 [Javelin] NoAI
+UNIT Arcanian Cavalier Dunlas Level(8,Enemy,True) [10,21] 0x00 0x00 0x00 0x00 [KillingEdge] NoAI
+UNIT Arcanian Cavalier Dunlas Level(10,Enemy,True) [12,21] 0x00 0x00 0x00 0x00 [SteelLance,SlimSword] NoAI
+UNIT
+
+Turn9Units:
+UNIT Arcanian Pirate Dunlas Level(10,Enemy,True) [19,17] 0x00 0x00 0x00 0x00 [ShortAxe] AttackInRangeAI
+UNIT Arcanian Fighter Dunlas Level(8,Enemy,True) [17,0] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT Arcanian Cavalier Dunlas Level(9,Enemy,True) [19,0] 0x00 0x00 0x00 0x00 [Horseslayer] NoAI
+UNIT Arcanian PegasusKnight Dunlas Level(14,Enemy,True) [16,21] 0x00 0x00 0x00 0x00 [Axereaver,Javelin] NoAI
+UNIT Arcanian PegasusKnight Dunlas Level(12,Enemy,True) [18,21] 0x00 0x00 0x00 0x00 [SlimLance] AttackInRangeAI
+UNIT
+
+Turn12Units:
+UNIT Arcanian Fighter Dunlas Level(12,Enemy,True) [0,20] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT Arcanian Berserker Dunlas Level(3,Enemy,True) [3,21] Drop 0x00 0x00 0x00 [Swordreaver] NoAI
+UNIT Arcanian Soldier Dunlas Level(11,Enemy,True) [19,10] 0x00 0x00 0x00 0x00 [IronLance] NoAI
+UNIT Arcanian Sentinel Dunlas Level(3,Enemy,True) [19,15] 0x00 0x00 0x00 0x00 [SteelBlade,HandAxe] NoAI
+UNIT Arcanian Mage Dunlas Level(11,Enemy,True) [9,21] 0x00 0x00 0x00 0x00 [Arcwind] NoAI
+EndUnit
+
+//Label Ending Units
+AltiaFriends:
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [14,10] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Jasper 0x00 0x00 Level(1,Ally,True) [13,10] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Forrest 0x00 0x00 Level(1,Ally,True) [10,10] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Christina 0x00 0x00 Level(1,Ally,True) [11,9] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Finoc 0x00 0x00 Level(1,Ally,True) [13,12] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Cougar 0x00 0x00 Level(1,Ally,True) [15,12] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Elanil 0x00 0x00 Level(1,Ally,True) [14,13] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Sekar 0x00 0x00 Level(1,Ally,True) [12,11] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Clara 0x00 0x00 Level(1,Ally,True) [10,11] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+HaedricFriends:
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [10,9] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Jasper 0x00 0x00 Level(1,Ally,True) [11,8] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Forrest 0x00 0x00 Level(1,Ally,True) [2,8] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Christina 0x00 0x00 Level(1,Ally,True) [4,4] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Finoc 0x00 0x00 Level(1,Ally,True) [1,6] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Cougar 0x00 0x00 Level(1,Ally,True) [7,4] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Elanil 0x00 0x00 Level(1,Ally,True) [9,7] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Sekar 0x00 0x00 Level(1,Ally,True) [12,6] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Clara 0x00 0x00 Level(1,Ally,True) [5,7] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+Haedricians:
+UNIT Tyrone Warrior 0x00 Level(1,NPC,True) [14,0] 0x00 0x00 0x01 REDA14R6 [0] NoAI
+UNIT Haedrician Berserker 0x00 Level(1,NPC,True) [15,0] 0x00 0x00 0x01 REDA17R6 [0] NoAI
+UNIT Haedrician Hero 0x00 Level(1,NPC,True) [14,0] 0x00 0x00 0x01 REDA14R2 [0] NoAI
+EndUnit

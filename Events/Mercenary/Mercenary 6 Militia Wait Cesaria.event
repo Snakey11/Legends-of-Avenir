@@ -48,6 +48,14 @@ ENDTRAP
 ALIGN 4
 
 Units:
+UNIT PlayerMMercenary 0x00 0x00 Level(4,Ally,True) [24,5] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Luke 0x00 0x00 Level(1,Ally,True) [23,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Arc 0x00 0x00 Level(1,Ally,True) [24,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Finoc 0x00 0x00 Level(1,Ally,True) [20,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Elanil 0x00 0x00 Level(1,Ally,True) [21,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Lux 0x00 0x00 Level(1,Ally,True) [20,4] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Jasper 0x00 0x00 Level(1,Ally,True) [22,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [23,4] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 BeginningScene:
@@ -89,7 +97,7 @@ ENUN
 STAL 0x20
 Text(Merc6MilitiaWaitCesariaLuxText)
 NoFade
-ENDA
+GotoPrepScreen
 
 EndingScene:
 FADI 0x5
@@ -116,7 +124,7 @@ MOVE 0x0 Finoc [16,0]
 ENUN
 TEXTCONT
 TEXTEND
-MOVE 0x0 Luke [14,3]
+MOVE 0x0 Luke [3,14]
 STAL 0x30
 TEXTCONT
 TEXTEND
@@ -162,32 +170,32 @@ UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [4,4] 0x00 0x00 0x00 0x00 [Iron
 UNIT	
 
 UzkalisPeople:
-UNIT Uzkalis GaidenSage Uzkalis Level(4,Enemy,True) [4,4] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT Arcanian Sentinel Uzkalis Level(4,Enemy,True) [12,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT Arcanian Druid Uzkalis Level(4,Enemy,True) [3,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT Arcanian Druid Uzkalis Level(4,Enemy,True) [5,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT Arcanian Mage Uzkalis Level(4,Enemy,True) [13,1] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT Arcanian Monk Uzkalis Level(4,Enemy,True) [12,0] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT Arcanian FalcoKnight Uzkalis Level(4,Enemy,True) [8,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT Arcanian WyvernRider Uzkalis Level(4,Enemy,True) [7,1] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT Arcanian WyvernRider Uzkalis Level(4,Enemy,True) [9,1] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT Uzkalis GaidenSage Uzkalis Level(4,Enemy,True) [4,4] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Arcanian Sentinel Uzkalis Level(4,Enemy,True) [12,3] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Arcanian Druid Uzkalis Level(4,Enemy,True) [3,2] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Arcanian Druid Uzkalis Level(4,Enemy,True) [5,2] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Arcanian Mage Uzkalis Level(4,Enemy,True) [13,1] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Arcanian Monk Uzkalis Level(4,Enemy,True) [12,0] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Arcanian FalcoKnight Uzkalis Level(4,Enemy,True) [8,2] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Arcanian WyvernRider Uzkalis Level(4,Enemy,True) [7,1] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Arcanian WyvernRider Uzkalis Level(4,Enemy,True) [9,1] 0x00 0x00 0x00 0x00 [0] NoAI 
 UNIT
 
 ThatSoldier:
-UNIT Arcanian Halberdier Arcanian Level(4,Enemy,True) [4,0] 0x00 0x00 0x1 REDA5R4 [IronAxe,Vulnerary] NoAI 
+UNIT Arcanian Halberdier Arcanian Level(4,Enemy,True) [4,0] 0x00 0x00 0x1 REDA5R4 [0] NoAI 
 UNIT
 
 MaximusPeople:
-UNIT Maximus BattleSage Maximus Level(4,NPC,True) [6,9] 0x00 0x00 0x1 REDA5R6 [IronAxe,Vulnerary] NoAI 
-UNIT Cesarian Cavalier Maximus Level(4,NPC,True) [10,9] 0x00 0x00 0x1 REDA10R6 [IronAxe,Vulnerary] NoAI 
-UNIT Cesarian Cavalier Maximus Level(4,NPC,True) [12,9] 0x00 0x00 0x1 REDA12R6 [IronAxe,Vulnerary] NoAI 
-UNIT Cesarian Valkyrie Maximus Level(4,NPC,True) [11,9] 0x00 0x00 0x1 REDA11R7 [IronAxe,Vulnerary] NoAI 
-UNIT Cesarian GreatKnight Maximus Level(4,NPC,True) [7,9] 0x00 0x00 0x1 REDA7R5 [IronAxe,Vulnerary] NoAI 
-UNIT Cesarian Myrmidon Maximus Level(4,NPC,True) [5,9] 0x00 0x00 0x1 REDA3R7 [IronAxe,Vulnerary] NoAI 
-UNIT Cesarian Warrior Maximus Level(4,NPC,True) [8,9] 0x00 0x00 0x1 REDA8R7 [IronAxe,Vulnerary] NoAI 
-UNIT Cesarian Sage Maximus Level(4,NPC,True) [7,9] 0x00 0x00 0x1 REDA7R8 [IronAxe,Vulnerary] NoAI 
-UNIT Cesarian WyvernLord Maximus Level(4,NPC,True) [0,8] 0x00 0x00 0x1 REDA0R8 [IronAxe,Vulnerary] NoAI 
-UNIT Cesarian WyvernLord Maximus Level(4,NPC,True) [1,9] 0x00 0x00 0x1 REDA1R9 [IronAxe,Vulnerary] NoAI 
+UNIT Maximus BattleSage Maximus Level(4,NPC,True) [6,9] 0x00 0x00 0x1 REDA5R6 [0] NoAI 
+UNIT Cesarian Cavalier Maximus Level(4,NPC,True) [10,9] 0x00 0x00 0x1 REDA10R6 [0] NoAI 
+UNIT Cesarian Cavalier Maximus Level(4,NPC,True) [12,9] 0x00 0x00 0x1 REDA12R6 [0] NoAI 
+UNIT Cesarian Valkyrie Maximus Level(4,NPC,True) [11,9] 0x00 0x00 0x1 REDA11R7 [0] NoAI 
+UNIT Cesarian GreatKnight Maximus Level(4,NPC,True) [7,9] 0x00 0x00 0x1 REDA7R5 [0] NoAI 
+UNIT Cesarian Myrmidon Maximus Level(4,NPC,True) [5,9] 0x00 0x00 0x1 REDA3R7 [0] NoAI 
+UNIT Cesarian Warrior Maximus Level(4,NPC,True) [8,9] 0x00 0x00 0x1 REDA8R7 [0] NoAI 
+UNIT Cesarian Sage Maximus Level(4,NPC,True) [7,9] 0x00 0x00 0x1 REDA7R8 [0] NoAI 
+UNIT Cesarian WyvernLord Maximus Level(4,NPC,True) [0,8] 0x00 0x00 0x1 REDA0R8 [0] NoAI 
+UNIT Cesarian WyvernLord Maximus Level(4,NPC,True) [1,9] 0x00 0x00 0x1 REDA1R9 [0] NoAI 
 UNIT
 
 ChapterMeanies:
@@ -235,21 +243,21 @@ UNIT Arcanian Ranger Pat Level(4,Enemy,True) [1,3] 0x00 0x00 0x00 0x00 [SteelBla
 UNIT
 
 AllyPeople:
-UNIT Luke Ranger Pat Level(1,Ally,True) [23,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
-UNIT Arc Ranger Pat Level(1,Ally,True) [24,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
-UNIT Finoc Ranger Pat Level(1,Ally,True) [20,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
-UNIT Elanil Ranger Pat Level(1,Ally,True) [21,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
-UNIT Lux Ranger Pat Level(1,Ally,True) [20,4] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
-UNIT Jasper Ranger Pat Level(1,Ally,True) [22,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
-UNIT Derek Ranger Pat Level(1,Ally,True) [23,4] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
+UNIT Luke Ranger Pat Level(1,Ally,True) [23,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Arc Ranger Pat Level(1,Ally,True) [24,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Finoc Ranger Pat Level(1,Ally,True) [20,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Elanil Ranger Pat Level(1,Ally,True) [21,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Lux Ranger Pat Level(1,Ally,True) [20,4] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Jasper Ranger Pat Level(1,Ally,True) [22,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Derek Ranger Pat Level(1,Ally,True) [23,4] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 EndingFriends:
-UNIT Luke Ranger Pat Level(1,Ally,True) [5,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
-UNIT Arc Ranger Pat Level(1,Ally,True) [6,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
-UNIT Finoc Ranger Pat Level(1,Ally,True) [4,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
-UNIT Elanil Ranger Pat Level(1,Ally,True) [3,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
-UNIT Lux Ranger Pat Level(1,Ally,True) [2,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
-UNIT Jasper Ranger Pat Level(1,Ally,True) [3,6] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
-UNIT Derek Ranger Pat Level(1,Ally,True) [4,6] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
+UNIT Luke Ranger Pat Level(1,Ally,True) [5,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Arc Ranger Pat Level(1,Ally,True) [6,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Finoc Ranger Pat Level(1,Ally,True) [4,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Elanil Ranger Pat Level(1,Ally,True) [3,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Lux Ranger Pat Level(1,Ally,True) [2,5] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Jasper Ranger Pat Level(1,Ally,True) [3,6] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Derek Ranger Pat Level(1,Ally,True) [4,6] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT

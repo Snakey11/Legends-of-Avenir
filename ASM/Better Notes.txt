@@ -1,5 +1,9 @@
-https://github.com/StanHash/FE-CHAX/blob/master/Tools/libgbafe/fe8u.s
+https://github.com/StanHash/FE-CLib/blob/master/reference/FE8U-20181105.s
 
+All (possible) Proc States are stored in a contiguous array,
+located at a fixed point in memory (FE8U:02024E68), capable
+of holding up to 0x40 Proc States (the amount of memory
+used by the array is thus 0x40*0x6C=0x1B00 bytes. 02024E68 - 2026968).
 
 ##########
 FREE SPACE:
@@ -349,7 +353,7 @@ CHAPTER DATA STRUCT (202BCF0) (FE7: 202BBF8) (FE6: 202AA48) (FE7J: 202BBF4) (FE8
 	+0x10	Set when on prep screen
 	+0x20	?
 	+0x40	Set for hard mode
-	+0x80	Don't gain weapon exp (not sure what this is for)
+	+0x80	Set if in the link arena
 +0x15	Byte	Weather (0=clear, 1=snow, 2=snowstorm, 4=rain) (funnily enough, if non-zero, arena battles take support bonuses into account)
 +0x16	Short	Number of support points gained this chapter?
 +0x18	Byte	? (Set at A4F14 when starting a new game, but no idea what it does)
@@ -659,8 +663,6 @@ Returns: Total value of item
 Params: r0=char data ptr, r1=item id to search for
 Returns: True if character has item
 
-[203A5EC..203A608]!!
-
 ? is a break on read
 !! is a break on write
 ! is a break on write if the new value is different from the old
@@ -669,3 +671,15 @@ So if I want to set a break on read to 202BCFE, I would write [202BCFE]? in the 
 You can also set a break on read/write to a range of memory. Simply put the two addresses in brackets, separated with 2 periods:
 [202BCFE..202BD0D]? will break upon reading any value between those two offsets, including the endpoints.
 Note that the game will pause after executing the command that did the read/write.
+
+You can set conditions to a break. For instance, you might want to break on the
+current line only if r2 is 0. Simply press Ctrl + B, enter your address (you can
+use $ for the current line), and separate the
+conditions with a comma, like $, r2 = 0.
+You can also use the conditions by themselves: a break when r2 = 0
+would be written as r2 = 0. Of course, that will almost certainly
+bring up a ton of false breaks if you’re looking for a specific
+instance of r2 = 0, but that’s part of the fun! Right? …Right? Ok,
+I guess it’s not fun, but you’ll have to put up with it anyway.
+Also, please note you can only have one break on execution per
+address, and only one condition per breakpoint.

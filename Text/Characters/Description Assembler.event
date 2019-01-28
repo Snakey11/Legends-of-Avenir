@@ -28,8 +28,9 @@ A spiteful, self-trained swordsman[NL]
 who lost his parents in childhood.[X]
 
 ## ValDescText
-A loyal dark mage who cares for her[NL]
-friends but hates her enemies with passion.[X]
+A loyal dark mage who cares[NL]
+for her friends but hates[NL]
+her enemies with passion.[X]
 
 ## HelmerDescText
 A young, obedient soldier hoping[NL]
@@ -140,11 +141,11 @@ his position to live comfortably.[X]
 A Grand Magus of Arcanae. She[NL]
 fights against Xavus and Uzaklis.[X]
 
-## BradyDescText
-An agressive fighter who[NL]
-often challenges leadership.[X]
+## ChristinaDescText
+A strong rider who remains loyal[NL]
+but often questions leadership.[X]
 
-## ForestDescText
+## ForrestDescText
 A rider who prefers diplomacy[NL]
 and only fights when necessary.[X]
 
@@ -286,3 +287,24 @@ Sateenkaari for years.[X]
 A young Cesarian captain[NL]
 who is passionate about[NL]
 her loyalty.[X]
+
+## SamDescText
+A greedy Altian bandit who has[NL]
+caught wind of the[NL]
+Anguis's voyage.[X]
+
+## SamBanditDescText
+An Altian bandit[NL]
+following Sam.[X]
+
+## SekarDescText
+An experienced and reliable[NL]
+Haedrican warrior.[X]
+
+## RichterDescText
+An ambitious warlord who[NL]
+has sold out his nation.[X]
+
+## DefectDescText
+A soldier under Richter[NL]
+following along in betrayal.[X]

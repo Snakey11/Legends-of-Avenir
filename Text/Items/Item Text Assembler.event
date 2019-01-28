@@ -1,4 +1,4 @@
 
-#include "Items/Name Assembler.event"
+#include "Name Assembler.event"
 
-#include "Items/Description Assembler.event"
+#include "Description Assembler.event"

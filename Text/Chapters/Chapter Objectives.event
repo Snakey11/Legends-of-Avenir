@@ -98,3 +98,32 @@ Reach Efil.[X]
 
 ## Merc7BanditDisbandStatusText
 Defeat Xylia.[X]
+
+
+## Military1StatusText
+Defeat all[NL]
+units.[X]
+
+## Military2PassStatusText
+Defeat all[NL]
+bandits.[X]
+
+## Military3PassStatusText
+Defeat Connor[NL]	
+and Adlez.[X]
+
+## Military4PassStatusText
+Defend the town[NL]
+and defeat Dunlas.[X]
+
+## Military5PassAltiaStatusText
+Defeat all of[NL]
+Richter's troops.[X]
+
+## Military6PassAltiaStatusText
+Defeat all of the[NL]
+Vathrylian Guardians.[X]
+
+## Military7PassAltiaStatusText
+Defeat Xavus and[NL]
+rescue Izuk.[X]

@@ -44,6 +44,11 @@ ENDTRAP
 ALIGN 4
 
 Units:
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [4,7] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Arc 0x00 0x00 Level(1,Ally,True) [3,9] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Luke 0x00 0x00 Level(1,Ally,True) [2,7] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Arya 0x00 0x00 Level(1,Ally,True) [4,8] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Kendrick 0x00 0x00 Level(1,Ally,True) [4,12] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 BeginningScene:
@@ -53,7 +58,7 @@ LOAD2 0x1 DockAllies
 ENUN
 MUSC Laughter
 STAL 0x20
-LOAD3 0x1 PlayerLoading2
+LOAD3 0x1 PlayerLoading1
 SetBackground(0x7)
 TEXTSHOW Merc4MilitiaKillBeginningText
 TEXTEND
@@ -93,7 +98,7 @@ FADI 0x5
 
 SVAL 0xB 0x080007
 LOMA MercenaryMilitiaKill4
-LOAD3 0x1 PlayerLoading3
+LOAD3 0x1 PlayerLoading2
 LOAD2 0x1 BoatAllies
 LOAD1 0x1 BoatMeanies
 ENUN
@@ -112,7 +117,7 @@ EndConvo
 STAL 0x20
 ENUN
 NoFade
-ENDA
+GotoPrepScreen
 
 EndingScene:
 FADI 0x5
@@ -128,7 +133,7 @@ SET_HP Arya
 SET_HP Kendrick
 CAM1 [11,8]
 LOAD1 0x1 EndingPeople
-LOAD3 0x1 PlayerLoading4
+LOAD3 0x1 PlayerLoading3
 ENUN
 FADU 0x5
 STAL 0x20
@@ -165,24 +170,21 @@ ENDA
 	/*UNIT DATA*/
 
 PlayerLoading1:
-UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [11,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMercenary 0x00 0x00 Level(1,Ally,True) [17,14] 0x00 0x00 0x00 0x00 [0] NoAI 
 UNIT
 
+PlayerLoading2:
+UNIT PlayerMMercenary 0x00 0x00 Level(1,Ally,True) [5,7] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT
+
+PlayerLoading3:
+UNIT PlayerMMercenary 0x00 0x00 Level(1,Ally,True) [12,8] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT	
+	
 VillageAllies:
 UNIT Arc Fighter PlayerMArcher Level(1,Ally,True) [12,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
 UNIT Luke Monk PlayerMArcher Level(1,Ally,True) [12,4] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
 UNIT Arya Myrmidon_F PlayerMArcher Level(1,Ally,True) [13,4] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT
-
-PlayerLoading2:
-UNIT PlayerFMercenary Mercenary_F PlayerMArcher Level(1,Ally,True) [17,14] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerFMyrmidon Myrmidon_F PlayerMArcher Level(1,Ally,True) [17,14] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerFPegasusKnight PegasusKnight PlayerMArcher Level(1,Ally,True) [17,14] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
-UNIT PlayerMMercenary Mercenary PlayerMArcher Level(1,Ally,True) [17,14] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerMMyrmidon Myrmidon PlayerMArcher Level(1,Ally,True) [17,14] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerMFighter Fighter PlayerMArcher Level(1,Ally,True) [17,14] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT PlayerMPirate Pirate PlayerMArcher Level(1,Ally,True) [17,14] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT PlayerMBrigand Brigand PlayerMArcher Level(1,Ally,True) [17,14] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
 UNIT
 	
 DockAllies:
@@ -204,17 +206,6 @@ UNIT
 
 HesHere:
 UNIT Kendrick Pirate PlayerMArcher Level(9,Ally,True) [26,16] 0x00 0x00 0x1 REDA4 [HandAxe,Swordreaver,Vulnerary] [0] 
-UNIT
-
-PlayerLoading3:
-UNIT PlayerFMercenary Mercenary_F PlayerMArcher Level(1,Ally,True) [5,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerFMyrmidon Myrmidon_F PlayerMArcher Level(1,Ally,True) [5,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerFPegasusKnight PegasusKnight PlayerMArcher Level(1,Ally,True) [5,7] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
-UNIT PlayerMMercenary Mercenary PlayerMArcher Level(1,Ally,True) [5,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerMMyrmidon Myrmidon PlayerMArcher Level(1,Ally,True) [5,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerMFighter Fighter PlayerMArcher Level(1,Ally,True) [5,7] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT PlayerMPirate Pirate PlayerMArcher Level(1,Ally,True) [5,7] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT PlayerMBrigand Brigand PlayerMArcher Level(1,Ally,True) [5,7] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
 UNIT
 
 BoatAllies:
@@ -262,17 +253,6 @@ LoadTroops4:
 UNIT RobertPirate Myrmidon Robert Level(8,Enemy,True) [18,5] 0x00 0x00 0x00 0x00 [IronBlade] PursueWithoutHeedAI
 UNIT RobertPirate Thief Robert Level(6,Enemy,True) [18,9] 0x00 0x00 0x00 0x00 [SlimSword] StealingThiefAI
 UNIT RobertPirate Mage Robert Level(7,Enemy,True) [13,7] 0x00 0x00 0x00 0x00 [Elwind] [0]
-UNIT
-
-PlayerLoading4:
-UNIT PlayerFMercenary Mercenary_F PlayerMArcher Level(1,Ally,True) [12,8] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerFMyrmidon Myrmidon_F PlayerMArcher Level(1,Ally,True) [12,8] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerFPegasusKnight PegasusKnight PlayerMArcher Level(1,Ally,True) [12,8] 0x00 0x00 0x00 0x00 [IronLance,Vulnerary] [0] 
-UNIT PlayerMMercenary Mercenary PlayerMArcher Level(1,Ally,True) [12,8] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerMMyrmidon Myrmidon PlayerMArcher Level(1,Ally,True) [12,8] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
-UNIT PlayerMFighter Fighter PlayerMArcher Level(1,Ally,True) [12,8] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT PlayerMPirate Pirate PlayerMArcher Level(1,Ally,True) [12,8] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT PlayerMBrigand Brigand PlayerMArcher Level(1,Ally,True) [12,8] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
 UNIT
 
 EndingPeople:

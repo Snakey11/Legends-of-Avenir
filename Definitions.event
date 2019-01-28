@@ -132,6 +132,7 @@
 #define ArmoredWyvernLord 0x9B
 #define EdgySwordmaster 0x9C
 #define EmperorClass 0x9D
+#define MurielSage 0x9E
 //EndLabel
 
 //Label Character definitions
@@ -188,7 +189,8 @@
 #define Connor 0x32
 #define Adlez 0x33
 #define Muriel 0x34
-#define Brady 0x35
+#define Christina 0x35
+#undef Forest
 #define Forrest 0x36
 #define Cougar 0x37
 #define Shannon 0x38
@@ -197,6 +199,7 @@
 #define Finoc 0x3B
 #define Xexim 0x3C
 #define Rex 0x3D
+#define Sekar 0x3E
 
 #define Henning 0x47
 #define Gerwick 0x48
@@ -222,6 +225,7 @@
 #define BossArc 0x60
 #define Roger 0x61
 #define Haedrican 0x62
+#define Haedrician Haedrican
 #define Tyrone 0x63
 #define Mayor 0x64
 #define Bacrunian 0x65
@@ -231,10 +235,10 @@
 #define Hunter 0x68
 #define Daniel 0x69
 #define Wanderer 0x6A
-#define MercenaryMAvatar 0x6B
-#define MercenaryFAvatar 0x6C
-#define MageFAvatar 0x6D
-#define MageMAvatar 0x6E
+#define MageMAvatar 0x6B
+#define MageFAvatar 0x6C
+#define MercenaryMAvatar 0x6D
+#define MercenaryFAvatar 0x6E
 #define MilitaryMAvatar 0x6F
 #define MilitaryFAvatar 0x70
 #define Kilthel 0x71
@@ -247,6 +251,10 @@
 #define WestonBandit 0x78
 #define KendrickFriend 0x79
 #define Sylvaine 0x7A
+#define Sam 0x7B
+#define SamBandit 0x7C
+#define Richter 0x7D
+#define Defect 0x7E
 //EndLabel
 
 //Label Portrait Defenitions
@@ -288,8 +296,8 @@
 #define LukasMug 0x24
 #define AdlezMug 0x25
 #define MurielMug 0x26
-#define BradyMug 0x27
-#define ForestMug 0x28
+#define ChristinaMug 0x27
+#define ForrestMug 0x28
 #define CougarMug 0x29
 #define ShannonMug 0x2A
 #define MerchantMug 0x2B
@@ -324,7 +332,10 @@
 #define KilthelMug 0x4A
 #define ArveldirMug 0x4B
 #define ServiusMug 0x4C
+#define SamMug 0x4D
 #define SylvaineMug 0x4E
+#define SekarMug 0x4F
+#define RichterMug 0x50
 //EndLabel
 
 //Label Spell Definitions
@@ -399,9 +410,12 @@
 #define MilitaryPass2 0x1E
 #define MilitaryPass3 0x1F
 #define MilitaryPass4 0x20
-#define MilitaryPass5 0x21
-#define MilitaryPass6 0x22
-#define MilitaryPass7 0x23
+#define MilitaryPassHaedric5 0x21
+#define MilitaryPassHaedric6 0x22
+#define MilitaryPassHaedric7 0x23
+#define MilitaryPassAltia5 0x24
+#define MilitaryPassAltia6 0x25
+#define MilitaryPassAltia7 0x26
 #define Mercenary1 0x3B
 #define MercenaryMilitia2 0x3C
 #define MercenaryMilitiaWait3 0x3D
@@ -531,7 +545,7 @@
 #define ZaliusSwordmasterPaletteID 0x54
 //EndLabel
 
-//Label Maps, Map Changes, & Events
+//Label Maps, Map Changes, Events, and Tilesets
 #define EnterMap(ID) "PUSH;ORG EventPointerListOffset+(ID*4);POIN Map;POP"
 #define EnterChanges(ID) "PUSH;ORG EventPointerListOffset+(ID*4);POIN MapChanges;POP"
 
@@ -545,7 +559,7 @@
 #define BigPathMap 0x0C
 #define BoatsAtSeaMap 0x0D
 #define CaravanPathMap 0x11
-#define CastleEntranceMap 0x13
+#define BacrunCity3Map 0x13
 #define CastleHallMap 0x14
 #define CesarianCapitalAssassinMap 0x15
 #define CliffMap 0x16
@@ -600,6 +614,9 @@
 #define KilthelFightCutsceneMap 0xA6
 #define GuardianSpiritWallCutsceneMap 0xA7
 #define MercenaryCampCutsceneMap 0xA8
+#define PeakRiverMap 0xB3
+#define SnowyAltianPassMap 0xB4
+#define AltianCastleMap 0xBD
 
 //Map Changes
 
@@ -607,7 +624,7 @@
 #define BanditPassChanges 0x46
 #define BigBoatDockChanges 0x47
 #define BigBridgeChanges 0x49
-#define CastleEntranceChanges 0x4A
+#define BacrunCity3Changes 0x4A
 #define CastleHallChanges 0x4B
 #define CesarianCapitalAssassinChanges 0x4D
 #define DefenseHallChanges 0x4E
@@ -631,9 +648,19 @@
 #define BacrunCity2Changes 0x9C
 #define ArtifactSlotChanges 0xA0
 #define XyliaTempleChanges 0xA5
+#define AltianCastleChanges 0xBE
 
-//Event Pointer References
-// Good until 0xA3
+// Tilesets
+#define OutdoorSnowyObjectSet 0xB5
+#define OutdoorSnowyPalette 0xB6
+#define OutdoorSnowyTileConfig 0xB7
+#define IndoorSnowyObjectSet 0xB8
+#define IndoorSnowyPalette 0xBA
+#define IndoorSnowyTileConfig 0xBB
+#define FE6WaterAnimations 0xBC
+#define FE6WaterAnimation FE6WaterAnimations
+
+// Events
 
 #define PrologueEvent 0x65
 #define Merc1Events 0x66
@@ -660,6 +687,19 @@
 #define Merc5BanditDisbandEvents 0x98
 #define Merc6BanditDisbandEvents 0x99
 #define Merc7BanditDisbandEvents 0x9A
+
+#define Military1Events 0xA9
+#define Military2PassEvents 0xAA
+#define Military3PassEvents 0xAB
+#define Military4PassEvents 0xAC
+#define Military5PassHaedricEvents 0xAD
+#define Military6PassHaedricEvents 0xAE
+#define Military7PassHaedricEvents 0xAF
+#define Military5PassAltiaEvents 0xB0
+#define Military6PassAltiaEvents 0xB1
+#define Military7PassAltiaEvents 0xB2
+
+// Good until 0xC9
 //EndLabel
 
 //Label Tileset stuff
@@ -749,6 +789,18 @@
 #define CommanderLance 0x09
 #define CommanderSpear 0x09
 #define CommanderUnarmed 0x0A
+#define CavalierSword 0x34
+#define CavalierLance 0x35
+#define CavalierUnarmed 0x36
+#define KnightLance 0x40
+#define KnightUnarmed 0x41
+#define GreatKnightSword 0x4E
+#define GreatKnightLance 0x4F
+#define GreatKnightAxe 0x50
+#define GreatKnightHandAxe 0x51
+#define GreatKnightUnarmed 0x52
+#define WyvernKnightLance 0x62
+#define WyvernKnightUnarmed 0x63
 #define MonkMagic 0x7D
 #define MonkStaff 0x7F
 #define MonkFStaff 0x80
@@ -760,6 +812,8 @@
 #define DarkKnightFStaff 0x95
 #define GaidenSageMagic 0x96
 #define GaidenSageStaff 0x97
+#define SoldierLance 0x98
+#define SoldierUnarmed 0x99
 #define GladiatorAxe 0xA1
 #define GladiatorHandAxe 0xA2
 #define GladiatorUnarmed 0xA3
@@ -820,25 +874,23 @@
 #define WarlockAxe 0xCB
 #define WarlockHandAxe 0xCC
 #define WarlockUnarmed 0xCD
-#define WyvernGeneralSword 0xCE
-#define WyvernGeneralSpear 0xCF
-#define WyvernGeneralAxe 0xD0
-#define WyvernGeneralHandAxe 0xD1
-#define WyvernGeneralBow 0xD2
-#define WyvernGeneralUnarmed 0x61
-#define NarratorSword1 0xE2
-#define NarratorSword2 0xE3
-#define SpearHeroSpear 0xE4
-#define XeximSword 0xE5
-#define XeximBow 0xE6
-#define XeximUnarmed 0xE7
-#define GrandPaladinSword 0xE8
-#define GrandPaladinLance 0xE9
-#define GrandPaladinAxe 0xEA
-#define GrandPaladinHandAxe 0xEB
-#define GrandPaladinUnarmed 0xEC
-#define HarbingerSword 0xED
-#define HarbingerAxe 0xEE
+#define WyvernGeneralSword 0x5C
+#define WyvernGeneralSpear 0x5D
+#define WyvernGeneralAxe 0xCE
+#define WyvernGeneralHandAxe 0xCF
+#define WyvernGeneralBow 0xD0
+#define WyvernGeneralUnarmed 0x5E
+#define GrandPaladinSword 0xE2
+#define GrandPaladinLance 0xE3
+#define GrandPaladinAxe 0xE4
+#define GrandPaladinHandAxe 0xE5
+#define GrandPaladinUnarmed 0xE6
+#define SpearHeroSpear 0xE7
+#define XeximSword 0xE8
+#define XeximBow 0xE9
+#define XeximUnarmed 0xEA
+#define HarbingerSword 0xEB
+#define HarbingerAxe 0xED
 #define HarbingerHandAxe 0xEF
 #define HarbingerUnarmed 0xF0
 #define HolySageMagic 0xF1
@@ -864,6 +916,30 @@
 #define PhantomAxe 0x105
 #define PhantomHandAxe 0x106
 #define PhantomUnarmed 0x107
+#define KnightAxe 0x108
+#define KnightHandAxe 0x109
+#define MurielSageMagic 0x10A
+//EndLabel
+
+//Label Music Definitions
+#define Town_of_Winds_and_Ruin 0x0170
+#define Derris_Kharlan_Appear 0x0171
+#define Shihna 0x0172
+#define Fatalize 0x0173
+#define Fighting_of_the_Spirit 0x0174
+#define Anchoret 0x0175
+#define Kratos 0x0176
+#define Lloyd 0x02
+#define Beedles_Shop 0x0178
+#define Encounter_with_Renegades 0x0179
+#define Dry_Trail 0x019A
+#define Last_Battle_Decision 0x017B
+#define Mars_Lighthouse 0x01
+#define Old_Familiar_Scent 0x017D
+#define Rest_of_the_Heart 0x017E
+#define Venus_Lighthouse 0x017F
+#define Burning_Fighting_Spirit 0x0180
+#define A_Tragic_Decision 0x0181
 //EndLabel
 
 //Label Skill Definitions
@@ -1066,6 +1142,8 @@
 //Label Misc.
 #define SetChapterData(ChapterID,ObjectType1,ObjectType2,PaletteID,TileConfig,MapID,MapPointer,Anims1,Anims2,MapChanges) "PUSH; ORG ChapterDataTable+(ChapterID*148)+4; BYTE ObjectType1 ObjectType2 PaletteID TileConfig MapID Anims1 Anims2 MapChanges; EventPointerTable(MapID,MapPointer); POP"
 
+ #define TilesetAnimation(speed, size, pointer)    "BYTE speed 0; SHORT size; POIN pointer"
+
 #define DeathQuote(Character,Chapter,EventID,TextID) "SHORT Character; BYTE 0xFF Chapter; SHORT EventID TextID 0 0"
 #define AllChapters 0xFF
 
@@ -1073,6 +1151,8 @@
 #define SpecifiedBattleConvo(Character1,Character2,Chapter,EventID,TextID) "SHORT Character1 Character2 Chapter EventID TextID 0x0 0x0 0x0; SHORT Character2 Character1 Chapter EventID TextID 0x0 0x0 0x0"
 //#define UnspecifiedBattleConvo(Character,Chapter,EventID,TextID) "BYTE Character 0x0 0x0 0x0 Chapter 0x0 EventID 0x0; SHORT TextID 0x0 0x0 0x0 ; BYTE 0x0 0x0 Character 0x0 Chapter 0x0 0x0 EventID ; SHORT TextID 0x0 0x0 0x0"
 #define UnspecifiedBattleConvo(Character,Chapter,EventID,TextID) "SHORT Character 0x0 Chapter EventID TextID 0x0 0x0 0x0; SHORT 0x0 Character Chapter EventID TextID 0x0 0x0 0x0"
+
+#define ForceCharacter(Character,Chapter) "BYTE Character 0x00 0xFF Chapter"
 
 #define MoveMercenary(X,Y) "MOVE 0x0 PlayerMMercenary [X,Y];MOVE 0x0 PlayerMMyrmidon [X,Y];MOVE 0x0 PlayerMPirate [X,Y];MOVE 0x0 PlayerMFighter [X,Y];MOVE 0x0 PlayerMBrigand [X,Y];MOVE 0x0 PlayerFMercenary [X,Y];MOVE 0x0 PlayerFMyrmidon [X,Y];MOVE 0x0 PlayerFPegasusKnight [X,Y]"
 #define MoveMercenarySlow(X,Y) "MOVE 0x1 PlayerMMercenary [X,Y];MOVE 0x1 PlayerMMyrmidon [X,Y];MOVE 0x1 PlayerMPirate [X,Y];MOVE 0x1 PlayerMFighter [X,Y];MOVE 0x1 PlayerMBrigand [X,Y];MOVE 0x1 PlayerFMercenary [X,Y];MOVE 0x1 PlayerFMyrmidon [X,Y];MOVE 0x1 PlayerFPegasusKnight [X,Y]"
@@ -1086,7 +1166,7 @@
 #define ChapterDataEditor ChapterDataTable
 
 #define GiveItem(Item,Character) "SMOV 0x3 Item ; GIVEITEMTO Character"
-//#define GiveMoney
+#define GiveGold(Amount) "SVAL 0x3 Amount ; GIVEITEMTOMAIN 0x0"
 
 #define EndConvo "CALL $9EE2C4"
 
@@ -1123,6 +1203,9 @@
 // You still need to set up the battle first!
 
 #define MoveToChapter(Chapter) "MNC2 Chapter"
+
+#define EventMenuCommand(aTextId,Effect) "WORD 0; SHORT aTextId 0; WORD 0; POIN (0x04F448+1); WORD 0; POIN (Effect+1); WORD 0 0 0"
+#define EventMenuCommandEnd "WORD 0 0 0 0 0 0 0 0 0"
 
 #define Twisted_Shadows_A 0x16
 #define Twisted_Shadows_B 0x17

@@ -1,4 +1,4 @@
-0 ; POP ; ALIGN 4 ; PersonalMusicTable:,Music
+INLINE PersonalMusicTable,Music
 None,0
 PlayerMMonk,0
 PlyaerMShaman,0
@@ -39,7 +39,7 @@ Leon,Powerful_Foe
 Jasper,0
 Derek,0
 Lux,0
-Yvette,Powerful_Foe
+Yvette,0
 Zalius,Powerful_Foe
 Leyos,Powerful_Foe
 Clara,0
@@ -60,8 +60,12 @@ PlayerMArcher,0
 PlayerFArcher,0
 Finoc,0
 Xexim,Powerful_Foe
-Uzkalis,Powerful_Foe
 Rex,Powerful_Foe
+Sekar,0
+BLANK,0
+BLANK,0
+BLANK,0
+BLANK,0
 BLANK,0
 BLANK,0
 BLANK,0
@@ -69,17 +73,13 @@ BLANK,0
 Henning,The_Battle_to_Be_Won
 Gerwick,The_Battle_to_Be_Won
 MilitiaMan,0
-Weston,The_Battle_to_Be_Won
-GerwickBandit,0
-WestonBansit,0
-KendrickFriend,0
 Robert,The_Battle_to_Be_Won
 RobertPirate,0
 GhostBoss,The_Battle_to_Be_Won
 TankGhost,0
 FastGhost,0
-StrongGhost,0
 MageGhost,0
+StrongGhost,0
 BLANK,0
 Aaron,The_Battle_to_Be_Won
 Cesarian,0
@@ -91,14 +91,14 @@ Arcanian,0
 BLANK,0
 Guardian,0
 William,The_Battle_to_Be_Won
-Emperor,0
+Emperor,Powerful_Foe
 Grant,The_Battle_to_Be_Won
 Pat,The_Battle_to_Be_Won
-BossUzkalis,Powerful_Foe
-BossArc,The_Battle_to_Be_Won
+BossUzkalis,The_Battle_to_Be_Won
+BossArc,0
 Roger,The_Battle_to_Be_Won
 Haedrican,0
-Tyrone,The_Battle_to_Be_Won
+Tyrone,Powerful_Foe
 Mayor,The_Battle_to_Be_Won
 Bacrunian,0
 Harken,The_Battle_to_Be_Won
@@ -113,19 +113,19 @@ MercenaryFAvatar,0
 MilitaryMAvatar,0
 MilitaryFAvatar,0
 Kilthel,The_Princes_Despair
-Xylia,Powerful_Foe
+Xylia,Fatalize
 Servius,Powerful_Foe
 Arveldir,Powerful_Foe
-0x0,0
-0x0,0
-0x0,0
-0x0,0
-0x0,0
-0x0,0
-0x0,0
-0x0,0
-0x0,0
-0x0,0
+ValSummon,0
+Weston,The_Battle_to_Be_Won
+GerwickBandit,0
+WestonBansit,0
+KendrickFriend,0
+Sylvaine,The_Battle_to_Be_Won
+Sam,The_Battle_to_Be_Won
+SamBandit,0
+Richter,The_Battle_to_Be_Won
+Defect,0
 0x0,0
 0x0,0
 0x0,0
@@ -254,4 +254,4 @@ Arveldir,Powerful_Foe
 0x0,0
 0x0,0
 Wall,0
-Snag,0 ; PUSH
+Snag,0

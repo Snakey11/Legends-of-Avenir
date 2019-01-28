@@ -125,6 +125,13 @@ HandAxeAnim(JacketHeroHandAxe)
 UnarmedAnim(JacketHeroUnarmed)
 WORD 0x0 0x0
 
+KnightAnim:
+LanceAnim(KnightLance)
+AxeAnim(KnightAxe)
+HandAxeAnim(KnightHandAxe)
+UnarmedAnim(KnightUnarmed)
+WORD 0x0 0x0
+
 MagusMAnim:
 StaffAnim(MagusMStaff)
 AnimaAnim(MagusMMagic)
@@ -187,8 +194,10 @@ BowAnim(MountedBrigandBow)
 UnarmedAnim(MountedBrigandUnarmed)
 WORD 0x0 0x0
 
-NarratorClassAnim:
-SwordAnim(NarratorSword1)
+MurielSageAnim:
+AnimaAnim(MurielSageMagic)
+LightAnim(MurielSageMagic)
+UnarmedAnim(MurielSageMagic)
 WORD 0x0 0x0
 
 NomadAnim:

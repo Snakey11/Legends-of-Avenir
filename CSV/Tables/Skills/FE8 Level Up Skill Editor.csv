@@ -1,4 +1,4 @@
-0 ; POP ; ALIGN 4 ; LevelUpSkillTable:,Skill Pointer
+INLINE LevelUpSkillTable,Skill Pointer
 None,0x0
 Ephraim Lord,0x0
 Eirika Lord,0x0
@@ -156,4 +156,4 @@ LostSoulM,0x0
 LostSoulF,0x0
 ArmoredWyvernLord,WyvernLordSkillList|IsPointer
 EdgySwordmaster,SwordmasterSkillList|IsPointer
-EmperorClass,EmperorClassSkillList|IsPointer ; PUSH
+EmperorClass,EmperorClassSkillList|IsPointer

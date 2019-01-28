@@ -23,7 +23,7 @@
 
 #ifdef _FE8_
 #ifndef TextTable
-    #define TextTable 0x15D48C
+    //#define TextTable 0x15D48C
 #endif
 #ifndef PortraitTable
     #define PortraitTable 0x8ACBC4

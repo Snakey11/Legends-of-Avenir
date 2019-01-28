@@ -43,6 +43,12 @@ ENDTRAP
 ALIGN 4
 
 Units:
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [6,3] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Arc 0x00 0x00 Level(1,Ally,True) [6,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Luke 0x00 0x00 Level(1,Ally,True) [7,1] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Elanil 0x00 0x00 Level(1,Ally,True) [5,1] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Val 0x00 0x00 Level(1,Ally,True) [6,1] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Helmer 0x00 0x00 Level(1,Ally,True) [7,3] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 BeginningScene:
@@ -58,8 +64,9 @@ TEXTEND
 MUSC Ties_of_Friendship
 TEXTCONT
 TEXTEND
-FADI 0x5
 REMA
+GiveGold(3500)
+FADI 0x5
 SetBackground(0x1D)
 TEXTSHOW Merc5MilitiaWaitArcanaeMountainPassText
 TEXTEND
@@ -102,14 +109,14 @@ GiveToSupplySilent(Shine)
 GiveToSupplySilent(Mend)
 GiveToSupplySilent(Elfire)
 NoFade
-ENDA
+GotoPrepScreen
 
 EndingScene:
 FADI 0x5
 #ifdef __DEBUG__
 	CHECK_TURNS
 	SVAL 0x1 2
-	BGE 0x0 0x1 0xC
+	BLT 0x0 0x1 0xC
 		REVEAL Finoc
 	LABEL 0x0
 #endif
@@ -159,7 +166,7 @@ ENDA
 VillagePlace:
 MUSI
 Text(0x2,Merc5MilitiaWaitArcanaeHouse1Text)
-GiveItem(HeroCrest,0xFFFF)
+GiveItem(ElysianWhip,0xFFFF)
 MUNO
 NoFade
 ENDA
@@ -199,7 +206,7 @@ UNIT
 
 StartAllies:
 UNIT Arc Monk Luke Level(1,Ally,True) [6,2] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
-UNIT Luke Monk Luke Level(1,Ally,True) [7,2] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
+UNIT Luke Monk Luke Level(1,Ally,True) [7,1] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
 UNIT Elanil Monk Luke Level(1,Ally,True) [5,1] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
 UNIT
 
@@ -214,11 +221,11 @@ UNIT Cesarian Archer William Level(10,Enemy,True) [7,14] 0x00 0x00 0x00 0x00 [St
 UNIT Cesarian Archer William Level(11,Enemy,True) [10,11] 0x00 0x00 0x00 0x00 [SteelLongbow] AttackInRangeAI
 UNIT Cesarian Paladin William Level(2,Enemy,True) [6,13] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
 UNIT Cesarian Knight William Level(10,Enemy,True) [9,7] 0x00 0x00 0x00 0x00 [Javelin] GuardAI
-UNIT Cesarian Knight William Level(8,Enemy,True) [8,8] 0x00 0x00 0x00 0x00 [SteelLance] GuardAI
+UNIT Cesarian Knight William Level(8,Enemy,True) [8,8] 0x00 0x00 0x00 0x00 [SteelAxe,Axereaver] GuardAI
 UNIT Cesarian Shaman William Level(7,Enemy,True) [7,11] Drop 0x00 0x00 0x00 [Slime,GuidingRing] NoAI
 UNIT Cesarian Cavalier William Level(7,Enemy,True) [7,11] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
 UNIT Cesarian Myrmidon William Level(10,Enemy,True) [3,13] Drop 0x00 0x00 0x00 [IronSword,EnergyRing] ChaseOnceApproachedAI
-UNIT Cesarian Sentinel William Level(3,Enemy,True) [8,13] 0x00 0x00 0x00 0x00 [Spear] GuardAI
+UNIT Cesarian Sentinel William Level(5,Enemy,True) [8,13] 0x00 0x00 0x00 0x00 [Spear] GuardAI
 UNIT Cesarian Fighter William Level(11,Enemy,True) [10,14] Drop 0x00 0x00 0x00 [Halberd] ChaseOnceApproachedAI
 UNIT Cesarian Soldier William Level(6,Enemy,True) [10,12] 0x00 0x00 0x00 0x00 [KillerLance] ChaseOnceApproachedAI
 UNIT Cesarian Soldier William Level(9,Enemy,True) [4,14] Drop 0x00 0x00 0x00 [HeavySpear] AttackInRangeAI

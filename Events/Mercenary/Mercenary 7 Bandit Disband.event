@@ -11,7 +11,7 @@ POIN EndMainPointer EndMainPointer EndMainPointer
 POIN EndMainPointer
 POIN TrapData TrapData
 POIN Units Units
-POIN $0 $0 $0 $0 $0 $0
+POIN GoodEnding EndingScene $0 $0 $0 $0
 POIN BeginningScene EndingScene
 //EndLabel
 
@@ -44,6 +44,13 @@ ALIGN 4
 
 //Label Units
 Units:
+UNIT PlayerMMercenary 0x00 0x00 Level(4,Ally,True) [13,26] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Vicar 0x00 0x00 Level(15,Ally,True) [11,24] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Walter 0x00 0x00 Level(15,Ally,True) [14,23] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Baret 0x00 0x00 Level(15,Ally,True) [12,25] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Arya 0x00 0x00 Level(15,Ally,True) [12,23] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Adlez 0x00 0x00 Level(15,Ally,True) [14,27] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Kendrick 0x00 0x00 Level(15,Ally,True) [14,25] 0x00 0x00 0x00 0x00 [0] NoAI
 EndUnit
 
 //Label BeginingScene
@@ -52,13 +59,13 @@ ENUT 0x13
 SVAL 0xB Coords(7,5)
 LOAD2 0x1 EfilMaximusKilthelCutscene
 LOMA OutsideKilthelCutscene
-MUSC Indignation
+MUSC Shihna
 SetBackground(0x0A)
 Text(Merc7BanditDisbandBeginningText)
 FadeOutMusic
 FADI 0x10
 STAL 0x50
-MUSC Distant_Roads
+MUSC Lloyd
 SetBackground(0x2D)
 Text(Merc7BanditDisbandStartFlashbackText)
 MUSC Advance
@@ -70,7 +77,7 @@ Text(Merc7BanditDisbandXyliaAttackingFlashbackText)
 FADI 0x5
 STAL 0x20
 EndConvo
-MUSC Land_of_Promise
+MUSC Derris_Kharlan_Appear
 Text(Merc7BanditDisbandAtTempleFlashbackText)
 STAL 0x10
 WarpIn(6,4,UzkalisWarp)
@@ -166,7 +173,7 @@ LOAD2 0x1 StartingFriends
 LOAD1 0x1 LoadEfil
 ENUN
 STAL 0x50
-MUSC Sorrow
+MUSC Anchoret
 SetBackground(0x0A)
 Text(Merc7BanditDisbandLeaveFlashbackText)
 SetBackground(0x0D)
@@ -193,9 +200,11 @@ WarpIn(12,1,LoadXyliaThrone)
 ENUN
 STAL 0x20
 NoFade
-ENDA
+GotoPrepScreen
 
 //Label EndingScene
+GoodEnding:
+ENUT 0x10
 EndingScene:
 ASMC PrepForEnd|1
 ENUF 0x13
@@ -301,11 +310,11 @@ UNIT
 
 StartingKilthelFightPeople:
 UNIT Efil Truerblade Efil Level(11,NPC,True) [11,1] 0x00 0x00 0x00 0x00 [SilverSword] NoAI
-UNIT Maximus BattleSage Maximus Level(12,NPC,True) [10,4] 0x00 0x00 0x00 0x00 [Bolganone] NoAI
+UNIT Maximus BattleSage Maximus Level(16,NPC,True) [10,4] 0x00 0x00 0x00 0x00 [Bolganone] NoAI
 UNIT Uzkalis GaidenSage Uzkalis Level(17,NPC,True)[12,3] 0x00 0x00 0x00 0x00 [Thoron] NoAI
 UNIT Kilthel GuardianSpirit Kilthel Level(15,Enemy,True) [7,1] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI
 UNIT Arveldir WilSniper Kilthel Level(10,Enemy,True) [8,2] 0x00 0x00 0x00 0x00 [SilverBow] NoAI
-UNIT Servius Trueblade Kilthel Level(15,Enemy,True) [7,3] 0x00 0x00 0x00 0x00 [SilverBlade] NoAI
+UNIT Servius Trueblade Kilthel Level(13,Enemy,True) [7,3] 0x00 0x00 0x00 0x00 [SilverBlade] NoAI
 UNIT
 
 LoadXylia:

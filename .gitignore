@@ -4,6 +4,8 @@ ups/
 *.gba
 *.exe
 *.bat
+*.sym
+*.wav
 UPDATE.cmd
 !EA Avenir/*.exe
 *.txt
@@ -24,6 +26,7 @@ Map Data/Pictures
 TEST/
 BROKE.txt
 _textentries/
+.TextEntries/
 devkitPro/
 Install Text Data.event
 Text Definitions.event

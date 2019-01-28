@@ -1,11 +1,12 @@
 
+.thumb
+
 .macro blh to, reg
     ldr \reg, =\to
     mov lr, \reg
     .short 0xF800
 .endm
 
-.thumb
 .global GiveToSupply
 .type GiveToSupply, %function
 GiveToSupply: @ Input is in memory slot 0x1.

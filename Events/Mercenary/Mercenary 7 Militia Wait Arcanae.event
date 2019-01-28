@@ -10,7 +10,7 @@ POIN Dunno Dunno Dunno
 POIN Tutorial
 POIN TrapData TrapData
 POIN Units Units
-POIN $0 $0 $0 $0 $0 $0
+POIN EndingScene BadEnding $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
@@ -50,6 +50,14 @@ ENDTRAP
 ALIGN 4
 
 Units:
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [20,10] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Arc 0x00 0x00 Level(1,Ally,True) [21,11] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Luke 0x00 0x00 Level(1,Ally,True) [19,9] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Elanil 0x00 0x00 Level(1,Ally,True) [21,9] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Finoc 0x00 0x00 Level(1,Ally,True) [20,8] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Val 0x00 0x00 Level(9,Ally,True) [20,12] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Helmer 0x00 0x00 Level(11,Ally,True) [21,13] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Uzkalis 0x00 0x00 Level(10,Ally,True) [21,12] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 BeginningScene:
@@ -130,12 +138,14 @@ LOAD1 0x1 MoveMaximus
 ENUN
 Text(Merc7MilitiaWaitArcanaeEndingBeginningText)
 NoFade
-ENDA
+GotoPrepScreen
 
+BadEnding:
+DISA Emperor
 EndingScene:
+FADI 0x5
 ASMC PrepForEnd|1
 ENUF 0x12
-FADI 0x5
 MUSC Victory
 SVAL 0x1 60
 SET_HP Arc
@@ -382,7 +392,7 @@ UNIT Helmer Soldier Helmer Level(11,Ally,True) [21,13] 0x00 0x00 0x00 0x00 [Stee
 UNIT
 
 LoadUzkalisInside:
-UNIT Uzkalis GaidenSage Uzkalis Level(12,Ally,True) [21,12] 0x00 0x00 0x00 0x00 [Thoron,Arcwind] [0]
+UNIT Uzkalis GaidenSage Uzkalis Level(10,Ally,True) [21,12] 0x00 0x00 0x00 0x00 [Thoron,Arcwind] [0]
 UNIT
 
 MoveMaximus:

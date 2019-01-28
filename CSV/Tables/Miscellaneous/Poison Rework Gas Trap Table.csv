@@ -1,0 +1,100 @@
+INLINE PoisonReworkGasTrapTable,
+00 Prologue,4
+01 Mage1,4
+02 MageEscape2,4
+03 MageEscape3,4
+04 MageEscape4,4
+05 MageEscape5,4
+06 MageEscapeXavus6,4
+07 MageEscapeXavus7,4
+08 MageInvestigate2,4
+09 MageInvestigate3,4
+0A MageInvestigate4,4
+0B MageInvestigate5,4
+0C MageInvestigate6,4
+0D MageInvestigate7,4
+0E MageEscapeCesaria6,4
+0F MageEscapeCesaria7,4
+10 Military1,4
+11 MilitaryPromotion2,4
+12 MilitaryPromotion3,4
+13 MilitaryPromotionHold4,4
+14 MilitaryPromotionHold5,4
+15 MilitaryPromotionHold6,4
+16 MilitaryPromotionHold7,4
+17 MilitaryPromotionRetreat4,4
+18 MilitaryPromotionRetreatLeave5,4
+19 MilitaryPromotionRetreatLeave6(GrowingTown1Map),4
+1A MilitaryPromotionRetreatLeave7,4
+1B MilitaryPromotionRetreatHelp5,4
+1C MilitaryPromotionRetreatHelp6,4
+1D MilitaryPromotionRetreatHelp7,4
+1E MilitaryPass2,4
+1F MilitaryPass3,4
+20 MilitaryPass4,4
+21 MilitaryPass5,4
+22 MilitaryPass6,4
+23 MilitaryPass7,4
+24 Tower of Valni 1,4
+25 Tower of Valni 2,4
+26 Tower of Valni 3,4
+27 Tower of Valni 4,4
+28 Tower of Valni 5,4
+29 Tower of Valni 6,4
+2A Tower of Valni 7,4
+2B Tower of Valni 8,4
+2C Tower of Valni 8 Clone,4
+2D Tower of Valni 8 Clone,4
+2E Lagdou Ruins 1,4
+2F Lagdou Ruins 2,4
+30 Lagdou Ruins 3,4
+31 Lagdou Ruins 4,4
+32 Lagdou Ruins 5,4
+33 Lagdou Ruins 6,4
+34 Lagdou Ruins 7,4
+35 Lagdou Ruins 8,4
+36 Lagdou Ruins 9,4
+37 Lagdou Ruins 10,4
+38 Lords split up (glitchy map),4
+39 Melkaen Coast,4
+3A Link Arena,4
+3B Merceary1,4
+3C MercenaryMilitia2,4
+3D MercenaryMilitiaSurvival3,4
+3E MercenaryMilitiaSurvival4,4
+3F MercenaryMilitiaSurvivalArcanae5,4
+40 MercenaryMilitiaSurvivalArcanae6,4
+41 MercenaryMilitiaSurvivalArcanae7,4
+42 MercenaryMilitiaSurvivalCesaria5,4
+43 MercenaryMilitiaSurvivalCesaria6,4
+44 MercenaryMilitiaSurvivalCesaria7,4
+45 MercenaryMilitiaKill3,4
+46 MercenaryMilitiaKill4,4
+47 MercenaryMilitiaKill5,4
+48 MercenaryMilitiaKill6,4
+49 MercenaryMilitiaKill7,4
+4A MercenaryBandit2,4
+4B MercenaryBandit3,4
+4C MercenaryBandit4,4
+4D MercenaryBanditBandit5,4
+4E MercenaryBanditBandit6,4
+4F MercenaryBanditBandit7,4
+50 MercenaryBanditDisband5,4
+51 MercenaryBanditDisband6,4
+52 MercenaryBanditDisband7,4
+53 MilitaryPromotionRetreatLeave6(GrowingTown2),4
+54 MilitaryPromotionRetreatLeave6(GrowingTown3),4
+55 ShizonShrineCutscene,4
+56 LeavingShizonCutscene,4
+57 Leaving Underground Cutscene,4
+58 OutsideTempleCutscene,4
+59 Mercenary Camp Cutscene,4
+5A Maximus Uzkalis Cutscene,4
+5B HaedricCastleCutscene,4
+5C Kilthel Cutscene,4
+5D Artifact Door Cutscene,4
+"5E MercenaryBandit2	4",4
+"5F BacrunRuins1Cutscene	4",4
+"60 BacrunRuins2Cutscene	4",4
+"61 Kilthel Fight Cutscene	4",4
+"62 Guardian Spirit Wall	4 ; PUSH",4

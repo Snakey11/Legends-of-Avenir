@@ -94,9 +94,13 @@ ENDA
 //Label EndingScene
 EndingScene:
 FADI 0x5
+CLEA 0x0
+CLEE 0x0
 MUSC Victory
 SetBackground(0x1D)
 Text(Merc3BanditEndingText)
+EndConvo
+GiveGold(1000)
 MoveToChapter(MercenaryBandit4)
 ENDA
 
@@ -127,19 +131,17 @@ EndUnit
 //Label CaravanPeople
 CaravanPeople:
 UNIT Roger Mercenary Roger Level(4,Enemy,True) [16,13] 0x00 0x00 0x00 0x00 [SteelBlade] GuardAI
-UNIT Haedrican Fighter Haedrican Level(6,Enemy,True) [8,6] 0x00 0x00 0x00 0x00 [HandAxe] GuardAI
-UNIT Haedrican Fighter Haedrican Level(7,Enemy,True) [9,7] 0x00 0x00 0x00 0x00 [IronAxe] GuardAI
-UNIT Haedrican Mercenary Haedrican Level(6,Enemy,True) [7,7] 0x00 0x00 0x00 0x00 [IronBlade] GuardAI
+UNIT Haedrican Fighter Haedrican Level(6,Enemy,True) [9,7] 0x00 0x00 0x00 0x00 [IronAxe] GuardAI
+UNIT Haedrican Mercenary Haedrican Level(7,Enemy,True) [7,7] 0x00 0x00 0x00 0x00 [IronBlade] GuardAI
 UNIT Haedrican Fighter Haedrican Level(7,Enemy,True) [4,4] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
 UNIT Haedrican Archer Haedrican Level(4,Enemy,True) [3,8] 0x00 0x00 0x00 0x00 [DevilBow] AttackInRangeAI
 UNIT Haedrican Soldier Haedrican Level(6,Enemy,True) [12,4] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
-UNIT Haedrican Mage Haedrican Level(6,Enemy,True) [11,6] 0x00 0x00 0x00 0x00 [Wind] NoAI
-UNIT Haedrican Cavalier Haedrican Level(7,Enemy,True) [12,13] 0x00 0x00 0x00 0x00 [IronSword,Javelin] NoAI
-UNIT Haedrican Cavalier Haedrican Level(9,Enemy,True) [13,12] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
-UNIT Haedrican Cavalier Haedrican Level(7,Enemy,True) [4,14] 0x00 0x00 0x00 0x00 [Zanbato,IronLance] AttackInRangeAI
-UNIT Haedrican Cavalier Haedrican Level(8,Enemy,True) [3,13] 0x00 0x00 0x00 0x00 [KillerLance] AttackInRangeAI
-UNIT Haedrican Myrmidon Haedrican Level(7,Enemy,True) [8,10] Drop 0x00 0x00 0x00 [SteelSword] ChaseOnceApproachedAI
-UNIT Haedrican Hero Haedrican Level(2,Enemy,True) [8,10] Drop 0x00 0x00 0x00 [SteelAxe,IronBlade] AttackInRangeAI
+UNIT Haedrican Mage Haedrican Level(3,Enemy,True) [11,6] 0x00 0x00 0x00 0x00 [Wind] NoAI
+UNIT Haedrican Cavalier Haedrican Level(6,Enemy,True) [12,13] 0x00 0x00 0x00 0x00 [IronSword,Javelin] NoAI
+UNIT Haedrican Cavalier Haedrican Level(8,Enemy,True) [13,12] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Haedrican Cavalier Haedrican Level(6,Enemy,True) [4,14] 0x00 0x00 0x00 0x00 [Zanbato,IronLance] AttackInRangeAI
+UNIT Haedrican Cavalier Haedrican Level(7,Enemy,True) [3,13] 0x00 0x00 0x00 0x00 [KillerLance] AttackInRangeAI
+UNIT Haedrican Myrmidon Haedrican Level(6,Enemy,True) [8,10] Drop 0x00 0x00 0x00 [SteelSword] ChaseOnceApproachedAI
 UNIT Haedrican Archer Haedrican Level(5,Enemy,True) [14,15] 0x0 0x00 0x00 0x00 [IronBow] ChaseOnceApproachedAI
 UNIT Haedrican Soldier Haedrican Level(6,Enemy,True) [15,14] 0x0 0x00 0x00 0x00 [ShortSpear] ChaseOnceApproachedAI
 UNIT Haedrican Pirate Haedrican Level(7,Enemy,True) [15,12] 0x0 0x00 0x00 0x00 [SteelAxe] ChaseOnceApproachedAI

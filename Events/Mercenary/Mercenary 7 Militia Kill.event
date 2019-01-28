@@ -10,7 +10,7 @@ POIN Dunno Dunno Dunno
 POIN Tutorial
 POIN TrapData TrapData
 POIN Units Units
-POIN $0 $0 $0 $0 $0 $0
+POIN EndingScene BadEnding $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
@@ -58,6 +58,12 @@ ENDTRAP
 ALIGN 4
 
 Units:
+UNIT PlayerMMercenary 0x00 0x00 Level(1,Ally,True) [18,22] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Arc 0x00 0x00 Level(1,Ally,True) [19,22] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Kendrick 0x00 0x00 Level(1,Ally,True) [17,22] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Luke 0x00 0x00 Level(1,Ally,True) [17,21] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Arya 0x00 0x00 Level(1,Ally,True) [19,21] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Xexim 0x00 0x00 Level(7,Ally,True) [18,20] 0x00 0x00 0x00 0x00 [0] NoAI  
 UNIT
 
 //Label BeginningScene
@@ -134,15 +140,17 @@ STAL 0x30
 Text(0x0E,Merc7MilitiaKillThroneRoomText)
 //LOAD1 0x1 TestGui
 NoFade
-ENDA
+GotoPrepScreen
 
+BadEnding:
+DISA Xexim
 EndingScene:
+STAL 0x20
+FADI 0x5
 ASMC PrepForEnd|1
 ENUF 0x10 // Enables the special death quote that doesn't cause a game over to prevent the game over route looping glitch.
 FadeOutMusic
-STAL 0x20
 
-FADI 0x5
 CLEE 0x0
 CLEA 0x0
 SetBackground(0x1B)
@@ -224,11 +232,11 @@ LABEL 0x00
 LABEL 0x01
 CAM1 [18,18]
 STAL 0x10
-CUMO [7,22]
-CUMO [8,22]
-CUMO [9,22]
-CUMO [10,22]
-STAL 0x60
+CUMO [17,22]
+CUMO [18,22]
+CUMO [19,22]
+CUMO [20,22]
+STAL 0x70
 CURE
 NoFade
 EndA2
@@ -314,7 +322,7 @@ UNIT
 Enemies:
 UNIT Rex GrandPaladin Rex Level(14,Enemy,True) [6,1] 0x00 0x00 0x00 0x00 [Spear,RuneSword] GuardAI
 UNIT Cesarian Knight Rex Level(13,Enemy,True) [15,7] 0x00 0x00 0x00 0x00 [Axeslayer] [0]
-UNIT Cesarian Knight Rex Level(14,Enemy,True) [16,7] 0x00 0x00 0x00 0x00 [ShortSpear] [0]
+UNIT Cesarian Knight Rex Level(14,Enemy,True) [16,7] 0x00 0x00 0x00 0x00 [Halberd,ShortSpear] [0]
 UNIT Cesarian GreatKnight Rex Level(7,Enemy,True) [15,5] 0x00 0x00 0x00 0x00 [SilverSword,SteelLance] [0]
 UNIT Cesarian GreatKnight Rex Level(6,Enemy,True) [16,5] 0x00 0x00 0x00 0x00 [KillerAxe,Javelin] [0]
 UNIT Cesarian Sage Rex Level(5,Enemy,True) [22,17] Drop 0x00 0x00 0x00 [Thoron,ChestKey] AttackInRangeAI

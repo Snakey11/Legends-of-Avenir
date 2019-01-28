@@ -37,7 +37,7 @@ cmp r0, #0x00
 beq CheckDartingStance
 mov r1, #0x5C
 ldrh r0, [ r4, r1 ]
-add r0, #0x04 @ Add 4 def/res.
+add r0, #0x02 @ Add 4 def/res.
 strh r0, [ r4, r1 ]
 
 CheckDartingStance:
@@ -46,11 +46,11 @@ cmp r0, #0x00
 beq CheckFierceStance
 mov r1, #0x5E
 ldrh r0, [ r4, r1 ]
-add r0, #0x06 @ Add 6 attack speed.
+add r0, #0x03 @ Add 6 attack speed.
 strh r0, [ r4, r1 ]
 mov r1, #0x62
 ldrh r0, [ r4, r1 ]
-add r0, #0x0C @ Add 12 avoid.
+add r0, #0x06 @ Add 12 avoid.
 strh r0, [ r4, r1 ]
 
 CheckFierceStance:
@@ -59,7 +59,7 @@ cmp r0, #0x00
 beq CheckKestrelStance
 mov r1, #0x5A
 ldrh r0, [ r4, r1 ]
-add r0, #0x06 @ Add 6 attack.
+add r0, #0x03 @ Add 6 attack.
 strh r0, [ r4, r1 ]
 
 CheckKestrelStance:
@@ -68,15 +68,15 @@ cmp r0, #0x00
 beq CheckMirrorStance
 mov r1, #0x5A
 ldrh r0, [ r4, r1 ]
-add r0, #0x04 @ Add 4 attack.
+add r0, #0x02 @ Add 4 attack.
 strh r0, [ r4, r1 ]
 mov r1, #0x5E
 ldrh r0, [ r4, r1 ]
-add r0, #0x04 @ Add 4 attack speed.
+add r0, #0x02 @ Add 4 attack speed.
 strh r0, [ r4, r1 ]
 mov r1, #0x62
 ldrh r0, [ r4, r1 ]
-add r0, #0x08 @ Add 8 avoid.
+add r0, #0x04 @ Add 8 avoid.
 strh r0, [ r4, r1 ]
 
 CheckMirrorStance:
@@ -85,14 +85,14 @@ cmp r0, #0x00
 beq CheckReadyStance
 mov r1, #0x5A
 ldrh r0, [ r4, r1 ]
-add r0, #0x04 @ Add 4 attack.
+add r0, #0x02 @ Add 4 attack.
 strh r0, [ r4, r1 ]
 @ I need to check if the enemy's weapon is magic since this calls for +4 res specifically.
 cmp r7, #0x01
 bne CheckReadyStance
 mov r1, #0x5C
 ldrh r0, [ r4, r1 ]
-add r0, #0x04 @ Add 4 res.
+add r0, #0x02 @ Add 4 res.
 strh r0, [ r4, r1 ]
 
 CheckReadyStance:
@@ -101,17 +101,17 @@ cmp r0, #0x00
 beq CheckSteadyStance
 mov r1, #0x5E
 ldrh r0, [ r4, r1 ]
-add r0, #0x04 @ Add 4 attack speed.
+add r0, #0x02 @ Add 4 attack speed.
 strh r0, [ r4, r1 ]
 mov r1, #0x62
 ldrh r0, [ r4, r1 ]
-add r0, #0x08 @ Add 8 avoid.
+add r0, #0x04 @ Add 8 avoid.
 strh r0, [ r4, r1 ]
 cmp r7, #0x01
 beq CheckSteadyStance
 mov r1, #0x5C
 ldrh r0, [ r4, r1 ]
-add r0, #0x04 @ Add 4 def.
+add r0, #0x02 @ Add 4 def.
 strh r0, [ r4, r1 ]
 
 CheckSteadyStance:
@@ -122,7 +122,7 @@ cmp r7, #0x01
 beq CheckSturdyStance
 mov r1, #0x5C
 ldrh r0, [ r4, r1 ]
-add r0, #0x06 @ Add 6 def.
+add r0, #0x03 @ Add 6 def.
 strh r0, [ r4, r1 ]
 
 CheckSturdyStance:
@@ -131,13 +131,13 @@ cmp r0, #0x00
 beq CheckSwiftStance
 mov r1, #0x5A
 ldrh r0, [ r4, r1 ]
-add r0, #0x04 @ Add 4 attack.
+add r0, #0x02 @ Add 4 attack.
 strh r0, [ r4, r1 ]
 cmp r7, #0x01
 beq CheckSwiftStance
 mov r1, #0x5C
 ldrh r0, [ r4, r1 ]
-add r0, #0x04 @ Add 4 def.
+add r0, #0x02 @ Add 4 def.
 strh r0, [ r4, r1 ]
 
 CheckSwiftStance:
@@ -146,17 +146,17 @@ cmp r0, #0x00
 beq CheckWardingStance
 mov r1, #0x5E
 ldrh r0, [ r4, r1 ]
-add r0, #0x04 @ Add 4 attack speed.
+add r0, #0x02 @ Add 4 attack speed.
 strh r0, [ r4, r1 ]
 mov r1, #0x62
 ldrh r0, [ r4, r1 ]
-add r0, #0x08 @ Add 8 avoid.
+add r0, #0x04 @ Add 8 avoid.
 strh r0, [ r4, r1 ]
 cmp r7, #0x01
 bne CheckWardingStance
 mov r1, #0x5C
 ldrh r0, [ r4, r1 ]
-add r0, #0x04 @ Add 4 res.
+add r0, #0x02 @ Add 4 res.
 strh r0, [ r4, r1 ]
 
 CheckWardingStance:
@@ -167,7 +167,7 @@ cmp r7, #0x01
 bne CheckSpectrumStance
 mov r1, #0x5C
 ldrh r0, [ r4, r1 ]
-add r0, #0x06 @ Add 6 res.
+add r0, #0x03 @ Add 6 res.
 strh r0, [ r4, r1 ]
 
 CheckSpectrumStance:

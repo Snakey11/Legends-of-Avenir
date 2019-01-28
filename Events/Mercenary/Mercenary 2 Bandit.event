@@ -48,20 +48,30 @@ EndUnit
 
 //Label BeginningScene
 BeginningScene:
-SVAL 0xB Coords(7,9)
+SVAL 0xB Coords(11,12)
 LOMA MilitaryPass2
 LOAD1 0x1 BanditFriends
 ENUN
 LOAD3 0x1 PlayerLoading1
 ENUN
+MUSC Indignation
 FADU 0x5
 STAL 0x40
 FADI 0x5
 SetBackground(0x18)
-TEXTSHOW Merc2BanditTactMeetsOthersText // [Tact] cathces up with others
+TEXTSHOW Merc2BanditTactMeetsOthersPart1Text // [Tact] cathces up with others
 TEXTEND
 MUSC Comrades
-TEXTCONT
+CHECK_EVENTID 0x6E
+BEQ 0x0 0x0 0xC
+	TEXTSHOW2 Merc2BanditTactMeetsOthersHimText
+	TEXTEND
+	GOTO 0x1
+LABEL 0x0
+	TEXTSHOW2 Merc2BanditTactMeetsOthersHerText // Accounts for him/her
+	TEXTEND
+LABEL 0x1
+TEXTSHOW2 Merc2BanditTactMeetsOthersPart2Text
 TEXTEND
 EndConvo
 STAL 0x40
@@ -182,14 +192,14 @@ EndUnit
 
 //Label OutsideDanaanFriends
 OutsideDanaanFriends:
-UNIT Baret Soldier PlayerMArcher Level(6,Ally,True) [12,14] 0x00 0x00 0x00 0x00 [SteelLance] [0] 
+UNIT Baret Soldier PlayerMArcher Level(5,Ally,True) [12,14] 0x00 0x00 0x00 0x00 [SteelLance] [0] 
 UNIT Vicar Warrior PlayerMArcher Level(2,Ally,True) [13,12] 0x00 0x00 0x00 0x00 [SteelAxe,KillerAxe] [0]
 EndUnit
 
 //Label MilitiaMen
 MilitiaMen:
 //UNIT Arc Fighter BossArc Level(1,Enemy,True) [7,14] 0x00 0x00 0x1 REDA9R13 [SteelAxe,ShortAxe] GuardAI
-UNIT Militiaman Knight BossArc Level(6,Enemy,True) [7,13] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
+UNIT Militiaman Knight BossArc Level(6,Enemy,True) [7,13] 0x00 0x00 0x00 0x00 [IronAxe] GuardAI
 UNIT Militiaman Myrmidon BossArc Level(5,Enemy,True) [4,13] 0x00 0x00 0x00 0x00 [SlimSword] [0]
 UNIT Militiaman Fighter BossArc Level(5,Enemy,True) [3,11] 0x00 0x00 0x00 0x00 [HandAxe] AttackInRangeAI
 UNIT Militiaman Fighter BossArc Level(4,Enemy,True) [3,8] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
@@ -212,7 +222,7 @@ EndUnit
 
 //Label LoadWalter
 LoadWalter:
-UNIT Walter Archer PlayerMArcher Level(5,Ally,True) [14,14] 0x00 0x00 0x1 REDA11R13 [IronBow,Vulnerary] [0] 
+UNIT Walter Archer PlayerMArcher Level(5,Ally,True) [14,14] 0x00 0x00 0x1 REDA11R13 [SteelBow,Vulnerary] [0] 
 EndUnit
 
 SlowREDA:

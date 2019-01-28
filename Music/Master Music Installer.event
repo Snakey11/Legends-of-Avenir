@@ -1,0 +1,72 @@
+
+#define SongTableOffset  0x224470
+#include "drumfix_fe8.event"
+ALIGN 4
+voicegroup000:
+//#incbin "FE8_NI_Map.bin"
+#incbin "FE8_NI_2.bin"
+
+#define SongTable(index,SongPointer,Group) "PUSH; ORG SongTableOffset+(8*index); POIN SongPointer; SHORT Group Group; POP"
+#define BattleMusicGroup 0
+#define MapMusicGroup 1
+#define SFXGroup 6
+
+//Example song
+//SongTable(99,My_song,MapMusicGroup)
+//#include "My_song.event"
+
+SongTable(Town_of_Winds_and_Ruin,songTownOfWindsAndRuin,MapMusicGroup)
+#include "TownOfWindsAndRuin.event"
+
+SongTable(Derris_Kharlan_Appear,songDerrisKharlanAppear,MapMusicGroup)
+#include "DerrisKharlanAppear.event"
+
+SongTable(Shihna,songShihna,MapMusicGroup)
+#include "Shihna.event"
+
+SongTable(Fatalize,songFatalize,MapMusicGroup)
+#include "Fatalize.event"
+
+SongTable(Fighting_of_the_Spirit,songFightingOfTheSpirit,MapMusicGroup)
+#include "Fighting of the Spirit.event"
+
+SongTable(Anchoret,songAnchoret,MapMusicGroup)
+#include "Anchoret.event"
+
+SongTable(Kratos,songKratos,MapMusicGroup)
+#include "Kratos.event"
+
+SongTable(Lloyd,songLloyd,MapMusicGroup)
+#include "Lloyd.event"
+
+
+SongTable(Beedles_Shop,songBeedlesShop,MapMusicGroup)
+#include "BeedlesShop.event"
+
+SongTable(Dry_Trail,songDryTrail,MapMusicGroup)
+#include "DryTrail.event"
+
+SongTable(Encounter_with_Renegades,songEncounterWithRenegades,MapMusicGroup)
+#include "EncounterWithRenegades.event"
+
+SongTable(Last_Battle_Decision,songLastBattleDecision,MapMusicGroup)
+#include "LastBattleDecision.event"
+
+SongTable(Mars_Lighthouse,songMarsLighthouse,MapMusicGroup)
+#include "MarsLighthouse.event"
+
+SongTable(Old_Familiar_Scent,songOldFamiliarScent,MapMusicGroup)
+#include "OldFamiliarScent.event"
+
+SongTable(Rest_of_the_Heart,songRestOfTheHeart,MapMusicGroup)
+#include "RestOfTheHeart.event"
+
+SongTable(Venus_Lighthouse,songVenusLighthouse,MapMusicGroup)
+#include "VenusLighthouse.event"
+
+
+SongTable(Burning_Fighting_Spirit,songBurningFightingSpirit,MapMusicGroup)
+#include "BurningFightingSpirit.event"
+
+SongTable(A_Tragic_Decision,songATragicDecision,MapMusicGroup)
+#include "ATragicDecision.event"

@@ -1,4 +1,4 @@
-0 ; POP ; ALIGN 4 ; ClassSkillTable:,Skill
+INLINE ClassSkillTable,Skill
 0x00 Separator/Nothing,0x0
 Ephraim Lord,0x0
 Eirika Lord,0x0
@@ -252,4 +252,4 @@ Emperor,0x0
 -,0x0
 -,0x0
 -,0x0
--,0x0 ; PUSH
+-,0x0

@@ -1,4 +1,4 @@
-0 ; POP ; ALIGN 4 ; MovingMapSpriteTable:,Graphics,Animation
+INLINE MovingMapSpriteTable,Graphics,Animation
 Ephraim Lord,0x81c33cc,0x81c3d7c
 Eirika Lord,0x81c3ed4,0x81c46cc
 Ephraim Master Lord,0x81c4824,0x81c52b4
@@ -7,8 +7,8 @@ Socialknight,0x81c5fe4,0x81c692c
 Socialknight (F),0x81c5fe4,0x81c692c
 Paladin,0x81c6a84,0x81c7428
 Paladin (F),0x81c6a84,0x81c7428
-Armour Knight,0x81c7580,0x81c7e74
-Armour Knight (F),0x81c7580,0x81c7e74
+Armour Knight,KnightMv|IsPointer,0x81c7e74
+Armour Knight (F),KnightMv|IsPointer,0x81c7e74
 General,0x81c7fcc,0x81c8a80
 General (F),0x81c7fcc,0x81c8a80
 Thief,0x81c8be0,0x81c945c
@@ -121,7 +121,7 @@ Monk2,0x81e6f4c,0x81e7638
 MonkF2,MonkFSt,0x81e7638
 Cavalier2,0x81c5fe4,0x81c692c
 CavalierF2,0x81c5fe4,0x81c692c
-Knight2,0x81c7580,0x81c7e74
+Knight2,KnightMv|IsPointer,0x81c7e74
 Soldier2,0x81ed418,0x81edbc4
 Wyvern Rider2,0x81d32ec,0x81d403c
 Archer2,0x81d02b8,0x81d0a7c
@@ -155,4 +155,5 @@ LostSoul,0x81ffd24,0x8200348
 LostSoul,0x82004a0,0x8200afc
 ArmoredWyvernLord,0x81d504c,0x81d5e58
 Swordmaster,EdgySwordmasterMv|IsPointer,0x81ce4fc
-Emperor,0x8201CDC,0x8202558 ; PUSH
+Emperor,0x8201CDC,0x8202558
+MurielSage,0x81d9cb0,0x81da694

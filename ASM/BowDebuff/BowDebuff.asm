@@ -47,24 +47,24 @@ OneRange: @ For one range... let's lower AS by 3, hit by 20, and damage by 3.
 mov r0, #3
 mov r1, #0x5A
 bl SetDebuff @ Reduce attack by 3
-@ mov r0, #3
+mov r0, #2
 mov r1, #0x5E
-bl SetDebuff @ Reduce AS by 3
-mov r0, #20
+bl SetDebuff @ Reduce AS by 2
+mov r0, #15
 mov r1, #0x60
-bl SetDebuff @ Reduce hit by 20
+bl SetDebuff @ Reduce hit by 15
 b End
 
 ThreeRange: @ For three range... let's lower AS by 5, hit by 30, and damage by 5.
 mov r0, #5
 mov r1, #0x5A
 bl SetDebuff @ Reduce attack by 5
-@ mov r0, #5
+mov r0, #3
 mov r1, #0x5E
-bl SetDebuff @ Reduce AS by 5
-mov r0, #30
+bl SetDebuff @ Reduce AS by 3
+mov r0, #20
 mov r1, #0x60
-bl SetDebuff @ Reduce hit by 30
+bl SetDebuff @ Reduce hit by 20
 b End
 
 SetDebuff: @ Put debuff amount in r0, byte offset in r1

@@ -1,0 +1,198 @@
+﻿
+EventPointerTable(Military2PassEvents,ThisChapter)
+
+//Label ThisChapter
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN EndMainPointer EndMainPointer EndMainPointer
+POIN EndMainPointer
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+//EndLabel
+
+//Label TurnBasedEvents
+TurnBasedEvents:
+TurnEventEnemy(0x00,BossNotices,3)
+END_MAIN
+
+//Label CharacterBasedEvents
+ALIGN 32
+CharacterBasedEvents:
+END_MAIN
+
+//Label LocationBasedEvents
+LocationBasedEvents:
+Village(0x10,NVillage,5,5)
+Village(0x11,SVillage,8,7)
+House(0x00,House01,3,7)
+House(0x00,House02,10,9)
+House(0x00,House03,6,10)
+END_MAIN
+
+//Label MiscBasedEvents
+MiscBasedEvents:
+DefeatAll(EndingScene)
+CauseGameOverIfLordDies
+END_MAIN
+
+//Label TrapData
+TrapData:
+ENDTRAP
+ALIGN 4
+
+//Label Units
+Units:
+EndUnit
+
+//Label BeginingScene
+BeginningScene:
+EnterStop
+SVAL 0xB Coords(7,11)
+LOMA MercenaryMilitiaWaitArcanae5
+LOAD3 0x1 PlayerLoading1
+LOAD2 0x1 TownDerekJasper
+LOAD1 0x1 MayorSylvaine
+ENUN
+MUSC Advance
+SetBackground(0x12)
+Text(Military2PassSettingOutText)
+MUSC Distant_Roads
+SetBackground(0x18)
+Text(Military2PassCountrysideText)
+EndConvo
+STAL 0x40
+FADI 0x5
+CLEA 0x0
+CLEN 0x0
+SVAL 0xB Coords(7,5)
+LOMA MilitaryPass2
+LOAD3 0x1 PlayerLoading2
+LOAD2 0x1 BattleDerekJasper
+LOAD1 0x1 ElanilFinocEnemies
+ENUN
+SetBackground(0x03)
+TEXTSHOW Military2PassMayorText
+TEXTEND
+MUSC Raid
+TEXTCONT
+TEXTEND
+EndConvo
+STAL 0x30
+Text(Military2PassStartBattleText)
+NoFade
+ENDA
+
+//Label EndingScene
+EndingScene:
+MUSC Victory
+SetBackground(0x1D)
+Text(Military2PassEndingText)
+MoveToChapter(MilitaryPass3)
+ENDA
+
+//Label Turn Events
+BossNotices:
+CAM1 [10,15]
+STAL 0x10
+Text(Military2PassBossNoticesText)
+NoFade
+ENDA
+
+//Label Villages
+NVillage:
+MUSI
+SetBackground(0x02)
+Text(Military2PassNVillageText)
+EndConvo
+GiveItem(Elixir,0xFFFF)
+MUNO
+NoFade
+EndA2
+
+SVillage:
+MUSI
+SetBackground(0x02)
+Text(Military2PassSVillageText)
+EndConvo
+GiveItem(DragonSpear,0xFFFF)
+MUNO
+NoFade
+EndA2
+
+House01:
+MUSI
+Text(0x01,Military2PassHouse1Text)
+MUNO
+NoFade
+EndA2
+
+House02:
+MUSI
+Text(0x01,Military2PassHouse2Text)
+MUNO
+NoFade
+EndA2
+
+House03:
+MUSI
+Text(0x01,Military2PassHouse3Text)
+MUNO
+NoFade
+ENDA
+
+	/*UNIT DATA*/
+
+//Label PlayerLoading
+PlayerLoading1:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [10,12] 0x00 0x00 0x00 0x00 [IronSword] NoAI
+UNIT
+
+PlayerLoading2:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [1,2] 0x00 0x00 0x00 0x00 [IronSword] NoAI
+EndUnit
+
+//Label Cutscene Units
+TownDerekJasper:
+UNIT Derek 0x00 0x00 Level(5,Ally,True) [11,15] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Jasper 0x00 0x00 Level(5,Ally,True) [10,13] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+MayorSylvaine:
+UNIT Sylvaine ArmoredWyvernLord 0x00 Level(1,NPC,True) [12,14] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Elanil Archer_F 0x00 Level(1,NPC,True) [14,11] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Finoc WyvernLord 0x00 Level(1,NPC,True) [14,12] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT William General 0x00 Level(1,NPC,True) [12,12] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Cesarian Cavalier 0x00 Level(1,NPC,True) [7,14] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Cesarian Soldier 0x00 Level(1,NPC,True) [8,11] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
+
+//Label Chapter Units
+BattleDerekJasper:
+UNIT Derek 0x00 0x00 Level(5,Ally,True) [2,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Jasper 0x00 0x00 Level(5,Ally,True) [1,0] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+ElanilFinocEnemies:
+UNIT Elanil Archer_F 0x00 Level(6,Ally,True) [0,1] 0x00 0x00 0x00 0x00 [SteelLongbow,Vulnerary] NoAI
+UNIT Finoc WyvernRider 0x00 Level(6,Ally,True) [2,1] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Sam Myrmidon Sam Level(10,Enemy,True) [15,16] 0x00 0x00 0x00 0x00 [SteelBlade] AttackInRangeAI
+UNIT SamBandit Brigand Sam Level(5,Enemy,True) [9,2] 0x00 0x00 0x00 0x00 [IronAxe] BrigandAI
+UNIT SamBandit Brigand Sam Level(6,Enemy,True) [13,5] 0x00 0x00 0x00 0x00 [IronAxe] BrigandAI
+UNIT SamBandit Brigand Sam Level(7,Enemy,True) [0,10] 0x00 0x00 0x00 0x00 [SteelAxe] BrigandAI
+UNIT SamBandit Brigand Sam Level(6,Enemy,True) [3,14] 0x00 0x00 0x00 0x00 [IronAxe] BrigandAI
+UNIT SamBandit Mercenary Sam Level(8,Enemy,True) [3,5] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT SamBandit Soldier Sam Level(7,Enemy,True) [6,8] 0x00 0x00 0x00 0x00 [IronLance] NoAI
+UNIT SamBandit Fighter Sam Level(5,Enemy,True) [5,9] Drop 0x00 0x00 0x00 [HandAxe] AttackInRangeAI
+UNIT SamBandit Archer Sam Level(7,Enemy,True) [11,7] 0x00 0x00 0x00 0x00 [SteelShortbow] AttackInRangeAI
+UNIT SamBandit Knight Sam Level(7,Enemy,True) [8,9] 0x00 0x00 0x00 0x00 [Javelin] GuardAI
+UNIT SamBandit Fighter Sam Level(8,Enemy,True) [9,14] 0x00 0x00 0x00 0x00 [IronAxe] AttackInRangeAI
+UNIT SamBandit Myrmidon Sam Level(6,Enemy,True) [13,10] 0x00 0x00 0x00 0x00 [Zanbato] AttackInRangeAI
+UNIT SamBandit Mage Sam Level(7,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [Fire] ChaseOnceApproachedAI
+UNIT SamBandit Fighter Sam Level(8,Enemy,True) [17,12] 0x00 0x00 0x00 0x00 [IronAxe] ChaseOnceApproachedAI
+UNIT SamBandit Archer Sam Level(8,Enemy,True) [10,18] 0x00 0x00 0x00 0x00 [SteelBow] ChaseOnceApproachedAI
+EndUnit

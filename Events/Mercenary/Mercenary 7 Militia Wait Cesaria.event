@@ -10,10 +10,11 @@ POIN Dunno Dunno Dunno
 POIN Tutorial
 POIN TrapData TrapData
 POIN Units Units
-POIN $0 $0 $0 $0 $0 $0
+POIN EndingScene BadEnding $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,Turn1,1)
 TurnEventPlayer(0x0,Turn3Reinforcements,3)
 TurnEventPlayer(0x0,Turn6Reinforcements,6)
 TurnEventPlayer(0x0,Turn10Reinforcements,10)
@@ -43,6 +44,12 @@ ENDTRAP
 ALIGN 4
 
 Units:
+UNIT PlayerMMercenary 0x00 0x00 Level(1,Ally,True) [14,2] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Arc 0x00 0x00 Level(1,Ally,True) [15,1] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Luke 0x00 0x00 Level(1,Ally,True) [17,2] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Lux 0x00 0x00 Level(1,Ally,True) [16,1] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Jasper 0x00 0x00 Level(1,Ally,True) [14,3] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [14,0] 0x00 0x00 0x00 0x00 [0] NoAI 
 UNIT
 
 BeginningScene:
@@ -50,6 +57,8 @@ MUSC Tension
 ENUT 0x12
 ENUT 0x13
 ENUT 0x14
+REMU Elanil
+REMU Finoc
 SVAL 0xB Coords(7,5)
 LOMA MaximusUzkalisCutscene
 LOAD3 0x1 PlayerLoading1
@@ -89,12 +98,6 @@ MOVE 0x0 Maximus [4,5]
 STAL 0x8
 MOVE 0x0 Uzkalis [12,21]
 STAL 0x40
-MUSC Binding_Vow
-LOAD2 0x1 LoadFinocStart
-ENUN
-LOAD2 0x1 LoadElanilStart
-ENUN
-Text(Merc7MilitiaWaitCesariaFinocHereText)
 MUSC Tension
 CAM1 [9,7]
 LOAD3 0x1 PlayerLoading2
@@ -104,11 +107,13 @@ SVAL 0x1 60
 SET_HP Uzkalis
 Text(Merc7MilitiaWaitCesariaRestHereText)
 NoFade
-ENDA
+GotoPrepScreen
 
+BadEnding:
+DISA Maximus
+FADI 0x5
 EndingScene:
 ASMC PrepForEnd|1
-FADI 0x5
 CAM1 [9,14]
 CLEE 0x0
 CLEN 0x0
@@ -121,10 +126,10 @@ SET_HP Elanil
 SET_HP Jasper
 SET_HP Derek
 SET_HP Lux
-SET_HP Maximus
 CHECK_ALIVE Maximus
 BEQ 0x0 0x0 0xC
 	// Maximus is alive
+	SET_HP Maximus
 	ENUF 0x12
 	MUSC Victory
 	LOAD3 0x1 PlayerLoading3
@@ -212,6 +217,21 @@ ENUF 0x6D
 MoveToChapter(PrologueChapter)
 ENDA
 
+Turn1:
+CAM1 [7,7]
+MUSS Binding_Vow
+LOAD2 0x1 LoadFinocStart
+ENUN
+REVEAL Finoc
+LOAD2 0x1 LoadElanilStart
+ENUN
+REVEAL Elanil
+Text(Merc7MilitiaWaitCesariaFinocHereText)
+TurnAlly(Maximus)
+MURE 0x05
+NoFade
+ENDA
+
 Turn3Reinforcements:
 LOAD1 0x1 Turn3Units
 ENUN
@@ -244,20 +264,20 @@ UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [11,13] 0x00 0x00 0x00 0x00 [Ir
 UNIT
 
 CutsceneAllies:
-UNIT Arc Brigand2 PlayerMArcher Level(1,Ally,True) [7,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Luke Brigand2 PlayerMArcher Level(1,Ally,True) [8,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Elanil Brigand2 PlayerMArcher Level(1,Ally,True) [5,7] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Lux Brigand2 PlayerMArcher Level(1,Ally,True) [4,6] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Jasper Brigand2 PlayerMArcher Level(1,Ally,True) [3,4] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Derek Brigand2 PlayerMArcher Level(1,Ally,True) [3,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Arc Brigand2 PlayerMArcher Level(1,Ally,True) [7,5] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT Luke Brigand2 PlayerMArcher Level(1,Ally,True) [8,5] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT Elanil Brigand2 PlayerMArcher Level(1,Ally,True) [5,7] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT Lux Brigand2 PlayerMArcher Level(1,Ally,True) [4,6] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT Jasper Brigand2 PlayerMArcher Level(1,Ally,True) [3,4] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT Derek Brigand2 PlayerMArcher Level(1,Ally,True) [3,5] 0x00 0x00 0x00 0x00 [0] [0] 
 UNIT
 
 FinocEntersCutscene:
-UNIT Finoc WyvernRider PlayerMArcher Level(1,Ally,True) [0,1] 0x00 0x00 0x1 REDA5R3 [IronAxe,Vulnerary] [0] 
+UNIT Finoc WyvernRider PlayerMArcher Level(1,Ally,True) [0,1] 0x00 0x00 0x1 REDA5R3 [0] [0] 
 UNIT
 
 Cesarians:
-UNIT Maximus BattleSage Maximus Level(10,Ally,True) [7,8] 0x00 0x00 0x00 0x00 [Arcfire,Elwind,Mend] GuardAI
+UNIT Maximus BattleSage Maximus Level(10,NPC,True) [7,8] 0x00 0x00 0x00 0x00 [Arcfire,Elwind,Mend] GuardAI
 UNIT Cesarian GreatKnight Maximus Level(6,NPC,True) [6,7] 0x00 0x00 0x00 0x00 [BraveLance,ShortAxe] GuardAI
 UNIT Cesarian GreatKnight Maximus Level(7,NPC,True) [5,8] 0x00 0x00 0x00 0x00 [KillerAxe,Zanbato] GuardAI
 UNIT Cesarian Ranger Maximus Level(5,NPC,True) [5,6] 0x00 0x00 0x00 0x00 [SilverBow] AttackInRangeAI
@@ -302,40 +322,40 @@ UNIT Arcanian Valkyrie Uzkalis Level(10,Enemy,True) [14,15] 0x00 0x00 0x00 0x00 
 UNIT
 
 LoadFinocStart:
-UNIT Finoc WyvernRider PlayerMArcher Level(1,Ally,True) [0,7] 0x00 0x00 0x1 REDA3R6 [IronAxe,Vulnerary] [0] 
+UNIT Finoc WyvernRider PlayerMArcher Level(1,Ally,True) [0,7] 0x00 0x00 0x1 REDA3R6 [0] [0] 
 UNIT
 
 LoadElanilStart:
-UNIT Elanil Archer PlayerMArcher Level(1,Ally,True) [3,5] 0x00 0x00 0x1 REDA4R7 [IronAxe,Vulnerary] [0] 
+UNIT Elanil Archer PlayerMArcher Level(1,Ally,True) [3,5] 0x00 0x00 0x1 REDA4R7 [0] [0] 
 UNIT
 	
 LoadFriendPeople:
-UNIT Arc Brigand2 PlayerMArcher Level(1,Ally,True) [15,0] 0x00 0x00 0x1 REDA15R1 [IronAxe,Vulnerary] [0] 
-UNIT Luke Brigand2 PlayerMArcher Level(1,Ally,True) [18,2] 0x00 0x00 0x1 REDA17R2 [IronAxe,Vulnerary] [0] 
-UNIT Lux Brigand2 PlayerMArcher Level(1,Ally,True) [16,0] 0x00 0x00 0x1 REDA16R1 [IronAxe,Vulnerary] [0] 
-UNIT Jasper Brigand2 PlayerMArcher Level(1,Ally,True) [15,0] 0x00 0x00 0x1 REDA14R3 [IronAxe,Vulnerary] [0] 
-UNIT Derek Brigand2 PlayerMArcher Level(1,Ally,True) [14,0] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Arc Brigand2 PlayerMArcher Level(1,Ally,True) [15,0] 0x00 0x00 0x1 REDA15R1 [0] [0] 
+UNIT Luke Brigand2 PlayerMArcher Level(1,Ally,True) [18,2] 0x00 0x00 0x1 REDA17R2 [0] [0] 
+UNIT Lux Brigand2 PlayerMArcher Level(1,Ally,True) [16,0] 0x00 0x00 0x1 REDA16R1 [0] [0] 
+UNIT Jasper Brigand2 PlayerMArcher Level(1,Ally,True) [15,0] 0x00 0x00 0x1 REDA14R3 [0] [0] 
+UNIT Derek Brigand2 PlayerMArcher Level(1,Ally,True) [14,0] 0x00 0x00 0x00 0x00 [0] [0] 
 UNIT
 
 GoodEndingFriends:
-UNIT Arc Brigand2 PlayerMArcher Level(1,Ally,True) [12,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Luke Brigand2 PlayerMArcher Level(1,Ally,True) [9,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Elanil Brigand2 PlayerMArcher Level(1,Ally,True) [7,14] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Lux Brigand2 PlayerMArcher Level(1,Ally,True) [12,15] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Jasper Brigand2 PlayerMArcher Level(1,Ally,True) [13,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Derek Brigand2 PlayerMArcher Level(1,Ally,True) [13,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Maximus Brigand2 PlayerMArcher Level(1,Ally,True) [11,15] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Finoc Brigand2 PlayerMArcher Level(1,Ally,True) [8,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Arc Brigand2 PlayerMArcher Level(1,Ally,True) [12,11] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT Luke Brigand2 PlayerMArcher Level(1,Ally,True) [9,12] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT Elanil Brigand2 PlayerMArcher Level(1,Ally,True) [7,14] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT Lux Brigand2 PlayerMArcher Level(1,Ally,True) [12,15] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT Jasper Brigand2 PlayerMArcher Level(1,Ally,True) [13,12] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT Derek Brigand2 PlayerMArcher Level(1,Ally,True) [13,13] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT Maximus Brigand2 PlayerMArcher Level(1,Ally,True) [11,15] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT Finoc Brigand2 PlayerMArcher Level(1,Ally,True) [8,13] 0x00 0x00 0x00 0x00 [0] [0] 
 UNIT
 
 BadEndingFriends:
-UNIT Arc Brigand2 PlayerMArcher Level(1,Ally,True) [10,14] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Luke Brigand2 PlayerMArcher Level(1,Ally,True) [8,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Finoc Brigand2 PlayerMArcher Level(1,Ally,True) [13,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Elanil Brigand2 PlayerMArcher Level(1,Ally,True) [13,14] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Lux Brigand2 PlayerMArcher Level(1,Ally,True) [11,11] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Jasper Brigand2 PlayerMArcher Level(1,Ally,True) [10,10] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Derek Brigand2 PlayerMArcher Level(1,Ally,True) [12,10] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Arc Brigand2 PlayerMArcher Level(1,Ally,True) [10,14] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT Luke Brigand2 PlayerMArcher Level(1,Ally,True) [8,13] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT Finoc Brigand2 PlayerMArcher Level(1,Ally,True) [13,13] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT Elanil Brigand2 PlayerMArcher Level(1,Ally,True) [13,14] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT Lux Brigand2 PlayerMArcher Level(1,Ally,True) [11,11] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT Jasper Brigand2 PlayerMArcher Level(1,Ally,True) [10,10] 0x00 0x00 0x00 0x00 [0] [0] 
+UNIT Derek Brigand2 PlayerMArcher Level(1,Ally,True) [12,10] 0x00 0x00 0x00 0x00 [0] [0] 
 UNIT
 
 LoadNarrator:

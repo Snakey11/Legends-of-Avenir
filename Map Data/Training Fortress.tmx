@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="15" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="0E000F10" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/0E000F10.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="15">
+  <properties>
+   <property name="Anims" value="_0EAnims"/>
+   <property name="ChapterID" value="Military1"/>
+   <property name="Main" value=""/>
+   <property name="MapId" value="TrainingFortressMap"/>
+   <property name="ObjectType" value="0x0E"/>
+   <property name="PaletteID" value="0x0F"/>
+   <property name="TileConfig" value="0x10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJyNkzEOwjAMRZ1WsCAqOAKVYADUcgeYqETPwMYA4gwM3blYB8QNGJG4A9/CVkyoSoenNGme47huFhFlAVewAi9wbiH0rDv+Q1O8JP64O1CCXGLmZr53RLf4l7u41tFRny8dXKZuyInXu7h8/xGo3OeemvsEcwemRDQD88i/t+4qWONapGDD+YvXC/bYumemVswCrCPvPd23mweurpWyfyljIXHq4DupWznv8fpWzirk7g/ytdFzbH/ZmHzXVOrFHo+2NmVDP9k6q8MxNiZHzU171c65rwbwEtCn75z1XNuXFu6rE/YewBEM4/b/JuQNzaNJNQ==
+  </data>
+ </layer>
+</map>

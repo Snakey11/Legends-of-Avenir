@@ -22,11 +22,6 @@
 #include "Wyvern Lord Bow.event"
 
 
-#include "Narrator 1.event"
-
-#include "Narrator 2.event"
-
-
 #include "Sentinel Sword.event"
 
 #include "Sentinel Lance.event"
@@ -72,3 +67,7 @@
 
 #include "Harbinger Unarmed.event"
 
+
+#include "Hunter Bow.event"
+
+#include "Hunter Unarmed.event"

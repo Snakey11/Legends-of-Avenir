@@ -61,13 +61,20 @@ ALIGN 4
 
 //Label Units
 Units:
+UNIT PlayerMMercenary 0x00 0x00 Level(1,Ally,True) [17,16] 0x00 0x00 0x00 0x00 [0] NoAI  
+UNIT Vicar 0x00 0x00 Level(1,Ally,True) [17,17] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Baret 0x00 0x00 Level(1,Ally,True) [16,18] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Walter 0x00 0x00 Level(1,Ally,True) [18,18] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Arya 0x00 0x00 Level(1,Ally,True) [17,19] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Adlez 0x00 0x00 Level(1,Ally,True) [18,16] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Connor 0x00 0x00 Level(1,Ally,True) [16,16] 0x00 0x00 0x00 0x00 [0] NoAI 
 EndUnit
 
 //Label BeginingScene
 BeginningScene:
 MUSC Solve_the_Riddle
 SETVAL 0xB Coords(9,7)
-LOMA MilitaryPass6 // Haedric city map
+LOMA MilitaryPassHaedric6 // Haedric city map
 LOAD2 0x1 CityFriends
 LOAD3 0x1 PlayerLoading1
 LOAD1 0x1 HaedricCityPeople
@@ -100,7 +107,7 @@ LOAD1 0x1 CastleTrap
 ENUN
 Text(Merc5BanditBanditGetLeonText)
 NoFade
-ENDA
+GotoPrepScreen
 
 //Label EndingScene
 EndingScene:
@@ -191,7 +198,7 @@ UNIT Haedrican Warrior Haedrican Level(7,Enemy,True) [0,11] 0x00 0x00 0x01 REDA7
 UNIT Haedrican Myrmidon Haedrican Level(10,Enemy,True) [0,10] 0x00 0x00 0x01 REDA11R15 [KillingEdge] AttackInRangeAI
 UNIT Haedrican Myrmidon Haedrican Level(9,Enemy,True) [0,10] 0x00 0x00 0x01 REDA12R16 [SteelSword] AttackInRangeAI
 UNIT Haedrican Fighter Haedrican Level(11,Enemy,True) [0,11] 0x00 0x00 0x01 REDA8R15 [HandAxe] NoAI
-UNIT Haedrican Knight Haedrican Level(13,Enemy,True) [5,10] Drop 0x00 0x01 REDA5R10 [Horseslayer,DoorKey] GuardAI
+UNIT Haedrican Knight Haedrican Level(13,Enemy,True) [5,10] Drop 0x00 0x01 REDA5R10 [Halberd,DoorKey] GuardAI
 UNIT Haedrican Mercenary Haedrican Level(9,Enemy,True) [7,0] 0x00 0x00 0x01 REDA8R8 [IronSword] ChaseOnceApproachedAI
 UNIT Haedrican Mercenary Haedrican Level(11,Enemy,True) [8,0] 0x00 0x00 0x01 REDA7R9 [LightBrand] ChaseOnceApproachedAI
 UNIT Haedrican Cavalier Haedrican Level(9,Enemy,True) [1,0] 0x00 0x00 0x00 0x00 [DragonSpear] ChaseOnceApproachedAI

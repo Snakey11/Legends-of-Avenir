@@ -118,6 +118,12 @@ POP
   ORG $c63ad
   BYTE $e0
 
+//Fix CAM1 going out of bounds
+  ORG $15D52
+  BYTE 14
+  ORG $15D66
+  BYTE 9
+  
 #include "Extensions/Hack Installation.txt"
 //Anti-Huffman Patch, by Hextator and Nintenlord
 {

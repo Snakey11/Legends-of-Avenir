@@ -3,7 +3,7 @@
 .equ SealSkillList, SkillTester+4
 .equ ExtraDataLocation, SealSkillList+4
 .equ FullMetalBodyID, ExtraDataLocation+4
-.equ DebuffAmount, 6
+.equ DebuffAmount, 3
 
 mov r1,r5
 ldr r3, =0x802c1ec

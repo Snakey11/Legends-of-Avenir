@@ -1,0 +1,244 @@
+
+EventPointerTable(Military1Events,ThisChapter)
+
+//Label ThisChapter
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN EndMainPointer EndMainPointer EndMainPointer
+POIN EndMainPointer
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+//EndLabel
+
+//Label TurnBasedEvents
+TurnBasedEvents:
+END_MAIN
+
+//Label CharacterBasedEvents
+ALIGN 32
+CharacterBasedEvents:
+END_MAIN
+
+//Label LocationBasedEvents
+LocationBasedEvents:
+END_MAIN
+
+//Label MiscBasedEvents
+MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatAll(EndingScene)
+END_MAIN
+
+//Label TrapData
+TrapData:
+ENDTRAP
+ALIGN 4
+
+//Label Units
+Units:
+EndUnit
+
+//Label BeginingScene
+BeginningScene:
+CAM1 [7,7]
+LOAD1 0x1 LoadSylvaine
+ENUN
+MUSC Advance
+SetBackground(0x10)
+Text(Military1BeginningText)
+FadeOutMusic
+EndConvo
+STAL 0x30
+CHECK_EVENTID 0x6E
+BEQ 0x0 0x0 0xC
+	CHECK_EVENTID 0x69
+	BEQ 0x2 0x0 0xC
+		LOAD1 0x1 MaleCavalier
+		GOTO 0x1
+	LABEL 0x2
+	CHECK_EVENTID 0x6A
+	BEQ 0x3 0x0 0xC
+		LOAD1 0x1 MaleKnight
+		GOTO 0x1
+	LABEL 0x3
+	CHECK_EVENTID 0x6B
+	BEQ 0x4 0x0 0xC
+		LOAD1 0x1 MaleSoldier
+		GOTO 0x1
+	LABEL 0x4
+	CHECK_EVENTID 0x6C
+	BEQ 0x5 0x0 0xC
+		LOAD1 0x1 MaleArcher
+		GOTO 0x1
+	LABEL 0x5
+	CHECK_EVENTID 0x6D
+	BEQ 0x6 0x0 0xC
+		LOAD1 0x1 MaleWyvernRider
+		GOTO 0x1
+	LABEL 0x6
+	GOTO 0x1
+LABEL 0x0
+	CHECK_EVENTID 0x69
+	BEQ 0x7 0x0 0xC
+		LOAD1 0x1 FemaleCavalier
+		GOTO 0x1
+	LABEL 0x7
+	CHECK_EVENTID 0x6A
+	BEQ 0x8 0x0 0xC
+		LOAD1 0x1 FemaleKnight
+		GOTO 0x1
+	LABEL 0x8
+	CHECK_EVENTID 0x6B
+	BEQ 0x9 0x0 0xC
+		LOAD1 0x1 FemaleSoldier
+		GOTO 0x1
+	LABEL 0x9
+	CHECK_EVENTID 0x6C
+	BEQ 0xA 0x0 0xC
+		LOAD1 0x1 FemaleArcher
+		GOTO 0x1
+	LABEL 0xA
+	CHECK_EVENTID 0x6D
+	BEQ 0xB 0x0 0xC
+		LOAD1 0x1 FemaleWyvernRider
+		GOTO 0x1
+	LABEL 0xB
+LABEL 0x1
+LOAD1 0x1 LoadDerekJasper
+ENUN
+STAL 0x30
+MUSC In_the_Colosseum
+FADI 0x5
+LOAD1 0x1 LoadChristinaForrest
+ENUN
+EnterStop
+SetBackground(0x21)
+Text(Military1SylvaineBriefingText)
+EndConvo
+STAL 0x8
+MOVE 0x0 Sylvaine [6,0]
+ENUN
+DISA Sylvaine
+MOVE 0x0 Christina [11,6]
+STAL 0x4
+MOVE 0x0 Forrest [11,8]
+LOAD1 0x1 ChapterMeanies
+ENUN
+LOAD1 0x1 LoadSylvaine2
+Text(Military1EndingBeginningText)
+NoFade
+ENDA
+
+//Label EndingScene
+EndingScene:
+EnterStop
+FADI 0x5
+MUSC Into_the_Shadow_of_Victory
+CLEA 0x0
+CLEE 0x0
+CLEN 0x0
+LOAD3 0x1 PlayerLoading1
+LOAD2 0x1 EndingFriends
+LOAD1 0x1 EndingMeanies
+ENUN
+SetBackground(0x27)
+Text(Military1FinishedText)
+EndConvo
+STAL 0x20
+ASMC CallMilitary1Menu|1
+BNE 0x0 0x0 0xC
+	// Accept the promotion
+	Text(Military1PromotionText)
+	MoveToChapter(MilitaryPromotion2)
+	GOTO 0x1
+LABEL 0x0
+	// Pass the promotion
+	Text(Military1PassText)
+	MoveToChapter(MilitaryPass2)
+LABEL 0x1
+ENDA
+
+	/*UNIT DATA*/
+
+//Label PlayerLoading
+MaleCavalier:
+UNIT PlayerMCavalier CavalierM2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [IronSword,SteelLance,Vulnerary] NoAI
+UNIT
+MaleKnight:
+UNIT PlayerMKnight Knight2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [SteelLance,Vulnerary] NoAI
+UNIT
+MaleSoldier:
+UNIT PlayerMSoldier Soldier2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [Javelin,SteelLance,Vulnerary] NoAI
+UNIT
+MaleArcher:
+UNIT PlayerMArcher ArcherM2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [SteelBow,Vulnerary] NoAI
+UNIT
+MaleWyvernRider:
+UNIT PlayerMWyvernRider WyvernRider2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [SteelLance,Vulnerary] NoAI
+UNIT
+FemaleCavalier:
+UNIT PlayerFCavalier CavalierF2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [IronSword,SteelLance,Vulnerary] NoAI
+UNIT
+FemaleKnight:
+UNIT PlayerFKnight Knight2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [SteelLance,Vulnerary] NoAI
+UNIT
+FemaleSoldier:
+UNIT PlayerFSoldier Soldier2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [Javelin,SteelLance,Vulnerary] NoAI
+UNIT
+FemaleArcher:
+UNIT PlayerFArcher ArcherF2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [SteelBow,Vulnerary] NoAI
+UNIT
+FemaleWyvernRider:
+UNIT PlayerFWyvernRider WyvernRider2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [SteelLance,Vulnerary] NoAI
+UNIT
+
+PlayerLoading1:
+UNIT PlayerMCavalier 0x00 0x00 Level(5,Ally,True) [6,7] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
+
+//Label Starting people
+LoadSylvaine:
+UNIT Sylvaine ArmoredWyvernLord Sylvaine Level(9,NPC,True) [5,7] 0x00 0x00 0x00 0x00 [SilverLongbow] GuardAI
+UNIT
+
+LoadDerekJasper:
+UNIT Derek Knight 0x00 Level(4,Ally,True) [0,9] 0x00 0x00 0x01 REDA3R8 [SteelLance] NoAI
+UNIT Jasper Cavalier 0x00 Level(5,Ally,True) [0,8] 0x00 0x00 0x01 REDA3R6 [SteelSword,Javelin,Vulnerary] NoAI
+//UNIT Lux Mage 0x00 Level(5,Ally,True) [4,6] 0x00 0x00 0x00 0x00 [Fire,Thunder,Elfire,Fimbulvetr] NoAI
+UNIT
+
+LoadSylvaine2:
+UNIT Sylvaine ArmoredWyvernLord Sylvaine Level(9,NPC,True) [2,0] 0x00 0x00 0x00 0x00 [SilverLongbow] GuardAI
+EndUnit
+
+//Label ChapterMeanies
+LoadChristinaForrest:
+UNIT Christina Cavalier_F Christina Level(8,Enemy,True) [6,6] 0x00 0x00 0x00 0x00 [IronBlade] GuardAI
+UNIT Forrest Cavalier Christina Level(7,Enemy,True) [6,8] 0x00 0x00 0x00 0x00 [ShortSpear] GuardAI
+UNIT
+
+ChapterMeanies:
+UNIT Cesarian Knight Christina Level(5,Enemy,True) [14,11] 0x00 0x00 0x01 REDA7R8 [IronLance] AttackInRangeAI
+UNIT Cesarian Fighter Christina Level(4,Enemy,True) [14,1] 0x00 0x00 0x01 REDA8R2 [IronAxe] NoAI
+UNIT Cesarian Soldier Christina Level(4,Enemy,True) [14,13] 0x00 0x00 0x01 REDA6R13 [SteelLance] AttackInRangeAI
+UNIT Cesarian Mercenary Christina Level(5,Enemy,True) [11,9] 0x00 0x00 0x01 REDA13R9 [SlimSword] ChaseOnceApproachedAI
+UNIT Cesarian Soldier Christina Level(4,Enemy,True) [14,3] 0x00 0x00 0x01 REDA12R3 [IronLance] AttackInRangeAI
+UNIT Cesarian Cavalier Christina Level(5,Enemy,True) [1,14] 0x00 0x00 0x01 REDA1R13 [SteelSword] NoAI
+EndUnit
+
+//Label Ending People
+EndingFriends:
+UNIT Derek 0x00 0x00 Level(4,Ally,True) [5,6] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Jasper 0x00 0x00 Level(5,Ally,True) [5,8] 0x00 0x00 0x00 0x00 [SteelSword,Javelin] NoAI
+UNIT
+
+EndingMeanies:
+UNIT Sylvaine ArmoredWyvernLord 0x00 Level(1,NPC,True) [8,8] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Christina Cavalier_F 0x00 Level(1,NPC,True) [7,5] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Forrest Cavalier 0x00 Level(1,NPC,True) [8,6] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit

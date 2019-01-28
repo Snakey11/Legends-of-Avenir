@@ -1,0 +1,129 @@
+
+#include "Replacement Assembler.event"
+
+#include "Skill System/Stat Screen Text.event"
+
+# 0x0094
+HP Bars[.][X]
+
+# 0x00B2
+Set health bar display[X]
+
+# 0x903 RaidNameText
+ Raid[X]
+
+## RaidDescText
+Pillage this building[NL]
+for its items or wealth.[.][X]
+
+## WinNameText
+ Win[X]
+
+## WinDescText
+Skip this chapter.[X]
+
+## DebugNameText
+ Debug[X]
+ 
+## PromoteNameText
+ Promote[X]
+ 
+## EscapeNameText
+ Escape[X]
+
+## EscapeDescText
+Have this unit[NL]
+leave this chapter.[X]
+
+## ArriveNameText
+ Arrive[X]
+
+## ArriveDescText
+Complete this chapter[NL]
+by having this unit arrive.[X]
+ 
+## PromoteDescText
+This unit is eligible to[NL]
+promote to a new class.[X]
+
+#include "Chapters/Chapter Text Assembler.event"
+
+#include "Items/Item Text Assembler.event"
+
+#include "Characters/Character Text Assembler.event"
+
+#include "Classes/Class Text Assembler.event"
+
+#include "Music/Music Names Assembler.event"
+
+## DV1Desc
+Freeze all enemies[N]
+for one turn[X]
+
+#include "Skill System/Unit Menu Text.event"
+
+#include "Skill System/Skill Desc.event"
+
+## SassyText1
+[MidLeft][LoadNarrator]
+I figured you for a quitter.[NL]
+You want out? [Yes][X]
+
+## SassyText2
+[MidLeft][LoadNarrator]
+My predictions never fail...[NL]
+You're done? [Yes][X]
+
+## SassyText3
+[MidLeft][LoadNarrator]
+Sick of me? I'm kinda sick[NL]
+of you too. [Yes][X]
+
+## SassyText4
+[MidLeft][LoadNarrator]
+Had enough?[NL]
+[Yes][X]
+
+## SassyText5
+[MidLeft][LoadNarrator]
+Ready to fail?[NL]
+[Yes][X]
+
+## SassyTextEnd
+[MidLeft]
+Just as I expected. You know where[NL]
+to find me when you're ready for more.[A][X]
+
+## WinButtonNarratorText
+[MidLeft][LoadNarrator]
+I didn't expect much, but a cheater?[NL]
+You sure?[Yes][X]
+
+## GoodEndingMenuText
+Good Ending[X]
+
+## BadEndingMenuText
+Bad Ending[X]
+
+## PickUnitsErrorText
+Unit selection is[NL]
+disabled for this chapter.[X]
+
+## ItemErrorText
+Item management is[NL]
+disabled for this chapter.[X]
+
+## SupportErrorText
+There are no[NL]
+supports to view.[X]
+
+## CheckMapErrorText
+Map viewing is disabled[NL]
+for this chapter.[X]
+
+## SaveErrorText
+Saving is disabled[NL]
+dor this chapter.[X]
+
+## FinalTextID
+[X]
