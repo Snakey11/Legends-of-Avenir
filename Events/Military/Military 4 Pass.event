@@ -13,7 +13,7 @@ POIN TrapData TrapData
 POIN Units Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
-//EndLabel
+//LabelEnd
 
 //Label TurnBasedEvents
 TurnBasedEvents:
@@ -103,7 +103,6 @@ LOAD1 0x1 StartingMeanies
 ENUN
 STAL 0x10
 Text(Military4PassDunlasHereText)
-GiveToSupplySilent(KnightCrest)
 GiveToSupplySilent(SteelLance)
 GiveToSupplySilent(Vulnerary)
 NoFade
@@ -214,7 +213,7 @@ ENDA
 House1:
 MUSI
 Text(0x01,Military4PassHouse1Text)
-GiveItem(KnightCrest,0xFFFF)
+GiveItem(Hammer,0xFFFF)
 MUNO
 NoFade
 EndA2
@@ -239,7 +238,7 @@ SHLI SteelSword IronBlade SteelLance Javelin SteelAxe HandAxe SteelBow SteelLong
 
 ShopList:
 SHLI Elwind Fire Elaqua Worm Divine Mend Vulnerary
-//EndLabel
+//LabelEnd
 
 	/*UNIT DATA*/
 
@@ -277,7 +276,7 @@ EndUnit
 
 //Label Chapter Meanies
 StartingMeanies:
-UNIT Dunlas Halberdier Dunlas Level(4,Enemy,True) [11,21] 0x00 0x00 0x01 REDA11R20 [ShortSpear] GuardAI
+UNIT Dunlas Halberdier Dunlas Level(4,Enemy,True) [11,21] Drop 0x00 0x01 REDA11R20 [ShortSpear,Elixir] GuardAI
 UNIT Arcanian Knight Dunlas Level(11,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [Dragonspear] AttackInRangeAI
 UNIT Arcanian Fighter Dunlas Level(12,Enemy,True) [0,12] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
 UNIT Arcanian Soldier Dunlas Level(10,Enemy,True) [0,13] 0x00 0x00 0x01 REDA2R13 [IronLance] NoAI
@@ -302,7 +301,7 @@ EndUnit
 Turn3Units:
 UNIT Arcanian Cavalier Dunlas Level(7,Enemy,True) [19,1] 0x00 0x00 0x00 0x00 [IronSword] NoAI
 UNIT Arcanian Monk Dunlas Level(8,Enemy,True) [6,21] 0x00 0x00 0x00 0x00 [Shine] NoAI
-UNIT Arcanian Mercenary Dunlas Level(10,Enemy,True) [19,10] Drop 0x00 0x00 0x00 [PoisonSword,HeroCrest] NoAI
+UNIT Arcanian Mercenary Dunlas Level(10,Enemy,True) [19,10] Drop 0x00 0x00 0x00 [PoisonSword] NoAI
 UNIT Arcanian Mercenary Dunlas Level(9,Enemy,True) [8,0] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
 UNIT
 

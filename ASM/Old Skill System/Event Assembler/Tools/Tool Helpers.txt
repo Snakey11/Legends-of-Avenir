@@ -26,7 +26,7 @@
     #define TextTable 0x15D48C
 #endif
 #ifndef PortraitTable
-    #define PortraitTable 0x8ACBC4
+    //#define PortraitTable 0x8ACBC4
 #endif
 #endif
 

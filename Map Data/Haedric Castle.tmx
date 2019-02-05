@@ -24,25 +24,13 @@
    <property name="TileConfig" value="0x3E"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJytlcFKw0AQhjcrPehBTNsXEBEETz6CjyD6BHoPKPoAvkL1BariRe3Bd1APgpQo3gWLh4DQFu/OkBn6Z7pbG/DwMZvJbv7dfyZJuuBc0/CcOJdGrnnc9M7tEe80viN2aNyj+JOU+Y6fXsPjvq9Gzj8QT8QjUZg1LZp3RJyL3qHEM8mfGB1dv0LsQrQ6ma/qbNH18QzujQ6ut77FdNinW8NHINeL6Cz6yZxvok25FqB7aNUA16Afb6Q19tN9gHtYinjwF6gzpGdcJdP9UcD5sCdQ3+7B+ov5G0G9tX0R6gn1wPqw6avoua5pzgbk7fsT02EPRgLqxGr1lZSontVpB9Zwft+VWhxtXUOojoL3lqEOL8b3gZxpYO7xeJvya8IsHfw+8Hl0z+h7g/hMyljAPZ53yucUulB/RfsG+yAVz6yH634SM/GvLX3Z9RPGAazP7MkFcSk+xWqA9ctMv+W+WsthQIc90X5rzPme2n4byRlY7zXQn03wRv2J/T/6sIe+2U8uGvoO5AGdGHae1tOOmVXovbrMux9G+64uBwGd0D9D+U8d+01DfgFiSr+H
-  </data>
- </layer>
- <layer name="Far Left Chest 2" width="26" height="20" visible="0">
-  <properties>
-   <property name="Height" value="1"/>
-   <property name="ID" value="9"/>
-   <property name="Width" value="1"/>
-   <property name="X" value="3"/>
-   <property name="Y" value="14"/>
-  </properties>
-  <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIJRMNSA00A7YBQMewAApegAQw==
+   eJytlU1KA0EQhXtastCFmJ8LiAiCK4/gEURPoPuAogfwCtELRMWNmoV3UBeChEHcCwYXAcEE91YxXczLS3fMgIuP6qnpntf9qmamvuBcg3jOnKsnrnXc8M7tCW8yvhN2ZNyT+JMV+Y6fXqPjvp+Mmn8QnoRHYUhrmjLvSDgPeochnoX8CenY+hVhFyLrtP2kzpZcH8/gnnRwPfuW0lGfbon3SK6X0Fn05ZwvoSW5JmB7aFYA16Afr6I19tN9gHtYSnjwF6jzLc+4yqb7Ywjnw55Afd4D+4v5m4B5y30R6wnzgH3Y9JPYua5lzgbk+f1J6agHowDqpGr1mRWYHuu0Ims0v+8KLY1c1ximY+C9ZajDC/k+CGca0D0db0t+LTBLB78Peh7bM/peEz6yIg7hns471XMGulB/w/oG+6AePGMP130ZtXbYl11fMo7APqsnF8Jl8ClVA6xdm/ot92UtY32jqCfWb7U531Put1E4Qz5Dx7wxf1L/jz7soU/7yUkjj+ik4HlWTx4rq9B7VZl3P4r1XVUOIjqxf4bxnzr8TUN+AR18v+w=
   </data>
  </layer>
  <layer name="Far Left Chest 1" width="26" height="20" visible="0">
   <properties>
    <property name="Height" value="1"/>
-   <property name="ID" value="8"/>
+   <property name="ID" value="6"/>
    <property name="Width" value="1"/>
    <property name="X" value="1"/>
    <property name="Y" value="14"/>
@@ -51,40 +39,16 @@
    eJxjYBgFo2AUjIJRMFSA00A7YBSMGAAAp/gAQw==
   </data>
  </layer>
- <layer name="East Big Door" width="26" height="20" visible="0">
-  <properties>
-   <property name="Height" value="1"/>
-   <property name="ID" value="7"/>
-   <property name="Width" value="2"/>
-   <property name="X" value="23"/>
-   <property name="Y" value="13"/>
-  </properties>
-  <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIJRMFiBIDMDgxDzQLtiFIxEAABtogAq
-  </data>
- </layer>
  <layer name="West Big Door" width="26" height="20" visible="0">
   <properties>
    <property name="Height" value="1"/>
-   <property name="ID" value="6"/>
+   <property name="ID" value="5"/>
    <property name="Width" value="2"/>
    <property name="X" value="10"/>
    <property name="Y" value="13"/>
   </properties>
   <data encoding="base64" compression="zlib">
    eJxjYBgFo2AUjIJRQA8gyMzAIMQ80K4YBaOAOAAAdfYAKg==
-  </data>
- </layer>
- <layer name="SE Chest" width="26" height="20" visible="0">
-  <properties>
-   <property name="Height" value="1"/>
-   <property name="ID" value="5"/>
-   <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="12"/>
-  </properties>
-  <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIJRQAxwGmgHjIJRQEcAAMoAAEM=
   </data>
  </layer>
  <layer name="Far Left Chest Door" width="26" height="20" visible="0">

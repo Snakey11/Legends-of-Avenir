@@ -13,7 +13,7 @@ POIN TrapData TrapData
 POIN Units Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
-//EndLabel
+//LabelEnd
 
 //Label TurnBasedEvents
 TurnBasedEvents:
@@ -186,7 +186,7 @@ UNIT Hunter PegasusKnight Mason Level(9,Enemy,True) [17,15] 0x00 0x00 0x00 0x00 
 UNIT Hunter Soldier Mason Level(9,Enemy,True) [13,16] 0x00 0x00 0x00 0x00 [SteelLance] ChaseOnceApproachedAI
 UNIT Hunter Soldier Mason Level(11,Enemy,True) [12,18] 0x00 0x00 0x00 0x00 [ShortSpear] NoAI
 UNIT Hunter Myrmidon Mason Level(8,Enemy,True) [15,19] 0x00 0x00 0x00 0x00 [WindSword] AttackInRangeAI
-UNIT Hunter Archer Mason Level(7,Enemy,True) [16,21] Drop 0x00 0x00 0x00 [SteelShortbow,OrionsBolt] AttackInRangeAI
+UNIT Hunter Archer Mason Level(7,Enemy,True) [16,21] 0x00 0x00 0x00 0x00 [SteelShortbow] AttackInRangeAI
 UNIT Hunter Knight Mason Level(9,Enemy,True) [9,19] 0x00 0x00 0x00 0x00 [KillerLance] GuardAI
 UNIT Hunter Mercenary Mason Level(13,Enemy,True) [10,20] 0x00 0x00 0x00 0x00 [IronSword] ChaseOnceApproachedAI
 UNIT
@@ -209,5 +209,5 @@ UNIT Hunter Troubadour Mason Level(13,Enemy,True) [2,11] 0x00 0x00 0x00 0x00 [Me
 UNIT Hunter Pirate Mason Level(9,Enemy,True) [0,13] 0x00 0x00 0x00 0x00 [Hammer] AttackInRangeAI
 UNIT Hunter Shaman Mason Level(11,Enemy,True) [3,13] 0x00 0x00 0x00 0x00 [Slime] AttackInRangeAI
 UNIT Hunter Knight Mason Level(8,Enemy,True) [2,16] 0x00 0x00 0x00 0x00 [Javelin] GuardAI
-UNIT Hunter Sentinel Mason Level(7,Enemy,True) [1,18] 0x00 0x00 0x00 0x00 [BraveLance,IronAxe] ChaseOnceApproachedAI
+UNIT Hunter Sentinel Mason Level(7,Enemy,True) [1,18] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] ChaseOnceApproachedAI
 EndUnit

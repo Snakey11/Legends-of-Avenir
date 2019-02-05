@@ -22,7 +22,7 @@ IndoorSnowyTilesetObjects:
 
 ALIGN 4
 IndoorSnowyTilesetPalette:
-#incbin "Snowy Tileset Indoor.png"
+#incbin "Snowy Tileset Indoor Palette.dmp"
 
 ALIGN 4
 IndoorSnowyTilesetTileConfig:

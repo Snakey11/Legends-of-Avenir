@@ -4,7 +4,7 @@
 	#define	songShihna_grp  voicegroup000
 	#define	songShihna_pri  0
 	#define	songShihna_rev  0
-	#define	songShihna_mvl  25
+	#define	songShihna_mvl  15
 	#define	songShihna_key  0
 	#define	songShihna_tbs  1
 	#define	songShihna_exg  0

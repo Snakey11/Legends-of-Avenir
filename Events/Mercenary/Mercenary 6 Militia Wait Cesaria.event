@@ -155,7 +155,7 @@ ENDA
 
 SVillage:
 Text(0x2,Merc6MilitiaWaitCesariaHouse2Text)
-GiveItem(OrionBolt,0xFFFF)
+GiveItem(SilverSword,0xFFFF)
 NoFade
 ENDA
 
@@ -221,7 +221,7 @@ UNIT
 
 Group2Arcanians:
 UNIT Arcanian Fighter Pat Level(10,Enemy,True) [9,20] 0x00 0x00 0x00 0x00 [Swordreaver] ChaseOnceApproachedAI
-UNIT Arcanian Soldier Pat Level(9,Enemy,True) [10,21] Drop 0x00 0x00 0x00 [SlimLance,KnightCrest] ChaseOnceApproachedAI
+UNIT Arcanian Soldier Pat Level(9,Enemy,True) [10,21] 0x00 0x00 0x00 0x00 [SlimLance] ChaseOnceApproachedAI
 UNIT Arcanian Monk Pat Level(11,Enemy,True) [7,22] 0x00 0x00 0x00 0x00 [Lightning,Physic] HealAlliesAI
 UNIT Arcanian Soldier Pat Level(12,Enemy,True) [13,18] 0x00 0x00 0x00 0x00 [PoisonLance] AttackInRangeAI
 UNIT Arcanian Soldier Pat Level(11,Enemy,True) [14,18] Drop 0x00 0x00 0x00 [DragonSpear] AttackInRangeAI

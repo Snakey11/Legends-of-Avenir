@@ -17,11 +17,11 @@ beq End
 @add 10 damage each
 mov r1, #0x5a
 ldrsh r0, [r4, r1] @atk
-add r0, #10
+add r0, #4
 strh r0, [r4,r1]
 mov r1, #0x5c
 ldrsh r0, [r4, r1] @atk
-sub r0, #10
+sub r0, #4
 strh r0, [r4,r1]
 
 End:

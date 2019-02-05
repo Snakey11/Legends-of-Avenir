@@ -104,7 +104,7 @@ UnitMenuTable:
   UM_Vendor
   UM_Secret
   UM_Arena
-  
+  MenuCommand(PromoteNameText, PromoteDescText, NormalText, AutoPromoteUsability, AutoPromoteEffect)
   //Rally
   MenuCommand(UM_Rally, UM_RallyDesc, NormalText, RallyUsability, RallyEffect)
   

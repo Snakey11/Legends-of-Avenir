@@ -61,6 +61,7 @@ UNIT
 BeginningScene:
 REMU Finoc
 REMU Elanil
+MUSC Indignation
 SVAL 0xB Coords(7,5)
 LOMA LeavingUndergroundCutscene
 LOAD3 0x1 PlayerLoading1
@@ -158,7 +159,7 @@ ALIGN 4
 NVillage:
 MUSI
 Text(0x2,Merc5MilitiaWaitCesariaHouse1Text)
-GiveItem(ElysianWhip,0xFFFF)
+GiveItem(ShortAxe,0xFFFF)
 MUNO
 NoFade
 ENDA
@@ -173,14 +174,14 @@ ENDA
 
 NHouse:
 MUSI
-Text(0x85) // NEEDS TEXT
+Text(Merc5MilitiaWaitCesariaHouse3Text)
 MUNO
 NoFade
 ENDA
 
 SHouse:
 MUSI
-Text(0x85) // NEEDS TEXT
+Text(Merc5MilitiaWaitCesariaHouse4Text)
 MUNO
 NoFade
 ENDA
@@ -269,7 +270,7 @@ UNIT Lux Mage_F Lux Level(10,Ally,True) [1,0] 0x00 0x00 0x1 REDA5R2 [Elaqua,Fire
 UNIT
 
 Meanies:
-UNIT Grant Ranger Grant Level(4,Enemy,True) [17,16] Drop 0x00 0x00 0x00 [SteelShortbow,Armorslayer,HeroCrest] AttackInRangeAI
+UNIT Grant Ranger Grant Level(4,Enemy,True) [17,16] 0x00 0x00 0x00 0x00 [SteelShortbow,Armorslayer] AttackInRangeAI
 UNIT Arcanian Hero Grant Level(3,Enemy,True) [16,12] 0x00 0x00 0x00 0x00 [Wyrmslayer] AttackInRangeAI
 UNIT Arcanian Mage Grant Level(10,Enemy,True) [17,11] 0x00 0x00 0x00 0x00 [Elfire] AttackInRangeAI
 UNIT Arcanian MageKnight Grant Level(2,Enemy,True) [15,18] 0x00 0x00 0x00 0x00 [Arcaqua,Mend] ChaseOnceApproachedAI
@@ -304,7 +305,7 @@ UNIT Luke Mage_F Lux Level(4,Ally,True) [0,3] 0x00 0x00 0x00 0x00 [Elaqua,Fire] 
 
 JasperDerek:
 UNIT Jasper Cavalier Lux Level(9,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [SteelSword,Javelin] NoAI 
-UNIT Derek Knight Lux Level(8,Ally,True) [3,2] 0x00 0x00 0x00 0x00 [SteelAxe,HeavySpear,KnightCrest] NoAI 
+UNIT Derek Knight Lux Level(8,Ally,True) [3,2] 0x00 0x00 0x00 0x00 [SteelAxe,HeavySpear] NoAI 
 UNIT
 
 LoadFinoc:

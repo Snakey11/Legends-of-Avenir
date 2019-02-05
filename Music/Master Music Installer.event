@@ -70,3 +70,16 @@ SongTable(Burning_Fighting_Spirit,songBurningFightingSpirit,MapMusicGroup)
 
 SongTable(A_Tragic_Decision,songATragicDecision,MapMusicGroup)
 #include "ATragicDecision.event"
+
+//SongTable(Presidents_Office,songPresidentsOffice,MapMusicGroup)
+//#include "PresidentsOffice.event"
+
+//SongTable(Altin_Caves,songAltinCaves,MapMusicGroup)
+//#include "AltinCaves.event"
+/*
+SongTable(Wicked_Child,songWickedChild,MapMusicGroup)
+#include "WickedChild.event"
+
+SongTable(Bloodpool,songBloodpool,MapMusicGroup)
+#include "Bloodpool.event"
+*/

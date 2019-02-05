@@ -76,6 +76,7 @@
 	{
 	#include "Mercenary/Mercenary 7 Bandit Disband.event"
 	}
+	#include "Mercenary/Narrator Fight.event"
 #endif
 #ifndef __NO_MILITARY__	
 	{
@@ -106,8 +107,9 @@
 	#include "Military/Military 6 Pass Altia.event"
 	}
 	{
-	//#include "Military/Military 7 Pass Altia.event"
+	#include "Military/Military 7 Pass Altia.event"
 	}
+	#include "Military/Narrator Fight.event"
 #endif
 #ifndef __NO_MAGE__
 	
@@ -116,6 +118,5 @@
 
 #include "Sassy.event"
 
-#include "Mercenary/Narrator Fight.event"
 EndMainPointer:
 END_MAIN

@@ -270,3 +270,26 @@ quickly and get out. For your sake,[A][NL]
 for their sake, and for our sake.[NL]
 I suppose it's fair I help you out.[NL]
 Just a little bit though. Take this.[A][X]
+
+## Merc5MilitiaWaitCesariaHouse3Text
+[MidRight][LoadCurrent][MidLeft][LoadVillagerMan3]
+A skirmish? Out here? There hasn't been[NL]
+much battle in Draterus at all in the[A][NL]
+past few centuries ever since the fall[NL]
+of Vathryl. I'd take care to end the[A][NL]
+battle quickly. The Wanderers who[NL]
+inhabit the desert aren't[A][NL]
+especially fond of visitors.[A][X]
+
+## Merc5MilitiaWaitCesariaHouse4Text
+[MidRight][LoadCurrent][MidLeft][LoadVillagerOldMan]
+I would've thought hiding all the way[NL]
+out here in my retirement would have[A][NL]
+spared me the war, but I guess I[NL]
+thought wrong. Take care fighting[A][NL]
+against the Arcanian mages. They've[NL]
+mastered the art of quick movement[A][NL]
+over the sands, and their magic[NL]
+could tear through your units[A][NL]
+that have a tougher time of it.[A][X]
+

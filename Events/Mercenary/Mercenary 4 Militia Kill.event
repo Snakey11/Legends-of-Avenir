@@ -219,7 +219,7 @@ UNIT KendrickFriend Myrmidon Kendrick Level(1,NPC,True) [4,16] 0x00 0x00 0x00 0x
 UNIT
 
 BoatMeanies:
-UNIT Robert Berserker Robert Level(3,Enemy,True) [12,6] Drop 0x00 0x00 0x00 [KillerAxe,Tomahawk,HeroCrest] GuardAI
+UNIT Robert Berserker Robert Level(3,Enemy,True) [12,6] Drop 0x00 0x00 0x00 [KillerAxe,Tomahawk] GuardAI
 UNIT RobertPirate Hero Robert Level(1,Enemy,True) [15,11] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
 UNIT RobertPirate Pirate Robert Level(7,Enemy,True) [6,11] 0x00 0x00 0x00 0x00 [SteelAxe] [0]
 UNIT RobertPirate Mercenary Robert Level(8,Enemy,True) [10,11] 0x00 0x00 0x00 0x00 [DevilSword] [0]

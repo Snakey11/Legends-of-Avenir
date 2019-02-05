@@ -78,23 +78,23 @@ Discipline: Weapon experience[N]
 gains are doubled.[X]
 
 ## SD_Swordbreaker
-Swordbreaker: +50 Hit/Avo when[N]
+Swordbreaker: +15 Hit/Avo when[N]
 enemy has a sword equipped.[X]
 
 ## SD_Lancebreaker
-Lancebreaker: +50 Hit/Avo when[N]
+Lancebreaker: +15 Hit/Avo when[N]
 enemy has a lance equipped.[X]
 
 ## SD_Axebreaker
-Axebreaker: +50 Hit/Avo when[N]
+Axebreaker: +15 Hit/Avo when[N]
 enemy has an axe equipped.[X]
 
 ## SD_Bowbreaker
-Bowbreaker: +50 Hit/Avo when[N]
+Bowbreaker: +15 Hit/Avo when[N]
 enemy has a bow equipped.[X]
 
 ## SD_Tomebreaker
-Tomebreaker: +50 Hit/Avo when[N]
+Tomebreaker: +15 Hit/Avo when[N]
 enemy has a tome equipped.[X]
 
 ## SD_Aegis

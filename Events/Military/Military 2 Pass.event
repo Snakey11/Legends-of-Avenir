@@ -13,7 +13,7 @@ POIN TrapData TrapData
 POIN Units Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
-//EndLabel
+//LabelEnd
 
 //Label TurnBasedEvents
 TurnBasedEvents:

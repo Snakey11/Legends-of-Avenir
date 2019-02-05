@@ -27,7 +27,7 @@ DOOR 0x10 [16,8] 0x12
 DOOR 0x10 [14,9] 0x12
 DOOR 0x10 [15,9] 0x12
 DOOR 0x10 [16,9] 0x12
-Chest(OrionBolt,0,16)
+Chest(Swordreaver,0,16)
 Chest(Dragonshield,0,17)
 Chest(BraveSword,0,19)
 Chest(KillingEdge,0,20)
@@ -186,8 +186,8 @@ UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [15,5] 0x00 0x00 0x00 0x00 [Iro
 UNIT
 
 RexZaliusCutscene:
-UNIT Rex GrandPaladin Rex Level(1,Enemy,True) [15,1] Drop 0x00 0x00 0x00 [SteelLance,WindSword,KillerAxe,MasterSeal] GuardAI
-UNIT Zalius EdgySwordmaster Zalius Level(1,Enemy,True) [15,3] Drop 0x00 0x00 0x00 [SilverBlade,MasterSeal] GuardAI 
+UNIT Rex GrandPaladin Rex Level(1,Enemy,True) [15,1] 0x00 0x00 0x00 0x00 [SteelLance,WindSword,KillerAxe] GuardAI
+UNIT Zalius EdgySwordmaster Zalius Level(1,Enemy,True) [15,3] 0x00 0x00 0x00 0x00 [SilverBlade] GuardAI 
 UNIT
 
 FriendlyPeople:
@@ -200,7 +200,7 @@ UNIT Helmer Soldier Helmer Level(11,Ally,True) [22,25] 0x00 0x00 0x00 0x00 [Stee
 UNIT
 
 MoveZaliusCesarians:
-UNIT Rex GrandPaladin Rex Level(11,Enemy,True) [15,1] Drop 0x00 0x00 0x00 [SteelLance,WindSword,KillerAxe,MasterSeal] GuardAI
+UNIT Rex GrandPaladin Rex Level(11,Enemy,True) [15,1] 0x00 0x00 0x00 0x00 [SteelLance,WindSword,KillerAxe] GuardAI
 UNIT Zalius EdgySwordmaster Zalius Level(13,Enemy,True) [19,24] Drop 0x00 0x00 0x00 [SilverBlade,DoorKey] GuardAI 
 UNIT Cesarian Sniper Rex Level(5,Enemy,True) [15,20] 0x00 0x00 0x00 0x00 [SilverLongbow] AttackInRangeAI
 UNIT Cesarian Archer Rex Level(12,Enemy,True) [6,15] 0x00 0x00 0x00 0x00 [DevilBow] AttackInRangeAI
@@ -212,7 +212,7 @@ UNIT Cesarian Hero Rex Level(5,Enemy,True) [2,18] Drop 0x00 0x00 0x00 [Tomahawk,
 UNIT Cesarian Knight Rex Level(9,Enemy,True) [3,19] 0x00 0x00 0x00 0x00 [DragonAxe] GuardAI
 UNIT Cesarian Knight Rex Level(13,Enemy,True) [4,19] 0x00 0x00 0x00 0x00 [SteelLance] GuardAI
 UNIT Cesarian Archer Rex Level(8,Enemy,True) [9,20] 0x00 0x00 0x00 0x00 [IronLongbow] AttackInRangeAI
-UNIT Cesarian Mage Rex Level(11,Enemy,True) [5,18] Drop 0x00 0x00 0x00 [Elaqua,GuidingRing] AttackInRangeAI
+UNIT Cesarian Mage Rex Level(11,Enemy,True) [5,18] 0x00 0x00 0x00 0x00 [Elaqua] AttackInRangeAI
 UNIT Cesarian Sage Rex Level(4,Enemy,True) [3,16] Drop 0x00 0x00 0x00 [Arcfire,Mend] AttackInRangeAI
 UNIT Cesarian Cavalier Rex Level(11,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [KillerLance] AttackInRangeAI	
 UNIT Cesarian Cavalier Rex Level(12,Enemy,True) [10,10] 0x00 0x00 0x00 0x00 [SteelBlade,HeavySpear] AttackInRangeAI

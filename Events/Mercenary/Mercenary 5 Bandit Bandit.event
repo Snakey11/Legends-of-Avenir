@@ -13,7 +13,7 @@ POIN TrapData TrapData
 POIN Units Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
-//EndLabel
+//LabelEnd
 
 //Label TurnBasedEvents
 TurnBasedEvents:
@@ -35,11 +35,9 @@ END_MAIN
 
 //Label LocationBasedEvents
 LocationBasedEvents:
-Chest(HeroCrest,20,12)
 Chest(BraveBow,18,9)
 Chest(AngelicRobe,16,9)
 Chest(KillerLance,11,11)
-Chest(OrionBolt,3,14)
 Chest(HeroCrest,1,14)
 Door(0,12)
 Door(17,3)

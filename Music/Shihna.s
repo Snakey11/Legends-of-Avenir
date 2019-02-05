@@ -3,7 +3,7 @@
 	.equ	songShihna_grp, voicegroup000
 	.equ	songShihna_pri, 0
 	.equ	songShihna_rev, 0
-	.equ	songShihna_mvl, 25
+	.equ	songShihna_mvl, 15
 	.equ	songShihna_key, 0
 	.equ	songShihna_tbs, 1
 	.equ	songShihna_exg, 0

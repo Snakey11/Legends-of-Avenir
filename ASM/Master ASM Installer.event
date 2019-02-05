@@ -18,8 +18,13 @@ BYTE Aqua Elaqua Arcaqua Fimbulvetr 0x00
 ALIGN 4
 #include "Arms Scroll/EA Installer.event"
 
-//ALIGN 4
-//#inctext lyn "AutoPromote/AutoPromote.elf"
+ALIGN 4
+#inctext lyn "AutoPromote/AutoPromote.elf"
+
+AutoPromoteTestEvents:
+ASMC PromotionTime|1
+NoFade
+ENDA
 
 ALIGN 4
 #inctext lyn "BowDebuff/BowDebuff.elf"
@@ -151,9 +156,9 @@ ALIGN 4
 
 PUSH
 ORG $96B1C
-SHORT 0xE00A
+SHORT 0xE00A // Eliminate "Tower" in prep screens
 ORG $96B3A
-SHORT 0xE003
+SHORT 0xE003 // Eliminate "Ruins" in prep screens
 
 ORG $44800 //Enabling name selection
 BYTE 0x8 //max name length

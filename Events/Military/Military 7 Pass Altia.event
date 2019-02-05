@@ -11,9 +11,9 @@ POIN EndMainPointer EndMainPointer EndMainPointer
 POIN EndMainPointer
 POIN TrapData TrapData
 POIN Units Units
-POIN $0 $0 $0 $0 $0 $0
+POIN IzukEscapes IzukDies $0 $0 $0 $0
 POIN BeginningScene EndingScene
-//EndLabel
+//LabelEnd
 
 //Label TurnBasedEvents
 TurnBasedEvents:
@@ -24,17 +24,20 @@ END_MAIN
 ALIGN 32
 CharacterBasedEvents:
 CHAR 0x10 TElanilIzuk [Elanil, Izuk] 0x00
-CHAR 0x10 TElanilFinoc [Finoc, Izuk] 0x00
-CHAR 0x10 TElanilCougar [Cougar, Izuk] 0x00
+CHAR 0x10 TFinocIzuk [Finoc, Izuk] 0x00
+CHAR 0x10 TCougarIzuk [Cougar, Izuk] 0x00
 END_MAIN
 
 //Label LocationBasedEvents
 LocationBasedEvents:
+Vendor(ShopList,20,24)
+Armory(ArmoryList,19,23)
 END_MAIN
 
 //Label MiscBasedEvents
 MiscBasedEvents:
 CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
 END_MAIN
 
 //Label TrapData
@@ -53,12 +56,14 @@ UNIT Cougar 0x00 0x00 Level(1,Ally,True) [21,26] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Sekar 0x00 0x00 Level(1,Ally,True) [16,27] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Christina 0x00 0x00 Level(1,Ally,True) [18,25] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Forrest 0x00 0x00 Level(1,Ally,True) [20,25] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT Clara 0x00 0x00 Level(1,Ally,True) [16,27] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT Sylvaine 0x00 0x00 Level(1,Ally,True) [11,23] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Clara 0x00 0x00 Level(1,Ally,True) [17,26] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Sylvaine 0x00 0x00 Level(1,Ally,True) [19,26] 0x00 0x00 0x00 0x00 [0] NoAI
 EndUnit
 
 //Label BeginingScene
 BeginningScene:
+ENUT 0x11
+ENUT 0x12
 CAM1 [18,22]
 LOAD3 0x1 PlayerLoading1
 LOAD2 0x1 Friends
@@ -69,7 +74,7 @@ LOAD1 0x1 Meanies3
 ENUN
 MUSC Solve_the_Riddle
 SetBackground(0x0E)
-Text(Military7PassAltiaXavusBeginningText)
+Text(Military7PassAltiaBeginningXavusText)
 MUSC Shihna
 SetBackground(0x1D)
 Text(Military7PassAltiaFriendsHereText)
@@ -79,6 +84,12 @@ Text(Military7PassAltiaJasperDerekTactBeginningText)
 GotoPrepScreen
 
 //Label EndingScene
+IzukEscapes:
+GOTO 0x1
+
+IzukDies:
+GOTO 0x0
+
 EndingScene:
 FADI 0x5
 CHECK_ALIVE Izuk
@@ -86,24 +97,116 @@ BEQ 0x0 0x0 0xC
 	// If Izuk is alive.
 	CHECK_EXISTS Izuk
 	BEQ 0x1 0x0 0xC
-		// If Izuk is still on the map.
+		// If Izuk is still on the map. Bad ending.
+		ENUF 0x12
 		CLEA 0x0
 		CLEN 0x0
 		CLEE 0x0
-		
+		CAM1 [7,19]
+		LOAD3 0x1 PlayerLoading4
+		LOAD2 0x1 EndingSylvaine
+		ENUN
+		MUSC Tension
+		SetBackground(0x0E)
+		TEXTSHOW Military7PassAltiaNoEscapeText
+		TEXTEND
+		MUSC Tragic_Decision
+		TEXTCONT
+		TEXTEND
+		MUSC Into_the_Shadow_of_Victory
+		TEXTCONT
+		TEXTEND
 		GOTO 0x2
 	LABEL 0x1
-		// If Izuk escaped.
+		// If Izuk escaped. Good ending.
+		ENUF 0x11
 		CLEA 0x0
 		CLEE 0x0
-		
+		LOAD3 0x1 PlayerLoading2
+		LOAD2 0x1 EscapeFriends
+		ENUN
+		MUSC Victory
+		STAL 0x20
+		FADU 0x5
+		STAL 0x30
+		Text(Military7PassAltiaEscapeSylvaineText)
+		WarpIn(WarpIzuk,3,1)
+		STAL 0x20
+		FADI 0x5
+		CLEA 0x0
+		CLEN 0x0
+		SVAL 0xB Coords(7,5)
+		LOMA AltianDungeonCutscene
+		LOAD3 0x1 PlayerLoading3
+		LOAD2 0x1 EscapeClara
+		ENUN
+		SetBackground(0x0E)
+		Text(Military7PassAltiaEscapeIzukHereText)
+		EndConvo
+		FadeOutMusic
+		STAL 0x10
+		Text(Military7PassAltiaEscapeClaraText)
+		STAL 0x10
+		MOVE 0x00 Clara [13,9]
+		ENUN
+		DISA Clara
+		STAL 0x20
+		MUSC Return_of_the_Demon_King
+		WarpIn(EscapeGuardianSpirit,4,6)
+		STAL 0x10
+		Text(Military7PassAltiaEscapeGuardianSpiritText)
+		STAL 0x8
+		MOVE 0x00 Narrator [5,6]
+		ENUN
+		StartBattle
+		CriticalHit(1,80)
+		MilitaryNarratorFight(6,6)
 		GOTO 0x2
 LABEL 0x0
-	// If Izuk is dead.
+	// If Izuk is dead. Bad ending.
+	ENUF 0x12
 	CLEA 0x0
 	CLEE 0x0
+	LABEL 0x3
+	LOAD3 0x1 PlayerLoading4
+	LOAD2 0x1 EndingSylvaine
+	ENUN
+	MUSC Tragic_Decision
+	SetBackground(0x0E)
+	Text(Military7PassAltiaIzukDeadText)
+	
+LABEL 0x3
+EndConvo
+MUSC Anchoret
+Text(Military7PassAltiaSylvaineEndingText)
+MOVE 0x0 [22,18] Sylvaine
+ENUN
+Text(Military7PassAltiaThisIsWarText)
+STAL 0x10
+MUSC Return_of_the_Demon_King
+WarpIn(5,20,BadEndingGuardianSpirit)
+STAL 0x10
+Text(Military7PassAltiBadEndingGuardianSpiritText)
+MOVE 0x00 Narrator [5,19]
+ENUN
+StartBattle
+MissedAttack(0,0)
+NormalDamage(1,30)
+NormalDamage(1,30)
+MilitaryNarratorFight(5,18)
 
 LABEL 0x2
+DISA Jasper
+DISA Derek
+DISA Finoc
+DISA Elanil
+DISA Cougar
+DISA Sekar
+DISA Forrest
+DISA Christina
+DISA Clara
+DISA Sylvaine
+MoveToChapter(PrologueChapter)
 ENDA
 
 //Label Turn Events
@@ -124,7 +227,7 @@ MUNO
 NoFade
 EndA2
 
-TFinocElanil:
+TFinocIzuk:
 MUSI
 Text(Military7PassAltiaFinocIzukText)
 SVAL 0x01 0x00000510
@@ -133,7 +236,7 @@ MUNO
 NoFade
 EndA2
 
-TElanilCougar:
+TCougarIzuk:
 MUSI
 Text(Military7PassAltiaCougarIzukText)
 SVAL 0x01 0x00001005
@@ -148,16 +251,39 @@ EscapePointPointerTable(MilitaryPassAltia7, Military7PassAltiaEscapePoints)
 Military7PassAltiaEscapePoints:
 EscapePoint(25,7,MoveLeft)
 EscapePointEnd
-//EndLabel
+//LabelEnd
+
+//Label Location Events
+ShopList:
+SHLI Flare Elwind Arcfire Dasher Aura Divine Nosferatu Recover Sleep Silence Vulnerary
+ALIGN 4
+
+ArmoryList:
+SHLI SteelSword SteelBlade KillingEdge SteelLance Spear Tomahawk Halberd SteelLongbow BraveBow
+ALIGN 4
+//LabelEnd
 
 	/*UNIT DATA*/
 
 //Label PlayerLoading
 PlayerLoading1:
 UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [15,26] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+PlayerLoading2:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [4,5] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+PlayerLoading3:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [6,6] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+PlayerLoading4:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [5,18] 0x00 0x00 0x00 0x00 [0] NoAI
 EndUnit
 
 //Label Friends
+Friends:
 UNIT Jasper 0x00 0x00 Level(1,Ally,True) [14,27] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Derek 0x00 0x00 Level(1,Ally,True) [16,25] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Elanil 0x00 0x00 Level(1,Ally,True) [18,27] 0x00 0x00 0x00 0x00 [0] NoAI
@@ -166,65 +292,99 @@ UNIT Cougar 0x00 0x00 Level(1,Ally,True) [21,26] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Sekar 0x00 0x00 Level(1,Ally,True) [16,27] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Christina 0x00 0x00 Level(1,Ally,True) [18,25] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Forrest 0x00 0x00 Level(1,Ally,True) [20,25] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT Clara 0x00 0x00 Level(1,Ally,True) [16,27] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Clara 0x00 0x00 Level(1,Ally,True) [17,26] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 LoadSylvaine:
-UNIT Sylvaine ArmoredWyvernLord 0x00 Level(8,Ally,True) [11,23] 0x00 0x00 0x00 0x00 [SilverAxe,SteelBlade,SteelBow] NoAI
+UNIT Sylvaine ArmoredWyvernLord 0x00 Level(8,Ally,True) [19,26] 0x00 0x00 0x00 0x00 [SilverAxe,SteelBlade,SteelBow] NoAI
 ENDA
 
 //Label Meanies
 Meanies1:
-UNIT Izuk HighPriest Izuk Level(4,NPC,True) [13,4] 0x00 0x00 0x00 0x00 [0] [0,DontMove,0,0]
+UNIT Izuk Patriarch Izuk Level(8,NPC,True) [13,4] 0x00 0x00 0x00 0x00 [0] [0,DontMove,0,0]
 UNIT Xavus Necromancer Xavus Level(14,Enemy,True) [3,1] 0x00 0x00 0x00 0x00 [Swarm,Dulam] GuardAI
-UNIT Guardian Sentinel Xavus Level(14,Enemy,True) [13,23] Drop 0x00 0x00 0x00 [SteelAxe,KillingEdge] NoAI
-UNIT Guardian Sentinel Xavus Level(14,Enemy,True) [11,24] 0x00 0x00 0x00 0x00 [Spear] NoAI
-UNIT Arcanian Sage Xavus Level(14,Enemy,True) [11,22] 0x00 0x00 0x00 0x00 [Arcaqua] NoAI
-UNIT Guardian Berserker Xavus Level(14,Enemy,True) [12,21] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI
-UNIT Arcanian Assassin Xavus Level(14,Enemy,True) [7,22] 0x00 0x00 0x00 0x00 [Shamshir] AttackInRangeAI
-UNIT Arcanian Fighter Xavus Level(14,Enemy,True) [10,20] 0x00 0x00 0x00 0x00 [PoisonAxe] AttackInRangeAI
-UNIT Arcanian GreatKnight Xavus Level(14,Enemy,True) [3,18] 0x00 0x00 0x00 0x00 [ShortAxe,Armorslayer] ChaseOnceApproachedAI
-UNIT Arcanian GreatKnight Xavus Level(14,Enemy,True) [4,17] 0x00 0x00 0x00 0x00 [SteelBlade,SteelLance] ChaseOnceApproachedAI
-UNIT Guardian General Xavus Level(14,Enemy,True) [7,19] Drop 0x00 0x00 0x00 [BattleAxe,Javelin] GuardAI
-UNIT Arcanian Monk Xavus Level(14,Enemy,True) [5,21] Drop 0x00 0x00 0x00 [Aura,Physic] GuardAI
-UNIT Guardian General Xavus Level(14,Enemy,True) [9,15] 0x00 0x00 0x00 0x00 [SilverBlade] GuardAI
-UNIT Guardian Paladin Xavus Level(14,Enemy,True) [6,11] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
-UNIT Guardian MageKnight Xavus Level(14,Enemy,True) [5,12] 0x00 0x00 0x00 0x00 [Arcfire] AttackInRangeAI
-UNIT Guardian Hero Xavus Level(14,Enemy,True) [9,13] 0x00 0x00 0x00 0x00 [DragonAxe] NoAI
+UNIT Guardian Sentinel Xavus Level(8,Enemy,True) [13,23] Drop 0x00 0x00 0x00 [SteelAxe,KillingEdge] NoAI
+UNIT Guardian Sentinel Xavus Level(9,Enemy,True) [11,24] 0x00 0x00 0x00 0x00 [Spear] NoAI
+UNIT Arcanian Sage Xavus Level(7,Enemy,True) [11,22] 0x00 0x00 0x00 0x00 [Arcaqua] NoAI
+UNIT Guardian Berserker Xavus Level(6,Enemy,True) [12,21] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI
+UNIT Arcanian Assassin Xavus Level(11,Enemy,True) [7,22] 0x00 0x00 0x00 0x00 [Shamshir] AttackInRangeAI
+UNIT Arcanian Fighter Xavus Level(19,Enemy,True) [10,20] 0x00 0x00 0x00 0x00 [PoisonAxe] AttackInRangeAI
+UNIT Arcanian GreatKnight Xavus Level(10,Enemy,True) [3,18] 0x00 0x00 0x00 0x00 [ShortAxe,Armorslayer] ChaseOnceApproachedAI
+UNIT Arcanian GreatKnight Xavus Level(8,Enemy,True) [4,17] 0x00 0x00 0x00 0x00 [SteelBlade,SteelLance] ChaseOnceApproachedAI
+UNIT Guardian General Xavus Level(13,Enemy,True) [7,19] Drop 0x00 0x00 0x00 [BattleAxe,Javelin] GuardAI
+UNIT Arcanian Monk Xavus Level(18,Enemy,True) [5,21] Drop 0x00 0x00 0x00 [Aura,Physic] GuardAI
+UNIT Guardian General Xavus Level(12,Enemy,True) [9,15] 0x00 0x00 0x00 0x00 [SilverBlade] GuardAI
+UNIT Guardian Paladin Xavus Level(9,Enemy,True) [6,11] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
+UNIT Guardian MageKnight Xavus Level(8,Enemy,True) [5,12] 0x00 0x00 0x00 0x00 [Arcfire] AttackInRangeAI
+UNIT Guardian Hero Xavus Level(11,Enemy,True) [9,13] 0x00 0x00 0x00 0x00 [DragonAxe] NoAI
 UNIT
 
 Meanies2:
-UNIT Guardian Swordmaster Xavus Level(14,Enemy,True) [10,14] 0x00 0x00 0x00 0x00 [BraveSword] ChaseOnceApproachedAI
-UNIT Arcanian Mage Xavus Level(14,Enemy,True) [13,13] Drop 0x00 0x00 0x00 [Dasher,EnergyRing] AttackInRangeAI
-UNIT Arcanian Shaman Xavus Level(14,Enemy,True) [12,15] 0x00 0x00 0x00 0x00 [Flux] AttackInRangeAI
-UNIT Arcanian Warrior Xavus Level(14,Enemy,True) [11,12] 0x00 0x00 0x00 0x00 [Swordslayer,Hammer] AttackInRangeAI
-UNIT Guardian Sniper Xavus Level(14,Enemy,True) [19,13] 0x00 0x00 0x00 0x00 [BraveBow] NoAI
-UNIT Guardian Mercenary Xavus Level(14,Enemy,True) [16,16] 0x00 0x00 0x00 0x00 [Lancereaver,PoisonSword] AttackInRangeAI
-UNIT Arcanian Druid Xavus Level(14,Enemy,True) [24,13] 0x00 0x00 0x00 0x00 [Nosferatu] AttackInRangeAI
-UNIT Guardian Halberdier Xavus Level(14,Enemy,True) [24,13] 0x00 0x00 0x00 0x00 [SilverLance] AttackInRangeAI
-UNIT Guardian Sentinel Xavus Level(14,Enemy,True) [24,13] 0x00 0x00 0x00 0x00 [SilverAxe] AttackInRangeAI
-UNIT Guardian Sentinel Xavus Level(14,Enemy,True) [24,13] 0x00 0x00 0x00 0x00 [SilverSword] AttackInRangeAI
-UNIT Arcanian WyvernKnight Xavus Level(14,Enemy,True) [1,14] 0x00 0x00 0x00 0x00 [ShortSpear] ChaseOnceApproachedAI
-UNIT Arcanian Falcoknight Xavus Level(14,Enemy,True) [2,13] 0x00 0x00 0x00 0x00 [SteelLance] ChaseOnceApproachedAI
-UNIT Arcanian WyvernLord Xavus Level(14,Enemy,True) [2,25] 0x00 0x00 0x00 0x00 [RuneSword] AttackInRangeAI
-UNIT Arcanian WyvernRider Xavus Level(14,Enemy,True) [2,25] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
-UNIT Arcanian WyvernRider Xavus Level(14,Enemy,True) [2,25] 0x00 0x00 0x00 0x00 [HeavySpear] AttackInRangeAI
-UNIT Arcanian Falcoknight Xavus Level(14,Enemy,True) [24,18] 0x00 0x00 0x00 0x00 [BraveLance] AttackInRangeAI
+UNIT Guardian Swordmaster Xavus Level(9,Enemy,True) [10,14] 0x00 0x00 0x00 0x00 [BraveSword] ChaseOnceApproachedAI
+UNIT Arcanian Mage Xavus Level(18,Enemy,True) [13,13] Drop 0x00 0x00 0x00 [Dasher,EnergyRing] AttackInRangeAI
+UNIT Arcanian Shaman Xavus Level(16,Enemy,True) [12,15] 0x00 0x00 0x00 0x00 [Flux] AttackInRangeAI
+UNIT Arcanian Warrior Xavus Level(11,Enemy,True) [11,12] 0x00 0x00 0x00 0x00 [Swordslayer,Hammer] AttackInRangeAI
+UNIT Guardian Sniper Xavus Level(11,Enemy,True) [19,13] 0x00 0x00 0x00 0x00 [SteelBow] NoAI
+UNIT Guardian Mercenary Xavus Level(17,Enemy,True) [16,16] 0x00 0x00 0x00 0x00 [Lancereaver,PoisonSword] AttackInRangeAI
+UNIT Arcanian Druid Xavus Level(12,Enemy,True) [24,13] 0x00 0x00 0x00 0x00 [Nosferatu] AttackInRangeAI
+UNIT Guardian Halberdier Xavus Level(11,Enemy,True) [24,13] 0x00 0x00 0x00 0x00 [SilverLance] AttackInRangeAI
+UNIT Guardian Sentinel Xavus Level(12,Enemy,True) [24,13] 0x00 0x00 0x00 0x00 [SilverAxe] AttackInRangeAI
+UNIT Guardian Sentinel Xavus Level(11,Enemy,True) [24,13] 0x00 0x00 0x00 0x00 [SilverSword] AttackInRangeAI
+UNIT Arcanian WyvernKnight Xavus Level(8,Enemy,True) [1,14] 0x00 0x00 0x00 0x00 [ShortSpear] ChaseOnceApproachedAI
+UNIT Arcanian Falcoknight Xavus Level(7,Enemy,True) [2,13] 0x00 0x00 0x00 0x00 [SteelLance] ChaseOnceApproachedAI
+UNIT Arcanian WyvernLord Xavus Level(9,Enemy,True) [2,25] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
+UNIT Arcanian WyvernRider Xavus Level(16,Enemy,True) [2,25] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT Arcanian WyvernRider Xavus Level(15,Enemy,True) [2,25] 0x00 0x00 0x00 0x00 [HeavySpear] AttackInRangeAI
+UNIT Arcanian Falcoknight Xavus Level(9,Enemy,True) [24,18] 0x00 0x00 0x00 0x00 [BraveLance] AttackInRangeAI
 UNIT
 
 Meanies3:
-UNIT Arcanian Bishop Xavus Level(14,Enemy,True) [21,7] Drop 0x00 0x00 0x00 [Sleep] GuardAI
-UNIT Guardian Soldier Xavus Level(14,Enemy,True) [22,3] 0x00 0x00 0x00 0x00 [Javelin] ChaseOnceApproachedAI
-UNIT Guardian Soldier Xavus Level(14,Enemy,True) [23,4] 0x00 0x00 0x00 0x00 [PoisonLance] ChaseOnceApproachedAI
-UNIT Guardian Hero Xavus Level(14,Enemy,True) [19,2] 0x00 0x00 0x00 0x00 [SteelBlade,HandAxe] AttackInRangeAI
-UNIT Guardian Sniper Xavus Level(14,Enemy,True) [18,6] 0x00 0x00 0x00 0x00 [SteelShortbow] AttackInRangeAI
-UNIT Guardian Sniper Xavus Level(14,Enemy,True) [18,8] 0x00 0x00 0x00 0x00 [SilverBow] AttackInRangeAI
-UNIT Guardian Pirate Xavus Level(14,Enemy,True) [13,1] 0x00 0x00 0x00 0x00 [HandAxe] ChaseOnceApproachedAI
-UNIT Arcanian Berserker Xavus Level(14,Enemy,True) [14,0] 0x00 0x00 0x00 0x00 [ShortAxe] AttackInRangeAI
-UNIT Arcanian Sage Xavus Level(14,Enemy,True) [13,7] 0x00 0x00 0x00 0x00 [Aircalibur,Fire] AttackInRangeAI
-UNIT Guardian Halberider Xavus Level(14,Enemy,True) [11,8] Drop 0x00 0x00 0x00 [Spear,DoorKey] AttackInRangeAI
-UNIT Arcanian General Xavus Level(14,Enemy,True) [8,4] Drop 0x00 0x00 0x00 [BraveLance] AttackInRangeAI
-UNIT Guardian Sentinel Xavus Level(14,Enemy,True) [6,5] 0x00 0x00 0x00 0x00 [Tomahawk,IronBlade] AttackInRangeAI
-UNIT Arcanian Sage Xavus Level(14,Enemy,True) [1,2] 0x00 0x00 0x00 0x00 [Thoron] AttackInRangeAI
-UNIT Arcanian Druid Xavus Level(14,Enemy,True) [5,2] 0x00 0x00 0x00 0x00 [Tornado] AttackInRangeAI
+UNIT Arcanian Bishop Xavus Level(10,Enemy,True) [21,7] Drop 0x00 0x00 0x00 [Sleep] GuardAI
+UNIT Guardian Soldier Xavus Level(19,Enemy,True) [22,3] 0x00 0x00 0x00 0x00 [Javelin] ChaseOnceApproachedAI
+UNIT Guardian Soldier Xavus Level(20,Enemy,True) [23,4] 0x00 0x00 0x00 0x00 [PoisonLance] ChaseOnceApproachedAI
+UNIT Guardian Hero Xavus Level(9,Enemy,True) [19,2] 0x00 0x00 0x00 0x00 [SteelBlade,HandAxe] AttackInRangeAI
+UNIT Guardian Sniper Xavus Level(7,Enemy,True) [18,6] 0x00 0x00 0x00 0x00 [SteelShortbow] AttackInRangeAI
+UNIT Guardian Sniper Xavus Level(10,Enemy,True) [18,8] 0x00 0x00 0x00 0x00 [SilverBow] AttackInRangeAI
+UNIT Guardian Pirate Xavus Level(18,Enemy,True) [13,1] 0x00 0x00 0x00 0x00 [HandAxe] ChaseOnceApproachedAI
+UNIT Arcanian Berserker Xavus Level(11,Enemy,True) [14,0] 0x00 0x00 0x00 0x00 [ShortAxe] AttackInRangeAI
+UNIT Arcanian Sage Xavus Level(6,Enemy,True) [13,7] 0x00 0x00 0x00 0x00 [Fire] AttackInRangeAI
+UNIT Guardian Halberdier Xavus Level(15,Enemy,True) [11,8] Drop 0x00 0x00 0x00 [Spear,DoorKey] GuardAI
+UNIT Arcanian General Xavus Level(13,Enemy,True) [8,4] Drop 0x00 0x00 0x00 [BraveLance] AttackInRangeAI
+UNIT Guardian Sentinel Xavus Level(11,Enemy,True) [6,5] 0x00 0x00 0x00 0x00 [Tomahawk,IronBlade] AttackInRangeAI
+UNIT Arcanian Sage Xavus Level(15,Enemy,True) [1,2] 0x00 0x00 0x00 0x00 [Thoron] AttackInRangeAI
+UNIT Arcanian Druid Xavus Level(15,Enemy,True) [5,2] 0x00 0x00 0x00 0x00 [Tornado] AttackInRangeAI
+EndUnit
+
+//Label Ending People
+EscapeFriends:
+UNIT Jasper 0x00 0x00 Level(1,Ally,True) [6,5] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [5,4] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Elanil 0x00 0x00 Level(1,Ally,True) [2,5] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Finoc 0x00 0x00 Level(1,Ally,True) [1,4] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Cougar 0x00 0x00 Level(1,Ally,True) [2,4] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Sekar 0x00 0x00 Level(1,Ally,True) [1,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Christina 0x00 0x00 Level(1,Ally,True) [4,4] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Forrest 0x00 0x00 Level(1,Ally,True) [5,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Clara 0x00 0x00 Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Sylvaine 0x00 0x00 Level(1,Ally,True) [3,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+WarpIzuk:
+UNIT Izuk Patriarch 0x00 Level(1,NPC,True) [3,1] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+EscapeClara:
+UNIT Clara 0x00 0x00 Level(1,Ally,True) [8,5] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+EscapeGuardianSpirit:
+UNIT Narrator GuardianSpirit Narrator Level(15,Enemy,True) [4,6] 0x00 0x00 0x00 0x00 [SilverSword] NoAI
+UNIT
+
+EndingSylvaine:
+UNIT Sylvaine 0x00 0x00 Level(1,Ally,True) [6,19] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+BadEndingGuardianSpirit:
+UNIT Narrator GuardianSpirit Narrator Level(14,Enemy,True) [5,20] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI
 EndUnit

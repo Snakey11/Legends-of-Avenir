@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="Snowy Tileset Indoor" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/Snowy Tileset Indoor.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="10">
+  <properties>
+   <property name="Anims" value="0"/>
+   <property name="ChapterID" value="AltianDungeonCutscene"/>
+   <property name="Main" value=""/>
+   <property name="MapID" value="AltianDungeonCutsceneMap"/>
+   <property name="ObjectType" value="IndoorSnowyObjectSet"/>
+   <property name="PaletteID" value="IndoorSnowyPalette"/>
+   <property name="TileConfig" value="IndoorSnowyTileConfig"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJwTZ2RgCGFiYPjOwMAgzgjBxPK/MkDYP6BsUvnk6jVhQuAvTKTx7zMgsCkjaXyY/8nBXxnIx7Aw0GNG9QsuDFIH02MGtNsciO2A7AYGVP9g49sh6UHWe58IjKwXALA4VV0=
+  </data>
+ </layer>
+</map>

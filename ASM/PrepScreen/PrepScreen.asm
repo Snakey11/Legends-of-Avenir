@@ -25,7 +25,7 @@ mov r4, r0
 blh CheckGameLinkArenaBit, r0
 lsl r0, #0x18
 cmp r0, #0x00
-beq TextPrepScreen
+bne TextLinkArena
 ldr r4, =PrepScreenTable
 mov r0, #0x01
 lsl r0, #12
@@ -55,8 +55,8 @@ pop { r4 }
 pop { r1 }
 bx r1
 
-TextPrepScreen:
-ldr r0, =#0x08095049
+TextLinkArena:
+ldr r0, =#0x08095037
 bx r0
 
 .equ CheckGameLinkArenaBit, 0x08042E98
@@ -119,12 +119,6 @@ EndPrepScreenLoop:
 ldr r0, =#0x080955F9
 bx r0
 
-.global PrepScreenReturnFalse
-.type PrepScreenReturnFalse, %function
-PrepScreenReturnTrue:
-mov r0, #0x01
-bx lr
-
 .global PrepScreenSaveGreyUsability
 .type PrepScreenSaveGreyUsability, %function
 PrepScreenSaveGreyUsability:
@@ -141,92 +135,8 @@ ReturnTrue:
 mov r0, #0x01
 bx lr
 
-@.global PrepScreenMenuUsability
-@.type PrepScreenMenuUsability, %function
-@PrepScreenMenuUsability: @ Autohook to 0x08095524. Let's just replace this function... it'll be really oof to place that many hooks in here... @ r0 = parent proc(?)
-@push { r4, r5, lr }
-@add sp, #-0x04
-@mov r5, r0
-@blh #0x08096FAC, r1
-@blh CheckGameLinkArenaBit, r1
-@lsl r0, r0, #0x18
-@asr r4, r0, #0x18
-@cmp r4, #0x00
-@bne LinkArena
-
-@bl PickUnitsOption
-
-@bl ItemsOption
-
-@bl SupportOption
-
-@bl CheckMapOption
-
-@bl SaveOption
-
-@ldr r0, =#0x080955F9
-@bx r0
-
-@LinkArena:
-@ldr r0, =#0x080955CD
-@bx r0
-
-@PickUnitsOption:
-@push { r4, lr }
-@ldr r1, =#0x080951B9
-@ldr r3, =#0x0574
-@str r4, [ sp ]
-@mov r0, #0x00
-@mov r2, #0x01 @ Never use
-@blh BuildMenuOption, r4
-@pop { r4 }
-@pop { r0 }
-@bx r0
-
-@ItemsOption:
-@push { r4, lr }
-@ldr r1, =#0x080951CD
-@ldr r3, =#0x0576
-@str r4, [ sp ]
-@mov r0, #0x01
-@mov r2, #0x00 @ Always use
-@blh BuildMenuOption, r4
-@pop { r4 }
-@pop { r0 }
-@bx r0
-
-@SupportOption:  @ !ew in vanilla, support is handled through its own bl call...
-@push { r4, lr }
-@ldr r1, =#0x080951E1
-@ldr r3, =#0x0577
-@str r4, [ sp ]
-@mov r0, #0x04
-@mov r2, #0x01 @ Never use for now
-@blh BuildMenuOption, r4
-@pop { r4 }
-@pop { r0 }
-@bx r0
-
-@CheckMapOption:
-@push { r4, lr }
-@ldr r1, =#0x080952C1
-@ldr r3, =#0x0578
-@str r4, [ sp ]
-@mov r0, #0x07
-@mov r2, #0x00 @ Always use
-@blh BuildMenuOption, r4
-@pop { r4 }
-@pop { r0 }
-@bx r0
-
-@SaveOption:
-@push { r4, lr }
-@ldr r1, =#0x08095211
-@ldr r3, =#0x0579
-@str r4, [ sp ]
-@mov r0, #0x02
-@mov r2, #0x00 @ Always use
-@blh BuildMenuOption, r4
-@pop { r4 }
-@pop { r0 }
-@bx r0
+.global PrepScreenReturnFalse
+.type PrepScreenReturnFalse, %function
+PrepScreenReturnFalse:
+mov r0, #0x00
+bx lr

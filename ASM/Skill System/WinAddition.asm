@@ -31,6 +31,20 @@ blh 0x0800D07C, r2 @ Runs the events.
 pop { r0 }
 bx r0
 
+.global Win_Effect_Special_2
+.type Win_Effect_Special_2, %function
+Win_Effect_Special_2: @ Instead of loading EndingScene, I need to load the extra special ending
+push { lr }
+ldr r0, =#0x0202BCF0
+ldrb r0, [ r0, #0x0E ]
+blh 0x080346B0, r1 @ r0 has pointer to chapter events.
+add r0, #0x34
+ldr r0, [ r0 ] @ r0 has pointer to events to run.
+mov r1, #0x01
+blh 0x0800D07C, r2 @ Runs the events.
+pop { r0 }
+bx r0
+
 .global Win_Effect_Bad_Ending
 .type Win_Effect_Bad_Ending, %function
 Win_Effect_Bad_Ending: @ Instead of loading EndingScene (or the good ending), I need to load the bad ending.

@@ -123,12 +123,8 @@ ORG $17768
 POIN ItemTable
 ORG $17794
 POIN ItemTable
-//ORG $177AC
-//POIN ItemTable
 ORG $177C0
 POIN ItemTable
-//ORG $177B8
-//POIN ItemTable
 ORG $17718
 POIN ItemTable
 ORG $1C1FB8
@@ -168,21 +164,21 @@ ORG $78240
 POIN SpellAssociationTable
 
 ORG $CC7C8
-POIN (PromotionBranchTable-1)
+POIN PromotionBranchTable - 1
 ORG $CC7D0
-POIN (PromotionBranchTable-2)
+POIN PromotionBranchTable - 2
 ORG $CC824
-POIN (PromotionBranchTable-2)
+POIN PromotionBranchTable - 2
 ORG $CC860
-POIN (PromotionBranchTable-2)
+POIN PromotionBranchTable - 2
 ORG $CC8A4
-POIN (PromotionBranchTable-2)
+POIN PromotionBranchTable - 2
 ORG $CC8EC
-POIN (PromotionBranchTable-2)
+POIN PromotionBranchTable - 2
 ORG $CCE8C
-POIN (PromotionBranchTable-2)
+POIN PromotionBranchTable - 2
 ORG $CDB74
-POIN (PromotionBranchTable-2)
+POIN PromotionBranchTable - 2
 
 ORG $3462C
 POIN ChapterDataTable
@@ -243,21 +239,21 @@ POIN SpellTable
 ORG $2442C
 POIN SummonCharacterTable
 ORG $244A0
-POIN (SummonCharacterTable+1)
+POIN SummonCharacterTable + 1
 ORG $7AD54
 POIN SummonCharacterTable
 ORG $7AE00
 POIN SummonCharacterTable
 ORG $7AE04
-POIN (SummonCharacterTable+1)
+POIN SummonCharacterTable + 1
 
 ORG $A26C
 POIN TextTable
 ORG $A2A0
 POIN TextTable
 
-ORG $8483C
-POIN CharacterForcerTable
+//ORG $8483C
+//POIN CharacterForcerTable
 
 ORG $1BC14
 POIN SoundRoom
@@ -282,4 +278,8 @@ POIN SoundRoom
 ORG $B042C
 POIN SoundRoom
 
+ORG $5524
+POIN PortraitTable// - 0x1C
+//ORG $6F46E0
+//POIN PortraitTable - 0xC7
 POP

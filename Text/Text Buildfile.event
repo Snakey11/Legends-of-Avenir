@@ -57,73 +57,14 @@ promote to a new class.[X]
 #include "Music/Music Names Assembler.event"
 
 ## DV1Desc
-Freeze all enemies[N]
+Freeze all enemies[NL]
 for one turn[X]
 
 #include "Skill System/Unit Menu Text.event"
 
 #include "Skill System/Skill Desc.event"
 
-## SassyText1
-[MidLeft][LoadNarrator]
-I figured you for a quitter.[NL]
-You want out? [Yes][X]
-
-## SassyText2
-[MidLeft][LoadNarrator]
-My predictions never fail...[NL]
-You're done? [Yes][X]
-
-## SassyText3
-[MidLeft][LoadNarrator]
-Sick of me? I'm kinda sick[NL]
-of you too. [Yes][X]
-
-## SassyText4
-[MidLeft][LoadNarrator]
-Had enough?[NL]
-[Yes][X]
-
-## SassyText5
-[MidLeft][LoadNarrator]
-Ready to fail?[NL]
-[Yes][X]
-
-## SassyTextEnd
-[MidLeft]
-Just as I expected. You know where[NL]
-to find me when you're ready for more.[A][X]
-
-## WinButtonNarratorText
-[MidLeft][LoadNarrator]
-I didn't expect much, but a cheater?[NL]
-You sure?[Yes][X]
-
-## GoodEndingMenuText
-Good Ending[X]
-
-## BadEndingMenuText
-Bad Ending[X]
-
-## PickUnitsErrorText
-Unit selection is[NL]
-disabled for this chapter.[X]
-
-## ItemErrorText
-Item management is[NL]
-disabled for this chapter.[X]
-
-## SupportErrorText
-There are no[NL]
-supports to view.[X]
-
-## CheckMapErrorText
-Map viewing is disabled[NL]
-for this chapter.[X]
-
-## SaveErrorText
-Saving is disabled[NL]
-dor this chapter.[X]
+#include "Chapters/Sassy.event"
 
 ## FinalTextID
 [X]

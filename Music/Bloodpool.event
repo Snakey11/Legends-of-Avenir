@@ -1,0 +1,4279 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	Bloodpool_grp  voicegroup000
+	#define	Bloodpool_pri  10
+	#define	Bloodpool_rev  0
+	#define	Bloodpool_mvl  127
+	#define	Bloodpool_key  0
+	#define	Bloodpool_tbs  1
+	#define	Bloodpool_exg  0
+	#define	Bloodpool_cmp  1
+
+	// .rodata
+	//	m
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+Bloodpool_001:
+// 000   ----------------------------------------
+Bloodpool_Label_0_00:
+ BYTE   TEMPO   160*Bloodpool_tbs/2
+ BYTE   KEYSH   Bloodpool_key+0
+ BYTE   VOICE   6
+ BYTE   VOL   10*Bloodpool_mvl/mxv
+ BYTE   W48
+ BYTE   W03
+// 001   ----------------------------------------
+ BYTE   PAN   c_v-4
+ BYTE   W10
+ BYTE   W15
+ BYTE   BEND   c_v+0
+ BYTE   W10
+ BYTE   MOD 0
+ BYTE   W92
+Bloodpool_Label_0_0164:
+ BYTE   W24
+ BYTE   W02
+// 002   ----------------------------------------
+ BYTE   N05  Gn4  v085
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   N12  Cn5  v120
+ BYTE   W12
+ BYTE   N04  Gn4  v108
+ BYTE   W12
+ BYTE   N12
+ BYTE   W24
+ BYTE   Gn4
+ BYTE   N12  Cn4  v095
+ BYTE   W12
+ BYTE   N06  Gs4  v108
+ BYTE   N06  Cs4  v095
+ BYTE   W24
+// 003   ----------------------------------------
+ BYTE   Gs4  v108
+ BYTE   N06  Cs4  v095
+ BYTE   W12
+ BYTE   N12  Gs4  v108
+ BYTE   N12  Cs4  v095
+ BYTE   W12
+ BYTE   N06  As4  v108
+ BYTE   N06  Ds4  v095
+ BYTE   W24
+ BYTE   As4  v108
+ BYTE   N06  Ds4  v095
+ BYTE   W12
+ BYTE   N12  As4  v108
+ BYTE   N12  Ds4  v095
+ BYTE   W12
+ BYTE   N06  Gs4  v108
+ BYTE   N06  Cs4  v095
+ BYTE   W36
+// 004   ----------------------------------------
+Bloodpool_Label_0_0330:
+ BYTE   N08  Cn5  v108
+ BYTE   W12
+ BYTE   N06  Gn5  v095
+ BYTE   N06  Cn5  v108
+ BYTE   W06
+ BYTE   Gn5  v095
+ BYTE   N06  Cn5  v108
+ BYTE   W06
+ BYTE   N11
+ BYTE   N12  Gn5  v095
+ BYTE   W12
+ BYTE   N06
+ BYTE   N06  Cn5  v108
+ BYTE   W06
+ BYTE   Gn5  v095
+ BYTE   N06  Cn5  v108
+ BYTE   W06
+ BYTE   N12  Gn5  v095
+ BYTE   N12  Cn5  v108
+ BYTE   W12
+ BYTE   N06  Gs5
+ BYTE   N06  Cs5  v095
+ BYTE   W24
+ BYTE   Gs5  v108
+ BYTE   N06  Cs5  v095
+ BYTE   W12
+ BYTE   PEND 
+// 005   ----------------------------------------
+Bloodpool_Label_0_03F0:
+ BYTE   N12  Gs5  v108
+ BYTE   N12  Cs5  v095
+ BYTE   W12
+ BYTE   N06  As5  v108
+ BYTE   N06  Ds5  v095
+ BYTE   W24
+ BYTE   As5  v108
+ BYTE   N06  Ds5  v095
+ BYTE   W12
+ BYTE   N12  As5  v108
+ BYTE   N12  Ds5  v095
+ BYTE   W12
+ BYTE   N06  Gs5  v108
+ BYTE   N06  Cs5  v095
+ BYTE   W36
+ BYTE   PEND 
+// 006   ----------------------------------------
+Bloodpool_Label_0_04B0:
+ BYTE   N12  Cn5  v120
+ BYTE   W12
+ BYTE   N04  Gn4  v108
+ BYTE   W12
+ BYTE   N12
+ BYTE   W24
+ BYTE   Gn4
+ BYTE   N12  Cn4  v095
+ BYTE   W12
+ BYTE   N06  Gs4  v108
+ BYTE   N06  Cs4  v095
+ BYTE   W24
+ BYTE   Gs4  v108
+ BYTE   N06  Cs4  v095
+ BYTE   W12
+ BYTE   PEND 
+// 007   ----------------------------------------
+Bloodpool_Label_0_0570:
+ BYTE   N12  Gs4  v108
+ BYTE   N12  Cs4  v095
+ BYTE   W12
+ BYTE   N06  As4  v108
+ BYTE   N06  Ds4  v095
+ BYTE   W24
+ BYTE   As4  v108
+ BYTE   N06  Ds4  v095
+ BYTE   W12
+ BYTE   N12  As4  v108
+ BYTE   N12  Ds4  v095
+ BYTE   W12
+ BYTE   N06  Gs4  v108
+ BYTE   N06  Cs4  v095
+ BYTE   W36
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_0330
+// 008   ----------------------------------------
+Bloodpool_Label_0_06F0:
+ BYTE   N12  Gs5  v108
+ BYTE   N12  Cs5  v095
+ BYTE   W12
+ BYTE   N06  As5  v108
+ BYTE   N06  Ds5  v095
+ BYTE   W24
+ BYTE   As5  v108
+ BYTE   N06  Ds5  v095
+ BYTE   W12
+ BYTE   N12  As5  v108
+ BYTE   N12  Ds5  v095
+ BYTE   W12
+ BYTE   N06  Gs5  v108
+ BYTE   N06  Cs5  v095
+ BYTE   W48
+ BYTE   PEND 
+// 009   ----------------------------------------
+Bloodpool_Label_0_07C8:
+ BYTE   N12  Gn4  v108
+ BYTE   N12  Cn4
+ BYTE   W24
+ BYTE   Gn4
+ BYTE   N12  Cn4
+ BYTE   W24
+ BYTE   Fs4
+ BYTE   N12  Bn3
+ BYTE   W24
+ BYTE   Fs4
+ BYTE   N12  Bn3
+ BYTE   W24
+ BYTE   PEND 
+// 010   ----------------------------------------
+Bloodpool_Label_0_0888:
+ BYTE   N12  Fn4  v108
+ BYTE   N12  As3
+ BYTE   W24
+ BYTE   Fn4
+ BYTE   N12  As3
+ BYTE   W24
+ BYTE   En4
+ BYTE   N12  An3
+ BYTE   W24
+ BYTE   En4
+ BYTE   N12  An3
+ BYTE   W24
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_0888
+// 011   ----------------------------------------
+Bloodpool_Label_0_0A08:
+ BYTE   N12  Ds4  v108
+ BYTE   N12  Gs3
+ BYTE   W24
+ BYTE   Ds4
+ BYTE   N12  Gs3
+ BYTE   W24
+ BYTE   Dn4
+ BYTE   N12  Gn3
+ BYTE   W24
+ BYTE   Dn4
+ BYTE   N12  Gn3
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 013   ----------------------------------------
+ BYTE   W96
+ BYTE   W12
+ BYTE   PEND 
+// 014   ----------------------------------------
+Bloodpool_Label_0_0DB0:
+ BYTE   N07  Fs4  v108
+ BYTE   N07  Fs3
+ BYTE   W96
+ BYTE   PEND 
+// 015   ----------------------------------------
+Bloodpool_Label_0_0E70:
+ BYTE   N07  Fs4  v098
+ BYTE   N07  Fs3
+ BYTE   W48
+ BYTE   Fs4
+ BYTE   N07  Fs3
+ BYTE   W48
+ BYTE   PEND 
+// 016   ----------------------------------------
+Bloodpool_Label_0_0F30:
+ BYTE   N07  Fs4  v098
+ BYTE   N07  Fs3
+ BYTE   W96
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_0E70
+// 017   ----------------------------------------
+Bloodpool_Label_0_10B0:
+ BYTE   N07  Gn4  v098
+ BYTE   N07  Gn3
+ BYTE   W96
+ BYTE   PEND 
+// 018   ----------------------------------------
+Bloodpool_Label_0_1170:
+ BYTE   N07  Gn4  v098
+ BYTE   N07  Gn3
+ BYTE   W48
+ BYTE   Gn4
+ BYTE   N07  Gn3
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_10B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_1170
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_04B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_0570
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_0330
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_03F0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_04B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_0570
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_0330
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_06F0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_07C8
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_0888
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_0888
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_0A08
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_0DB0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_0E70
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_0F30
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_0E70
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_10B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_1170
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_10B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_1170
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_04B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_0570
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_0330
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_03F0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_04B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_0570
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_0330
+// 019   ----------------------------------------
+ BYTE   N12  Gs5  v108
+ BYTE   N12  Cs5  v095
+ BYTE   W12
+ BYTE   N06  As5  v108
+ BYTE   N06  Ds5  v095
+ BYTE   W24
+ BYTE   As5  v108
+ BYTE   N06  Ds5  v095
+ BYTE   W12
+ BYTE   N12  As5  v108
+ BYTE   N12  Ds5  v095
+ BYTE   W12
+ BYTE   N06  Gs5  v108
+ BYTE   N06  Cs5  v095
+ BYTE   W09
+ BYTE   W20
+ BYTE   W19
+ BYTE   PATT
+  POIN2 Bloodpool_Label_0_07C8
+// 020   ----------------------------------------
+ BYTE   N12  Fn4  v108
+ BYTE   N12  As3
+ BYTE   W24
+ BYTE   Fn4
+ BYTE   N12  As3
+ BYTE   W24
+ BYTE   En4
+ BYTE   N12  An3
+ BYTE   W24
+ BYTE   En4
+ BYTE   N12  An3
+ BYTE   W06
+ BYTE   W03
+ BYTE   W01
+ BYTE   W01
+ BYTE   W02
+// 021   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Bloodpool_Label_0_00
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+Bloodpool_002:
+// 000   ----------------------------------------
+Bloodpool_Label_1_00:
+ BYTE   TEMPO   160*Bloodpool_tbs/2
+ BYTE   KEYSH   Bloodpool_key+0
+ BYTE   VOICE   0
+ BYTE   VOL   19*Bloodpool_mvl/mxv
+ BYTE   W48
+ BYTE   W03
+// 001   ----------------------------------------
+ BYTE   PAN   c_v-9
+ BYTE   W10
+ BYTE   W15
+ BYTE   BEND   c_v+0
+ BYTE   W10
+ BYTE   MOD 0
+ BYTE   W92
+Bloodpool_Label_1_0164:
+ BYTE   W24
+ BYTE   W02
+// 002   ----------------------------------------
+ BYTE   N05  Gn3  v085
+ BYTE   W06
+ BYTE   Gn3
+ BYTE   W06
+ BYTE   N08  Cn4  v120
+ BYTE   W12
+ BYTE   N04  Gn3  v108
+ BYTE   W12
+ BYTE   N12
+ BYTE   W24
+ BYTE   Gn3
+ BYTE   N12  Cn3  v095
+ BYTE   W12
+ BYTE   N06  Gs3  v108
+ BYTE   N06  Cs3  v095
+ BYTE   W24
+// 003   ----------------------------------------
+ BYTE   N04  Gs3  v108
+ BYTE   N04  Cs3  v095
+ BYTE   W12
+ BYTE   N12  Gs3  v108
+ BYTE   N12  Cs3  v095
+ BYTE   W12
+ BYTE   N06  As3  v108
+ BYTE   N06  Ds3  v095
+ BYTE   W24
+ BYTE   As3  v108
+ BYTE   N06  Ds3  v095
+ BYTE   W12
+ BYTE   N12  As3  v108
+ BYTE   N12  Ds3  v095
+ BYTE   W12
+ BYTE   N06  Gs3  v108
+ BYTE   N06  Cs3  v095
+ BYTE   W36
+// 004   ----------------------------------------
+Bloodpool_Label_1_0330:
+ BYTE   N06  Cn4  v108
+ BYTE   W12
+ BYTE   Gn4  v095
+ BYTE   N06  Cn4  v108
+ BYTE   W06
+ BYTE   Gn4  v095
+ BYTE   N06  Cn4  v108
+ BYTE   W06
+ BYTE   N11
+ BYTE   N12  Gn4  v095
+ BYTE   W12
+ BYTE   N06
+ BYTE   N06  Cn4  v108
+ BYTE   W06
+ BYTE   Gn4  v095
+ BYTE   N06  Cn4  v108
+ BYTE   W06
+ BYTE   N12  Gn4  v095
+ BYTE   N12  Cn4  v108
+ BYTE   W12
+ BYTE   N06  Gs4
+ BYTE   N06  Cs4  v095
+ BYTE   W24
+ BYTE   Gs4  v108
+ BYTE   N06  Cs4  v095
+ BYTE   W12
+ BYTE   PEND 
+// 005   ----------------------------------------
+Bloodpool_Label_1_03F0:
+ BYTE   N12  Gs4  v108
+ BYTE   N12  Cs4  v095
+ BYTE   W12
+ BYTE   N04  As4  v108
+ BYTE   N04  Ds4  v095
+ BYTE   W24
+ BYTE   N06  As4  v108
+ BYTE   N06  Ds4  v095
+ BYTE   W12
+ BYTE   N12  As4  v108
+ BYTE   N12  Ds4  v095
+ BYTE   W12
+ BYTE   N06  Gs4  v108
+ BYTE   N06  Cs4  v095
+ BYTE   W36
+ BYTE   PEND 
+// 006   ----------------------------------------
+Bloodpool_Label_1_04B0:
+ BYTE   N08  Cn4  v120
+ BYTE   W12
+ BYTE   N04  Gn3  v108
+ BYTE   W12
+ BYTE   N12
+ BYTE   W24
+ BYTE   Gn3
+ BYTE   N12  Cn3  v095
+ BYTE   W12
+ BYTE   N06  Gs3  v108
+ BYTE   N06  Cs3  v095
+ BYTE   W24
+ BYTE   N04  Gs3  v108
+ BYTE   N04  Cs3  v095
+ BYTE   W12
+ BYTE   PEND 
+// 007   ----------------------------------------
+Bloodpool_Label_1_0570:
+ BYTE   N12  Gs3  v108
+ BYTE   N12  Cs3  v095
+ BYTE   W12
+ BYTE   N06  As3  v108
+ BYTE   N06  Ds3  v095
+ BYTE   W24
+ BYTE   As3  v108
+ BYTE   N06  Ds3  v095
+ BYTE   W12
+ BYTE   N12  As3  v108
+ BYTE   N12  Ds3  v095
+ BYTE   W12
+ BYTE   N06  Gs3  v108
+ BYTE   N06  Cs3  v095
+ BYTE   W36
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_0330
+// 008   ----------------------------------------
+Bloodpool_Label_1_06F0:
+ BYTE   N12  Gs4  v108
+ BYTE   N12  Cs4  v095
+ BYTE   W12
+ BYTE   N04  As4  v108
+ BYTE   N04  Ds4  v095
+ BYTE   W24
+ BYTE   N06  As4  v108
+ BYTE   N06  Ds4  v095
+ BYTE   W12
+ BYTE   N12  As4  v108
+ BYTE   N12  Ds4  v095
+ BYTE   W12
+ BYTE   N06  Gs4  v108
+ BYTE   N06  Cs4  v095
+ BYTE   W48
+ BYTE   PEND 
+// 009   ----------------------------------------
+Bloodpool_Label_1_07C8:
+ BYTE   N12  Gn3  v108
+ BYTE   N12  Cn3
+ BYTE   W24
+ BYTE   Gn3
+ BYTE   N12  Cn3
+ BYTE   W24
+ BYTE   Fs3
+ BYTE   N12  Bn2
+ BYTE   W24
+ BYTE   Fs3
+ BYTE   N12  Bn2
+ BYTE   W24
+ BYTE   PEND 
+// 010   ----------------------------------------
+Bloodpool_Label_1_0888:
+ BYTE   N12  Fn3  v108
+ BYTE   N12  As2
+ BYTE   W24
+ BYTE   Fn3
+ BYTE   N12  As2
+ BYTE   W24
+ BYTE   En3
+ BYTE   N12  An2
+ BYTE   W24
+ BYTE   En3
+ BYTE   N12  An2
+ BYTE   W24
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_0888
+// 011   ----------------------------------------
+Bloodpool_Label_1_0A08:
+ BYTE   N12  Ds3  v108
+ BYTE   N12  Gs2
+ BYTE   W24
+ BYTE   Ds3
+ BYTE   N12  Gs2
+ BYTE   W24
+ BYTE   Dn3
+ BYTE   N12  Gn2
+ BYTE   W24
+ BYTE   Dn3
+ BYTE   N12  Gn2
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 013   ----------------------------------------
+ BYTE   W96
+ BYTE   W12
+ BYTE   PEND 
+// 014   ----------------------------------------
+Bloodpool_Label_1_0DB0:
+ BYTE   N07  Fs3  v092
+ BYTE   N07  Fs2
+ BYTE   W96
+ BYTE   PEND 
+// 015   ----------------------------------------
+Bloodpool_Label_1_0E70:
+ BYTE   N07  Fs3  v092
+ BYTE   N07  Fs2
+ BYTE   W48
+ BYTE   Fs3
+ BYTE   N07  Fs2
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_0DB0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_0E70
+// 016   ----------------------------------------
+Bloodpool_Label_1_10B0:
+ BYTE   N07  Gn3  v092
+ BYTE   N07  Gn2
+ BYTE   W96
+ BYTE   PEND 
+// 017   ----------------------------------------
+Bloodpool_Label_1_1170:
+ BYTE   N07  Gn3  v092
+ BYTE   N07  Gn2
+ BYTE   W48
+ BYTE   Gn3
+ BYTE   N07  Gn2
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_10B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_1170
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_04B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_0570
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_0330
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_03F0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_04B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_0570
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_0330
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_06F0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_07C8
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_0888
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_0888
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_0A08
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_0DB0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_0E70
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_0DB0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_0E70
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_10B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_1170
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_10B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_1170
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_04B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_0570
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_0330
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_03F0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_04B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_0570
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_0330
+// 018   ----------------------------------------
+ BYTE   N12  Gs4  v108
+ BYTE   N12  Cs4  v095
+ BYTE   W12
+ BYTE   N04  As4  v108
+ BYTE   N04  Ds4  v095
+ BYTE   W24
+ BYTE   N06  As4  v108
+ BYTE   N06  Ds4  v095
+ BYTE   W12
+ BYTE   N12  As4  v108
+ BYTE   N12  Ds4  v095
+ BYTE   W12
+ BYTE   N06  Gs4  v108
+ BYTE   N06  Cs4  v095
+ BYTE   W09
+ BYTE   W20
+ BYTE   W19
+ BYTE   PATT
+  POIN2 Bloodpool_Label_1_07C8
+// 019   ----------------------------------------
+ BYTE   N12  Fn3  v108
+ BYTE   N12  As2
+ BYTE   W24
+ BYTE   Fn3
+ BYTE   N12  As2
+ BYTE   W24
+ BYTE   En3
+ BYTE   N12  An2
+ BYTE   W24
+ BYTE   En3
+ BYTE   N12  An2
+ BYTE   W06
+ BYTE   W03
+ BYTE   W01
+ BYTE   W01
+ BYTE   W02
+// 020   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Bloodpool_Label_1_00
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+Bloodpool_003:
+// 000   ----------------------------------------
+Bloodpool_Label_2_00:
+ BYTE   TEMPO   160*Bloodpool_tbs/2
+ BYTE   KEYSH   Bloodpool_key+0
+ BYTE   VOICE   40
+ BYTE   VOL   18*Bloodpool_mvl/mxv
+ BYTE   W48
+ BYTE   W03
+// 001   ----------------------------------------
+ BYTE   PAN   c_v+11
+ BYTE   W10
+ BYTE   W15
+ BYTE   BEND   c_v+0
+ BYTE   W10
+ BYTE   MOD 0
+ BYTE   W92
+Bloodpool_Label_2_0164:
+ BYTE   W24
+ BYTE   W02
+// 002   ----------------------------------------
+ BYTE   N05  Gn1  v095
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   N96  Cn1  v105
+ BYTE   W48
+ BYTE   N72
+ BYTE   W84
+// 003   ----------------------------------------
+ BYTE   W01
+// 004   ----------------------------------------
+Bloodpool_Label_2_02BA:
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W13
+ BYTE   N06  Gn1  v105
+ BYTE   W12
+ BYTE   N96  Cn2
+ BYTE   W60
+ BYTE   W01
+ BYTE   PEND 
+// 005   ----------------------------------------
+Bloodpool_Label_2_03AA:
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N08  Cn2  v115
+ BYTE   W24
+ BYTE   Gs1
+ BYTE   W24
+ BYTE   Gn1
+ BYTE   W24
+ BYTE   Ds1
+ BYTE   W12
+ BYTE   N06  Gn1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   N96  Cn1  v105
+ BYTE   W48
+ BYTE   N72
+ BYTE   W84
+ BYTE   W01
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Bloodpool_Label_2_02BA
+// 006   ----------------------------------------
+Bloodpool_Label_2_06AA:
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N08  Cn2  v115
+ BYTE   W24
+ BYTE   Gs1
+ BYTE   W24
+ BYTE   Gn1
+ BYTE   W24
+ BYTE   Ds1
+ BYTE   W12
+ BYTE   N06  Gn1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   N12  An1  v110
+ BYTE   W24
+ BYTE   Dn2
+ BYTE   W24
+ BYTE   Cs2
+ BYTE   W24
+ BYTE   Gn1
+ BYTE   W24
+ BYTE   Fs1
+ BYTE   W24
+ BYTE   Cn2
+ BYTE   W24
+ BYTE   Bn1
+ BYTE   W24
+ BYTE   Fn1
+ BYTE   W24
+ BYTE   Fs1
+ BYTE   W24
+ BYTE   Cn2
+ BYTE   W24
+ BYTE   Bn1
+ BYTE   W24
+ BYTE   Fn1
+ BYTE   W24
+ BYTE   En1
+ BYTE   W24
+ BYTE   As1
+ BYTE   W24
+ BYTE   An1
+ BYTE   W24
+ BYTE   Ds1
+ BYTE   W24
+ BYTE   N40  Dn1
+ BYTE   W32
+ BYTE   W03
+ BYTE   PEND 
+// 007   ----------------------------------------
+Bloodpool_Label_2_0AF6:
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W13
+ BYTE   N08  Dn1  v112
+ BYTE   W12
+ BYTE   Dn2  v115
+ BYTE   W12
+ BYTE   An1  v110
+ BYTE   W12
+ BYTE   N10  Gs1
+ BYTE   W24
+ BYTE   Dn2  v090
+ BYTE   N10  Gn1  v110
+ BYTE   W24
+ BYTE   Gs1
+ BYTE   W24
+ BYTE   Ds2  v090
+ BYTE   N10  An1  v110
+ BYTE   W24
+ BYTE   N40  En1
+ BYTE   W32
+ BYTE   W03
+ BYTE   PEND 
+// 008   ----------------------------------------
+Bloodpool_Label_2_0C76:
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W13
+ BYTE   N08  En1  v112
+ BYTE   W12
+ BYTE   En2  v115
+ BYTE   W12
+ BYTE   As1  v110
+ BYTE   W12
+ BYTE   N10
+ BYTE   W24
+ BYTE   En2  v090
+ BYTE   N10  An1  v110
+ BYTE   W24
+ BYTE   As1
+ BYTE   W24
+ BYTE   Fn2  v090
+ BYTE   N10  Bn1  v110
+ BYTE   W24
+ BYTE   N20  Fs1
+ BYTE   W36
+ BYTE   N08  Ds2
+ BYTE   W12
+ BYTE   N36  Gs2
+ BYTE   W18
+ BYTE   N01
+ BYTE   W17
+ BYTE   PEND 
+// 009   ----------------------------------------
+Bloodpool_Label_2_0E56:
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N14  Fs1  v110
+ BYTE   W16
+ BYTE   N06  Ds2
+ BYTE   W08
+ BYTE   Gs2
+ BYTE   W24
+ BYTE   N14  Fs1
+ BYTE   W16
+ BYTE   N06  Ds2
+ BYTE   W08
+ BYTE   Gs2
+ BYTE   W24
+ BYTE   N20  Fs1
+ BYTE   W36
+ BYTE   N08  Ds2
+ BYTE   W12
+ BYTE   N36  Gs2
+ BYTE   W18
+ BYTE   N01
+ BYTE   W17
+ BYTE   PEND 
+// 010   ----------------------------------------
+Bloodpool_Label_2_0FD6:
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N14  Fs1  v110
+ BYTE   W16
+ BYTE   N06  Ds2
+ BYTE   W08
+ BYTE   Gs2
+ BYTE   W24
+ BYTE   N14  Fs1
+ BYTE   W16
+ BYTE   N06  Ds2
+ BYTE   W08
+ BYTE   Gs2
+ BYTE   W24
+ BYTE   N20  Gn1
+ BYTE   W36
+ BYTE   N08  En2
+ BYTE   W12
+ BYTE   N36  An2
+ BYTE   W18
+ BYTE   N01
+ BYTE   W17
+ BYTE   PEND 
+// 011   ----------------------------------------
+Bloodpool_Label_2_1156:
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N14  Gn1  v110
+ BYTE   W16
+ BYTE   N06  En2
+ BYTE   W08
+ BYTE   An2
+ BYTE   W24
+ BYTE   N14  Gn1
+ BYTE   W16
+ BYTE   N06  En2
+ BYTE   W08
+ BYTE   An2
+ BYTE   W24
+ BYTE   N20  Gn1
+ BYTE   W36
+ BYTE   N08  En2
+ BYTE   W12
+ BYTE   N36  An2
+ BYTE   W18
+ BYTE   N01
+ BYTE   W17
+ BYTE   PEND 
+// 012   ----------------------------------------
+Bloodpool_Label_2_12D6:
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N14  Gn1  v110
+ BYTE   W16
+ BYTE   N06  En2
+ BYTE   W08
+ BYTE   An2
+ BYTE   W24
+ BYTE   N14  Gn1
+ BYTE   W16
+ BYTE   N06  En2
+ BYTE   W08
+ BYTE   An2
+ BYTE   W24
+ BYTE   N96  Cn1  v105
+ BYTE   W48
+ BYTE   N72
+ BYTE   W84
+ BYTE   W01
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Bloodpool_Label_2_02BA
+ BYTE   PATT
+  POIN2 Bloodpool_Label_2_03AA
+ BYTE   PATT
+  POIN2 Bloodpool_Label_2_02BA
+ BYTE   PATT
+  POIN2 Bloodpool_Label_2_06AA
+ BYTE   PATT
+  POIN2 Bloodpool_Label_2_0AF6
+ BYTE   PATT
+  POIN2 Bloodpool_Label_2_0C76
+ BYTE   PATT
+  POIN2 Bloodpool_Label_2_0E56
+ BYTE   PATT
+  POIN2 Bloodpool_Label_2_0FD6
+ BYTE   PATT
+  POIN2 Bloodpool_Label_2_1156
+ BYTE   PATT
+  POIN2 Bloodpool_Label_2_12D6
+ BYTE   PATT
+  POIN2 Bloodpool_Label_2_02BA
+ BYTE   PATT
+  POIN2 Bloodpool_Label_2_03AA
+ BYTE   PATT
+  POIN2 Bloodpool_Label_2_02BA
+// 013   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N08  Cn2  v115
+ BYTE   W24
+ BYTE   Gs1
+ BYTE   W24
+ BYTE   Gn1
+ BYTE   W21
+ BYTE   W03
+ BYTE   N08  Ds1  v115
+ BYTE   W12
+ BYTE   N06  Gn1
+ BYTE   W05
+ BYTE   W01
+ BYTE   N06  Gn1  v115
+ BYTE   W06
+ BYTE   N12  An1  v110
+ BYTE   W24
+ BYTE   Dn2
+ BYTE   W24
+ BYTE   Cs2
+ BYTE   W24
+ BYTE   Gn1
+ BYTE   W24
+ BYTE   Fs1
+ BYTE   W24
+ BYTE   Cn2
+ BYTE   W24
+ BYTE   Bn1
+ BYTE   W24
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   W06
+ BYTE   W03
+ BYTE   W01
+ BYTE   W01
+ BYTE   W02
+// 014   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Bloodpool_Label_2_00
+ BYTE   FINE
+
+//**************** Track 4 (Midi-Chn.3) ****************//
+
+Bloodpool_004:
+// 000   ----------------------------------------
+Bloodpool_Label_3_00:
+ BYTE   TEMPO   160*Bloodpool_tbs/2
+ BYTE   KEYSH   Bloodpool_key+0
+ BYTE   VOICE   24
+ BYTE   VOL   11*Bloodpool_mvl/mxv
+ BYTE   W48
+ BYTE   W03
+// 001   ----------------------------------------
+ BYTE   PAN   c_v-6
+ BYTE   W10
+ BYTE   W15
+ BYTE   BEND   c_v+0
+ BYTE   W10
+ BYTE   MOD 0
+ BYTE   W92
+Bloodpool_Label_3_0164:
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+ BYTE   W36
+ BYTE   W02
+// 006   ----------------------------------------
+Bloodpool_Label_3_07B0:
+ BYTE   N04  Gn5  v110
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   PEND 
+// 007   ----------------------------------------
+Bloodpool_Label_3_0870:
+ BYTE   N04  Fn5  v110
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Bloodpool_Label_3_0870
+// 008   ----------------------------------------
+Bloodpool_Label_3_09F0:
+ BYTE   N04  Ds5  v110
+ BYTE   W06
+ BYTE   Ds5
+ BYTE   W06
+ BYTE   Ds5
+ BYTE   W06
+ BYTE   Ds5
+ BYTE   W06
+ BYTE   Ds5
+ BYTE   W06
+ BYTE   Ds5
+ BYTE   W06
+ BYTE   Ds5
+ BYTE   W06
+ BYTE   Ds5
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   W18
+ BYTE   PEND 
+Bloodpool_Label_3_0B88:
+ BYTE   N07  Fs4  v095
+ BYTE   N07  Dn4
+ BYTE   W24
+ BYTE   Fn4
+ BYTE   N07  Cs4
+ BYTE   W24
+// 010   ----------------------------------------
+ BYTE   Fs4
+ BYTE   N07  Dn4
+ BYTE   W24
+ BYTE   Gn4
+ BYTE   N07  Ds4
+ BYTE   W96
+ BYTE   W24
+ BYTE   PEND 
+// 011   ----------------------------------------
+Bloodpool_Label_3_0D08:
+ BYTE   N07  Gs4  v095
+ BYTE   N07  En4
+ BYTE   W24
+ BYTE   Gn4
+ BYTE   N07  Ds4
+ BYTE   W24
+ BYTE   Gs4
+ BYTE   N07  En4
+ BYTE   W24
+ BYTE   An4
+ BYTE   N07  Fn4
+ BYTE   W12
+ BYTE   N04  Fs4  v085
+ BYTE   W06
+ BYTE   Ds4
+ BYTE   W06
+ BYTE   PEND 
+// 012   ----------------------------------------
+Bloodpool_Label_3_0DC8:
+ BYTE   N04  Gs4  v085
+ BYTE   W06
+ BYTE   Ds4
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   W06
+ BYTE   Ds4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   Ds4
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   W06
+ BYTE   Ds4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   Ds4
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   W06
+ BYTE   Ds4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   Ds4
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   W06
+ BYTE   Ds4
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Bloodpool_Label_3_0DC8
+ BYTE   PATT
+  POIN2 Bloodpool_Label_3_0DC8
+// 013   ----------------------------------------
+Bloodpool_Label_3_1008:
+ BYTE   N04  Gs4  v085
+ BYTE   W06
+ BYTE   Ds4
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   W06
+ BYTE   Ds4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   Ds4
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   W06
+ BYTE   Ds4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   Ds4
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   W06
+ BYTE   Ds4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   Ds4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   PEND 
+// 014   ----------------------------------------
+Bloodpool_Label_3_10C8:
+ BYTE   N04  An4  v085
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Bloodpool_Label_3_10C8
+ BYTE   PATT
+  POIN2 Bloodpool_Label_3_10C8
+// 015   ----------------------------------------
+ BYTE   N04  An4  v085
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W96
+// 016   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 017   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 018   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 019   ----------------------------------------
+ BYTE   W96
+ BYTE   W06
+ BYTE   PATT
+  POIN2 Bloodpool_Label_3_07B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_3_0870
+ BYTE   PATT
+  POIN2 Bloodpool_Label_3_0870
+ BYTE   PATT
+  POIN2 Bloodpool_Label_3_09F0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_3_0B88
+ BYTE   PATT
+  POIN2 Bloodpool_Label_3_0D08
+ BYTE   PATT
+  POIN2 Bloodpool_Label_3_0DC8
+ BYTE   PATT
+  POIN2 Bloodpool_Label_3_0DC8
+ BYTE   PATT
+  POIN2 Bloodpool_Label_3_0DC8
+ BYTE   PATT
+  POIN2 Bloodpool_Label_3_1008
+ BYTE   PATT
+  POIN2 Bloodpool_Label_3_10C8
+ BYTE   PATT
+  POIN2 Bloodpool_Label_3_10C8
+ BYTE   PATT
+  POIN2 Bloodpool_Label_3_10C8
+// 020   ----------------------------------------
+ BYTE   N04  An4  v085
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W96
+// 021   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 022   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 023   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 024   ----------------------------------------
+ BYTE   W72
+ BYTE   W03
+// 025   ----------------------------------------
+ BYTE   W20
+ BYTE   W07
+ BYTE   N04  Gn5  v110
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+// 026   ----------------------------------------
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+// 027   ----------------------------------------
+ BYTE   En5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   N04  En5  v110
+ BYTE   W03
+ BYTE   W01
+ BYTE   W01
+ BYTE   W02
+// 028   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Bloodpool_Label_3_00
+ BYTE   FINE
+
+//**************** Track 5 (Midi-Chn.4) ****************//
+
+Bloodpool_005:
+// 000   ----------------------------------------
+Bloodpool_Label_4_00:
+ BYTE   TEMPO   160*Bloodpool_tbs/2
+ BYTE   KEYSH   Bloodpool_key+0
+ BYTE   VOICE   11
+ BYTE   VOL   13*Bloodpool_mvl/mxv
+ BYTE   W48
+ BYTE   W03
+// 001   ----------------------------------------
+ BYTE   PAN   c_v-4
+ BYTE   W10
+ BYTE   W15
+ BYTE   BEND   c_v+0
+ BYTE   W10
+ BYTE   MOD 0
+ BYTE   W92
+Bloodpool_Label_4_0164:
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+ BYTE   W64
+ BYTE   W01
+// 003   ----------------------------------------
+Bloodpool_Label_4_0366:
+ BYTE   N11  Gn3  v108
+ BYTE   N11  Cn3
+ BYTE   W48
+ BYTE   Gn3
+ BYTE   N11  Cn3
+ BYTE   W36
+ BYTE   N12  As3
+ BYTE   N12  Fn3
+ BYTE   W12
+ BYTE   PEND 
+// 004   ----------------------------------------
+ BYTE   N04  Cn4  v108
+ BYTE   N04  Gn3
+ BYTE   W36
+ BYTE   N12  Fn4
+ BYTE   N12  As3
+ BYTE   W12
+ BYTE   N04  Gn4
+ BYTE   N04  Cn4
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+ BYTE   W48
+ BYTE   PATT
+  POIN2 Bloodpool_Label_4_0366
+// 006   ----------------------------------------
+ BYTE   N04  Cn4  v108
+ BYTE   N04  Gn3
+ BYTE   W36
+ BYTE   N12  Fn4
+ BYTE   N12  As3
+ BYTE   W12
+ BYTE   N04  Gn4
+ BYTE   N04  Cn4
+ BYTE   W24
+ BYTE   N48  Gn4
+ BYTE   N48  Cn4
+ BYTE   W32
+ BYTE   W03
+// 007   ----------------------------------------
+Bloodpool_Label_4_07FC:
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N48  Fs4  v108
+ BYTE   N48  Bn3
+ BYTE   W32
+ BYTE   W03
+ BYTE   PEND 
+// 008   ----------------------------------------
+Bloodpool_Label_4_085C:
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N48  Fn4  v108
+ BYTE   N48  As3
+ BYTE   W32
+ BYTE   W03
+ BYTE   PEND 
+// 009   ----------------------------------------
+Bloodpool_Label_4_08BC:
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N48  An3  v108
+ BYTE   N48  En4
+ BYTE   W32
+ BYTE   W03
+ BYTE   PEND 
+// 010   ----------------------------------------
+Bloodpool_Label_4_091C:
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N48  As3  v108
+ BYTE   N48  Fn4
+ BYTE   W32
+ BYTE   W03
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Bloodpool_Label_4_08BC
+// 011   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N48  Ds4  v108
+ BYTE   N48  Gs3
+ BYTE   W32
+ BYTE   W03
+// 012   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N48  Gn3  v108
+ BYTE   N48  Dn4
+ BYTE   W32
+ BYTE   W03
+// 013   ----------------------------------------
+Bloodpool_Label_4_0A9C:
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N12  Dn4  v112
+ BYTE   W12
+ BYTE   N04  Fs4  v104
+ BYTE   N04  Cn4  v112
+ BYTE   W12
+ BYTE   N12  Dn4
+ BYTE   W12
+ BYTE   N04  Fs4  v104
+ BYTE   N04  Cn4  v112
+ BYTE   W12
+ BYTE   N12  Fn4  v104
+ BYTE   N12  Bn3  v112
+ BYTE   W12
+ BYTE   N04  An4  v104
+ BYTE   N04  Cn4  v112
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W12
+ BYTE   N06  Dn5  v116
+ BYTE   W12
+ BYTE   Dn4  v112
+ BYTE   W12
+ BYTE   N04
+ BYTE   N06  Fs4  v104
+ BYTE   W12
+ BYTE   Cs4  v112
+ BYTE   W12
+ BYTE   N04
+ BYTE   N06  Fn4  v104
+ BYTE   W12
+ BYTE   Dn4  v112
+ BYTE   W12
+ BYTE   N04
+ BYTE   N06  Fs4  v104
+ BYTE   W12
+ BYTE   Ds4  v112
+ BYTE   W12
+ BYTE   N04
+ BYTE   N06  Gn4  v104
+ BYTE   W12
+ BYTE   N12  En4  v112
+ BYTE   W12
+ BYTE   N04  Gs4  v104
+ BYTE   N04  Dn4  v112
+ BYTE   W12
+ BYTE   N12  En4
+ BYTE   W12
+ BYTE   N04  Gs4  v104
+ BYTE   N04  Dn4  v112
+ BYTE   W12
+ BYTE   N12  Gn4  v104
+ BYTE   N12  Cs4  v112
+ BYTE   W12
+ BYTE   N04  As4  v104
+ BYTE   N04  Dn4  v112
+ BYTE   W12
+ BYTE   En4
+ BYTE   W12
+ BYTE   N06  En5  v116
+ BYTE   W12
+ BYTE   En4  v112
+ BYTE   W12
+ BYTE   N04
+ BYTE   N06  Gs4  v104
+ BYTE   W12
+ BYTE   Ds4  v112
+ BYTE   W12
+ BYTE   N04
+ BYTE   N06  Gn4  v104
+ BYTE   W12
+ BYTE   En4  v112
+ BYTE   W12
+ BYTE   N04
+ BYTE   N06  Gs4  v104
+ BYTE   W12
+ BYTE   Fn4  v112
+ BYTE   W12
+ BYTE   N04
+ BYTE   N06  An4  v104
+ BYTE   W12
+ BYTE   As4  v112
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   N68
+ BYTE   N68  As4
+ BYTE   W36
+ BYTE   W01
+ BYTE   PEND 
+// 014   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W24
+ BYTE   W01
+ BYTE   N06  As4  v112
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4  v105
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4  v112
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W24
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   N68
+ BYTE   N68  As4
+ BYTE   W36
+ BYTE   W01
+// 015   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W24
+ BYTE   W01
+ BYTE   N06  As4  v112
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4  v105
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4  v112
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W24
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   N68
+ BYTE   N68  Bn4
+ BYTE   W36
+ BYTE   W01
+// 016   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W24
+ BYTE   W01
+ BYTE   N06  Bn4  v112
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v105
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v112
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W24
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   N68  Bn4
+ BYTE   N68  En4
+ BYTE   W36
+ BYTE   W01
+// 017   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W24
+ BYTE   W01
+ BYTE   N06  Bn4  v112
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v105
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v112
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v105
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v112
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v098
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v092
+ BYTE   N06  En4
+ BYTE   W96
+ BYTE   W96
+ BYTE   W32
+ BYTE   N11  Gn3  v108
+ BYTE   N11  Cn3
+ BYTE   W48
+ BYTE   Gn3
+ BYTE   N11  Cn3
+ BYTE   W36
+ BYTE   N12  As3
+ BYTE   N12  Fn3
+ BYTE   W12
+ BYTE   N04  Cn4
+ BYTE   N04  Gn3
+ BYTE   W36
+ BYTE   N12  Fn4
+ BYTE   N12  As3
+ BYTE   W12
+ BYTE   N04  Gn4
+ BYTE   N04  Cn4
+ BYTE   W96
+ BYTE   W96
+ BYTE   W48
+ BYTE   N11  Gn3
+ BYTE   N11  Cn3
+ BYTE   W48
+ BYTE   Gn3
+ BYTE   N11  Cn3
+ BYTE   W36
+ BYTE   N12  As3
+ BYTE   N12  Fn3
+ BYTE   W12
+ BYTE   N04  Cn4
+ BYTE   N04  Gn3
+ BYTE   W36
+ BYTE   N12  Fn4
+ BYTE   N12  As3
+ BYTE   W12
+ BYTE   N04  Gn4
+ BYTE   N04  Cn4
+ BYTE   W24
+ BYTE   N48  Gn4
+ BYTE   N48  Cn4
+ BYTE   W32
+ BYTE   W03
+ BYTE   PATT
+  POIN2 Bloodpool_Label_4_07FC
+ BYTE   PATT
+  POIN2 Bloodpool_Label_4_091C
+ BYTE   PATT
+  POIN2 Bloodpool_Label_4_08BC
+ BYTE   PATT
+  POIN2 Bloodpool_Label_4_085C
+ BYTE   PATT
+  POIN2 Bloodpool_Label_4_08BC
+// 018   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N48  Gs3  v108
+ BYTE   N48  Ds4
+ BYTE   W32
+ BYTE   W03
+// 019   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N48  Dn4  v108
+ BYTE   N48  Gn3
+ BYTE   W32
+ BYTE   W03
+ BYTE   PATT
+  POIN2 Bloodpool_Label_4_0A9C
+// 020   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W24
+ BYTE   W01
+ BYTE   N06  As4  v112
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4  v105
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4  v112
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W24
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   N68  As4
+ BYTE   N68  Ds4
+ BYTE   W36
+ BYTE   W01
+// 021   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W24
+ BYTE   W01
+ BYTE   N06  As4  v112
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4  v105
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4  v112
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W24
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   N68  Bn4
+ BYTE   N68  En4
+ BYTE   W36
+ BYTE   W01
+// 022   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W24
+ BYTE   W01
+ BYTE   N06  Bn4  v112
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v105
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v112
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W24
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   N68
+ BYTE   N68  Bn4
+ BYTE   W36
+ BYTE   W01
+// 023   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W24
+ BYTE   W01
+ BYTE   N06  Bn4  v112
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v105
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v112
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v105
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v112
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v098
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v092
+ BYTE   N06  En4
+ BYTE   W96
+ BYTE   W96
+ BYTE   W32
+ BYTE   N11  Gn3  v108
+ BYTE   N11  Cn3
+ BYTE   W48
+ BYTE   Gn3
+ BYTE   N11  Cn3
+ BYTE   W36
+ BYTE   N12  As3
+ BYTE   N12  Fn3
+ BYTE   W12
+ BYTE   N04  Cn4
+ BYTE   N04  Gn3
+ BYTE   W36
+ BYTE   N12  Fn4
+ BYTE   N12  As3
+ BYTE   W12
+ BYTE   N04  Gn4
+ BYTE   N04  Cn4
+ BYTE   W96
+ BYTE   W96
+ BYTE   W48
+ BYTE   N11  Gn3
+ BYTE   N11  Cn3
+ BYTE   W48
+ BYTE   Gn3
+ BYTE   N11  Cn3
+ BYTE   W36
+ BYTE   N12  As3
+ BYTE   N12  Fn3
+ BYTE   W12
+ BYTE   N04  Cn4
+ BYTE   N04  Gn3
+ BYTE   W36
+ BYTE   N12  Fn4
+ BYTE   N12  As3
+ BYTE   W06
+ BYTE   W06
+ BYTE   N04  Gn4  v108
+ BYTE   N04  Cn4
+ BYTE   W14
+ BYTE   W10
+ BYTE   N48  Gn4  v108
+ BYTE   N48  Cn4
+ BYTE   W32
+ BYTE   W03
+ BYTE   PATT
+  POIN2 Bloodpool_Label_4_07FC
+ BYTE   PATT
+  POIN2 Bloodpool_Label_4_085C
+// 024   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W32
+ BYTE   W02
+ BYTE   W02
+// 025   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   GoTo
+  POIN2 Bloodpool_Label_4_00
+ BYTE   FINE
+
+//**************** Track 6 (Midi-Chn.5) ****************//
+
+Bloodpool_006:
+// 000   ----------------------------------------
+Bloodpool_Label_5_00:
+ BYTE   TEMPO   160*Bloodpool_tbs/2
+ BYTE   KEYSH   Bloodpool_key+0
+ BYTE   VOICE   11
+ BYTE   VOL   13*Bloodpool_mvl/mxv
+ BYTE   W36
+ BYTE   W01
+ BYTE   VOICE   57
+ BYTE   W13
+// 001   ----------------------------------------
+ BYTE   PAN   c_v-6
+ BYTE   W10
+ BYTE   W15
+ BYTE   BEND   c_v+0
+ BYTE   W10
+ BYTE   MOD 0
+ BYTE   W92
+Bloodpool_Label_5_0164:
+ BYTE   W28
+ BYTE   W01
+// 002   ----------------------------------------
+ BYTE   N05  Gn3  v085
+ BYTE   W06
+ BYTE   Gn3
+ BYTE   W06
+ BYTE   N08  Cn4  v115
+ BYTE   W12
+ BYTE   N04  Gn3  v108
+ BYTE   W12
+ BYTE   N12
+ BYTE   W24
+ BYTE   Gn3
+ BYTE   N12  Cn3  v095
+ BYTE   W12
+ BYTE   N06  Gs3  v108
+ BYTE   N06  Cs3  v095
+ BYTE   W24
+// 003   ----------------------------------------
+ BYTE   N04  Gs3  v108
+ BYTE   N04  Cs3  v095
+ BYTE   W12
+ BYTE   N12  Gs3  v108
+ BYTE   N12  Cs3  v095
+ BYTE   W12
+ BYTE   N06  As3  v108
+ BYTE   N06  Ds3  v095
+ BYTE   W24
+ BYTE   As3  v108
+ BYTE   N06  Ds3  v095
+ BYTE   W12
+ BYTE   N12  As3  v108
+ BYTE   N12  Ds3  v095
+ BYTE   W12
+ BYTE   N06  Gs3  v108
+ BYTE   N06  Cs3  v095
+ BYTE   W36
+// 004   ----------------------------------------
+Bloodpool_Label_5_0336:
+ BYTE   N06  Cn4  v108
+ BYTE   W12
+ BYTE   Gn4  v095
+ BYTE   N06  Cn4  v108
+ BYTE   W06
+ BYTE   Gn4  v095
+ BYTE   N06  Cn4  v108
+ BYTE   W06
+ BYTE   N11
+ BYTE   N12  Gn4  v095
+ BYTE   W12
+ BYTE   N06
+ BYTE   N06  Cn4  v108
+ BYTE   W06
+ BYTE   Gn4  v095
+ BYTE   N06  Cn4  v108
+ BYTE   W06
+ BYTE   N12  Gn4  v095
+ BYTE   N12  Cn4  v108
+ BYTE   W12
+ BYTE   N06  Gs4
+ BYTE   N06  Cs4  v095
+ BYTE   W24
+ BYTE   Gs4  v108
+ BYTE   N06  Cs4  v095
+ BYTE   W12
+ BYTE   PEND 
+// 005   ----------------------------------------
+Bloodpool_Label_5_03F6:
+ BYTE   N12  Gs4  v108
+ BYTE   N12  Cs4  v095
+ BYTE   W12
+ BYTE   N04  As4  v108
+ BYTE   N04  Ds4  v095
+ BYTE   W24
+ BYTE   N06  As4  v108
+ BYTE   N06  Ds4  v095
+ BYTE   W12
+ BYTE   N12  As4  v108
+ BYTE   N12  Ds4  v095
+ BYTE   W12
+ BYTE   N06  Gs4  v108
+ BYTE   N06  Cs4  v095
+ BYTE   W36
+ BYTE   PEND 
+// 006   ----------------------------------------
+Bloodpool_Label_5_04B6:
+ BYTE   N08  Cn4  v115
+ BYTE   W12
+ BYTE   N04  Gn3  v108
+ BYTE   W12
+ BYTE   N12
+ BYTE   W24
+ BYTE   Gn3
+ BYTE   N12  Cn3  v095
+ BYTE   W12
+ BYTE   N06  Gs3  v108
+ BYTE   N06  Cs3  v095
+ BYTE   W24
+ BYTE   N04  Gs3  v108
+ BYTE   N04  Cs3  v095
+ BYTE   W12
+ BYTE   PEND 
+// 007   ----------------------------------------
+Bloodpool_Label_5_0576:
+ BYTE   N12  Gs3  v108
+ BYTE   N12  Cs3  v095
+ BYTE   W12
+ BYTE   N06  As3  v108
+ BYTE   N06  Ds3  v095
+ BYTE   W24
+ BYTE   As3  v108
+ BYTE   N06  Ds3  v095
+ BYTE   W12
+ BYTE   N12  As3  v108
+ BYTE   N12  Ds3  v095
+ BYTE   W12
+ BYTE   N06  Gs3  v108
+ BYTE   N06  Cs3  v095
+ BYTE   W36
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Bloodpool_Label_5_0336
+// 008   ----------------------------------------
+Bloodpool_Label_5_06F6:
+ BYTE   N12  Gs4  v108
+ BYTE   N12  Cs4  v095
+ BYTE   W12
+ BYTE   N04  As4  v108
+ BYTE   N04  Ds4  v095
+ BYTE   W24
+ BYTE   N06  As4  v108
+ BYTE   N06  Ds4  v095
+ BYTE   W12
+ BYTE   N12  As4  v108
+ BYTE   N12  Ds4  v095
+ BYTE   W12
+ BYTE   N06  Gs4  v108
+ BYTE   N06  Cs4  v095
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 010   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 011   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 013   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 014   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 015   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 016   ----------------------------------------
+ BYTE   W96
+ BYTE   W36
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Bloodpool_Label_5_04B6
+ BYTE   PATT
+  POIN2 Bloodpool_Label_5_0576
+ BYTE   PATT
+  POIN2 Bloodpool_Label_5_0336
+ BYTE   PATT
+  POIN2 Bloodpool_Label_5_03F6
+ BYTE   PATT
+  POIN2 Bloodpool_Label_5_04B6
+ BYTE   PATT
+  POIN2 Bloodpool_Label_5_0576
+ BYTE   PATT
+  POIN2 Bloodpool_Label_5_0336
+ BYTE   PATT
+  POIN2 Bloodpool_Label_5_06F6
+ BYTE   PATT
+  POIN2 Bloodpool_Label_5_04B6
+ BYTE   PATT
+  POIN2 Bloodpool_Label_5_0576
+ BYTE   PATT
+  POIN2 Bloodpool_Label_5_0336
+ BYTE   PATT
+  POIN2 Bloodpool_Label_5_03F6
+ BYTE   PATT
+  POIN2 Bloodpool_Label_5_04B6
+ BYTE   PATT
+  POIN2 Bloodpool_Label_5_0576
+ BYTE   PATT
+  POIN2 Bloodpool_Label_5_0336
+// 017   ----------------------------------------
+ BYTE   N12  Gs4  v108
+ BYTE   N12  Cs4  v095
+ BYTE   W12
+ BYTE   N04  As4  v108
+ BYTE   N04  Ds4  v095
+ BYTE   W24
+ BYTE   N06  As4  v108
+ BYTE   N06  Ds4  v095
+ BYTE   W12
+ BYTE   N12  As4  v108
+ BYTE   N12  Ds4  v095
+ BYTE   W12
+ BYTE   N06  Gs4  v108
+ BYTE   N06  Cs4  v095
+ BYTE   W06
+ BYTE   W20
+ BYTE   W96
+// 018   ----------------------------------------
+ BYTE   W90
+ BYTE   W01
+// 019   ----------------------------------------
+ BYTE   W06
+ BYTE   W03
+ BYTE   W01
+ BYTE   W01
+ BYTE   W02
+// 020   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Bloodpool_Label_5_00
+ BYTE   FINE
+
+//**************** Track 7 (Midi-Chn.6) ****************//
+
+Bloodpool_007:
+// 000   ----------------------------------------
+Bloodpool_Label_6_00:
+ BYTE   TEMPO   160*Bloodpool_tbs/2
+ BYTE   KEYSH   Bloodpool_key+0
+ BYTE   VOL   16*Bloodpool_mvl/mxv
+ BYTE   W36
+ BYTE   W01
+ BYTE   VOICE   56
+ BYTE   W13
+// 001   ----------------------------------------
+ BYTE   PAN   c_v-4
+ BYTE   W10
+ BYTE   W15
+ BYTE   BEND   c_v+0
+ BYTE   W10
+ BYTE   MOD 0
+ BYTE   W92
+Bloodpool_Label_6_0164:
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+ BYTE   W60
+ BYTE   W02
+// 003   ----------------------------------------
+Bloodpool_Label_6_0360:
+ BYTE   N11  Gn3  v108
+ BYTE   N11  Cn3
+ BYTE   W48
+ BYTE   Gn3
+ BYTE   N11  Cn3
+ BYTE   W36
+ BYTE   N12  As3
+ BYTE   N12  Fn3
+ BYTE   W12
+ BYTE   PEND 
+// 004   ----------------------------------------
+ BYTE   N04  Cn4  v108
+ BYTE   N04  Gn3
+ BYTE   W36
+ BYTE   N12  Fn4
+ BYTE   N12  As3
+ BYTE   W12
+ BYTE   N04  Gn4
+ BYTE   N04  Cn4
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+ BYTE   W48
+ BYTE   PATT
+  POIN2 Bloodpool_Label_6_0360
+// 006   ----------------------------------------
+ BYTE   N04  Cn4  v108
+ BYTE   N04  Gn3
+ BYTE   W36
+ BYTE   N12  Fn4
+ BYTE   N12  As3
+ BYTE   W12
+ BYTE   N04  Gn4
+ BYTE   N04  Cn4
+ BYTE   W24
+ BYTE   N48  Gn4
+ BYTE   N48  Cn4
+ BYTE   W32
+ BYTE   W03
+// 007   ----------------------------------------
+Bloodpool_Label_6_07F6:
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N48  Fs4  v108
+ BYTE   N48  Bn3
+ BYTE   W32
+ BYTE   W03
+ BYTE   PEND 
+// 008   ----------------------------------------
+Bloodpool_Label_6_0856:
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N48  Fn4  v108
+ BYTE   N48  As3
+ BYTE   W32
+ BYTE   W03
+ BYTE   PEND 
+// 009   ----------------------------------------
+Bloodpool_Label_6_08B6:
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N48  An3  v108
+ BYTE   N48  En4
+ BYTE   W32
+ BYTE   W03
+ BYTE   PEND 
+// 010   ----------------------------------------
+Bloodpool_Label_6_0916:
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N48  As3  v108
+ BYTE   N48  Fn4
+ BYTE   W32
+ BYTE   W03
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Bloodpool_Label_6_08B6
+// 011   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N48  Ds4  v108
+ BYTE   N48  Gs3
+ BYTE   W32
+ BYTE   W03
+// 012   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N48  Gn3  v108
+ BYTE   N48  Dn4
+ BYTE   W32
+ BYTE   W03
+// 013   ----------------------------------------
+Bloodpool_Label_6_0A96:
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N12  Dn4  v112
+ BYTE   W12
+ BYTE   N04  Fs4  v104
+ BYTE   N04  Cn4  v112
+ BYTE   W12
+ BYTE   N12  Dn4
+ BYTE   W12
+ BYTE   N04  Fs4  v104
+ BYTE   N04  Cn4  v112
+ BYTE   W12
+ BYTE   N12  Fn4  v104
+ BYTE   N12  Bn3  v112
+ BYTE   W12
+ BYTE   N04  An4  v104
+ BYTE   N04  Cn4  v112
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W12
+ BYTE   N06  Dn5  v116
+ BYTE   W12
+ BYTE   Dn4  v112
+ BYTE   W12
+ BYTE   N04
+ BYTE   N06  Fs4  v104
+ BYTE   W12
+ BYTE   Cs4  v112
+ BYTE   W12
+ BYTE   N04
+ BYTE   N06  Fn4  v104
+ BYTE   W12
+ BYTE   Dn4  v112
+ BYTE   W12
+ BYTE   N04
+ BYTE   N06  Fs4  v104
+ BYTE   W12
+ BYTE   Ds4  v112
+ BYTE   W12
+ BYTE   N04
+ BYTE   N06  Gn4  v104
+ BYTE   W12
+ BYTE   N12  En4  v112
+ BYTE   W12
+ BYTE   N04  Gs4  v104
+ BYTE   N04  Dn4  v112
+ BYTE   W12
+ BYTE   N12  En4
+ BYTE   W12
+ BYTE   N04  Gs4  v104
+ BYTE   N04  Dn4  v112
+ BYTE   W12
+ BYTE   N12  Gn4  v104
+ BYTE   N12  Cs4  v112
+ BYTE   W12
+ BYTE   N04  As4  v104
+ BYTE   N04  Dn4  v112
+ BYTE   W12
+ BYTE   En4
+ BYTE   W12
+ BYTE   N06  En5  v116
+ BYTE   W12
+ BYTE   En4  v112
+ BYTE   W12
+ BYTE   N04
+ BYTE   N06  Gs4  v104
+ BYTE   W12
+ BYTE   Ds4  v112
+ BYTE   W12
+ BYTE   N04
+ BYTE   N06  Gn4  v104
+ BYTE   W12
+ BYTE   En4  v112
+ BYTE   W12
+ BYTE   N04
+ BYTE   N06  Gs4  v104
+ BYTE   W12
+ BYTE   Fn4  v112
+ BYTE   W12
+ BYTE   N04
+ BYTE   N06  An4  v104
+ BYTE   W12
+ BYTE   As4  v112
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   N68
+ BYTE   N68  As4
+ BYTE   W36
+ BYTE   W01
+ BYTE   PEND 
+// 014   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W24
+ BYTE   W01
+ BYTE   N06  As4  v112
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4  v105
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4  v112
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W24
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   N68
+ BYTE   N68  As4
+ BYTE   W36
+ BYTE   W01
+// 015   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W24
+ BYTE   W01
+ BYTE   N06  As4  v112
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4  v105
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4  v112
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W24
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   N68
+ BYTE   N68  Bn4
+ BYTE   W36
+ BYTE   W01
+// 016   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W24
+ BYTE   W01
+ BYTE   N06  Bn4  v112
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v105
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v112
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W24
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   N68  Bn4
+ BYTE   N68  En4
+ BYTE   W36
+ BYTE   W01
+// 017   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W24
+ BYTE   W01
+ BYTE   N06  Bn4  v112
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v105
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v112
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v105
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v112
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v098
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v092
+ BYTE   N06  En4
+ BYTE   W96
+ BYTE   W96
+ BYTE   W32
+ BYTE   N11  Gn3  v108
+ BYTE   N11  Cn3
+ BYTE   W48
+ BYTE   Gn3
+ BYTE   N11  Cn3
+ BYTE   W36
+ BYTE   N12  As3
+ BYTE   N12  Fn3
+ BYTE   W12
+ BYTE   N04  Cn4
+ BYTE   N04  Gn3
+ BYTE   W36
+ BYTE   N12  Fn4
+ BYTE   N12  As3
+ BYTE   W12
+ BYTE   N04  Gn4
+ BYTE   N04  Cn4
+ BYTE   W96
+ BYTE   W96
+ BYTE   W48
+ BYTE   N11  Gn3
+ BYTE   N11  Cn3
+ BYTE   W48
+ BYTE   Gn3
+ BYTE   N11  Cn3
+ BYTE   W36
+ BYTE   N12  As3
+ BYTE   N12  Fn3
+ BYTE   W12
+ BYTE   N04  Cn4
+ BYTE   N04  Gn3
+ BYTE   W36
+ BYTE   N12  Fn4
+ BYTE   N12  As3
+ BYTE   W12
+ BYTE   N04  Gn4
+ BYTE   N04  Cn4
+ BYTE   W24
+ BYTE   N48  Gn4
+ BYTE   N48  Cn4
+ BYTE   W32
+ BYTE   W03
+ BYTE   PATT
+  POIN2 Bloodpool_Label_6_07F6
+ BYTE   PATT
+  POIN2 Bloodpool_Label_6_0916
+ BYTE   PATT
+  POIN2 Bloodpool_Label_6_08B6
+ BYTE   PATT
+  POIN2 Bloodpool_Label_6_0856
+ BYTE   PATT
+  POIN2 Bloodpool_Label_6_08B6
+// 018   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N48  Gs3  v108
+ BYTE   N48  Ds4
+ BYTE   W32
+ BYTE   W03
+// 019   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   N48  Dn4  v108
+ BYTE   N48  Gn3
+ BYTE   W32
+ BYTE   W03
+ BYTE   PATT
+  POIN2 Bloodpool_Label_6_0A96
+// 020   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W24
+ BYTE   W01
+ BYTE   N06  As4  v112
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4  v105
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4  v112
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W24
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   N68  As4
+ BYTE   N68  Ds4
+ BYTE   W36
+ BYTE   W01
+// 021   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W24
+ BYTE   W01
+ BYTE   N06  As4  v112
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4  v105
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4  v112
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W08
+ BYTE   As4
+ BYTE   N06  Ds4
+ BYTE   W24
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   N68  Bn4
+ BYTE   N68  En4
+ BYTE   W36
+ BYTE   W01
+// 022   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W24
+ BYTE   W01
+ BYTE   N06  Bn4  v112
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v105
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v112
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W24
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   N68
+ BYTE   N68  Bn4
+ BYTE   W36
+ BYTE   W01
+// 023   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v-1
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W24
+ BYTE   W01
+ BYTE   N06  Bn4  v112
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v105
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v112
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v105
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v112
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v098
+ BYTE   N06  En4
+ BYTE   W08
+ BYTE   Bn4  v092
+ BYTE   N06  En4
+ BYTE   W96
+ BYTE   W96
+ BYTE   W32
+ BYTE   N11  Gn3  v108
+ BYTE   N11  Cn3
+ BYTE   W48
+ BYTE   Gn3
+ BYTE   N11  Cn3
+ BYTE   W36
+ BYTE   N12  As3
+ BYTE   N12  Fn3
+ BYTE   W12
+ BYTE   N04  Cn4
+ BYTE   N04  Gn3
+ BYTE   W36
+ BYTE   N12  Fn4
+ BYTE   N12  As3
+ BYTE   W12
+ BYTE   N04  Gn4
+ BYTE   N04  Cn4
+ BYTE   W96
+ BYTE   W96
+ BYTE   W48
+ BYTE   N11  Gn3
+ BYTE   N11  Cn3
+ BYTE   W48
+ BYTE   Gn3
+ BYTE   N11  Cn3
+ BYTE   W36
+ BYTE   N12  As3
+ BYTE   N12  Fn3
+ BYTE   W12
+ BYTE   N04  Cn4
+ BYTE   N04  Gn3
+ BYTE   W36
+ BYTE   N12  Fn4
+ BYTE   N12  As3
+ BYTE   W09
+ BYTE   W03
+ BYTE   N04  Gn4  v108
+ BYTE   N04  Cn4
+ BYTE   W17
+ BYTE   W07
+ BYTE   N48  Gn4  v108
+ BYTE   N48  Cn4
+ BYTE   W32
+ BYTE   W03
+ BYTE   PATT
+  POIN2 Bloodpool_Label_6_07F6
+ BYTE   PATT
+  POIN2 Bloodpool_Label_6_0856
+// 024   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W36
+// 025   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   W02
+ BYTE   GoTo
+  POIN2 Bloodpool_Label_6_00
+ BYTE   FINE
+
+//**************** Track 8 (Midi-Chn.7) ****************//
+
+Bloodpool_008:
+// 000   ----------------------------------------
+Bloodpool_Label_7_00:
+ BYTE   TEMPO   160*Bloodpool_tbs/2
+ BYTE   KEYSH   Bloodpool_key+0
+ BYTE   VOL   18*Bloodpool_mvl/mxv
+ BYTE   W36
+ BYTE   W01
+ BYTE   VOICE   56
+ BYTE   W13
+// 001   ----------------------------------------
+ BYTE   PAN   c_v-8
+ BYTE   W10
+ BYTE   W15
+ BYTE   BEND   c_v+0
+ BYTE   W10
+ BYTE   MOD 0
+ BYTE   W92
+Bloodpool_Label_7_0164:
+ BYTE   W36
+ BYTE   W02
+// 002   ----------------------------------------
+Bloodpool_Label_7_01B0:
+ BYTE   N05  Cn3  v105
+ BYTE   N05  Gn2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   N05  Gn2
+ BYTE   W12
+ BYTE   N12  Cn3
+ BYTE   N12  Gn2
+ BYTE   W12
+ BYTE   N05  Cn3
+ BYTE   N05  Gn2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   N05  Gn2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   N05  Gn2
+ BYTE   W12
+ BYTE   N12  Cn3
+ BYTE   N12  Gn2
+ BYTE   W12
+ BYTE   N05  Cn3
+ BYTE   N05  Gn2
+ BYTE   W12
+ BYTE   PEND 
+// 003   ----------------------------------------
+Bloodpool_Label_7_0270:
+ BYTE   N05  Cn3  v105
+ BYTE   N05  Gn2
+ BYTE   W12
+ BYTE   N12  Cn3
+ BYTE   N12  Gn2
+ BYTE   W12
+ BYTE   N05  Cs3
+ BYTE   N05  Gs2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   N05  Gn2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   N05  Gn2
+ BYTE   W12
+ BYTE   N12  Cs3
+ BYTE   N12  Gs2
+ BYTE   W12
+ BYTE   N05  Gn2
+ BYTE   N05  Cn3
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   N05  Cn3
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Bloodpool_Label_7_01B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_7_0270
+ BYTE   PATT
+  POIN2 Bloodpool_Label_7_01B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_7_0270
+ BYTE   PATT
+  POIN2 Bloodpool_Label_7_01B0
+// 004   ----------------------------------------
+Bloodpool_Label_7_06F0:
+ BYTE   N05  Cn3  v105
+ BYTE   N05  Gn2
+ BYTE   W12
+ BYTE   N12  Cn3
+ BYTE   N12  Gn2
+ BYTE   W12
+ BYTE   N05  Cs3
+ BYTE   N05  Gs2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   N05  Gn2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   N05  Gn2
+ BYTE   W12
+ BYTE   N12  Cs3
+ BYTE   N12  Gs2
+ BYTE   W12
+ BYTE   N05  Gn2
+ BYTE   N05  Cn3
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   N05  Cn3
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 008   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 010   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 011   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   W96
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Bloodpool_Label_7_01B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_7_0270
+ BYTE   PATT
+  POIN2 Bloodpool_Label_7_01B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_7_0270
+ BYTE   PATT
+  POIN2 Bloodpool_Label_7_01B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_7_0270
+ BYTE   PATT
+  POIN2 Bloodpool_Label_7_01B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_7_06F0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_7_01B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_7_0270
+ BYTE   PATT
+  POIN2 Bloodpool_Label_7_01B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_7_0270
+ BYTE   PATT
+  POIN2 Bloodpool_Label_7_01B0
+ BYTE   PATT
+  POIN2 Bloodpool_Label_7_0270
+ BYTE   PATT
+  POIN2 Bloodpool_Label_7_01B0
+// 013   ----------------------------------------
+ BYTE   N05  Cn3  v105
+ BYTE   N05  Gn2
+ BYTE   W12
+ BYTE   N12  Cn3
+ BYTE   N12  Gn2
+ BYTE   W12
+ BYTE   N05  Cs3
+ BYTE   N05  Gs2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   N05  Gn2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   N05  Gn2
+ BYTE   W12
+ BYTE   N12  Cs3
+ BYTE   N12  Gs2
+ BYTE   W09
+ BYTE   W03
+ BYTE   N05  Gn2  v105
+ BYTE   N05  Cn3
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   N05  Cn3
+ BYTE   W05
+ BYTE   W96
+// 014   ----------------------------------------
+ BYTE   W90
+ BYTE   W01
+// 015   ----------------------------------------
+ BYTE   W06
+ BYTE   W03
+ BYTE   W01
+ BYTE   W01
+ BYTE   W02
+// 016   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Bloodpool_Label_7_00
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+songBloodpool:
+	BYTE	8	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	Bloodpool_pri	// Priority
+	BYTE	Bloodpool_rev	// Reverb.
+    
+	POIN2	Bloodpool_grp
+    
+	POIN2	Bloodpool_001
+	POIN2	Bloodpool_002
+	POIN2	Bloodpool_003
+	POIN2	Bloodpool_004
+	POIN2	Bloodpool_005
+	POIN2	Bloodpool_006
+	POIN2	Bloodpool_007
+	POIN2	Bloodpool_008
+
+	

@@ -40,7 +40,7 @@ LABEL 0x0
 		FIG1 PlayerMBrigand Narrator 0x0
 LABEL 0x1
 ENUN
-STAL 0x70
+STAL 0x50
 SET_SOMETHING 0xFFFE
 DISA_IF 0xFFFE // Kills [Tact] assuming that the coordinates were set from the macro call.
 STAL 0x30

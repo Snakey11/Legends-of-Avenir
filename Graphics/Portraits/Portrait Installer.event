@@ -1,4 +1,9 @@
 
+ALIGN 4
+PortraitTable:
+#incbin "Vanilla Portrait Table.dmp"
+
+ALIGN 4
 MercMAvatarPortrait:
 #incext PortraitFormatter "Male Merc Avatar.png"
 MercFAvatarPortrait:
@@ -134,11 +139,8 @@ setMugEntry(XeximMug,XeximPortrait,2,5,3,3)
 setMugEntry(XyliaMug,XyliaPortrait,3,6,3,4)
 setMugEntry(ZaliusMug,ZaliusPortrait,3,5,3,3)
 
-/*
-setMugEntry(SentinelCard,SentinelPortrait,0,0,0,0)
-setMugEntry(HalberdierCard,HalberdierPortrait,0,0,0,0)
-setMugEntry(AssassinCard,AssassinPortrait,0,0,0,0)
-*/
+setMugEntry(0x02,UzkalisPortrait,2,6,2,3)
+setMugEntry(0x14,MaximusPortrait,3,4,3,2) // Set Eirika and Ephraim to be Maximus and Uzkalis (Debug screen)
 
 setCardEntry(SentinelCard,SentinelPortrait,SentinelPortraitPalette)
 setCardEntry(HalberdierCard,HalberdierPortrait,HalberdierPortraitPalette)

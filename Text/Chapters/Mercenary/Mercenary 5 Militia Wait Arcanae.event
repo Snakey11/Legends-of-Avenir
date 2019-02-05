@@ -178,7 +178,7 @@ can come to an agreement.[A]
 [FarLeft]Will do. Good luck.[A][X]
 
 ## Merc5MilitiaWaitArcanaeMeetGovernorText
-[Left][LoadElanil][FarLeft][LoadLuke][FarRight][LoadGovernor]
+[Left][LoadElanil][FarLeft][LoadLuke][FarRight][LoadWilliam]
 Visitors from Altia? What[NL]
 business do you have here?[A][CloseSpeech][Left][MoveRight]
 I'm Corporal Elanil of the Altian Military.[NL][Left][LoadPlayer][Right]
@@ -250,12 +250,12 @@ a little bit and they get into trouble...[A][NL]
 Might as well make myself worthwhile.[A][X]
 
 ## Merc5MilitiaWaitArcanaeGovernorBattleText
-[FarLeft][LoadGovernor]Dammit, Maximus. You told[NL]
+[FarLeft][LoadWilliam]Dammit, Maximus. You told[NL]
 me your men could take them...[A][NL]
 It falls to me![A][X]
 
 ## Merc5MilitiaWaitArcanaeGovernorDeathText
-[FarLeft][LoadGovernor]Please...[....] Spare my people...[....][NL][CloseEyes]
+[FarLeft][LoadWilliam]Please...[....] Spare my people...[....][NL][CloseEyes]
 They only want...[.....] Peace...[A][X]
 
 ## Merc5MilitiaWaitArcanaeEndingText

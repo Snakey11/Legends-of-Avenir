@@ -60,9 +60,10 @@
 #define Elaqua 0xDB
 #define Arcaqua 0xDC
 #define Meteor 0xDD
-//EndLabel
+//LabelEnd
 
 //Label Class defenitions
+#define Falcoknight FalcoKnight
 #define Phantom 0x51
 #define Patriarch 0x52
 #define Matriarch 0x53
@@ -133,7 +134,7 @@
 #define EdgySwordmaster 0x9C
 #define EmperorClass 0x9D
 #define MurielSage 0x9E
-//EndLabel
+//LabelEnd
 
 //Label Character definitions
 #undef Hunter
@@ -255,88 +256,92 @@
 #define SamBandit 0x7C
 #define Richter 0x7D
 #define Defect 0x7E
-//EndLabel
+//LabelEnd
 
 //Label Portrait Defenitions
 #define setCardEntry(cardEntry,cardLocation,cardPaletteLocation) "PUSH; ORG PortraitTable+cardEntry*0x1C; POIN 0 0 cardPaletteLocation 0 cardLocation; POP"
 
-#define MaleMageMug 0x3
-#define FemaleMageMug 0x4
-#define MaleMercMug 0x5
-#define FemaleMercMug 0x6
-#define MaleMilitaryMug 0x7
-#define FemaleMilitaryMug 0x8
-#define XenaMug 0x09
-#define VicarMug 0x0A
-#define WalterMug 0x0B
-#define BaretMug 0x0C
-#define ValMug 0x0D
-#define HelmerMug 0x0E
-#define XavusMug 0x0F
-#define DunlasMug 0x10
-#define JohnathanMug 0x11
-#define ElanilMug 0x12
-#define IzukMug 0x13
-#define MaximusMug 0x14
-#define JurgenMug 0x15
-#define LeonMug 0x16
-#define JasperMug 0x17
-#define DerekMug 0x18
-#define LuxMug 0x19
-#define YvetteMug 0x1A
-#define ZaliusMug 0x1B
-#define LeyosMug 0x1C
-#define ClaraMug 0x1D
-#define LukeMug 0x1E
-#define ArcMug 0x1F
-#define EfilMug 0x20
-#define UzkalisMug 0x21
-#define AryaMug 0x22
-#define KendrickMug 0x23
-#define LukasMug 0x24
-#define AdlezMug 0x25
-#define MurielMug 0x26
-#define ChristinaMug 0x27
-#define ForrestMug 0x28
-#define CougarMug 0x29
-#define ShannonMug 0x2A
-#define MerchantMug 0x2B
-#define HenningMug 0x39
-#define GerwickMug 0x32
-#define InkeeperMug 0x2E
-#define MilitiaManMug 0x2F
-#define WestonMug 0x30
-#define ConnorMug 0x31
-#define EscortMug 0x32
-#define OfficialMug 0x33
-#define RobertMug 0x34
-#define XeximMug 0x35
-#define HalberdierCard 0x36
-#define SentinelCard 0x37
-#define EmperorMug 0x39
-#define AssassinCard 0x3A
-#define NarratorMug 0x3B
-#define RexMug 0x3C
-#define FinocMug 0x3E
-#define AaronMug 0x3F
-#define WilliamMug 0x40
-#define GrantMug 0x41
-#define PatMug 0x42
-#define RogerMug 0x43
-#define TyroneMug 0x44
-#define MayorMug 0x45
-#define HarkenMug 0x46
-#define MasonMug 0x47
-#define DanielMug 0x48
-#define XyliaMug 0x49
-#define KilthelMug 0x4A
-#define ArveldirMug 0x4B
-#define ServiusMug 0x4C
-#define SamMug 0x4D
-#define SylvaineMug 0x4E
-#define SekarMug 0x4F
-#define RichterMug 0x50
-//EndLabel
+#define MaleMageMug 0xAE
+#define FemaleMageMug 0xAF
+#define MaleMercMug 0xB0
+#define FemaleMercMug 0xB1
+#define MaleMilitaryMug 0xB2
+#define FemaleMilitaryMug 0xB3
+#define XenaMug 0xB4
+#define VicarMug 0xB5
+#define WalterMug 0xB6
+#define BaretMug 0xB7
+#define ValMug 0xB8
+#define HelmerMug 0xB9
+#define XavusMug 0xBA
+#define DunlasMug 0xBB
+#define JohnathanMug 0xBC
+#define ElanilMug 0xBD
+#define IzukMug 0x1A // Artur
+#define MaximusMug 0xBF
+#define JurgenMug 0xC0
+#define LeonMug 0xC1
+#define JasperMug 0xC2
+#define DerekMug 0xC3
+#define LuxMug 0xC4
+#define YvetteMug 0xC5
+#define ZaliusMug 0xC6
+#define LeyosMug 0xC7
+#define ClaraMug 0x11 // Natasha
+#define LukeMug 0xC9
+#define ArcMug 0xCA
+#define EfilMug 0xCB
+#define UzkalisMug 0xCC
+#define AryaMug 0xCD
+#define KendrickMug 0xCE
+#define LukasMug 0xCF
+#define AdlezMug 0xD0
+#define MurielMug 0x3F // Selena
+#define ChristinaMug 0x19 // Amelia
+#define ForrestMug 0x18 // Kyle
+#define CougarMug 0x13 // Cormag
+#define ShannonMug 0xD5
+#define ConnorMug 0xD6
+#define XeximMug 0xD7
+#define HalberdierCard 0xD8
+#define SentinelCard 0xD9
+#define EmperorMug 0xDA
+#define AssassinCard 0xDB
+#define NarratorMug 0xDC
+#define RexMug 0xDD
+#define FinocMug 0xDE
+#define XyliaMug 0xDF
+#define KilthelMug 0xE0
+#define ArveldirMug 0xE1
+#define ServiusMug 0xE2
+#define SylvaineMug 0xE3
+#define SekarMug 0x39 // Binks
+
+#define MerchantMug 0x31 // Breguet
+#define HenningMug 0x33 // Bazba
+#define GerwickMug 0x32 // Bone
+#define InkeeperMug 0x29 // Knoll
+#define MilitiaManMug 0x0E // Garcia
+#define WestonMug 0x35 // Zonta
+#define EscortMug 0x4B // Glen
+#define OfficialMug 0x20 // Saleh
+#define RobertMug 0x34 // Saar
+#define AaronMug 0x1B // Gerik
+#define WilliamMug 0x41 // Vigarde
+#define GrantMug 0x3A // Pablo
+#define PatMug 0x16 // Forde
+#define RogerMug 0x43 // Caellach
+#define TyroneMug 0x39 // Binks
+#define MayorMug 0x45 // Orson
+#define HarkenMug 0x4D // Unused rando
+#define MasonMug 0x52 // Hayden
+#define DanielMug 0x3C // Carlyle
+#define SamMug 0x2A // Joshua
+#define RichterMug 0x23 // Dozla
+#define MageMug 0x10 // Lute
+#define BanditMug 0x4C // Bandit
+#define GuildsmanMug 0x51 // Fado
+//LabelEnd
 
 //Label Spell Definitions
 #define HandAxeAnim 0x01
@@ -374,7 +379,7 @@
 #define GreenFlash 0x3
 #define BlueFlash 0x4
 #define YellowFlash 0x5
-//EndLabel
+//LabelEnd
 
 //Label Chapter Defenitions
 #define PrologueChapter 0x0
@@ -456,7 +461,8 @@
 #define BacrunRuins2Cutscene 0x60
 #define KilthelFightCutscene 0x61
 #define GuardianSpiritWallCutscene 0x62
-//EndLabel
+#define AltianDungeonCutscene 0x63
+//LabelEnd
 
 //Label Palette Definitions
 #define AdlezBrigandPaletteID 0x01
@@ -543,7 +549,7 @@
 #define MayorCavalierPaletteID 0x52
 #define WestonMercenaryPaletteID 0x53
 #define ZaliusSwordmasterPaletteID 0x54
-//EndLabel
+//LabelEnd
 
 //Label Maps, Map Changes, Events, and Tilesets
 #define EnterMap(ID) "PUSH;ORG EventPointerListOffset+(ID*4);POIN Map;POP"
@@ -617,6 +623,7 @@
 #define PeakRiverMap 0xB3
 #define SnowyAltianPassMap 0xB4
 #define AltianCastleMap 0xBD
+#define AltianDungeonCutsceneMap 0xBF
 
 //Map Changes
 
@@ -700,7 +707,7 @@
 #define Military7PassAltiaEvents 0xB2
 
 // Good until 0xC9
-//EndLabel
+//LabelEnd
 
 //Label Tileset stuff
 #define SetTilesetData(Index,ObjectSet,Palette,TileConfig,TileAnims,BattleSet) "PUSH;ORG (ChapterDataEditor+(Index*148)+4);SHORT ObjectSet;BYTE Palette TileConfig;ORG (ChapterDataEditor+(Index*148)+9);BYTE TileAnims;ORG (ChapterDataEditor+(Index*148)+19);BYTE BattleSet;POP"
@@ -727,7 +734,7 @@
 #define _6CAnims "0x05"
 #define _79Anims "0x7D"
 #define _88Anims "0x00"
-//EndLabel
+//LabelEnd
 
 //Label Map Sprites (Standing)
 #define Large 0x02
@@ -760,7 +767,7 @@
 #define ShadowSprite 0x80
 #define HarbingerSprite 0x81
 #define EdgySwordmasterSprite 0x82
-//EndLabel
+//LabelEnd
 
 //Label Battle Animations
 #define SwordAnim(Animation) "BYTE Swords 0x01 ; SHORT Animation"
@@ -919,28 +926,32 @@
 #define KnightAxe 0x108
 #define KnightHandAxe 0x109
 #define MurielSageMagic 0x10A
-//EndLabel
+//LabelEnd
 
 //Label Music Definitions
-#define Town_of_Winds_and_Ruin 0x0170
-#define Derris_Kharlan_Appear 0x0171
-#define Shihna 0x0172
-#define Fatalize 0x0173
-#define Fighting_of_the_Spirit 0x0174
-#define Anchoret 0x0175
-#define Kratos 0x0176
-#define Lloyd 0x02
-#define Beedles_Shop 0x0178
-#define Encounter_with_Renegades 0x0179
-#define Dry_Trail 0x019A
-#define Last_Battle_Decision 0x017B
-#define Mars_Lighthouse 0x01
-#define Old_Familiar_Scent 0x017D
-#define Rest_of_the_Heart 0x017E
-#define Venus_Lighthouse 0x017F
-#define Burning_Fighting_Spirit 0x0180
-#define A_Tragic_Decision 0x0181
-//EndLabel
+#define Town_of_Winds_and_Ruin 0x03D7
+#define Derris_Kharlan_Appear 0x03D8
+#define Shihna 0x03D9
+#define Fatalize 0x03DA
+#define Fighting_of_the_Spirit 0x03DB
+#define Anchoret 0x03DC
+#define Kratos 0x03DD
+#define Lloyd 0x03DE
+#define Beedles_Shop 0x03DF
+#define Encounter_with_Renegades 0x03E0
+#define Dry_Trail 0x03E1
+#define Last_Battle_Decision 0x03E2
+#define Mars_Lighthouse 0x03E3
+#define Old_Familiar_Scent 0x03E4
+#define Rest_of_the_Heart 0x03E5
+#define Venus_Lighthouse 0x03E6
+#define Burning_Fighting_Spirit 0x03E7
+#define A_Tragic_Decision 0x03E8
+//#define Presidents_Office 0x0182
+//#define Altin_Caves 0x0177
+#define Wicked_Child 0x03DE
+#define Bloodpool 0x03E2
+//LabelEnd
 
 //Label Skill Definitions
 #define AcrobatID 1 //Thief, Assassin, Rogue
@@ -1137,7 +1148,7 @@
 #define HexID 186 //								Xavus
 #define BarricadeID 187 //General
 #define BarricadePlusID 188 //Commander
-//EndLabel
+//LabelEnd
 
 //Label Misc.
 #define SetChapterData(ChapterID,ObjectType1,ObjectType2,PaletteID,TileConfig,MapID,MapPointer,Anims1,Anims2,MapChanges) "PUSH; ORG ChapterDataTable+(ChapterID*148)+4; BYTE ObjectType1 ObjectType2 PaletteID TileConfig MapID Anims1 Anims2 MapChanges; EventPointerTable(MapID,MapPointer); POP"
@@ -1200,6 +1211,7 @@
 //#define MaxMercenaryHP "SVAL 0x1 60; SET_HP PlayerMMercenary ; SET_HP PlayerMMyrmidon ; SET_HP PlayerMFighter ; SET_HP PlayerMPirate ; SET_HP PlayerMBrigand ; SET_HP PlayerFMercenary ; SET_HP PlayerFMyrmidon ; SET_HP PlayerFPegasusKnight"
 
 #define MercenaryNarratorFight(TactX,TactY) "SVAL 0xB Coords(TactX,TactY) ; CALL MercenaryNarratorFightEvents"
+#define MilitaryNarratorFight(TactX,TactY) "SVAL 0xB Coords(TactX,TactY) ; CALL MilitaryNarratorFightEvents"
 // You still need to set up the battle first!
 
 #define MoveToChapter(Chapter) "MNC2 Chapter"
@@ -1211,8 +1223,16 @@
 #define Twisted_Shadows_B 0x17
 #define The_Battle_to_Be_Won 0x1B
 #define Return_of_the_Demon_King 0x1E
-//EndLabel
 
+#define SnowWeather 0x01
+#define BlizzardWeather 0x02
+#define BlueWeather 0x03
+#define RainWeather 0x04
+#define AshWeather 0x05
+#define SandstormWeather 0x06
+#define CloudWeather 0x07
+
+//LabelEnd
 #define EndUnit UNIT // Necessary for folding
 #define EndA2 ENDA
 

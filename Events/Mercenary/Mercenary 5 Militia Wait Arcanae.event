@@ -166,7 +166,7 @@ ENDA
 VillagePlace:
 MUSI
 Text(0x2,Merc5MilitiaWaitArcanaeHouse1Text)
-GiveItem(ElysianWhip,0xFFFF)
+GiveItem(BraveLance,0xFFFF)
 MUNO
 NoFade
 ENDA
@@ -212,7 +212,7 @@ UNIT
 
 ValHelmer:
 UNIT Val Shaman_F Val Level(12,Ally,True) [6,1] 0x00 0x00 0x00 0x00 [Worm,Nosferatu] [0]
-UNIT Helmer Soldier Helmer Level(13,Ally,True) [7,3] 0x00 0x00 0x00 0x00 [SteelLance,KnightCrest] [0]
+UNIT Helmer Soldier Helmer Level(13,Ally,True) [7,3] 0x00 0x00 0x00 0x00 [SteelLance] [0]
 UNIT
 
 StartEnemies:

@@ -90,7 +90,7 @@ the border town where we're to meet[A][NL]
 the Anguis. Keep your eyes open.[A][X]
 
 ## Military2PassMayorText
-[MidLeft][LoadSylvaine][MidRight][LoadGovernor]
+[MidLeft][LoadSylvaine][MidRight][LoadWilliam]
 Captain Sylvaine! It's good to see you![A]
 [MidLeft]Greetings, mayor. Thank you for allowing[NL]
 us to have our negotiations here.[A]

@@ -12,7 +12,7 @@ POIN TrapData TrapData
 POIN Units Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
-//EndLabel
+//LabelEnd
 
 //Label TurnBasedEvents
 TurnBasedEvents:
@@ -111,7 +111,7 @@ EndingScene:
 	FADI 0x5
 	SVAL 0x1 1
 	CHECK_TURNS
-	BNE 0x0 0x0 0xC
+	BNE 0x0 0x1 0xC
 		LOAD1 0x1 EnterWalter
 		ENUN
 	LABEL 0x0

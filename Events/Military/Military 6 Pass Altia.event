@@ -13,11 +13,12 @@ POIN TrapData TrapData
 POIN Units Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
-//EndLabel
+//LabelEnd
 
 //Label TurnBasedEvents
 TurnBasedEvents:
 TurnEventPlayer(0x00,Turn3,3)
+TurnEventPlayer(0x00,Turn4,4)
 END_MAIN
 
 //Label CharacterBasedEvents
@@ -91,6 +92,11 @@ LOAD1 0x1 Turn3Units
 ENUN
 CamOFF
 NoFade
+EndA2
+
+Turn4:
+WEA1 SnowWeather
+NoFade
 ENDA
 
 	/*UNIT DATA*/
@@ -136,7 +142,7 @@ UNIT Guardian Archer 0x00 Level(19,Enemy,True) [12,1] 0x00 0x00 0x00 0x00 [Steel
 UNIT Guardian Sentinel 0x00 Level(3,Enemy,True) [15,0] 0x00 0x00 0x00 0x00 [Spear] NoAI
 UNIT Guardian Swordmaster 0x00 Level(6,Enemy,True) [9,0] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
 UNIT Guardian Fighter 0x00 Level(19,Enemy,True) [12,3] 0x00 0x00 0x00 0x00 [BraveAxe] AttackInRangeAI
-UNIT Guardian WyvernRider 0x00 Level(14,Enemy,True) [18,4] Drop 0x00 0x00 0x00 [SteelLance,ElysianWhip] ChaseOnceApproachedAI
+UNIT Guardian WyvernRider 0x00 Level(14,Enemy,True) [18,4] Drop 0x00 0x00 0x00 [SteelLance] ChaseOnceApproachedAI
 UNIT Guardian WyvernRider 0x00 Level(16,Enemy,True) [18,7] 0x00 0x00 0x00 0x00 [HeavySpear] ChaseOnceApproachedAI
 UNIT Guardian WyvernRider 0x00 Level(15,Enemy,True) [18,10] 0x00 0x00 0x00 0x00 [ShortSpear] ChaseOnceApproachedAI
 UNIT

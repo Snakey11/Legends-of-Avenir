@@ -206,7 +206,7 @@ ENDA
 RedHouse1:
 MUSI
 Text(0x1,Merc6MilitiaKillHouse1Text)
-GiveItem(OceanSeal,0xFFFF)
+GiveItem(BraveSword,0xFFFF)
 MUNO
 NoFade
 ENDA

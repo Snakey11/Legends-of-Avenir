@@ -13,7 +13,7 @@ POIN TrapData TrapData
 POIN Units Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
-//EndLabel
+//LabelEnd
 
 //Label TurnBasedEvents
 TurnBasedEvents:
@@ -49,7 +49,7 @@ END_MAIN
 
 //Label LocationBasedEvents
 LocationBasedEvents:
-Chest(OceanSeal,8,15)
+Chest(Boots,8,15)
 Chest(Swordslayer,9,15)
 Chest(Dragonshield,13,15)
 Chest(SilverAxe,14,14)
