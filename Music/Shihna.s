@@ -3,7 +3,7 @@
 	.equ	songShihna_grp, voicegroup000
 	.equ	songShihna_pri, 0
 	.equ	songShihna_rev, 0
-	.equ	songShihna_mvl, 15
+	.equ	songShihna_mvl, 10
 	.equ	songShihna_key, 0
 	.equ	songShihna_tbs, 1
 	.equ	songShihna_exg, 0
@@ -33,7 +33,7 @@ Label_0_0100BDF6:
  .byte   Cs5
  .byte   W06
  .byte   TEMPO , 120*songShihna_tbs/2
- .byte   N36 ,An3 ,v127
+ .byte   N36 ,An3 ,v080
  .byte   W36
  .byte   N48 ,En4
  .byte   W36
@@ -62,7 +62,7 @@ Label_0_0100BDF6:
 @ 003   ----------------------------------------
 Label_0_0100BE29:
  .byte   W12
- .byte   N24 ,Bn3 ,v127
+ .byte   N24 ,Bn3 ,v080
  .byte   W24
  .byte   N12 ,Cn4
  .byte   W12
@@ -106,7 +106,7 @@ Label_0_0100BE29:
   .word Label_0_0100BE29
 @ 007   ----------------------------------------
  .byte   W24
- .byte   N84 ,Fn4 ,v127
+ .byte   N84 ,Fn4 ,v080
  .byte   W72
 @ 008   ----------------------------------------
  .byte   W12
@@ -164,7 +164,7 @@ Label_0_0100BE29:
  .byte   W12
 @ 016   ----------------------------------------
 Label_0_0100BE9E:
- .byte   N12 ,Gn4 ,v127
+ .byte   N12 ,Gn4 ,v080
  .byte   W12
  .byte   N24 ,Fn4
  .byte   W24
@@ -178,7 +178,7 @@ Label_0_0100BE9E:
 @ 017   ----------------------------------------
 Label_0_0100BEAE:
  .byte   W24
- .byte   N12 ,Cn5 ,v127
+ .byte   N12 ,Cn5 ,v080
  .byte   W12
  .byte   Dn5
  .byte   W12
@@ -192,7 +192,7 @@ Label_0_0100BEAE:
 @ 018   ----------------------------------------
 Label_0_0100BEBD:
  .byte   W12
- .byte   N24 ,Bn4 ,v127
+ .byte   N24 ,Bn4 ,v080
  .byte   W24
  .byte   N12 ,Gn4
  .byte   W12
@@ -238,13 +238,12 @@ Label_1_0100BEF2:
  .byte   CnM2
  .byte   LFOS 0
  .byte   Gs1
- .byte   VOL , 50*songShihna_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 50*songShihna_mvl/mxv
+ .byte   VOL , 30*songShihna_mvl/mxv
  .byte   W18
  .byte   Bn1
  .byte   W06
- .byte   N06 ,An4 ,v127
+ .byte   N06 ,An4 ,v080
  .byte   W12
  .byte   An3
  .byte   W12
@@ -258,7 +257,7 @@ Label_1_0100BEF2:
  .byte   W12
 @ 001   ----------------------------------------
 Label_1_0100BF0F:
- .byte   N06 ,An4 ,v127
+ .byte   N06 ,An4 ,v080
  .byte   W12
  .byte   An3
  .byte   W12
@@ -278,7 +277,7 @@ Label_1_0100BF0F:
  .byte   PATT
   .word Label_1_0100BF0F
 @ 002   ----------------------------------------
- .byte   N06 ,An4 ,v127
+ .byte   N06 ,An4 ,v080
  .byte   W12
  .byte   An3
  .byte   W12
@@ -324,7 +323,7 @@ Label_1_0100BF0F:
  .byte   W12
  .byte   An3
  .byte   W12
- .byte   VOL , 150*songShihna_mvl/mxv
+ .byte   VOL , 200*songShihna_mvl/mxv
  .byte   N36 ,Fn4
  .byte   W36
  .byte   N48 ,An4
@@ -400,7 +399,7 @@ Label_1_0100BF0F:
  .byte   W12
 @ 013   ----------------------------------------
 Label_1_0100BFB8:
- .byte   N12 ,En4 ,v127
+ .byte   N12 ,En4 ,v080
  .byte   W12
  .byte   N24 ,Dn4
  .byte   W24
@@ -414,7 +413,7 @@ Label_1_0100BFB8:
 @ 014   ----------------------------------------
 Label_1_0100BFC8:
  .byte   W12
- .byte   N06 ,Cn4 ,v127
+ .byte   N06 ,Cn4 ,v080
  .byte   W06
  .byte   Dn4
  .byte   W06
@@ -432,7 +431,7 @@ Label_1_0100BFC8:
 @ 015   ----------------------------------------
 Label_1_0100BFDC:
  .byte   W12
- .byte   N24 ,Dn4 ,v127
+ .byte   N24 ,Dn4 ,v080
  .byte   W24
  .byte   N12 ,Cn4
  .byte   W12

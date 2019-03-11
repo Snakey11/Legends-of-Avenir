@@ -79,4 +79,15 @@ INLINE SoundRoom,Song ID,Song Length (Only Used for Shuffle Mode),Song Unlock AS
 0x4D A Tragic Decision,A_Tragic_Decision,9360,0,ATragicDecisionText
 0x4E Mars Lighthouse,Mars_Lighthouse,9360,0,MarsLighthouseText
 0x4D Lloyd,Lloyd,9360,0,LloydText
+0x4E Venus Lighthouse,Venus_Lighthouse,9360,0,VenusLighthouseText
+0x4F PubTheme,Pub_Theme,9360,0,PubThemeText
+0x50 SnowBattle,Snow_Battle,9360,0,SnowBattleText
+0x51 WildFields,Wild_Fields,9360,0,WildFieldsText
+0x52 MarbleCorridor,Marble_Corridor,9360,0,MarbleCorridorText
+0x53 NaraAndMaraBattle,Nara_and_Mara_Battle,9360,0,NaraAndMaraBattleText
+0x54 Nekonin,Nekonin,9360,0,NekoninText
+0x55 Ringabel,Ringabel,9360,0,RingabelText
+0x56 VictorysDelight,Victorys_Delight,9360,0,VictorysDelightText
+0x57 Zelos,Zelos,9360,0,ZelosText
+0x58 StageOne,Stage_One,9360,0,StageOneText
 Terminator,0xFFFFFFFF,0x0,0x0,0x0

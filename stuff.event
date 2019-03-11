@@ -1,0 +1,26 @@
+
+////////////////////////////////////////////////////
+//                                                //
+// Disassembled with Nintenlord's Event Assembler //
+// Version: 11.1.0.0                              //
+// Game: FE8                                      //
+// File: Clean.gba                                //
+// Offset: $9EE2E8                                //
+//                                                //
+////////////////////////////////////////////////////
+
+
+
+ORG $9EE2E8
+CHECK_EVBIT 0x8
+BNE 0x80D2 0xC 0x0
+FADI 16
+LABEL 0x80D2
+REMOVEPORTRAITS
+BACG 0xFFFF
+FADU 16
+ENDA
+
+//The next line is to ensure that new events do not overwrite other data.
+//Do not delete unless you are SURE you know what you are doing!
+ASSERT $9EE310 - currentOffset

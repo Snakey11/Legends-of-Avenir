@@ -256,6 +256,7 @@
 #define SamBandit 0x7C
 #define Richter 0x7D
 #define Defect 0x7E
+#define Shanley 0x7F
 //LabelEnd
 
 //Label Portrait Defenitions
@@ -287,7 +288,7 @@
 #define YvetteMug 0xC5
 #define ZaliusMug 0xC6
 #define LeyosMug 0xC7
-#define ClaraMug 0x11 // Natasha
+#define ClaraMug 0xC8
 #define LukeMug 0xC9
 #define ArcMug 0xCA
 #define EfilMug 0xCB
@@ -296,10 +297,10 @@
 #define KendrickMug 0xCE
 #define LukasMug 0xCF
 #define AdlezMug 0xD0
-#define MurielMug 0x3F // Selena
-#define ChristinaMug 0x19 // Amelia
-#define ForrestMug 0x18 // Kyle
-#define CougarMug 0x13 // Cormag
+#define MurielMug 0xD1
+#define ChristinaMug 0xD2
+#define ForrestMug 0xD3
+#define CougarMug 0xD4
 #define ShannonMug 0xD5
 #define ConnorMug 0xD6
 #define XeximMug 0xD7
@@ -315,7 +316,7 @@
 #define ArveldirMug 0xE1
 #define ServiusMug 0xE2
 #define SylvaineMug 0xE3
-#define SekarMug 0x39 // Binks
+#define SekarMug 0xE4
 
 #define MerchantMug 0x31 // Breguet
 #define HenningMug 0x33 // Bazba
@@ -341,6 +342,7 @@
 #define MageMug 0x10 // Lute
 #define BanditMug 0x4C // Bandit
 #define GuildsmanMug 0x51 // Fado
+#define ShanleyMug 0x46 // Lyon
 //LabelEnd
 
 //Label Spell Definitions
@@ -462,6 +464,7 @@
 #define KilthelFightCutscene 0x61
 #define GuardianSpiritWallCutscene 0x62
 #define AltianDungeonCutscene 0x63
+#define HaedricCityCutscene 0x64
 //LabelEnd
 
 //Label Palette Definitions
@@ -549,6 +552,24 @@
 #define MayorCavalierPaletteID 0x52
 #define WestonMercenaryPaletteID 0x53
 #define ZaliusSwordmasterPaletteID 0x54
+#define ChristinaCavalierPaletteID 0x55
+#define ChristinaGreatKnightPaletteID 0x56
+#define ChristinaPaladinPaletteID 0x57
+#define ClaraTroubadourPaletteID 0x58
+#define ClaraMageKnightPaletteID 0x59
+#define ClaraValkyriePaletteID 0x5A
+#define SylvaineWyvernLordPaletteID 0x5B
+#define ShanleySagePaletteID 0x5C
+#define XavusNecromancerPaletteID 0x5D
+#define DunlasHalberdierPaletteID 0x5E
+#define SamMyrmidonPaletteID 0x5F
+#define RichterHeroPaletteID 0x60
+#define SekarFighterPaletteID 0x61
+#define SekarHeroPaletteID 0x62
+#define SekarWarriorPaletteID 0x63
+#define ForrestCavalierPaletteID 0x64
+#define ForrestGreatKnightPaletteID 0x65
+#define ForrestPaladinPaletteID 0x66
 //LabelEnd
 
 //Label Maps, Map Changes, Events, and Tilesets
@@ -624,6 +645,7 @@
 #define SnowyAltianPassMap 0xB4
 #define AltianCastleMap 0xBD
 #define AltianDungeonCutsceneMap 0xBF
+#define DeidarMap 0xC0
 
 //Map Changes
 
@@ -656,6 +678,7 @@
 #define ArtifactSlotChanges 0xA0
 #define XyliaTempleChanges 0xA5
 #define AltianCastleChanges 0xBE
+#define DeidarChanges 0xC1
 
 // Tilesets
 #define OutdoorSnowyObjectSet 0xB5
@@ -929,28 +952,44 @@
 //LabelEnd
 
 //Label Music Definitions
-#define Town_of_Winds_and_Ruin 0x03D7
-#define Derris_Kharlan_Appear 0x03D8
-#define Shihna 0x03D9
-#define Fatalize 0x03DA
-#define Fighting_of_the_Spirit 0x03DB
-#define Anchoret 0x03DC
-#define Kratos 0x03DD
-#define Lloyd 0x03DE
-#define Beedles_Shop 0x03DF
-#define Encounter_with_Renegades 0x03E0
-#define Dry_Trail 0x03E1
-#define Last_Battle_Decision 0x03E2
-#define Mars_Lighthouse 0x03E3
-#define Old_Familiar_Scent 0x03E4
-#define Rest_of_the_Heart 0x03E5
-#define Venus_Lighthouse 0x03E6
-#define Burning_Fighting_Spirit 0x03E7
-#define A_Tragic_Decision 0x03E8
+#define Encounter_with_Renegades 0x0400
+#define Dry_Trail 0x0401
+#define Last_Battle_Decision 0x0402
+#define Mars_Lighthouse 0x0403
+#define Old_Familiar_Scent 0x0404
+#define Rest_of_the_Heart 0x0405
+#define Burning_Fighting_Spirit 0x0406
 //#define Presidents_Office 0x0182
 //#define Altin_Caves 0x0177
-#define Wicked_Child 0x03DE
-#define Bloodpool 0x03E2
+//#define Wicked_Child 0x03DE
+//#define Bloodpool 0x03E2
+//#define Stage_One 0x03E6
+#define Pub_Theme 0x0407
+#define Snow_Battle 0x0408
+#define Wild_Fields 0x0409
+#define Town_of_Winds_and_Ruin 0x040A
+#define Derris_Kharlan_Appear 0x040B
+#define Shihna 0x040C
+#define Fatalize 0x040D
+#define Fighting_of_the_Spirit 0x040E
+#define Anchoret 0x040F
+#define Kratos 0x0410
+#define Lloyd 0x0411
+#define Beedles_Shop 0x0412
+#define A_Tragic_Decision 0x0413
+#define Venus_Lighthouse 0x0414
+
+//#define End_Peaceful_World 0x0300
+//#define Karma 0x0301
+#define Marble_Corridor 0x0415
+#define Nara_and_Mara_Battle 0x0416
+#define Nekonin 0x0417
+#define Ringabel 0x0418
+//#define The_More_I_Try 0x0405
+#define Victorys_Delight 0x0419
+#define Zelos 0x041A
+#define Stage_One 0x041B
+#define Full_Force 0x41B
 //LabelEnd
 
 //Label Skill Definitions
@@ -967,7 +1006,7 @@
 #define CantoID 11 //All the mounted shit
 #define CunningID 12 //display only: Thief, Rogue, Assassin
 #define LethalityID 13 //display only: Assassin
-#define LunaID 14 //GreatKnight
+#define LunaID 14 //DONE
 #define SolID 15 //Paladin
 #define AetherID 16 //Truerblade						Xexim
 #define AstraID 17 //Swordmaster
@@ -981,7 +1020,7 @@
 #define BowbreakerID 22 //Wyvern Rider, Wyvern Lord, Wyvern Knight
 #define BowBreakerID BowbreakerID
 #define TomebreakerID 23 //Druid
-#define AegisID 24 //Izuk
+#define AegisID 24 //Monk, Bishop, Izuk
 #define PaviseID 25 //General, Hero
 #define DuelistsBlowID 26 //Myrmidon, Swordmaster
 #define DeathBlowID 27 //Warrior
@@ -994,7 +1033,7 @@
 #define WrathID 34 //Soldier, Halberdier, Sentinel
 #define CounterID 35 //Hector, Champion
 #define CounterMagicID 36 //Bishop
-#define MiracleID 37 //Monk, Bishop
+#define MiracleID 37 //									Luke
 #define SwordfaireID 38 //Swordmaster
 #define LancefaireID 39 //WyvernKnight
 #define AxefaireID 40 //Berserker
@@ -1016,12 +1055,12 @@
 #define VoiceOfPeaceID 56 //Troubadour, Valkyrie
 #define AmaterasuID 57 //Patriarch
 #define SpurStrID 58 //MountedBrigand					Adlez
-#define SpurMagID 59 //Magus
-#define SpurSpdID 60 //Hunter
-#define SpurDefID 61 //Sentinel
+#define SpurMagID 59 //Hunter
+#define SpurDefID 61 //GreatKnight
+#define SpurSpdID 60 //Sentinel
 #define SpurResID 62 //Valkyrie
 #define NihilID 63 //this is a giant pain tbh
-#define NullifyID 64
+#define NullifyID 64 //DONE
 #define ParagonID 65 //Unused
 #define ImpaleID 66 //Impaler
 #define ColossusID 67 //Warrior, Gladiator
@@ -1037,7 +1076,7 @@
 #define BowRangeUpID 77
 #define StaffSavantID 78 //half done (mag/2 only)
 #define LiveToServeID 79 //Bishop
-#define IgnisID 80 //Sage, GaidenSage
+#define IgnisID 80 //DONE
 #define LifeAndDeathID 81 //Shaman, Druid, Summoner
 #define LockTouchID 82 //Display only: Rogue
 #define LungeID 83 //Rogue, Champion
@@ -1049,7 +1088,7 @@
 #define SavageBlowID 89 //WyvernLord
 #define ReliefID 90 //WyvernGeneral
 #define TantivyID 91 //WyvernRider, WyvernLord, WyvernKnight
-#define FocusID 92 //Magus
+#define FocusID 92 //,Sage, Magus
 #define BondID 93 //Izuk
 #define AnathemaID 94 //Summoner
 #define LilysPoiseID 95 //JacketHero
@@ -1216,7 +1255,8 @@
 
 #define MoveToChapter(Chapter) "MNC2 Chapter"
 
-#define EventMenuCommand(aTextId,Effect) "WORD 0; SHORT aTextId 0; WORD 0; POIN (0x04F448+1); WORD 0; POIN (Effect+1); WORD 0 0 0"
+#define EventMenuCommand(aTextId,Effect) "WORD 0; SHORT aTextId 0; WORD 0; POIN (0x04F448|1); WORD 0; POIN (Effect|1); WORD 0 0 0"
+#define EventMenuCommand(aTextId,Usability,Effect) "WORD 0; SHORT aTextId 0; WORD 0; POIN (Usability|1); WORD 0; POIN (Effect|1); WORD 0 0 0"
 #define EventMenuCommandEnd "WORD 0 0 0 0 0 0 0 0 0"
 
 #define Twisted_Shadows_A 0x16

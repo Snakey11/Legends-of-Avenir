@@ -18,7 +18,7 @@
 
 AltinCaves_001:
 @ 000   ----------------------------------------
-Label_0_00:
+LabelAltinCaves_0_00:
  .byte   TEMPO , 72*AltinCaves_tbs/2
  .byte   KEYSH , AltinCaves_key+0
  .byte   VOICE , 0
@@ -93,7 +93,7 @@ Label_0_00:
  .byte   N11 ,Fs0 ,v127
  .byte   W12
 @ 003   ----------------------------------------
-Label_0_05A0:
+LabelAltinCaves_0_05A0:
  .byte   N05 ,Fs0 ,v090
  .byte   W06
  .byte   N11 ,Fs0 ,v127
@@ -118,7 +118,7 @@ Label_0_05A0:
  .byte   W06
  .byte   PEND 
 @ 004   ----------------------------------------
-Label_0_0780:
+LabelAltinCaves_0_0780:
  .byte   N11 ,Fs0 ,v127
  .byte   W12
  .byte   N05 ,Fs0 ,v090
@@ -143,13 +143,13 @@ Label_0_0780:
  .byte   W12
  .byte   PEND 
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
 @ 005   ----------------------------------------
-Label_0_0F3C:
+LabelAltinCaves_0_0F3C:
  .byte   N11 ,Fs0 ,v127
  .byte   W12
  .byte   N05 ,Fs0 ,v090
@@ -174,7 +174,7 @@ Label_0_0F3C:
  .byte   W12
  .byte   PEND 
 @ 006   ----------------------------------------
-Label_0_113A:
+LabelAltinCaves_0_113A:
  .byte   N05 ,En0 ,v090
  .byte   W06
  .byte   N11 ,En0 ,v127
@@ -199,7 +199,7 @@ Label_0_113A:
  .byte   W06
  .byte   PEND 
 @ 007   ----------------------------------------
-Label_0_131A:
+LabelAltinCaves_0_131A:
  .byte   N11 ,En0 ,v127
  .byte   W12
  .byte   N05 ,En0 ,v090
@@ -224,7 +224,7 @@ Label_0_131A:
  .byte   W12
  .byte   PEND 
 @ 008   ----------------------------------------
-Label_0_1518:
+LabelAltinCaves_0_1518:
  .byte   N05 ,En0 ,v090
  .byte   W06
  .byte   N11 ,En0 ,v127
@@ -249,11 +249,11 @@ Label_0_1518:
  .byte   W06
  .byte   PEND 
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
 @ 009   ----------------------------------------
-Label_0_1AD6:
+LabelAltinCaves_0_1AD6:
  .byte   N11 ,Fs0 ,v127
  .byte   W12
  .byte   N05 ,Fs0 ,v090
@@ -278,11 +278,11 @@ Label_0_1AD6:
  .byte   W12
  .byte   PEND 
  .byte   PATT
-  .word Label_0_113A
+  .word LabelAltinCaves_0_113A
  .byte   PATT
-  .word Label_0_131A
+  .word LabelAltinCaves_0_131A
 @ 010   ----------------------------------------
-Label_0_20B2:
+LabelAltinCaves_0_20B2:
  .byte   N05 ,En0 ,v090
  .byte   W06
  .byte   N11 ,En0 ,v127
@@ -319,7 +319,7 @@ Label_0_20B2:
  .byte   W06
  .byte   PEND 
 @ 011   ----------------------------------------
-Label_0_2292:
+LabelAltinCaves_0_2292:
  .byte   N11 ,Bn1 ,v102
  .byte   N11 ,En1
  .byte   W12
@@ -351,7 +351,7 @@ Label_0_2292:
  .byte   W06
  .byte   PEND 
 @ 012   ----------------------------------------
-Label_0_2472:
+LabelAltinCaves_0_2472:
  .byte   N05 ,En0 ,v102
  .byte   W06
  .byte   Gn1
@@ -383,7 +383,7 @@ Label_0_2472:
  .byte   W12
  .byte   PEND 
 @ 013   ----------------------------------------
-Label_0_2652:
+LabelAltinCaves_0_2652:
  .byte   N05 ,En0 ,v102
  .byte   W06
  .byte   N11 ,Fs0 ,v127
@@ -414,7 +414,7 @@ Label_0_2652:
  .byte   W06
  .byte   PEND 
 @ 014   ----------------------------------------
-Label_0_2832:
+LabelAltinCaves_0_2832:
  .byte   N05 ,Cs1 ,v127
  .byte   W06
  .byte   Fs0 ,v102
@@ -447,7 +447,7 @@ Label_0_2832:
  .byte   W06
  .byte   PEND 
 @ 015   ----------------------------------------
-Label_0_2A12:
+LabelAltinCaves_0_2A12:
  .byte   N05 ,Gs0 ,v102
  .byte   W06
  .byte   Gs1 ,v127
@@ -480,7 +480,7 @@ Label_0_2A12:
  .byte   W06
  .byte   PEND 
 @ 016   ----------------------------------------
-Label_0_2BF2:
+LabelAltinCaves_0_2BF2:
  .byte   N05 ,Bn1 ,v102
  .byte   W06
  .byte   N11 ,Fs0 ,v127
@@ -505,15 +505,15 @@ Label_0_2BF2:
  .byte   W06
  .byte   PEND 
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_131A
+  .word LabelAltinCaves_0_131A
  .byte   PATT
-  .word Label_0_113A
+  .word LabelAltinCaves_0_113A
 @ 017   ----------------------------------------
-Label_0_358E:
+LabelAltinCaves_0_358E:
  .byte   N11 ,En0 ,v127
  .byte   W12
  .byte   N05 ,En0 ,v090
@@ -538,7 +538,7 @@ Label_0_358E:
  .byte   W12
  .byte   PEND 
 @ 018   ----------------------------------------
-Label_0_378C:
+LabelAltinCaves_0_378C:
  .byte   N05 ,Fs0 ,v090
  .byte   W06
  .byte   N11 ,Fs0 ,v127
@@ -565,7 +565,7 @@ Label_0_378C:
  .byte   W12
  .byte   PEND 
 @ 019   ----------------------------------------
-Label_0_398A:
+LabelAltinCaves_0_398A:
  .byte   N05 ,Fs0 ,v018
  .byte   W06
  .byte   N11 ,Fs0 ,v127
@@ -590,7 +590,7 @@ Label_0_398A:
  .byte   W12
  .byte   PEND 
 @ 020   ----------------------------------------
-Label_0_3B6A:
+LabelAltinCaves_0_3B6A:
  .byte   N05 ,Fs0 ,v022
  .byte   W06
  .byte   Fs0 ,v018
@@ -615,23 +615,23 @@ Label_0_3B6A:
  .byte   W12
  .byte   PEND 
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_1AD6
+  .word LabelAltinCaves_0_1AD6
  .byte   PATT
-  .word Label_0_113A
+  .word LabelAltinCaves_0_113A
  .byte   PATT
-  .word Label_0_131A
+  .word LabelAltinCaves_0_131A
 @ 021   ----------------------------------------
-Label_0_4CC2:
+LabelAltinCaves_0_4CC2:
  .byte   N05 ,En0 ,v090
  .byte   W06
  .byte   N11 ,Fs0 ,v127
@@ -656,17 +656,17 @@ Label_0_4CC2:
  .byte   W06
  .byte   PEND 
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_131A
+  .word LabelAltinCaves_0_131A
  .byte   PATT
-  .word Label_0_113A
+  .word LabelAltinCaves_0_113A
  .byte   PATT
-  .word Label_0_131A
+  .word LabelAltinCaves_0_131A
 @ 022   ----------------------------------------
-Label_0_585C:
+LabelAltinCaves_0_585C:
  .byte   N05 ,En0 ,v090
  .byte   W06
  .byte   Fs1 ,v102
@@ -704,7 +704,7 @@ Label_0_585C:
  .byte   W06
  .byte   PEND 
 @ 023   ----------------------------------------
-Label_0_5A3C:
+LabelAltinCaves_0_5A3C:
  .byte   N11 ,Bn1 ,v102
  .byte   N11 ,Fs1
  .byte   W12
@@ -738,7 +738,7 @@ Label_0_5A3C:
  .byte   W06
  .byte   PEND 
 @ 024   ----------------------------------------
-Label_0_5C1C:
+LabelAltinCaves_0_5C1C:
  .byte   N05 ,Fs1 ,v102
  .byte   N05 ,Bn0
  .byte   W06
@@ -767,7 +767,7 @@ Label_0_5C1C:
  .byte   W12
  .byte   PEND 
 @ 025   ----------------------------------------
-Label_0_5DFC:
+LabelAltinCaves_0_5DFC:
  .byte   N05 ,Fs0 ,v102
  .byte   W06
  .byte   Cs1 ,v127
@@ -800,7 +800,7 @@ Label_0_5DFC:
  .byte   W06
  .byte   PEND 
 @ 026   ----------------------------------------
-Label_0_5FDC:
+LabelAltinCaves_0_5FDC:
  .byte   N05 ,Fs1 ,v127
  .byte   W06
  .byte   Fs0 ,v102
@@ -833,7 +833,7 @@ Label_0_5FDC:
  .byte   W06
  .byte   PEND 
 @ 027   ----------------------------------------
-Label_0_61BC:
+LabelAltinCaves_0_61BC:
  .byte   N05 ,As1 ,v127
  .byte   W06
  .byte   Bn1 ,v102
@@ -864,11 +864,11 @@ Label_0_61BC:
  .byte   W12
  .byte   PEND 
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
 @ 028   ----------------------------------------
-Label_0_677A:
+LabelAltinCaves_0_677A:
  .byte   N05 ,Fs0 ,v090
  .byte   W06
  .byte   N11 ,Fs0 ,v127
@@ -893,9 +893,9 @@ Label_0_677A:
  .byte   W06
  .byte   PEND 
  .byte   PATT
-  .word Label_0_131A
+  .word LabelAltinCaves_0_131A
  .byte   PATT
-  .word Label_0_113A
+  .word LabelAltinCaves_0_113A
 @ 029   ----------------------------------------
  .byte   N11 ,En0 ,v127
  .byte   W12
@@ -945,7 +945,7 @@ Label_0_677A:
  .byte   N11 ,Fs0 ,v127
  .byte   W12
  .byte   PATT
-  .word Label_0_378C
+  .word LabelAltinCaves_0_378C
 @ 031   ----------------------------------------
  .byte   N05 ,Fs0 ,v018
  .byte   W06
@@ -970,13 +970,13 @@ Label_0_677A:
  .byte   N05 ,Fs0 ,v090
  .byte   W06
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
 @ 032   ----------------------------------------
  .byte   N11 ,Fs0 ,v127
  .byte   W12
@@ -1001,9 +1001,9 @@ Label_0_677A:
  .byte   N11 ,En0 ,v127
  .byte   W12
  .byte   PATT
-  .word Label_0_113A
+  .word LabelAltinCaves_0_113A
  .byte   PATT
-  .word Label_0_131A
+  .word LabelAltinCaves_0_131A
 @ 033   ----------------------------------------
  .byte   N05 ,En0 ,v090
  .byte   W06
@@ -1028,9 +1028,9 @@ Label_0_677A:
  .byte   N05 ,Fs0 ,v090
  .byte   W06
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
 @ 034   ----------------------------------------
  .byte   N11 ,Fs0 ,v127
  .byte   W12
@@ -1055,9 +1055,9 @@ Label_0_677A:
  .byte   N11 ,En0 ,v127
  .byte   W12
  .byte   PATT
-  .word Label_0_113A
+  .word LabelAltinCaves_0_113A
  .byte   PATT
-  .word Label_0_131A
+  .word LabelAltinCaves_0_131A
 @ 035   ----------------------------------------
  .byte   N05 ,En0 ,v090
  .byte   W06
@@ -1270,9 +1270,9 @@ Label_0_677A:
  .byte   N11 ,Fs0 ,v127
  .byte   W12
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
 @ 042   ----------------------------------------
  .byte   N05 ,Fs0 ,v090
  .byte   W06
@@ -1297,9 +1297,9 @@ Label_0_677A:
  .byte   N05 ,En0 ,v090
  .byte   W06
  .byte   PATT
-  .word Label_0_131A
+  .word LabelAltinCaves_0_131A
  .byte   PATT
-  .word Label_0_113A
+  .word LabelAltinCaves_0_113A
 @ 043   ----------------------------------------
  .byte   N11 ,En0 ,v127
  .byte   W12
@@ -1324,7 +1324,7 @@ Label_0_677A:
  .byte   N11 ,Fs0 ,v082
  .byte   W12
 @ 044   ----------------------------------------
-Label_0_A73A:
+LabelAltinCaves_0_A73A:
  .byte   N05 ,Fs0 ,v062
  .byte   W06
  .byte   Fs0 ,v050
@@ -1376,15 +1376,15 @@ Label_0_A73A:
  .byte   N11 ,Fs0 ,v127
  .byte   W12
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
 @ 046   ----------------------------------------
  .byte   N11 ,Fs0 ,v127
  .byte   W12
@@ -1409,9 +1409,9 @@ Label_0_A73A:
  .byte   N11 ,En0 ,v127
  .byte   W12
  .byte   PATT
-  .word Label_0_113A
+  .word LabelAltinCaves_0_113A
  .byte   PATT
-  .word Label_0_131A
+  .word LabelAltinCaves_0_131A
 @ 047   ----------------------------------------
  .byte   N05 ,En0 ,v090
  .byte   W06
@@ -1436,15 +1436,15 @@ Label_0_A73A:
  .byte   N05 ,Fs0 ,v090
  .byte   W06
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_0F3C
+  .word LabelAltinCaves_0_0F3C
  .byte   PATT
-  .word Label_0_113A
+  .word LabelAltinCaves_0_113A
  .byte   PATT
-  .word Label_0_131A
+  .word LabelAltinCaves_0_131A
 @ 048   ----------------------------------------
  .byte   N05 ,En0 ,v090
  .byte   W06
@@ -1655,15 +1655,15 @@ Label_0_A73A:
  .byte   N05 ,Fs0 ,v090
  .byte   W06
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_1AD6
+  .word LabelAltinCaves_0_1AD6
  .byte   PATT
-  .word Label_0_113A
+  .word LabelAltinCaves_0_113A
  .byte   PATT
-  .word Label_0_131A
+  .word LabelAltinCaves_0_131A
 @ 055   ----------------------------------------
  .byte   N05 ,En0 ,v090
  .byte   W06
@@ -1711,115 +1711,115 @@ Label_0_A73A:
  .byte   N11 ,Fs0 ,v082
  .byte   W12
  .byte   PATT
-  .word Label_0_A73A
+  .word LabelAltinCaves_0_A73A
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_0F3C
+  .word LabelAltinCaves_0_0F3C
  .byte   PATT
-  .word Label_0_113A
+  .word LabelAltinCaves_0_113A
  .byte   PATT
-  .word Label_0_131A
+  .word LabelAltinCaves_0_131A
  .byte   PATT
-  .word Label_0_1518
+  .word LabelAltinCaves_0_1518
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_1AD6
+  .word LabelAltinCaves_0_1AD6
  .byte   PATT
-  .word Label_0_113A
+  .word LabelAltinCaves_0_113A
  .byte   PATT
-  .word Label_0_131A
+  .word LabelAltinCaves_0_131A
  .byte   PATT
-  .word Label_0_20B2
+  .word LabelAltinCaves_0_20B2
  .byte   PATT
-  .word Label_0_2292
+  .word LabelAltinCaves_0_2292
  .byte   PATT
-  .word Label_0_2472
+  .word LabelAltinCaves_0_2472
  .byte   PATT
-  .word Label_0_2652
+  .word LabelAltinCaves_0_2652
  .byte   PATT
-  .word Label_0_2832
+  .word LabelAltinCaves_0_2832
  .byte   PATT
-  .word Label_0_2A12
+  .word LabelAltinCaves_0_2A12
  .byte   PATT
-  .word Label_0_2BF2
+  .word LabelAltinCaves_0_2BF2
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_131A
+  .word LabelAltinCaves_0_131A
  .byte   PATT
-  .word Label_0_113A
+  .word LabelAltinCaves_0_113A
  .byte   PATT
-  .word Label_0_358E
+  .word LabelAltinCaves_0_358E
  .byte   PATT
-  .word Label_0_378C
+  .word LabelAltinCaves_0_378C
  .byte   PATT
-  .word Label_0_398A
+  .word LabelAltinCaves_0_398A
  .byte   PATT
-  .word Label_0_3B6A
+  .word LabelAltinCaves_0_3B6A
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_1AD6
+  .word LabelAltinCaves_0_1AD6
  .byte   PATT
-  .word Label_0_113A
+  .word LabelAltinCaves_0_113A
  .byte   PATT
-  .word Label_0_131A
+  .word LabelAltinCaves_0_131A
  .byte   PATT
-  .word Label_0_4CC2
+  .word LabelAltinCaves_0_4CC2
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_131A
+  .word LabelAltinCaves_0_131A
  .byte   PATT
-  .word Label_0_113A
+  .word LabelAltinCaves_0_113A
  .byte   PATT
-  .word Label_0_131A
+  .word LabelAltinCaves_0_131A
  .byte   PATT
-  .word Label_0_585C
+  .word LabelAltinCaves_0_585C
  .byte   PATT
-  .word Label_0_5A3C
+  .word LabelAltinCaves_0_5A3C
  .byte   PATT
-  .word Label_0_5C1C
+  .word LabelAltinCaves_0_5C1C
  .byte   PATT
-  .word Label_0_5DFC
+  .word LabelAltinCaves_0_5DFC
  .byte   PATT
-  .word Label_0_5FDC
+  .word LabelAltinCaves_0_5FDC
  .byte   PATT
-  .word Label_0_61BC
+  .word LabelAltinCaves_0_61BC
  .byte   PATT
-  .word Label_0_05A0
+  .word LabelAltinCaves_0_05A0
  .byte   PATT
-  .word Label_0_0780
+  .word LabelAltinCaves_0_0780
  .byte   PATT
-  .word Label_0_677A
+  .word LabelAltinCaves_0_677A
  .byte   PATT
-  .word Label_0_131A
+  .word LabelAltinCaves_0_131A
  .byte   PATT
-  .word Label_0_113A
+  .word LabelAltinCaves_0_113A
 @ 057   ----------------------------------------
  .byte   N11 ,En0 ,v127
  .byte   W12
@@ -1839,14 +1839,14 @@ Label_0_A73A:
  .byte   W10
 @ 058   ----------------------------------------
  .byte   GOTO
-  .word Label_0_00
+  .word LabelAltinCaves_0_00
  .byte   FINE
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
 AltinCaves_002:
 @ 000   ----------------------------------------
-Label_1_00:
+LabelAltinCaves_1_00:
  .byte   TEMPO , 72*AltinCaves_tbs/2
  .byte   KEYSH , AltinCaves_key+0
  .byte   VOICE , 44
@@ -1860,7 +1860,7 @@ Label_1_00:
  .byte   W44
  .byte   W03
 @ 002   ----------------------------------------
-Label_1_0A4B:
+LabelAltinCaves_1_0A4B:
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   W01
  .byte   N96 ,An3 ,v100
@@ -1893,7 +1893,7 @@ Label_1_0A4B:
  .byte   N44 ,Cs3
  .byte   PEND 
 @ 003   ----------------------------------------
-Label_1_0AB1:
+LabelAltinCaves_1_0AB1:
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 17*AltinCaves_mvl/mxv
@@ -1923,7 +1923,7 @@ Label_1_0AB1:
  .byte   W01
  .byte   PEND 
 @ 004   ----------------------------------------
-Label_1_0B17:
+LabelAltinCaves_1_0B17:
  .byte   VOL , 26*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 27*AltinCaves_mvl/mxv
@@ -1950,7 +1950,7 @@ Label_1_0B17:
  .byte   W01
  .byte   PEND 
 @ 005   ----------------------------------------
-Label_1_0B7D:
+LabelAltinCaves_1_0B7D:
  .byte   VOL , 37*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 38*AltinCaves_mvl/mxv
@@ -1977,7 +1977,7 @@ Label_1_0B7D:
  .byte   W01
  .byte   PEND 
 @ 006   ----------------------------------------
-Label_1_0BE3:
+LabelAltinCaves_1_0BE3:
  .byte   VOL , 50*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 52*AltinCaves_mvl/mxv
@@ -2004,7 +2004,7 @@ Label_1_0BE3:
  .byte   W01
  .byte   PEND 
 @ 007   ----------------------------------------
-Label_1_0C49:
+LabelAltinCaves_1_0C49:
  .byte   VOL , 65*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 66*AltinCaves_mvl/mxv
@@ -2031,7 +2031,7 @@ Label_1_0C49:
  .byte   W01
  .byte   PEND 
 @ 008   ----------------------------------------
-Label_1_0CAF:
+LabelAltinCaves_1_0CAF:
  .byte   VOL , 81*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 82*AltinCaves_mvl/mxv
@@ -2051,7 +2051,7 @@ Label_1_0CAF:
  .byte   W01
  .byte   PEND 
 @ 009   ----------------------------------------
-Label_1_0FE3:
+LabelAltinCaves_1_0FE3:
  .byte   VOL , 13*AltinCaves_mvl/mxv
  .byte   W02
  .byte   VOL , 13*AltinCaves_mvl/mxv
@@ -2104,7 +2104,7 @@ Label_1_0FE3:
  .byte   VOL , 28*AltinCaves_mvl/mxv
  .byte   W02
 @ 011   ----------------------------------------
-Label_1_10A3:
+LabelAltinCaves_1_10A3:
  .byte   VOL , 29*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 30*AltinCaves_mvl/mxv
@@ -2129,7 +2129,7 @@ Label_1_10A3:
  .byte   W02
  .byte   PEND 
 @ 012   ----------------------------------------
-Label_1_110C:
+LabelAltinCaves_1_110C:
  .byte   VOL , 39*AltinCaves_mvl/mxv
  .byte   W02
  .byte   VOL , 41*AltinCaves_mvl/mxv
@@ -2152,7 +2152,7 @@ Label_1_110C:
  .byte   W02
  .byte   PEND 
 @ 013   ----------------------------------------
-Label_1_116C:
+LabelAltinCaves_1_116C:
  .byte   VOL , 50*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 52*AltinCaves_mvl/mxv
@@ -2175,7 +2175,7 @@ Label_1_116C:
  .byte   W02
  .byte   PEND 
 @ 014   ----------------------------------------
-Label_1_11CC:
+LabelAltinCaves_1_11CC:
  .byte   VOL , 63*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 64*AltinCaves_mvl/mxv
@@ -2200,7 +2200,7 @@ Label_1_11CC:
  .byte   W02
  .byte   PEND 
 @ 015   ----------------------------------------
-Label_1_1235:
+LabelAltinCaves_1_1235:
  .byte   VOL , 77*AltinCaves_mvl/mxv
  .byte   W02
  .byte   VOL , 78*AltinCaves_mvl/mxv
@@ -2225,7 +2225,7 @@ Label_1_1235:
  .byte   W01
  .byte   PEND 
 @ 016   ----------------------------------------
-Label_1_1572:
+LabelAltinCaves_1_1572:
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 9*AltinCaves_mvl/mxv
@@ -2285,15 +2285,15 @@ Label_1_1572:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
 @ 018   ----------------------------------------
-Label_1_17D6:
+LabelAltinCaves_1_17D6:
  .byte   VOL , 81*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 82*AltinCaves_mvl/mxv
@@ -2313,7 +2313,7 @@ Label_1_17D6:
  .byte   W03
  .byte   PEND 
 @ 019   ----------------------------------------
-Label_1_1B12:
+LabelAltinCaves_1_1B12:
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 9*AltinCaves_mvl/mxv
@@ -2342,7 +2342,7 @@ Label_1_1B12:
  .byte   W01
  .byte   PEND 
 @ 020   ----------------------------------------
-Label_1_1B78:
+LabelAltinCaves_1_1B78:
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 17*AltinCaves_mvl/mxv
@@ -2375,15 +2375,15 @@ Label_1_1B78:
  .byte   W01
  .byte   PEND 
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
 @ 021   ----------------------------------------
-Label_1_1D76:
+LabelAltinCaves_1_1D76:
  .byte   VOL , 81*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 82*AltinCaves_mvl/mxv
@@ -2459,7 +2459,7 @@ Label_1_1D76:
  .byte   N44 ,Fs4
  .byte   W01
 @ 023   ----------------------------------------
-Label_1_2C76:
+LabelAltinCaves_1_2C76:
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 17*AltinCaves_mvl/mxv
@@ -2489,15 +2489,15 @@ Label_1_2C76:
  .byte   W01
  .byte   PEND 
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
 @ 024   ----------------------------------------
-Label_1_2E74:
+LabelAltinCaves_1_2E74:
  .byte   VOL , 81*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 82*AltinCaves_mvl/mxv
@@ -2517,7 +2517,7 @@ Label_1_2E74:
  .byte   W01
  .byte   PEND 
  .byte   PATT
-  .word Label_1_1B12
+  .word LabelAltinCaves_1_1B12
 @ 025   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -2550,15 +2550,15 @@ Label_1_2E74:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
 @ 026   ----------------------------------------
-Label_1_33F6:
+LabelAltinCaves_1_33F6:
  .byte   VOL , 81*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 82*AltinCaves_mvl/mxv
@@ -2642,17 +2642,17 @@ Label_1_33F6:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_0CAF
+  .word LabelAltinCaves_1_0CAF
 @ 029   ----------------------------------------
-Label_1_4733:
+LabelAltinCaves_1_4733:
  .byte   VOL , 13*AltinCaves_mvl/mxv
  .byte   W02
  .byte   VOL , 13*AltinCaves_mvl/mxv
@@ -2705,17 +2705,17 @@ Label_1_4733:
  .byte   VOL , 28*AltinCaves_mvl/mxv
  .byte   W02
  .byte   PATT
-  .word Label_1_10A3
+  .word LabelAltinCaves_1_10A3
  .byte   PATT
-  .word Label_1_110C
+  .word LabelAltinCaves_1_110C
  .byte   PATT
-  .word Label_1_116C
+  .word LabelAltinCaves_1_116C
  .byte   PATT
-  .word Label_1_11CC
+  .word LabelAltinCaves_1_11CC
  .byte   PATT
-  .word Label_1_1235
+  .word LabelAltinCaves_1_1235
  .byte   PATT
-  .word Label_1_1572
+  .word LabelAltinCaves_1_1572
 @ 031   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -2748,31 +2748,31 @@ Label_1_4733:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_17D6
+  .word LabelAltinCaves_1_17D6
  .byte   PATT
-  .word Label_1_1B12
+  .word LabelAltinCaves_1_1B12
  .byte   PATT
-  .word Label_1_1B78
+  .word LabelAltinCaves_1_1B78
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_1D76
+  .word LabelAltinCaves_1_1D76
 @ 032   ----------------------------------------
-Label_1_6360:
+LabelAltinCaves_1_6360:
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   N96 ,Cs3 ,v100
  .byte   N96 ,Fs4
@@ -2805,7 +2805,7 @@ Label_1_6360:
  .byte   W01
  .byte   PEND 
 @ 033   ----------------------------------------
-Label_1_63C6:
+LabelAltinCaves_1_63C6:
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 17*AltinCaves_mvl/mxv
@@ -2835,17 +2835,17 @@ Label_1_63C6:
  .byte   W01
  .byte   PEND 
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_2E74
+  .word LabelAltinCaves_1_2E74
  .byte   PATT
-  .word Label_1_1B12
+  .word LabelAltinCaves_1_1B12
 @ 034   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -2878,15 +2878,15 @@ Label_1_63C6:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_33F6
+  .word LabelAltinCaves_1_33F6
 @ 035   ----------------------------------------
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   W01
@@ -2947,17 +2947,17 @@ Label_1_63C6:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_0CAF
+  .word LabelAltinCaves_1_0CAF
  .byte   PATT
-  .word Label_1_4733
+  .word LabelAltinCaves_1_4733
 @ 037   ----------------------------------------
  .byte   VOL , 20*AltinCaves_mvl/mxv
  .byte   W01
@@ -2986,17 +2986,17 @@ Label_1_63C6:
  .byte   VOL , 28*AltinCaves_mvl/mxv
  .byte   W02
  .byte   PATT
-  .word Label_1_10A3
+  .word LabelAltinCaves_1_10A3
  .byte   PATT
-  .word Label_1_110C
+  .word LabelAltinCaves_1_110C
  .byte   PATT
-  .word Label_1_116C
+  .word LabelAltinCaves_1_116C
  .byte   PATT
-  .word Label_1_11CC
+  .word LabelAltinCaves_1_11CC
  .byte   PATT
-  .word Label_1_1235
+  .word LabelAltinCaves_1_1235
  .byte   PATT
-  .word Label_1_1572
+  .word LabelAltinCaves_1_1572
 @ 038   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -3029,17 +3029,17 @@ Label_1_63C6:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_17D6
+  .word LabelAltinCaves_1_17D6
  .byte   PATT
-  .word Label_1_1B12
+  .word LabelAltinCaves_1_1B12
 @ 039   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -3072,33 +3072,33 @@ Label_1_63C6:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_1D76
+  .word LabelAltinCaves_1_1D76
  .byte   PATT
-  .word Label_1_6360
+  .word LabelAltinCaves_1_6360
  .byte   PATT
-  .word Label_1_63C6
+  .word LabelAltinCaves_1_63C6
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_2E74
+  .word LabelAltinCaves_1_2E74
  .byte   PATT
-  .word Label_1_1B12
+  .word LabelAltinCaves_1_1B12
 @ 040   ----------------------------------------
-Label_1_A098:
+LabelAltinCaves_1_A098:
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 17*AltinCaves_mvl/mxv
@@ -3131,15 +3131,15 @@ Label_1_A098:
  .byte   W01
  .byte   PEND 
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_33F6
+  .word LabelAltinCaves_1_33F6
 @ 041   ----------------------------------------
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   W01
@@ -3172,19 +3172,19 @@ Label_1_A098:
  .byte   N44 ,Fs4
  .byte   N44 ,An3
  .byte   PATT
-  .word Label_1_0AB1
+  .word LabelAltinCaves_1_0AB1
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_0CAF
+  .word LabelAltinCaves_1_0CAF
  .byte   PATT
-  .word Label_1_4733
+  .word LabelAltinCaves_1_4733
 @ 042   ----------------------------------------
  .byte   VOL , 20*AltinCaves_mvl/mxv
  .byte   W01
@@ -3213,15 +3213,15 @@ Label_1_A098:
  .byte   VOL , 28*AltinCaves_mvl/mxv
  .byte   W02
  .byte   PATT
-  .word Label_1_10A3
+  .word LabelAltinCaves_1_10A3
  .byte   PATT
-  .word Label_1_110C
+  .word LabelAltinCaves_1_110C
  .byte   PATT
-  .word Label_1_116C
+  .word LabelAltinCaves_1_116C
  .byte   PATT
-  .word Label_1_11CC
+  .word LabelAltinCaves_1_11CC
  .byte   PATT
-  .word Label_1_1235
+  .word LabelAltinCaves_1_1235
 @ 043   ----------------------------------------
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   W01
@@ -3281,17 +3281,17 @@ Label_1_A098:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_17D6
+  .word LabelAltinCaves_1_17D6
 @ 045   ----------------------------------------
-Label_1_C102:
+LabelAltinCaves_1_C102:
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 9*AltinCaves_mvl/mxv
@@ -3351,45 +3351,45 @@ Label_1_C102:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_1D76
+  .word LabelAltinCaves_1_1D76
  .byte   PATT
-  .word Label_1_6360
+  .word LabelAltinCaves_1_6360
  .byte   PATT
-  .word Label_1_63C6
+  .word LabelAltinCaves_1_63C6
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_2E74
+  .word LabelAltinCaves_1_2E74
  .byte   PATT
-  .word Label_1_C102
+  .word LabelAltinCaves_1_C102
  .byte   PATT
-  .word Label_1_A098
+  .word LabelAltinCaves_1_A098
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_33F6
+  .word LabelAltinCaves_1_33F6
  .byte   PATT
-  .word Label_1_0A4B
+  .word LabelAltinCaves_1_0A4B
 @ 047   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -3419,17 +3419,17 @@ Label_1_C102:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_0CAF
+  .word LabelAltinCaves_1_0CAF
  .byte   PATT
-  .word Label_1_0FE3
+  .word LabelAltinCaves_1_0FE3
 @ 048   ----------------------------------------
  .byte   VOL , 20*AltinCaves_mvl/mxv
  .byte   W01
@@ -3458,17 +3458,17 @@ Label_1_C102:
  .byte   VOL , 28*AltinCaves_mvl/mxv
  .byte   W02
  .byte   PATT
-  .word Label_1_10A3
+  .word LabelAltinCaves_1_10A3
  .byte   PATT
-  .word Label_1_110C
+  .word LabelAltinCaves_1_110C
  .byte   PATT
-  .word Label_1_116C
+  .word LabelAltinCaves_1_116C
  .byte   PATT
-  .word Label_1_11CC
+  .word LabelAltinCaves_1_11CC
  .byte   PATT
-  .word Label_1_1235
+  .word LabelAltinCaves_1_1235
  .byte   PATT
-  .word Label_1_1572
+  .word LabelAltinCaves_1_1572
 @ 049   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -3501,15 +3501,15 @@ Label_1_C102:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_17D6
+  .word LabelAltinCaves_1_17D6
 @ 050   ----------------------------------------
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   W01
@@ -3569,15 +3569,15 @@ Label_1_C102:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_1D76
+  .word LabelAltinCaves_1_1D76
 @ 052   ----------------------------------------
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   N96 ,Cs3 ,v100
@@ -3610,21 +3610,21 @@ Label_1_C102:
  .byte   N44 ,An3
  .byte   W01
  .byte   PATT
-  .word Label_1_2C76
+  .word LabelAltinCaves_1_2C76
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_2E74
+  .word LabelAltinCaves_1_2E74
  .byte   PATT
-  .word Label_1_C102
+  .word LabelAltinCaves_1_C102
 @ 053   ----------------------------------------
-Label_1_010F38:
+LabelAltinCaves_1_010F38:
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 17*AltinCaves_mvl/mxv
@@ -3657,31 +3657,31 @@ Label_1_010F38:
  .byte   W01
  .byte   PEND 
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_33F6
+  .word LabelAltinCaves_1_33F6
  .byte   PATT
-  .word Label_1_0A4B
+  .word LabelAltinCaves_1_0A4B
  .byte   PATT
-  .word Label_1_0AB1
+  .word LabelAltinCaves_1_0AB1
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_0CAF
+  .word LabelAltinCaves_1_0CAF
  .byte   PATT
-  .word Label_1_0FE3
+  .word LabelAltinCaves_1_0FE3
 @ 054   ----------------------------------------
  .byte   VOL , 20*AltinCaves_mvl/mxv
  .byte   W01
@@ -3710,17 +3710,17 @@ Label_1_010F38:
  .byte   VOL , 28*AltinCaves_mvl/mxv
  .byte   W02
  .byte   PATT
-  .word Label_1_10A3
+  .word LabelAltinCaves_1_10A3
  .byte   PATT
-  .word Label_1_110C
+  .word LabelAltinCaves_1_110C
  .byte   PATT
-  .word Label_1_116C
+  .word LabelAltinCaves_1_116C
  .byte   PATT
-  .word Label_1_11CC
+  .word LabelAltinCaves_1_11CC
  .byte   PATT
-  .word Label_1_1235
+  .word LabelAltinCaves_1_1235
  .byte   PATT
-  .word Label_1_1572
+  .word LabelAltinCaves_1_1572
 @ 055   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -3753,17 +3753,17 @@ Label_1_010F38:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_17D6
+  .word LabelAltinCaves_1_17D6
  .byte   PATT
-  .word Label_1_1B12
+  .word LabelAltinCaves_1_1B12
 @ 056   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -3796,15 +3796,15 @@ Label_1_010F38:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_1D76
+  .word LabelAltinCaves_1_1D76
 @ 057   ----------------------------------------
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   N96 ,Cs3 ,v100
@@ -3837,29 +3837,29 @@ Label_1_010F38:
  .byte   N44 ,An3
  .byte   W01
  .byte   PATT
-  .word Label_1_63C6
+  .word LabelAltinCaves_1_63C6
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
  .byte   PATT
-  .word Label_1_2E74
+  .word LabelAltinCaves_1_2E74
  .byte   PATT
-  .word Label_1_1B12
+  .word LabelAltinCaves_1_1B12
  .byte   PATT
-  .word Label_1_010F38
+  .word LabelAltinCaves_1_010F38
  .byte   PATT
-  .word Label_1_0B17
+  .word LabelAltinCaves_1_0B17
  .byte   PATT
-  .word Label_1_0B7D
+  .word LabelAltinCaves_1_0B7D
  .byte   PATT
-  .word Label_1_0BE3
+  .word LabelAltinCaves_1_0BE3
  .byte   PATT
-  .word Label_1_0C49
+  .word LabelAltinCaves_1_0C49
 @ 058   ----------------------------------------
  .byte   VOL , 81*AltinCaves_mvl/mxv
  .byte   W01
@@ -3879,14 +3879,14 @@ Label_1_010F38:
  .byte   W68
  .byte   W01
  .byte   GOTO
-  .word Label_1_00
+  .word LabelAltinCaves_1_00
  .byte   FINE
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
 AltinCaves_003:
 @ 000   ----------------------------------------
-Label_2_00:
+LabelAltinCaves_2_00:
  .byte   TEMPO , 72*AltinCaves_tbs/2
  .byte   KEYSH , AltinCaves_key+0
  .byte   VOICE , 75
@@ -3901,7 +3901,7 @@ Label_2_00:
  .byte   W96
  .byte   W96
 @ 002   ----------------------------------------
-Label_2_0D20:
+LabelAltinCaves_2_0D20:
  .byte   N05 ,Fs4 ,v090
  .byte   W06
  .byte   Fs4 ,v066
@@ -3936,7 +3936,7 @@ Label_2_0D20:
  .byte   W06
  .byte   PEND 
 @ 003   ----------------------------------------
-Label_2_0F00:
+LabelAltinCaves_2_0F00:
  .byte   N05 ,Cs5 ,v066
  .byte   W06
  .byte   Fs4 ,v090
@@ -3956,7 +3956,7 @@ Label_2_0F00:
  .byte   W54
  .byte   PEND 
 @ 004   ----------------------------------------
-Label_2_12C0:
+LabelAltinCaves_2_12C0:
  .byte   N05 ,En5 ,v090
  .byte   W06
  .byte   En4 ,v066
@@ -3991,7 +3991,7 @@ Label_2_12C0:
  .byte   W06
  .byte   PEND 
 @ 005   ----------------------------------------
-Label_2_14A0:
+LabelAltinCaves_2_14A0:
  .byte   N05 ,Bn4 ,v066
  .byte   W06
  .byte   Cn5 ,v090
@@ -4015,7 +4015,7 @@ Label_2_14A0:
  .byte   W01
  .byte   PEND 
 @ 006   ----------------------------------------
-Label_2_16DA:
+LabelAltinCaves_2_16DA:
  .byte   N02 ,Gs4 ,v090
  .byte   W03
  .byte   An4
@@ -4036,7 +4036,7 @@ Label_2_16DA:
  .byte   W02
  .byte   PEND 
 @ 007   ----------------------------------------
-Label_2_196E:
+LabelAltinCaves_2_196E:
  .byte   N05 ,Cs5 ,v090
  .byte   W06
  .byte   Dn5
@@ -4051,9 +4051,9 @@ Label_2_196E:
  .byte   W11
  .byte   PEND 
  .byte   PATT
-  .word Label_2_12C0
+  .word LabelAltinCaves_2_12C0
 @ 008   ----------------------------------------
-Label_2_1FE0:
+LabelAltinCaves_2_1FE0:
  .byte   N05 ,Bn4 ,v066
  .byte   W06
  .byte   Cn5 ,v090
@@ -4076,7 +4076,7 @@ Label_2_1FE0:
  .byte   W06
  .byte   PEND 
 @ 010   ----------------------------------------
-Label_2_2670:
+LabelAltinCaves_2_2670:
  .byte   N02 ,Fs4 ,v090
  .byte   W03
  .byte   An4
@@ -4100,7 +4100,7 @@ Label_2_2670:
  .byte   W24
  .byte   PEND 
 @ 011   ----------------------------------------
-Label_2_286E:
+LabelAltinCaves_2_286E:
  .byte   N02 ,Gs4 ,v090
  .byte   W03
  .byte   Bn4
@@ -4125,7 +4125,7 @@ Label_2_286E:
  .byte   W30
  .byte   PEND 
 @ 012   ----------------------------------------
-Label_2_2AA8:
+LabelAltinCaves_2_2AA8:
  .byte   N05 ,Ds5 ,v090
  .byte   W06
  .byte   Cs5
@@ -4149,13 +4149,13 @@ Label_2_2AA8:
  .byte   W01
  .byte   PEND 
  .byte   PATT
-  .word Label_2_16DA
+  .word LabelAltinCaves_2_16DA
  .byte   PATT
-  .word Label_2_196E
+  .word LabelAltinCaves_2_196E
  .byte   PATT
-  .word Label_2_12C0
+  .word LabelAltinCaves_2_12C0
 @ 013   ----------------------------------------
-Label_2_3660:
+LabelAltinCaves_2_3660:
  .byte   N05 ,Bn4 ,v066
  .byte   W06
  .byte   Cn5 ,v090
@@ -4182,153 +4182,153 @@ Label_2_3660:
  .byte   W06
  .byte   PEND 
  .byte   PATT
-  .word Label_2_0D20
+  .word LabelAltinCaves_2_0D20
  .byte   PATT
-  .word Label_2_0F00
+  .word LabelAltinCaves_2_0F00
  .byte   PATT
-  .word Label_2_12C0
+  .word LabelAltinCaves_2_12C0
  .byte   PATT
-  .word Label_2_14A0
+  .word LabelAltinCaves_2_14A0
  .byte   PATT
-  .word Label_2_16DA
+  .word LabelAltinCaves_2_16DA
  .byte   PATT
-  .word Label_2_196E
+  .word LabelAltinCaves_2_196E
  .byte   PATT
-  .word Label_2_12C0
+  .word LabelAltinCaves_2_12C0
  .byte   PATT
-  .word Label_2_1FE0
+  .word LabelAltinCaves_2_1FE0
  .byte   PATT
-  .word Label_2_2670
+  .word LabelAltinCaves_2_2670
  .byte   PATT
-  .word Label_2_286E
+  .word LabelAltinCaves_2_286E
  .byte   PATT
-  .word Label_2_2AA8
+  .word LabelAltinCaves_2_2AA8
  .byte   PATT
-  .word Label_2_16DA
+  .word LabelAltinCaves_2_16DA
  .byte   PATT
-  .word Label_2_196E
+  .word LabelAltinCaves_2_196E
  .byte   PATT
-  .word Label_2_12C0
+  .word LabelAltinCaves_2_12C0
  .byte   PATT
-  .word Label_2_3660
+  .word LabelAltinCaves_2_3660
  .byte   PATT
-  .word Label_2_0D20
+  .word LabelAltinCaves_2_0D20
  .byte   PATT
-  .word Label_2_0F00
+  .word LabelAltinCaves_2_0F00
  .byte   PATT
-  .word Label_2_12C0
+  .word LabelAltinCaves_2_12C0
  .byte   PATT
-  .word Label_2_14A0
+  .word LabelAltinCaves_2_14A0
  .byte   PATT
-  .word Label_2_16DA
+  .word LabelAltinCaves_2_16DA
  .byte   PATT
-  .word Label_2_196E
+  .word LabelAltinCaves_2_196E
  .byte   PATT
-  .word Label_2_12C0
+  .word LabelAltinCaves_2_12C0
  .byte   PATT
-  .word Label_2_1FE0
+  .word LabelAltinCaves_2_1FE0
  .byte   PATT
-  .word Label_2_2670
+  .word LabelAltinCaves_2_2670
  .byte   PATT
-  .word Label_2_286E
+  .word LabelAltinCaves_2_286E
  .byte   PATT
-  .word Label_2_2AA8
+  .word LabelAltinCaves_2_2AA8
  .byte   PATT
-  .word Label_2_16DA
+  .word LabelAltinCaves_2_16DA
  .byte   PATT
-  .word Label_2_196E
+  .word LabelAltinCaves_2_196E
  .byte   PATT
-  .word Label_2_12C0
+  .word LabelAltinCaves_2_12C0
  .byte   PATT
-  .word Label_2_3660
+  .word LabelAltinCaves_2_3660
  .byte   PATT
-  .word Label_2_0D20
+  .word LabelAltinCaves_2_0D20
  .byte   PATT
-  .word Label_2_0F00
+  .word LabelAltinCaves_2_0F00
  .byte   PATT
-  .word Label_2_12C0
+  .word LabelAltinCaves_2_12C0
  .byte   PATT
-  .word Label_2_14A0
+  .word LabelAltinCaves_2_14A0
  .byte   PATT
-  .word Label_2_16DA
+  .word LabelAltinCaves_2_16DA
  .byte   PATT
-  .word Label_2_196E
+  .word LabelAltinCaves_2_196E
  .byte   PATT
-  .word Label_2_12C0
+  .word LabelAltinCaves_2_12C0
  .byte   PATT
-  .word Label_2_1FE0
+  .word LabelAltinCaves_2_1FE0
  .byte   PATT
-  .word Label_2_2670
+  .word LabelAltinCaves_2_2670
  .byte   PATT
-  .word Label_2_286E
+  .word LabelAltinCaves_2_286E
  .byte   PATT
-  .word Label_2_2AA8
+  .word LabelAltinCaves_2_2AA8
  .byte   PATT
-  .word Label_2_16DA
+  .word LabelAltinCaves_2_16DA
  .byte   PATT
-  .word Label_2_196E
+  .word LabelAltinCaves_2_196E
  .byte   PATT
-  .word Label_2_12C0
+  .word LabelAltinCaves_2_12C0
  .byte   PATT
-  .word Label_2_3660
+  .word LabelAltinCaves_2_3660
  .byte   PATT
-  .word Label_2_0D20
+  .word LabelAltinCaves_2_0D20
  .byte   PATT
-  .word Label_2_0F00
+  .word LabelAltinCaves_2_0F00
  .byte   PATT
-  .word Label_2_12C0
+  .word LabelAltinCaves_2_12C0
  .byte   PATT
-  .word Label_2_14A0
+  .word LabelAltinCaves_2_14A0
  .byte   PATT
-  .word Label_2_16DA
+  .word LabelAltinCaves_2_16DA
  .byte   PATT
-  .word Label_2_196E
+  .word LabelAltinCaves_2_196E
  .byte   PATT
-  .word Label_2_12C0
+  .word LabelAltinCaves_2_12C0
  .byte   PATT
-  .word Label_2_1FE0
+  .word LabelAltinCaves_2_1FE0
  .byte   PATT
-  .word Label_2_2670
+  .word LabelAltinCaves_2_2670
  .byte   PATT
-  .word Label_2_286E
+  .word LabelAltinCaves_2_286E
  .byte   PATT
-  .word Label_2_2AA8
+  .word LabelAltinCaves_2_2AA8
  .byte   PATT
-  .word Label_2_16DA
+  .word LabelAltinCaves_2_16DA
  .byte   PATT
-  .word Label_2_196E
+  .word LabelAltinCaves_2_196E
  .byte   PATT
-  .word Label_2_12C0
+  .word LabelAltinCaves_2_12C0
  .byte   PATT
-  .word Label_2_3660
+  .word LabelAltinCaves_2_3660
  .byte   PATT
-  .word Label_2_0D20
+  .word LabelAltinCaves_2_0D20
  .byte   PATT
-  .word Label_2_0F00
+  .word LabelAltinCaves_2_0F00
  .byte   PATT
-  .word Label_2_12C0
+  .word LabelAltinCaves_2_12C0
  .byte   PATT
-  .word Label_2_14A0
+  .word LabelAltinCaves_2_14A0
  .byte   PATT
-  .word Label_2_16DA
+  .word LabelAltinCaves_2_16DA
  .byte   PATT
-  .word Label_2_196E
+  .word LabelAltinCaves_2_196E
  .byte   PATT
-  .word Label_2_12C0
+  .word LabelAltinCaves_2_12C0
  .byte   PATT
-  .word Label_2_1FE0
+  .word LabelAltinCaves_2_1FE0
  .byte   PATT
-  .word Label_2_2670
+  .word LabelAltinCaves_2_2670
  .byte   PATT
-  .word Label_2_286E
+  .word LabelAltinCaves_2_286E
  .byte   PATT
-  .word Label_2_2AA8
+  .word LabelAltinCaves_2_2AA8
  .byte   PATT
-  .word Label_2_16DA
+  .word LabelAltinCaves_2_16DA
  .byte   PATT
-  .word Label_2_196E
+  .word LabelAltinCaves_2_196E
  .byte   PATT
-  .word Label_2_12C0
+  .word LabelAltinCaves_2_12C0
 @ 015   ----------------------------------------
  .byte   N05 ,Bn4 ,v066
  .byte   W06
@@ -4348,14 +4348,14 @@ Label_2_3660:
  .byte   W10
 @ 016   ----------------------------------------
  .byte   GOTO
-  .word Label_2_00
+  .word LabelAltinCaves_2_00
  .byte   FINE
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
 AltinCaves_004:
 @ 000   ----------------------------------------
-Label_3_00:
+LabelAltinCaves_3_00:
  .byte   TEMPO , 72*AltinCaves_tbs/2
  .byte   KEYSH , AltinCaves_key+0
  .byte   VOICE , 24
@@ -4407,7 +4407,7 @@ Label_3_00:
  .byte   N11 ,Fs0 ,v055
  .byte   W12
 @ 002   ----------------------------------------
-Label_3_03D9:
+LabelAltinCaves_3_03D9:
  .byte   N05 ,Fs0 ,v035
  .byte   W06
  .byte   Fs0 ,v023
@@ -4434,7 +4434,7 @@ Label_3_03D9:
  .byte   W12
  .byte   PEND 
 @ 003   ----------------------------------------
-Label_3_05D7:
+LabelAltinCaves_3_05D7:
  .byte   N05 ,Fs0 ,v063
  .byte   W06
  .byte   N11 ,Fs0 ,v100
@@ -4459,7 +4459,7 @@ Label_3_05D7:
  .byte   W06
  .byte   PEND 
 @ 004   ----------------------------------------
-Label_3_07B7:
+LabelAltinCaves_3_07B7:
  .byte   N11 ,Fs0 ,v100
  .byte   W12
  .byte   N05 ,Fs0 ,v063
@@ -4484,13 +4484,13 @@ Label_3_07B7:
  .byte   W12
  .byte   PEND 
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
 @ 005   ----------------------------------------
-Label_3_0F73:
+LabelAltinCaves_3_0F73:
  .byte   N11 ,Fs0 ,v100
  .byte   W12
  .byte   N05 ,Fs0 ,v063
@@ -4515,7 +4515,7 @@ Label_3_0F73:
  .byte   W12
  .byte   PEND 
 @ 006   ----------------------------------------
-Label_3_1171:
+LabelAltinCaves_3_1171:
  .byte   N05 ,En0 ,v063
  .byte   W06
  .byte   N11 ,En0 ,v100
@@ -4540,7 +4540,7 @@ Label_3_1171:
  .byte   W06
  .byte   PEND 
 @ 007   ----------------------------------------
-Label_3_1351:
+LabelAltinCaves_3_1351:
  .byte   N11 ,En0 ,v100
  .byte   W12
  .byte   N05 ,En0 ,v063
@@ -4565,7 +4565,7 @@ Label_3_1351:
  .byte   W12
  .byte   PEND 
 @ 008   ----------------------------------------
-Label_3_154F:
+LabelAltinCaves_3_154F:
  .byte   N05 ,En0 ,v063
  .byte   W06
  .byte   N11 ,En0 ,v100
@@ -4590,11 +4590,11 @@ Label_3_154F:
  .byte   W06
  .byte   PEND 
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
 @ 009   ----------------------------------------
-Label_3_1B0D:
+LabelAltinCaves_3_1B0D:
  .byte   N11 ,Fs0 ,v100
  .byte   W12
  .byte   N05 ,Fs0 ,v063
@@ -4619,11 +4619,11 @@ Label_3_1B0D:
  .byte   W12
  .byte   PEND 
  .byte   PATT
-  .word Label_3_1171
+  .word LabelAltinCaves_3_1171
  .byte   PATT
-  .word Label_3_1351
+  .word LabelAltinCaves_3_1351
 @ 010   ----------------------------------------
-Label_3_20E9:
+LabelAltinCaves_3_20E9:
  .byte   N05 ,En0 ,v063
  .byte   W06
  .byte   N11 ,En0 ,v100
@@ -4660,7 +4660,7 @@ Label_3_20E9:
  .byte   W06
  .byte   PEND 
 @ 011   ----------------------------------------
-Label_3_22C9:
+LabelAltinCaves_3_22C9:
  .byte   N11 ,Bn1 ,v075
  .byte   N11 ,En1
  .byte   W12
@@ -4692,7 +4692,7 @@ Label_3_22C9:
  .byte   W06
  .byte   PEND 
 @ 012   ----------------------------------------
-Label_3_24A9:
+LabelAltinCaves_3_24A9:
  .byte   N05 ,En0 ,v075
  .byte   W06
  .byte   Gn1
@@ -4724,7 +4724,7 @@ Label_3_24A9:
  .byte   W12
  .byte   PEND 
 @ 013   ----------------------------------------
-Label_3_2689:
+LabelAltinCaves_3_2689:
  .byte   N05 ,En0 ,v075
  .byte   W06
  .byte   N11 ,Fs0 ,v100
@@ -4755,7 +4755,7 @@ Label_3_2689:
  .byte   W06
  .byte   PEND 
 @ 014   ----------------------------------------
-Label_3_2869:
+LabelAltinCaves_3_2869:
  .byte   N05 ,Cs1 ,v100
  .byte   W06
  .byte   Fs0 ,v075
@@ -4788,7 +4788,7 @@ Label_3_2869:
  .byte   W06
  .byte   PEND 
 @ 015   ----------------------------------------
-Label_3_2A49:
+LabelAltinCaves_3_2A49:
  .byte   N05 ,Gs0 ,v075
  .byte   W06
  .byte   Gs1 ,v100
@@ -4821,7 +4821,7 @@ Label_3_2A49:
  .byte   W06
  .byte   PEND 
 @ 016   ----------------------------------------
-Label_3_2C29:
+LabelAltinCaves_3_2C29:
  .byte   N05 ,Bn1 ,v075
  .byte   W06
  .byte   N11 ,Fs0 ,v100
@@ -4846,15 +4846,15 @@ Label_3_2C29:
  .byte   W06
  .byte   PEND 
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_1351
+  .word LabelAltinCaves_3_1351
  .byte   PATT
-  .word Label_3_1171
+  .word LabelAltinCaves_3_1171
 @ 017   ----------------------------------------
-Label_3_35C5:
+LabelAltinCaves_3_35C5:
  .byte   N11 ,En0 ,v100
  .byte   W12
  .byte   N05 ,En0 ,v063
@@ -4877,7 +4877,7 @@ Label_3_35C5:
  .byte   W12
  .byte   PEND 
 @ 018   ----------------------------------------
-Label_3_37C3:
+LabelAltinCaves_3_37C3:
  .byte   N05 ,Fs0 ,v063
  .byte   W06
  .byte   N11 ,Fs0 ,v100
@@ -4904,7 +4904,7 @@ Label_3_37C3:
  .byte   W12
  .byte   PEND 
 @ 019   ----------------------------------------
-Label_3_39C1:
+LabelAltinCaves_3_39C1:
  .byte   N05 ,Fs0 ,v001
  .byte   W06
  .byte   N11 ,Fs0 ,v100
@@ -4929,7 +4929,7 @@ Label_3_39C1:
  .byte   W12
  .byte   PEND 
 @ 020   ----------------------------------------
-Label_3_3BA1:
+LabelAltinCaves_3_3BA1:
  .byte   N05 ,Fs0 ,v001
  .byte   W06
  .byte   Fs0
@@ -4954,23 +4954,23 @@ Label_3_3BA1:
  .byte   W12
  .byte   PEND 
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_1B0D
+  .word LabelAltinCaves_3_1B0D
  .byte   PATT
-  .word Label_3_1171
+  .word LabelAltinCaves_3_1171
  .byte   PATT
-  .word Label_3_1351
+  .word LabelAltinCaves_3_1351
 @ 021   ----------------------------------------
-Label_3_4CF9:
+LabelAltinCaves_3_4CF9:
  .byte   N05 ,En0 ,v063
  .byte   W06
  .byte   N11 ,Fs0 ,v100
@@ -4995,17 +4995,17 @@ Label_3_4CF9:
  .byte   W06
  .byte   PEND 
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_1351
+  .word LabelAltinCaves_3_1351
  .byte   PATT
-  .word Label_3_1171
+  .word LabelAltinCaves_3_1171
  .byte   PATT
-  .word Label_3_1351
+  .word LabelAltinCaves_3_1351
 @ 022   ----------------------------------------
-Label_3_5893:
+LabelAltinCaves_3_5893:
  .byte   N05 ,En0 ,v063
  .byte   W06
  .byte   Fs1 ,v075
@@ -5043,7 +5043,7 @@ Label_3_5893:
  .byte   W06
  .byte   PEND 
 @ 023   ----------------------------------------
-Label_3_5A73:
+LabelAltinCaves_3_5A73:
  .byte   N11 ,Bn1 ,v075
  .byte   N11 ,Fs1
  .byte   W12
@@ -5077,7 +5077,7 @@ Label_3_5A73:
  .byte   W06
  .byte   PEND 
 @ 024   ----------------------------------------
-Label_3_5C53:
+LabelAltinCaves_3_5C53:
  .byte   N05 ,Fs1 ,v075
  .byte   N05 ,Bn0
  .byte   W06
@@ -5106,7 +5106,7 @@ Label_3_5C53:
  .byte   W12
  .byte   PEND 
 @ 025   ----------------------------------------
-Label_3_5E33:
+LabelAltinCaves_3_5E33:
  .byte   N05 ,Fs0 ,v075
  .byte   W06
  .byte   Cs1 ,v100
@@ -5139,7 +5139,7 @@ Label_3_5E33:
  .byte   W06
  .byte   PEND 
 @ 026   ----------------------------------------
-Label_3_6013:
+LabelAltinCaves_3_6013:
  .byte   N05 ,Fs1 ,v100
  .byte   W06
  .byte   Fs0 ,v075
@@ -5172,7 +5172,7 @@ Label_3_6013:
  .byte   W06
  .byte   PEND 
 @ 027   ----------------------------------------
-Label_3_61F3:
+LabelAltinCaves_3_61F3:
  .byte   N05 ,As1 ,v100
  .byte   W06
  .byte   Bn1 ,v075
@@ -5203,11 +5203,11 @@ Label_3_61F3:
  .byte   W12
  .byte   PEND 
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
 @ 028   ----------------------------------------
-Label_3_67B1:
+LabelAltinCaves_3_67B1:
  .byte   N05 ,Fs0 ,v063
  .byte   W06
  .byte   N11 ,Fs0 ,v100
@@ -5232,9 +5232,9 @@ Label_3_67B1:
  .byte   W06
  .byte   PEND 
  .byte   PATT
-  .word Label_3_1351
+  .word LabelAltinCaves_3_1351
  .byte   PATT
-  .word Label_3_1171
+  .word LabelAltinCaves_3_1171
 @ 029   ----------------------------------------
  .byte   N11 ,En0 ,v100
  .byte   W12
@@ -5282,7 +5282,7 @@ Label_3_67B1:
  .byte   N11 ,Fs0 ,v100
  .byte   W12
  .byte   PATT
-  .word Label_3_37C3
+  .word LabelAltinCaves_3_37C3
 @ 031   ----------------------------------------
  .byte   N05 ,Fs0 ,v001
  .byte   W06
@@ -5307,13 +5307,13 @@ Label_3_67B1:
  .byte   N05 ,Fs0 ,v063
  .byte   W06
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
 @ 032   ----------------------------------------
  .byte   N11 ,Fs0 ,v100
  .byte   W12
@@ -5338,9 +5338,9 @@ Label_3_67B1:
  .byte   N11 ,En0 ,v100
  .byte   W12
  .byte   PATT
-  .word Label_3_1171
+  .word LabelAltinCaves_3_1171
  .byte   PATT
-  .word Label_3_1351
+  .word LabelAltinCaves_3_1351
 @ 033   ----------------------------------------
  .byte   N05 ,En0 ,v063
  .byte   W06
@@ -5365,9 +5365,9 @@ Label_3_67B1:
  .byte   N05 ,Fs0 ,v063
  .byte   W06
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
 @ 034   ----------------------------------------
  .byte   N11 ,Fs0 ,v100
  .byte   W12
@@ -5392,9 +5392,9 @@ Label_3_67B1:
  .byte   N11 ,En0 ,v100
  .byte   W12
  .byte   PATT
-  .word Label_3_1171
+  .word LabelAltinCaves_3_1171
  .byte   PATT
-  .word Label_3_1351
+  .word LabelAltinCaves_3_1351
 @ 035   ----------------------------------------
  .byte   N05 ,En0 ,v063
  .byte   W06
@@ -5607,9 +5607,9 @@ Label_3_67B1:
  .byte   N11 ,Fs0 ,v100
  .byte   W12
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
 @ 042   ----------------------------------------
  .byte   N05 ,Fs0 ,v063
  .byte   W06
@@ -5634,9 +5634,9 @@ Label_3_67B1:
  .byte   N05 ,En0 ,v063
  .byte   W06
  .byte   PATT
-  .word Label_3_1351
+  .word LabelAltinCaves_3_1351
  .byte   PATT
-  .word Label_3_1171
+  .word LabelAltinCaves_3_1171
 @ 043   ----------------------------------------
  .byte   N11 ,En0 ,v100
  .byte   W12
@@ -5659,7 +5659,7 @@ Label_3_67B1:
  .byte   N11 ,Fs0 ,v055
  .byte   W12
  .byte   PATT
-  .word Label_3_03D9
+  .word LabelAltinCaves_3_03D9
 @ 044   ----------------------------------------
  .byte   N05 ,Fs0 ,v083
  .byte   W06
@@ -5686,15 +5686,15 @@ Label_3_67B1:
  .byte   N11 ,Fs0 ,v100
  .byte   W12
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
 @ 045   ----------------------------------------
  .byte   N11 ,Fs0 ,v100
  .byte   W12
@@ -5719,9 +5719,9 @@ Label_3_67B1:
  .byte   N11 ,En0 ,v100
  .byte   W12
  .byte   PATT
-  .word Label_3_1171
+  .word LabelAltinCaves_3_1171
  .byte   PATT
-  .word Label_3_1351
+  .word LabelAltinCaves_3_1351
 @ 046   ----------------------------------------
  .byte   N05 ,En0 ,v063
  .byte   W06
@@ -5746,15 +5746,15 @@ Label_3_67B1:
  .byte   N05 ,Fs0 ,v063
  .byte   W06
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_0F73
+  .word LabelAltinCaves_3_0F73
  .byte   PATT
-  .word Label_3_1171
+  .word LabelAltinCaves_3_1171
  .byte   PATT
-  .word Label_3_1351
+  .word LabelAltinCaves_3_1351
 @ 047   ----------------------------------------
  .byte   N05 ,En0 ,v063
  .byte   W06
@@ -5965,13 +5965,13 @@ Label_3_67B1:
  .byte   N05 ,Fs0 ,v063
  .byte   W06
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_1B0D
+  .word LabelAltinCaves_3_1B0D
  .byte   PATT
-  .word Label_3_1171
+  .word LabelAltinCaves_3_1171
 @ 054   ----------------------------------------
  .byte   N11 ,En0 ,v100
  .byte   W12
@@ -6065,113 +6065,113 @@ Label_3_67B1:
  .byte   N11 ,Fs0 ,v100
  .byte   W12
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_0F73
+  .word LabelAltinCaves_3_0F73
  .byte   PATT
-  .word Label_3_1171
+  .word LabelAltinCaves_3_1171
  .byte   PATT
-  .word Label_3_1351
+  .word LabelAltinCaves_3_1351
  .byte   PATT
-  .word Label_3_154F
+  .word LabelAltinCaves_3_154F
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_1B0D
+  .word LabelAltinCaves_3_1B0D
  .byte   PATT
-  .word Label_3_1171
+  .word LabelAltinCaves_3_1171
  .byte   PATT
-  .word Label_3_1351
+  .word LabelAltinCaves_3_1351
  .byte   PATT
-  .word Label_3_20E9
+  .word LabelAltinCaves_3_20E9
  .byte   PATT
-  .word Label_3_22C9
+  .word LabelAltinCaves_3_22C9
  .byte   PATT
-  .word Label_3_24A9
+  .word LabelAltinCaves_3_24A9
  .byte   PATT
-  .word Label_3_2689
+  .word LabelAltinCaves_3_2689
  .byte   PATT
-  .word Label_3_2869
+  .word LabelAltinCaves_3_2869
  .byte   PATT
-  .word Label_3_2A49
+  .word LabelAltinCaves_3_2A49
  .byte   PATT
-  .word Label_3_2C29
+  .word LabelAltinCaves_3_2C29
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_1351
+  .word LabelAltinCaves_3_1351
  .byte   PATT
-  .word Label_3_1171
+  .word LabelAltinCaves_3_1171
  .byte   PATT
-  .word Label_3_35C5
+  .word LabelAltinCaves_3_35C5
  .byte   PATT
-  .word Label_3_37C3
+  .word LabelAltinCaves_3_37C3
  .byte   PATT
-  .word Label_3_39C1
+  .word LabelAltinCaves_3_39C1
  .byte   PATT
-  .word Label_3_3BA1
+  .word LabelAltinCaves_3_3BA1
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_1B0D
+  .word LabelAltinCaves_3_1B0D
  .byte   PATT
-  .word Label_3_1171
+  .word LabelAltinCaves_3_1171
  .byte   PATT
-  .word Label_3_1351
+  .word LabelAltinCaves_3_1351
  .byte   PATT
-  .word Label_3_4CF9
+  .word LabelAltinCaves_3_4CF9
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_1351
+  .word LabelAltinCaves_3_1351
  .byte   PATT
-  .word Label_3_1171
+  .word LabelAltinCaves_3_1171
  .byte   PATT
-  .word Label_3_1351
+  .word LabelAltinCaves_3_1351
  .byte   PATT
-  .word Label_3_5893
+  .word LabelAltinCaves_3_5893
  .byte   PATT
-  .word Label_3_5A73
+  .word LabelAltinCaves_3_5A73
  .byte   PATT
-  .word Label_3_5C53
+  .word LabelAltinCaves_3_5C53
  .byte   PATT
-  .word Label_3_5E33
+  .word LabelAltinCaves_3_5E33
  .byte   PATT
-  .word Label_3_6013
+  .word LabelAltinCaves_3_6013
  .byte   PATT
-  .word Label_3_61F3
+  .word LabelAltinCaves_3_61F3
  .byte   PATT
-  .word Label_3_05D7
+  .word LabelAltinCaves_3_05D7
  .byte   PATT
-  .word Label_3_07B7
+  .word LabelAltinCaves_3_07B7
  .byte   PATT
-  .word Label_3_67B1
+  .word LabelAltinCaves_3_67B1
  .byte   PATT
-  .word Label_3_1351
+  .word LabelAltinCaves_3_1351
  .byte   PATT
-  .word Label_3_1171
+  .word LabelAltinCaves_3_1171
 @ 058   ----------------------------------------
  .byte   N11 ,En0 ,v100
  .byte   W12
@@ -6189,14 +6189,14 @@ Label_3_67B1:
  .byte   W11
 @ 059   ----------------------------------------
  .byte   GOTO
-  .word Label_3_00
+  .word LabelAltinCaves_3_00
  .byte   FINE
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
 AltinCaves_005:
 @ 000   ----------------------------------------
-Label_4_00:
+LabelAltinCaves_4_00:
  .byte   TEMPO , 72*AltinCaves_tbs/2
  .byte   KEYSH , AltinCaves_key+0
  .byte   VOICE , 40
@@ -6213,7 +6213,7 @@ Label_4_00:
  .byte   W96
  .byte   W05
 @ 002   ----------------------------------------
-Label_4_0D39:
+LabelAltinCaves_4_0D39:
  .byte   N05 ,Fs4 ,v080
  .byte   W06
  .byte   Fs4 ,v056
@@ -6248,7 +6248,7 @@ Label_4_0D39:
  .byte   W06
  .byte   PEND 
 @ 003   ----------------------------------------
-Label_4_0F19:
+LabelAltinCaves_4_0F19:
  .byte   N05 ,Cs5 ,v056
  .byte   W06
  .byte   Fs4 ,v080
@@ -6268,7 +6268,7 @@ Label_4_0F19:
  .byte   W54
  .byte   PEND 
 @ 004   ----------------------------------------
-Label_4_12D9:
+LabelAltinCaves_4_12D9:
  .byte   N05 ,En5 ,v080
  .byte   W06
  .byte   En4 ,v056
@@ -6303,7 +6303,7 @@ Label_4_12D9:
  .byte   W06
  .byte   PEND 
 @ 005   ----------------------------------------
-Label_4_14B9:
+LabelAltinCaves_4_14B9:
  .byte   N05 ,Bn4 ,v056
  .byte   W06
  .byte   Cn5 ,v080
@@ -6327,7 +6327,7 @@ Label_4_14B9:
  .byte   W01
  .byte   PEND 
 @ 006   ----------------------------------------
-Label_4_16F3:
+LabelAltinCaves_4_16F3:
  .byte   N02 ,Gs4 ,v080
  .byte   W03
  .byte   An4
@@ -6348,7 +6348,7 @@ Label_4_16F3:
  .byte   W02
  .byte   PEND 
 @ 007   ----------------------------------------
-Label_4_1987:
+LabelAltinCaves_4_1987:
  .byte   N05 ,Cs5 ,v080
  .byte   W06
  .byte   Dn5
@@ -6363,9 +6363,9 @@ Label_4_1987:
  .byte   W11
  .byte   PEND 
  .byte   PATT
-  .word Label_4_12D9
+  .word LabelAltinCaves_4_12D9
 @ 008   ----------------------------------------
-Label_4_1FF9:
+LabelAltinCaves_4_1FF9:
  .byte   N05 ,Bn4 ,v056
  .byte   W06
  .byte   Cn5 ,v080
@@ -6388,7 +6388,7 @@ Label_4_1FF9:
  .byte   W06
  .byte   PEND 
 @ 010   ----------------------------------------
-Label_4_2689:
+LabelAltinCaves_4_2689:
  .byte   N02 ,Fs4 ,v080
  .byte   W03
  .byte   An4
@@ -6412,7 +6412,7 @@ Label_4_2689:
  .byte   W24
  .byte   PEND 
 @ 011   ----------------------------------------
-Label_4_2887:
+LabelAltinCaves_4_2887:
  .byte   N02 ,Gs4 ,v080
  .byte   W03
  .byte   Bn4
@@ -6437,7 +6437,7 @@ Label_4_2887:
  .byte   W30
  .byte   PEND 
 @ 012   ----------------------------------------
-Label_4_2AC1:
+LabelAltinCaves_4_2AC1:
  .byte   N05 ,Ds5 ,v080
  .byte   W06
  .byte   Cs5
@@ -6461,13 +6461,13 @@ Label_4_2AC1:
  .byte   W01
  .byte   PEND 
  .byte   PATT
-  .word Label_4_16F3
+  .word LabelAltinCaves_4_16F3
  .byte   PATT
-  .word Label_4_1987
+  .word LabelAltinCaves_4_1987
  .byte   PATT
-  .word Label_4_12D9
+  .word LabelAltinCaves_4_12D9
 @ 013   ----------------------------------------
-Label_4_3679:
+LabelAltinCaves_4_3679:
  .byte   N05 ,Bn4 ,v056
  .byte   W06
  .byte   Cn5 ,v080
@@ -6494,153 +6494,153 @@ Label_4_3679:
  .byte   W06
  .byte   PEND 
  .byte   PATT
-  .word Label_4_0D39
+  .word LabelAltinCaves_4_0D39
  .byte   PATT
-  .word Label_4_0F19
+  .word LabelAltinCaves_4_0F19
  .byte   PATT
-  .word Label_4_12D9
+  .word LabelAltinCaves_4_12D9
  .byte   PATT
-  .word Label_4_14B9
+  .word LabelAltinCaves_4_14B9
  .byte   PATT
-  .word Label_4_16F3
+  .word LabelAltinCaves_4_16F3
  .byte   PATT
-  .word Label_4_1987
+  .word LabelAltinCaves_4_1987
  .byte   PATT
-  .word Label_4_12D9
+  .word LabelAltinCaves_4_12D9
  .byte   PATT
-  .word Label_4_1FF9
+  .word LabelAltinCaves_4_1FF9
  .byte   PATT
-  .word Label_4_2689
+  .word LabelAltinCaves_4_2689
  .byte   PATT
-  .word Label_4_2887
+  .word LabelAltinCaves_4_2887
  .byte   PATT
-  .word Label_4_2AC1
+  .word LabelAltinCaves_4_2AC1
  .byte   PATT
-  .word Label_4_16F3
+  .word LabelAltinCaves_4_16F3
  .byte   PATT
-  .word Label_4_1987
+  .word LabelAltinCaves_4_1987
  .byte   PATT
-  .word Label_4_12D9
+  .word LabelAltinCaves_4_12D9
  .byte   PATT
-  .word Label_4_3679
+  .word LabelAltinCaves_4_3679
  .byte   PATT
-  .word Label_4_0D39
+  .word LabelAltinCaves_4_0D39
  .byte   PATT
-  .word Label_4_0F19
+  .word LabelAltinCaves_4_0F19
  .byte   PATT
-  .word Label_4_12D9
+  .word LabelAltinCaves_4_12D9
  .byte   PATT
-  .word Label_4_14B9
+  .word LabelAltinCaves_4_14B9
  .byte   PATT
-  .word Label_4_16F3
+  .word LabelAltinCaves_4_16F3
  .byte   PATT
-  .word Label_4_1987
+  .word LabelAltinCaves_4_1987
  .byte   PATT
-  .word Label_4_12D9
+  .word LabelAltinCaves_4_12D9
  .byte   PATT
-  .word Label_4_1FF9
+  .word LabelAltinCaves_4_1FF9
  .byte   PATT
-  .word Label_4_2689
+  .word LabelAltinCaves_4_2689
  .byte   PATT
-  .word Label_4_2887
+  .word LabelAltinCaves_4_2887
  .byte   PATT
-  .word Label_4_2AC1
+  .word LabelAltinCaves_4_2AC1
  .byte   PATT
-  .word Label_4_16F3
+  .word LabelAltinCaves_4_16F3
  .byte   PATT
-  .word Label_4_1987
+  .word LabelAltinCaves_4_1987
  .byte   PATT
-  .word Label_4_12D9
+  .word LabelAltinCaves_4_12D9
  .byte   PATT
-  .word Label_4_3679
+  .word LabelAltinCaves_4_3679
  .byte   PATT
-  .word Label_4_0D39
+  .word LabelAltinCaves_4_0D39
  .byte   PATT
-  .word Label_4_0F19
+  .word LabelAltinCaves_4_0F19
  .byte   PATT
-  .word Label_4_12D9
+  .word LabelAltinCaves_4_12D9
  .byte   PATT
-  .word Label_4_14B9
+  .word LabelAltinCaves_4_14B9
  .byte   PATT
-  .word Label_4_16F3
+  .word LabelAltinCaves_4_16F3
  .byte   PATT
-  .word Label_4_1987
+  .word LabelAltinCaves_4_1987
  .byte   PATT
-  .word Label_4_12D9
+  .word LabelAltinCaves_4_12D9
  .byte   PATT
-  .word Label_4_1FF9
+  .word LabelAltinCaves_4_1FF9
  .byte   PATT
-  .word Label_4_2689
+  .word LabelAltinCaves_4_2689
  .byte   PATT
-  .word Label_4_2887
+  .word LabelAltinCaves_4_2887
  .byte   PATT
-  .word Label_4_2AC1
+  .word LabelAltinCaves_4_2AC1
  .byte   PATT
-  .word Label_4_16F3
+  .word LabelAltinCaves_4_16F3
  .byte   PATT
-  .word Label_4_1987
+  .word LabelAltinCaves_4_1987
  .byte   PATT
-  .word Label_4_12D9
+  .word LabelAltinCaves_4_12D9
  .byte   PATT
-  .word Label_4_3679
+  .word LabelAltinCaves_4_3679
  .byte   PATT
-  .word Label_4_0D39
+  .word LabelAltinCaves_4_0D39
  .byte   PATT
-  .word Label_4_0F19
+  .word LabelAltinCaves_4_0F19
  .byte   PATT
-  .word Label_4_12D9
+  .word LabelAltinCaves_4_12D9
  .byte   PATT
-  .word Label_4_14B9
+  .word LabelAltinCaves_4_14B9
  .byte   PATT
-  .word Label_4_16F3
+  .word LabelAltinCaves_4_16F3
  .byte   PATT
-  .word Label_4_1987
+  .word LabelAltinCaves_4_1987
  .byte   PATT
-  .word Label_4_12D9
+  .word LabelAltinCaves_4_12D9
  .byte   PATT
-  .word Label_4_1FF9
+  .word LabelAltinCaves_4_1FF9
  .byte   PATT
-  .word Label_4_2689
+  .word LabelAltinCaves_4_2689
  .byte   PATT
-  .word Label_4_2887
+  .word LabelAltinCaves_4_2887
  .byte   PATT
-  .word Label_4_2AC1
+  .word LabelAltinCaves_4_2AC1
  .byte   PATT
-  .word Label_4_16F3
+  .word LabelAltinCaves_4_16F3
  .byte   PATT
-  .word Label_4_1987
+  .word LabelAltinCaves_4_1987
  .byte   PATT
-  .word Label_4_12D9
+  .word LabelAltinCaves_4_12D9
  .byte   PATT
-  .word Label_4_3679
+  .word LabelAltinCaves_4_3679
  .byte   PATT
-  .word Label_4_0D39
+  .word LabelAltinCaves_4_0D39
  .byte   PATT
-  .word Label_4_0F19
+  .word LabelAltinCaves_4_0F19
  .byte   PATT
-  .word Label_4_12D9
+  .word LabelAltinCaves_4_12D9
  .byte   PATT
-  .word Label_4_14B9
+  .word LabelAltinCaves_4_14B9
  .byte   PATT
-  .word Label_4_16F3
+  .word LabelAltinCaves_4_16F3
  .byte   PATT
-  .word Label_4_1987
+  .word LabelAltinCaves_4_1987
  .byte   PATT
-  .word Label_4_12D9
+  .word LabelAltinCaves_4_12D9
  .byte   PATT
-  .word Label_4_1FF9
+  .word LabelAltinCaves_4_1FF9
  .byte   PATT
-  .word Label_4_2689
+  .word LabelAltinCaves_4_2689
  .byte   PATT
-  .word Label_4_2887
+  .word LabelAltinCaves_4_2887
  .byte   PATT
-  .word Label_4_2AC1
+  .word LabelAltinCaves_4_2AC1
  .byte   PATT
-  .word Label_4_16F3
+  .word LabelAltinCaves_4_16F3
  .byte   PATT
-  .word Label_4_1987
+  .word LabelAltinCaves_4_1987
  .byte   PATT
-  .word Label_4_12D9
+  .word LabelAltinCaves_4_12D9
 @ 015   ----------------------------------------
  .byte   N05 ,Bn4 ,v056
  .byte   W06
@@ -6660,14 +6660,14 @@ Label_4_3679:
  .byte   W05
 @ 016   ----------------------------------------
  .byte   GOTO
-  .word Label_4_00
+  .word LabelAltinCaves_4_00
  .byte   FINE
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
 AltinCaves_006:
 @ 000   ----------------------------------------
-Label_5_00:
+LabelAltinCaves_5_00:
  .byte   TEMPO , 72*AltinCaves_tbs/2
  .byte   KEYSH , AltinCaves_key+0
  .byte   VOICE , 1
@@ -6713,7 +6713,7 @@ Label_5_00:
  .byte   N44 ,An3
  .byte   N44 ,Cs3
 @ 003   ----------------------------------------
-Label_5_0AB1:
+LabelAltinCaves_5_0AB1:
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 17*AltinCaves_mvl/mxv
@@ -6743,7 +6743,7 @@ Label_5_0AB1:
  .byte   W01
  .byte   PEND 
 @ 004   ----------------------------------------
-Label_5_0B17:
+LabelAltinCaves_5_0B17:
  .byte   VOL , 26*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 27*AltinCaves_mvl/mxv
@@ -6770,7 +6770,7 @@ Label_5_0B17:
  .byte   W01
  .byte   PEND 
 @ 005   ----------------------------------------
-Label_5_0B7D:
+LabelAltinCaves_5_0B7D:
  .byte   VOL , 37*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 38*AltinCaves_mvl/mxv
@@ -6797,7 +6797,7 @@ Label_5_0B7D:
  .byte   W01
  .byte   PEND 
 @ 006   ----------------------------------------
-Label_5_0BE3:
+LabelAltinCaves_5_0BE3:
  .byte   VOL , 50*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 52*AltinCaves_mvl/mxv
@@ -6824,7 +6824,7 @@ Label_5_0BE3:
  .byte   W01
  .byte   PEND 
 @ 007   ----------------------------------------
-Label_5_0C49:
+LabelAltinCaves_5_0C49:
  .byte   VOL , 65*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 66*AltinCaves_mvl/mxv
@@ -6851,7 +6851,7 @@ Label_5_0C49:
  .byte   W01
  .byte   PEND 
 @ 008   ----------------------------------------
-Label_5_0CAF:
+LabelAltinCaves_5_0CAF:
  .byte   VOL , 81*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 82*AltinCaves_mvl/mxv
@@ -6871,7 +6871,7 @@ Label_5_0CAF:
  .byte   W01
  .byte   PEND 
 @ 009   ----------------------------------------
-Label_5_0FE3:
+LabelAltinCaves_5_0FE3:
  .byte   VOL , 13*AltinCaves_mvl/mxv
  .byte   W02
  .byte   VOL , 13*AltinCaves_mvl/mxv
@@ -6897,7 +6897,7 @@ Label_5_0FE3:
  .byte   W02
  .byte   PEND 
 @ 010   ----------------------------------------
-Label_5_1043:
+LabelAltinCaves_5_1043:
  .byte   VOL , 20*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 21*AltinCaves_mvl/mxv
@@ -6926,7 +6926,7 @@ Label_5_1043:
  .byte   W02
  .byte   PEND 
 @ 011   ----------------------------------------
-Label_5_10A3:
+LabelAltinCaves_5_10A3:
  .byte   VOL , 29*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 30*AltinCaves_mvl/mxv
@@ -6951,7 +6951,7 @@ Label_5_10A3:
  .byte   W02
  .byte   PEND 
 @ 012   ----------------------------------------
-Label_5_110C:
+LabelAltinCaves_5_110C:
  .byte   VOL , 39*AltinCaves_mvl/mxv
  .byte   W02
  .byte   VOL , 41*AltinCaves_mvl/mxv
@@ -6974,7 +6974,7 @@ Label_5_110C:
  .byte   W02
  .byte   PEND 
 @ 013   ----------------------------------------
-Label_5_116C:
+LabelAltinCaves_5_116C:
  .byte   VOL , 50*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 52*AltinCaves_mvl/mxv
@@ -6997,7 +6997,7 @@ Label_5_116C:
  .byte   W02
  .byte   PEND 
 @ 014   ----------------------------------------
-Label_5_11CC:
+LabelAltinCaves_5_11CC:
  .byte   VOL , 63*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 64*AltinCaves_mvl/mxv
@@ -7022,7 +7022,7 @@ Label_5_11CC:
  .byte   W02
  .byte   PEND 
 @ 015   ----------------------------------------
-Label_5_1235:
+LabelAltinCaves_5_1235:
  .byte   VOL , 77*AltinCaves_mvl/mxv
  .byte   W02
  .byte   VOL , 78*AltinCaves_mvl/mxv
@@ -7047,7 +7047,7 @@ Label_5_1235:
  .byte   W01
  .byte   PEND 
 @ 016   ----------------------------------------
-Label_5_1572:
+LabelAltinCaves_5_1572:
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 9*AltinCaves_mvl/mxv
@@ -7107,15 +7107,15 @@ Label_5_1572:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
 @ 018   ----------------------------------------
-Label_5_17D6:
+LabelAltinCaves_5_17D6:
  .byte   VOL , 81*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 82*AltinCaves_mvl/mxv
@@ -7135,7 +7135,7 @@ Label_5_17D6:
  .byte   W03
  .byte   PEND 
 @ 019   ----------------------------------------
-Label_5_1B12:
+LabelAltinCaves_5_1B12:
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 9*AltinCaves_mvl/mxv
@@ -7195,15 +7195,15 @@ Label_5_1B12:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
 @ 021   ----------------------------------------
-Label_5_1D76:
+LabelAltinCaves_5_1D76:
  .byte   VOL , 81*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 82*AltinCaves_mvl/mxv
@@ -7248,7 +7248,7 @@ Label_5_1D76:
  .byte   W20
  .byte   PEND 
 @ 022   ----------------------------------------
-Label_5_2C10:
+LabelAltinCaves_5_2C10:
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   N96 ,Cs3 ,v070
  .byte   N96 ,Fs4
@@ -7281,7 +7281,7 @@ Label_5_2C10:
  .byte   W01
  .byte   PEND 
 @ 023   ----------------------------------------
-Label_5_2C76:
+LabelAltinCaves_5_2C76:
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 17*AltinCaves_mvl/mxv
@@ -7311,15 +7311,15 @@ Label_5_2C76:
  .byte   W01
  .byte   PEND 
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
 @ 024   ----------------------------------------
-Label_5_2E74:
+LabelAltinCaves_5_2E74:
  .byte   VOL , 81*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 82*AltinCaves_mvl/mxv
@@ -7339,7 +7339,7 @@ Label_5_2E74:
  .byte   W01
  .byte   PEND 
 @ 025   ----------------------------------------
-Label_5_3192:
+LabelAltinCaves_5_3192:
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 9*AltinCaves_mvl/mxv
@@ -7399,15 +7399,15 @@ Label_5_3192:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
 @ 027   ----------------------------------------
-Label_5_33F6:
+LabelAltinCaves_5_33F6:
  .byte   VOL , 81*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 82*AltinCaves_mvl/mxv
@@ -7463,19 +7463,19 @@ Label_5_33F6:
  .byte   N44 ,Fs4
  .byte   N44 ,An3
  .byte   PATT
-  .word Label_5_0AB1
+  .word LabelAltinCaves_5_0AB1
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_0CAF
+  .word LabelAltinCaves_5_0CAF
 @ 029   ----------------------------------------
-Label_5_4733:
+LabelAltinCaves_5_4733:
  .byte   VOL , 13*AltinCaves_mvl/mxv
  .byte   W02
  .byte   VOL , 13*AltinCaves_mvl/mxv
@@ -7501,19 +7501,19 @@ Label_5_4733:
  .byte   W02
  .byte   PEND 
  .byte   PATT
-  .word Label_5_1043
+  .word LabelAltinCaves_5_1043
  .byte   PATT
-  .word Label_5_10A3
+  .word LabelAltinCaves_5_10A3
  .byte   PATT
-  .word Label_5_110C
+  .word LabelAltinCaves_5_110C
  .byte   PATT
-  .word Label_5_116C
+  .word LabelAltinCaves_5_116C
  .byte   PATT
-  .word Label_5_11CC
+  .word LabelAltinCaves_5_11CC
  .byte   PATT
-  .word Label_5_1235
+  .word LabelAltinCaves_5_1235
  .byte   PATT
-  .word Label_5_1572
+  .word LabelAltinCaves_5_1572
 @ 030   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -7546,17 +7546,17 @@ Label_5_4733:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_17D6
+  .word LabelAltinCaves_5_17D6
 @ 031   ----------------------------------------
-Label_5_5262:
+LabelAltinCaves_5_5262:
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 9*AltinCaves_mvl/mxv
@@ -7616,17 +7616,17 @@ Label_5_5262:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_1D76
+  .word LabelAltinCaves_5_1D76
 @ 033   ----------------------------------------
-Label_5_6360:
+LabelAltinCaves_5_6360:
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   N96 ,Cs3 ,v070
  .byte   N96 ,Fs4
@@ -7659,7 +7659,7 @@ Label_5_6360:
  .byte   W01
  .byte   PEND 
 @ 034   ----------------------------------------
-Label_5_63C6:
+LabelAltinCaves_5_63C6:
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 17*AltinCaves_mvl/mxv
@@ -7689,17 +7689,17 @@ Label_5_63C6:
  .byte   W01
  .byte   PEND 
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_2E74
+  .word LabelAltinCaves_5_2E74
 @ 035   ----------------------------------------
-Label_5_68E2:
+LabelAltinCaves_5_68E2:
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 9*AltinCaves_mvl/mxv
@@ -7759,15 +7759,15 @@ Label_5_68E2:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_33F6
+  .word LabelAltinCaves_5_33F6
 @ 037   ----------------------------------------
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   W01
@@ -7828,17 +7828,17 @@ Label_5_68E2:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_0CAF
+  .word LabelAltinCaves_5_0CAF
  .byte   PATT
-  .word Label_5_4733
+  .word LabelAltinCaves_5_4733
 @ 039   ----------------------------------------
  .byte   VOL , 20*AltinCaves_mvl/mxv
  .byte   W01
@@ -7867,15 +7867,15 @@ Label_5_68E2:
  .byte   VOL , 28*AltinCaves_mvl/mxv
  .byte   W02
  .byte   PATT
-  .word Label_5_10A3
+  .word LabelAltinCaves_5_10A3
  .byte   PATT
-  .word Label_5_110C
+  .word LabelAltinCaves_5_110C
  .byte   PATT
-  .word Label_5_116C
+  .word LabelAltinCaves_5_116C
  .byte   PATT
-  .word Label_5_11CC
+  .word LabelAltinCaves_5_11CC
  .byte   PATT
-  .word Label_5_1235
+  .word LabelAltinCaves_5_1235
 @ 040   ----------------------------------------
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   W01
@@ -7935,19 +7935,19 @@ Label_5_68E2:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_17D6
+  .word LabelAltinCaves_5_17D6
  .byte   PATT
-  .word Label_5_1B12
+  .word LabelAltinCaves_5_1B12
 @ 042   ----------------------------------------
-Label_5_8A18:
+LabelAltinCaves_5_8A18:
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
  .byte   VOL , 17*AltinCaves_mvl/mxv
@@ -7980,15 +7980,15 @@ Label_5_8A18:
  .byte   W01
  .byte   PEND 
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_1D76
+  .word LabelAltinCaves_5_1D76
 @ 043   ----------------------------------------
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   N96 ,Fs4 ,v070
@@ -8049,17 +8049,17 @@ Label_5_8A18:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_2E74
+  .word LabelAltinCaves_5_2E74
  .byte   PATT
-  .word Label_5_68E2
+  .word LabelAltinCaves_5_68E2
 @ 045   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -8092,17 +8092,17 @@ Label_5_8A18:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_33F6
+  .word LabelAltinCaves_5_33F6
  .byte   PATT
-  .word Label_5_6360
+  .word LabelAltinCaves_5_6360
 @ 046   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -8132,17 +8132,17 @@ Label_5_8A18:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_0CAF
+  .word LabelAltinCaves_5_0CAF
  .byte   PATT
-  .word Label_5_0FE3
+  .word LabelAltinCaves_5_0FE3
 @ 047   ----------------------------------------
  .byte   VOL , 20*AltinCaves_mvl/mxv
  .byte   W01
@@ -8171,17 +8171,17 @@ Label_5_8A18:
  .byte   VOL , 28*AltinCaves_mvl/mxv
  .byte   W02
  .byte   PATT
-  .word Label_5_10A3
+  .word LabelAltinCaves_5_10A3
  .byte   PATT
-  .word Label_5_110C
+  .word LabelAltinCaves_5_110C
  .byte   PATT
-  .word Label_5_116C
+  .word LabelAltinCaves_5_116C
  .byte   PATT
-  .word Label_5_11CC
+  .word LabelAltinCaves_5_11CC
  .byte   PATT
-  .word Label_5_1235
+  .word LabelAltinCaves_5_1235
  .byte   PATT
-  .word Label_5_1572
+  .word LabelAltinCaves_5_1572
 @ 048   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -8214,17 +8214,17 @@ Label_5_8A18:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_17D6
+  .word LabelAltinCaves_5_17D6
  .byte   PATT
-  .word Label_5_3192
+  .word LabelAltinCaves_5_3192
 @ 049   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -8257,15 +8257,15 @@ Label_5_8A18:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_1D76
+  .word LabelAltinCaves_5_1D76
 @ 050   ----------------------------------------
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   N96 ,Cs3 ,v070
@@ -8298,19 +8298,19 @@ Label_5_8A18:
  .byte   N44 ,An3
  .byte   W01
  .byte   PATT
-  .word Label_5_2C76
+  .word LabelAltinCaves_5_2C76
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_2E74
+  .word LabelAltinCaves_5_2E74
  .byte   PATT
-  .word Label_5_3192
+  .word LabelAltinCaves_5_3192
 @ 051   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -8343,15 +8343,15 @@ Label_5_8A18:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_33F6
+  .word LabelAltinCaves_5_33F6
 @ 052   ----------------------------------------
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   W01
@@ -8412,17 +8412,17 @@ Label_5_8A18:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_0CAF
+  .word LabelAltinCaves_5_0CAF
  .byte   PATT
-  .word Label_5_4733
+  .word LabelAltinCaves_5_4733
 @ 054   ----------------------------------------
  .byte   VOL , 20*AltinCaves_mvl/mxv
  .byte   W01
@@ -8451,17 +8451,17 @@ Label_5_8A18:
  .byte   VOL , 28*AltinCaves_mvl/mxv
  .byte   W02
  .byte   PATT
-  .word Label_5_10A3
+  .word LabelAltinCaves_5_10A3
  .byte   PATT
-  .word Label_5_110C
+  .word LabelAltinCaves_5_110C
  .byte   PATT
-  .word Label_5_116C
+  .word LabelAltinCaves_5_116C
  .byte   PATT
-  .word Label_5_11CC
+  .word LabelAltinCaves_5_11CC
  .byte   PATT
-  .word Label_5_1235
+  .word LabelAltinCaves_5_1235
  .byte   PATT
-  .word Label_5_1572
+  .word LabelAltinCaves_5_1572
 @ 055   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -8494,29 +8494,29 @@ Label_5_8A18:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_17D6
+  .word LabelAltinCaves_5_17D6
  .byte   PATT
-  .word Label_5_3192
+  .word LabelAltinCaves_5_3192
  .byte   PATT
-  .word Label_5_8A18
+  .word LabelAltinCaves_5_8A18
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_1D76
+  .word LabelAltinCaves_5_1D76
 @ 056   ----------------------------------------
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   N96 ,Cs3 ,v070
@@ -8549,19 +8549,19 @@ Label_5_8A18:
  .byte   N44 ,Cs3
  .byte   W01
  .byte   PATT
-  .word Label_5_63C6
+  .word LabelAltinCaves_5_63C6
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_2E74
+  .word LabelAltinCaves_5_2E74
  .byte   PATT
-  .word Label_5_3192
+  .word LabelAltinCaves_5_3192
 @ 057   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -8594,17 +8594,17 @@ Label_5_8A18:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_33F6
+  .word LabelAltinCaves_5_33F6
  .byte   PATT
-  .word Label_5_2C10
+  .word LabelAltinCaves_5_2C10
 @ 058   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -8634,17 +8634,17 @@ Label_5_8A18:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_0CAF
+  .word LabelAltinCaves_5_0CAF
  .byte   PATT
-  .word Label_5_4733
+  .word LabelAltinCaves_5_4733
 @ 059   ----------------------------------------
  .byte   VOL , 20*AltinCaves_mvl/mxv
  .byte   W01
@@ -8673,17 +8673,17 @@ Label_5_8A18:
  .byte   VOL , 28*AltinCaves_mvl/mxv
  .byte   W02
  .byte   PATT
-  .word Label_5_10A3
+  .word LabelAltinCaves_5_10A3
  .byte   PATT
-  .word Label_5_110C
+  .word LabelAltinCaves_5_110C
  .byte   PATT
-  .word Label_5_116C
+  .word LabelAltinCaves_5_116C
  .byte   PATT
-  .word Label_5_11CC
+  .word LabelAltinCaves_5_11CC
  .byte   PATT
-  .word Label_5_1235
+  .word LabelAltinCaves_5_1235
  .byte   PATT
-  .word Label_5_1572
+  .word LabelAltinCaves_5_1572
 @ 060   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -8716,17 +8716,17 @@ Label_5_8A18:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_17D6
+  .word LabelAltinCaves_5_17D6
  .byte   PATT
-  .word Label_5_3192
+  .word LabelAltinCaves_5_3192
 @ 061   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -8759,15 +8759,15 @@ Label_5_8A18:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_1D76
+  .word LabelAltinCaves_5_1D76
 @ 062   ----------------------------------------
  .byte   VOL , 8*AltinCaves_mvl/mxv
  .byte   N96 ,Fs4 ,v070
@@ -8800,19 +8800,19 @@ Label_5_8A18:
  .byte   N44 ,Cs3
  .byte   W01
  .byte   PATT
-  .word Label_5_2C76
+  .word LabelAltinCaves_5_2C76
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
  .byte   PATT
-  .word Label_5_2E74
+  .word LabelAltinCaves_5_2E74
  .byte   PATT
-  .word Label_5_5262
+  .word LabelAltinCaves_5_5262
 @ 063   ----------------------------------------
  .byte   VOL , 16*AltinCaves_mvl/mxv
  .byte   W01
@@ -8845,13 +8845,13 @@ Label_5_8A18:
  .byte   VOL , 25*AltinCaves_mvl/mxv
  .byte   W01
  .byte   PATT
-  .word Label_5_0B17
+  .word LabelAltinCaves_5_0B17
  .byte   PATT
-  .word Label_5_0B7D
+  .word LabelAltinCaves_5_0B7D
  .byte   PATT
-  .word Label_5_0BE3
+  .word LabelAltinCaves_5_0BE3
  .byte   PATT
-  .word Label_5_0C49
+  .word LabelAltinCaves_5_0C49
 @ 064   ----------------------------------------
  .byte   VOL , 81*AltinCaves_mvl/mxv
  .byte   W01
@@ -8871,14 +8871,14 @@ Label_5_8A18:
  .byte   W68
  .byte   W01
  .byte   GOTO
-  .word Label_5_00
+  .word LabelAltinCaves_5_00
  .byte   FINE
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
 AltinCaves_007:
 @ 000   ----------------------------------------
-Label_6_00:
+LabelAltinCaves_6_00:
  .byte   TEMPO , 72*AltinCaves_tbs/2
  .byte   KEYSH , AltinCaves_key+0
  .byte   VOICE , 24
@@ -8894,7 +8894,7 @@ Label_6_00:
  .byte   W96
  .byte   W96
 @ 002   ----------------------------------------
-Label_6_0D20:
+LabelAltinCaves_6_0D20:
  .byte   N02 ,Bn0 ,v110
  .byte   W24
  .byte   Cn2
@@ -8931,7 +8931,7 @@ Label_6_0D20:
  .byte   W06
  .byte   PEND 
 @ 003   ----------------------------------------
-Label_6_0F00:
+LabelAltinCaves_6_0F00:
  .byte   N02 ,An1 ,v110
  .byte   W03
  .byte   An1
@@ -8961,7 +8961,7 @@ Label_6_0F00:
  .byte   W30
  .byte   PEND 
 @ 004   ----------------------------------------
-Label_6_1266:
+LabelAltinCaves_6_1266:
  .byte   N02 ,En1 ,v110
  .byte   W18
  .byte   Bn0
@@ -8999,7 +8999,7 @@ Label_6_1266:
  .byte   W06
  .byte   PEND 
 @ 005   ----------------------------------------
-Label_6_1446:
+LabelAltinCaves_6_1446:
  .byte   N02 ,Bn0 ,v110
  .byte   W06
  .byte   Bn0
@@ -9050,7 +9050,7 @@ Label_6_1446:
  .byte   W12
  .byte   PEND 
 @ 006   ----------------------------------------
-Label_6_1644:
+LabelAltinCaves_6_1644:
  .byte   N02 ,Bn0 ,v110
  .byte   N02 ,Fs1
  .byte   W06
@@ -9091,7 +9091,7 @@ Label_6_1644:
  .byte   W06
  .byte   PEND 
 @ 007   ----------------------------------------
-Label_6_1824:
+LabelAltinCaves_6_1824:
  .byte   N02 ,Fs1 ,v110
  .byte   N02 ,Bn0
  .byte   W12
@@ -9132,7 +9132,7 @@ Label_6_1824:
  .byte   W06
  .byte   PEND 
 @ 008   ----------------------------------------
-Label_6_1A04:
+LabelAltinCaves_6_1A04:
  .byte   N02 ,Bn0 ,v110
  .byte   N02 ,Fs1
  .byte   W06
@@ -9175,7 +9175,7 @@ Label_6_1A04:
  .byte   W06
  .byte   PEND 
 @ 009   ----------------------------------------
-Label_6_1BE4:
+LabelAltinCaves_6_1BE4:
  .byte   N02 ,Fs1 ,v110
  .byte   N02 ,Bn0
  .byte   W06
@@ -9218,7 +9218,7 @@ Label_6_1BE4:
  .byte   W06
  .byte   PEND 
 @ 010   ----------------------------------------
-Label_6_1DC4:
+LabelAltinCaves_6_1DC4:
  .byte   N02 ,Fs1 ,v110
  .byte   N02 ,Bn0
  .byte   W06
@@ -9256,7 +9256,7 @@ Label_6_1DC4:
  .byte   W03
  .byte   PEND 
 @ 011   ----------------------------------------
-Label_6_1FA4:
+LabelAltinCaves_6_1FA4:
  .byte   N02 ,Cn2 ,v110
  .byte   W06
  .byte   An1
@@ -9299,7 +9299,7 @@ Label_6_1FA4:
  .byte   W06
  .byte   PEND 
 @ 012   ----------------------------------------
-Label_6_2184:
+LabelAltinCaves_6_2184:
  .byte   N02 ,Fs1 ,v110
  .byte   W06
  .byte   Fs1 ,v074
@@ -9336,7 +9336,7 @@ Label_6_2184:
  .byte   W06
  .byte   PEND 
 @ 013   ----------------------------------------
-Label_6_2364:
+LabelAltinCaves_6_2364:
  .byte   N02 ,Fs1 ,v074
  .byte   W06
  .byte   Fs1
@@ -9371,7 +9371,7 @@ Label_6_2364:
  .byte   W06
  .byte   PEND 
 @ 014   ----------------------------------------
-Label_6_2544:
+LabelAltinCaves_6_2544:
  .byte   N02 ,Fs1 ,v074
  .byte   W06
  .byte   Fs1 ,v110
@@ -9416,7 +9416,7 @@ Label_6_2544:
  .byte   W06
  .byte   PEND 
 @ 015   ----------------------------------------
-Label_6_2724:
+LabelAltinCaves_6_2724:
  .byte   N02 ,Fs1 ,v110
  .byte   N02 ,En1
  .byte   W06
@@ -9469,7 +9469,7 @@ Label_6_2724:
  .byte   W06
  .byte   PEND 
 @ 016   ----------------------------------------
-Label_6_2904:
+LabelAltinCaves_6_2904:
  .byte   N02 ,Fs1 ,v074
  .byte   W06
  .byte   Fs1
@@ -9511,7 +9511,7 @@ Label_6_2904:
  .byte   W06
  .byte   PEND 
 @ 017   ----------------------------------------
-Label_6_2AE4:
+LabelAltinCaves_6_2AE4:
  .byte   N02 ,Fs1 ,v097
  .byte   W06
  .byte   En1 ,v110
@@ -9553,7 +9553,7 @@ Label_6_2AE4:
  .byte   W12
  .byte   PEND 
 @ 018   ----------------------------------------
-Label_6_2CC4:
+LabelAltinCaves_6_2CC4:
  .byte   N02 ,Bn0 ,v110
  .byte   N02 ,Fs1
  .byte   W06
@@ -9594,7 +9594,7 @@ Label_6_2CC4:
  .byte   W06
  .byte   PEND 
 @ 019   ----------------------------------------
-Label_6_2EA4:
+LabelAltinCaves_6_2EA4:
  .byte   N02 ,Bn0 ,v110
  .byte   N02 ,Fs1 ,v097
  .byte   W12
@@ -9635,7 +9635,7 @@ Label_6_2EA4:
  .byte   W06
  .byte   PEND 
 @ 020   ----------------------------------------
-Label_6_3084:
+LabelAltinCaves_6_3084:
  .byte   N02 ,Fs1 ,v097
  .byte   N02 ,Bn0 ,v110
  .byte   W06
@@ -9675,7 +9675,7 @@ Label_6_3084:
  .byte   W12
  .byte   PEND 
 @ 021   ----------------------------------------
-Label_6_3264:
+LabelAltinCaves_6_3264:
  .byte   N02 ,Bn0 ,v110
  .byte   N02 ,Fs1
  .byte   W06
@@ -9720,7 +9720,7 @@ Label_6_3264:
  .byte   W06
  .byte   PEND 
 @ 022   ----------------------------------------
-Label_6_3444:
+LabelAltinCaves_6_3444:
  .byte   N02 ,Bn0 ,v110
  .byte   N02 ,Fs1 ,v097
  .byte   W03
@@ -9750,7 +9750,7 @@ Label_6_3444:
  .byte   W12
  .byte   PEND 
 @ 023   ----------------------------------------
-Label_6_3624:
+LabelAltinCaves_6_3624:
  .byte   N02 ,Bn0 ,v110
  .byte   W06
  .byte   En1
@@ -9777,223 +9777,223 @@ Label_6_3624:
  .byte   W06
  .byte   PEND 
  .byte   PATT
-  .word Label_6_0D20
+  .word LabelAltinCaves_6_0D20
  .byte   PATT
-  .word Label_6_0F00
+  .word LabelAltinCaves_6_0F00
  .byte   PATT
-  .word Label_6_1266
+  .word LabelAltinCaves_6_1266
  .byte   PATT
-  .word Label_6_1446
+  .word LabelAltinCaves_6_1446
  .byte   PATT
-  .word Label_6_1644
+  .word LabelAltinCaves_6_1644
  .byte   PATT
-  .word Label_6_1824
+  .word LabelAltinCaves_6_1824
  .byte   PATT
-  .word Label_6_1A04
+  .word LabelAltinCaves_6_1A04
  .byte   PATT
-  .word Label_6_1BE4
+  .word LabelAltinCaves_6_1BE4
  .byte   PATT
-  .word Label_6_1DC4
+  .word LabelAltinCaves_6_1DC4
  .byte   PATT
-  .word Label_6_1FA4
+  .word LabelAltinCaves_6_1FA4
  .byte   PATT
-  .word Label_6_2184
+  .word LabelAltinCaves_6_2184
  .byte   PATT
-  .word Label_6_2364
+  .word LabelAltinCaves_6_2364
  .byte   PATT
-  .word Label_6_2544
+  .word LabelAltinCaves_6_2544
  .byte   PATT
-  .word Label_6_2724
+  .word LabelAltinCaves_6_2724
  .byte   PATT
-  .word Label_6_2904
+  .word LabelAltinCaves_6_2904
  .byte   PATT
-  .word Label_6_2AE4
+  .word LabelAltinCaves_6_2AE4
  .byte   PATT
-  .word Label_6_2CC4
+  .word LabelAltinCaves_6_2CC4
  .byte   PATT
-  .word Label_6_2EA4
+  .word LabelAltinCaves_6_2EA4
  .byte   PATT
-  .word Label_6_3084
+  .word LabelAltinCaves_6_3084
  .byte   PATT
-  .word Label_6_3264
+  .word LabelAltinCaves_6_3264
  .byte   PATT
-  .word Label_6_3444
+  .word LabelAltinCaves_6_3444
  .byte   PATT
-  .word Label_6_3624
+  .word LabelAltinCaves_6_3624
  .byte   PATT
-  .word Label_6_0D20
+  .word LabelAltinCaves_6_0D20
  .byte   PATT
-  .word Label_6_0F00
+  .word LabelAltinCaves_6_0F00
  .byte   PATT
-  .word Label_6_1266
+  .word LabelAltinCaves_6_1266
  .byte   PATT
-  .word Label_6_1446
+  .word LabelAltinCaves_6_1446
  .byte   PATT
-  .word Label_6_1644
+  .word LabelAltinCaves_6_1644
  .byte   PATT
-  .word Label_6_1824
+  .word LabelAltinCaves_6_1824
  .byte   PATT
-  .word Label_6_1A04
+  .word LabelAltinCaves_6_1A04
  .byte   PATT
-  .word Label_6_1BE4
+  .word LabelAltinCaves_6_1BE4
  .byte   PATT
-  .word Label_6_1DC4
+  .word LabelAltinCaves_6_1DC4
  .byte   PATT
-  .word Label_6_1FA4
+  .word LabelAltinCaves_6_1FA4
  .byte   PATT
-  .word Label_6_2184
+  .word LabelAltinCaves_6_2184
  .byte   PATT
-  .word Label_6_2364
+  .word LabelAltinCaves_6_2364
  .byte   PATT
-  .word Label_6_2544
+  .word LabelAltinCaves_6_2544
  .byte   PATT
-  .word Label_6_2724
+  .word LabelAltinCaves_6_2724
  .byte   PATT
-  .word Label_6_2904
+  .word LabelAltinCaves_6_2904
  .byte   PATT
-  .word Label_6_2AE4
+  .word LabelAltinCaves_6_2AE4
  .byte   PATT
-  .word Label_6_2CC4
+  .word LabelAltinCaves_6_2CC4
  .byte   PATT
-  .word Label_6_2EA4
+  .word LabelAltinCaves_6_2EA4
  .byte   PATT
-  .word Label_6_3084
+  .word LabelAltinCaves_6_3084
  .byte   PATT
-  .word Label_6_3264
+  .word LabelAltinCaves_6_3264
  .byte   PATT
-  .word Label_6_3444
+  .word LabelAltinCaves_6_3444
  .byte   PATT
-  .word Label_6_3624
+  .word LabelAltinCaves_6_3624
  .byte   PATT
-  .word Label_6_0D20
+  .word LabelAltinCaves_6_0D20
  .byte   PATT
-  .word Label_6_0F00
+  .word LabelAltinCaves_6_0F00
  .byte   PATT
-  .word Label_6_1266
+  .word LabelAltinCaves_6_1266
  .byte   PATT
-  .word Label_6_1446
+  .word LabelAltinCaves_6_1446
  .byte   PATT
-  .word Label_6_1644
+  .word LabelAltinCaves_6_1644
  .byte   PATT
-  .word Label_6_1824
+  .word LabelAltinCaves_6_1824
  .byte   PATT
-  .word Label_6_1A04
+  .word LabelAltinCaves_6_1A04
  .byte   PATT
-  .word Label_6_1BE4
+  .word LabelAltinCaves_6_1BE4
  .byte   PATT
-  .word Label_6_1DC4
+  .word LabelAltinCaves_6_1DC4
  .byte   PATT
-  .word Label_6_1FA4
+  .word LabelAltinCaves_6_1FA4
  .byte   PATT
-  .word Label_6_2184
+  .word LabelAltinCaves_6_2184
  .byte   PATT
-  .word Label_6_2364
+  .word LabelAltinCaves_6_2364
  .byte   PATT
-  .word Label_6_2544
+  .word LabelAltinCaves_6_2544
  .byte   PATT
-  .word Label_6_2724
+  .word LabelAltinCaves_6_2724
  .byte   PATT
-  .word Label_6_2904
+  .word LabelAltinCaves_6_2904
  .byte   PATT
-  .word Label_6_2AE4
+  .word LabelAltinCaves_6_2AE4
  .byte   PATT
-  .word Label_6_2CC4
+  .word LabelAltinCaves_6_2CC4
  .byte   PATT
-  .word Label_6_2EA4
+  .word LabelAltinCaves_6_2EA4
  .byte   PATT
-  .word Label_6_3084
+  .word LabelAltinCaves_6_3084
  .byte   PATT
-  .word Label_6_3264
+  .word LabelAltinCaves_6_3264
  .byte   PATT
-  .word Label_6_3444
+  .word LabelAltinCaves_6_3444
  .byte   PATT
-  .word Label_6_3624
+  .word LabelAltinCaves_6_3624
  .byte   PATT
-  .word Label_6_0D20
+  .word LabelAltinCaves_6_0D20
  .byte   PATT
-  .word Label_6_0F00
+  .word LabelAltinCaves_6_0F00
  .byte   PATT
-  .word Label_6_1266
+  .word LabelAltinCaves_6_1266
  .byte   PATT
-  .word Label_6_1446
+  .word LabelAltinCaves_6_1446
  .byte   PATT
-  .word Label_6_1644
+  .word LabelAltinCaves_6_1644
  .byte   PATT
-  .word Label_6_1824
+  .word LabelAltinCaves_6_1824
  .byte   PATT
-  .word Label_6_1A04
+  .word LabelAltinCaves_6_1A04
  .byte   PATT
-  .word Label_6_1BE4
+  .word LabelAltinCaves_6_1BE4
  .byte   PATT
-  .word Label_6_1DC4
+  .word LabelAltinCaves_6_1DC4
  .byte   PATT
-  .word Label_6_1FA4
+  .word LabelAltinCaves_6_1FA4
  .byte   PATT
-  .word Label_6_2184
+  .word LabelAltinCaves_6_2184
  .byte   PATT
-  .word Label_6_2364
+  .word LabelAltinCaves_6_2364
  .byte   PATT
-  .word Label_6_2544
+  .word LabelAltinCaves_6_2544
  .byte   PATT
-  .word Label_6_2724
+  .word LabelAltinCaves_6_2724
  .byte   PATT
-  .word Label_6_2904
+  .word LabelAltinCaves_6_2904
  .byte   PATT
-  .word Label_6_2AE4
+  .word LabelAltinCaves_6_2AE4
  .byte   PATT
-  .word Label_6_2CC4
+  .word LabelAltinCaves_6_2CC4
  .byte   PATT
-  .word Label_6_2EA4
+  .word LabelAltinCaves_6_2EA4
  .byte   PATT
-  .word Label_6_3084
+  .word LabelAltinCaves_6_3084
  .byte   PATT
-  .word Label_6_3264
+  .word LabelAltinCaves_6_3264
  .byte   PATT
-  .word Label_6_3444
+  .word LabelAltinCaves_6_3444
  .byte   PATT
-  .word Label_6_3624
+  .word LabelAltinCaves_6_3624
  .byte   PATT
-  .word Label_6_0D20
+  .word LabelAltinCaves_6_0D20
  .byte   PATT
-  .word Label_6_0F00
+  .word LabelAltinCaves_6_0F00
  .byte   PATT
-  .word Label_6_1266
+  .word LabelAltinCaves_6_1266
  .byte   PATT
-  .word Label_6_1446
+  .word LabelAltinCaves_6_1446
  .byte   PATT
-  .word Label_6_1644
+  .word LabelAltinCaves_6_1644
  .byte   PATT
-  .word Label_6_1824
+  .word LabelAltinCaves_6_1824
  .byte   PATT
-  .word Label_6_1A04
+  .word LabelAltinCaves_6_1A04
  .byte   PATT
-  .word Label_6_1BE4
+  .word LabelAltinCaves_6_1BE4
  .byte   PATT
-  .word Label_6_1DC4
+  .word LabelAltinCaves_6_1DC4
  .byte   PATT
-  .word Label_6_1FA4
+  .word LabelAltinCaves_6_1FA4
  .byte   PATT
-  .word Label_6_2184
+  .word LabelAltinCaves_6_2184
  .byte   PATT
-  .word Label_6_2364
+  .word LabelAltinCaves_6_2364
  .byte   PATT
-  .word Label_6_2544
+  .word LabelAltinCaves_6_2544
  .byte   PATT
-  .word Label_6_2724
+  .word LabelAltinCaves_6_2724
  .byte   PATT
-  .word Label_6_2904
+  .word LabelAltinCaves_6_2904
  .byte   PATT
-  .word Label_6_2AE4
+  .word LabelAltinCaves_6_2AE4
  .byte   PATT
-  .word Label_6_2CC4
+  .word LabelAltinCaves_6_2CC4
  .byte   PATT
-  .word Label_6_2EA4
+  .word LabelAltinCaves_6_2EA4
  .byte   PATT
-  .word Label_6_3084
+  .word LabelAltinCaves_6_3084
  .byte   PATT
-  .word Label_6_3264
+  .word LabelAltinCaves_6_3264
  .byte   PATT
-  .word Label_6_3444
+  .word LabelAltinCaves_6_3444
 @ 025   ----------------------------------------
  .byte   N02 ,Bn0 ,v110
  .byte   W06
@@ -10013,7 +10013,7 @@ Label_6_3624:
  .byte   W10
 @ 026   ----------------------------------------
  .byte   GOTO
-  .word Label_6_00
+  .word LabelAltinCaves_6_00
  .byte   FINE
 
 @******************************************************@

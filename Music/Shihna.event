@@ -4,7 +4,7 @@
 	#define	songShihna_grp  voicegroup000
 	#define	songShihna_pri  0
 	#define	songShihna_rev  0
-	#define	songShihna_mvl  15
+	#define	songShihna_mvl  10
 	#define	songShihna_key  0
 	#define	songShihna_tbs  1
 	#define	songShihna_exg  0
@@ -34,7 +34,7 @@ Label_0_0100BDF6:
  BYTE   Cs5
  BYTE   W06
  BYTE   TEMPO   120*songShihna_tbs/2
- BYTE   N36  An3  v127
+ BYTE   N36  An3  v080
  BYTE   W36
  BYTE   N48  En4
  BYTE   W36
@@ -63,7 +63,7 @@ Label_0_0100BDF6:
 // 003   ----------------------------------------
 Label_0_0100BE29:
  BYTE   W12
- BYTE   N24  Bn3  v127
+ BYTE   N24  Bn3  v080
  BYTE   W24
  BYTE   N12  Cn4
  BYTE   W12
@@ -107,7 +107,7 @@ Label_0_0100BE29:
   POIN2 Label_0_0100BE29
 // 007   ----------------------------------------
  BYTE   W24
- BYTE   N84  Fn4  v127
+ BYTE   N84  Fn4  v080
  BYTE   W72
 // 008   ----------------------------------------
  BYTE   W12
@@ -165,7 +165,7 @@ Label_0_0100BE29:
  BYTE   W12
 // 016   ----------------------------------------
 Label_0_0100BE9E:
- BYTE   N12  Gn4  v127
+ BYTE   N12  Gn4  v080
  BYTE   W12
  BYTE   N24  Fn4
  BYTE   W24
@@ -179,7 +179,7 @@ Label_0_0100BE9E:
 // 017   ----------------------------------------
 Label_0_0100BEAE:
  BYTE   W24
- BYTE   N12  Cn5  v127
+ BYTE   N12  Cn5  v080
  BYTE   W12
  BYTE   Dn5
  BYTE   W12
@@ -193,7 +193,7 @@ Label_0_0100BEAE:
 // 018   ----------------------------------------
 Label_0_0100BEBD:
  BYTE   W12
- BYTE   N24  Bn4  v127
+ BYTE   N24  Bn4  v080
  BYTE   W24
  BYTE   N12  Gn4
  BYTE   W12
@@ -239,13 +239,12 @@ Label_1_0100BEF2:
  BYTE   CnM2
  BYTE   LFOS 0
  BYTE   Gs1
- BYTE   VOL   50*songShihna_mvl/mxv
  BYTE   PAN   c_v+0
- BYTE   VOL   50*songShihna_mvl/mxv
+ BYTE   VOL   30*songShihna_mvl/mxv
  BYTE   W18
  BYTE   Bn1
  BYTE   W06
- BYTE   N06  An4  v127
+ BYTE   N06  An4  v080
  BYTE   W12
  BYTE   An3
  BYTE   W12
@@ -259,7 +258,7 @@ Label_1_0100BEF2:
  BYTE   W12
 // 001   ----------------------------------------
 Label_1_0100BF0F:
- BYTE   N06  An4  v127
+ BYTE   N06  An4  v080
  BYTE   W12
  BYTE   An3
  BYTE   W12
@@ -279,7 +278,7 @@ Label_1_0100BF0F:
  BYTE   PATT
   POIN2 Label_1_0100BF0F
 // 002   ----------------------------------------
- BYTE   N06  An4  v127
+ BYTE   N06  An4  v080
  BYTE   W12
  BYTE   An3
  BYTE   W12
@@ -325,7 +324,7 @@ Label_1_0100BF0F:
  BYTE   W12
  BYTE   An3
  BYTE   W12
- BYTE   VOL   150*songShihna_mvl/mxv
+ BYTE   VOL   200*songShihna_mvl/mxv
  BYTE   N36  Fn4
  BYTE   W36
  BYTE   N48  An4
@@ -401,7 +400,7 @@ Label_1_0100BF0F:
  BYTE   W12
 // 013   ----------------------------------------
 Label_1_0100BFB8:
- BYTE   N12  En4  v127
+ BYTE   N12  En4  v080
  BYTE   W12
  BYTE   N24  Dn4
  BYTE   W24
@@ -415,7 +414,7 @@ Label_1_0100BFB8:
 // 014   ----------------------------------------
 Label_1_0100BFC8:
  BYTE   W12
- BYTE   N06  Cn4  v127
+ BYTE   N06  Cn4  v080
  BYTE   W06
  BYTE   Dn4
  BYTE   W06
@@ -433,7 +432,7 @@ Label_1_0100BFC8:
 // 015   ----------------------------------------
 Label_1_0100BFDC:
  BYTE   W12
- BYTE   N24  Dn4  v127
+ BYTE   N24  Dn4  v080
  BYTE   W24
  BYTE   N12  Cn4
  BYTE   W12

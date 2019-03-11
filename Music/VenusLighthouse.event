@@ -347,12 +347,13 @@ Label_0_01034D49:
  BYTE   Gn4
  BYTE   N48  Bn4
  BYTE   N48  Dn5
- BYTE   W40
+ BYTE   W30
+ BYTE   W14
  BYTE   W01
  BYTE   GoTo
   POIN2 Label_0_01034BE6
 // 023   ----------------------------------------
- BYTE   W07
+ BYTE   W96
  BYTE   FINE
 
 //**************** Track 2 (Midi-Chn.1) ****************//
@@ -491,7 +492,7 @@ Label_1_01034E8E:
 // 009   ----------------------------------------
  BYTE   PAN   c_v+32
  BYTE   VOL   25*songVenusLighthouse_mvl/mxv
- BYTE   N36  Fs5  v088
+ BYTE   N36  Fs5  v035
  BYTE   W36
  BYTE   N24  Fs6
  BYTE   W24
@@ -603,11 +604,12 @@ Label_1_01034E8E:
  BYTE   W96
 // 028   ----------------------------------------
  BYTE   W88
+ BYTE   W04
  BYTE   W01
  BYTE   GoTo
   POIN2 Label_1_01034DE2
 // 029   ----------------------------------------
- BYTE   W07
+ BYTE   W96
  BYTE   FINE
 
 //**************** Track 3 (Midi-Chn.2) ****************//
@@ -857,11 +859,12 @@ Label_2_01035080:
  BYTE   W96
 // 026   ----------------------------------------
  BYTE   W88
+ BYTE   W04
  BYTE   W01
  BYTE   GoTo
   POIN2 Label_2_01034F36
 // 027   ----------------------------------------
- BYTE   W07
+ BYTE   W96
  BYTE   FINE
 
 //**************** Track 4 (Midi-Chn.3) ****************//
@@ -1308,10 +1311,11 @@ Label_3_0103526D:
  BYTE   W12
  BYTE   Gn1
  BYTE   W05
+ BYTE   W04
  BYTE   GoTo
   POIN2 Label_3_010350AE
 // 023   ----------------------------------------
- BYTE   W07
+ BYTE   W96
  BYTE   FINE
 
 //**************** Track 5 (Midi-Chn.4) ****************//
@@ -1320,12 +1324,12 @@ songVenusLighthouse_005:
 // 000   ----------------------------------------
  BYTE   KEYSH   songVenusLighthouse_key+0
 Label_4_010352D6:
- BYTE   VOICE   121
+ BYTE   VOICE   50
  BYTE   MODT 0
  BYTE   CnM2
  BYTE   LFOS 0
  BYTE   Gs1
- BYTE   VOL   25*songVenusLighthouse_mvl/mxv
+ BYTE   VOL   5*songVenusLighthouse_mvl/mxv
  BYTE   W96
 // 001   ----------------------------------------
  BYTE   Gn8
@@ -1343,14 +1347,14 @@ Label_4_010352D6:
  BYTE   Gn8
  BYTE   W96
 // 006   ----------------------------------------
- BYTE   PAN   c_v+32
- BYTE   VOL   0*songVenusLighthouse_mvl/mxv
- BYTE   N96  Fs2  v127
+ BYTE   VOL   20*songVenusLighthouse_mvl/mxv
+ BYTE   N96  Fs2  v030
  BYTE   N96  Cs3
  BYTE   N96  Fs3
  BYTE   N96  Cs4
  BYTE   W01
- BYTE   VOL   0*songVenusLighthouse_mvl/mxv
+ BYTE	 PAN   c_v-64
+ BYTE   VOL   40*songVenusLighthouse_mvl/mxv
  BYTE   W01
  BYTE   CnM2
  BYTE   W01
@@ -1543,7 +1547,7 @@ Label_4_010352D6:
 // 007   ----------------------------------------
  BYTE   PAN   c_v-64
  BYTE   VOL   25*songVenusLighthouse_mvl/mxv
- BYTE   N48  Fs2
+ BYTE   N48  Fs2  v070
  BYTE   N48  An2
  BYTE   N48  Dn3
  BYTE   N48  Cs4
@@ -1560,7 +1564,7 @@ Label_4_010352D6:
  BYTE   PAN   c_v+63
  BYTE   VOL   25*songVenusLighthouse_mvl/mxv
  BYTE   PAN   c_v+61
- BYTE   N06  Cs4
+ BYTE   N06  Cs4  v100
  BYTE   N06  Fs4
  BYTE   W01
  BYTE   PAN   c_v+58
@@ -2203,7 +2207,7 @@ Label_4_010352D6:
 Label_4_010356DD:
  BYTE   PAN   c_v+0
  BYTE   VOL   25*songVenusLighthouse_mvl/mxv
- BYTE   N96  Dn3  v127
+ BYTE   N96  Dn3  v080
  BYTE   N96  Fs3
  BYTE   N96  An3
  BYTE   N96  Cs4
@@ -2212,7 +2216,7 @@ Label_4_010356DD:
 // 013   ----------------------------------------
 Label_4_010356EC:
  BYTE   VOL   25*songVenusLighthouse_mvl/mxv
- BYTE   N96  Gs3  v127
+ BYTE   N96  Gs3  v080
  BYTE   N96  Bn3
  BYTE   N96  En4
  BYTE   W96
@@ -2220,7 +2224,7 @@ Label_4_010356EC:
 // 014   ----------------------------------------
 Label_4_010356F7:
  BYTE   VOL   25*songVenusLighthouse_mvl/mxv
- BYTE   N96  As3  v127
+ BYTE   N96  As3  v080
  BYTE   N96  Cs4
  BYTE   N96  Fs4
  BYTE   W96
@@ -2228,7 +2232,7 @@ Label_4_010356F7:
 // 015   ----------------------------------------
 Label_4_01035702:
  BYTE   VOL   25*songVenusLighthouse_mvl/mxv
- BYTE   N48  Gs3  v127
+ BYTE   N48  Gs3  v080
  BYTE   N48  Bn3
  BYTE   N48  Fs4
  BYTE   W48
@@ -2250,7 +2254,7 @@ Label_4_01035702:
  BYTE   W96
 // 018   ----------------------------------------
 Label_4_01035722:
- BYTE   N96  Fs3  v127
+ BYTE   N96  Fs3  v080
  BYTE   N96  An3
  BYTE   N96  Cs4
  BYTE   W96
@@ -2274,7 +2278,7 @@ Label_4_01035722:
  BYTE   PATT
   POIN2 Label_4_01035722
 // 022   ----------------------------------------
- BYTE   N96  Fn3  v127
+ BYTE   N96  Fn3  v080
  BYTE   N96  Gs3
  BYTE   N96  Cs4
  BYTE   W96
@@ -2928,7 +2932,7 @@ Label_4_01035722:
  BYTE   PATT
   POIN2 Label_4_01035702
 // 027   ----------------------------------------
- BYTE   N48  Cn5  v127
+ BYTE   N48  Cn5  v060
  BYTE   W48
  BYTE   As4
  BYTE   W48
@@ -2994,11 +2998,12 @@ Label_4_01035722:
  BYTE   W96
 // 038   ----------------------------------------
  BYTE   W88
+  byte   W04
  BYTE   W01
  BYTE   GoTo
   POIN2 Label_4_010352D6
 // 039   ----------------------------------------
- BYTE   W07
+ BYTE   W96
  BYTE   FINE
 
 //**************** Track 6 (Midi-Chn.5) ****************//
@@ -3013,7 +3018,7 @@ Label_5_01035AC2:
  BYTE   LFOS 0
  BYTE   Gs1
  BYTE   PAN   c_v+0
- BYTE   VOL   15*songVenusLighthouse_mvl/mxv
+ BYTE   VOL   35*songVenusLighthouse_mvl/mxv
  BYTE   N12  Bn0  v127
  BYTE   N12  Fs1
  BYTE   N12  An2
@@ -3039,7 +3044,7 @@ Label_5_01035AC2:
 // 001   ----------------------------------------
 Label_5_01035AEA:
  BYTE   PAN   c_v+0
- BYTE   VOL   15*songVenusLighthouse_mvl/mxv
+ BYTE   VOL   35*songVenusLighthouse_mvl/mxv
  BYTE   N12  Bn0  v127
  BYTE   N12  Fs1
  BYTE   W12
@@ -3066,7 +3071,7 @@ Label_5_01035AEA:
 // 002   ----------------------------------------
 Label_5_01035B0C:
  BYTE   PAN   c_v+0
- BYTE   VOL   15*songVenusLighthouse_mvl/mxv
+ BYTE   VOL   35*songVenusLighthouse_mvl/mxv
  BYTE   N12  Bn0  v127
  BYTE   N12  Fs1
  BYTE   W12
@@ -3092,7 +3097,7 @@ Label_5_01035B0C:
 // 003   ----------------------------------------
 Label_5_01035B2D:
  BYTE   PAN   c_v+0
- BYTE   VOL   15*songVenusLighthouse_mvl/mxv
+ BYTE   VOL   35*songVenusLighthouse_mvl/mxv
  BYTE   N12  Bn0  v127
  BYTE   N12  Fs1
  BYTE   W12
@@ -3122,7 +3127,7 @@ Label_5_01035B2D:
   POIN2 Label_5_01035B0C
 // 004   ----------------------------------------
  BYTE   PAN   c_v+0
- BYTE   VOL   15*songVenusLighthouse_mvl/mxv
+ BYTE   VOL   35*songVenusLighthouse_mvl/mxv
  BYTE   N12  Bn0  v127
  BYTE   N12  Fs1
  BYTE   W12
@@ -3154,7 +3159,7 @@ Label_5_01035B2D:
   POIN2 Label_5_01035B0C
 // 005   ----------------------------------------
  BYTE   PAN   c_v+0
- BYTE   VOL   15*songVenusLighthouse_mvl/mxv
+ BYTE   VOL   35*songVenusLighthouse_mvl/mxv
  BYTE   N12  Bn0  v127
  BYTE   N12  Fs1
  BYTE   W12
@@ -3195,7 +3200,7 @@ Label_5_01035B2D:
 // 006   ----------------------------------------
 Label_5_01035BBA:
  BYTE   PAN   c_v+0
- BYTE   VOL   15*songVenusLighthouse_mvl/mxv
+ BYTE   VOL   35*songVenusLighthouse_mvl/mxv
  BYTE   N12  Bn0  v127
  BYTE   N12  Fs1
  BYTE   N12  An2
@@ -3230,7 +3235,7 @@ Label_5_01035BBA:
 // 007   ----------------------------------------
 Label_5_01035BF1:
  BYTE   PAN   c_v+0
- BYTE   VOL   15*songVenusLighthouse_mvl/mxv
+ BYTE   VOL   35*songVenusLighthouse_mvl/mxv
  BYTE   N12  Bn0  v127
  BYTE   N12  Fs1
  BYTE   W12
@@ -3264,7 +3269,7 @@ Label_5_01035BF1:
 // 008   ----------------------------------------
 Label_5_01035C1D:
  BYTE   PAN   c_v+0
- BYTE   VOL   15*songVenusLighthouse_mvl/mxv
+ BYTE   VOL   35*songVenusLighthouse_mvl/mxv
  BYTE   N12  Bn0  v127
  BYTE   W12
  BYTE   N06  Fs1
@@ -3311,7 +3316,7 @@ Label_5_01035C1D:
  BYTE   PEND 
 // 009   ----------------------------------------
  BYTE   PAN   c_v+0
- BYTE   VOL   15*songVenusLighthouse_mvl/mxv
+ BYTE   VOL   35*songVenusLighthouse_mvl/mxv
  BYTE   N24  Bn0
  BYTE   N24  Gs1
  BYTE   N24  Cs2
@@ -3351,7 +3356,7 @@ Label_5_01035C1D:
  BYTE   W12
 // 011   ----------------------------------------
  BYTE   PAN   c_v+0
- BYTE   VOL   15*songVenusLighthouse_mvl/mxv
+ BYTE   VOL   35*songVenusLighthouse_mvl/mxv
  BYTE   N24  Bn0
  BYTE   N24  Gs1
  BYTE   W24
@@ -3744,10 +3749,11 @@ Label_5_01035D98:
  BYTE   W12
  BYTE   N12
  BYTE   W05
+ BYTE   W04
  BYTE   GoTo
   POIN2 Label_5_01035AC2
 // 027   ----------------------------------------
- BYTE   W07
+ BYTE   W96
  BYTE   FINE
 
 //******************************************************//

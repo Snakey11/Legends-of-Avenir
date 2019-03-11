@@ -44,6 +44,8 @@ EndUnit
 
 //Label BeginingScene
 BeginningScene:
+//SVAL 0xB Coords(
+LOMA HaedricCityCutscene
 ENDA
 
 //Label EndingScene

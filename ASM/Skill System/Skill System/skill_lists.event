@@ -124,7 +124,7 @@ SageSkillList:
 BYTE 255 SwiftStanceID
 BYTE 255 SolidarityID
 BYTE 5 TomefaireID
-BYTE 10 IgnisID
+BYTE 10 FocusID
 BYTE 00 00
 ALIGN 4
 
@@ -137,7 +137,7 @@ BYTE 00 00
 ALIGN 4
 
 BishopSkillList:
-BYTE 255 MiracleID
+BYTE 255 AegisID
 BYTE 255 SealResID
 BYTE 5 LiveToServeID
 BYTE 10 CounterMagicID
@@ -178,7 +178,7 @@ GreatKnightSkillList:
 BYTE 255 NaturalCoverID
 BYTE 255 SturdyStanceID
 BYTE 5 ArmoredBlowID
-BYTE 10 LunaID
+BYTE 10 SpurDefID
 BYTE 00 00
 ALIGN 4
 
@@ -223,7 +223,7 @@ BYTE 00 00
 ALIGN 4
 
 MonkSkillList:
-BYTE 5 MiracleID
+BYTE 5 AegisID
 BYTE 10 SealResID
 BYTE 00 00
 ALIGN 4

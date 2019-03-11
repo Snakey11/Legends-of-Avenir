@@ -346,12 +346,13 @@ Label_0_01034D49:
  .byte   Gn4
  .byte   N48 ,Bn4
  .byte   N48 ,Dn5
- .byte   W40
+ .byte   W30
+ .byte   W14
  .byte   W01
  .byte   GOTO
   .word Label_0_01034BE6
 @ 023   ----------------------------------------
- .byte   W07
+ .byte   W96
  .byte   FINE
 
 @**************** Track 2 (Midi-Chn.1) ****************@
@@ -490,7 +491,7 @@ Label_1_01034E8E:
 @ 009   ----------------------------------------
  .byte   PAN , c_v+32
  .byte   VOL , 25*songVenusLighthouse_mvl/mxv
- .byte   N36 ,Fs5 ,v088
+ .byte   N36 ,Fs5 ,v035
  .byte   W36
  .byte   N24 ,Fs6
  .byte   W24
@@ -602,11 +603,12 @@ Label_1_01034E8E:
  .byte   W96
 @ 028   ----------------------------------------
  .byte   W88
+ .byte   W04
  .byte   W01
  .byte   GOTO
   .word Label_1_01034DE2
 @ 029   ----------------------------------------
- .byte   W07
+ .byte   W96
  .byte   FINE
 
 @**************** Track 3 (Midi-Chn.2) ****************@
@@ -856,11 +858,12 @@ Label_2_01035080:
  .byte   W96
 @ 026   ----------------------------------------
  .byte   W88
+ .byte   W04
  .byte   W01
  .byte   GOTO
   .word Label_2_01034F36
 @ 027   ----------------------------------------
- .byte   W07
+ .byte   W96
  .byte   FINE
 
 @**************** Track 4 (Midi-Chn.3) ****************@
@@ -1307,10 +1310,11 @@ Label_3_0103526D:
  .byte   W12
  .byte   Gn1
  .byte   W05
+ .byte   W04
  .byte   GOTO
   .word Label_3_010350AE
 @ 023   ----------------------------------------
- .byte   W07
+ .byte   W96
  .byte   FINE
 
 @**************** Track 5 (Midi-Chn.4) ****************@
@@ -1319,12 +1323,12 @@ songVenusLighthouse_005:
 @ 000   ----------------------------------------
  .byte   KEYSH , songVenusLighthouse_key+0
 Label_4_010352D6:
- .byte   VOICE , 121
+ .byte   VOICE , 50
  .byte   MODT 0
  .byte   CnM2
  .byte   LFOS 0
  .byte   Gs1
- .byte   VOL , 25*songVenusLighthouse_mvl/mxv
+ .byte   VOL , 5*songVenusLighthouse_mvl/mxv
  .byte   W96
 @ 001   ----------------------------------------
  .byte   Gn8
@@ -1342,14 +1346,14 @@ Label_4_010352D6:
  .byte   Gn8
  .byte   W96
 @ 006   ----------------------------------------
- .byte   PAN , c_v+32
- .byte   VOL , 0*songVenusLighthouse_mvl/mxv
- .byte   N96 ,Fs2 ,v127
+ .byte   VOL , 20*songVenusLighthouse_mvl/mxv
+ .byte   N96 ,Fs2, v030
  .byte   N96 ,Cs3
  .byte   N96 ,Fs3
  .byte   N96 ,Cs4
  .byte   W01
- .byte   VOL , 0*songVenusLighthouse_mvl/mxv
+ .byte	 PAN , c_v-64
+ .byte   VOL , 40*songVenusLighthouse_mvl/mxv
  .byte   W01
  .byte   CnM2
  .byte   W01
@@ -1542,7 +1546,7 @@ Label_4_010352D6:
 @ 007   ----------------------------------------
  .byte   PAN , c_v-64
  .byte   VOL , 25*songVenusLighthouse_mvl/mxv
- .byte   N48 ,Fs2
+ .byte   N48 ,Fs2, v070
  .byte   N48 ,An2
  .byte   N48 ,Dn3
  .byte   N48 ,Cs4
@@ -1559,7 +1563,7 @@ Label_4_010352D6:
  .byte   PAN , c_v+63
  .byte   VOL , 25*songVenusLighthouse_mvl/mxv
  .byte   PAN , c_v+61
- .byte   N06 ,Cs4
+ .byte   N06 ,Cs4, v100
  .byte   N06 ,Fs4
  .byte   W01
  .byte   PAN , c_v+58
@@ -2202,7 +2206,7 @@ Label_4_010352D6:
 Label_4_010356DD:
  .byte   PAN , c_v+0
  .byte   VOL , 25*songVenusLighthouse_mvl/mxv
- .byte   N96 ,Dn3 ,v127
+ .byte   N96 ,Dn3 ,v080
  .byte   N96 ,Fs3
  .byte   N96 ,An3
  .byte   N96 ,Cs4
@@ -2211,7 +2215,7 @@ Label_4_010356DD:
 @ 013   ----------------------------------------
 Label_4_010356EC:
  .byte   VOL , 25*songVenusLighthouse_mvl/mxv
- .byte   N96 ,Gs3 ,v127
+ .byte   N96 ,Gs3 ,v080
  .byte   N96 ,Bn3
  .byte   N96 ,En4
  .byte   W96
@@ -2219,7 +2223,7 @@ Label_4_010356EC:
 @ 014   ----------------------------------------
 Label_4_010356F7:
  .byte   VOL , 25*songVenusLighthouse_mvl/mxv
- .byte   N96 ,As3 ,v127
+ .byte   N96 ,As3 ,v080
  .byte   N96 ,Cs4
  .byte   N96 ,Fs4
  .byte   W96
@@ -2227,7 +2231,7 @@ Label_4_010356F7:
 @ 015   ----------------------------------------
 Label_4_01035702:
  .byte   VOL , 25*songVenusLighthouse_mvl/mxv
- .byte   N48 ,Gs3 ,v127
+ .byte   N48 ,Gs3 ,v080
  .byte   N48 ,Bn3
  .byte   N48 ,Fs4
  .byte   W48
@@ -2249,7 +2253,7 @@ Label_4_01035702:
  .byte   W96
 @ 018   ----------------------------------------
 Label_4_01035722:
- .byte   N96 ,Fs3 ,v127
+ .byte   N96 ,Fs3 ,v080
  .byte   N96 ,An3
  .byte   N96 ,Cs4
  .byte   W96
@@ -2273,7 +2277,7 @@ Label_4_01035722:
  .byte   PATT
   .word Label_4_01035722
 @ 022   ----------------------------------------
- .byte   N96 ,Fn3 ,v127
+ .byte   N96 ,Fn3 ,v080
  .byte   N96 ,Gs3
  .byte   N96 ,Cs4
  .byte   W96
@@ -2927,7 +2931,7 @@ Label_4_01035722:
  .byte   PATT
   .word Label_4_01035702
 @ 027   ----------------------------------------
- .byte   N48 ,Cn5 ,v127
+ .byte   N48 ,Cn5 ,v060
  .byte   W48
  .byte   As4
  .byte   W48
@@ -2993,11 +2997,12 @@ Label_4_01035722:
  .byte   W96
 @ 038   ----------------------------------------
  .byte   W88
+ ,byte   W04
  .byte   W01
  .byte   GOTO
   .word Label_4_010352D6
 @ 039   ----------------------------------------
- .byte   W07
+ .byte   W96
  .byte   FINE
 
 @**************** Track 6 (Midi-Chn.5) ****************@
@@ -3012,7 +3017,7 @@ Label_5_01035AC2:
  .byte   LFOS 0
  .byte   Gs1
  .byte   PAN , c_v+0
- .byte   VOL , 15*songVenusLighthouse_mvl/mxv
+ .byte   VOL , 35*songVenusLighthouse_mvl/mxv
  .byte   N12 ,Bn0 ,v127
  .byte   N12 ,Fs1
  .byte   N12 ,An2
@@ -3038,7 +3043,7 @@ Label_5_01035AC2:
 @ 001   ----------------------------------------
 Label_5_01035AEA:
  .byte   PAN , c_v+0
- .byte   VOL , 15*songVenusLighthouse_mvl/mxv
+ .byte   VOL , 35*songVenusLighthouse_mvl/mxv
  .byte   N12 ,Bn0 ,v127
  .byte   N12 ,Fs1
  .byte   W12
@@ -3065,7 +3070,7 @@ Label_5_01035AEA:
 @ 002   ----------------------------------------
 Label_5_01035B0C:
  .byte   PAN , c_v+0
- .byte   VOL , 15*songVenusLighthouse_mvl/mxv
+ .byte   VOL , 35*songVenusLighthouse_mvl/mxv
  .byte   N12 ,Bn0 ,v127
  .byte   N12 ,Fs1
  .byte   W12
@@ -3091,7 +3096,7 @@ Label_5_01035B0C:
 @ 003   ----------------------------------------
 Label_5_01035B2D:
  .byte   PAN , c_v+0
- .byte   VOL , 15*songVenusLighthouse_mvl/mxv
+ .byte   VOL , 35*songVenusLighthouse_mvl/mxv
  .byte   N12 ,Bn0 ,v127
  .byte   N12 ,Fs1
  .byte   W12
@@ -3121,7 +3126,7 @@ Label_5_01035B2D:
   .word Label_5_01035B0C
 @ 004   ----------------------------------------
  .byte   PAN , c_v+0
- .byte   VOL , 15*songVenusLighthouse_mvl/mxv
+ .byte   VOL , 35*songVenusLighthouse_mvl/mxv
  .byte   N12 ,Bn0 ,v127
  .byte   N12 ,Fs1
  .byte   W12
@@ -3153,7 +3158,7 @@ Label_5_01035B2D:
   .word Label_5_01035B0C
 @ 005   ----------------------------------------
  .byte   PAN , c_v+0
- .byte   VOL , 15*songVenusLighthouse_mvl/mxv
+ .byte   VOL , 35*songVenusLighthouse_mvl/mxv
  .byte   N12 ,Bn0 ,v127
  .byte   N12 ,Fs1
  .byte   W12
@@ -3194,7 +3199,7 @@ Label_5_01035B2D:
 @ 006   ----------------------------------------
 Label_5_01035BBA:
  .byte   PAN , c_v+0
- .byte   VOL , 15*songVenusLighthouse_mvl/mxv
+ .byte   VOL , 35*songVenusLighthouse_mvl/mxv
  .byte   N12 ,Bn0 ,v127
  .byte   N12 ,Fs1
  .byte   N12 ,An2
@@ -3229,7 +3234,7 @@ Label_5_01035BBA:
 @ 007   ----------------------------------------
 Label_5_01035BF1:
  .byte   PAN , c_v+0
- .byte   VOL , 15*songVenusLighthouse_mvl/mxv
+ .byte   VOL , 35*songVenusLighthouse_mvl/mxv
  .byte   N12 ,Bn0 ,v127
  .byte   N12 ,Fs1
  .byte   W12
@@ -3263,7 +3268,7 @@ Label_5_01035BF1:
 @ 008   ----------------------------------------
 Label_5_01035C1D:
  .byte   PAN , c_v+0
- .byte   VOL , 15*songVenusLighthouse_mvl/mxv
+ .byte   VOL , 35*songVenusLighthouse_mvl/mxv
  .byte   N12 ,Bn0 ,v127
  .byte   W12
  .byte   N06 ,Fs1
@@ -3310,7 +3315,7 @@ Label_5_01035C1D:
  .byte   PEND 
 @ 009   ----------------------------------------
  .byte   PAN , c_v+0
- .byte   VOL , 15*songVenusLighthouse_mvl/mxv
+ .byte   VOL , 35*songVenusLighthouse_mvl/mxv
  .byte   N24 ,Bn0
  .byte   N24 ,Gs1
  .byte   N24 ,Cs2
@@ -3350,7 +3355,7 @@ Label_5_01035C1D:
  .byte   W12
 @ 011   ----------------------------------------
  .byte   PAN , c_v+0
- .byte   VOL , 15*songVenusLighthouse_mvl/mxv
+ .byte   VOL , 35*songVenusLighthouse_mvl/mxv
  .byte   N24 ,Bn0
  .byte   N24 ,Gs1
  .byte   W24
@@ -3743,10 +3748,11 @@ Label_5_01035D98:
  .byte   W12
  .byte   N12
  .byte   W05
+ .byte   W04
  .byte   GOTO
   .word Label_5_01035AC2
 @ 027   ----------------------------------------
- .byte   W07
+ .byte   W96
  .byte   FINE
 
 @******************************************************@

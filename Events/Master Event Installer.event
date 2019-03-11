@@ -114,7 +114,6 @@
 #ifndef __NO_MAGE__
 	
 #endif
-#include "Split Events.event"
 
 #include "Sassy.event"
 

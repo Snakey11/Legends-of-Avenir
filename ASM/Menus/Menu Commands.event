@@ -149,3 +149,57 @@ Set06Command:
 
 Set07Command:
 #incbin "Set 0x07 Command.dmp"	
+
+//MESSAGE Calling the test proc menu is at CURRENTOFFSET
+//CallTestProcMenu:
+//SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+//POIN TestProcMenuGeometry // This menu will not clear BG0 and BG1, allowing for the "Select a conversation" text at the bottom
+/*
+TestProcMenuGeometry:
+BYTE 8 6 14 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+WORD 1                  // idk
+POIN TestProcMenuCommands // Command Definitions
+WORD 0 0 0 0 0 0        // No routines to handle B press/R press/construction/etc
+
+MESSAGE Test proc commands are at CURRENTOFFSET
+TestProcMenuCommands:
+	EventMenuCommand(TestMenuText1,SetTestMenuRAMFlag1)
+	EventMenuCommand(TestMenuText2,SetTestMenuRAMFlag2)
+	EventMenuCommand(TestMenuText3,SetTestMenuRAMFlag3)
+EventMenuCommandEnd
+*/
+ALIGN 4
+CallTestMenuProcConversationEvents: // This is called assuming the text ID to show is in memory slot 0x2
+EVBIT_T 0x4
+SetBackground(0x0E)
+SADD 0x032 // Move slot 0x3 into 0x2
+TEXTSTART
+TEXTSHOW -1
+TEXTEND
+REMA
+ASMC BaseSupportIncreaseSupport|1
+FADI 0x5
+CLEAN
+SVAL 0x5 0x1 // Used by the base support proc to see if the events are finished running.
+NoFade
+ENDA
+
+/*
+ALIGN 4
+BaseSupportMenuGeometry:
+BYTE 4 2 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+WORD 1                  // idk
+POIN BaseSupportMenuCommands // Command Definitions
+WORD 0 0 0 0 0 0        // No routines to handle B press/R press/construction/etc
+*/
+BaseSupportMenuCommands:
+	EventMenuCommand(BaseSupportTextID1,BaseSupportUsability,BaseSupportConvo1)
+	EventMenuCommand(BaseSupportTextID2,BaseSupportUsability,BaseSupportConvo2)
+	EventMenuCommand(BaseSupportTextID3,BaseSupportUsability,BaseSupportConvo3)
+	EventMenuCommand(BaseSupportTextID4,BaseSupportUsability,BaseSupportConvo4)
+	EventMenuCommand(BaseSupportTextID5,BaseSupportUsability,BaseSupportConvo5)
+	EventMenuCommand(BaseSupportTextID6,BaseSupportUsability,BaseSupportConvo6)
+	EventMenuCommand(BaseSupportTextID7,BaseSupportUsability,BaseSupportConvo7)
+	EventMenuCommand(BaseSupportTextID8,BaseSupportUsability,BaseSupportConvo8)
+EventMenuCommandEnd
+	

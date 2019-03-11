@@ -22,7 +22,7 @@
 		#define __DEBUG__
 	#endif
 	//#define TESTING
-
+	
 	#ifdef TESTING // For clean-ROM-style testing
 	
 		#include "TEST/Test Buildfile.event"
@@ -35,37 +35,33 @@
 			#include "Graphics/Battle Animations/Battle Animations 2.event" // FULL!
 		#endif
 		
-		MESSAGE First data animation block ends at CURRENTOFFSET
-		MESSAGE There is ( $BFFFFF - CURRENTOFFSET ) of space available
+		MESSAGE First animation block ends at CURRENTOFFSET
+		//MESSAGE There is ( $BFFFFF - CURRENTOFFSET ) of space available
 		ASSERT $C00000 - CURRENTOFFSET
-		MESSAGE
 		
 		ORG FreeSpaceB
 		#ifdef IncludeBigStuff
 			#include "Graphics/Battle Animations/Battle Animations 1.event" // FULL!
 		#endif
 		
-		MESSAGE Second battle animation block ends at CURRENTOFFSET
-		MESSAGE There is ( $EE0000 - CURRENTOFFSET ) of space available
+		MESSAGE Second animation block ends at CURRENTOFFSET
+		//MESSAGE There is ( $EE0000 - CURRENTOFFSET ) of space available
 		ASSERT $EE0000 - CURRENTOFFSET
-		MESSAGE
 		
 		ORG FreeSpaceC
 		#ifdef IncludeBigStuff
 			#include "Graphics/Battle Animations/Battle Animations 3.event" // FULL!
 		#endif
-		MESSAGE Third battle animation block ends at CURRENTOFFSET
-		MESSAGE There is ( $FE0000 - CURRENTOFFSET ) of space available
+		MESSAGE Third animation block ends at CURRENTOFFSET
+		//MESSAGE There is ( $FE0000 - CURRENTOFFSET ) of space available
 		ASSERT $FE0000 - CURRENTOFFSET
-		MESSAGE
 		
 		ORG EndofROM
 		#ifdef IncludeBigStuff
 			#include "Graphics/Battle Animations/Battle Animations 4.event"
 		#endif
 		
-		MESSAGE Fourth battle animation block ends at CURRENTOFFSET
-		MESSAGE
+		MESSAGE Fourth animation block ends at CURRENTOFFSET
 
 		ALIGN 16
 		//Text
@@ -73,7 +69,6 @@
 		#incbin "Text/Vanilla Text Table.dmp"
 		#include "Text/Install Text Data.event"
 		MESSAGE Text data ends at CURRENTOFFSET
-		MESSAGE "Final text ID is FinalTextID . Repoint is required at 0xD4B."
 		
 		ALIGN 16
 		//CSV
@@ -105,7 +100,7 @@
 		ALIGN 16	
 		//ASM
 		#include "ASM/Master ASM Installer.event"
-		MESSAGE Assembly data ends at CURRENTOFFSET
+		MESSAGE ASM data ends at CURRENTOFFSET
 		
 		ALIGN 16
 		WORD 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Prevent NUPS from cutting off the last 6 bytes

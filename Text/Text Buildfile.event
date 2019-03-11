@@ -46,6 +46,44 @@ by having this unit arrive.[X]
 This unit is eligible to[NL]
 promote to a new class.[X]
 
+## BaseSupportSelectConvoText
+Select a conversation.[X]
+
+## PrepScreenSupportErrorText
+There are no[NL]
+supports to view.[X]
+
+## Support1Text
+[FarLeft][LoadDerek][FarRight][LoadJasper]
+Hey, Derek. This is[NL]
+support convo number 1.[A]
+[FarLeft]Pfft. Supports are[NL]
+for losers.[A][X]
+
+## Support2Text
+[FarLeft][LoadDerek][FarRight][LoadJasper]
+Hey, Derek. This is[NL]
+support convo number 2.[A]
+[FarLeft]Pfft. Supports are[NL]
+for losers.[A][X]
+
+## Support3Text
+[FarLeft][LoadDerek][FarRight][LoadJasper]
+Hey, Derek. This is[NL]
+support convo number 3.[A]
+[FarLeft]Pfft. Supports are[NL]
+for losers.[A][X]
+
+## Support4Text
+[FarLeft][LoadDerek][FarRight][LoadJasper]
+Hey, Derek. This is[NL]
+support convo number 4.[A]
+[FarLeft]Pfft. Supports are[NL]
+for losers.[A][X]
+
+## SupportIncreasedToText
+Support level increased to [X]
+
 #include "Chapters/Chapter Text Assembler.event"
 
 #include "Items/Item Text Assembler.event"
@@ -65,6 +103,30 @@ for one turn[X]
 #include "Skill System/Skill Desc.event"
 
 #include "Chapters/Sassy.event"
+
+## BaseSupportTextID1
+[X]
+
+## BaseSupportTextID2
+[X]
+
+## BaseSupportTextID3
+[X]
+
+## BaseSupportTextID4
+[X]
+
+## BaseSupportTextID5
+[X]
+
+## BaseSupportTextID6
+[X]
+
+## BaseSupportTextID7
+[X]
+
+## BaseSupportTextID8
+[X]
 
 ## FinalTextID
 [X]

@@ -1,0 +1,46 @@
+
+ALIGN 4
+#inctext lyn "MasterSupportCalculations.elf" "Hooks.elf"
+PUSH
+ORG $A1980
+POIN PrepScreenSupportProc
+POP
+BaseSupportSelectConvoTextLink:
+SHORT BaseSupportSelectConvoText
+
+ORG (TextTable+(4*BaseSupportTextID1))
+WORD 0x8203EFC0
+ORG (TextTable+(4*BaseSupportTextID2))
+WORD 0x8203EFC0+40
+ORG (TextTable+(4*BaseSupportTextID3))
+WORD 0x8203EFC0+80
+ORG (TextTable+(4*BaseSupportTextID4))
+WORD 0x8203EFC0+120
+ORG (TextTable+(4*BaseSupportTextID5))
+WORD 0x8203EFC0+160
+ORG (TextTable+(4*BaseSupportTextID6))
+WORD 0x8203EFC0+200
+ORG (TextTable+(4*BaseSupportTextID7))
+WORD 0x8203EFC0+240
+ORG (TextTable+(4*BaseSupportTextID8))
+WORD 0x8203EFC0+280
+
+IncreaseSupportPopupDefinitions:
+WORD 0x0C 0x5A // Play sound 0x5A
+WORD 0x06 SupportIncreasedToText // Show "Support level increased to ".
+WORD 0x07 0x0203EFC0 // Show string at 0x0203EFC0 (This will be C, B, or A).
+WORD 0x06 0x22 // Snow "." at the end.
+WORD 0x00 0x00 // End
+
+MESSAGE Master support calculations are at MasterSupportCalculation
+MESSAGE Stat screen stuff is at DisplaySupportStatScreen1 and DisplaySupportStatScreen2
+MESSAGE Prep screen usability is at PrepScreenSupportUsability
+MESSAGE Setting the ID for the convo starts at BaseSupportConvo1
+MESSAGE Ensuring the menu selection is at EnsureSelection
+MESSAGE Setting up the conversation is at SetUpConvo
+MESSAGE Calling the conversation is at CallConversation
+MESSAGE Base support increase support is at BaseSupportIncreaseSupport
+MESSAGE The text is made at BuildSupportMenuText
+MESSAGE Increase support is at IncreaseSupport
+MESSAGE Convo usability is at BaseSupportUsability
+MESSAGE Geometry shit is at BuildSupportMenuGeometry

@@ -210,142 +210,246 @@ Arcanae won't fall...[NL]
 So...[CloseEyes] easily...[A][X]
 
 ## Military7PassAltiaEscapeSylvaineText
-Sylvaine: That’s it. Xavus is done.
+[MidRight][LoadSylvaine]
+That's it. Xavus is done.[A][X]
 
 ## Military7PassAltiaEscapeIzukHereText
-Izuk: Well done, Captain.
-Sylvaine: I’m glad you’re unharmed, Izuk.
-Izuk: As am I. Your soldiers did well. I’m glad that Altia and Cesaria were able to reach their agreement.
-Sylvaine: It worked out well. Hopefully with Xavus defeated, Uzkalis will surrender before long...
-Izuk: If not with the news of Xavus’ defeat, he likely will at the combined force of Altia, Cesaria, and Haedric.
-Sylvaine: Agreed. Anyway, I’ll leave the rebuilding of Altia to you and your Anguis.
-Izuk: Thank you.
-Finoc: It’s been an honor serving under you, Captain Sylvaine. You are as worthy of the skies as any Altian.
-Cougar: I agree. Thank you for helping us reclaim our homeland. I feel that all of us will remember this for years to come.
-Sylvaine: Thanks, both of you. Your Anguis will be proud of you, I have no doubt. You made my job far easier.
-Elanil: I share their sentiment.
-Sylvaine: You did well, Elanil.
-Sekar: This is the part where I have to return to Haedric. The Basileus will likely begin his assault against the rest of Arcanae, and I’d like to be there.
-Sylvaine: I understand, Sekar. Thank you. Good luck.
-Sekar: We won’t need it.
-Forrest: Sergeant Christina and I are going to make sure the citizens are okay.
-Sylvaine: That will work well, thank you Sergeant.
-Jasper: What are our orders, Captain?
-Sylvaine: You and Private Derek can go with the Sergeants.
-Derek: Yes, ma’am!
-Avatar: What about me?
-Sylvaine: I want you and Clara to check through the castle. Make sure that there’s no stragglers or anything left over from Xavus’ force.
-Avatar: Yes, ma’am.
+[MidRight][LoadSylvaine][MidLeft][LoadIzuk]
+Well done, Captain.[A]
+[MidRight]I'm glad you're unharmed, Izuk.[A]
+[MidLeft]As am I. Your soldiers did well. I'm[NL]
+glad that Altia and Cesaria were[A][NL]
+able to reach their agreement.[A]
+[MidRight]It worked out well. Hopefully[NL]
+with Xavus defeated, Uzkalis[A][NL]
+will surrender before long...[A]
+[MidLeft]If not with the news of Xavus' defeat,[NL]
+he likely will at the combined force[A][NL]
+of Altia, Cesaria, and Haedric.[A]
+[MidRight]Agreed. Anyway, I'll leave the rebuilding[NL]
+of Altia to you and your Anguis.[A]
+[MidLeft]Thank you.[A][CloseSpeech][MoveLeft][MidRight][MoveRight][FarRight][LoadCougar][FarLeft][LoadFinoc]
+It's been an honor serving under you,[NL]
+Captain Sylvaine. You are as[A][NL]
+worthy of the skies as any Altian.[A]
+[FarRight]I agree. Thank you for helping us[NL]
+reclaim our homeland. I feel that all of[A][NL]
+us will remember this for years to come.[A]
+[Right]Thanks, both of you. Your Anguis will[NL]
+be proud of you, I have no doubt.[A][NL]
+You made my job far easier.[A][FarLeft][ClearFace][LoadElanil]
+I share their sentiment.[A]
+[Right]You did well, Elanil.[FarRight][ClearFace][LoadSekar]
+This is the part where I have to return to[NL]
+Haedric. The Basileus will likely begin his[A][NL]
+assault against the rest of Arcanae,[NL]
+and I'd like to be there.[A]
+[Right]I understand, Sekar.[NL]
+Thank you. Good luck.[A]
+[FarRight]We won't need it.[A][ClearFace][FarLeft][ClearFace][LoadForrest]
+Sergeant Christina and I are going to[NL]
+make sure the citizens are okay.[A]
+[Right]That will work well, thank you Sergeant.[A][FarLeft][ClearFace][LoadJasper]
+What are our orders, Captain?[A]
+[Right]You and Private Derek can[NL]
+go with the Sergeants.[A][FarRight][LoadDerek]
+Yes, ma'am![A][ClearFace][LoadPlayer]
+What about me?[A]
+[Right]I want you and Clara to check through[NL]
+the castle. Make sure that there are[A][NL]
+no stragglers or anything left[NL]
+over from Xavus' force.[A]
+[FarRight]Yes, ma'am.[A][X]
 
 ## Military7PassAltiaEscapeClaraText
-Clara: It looks like they all either escaped or were killed...
-Avatar: Looks like it. If you want to go report to Captain Sylvaine, I’ll check through the dungeons one last time.
-Clara: Sounds good, [Tact].
+[MidLeft][LoadPlayer][MidRight][LoadClara]
+It looks like they all[NL]
+either escaped or were killed...[A]
+[MidLeft]Looks like it. If you want to go report[NL]
+to Captain Sylvaine, I'll check[A][NL]
+through the dungeons one last time.[A]
+[MidRight]Sounds good, [Tact].[A][X]
 
 ## Military7PassAltiaEscapeGuardianSpiritText
-Guardian Spirit: Not all your enemies are gone.
-Avatar: Who are you?! Uzkalis?
-Guardian Spirit: Ha! That moron? Of course not. You lost souls are really daft.
-Avatar: What are you saying? I’m just a private, you can’t expect me to know every great enemy of Cesaria.
-Guardian Spirit: Nonsense. You turned down that promotion, so by all rights, you’re more important than you think. But you just had to pass it to your friend... Diplomacy is so boring.
-Avatar: What are you trying to accomplish?
-Guardian Spirit: Uh... Being obnoxious before I kill you, of course.
-Avatar: What!?
-Guardian Spirit: Well while you may not have directly affected all of what’s happened, you were still involved and I can’t let lost souls be too important, so killing you and rolling back time is really my only option.
-Avatar: You won’t get away with this!
-Guardian Spirit: Yeah, sure, you keep saying that... Well, let’s get it over with!
+[MidRight][LoadPlayer][MidLeft][LoadNarrator]
+Not all your enemies are gone.[A]
+[MidRight]Who are you?! Uzkalis?[A]
+[MidLeft][MoveMidLeft]Ha![....] That moron? Of course not.[NL]
+You lost souls are really daft.[A]
+[MidRight]What are you saying? I'm just[NL]
+a private, you can't expect me to[A][NL]
+know every great enemy of Cesaria.[A]
+[MidLeft]Nonsense. You turned down that promotion,[NL]
+so by all rights, you're more important[A][NL]
+than you think. But you just had to past it[NL]
+to your friend... Diplomacy is so boring.[A]
+[MidRight]What are you trying to accomplish?[A]
+[MidLeft]Uh...[....] Being obnoxious before[NL]
+I kill you, of course.[A]
+[MidRight]What!?[A]
+[MidLeft]Well while you may not have directly[NL]
+affected all of what's happened, you were[A][NL]
+still involved, and I can't let lost souls[NL]
+be too important, so killing you and[A][NL]
+rolling back time is really my only option.[A]
+[MidRight]You won't get away with this![A]
+[MidLeft]Yeah, sure, you keep saying that...[NL]
+Well, let's get it over with![A][X]
 
 ## Military7PassAltiaEscapePlayerDeathText
-Avatar: Dammit... I’m sorry, Captain...
+[FarRight][LoadPlayer]
+Dammit... I'm[NL]
+sorry, Captain...[A][X]
 
 ## Military7PassAltiaNoEscapeText
-Xavus: You are a fool...
-Sylvaine: How so?
-Xavus: You never broke the power link with Izuk... I may fall, but... Heh...
-Sylvaine: What?
-Clara: Sylvaine, he’s trying to rebound the power link!
-Sylvaine: But that’ll kill Izuk!
-Xavus: Ha! Precisely! If I take my own life... It’s worth it...
-Sylvaine: Clara! Hurry!
-Clara: I’m on it!
-Finoc: What’s going on?
-Sylvaine: Xavus is taking his own life in hopes that the rebound of the power link will kill Izuk.
-Finoc: No!
-*Xavus dies*
-Sylvaine: Clara!
+[MidRight][LoadSylvaine][MidLeft][CloseEyes][LoadXavus]
+You are a fool...[A]
+[MidRight]How so?[A]
+[MidLeft]You never broke the power link with[NL]
+Izuk... I may fall, but...[OpenEyes] Heh...[A]
+[MidRight]What?[A][CloseSpeech][MoveRight][FarRight][LoadClara]
+Sylvaine, he's trying to[NL]
+rebound the power link![A]
+[Right][MoveRight]But that'll kill Izuk![A]
+[MidLeft]Ha! Precisely! If I take my[NL]
+own life... It's worth it...[A]
+[Right]Clara! Hurry![A]
+[FarRight]I'm on it![A][CloseSpeech][....][MidLeft][ClearFace][....]
+[Right]Clara![A]
 [Events]
-Clara: I’m sorry, Sylvaine... I was... Too late...
-Finoc: High Priest... No... Dammit!
-Sylvaine: Finoc... I’m sorry...
-Finoc: I... have to speak to Cougar and Elanil... One of us will need to inform the Anguis...
-Sylvaine: I understand... I truly am sorry...
-Finoc: There’s nothing you could have done, Captain. I’ll let you know when we head out to meet the Anguis.
-Sekar: This isn’t good... But there’s not time for us to stall. Xavus is gone, but Uzkalis is still out there.
+[FarRight]I'm sorry, Sylvaine...[....][NL]
+I was too late...[A][MidLeft][LoadFinoc]
+High Priest... No... Dammit![A]
+[Right]Finoc... I'm sorry...[A]
+[MidLeft]I... have to speak to Cougar and Elanil...[NL]
+One of us will need to inform the Anguis...[A]
+[Right]I understand... I truly am sorry...[A]
+[MidLeft]There's nothing you could have done,[NL]
+Captain. I'll let you know when[A][NL]
+we head out to meet the Anguis.[A][ClearFace][LoadSekar]
+This isn't good... But there's not time[NL]
+for us to stall. Xavus is gone,[A][NL]
+but Uzkalis is still out there.[A]
 [Events]
-Sylvaine: Right... Still, we can’t discount this victory here. There are Cesarian Captains in the field putting Uzkalis to the sword already.
-Sekar: I’m going to head back south to join the Basileus at the border.
-Sylvaine: Understood. Good luck Sekar.
-Clara: I’m going to meet back up with Muriel. She’ll want to know that Xavus is defeated. I’m sorry I was unable to save Izuk...
-Sylvaine: Don’t blame yourself, Clara. I should have prioritized his rescue more than I did. That’s my fault.
-Clara: You can’t blame yourself!
-Sylvaine: Don’t worry about me. Let Lady Muriel know what’s happened.
-Clara: Right. Thank you, Sylvaine.
-Forrest: Sergeant Christina and I will tend to the civilians. We don’t know the extent of Xavus’ occupation and reconstruction may be needed.
-Sylvaine: Good idea.
-Jasper: What do you want us to do?
-Sylvaine: Assist the Sergeants.
-Jasper: Understood.
+[Right]Right... Still, we can't discount[NL]
+this victory here. There are Cesarian[A][NL]
+Captains in the field putting[NL]
+Uzkalis to the sword already.[A]
+[MidLeft]I'm going to head back south to[NL]
+join the Basileus at the border.[A]
+[Right]Understood. Good luck, Sekar.[A][MidLeft][ClearFace]
+[FarRight]I'm going to meet back up with Muriel.[NL]
+She'll want to know that Xavus is defeated.[A][NL]
+I'm sorry I was unable to save Izuk...[A][CloseSpeech][Right][MoveMidLeft]
+Don't blame yourself, Clara. I should[NL]
+have prioritized his rescue[A][NL]
+more than I did. That's my fault.[A]
+[FarRight]You can't blame yourself![A][MidLeft][ClearFace][LoadSylvaine]
+Don't worry about me. Let Lady[NL]
+Muriel know what's happened.[A]
+[FarRight]Right. Thank you, Sylvaine.[A][ClearFace][MidRight][LoadForrest]
+Sergeant Christina and I will tend to the[NL]
+civilians. We don't know the extent[A][NL]
+of Xavus' occupation, and[NL]
+reconstruction may be needed.[A]
+[MidLeft]Good idea.[A][MidRight][ClearFace][LoadJasper]
+What do you want us to do?[A]
+[MidLeft]Assist the Sergeants.[A]
+[MidRight]Understood.[A][X]
 
 ## Military7PassAltiaIzukDeadText
-Finoc: We did it, but... The High Priest...
-Sylvaine: I’m sorry, Finoc. There was nothing we could do. Stopping Xavus was the top priority...
-Finoc: I know... Still, he was one of our main leaders. We all admired him greatly.
-Elanil: Finoc...
-Finoc: ... We should check on the civilians. Make sure everyone is okay. I shudder to think the damage Xavus could have caused this quickly.
-Elanil: That’s a good idea. I’ll help you.
-Christina: Corporal Jasper! We’re helping too.
-Jasper: Yes, Sergeant!
-Forrest: Captain, what’s our next move?
-Sylvaine: We’ll stay here. The other Captains and the Basileus will likely be able to overpower Uzkalis soon.
-Cougar: I can fly south with word of Xavus’ fall.
-Sylvaine: Are you sure, Cougar? With the passing of Lord Izuk...
-Cougar: I’m fine, Captain. This is war time. There isn’t time for mourning. We’ll give him his due respect when Uzkalis lies defeated.
-Sylvaine: Very well.
-Clara: Cougar, may I come with you? I want to meet back up with Lady Muriel.
-Cougar: That would be fine, if it’s okay with the Captain.
-Sylvaine: That’s fine. Thanks for all the help, Clara.
-Clara: I’m glad to have been of service.
-Sylvaine: May you face clear skies.
-Cougar: Thank you, Captain.
-Forrest: I’m going to take the Privates and secure the rest of the castle. Make sure there’s no stragglers and whatnot.
-Sylvaine: That should suffice. Thank you, Sergeant. The Anguis will be arriving shortly. I’ll bring him up to speed.
+[MidRight][LoadSylvaine][FarLeft][LoadElanil][Left][LoadFinoc]
+We did it, but... The High Priest...[A]
+[MidRight]I'm sorry, Finoc. There was[NL]
+nothing we could do. Stopping[A][NL]
+Xavus was the top priority...[A]
+[Left]I know... Still, he was one of our main[NL]
+leaders. We all admired him greatly.[A]
+[FarLeft]Finoc...[A]
+[Left]We should check on the civilians.[NL]
+Make sure everyone is okay. I[A][NL]
+shudder to think the damage Xavus[NL]
+could have caused this quickly.[A][ClearFace]
+[FarLeft]That's a good idea. I'll help you.[A][ClearFace][Left][LoadChristina]
+Corporal Jasper! We're helping too.[A][FarLeft][LoadJasper]
+Yes, Sergeant![A][ClearFace][Left][ClearFace][LoadForrest]
+Captain, what's our next move?[A]
+[MidRight]We'll stay here. The other Captains[NL]
+and the Basileus will likely be[A][NL]
+able to overpower Uzkalis soon.[A][FarLeft][LoadCougar]
+I can fly south with word of Xavus' fall.[A]
+[MidRight]Are you sure, Cougar? With[NL]
+the passing of Lord Izuk...[A]
+[FarLeft]I'm fine, Captain. This is wartime.[NL]
+There isn't time for mourning.[A][NL]
+We'll give him his due respect[NL]
+when Uzkalis lies defeated.[A]
+[MidRight]Very well.[A][CloseSpeech][MoveRight][FarRight][LoadClara]
+Cougar, may I come with you? I want[NL]
+to meet back up with Lady Muriel.[A]
+[FarLeft]That would be fine, if[NL]
+it's okay with the Captain.[A]
+[Right]That's fine. Thanks for[NL]
+all the help, Clara.[A]
+[FarRight]I'm glad to have been of service.[A][ClearFace]
+[Right][Smile]May you face clear skies.[A]
+[FarLeft][Smile]Thank you, Captain.[A][ClearFace]
+[Left]I'm going to take the Privates and secure[NL]
+the rest of the castle. Make sure[A][NL]
+there's no stragglers and whatnot.[A]
+[Right]That should suffice. Thank you,[NL]
+Sergeant. The Anguis will be arriving[A][NL]
+shortly. I'll bring him up to speed.[A][X]
 
 ## Military7PassAltiaSylvaineEndingText
-Avatar: Captain?
-Sylvaine: [Tact]? What is it?
-Avatar: Was this... really a victory?
-Sylvaine: How do you mean?
-Avatar: We lost High Priest Izuk...
-Sylvaine: ... In war, victory can be difficult to define... You’re right. In some respects, we are not victorious, because we failed in one of our objectives. At the same time, Xavus lies defeated. That’s huge for the war. Uzkalis will fall before long, or even surrender.
-Avatar: But...
-Sylvaine: I know it’s difficult. This was your first campaign, after all. You did well, [Tact]. I won’t forget that. Take a rest to think about it. It’s always difficult. The Sergeants and I can take care of the civilians.
-Avatar: Thank you, Captain.
-Sylvaine: Make no mention of it.
+[MidLeft][LoadSylvaine][MidRight][LoadPlayer]
+Captain?[A]
+[MidLeft][Tact]? What is it?[A]
+[MidRight]Was this... really a victory?[A]
+[MidLeft]How do you mean?[A]
+[MidRight]We lost High Priest Izuk...[A]
+[MidLeft][TMM]...[......][TMM] In war, victory can be difficult[NL]
+to define... You're right. In some[A][NL]
+respects, we are not victorious because[NL]
+we failed in one of our objectives[A][NL]
+At the same time, Xavus lies defeated.[NL]
+That's huge for the war. Uzkalis will[A][NL]
+fall before long or even surrender.[A]
+[MidRight]But...[A]
+[MidLeft]I know it's difficult. This was your first[NL]
+campaign, after all. You did well,[A][NL]
+[Tact]. I won't forget that. Take a rest[NL]
+to think about it. It's always[A][NL]
+difficult. The Sergeants and I can[NL]
+take care of the civilians.[A]
+[MidRight]Thank you, Captain.[A]
+[MidLeft]Make no mention of it.[A][X]
 
 ## Military7PassAltiaThisIsWarText
-Avatar: This is war?
+[MidRight][LoadPlayer]This is war?[A][X]
 
 ## Military7PassAltiaBadEndingGuardianSpiritText
-Narrator: Having second thoughts, [Tact]?
-Avatar: Who are you? Identify yourself!
-Narrator: Some nerd. Does it matter?
-Avatar: You’re trespassing.
-Narrator: Oh, I’M trespassing? News to me. You lost souls are so high and mighty...
-Avatar: I’ll have to remove you by force then.
-Narrator: By force? Very well then. Try me.
+[MidRight][LoadPlayer][MidLeft][LoadNarrator]
+Having second thoughts, [Tact]?[A]
+[MidRight]Who are you? Identify yourself![A]
+[MidLeft]Some nerd. Does it matter?[A]
+[MidRight]You're trespassing.[A]
+[MidLeft]Oh, I'M trespassing? News to me. You[NL]
+lost souls are so high and mighty...[A]
+[MidRight]I'll have to remove you by force then.[A]
+[MidLeft]By force? Very well then. Try me.[A][X]
 
 ## Military7PassAltiaBadEndingPlayerDeathText
-Avatar: Such... power...
-Narrator: I gave you this life, lost soul. But you’ve caused too much change in Avenir. One more strike to kill you, and then I roll back time and we can forget about this whole ordeal. Goodbye, [Tact]. Hope it was fun.
-Avatar: Bastard...
-
+[FarRight][LoadPlayer]
+Such... power...[A][ClearFace]
+[FarLeft][LoadNarrator]
+I gave you this life,[NL]
+lost soul, but you've[A][NL]
+caused too much change in[NL]
+Avenir. Once I roll[A][NL]
+back time, we can forget[NL]
+about this whole ordeal.[A][NL]
+Goodbye, [Tact].[NL]
+Hope it was fun.[A][ClearFace]
+[FarRight][CloseEyes][LoadPlayer]
+Bastard...[A][X]

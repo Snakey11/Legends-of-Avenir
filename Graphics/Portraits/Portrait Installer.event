@@ -24,10 +24,16 @@ BaretPortrait:
 #incext PortraitFormatter "Baret.png"
 ChristinaPortrait:
 #incext PortraitFormatter "Christina.png"
+ClaraPortrait:
+#incext PortraitFormatter "Clara.png"
 ConnorPortrait:
 #incext PortraitFormatter "Connor.png"
+CougarPortrait:
+#incext PortraitFormatter "Cougar.png"
 DerekPortrait:
 #incext PortraitFormatter "Derek.png"
+DunlasPortrait:
+#incext PortraitFormatter "Dunlas.png"
 EfilPortrait:
 #incext PortraitFormatter "Efil.png"
 ElanilPortrait:
@@ -58,10 +64,14 @@ LuxPortrait:
 #incext PortraitFormatter "Lux.png"
 MaximusPortrait:
 #incext PortraitFormatter "Maximus.png"
+MurielPortrait:
+#incext PortraitFormatter "Muriel.png"
 NarratorPortrait:
 #incext PortraitFormatter "Narrator.png"
 RexPortrait:
 #incext PortraitFormatter "Rex.png"
+SekarPortrait:
+#incext PortraitFormatter "Sekar.png"
 ServiusPortrait:
 #incext PortraitFormatter "Servius.png"
 SylvainePortrait:
@@ -109,8 +119,11 @@ setMugEntry(ArveldirMug,ArveldirPortrait,2,5,3,3)
 setMugEntry(AryaMug,AryaPortrait,2,6,3,4)
 setMugEntry(BaretMug,BaretPortrait,3,5,3,3)
 setMugEntry(ChristinaMug,ChristinaPortrait,2,6,3,4)
+setMugEntry(ClaraMug,ClaraPortrait,3,6,3,4)
 setMugEntry(ConnorMug,ConnorPortrait,3,5,3,3)
+setMugEntry(CougarMug,CougarPortrait,2,5,3,3)
 setMugEntry(DerekMug,DerekPortrait,3,5,3,3)
+setMugEntry(DunlasMug,DunlasPortrait,3,5,2,3)
 setMugEntry(EfilMug,EfilPortrait,3,5,3,3)
 setMugEntry(ElanilMug,ElanilPortrait,4,5,4,3)
 setMugEntry(EmperorMug,EmperorPortrait,3,5,3,3)
@@ -126,12 +139,14 @@ setMugEntry(LeyosMug,LeyosPortrait,3,5,3,3)
 setMugEntry(LukeMug,LukePortrait,2,6,3,4)
 setMugEntry(LuxMug,LuxPortrait,2,6,3,4)
 setMugEntry(MaximusMug,MaximusPortrait,3,4,3,2)
+setMugEntry(MurielMug,MurielPortrait,3,6,3,4)
 setMugEntry(NarratorMug,NarratorPortrait,3,5,3,3)
 setMugEntry(RexMug,RexPortrait,2,5,2,3)
+setMugEntry(SekarMug,SekarPortrait,3,5,3,3)
 setMugEntry(ServiusMug,ServiusPortrait,3,5,3,3)
 setMugEntry(SylvaineMug,SylvainePortrait,2,5,2,3)
 setMugEntry(UzkalisMug,UzkalisPortrait,2,6,2,3)
-setMugEntry(ValMug,ValPortrait,3,5,3,4)
+setMugEntry(ValMug,ValPortrait,3,5,3,3)
 setMugEntry(VicarMug,VicarPortrait,2,4,3,2)
 setMugEntry(WalterMug,WalterPortrait,3,5,3,3)
 setMugEntry(XavusMug,XavusPortrait,2,5,3,3)

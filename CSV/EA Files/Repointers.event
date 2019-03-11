@@ -157,7 +157,6 @@ POIN CharacterTable
 ORG $19478
 POIN CharacterTable
 
-
 ORG $58014
 POIN SpellAssociationTable
 ORG $78240
@@ -279,7 +278,29 @@ ORG $B042C
 POIN SoundRoom
 
 ORG $5524
-POIN PortraitTable// - 0x1C
-//ORG $6F46E0
-//POIN PortraitTable - 0xC7
+POIN PortraitTable
+
+ORG $28BC
+POIN MusicTable
+ORG $14B80
+POIN MusicTable
+ORG $458E0
+POIN MusicTable
+ORG $71B20
+POIN MusicTable
+ORG $71B64
+POIN MusicTable
+ORG $B575C
+POIN MusicTable
+ORG $D0224
+POIN MusicTable
+ORG $D0258
+POIN MusicTable
+ORG $D02A4
+POIN MusicTable
+ORG $D02F8
+POIN MusicTable
+ORG $D032C
+POIN MusicTable
+
 POP

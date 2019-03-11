@@ -74,18 +74,6 @@ ENDA
 //Label EndingScene
 EndingScene:
 MUSC Into_the_Shadow_of_Victory
-CHECK_EVENTID 0x6C
-BEQ 0x1 0x0 0xC
-	GiveToSupplySilent(OrionBolt)
-	GOTO 0x0
-LABEL 0x1
-CHECK_EVENTID 0x6D
-BEQ 0x2 0x0 0xC
-	GiveToSupplySilent(ElysianWhip)
-	GOTO 0x0
-LABEL 0x2
-	GiveToSupplySilent(KnightCrest)
-LABEL 0x0
 GiveToSupplySilent(Shine)
 GiveToSupplySilent(SteelSword)
 GiveToSupplySilent(Javelin)

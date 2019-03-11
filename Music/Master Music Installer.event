@@ -1,5 +1,5 @@
 
-#define SongTableOffset  0x224470
+#define SongTableOffset MusicTable
 #include "drumfix_fe8.event"
 ALIGN 4
 voicegroup000:
@@ -83,3 +83,46 @@ SongTable(Wicked_Child,songWickedChild,MapMusicGroup)
 SongTable(Bloodpool,songBloodpool,MapMusicGroup)
 #include "Bloodpool.event"
 */
+
+SongTable(Pub_Theme,songPubTheme,MapMusicGroup)
+#include "PubTheme.event"
+
+SongTable(Snow_Battle,songSnowBattle,MapMusicGroup)
+#include "SnowBattle.event"
+
+SongTable(Wild_Fields,songWildFields,MapMusicGroup)
+#include "WildFields.event"
+
+
+//SongTable(End_Peaceful_World,songEndPeacefulWorld,MapMusicGroup)
+//#include "EndPeacefulWorld.event"
+
+//SongTable(Karma,songKarma,MapMusicGroup)
+//#include "Karma.event"
+
+SongTable(Marble_Corridor,songMarbleCorridor,MapMusicGroup)
+#include "MarbleCorridor.event"
+
+SongTable(Nara_and_Mara_Battle,songNaraAndMaraBattle,MapMusicGroup)
+#include "NaraAndMaraBattle.event"
+
+SongTable(Nekonin,songNekonin,MapMusicGroup)
+#include "Nekonin.event"
+
+SongTable(Ringabel,songRingabel,MapMusicGroup)
+#include "Ringabel.event"
+
+//SongTable(The_More_I_Try,songTheMoreITry,MapMusicGroup)
+//#include "TheMoreITry.event"
+
+SongTable(Victorys_Delight,songVictorysDelight,MapMusicGroup)
+#include "VictorysDelight.event"
+
+SongTable(Zelos,songZelos,MapMusicGroup)
+#include "Zelos.event"
+
+SongTable(Stage_One,songStageOne,MapMusicGroup)
+#include "StageOne.event"
+
+SongTable(Full_Force,songFullForce,MapMusicGroup)
+#include "FullForce.event"

@@ -138,3 +138,34 @@ way of atonement...[A][X]
 [FarRight][LoadXexim]
 And so our ancient[NL]
 order falls...[CloseEyes][A][X]
+
+## CougarDeathText
+[FarRight][CloseEyes][LoadCougar]
+So... weak... I'm just[NL]
+a liability out here.[A][NL]
+I'm sorry, everyone.[A][X]
+
+## SekarDeathText
+[FarRight][LoadSekar]
+I'm... wounded...[NL]
+shameful for a Haedrician.[A][NL]
+I'm sorry to everyone.[A][X]
+
+## ForrestDeathText
+[FarRight][LoadForrest]
+No... Not like this![A][X]
+
+## ChristinaDeathText
+[FarRight][LoadChristina]
+I'm sorry, Captain Sylvaine.[NL]
+I can't take any more.[A][X]
+
+## ClaraDeathText
+[FarRight][LoadClara]
+Ah! This is too much.[NL]
+I'm sorry, everyone.[A][X]
+
+## SylvaineDeathText
+[FarRight][LoadSylvaine]
+I musn't fall...[CloseEyes] Altia[NL]
+must be liberated...[A][X]

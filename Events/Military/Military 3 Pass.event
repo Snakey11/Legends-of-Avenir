@@ -107,7 +107,6 @@ CLEE 0x0
 MUSC Victory
 SetBackground(0x1D)
 Text(Military3PassEndingText)
-EndConvo
 GiveGold(5000)
 MoveToChapter(MilitaryPass4)
 NoFade
@@ -115,8 +114,10 @@ ENDA
 
 //Label Turn 4
 Turn4Event:
+CamON
 LOAD1 0x1 LoadTurn4Units
 ENUN
+CamOFF
 NoFade
 ENDA
 

@@ -72,7 +72,7 @@ EndUnit
 BeginningScene:
 MUSC Solve_the_Riddle
 SETVAL 0xB Coords(9,7)
-LOMA MilitaryPassHaedric6 // Haedric city map
+LOMA HaedricCityCutscene // Haedric city map
 LOAD2 0x1 CityFriends
 LOAD3 0x1 PlayerLoading1
 LOAD1 0x1 HaedricCityPeople

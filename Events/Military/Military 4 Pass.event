@@ -121,6 +121,7 @@ ENUN
 FADU 0x5
 STAL 0x10
 Text(Military4PassHaedricEndingText)
+CAM1 [10,6]
 STAL 0x20
 LOAD1 0x1 Haedricians
 ENUN
@@ -213,7 +214,7 @@ ENDA
 House1:
 MUSI
 Text(0x01,Military4PassHouse1Text)
-GiveItem(Hammer,0xFFFF)
+GiveItem(KnightCrest,0xFFFF)
 MUNO
 NoFade
 EndA2

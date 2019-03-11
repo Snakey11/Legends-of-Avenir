@@ -13,7 +13,7 @@ BYTE Knight Knight_F General General_F GreatKnight GreatKnight_F Commander Knigh
 
 ALIGN 16
 FlierEffectiveness:
-BYTE PegasusKnight FalcoKnight PegasusKnight2 BlackFalcoknight WyvernRider WyvernRider_F WyvernLord WyvernLord_F WyvernKnight WyvernKnight_F WyvernRider2 WyvernGeneral 0x0 0x0 0x0 0x0
+BYTE PegasusKnight FalcoKnight PegasusKnight2 BlackFalcoknight WyvernRider WyvernRider_F WyvernLord WyvernLord_F WyvernKnight WyvernKnight_F WyvernRider2 WyvernGeneral ArmoredWyvernLord 0x0 0x0 0x0 0x0
 
 ALIGN 16
 PegasusEffectiveness:
@@ -21,7 +21,7 @@ BYTE PegasusKnight FalcoKnight PegasusKnight2 BlackFalcoknight 0x0 0x0 0x0 0x0
 
 ALIGN 16
 WyvernEffectiveness:
-BYTE WyvernRider WyvernRider_F WyvernLord WyvernLord_F WyvernKnight WyvernKnight_F WyvernRider2 WyvernGeneral 0x0 0x0 0x0 0x0
+BYTE WyvernRider WyvernRider_F WyvernLord WyvernLord_F WyvernKnight WyvernKnight_F WyvernRider2 WyvernGeneral ArmoredWyvernLord 0x0 0x0 0x0 0x0
 
 ALIGN 16
 SwordEffectiveness:

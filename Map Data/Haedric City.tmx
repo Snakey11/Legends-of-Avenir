@@ -6,7 +6,7 @@
  <layer name="Tile Layer 1" width="19" height="25">
   <properties>
    <property name="Anims" value="_0EAnims"/>
-   <property name="ChapterID" value="MilitaryPassHaedric6"/>
+   <property name="ChapterID" value="HaedricCityCutscene"/>
    <property name="Main" value=""/>
    <property name="MapChangesID" value="HaedricCityChanges"/>
    <property name="MapID" value="HaedricCityMap"/>

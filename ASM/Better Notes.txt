@@ -4,6 +4,21 @@ All (possible) Proc States are stored in a contiguous array,
 located at a fixed point in memory (FE8U:02024E68), capable
 of holding up to 0x40 Proc States (the amount of memory
 used by the array is thus 0x40*0x6C=0x1B00 bytes. 02024E68 - 2026968).
+PROC STATE
++00 word:  codeStart @ Proc Code Pointer: Start
++04 word:  codeNext  @ Proc Code Pointer: Next Instruction
++08 word:  onEnd     @ Function Pointer: Called on Proc end
++0C word:  onCycle   @ Function Pointer: when non-null, called on Cycle instead of Next Instruction
++10 word:  name      @ C-String Pointer: Name (unused in game)
++14 word:  parent    @ Proc State Pointer: Parent State (If Parent is Root, then Tree Index (0-7))
++18 word:  child     @ Proc State Pointer: Oldest Child State (null if none)
++1C word:  previous  @ Proc State Pointer: Previous Sibling (sorted by age) (null if none)
++20 word:  next      @ Proc State Pointer: Next Sibling (sorted by age) (null if none)
++24 short: sleepTime @ Integer: Time left sleeping
++26 byte:  mark      @ Integer: "Mark"
++27 byte:  statebits @ Bitfield: Various Flags
++28 byte:  lockCount @ Integer: Number of times Proc has been "blocked"
++29 to 6C: (Body)    @ Free
 
 ##########
 FREE SPACE:

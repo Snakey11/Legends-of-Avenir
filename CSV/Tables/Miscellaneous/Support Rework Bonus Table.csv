@@ -1,0 +1,8 @@
+INLINE SupportReworkBonusTable,Character 1,Character 2,C Attack,C Defense,C Hit,C Avoid,C Crit,C Crit Avoid,B Attack,B Defense,B Hit,B Avoid,B Crit,B Crit Avoid,A Attack,A Defense,A Hit,A Avoid,A Crit,A Crit Avoid
+0,Arc,Luke,1,2,10,10,0,0,2,2,15,10,5,0,2,4,15,15,10,10
+1,Jasper,Derek,1,2,10,10,0,0,2,2,15,10,5,0,2,4,15,15,10,10
+2,Jasper,Christina,0,1,5,5,5,0,1,1,10,5,5,0,2,2,10,5,5,5
+3,Jasper,Elanil,2,0,5,5,0,5,2,1,10,5,0,10,3,1,10,10,5,10
+4,Jasper,Finoc,0,1,5,5,5,0,1,1,10,5,5,0,2,2,10,5,5,5
+5,Jasper,Sekar,2,0,5,5,0,5,2,1,10,5,0,10,3,1,10,10,5,10
+6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
