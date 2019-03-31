@@ -173,7 +173,7 @@ MaleKnight:
 UNIT PlayerMKnight Knight2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [SteelLance,Vulnerary] NoAI
 UNIT
 MaleSoldier:
-UNIT PlayerMSoldier Soldier2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [Javelin,SteelLance,Vulnerary] NoAI
+UNIT PlayerMSoldier SoldierM2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [Javelin,SteelLance,Vulnerary] NoAI
 UNIT
 MaleArcher:
 UNIT PlayerMArcher ArcherM2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [SteelBow,Vulnerary] NoAI
@@ -188,7 +188,7 @@ FemaleKnight:
 UNIT PlayerFKnight Knight2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [SteelLance,Vulnerary] NoAI
 UNIT
 FemaleSoldier:
-UNIT PlayerFSoldier Soldier2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [Javelin,SteelLance,Vulnerary] NoAI
+UNIT PlayerFSoldier SoldierF2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [Javelin,SteelLance,Vulnerary] NoAI
 UNIT
 FemaleArcher:
 UNIT PlayerFArcher ArcherF2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [SteelBow,Vulnerary] NoAI

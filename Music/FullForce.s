@@ -3,7 +3,7 @@
 	.equ	songFullForce_grp, voicegroup000
 	.equ	songFullForce_pri, 0
 	.equ	songFullForce_rev, 0
-	.equ	songFullForce_mvl, 127
+	.equ	songFullForce_mvl, 90
 	.equ	songFullForce_key, 0
 	.equ	songFullForce_tbs, 1
 	.equ	songFullForce_exg, 0

@@ -56,7 +56,7 @@ SVAL 0xB 0x0E0016
 LOMA MilitaryPromotionRetreatLeave6GrowingTown3
 LOAD2 0x1 DockAllies
 ENUN
-MUSC Laughter
+MUSC Zelos
 STAL 0x20
 LOAD3 0x1 PlayerLoading1
 SetBackground(0x7)
@@ -78,7 +78,7 @@ SetBackground(0x7)
 Text(Merc4MilitiaKillOfficialsText)
 FADI 0x5
 STAL 0x20
-MUSC Laughter
+MUSC Zelos
 STAL 0x20
 EndConvo
 LOAD1 0x1 HesHere

@@ -8,18 +8,20 @@
 #include "Truerblade Unarmed.event"
 
 
-#include "Warlock Axe.event"
+#include "Fighter Axe.event"
 
-#include "Warlock Hand Axe.event"
+#include "Fighter Hand Axe.event"
 
-#include "Warlock Unarmed.event"
+#include "Fighter Unarmed.event"
 
 
 #include "Wyvern General Axe.event"
 
 #include "Wyvern General Hand Axe.event"
 
-#include "Wyvern Lord Bow.event"
+#include "Wyvern General Lance.event"
+
+#include "Wyvern General Unarmed.event"
 
 
 #include "Sentinel Sword.event"
@@ -66,8 +68,3 @@
 #include "Harbinger Hand Axe.event"
 
 #include "Harbinger Unarmed.event"
-
-
-#include "Hunter Bow.event"
-
-#include "Hunter Unarmed.event"

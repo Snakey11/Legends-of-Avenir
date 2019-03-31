@@ -99,8 +99,8 @@ bx lr
 .type IncreaseSupport, %function
 IncreaseSupport: @ r0 = character struct to set in, r1 = supporting character. Assume we're increasing the support level by 1.
 push { r4 - r6, lr }
-mov r4, r0 @ Character struct
-mov r5, r1 @ Supporting character
+mov r4, r0 @ Character struct.
+mov r5, r1 @ Supporting character.
 bl FindSupportData @ r0 has number of bytes from 0x32 to the support.
 mov r1, #0x00
 mvn r1, r1
@@ -340,9 +340,9 @@ add r4, r4, #0x06
 add r6, r6, #0x01
 cmp r6, #0x08
 beq EndGeometryLoop
-ldr r0, [ r0 ]
+ldr r0, [ r4 ]
 cmp r0, #0x00
-beq EndGeometryLoop
+beq StartGeometryLoop
 	ldrb r0, [ r4 ] @ First character
 	bl FindCharacter @ r0 has character struct
 	cmp r0, #0x00
@@ -369,10 +369,12 @@ beq EndGeometryLoop
 		cmp r0, r1
 		bne BuildMenuGeometryHandleSupport
 			mov r0, #0x00
+			b BuildMenuGeometryTestLevel
 		BuildMenuGeometryHandleSupport:
 		mov r1, r0
 		mov r0, r7
 		bl GetSupportLevel @ r0 has the support level.
+		BuildMenuGeometryTestLevel:
 		add r0, r0, #0x01
 		ldrb r1, [ r4, #0x04 ]
 		cmp r0, r1
@@ -386,9 +388,16 @@ mov r1, #36
 bl ClearRAM @ Clear old rounds data just in case.
 mov r0, #0x06
 strb r0, [ r7 ] @ Store X position.
+cmp r5, #0x08
+bne NotMaxSupportGeometry
+	@ Wow! They have 8 possible supports to view. Let's set the Y position to 0.
+	mov r0, #0x00
+	beq GeometrySetYPosition
+NotMaxSupportGeometry:
 lsr r0, r5, #0x1 @ Divide r5 by 2 and put it in r0.
 mov r1, #0x05
 sub r0, r1, r0
+GeometrySetYPosition:
 strb r0, [ r7, #0x01 ] @ Store Y position.
 mov r0, #18
 strb r0, [ r7, #0x02 ] @ Store width.
@@ -639,129 +648,148 @@ bx lr
 .global BaseSupportConvo1
 .type BaseSupportConvo1, %function
 BaseSupportConvo1:
-ldr r0, =#0x030004C4 @ Memory slot 0x3
+ldr r0, =#0x030004C0 @ Memory slot 0x2
 ldr r1, =BaseSupportTable
 ldr r2, =ChapterDataStruct
 ldrb r2, [ r2, #0x0E ]
 mov r3, #48
 mul r2, r3
 add r1, r1, r2
-ldrh r1, [ r1, #2 ] @ Text ID for this conversation
-strh r1, [ r0 ]
+ldrh r2, [ r1, #2 ] @ Text ID for this conversation
+strh r2, [ r0, #0x04 ] @ Store in memory slot 0x3.
+ldrb r2, [ r1, #5 ] @ Background for this conversation.
+strh r2, [ r0 ] @ Store in memory slot 0x2.
 mov r1, #0x01
-strb r1, [ r0, #0x04 ] @ Store 0x1 into slot 0x4 for later.
+strb r1, [ r0, #0x08 ] @ Store 0x1 into slot 0x4 for later.
 bx lr
 
 .global BaseSupportConvo2
 .type BaseSupportConvo2, %function
 BaseSupportConvo2:
-ldr r0, =#0x030004C4 @ Memory slot 0x3
+ldr r0, =#0x030004C0 @ Memory slot 0x2
 ldr r1, =BaseSupportTable
 ldr r2, =ChapterDataStruct
 ldrb r2, [ r2, #0x0E ]
 mov r3, #48
 mul r2, r3
 add r1, r1, r2
-ldrh r1, [ r1, #8 ] @ Text ID for this conversation
-strh r1, [ r0 ]
+ldrh r2, [ r1, #8 ] @ Text ID for this conversation
+strh r2, [ r0, #0x04 ] @ Store in memory slot 0x3.
+ldrb r2, [ r1, #11 ] @ Background for this conversation.
+strh r2, [ r0 ] @ Store in memory slot 0x2.
 mov r1, #0x02
-strb r1, [ r0, #0x04 ] @ Store 0x2 into slot 0x4 for later.
+strb r1, [ r0, #0x08 ] @ Store 0x2 into slot 0x4 for later.
 bx lr
 
 .global BaseSupportConvo3
 .type BaseSupportConvo3, %function
 BaseSupportConvo3:
-ldr r0, =#0x030004C4 @ Memory slot 0x3
+ldr r0, =#0x030004C0 @ Memory slot 0x2
 ldr r1, =BaseSupportTable
 ldr r2, =ChapterDataStruct
 ldrb r2, [ r2, #0x0E ]
 mov r3, #48
 mul r2, r3
 add r1, r1, r2
-ldrh r1, [ r1, #14 ] @ Text ID for this conversation
-strh r1, [ r0 ]
+ldrh r2, [ r1, #14 ] @ Text ID for this conversation
+strh r2, [ r0, #0x04 ] @ Store in memory slot 0x3.
+ldrb r2, [ r1, #17 ] @ Background for this conversation.
+strh r2, [ r0 ] @ Store in memory slot 0x2.
 mov r1, #0x03
-strb r1, [ r0, #0x04 ] @ Store 0x3 into slot 0x4 for later.
+strb r1, [ r0, #0x08 ] @ Store 0x3 into slot 0x4 for later.
 bx lr
 
 .global BaseSupportConvo4
 .type BaseSupportConvo4, %function
 BaseSupportConvo4:
-ldr r0, =#0x030004C4 @ Memory slot 0x3
+ldr r0, =#0x030004C0 @ Memory slot 0x2
 ldr r1, =BaseSupportTable
 ldr r2, =ChapterDataStruct
 ldrb r2, [ r2, #0x0E ]
 mov r3, #48
 mul r2, r3
 add r1, r1, r2
-ldrh r1, [ r1, #20 ] @ Text ID for this conversation
-strh r1, [ r0 ]
+ldrh r2, [ r1, #20 ] @ Text ID for this conversation
+strh r2, [ r0, #0x04 ] @ Store in memory slot 0x3.
+ldrb r2, [ r1, #23 ] @ Background for this conversation.
+strh r2, [ r0 ] @ Store in memory slot 0x2.
 mov r1, #0x04
-strb r1, [ r0, #0x04 ] @ Store 0x4 into slot 0x4 for later.
+strb r1, [ r0, #0x08 ] @ Store 0x4 into slot 0x4 for later.
 bx lr
 
 .global BaseSupportConvo5
 .type BaseSupportConvo5, %function
 BaseSupportConvo5:
-ldr r0, =#0x030004C4 @ Memory slot 0x3
+ldr r0, =#0x030004C0 @ Memory slot 0x2
 ldr r1, =BaseSupportTable
 ldr r2, =ChapterDataStruct
 ldrb r2, [ r2, #0x0E ]
 mov r3, #48
 mul r2, r3
 add r1, r1, r2
-ldrh r1, [ r1, #26 ] @ Text ID for this conversation
-strh r1, [ r0 ]
+ldrh r2, [ r1, #26 ] @ Text ID for this conversation
+strh r2, [ r0, #0x04 ] @ Store in memory slot 0x3.
+ldrb r2, [ r1, #29 ] @ Background for this conversation.
+strh r2, [ r0 ] @ Store in memory slot 0x2.
 mov r1, #0x05
-strb r1, [ r0, #0x04 ] @ Store 0x5 into slot 0x4 for later.
+strb r1, [ r0, #0x08 ] @ Store 0x5 into slot 0x4 for later.
 bx lr
 
 .global BaseSupportConvo6
 .type BaseSupportConvo6, %function
 BaseSupportConvo6:
-ldr r0, =#0x030004C4 @ Memory slot 0x3
+ldr r0, =#0x030004C0 @ Memory slot 0x2
 ldr r1, =BaseSupportTable
 ldr r2, =ChapterDataStruct
 ldrb r2, [ r2, #0x0E ]
 mov r3, #48
 mul r2, r3
 add r1, r1, r2
-ldrh r1, [ r1, #32 ] @ Text ID for this conversation
-strh r1, [ r0 ]
+ldrh r2, [ r1, #32 ] @ Text ID for this conversation
+strh r2, [ r0, #0x04 ] @ Store in memory slot 0x3.
+mov r2, #35
+ldrb r2, [ r1, r2 ] @ Background for this conversation.
+strh r2, [ r0 ] @ Store in memory slot 0x2.
 mov r1, #0x06
-strb r1, [ r0, #0x04 ] @ Store 0x6 into slot 0x4 for later.
+strb r1, [ r0, #0x08 ] @ Store 0x6 into slot 0x4 for later.
 bx lr
 
 .global BaseSupportConvo7
 .type BaseSupportConvo7, %function
 BaseSupportConvo7:
-ldr r0, =#0x030004C4 @ Memory slot 0x3
+ldr r0, =#0x030004C0 @ Memory slot 0x2
 ldr r1, =BaseSupportTable
 ldr r2, =ChapterDataStruct
 ldrb r2, [ r2, #0x0E ]
 mov r3, #48
 mul r2, r3
 add r1, r1, r2
-ldrh r1, [ r1, #38 ] @ Text ID for this conversation
-strh r1, [ r0 ]
+ldrh r2, [ r1, #38 ] @ Text ID for this conversation
+strh r2, [ r0, #0x04 ] @ Store in memory slot 0x3.
+mov r2, #39
+ldrb r2, [ r1, r2 ] @ Background for this conversation.
+strh r2, [ r0 ] @ Store in memory slot 0x2.
 mov r1, #0x07
-strb r1, [ r0, #0x04 ] @ Store 0x7 into slot 0x4 for later.
+strb r1, [ r0, #0x08 ] @ Store 0x7 into slot 0x4 for later.
 bx lr
 
 .global BaseSupportConvo8
 .type BaseSupportConvo8, %function
 BaseSupportConvo8:
-ldr r0, =#0x030004C4 @ Memory slot 0x3
+ldr r0, =#0x030004C0 @ Memory slot 0x2
 ldr r1, =BaseSupportTable
 ldr r2, =ChapterDataStruct
 ldrb r2, [ r2, #0x0E ]
 mov r3, #48
 mul r2, r3
 add r1, r1, r2
-ldrh r1, [ r1, #44 ] @ Text ID for this conversation
-strh r1, [ r0 ]
+ldrh r2, [ r1, #44 ] @ Text ID for this conversation
+strh r2, [ r0, #0x04 ] @ Store in memory slot 0x3.
+mov r2, #47
+ldrb r2, [ r1, r2 ] @ Background for this conversation.
+strh r2, [ r0 ] @ Store in memory slot 0x2.
 mov r1, #0x08
-strb r1, [ r0, #0x04 ] @ Store 0x8 into slot 0x4 for later.
+strb r1, [ r0, #0x08 ] @ Store 0x8 into slot 0x4 for later.
 bx lr
 
 .global BaseSupportUsability
@@ -837,6 +865,92 @@ EndBaseSupportUsability:
 pop { r4, r6, r7 }
 pop { r1 }
 bx r1
+
+.global SupportReturnFalse
+.type SupportReturnFalse, %function
+SupportReturnFalse: @ Used for storing support data in CharacterBasedEvents. This makes sure supports don't appear as regular talk events.
+mov r0, #0x00
+bx lr
+
+.equ GetChapterEvents, 0x080346B0
+.global SupportConvoUsability
+.type SupportConvoUsability, %function
+SupportConvoUsability: @ This function will be called from the support action menu usability to determine whether there is a viewable support. Autohook to 0x08023D14.
+@ Return 0x1 for true and 0x3 for false.
+push { r4 - r7, lr }
+ldr r0, =#0x03004E50
+ldr r4, [ r0 ] @ Store the current character struct in r4.
+ldr r0, [ r4 ] @ ROM character data
+ldrb r6, [ r0, #0x04 ] @ Store the character ID in r6.
+ldr r0, =0x0202BCF0
+ldrb r0, [ r0, #0x0E ] @ Chapter number.
+blh GetChapterEvents, r1 @ r0 has this chapter's events.
+ldr r5, [ r0, #0x04 ] @ r5 has this chapter's CharacterBasedEvents.
+sub r5, r5, #0x10
+SupportConvoUsabilityLoop:
+add r5, r5, #0x10
+ldrh r0, [ r5 ]
+cmp r0, #0x00
+beq EndSupportConvoUsabilityFalse @ End the loop if this is an END_MAIN. No support was found.
+	ldr r0, [ r5, #12 ] @ This talk convo's extra condition.
+	ldr r1, =SupportReturnFalse
+	cmp r0, r1
+	bne SupportConvoUsabilityLoop @ Loop back if this is not marked as a support convo.
+		ldrb r0, [ r5, #0x08 ] @ Character 1
+		cmp r0, r6
+		beq SupportConvoUsabilityGetCharacter2
+		ldrb r0, [ r5, #0x09 ] @ Character 2
+		cmp r0, r6
+		bne SupportConvoUsabilityLoop @ Neither character in this convo matches the active character. Loop back.
+			@ SupportConvoUsabilityGetCharacter1:
+			ldrb r7, [ r5, #0x08 ]
+			b SupportConvoUsabilityGotCharacter
+			SupportConvoUsabilityGetCharacter2
+			ldrb r7, [ r5, #0x09 ]
+			SupportConvoUsabilityGotCharacter: @ The target character is in r7. Now to check if these units can support.
+			mov r0, r4
+			mov r1, r7
+			bl FindSupportData @ r0 = bytes from 0x32 for this support.
+			mov r1, #0x00
+			mvn r1, r1
+			cmp r0, r1
+			bne SupportConvoUsabilityFoundSupport
+				@ No support was found. Let's make sure there's enough room to add this support.
+				mov r0, r4
+				bl CountSupports @ r0 = number of supports of the active character.
+				cmp r0, #0x06
+				beq SupportConvoUsabilityLoop @ Loop back if there are already 6 supports.
+				mov r0, r7
+				bl FindCharacter @ r0 = target character struct.
+				bl CountSupports @ r0 = number of supports of the target character.
+				cmp r0, #0x06
+				beq SupportConvoUsabilityLoop @ Loop back if there are already 6 supports.
+				mov r0, #0x01
+				b EndSupportConvoUsability
+			SupportConvoUsabilityFoundSupport:
+			mov r1, r0
+			mov r0, r4
+			bl GetSupportLevel @ r0 = this support level.
+			cmp r0, #0x03
+			beq SupportConvoUsabilityLoop @ Loop back if this is already an A support.
+				@ If we're here, this is already a C or B support. Return true.
+				mov r0, #0x01
+				b EndSupportConvoUsability
+EndSupportConvoUsabilityFalse:
+mov r0, #0x03
+EndSupportConvoUsability:
+pop { r4 - r7 }
+pop { r1 }
+bx r1
+
+.global BuildSupportTargetList
+.type BuildSupportTargetList, %function
+BuildSupportTargetList: @ Sets up the target list for on-map support conversations. Autohook to 0x08025644.
+push { r4 - r7, lr } @ r0 = active unit pointer.
+ldr r4, =#0x02033F3C
+str r0, [ r4 ]
+mov r2, #0x10
+ldsb 
 
 .align
 .ltorg

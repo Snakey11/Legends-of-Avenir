@@ -90,4 +90,6 @@ INLINE SoundRoom,Song ID,Song Length (Only Used for Shuffle Mode),Song Unlock AS
 0x56 VictorysDelight,Victorys_Delight,9360,0,VictorysDelightText
 0x57 Zelos,Zelos,9360,0,ZelosText
 0x58 StageOne,Stage_One,9360,0,StageOneText
+0x59 FullForce,Full_Force,9360,0,FullForceText
+0x5A FurySparks,Fury_Sparks,9360,0,FurySparksText
 Terminator,0xFFFFFFFF,0x0,0x0,0x0

@@ -29,7 +29,9 @@ WORD 0x0 0x0
 
 CommanderAnim:
 SwordAnim(CommanderSword)
-SpearAnim(CommanderSpear)
+SpearAnim(CommanderLance)
+AxeAnim(CommanderAxe)
+HandAxeAnim(CommanderHandAxe)
 UnarmedAnim(CommanderUnarmed)
 WORD 0x0 0x0
 
@@ -102,14 +104,25 @@ DarkAnim(HolySageMagic)
 StaffAnim(HolySageStaff)
 WORD 0x0 0x0
 
-HunterAnim:
-BowAnim(HunterBow)
-UnarmedAnim(HunterUnarmed)
+HunterMAnim:
+SwordAnim(HunterMSword)
+BowAnim(HunterMBow)
+UnarmedAnim(HunterMUnarmed)
 WORD 0x0 0x0
 
-ImpalerAnim:
-SpearAnim(ImpalerSpear)
-UnarmedAnim(ImpalerUnarmed)
+HunterFAnim:
+BowAnim(HunterFBow)
+UnarmedAnim(HunterFUnarmed)
+WORD 0x0 0x0
+
+ImpalerMAnim:
+SpearAnim(ImpalerMLance)
+UnarmedAnim(ImpalerMUnarmed)
+WORD 0x0 0x0
+
+ImpalerFAnim:
+SpearAnim(ImpalerFLance)
+UnarmedAnim(ImpalerFUnarmed)
 WORD 0x0 0x0
 
 IzukAnim:
@@ -148,7 +161,7 @@ WORD 0x0 0x0
 
 MasterKnightMAnim:
 SwordAnim(MasterKnightMSword)
-SpearAnim(MasterKnightMSpear)
+SpearAnim(MasterKnightMLance)
 AxeAnim(MasterKnightMAxe)
 HandAxeAnim(MasterKnightMHandAxe)
 UnarmedAnim(MasterKnightMUnarmed)
@@ -156,7 +169,7 @@ WORD 0x0 0x0
 
 MasterKnightFAnim:
 SwordAnim(MasterKnightFSword)
-SpearAnim(MasterKnightFSpear)
+SpearAnim(MasterKnightFLance)
 AxeAnim(MasterKnightFAxe)
 HandAxeAnim(MasterKnightFHandAxe)
 UnarmedAnim(MasterKnightFUnarmed)
@@ -259,11 +272,9 @@ BowAnim(WilSniperBow)
 WORD 0x0
 
 WyvernGeneralAnim:
-SwordAnim(WyvernGeneralSword)
-SpearAnim(WyvernGeneralSpear)
+SpearAnim(WyvernGeneralLance)
 AxeAnim(WyvernGeneralAxe)
 HandAxeAnim(WyvernGeneralHandAxe)
-BowAnim(WyvernGeneralBow)
 UnarmedAnim(WyvernGeneralUnarmed)
 WORD 0x0 0x0
 

@@ -18,13 +18,6 @@
 #include "Champion Unarmed.event"
 
 
-#include "Zelgius Sword.event"
-
-#include "Zelgius Lance.event"
-
-#include "Zelgius Unarmed.event"
-
-
 #include "Dark Knight M Magic.event"
 
 #include "Dark Knight M Staff.event"

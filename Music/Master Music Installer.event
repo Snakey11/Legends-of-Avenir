@@ -126,3 +126,6 @@ SongTable(Stage_One,songStageOne,MapMusicGroup)
 
 SongTable(Full_Force,songFullForce,MapMusicGroup)
 #include "FullForce.event"
+
+SongTable(Fury_Sparks,songFurySparks,MapMusicGroup)
+#include "FurySparks.event"

@@ -3,7 +3,7 @@
 	.equ	songMarsLighthouse_grp, voicegroup000
 	.equ	songMarsLighthouse_pri, 0
 	.equ	songMarsLighthouse_rev, 0
-	.equ	songMarsLighthouse_mvl, 150
+	.equ	songMarsLighthouse_mvl, 180
 	.equ	songMarsLighthouse_key, 0
 	.equ	songMarsLighthouse_tbs, 1
 	.equ	songMarsLighthouse_exg, 0

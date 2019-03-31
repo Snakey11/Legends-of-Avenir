@@ -96,10 +96,10 @@ EndingScene:
 FADI 0x5
 CLEA 0x0
 CLEE 0x0
+LOAD1 0x1 LoadAdlez
 MUSC Victory
 SetBackground(0x1D)
 Text(Merc3BanditEndingText)
-EndConvo
 GiveGold(1000)
 MoveToChapter(MercenaryBandit4)
 ENDA
@@ -126,6 +126,10 @@ BanditFriends:
 UNIT Baret Myrmidon PlayerMArcher Level(6,Ally,True) [9,2] 0x00 0x00 0x00 0x00 [SteelSword] [0] 
 UNIT Vicar Warrior PlayerMArcher Level(2,Ally,True) [7,3] 0x00 0x00 0x00 0x00 [SteelAxe,KillerAxe] [0]
 UNIT Walter Archer PlayerMArcher Level(4,Ally,True) [7,2] 0x00 0x00 0x00 0x00 [IronBow,Vulnerary] [0] 
+UNIT
+
+LoadAdlez:
+UNIT Adlez Brigand Adlez Level(9,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [KillerAxe,HandAxe] NoAI 
 EndUnit
 
 //Label CaravanPeople

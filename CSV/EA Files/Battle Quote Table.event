@@ -78,5 +78,7 @@ UnspecifiedBattleConvo(Richter,MilitaryPassAltia5,0x11,Military5PassAltiaRichter
 SpecifiedBattleConvo(Sylvaine,Xavus,MilitaryPassAltia7,0x10,Military7PassAltiaSylvaineXavusBattleText)
 UnspecifiedBattleConvo(Xavus,MilitaryPassAltia7,0x11,Military7PassAltiaXavusBattleText)
 UnspecifiedBattleConvo(Shanley,MilitaryPassHaedric5,0x13,Military5PassHaedricShanleyBattleText)
+SpecifiedBattleConvo(Uzkalis,Muriel,MilitaryPassHaedric7,0x10,Military7PassHaedricMurielUzkalisBattleText)
+UnspecifiedBattleConvo(Uzkalis,MilitaryPassHaedric7,0x11,Military7PassHaedricUzkalisBattleText)
 
 BYTE 0xFF 0xFF 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Terminator

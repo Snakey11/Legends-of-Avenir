@@ -185,8 +185,9 @@ bx r0
 @ These functions will be called by the user via events.
 .global CallAddSupport
 .type CallAddSupport, %function
-CallAddSupport: @ Memory slot 0x1 = character 1, memory slot 0x2 = character 2. Defaults to setting a C support.
-push { lr }
+CallAddSupport: @ Memory slot 0x1 = character 1, slot 0x2 = character 2. Defaults to setting a C support.
+push { r4, lr }
+mov r0, r4
 bl CallAddSupportNoPopup @ I can treat this like an ext too hmm.
 ldr r0, =#0x0203EFC0
 mov r1, #0x43 @ ASCII "C".
@@ -196,9 +197,10 @@ mov r1, #90 @ Duration of the popup
 mov r2, #0x00 @ Style of popup window
 ldr r3, =NewPopup
 mov lr, r3
-mov r3, r5 @ Parent proc
+mov r3, r4 @ Parent proc
 .short 0xF800 @ No scratch registers ree
 EndCallAddSupport:
+pop { r4 }
 pop { r0 }
 bx r0
 
@@ -232,9 +234,163 @@ pop { r4 - r7 }
 pop { r0 }
 bx r0
 
+.global CallIncreaseSupport
+.type CallIncreaseSupport, %function
+CallIncreaseSupport: @ Memory slot 0x1 = character 1, slot 0x2 = character 2. Increases the support level by 1.
+push { r4 - r6, lr }
+mov r4, r0
+bl CallIncreaseSupportNoPopup
+ldr r1, =#0x0030004B8 @ Memory slot 0x0.
+ldr r0, [ r1, #0x04 ] @ Character 1.
+ldr r5, [ r1, #0x08 ] @ Character 2.
+bl FindCharacter @ r0 = character 1's character struct.
+mov r6, r0 @ Character 1's character struct.
+mov r1, r5
+bl FindSupportData @ r0 has distance to this support.
+mov r1, r0
+mov r0, r6
+bl GetSupportLevel @ r0 has this support level.
+
+ldr r1, =#0x0203EFC0
+add r0, r0, #0x42
+strb r0, [ r1 ]
+ldr r0, =IncreaseSupportPopupDefinitions
+mov r1, #90 @ Duration of the popup
+mov r2, #0x00 @ Style of popup window
+ldr r3, =NewPopup
+mov lr, r3
+mov r3, r4 @ Parent proc
+.short 0xF800 @ No scratch registers ree
+pop { r4 - r6 }
+pop { r0 }
+bx r0 
+
+.global CallIncreaseSupportNoPopup
+.type CallIncreaseSupportNoPopup, %function
+CallIncreaseSupportNoPopup: @ Memory slot 0x1 = character 1, slot 0x2 = character 2. Increases the support level by 1.
+push { r4 - r7, lr }
+ldr r0, =#0x0030004B8 @ Memory slot 0x0.
+ldr r4, [ r0, #0x04 ] @ Character 1.
+ldr r5, [ r0, #0x08 ] @ Character 2.
+mov r0, r4
+bl FindCharacter
+mov r6, r0 @ Character 1's character struct.
+mov r0, r5
+bl FindCharacter
+mov r7, r0 @ Character 2's character struct.
+mov r0, r6
+mov r1, r5
+bl IncreaseSupport
+mov r0, r7
+mov r1, r4
+bl IncreaseSupport
+pop { r4 - r7 }
+pop { r0 }
+bx r0
+
 .global CallSetSupport
 .type CallSetSupport, %function
-CallSetSupport: 
+CallSetSupport: @ Memory slot 0x1 = character 1, slot 0x2 = character 2, 0x3 = level to set. Sets a level for a support (C, B, or A)
+push { r4 - r7, lr }
+ldr r0, =#0x0030004B8 @ Memory slot 0x0.
+ldr r4, [ r0, #0x04 ] @ r4 = character 1.
+ldr r5, [ r0, #0x08 ] @ r5 = character 2.
+ldr r0, [ r0, #0x0C ]
+cmp r0, #0x03
+bgt EndCallSetSupport @ This isn't a valid level. Let's just end.
+cmp r0, #0x00
+beq EndCallSetSupport @ They're trying to set 0. Let's just end.
+mov r0, r4
+bl FindCharacter
+mov r6, r0 @ r6 = character 1's character struct.
+mov r0, r5
+bl FindCharacter
+mov r7, r0 @ r7 = character 2's character struct.
+
+mov r0, r6
+mov r1, r5
+bl FindSupportData @ r0 has the location of this support.
+mov r1, #0x00
+mvn r1, r1
+cmp r0, r1
+beq EndCallSetSupport @ This support doesn't exist. Let's just end.
+mov r1, r0
+mov r0, r6
+ldr r2, =#0x0030004C4
+ldr r2, [ r2 ] @ Support level
+bl SetSupport
+mov r0, r7
+mov r1, r4
+bl FindSupportData @ r0 has the location of this support.
+mov r1, #0x00
+mvn r1, r1
+cmp r0, r1
+beq EndCallSetSupport @ This support doesn't exist. Let's just end.
+mov r1, r0
+mov r0, r7
+ldr r2, =#0x0030004C4
+ldr r2, [ r2 ] @ Support level
+bl SetSupport
+EndCallSetSupport:
+pop { r4 - r7 }
+pop { r0 }
+bx r0
+
+.global CallClearSupport
+.type CallClearSupport, %function
+CallClearSupport: @ Memory slot 0x1 = character 1, slot 0x2 = character 2. Clears a support completely.
+push { r4 - r7, lr }
+ldr r0, =#0x0030004B8 @ Memory slot 0x0.
+ldr r4, [ r0, #0x04 ] @ Character 1.
+ldr r5, [ r0, #0x08 ] @ Character 2.
+mov r0, r4
+bl FindCharacter
+mov r6, r0 @ Character 1's character struct.
+mov r0, r5
+bl FindCharacter
+mov r7, r0 @ Character 2's character struct.
+
+mov r0, r6
+mov r1, r5
+bl FindSupportData @ r0 has the location of this support.
+mov r1, #0x00
+mvn r2, r1
+cmp r0, r2
+beq EndCallClearSupport @ This support already doesn't exist... let's just end.
+add r2, r6, r0
+mov r3, #0x32
+strb r1, [ r2, r3 ] @ Clears the character stored in the support data.
+mov r1, #0x03
+lsl r1, r1, #14
+lsl r0, r0, #0x01 @ Multiply the location by 2.
+lsr r1, r1, r0
+mvn r1, r1
+ldrh r0, [ r6, #0x38 ]
+and r1, r0, r1 @ Clears the old support level.
+strh r0, [ r6, #0x38 ]
+
+mov r0, r7
+mov r1, r4
+bl FindSupportData @ r0 has the location of this support.
+mov r1, #0x00
+mvn r2, r1
+cmp r0, r2
+beq EndCallClearSupport @ This support already doesn't exist... let's just end.
+add r2, r7, r0
+mov r3, #0x32
+strb r1, [ r2, r3 ] @ Clears the character stored in the support data.
+mov r1, #0x03
+lsl r1, r1, #14
+lsl r0, r0, #0x01 @ Multiply the location by 2.
+lsr r1, r1, r0
+mvn r1, r1
+ldrh r0, [ r7, #0x38 ]
+and r0, r0, r1 @ Clears the old support level.
+strh r0, [ r7, #0x38 ]
+EndCallClearSupport:
+pop { r4 - r7 }
+pop { r0 }
+bx r0
 
 .align
 .ltorg

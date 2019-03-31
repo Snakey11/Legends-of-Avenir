@@ -7,9 +7,9 @@
 //////////////Installed animations go here
 
 
-#include "Impaler Spear.event"
+#include "Impaler M Lance.event"
 
-#include "Impaler Unarmed.event"
+#include "Impaler M Unarmed.event"
 
 
 #include "Izuk Magic.event"
@@ -36,13 +36,20 @@
 #include "Magus F Staff.event"
 
 
+#include "Master Knight M Sword.event"
+
+#include "Master Knight M Lance.event"
+
 #include "Master Knight M Axe.event"
 
 #include "Master Knight M Hand Axe.event"
 
+#include "Master Knight M Unarmed.event"
+
+
 #include "Master Knight F Sword.event"
 
-#include "Master Knight F Spear.event"
+#include "Master Knight F Lance.event"
 
 #include "Master Knight F Axe.event"
 

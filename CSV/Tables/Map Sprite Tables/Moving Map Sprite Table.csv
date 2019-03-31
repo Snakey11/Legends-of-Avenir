@@ -122,7 +122,7 @@ MonkF2,MonkFSt,0x81e7638
 Cavalier2,0x81c5fe4,0x81c692c
 CavalierF2,0x81c5fe4,0x81c692c
 Knight2,KnightMv|IsPointer,0x81c7e74
-Soldier2,0x81ed418,0x81edbc4
+SoldierM2,0x81ed418,0x81edbc4
 Wyvern Rider2,0x81d32ec,0x81d403c
 Archer2,0x81d02b8,0x81d0a7c
 ArcherF2,0x81d0bd4,0x81d13c8
@@ -157,3 +157,6 @@ ArmoredWyvernLord,0x81d504c,0x81d5e58
 Swordmaster,EdgySwordmasterMv|IsPointer,0x81ce4fc
 Emperor,0x8201CDC,0x8202558
 MurielSage,0x81d9cb0,0x81da694
+Impaler F,ImpalerMv|IsPointer,0x81f49b8
+SoldierF2,0x81ed418,0x81edbc4
+Hunter F,HunterMv|IsPointer,0x81f607c

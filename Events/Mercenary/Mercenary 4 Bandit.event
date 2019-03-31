@@ -56,7 +56,7 @@ UNIT Vicar 0x00 0x00 Level(1,Ally,True) [18,17] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Baret 0x00 0x00 Level(1,Ally,True) [19,17] 0x00 0x00 0x00 0x00 [0] NoAI 
 UNIT Walter 0x00 0x00 Level(1,Ally,True) [19,16] 0x00 0x00 0x00 0x00 [0] NoAI 
 UNIT Arya 0x00 0x00 Level(1,Ally,True) [20,15] 0x00 0x00 0x00 0x00 [0] NoAI 
-UNIT Adlez 0x00 0x00 Level(9,Ally,True) [20,16] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT Adlez 0x00 0x00 Level(1,Ally,True) [20,16] 0x00 0x00 0x00 0x00 [0] NoAI 
 EndUnit
 
 //Label BeginingScene
@@ -110,7 +110,6 @@ STAL 0x8
 MOVE 0x0 Mayor [17,1]
 MUSC Advance
 LOAD2 0x1 BanditPeople
-LOAD1 0x1 LoadAdlez
 LOAD3 0x1 PlayerLoading2
 ENUN
 CAM1 [13,13]
@@ -272,8 +271,5 @@ UNIT Vicar Warrior Vicar Level(1,Ally,True) [18,17] 0x00 0x00 0x00 0x00 [IronAxe
 UNIT Baret Myrmidon Baret Level(1,Ally,True) [19,17] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 UNIT Walter Archer Walter Level(1,Ally,True) [19,16] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 UNIT Arya Myrmidon_F Arya Level(1,Ally,True) [20,15] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT
-
-LoadAdlez:
-UNIT Adlez Brigand Adlez Level(9,Ally,True) [20,16] 0x00 0x00 0x00 0x00 [KillerAxe,HandAxe] NoAI 
+UNIT Adlez Brigand Adlez Level(1,Ally,True) [20,16] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 EndUnit

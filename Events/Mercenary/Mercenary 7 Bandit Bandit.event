@@ -217,14 +217,14 @@ Text(Merc7BanditBanditGoodEndingText)
 EndConvo
 STAL 0x10
 MUSC Return_of_the_Demon_King
-WarpIn(5,10,LoadNarrator1) // Loads with a not sword to kill Adlez and Leon without a battle animation.
+WarpIn(5,10,LoadNarrator1)
 ENUN
 STAL 0x20
 MOVE 0x0 Narrator [4,8]
 ENUN
 StartBattle
-NormalDamage(0,35)
-NormalDamage(0,35)
+NormalDamage(0,20)
+CriticalHit(0,60)
 EndAttack
 FIG1 Narrator Adlez 0x0
 KillUnit(4,7)
@@ -467,7 +467,7 @@ UNIT Adlez Myrmidon_F PlayerMArcher Level(1,Ally,True) [7,9] 0x00 0x00 0x01 REDA
 UNIT
 
 LoadNarrator1:
-UNIT Narrator NarratorClass PlayerMArcher Level(20,Enemy,True) [5,10] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI 
+UNIT Narrator NarratorClass PlayerMArcher Level(20,Enemy,True) [5,10] 0x00 0x00 0x00 0x00 [BraveAxe] NoAI 
 UNIT
 
 LoadNarrator2:

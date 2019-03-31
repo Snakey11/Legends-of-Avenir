@@ -92,6 +92,17 @@ DeathQuote(PlayerFSoldier,MilitaryPassAltia7,0x12,Military7PassAltiaBadEndingPla
 DeathQuote(PlayerFArcher,MilitaryPassAltia7,0x12,Military7PassAltiaBadEndingPlayerDeathText)
 DeathQuote(PlayerFWyvernRider,MilitaryPassAltia7,0x12,Military7PassAltiaBadEndingPlayerDeathText)
 
+DeathQuote(PlayerMCavalier,MilitaryPassHaedric7,0x12,Military7PassHaedricGoodEndingPlayerDeathText) // Military Pass Haedric Good Ending
+DeathQuote(PlayerMKnight,MilitaryPassHaedric7,0x12,Military7PassHaedricGoodEndingPlayerDeathText)
+DeathQuote(PlayerMSoldier,MilitaryPassHaedric7,0x12,Military7PassHaedricGoodEndingPlayerDeathText)
+DeathQuote(PlayerMArcher,MilitaryPassHaedric7,0x12,Military7PassHaedricGoodEndingPlayerDeathText)
+DeathQuote(PlayerMWyvernRider,MilitaryPassHaedric7,0x12,Military7PassHaedricGoodEndingPlayerDeathText)
+DeathQuote(PlayerFCavalier,MilitaryPassHaedric7,0x12,Military7PassHaedricGoodEndingPlayerDeathText)
+DeathQuote(PlayerFKnight,MilitaryPassHaedric7,0x12,Military7PassHaedricGoodEndingPlayerDeathText)
+DeathQuote(PlayerFSoldier,MilitaryPassHaedric7,0x12,Military7PassHaedricGoodEndingPlayerDeathText)
+DeathQuote(PlayerFArcher,MilitaryPassHaedric7,0x12,Military7PassHaedricGoodEndingPlayerDeathText)
+DeathQuote(PlayerFWyvernRider,MilitaryPassHaedric7,0x12,Military7PassHaedricGoodEndingPlayerDeathText)
+
 // Specific death quotes need to come first.
 DeathQuote(Henning,Mercenary1,0x02,Merc1HenningDeathText)
 DeathQuote(Gerwick,MercenaryMilitia2,0x2,Merc2MilitiaGerwickDeathText)
@@ -112,8 +123,7 @@ DeathQuote(Emperor,MercenaryMilitiaWaitArcanae7,0x0,Merc7MilitiaWaitArcanaeEmper
 DeathQuote(Grant,MercenaryMilitiaWaitCesaria5,0x2,Merc5MilitiaWaitCesariaGrantDeathText)
 DeathQuote(Pat,MercenaryMilitiaWaitCesaria6,0x2,Merc6MilitiaWaitCesariaPatDeathText)
 DeathQuote(Uzkalis,MercenaryMilitiaWaitCesaria7,0x2,Merc7MilitiaWaitCesariaUzkalisDeathText)
-DeathQuote(BossUzkalis,MercenaryMilitiaWaitCesaria7,0x2,Merc7MilitiaWaitCesariaUzkalisDeathText) // tbh don't know which it is in the chapter......
-DeathQuote(BossArc,MercenaryBandit2,0x2,Merc2BanditArcDeathText)
+DeathQuote(Arc,MercenaryBandit2,0x2,Merc2BanditArcDeathText)
 DeathQuote(Roger,MercenaryBandit3,0x2,Merc3BanditRogerDeathText)
 DeathQuote(Mayor,MercenaryBandit4,0x0,Merc4BanditMayorDeathText)
 DeathQuote(Tyrone,MercenaryBandit4,0x2,Merc4BanditTyroneDeathText)
@@ -136,7 +146,9 @@ DeathQuote(Adlez,MilitaryPass3,0x11,Military3PassAdlezDeathText)
 DeathQuote(Dunlas,MilitaryPass4,0x02,0x00)
 DeathQuote(Richter,MilitaryPassAltia5,0x00,Military5PassAltiaRichterDeathText)
 DeathQuote(Xavus,MilitaryPassAltia7,0x02,Military7PassAltiaXavusDeathText)
-DeathQuote(Shanley,MilitaryPassHaedric5,0x00,Military5PassHaedricShanleyDeathText)
+DeathQuote(Shanley,MilitaryPassHaedric5,0x02,Military5PassHaedricShanleyDeathText)
+DeathQuote(Dunlas,MilitaryPassHaedric6,0x02,0x00)
+DeathQuote(Uzkalis,MilitaryPassHaedric7,0x02,Military7PassHaedricUzkalisDeathText)
 
 // Nonspecific death quotes come after.
 DeathQuote(Vicar,AllChapters,0x00,VicarDeathText)

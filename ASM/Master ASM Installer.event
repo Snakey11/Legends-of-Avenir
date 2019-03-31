@@ -54,7 +54,6 @@ ALIGN 4
 #inctext lyn "ModularEXP/ModularEXP.elf" "ModularEXP/Hooks.elf"
 #define ModularEXPEntry(Character,Chapter,EventID,Multiplier,Divisor) "BYTE Character Chapter EventID Multiplier Divisor 0x00 0x00 0x00"
 ModularEXPChapterTable:
-ModularEXPEntry(0xFF,0xFF,0x00,0,1)
 ModularEXPEntry(0,0,0,0,0)
 
 ALIGN 4
@@ -102,6 +101,9 @@ ALIGN 4
 
 ALIGN 4
 #include "Raid/Raid.event"
+
+ALIGN 4
+#inctext lyn "RemoveBallistae/RemoveBallistae.elf"
 
 /*
 PUSH

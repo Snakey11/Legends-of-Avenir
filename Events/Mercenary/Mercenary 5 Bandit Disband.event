@@ -72,7 +72,7 @@ MUSC Combat_Preparation
 SetBackground(0x05)
 TEXTSHOW Merc5BanditDisbandTalkWithMerchantText
 TEXTEND
-MUSC Laughter
+MUSC Zelos
 TEXTCONT
 TEXTEND
 MUSC Comrades

@@ -74,9 +74,9 @@
 #define MagusF 0x57
 #define MasterKnightF 0x58
 #define Commander 0x59
-#define Impaler 0x5A
+#define ImpalerM 0x5A
 #define WyvernGeneral 0x5B
-#define Hunter 0x5C
+#define HunterM 0x5C
 #define MasterKnightM 0x5D
 #define Champion 0x5E
 #define TruebladeF 0x5F
@@ -96,7 +96,7 @@
 #define CavalierM2 0x79
 #define CavalierF2 0x7A
 #define Knight2 0x7B
-#define Soldier2 0x7C
+#define SoldierM2 0x7C
 #define WyvernRider2 0x7D
 #define ArcherM2 0x7E
 #define ArcherF2 0x7F
@@ -113,6 +113,7 @@
 #define JacketHero 0x8A
 #define Gladiator 0x8B
 #define Basileus Gladiator
+#define Baselius Gladiator
 #define HectorClass 0x8C
 #define Hector HectorClass
 #define Truerblade 0x8D
@@ -134,10 +135,12 @@
 #define EdgySwordmaster 0x9C
 #define EmperorClass 0x9D
 #define MurielSage 0x9E
+#define ImpalerF 0x9F
+#define SoldierF2 0xA0
+#define HunterF 0xA1
 //LabelEnd
 
 //Label Character definitions
-#undef Hunter
 #define PlayerMMonk 0x1
 #define PlayerMShaman 0x2 
 #define PlayerMMage 0x3
@@ -570,6 +573,26 @@
 #define ForrestCavalierPaletteID 0x64
 #define ForrestGreatKnightPaletteID 0x65
 #define ForrestPaladinPaletteID 0x66
+#define MilitaryMMasterKnightPaletteID 0x67
+#define MilitaryMCommanderPaletteID 0x68
+#define MilitaryMImpalerPaletteID 0x69
+#define MilitaryMWyvernGeneralPaletteID 0x6A
+#define MilitaryMHunterPaletteID 0x6B
+#define MilitaryFMasterKnightPaletteID 0x6C
+#define MilitaryFCommanderPaletteID 0x6D
+#define MilitaryFImpalerPaletteID 0x6E
+#define MilitaryFWyvernGeneralPaletteID 0x6F
+#define MilitaryFHunterPaletteID 0x70
+#define MilitaryMCavalierPaletteID 0x71
+#define MilitaryMKnightPaletteID 0x72
+#define MilitaryMSoldierPaletteID 0x73
+#define MilitaryMWyvernRiderPaletteID 0x74
+#define MilitaryMArcherPaletteID 0x75
+#define MilitaryFCavalierPaletteID 0x76
+#define MilitaryFKnightPaletteID 0x77
+#define MilitaryFSoldierPaletteID 0x78
+#define MilitaryFWyvernRiderPaletteID 0x79
+#define MilitaryFArcherPaletteID 0x7A
 //LabelEnd
 
 //Label Maps, Map Changes, Events, and Tilesets
@@ -646,6 +669,7 @@
 #define AltianCastleMap 0xBD
 #define AltianDungeonCutsceneMap 0xBF
 #define DeidarMap 0xC0
+#define HaedricIgnefrontMap 0xC2
 
 //Map Changes
 
@@ -679,6 +703,7 @@
 #define XyliaTempleChanges 0xA5
 #define AltianCastleChanges 0xBE
 #define DeidarChanges 0xC1
+#define HaedricIgnefrontChanges 0xC3
 
 // Tilesets
 #define OutdoorSnowyObjectSet 0xB5
@@ -746,17 +771,18 @@
 
 //Tile Animations
 
-#define _01Anims "0x05"
-#define _0EAnims "0x12"
-#define _18Anims "0x1C"
-#define _2EAnims "0x05"
-#define _3CAnims "0x00"
-#define _42Anims "0x05"
-#define _50Anims "0x00"
-#define _5FAnims "0x00"
-#define _6CAnims "0x05"
-#define _79Anims "0x7D"
-#define _88Anims "0x00"
+#define _01Anims 0x05
+#define _0EAnims 0x12
+#define _18Anims 0x1C
+#define _2EAnims 0x05
+#define _3CAnims 0x00
+#define _42Anims 0x05
+#define _50Anims 0x00
+#define _5FAnims 0x00
+#define _6CAnims 0x05
+#define _79Anims 0x7D
+#define _88Anims 0x00
+#define LavaAnims2 0x54
 //LabelEnd
 
 //Label Map Sprites (Standing)
@@ -806,6 +832,9 @@
 #define UnarmedAnim(Animation) "BYTE Item 0x01 ; SHORT Animation"
 #define SpecialAnim(Animation,Weapon) "BYTE Weapon 0x00 ; SHORT Animation"
 #define BerserkerSword 0x01
+#define FighterAxe 0x19
+#define FighterHandAxe 0x1A
+#define FighterUnarmed 0x1B
 #define BerserkerAxe 0x23
 #define BerserkerHandAxe 0x24
 #define BerserkerUnarmed 0x25
@@ -817,7 +846,6 @@
 #define ChampionHandAxe 0x07
 #define ChampionUnarmed 0x08
 #define CommanderLance 0x09
-#define CommanderSpear 0x09
 #define CommanderUnarmed 0x0A
 #define CavalierSword 0x34
 #define CavalierLance 0x35
@@ -853,10 +881,10 @@
 #define HectorAxe 0xA7
 #define HectorHandAxe 0xA8
 #define HectorUnarmed 0xA9
-#define HunterBow 0xAA
-#define HunterUnarmed 0xAB
-#define ImpalerSpear 0xAC
-#define ImpalerUnarmed 0xAD
+#define HunterMBow 0xAA
+#define HunterMUnarmed 0xAB
+#define ImpalerMLance 0xAC
+#define ImpalerMUnarmed 0xAD
 #define IzukMagic 0xAE
 #define JacketHeroSword 0xD4
 #define JacketHeroAxe 0xD5
@@ -866,13 +894,10 @@
 #define MagusMStaff 0xB0
 #define MagusFMagic 0xB1
 #define MagusFStaff 0xB2
-#define MasterKnightMSword 0x3A
-#define MasterKnightMSpear 0x3B
 #define MasterKnightMAxe 0xD8
 #define MasterKnightMHandAxe 0xD9
-#define MasterKnightMUnarmed 0x3C
 #define MasterKnightFSword 0xDA
-#define MasterKnightFSpear 0xDB
+#define MasterKnightFLance 0xDB
 #define MasterKnightFAxe 0xDC
 #define MasterKnightFHandAxe 0xDD
 #define MasterKnightFUnarmed 0xDE
@@ -904,11 +929,8 @@
 #define WarlockAxe 0xCB
 #define WarlockHandAxe 0xCC
 #define WarlockUnarmed 0xCD
-#define WyvernGeneralSword 0x5C
-#define WyvernGeneralSpear 0x5D
 #define WyvernGeneralAxe 0xCE
 #define WyvernGeneralHandAxe 0xCF
-#define WyvernGeneralBow 0xD0
 #define WyvernGeneralUnarmed 0x5E
 #define GrandPaladinSword 0xE2
 #define GrandPaladinLance 0xE3
@@ -949,6 +971,17 @@
 #define KnightAxe 0x108
 #define KnightHandAxe 0x109
 #define MurielSageMagic 0x10A
+#define ImpalerFLance 0x10B
+#define ImpalerFUnarmed 0x10C
+#define HunterFBow 0x10D
+#define HunterFUnarmed 0x10E
+#define MasterKnightMSword 0x10F
+#define MasterKnightMLance 0x10E
+#define MasterKnightMUnarmed 0x10F
+#define CommanderAxe 0x110
+#define CommanderHandAxe 0x111
+#define HunterMSword 0x112
+#define WyvernGeneralLance 0x113
 //LabelEnd
 
 //Label Music Definitions
@@ -977,8 +1010,8 @@
 #define Lloyd 0x0411
 #define Beedles_Shop 0x0412
 #define A_Tragic_Decision 0x0413
+#define Tragic_Decision A_Tragic_Decision
 #define Venus_Lighthouse 0x0414
-
 //#define End_Peaceful_World 0x0300
 //#define Karma 0x0301
 #define Marble_Corridor 0x0415
@@ -989,7 +1022,8 @@
 #define Victorys_Delight 0x0419
 #define Zelos 0x041A
 #define Stage_One 0x041B
-#define Full_Force 0x41B
+#define Full_Force 0x041C
+#define Fury_Sparks 0x041D
 //LabelEnd
 
 //Label Skill Definitions
@@ -1013,7 +1047,7 @@
 #define DisciplineID 18 //Cavalier, Paladin
 #define SwordbreakerID 19 //WyvernLord
 #define SwordBreakerID SwordbreakerID
-#define LancebreakerID 20 //Nomad						Zalius
+#define LancebreakerID 20 //DONE
 #define LanceBreakerID LancebreakerID
 #define AxebreakerID 21 //Hero
 #define AxeBreakerID AxebreakerID
@@ -1044,7 +1078,7 @@
 #define SummonID 45 //display only: Summoner
 #define DanceID 46 //display only: Dancer
 #define LifetakerID 47 //DarkKnight
-#define GaleforceID 48 //Ranger
+#define GaleforceID 48 //								Zalius
 #define RenewalID 49 //Izuk
 #define NiceThighsID 50 //DONE
 #define DemoiselleID 51 //Troubadour, Valkyrie
@@ -1174,7 +1208,7 @@
 #define ArmorMarchID 174 //Unused
 #define VigorDanceID 175 //DONE
 #define InspiringTuneID 175 //Alias
-#define ForagerID 176 //Nomad
+#define ForagerID 176 //Ranger
 #define FullMetalBodyID 177 //						Derek
 #define LiquidOozeID 178 //							William
 #define ShadowgiftID 179 //Unused
@@ -1272,6 +1306,15 @@
 #define SandstormWeather 0x06
 #define CloudWeather 0x07
 
+#define AddSupport(Character1,Character2) "SVAL 0x1 Character1 ; SVAL 0x2 Character2 ; ASMC CallAddSupport|1"
+#define AddSupportNoPopup(Character1,Character2) "SVAL 0x1 Character1 ; SVAL 0x2 Character2 ; ASMC CallAddSupportNoPopup|1"
+#define IncreaseSupport(Character1,Character2) "SVAL 0x1 Character1 ; SVAL 0x2 Character2 ; ASMC CallIncreaseSupport|1"
+#define IncreaseSupportNoPopup(Character1,Character2) "SVAL 0x1 Character1 ; SVAL 0x2 Character2 ; ASMC CallIncreaseSupportNoPopup|1"
+#define SetSupport(Character1,Character2,Level) "SVAL 0x1 Character1 ; SVAL 0x2 Character2 ; SVAL 0x3 Level ; ASMC CallSetSupport|1"
+#define ClearSupport(Character1,Character2) "SVAL 0x1 Character1 ; SVAL 0x2 Character2 ; ASMC CallClearSupport|1"
+#define CSupport 1
+#define BSupport 2
+#define ASupport 3
 //LabelEnd
 #define EndUnit UNIT // Necessary for folding
 #define EndA2 ENDA

@@ -11,8 +11,8 @@
   // TODO: make the sleep staff inflict freeze
 
   PUSH
-    ORG 0x276F8  //sick displays sleep map anim
-      WORD 0x80277A8
+    //ORG 0x276F8  //sick displays sleep map anim
+      //WORD 0x80277A8
 
     // ORG 0x178EA  //2 turns = 1 player phase
       // BYTE 0x20

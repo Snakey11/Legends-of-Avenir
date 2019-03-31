@@ -208,8 +208,15 @@ NormalDamage(1,30)
 NormalDamage(1,30)
 EndAttack
 MilitaryNarratorFight(5,18)
-
 LABEL 0x2
+ENUF 0x67
+ENUF 0x68
+ENUF 0x69
+ENUF 0x6A
+ENUF 0x6B
+ENUF 0x6C
+ENUF 0x6D
+ENUF 0x6E
 DISA Jasper
 DISA Derek
 DISA Finoc

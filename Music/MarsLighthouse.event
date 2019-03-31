@@ -4,7 +4,7 @@
 	#define	songMarsLighthouse_grp  voicegroup000
 	#define	songMarsLighthouse_pri  0
 	#define	songMarsLighthouse_rev  0
-	#define	songMarsLighthouse_mvl  150
+	#define	songMarsLighthouse_mvl  180
 	#define	songMarsLighthouse_key  0
 	#define	songMarsLighthouse_tbs  1
 	#define	songMarsLighthouse_exg  0

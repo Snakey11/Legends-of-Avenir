@@ -97,3 +97,38 @@
 #include "Cavalier Lance.event"
 
 #include "Cavalier Unarmed.event"
+
+
+#include "Impaler F Lance.event"
+
+#include "Impaler F Unarmed.event"
+
+
+#include "Commander Sword.event"
+
+#include "Commander Lance.event"
+
+#include "Commander Axe.event"
+
+#include "Commander Hand Axe.event"
+
+#include "Commander Unarmed.event"
+
+
+#include "Hunter F Bow.event"
+
+#include "Hunter F Unarmed.event"
+
+
+#include "Hunter M Sword.event"
+
+#include "Hunter M Bow.event"
+
+#include "Hunter M Unarmed.event"
+
+
+#include "Warlock Axe.event"
+
+#include "Warlock Hand Axe.event"
+
+#include "Warlock Unarmed.event"

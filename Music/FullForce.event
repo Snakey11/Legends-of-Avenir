@@ -4,7 +4,7 @@
 	#define	songFullForce_grp  voicegroup000
 	#define	songFullForce_pri  0
 	#define	songFullForce_rev  0
-	#define	songFullForce_mvl  127
+	#define	songFullForce_mvl  90
 	#define	songFullForce_key  0
 	#define	songFullForce_tbs  1
 	#define	songFullForce_exg  0

@@ -88,7 +88,7 @@ RangerSkillList:
 BYTE 255 CertainBlowID
 BYTE 255 QuickDrawID
 BYTE 5 CantoPlusID
-BYTE 10 GaleforceID
+BYTE 10 ForagerID
 BYTE 00 00
 ALIGN 4
 

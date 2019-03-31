@@ -157,3 +157,7 @@ LostSoulF,0x0
 ArmoredWyvernLord,WyvernLordSkillList|IsPointer
 EdgySwordmaster,SwordmasterSkillList|IsPointer
 EmperorClass,EmperorClassSkillList|IsPointer
+MurielSage,SageSkillList|IsPointer
+Impaler F,ImpalerSkillList|IsPointer
+SoldierF2,SoldierSkillList|IsPointer
+Hunter F,HunterSkillList|IsPointer

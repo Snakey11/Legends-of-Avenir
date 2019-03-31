@@ -113,6 +113,7 @@ GotoPrepScreen
 
 //Label EndingScene
 EndingScene:
+MUSC Victory
 SetBackground(0x05)
 Text(Military5PassHaedricEndingText)
 MoveToChapter(MilitaryPassHaedric6)
@@ -120,7 +121,7 @@ ENDA
 
 //Label Turn Events
 Turn1:
-MUSC Follow_Me
+MUSC Determination
 CAM1 [16,12]
 STAL 0x20
 Text(Military5PassHaedricStartBattleText)
@@ -135,6 +136,7 @@ TopHouse:
 MUSI
 Text(0x01,Military5PassHaedricHouse1Text)
 GiveItem(Tomahawk,0xFFFF)
+TileChange(6,2)
 MUNO
 NoFade
 EndA2
@@ -143,6 +145,7 @@ RightHouse:
 MUSI
 Text(0x01,Military5PassHaedricHouse2Text)
 GiveItem(KillerLance,0xFFFF)
+TileChange(16,12)
 MUNO
 NoFade
 EndA2
@@ -151,6 +154,7 @@ BottomHouse:
 MUSI
 Text(0x01,Military5PassHaedricHouse3Text)
 GiveItem(ArmsScroll,0xFFFF)
+TileChange(9,14)
 MUNO
 NoFade
 ENDA
@@ -184,15 +188,15 @@ UNIT
 ChapterMeanies1:
 UNIT Shanley Sage Shanley Level(6,Enemy,True) [22,15] 0x00 0x00 0x00 0x00 [Arcthunder] GuardAI
 UNIT Arcanian General Shanley Level(3,Enemy,True) [2,9] 0x00 0x00 0x00 0x00 [IronBlade] GuardAI
-UNIT Arcanian Soldier Shanley Level(9,Enemy,True) [4,10] Drop 0x00 0x00 0x00 [Horseslayer] NoAI
+UNIT Arcanian Sentinel Shanley Level(4,Enemy,True) [4,10] Drop 0x00 0x00 0x00 [Horseslayer] NoAI
 UNIT Arcanian Soldier Shanley Level(10,Enemy,True) [5,11] 0x00 0x00 0x00 0x00 [IronLance] NoAI
-UNIT Arcanian Mage Shanley Level(8,Enemy,True) [7,15] 0x00 0x00 0x00 0x00 [Fire] AttackInRangeAI
+UNIT Arcanian Mage Shanley Level(10,Enemy,True) [7,15] 0x00 0x00 0x00 0x00 [Fire] AttackInRangeAI
 UNIT Arcanian Knight Shanley Level(11,Enemy,True) [4,5] 0x00 0x00 0x00 0x00 [KillerAxe] AttackInRangeAI
-UNIT Arcanian Fighter Shanley Level(12,Enemy,True) [12,8] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
-UNIT Arcanian Fighter Shanley Level(9,Enemy,True) [12,9] 0x00 0x00 0x00 0x00 [Hammer] AttackInRangeAI
-UNIT Arcanian Monk Shanley Level(11,Enemy,True) [9,9] Drop 0x00 0x00 0x00 [Divine,GuidingRing] NoAI
-UNIT Arcanian Cavalier Shanley Level(10,Enemy,True) [11,15] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
-UNIT Arcanian Cavalier Shanley Level(9,Enemy,True) [18,8] 0x00 0x00 0x00 0x00 [Dragonspear] ChaseOnceApproachedAI
+UNIT Arcanian Fighter Shanley Level(14,Enemy,True) [12,8] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
+UNIT Arcanian Fighter Shanley Level(12,Enemy,True) [12,9] 0x00 0x00 0x00 0x00 [Hammer] AttackInRangeAI
+UNIT Arcanian Bishop Shanley Level(3,Enemy,True) [9,9] Drop 0x00 0x00 0x00 [Divine,GuidingRing] NoAI
+UNIT Arcanian Cavalier Shanley Level(11,Enemy,True) [11,15] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
+UNIT Arcanian Cavalier Shanley Level(12,Enemy,True) [18,8] 0x00 0x00 0x00 0x00 [Dragonspear] ChaseOnceApproachedAI
 UNIT Arcanian Cavalier Shanley Level(11,Enemy,True) [17,10] 0x00 0x00 0x00 0x00 [DevilSword] ChaseOnceApproachedAI
 UNIT Arcanian Archer Shanley Level(9,Enemy,True) [8,5] 0x00 0x00 0x00 0x00 [IronBow] ChaseOnceApproachedAI
 UNIT
@@ -204,10 +208,10 @@ UNIT Arcanian Pirate Shanley Level(14,Enemy,True) [2,2] 0x00 0x00 0x00 0x00 [Sho
 UNIT Arcanian Pirate Shanley Level(10,Enemy,True) [15,4] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
 UNIT Arcanian PegasusKnight Shanley Level(14,Enemy,True) [18,14] 0x00 0x00 0x00 0x00 [SlimLance] AttackInRangeAI
 UNIT Arcanian PegasusKnight Shanley Level(15,Enemy,True) [17,15] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
-UNIT Arcanian Archer Shanley Level(10,Enemy,True) [18,2] 0x00 0x00 0x00 0x00 [SteelLongbow] AttackInRangeAI
-UNIT Arcanian Sentinel Shanley Level(2,Enemy,True) [21,6] 0x00 0x00 0x00 0x00 [ShortSpear,Armorslayer] ChaseOnceApproachedAI
-UNIT Arcanian Halberdier Shanley Level(3,Enemy,True) [21,12] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
-UNIT Arcanian Cavalier Shanley Level(10,Enemy,True) [21,16] 0x00 0x00 0x00 0x00 [IronSword,Javelin] AttackInRangeAI
+UNIT Arcanian Archer Shanley Level(12,Enemy,True) [18,2] 0x00 0x00 0x00 0x00 [SteelLongbow] AttackInRangeAI
+UNIT Arcanian Sentinel Shanley Level(3,Enemy,True) [21,6] 0x00 0x00 0x00 0x00 [ShortSpear,Armorslayer] ChaseOnceApproachedAI
+UNIT Arcanian Halberdier Shanley Level(4,Enemy,True) [21,12] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT Arcanian Cavalier Shanley Level(12,Enemy,True) [21,16] 0x00 0x00 0x00 0x00 [IronSword,Javelin] AttackInRangeAI
 UNIT Arcanian Valkyrie Shanley Level(2,Enemy,True) [23,16] 0x00 0x00 0x00 0x00 [Shine] AttackInRangeAI
 UNIT Arcanian Mage Shanley Level(13,Enemy,True) [21,9] 0x00 0x00 0x00 0x00 [Elaqua] AttackInRangeAI
 UNIT Arcanian Hero Shanley Level(4,Enemy,True) [18,2] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
