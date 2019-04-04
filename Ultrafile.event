@@ -22,6 +22,30 @@
 		#define __DEBUG__
 	#endif
 	//#define TESTING
+	#ifdef __PRIVATE__
+		MESSAGE Compiling PRIVATE release
+	#endif
+	#ifdef __PUBLIC
+		MESSAGE Compiling PUBLIC release
+	#endif
+	#ifndef __NO_MERCENARY__
+		MESSAGE Compiling with mercenary
+	#else
+		MESSAGE Compiling without mercenary
+	#endif
+	#ifndef __NO_MILITARY__
+		MESSAGE Compiling with military
+	#else
+		MESSAGE Compiling without military
+	#endif
+	#ifndef __NO_MAGE__
+		MESSAGE Compiling with mage
+	#else
+		MESSAGE Compiling without mage
+	#endif
+	#ifdef __DEBUG__
+		MESSAGE Compiling with debug features
+	#endif
 	
 	#ifdef TESTING // For clean-ROM-style testing
 	

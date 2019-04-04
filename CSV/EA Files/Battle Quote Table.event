@@ -57,7 +57,7 @@ SpecifiedBattleConvo(Mayor,PlayerFMyrmidon,MercenaryBandit4,0x19,Merc4BanditMayo
 SpecifiedBattleConvo(Mayor,PlayerFPegasusKnight,MercenaryBandit4,0x19,Merc4BanditMayorPlayerBattleText)
 SpecifiedBattleConvo(Mayor,Adlez,MercenaryBandit4,0x20,Merc4BanditMayorAdlezBattleText)
 SpecifiedBattleConvo(Tyrone,Adlez,MercenaryBandit4,0x21,Merc4BanditTyroneAdlezBattleText)
-UnspecifiedBattleConvo(Mayor,MercenaryBandit4,0x23,Merc4BanditMayorBattleText)
+UnspecifiedBattleConvo(Mayor,MercenaryBandit4,0x24,Merc4BanditMayorBattleText) // 0x23 is used by escape/arrive reeeee
 UnspecifiedBattleConvo(Tyrone,MercenaryBandit4,0x22,Merc4BanditTyroneBattleText)
 UnspecifiedBattleConvo(Harken,MercenaryBanditBandit6,0x20,Merc6BanditBanditHarkenBattleText)
 SpecifiedBattleConvo(Harken,Adlez,MercenaryBanditBandit6,0x10,Merc6BanditBanditHarkenAdlezBattleText)

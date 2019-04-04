@@ -76,7 +76,7 @@ BaseSupportMenuCommands:
 	EventMenuCommand(BaseSupportTextID7,BaseSupportUsability,BaseSupportConvo7)
 	EventMenuCommand(BaseSupportTextID8,BaseSupportUsability,BaseSupportConvo8)
 EventMenuCommandEnd
-
+/*
 MESSAGE Master support calculations are at MasterSupportCalculation
 MESSAGE Stat screen stuff is at DisplaySupportStatScreen1 and DisplaySupportStatScreen2
 MESSAGE Prep screen usability is at PrepScreenSupportUsability
@@ -89,4 +89,4 @@ MESSAGE The text is made at BuildSupportMenuText
 MESSAGE Increase support is at IncreaseSupport
 MESSAGE Convo usability is at BaseSupportUsability
 MESSAGE Geometry shit is at BuildSupportMenuGeometry
-MESSAGE Call clear support is at CallClearSupport
+MESSAGE Call clear support is at CallClearSupport*/

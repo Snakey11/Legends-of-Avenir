@@ -224,7 +224,7 @@ UNIT Arya Myrmidon_F Arya Level(1,Ally,True) [3,7] 0x00 0x00 0x00 0x00 [IronAxe,
 UNIT
 
 ConnorAdlezThrone:
-UNIT Adlez Brigand Adlez Level(1,NPC,True) [1,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT Adlez Brigand Adlez Level(9,Ally,True) [1,3] 0x00 0x00 0x00 0x00 [KillerAxe,HandAxe] NoAI 
 UNIT Connor Mercenary Connor Level(1,NPC,True) [3,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 UNIT
 

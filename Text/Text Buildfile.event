@@ -84,6 +84,12 @@ for losers.[A][X]
 ## SupportIncreasedToText
 Support level increased to [X]
 
+## ControlONMessage
+Enemy control ON[X]
+
+## ControlOFFMessage
+Enemy control OFF[X]
+
 #include "Chapters/Chapter Text Assembler.event"
 
 #include "Items/Item Text Assembler.event"

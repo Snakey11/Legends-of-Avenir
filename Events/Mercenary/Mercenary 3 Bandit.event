@@ -96,7 +96,6 @@ EndingScene:
 FADI 0x5
 CLEA 0x0
 CLEE 0x0
-LOAD1 0x1 LoadAdlez
 MUSC Victory
 SetBackground(0x1D)
 Text(Merc3BanditEndingText)

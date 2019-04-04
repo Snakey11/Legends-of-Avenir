@@ -36,6 +36,9 @@ ALIGN 4
 #include "Display All Weapon Level Ups/Promotion Ranks Fix Installer.event"
 
 ALIGN 4
+#include "EnemyControl/Enemy Control.event"
+
+ALIGN 4
 #include "Escape-Arrive/Escape Installer.event"
 
 ALIGN 4
@@ -70,7 +73,11 @@ PortraitSelectionEntry(MaleMercMug,0x00,MaleMercList,0xE0E0)
 PortraitSelectionEntry(FemaleMercMug,0x00,FemaleMercList,0xE0E0)
 PortraitSelectionEntry(MaleMageMug,0x00,MaleMageList,0xE0E0)
 PortraitSelectionEntry(FemaleMageMug,0x00,FemaleMageList,0xE0E0)
+//PortraitSelectionEntry(KendrickMug,0x00,KendrickList,0xE0E0)
 SHORT 0x0 0x0 0x0 0x0 0x0 0x0
+
+KendrickList:
+BYTE 0x00 0x00
 
 MaleMilitaryList:
 BYTE 0x6E True  0x68 True  0x00 0x00
@@ -119,6 +126,10 @@ BL(ReversePortrait)
 
 POP
 */
+ALIGN 4
+#inctext lyn "NameSelection/SetName.elf"
+KendrickName:
+String(Kendrick)
 
 ALIGN 4
 #include "Show Heal Amount/Show Heal Amount.event"
