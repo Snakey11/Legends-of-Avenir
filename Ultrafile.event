@@ -25,7 +25,7 @@
 	#ifdef __PRIVATE__
 		MESSAGE Compiling PRIVATE release
 	#endif
-	#ifdef __PUBLIC
+	#ifdef __PUBLIC__
 		MESSAGE Compiling PUBLIC release
 	#endif
 	#ifndef __NO_MERCENARY__
