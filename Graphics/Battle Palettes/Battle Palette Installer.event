@@ -312,11 +312,11 @@ MilitaryMCommanderPalette:
 
 ALIGN 4
 MilitaryMImpalerPalette:
-//#incbin "Military M Impaler.dmp"
+#incbin "Military M Impaler.dmp"
 
 ALIGN 4
 MilitaryMWyvernGeneralPalette:
-//#incbin "Military M Wyvern General.dmp"
+#incbin "Military M Wyvern General.dmp"
 
 ALIGN 4
 MilitaryMHunterPalette:
@@ -324,7 +324,7 @@ MilitaryMHunterPalette:
 
 ALIGN 4
 MilitaryFMasterKnightPalette:
-//#incbin "Military F Master Knight.dmp"
+#incbin "Military F Master Knight.dmp"
 
 ALIGN 4
 MilitaryFCommanderPalette:
@@ -332,7 +332,7 @@ MilitaryFCommanderPalette:
 
 ALIGN 4
 MilitaryFImpalerPalette:
-//#incbin "Military F Impaler.dmp"
+#incbin "Military F Impaler.dmp"
 
 ALIGN 4
 MilitaryFWyvernGeneralPalette:

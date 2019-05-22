@@ -74,12 +74,13 @@ STAL 0x10
 MoveMercenary(5,4)
 STAL 0x10
 LOAD1 0x1 MaximusCutscene
+LOAD2 0x1 LoadLux
 ENUN
 EnterStop
 STAL 0x8
 FADI 0x5
 MUSC Advance
-LOAD1 0x1 JasperDerek
+LOAD2 0x1 JasperDerek
 ENUN
 CLEN 0x0
 SetBackground(0x30)
@@ -108,15 +109,7 @@ STAL 0x30
 CAM1 [12,14]
 EnterStop
 Text(Merc5MilitiaWaitCesariaGrantText)
-GiveToSupplySilent(SteelSword)
-GiveToSupplySilent(Armorslayer)
-GiveToSupplySilent(ShortSpear)
-GiveToSupplySilent(IronLance)
-GiveToSupplySilent(ShortAxe)
-GiveToSupplySilent(SteelBow)
-GiveToSupplySilent(Elthunder)
-GiveToSupplySilent(Shine)
-GiveToSupplySilent(Mend)
+SetSupport(Jasper,Derek,CSupport)
 NoFade
 GotoPrepScreen
 
@@ -266,6 +259,9 @@ UNIT
 
 MaximusCutscene:
 UNIT Maximus BattleSage Maximus Level(4,NPC,True) [0,1] 0x00 0x00 0x1 REDA4R3 [IronSword,Vulnerary] NoAI 
+UNIT
+
+LoadLux:
 UNIT Lux Mage_F Lux Level(10,Ally,True) [1,0] 0x00 0x00 0x1 REDA5R2 [Elaqua,Fire] NoAI 
 UNIT
 

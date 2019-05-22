@@ -1,0 +1,288 @@
+
+EventPointerTable(Military3AcceptEvents,ThisChapter)
+
+EnableAIOption(MilitaryAccept3,EnableLockpick | EnableDoorKey)
+
+//Label ThisChapter
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN EndMainPointer EndMainPointer EndMainPointer
+POIN EndMainPointer
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+//LabelEnd
+
+//Label TurnBasedEvents
+TurnBasedEvents:
+TurnEventPlayer(0x00,Turn2,2)
+TurnEventPlayer(0x00,MadelineRemusHere,3)
+TurnEventPlayer(0x00,Turn4,4)
+TurnEventEnemy(0x00,ThiefHere,5)
+InfiniteTurnEventPlayer(0x00,Turn8,8)
+TurnEventPlayer(0x00,Turn9,9)
+InfiniteTurnEventPlayer(0x00,Turn12,12)
+END_MAIN
+
+//Label CharacterBasedEvents
+ALIGN 32
+CharacterBasedEvents:
+END_MAIN
+
+//Label LocationBasedEvents
+LocationBasedEvents:
+Seize(0x00,Retreat,0,4)
+Seize(0x00,Retreat,0,5)
+Seize(0x00,Retreat,0,6)
+Door(9,2)
+Door(1,11)
+Door(2,11)
+Door(1,12)
+Door(2,12)
+Chest(KnightCrest,12,7)
+END_MAIN
+
+//Label MiscBasedEvents
+MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
+END_MAIN
+
+//Label TrapData
+TrapData:
+ENDTRAP
+ALIGN 4
+
+//Label Units
+Units:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [8,8] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Jasper 0x00 0x00 Level(1,Ally,True) [6,10] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [5,8] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [8,10] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
+
+//Label BeginingScene
+BeginningScene:
+ENUT 0x22 // Enables escape.
+CAM1 [7,9]
+LOAD3 0x1 PlayerLoading1
+LOAD2 0x1 Friends
+ENUN
+MUSC Derris_Kharlan_Appear
+SetBackground(0x21)
+Text(Military3AcceptBeginningText)
+MUSC Advance
+SetBackground(0x1B)
+Text(Military3AcceptSettingOutText)
+FADI 0x5
+FadeOutMusic
+STAL 0x40
+MUSC Anchoret
+SetBackground(0x27)
+Text(Military3AcceptFort1Text)
+EndConvo
+MUSC Raid
+STAL 0x08
+Text(Military3AcceptFort2Text)
+CAM1 [7,5]
+STAL 0x10
+FlashCursor(0,5,60)
+STAL 0x10
+CAM1 [7,9]
+Text(Military3AcceptFort3Text)
+STAL 0x08
+LOAD1 0x1 Arcanians
+CAM1 [10,11]
+ENUN
+STAL 0x08
+FlashCursor(15,15,60)
+STAL 0x08
+Text(Military3AcceptSeanBeginningText)
+GotoPrepScreen
+
+//Label EndingScene
+EndingScene: // The boss was killed.
+MUSC Victory
+SetBackground(0x25)
+Text(Military3AcceptBossDeadText)
+MoveToChapter(MilitaryAcceptHold4)
+NoFade
+EndA2
+
+Retreat: // Tact activated the escape.
+MUSC Into_the_Shadow_of_Victory
+SetBackground(0x22)
+Text(Military3AcceptRetreat1Text)
+FADI 0x5
+MUSI
+STAL 0x30
+MUNO
+SetBackground(0x19)
+Text(Military3AcceptRetreat2Text)
+MoveToChapter(MilitaryAcceptRetreat4)
+NoFade
+ENDA
+
+//Label Turn events
+Turn2:
+CamON
+LOAD1 0x1 Turn2Units
+ENUN
+CamOFF
+SVAL 0x1 0x00
+CHAI [4,16]
+CHAI [5,15]
+NoFade
+EndA2
+
+MadelineRemusHere:
+MUSC Comrades
+CAM1 [7,5]
+LOAD1 0x1 MadelineRemus
+ENUN
+STAL 0x10
+Text(Military3AcceptMadelineRemusText)
+NoFade
+EndA2
+
+Turn4:
+CamON
+LOAD1 0x1 Turn4Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+ThiefHere:
+CamON
+LOAD1 0x1 LoadLooter
+ENUN
+STAL 0x30
+CamOFF
+NoFade
+EndA2
+
+Turn8:
+Every3Turns(0x00,0x01,0x02,0x11,0x12,Turn8Loop)
+NoFade
+EndA2
+
+Turn8Loop:
+CamON
+LOAD1 0x1 LoopUnits1
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn9:
+CamON
+LOAD1 0x1 Turn9Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn12:
+Every3Turns(0x00,0x01,0x02,0x13,0x14,Turn12Loop)
+NoFade
+EndA2
+
+Turn12Loop:
+CamON
+LOAD1 0x1 LoopUnits2
+ENUN
+CamOFF
+NoFade
+ENDA
+
+//Label Escape points
+EscapePointPointerTable(MilitaryAccept3,Military3AcceptEscapePoints)
+Military3AcceptEscapePoints:
+EscapePoint(8,0,MoveUp)
+EscapePoint(9,0,MoveUp)
+EscapePoint(10,0,MoveUp)
+EscapePoint(15,0,MoveUp)
+EscapePoint(17,6,MoveUp)
+EscapePointEnd
+//LabelEnd
+
+	/*UNIT DATA*/
+
+//Label PlayerLoading
+PlayerLoading1:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [7,8] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
+
+//Label Chapter units
+Friends:
+UNIT Jasper 0x00 0x00 Level(1,Ally,True) [6,10] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [5,8] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [8,10] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+Arcanians:
+UNIT Sean Sentinel Sean Level(2,Enemy,True) [12,16] 0x00 0x00 0x01 REDA15R15 [IronBlade,ShortAxe] GuardAI
+UNIT Arcanian Soldier Sean Level(9,Enemy,True) [4,16] 0x00 0x00 0x01 REDA2R14 [Javelin,DoorKey] AttackInRangeAI
+UNIT Arcanian Fighter Sean Level(8,Enemy,True) [5,16] 0x00 0x00 0x01 REDA5R15 [IronAxe] AttackInRangeAI
+UNIT Arcanian Fighter Sean Level(9,Enemy,True) [4,16] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
+UNIT Arcanian Mage Sean Level(8,Enemy,True) [6,16] 0x00 0x00 0x01 REDA6R14 [Wind] NoAI
+UNIT Arcanian Cavalier Sean Level(9,Enemy,True) [11,16] 0x00 0x00 0x01 REDA11R15 [SteelLance,SlimSword] AttackInRangeAI
+UNIT Arcanian Cavalier Sean Level(10,Enemy,True) [12,16] 0x00 0x00 0x01 REDA12R14 [Zanbato] AttackInRangeAI
+UNIT Arcanian Cavalier Sean Level(8,Enemy,True) [17,12] 0x00 0x00 0x01 REDA15R12 [IronLance] AttackInRangeAI
+UNIT Arcanian Cavalier Sean Level(9,Enemy,True) [17,12] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
+UNIT Arcanian Knight Sean Level(10,Enemy,True) [17,3] 0x00 0x00 0x01 REDA14R3 [ShortSpear] GuardAI
+UNIT Arcanian Mercenary Sean Level(10,Enemy,True) [17,3] 0x00 0x00 0x01 REDA15R2 [IronSword] NoAI
+UNIT Arcanian Mercenary Sean Level(9,Enemy,True) [17,4] 0x00 0x00 0x01 REDA15R4 [PoisonSword] NoAI
+UNIT Arcanian Mage Sean Level(7,Enemy,True) [17,8] 0x00 0x00 0x01 REDA16R8 [Elfire] ChaseOnceApproachedAI
+UNIT
+
+Turn2Units:
+UNIT Arcanian Mercenary Sean Level(9,Enemy,True) [5,16] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT Arcanian Soldier Sean Level(10,Enemy,True) [7,16] 0x00 0x00 0x00 0x00 [IronLance] NoAI
+UNIT Arcanian Mercenary Sean Level(10,Enemy,True) [17,7] Drop 0x00 0x00 0x00 [KillingEdge] NoAI
+UNIT
+
+MadelineRemus:
+UNIT Madeline Archer_F 0x00 Level(10,Ally,True) [0,5] 0x00 0x00 0x01 REDA5R4 [SteelLongbow,Vulnerary] NoAI
+UNIT Remus Soldier 0x00 Level(8,Ally,True) [0,4] 0x00 0x00 0x01 REDA5R5 [SteelLance,Vulnerary] NoAI
+UNIT
+
+Turn4Units:
+UNIT Arcanian Cavalier Sean Level(9,Enemy,True) [7,16] Drop 0x00 0x00 0x00 [Dragonspear] NoAI
+UNIT Arcanian Cavalier Sean Level(9,Enemy,True) [8,16] 0x00 0x00 0x00 0x00 [SteelSword,Javelin] NoAI
+UNIT Arcanian Knight Sean Level(13,Enemy,True) [10,16] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
+UNIT Arcanian Shaman Sean Level(10,Enemy,True) [17,13] 0x00 0x00 0x00 0x00 [Flux] NoAI
+UNIT Arcanian Myrmidon Sean Level(9,Enemy,True) [17,6] 0x00 0x00 0x00 0x00 [IronSword] NoAI
+UNIT
+
+LoadLooter:
+UNIT Looter Thief Looter Level(6,Enemy,True) [9,0] Drop 0x00 0x00 0x00 [SlimSword,DoorKey,ChestKey] LootingThiefAI
+UNIT
+
+LoopUnits1:
+UNIT Arcanian Cavalier Sean Level(10,Enemy,True) [17,3] 0x00 0x00 0x00 0x00 [Horseslayer] NoAI
+UNIT Arcanian Cavalier Sean Level(9,Enemy,True) [17,4] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT Arcanian Mage Sean Level(9,Enemy,True) [17,6] 0x00 0x00 0x00 0x00 [Aqua] NoAI
+UNIT Arcanian Mage Sean Level(10,Enemy,True) [7,16] 0x00 0x00 0x00 0x00 [Elthunder] NoAI
+UNIT Arcanian Soldier Sean Level(10,Enemy,True) [6,16] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT
+
+Turn9Units:
+UNIT Arcanian Monk Sean Level(10,Enemy,True) [4,16] 0x00 0x00 0x00 0x00 [Lightning] NoAI
+UNIT Arcanian Knight Sean Level(10,Enemy,True) [17,5] 0x00 0x00 0x00 0x00 [HeavySpear] NoAI
+UNIT Arcanian Fighter Sean Level(10,Enemy,True) [16,7] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
+UNIT Arcanian Fighter Sean Level(11,Enemy,True) [17,19] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT
+
+LoopUnits2:
+UNIT Arcanian Paladin Sean Level(2,Enemy,True) [17,16] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Arcanian Cavalier Sean Level(10,Enemy,True) [11,16] 0x00 0x00 0x00 0x00 [PoisonLance] NoAI
+UNIT Arcanian Cavalier Sean Level(11,Enemy,True) [17,10] 0x00 0x00 0x00 0x00 [IronBlade] NoAI
+UNIT Arcanian Pirate Sean Level(10,Enemy,True) [6,16] 0x00 0x00 0x00 0x00 [Hammer] NoAI
+UNIT Arcanian Mage Sean Level(9,Enemy,True) [17,5] 0x00 0x00 0x00 0x00 [Elfire] NoAI
+EndUnit

@@ -18,6 +18,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+SupportConvo(ASupport,Elanil,Finoc,Support1Text)
 END_MAIN
 
 LocationBasedEvents:
@@ -103,15 +104,7 @@ EndingScene:
 FADI 0x5
 CLEA 0x0
 CLEE 0x0
-SVAL 0x1 60
-ASMC MaxMercenaryHP|1
-SET_HP Arc
-SET_HP Luke
-SET_HP Elanil
-SET_HP Finoc
-SET_HP Lux
-SET_HP Jasper
-SET_HP Derek
+ASMC RefreshAll|1
 LOAD2 0x1 EndingFriends
 LOAD3 0x1 PlayerLoading2
 ENUN
@@ -212,7 +205,7 @@ UNIT Arcanian Shaman Pat Level(11,Enemy,True) [21,12] 0x00 0x00 0x00 0x00 [Dulam
 UNIT Arcanian Hero Pat Level(5,Enemy,True) [22,16] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
 UNIT Arcanian Mage Pat Level(10,Enemy,True) [21,17] 0x00 0x00 0x00 0x00 [Elwind] NoAI
 UNIT Arcanian GreatKnight Pat Level(6,Enemy,True) [21,22] 0x00 0x00 0x00 0x00 [SilverAxe] AttackInRangeAI
-UNIT Arcanian GreatKnight Pat Level(5,Enemy,True) [22,22] 0x00 0x00 0x00 0x00 [Javelin,SteelSword] AttackInRangeAI
+UNIT Arcanian GreatKnight Pat Level(5,Enemy,True) [22,22] 0x00 0x00 0x00 0x00 [Javelin,ToxinSword] AttackInRangeAI
 UNIT Arcanian Sage Pat Level(4,Enemy,True) [16,22] 0x00 0x00 0x00 0x00 [Divine,Thunder] AttackInRangeAI
 UNIT Arcanian WyvernRider Pat Level(12,Enemy,True) [13,13] Drop 0x00 0x00 0x00 [SteelLance,Vulnerary] NoAI
 UNIT Arcanian WyvernRider Pat Level(11,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [Axereaver] NoAI

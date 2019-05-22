@@ -303,4 +303,9 @@ POIN MusicTable
 ORG $D032C
 POIN MusicTable
 
+ORG $3970C // Whether the AI should use door keys, lockpicks, etc.
+POIN AIOptionsTable
+ORG $3976C
+POIN AIOptionsTable
+
 POP

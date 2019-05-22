@@ -65,7 +65,7 @@ STAL 0x30
 Text(Merc2MilitiaTheresDanaanText)//Opening text: will go into the tavern
 MoveMercenary(13,6)
 ENUN
-ClearMercenary
+CLEA 0x0
 STAL 0x20
 FADI 0x5
 LOAD1 0x1 Bandits
@@ -78,7 +78,18 @@ TEXTEND
 EndConvo
 STAL 0x20
 LOAD3 0x1 PlayerLoading2 //FMercenaryStart, FMyrmidonStart, FPegasusKnightStart, MMercenaryStart, MMyrmidonStart, MFighterStart, MPirateStart, MBRigandStart.
-LOAD1 0x1 ArcStuff
+CHECK_EVENTID 0x6E
+BEQ 0x0 0x0 0xC
+	// If male
+	CHECK_EVENTID 0x6A // Myrmidon
+	BEQ 0x0 0x0 0xC
+	CHECK_EVENTID 0x6B // Mercenary
+	BEQ 0x0 0x0 0xC
+		LOAD1 0x1 SwordArc
+		GOTO 0x1
+LABEL 0x0
+	LOAD1 0x1 ArcStuff // Axe Arc
+LABEL 0x1
 ENUN
 Text(Merc2MilitiaOutsideText)
 NoFade
@@ -96,6 +107,10 @@ LABEL 0x14
 	Text(Merc2MilitiaGerwickDeadNoLukeText)
 	LOAD1 0x1 LukeStuff2
 LABEL 0x15
+GiveToSupplySilent(KillingEdge)
+GiveToSupplySilent(SteelAxe)
+GiveToSupplySilent(Shine)
+GiveToSupplySilent(SlimLance)
 MoveToChapter(MercenaryMilitiaKill3)
 ENDA
 
@@ -132,6 +147,7 @@ LABEL 0x11
 LOAD1 0x1 LukeStuff
 ENUN
 TileChange(11,9)
+SetSupport(Arc,Luke,CSupport)
 MURE 0x5
 NoFade
 EndA2
@@ -177,7 +193,7 @@ EndUnit
 
 //Label Other units
 Bandits:
-UNIT Gerwick Pirate Gerwick Level(6,Enemy,True) [5,13] 0x02 0x00 0x0 0x0 [ShortAxe,RedGem] GuardTileAI 
+UNIT Gerwick Pirate Gerwick Level(6,Enemy,True) [5,13] 0x02 0x00 0x0 0x0 [ShortAxe,RedGem] GuardAI 
 UNIT GerwickBandit Soldier Gerwick Level(6,Enemy,True) [8,5] 0x00 0x00 0x0 0x0 [Javelin] [0] 
 UNIT GerwickBandit Soldier Gerwick Level(5,Enemy,True) [7,6] 0x00 0x00 0x0 0x0 [IronLance] [0] 
 UNIT GerwickBandit Pirate Gerwick Level(2,Enemy,True) [1,3] 0x00 0x00 0x0 0x0 [IronAxe] [0] 
@@ -197,10 +213,14 @@ ArcStuff:
 UNIT Arc Fighter Arc Level(1,Ally,True) [13,6] 0x00 0x00 0x1 REDA11R5 [IronAxe,Elixir] [0]
 UNIT
 
+SwordArc:
+UNIT Arc Mercenary Arc Level(1,Ally,True) [13,6] 0x00 0x00 0x1 REDA11R5 [SteelSword,Elixir] [0]
+UNIT
+
 LukeStuff:
-UNIT Luke Monk Arc Level(1,Ally,True) [12,9] 0x00 0x00 0x1 REDA10R9 [Lightning,Vulnerary] [0]
+UNIT Luke Monk Arc Level(4,Ally,True) [12,9] 0x00 0x00 0x1 REDA10R9 [Lightning,Vulnerary] [0]
 UNIT
 
 LukeStuff2:
-UNIT Luke Monk Arc Level(5,Ally,True) [12,9] 0x00 0x00 0x0 0x0 [Lightning,Vulnerary] [0]
+UNIT Luke Monk Arc Level(3,Ally,True) [12,9] 0x00 0x00 0x0 0x0 [Lightning,Vulnerary] [0]
 EndUnit

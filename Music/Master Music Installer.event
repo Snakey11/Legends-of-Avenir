@@ -15,8 +15,8 @@ voicegroup000:
 //SongTable(99,My_song,MapMusicGroup)
 //#include "My_song.event"
 
-SongTable(Town_of_Winds_and_Ruin,songTownOfWindsAndRuin,MapMusicGroup)
-#include "TownOfWindsAndRuin.event"
+SongTable(Town_of_Winds_and_Ruins,songTownOfWindsAndRuins,MapMusicGroup)
+#include "TownOfWindsAndRuins.event"
 
 SongTable(Derris_Kharlan_Appear,songDerrisKharlanAppear,MapMusicGroup)
 #include "DerrisKharlanAppear.event"
@@ -28,7 +28,7 @@ SongTable(Fatalize,songFatalize,MapMusicGroup)
 #include "Fatalize.event"
 
 SongTable(Fighting_of_the_Spirit,songFightingOfTheSpirit,MapMusicGroup)
-#include "Fighting of the Spirit.event"
+#include "FightingOfTheSpirit.event"
 
 SongTable(Anchoret,songAnchoret,MapMusicGroup)
 #include "Anchoret.event"
@@ -129,3 +129,22 @@ SongTable(Full_Force,songFullForce,MapMusicGroup)
 
 SongTable(Fury_Sparks,songFurySparks,MapMusicGroup)
 #include "FurySparks.event"
+
+
+SongTable(Church,songChurch,MapMusicGroup)
+#include "Church.event"
+
+SongTable(Kavoc,songKavoc,MapMusicGroup)
+#include "Kavoc.event"
+
+SongTable(Like_a_Glint_of_Light,songLikeAGlintOfLight,MapMusicGroup)
+#include "LikeAGlintOfLight.event"
+
+SongTable(Off_Key,songOffKey,MapMusicGroup)
+#include "OffKey.event"
+
+SongTable(The_Law_of_Battle,songTheLawOfBattle,MapMusicGroup)
+#include "TheLawOfBattle.event"
+
+SongTable(Twinrova,songTwinrova,MapMusicGroup)
+#include "Twinrova.event"

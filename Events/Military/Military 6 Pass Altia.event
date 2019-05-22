@@ -79,6 +79,11 @@ GotoPrepScreen
 
 //Label EndingScene
 EndingScene:
+FADI 0x5
+CLEA 0x0
+CLEE 0x0
+LOAD1 0x1 LoadSylvaine
+ENUN
 MUSC Into_the_Shadow_of_Victory
 SetBackground(0x1D)
 Text(Military6PassAltiaEndingText)
@@ -117,6 +122,10 @@ UNIT Sekar 0x00 0x00 Level(1,Ally,True) [7,23] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Christina 0x00 0x00 Level(1,Ally,True) [6,22] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Forrest 0x00 0x00 Level(1,Ally,True) [5,23] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Clara 0x00 0x00 Level(1,Ally,True) [11,23] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+LoadSylvaine:
+UNIT Sylvaine ArmoredWyvernLord 0x00 Level(8,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [SilverAxe,SteelBlade,SteelBow] NoAI
 EndUnit
 
 //Label Chapter Meanies

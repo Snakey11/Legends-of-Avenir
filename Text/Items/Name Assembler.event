@@ -17,9 +17,6 @@ Wind[X]
 ## ElwindNameText
 Elwind[X]
 
-## AircaliburNameText
-Aircalibur[X]
-
 ## ArcwindNameText
 Arcwind[X]
 
@@ -63,7 +60,7 @@ Dulam[X]
 Exordium[X]
 
 ## ArtimesNameText
-Artimes[X]
+Artemis[X]
 
 ## DevilSwordNameText
 Devil Sword[X]
@@ -106,3 +103,21 @@ Thani[X]
 
 ## SwarmNameText
 Swarm[X]
+
+## TempestNameText
+Tempest[X]
+
+## HailNameText
+Hail[X]
+
+## ToxinSwordNameText
+Toxin Sword[X]
+
+## ToxinLanceNameText
+Toxin Lance[X]
+
+## ToxinAxeNameText
+Toxin Axe[X]
+
+## ToxinBowNameText
+Toxin Bow[X]

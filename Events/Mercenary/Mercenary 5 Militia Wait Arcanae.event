@@ -94,20 +94,12 @@ CLEA Luke
 CLEE Cesarian
 LOAD3 0x1 PlayerLoading2
 LOAD2 0x1 StartAllies
-LOAD1 0x1 ValHelmer
 LOAD1 0x1 StartEnemies
 ENUN
 SetBackground(0x1D)
 Text(Merc5MilitiaWaitArcanaeReturnText)
 EndConvo
-GiveToSupplySilent(SteelSword)
-GiveToSupplySilent(SteelLance)
-GiveToSupplySilent(SteelAxe)
-GiveToSupplySilent(SteelBow)
-GiveToSupplySilent(Luna)
-GiveToSupplySilent(Shine)
-GiveToSupplySilent(Mend)
-GiveToSupplySilent(Elfire)
+SetSupport(Val,Helmer,BSupport)
 NoFade
 GotoPrepScreen
 
@@ -208,9 +200,6 @@ StartAllies:
 UNIT Arc Monk Luke Level(1,Ally,True) [6,2] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
 UNIT Luke Monk Luke Level(1,Ally,True) [7,1] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
 UNIT Elanil Monk Luke Level(1,Ally,True) [5,1] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
-UNIT
-
-ValHelmer:
 UNIT Val Shaman_F Val Level(12,Ally,True) [6,1] 0x00 0x00 0x00 0x00 [Worm,Nosferatu] [0]
 UNIT Helmer Soldier Helmer Level(13,Ally,True) [7,3] 0x00 0x00 0x00 0x00 [SteelLance] [0]
 UNIT
@@ -221,7 +210,7 @@ UNIT Cesarian Archer William Level(10,Enemy,True) [7,14] 0x00 0x00 0x00 0x00 [St
 UNIT Cesarian Archer William Level(11,Enemy,True) [10,11] 0x00 0x00 0x00 0x00 [SteelLongbow] AttackInRangeAI
 UNIT Cesarian Paladin William Level(2,Enemy,True) [6,13] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
 UNIT Cesarian Knight William Level(10,Enemy,True) [9,7] 0x00 0x00 0x00 0x00 [Javelin] GuardAI
-UNIT Cesarian Knight William Level(8,Enemy,True) [8,8] 0x00 0x00 0x00 0x00 [SteelAxe,Axereaver] GuardAI
+UNIT Cesarian Knight William Level(8,Enemy,True) [8,8] 0x00 0x00 0x00 0x00 [ToxinAxe,Axereaver] GuardAI
 UNIT Cesarian Shaman William Level(7,Enemy,True) [7,11] Drop 0x00 0x00 0x00 [Slime,GuidingRing] NoAI
 UNIT Cesarian Cavalier William Level(7,Enemy,True) [7,11] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
 UNIT Cesarian Myrmidon William Level(10,Enemy,True) [3,13] Drop 0x00 0x00 0x00 [IronSword,EnergyRing] ChaseOnceApproachedAI

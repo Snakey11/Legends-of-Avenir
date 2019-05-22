@@ -11,43 +11,27 @@
 @ r4 = character struct (of phantom)
 @ r5 = battle struct
 
-.thumb
-
-.macro blh to, reg
-    ldr \reg, =\to
-    mov lr, \reg
-    .short 0xF800
-.endm
-
-.equ FindCharacter, 0x0801829C
 .equ CheckCaps, 0x80181C8
 
 .global FixSettingGrowths
 .type FixSettingGrowths, %function
-
-@ r2 and r4 are scratch
-@ r4 and r5 are important
-@ r0 is important
-
-
 FixSettingGrowths:
 push { r4, r5 }
 mov r0, r5 @ r0 now has battle struct
-bl GetClass @ Outputs class in r1
-push { r1 }
-ldr r0, =#PhantomIDSummonASM
+ldr r0, [ r5, #0x04 ]
+ldrb r1, [ r0, #0x04 ]
+ldr r0, =PhantomIDSummonASM
 ldrb r0, [ r0 ]
 cmp r1, r0
-bne Normal
+bne NormalGrowths
 @ So it's a phantom. This means I have to put the summoner's character struct in.
+mov r0, r4
+bl FindSummoner @ r0 = Summoner's character struct.
 
-ldr r0, =#PhantomSummonerLink
-ldrb r0, [ r0 ] @ Character ID of summoner in r0.
-blh FindCharacter, r1 @ r0 now has character struct of summoner
-mov r3, r4
-mov r4, r0
+mov r3, r4 @ Phantom's battle struct.
+mov r4, r0 @ Summoner's character struct.
 
-Normal:
+NormalGrowths:
 mov r0, r5
 add r0, #0x73
 ldrb r0, [ r0 ]
@@ -93,20 +77,10 @@ strb r0, [ r4, #0x19 ]
 mov r0, r4
 blh CheckCaps, r2
 
-pop { r1 }
 pop { r4, r5 }
-ldr r0, =#PhantomIDSummonASM
-ldrb r0, [ r0 ]
-cmp r1, r0
-bne End1
-
-End1:
 ldr r1, =#0x0802C27B
 bx r1
 
-
-
-@ Now for the proccy shit...
 @ Hook at 0x0807ED38
 @ Return to 0x0807ED4E
 @ I don't think I actually need to set the phantom's character struct back. It's automatically overwritten.
@@ -114,47 +88,38 @@ bx r1
 
 .global SetUpSummonProc
 .type SetUpSummonProc, %function
-
-SetUpSummonProc:
+SetUpSummonProc: @ r0 = ?, r1 = which stat is being calculated (HP, str, skl, etc.)
 lsl r0, r4, #0x02
-add r0, r4
-lsl r0, #0x02
-add r0, r1
-ldrb r0, [ r0 ]
+add r0, r0, r4
+lsl r0, r0, #0x02
+add r0, r0, r1
+ldr r0, [ r0 ]
 ldrb r0, [ r0, #0x0B ]
-lsl r0, #0x18
-asr r0, #0x18
-blh 0x08019430, r2 @ All this and before from vanilla routine
-@ r0 = ... beginning character struct of the allied allegiance byte....? Kind of useless to me.
-@ r11 has the character struct of the phantom
-push { r0 }
-mov r0, r11
+lsl r0, r0, #0x18
+asr r0, r0, #0x18
+blh GetUnit, r2 @ All this and before from vanilla routine
+@ r0 = Character struct.
 @ All I really care about here is checking if the unit is a phantom and putting in the summoner's character struct if necessary
-bl GetClass
-pop { r0 }
-ldr r2, =#PhantomIDSummonASM
+ldr r1, [ r0, #0x04 ]
+ldrb r1, [ r1, #0x04 ] @ Class ID.
+ldr r2, =PhantomIDSummonASM
 ldrb r2, [ r2 ]
 cmp r1, r2
-bne End2
+bne EndSummonProc
+@ So it's a phantom. r0 still has the phantom's character struct.
+bl FindSummoner @ r0 = summoner's character struct.
 
-@ So it's a phantom.
-ldr r1, =#PhantomSummonerLink
-ldrb r0, [ r1 ] @ Character ID of summoner in r0
-blh FindCharacter, r2 @ r0 now has character struct of summoner
-
-End2:
+EndSummonProc:
 mov r2, r0
 ldr r1, =#0x0807ED4F
 bx r1
 
 @ I also need to fix the portrait in the level up screen.
-	@ The portrait index of this character is loaded at 0x0807F264
 	@ Hook at 0x0807F254
 	@ Return to 0x0807F266
 
 .global FixSummonPortrait
 .type FixSummonPortrait, %function
-
 FixSummonPortrait:
 mov r0, #0x2E
 ldsh r1, [ r5, r0 ]
@@ -164,18 +129,17 @@ lsl r0, #0x02
 add r0, r2
 ldr r0, [ r0 ] @ From vanilla routine
 @ r0 now has pointer to character struct.... or battle struct. It really doesn't matter.
-bl GetClass @ r1 has class ID
+ldr r1, [ r0, #0x04 ]
+ldrb r1, [ r1, #0x04 ] @ Class ID
 ldr r2, =#PhantomIDSummonASM
 ldrb r2, [ r2 ]
 cmp r1, r2
-bne End3
+bne EndSummonPortrait
 @ So it's a phantom. Find the summoner's character struct and return the portrait ID in r1.
+@ r0 still has the phantom's character struct.
+bl FindSummoner
 
-ldr r0, =#PhantomSummonerLink
-ldrb r0, [ r0 ] @ Character ID of summoner in r0.
-blh FindCharacter, r1 @ Phantom's character struct in r0
-
-End3:
+EndSummonPortrait:
 ldr r0, [ r0 ]
 ldrh r1, [ r0, #0x06 ] @ Return portrait ID in r1
 
@@ -190,7 +154,6 @@ bx r0
 
 .global FixSummonClassText
 .type FixSummonClassText, %function
-
 FixSummonClassText:
 ldr r0, =#0x02022CA8
 add r4, r0
@@ -201,19 +164,17 @@ lsl r0, #0x02
 add r7, r0, r1
 ldr r0, [ r7 ]
 @ r0 has the battle struct
-bl GetClass @ r1 has class ID
-ldr r2, =#PhantomIDSummonASM
+ldr r1, [ r0, #0x04 ]
+ldrb r1, [ r1, #0x04 ] @ Class ID
+ldr r2, =PhantomIDSummonASM
 ldrb r2, [ r2 ]
 cmp r1, r2
-bne End4
-
+bne EndClassText
 @ So it's a phantom. Find the summoner's character struct and return the class name ID.
+@ r0 still has the phantom's character struct.
+bl FindSummoner @ r0 = Summoner's character struct.
 
-ldr r0, =#PhantomSummonerLink
-ldrb r0, [ r0 ] @ Character ID of summoner in r0.
-blh FindCharacter, r1 @ Phantom's character struct in r0
-
-End4:
+EndClassText:
 ldr r0, [ r0, #0x04 ]
 ldrh r0, [ r0 ]
 

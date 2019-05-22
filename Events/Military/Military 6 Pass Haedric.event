@@ -25,6 +25,7 @@ END_MAIN
 ALIGN 32
 CharacterBasedEvents:
 CHAR 0x10 TalkToLeon [Sekar,Leon] 0x00
+SupportConvo(ASupport,Christina,Forrest,Support1Text)
 END_MAIN
 
 //Label LocationBasedEvents
@@ -137,6 +138,13 @@ GotoPrepScreen
 
 //Label EndingScene
 EndingScene:
+FADI 0x5
+CLEA 0x0
+CLEE 0x0
+CLEN 0x0
+LOAD1 0x1 LoadMuriel
+ENUN
+CLEA 0x0
 MUSC Into_the_Shadow_of_Victory
 SetBackground(0x0C)
 CHECK_EVENTID 0x10
@@ -181,7 +189,7 @@ ENUN
 StartBattle
 NormalDamage(1,21)
 NormalDamage(0,10)
-MissedAttack(0,10)
+NormalDamage(0,10)
 EndAttack
 FIG1 Muriel Uzkalis 0x00
 STAL 0x10
@@ -265,12 +273,16 @@ UNIT
 
 ThroneMuriel:
 UNIT Muriel MurielSage 0x00 Level(11,NPC,True) [17,4] 0x00 0x00 0x00 0x00 [Arcwind] NoAI
+UNIT
+
+LoadMuriel:
+UNIT Muriel MurielSage 0x00 Level(11,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [Arcwind,Elthunder] NoAI
 EndUnit
 
 //Label Chapter Units
 ChapterMeanies1:
 UNIT Uzkalis GaidenSage 0x00 Level(13,Enemy,True) [17,1] 0x00 0x00 0x00 0x00 [Arcthunder] NoAI
-UNIT Dunlas Halberdier Dunlas Level(10,Enemy,True) [18,2] 0x00 0x00 0x00 0x00 [Spear] GuardAI
+UNIT Dunlas Halberdier Dunlas Level(7,Enemy,True) [18,2] 0x00 0x00 0x00 0x00 [Spear] GuardAI
 UNIT Leon Baselius Leon Level(12,NPC,True) [2,15] 0x00 0x00 0x00 0x00 [0] GuardAI
 UNIT Arcanian Cavalier Dunlas Level(14,Enemy,True) [21,4] 0x00 0x00 0x00 0x00 [Axeslayer] AttackInRangeAI
 UNIT Arcanian Cavalier Dunlas Level(15,Enemy,True) [20,5] 0x00 0x00 0x00 0x00 [PoisonLance] AttackInRangeAI

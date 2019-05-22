@@ -71,7 +71,6 @@ EnterStop
 CAM1 [6,8]
 LOAD3 0x1 PlayerLoading1
 LOAD2 0x1 OldFriends
-LOAD1 0x1 LoadForrest
 ENUN
 MUSC Binding_Vow
 SetBackground(0x1D)
@@ -92,7 +91,7 @@ EndConvo
 STAL 0x40
 TEXTSHOW Military4PassStartBattleText
 TEXTEND
-LOAD1 0x1 LoadChristinaClara
+LOAD2 0x1 LoadChristinaClara
 ENUN
 TEXTCONT
 TEXTEND
@@ -103,8 +102,7 @@ LOAD1 0x1 StartingMeanies
 ENUN
 STAL 0x10
 Text(Military4PassDunlasHereText)
-GiveToSupplySilent(SteelLance)
-GiveToSupplySilent(Vulnerary)
+SetSupport(Forrest,Christina,BSupport)
 NoFade
 GotoPrepScreen
 	
@@ -114,6 +112,7 @@ FADI 0x5
 MUSC Into_the_Shadow_of_Victory
 CLEA 0x0
 CLEE 0x0
+ASMC RefreshAll|1
 CAM1 [7,6]
 LOAD3 0x1 PlayerLoading3
 LOAD2 0x1 HaedricFriends
@@ -128,8 +127,13 @@ ENUN
 STAL 0x20
 SetBackground(0x05)
 Text(Military4PassHaedricHaedriciansText)
+GiveToSupplySilent(Armorslayer)
+GiveToSupplySilent(SteelSword)
+GiveToSupplySilent(DragonSpear)
+GiveToSupplySilent(Javelin)
+GiveToSupplySilent(Exordium)
+GiveToSupplySilent(Elfire)
 MoveToChapter(MilitaryPassHaedric5)
-NoFade
 EndA2
 
 DunlasDead: // Altia
@@ -137,6 +141,7 @@ FADI 0x5
 MUSC Victory
 CLEA 0x0
 CLEE 0x0
+ASMC RefreshAll|1
 CAM1 [10,9]
 LOAD3 0x1 PlayerLoading2
 LOAD2 0x1 AltiaFriends
@@ -158,7 +163,6 @@ STAL 0x50
 SetBackground(0x05)
 Text(Military4PassAltiaCommandersGoneText)
 MoveToChapter(MilitaryPassAltia5)
-NoFade
 ENDA
 
 //Label Turn Events
@@ -214,7 +218,7 @@ ENDA
 House1:
 MUSI
 Text(0x01,Military4PassHouse1Text)
-GiveItem(KnightCrest,0xFFFF)
+GiveItem(Hammer,0xFFFF)
 MUNO
 NoFade
 EndA2
@@ -222,7 +226,7 @@ EndA2
 House2:
 MUSI
 Text(0x01,Military4PassHouse2Text)
-GiveItem(KillerAxe,0xFFFF)
+GiveItem(KnightCrest,0xFFFF)
 MUNO
 NoFade
 EndA2
@@ -264,9 +268,6 @@ UNIT Elanil 0x00 0x00 Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Finoc 0x00 0x00 Level(1,Ally,True) [6,5] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Cougar 0x00 0x00 Level(1,Ally,True) [2,4] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Sekar 0x00 0x00 Level(1,Ally,True) [5,4] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT
-
-LoadForrest:
 UNIT Forrest Cavalier 0x00 Level(11,Ally,True) [9,7] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI
 UNIT
 

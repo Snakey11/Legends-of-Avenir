@@ -22,6 +22,7 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
+SupportConvo(BSupport,Baret,Vicar,Support1Text)
 END_MAIN
 
 //Label LocationBasedEvents
@@ -48,14 +49,27 @@ BeginningScene:
 MUSC Into_the_Shadow_of_Victory
 CAM1 [8,6]
 LOAD1 0x1 LoadArya
-LOAD1 0x1 LoadConnor
 LOAD2 0x1 BanditFriends
 LOAD1 0x1 CaravanPeople
 ENUN
 LOAD3 0x1 PlayerLoading1
 ENUN
 SetBackground(0x27)
-Text(Merc3BanditBeginningText)
+TEXTSTART
+TEXTSHOW Merc3BanditBeginningText
+TEXTEND
+CHECK_EVENTID 0x6E
+BEQ 0x0 0x0 0xC
+	TEXTSHOW2 Merc3BanditBeginningHimText
+	TEXTEND
+	GOTO 0x1
+LABEL 0x0
+	TEXTSHOW2 Merc3BanditBeginningHerText
+	TEXTEND
+LABEL 0x1
+TEXTSHOW2 Merc3BanditBeginning2Text
+TEXTEND
+REMA
 MUSC Reunion
 SetBackground(0x11)
 Text(Merc3BanditPlanningText)
@@ -80,20 +94,13 @@ Text(Merc3RogerNoticesText)
 DISA Xena
 CAM1 [8,6]
 Text(Merc3BanditFormUpText)
-GiveToSupplySilent(Wyrmslayer)
-GiveToSupplySilent(Zanbato)
-GiveToSupplySilent(IronLance)
-GiveToSupplySilent(KillerLance)
-GiveToSupplySilent(SteelAxe)
-GiveToSupplySilent(HandAxe)
-GiveToSupplySilent(IronBow)
-GiveToSupplySilent(Vulnerary)
 NoFade
 ENDA
 
 //Label EndingScene
 EndingScene:
 FADI 0x5
+LOAD1 0x1 LoadAdlez
 CLEA 0x0
 CLEE 0x0
 MUSC Victory
@@ -113,10 +120,6 @@ EndUnit
 //Label LoadArya
 LoadArya:
 UNIT Arya Myrmidon_F PlayerMArcher Level(7,Ally,True) [10,3] 0x00 0x00 0x00 0x00 [SteelSword,Shamshir,Vulnerary] NoAI
-EndUnit
-
-//Label LoadConnor
-LoadConnor:
 UNIT Connor Mercenary PlayerMArcher Level(7,NPC,True) [8,0] 0x00 0x00 0x00 0x00 [0] NoAI
 EndUnit
 

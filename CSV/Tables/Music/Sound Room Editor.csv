@@ -92,4 +92,13 @@ INLINE SoundRoom,Song ID,Song Length (Only Used for Shuffle Mode),Song Unlock AS
 0x58 StageOne,Stage_One,9360,0,StageOneText
 0x59 FullForce,Full_Force,9360,0,FullForceText
 0x5A FurySparks,Fury_Sparks,9360,0,FurySparksText
+0x5B FightingOfTheSpirit,Fighting_of_the_Spirit,9360,0,FightingOfTheSpiritText
+0x5C Kratos,Kratos,9360,0,KratosText
+0x5D Church,Church,9360,0,ChurchText
+0x5E Kavok,Kavoc,9360,0,KavocText
+0x5F LikeAGlintOfLight,Like_a_Glint_of_Light,9360,0,LikeAGlintOfLightText
+0x60 OffKey,Off_Key,9360,0,OffKeyText
+0x61 TheLawOfBattle,The_Law_of_Battle,9360,0,TheLawOfBattleText
+0x62 Twinrova,Twinrova,9360,0,TwinrovaText
+0x63 TownOfWindsAndRuins,Town_of_Winds_and_Ruins,9360,0,TownOfWindsAndRuinsText
 Terminator,0xFFFFFFFF,0x0,0x0,0x0

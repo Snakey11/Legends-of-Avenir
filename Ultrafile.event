@@ -11,7 +11,8 @@
 		#define FreeSpaceA $B2A610
 		#define FreeSpaceB $E47200
 		#define FreeSpaceC $EFB2E0
-		#define EndofROM $FE4000
+		#define EndOfROM $FE4000
+		#define EndofROM EndOfROM
 	#define BLRange $1C2270
 	#define FreeSpaceBLRange BLRange
 	#define BlRange BLRange
@@ -53,7 +54,6 @@
 		
 	#else
 		
-	
 		ORG FreeSpaceA
 		#ifdef IncludeBigStuff
 			#include "Graphics/Battle Animations/Battle Animations 2.event" // FULL!
@@ -116,15 +116,15 @@
 		#include "Map Data/Master Map Installer.event"	
 		MESSAGE Map data ends at CURRENTOFFSET
 		
-		ALIGN 16
-		//Events
-		#include "Events/Master Event Installer.event"
-		MESSAGE Events end at CURRENTOFFSET
-		
 		ALIGN 16	
 		//ASM
 		#include "ASM/Master ASM Installer.event"
 		MESSAGE ASM data ends at CURRENTOFFSET
+		
+		ALIGN 16
+		//Events
+		#include "Events/Master Event Installer.event"
+		MESSAGE Events end at CURRENTOFFSET
 		
 		ALIGN 16
 		WORD 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Prevent NUPS from cutting off the last 6 bytes

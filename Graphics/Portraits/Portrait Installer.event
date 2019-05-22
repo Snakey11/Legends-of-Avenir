@@ -22,6 +22,8 @@ AryaPortrait:
 #incext PortraitFormatter "Arya.png"
 BaretPortrait:
 #incext PortraitFormatter "Baret.png"
+BlainePortrait:
+#incext PortraitFormatter "Blaine.png"
 ChristinaPortrait:
 #incext PortraitFormatter "Christina.png"
 ClaraPortrait:
@@ -62,6 +64,8 @@ LukePortrait:
 #incext PortraitFormatter "Luke.png"
 LuxPortrait:
 #incext PortraitFormatter "Lux.png"
+MadelinePortrait:
+#incext PortraitFormatter "Madeline.png"
 MaximusPortrait:
 #incext PortraitFormatter "Maximus.png"
 MurielPortrait:
@@ -70,6 +74,8 @@ NarratorPortrait:
 #incext PortraitFormatter "Narrator.png"
 RexPortrait:
 #incext PortraitFormatter "Rex.png"
+RemusPortrait:
+#incext PortraitFormatter "Remus.png"
 SekarPortrait:
 #incext PortraitFormatter "Sekar.png"
 ServiusPortrait:
@@ -90,6 +96,8 @@ XeximPortrait:
 #incext PortraitFormatter "Xexim.png"
 XyliaPortrait:
 #incext PortraitFormatter "Xylia.png"
+ZahevaPortrait:
+#incext PortraitFormatter "Zaheva.png"
 ZaliusPortrait:
 #incext PortraitFormatter "Zalius.png"
 
@@ -105,6 +113,10 @@ AssassinPortrait:
 #incext png2dmp "Assassin.png" --lz77
 AssassinPortraitPalette:
 #incext png2dmp "Assassin.png" --palette-only
+KnightPortrait:
+#incext png2dmp "Knight.png" --lz77
+KnightPortraitPalette:
+#incext png2dmp "Knight.png" --palette-only
 
 
 //setMugEntry(MugEntry,MugOffset,MouthX,MouthY,EyeX,EyeY)
@@ -118,7 +130,8 @@ setMugEntry(ArcMug,ArcPortrait,2,4,2,2)
 setMugEntry(ArveldirMug,ArveldirPortrait,2,5,3,3)
 setMugEntry(AryaMug,AryaPortrait,2,6,3,4)
 setMugEntry(BaretMug,BaretPortrait,3,5,3,3)
-setMugEntry(ChristinaMug,ChristinaPortrait,2,6,3,4)
+setMugEntry(BlaineMug,BlainePortrait,3,4,3,2)
+setMugEntry(ChristinaMug,ChristinaPortrait,3,5,3,3)
 setMugEntry(ClaraMug,ClaraPortrait,3,6,3,4)
 setMugEntry(ConnorMug,ConnorPortrait,3,5,3,3)
 setMugEntry(CougarMug,CougarPortrait,2,5,3,3)
@@ -128,19 +141,21 @@ setMugEntry(EfilMug,EfilPortrait,3,5,3,3)
 setMugEntry(ElanilMug,ElanilPortrait,4,5,4,3)
 setMugEntry(EmperorMug,EmperorPortrait,3,5,3,3)
 setMugEntry(FinocMug,FinocPortrait,2,5,3,3)
-setMugEntry(ForrestMug,ForrestPortrait,2,5,3,3)
+setMugEntry(ForrestMug,ForrestPortrait,3,5,3,3)
 setMugEntry(HelmerMug,HelmerPortrait,2,5,3,4)
 setMugEntry(JasperMug,JasperPortrait,3,5,3,3)
 setMugEntry(JurgenMug,JurgenPortrait,2,6,3,3)
-setMugEntry(KendrickMug,KendrickPortrait,3,6,3,4)
+setMugEntry(KendrickMug,KendrickPortrait,3,4,3,2)
 setMugEntry(KilthelMug,KilthelPortrait,3,5,3,3)
 setMugEntry(LeonMug,LeonPortrait,2,4,2,2)
 setMugEntry(LeyosMug,LeyosPortrait,3,5,3,3)
 setMugEntry(LukeMug,LukePortrait,2,6,3,4)
 setMugEntry(LuxMug,LuxPortrait,2,6,3,4)
-setMugEntry(MaximusMug,MaximusPortrait,3,4,3,2)
+setMugEntry(MadelineMug,MadelinePortrait,4,6,4,4)
+setMugEntry(MaximusMug,MaximusPortrait,2,5,2,3)
 setMugEntry(MurielMug,MurielPortrait,3,6,3,4)
 setMugEntry(NarratorMug,NarratorPortrait,3,5,3,3)
+setMugEntry(RemusMug,RemusPortrait,3,5,3,3)
 setMugEntry(RexMug,RexPortrait,2,5,2,3)
 setMugEntry(SekarMug,SekarPortrait,3,5,3,3)
 setMugEntry(ServiusMug,ServiusPortrait,3,5,3,3)
@@ -152,14 +167,16 @@ setMugEntry(WalterMug,WalterPortrait,3,5,3,3)
 setMugEntry(XavusMug,XavusPortrait,2,5,3,3)
 setMugEntry(XeximMug,XeximPortrait,2,5,3,3)
 setMugEntry(XyliaMug,XyliaPortrait,3,6,3,4)
+setMugEntry(ZahevaMug,ZahevaPortrait,3,6,3,4)
 setMugEntry(ZaliusMug,ZaliusPortrait,3,5,3,3)
 
-setMugEntry(0x02,UzkalisPortrait,2,6,2,3)
-setMugEntry(0x14,MaximusPortrait,3,4,3,2) // Set Eirika and Ephraim to be Maximus and Uzkalis (Debug screen)
+setMugEntry(0x14,UzkalisPortrait,2,6,2,3)
+setMugEntry(0x02,MaximusPortrait,2,5,2,3) // Set Eirika and Ephraim to be Maximus and Uzkalis (Debug screen)
 
 setCardEntry(SentinelCard,SentinelPortrait,SentinelPortraitPalette)
 setCardEntry(HalberdierCard,HalberdierPortrait,HalberdierPortraitPalette)
 setCardEntry(AssassinCard,AssassinPortrait,AssassinPortraitPalette)
+setCardEntry(KnightCard,KnightPortrait,KnightPortraitPalette)
 
 
 /*setMugEntry(1,KendrickPortrait,3,6,3,4)

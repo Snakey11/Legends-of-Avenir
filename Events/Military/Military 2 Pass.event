@@ -23,6 +23,7 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
+SupportConvo(BSupport,0xFF,Jasper,Support1Text)
 END_MAIN
 
 //Label LocationBasedEvents
@@ -84,6 +85,7 @@ TEXTEND
 EndConvo
 STAL 0x30
 Text(Military2PassStartBattleText)
+SetSupport(Elanil,Finoc,CSupport)
 NoFade
 ENDA
 
@@ -92,6 +94,13 @@ EndingScene:
 MUSC Victory
 SetBackground(0x1D)
 Text(Military2PassEndingText)
+GiveToSupplySilent(SteelSword)
+GiveToSupplySilent(Zanbato)
+GiveToSupplySilent(HeavySpear)
+GiveToSupplySilent(SteelLance)
+GiveToSupplySilent(SteelAxe)
+GiveToSupplySilent(DragonAxe)
+GiveToSupplySilent(SteelBow)
 MoveToChapter(MilitaryPass3)
 ENDA
 

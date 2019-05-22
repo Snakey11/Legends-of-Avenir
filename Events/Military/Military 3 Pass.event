@@ -23,6 +23,8 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
+SupportConvo(CSupport,Support1Text,Cougar,Finoc)
+SupportConvo(BSupport,Support1Text,Jasper,Derek)
 END_MAIN
 
 //Label LocationBasedEvents
@@ -89,13 +91,6 @@ STAL 0x10
 CAM1 [7,14]
 STAL 0x20
 Text(Military3PassAdlezConnorText)
-GiveToSupplySilent(SteelSword)
-GiveToSupplySilent(Zanbato)
-GiveToSupplySilent(HeavySpear)
-GiveToSupplySilent(SteelLance)
-GiveToSupplySilent(SteelAxe)
-GiveToSupplySilent(DragonAxe)
-GiveToSupplySilent(SteelBow)
 NoFade
 ENDA
 
@@ -103,11 +98,14 @@ ENDA
 EndingScene:
 FADI 0x5
 CLEA 0x0
+LOAD1 0x1 NewDudes
 CLEE 0x0
 MUSC Victory
 SetBackground(0x1D)
 Text(Military3PassEndingText)
 GiveGold(5000)
+GiveToSupplySilent(SteelLance)
+GiveToSupplySilent(Vulnerary)
 MoveToChapter(MilitaryPass4)
 NoFade
 ENDA
@@ -152,6 +150,12 @@ UNIT
 
 LoadSylvaine:
 UNIT Sylvaine ArmoredWyvernLord 0x00 Level(1,NPC,True) [7,11] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+NewDudes:
+UNIT Forrest Cavalier 0x00 Level(11,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI
+UNIT Christina Cavalier_F 0x00 Level(12,Ally,True) [0,1] 0x00 0x00 0x00 0x00 [Javelin,SteelSword] NoAI
+UNIT Clara Troubadour 0x00 Level(9,Ally,True) [0,2] 0x00 0x00 0x00 0x00 [Mend,Vulnerary] NoAI
 EndUnit
 
 //Label Chapter Units

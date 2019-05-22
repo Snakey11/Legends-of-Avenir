@@ -69,20 +69,13 @@ mov r1, #0x00
 ConvoyLoop:
 ldrh r2, [ r5, r0 ]
 cmp r2, #0x00
-beq MaxHP @ End if we've hit the end of the items.
+beq End @ End if we've hit the end of the items.
 strh r1, [ r5, r0 ]
 add r0, #1
 cmp r0, #202 @ Return if we haven't hit 100 items.
 bne ConvoyLoop
 
-MaxHP: @ Cool. What else needs to be done...? It would be nice to automatically max Tact's HP... Actually, let's just integrate both of these functions together.
-ldrb r1, [ r4, #0x12 ]
-strb r1, [ r4, #0x13 ]
+End:
 pop { r4, r5 }
 pop { r0 }
 bx r0
-
-MaxMercenaryHP:
-push { r4, r5, lr }
-ldr r4, =#0x0202BE4C
-b MaxHP

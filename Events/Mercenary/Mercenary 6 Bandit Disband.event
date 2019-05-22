@@ -191,6 +191,12 @@ GotoPrepScreen
 
 //Label EndingScene
 EndingScene:
+FADI 0x5
+CLEA 0x0
+CLEE 0x0
+CLEN 0x0
+LOAD1 0x1 LoadEfil
+ENUN
 MUSC Indignation
 SetBackground(0x2A)
 Text(Merc6BanditDisbandEndingText)
@@ -373,6 +379,10 @@ UNIT
 
 LeadWanderer:
 UNIT Daniel Swordmaster Daniel Level(1,Enemy,True) [7,9] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT
+
+LoadEfil:
+UNIT Efil Truerblade Efil Level(11,Ally,True) [11,26] 0x00 0x00 0x00 0x00 [SilverSword,SteelBlade] NoAI
 EndUnit
 
 //Label Chapter Friends
@@ -463,7 +473,7 @@ Guardian20:
 UNIT Guardian Berserker Guardian Level(4,Enemy,True) [23,7] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI 
 UNIT
 Guardian21:
-UNIT Guardian Mage Guardian Level(10,Enemy,True) [17,1] 0x00 0x00 0x00 0x00 [Meteor,Fire] GuardAI
+UNIT Guardian Mage Guardian Level(10,Enemy,True) [17,1] 0x00 0x00 0x00 0x00 [Hail,Fire] GuardAI
 UNIT
 Guardian22:
 UNIT Guardian Archer Guardian Level(10,Enemy,True) [23,11] 0x00 0x00 0x00 0x00 [SteelBow] NoAI 

@@ -25,6 +25,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+SupportConvo(BSupport,Arya,Kendrick,Support1Text)
 END_MAIN
 
 LocationBasedEvents:

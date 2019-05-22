@@ -1,34 +1,20 @@
 
-.macro blh to, reg
-    ldr \reg, =\to
-    mov lr, \reg
-    .short 0xF800
-.endm
-
-.equ FindCharacter, 0x0801829C
-
-.thumb
 .global SetUpSummonProcAnimsOn
 .type SetUpSummonProcAnimsOn, %function
 SetUpSummonProcAnimsOn: @ Autohook to 0x0807357C
-
 @ Now to check if this is a phantom. r5 has phantom's character struct (and also r0)
-bl GetClass @ r1 now has the class number
+ldr r1, [ r5, #0x04 ]
+ldrb r1, [ r1, #0x04 ] @ Class ID
 ldr r0, =PhantomIDSummonASM
 ldrb r0, [ r0 ]
 cmp r0, r1
-bne End1 @ If this isn't a phantom, end.
-
+bne EndProcAnimsOn @ If this isn't a phantom, end.
 @ So we have a phantom. Now to insert the character struct of the summoner.
-ldr r0, =PhantomSummonerLink
-ldrb r0, [ r0 ]
-blh FindCharacter, r1 @ r0 has character struct of the summoner
+mov r0, r5
+bl FindSummoner @ r0 = Summoner's character struct.
 mov r5, r0
-
 @ Now to do all that vanilla stat-getting crap.
-	@Er... actually no... looks like I can just kinda return after I yeet the summoner's character struct in without putting back the phantom's. Cool.
-
-End1:
+EndProcAnimsOn:
 ldr r1, =#0x02020110
 mov r3, r4
 add r3, #0x70
@@ -46,23 +32,19 @@ bx r1
 .type FixSummonAnimsOnLevelUpPortrait, %function
 FixSummonAnimsOnLevelUpPortrait: @ Autohook to 0x08073DBC
 @ r1 has the battle struct
-push { r1 }
-mov r0, r1
-bl GetClass @ r1 has the class number
-mov r2, r1
-pop { r1 }
+ldr r2, [ r1, #0x04 ]
+ldrb r2, [ r2, #0x04 ] @ Class ID
 ldr r0, =PhantomIDSummonASM
 ldrb r0, [ r0 ]
 cmp r0, r2
-bne End2
+bne EndPortraitAnimsOn
 
 @ So if I'm here, I have a phantom. Use the summoner's character struct to get the portrait ID.
-ldr r0, =PhantomSummonerLink
-ldrb r0, [ r0 ]
-blh FindCharacter, r1 @ r0 has the character struct of the summoner.
+mov r0, r1
+bl FindSummoner @ r0 = Summoner's character struct.
 mov r1, r0
 
-End2:
+EndPortraitAnimsOn:
 ldr r0, [ r1 ]
 ldrh r4, [ r0, #0x06 ]
 ldr r0, =#0x087592CC
@@ -83,18 +65,16 @@ bx r0
 .type FixSummonAnimsOnClassText, %function
 FixSummonAnimsOnClassText: @ Autohook to 0x08073808
 ldr r0, [ r0 ] @ Character struct in r0
-bl GetClass @ r1 has the class number
+ldr r1, [ r0, #0x04 ]
+ldrb r1, [ r1, #0x04 ] @ Class ID
 ldr r2, =PhantomIDSummonASM
 ldrb r2, [ r2 ]
-cmp r2, r1
-bne End3
-
+cmp r1, r2
+bne EndTextClassOn
 @ If I'm here, I have a phantom yadda yadda
-ldr r0, =#PhantomSummonerLink
-ldrb r0, [ r0 ]
-blh FindCharacter, r1 @ r0has the character struct of the summoner.
+bl FindSummoner @ r0 = Summoner's character struct.
 
-End3:
+EndTextClassOn:
 ldr r0, [ r0, #0x04 ]
 ldrh r0, [ r0 ]
 blh #0x0800A240, r1

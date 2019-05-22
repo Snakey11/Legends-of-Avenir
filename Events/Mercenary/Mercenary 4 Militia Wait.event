@@ -1,6 +1,8 @@
 
 EventPointerTable(Merc4MilitiaWaitEvents,ThisChapter)
 
+EnableAIOption(MercenaryMilitiaWait4,EnableLockpick)
+
 ThisChapter:
 POIN TurnBasedEvents
 POIN CharacterBasedEvents
@@ -20,6 +22,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+SupportConvo(BSupport,Arc,0xFF,Support1Text)
 END_MAIN
 
 LocationBasedEvents:
@@ -90,12 +93,7 @@ FADI 0x5
 MUSC Indignation
 CLEA 0x0
 CLEE 0x0
-ASMC MaxMercenaryHP|1
-SVAL 0x1 60
-SET_HP Arc
-SET_HP Luke
-SET_HP Elanil
-SET_HP Finoc
+ASMC RefreshAll|1
 LOAD3 0x1 PlayerLoading2
 LOAD2 0x1 EndingThrone
 ENUN
@@ -130,14 +128,34 @@ CLEE 0x0
 CLEN 0x0
 BNE 0x30 0xC 0x0
 	// Arcanae
+	LOAD1 0x1 LoadValHelmer
+	ENUN
 	SetBackground(0x30)
 	Text(Merc4MilitiaWaitChooseArcanaeText)
+	GiveToSupplySilent(SteelSword)
+	GiveToSupplySilent(SteelLance)
+	GiveToSupplySilent(SteelAxe)
+	GiveToSupplySilent(SteelBow)
+	GiveToSupplySilent(Luna)
+	GiveToSupplySilent(Shine)
+	GiveToSupplySilent(Mend)
+	GiveToSupplySilent(Elfire)
 	MoveToChapter(MercenaryMilitiaWaitArcanae5)
 GOTO 0x31
 LABEL 0x30
 	// Cesaria
+	LOAD1 0x1 LoadJasperDerekLux
 	SetBackground(0x30)
 	Text(Merc4MilitiaWaitChooseCesariaText)
+	GiveToSupplySilent(SteelSword)
+	GiveToSupplySilent(Armorslayer)
+	GiveToSupplySilent(ShortSpear)
+	GiveToSupplySilent(IronLance)
+	GiveToSupplySilent(ShortAxe)
+	GiveToSupplySilent(SteelBow)
+	GiveToSupplySilent(Elthunder)
+	GiveToSupplySilent(Shine)
+	GiveToSupplySilent(Mend)
 	MoveToChapter(MercenaryMilitiaWaitCesaria5)
 LABEL 0x31
 ENDA
@@ -157,7 +175,6 @@ NoFade
 ENDA
 
 EscapePointPointerTable(MercenaryMilitiaWait4, Merc4MilitiaWaitEscapePoints)
-
 Merc4MilitiaWaitEscapePoints:
 EscapePoint(0,1,MoveLeft)
 EscapePointEnd
@@ -215,7 +232,7 @@ UNIT Guardian Hero Adlez Level(1,Enemy,True) [12,2] 0x00 0x00 0x00 0x00 [Swordre
 UNIT
 
 GimmeAThief:
-UNIT Guardian Thief Adlez Level(3,Enemy,True) [14,1] 0x00 0x00 0x00 Drop [SlimSword,Lockpick] LootingThiefAI
+UNIT Looter Thief Looter Level(3,Enemy,True) [14,1] 0x00 0x00 0x00 Drop [SlimSword,Lockpick] LootingThiefAI
 UNIT
 
 Turn8Units:
@@ -269,4 +286,15 @@ UNIT Cesarian Halberdier Maximus Level(1,NPC,True) [3,0] 0x00 0x00 0x1 REDA6R3 [
 UNIT Cesarian Halberdier Maximus Level(1,NPC,True) [3,0] 0x00 0x00 0x1 REDA5R4 [IronAxe,Vulnerary] [0] 
 UNIT Cesarian Paladin Maximus Level(1,NPC,True) [2,0] 0x00 0x00 0x1 REDA2R2 [IronAxe,Vulnerary] [0] 
 UNIT Cesarian Paladin Maximus Level(1,NPC,True) [2,0] 0x00 0x00 0x1 REDA3R1 [IronAxe,Vulnerary] [0] 
+UNIT
+
+LoadValHelmer:
+UNIT Val Shaman_F Val Level(12,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [Worm,Nosferatu] [0]
+UNIT Helmer Soldier Helmer Level(13,Ally,True) [0,1] 0x00 0x00 0x00 0x00 [SteelLance] [0]
+UNIT
+
+LoadJasperDerekLux:
+UNIT Jasper Cavalier Lux Level(9,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [SteelSword,Javelin] NoAI 
+UNIT Derek Knight Lux Level(8,Ally,True) [0,1] 0x00 0x00 0x00 0x00 [SteelAxe,HeavySpear] NoAI 
+UNIT Lux Mage_F Lux Level(10,Ally,True) [0,2] 0x00 0x00 0x00 0x00 [Elaqua,Fire] NoAI 
 UNIT

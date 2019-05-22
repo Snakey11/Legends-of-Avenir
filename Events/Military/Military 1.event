@@ -131,6 +131,9 @@ LOAD1 0x1 ChapterMeanies
 ENUN
 LOAD1 0x1 LoadSylvaine2
 Text(Military1EndingBeginningText)
+SetSupport(Jasper,Derek,CSupport)
+SetSupport(Derek,0xFF,CSupport)
+SetSupport(Jasper,0xFF,CSupport)
 NoFade
 ENDA
 
@@ -142,6 +145,7 @@ MUSC Into_the_Shadow_of_Victory
 CLEA 0x0
 CLEE 0x0
 CLEN 0x0
+ASMC RefreshAll|1
 LOAD3 0x1 PlayerLoading1
 LOAD2 0x1 EndingFriends
 LOAD1 0x1 EndingMeanies
@@ -154,7 +158,7 @@ ASMC CallMilitary1Menu|1
 BNE 0x0 0x0 0xC
 	// Accept the promotion
 	Text(Military1PromotionText)
-	MoveToChapter(MilitaryPromotion2)
+	MoveToChapter(MilitaryAccept2)
 	GOTO 0x1
 LABEL 0x0
 	// Pass the promotion

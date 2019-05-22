@@ -20,330 +20,865 @@
 songKratos_001:
 // 000   ----------------------------------------
  BYTE   KEYSH   songKratos_key+0
-Label_0_01020052:
- BYTE   TEMPO   120*songKratos_tbs/2
- BYTE   VOICE   71
+LabelKratos_0_0105C702:
+ BYTE   TEMPO   86*songKratos_tbs/2
+ BYTE   VOICE   73
  BYTE   MODT 0
- BYTE   CnM2  v000
+ BYTE   CnM2
  BYTE   LFOS 0
- BYTE   CnM2  v044
- BYTE   VOL   0*songKratos_mvl/mxv
- BYTE   PAN   c_v+0
- BYTE   W24
- BYTE   N08  En3  v127
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
+ BYTE   Gs1
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   1*songKratos_mvl/mxv
+ BYTE   N04  Gn5  v127
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
 // 001   ----------------------------------------
-Label_0_01020071:
- BYTE   N08  En3  v127
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
- BYTE   Cn4
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+LabelKratos_0_0105C74A:
+ BYTE   W12
+ BYTE   N04  An5  v127
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
  BYTE   PEND 
 // 002   ----------------------------------------
-Label_0_01020088:
- BYTE   N08  Cn4  v127
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
- BYTE   Bn3
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+LabelKratos_0_0105C77E:
+ BYTE   N04  Gn5  v127
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
  BYTE   PEND 
 // 003   ----------------------------------------
-Label_0_0102009F:
- BYTE   N08  Bn3  v127
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
+LabelKratos_0_0105C7B1:
+ BYTE   N04  Gn5  v127
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W18
+ BYTE   Fs5
+ BYTE   N04  An5
+ BYTE   W06
  BYTE   PEND 
 // 004   ----------------------------------------
-Label_0_010200B2:
- BYTE   N08  Bn3  v127
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+LabelKratos_0_0105C7E4:
+ BYTE   N04  Fs5  v127
+ BYTE   N04  An5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   N04  An5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   N04  An5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   N04  An5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   N04  An5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   N04  An5
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W12
  BYTE   PEND 
 // 005   ----------------------------------------
-Label_0_010200C9:
- BYTE   N08  Bn3  v127
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
- BYTE   An4
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+LabelKratos_0_0105C81B:
+ BYTE   W06
+ BYTE   N04  Gn5  v127
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W18
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
  BYTE   PEND 
 // 006   ----------------------------------------
- BYTE   N08
- BYTE   W24
- BYTE   En3
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
- BYTE   PATT
-  POIN2 Label_0_01020071
- BYTE   PATT
-  POIN2 Label_0_01020088
- BYTE   PATT
-  POIN2 Label_0_0102009F
- BYTE   PATT
-  POIN2 Label_0_010200B2
- BYTE   PATT
-  POIN2 Label_0_010200C9
+LabelKratos_0_0105C853:
+ BYTE   N04  An5  v127
+ BYTE   N04  Cn6
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   PEND 
 // 007   ----------------------------------------
- BYTE   N08  An4  v127
- BYTE   W24
- BYTE   Cn4
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
+LabelKratos_0_0105C886:
+ BYTE   N04  Gn5  v127
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   PEND 
 // 008   ----------------------------------------
-Label_0_0102011B:
- BYTE   N08  Cn4  v127
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+LabelKratos_0_0105C8B9:
+ BYTE   N04  Gn5  v127
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W18
  BYTE   PEND 
 // 009   ----------------------------------------
-Label_0_01020132:
- BYTE   N08  Cn4  v127
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
- BYTE   Dn4
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+LabelKratos_0_0105C8EC:
+ BYTE   N04  Gn5  v127
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
  BYTE   PEND 
 // 010   ----------------------------------------
-Label_0_01020149:
- BYTE   N08  Dn4  v127
- BYTE   W24
- BYTE   Cn4
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
+LabelKratos_0_0105C927:
+ BYTE   W12
+ BYTE   N04  An5  v127
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W18
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
  BYTE   PEND 
 // 011   ----------------------------------------
-Label_0_0102015C:
- BYTE   N08  Dn4  v127
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
- BYTE   Cn4
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+LabelKratos_0_0105C95B:
+ BYTE   N04  An5  v127
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W18
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
  BYTE   PEND 
 // 012   ----------------------------------------
-Label_0_01020173:
- BYTE   N08  Cn4  v127
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
- BYTE   En4
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+LabelKratos_0_0105C98E:
+ BYTE   N04  An5  v127
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W18
+ BYTE   Bn5
+ BYTE   N04  Ds6
+ BYTE   W06
  BYTE   PEND 
 // 013   ----------------------------------------
- BYTE   N08
- BYTE   W24
- BYTE   Cn4
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
- BYTE   PATT
-  POIN2 Label_0_0102011B
- BYTE   PATT
-  POIN2 Label_0_01020132
- BYTE   PATT
-  POIN2 Label_0_01020149
- BYTE   PATT
-  POIN2 Label_0_0102015C
- BYTE   PATT
-  POIN2 Label_0_01020173
+LabelKratos_0_0105C9C1:
+ BYTE   N04  Bn5  v127
+ BYTE   N04  Ds6
+ BYTE   W06
+ BYTE   Bn5
+ BYTE   N04  Ds6
+ BYTE   W06
+ BYTE   Bn5
+ BYTE   N04  Ds6
+ BYTE   W06
+ BYTE   Bn5
+ BYTE   N04  Ds6
+ BYTE   W06
+ BYTE   Bn5
+ BYTE   N04  Ds6
+ BYTE   W06
+ BYTE   Bn5
+ BYTE   N04  Ds6
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W12
+ BYTE   PEND 
 // 014   ----------------------------------------
- BYTE   N08  En4  v127
- BYTE   W21
- BYTE   GoTo
-  POIN2 Label_0_01020052
+LabelKratos_0_0105C9F8:
+ BYTE   W06
+ BYTE   N04  Gn5  v127
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W18
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   PEND 
 // 015   ----------------------------------------
- BYTE   W03
+LabelKratos_0_0105CA30:
+ BYTE   N04  An5  v127
+ BYTE   N04  Cn6
+ BYTE   W18
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   PEND 
+// 016   ----------------------------------------
+LabelKratos_0_0105CA63:
+ BYTE   N04  Gn5  v127
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W18
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W06
+ BYTE   An5
+ BYTE   N04  Dn6
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   PEND 
+// 017   ----------------------------------------
+LabelKratos_0_0105CA96:
+ BYTE   N04  Gn5  v127
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Cn6
+ BYTE   W18
+ BYTE   Bn5
+ BYTE   N04  Ds6
+ BYTE   W06
+ BYTE   Bn5
+ BYTE   N04  Ds6
+ BYTE   W06
+ BYTE   Bn5
+ BYTE   N04  Ds6
+ BYTE   W06
+ BYTE   Bn5
+ BYTE   N04  Ds6
+ BYTE   W06
+ BYTE   Bn5
+ BYTE   N04  Ds6
+ BYTE   W06
+ BYTE   Bn5
+ BYTE   N04  Ds6
+ BYTE   W06
+ BYTE   Bn5
+ BYTE   N04  Ds6
+ BYTE   W18
+ BYTE   PEND 
+// 018   ----------------------------------------
+LabelKratos_0_0105CAC9:
+ BYTE   N04  Gn5  v127
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   N04  Bn5
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C74A
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C77E
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C7B1
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C7E4
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C81B
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C853
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C886
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C8B9
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C8EC
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C927
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C95B
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C98E
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C9C1
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C9F8
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105CA30
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105CA63
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105CA96
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105CAC9
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C74A
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C77E
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C7B1
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C7E4
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C81B
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C853
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C886
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C8B9
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C8EC
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C927
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C95B
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C98E
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C9C1
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105C9F8
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105CA30
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105CA63
+ BYTE   PATT
+  POIN2 LabelKratos_0_0105CA96
+// 019   ----------------------------------------
+ BYTE   GoTo
+  POIN2 LabelKratos_0_0105C702
+// 020   ----------------------------------------
+ BYTE   W06
  BYTE   FINE
 
 //**************** Track 2 (Midi-Chn.1) ****************//
@@ -351,329 +886,344 @@ Label_0_01020173:
 songKratos_002:
 // 000   ----------------------------------------
  BYTE   KEYSH   songKratos_key+0
-Label_1_010201C2:
- BYTE   VOICE   71
+LabelKratos_1_0105CBBE:
+ BYTE   VOICE   49
  BYTE   MODT 0
- BYTE   CnM2  v000
+ BYTE   CnM2
  BYTE   LFOS 0
- BYTE   CnM2  v044
- BYTE   VOL   0*songKratos_mvl/mxv
- BYTE   PAN   c_v+0
- BYTE   W24
- BYTE   N08  En4  v127
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
+ BYTE   Gs1
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   37*songKratos_mvl/mxv
+ BYTE   N54  En2  v127
+ BYTE   W54
+ BYTE   N18  Fs2
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W18
+ BYTE   Bn2
+ BYTE   W06
 // 001   ----------------------------------------
-Label_1_010201DF:
- BYTE   N08  En4  v127
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
- BYTE   Cn5
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+LabelKratos_1_0105CBD5:
+ BYTE   W12
+ BYTE   N18  An2  v127
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
+ BYTE   Cn3
+ BYTE   W18
+ BYTE   N54  Bn2
+ BYTE   W30
  BYTE   PEND 
 // 002   ----------------------------------------
-Label_1_010201F6:
- BYTE   N08  Cn5  v127
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
+LabelKratos_1_0105CBE2:
  BYTE   W24
- BYTE   Bn4
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+ BYTE   N36  En3  v127
+ BYTE   W36
+ BYTE   N18  Bn2
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
  BYTE   PEND 
 // 003   ----------------------------------------
-Label_1_0102020D:
- BYTE   N08  Bn4  v127
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
+LabelKratos_1_0105CBED:
+ BYTE   N18  Cn3  v127
+ BYTE   W18
+ BYTE   An2
+ BYTE   W18
+ BYTE   N54  Bn2
+ BYTE   W54
+ BYTE   N18  An2
+ BYTE   W06
  BYTE   PEND 
 // 004   ----------------------------------------
-Label_1_01020220:
- BYTE   N08  Bn4  v127
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+LabelKratos_1_0105CBFA:
+ BYTE   W12
+ BYTE   N18  Gn2  v127
+ BYTE   W18
+ BYTE   Fs2
+ BYTE   W18
+ BYTE   N54  En2
+ BYTE   W48
  BYTE   PEND 
 // 005   ----------------------------------------
-Label_1_01020237:
- BYTE   N08  Bn4  v127
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
- BYTE   An3
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+LabelKratos_1_0105CC05:
+ BYTE   W06
+ BYTE   N18  Fs2  v127
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W18
+ BYTE   Bn2
+ BYTE   W18
+ BYTE   An2
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
  BYTE   PEND 
 // 006   ----------------------------------------
- BYTE   N08
+LabelKratos_1_0105CC13:
+ BYTE   N18  Cn3  v127
+ BYTE   W18
+ BYTE   N54  Bn2
+ BYTE   W54
+ BYTE   N36  En3
  BYTE   W24
- BYTE   En4
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
- BYTE   PATT
-  POIN2 Label_1_010201DF
- BYTE   PATT
-  POIN2 Label_1_010201F6
- BYTE   PATT
-  POIN2 Label_1_0102020D
- BYTE   PATT
-  POIN2 Label_1_01020220
- BYTE   PATT
-  POIN2 Label_1_01020237
+ BYTE   PEND 
 // 007   ----------------------------------------
- BYTE   N08  An3  v127
- BYTE   W24
- BYTE   Cn5
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
+LabelKratos_1_0105CC1E:
+ BYTE   W12
+ BYTE   N18  Bn2  v127
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
+ BYTE   Cn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   W18
+ BYTE   N54  Bn2
+ BYTE   W12
+ BYTE   PEND 
 // 008   ----------------------------------------
-Label_1_01020289:
- BYTE   N08  Cn5  v127
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+LabelKratos_1_0105CC2D:
+ BYTE   W42
+ BYTE   N18  Gn3  v127
+ BYTE   W18
+ BYTE   Fs3
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
  BYTE   PEND 
 // 009   ----------------------------------------
-Label_1_010202A0:
- BYTE   N08  Cn5  v127
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
- BYTE   Dn5
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+LabelKratos_1_0105CC37:
+ BYTE   N54  Cn4  v127
+ BYTE   W54
+ BYTE   N18  Bn3
+ BYTE   W18
+ BYTE   An3
+ BYTE   W18
+ BYTE   Gn3
+ BYTE   W06
  BYTE   PEND 
 // 010   ----------------------------------------
-Label_1_010202B7:
- BYTE   N08  Dn5  v127
- BYTE   W24
- BYTE   Cn5
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
+LabelKratos_1_0105CC43:
+ BYTE   W12
+ BYTE   N54  An3  v127
+ BYTE   W54
+ BYTE   N18  Fs3
+ BYTE   W18
+ BYTE   Gn3
+ BYTE   W12
  BYTE   PEND 
 // 011   ----------------------------------------
-Label_1_010202CA:
- BYTE   N08  Dn5  v127
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
- BYTE   Cn5
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+LabelKratos_1_0105CC4E:
+ BYTE   W06
+ BYTE   N18  An3  v127
+ BYTE   W18
+ BYTE   N36  En3
+ BYTE   W36
+ BYTE   N18  Bn3
+ BYTE   W18
+ BYTE   N36  Gn3
+ BYTE   W18
  BYTE   PEND 
 // 012   ----------------------------------------
-Label_1_010202E1:
- BYTE   N08  Cn5  v127
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
- BYTE   En5
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+LabelKratos_1_0105CC5D:
+ BYTE   W18
+ BYTE   N18  Dn4  v127
+ BYTE   W18
+ BYTE   En4
+ BYTE   W18
+ BYTE   Fs4
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   W18
+ BYTE   N36  Fs4
+ BYTE   W06
  BYTE   PEND 
 // 013   ----------------------------------------
- BYTE   N08
- BYTE   W24
- BYTE   Cn5
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W24
- BYTE   PATT
-  POIN2 Label_1_01020289
- BYTE   PATT
-  POIN2 Label_1_010202A0
- BYTE   PATT
-  POIN2 Label_1_010202B7
- BYTE   PATT
-  POIN2 Label_1_010202CA
- BYTE   PATT
-  POIN2 Label_1_010202E1
+LabelKratos_1_0105CC6C:
+ BYTE   W30
+ BYTE   N18  Bn3  v127
+ BYTE   W18
+ BYTE   TIE  Cn2
+ BYTE   N54  Cn3
+ BYTE   N54  Cn4
+ BYTE   W48
+ BYTE   PEND 
 // 014   ----------------------------------------
- BYTE   N08  En5  v127
- BYTE   W21
- BYTE   GoTo
-  POIN2 Label_1_010201C2
+LabelKratos_1_0105CC79:
+ BYTE   W06
+ BYTE   N18  Bn2  v127
+ BYTE   N18  Bn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N18  An3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N18  Gn3
+ BYTE   W18
+ BYTE   PEND 
+ BYTE   EOT
+ BYTE   Cn2
+ BYTE   N54  An1
+ BYTE   N54  An2
+ BYTE   N54  An3
+ BYTE   W36
 // 015   ----------------------------------------
- BYTE   W03
+LabelKratos_1_0105CC92:
+ BYTE   W18
+ BYTE   N54  Dn1  v127
+ BYTE   N18  Fs2
+ BYTE   N18  Fs3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N18  Gn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N18  An3
+ BYTE   W18
+ BYTE   N54  Cn2
+ BYTE   N36  En2
+ BYTE   N36  En3
+ BYTE   W24
+ BYTE   PEND 
+// 016   ----------------------------------------
+LabelKratos_1_0105CCAB:
+ BYTE   W12
+ BYTE   N18  Bn2  v127
+ BYTE   N18  Bn3
+ BYTE   W18
+ BYTE   N54  Gn1
+ BYTE   N36  Gn2
+ BYTE   N36  Gn3
+ BYTE   W36
+ BYTE   N18  Dn3
+ BYTE   N18  Dn4
+ BYTE   W18
+ BYTE   N54  An1
+ BYTE   N18  En3
+ BYTE   N18  En4
+ BYTE   W12
+ BYTE   PEND 
+// 017   ----------------------------------------
+LabelKratos_1_0105CCC6:
+ BYTE   W06
+ BYTE   N18  Fs3  v127
+ BYTE   N18  Fs4
+ BYTE   W18
+ BYTE   Gn3
+ BYTE   N18  Gn4
+ BYTE   W18
+ BYTE   N54  Bn1
+ BYTE   N36  Fs3
+ BYTE   N36  Fs4
+ BYTE   W36
+ BYTE   N18  Bn2
+ BYTE   N18  Bn3
+ BYTE   W18
+ BYTE   PEND 
+// 018   ----------------------------------------
+LabelKratos_1_0105CCDE:
+ BYTE   N54  En2  v127
+ BYTE   W54
+ BYTE   N18  Fs2
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W18
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CBD5
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CBE2
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CBED
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CBFA
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC05
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC13
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC1E
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC2D
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC37
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC43
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC4E
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC5D
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC6C
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC79
+// 019   ----------------------------------------
+ BYTE   EOT
+ BYTE   Cn2
+ BYTE   N54  An1  v127
+ BYTE   N54  An2
+ BYTE   N54  An3
+ BYTE   W36
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC92
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CCAB
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CCC6
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CCDE
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CBD5
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CBE2
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CBED
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CBFA
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC05
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC13
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC1E
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC2D
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC37
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC43
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC4E
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC5D
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC6C
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC79
+// 020   ----------------------------------------
+ BYTE   EOT
+ BYTE   Cn2
+ BYTE   N54  An1  v127
+ BYTE   N54  An2
+ BYTE   N54  An3
+ BYTE   W36
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CC92
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CCAB
+ BYTE   PATT
+  POIN2 LabelKratos_1_0105CCC6
+// 021   ----------------------------------------
+ BYTE   GoTo
+  POIN2 LabelKratos_1_0105CBBE
+// 022   ----------------------------------------
+ BYTE   W06
  BYTE   FINE
 
 //**************** Track 3 (Midi-Chn.2) ****************//
@@ -681,170 +1231,304 @@ Label_1_010202E1:
 songKratos_003:
 // 000   ----------------------------------------
  BYTE   KEYSH   songKratos_key+0
-Label_2_0102032E:
- BYTE   VOICE   48
+LabelKratos_2_0105CDB6:
+ BYTE   VOICE   42
  BYTE   MODT 0
- BYTE   CnM2  v000
+ BYTE   CnM2
  BYTE   LFOS 0
- BYTE   CnM2  v044
- BYTE   VOL   35*songKratos_mvl/mxv
- BYTE   PAN   c_v+0
- BYTE   W24
- BYTE   N72  En3  v127
- BYTE   W72
-// 001   ----------------------------------------
-Label_2_0102033F:
- BYTE   N24  Fs2  v127
- BYTE   W24
+ BYTE   Gs1
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   12*songKratos_mvl/mxv
+ BYTE   N54  En2  v127
+ BYTE   W54
+ BYTE   N18  Fs2
+ BYTE   W18
  BYTE   Gn2
- BYTE   W24
+ BYTE   W18
  BYTE   Bn2
- BYTE   W24
- BYTE   An2
- BYTE   W24
+ BYTE   W06
+// 001   ----------------------------------------
+LabelKratos_2_0105CDCD:
+ BYTE   W12
+ BYTE   N18  An2  v127
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
+ BYTE   Cn3
+ BYTE   W18
+ BYTE   N54  Bn2
+ BYTE   W30
  BYTE   PEND 
 // 002   ----------------------------------------
-Label_2_0102034A:
- BYTE   N24  Dn3  v127
+LabelKratos_2_0105CDDA:
  BYTE   W24
- BYTE   Cn3
- BYTE   W24
- BYTE   N72  Bn2
- BYTE   W48
+ BYTE   N36  En3  v127
+ BYTE   W36
+ BYTE   N18  Bn2
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
  BYTE   PEND 
 // 003   ----------------------------------------
-Label_2_01020354:
- BYTE   W24
- BYTE   N48  En4  v127
- BYTE   W48
- BYTE   N24  Bn3
- BYTE   W24
+LabelKratos_2_0105CDE5:
+ BYTE   N18  Cn3  v127
+ BYTE   W18
+ BYTE   An2
+ BYTE   W18
+ BYTE   N54  Bn2
+ BYTE   W54
+ BYTE   N18  An2
+ BYTE   W06
  BYTE   PEND 
 // 004   ----------------------------------------
-Label_2_0102035D:
- BYTE   N24  Dn3  v127
- BYTE   W24
- BYTE   Cn3
- BYTE   W24
- BYTE   An2
- BYTE   W24
- BYTE   N72  Bn3
- BYTE   W24
+LabelKratos_2_0105CDF2:
+ BYTE   W12
+ BYTE   N18  Gn2  v127
+ BYTE   W18
+ BYTE   Fs2
+ BYTE   W18
+ BYTE   N54  En2
+ BYTE   W48
  BYTE   PEND 
 // 005   ----------------------------------------
- BYTE   W48
- BYTE   N24  An2
- BYTE   W24
+LabelKratos_2_0105CDFD:
+ BYTE   W06
+ BYTE   N18  Fs2  v127
+ BYTE   W18
  BYTE   Gn2
- BYTE   W24
+ BYTE   W18
+ BYTE   Bn2
+ BYTE   W18
+ BYTE   An2
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
+ BYTE   PEND 
 // 006   ----------------------------------------
- BYTE   Fs2
+LabelKratos_2_0105CE0B:
+ BYTE   N18  Cn3  v127
+ BYTE   W18
+ BYTE   N54  Bn2
+ BYTE   W54
+ BYTE   N36  En3
  BYTE   W24
- BYTE   N72  En3
- BYTE   W72
- BYTE   PATT
-  POIN2 Label_2_0102033F
- BYTE   PATT
-  POIN2 Label_2_0102034A
- BYTE   PATT
-  POIN2 Label_2_01020354
- BYTE   PATT
-  POIN2 Label_2_0102035D
+ BYTE   PEND 
 // 007   ----------------------------------------
- BYTE   W48
- BYTE   N24  An2  v127
- BYTE   W24
- BYTE   Fs3
- BYTE   W24
+LabelKratos_2_0105CE16:
+ BYTE   W12
+ BYTE   N18  Bn2  v127
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
+ BYTE   Cn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   W18
+ BYTE   N54  Bn2
+ BYTE   W12
+ BYTE   PEND 
 // 008   ----------------------------------------
- BYTE   Dn2
- BYTE   W24
- BYTE   N72  Cn4
- BYTE   W72
-// 009   ----------------------------------------
- BYTE   N24  Bn2
- BYTE   W24
- BYTE   An2
- BYTE   W24
- BYTE   Gn2
- BYTE   W24
- BYTE   N72  An2
- BYTE   W24
-// 010   ----------------------------------------
- BYTE   W48
- BYTE   N24  Fs3
- BYTE   W24
- BYTE   Gn2
- BYTE   W24
-// 011   ----------------------------------------
- BYTE   An2
- BYTE   W24
- BYTE   N48  En2
- BYTE   W48
- BYTE   N24  Bn2
- BYTE   W24
-// 012   ----------------------------------------
- BYTE   N48  Gn2
- BYTE   W48
- BYTE   N24  Dn3
- BYTE   W24
- BYTE   En3
- BYTE   W24
-// 013   ----------------------------------------
+LabelKratos_2_0105CE25:
+ BYTE   W42
+ BYTE   N18  Gn3  v127
+ BYTE   W18
  BYTE   Fs3
- BYTE   W24
- BYTE   Gn3
- BYTE   W24
- BYTE   N48  Fs3
- BYTE   W48
-// 014   ----------------------------------------
- BYTE   N24  Bn3
- BYTE   W24
- BYTE   N72  Cn4
- BYTE   W72
-// 015   ----------------------------------------
- BYTE   N24  Bn2
- BYTE   W24
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
+ BYTE   PEND 
+// 009   ----------------------------------------
+LabelKratos_2_0105CE2F:
+ BYTE   N54  Cn3  v127
+ BYTE   W54
+ BYTE   N18  Bn2
+ BYTE   W18
  BYTE   An2
- BYTE   W24
+ BYTE   W18
  BYTE   Gn2
- BYTE   W24
- BYTE   N72  An3
- BYTE   W24
-// 016   ----------------------------------------
- BYTE   W48
- BYTE   N24  Fs3
- BYTE   W24
- BYTE   Gn3
- BYTE   W24
-// 017   ----------------------------------------
- BYTE   An2
- BYTE   W24
- BYTE   N48  En3
- BYTE   W48
- BYTE   N24  Bn2
- BYTE   W24
-// 018   ----------------------------------------
- BYTE   N48  Gn3
- BYTE   W48
- BYTE   N24  Dn4
- BYTE   W24
+ BYTE   W06
+ BYTE   PEND 
+// 010   ----------------------------------------
+LabelKratos_2_0105CE3B:
+ BYTE   W12
+ BYTE   N54  An2  v127
+ BYTE   W54
+ BYTE   N18  Fs2
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   PEND 
+// 011   ----------------------------------------
+LabelKratos_2_0105CE46:
+ BYTE   W06
+ BYTE   N18  An2  v127
+ BYTE   W18
+ BYTE   N36  En2
+ BYTE   W36
+ BYTE   N18  Bn2
+ BYTE   W18
+ BYTE   N36  Gn2
+ BYTE   W18
+ BYTE   PEND 
+// 012   ----------------------------------------
+LabelKratos_2_0105CE55:
+ BYTE   W18
+ BYTE   N18  Dn3  v127
+ BYTE   W18
  BYTE   En3
- BYTE   W24
-// 019   ----------------------------------------
- BYTE   Fs4
- BYTE   W24
+ BYTE   W18
+ BYTE   Fs3
+ BYTE   W18
  BYTE   Gn3
- BYTE   W24
- BYTE   N48  Fs4
+ BYTE   W18
+ BYTE   N36  Fs3
+ BYTE   W06
+ BYTE   PEND 
+// 013   ----------------------------------------
+LabelKratos_2_0105CE64:
+ BYTE   W30
+ BYTE   N18  Bn2  v127
+ BYTE   W18
+ BYTE   N54  Cn3
  BYTE   W48
-// 020   ----------------------------------------
- BYTE   N24  Bn3
- BYTE   W21
+ BYTE   PEND 
+// 014   ----------------------------------------
+LabelKratos_2_0105CE6D:
+ BYTE   W06
+ BYTE   N18  Bn2  v127
+ BYTE   W18
+ BYTE   An2
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W18
+ BYTE   N54  An2
+ BYTE   W36
+ BYTE   PEND 
+// 015   ----------------------------------------
+LabelKratos_2_0105CE7A:
+ BYTE   W18
+ BYTE   N18  Fs2  v127
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W18
+ BYTE   An2
+ BYTE   W18
+ BYTE   N36  En2
+ BYTE   W24
+ BYTE   PEND 
+// 016   ----------------------------------------
+LabelKratos_2_0105CE87:
+ BYTE   W12
+ BYTE   N18  Bn2  v127
+ BYTE   W18
+ BYTE   N36  Gn2
+ BYTE   W36
+ BYTE   N18  Dn3
+ BYTE   W18
+ BYTE   En3
+ BYTE   W12
+ BYTE   PEND 
+// 017   ----------------------------------------
+LabelKratos_2_0105CE95:
+ BYTE   W06
+ BYTE   N18  Fs3  v127
+ BYTE   W18
+ BYTE   Gn3
+ BYTE   W18
+ BYTE   N36  Fs3
+ BYTE   W36
+ BYTE   N18  Bn2
+ BYTE   W18
+ BYTE   PEND 
+// 018   ----------------------------------------
+LabelKratos_2_0105CEA3:
+ BYTE   N54  En2  v127
+ BYTE   W54
+ BYTE   N18  Fs2
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W18
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CDCD
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CDDA
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CDE5
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CDF2
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CDFD
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE0B
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE16
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE25
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE2F
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE3B
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE46
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE55
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE64
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE6D
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE7A
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE87
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE95
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CEA3
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CDCD
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CDDA
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CDE5
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CDF2
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CDFD
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE0B
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE16
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE25
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE2F
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE3B
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE46
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE55
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE64
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE6D
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE7A
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE87
+ BYTE   PATT
+  POIN2 LabelKratos_2_0105CE95
+// 019   ----------------------------------------
  BYTE   GoTo
-  POIN2 Label_2_0102032E
-// 021   ----------------------------------------
- BYTE   W03
+  POIN2 LabelKratos_2_0105CDB6
+// 020   ----------------------------------------
+ BYTE   W06
  BYTE   FINE
 
 //**************** Track 4 (Midi-Chn.3) ****************//
@@ -852,170 +1536,628 @@ Label_2_0102035D:
 songKratos_004:
 // 000   ----------------------------------------
  BYTE   KEYSH   songKratos_key+0
-Label_3_010203F6:
- BYTE   VOICE   47
+LabelKratos_3_0105CF6A:
+ BYTE   VOICE   32
  BYTE   MODT 0
- BYTE   CnM2  v000
+ BYTE   CnM2
  BYTE   LFOS 0
- BYTE   CnM2  v044
- BYTE   VOL   35*songKratos_mvl/mxv
- BYTE   PAN   c_v+0
- BYTE   W24
- BYTE   N72  En2  v127
- BYTE   W72
+ BYTE   Gs1
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   50*songKratos_mvl/mxv
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   50*songKratos_mvl/mxv
+ BYTE   N06  En1  v127
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
 // 001   ----------------------------------------
-Label_3_01020407:
- BYTE   N24  Fs3  v127
- BYTE   W24
- BYTE   Gn3
- BYTE   W24
- BYTE   Bn3
- BYTE   W24
- BYTE   An3
- BYTE   W24
+LabelKratos_3_0105CFA4:
+ BYTE   N18  En0  v127
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W06
  BYTE   PEND 
 // 002   ----------------------------------------
-Label_3_01020412:
- BYTE   N24  Dn4  v127
- BYTE   W24
- BYTE   Cn4
- BYTE   W24
- BYTE   N72  Bn3
- BYTE   W48
+LabelKratos_3_0105CFCD:
+ BYTE   W06
+ BYTE   N06  En1  v127
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
  BYTE   PEND 
 // 003   ----------------------------------------
-Label_3_0102041C:
- BYTE   W24
- BYTE   N48  En3  v127
- BYTE   W48
- BYTE   N24  Bn2
- BYTE   W24
+LabelKratos_3_0105CFF4:
+ BYTE   N06  En1  v127
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1  v127
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1  v127
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  Dn1  v127
+ BYTE   W06
  BYTE   PEND 
 // 004   ----------------------------------------
-Label_3_01020425:
- BYTE   N24  Dn4  v127
- BYTE   W24
- BYTE   Cn4
- BYTE   W24
- BYTE   An3
- BYTE   W24
- BYTE   N72  Bn2
- BYTE   W24
+LabelKratos_3_0105D023:
+ BYTE   N18  En0  v127
+ BYTE   W12
+ BYTE   N06  Dn1
+ BYTE   W06
+ BYTE   N18  Dn0
+ BYTE   W12
+ BYTE   N06  Dn1
+ BYTE   W06
+ BYTE   N18  Dn0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   W06
  BYTE   PEND 
 // 005   ----------------------------------------
- BYTE   W48
- BYTE   N24  An3
- BYTE   W24
- BYTE   Gn3
- BYTE   W24
+LabelKratos_3_0105D047:
+ BYTE   N06  En0  v127
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   PEND 
 // 006   ----------------------------------------
- BYTE   Fs3
- BYTE   W24
- BYTE   N72  En2
- BYTE   W72
- BYTE   PATT
-  POIN2 Label_3_01020407
- BYTE   PATT
-  POIN2 Label_3_01020412
- BYTE   PATT
-  POIN2 Label_3_0102041C
- BYTE   PATT
-  POIN2 Label_3_01020425
+LabelKratos_3_0105D06D:
+ BYTE   N06  En1  v127
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   PEND 
 // 007   ----------------------------------------
- BYTE   W48
- BYTE   N24  An3  v127
- BYTE   W24
- BYTE   Fs2
- BYTE   W24
+LabelKratos_3_0105D096:
+ BYTE   N18  En0  v127
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W06
+ BYTE   PEND 
 // 008   ----------------------------------------
- BYTE   Dn3
- BYTE   W24
- BYTE   N72  Cn3
- BYTE   W72
+LabelKratos_3_0105D0BF:
+ BYTE   W06
+ BYTE   N06  En1  v127
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1  v127
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1  v127
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  Dn1  v127
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  Dn1
+ BYTE   W06
+ BYTE   N18  Dn0
+ BYTE   W12
+ BYTE   N06  Dn1
+ BYTE   W06
+ BYTE   N18  Dn0
+ BYTE   W12
+ BYTE   PEND 
 // 009   ----------------------------------------
- BYTE   N24  Bn3
- BYTE   W24
- BYTE   An3
- BYTE   W24
- BYTE   Gn3
- BYTE   W24
- BYTE   N72  An3
- BYTE   W24
+LabelKratos_3_0105D0EC:
+ BYTE   N06  Cn1  v127
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   PEND 
 // 010   ----------------------------------------
- BYTE   W48
- BYTE   N24  Fs2
- BYTE   W24
- BYTE   Gn3
- BYTE   W24
+LabelKratos_3_0105D107:
+ BYTE   N18  Cn1  v127
+ BYTE   W12
+ BYTE   N06  An0
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   N06  Dn1
+ BYTE   W06
+ BYTE   N18  Dn0
+ BYTE   W12
+ BYTE   N06  Dn1
+ BYTE   W06
+ BYTE   N18  Dn0
+ BYTE   W06
+ BYTE   PEND 
 // 011   ----------------------------------------
- BYTE   An3
- BYTE   W24
- BYTE   N48  En3
- BYTE   W48
- BYTE   N24  Bn3
- BYTE   W24
+LabelKratos_3_0105D128:
+ BYTE   W06
+ BYTE   N06  Dn1  v127
+ BYTE   W06
+ BYTE   N18  Dn0
+ BYTE   W12
+ BYTE   N06  Cn1
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   N06  Dn1
+ BYTE   W06
+ BYTE   N18  Gn0
+ BYTE   W12
+ BYTE   PEND 
 // 012   ----------------------------------------
- BYTE   N48  Gn3
- BYTE   W48
- BYTE   N24  Dn4
- BYTE   W24
- BYTE   En4
- BYTE   W24
+LabelKratos_3_0105D147:
+ BYTE   N06  Dn1  v127
+ BYTE   W06
+ BYTE   N18  Gn0
+ BYTE   W12
+ BYTE   N06  Dn1
+ BYTE   W06
+ BYTE   N18  Gn0
+ BYTE   W12
+ BYTE   N06  An0
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   N06  Bn0
+ BYTE   W06
+ BYTE   PEND 
 // 013   ----------------------------------------
- BYTE   Fs4
- BYTE   W24
- BYTE   Gn4
- BYTE   W24
- BYTE   N48  Fs4
- BYTE   W48
+LabelKratos_3_0105D168:
+ BYTE   N12  Bn0  v127
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N18
+ BYTE   W12
+ BYTE   N06  Cn1
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   PEND 
 // 014   ----------------------------------------
- BYTE   N24  Bn2
- BYTE   W24
- BYTE   N72  Cn3
- BYTE   W72
+LabelKratos_3_0105D182:
+ BYTE   N06  Cn1  v127
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N18
+ BYTE   W12
+ BYTE   N06  An0
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   PEND 
 // 015   ----------------------------------------
- BYTE   N24  Bn3
- BYTE   W24
- BYTE   An3
- BYTE   W24
- BYTE   Gn3
- BYTE   W24
- BYTE   N72  An2
- BYTE   W24
+LabelKratos_3_0105D19C:
+ BYTE   N06  An0  v127
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   N06  Dn1
+ BYTE   W06
+ BYTE   N18  Dn0
+ BYTE   W12
+ BYTE   N06  Dn1
+ BYTE   W06
+ BYTE   N18  Dn0
+ BYTE   W12
+ BYTE   N06  Dn1
+ BYTE   W06
+ BYTE   N18  Dn0
+ BYTE   W12
+ BYTE   N06  Cn1
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   PEND 
 // 016   ----------------------------------------
- BYTE   W48
- BYTE   N24  Fs2
- BYTE   W24
- BYTE   Gn2
- BYTE   W24
+LabelKratos_3_0105D1BF:
+ BYTE   N12  Cn1  v127
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   N06  Dn1
+ BYTE   W06
+ BYTE   N18  Gn0
+ BYTE   W12
+ BYTE   N06  Dn1
+ BYTE   W06
+ BYTE   N18  Gn0
+ BYTE   W12
+ BYTE   N06  Dn1
+ BYTE   W06
+ BYTE   N18  Gn0
+ BYTE   W12
+ BYTE   N06  An0
+ BYTE   W06
+ BYTE   N12
+ BYTE   W06
+ BYTE   PEND 
 // 017   ----------------------------------------
- BYTE   An3
- BYTE   W24
- BYTE   N48  En2
- BYTE   W48
- BYTE   N24  Bn3
- BYTE   W24
+LabelKratos_3_0105D1E2:
+ BYTE   W06
+ BYTE   N06  An0  v127
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   N06  Bn0
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N18
+ BYTE   W12
+ BYTE   PEND 
 // 018   ----------------------------------------
- BYTE   N48  Gn2
- BYTE   W48
- BYTE   N24  Dn3
- BYTE   W24
- BYTE   En4
- BYTE   W24
+LabelKratos_3_0105D1FE:
+ BYTE   N06  En1  v127
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N18  En0
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105CFA4
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105CFCD
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105CFF4
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D023
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D047
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D06D
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D096
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D0BF
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D0EC
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D107
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D128
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D147
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D168
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D182
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D19C
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D1BF
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D1E2
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D1FE
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105CFA4
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105CFCD
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105CFF4
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D023
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D047
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D06D
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D096
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D0BF
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D0EC
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D107
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D128
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D147
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D168
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D182
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D19C
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D1BF
+ BYTE   PATT
+  POIN2 LabelKratos_3_0105D1E2
 // 019   ----------------------------------------
- BYTE   Fs3
- BYTE   W24
- BYTE   Gn4
- BYTE   W24
- BYTE   N48  Fs3
- BYTE   W48
-// 020   ----------------------------------------
- BYTE   N24  Bn2
- BYTE   W21
  BYTE   GoTo
-  POIN2 Label_3_010203F6
-// 021   ----------------------------------------
- BYTE   W03
+  POIN2 LabelKratos_3_0105CF6A
+// 020   ----------------------------------------
+ BYTE   W06
  BYTE   FINE
 
 //**************** Track 5 (Midi-Chn.4) ****************//
@@ -1023,170 +2165,428 @@ Label_3_01020425:
 songKratos_005:
 // 000   ----------------------------------------
  BYTE   KEYSH   songKratos_key+0
-Label_4_010204BE:
- BYTE   VOICE   49
+LabelKratos_4_0105D2E2:
+ BYTE   VOICE   48
  BYTE   MODT 0
- BYTE   CnM2  v000
+ BYTE   CnM2
  BYTE   LFOS 0
- BYTE   CnM2  v044
- BYTE   VOL   26*songKratos_mvl/mxv
- BYTE   PAN   c_v+0
- BYTE   W24
- BYTE   N72  En3  v127
- BYTE   W72
+ BYTE   Gs1
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   50*songKratos_mvl/mxv
+ BYTE   N06  En1  v127
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W06
 // 001   ----------------------------------------
-Label_4_010204CF:
- BYTE   N24  Fs2  v127
- BYTE   W24
- BYTE   Gn2
- BYTE   W24
- BYTE   Bn2
- BYTE   W24
- BYTE   An2
- BYTE   W24
+LabelKratos_4_0105D300:
+ BYTE   W12
+ BYTE   N06  En1  v127
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W12
  BYTE   PEND 
 // 002   ----------------------------------------
-Label_4_010204DA:
- BYTE   N24  Dn3  v127
- BYTE   W24
- BYTE   Cn3
- BYTE   W24
- BYTE   N72  Bn2
- BYTE   W48
+LabelKratos_4_0105D312:
+ BYTE   W06
+ BYTE   N06  En1  v127
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W18
  BYTE   PEND 
 // 003   ----------------------------------------
-Label_4_010204E4:
- BYTE   W24
- BYTE   N48  En4  v127
- BYTE   W48
- BYTE   N24  Bn2
- BYTE   W24
+LabelKratos_4_0105D324:
+ BYTE   N06  En1  v127
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
  BYTE   PEND 
 // 004   ----------------------------------------
-Label_4_010204ED:
- BYTE   N24  Dn3  v127
- BYTE   W24
- BYTE   Cn3
- BYTE   W24
- BYTE   An2
- BYTE   W24
- BYTE   N72  Bn3
- BYTE   W24
+LabelKratos_4_0105D337:
+ BYTE   W12
+ BYTE   N06  Dn1  v127
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   En1
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
  BYTE   PEND 
 // 005   ----------------------------------------
- BYTE   W48
- BYTE   N24  An2
- BYTE   W24
- BYTE   Gn2
- BYTE   W24
+LabelKratos_4_0105D347:
+ BYTE   N06  En1  v127
+ BYTE   W06
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   PEND 
 // 006   ----------------------------------------
- BYTE   Fs2
- BYTE   W24
- BYTE   N72  En3
- BYTE   W72
- BYTE   PATT
-  POIN2 Label_4_010204CF
- BYTE   PATT
-  POIN2 Label_4_010204DA
- BYTE   PATT
-  POIN2 Label_4_010204E4
- BYTE   PATT
-  POIN2 Label_4_010204ED
+LabelKratos_4_0105D356:
+ BYTE   N06  En1  v127
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W06
+ BYTE   PEND 
 // 007   ----------------------------------------
- BYTE   W48
- BYTE   N24  An2  v127
- BYTE   W24
- BYTE   Fs3
- BYTE   W24
+LabelKratos_4_0105D369:
+ BYTE   W12
+ BYTE   N06  En1  v127
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W12
+ BYTE   PEND 
 // 008   ----------------------------------------
- BYTE   Dn2
- BYTE   W24
- BYTE   N72  Cn4
- BYTE   W72
+LabelKratos_4_0105D37B:
+ BYTE   W06
+ BYTE   N06  En1  v127
+ BYTE   W18
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   PEND 
 // 009   ----------------------------------------
- BYTE   N24  Bn2
- BYTE   W24
- BYTE   An2
- BYTE   W24
- BYTE   Gn2
- BYTE   W24
- BYTE   N72  An2
- BYTE   W24
+LabelKratos_4_0105D38D:
+ BYTE   N06  Cn1  v127
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W06
+ BYTE   PEND 
 // 010   ----------------------------------------
- BYTE   W48
- BYTE   N24  Fs3
- BYTE   W24
- BYTE   Gn2
- BYTE   W24
+LabelKratos_4_0105D3A0:
+ BYTE   W12
+ BYTE   N06  An0  v127
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W18
+ BYTE   N06
+ BYTE   W12
+ BYTE   PEND 
 // 011   ----------------------------------------
- BYTE   An2
- BYTE   W24
- BYTE   N48  En2
- BYTE   W48
- BYTE   N24  Bn2
- BYTE   W24
+LabelKratos_4_0105D3B2:
+ BYTE   W06
+ BYTE   N06  Dn1  v127
+ BYTE   W18
+ BYTE   Cn1
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W18
+ BYTE   PEND 
 // 012   ----------------------------------------
- BYTE   N48  Gn2
- BYTE   W48
- BYTE   N24  Dn3
- BYTE   W24
- BYTE   En3
- BYTE   W24
+LabelKratos_4_0105D3C4:
+ BYTE   N06  Dn1  v127
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   An0
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   PEND 
 // 013   ----------------------------------------
- BYTE   Fs3
- BYTE   W24
- BYTE   Gn3
- BYTE   W24
- BYTE   N48  Fs3
- BYTE   W48
+LabelKratos_4_0105D3D7:
+ BYTE   W12
+ BYTE   N06  Bn0  v127
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   Cn1
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   PEND 
 // 014   ----------------------------------------
- BYTE   N24  Bn3
- BYTE   W24
- BYTE   N72  Cn4
- BYTE   W72
+LabelKratos_4_0105D3E7:
+ BYTE   N06  Cn1  v127
+ BYTE   W06
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   An0
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   PEND 
 // 015   ----------------------------------------
- BYTE   N24  Bn2
- BYTE   W24
- BYTE   An2
- BYTE   W24
- BYTE   Gn2
- BYTE   W24
- BYTE   N72  An3
- BYTE   W24
+LabelKratos_4_0105D3F6:
+ BYTE   N06  An0  v127
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   Cn1
+ BYTE   W18
+ BYTE   N06
+ BYTE   W06
+ BYTE   PEND 
 // 016   ----------------------------------------
- BYTE   W48
- BYTE   N24  Fs3
- BYTE   W24
- BYTE   Gn3
- BYTE   W24
+LabelKratos_4_0105D409:
+ BYTE   W12
+ BYTE   N06  Cn1  v127
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   An0
+ BYTE   W12
+ BYTE   PEND 
 // 017   ----------------------------------------
- BYTE   An2
- BYTE   W24
- BYTE   N48  En3
- BYTE   W48
- BYTE   N24  Bn2
- BYTE   W24
+LabelKratos_4_0105D41B:
+ BYTE   W06
+ BYTE   N06  An0  v127
+ BYTE   W18
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   PEND 
 // 018   ----------------------------------------
- BYTE   N48  Gn3
- BYTE   W48
- BYTE   N24  Dn4
- BYTE   W24
- BYTE   En3
- BYTE   W24
+LabelKratos_4_0105D42D:
+ BYTE   N06  En1  v127
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W18
+ BYTE   N06
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D300
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D312
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D324
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D337
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D347
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D356
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D369
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D37B
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D38D
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D3A0
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D3B2
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D3C4
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D3D7
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D3E7
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D3F6
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D409
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D41B
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D42D
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D300
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D312
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D324
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D337
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D347
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D356
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D369
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D37B
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D38D
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D3A0
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D3B2
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D3C4
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D3D7
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D3E7
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D3F6
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D409
+ BYTE   PATT
+  POIN2 LabelKratos_4_0105D41B
 // 019   ----------------------------------------
- BYTE   Fs4
- BYTE   W24
- BYTE   Gn3
- BYTE   W24
- BYTE   N48  Fs4
- BYTE   W48
-// 020   ----------------------------------------
- BYTE   N24  Bn3
- BYTE   W21
  BYTE   GoTo
-  POIN2 Label_4_010204BE
-// 021   ----------------------------------------
- BYTE   W03
+  POIN2 LabelKratos_4_0105D2E2
+// 020   ----------------------------------------
+ BYTE   W06
  BYTE   FINE
 
 //**************** Track 6 (Midi-Chn.5) ****************//
@@ -1194,170 +2594,864 @@ Label_4_010204ED:
 songKratos_006:
 // 000   ----------------------------------------
  BYTE   KEYSH   songKratos_key+0
-Label_5_01020586:
- BYTE   VOICE   49
+LabelKratos_5_0105D4FA:
+ BYTE   VOICE   73
  BYTE   MODT 0
- BYTE   CnM2  v000
+ BYTE   CnM2
  BYTE   LFOS 0
- BYTE   CnM2  v044
- BYTE   VOL   26*songKratos_mvl/mxv
- BYTE   PAN   c_v+0
- BYTE   W24
- BYTE   N72  En2  v127
- BYTE   W72
+ BYTE   Gs1
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   0*songKratos_mvl/mxv
+ BYTE   N04  Gn4  v127
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
 // 001   ----------------------------------------
-Label_5_01020597:
- BYTE   N24  Fs3  v127
- BYTE   W24
- BYTE   Gn3
- BYTE   W24
- BYTE   Bn3
- BYTE   W24
- BYTE   An3
- BYTE   W24
+LabelKratos_5_0105D540:
+ BYTE   W12
+ BYTE   N04  An4  v127
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
  BYTE   PEND 
 // 002   ----------------------------------------
-Label_5_010205A2:
- BYTE   N24  Dn4  v127
- BYTE   W24
- BYTE   Cn4
- BYTE   W24
- BYTE   N72  Bn3
- BYTE   W48
+LabelKratos_5_0105D574:
+ BYTE   N04  Gn4  v127
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
  BYTE   PEND 
 // 003   ----------------------------------------
-Label_5_010205AC:
- BYTE   W24
- BYTE   N48  En3  v127
- BYTE   W48
- BYTE   N24  Bn3
- BYTE   W24
+LabelKratos_5_0105D5A7:
+ BYTE   N04  Gn4  v127
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W18
+ BYTE   Fs4
+ BYTE   N04  An4
+ BYTE   W06
  BYTE   PEND 
 // 004   ----------------------------------------
-Label_5_010205B5:
- BYTE   N24  Dn4  v127
- BYTE   W24
- BYTE   Cn4
- BYTE   W24
- BYTE   An3
- BYTE   W24
- BYTE   N72  Bn2
- BYTE   W24
+LabelKratos_5_0105D5DA:
+ BYTE   N04  Fs4  v127
+ BYTE   N04  An4
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   N04  An4
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   N04  An4
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   N04  An4
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   N04  An4
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   N04  An4
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W12
  BYTE   PEND 
 // 005   ----------------------------------------
- BYTE   W48
- BYTE   N24  An3
- BYTE   W24
- BYTE   Gn3
- BYTE   W24
+LabelKratos_5_0105D611:
+ BYTE   W06
+ BYTE   N04  Gn4  v127
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W18
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   PEND 
 // 006   ----------------------------------------
- BYTE   Fs3
- BYTE   W24
- BYTE   N72  En2
- BYTE   W72
- BYTE   PATT
-  POIN2 Label_5_01020597
- BYTE   PATT
-  POIN2 Label_5_010205A2
- BYTE   PATT
-  POIN2 Label_5_010205AC
- BYTE   PATT
-  POIN2 Label_5_010205B5
+LabelKratos_5_0105D649:
+ BYTE   N04  An4  v127
+ BYTE   N04  Cn5
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   PEND 
 // 007   ----------------------------------------
- BYTE   W48
- BYTE   N24  An3  v127
- BYTE   W24
- BYTE   Fs2
- BYTE   W24
+LabelKratos_5_0105D67C:
+ BYTE   N04  Gn4  v127
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   PEND 
 // 008   ----------------------------------------
- BYTE   Dn3
- BYTE   W24
- BYTE   N72  Cn3
- BYTE   W72
-// 009   ----------------------------------------
- BYTE   N24  Bn3
- BYTE   W24
- BYTE   An3
- BYTE   W24
- BYTE   Gn3
- BYTE   W24
- BYTE   N72  An3
- BYTE   W24
-// 010   ----------------------------------------
- BYTE   W48
- BYTE   N24  Fs2
- BYTE   W24
- BYTE   Gn3
- BYTE   W24
-// 011   ----------------------------------------
- BYTE   An3
- BYTE   W24
- BYTE   N48  En3
- BYTE   W48
- BYTE   N24  Bn3
- BYTE   W24
-// 012   ----------------------------------------
- BYTE   N48  Gn3
- BYTE   W48
- BYTE   N24  Dn4
- BYTE   W24
- BYTE   En4
- BYTE   W24
-// 013   ----------------------------------------
+LabelKratos_5_0105D6AF:
+ BYTE   N04  Gn4  v127
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W18
  BYTE   Fs4
- BYTE   W24
+ BYTE   N04  An4
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   N04  An4
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   N04  An4
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   N04  An4
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   N04  An4
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   N04  An4
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   N04  An4
+ BYTE   W18
+ BYTE   PEND 
+// 009   ----------------------------------------
+LabelKratos_5_0105D6E2:
+ BYTE   N04  Gn4  v127
+ BYTE   N04  Cn5
+ BYTE   W06
  BYTE   Gn4
- BYTE   W24
- BYTE   N48  Fs4
- BYTE   W48
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   PEND 
+// 010   ----------------------------------------
+LabelKratos_5_0105D71D:
+ BYTE   W12
+ BYTE   N04  An4  v127
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W18
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   PEND 
+// 011   ----------------------------------------
+LabelKratos_5_0105D751:
+ BYTE   N04  An4  v127
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W18
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   PEND 
+// 012   ----------------------------------------
+LabelKratos_5_0105D784:
+ BYTE   N04  An4  v127
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W18
+ BYTE   Bn4
+ BYTE   N04  Ds5
+ BYTE   W06
+ BYTE   PEND 
+// 013   ----------------------------------------
+LabelKratos_5_0105D7B7:
+ BYTE   N04  Bn4  v127
+ BYTE   N04  Ds5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   N04  Ds5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   N04  Ds5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   N04  Ds5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   N04  Ds5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   N04  Ds5
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W12
+ BYTE   PEND 
 // 014   ----------------------------------------
- BYTE   N24  Bn2
- BYTE   W24
- BYTE   N72  Cn3
- BYTE   W72
-// 015   ----------------------------------------
- BYTE   N24  Bn3
- BYTE   W24
- BYTE   An3
- BYTE   W24
- BYTE   Gn3
- BYTE   W24
- BYTE   N72  An2
- BYTE   W24
-// 016   ----------------------------------------
- BYTE   W48
- BYTE   N24  Fs2
- BYTE   W24
- BYTE   Gn2
- BYTE   W24
-// 017   ----------------------------------------
- BYTE   An3
- BYTE   W24
- BYTE   N48  En2
- BYTE   W48
- BYTE   N24  Bn3
- BYTE   W24
-// 018   ----------------------------------------
- BYTE   N48  Gn2
- BYTE   W48
- BYTE   N24  Dn3
- BYTE   W24
- BYTE   En4
- BYTE   W24
-// 019   ----------------------------------------
- BYTE   Fs3
- BYTE   W24
+LabelKratos_5_0105D7EE:
+ BYTE   W06
+ BYTE   N04  Gn4  v127
+ BYTE   N04  Cn5
+ BYTE   W06
  BYTE   Gn4
- BYTE   W24
- BYTE   N48  Fs3
- BYTE   W48
-// 020   ----------------------------------------
- BYTE   N24  Bn2
- BYTE   W21
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W18
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   PEND 
+// 015   ----------------------------------------
+LabelKratos_5_0105D826:
+ BYTE   N04  An4  v127
+ BYTE   N04  Cn5
+ BYTE   W18
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   PEND 
+// 016   ----------------------------------------
+LabelKratos_5_0105D859:
+ BYTE   N04  Gn4  v127
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W18
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W06
+ BYTE   An4
+ BYTE   N04  Dn5
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   PEND 
+// 017   ----------------------------------------
+LabelKratos_5_0105D88C:
+ BYTE   N04  Gn4  v127
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Cn5
+ BYTE   W18
+ BYTE   Bn4
+ BYTE   N04  Ds5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   N04  Ds5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   N04  Ds5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   N04  Ds5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   N04  Ds5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   N04  Ds5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   N04  Ds5
+ BYTE   W18
+ BYTE   PEND 
+// 018   ----------------------------------------
+LabelKratos_5_0105D8BF:
+ BYTE   N04  Gn4  v127
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   N04  Bn4
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D540
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D574
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D5A7
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D5DA
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D611
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D649
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D67C
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D6AF
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D6E2
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D71D
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D751
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D784
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D7B7
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D7EE
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D826
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D859
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D88C
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D8BF
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D540
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D574
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D5A7
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D5DA
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D611
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D649
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D67C
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D6AF
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D6E2
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D71D
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D751
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D784
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D7B7
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D7EE
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D826
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D859
+ BYTE   PATT
+  POIN2 LabelKratos_5_0105D88C
+// 019   ----------------------------------------
  BYTE   GoTo
-  POIN2 Label_5_01020586
-// 021   ----------------------------------------
- BYTE   W03
+  POIN2 LabelKratos_5_0105D4FA
+// 020   ----------------------------------------
+ BYTE   W06
  BYTE   FINE
 
 //**************** Track 7 (Midi-Chn.6) ****************//
@@ -1365,234 +3459,229 @@ Label_5_010205B5:
 songKratos_007:
 // 000   ----------------------------------------
  BYTE   KEYSH   songKratos_key+0
-Label_6_0102064E:
- BYTE   VOICE   30
+LabelKratos_6_0105D9B2:
+ BYTE   VOICE   47
  BYTE   MODT 0
- BYTE   CnM2  v000
+ BYTE   CnM2
  BYTE   LFOS 0
- BYTE   CnM2  v044
- BYTE   VOL   35*songKratos_mvl/mxv
- BYTE   PAN   c_v+0
- BYTE   W24
- BYTE   N06  En1  v127
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N08  En2
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+ BYTE   Gs1
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   50*songKratos_mvl/mxv
+ BYTE   TIE  En0  v127
+ BYTE   TIE  Fs0
+ BYTE   TIE  Gn0
+ BYTE   W96
 // 001   ----------------------------------------
-Label_6_01020668:
- BYTE   N06  En1  v127
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   PEND 
+ BYTE   W48
+ BYTE   EOT
+ BYTE   En0  v030
+ BYTE   Gn0
+ BYTE   W48
 // 002   ----------------------------------------
-Label_6_01020673:
- BYTE   N06  En1  v127
- BYTE   W24
- BYTE   N08  En2
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N06  En1
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   PEND 
+ BYTE   W96
 // 003   ----------------------------------------
-Label_6_01020684:
- BYTE   N06  En1  v127
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N08  En2
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   PEND 
- BYTE   PATT
-  POIN2 Label_6_01020668
+ BYTE   W96
 // 004   ----------------------------------------
-Label_6_01020699:
- BYTE   N06  En1  v127
- BYTE   W24
- BYTE   N08  En2
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N06  Dn1
- BYTE   W24
- BYTE   N06
- BYTE   W24
+LabelKratos_6_0105D9CE:
+ BYTE   W48
+ BYTE   TIE  En0  v127
+ BYTE   TIE  Fs0
+ BYTE   TIE  Gn0
+ BYTE   W48
  BYTE   PEND 
 // 005   ----------------------------------------
- BYTE   N06
- BYTE   W24
- BYTE   En1
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N08  En2
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   PATT
-  POIN2 Label_6_01020668
- BYTE   PATT
-  POIN2 Label_6_01020673
- BYTE   PATT
-  POIN2 Label_6_01020684
- BYTE   PATT
-  POIN2 Label_6_01020668
- BYTE   PATT
-  POIN2 Label_6_01020699
+ BYTE   W96
 // 006   ----------------------------------------
- BYTE   N06  Dn1  v127
- BYTE   W24
- BYTE   Cn2
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+ BYTE   EOT
+ BYTE   En0  v030
+ BYTE   Gn0
+ BYTE   W96
 // 007   ----------------------------------------
-Label_6_010206DE:
- BYTE   N06  Cn2  v127
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   An1
- BYTE   W24
+LabelKratos_6_0105D9DE:
+ BYTE   W84
+ BYTE   N18  En0  v127
+ BYTE   N18  Fs0
+ BYTE   N18  Gn0
+ BYTE   W12
  BYTE   PEND 
 // 008   ----------------------------------------
- BYTE   N06
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N06  Fs1
- BYTE   W24
- BYTE   N06
- BYTE   W24
+LabelKratos_6_0105D9E8:
+ BYTE   W42
+ BYTE   N18  En0  v127
+ BYTE   N18  Fs0
+ BYTE   N18  Gn0
+ BYTE   W18
+ BYTE   En0
+ BYTE   N18  Fs0
+ BYTE   N18  Gn0
+ BYTE   W18
+ BYTE   En0
+ BYTE   N18  Fs0
+ BYTE   N18  Gn0
+ BYTE   W18
+ BYTE   PEND 
 // 009   ----------------------------------------
-Label_6_010206F6:
- BYTE   N06  Fs1  v127
- BYTE   W24
- BYTE   Cn2
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+LabelKratos_6_0105D9FE:
+ BYTE   TIE  En0  v127
+ BYTE   TIE  Fs0
+ BYTE   TIE  Gn0
+ BYTE   W96
  BYTE   PEND 
 // 010   ----------------------------------------
-Label_6_01020705:
- BYTE   N06  Dn2  v127
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   En2
- BYTE   W24
- BYTE   PEND 
+ BYTE   W48
+ BYTE   EOT
+ BYTE   En0  v030
+ BYTE   Gn0
+ BYTE   W48
 // 011   ----------------------------------------
- BYTE   N06
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N06  Fs1
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   PATT
-  POIN2 Label_6_010206F6
- BYTE   PATT
-  POIN2 Label_6_010206DE
+ BYTE   W96
 // 012   ----------------------------------------
- BYTE   N06  An1  v127
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N06  Fs0
- BYTE   W24
- BYTE   N06
- BYTE   W24
+LabelKratos_6_0105DA0E:
+ BYTE   W36
+ BYTE   N18  En0  v127
+ BYTE   N18  Fs0
+ BYTE   N18  Gn0
+ BYTE   W54
+ BYTE   En0
+ BYTE   N18  Fs0
+ BYTE   N18  Gn0
+ BYTE   W06
+ BYTE   PEND 
 // 013   ----------------------------------------
- BYTE   N06
- BYTE   W24
- BYTE   Cn2
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   PATT
-  POIN2 Label_6_01020705
+LabelKratos_6_0105DA1E:
+ BYTE   W12
+ BYTE   N18  En0  v127
+ BYTE   N18  Fs0
+ BYTE   N18  Gn0
+ BYTE   W18
+ BYTE   En0
+ BYTE   N18  Fs0
+ BYTE   N18  Gn0
+ BYTE   W18
+ BYTE   TIE  En0
+ BYTE   TIE  Fs0
+ BYTE   TIE  Gn0
+ BYTE   W48
+ BYTE   PEND 
 // 014   ----------------------------------------
- BYTE   N06  En2  v127
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N06  Fs2
- BYTE   W24
- BYTE   N06
- BYTE   W24
+ BYTE   W96
 // 015   ----------------------------------------
- BYTE   N06
- BYTE   W21
- BYTE   GoTo
-  POIN2 Label_6_0102064E
+ BYTE   EOT
+ BYTE   En0  v030
+ BYTE   Gn0
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelKratos_6_0105D9DE
+ BYTE   PATT
+  POIN2 LabelKratos_6_0105D9E8
+ BYTE   PATT
+  POIN2 LabelKratos_6_0105D9FE
 // 016   ----------------------------------------
- BYTE   W03
+ BYTE   W48
+ BYTE   EOT
+ BYTE   En0  v030
+ BYTE   Gn0
+ BYTE   W48
+// 017   ----------------------------------------
+ BYTE   W96
+// 018   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelKratos_6_0105D9CE
+// 019   ----------------------------------------
+ BYTE   W96
+// 020   ----------------------------------------
+ BYTE   EOT
+ BYTE   En0  v030
+ BYTE   Gn0
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelKratos_6_0105D9DE
+ BYTE   PATT
+  POIN2 LabelKratos_6_0105D9E8
+ BYTE   PATT
+  POIN2 LabelKratos_6_0105D9FE
+// 021   ----------------------------------------
+ BYTE   W48
+ BYTE   EOT
+ BYTE   En0  v030
+ BYTE   Gn0
+ BYTE   W48
+// 022   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelKratos_6_0105DA0E
+ BYTE   PATT
+  POIN2 LabelKratos_6_0105DA1E
+// 023   ----------------------------------------
+ BYTE   W96
+// 024   ----------------------------------------
+ BYTE   EOT
+ BYTE   En0  v030
+ BYTE   Gn0
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelKratos_6_0105D9DE
+ BYTE   PATT
+  POIN2 LabelKratos_6_0105D9E8
+ BYTE   PATT
+  POIN2 LabelKratos_6_0105D9FE
+// 025   ----------------------------------------
+ BYTE   W48
+ BYTE   EOT
+ BYTE   En0  v030
+ BYTE   Gn0
+ BYTE   W48
+// 026   ----------------------------------------
+ BYTE   W96
+// 027   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelKratos_6_0105D9CE
+// 028   ----------------------------------------
+ BYTE   W96
+// 029   ----------------------------------------
+ BYTE   EOT
+ BYTE   En0  v030
+ BYTE   Gn0
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelKratos_6_0105D9DE
+ BYTE   PATT
+  POIN2 LabelKratos_6_0105D9E8
+ BYTE   PATT
+  POIN2 LabelKratos_6_0105D9FE
+// 030   ----------------------------------------
+ BYTE   W48
+ BYTE   EOT
+ BYTE   En0  v030
+ BYTE   Gn0
+ BYTE   W48
+// 031   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelKratos_6_0105DA0E
+ BYTE   PATT
+  POIN2 LabelKratos_6_0105DA1E
+// 032   ----------------------------------------
+ BYTE   W96
+// 033   ----------------------------------------
+ BYTE   EOT
+ BYTE   En0  v030
+ BYTE   Gn0
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelKratos_6_0105D9DE
+ BYTE   PATT
+  POIN2 LabelKratos_6_0105D9E8
+// 034   ----------------------------------------
+ BYTE   GoTo
+  POIN2 LabelKratos_6_0105D9B2
+// 035   ----------------------------------------
+ BYTE   W06
  BYTE   FINE
 
 //**************** Track 8 (Midi-Chn.7) ****************//
@@ -1600,243 +3689,564 @@ Label_6_01020705:
 songKratos_008:
 // 000   ----------------------------------------
  BYTE   KEYSH   songKratos_key+0
-Label_7_01020762:
- BYTE   VOICE   30
+LabelKratos_7_0105DADE:
+ BYTE   VOICE   48
  BYTE   MODT 0
- BYTE   CnM2  v000
+ BYTE   CnM2
  BYTE   LFOS 0
- BYTE   CnM2  v044
- BYTE   VOL   35*songKratos_mvl/mxv
- BYTE   PAN   c_v+0
- BYTE   W24
+ BYTE   Gs1
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   16*songKratos_mvl/mxv
  BYTE   N06  En2  v127
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N08  En1
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
 // 001   ----------------------------------------
-Label_7_0102077C:
+LabelKratos_7_0105DB0C:
+ BYTE   W12
  BYTE   N06  En2  v127
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N06
- BYTE   W24
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W12
  BYTE   PEND 
 // 002   ----------------------------------------
-Label_7_01020787:
+LabelKratos_7_0105DB2C:
+ BYTE   W06
  BYTE   N06  En2  v127
- BYTE   W24
- BYTE   N08  En1
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N06  En2
- BYTE   W24
- BYTE   N06
- BYTE   W24
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
  BYTE   PEND 
 // 003   ----------------------------------------
-Label_7_01020798:
+LabelKratos_7_0105DB4C:
  BYTE   N06  En2  v127
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N08  En1
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   Dn2
+ BYTE   N06  An2
+ BYTE   W06
  BYTE   PEND 
- BYTE   PATT
-  POIN2 Label_7_0102077C
 // 004   ----------------------------------------
-Label_7_010207AD:
- BYTE   N06  En2  v127
- BYTE   W24
- BYTE   N08  En1
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N06  Dn2
- BYTE   W24
- BYTE   N06
- BYTE   W24
+LabelKratos_7_0105DB6F:
+ BYTE   W12
+ BYTE   N06  Dn2  v127
+ BYTE   N06  An2
+ BYTE   W18
+ BYTE   Dn2
+ BYTE   N06  An2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
  BYTE   PEND 
 // 005   ----------------------------------------
- BYTE   N06
- BYTE   W24
+LabelKratos_7_0105DB8B:
+ BYTE   N06  En2  v127
+ BYTE   N06  Bn2
+ BYTE   W06
  BYTE   En2
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N08  En1
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   PATT
-  POIN2 Label_7_0102077C
- BYTE   PATT
-  POIN2 Label_7_01020787
- BYTE   PATT
-  POIN2 Label_7_01020798
- BYTE   PATT
-  POIN2 Label_7_0102077C
- BYTE   PATT
-  POIN2 Label_7_010207AD
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   PEND 
 // 006   ----------------------------------------
- BYTE   N06  Dn2  v127
- BYTE   W24
- BYTE   Cn1
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+LabelKratos_7_0105DBA6:
+ BYTE   N06  En2  v127
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   PEND 
 // 007   ----------------------------------------
-Label_7_010207F2:
- BYTE   N06  Cn1  v127
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   An0
- BYTE   W24
+LabelKratos_7_0105DBC9:
+ BYTE   W12
+ BYTE   N06  En2  v127
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W12
  BYTE   PEND 
 // 008   ----------------------------------------
- BYTE   N06
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N06  Fs0
- BYTE   W24
- BYTE   N06
- BYTE   W24
+LabelKratos_7_0105DBE9:
+ BYTE   W06
+ BYTE   N06  En2  v127
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   PEND 
 // 009   ----------------------------------------
- BYTE   N06
- BYTE   W24
- BYTE   Cn1
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+LabelKratos_7_0105DC09:
+ BYTE   N06  Gn2  v127
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   PEND 
 // 010   ----------------------------------------
-Label_7_01020816:
- BYTE   N06  Dn1  v127
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   En1
- BYTE   W24
+LabelKratos_7_0105DC2C:
+ BYTE   W12
+ BYTE   N06  An2  v127
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Dn3
+ BYTE   W12
  BYTE   PEND 
 // 011   ----------------------------------------
- BYTE   N06
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N06  Fs2
- BYTE   W24
- BYTE   N06
- BYTE   W24
+LabelKratos_7_0105DC4C:
+ BYTE   W06
+ BYTE   N06  An2  v127
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   PEND 
 // 012   ----------------------------------------
- BYTE   N06
- BYTE   W24
- BYTE   Cn1
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   PATT
-  POIN2 Label_7_010207F2
+LabelKratos_7_0105DC6C:
+ BYTE   N06  Gn2  v127
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   N06  Ds3
+ BYTE   W06
+ BYTE   PEND 
 // 013   ----------------------------------------
- BYTE   N06  An0  v127
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N06  Fs1
- BYTE   W24
- BYTE   N06
- BYTE   W24
+LabelKratos_7_0105DC8F:
+ BYTE   W12
+ BYTE   N06  Bn2  v127
+ BYTE   N06  Ds3
+ BYTE   W18
+ BYTE   Bn2
+ BYTE   N06  Ds3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   PEND 
 // 014   ----------------------------------------
- BYTE   N06
- BYTE   W24
- BYTE   Cn1
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   PATT
-  POIN2 Label_7_01020816
+LabelKratos_7_0105DCAB:
+ BYTE   N06  Gn2  v127
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   PEND 
 // 015   ----------------------------------------
- BYTE   N06  En1  v127
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N06  Fs1
- BYTE   W24
- BYTE   N06
- BYTE   W24
+LabelKratos_7_0105DCC6:
+ BYTE   N06  An2  v127
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   PEND 
 // 016   ----------------------------------------
- BYTE   N06
- BYTE   W21
- BYTE   GoTo
-  POIN2 Label_7_01020762
+LabelKratos_7_0105DCE9:
+ BYTE   W12
+ BYTE   N06  Gn2  v127
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W12
+ BYTE   PEND 
 // 017   ----------------------------------------
- BYTE   W03
+LabelKratos_7_0105DD09:
+ BYTE   W06
+ BYTE   N06  An2  v127
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   N06  Ds3
+ BYTE   W18
+ BYTE   Bn2
+ BYTE   N06  Ds3
+ BYTE   W18
+ BYTE   Bn2
+ BYTE   N06  Ds3
+ BYTE   W18
+ BYTE   PEND 
+// 018   ----------------------------------------
+LabelKratos_7_0105DD29:
+ BYTE   N06  En2  v127
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DB0C
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DB2C
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DB4C
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DB6F
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DB8B
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DBA6
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DBC9
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DBE9
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DC09
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DC2C
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DC4C
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DC6C
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DC8F
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DCAB
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DCC6
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DCE9
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DD09
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DD29
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DB0C
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DB2C
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DB4C
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DB6F
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DB8B
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DBA6
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DBC9
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DBE9
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DC09
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DC2C
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DC4C
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DC6C
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DC8F
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DCAB
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DCC6
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DCE9
+ BYTE   PATT
+  POIN2 LabelKratos_7_0105DD09
+// 019   ----------------------------------------
+ BYTE   GoTo
+  POIN2 LabelKratos_7_0105DADE
+// 020   ----------------------------------------
+ BYTE   W06
  BYTE   FINE
 
 //**************** Track 9 (Midi-Chn.8) ****************//
@@ -1844,14 +4254,17 @@ Label_7_01020816:
 songKratos_009:
 // 000   ----------------------------------------
  BYTE   KEYSH   songKratos_key+0
-Label_8_0102087A:
- BYTE   VOICE   35
+LabelKratos_8_0105DE06:
+ BYTE   VOICE   42
  BYTE   MODT 0
- BYTE   CnM2  v000
+ BYTE   CnM2
  BYTE   LFOS 0
- BYTE   CnM2  v044
- BYTE   VOL   26*songKratos_mvl/mxv
- BYTE   PAN   c_v+0
+ BYTE   Gs1
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   3*songKratos_mvl/mxv
  BYTE   W96
 // 001   ----------------------------------------
  BYTE   W96
@@ -1864,69 +4277,114 @@ Label_8_0102087A:
 // 005   ----------------------------------------
  BYTE   W96
 // 006   ----------------------------------------
- BYTE   W24
- BYTE   N72  En1  v127
- BYTE   W72
+ BYTE   W96
 // 007   ----------------------------------------
- BYTE   N24  Fs1
- BYTE   W24
- BYTE   Gn2
- BYTE   W24
- BYTE   Bn2
- BYTE   W24
- BYTE   Cn3
- BYTE   W24
+ BYTE   W96
 // 008   ----------------------------------------
- BYTE   Bn2
- BYTE   W24
- BYTE   An2
- BYTE   W24
- BYTE   N72  Bn2
- BYTE   W48
+ BYTE   W96
 // 009   ----------------------------------------
- BYTE   W24
- BYTE   N48
- BYTE   W48
- BYTE   N24  Gn1
- BYTE   W24
+LabelKratos_8_0105DE1B:
+ BYTE   N54  Cn4  v127
+ BYTE   W54
+ BYTE   N18  Bn3
+ BYTE   W18
+ BYTE   An3
+ BYTE   W18
+ BYTE   Gn3
+ BYTE   W06
+ BYTE   PEND 
 // 010   ----------------------------------------
- BYTE   N08  Gn2
- BYTE   W08
- BYTE   An2
- BYTE   W08
- BYTE   Gn2
- BYTE   W08
- BYTE   N48  An2
- BYTE   W48
- BYTE   N72  An1
- BYTE   W24
+LabelKratos_8_0105DE27:
+ BYTE   W12
+ BYTE   N54  An3  v127
+ BYTE   W54
+ BYTE   N18  Fs3
+ BYTE   W18
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   PEND 
 // 011   ----------------------------------------
- BYTE   W48
- BYTE   N08  Bn2
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+LabelKratos_8_0105DE32:
+ BYTE   W06
+ BYTE   N18  An3  v127
+ BYTE   W18
+ BYTE   N36  En3
+ BYTE   W36
+ BYTE   N18  Bn3
+ BYTE   W18
+ BYTE   N36  Gn3
+ BYTE   W18
+ BYTE   PEND 
 // 012   ----------------------------------------
- BYTE   N08
- BYTE   W96
+LabelKratos_8_0105DE41:
+ BYTE   W18
+ BYTE   N18  Dn4  v127
+ BYTE   W18
+ BYTE   En4
+ BYTE   W18
+ BYTE   Fs4
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   W18
+ BYTE   N36  Fs4
+ BYTE   W06
+ BYTE   PEND 
 // 013   ----------------------------------------
- BYTE   W96
+LabelKratos_8_0105DE50:
+ BYTE   W30
+ BYTE   N18  Bn3  v127
+ BYTE   W18
+ BYTE   N54  Cn4
+ BYTE   W48
+ BYTE   PEND 
 // 014   ----------------------------------------
- BYTE   W96
+LabelKratos_8_0105DE59:
+ BYTE   W06
+ BYTE   N18  Bn3  v127
+ BYTE   W18
+ BYTE   An3
+ BYTE   W18
+ BYTE   Gn3
+ BYTE   W18
+ BYTE   N54  An3
+ BYTE   W36
+ BYTE   PEND 
 // 015   ----------------------------------------
- BYTE   W96
+LabelKratos_8_0105DE66:
+ BYTE   W18
+ BYTE   N18  Fs3  v127
+ BYTE   W18
+ BYTE   Gn3
+ BYTE   W18
+ BYTE   An3
+ BYTE   W18
+ BYTE   N36  En3
+ BYTE   W24
+ BYTE   PEND 
 // 016   ----------------------------------------
- BYTE   W96
+LabelKratos_8_0105DE73:
+ BYTE   W12
+ BYTE   N18  Bn3  v127
+ BYTE   W18
+ BYTE   N36  Gn3
+ BYTE   W36
+ BYTE   N18  Dn4
+ BYTE   W18
+ BYTE   En4
+ BYTE   W12
+ BYTE   PEND 
 // 017   ----------------------------------------
- BYTE   W96
+LabelKratos_8_0105DE81:
+ BYTE   W06
+ BYTE   N18  Fs4  v127
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   W18
+ BYTE   N36  Fs4
+ BYTE   W36
+ BYTE   N18  Bn3
+ BYTE   W18
+ BYTE   PEND 
 // 018   ----------------------------------------
  BYTE   W96
 // 019   ----------------------------------------
@@ -1940,11 +4398,70 @@ Label_8_0102087A:
 // 023   ----------------------------------------
  BYTE   W96
 // 024   ----------------------------------------
- BYTE   W21
- BYTE   GoTo
-  POIN2 Label_8_0102087A
+ BYTE   W96
 // 025   ----------------------------------------
- BYTE   W03
+ BYTE   W96
+// 026   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelKratos_8_0105DE1B
+ BYTE   PATT
+  POIN2 LabelKratos_8_0105DE27
+ BYTE   PATT
+  POIN2 LabelKratos_8_0105DE32
+ BYTE   PATT
+  POIN2 LabelKratos_8_0105DE41
+ BYTE   PATT
+  POIN2 LabelKratos_8_0105DE50
+ BYTE   PATT
+  POIN2 LabelKratos_8_0105DE59
+ BYTE   PATT
+  POIN2 LabelKratos_8_0105DE66
+ BYTE   PATT
+  POIN2 LabelKratos_8_0105DE73
+ BYTE   PATT
+  POIN2 LabelKratos_8_0105DE81
+// 027   ----------------------------------------
+ BYTE   W96
+// 028   ----------------------------------------
+ BYTE   W96
+// 029   ----------------------------------------
+ BYTE   W96
+// 030   ----------------------------------------
+ BYTE   W96
+// 031   ----------------------------------------
+ BYTE   W96
+// 032   ----------------------------------------
+ BYTE   W96
+// 033   ----------------------------------------
+ BYTE   W96
+// 034   ----------------------------------------
+ BYTE   W96
+// 035   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelKratos_8_0105DE1B
+ BYTE   PATT
+  POIN2 LabelKratos_8_0105DE27
+ BYTE   PATT
+  POIN2 LabelKratos_8_0105DE32
+ BYTE   PATT
+  POIN2 LabelKratos_8_0105DE41
+ BYTE   PATT
+  POIN2 LabelKratos_8_0105DE50
+ BYTE   PATT
+  POIN2 LabelKratos_8_0105DE59
+ BYTE   PATT
+  POIN2 LabelKratos_8_0105DE66
+ BYTE   PATT
+  POIN2 LabelKratos_8_0105DE73
+ BYTE   PATT
+  POIN2 LabelKratos_8_0105DE81
+// 036   ----------------------------------------
+ BYTE   GoTo
+  POIN2 LabelKratos_8_0105DE06
+// 037   ----------------------------------------
+ BYTE   W06
  BYTE   FINE
 
 //**************** Track 10 (Midi-Chn.9) ****************//
@@ -1952,14 +4469,17 @@ Label_8_0102087A:
 songKratos_010:
 // 000   ----------------------------------------
  BYTE   KEYSH   songKratos_key+0
-Label_9_010208DA:
- BYTE   VOICE   35
+LabelKratos_9_0105DF06:
+ BYTE   VOICE   18
  BYTE   MODT 0
- BYTE   CnM2  v000
+ BYTE   CnM2
  BYTE   LFOS 0
- BYTE   CnM2  v044
- BYTE   VOL   26*songKratos_mvl/mxv
- BYTE   PAN   c_v+0
+ BYTE   Gs1
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   4*songKratos_mvl/mxv
  BYTE   W96
 // 001   ----------------------------------------
  BYTE   W96
@@ -1972,69 +4492,393 @@ Label_9_010208DA:
 // 005   ----------------------------------------
  BYTE   W96
 // 006   ----------------------------------------
- BYTE   W24
- BYTE   N72  En2  v127
- BYTE   W72
+ BYTE   W96
 // 007   ----------------------------------------
- BYTE   N24  Fs2
- BYTE   W24
- BYTE   Gn1
- BYTE   W24
- BYTE   Bn1
- BYTE   W24
- BYTE   Cn2
- BYTE   W24
+ BYTE   W96
 // 008   ----------------------------------------
- BYTE   Bn1
- BYTE   W24
- BYTE   An1
- BYTE   W24
- BYTE   N72  Bn1
- BYTE   W48
+ BYTE   W96
 // 009   ----------------------------------------
- BYTE   W24
- BYTE   N48
- BYTE   W48
- BYTE   N24  Gn2
- BYTE   W24
+LabelKratos_9_0105DF1B:
+ BYTE   N06  En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   PEND 
 // 010   ----------------------------------------
- BYTE   N08  Gn1
- BYTE   W08
- BYTE   An1
- BYTE   W08
- BYTE   Gn1
- BYTE   W08
- BYTE   N48  An1
- BYTE   W48
- BYTE   N72  An2
- BYTE   W24
+LabelKratos_9_0105DF50:
+ BYTE   W12
+ BYTE   N06  En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   PEND 
 // 011   ----------------------------------------
- BYTE   W48
- BYTE   N08  Bn1
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+LabelKratos_9_0105DF95:
+ BYTE   N06  En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   PEND 
 // 012   ----------------------------------------
- BYTE   N08
- BYTE   W96
+LabelKratos_9_0105DFD9:
+ BYTE   N06  En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   PEND 
 // 013   ----------------------------------------
- BYTE   W96
+LabelKratos_9_0105E00E:
+ BYTE   N06  En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   PEND 
 // 014   ----------------------------------------
- BYTE   W96
+LabelKratos_9_0105E05F:
+ BYTE   N06  En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   PEND 
 // 015   ----------------------------------------
- BYTE   W96
+LabelKratos_9_0105E087:
+ BYTE   N06  En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   PEND 
 // 016   ----------------------------------------
- BYTE   W96
+LabelKratos_9_0105E0E6:
+ BYTE   W12
+ BYTE   N06  En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W12
+ BYTE   PEND 
 // 017   ----------------------------------------
- BYTE   W96
+LabelKratos_9_0105E116:
+ BYTE   W06
+ BYTE   N06  En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W18
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v127
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0  v036
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   En0
+ BYTE   N06  En1
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   PEND 
 // 018   ----------------------------------------
  BYTE   W96
 // 019   ----------------------------------------
@@ -2048,11 +4892,70 @@ Label_9_010208DA:
 // 023   ----------------------------------------
  BYTE   W96
 // 024   ----------------------------------------
- BYTE   W21
- BYTE   GoTo
-  POIN2 Label_9_010208DA
+ BYTE   W96
 // 025   ----------------------------------------
- BYTE   W03
+ BYTE   W96
+// 026   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelKratos_9_0105DF1B
+ BYTE   PATT
+  POIN2 LabelKratos_9_0105DF50
+ BYTE   PATT
+  POIN2 LabelKratos_9_0105DF95
+ BYTE   PATT
+  POIN2 LabelKratos_9_0105DFD9
+ BYTE   PATT
+  POIN2 LabelKratos_9_0105E00E
+ BYTE   PATT
+  POIN2 LabelKratos_9_0105E05F
+ BYTE   PATT
+  POIN2 LabelKratos_9_0105E087
+ BYTE   PATT
+  POIN2 LabelKratos_9_0105E0E6
+ BYTE   PATT
+  POIN2 LabelKratos_9_0105E116
+// 027   ----------------------------------------
+ BYTE   W96
+// 028   ----------------------------------------
+ BYTE   W96
+// 029   ----------------------------------------
+ BYTE   W96
+// 030   ----------------------------------------
+ BYTE   W96
+// 031   ----------------------------------------
+ BYTE   W96
+// 032   ----------------------------------------
+ BYTE   W96
+// 033   ----------------------------------------
+ BYTE   W96
+// 034   ----------------------------------------
+ BYTE   W96
+// 035   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelKratos_9_0105DF1B
+ BYTE   PATT
+  POIN2 LabelKratos_9_0105DF50
+ BYTE   PATT
+  POIN2 LabelKratos_9_0105DF95
+ BYTE   PATT
+  POIN2 LabelKratos_9_0105DFD9
+ BYTE   PATT
+  POIN2 LabelKratos_9_0105E00E
+ BYTE   PATT
+  POIN2 LabelKratos_9_0105E05F
+ BYTE   PATT
+  POIN2 LabelKratos_9_0105E087
+ BYTE   PATT
+  POIN2 LabelKratos_9_0105E0E6
+ BYTE   PATT
+  POIN2 LabelKratos_9_0105E116
+// 036   ----------------------------------------
+ BYTE   GoTo
+  POIN2 LabelKratos_9_0105DF06
+// 037   ----------------------------------------
+ BYTE   W06
  BYTE   FINE
 
 //**************** Track 11 (Midi-Chn.10) ****************//
@@ -2060,14 +4963,17 @@ Label_9_010208DA:
 songKratos_011:
 // 000   ----------------------------------------
  BYTE   KEYSH   songKratos_key+0
-Label_10_0102093A:
- BYTE   VOICE   121
+LabelKratos_10_0105E1E6:
+ BYTE   VOICE   63
  BYTE   MODT 0
- BYTE   CnM2  v000
+ BYTE   CnM2
  BYTE   LFOS 0
- BYTE   CnM2  v044
- BYTE   VOL   26*songKratos_mvl/mxv
- BYTE   PAN   c_v+0
+ BYTE   Gs1
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   10*songKratos_mvl/mxv
  BYTE   W96
 // 001   ----------------------------------------
  BYTE   W96
@@ -2092,104 +4998,1890 @@ Label_10_0102093A:
 // 011   ----------------------------------------
  BYTE   W96
 // 012   ----------------------------------------
- BYTE   W24
- BYTE   N06  Dn1  v127
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+ BYTE   W96
 // 013   ----------------------------------------
-Label_10_0102095F:
- BYTE   N06  Dn1  v127
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N06
- BYTE   W24
+LabelKratos_10_0105E1FF:
+ BYTE   W48
+ BYTE   TIE  Cn2  v127
+ BYTE   W48
  BYTE   PEND 
 // 014   ----------------------------------------
-Label_10_0102096A:
- BYTE   N06  Dn1  v127
+ BYTE   W60
+ BYTE   EOT
+ BYTE   N54  An1
+ BYTE   W36
+// 015   ----------------------------------------
+LabelKratos_10_0105E20A:
+ BYTE   W18
+ BYTE   N54  Dn1  v127
+ BYTE   W54
+ BYTE   Cn2
  BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+ BYTE   PEND 
+// 016   ----------------------------------------
+LabelKratos_10_0105E212:
+ BYTE   W30
+ BYTE   N54  Gn1  v127
+ BYTE   W54
+ BYTE   An1
+ BYTE   W12
+ BYTE   PEND 
+// 017   ----------------------------------------
+ BYTE   W42
+ BYTE   Bn1
+ BYTE   W54
+// 018   ----------------------------------------
+ BYTE   W96
+// 019   ----------------------------------------
+ BYTE   W96
+// 020   ----------------------------------------
+ BYTE   W96
+// 021   ----------------------------------------
+ BYTE   W96
+// 022   ----------------------------------------
+ BYTE   W96
+// 023   ----------------------------------------
+ BYTE   W96
+// 024   ----------------------------------------
+ BYTE   W96
+// 025   ----------------------------------------
+ BYTE   W96
+// 026   ----------------------------------------
+ BYTE   W96
+// 027   ----------------------------------------
+ BYTE   W96
+// 028   ----------------------------------------
+ BYTE   W96
+// 029   ----------------------------------------
+ BYTE   W96
+// 030   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelKratos_10_0105E1FF
+// 031   ----------------------------------------
+ BYTE   W60
+ BYTE   EOT
+ BYTE   Cn2
+ BYTE   N54  An1  v127
+ BYTE   W36
+ BYTE   PATT
+  POIN2 LabelKratos_10_0105E20A
+ BYTE   PATT
+  POIN2 LabelKratos_10_0105E212
+// 032   ----------------------------------------
+ BYTE   W42
+ BYTE   N54  Bn1  v127
+ BYTE   W54
+// 033   ----------------------------------------
+ BYTE   W96
+// 034   ----------------------------------------
+ BYTE   W96
+// 035   ----------------------------------------
+ BYTE   W96
+// 036   ----------------------------------------
+ BYTE   W96
+// 037   ----------------------------------------
+ BYTE   W96
+// 038   ----------------------------------------
+ BYTE   W96
+// 039   ----------------------------------------
+ BYTE   W96
+// 040   ----------------------------------------
+ BYTE   W96
+// 041   ----------------------------------------
+ BYTE   W96
+// 042   ----------------------------------------
+ BYTE   W96
+// 043   ----------------------------------------
+ BYTE   W96
+// 044   ----------------------------------------
+ BYTE   W96
+// 045   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelKratos_10_0105E1FF
+// 046   ----------------------------------------
+ BYTE   W60
+ BYTE   EOT
+ BYTE   Cn2
+ BYTE   N54  An1  v127
+ BYTE   W36
+ BYTE   PATT
+  POIN2 LabelKratos_10_0105E20A
+ BYTE   PATT
+  POIN2 LabelKratos_10_0105E212
+// 047   ----------------------------------------
+ BYTE   W42
+ BYTE   N54  Bn1  v127
+ BYTE   W54
+// 048   ----------------------------------------
+ BYTE   GoTo
+  POIN2 LabelKratos_10_0105E1E6
+// 049   ----------------------------------------
+ BYTE   W06
+ BYTE   FINE
+
+//**************** Track 12 (Midi-Chn.11) ****************//
+
+songKratos_012:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songKratos_key+0
+LabelKratos_11_0105E276:
+ BYTE   VOICE   57
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   0*songKratos_mvl/mxv
+ BYTE   N54  En2  v127
+ BYTE   W54
+ BYTE   N18  Fs2
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W18
+ BYTE   Bn2
+ BYTE   W06
+// 001   ----------------------------------------
+LabelKratos_11_0105E28D:
+ BYTE   W12
+ BYTE   N18  An2  v127
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
+ BYTE   Cn3
+ BYTE   W18
+ BYTE   N54  Bn2
+ BYTE   W30
+ BYTE   PEND 
+// 002   ----------------------------------------
+LabelKratos_11_0105E29A:
+ BYTE   W24
+ BYTE   N36  En3  v127
+ BYTE   W36
+ BYTE   N18  Bn2
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
+ BYTE   PEND 
+// 003   ----------------------------------------
+LabelKratos_11_0105E2A5:
+ BYTE   N18  Cn3  v127
+ BYTE   W18
+ BYTE   An2
+ BYTE   W18
+ BYTE   N54  Bn2
+ BYTE   W54
+ BYTE   N18  An2
+ BYTE   W06
+ BYTE   PEND 
+// 004   ----------------------------------------
+LabelKratos_11_0105E2B2:
+ BYTE   W12
+ BYTE   N18  Gn2  v127
+ BYTE   W18
+ BYTE   Fs2
+ BYTE   W18
+ BYTE   N54  En2
+ BYTE   W48
+ BYTE   PEND 
+// 005   ----------------------------------------
+LabelKratos_11_0105E2BD:
+ BYTE   W06
+ BYTE   N18  Fs2  v127
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W18
+ BYTE   Bn2
+ BYTE   W18
+ BYTE   An2
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
+ BYTE   PEND 
+// 006   ----------------------------------------
+LabelKratos_11_0105E2CB:
+ BYTE   N18  Cn3  v127
+ BYTE   W18
+ BYTE   N54  Bn2
+ BYTE   W54
+ BYTE   N36  En3
+ BYTE   W24
+ BYTE   PEND 
+// 007   ----------------------------------------
+LabelKratos_11_0105E2D6:
+ BYTE   W12
+ BYTE   N18  Bn2  v127
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
+ BYTE   Cn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   W18
+ BYTE   N54  Bn2
+ BYTE   W12
+ BYTE   PEND 
+// 008   ----------------------------------------
+LabelKratos_11_0105E2E5:
+ BYTE   W42
+ BYTE   N18  Gn3  v127
+ BYTE   W18
+ BYTE   Fs3
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
+ BYTE   PEND 
+// 009   ----------------------------------------
+LabelKratos_11_0105E2EF:
+ BYTE   N54  Cn3  v127
+ BYTE   W54
+ BYTE   N18  Bn2
+ BYTE   W18
+ BYTE   An2
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W06
+ BYTE   PEND 
+// 010   ----------------------------------------
+LabelKratos_11_0105E2FB:
+ BYTE   W12
+ BYTE   N54  An2  v127
+ BYTE   W54
+ BYTE   N18  Fs2
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   PEND 
+// 011   ----------------------------------------
+LabelKratos_11_0105E306:
+ BYTE   W06
+ BYTE   N18  An2  v127
+ BYTE   W18
+ BYTE   N36  En2
+ BYTE   W36
+ BYTE   N18  Bn2
+ BYTE   W18
+ BYTE   N36  Gn2
+ BYTE   W18
+ BYTE   PEND 
+// 012   ----------------------------------------
+LabelKratos_11_0105E315:
+ BYTE   W18
+ BYTE   N18  Dn3  v127
+ BYTE   W18
+ BYTE   En3
+ BYTE   W18
+ BYTE   Fs3
+ BYTE   W18
+ BYTE   Gn3
+ BYTE   W18
+ BYTE   N36  Fs3
+ BYTE   W06
+ BYTE   PEND 
+// 013   ----------------------------------------
+LabelKratos_11_0105E324:
+ BYTE   W30
+ BYTE   N18  Bn2  v127
+ BYTE   W18
+ BYTE   N54  Cn3
+ BYTE   W48
+ BYTE   PEND 
+// 014   ----------------------------------------
+LabelKratos_11_0105E32D:
+ BYTE   W06
+ BYTE   N18  Bn2  v127
+ BYTE   W18
+ BYTE   An2
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W18
+ BYTE   N54  An2
+ BYTE   W36
  BYTE   PEND 
 // 015   ----------------------------------------
-Label_10_01020981:
- BYTE   N08  Dn1  v127
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N06
+LabelKratos_11_0105E33A:
+ BYTE   W18
+ BYTE   N18  Fs2  v127
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W18
+ BYTE   An2
+ BYTE   W18
+ BYTE   N36  En2
  BYTE   W24
- BYTE   N06
- BYTE   W24
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W08
+ BYTE   PEND 
+// 016   ----------------------------------------
+LabelKratos_11_0105E347:
+ BYTE   W12
+ BYTE   N18  Bn2  v127
+ BYTE   W18
+ BYTE   N36  Gn2
+ BYTE   W36
+ BYTE   N18  Dn3
+ BYTE   W18
+ BYTE   En3
+ BYTE   W12
+ BYTE   PEND 
+// 017   ----------------------------------------
+LabelKratos_11_0105E355:
+ BYTE   W06
+ BYTE   N18  Fs3  v127
+ BYTE   W18
+ BYTE   Gn3
+ BYTE   W18
+ BYTE   N36  Fs3
+ BYTE   W36
+ BYTE   N18  Bn2
+ BYTE   W18
+ BYTE   PEND 
+// 018   ----------------------------------------
+LabelKratos_11_0105E363:
+ BYTE   N54  En2  v127
+ BYTE   W54
+ BYTE   N18  Fs2
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W18
+ BYTE   Bn2
+ BYTE   W06
  BYTE   PEND 
  BYTE   PATT
-  POIN2 Label_10_0102095F
+  POIN2 LabelKratos_11_0105E28D
  BYTE   PATT
-  POIN2 Label_10_0102096A
+  POIN2 LabelKratos_11_0105E29A
  BYTE   PATT
-  POIN2 Label_10_01020981
+  POIN2 LabelKratos_11_0105E2A5
  BYTE   PATT
-  POIN2 Label_10_0102095F
+  POIN2 LabelKratos_11_0105E2B2
  BYTE   PATT
-  POIN2 Label_10_0102096A
+  POIN2 LabelKratos_11_0105E2BD
  BYTE   PATT
-  POIN2 Label_10_01020981
+  POIN2 LabelKratos_11_0105E2CB
  BYTE   PATT
-  POIN2 Label_10_0102095F
+  POIN2 LabelKratos_11_0105E2D6
  BYTE   PATT
-  POIN2 Label_10_0102096A
-// 016   ----------------------------------------
- BYTE   N08  Dn1  v127
- BYTE   W08
- BYTE   N08
- BYTE   W08
- BYTE   N08
- BYTE   W05
+  POIN2 LabelKratos_11_0105E2E5
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E2EF
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E2FB
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E306
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E315
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E324
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E32D
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E33A
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E347
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E355
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E363
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E28D
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E29A
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E2A5
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E2B2
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E2BD
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E2CB
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E2D6
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E2E5
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E2EF
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E2FB
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E306
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E315
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E324
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E32D
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E33A
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E347
+ BYTE   PATT
+  POIN2 LabelKratos_11_0105E355
+// 019   ----------------------------------------
  BYTE   GoTo
-  POIN2 Label_10_0102093A
+  POIN2 LabelKratos_11_0105E276
+// 020   ----------------------------------------
+ BYTE   W06
+ BYTE   FINE
+
+//**************** Track 13 (Midi-Chn.12) ****************//
+
+songKratos_013:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songKratos_key+0
+LabelKratos_12_0105E42A:
+ BYTE   VOICE   48
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   2*songKratos_mvl/mxv
+ BYTE   W06
+ BYTE   N54  En2  v127
+ BYTE   W54
+ BYTE   N18  Fs2
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W18
+// 001   ----------------------------------------
+LabelKratos_12_0105E440:
+ BYTE   N18  Bn2  v127
+ BYTE   W18
+ BYTE   An2
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
+ BYTE   Cn3
+ BYTE   W18
+ BYTE   N54  Bn2
+ BYTE   W24
+ BYTE   PEND 
+// 002   ----------------------------------------
+LabelKratos_12_0105E44E:
+ BYTE   W30
+ BYTE   N36  En3  v127
+ BYTE   W36
+ BYTE   N18  Bn2
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   PEND 
+// 003   ----------------------------------------
+LabelKratos_12_0105E459:
+ BYTE   W06
+ BYTE   N18  Cn3  v127
+ BYTE   W18
+ BYTE   An2
+ BYTE   W18
+ BYTE   N54  Bn2
+ BYTE   W54
+ BYTE   PEND 
+// 004   ----------------------------------------
+LabelKratos_12_0105E464:
+ BYTE   N18  An2  v127
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W18
+ BYTE   Fs2
+ BYTE   W18
+ BYTE   N54  En2
+ BYTE   W42
+ BYTE   PEND 
+// 005   ----------------------------------------
+LabelKratos_12_0105E470:
+ BYTE   W12
+ BYTE   N18  Fs2  v127
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W18
+ BYTE   Bn2
+ BYTE   W18
+ BYTE   An2
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   PEND 
+// 006   ----------------------------------------
+LabelKratos_12_0105E47E:
+ BYTE   W06
+ BYTE   N18  Cn3  v127
+ BYTE   W18
+ BYTE   N54  Bn2
+ BYTE   W54
+ BYTE   N36  En3
+ BYTE   W18
+ BYTE   PEND 
+// 007   ----------------------------------------
+LabelKratos_12_0105E48A:
+ BYTE   W18
+ BYTE   N18  Bn2  v127
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
+ BYTE   Cn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   W18
+ BYTE   N54  Bn2
+ BYTE   W06
+ BYTE   PEND 
+// 008   ----------------------------------------
+LabelKratos_12_0105E499:
+ BYTE   W48
+ BYTE   N18  Gn3  v127
+ BYTE   W18
+ BYTE   Fs3
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   PEND 
+// 009   ----------------------------------------
+LabelKratos_12_0105E4A3:
+ BYTE   W06
+ BYTE   N54  Cn4  v127
+ BYTE   W54
+ BYTE   N18  Bn3
+ BYTE   W18
+ BYTE   An3
+ BYTE   W18
+ BYTE   PEND 
+// 010   ----------------------------------------
+LabelKratos_12_0105E4AE:
+ BYTE   N18  Gn3  v127
+ BYTE   W18
+ BYTE   N54  An3
+ BYTE   W54
+ BYTE   N18  Fs3
+ BYTE   W18
+ BYTE   Gn3
+ BYTE   W06
+ BYTE   PEND 
+// 011   ----------------------------------------
+LabelKratos_12_0105E4BB:
+ BYTE   W12
+ BYTE   N18  An3  v127
+ BYTE   W18
+ BYTE   N36  En3
+ BYTE   W36
+ BYTE   N18  Bn3
+ BYTE   W18
+ BYTE   N36  Gn3
+ BYTE   W12
+ BYTE   PEND 
+// 012   ----------------------------------------
+LabelKratos_12_0105E4CA:
+ BYTE   W24
+ BYTE   N18  Dn4  v127
+ BYTE   W18
+ BYTE   En4
+ BYTE   W18
+ BYTE   Fs4
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   W18
+ BYTE   PEND 
+// 013   ----------------------------------------
+LabelKratos_12_0105E4D6:
+ BYTE   N36  Fs4  v127
+ BYTE   W36
+ BYTE   N18  Bn3
+ BYTE   W18
+ BYTE   TIE  Cn2
+ BYTE   N54  Cn3
+ BYTE   N54  Cn4
+ BYTE   W42
+ BYTE   PEND 
+// 014   ----------------------------------------
+LabelKratos_12_0105E4E5:
+ BYTE   W12
+ BYTE   N18  Bn2  v127
+ BYTE   N18  Bn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N18  An3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N18  Gn3
+ BYTE   W18
+ BYTE   PEND 
+ BYTE   EOT
+ BYTE   Cn2
+ BYTE   N54  An1
+ BYTE   N54  An2
+ BYTE   N54  An3
+ BYTE   W30
+// 015   ----------------------------------------
+LabelKratos_12_0105E4FE:
+ BYTE   W24
+ BYTE   N54  Dn1  v127
+ BYTE   N18  Fs2
+ BYTE   N18  Fs3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N18  Gn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N18  An3
+ BYTE   W18
+ BYTE   N54  Cn2
+ BYTE   N36  En2
+ BYTE   N36  En3
+ BYTE   W18
+ BYTE   PEND 
+// 016   ----------------------------------------
+LabelKratos_12_0105E517:
+ BYTE   W18
+ BYTE   N18  Bn2  v127
+ BYTE   N18  Bn3
+ BYTE   W18
+ BYTE   N54  Gn1
+ BYTE   N36  Gn2
+ BYTE   N36  Gn3
+ BYTE   W36
+ BYTE   N18  Dn3
+ BYTE   N18  Dn4
+ BYTE   W18
+ BYTE   N54  An1
+ BYTE   N18  En3
+ BYTE   N18  En4
+ BYTE   W06
+ BYTE   PEND 
 // 017   ----------------------------------------
- BYTE   W03
+LabelKratos_12_0105E532:
+ BYTE   W12
+ BYTE   N18  Fs3  v127
+ BYTE   N18  Fs4
+ BYTE   W18
+ BYTE   Gn3
+ BYTE   N18  Gn4
+ BYTE   W18
+ BYTE   N54  Bn1
+ BYTE   N36  Fs3
+ BYTE   N36  Fs4
+ BYTE   W36
+ BYTE   N18  Bn2
+ BYTE   N18  Bn3
+ BYTE   W12
+ BYTE   PEND 
+// 018   ----------------------------------------
+LabelKratos_12_0105E54A:
+ BYTE   W06
+ BYTE   N54  En2  v127
+ BYTE   W54
+ BYTE   N18  Fs2
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W18
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E440
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E44E
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E459
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E464
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E470
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E47E
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E48A
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E499
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E4A3
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E4AE
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E4BB
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E4CA
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E4D6
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E4E5
+// 019   ----------------------------------------
+ BYTE   EOT
+ BYTE   Cn2
+ BYTE   N54  An1  v127
+ BYTE   N54  An2
+ BYTE   N54  An3
+ BYTE   W30
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E4FE
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E517
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E532
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E54A
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E440
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E44E
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E459
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E464
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E470
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E47E
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E48A
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E499
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E4A3
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E4AE
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E4BB
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E4CA
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E4D6
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E4E5
+// 020   ----------------------------------------
+ BYTE   EOT
+ BYTE   Cn2
+ BYTE   N54  An1  v127
+ BYTE   N54  An2
+ BYTE   N54  An3
+ BYTE   W30
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E4FE
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E517
+ BYTE   PATT
+  POIN2 LabelKratos_12_0105E532
+// 021   ----------------------------------------
+ BYTE   GoTo
+  POIN2 LabelKratos_12_0105E42A
+// 022   ----------------------------------------
+ BYTE   W06
+ BYTE   FINE
+
+//**************** Track 14 (Midi-Chn.13) ****************//
+
+songKratos_014:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songKratos_key+0
+LabelKratos_13_0105E622:
+ BYTE   VOICE   60
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   0*songKratos_mvl/mxv
+ BYTE   N54  En2  v127
+ BYTE   W54
+ BYTE   N18  Fs2
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W18
+ BYTE   Bn2
+ BYTE   W06
+// 001   ----------------------------------------
+LabelKratos_13_0105E639:
+ BYTE   W12
+ BYTE   N18  An2  v127
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
+ BYTE   Cn3
+ BYTE   W18
+ BYTE   N54  Bn2
+ BYTE   W30
+ BYTE   PEND 
+// 002   ----------------------------------------
+LabelKratos_13_0105E646:
+ BYTE   W24
+ BYTE   N36  En3  v127
+ BYTE   W36
+ BYTE   N18  Bn2
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
+ BYTE   PEND 
+// 003   ----------------------------------------
+LabelKratos_13_0105E651:
+ BYTE   N18  Cn3  v127
+ BYTE   W18
+ BYTE   An2
+ BYTE   W18
+ BYTE   N54  Bn2
+ BYTE   W54
+ BYTE   N18  An2
+ BYTE   W06
+ BYTE   PEND 
+// 004   ----------------------------------------
+LabelKratos_13_0105E65E:
+ BYTE   W12
+ BYTE   N18  Gn2  v127
+ BYTE   W18
+ BYTE   Fs2
+ BYTE   W18
+ BYTE   N54  En2
+ BYTE   W36
+ BYTE   N18  An0  v036
+ BYTE   W12
+ BYTE   PEND 
+// 005   ----------------------------------------
+LabelKratos_13_0105E66D:
+ BYTE   W06
+ BYTE   N54  Bn0  v036
+ BYTE   N18  Fs2  v127
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W18
+ BYTE   Bn2
+ BYTE   W18
+ BYTE   Cn1  v036
+ BYTE   N18  An2  v127
+ BYTE   W18
+ BYTE   Cn1  v036
+ BYTE   N18  Dn3  v127
+ BYTE   W18
+ BYTE   PEND 
+// 006   ----------------------------------------
+LabelKratos_13_0105E686:
+ BYTE   N18  Cn1  v036
+ BYTE   N18  Cn3  v127
+ BYTE   W18
+ BYTE   N54  Bn0  v036
+ BYTE   N54  Bn2  v127
+ BYTE   W54
+ BYTE   N36  En3
+ BYTE   W24
+ BYTE   PEND 
+// 007   ----------------------------------------
+LabelKratos_13_0105E698:
+ BYTE   W12
+ BYTE   N18  Bn2  v127
+ BYTE   W18
+ BYTE   N06  An0  v036
+ BYTE   N18  Dn3  v127
+ BYTE   W06
+ BYTE   N06  Bn0  v036
+ BYTE   W06
+ BYTE   An0
+ BYTE   W06
+ BYTE   N24  En0
+ BYTE   N18  Cn3  v127
+ BYTE   W18
+ BYTE   An2
+ BYTE   W18
+ BYTE   N54  Bn2
+ BYTE   W12
+ BYTE   PEND 
+// 008   ----------------------------------------
+LabelKratos_13_0105E6B6:
+ BYTE   W42
+ BYTE   N18  Gn3  v127
+ BYTE   W18
+ BYTE   Fs3
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
+ BYTE   PEND 
+// 009   ----------------------------------------
+LabelKratos_13_0105E6C0:
+ BYTE   N54  Cn2  v127
+ BYTE   N54  Cn4
+ BYTE   W54
+ BYTE   N18  Bn1
+ BYTE   N18  Bn3
+ BYTE   W18
+ BYTE   An1
+ BYTE   N18  An3
+ BYTE   W18
+ BYTE   Gn1
+ BYTE   N18  Gn3
+ BYTE   W06
+ BYTE   PEND 
+// 010   ----------------------------------------
+LabelKratos_13_0105E6D4:
+ BYTE   W12
+ BYTE   N54  An1  v127
+ BYTE   N54  An3
+ BYTE   W54
+ BYTE   N18  Fs1
+ BYTE   N18  Fs3
+ BYTE   W18
+ BYTE   Gn1
+ BYTE   N18  Gn3
+ BYTE   W12
+ BYTE   PEND 
+// 011   ----------------------------------------
+LabelKratos_13_0105E6E5:
+ BYTE   W06
+ BYTE   N18  An1  v127
+ BYTE   N18  An3
+ BYTE   W18
+ BYTE   N36  En1
+ BYTE   N36  En3
+ BYTE   W36
+ BYTE   N18  Bn1
+ BYTE   N18  Bn3
+ BYTE   W18
+ BYTE   N36  Gn1
+ BYTE   N36  Gn3
+ BYTE   W18
+ BYTE   PEND 
+// 012   ----------------------------------------
+LabelKratos_13_0105E6FC:
+ BYTE   W18
+ BYTE   N18  Dn2  v127
+ BYTE   N18  Dn4
+ BYTE   W18
+ BYTE   En2
+ BYTE   N18  En4
+ BYTE   W18
+ BYTE   Fs2
+ BYTE   N18  Fs4
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N18  Gn4
+ BYTE   W18
+ BYTE   N36  Fs2
+ BYTE   N36  Fs4
+ BYTE   W06
+ BYTE   PEND 
+// 013   ----------------------------------------
+LabelKratos_13_0105E715:
+ BYTE   W30
+ BYTE   N18  Bn1  v127
+ BYTE   N18  Bn3
+ BYTE   W18
+ BYTE   TIE  Cn2
+ BYTE   N54  Cn3
+ BYTE   N54  Cn4
+ BYTE   W48
+ BYTE   PEND 
+// 014   ----------------------------------------
+LabelKratos_13_0105E724:
+ BYTE   W06
+ BYTE   N18  Bn1  v127
+ BYTE   N18  Bn2
+ BYTE   N18  Bn3
+ BYTE   W18
+ BYTE   An1
+ BYTE   N18  An2
+ BYTE   N18  An3
+ BYTE   W18
+ BYTE   Gn1
+ BYTE   N18  Gn2
+ BYTE   N18  Gn3
+ BYTE   W18
+ BYTE   PEND 
+ BYTE   EOT
+ BYTE   Cn2
+ BYTE   N54  An1
+ BYTE   N54  An2
+ BYTE   N54  An3
+ BYTE   W36
+// 015   ----------------------------------------
+LabelKratos_13_0105E743:
+ BYTE   W18
+ BYTE   N54  Dn1  v127
+ BYTE   N18  Fs1
+ BYTE   N18  Fs2
+ BYTE   N18  Fs3
+ BYTE   W18
+ BYTE   Gn1
+ BYTE   N18  Gn2
+ BYTE   N18  Gn3
+ BYTE   W18
+ BYTE   An1
+ BYTE   N18  An2
+ BYTE   N18  An3
+ BYTE   W18
+ BYTE   N36  En1
+ BYTE   N54  Cn2
+ BYTE   N36  En2
+ BYTE   N36  En3
+ BYTE   W24
+ BYTE   PEND 
+// 016   ----------------------------------------
+LabelKratos_13_0105E764:
+ BYTE   W12
+ BYTE   N18  Bn1  v127
+ BYTE   N18  Bn2
+ BYTE   N18  Bn3
+ BYTE   W18
+ BYTE   N54  Gn1
+ BYTE   N36  Gn2
+ BYTE   N36  Gn3
+ BYTE   W36
+ BYTE   N18  Dn2
+ BYTE   N18  Dn3
+ BYTE   N18  Dn4
+ BYTE   W18
+ BYTE   N54  An1
+ BYTE   N18  En2
+ BYTE   N18  En3
+ BYTE   N18  En4
+ BYTE   W12
+ BYTE   PEND 
+// 017   ----------------------------------------
+LabelKratos_13_0105E785:
+ BYTE   W06
+ BYTE   N18  Fs2  v127
+ BYTE   N18  Fs3
+ BYTE   N18  Fs4
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N18  Gn3
+ BYTE   N18  Gn4
+ BYTE   W18
+ BYTE   N54  Bn1
+ BYTE   N36  Fs2
+ BYTE   N36  Fs3
+ BYTE   N36  Fs4
+ BYTE   W36
+ BYTE   N18  Bn2
+ BYTE   N18  Bn3
+ BYTE   W18
+ BYTE   PEND 
+// 018   ----------------------------------------
+LabelKratos_13_0105E7A3:
+ BYTE   N54  En2  v127
+ BYTE   W54
+ BYTE   N18  Fs2
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W18
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E639
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E646
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E651
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E65E
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E66D
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E686
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E698
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E6B6
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E6C0
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E6D4
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E6E5
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E6FC
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E715
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E724
+// 019   ----------------------------------------
+ BYTE   EOT
+ BYTE   Cn2
+ BYTE   N54  An1  v127
+ BYTE   N54  An2
+ BYTE   N54  An3
+ BYTE   W36
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E743
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E764
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E785
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E7A3
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E639
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E646
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E651
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E65E
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E66D
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E686
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E698
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E6B6
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E6C0
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E6D4
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E6E5
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E6FC
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E715
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E724
+// 020   ----------------------------------------
+ BYTE   EOT
+ BYTE   Cn2
+ BYTE   N54  An1  v127
+ BYTE   N54  An2
+ BYTE   N54  An3
+ BYTE   W36
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E743
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E764
+ BYTE   PATT
+  POIN2 LabelKratos_13_0105E785
+// 021   ----------------------------------------
+ BYTE   GoTo
+  POIN2 LabelKratos_13_0105E622
+// 022   ----------------------------------------
+ BYTE   W06
+ BYTE   FINE
+
+//**************** Track 15 (Midi-Chn.14) ****************//
+
+songKratos_015:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songKratos_key+0
+LabelKratos_14_0105E87E:
+ BYTE   VOICE   60
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   9*songKratos_mvl/mxv
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W78
+ BYTE   N18  Cn3  v016
+ BYTE   W18
+// 006   ----------------------------------------
+LabelKratos_14_0105E894:
+ BYTE   N06  Cn3  v016
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   An2
+ BYTE   W06
+ BYTE   N54  En2
+ BYTE   W78
+ BYTE   PEND 
+// 007   ----------------------------------------
+LabelKratos_14_0105E8A0:
+ BYTE   W30
+ BYTE   N03  An2  v127
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   An2
+ BYTE   W06
+ BYTE   N90  En2  v032
+ BYTE   W48
+ BYTE   PEND 
+// 008   ----------------------------------------
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   W96
+// 010   ----------------------------------------
+ BYTE   W96
+// 011   ----------------------------------------
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   W96
+// 013   ----------------------------------------
+ BYTE   W96
+// 014   ----------------------------------------
+ BYTE   W96
+// 015   ----------------------------------------
+ BYTE   W96
+// 016   ----------------------------------------
+ BYTE   W96
+// 017   ----------------------------------------
+ BYTE   W96
+// 018   ----------------------------------------
+ BYTE   VOL   9*songKratos_mvl/mxv
+ BYTE   W96
+// 019   ----------------------------------------
+ BYTE   W96
+// 020   ----------------------------------------
+ BYTE   W96
+// 021   ----------------------------------------
+ BYTE   W96
+// 022   ----------------------------------------
+ BYTE   W96
+// 023   ----------------------------------------
+ BYTE   W78
+ BYTE   N18  Cn3  v016
+ BYTE   W18
+ BYTE   PATT
+  POIN2 LabelKratos_14_0105E894
+ BYTE   PATT
+  POIN2 LabelKratos_14_0105E8A0
+// 024   ----------------------------------------
+ BYTE   W96
+// 025   ----------------------------------------
+ BYTE   W96
+// 026   ----------------------------------------
+ BYTE   W96
+// 027   ----------------------------------------
+ BYTE   W96
+// 028   ----------------------------------------
+ BYTE   W96
+// 029   ----------------------------------------
+ BYTE   W96
+// 030   ----------------------------------------
+ BYTE   W96
+// 031   ----------------------------------------
+ BYTE   W96
+// 032   ----------------------------------------
+ BYTE   W96
+// 033   ----------------------------------------
+ BYTE   W96
+// 034   ----------------------------------------
+ BYTE   W96
+// 035   ----------------------------------------
+ BYTE   W96
+// 036   ----------------------------------------
+ BYTE   W96
+// 037   ----------------------------------------
+ BYTE   W96
+// 038   ----------------------------------------
+ BYTE   W96
+// 039   ----------------------------------------
+ BYTE   W78
+ BYTE   N18  Cn3  v016
+ BYTE   W18
+ BYTE   PATT
+  POIN2 LabelKratos_14_0105E894
+ BYTE   PATT
+  POIN2 LabelKratos_14_0105E8A0
+// 040   ----------------------------------------
+ BYTE   W96
+// 041   ----------------------------------------
+ BYTE   W96
+// 042   ----------------------------------------
+ BYTE   W96
+// 043   ----------------------------------------
+ BYTE   W96
+// 044   ----------------------------------------
+ BYTE   W96
+// 045   ----------------------------------------
+ BYTE   W96
+// 046   ----------------------------------------
+ BYTE   W96
+// 047   ----------------------------------------
+ BYTE   W96
+// 048   ----------------------------------------
+ BYTE   W96
+// 049   ----------------------------------------
+ BYTE   W96
+// 050   ----------------------------------------
+ BYTE   GoTo
+  POIN2 LabelKratos_14_0105E87E
+// 051   ----------------------------------------
+ BYTE   W06
+ BYTE   FINE
+
+//**************** Track 16 (Midi-Chn.15) ****************//
+
+songKratos_016:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songKratos_key+0
+LabelKratos_15_0105E902:
+ BYTE   VOICE   48
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   6*songKratos_mvl/mxv
+ BYTE   W06
+ BYTE   N06  En2  v127
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+// 001   ----------------------------------------
+LabelKratos_15_0105E92D:
+ BYTE   N06  En2  v127
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   PEND 
+// 002   ----------------------------------------
+LabelKratos_15_0105E950:
+ BYTE   W12
+ BYTE   N06  En2  v127
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W12
+ BYTE   PEND 
+// 003   ----------------------------------------
+LabelKratos_15_0105E970:
+ BYTE   W06
+ BYTE   N06  En2  v127
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   PEND 
+// 004   ----------------------------------------
+LabelKratos_15_0105E990:
+ BYTE   N06  Dn2  v127
+ BYTE   N06  An2
+ BYTE   W18
+ BYTE   Dn2
+ BYTE   N06  An2
+ BYTE   W18
+ BYTE   Dn2
+ BYTE   N06  An2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   PEND 
+// 005   ----------------------------------------
+LabelKratos_15_0105E9AB:
+ BYTE   N06  En2  v127
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Cn3
+ BYTE   W12
+ BYTE   PEND 
+// 006   ----------------------------------------
+LabelKratos_15_0105E9CA:
+ BYTE   W06
+ BYTE   N06  En2  v127
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   PEND 
+// 007   ----------------------------------------
+LabelKratos_15_0105E9EA:
+ BYTE   N06  En2  v127
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   PEND 
+// 008   ----------------------------------------
+LabelKratos_15_0105EA0D:
+ BYTE   W12
+ BYTE   N06  En2  v127
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W12
+ BYTE   PEND 
+// 009   ----------------------------------------
+LabelKratos_15_0105EA2D:
+ BYTE   W06
+ BYTE   N06  Gn2  v127
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   PEND 
+// 010   ----------------------------------------
+LabelKratos_15_0105EA4D:
+ BYTE   N06  Gn2  v127
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Dn3
+ BYTE   W06
+ BYTE   PEND 
+// 011   ----------------------------------------
+LabelKratos_15_0105EA70:
+ BYTE   W12
+ BYTE   N06  An2  v127
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Dn3
+ BYTE   W12
+ BYTE   PEND 
+// 012   ----------------------------------------
+LabelKratos_15_0105EA90:
+ BYTE   W06
+ BYTE   N06  Gn2  v127
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   PEND 
+// 013   ----------------------------------------
+LabelKratos_15_0105EAB0:
+ BYTE   N06  Bn2  v127
+ BYTE   N06  Ds3
+ BYTE   W18
+ BYTE   Bn2
+ BYTE   N06  Ds3
+ BYTE   W18
+ BYTE   Bn2
+ BYTE   N06  Ds3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   PEND 
+// 014   ----------------------------------------
+LabelKratos_15_0105EACB:
+ BYTE   N06  Gn2  v127
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W12
+ BYTE   PEND 
+// 015   ----------------------------------------
+LabelKratos_15_0105EAEA:
+ BYTE   W06
+ BYTE   N06  An2  v127
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   PEND 
+// 016   ----------------------------------------
+LabelKratos_15_0105EB0A:
+ BYTE   N06  Gn2  v127
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N06  Dn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   PEND 
+// 017   ----------------------------------------
+LabelKratos_15_0105EB2D:
+ BYTE   W12
+ BYTE   N06  An2  v127
+ BYTE   N06  Cn3
+ BYTE   W18
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   N06  Ds3
+ BYTE   W18
+ BYTE   Bn2
+ BYTE   N06  Ds3
+ BYTE   W18
+ BYTE   Bn2
+ BYTE   N06  Ds3
+ BYTE   W12
+ BYTE   PEND 
+// 018   ----------------------------------------
+LabelKratos_15_0105EB4D:
+ BYTE   W06
+ BYTE   N06  En2  v127
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   En2
+ BYTE   N06  Bn2
+ BYTE   W18
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105E92D
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105E950
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105E970
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105E990
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105E9AB
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105E9CA
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105E9EA
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EA0D
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EA2D
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EA4D
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EA70
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EA90
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EAB0
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EACB
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EAEA
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EB0A
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EB2D
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EB4D
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105E92D
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105E950
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105E970
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105E990
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105E9AB
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105E9CA
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105E9EA
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EA0D
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EA2D
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EA4D
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EA70
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EA90
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EAB0
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EACB
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EAEA
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EB0A
+ BYTE   PATT
+  POIN2 LabelKratos_15_0105EB2D
+// 019   ----------------------------------------
+ BYTE   GoTo
+  POIN2 LabelKratos_15_0105E902
+// 020   ----------------------------------------
+ BYTE   W06
  BYTE   FINE
 
 //******************************************************//
 	ALIGN 4
 
 songKratos:
-	BYTE	11	// NumTrks
+	BYTE	16	// NumTrks
 	BYTE	0	// NumBlks
 	BYTE	songKratos_pri	// Priority
 	BYTE	songKratos_rev	// Reverb.
@@ -2207,5 +6899,10 @@ songKratos:
 	POIN2	songKratos_009
 	POIN2	songKratos_010
 	POIN2	songKratos_011
+	POIN2	songKratos_012
+	POIN2	songKratos_013
+	POIN2	songKratos_014
+	POIN2	songKratos_015
+	POIN2	songKratos_016
 
 	

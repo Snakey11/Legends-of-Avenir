@@ -18,6 +18,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+SupportConvo(ASupport,0xFF,Arc,Support1Text)
 END_MAIN
 
 LocationBasedEvents:
@@ -72,17 +73,17 @@ FADU 0x5
 STAL 0x30
 Text(Merc7MilitiaWaitArcanaeBeginningText)
 MUSC Solve_the_Riddle
-WARP_IN // rB is already set
+WarpIn(7,4,LoadUzkalisTemple)
 LOAD1 0x1 LoadUzkalisTemple
 ENUN
 STAL 0x20
 Text(Merc7MilitiaWaitArcanaeUzkalisHereText)
-WARP_OUT // rB is already set
-CLEN Uzkalis
+SVAL 0xB Coords(7,4)
+WARP_OUT
+DISA Uzkalis
 STAL 0x20
 Text(Merc7MilitiaWaitArcanaeUzkalisGoneText)
 FADI 0x5
-CLEA 0x0
 CLEE 0x0
 CLEN 0x0
 SVAL 0xB Coords(7,5)
@@ -98,7 +99,7 @@ MUSC Indignation
 MOVE 0x0 Finoc [3,0]
 ENUN
 REMU Finoc
-WarpIn(4,11,LoadUzkalisCamp)
+WarpIn(8,2,LoadUzkalisCamp)
 ENUN
 STAL 0x10
 FADI 0x5
@@ -128,11 +129,8 @@ CAM1 [14,11]
 STAL 0x10
 LOAD3 0x1 PlayerLoading3
 LOAD2 0x1 LoadTempleAllies
-LOAD1 0x1 LoadUzkalisInside
 ENUN
 REVEAL Finoc
-SVAL 0x1 0x1
-SET_STATE Finoc
 DISA Maximus
 LOAD1 0x1 MoveMaximus
 ENUN
@@ -144,25 +142,18 @@ BadEnding:
 DISA Emperor
 EndingScene:
 FADI 0x5
+CLEA 0x0
+CLEE 0x0
+ASMC RefreshAll|1
 ASMC PrepForEnd|1
 ENUF 0x12
 MUSC Victory
-SVAL 0x1 60
-SET_HP Arc
-SET_HP Luke
-SET_HP Elanil
-SET_HP Finoc
-SET_HP Val
-SET_HP Helmer
-SET_HP Uzkalis
 CAM1 [14,20]
 
 CHECK_ALIVE Emperor
 BEQ 0x0 0x0 0xC
 	// Emperor is alive. Good ending.
 	ENUF 0x12
-	CLEA 0x0
-	CLEE 0x0
 	LOAD3 0x1 PlayerLoading4
 	LOAD2 0x1 EndingAllies
 	ENUN
@@ -208,8 +199,6 @@ BEQ 0x0 0x0 0xC
 LABEL 0x0
 	// Emperor is dead. Bad ending.
 	ENUF 0x16
-	CLEA 0x0
-	CLEE 0x0
 	LOAD3 0x1 PlayerLoading4
 	LOAD2 0x1 EndingAllies
 	ENUN
@@ -287,7 +276,7 @@ ENDA
 	/*UNIT DATA*/
 
 PlayerLoading1:
-UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [7,10] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0]  
+UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [6,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0]  
 UNIT
 
 PlayerLoading2:
@@ -317,12 +306,12 @@ UNIT Maximus BattleSage Maximus Level(1,Enemy,True) [8,6] 0x00 0x00 0x00 0x00 [T
 UNIT
 
 MercenaryCampUnits:
-UNIT Arc Monk Luke Level(1,Ally,True) [6,11] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
-UNIT Luke Monk Luke Level(1,Ally,True) [5,10] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
-UNIT Elanil Monk Luke Level(1,Ally,True) [6,9] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
-UNIT Finoc Monk Luke Level(1,Ally,True) [7,8] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
-UNIT Val Shaman_F Val Level(9,Ally,True) [5,8] 0x00 0x00 0x00 0x00 [Worm,Nosferatu] [0]
-UNIT Helmer Soldier Helmer Level(11,Ally,True) [6,8] 0x00 0x00 0x00 0x00 [SteelLance,KnightCrest] [0]
+UNIT Arc Monk Luke Level(1,Ally,True) [5,6] 0x00 0x00 0x00 0x00 [0] [0]
+UNIT Luke Monk Luke Level(1,Ally,True) [3,4] 0x00 0x00 0x00 0x00 [0] [0]
+UNIT Elanil Monk Luke Level(1,Ally,True) [4,3] 0x00 0x00 0x00 0x00 [0] [0]
+UNIT Finoc Monk Luke Level(1,Ally,True) [5,2] 0x00 0x00 0x00 0x00 [0] [0]
+UNIT Val Shaman_F Val Level(9,Ally,True) [9,5] 0x00 0x00 0x00 0x00 [0] [0]
+UNIT Helmer Soldier Helmer Level(11,Ally,True) [9,6] 0x00 0x00 0x00 0x00 [0] [0]
 UNIT
 
 LoadUzkalisTemple:
@@ -330,7 +319,7 @@ UNIT Uzkalis GaidenSage Uzkalis Level(11,NPC,True) [7,4] 0x00 0x00 0x00 0x00 [St
 UNIT
 
 LoadUzkalisCamp:
-UNIT Uzkalis GaidenSage Uzkalis Level(11,NPC,True) [4,11] 0x00 0x00 0x00 0x00 [SteelLance,KnightCrest] [0]
+UNIT Uzkalis GaidenSage Uzkalis Level(11,NPC,True) [8,2] 0x00 0x00 0x00 0x00 [0] [0]
 UNIT
 
 OutsideTempleAllies:
@@ -355,8 +344,8 @@ UNIT Cesarian MageKnight Maximus Level(7,Enemy,True) [10,5] 0x00 0x00 0x00 0x00 
 UNIT Cesarian Mage Maximus Level(13,Enemy,True) [12,9] 0x00 0x00 0x00 0x00 [Arcaqua] AttackInRangeAI
 UNIT Cesarian Swordmaster Maximus Level(5,Enemy,True) [11,8] 0x00 0x00 0x00 0x00 [SteelSword] [0]
 UNIT Cesarian Halberdier Maximus Level(6,Enemy,True) [9,8] 0x00 0x00 0x00 0x00 [SilverLance] AttackInRangeAI
-UNIT Cesarian Soldier Maximus Level(13,Enemy,True) [10,9] 0x00 0x00 0x00 0x00 [Javelin] [0]
-UNIT Cesarian Fighter Maximus Level(14,Enemy,True) [10,7] 0x00 0x00 0x00 0x00 [ShortAxe] [0]
+UNIT Cesarian Soldier Maximus Level(13,Enemy,True) [10,9] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
+UNIT Cesarian Fighter Maximus Level(14,Enemy,True) [10,7] 0x00 0x00 0x00 0x00 [ShortAxe] AttackInRangeAI
 UNIT Cesarian Sniper Maximus Level(7,Enemy,True) [11,1] Drop 0x00 0x00 0x00 [BraveBow,ChestKey] AttackInRangeAI
 UNIT Cesarian Sentinel Maximus Level(8,Enemy,True) [12,6] Drop 0x00 0x00 0x00 [Spear,DevilSword,DoorKey] GuardAI
 UNIT Cesarian Ranger Maximus Level(5,Enemy,True) [3,7] 0x00 0x00 0x00 0x00 [SteelLongbow] AttackInRangeAI
@@ -371,13 +360,13 @@ UNIT Cesarian Hero Maximus Level(5,Enemy,True) [5,4] 0x00 0x00 0x00 0x00 [ShortA
 UNIT Cesarian Archer Maximus Level(13,Enemy,True) [6,7] 0x00 0x00 0x00 0x00 [SilverShortbow] [0]
 UNIT Cesarian Paladin Maximus Level(8,Enemy,True) [6,10] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
 UNIT Cesarian GreatKnight Maximus Level(7,Enemy,True) [4,14] 0x00 0x00 0x00 0x00 [BraveAxe] GuardAI
-UNIT Cesarian Hero Maximus Level(7,Enemy,True) [3,18] 0x00 0x00 0x00 0x00 [SilverAxe] ChaseOnceApproachedAI
-UNIT Cesarian Hero Maximus Level(6,Enemy,True) [5,18] 0x00 0x00 0x00 0x00 [Zanbato] ChaseOnceApproachedAI
+UNIT Cesarian Hero Maximus Level(7,Enemy,True) [3,18] 0x00 0x00 0x00 0x00 [SilverAxe] AttackInRangeAI
+UNIT Cesarian Hero Maximus Level(6,Enemy,True) [5,18] 0x00 0x00 0x00 0x00 [Zanbato] AttackInRangeAI
 UNIT Cesarian General Maximus Level(7,Enemy,True) [12,23] 0x00 0x00 0x00 0x00 [Spear] AttackInRangeAI
 UNIT Cesarian General Maximus Level(9,Enemy,True) [12,20] 0x00 0x00 0x00 0x00 [SilverSword,HandAxe] AttackInRangeAI
 UNIT Cesarian Halberdier Maximus Level(8,Enemy,True) [6,20] 0x00 0x00 0x00 0x00 [BraveLance] [0]
 UNIT Cesarian GreatKnight Maximus Level(7,Enemy,True) [2,21] 0x00 0x00 0x00 0x00 [ShortSpear] AttackInRangeAI
-UNIT Cesarian Warrior Maximus Level(6,Enemy,True) [2,24] 0x00 0x00 0x00 0x00 [Tomahawk] [0]
+UNIT Cesarian Warrior Maximus Level(6,Enemy,True) [2,24] 0x00 0x00 0x00 0x00 [Tomahawk] AttackInRangeAI
 UNIT Cesarian Warrior Maximus Level(7,Enemy,True) [7,22] 0x00 0x00 0x00 0x00 [SteelAxe,SteelLongbow] AttackInRangeAI
 UNIT Cesarian Druid Maximus Level(8,Enemy,True) [9,19] 0x00 0x00 0x00 0x00 [Fenrir,Silence] GuardAI
 UNIT
@@ -389,9 +378,6 @@ UNIT Elanil Monk Luke Level(1,Ally,True) [21,9] 0x00 0x00 0x00 0x00 [BraveLance,
 UNIT Finoc Monk Luke Level(1,Ally,True) [21,8] 0x00 0x00 0x1 REDA20R8 [BraveLance,HandAxe] [0]
 UNIT Val Shaman_F Val Level(9,Ally,True) [21,12] 0x00 0x00 0x00 0x00 [Worm,Nosferatu] [0]
 UNIT Helmer Soldier Helmer Level(11,Ally,True) [21,13] 0x00 0x00 0x00 0x00 [SteelLance,KnightCrest] [0]
-UNIT
-
-LoadUzkalisInside:
 UNIT Uzkalis GaidenSage Uzkalis Level(10,Ally,True) [21,12] 0x00 0x00 0x00 0x00 [Thoron,Arcwind] [0]
 UNIT
 

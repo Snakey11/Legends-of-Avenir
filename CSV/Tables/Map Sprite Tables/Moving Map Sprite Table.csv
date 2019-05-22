@@ -89,7 +89,7 @@ Magus F,MagusFMv|IsPointer,0x81f249c
 Master Knight_F,0x81c6a84,0x81c7428
 Commander,CommanderMv|IsPointer,0x81f3fa0
 Impaler,ImpalerMv|IsPointer,0x81f49b8
-Wyvern General,0x81d504c,0x81d5e58
+Wyvern General,0x81d6ec4,0x81d7cc8
 Hunter,HunterMv|IsPointer,0x81f607c
 Master Knight,0x81c6a84,0x81c7428
 Champion,ChampionMv|IsPointer,0x81cbd94
@@ -160,3 +160,4 @@ MurielSage,0x81d9cb0,0x81da694
 Impaler F,ImpalerMv|IsPointer,0x81f49b8
 SoldierF2,0x81ed418,0x81edbc4
 Hunter F,HunterMv|IsPointer,0x81f607c
+High Priest,PatriarchMv|IsPointer,0x81efe70

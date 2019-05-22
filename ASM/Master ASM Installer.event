@@ -110,6 +110,9 @@ ALIGN 4
 #include "Raid/Raid.event"
 
 ALIGN 4
+#inctext lyn "RefreshAll/RefreshAll.o" "RefreshAll/Definitions.o"
+
+ALIGN 4
 #inctext lyn "RemoveBallistae/RemoveBallistae.elf"
 
 /*
@@ -130,6 +133,7 @@ ALIGN 4
 #inctext lyn "NameSelection/SetName.elf"
 KendrickName:
 String(Kendrick)
+BYTE 0x00
 
 ALIGN 4
 #include "Show Heal Amount/Show Heal Amount.event"
@@ -146,8 +150,8 @@ ALIGN 4
 	#include "FE8 Battle Stats with Anims Off/FE8-Battle Stats.event"
 #endif
 
-//ALIGN 4
-//#include "SummonStuff/Summon.event"
+ALIGN 4
+#include "SummonStuff/Summon.event"
 
 ALIGN 4
 #inctext lyn "SupplyUsability/SupplyUsability.elf"
@@ -158,7 +162,11 @@ BYTE PlayerMMercenary PlayerMMyrmidon PlayerMFighter PlayerMPirate PlayerMBrigan
 SupplyUsabilityPhantomIDLink:
 BYTE Phantom
 
+ALIGN 4
 #include "SupportRework/SupportRework.event"
+
+ALIGN 4
+#include "ToggleFixedGrowths/ToggleFixedGrowths.event"
 
 ALIGN 4
 #include "Walking Sounds Fix/FE8-Walking Sounds EA.event"
@@ -171,13 +179,12 @@ ALIGN 4
 
 
 PUSH
-ORG $28290
-SHORT 0x4770 // Eliminate gaining support points.
-
 ORG $96B1C
 SHORT 0xE00A // Eliminate "Tower" in prep screens
 ORG $96B3A
 SHORT 0xE003 // Eliminate "Ruins" in prep screens
+ORG $96B4C
+SHORT 0xE003 // Eliminate "Ex.map" in prep screens
 
 ORG $44800 //Enabling name selection
 BYTE 0x8 //max name length
@@ -240,11 +247,11 @@ WORD 0x8202bd10//tactician name
 ORG 0xBD070
 SHORT 0xE0B8
 //Fixes the world map chapter ID being loaded instead of the actual chapter ID.
-//ORG 0x897B2
-//SHORT 0 0
+ORG 0x897B2
+SHORT 0 0
 //Fixes the game considering some chapters postgame.
-//ORG 0x897C4
-//SHORT 0x200E 0x5620 //mov r0, #0x0E; ldsb r0, [r4, r0]
+ORG 0x897C4
+SHORT 0x200E 0x5620 //mov r0, #0x0E; ldsb r0, [r4, r0]
 
 ORG 0xBA30 // Fix debuff bug
 WORD 0x203EE80
@@ -261,9 +268,18 @@ SHORT $6129 $2026 $5429 $3002 $5429
 //Don't draw portrait on item select menu if unit is generic
 ORG $22BE8
 SHORT $6808 $88C0 $2800
+
+ORG $268E4 // Fix map sprite frames not loading properly after 0x80
+SHORT 0x2000
+ORG $26A52
+SHORT 0x2000
+ORG $26B42
+SHORT 0x2000
+
 /*
 ORG 0x33750 // Allow repositioning of forced units
 BYTE 0x00 0x20 0x00 0x00
 ORG 0x9543E
 BYTE 0x00 0x20 0x00 0x00*/
+
 POP

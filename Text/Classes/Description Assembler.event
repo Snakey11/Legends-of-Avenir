@@ -1,7 +1,11 @@
 
+## KnightDescText
+Heavily armored knights with poor[NL]
+movement. Equip: Lances, axes.[X]
+
 ## LostSoulDescText
 A soul without a body who's[NL]
-about to make a major descicion.[X]
+about to make a major decision.[X]
 
 ## PatriarchMatriarchDescText
 Truly devout and highly-ranking[NL]
@@ -20,16 +24,18 @@ Efficient commanders who lead their[NL]
 troops well. Equip, Swords, Lances, Axes.[X]
 
 ## CommanderDescText
-Armored veterans who set good examples[NL]
-for their troops. Equip, Lances.[X]
+Armored veterans who set good[NL]
+examples for their troops.[NL]
+Equip, Swords, Lances, Axes.[X]
 
 ## ImpalerDescText
 Experienced footsoldiers who[NL]
 strike effectively. Equip: Lances.[X]
 
 ## WyvernGeneralDescText
-Talented wyvern riders who have mastered[NL]
-their art. Equip: Swords, Lances, Axes, Bows[X]
+Talented wyvern riders[NL]
+who have mastered their[NL]
+art. Equip: Lances, Axes.[X]
 
 ## BlackFalcoknightDescText
 A pegasus rider with very high magical[NL]
@@ -98,3 +104,7 @@ skill. Equip: Swords, Lances, Axes.[X]
 ## ArmoredWyvernLordDescText
 Wyvern-mounted knights of superior skill[NL]
 Equip: Swords, Lances, Axes, Bows.[X]
+
+## HighPriestDescText
+Lord of fire and dragons of[NL]
+Altia Equip: Fire, Staves.[X]

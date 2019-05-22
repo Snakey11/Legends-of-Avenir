@@ -82,6 +82,7 @@ WalkingSound(MurielSage,FootSound)
 WalkingSound(ImpalerF,FootSound)
 WalkingSound(SoldierF2,FootSound)
 WalkingSound(HunterF,FootSound)
+WalkingSound(HighPriest,FootSound)
 	
 POP
 	

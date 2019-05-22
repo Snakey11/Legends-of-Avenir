@@ -16,11 +16,21 @@ first experience working for a bandit chief?[A]
 [FarLeft]It was different than what I[NL]
 expected. I didn't realize there[A][NL]
 was so much senseless killing.[A]
-[Right][LoadBaret]Still hung up on that?[A][Left][ClearFace][LoadWalter]
+[Right][LoadBaret]Still hung up on that?[A][Left][ClearFace][LoadWalter][X]
+
+## Merc3BanditBeginningHimText
 Lay off him, Baret. We used to have[NL]
 his same morals too, you know.[A]
 [Right]I doubt we'll be seeing much[NL]
-more of him anyway.[A][Left][ClearFace][LoadVicar]
+more of him anyway.[A][Left][ClearFace][LoadVicar][X]
+
+## Merc3BanditBeginningHerText
+Lay off her, Baret. We used to have[NL]
+her same morals too, you know.[A]
+[Right]I doubt we'll be seeing much[NL]
+more of her anyway.[A][Left][ClearFace][LoadVicar][X]
+
+## Merc3BanditBeginning2Text
 If you don't mind, Adlez, I think we'll be[NL]
 using some spare cots here for the[A][NL]
 night. Unless you have objections?[A]

@@ -65,7 +65,7 @@ MUSC Solve_the_Riddle
 SVAL 0xB Coords(7,6)
 LOMA MercenaryMilitiaWait3
 LOAD2 0x1 ThronePeople
-LOAD1 0x1 ConnorAdlezThrone
+LOAD2 0x1 ConnorAdlezThrone
 LOAD3 0x1 PlayerLoading1
 ENUN
 Text(0x26,Merc4BanditBeginningText)
@@ -124,16 +124,22 @@ MayorDead:
 FADI 0x5
 DISA Mayor
 EndingScene:
+FADI 0x5
 MUSC Into_the_Shadow_of_Victory
-SetBackground(0x04)
 CHECK_ALIVE Mayor
 BNE 0x10 0x0 0xC
 	// Mayor is dead
+	LOAD1 0x1 LoadConnor
+	ENUN
+	SetBackground(0x04)
 	Text(Merc4BanditEndingBanditText)
 	MoveToChapter(MercenaryBanditBandit5)
 GOTO 0x11
 LABEL 0x10
 	// Mayor is alive
+	LOAD1 0x1 LoadKendrick
+	ENUN
+	SetBackground(0x04)
 	Text(Merc4BanditEndingDisbandText)
 	MoveToChapter(MercenaryBanditDisband5)
 LABEL 0x11
@@ -218,8 +224,6 @@ EndUnit
 //Label Throne
 ThronePeople:
 UNIT Vicar Warrior Vicar Level(1,Ally,True) [0,4] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-//UNIT Baret Myrmidon Baret Level(1,Ally,True) [3,5] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-//UNIT Walter Archer Walter Level(1,Ally,True) [4,4] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 UNIT Arya Myrmidon_F Arya Level(1,Ally,True) [3,7] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 UNIT
 
@@ -272,4 +276,12 @@ UNIT Baret Myrmidon Baret Level(1,Ally,True) [19,17] 0x00 0x00 0x00 0x00 [IronAx
 UNIT Walter Archer Walter Level(1,Ally,True) [19,16] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 UNIT Arya Myrmidon_F Arya Level(1,Ally,True) [20,15] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 UNIT Adlez Brigand Adlez Level(1,Ally,True) [20,16] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT
+
+LoadConnor:
+UNIT Connor Mercenary PlayerMArcher Level(11,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [SteelSword,Armorslayer] NoAI 
+UNIT
+
+LoadKendrick:
+UNIT Kendrick Pirate Kendrick Level(12,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [ShortAxe,Swordreaver,Vulnerary] NoAI
 EndUnit

@@ -1,0 +1,208 @@
+
+EventPointerTable(Military2AcceptEvents,ThisChapter)
+
+//Label ThisChapter
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN EndMainPointer EndMainPointer EndMainPointer
+POIN EndMainPointer
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+//LabelEnd
+
+//Label TurnBasedEvents
+TurnBasedEvents:
+TurnEventPlayer(0x14,TurnZaheva,0,255)
+END_MAIN
+
+//Label CharacterBasedEvents
+ALIGN 32
+CharacterBasedEvents:
+END_MAIN
+
+//Label LocationBasedEvents
+LocationBasedEvents:
+END_MAIN
+
+//Label MiscBasedEvents
+MiscBasedEvents:
+AFEV 0x11 RecruitZaheva 0x10
+DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+END_MAIN
+
+//Label TrapData
+TrapData:
+ENDTRAP
+ALIGN 4
+
+//Label Units
+Units:
+EndUnit
+
+//Label BeginingScene
+BeginningScene:
+CAM1 [9,1]
+LOAD1 0x1 Arcanians
+LOAD3 0x1 PlayerLoading1
+LOAD2 0x1 Friends
+ENUN
+MUSC Rest_of_the_Heart
+SetBackground(0x12)
+Text(Military2AcceptBeginningText)
+FADI 0x5
+MUSI
+STAL 0x60
+MUNO
+SetBackground(0x18)
+Text(Military2AcceptTravelText)
+MUSC Advance
+SetBackground(0x1B)
+Text(Military2AcceptJurgenText)
+FADI 0x5
+FadeOutMusic
+STAL 0x40
+MUSC Kratos
+EndConvo
+STAL 0x30
+FlashCursor(9,1,60)
+TEXTSTART
+TEXTSHOW Military2AcceptGeraldStartText
+TEXTEND
+MOVE 0x00 Zaheva [10,2]
+TEXTCONT
+TEXTEND
+ENUN
+TEXTCONT
+TEXTEND
+MOVE 0x00 Zaheva [11,8]
+TEXTCONT
+TEXTEND
+REMA
+STAL 0x20
+CAM1 [10,8]
+STAL 0x10
+FlashCursor(11,8,60)
+Text(Military2AcceptZahevaPlanText)
+STAL 0x08
+MUSC Advance
+CAM1 [7,12]
+STAL 0x10
+Text(Military2AcceptFriendsHereText)
+NoFade
+ENDA
+
+//Label EndingScene
+EndingScene:
+FADI 0x5
+MUSC Victory
+CLEA 0x0
+CLEE 0x0
+CHECK_EXISTS Zaheva
+BNE 0x0 0x0 0xC
+	// If Zaheva was never recruited
+	LOAD1 0x1 EndingZaheva // Add Zaheva to the party
+	ENUN
+	SetBackground(0x18)
+	TEXTSTART
+	TEXTSHOW Military2AcceptZahevaNotRecruitedText
+	TEXTEND
+	MUSC Comrades
+	TEXTCONT
+	TEXTEND
+	MUSC Victory
+	TEXTSHOW2 Military2AcceptEndingText
+	TEXTEND
+	REMA
+	GOTO 0x1
+LABEL 0x0
+	SetBackground(0x18)
+	CHECK_ALIVE Zaheva
+	BEQ 0x2 0x0 0xC
+		// If Zaheva was recruited and survived
+		Text(Military2AcceptEndingText)
+		GOTO 0x1
+	LABEL 0x2
+		// If Zaheva was recruited then died
+		SVAL 0x1 Zaheva
+		ASMC MakeNotDeadASM|1 // Make Zaheva alive again
+		Text(Military2AcceptEndingZahevaDeadText)
+LABEL 0x1
+GiveToSupplySilent(SteelSword)
+GiveToSupplySilent(PoisonLance)
+GiveToSupplySilent(SteelLance)
+GiveToSupplySilent(HandAxe)
+MoveToChapter(MilitaryAccept3)
+NoFade
+ENDA
+
+//Label RecruitZaheva
+RecruitZaheva:
+CHECK_ALIVE Zaheva
+BEQ 0x0 0x0 0xC
+	MUSI
+	TEXTSTART
+	TEXTSHOW Military2AcceptRecruitZahevaText
+	TEXTEND
+	MUSS Comrades
+	MUNO
+	TEXTCONT
+	TEXTEND
+	REMA
+	ENUT 0x12 // Disable Zaheva's red death quote and enable her blue quote
+	MURE 0x5
+LABEL 0x0
+NoFade
+EndA2
+
+TurnZaheva:
+CHECK_EVENTID 0x11
+BEQ 0x0 0x0 0xC
+	CHECK_ALIVE Zaheva
+	BEQ 0x0 0x0 0xC
+		TurnAlly(Zaheva)
+		GOTO 0x1
+LABEL 0x0
+	ENUF 0x14
+LABEL 0x1
+NoFade
+ENDA
+
+	/*UNIT DATA*/
+
+//Label PlayerLoading
+PlayerLoading1:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [2,16] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
+
+//Label Chapter units
+Friends:
+UNIT Jasper 0x00 0x00 Level(1,Ally,True) [4,16] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [3,15] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+Arcanians:
+UNIT Gerald Mage Gerald Level(10,Enemy,True) [9,1] 0x00 0x00 0x00 0x00 [Elfire] GuardAI
+UNIT Zaheva Mercenary_F Gerald Level(7,Enemy,True) [12,10] 0x00 0x00 0x00 0x00 [SteelSword,Vulnerary] AttackInRangeAI
+UNIT Arcanian Knight Gerald Level(5,Enemy,True) [1,14] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
+UNIT Arcanian Soldier Gerald Level(6,Enemy,True) [2,11] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
+UNIT Arcanian Mercenary Gerald Level(4,Enemy,True) [10,11] Drop 0x00 0x00 0x00 [IronBlade] AttackInRangeAI
+UNIT Arcanian Fighter Gerald Level(4,Enemy,True) [12,12] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
+UNIT Arcanian Archer Gerald Level(6,Enemy,True) [14,9] 0x00 0x00 0x00 0x00 [IronBow] AttackInRangeAI
+UNIT Arcanian Knight Gerald Level(5,Enemy,True) [10,5] 0x00 0x00 0x00 0x00 [HandAxe] GuardAI
+UNIT Arcanian Fighter Gerald Level(6,Enemy,True) [11,4] Drop 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT Arcanian Soldier Gerald Level(6,Enemy,True) [13,3] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
+UNIT Arcanian Cavalier Gerald Level(7,Enemy,True) [5,6] 0x00 0x00 0x00 0x00 [SteelLance] ChaseOnceApproachedAI
+UNIT Arcanian Cavalier Gerald Level(6,Enemy,True) [12,0] 0x00 0x00 0x00 0x00 [IronSword] ChaseOnceApproachedAI
+UNIT Arcanian Myrmidon Gerald Level(5,Enemy,True) [0,6] 0x00 0x00 0x00 0x00 [SlimSword] AttackInRangeAI
+UNIT Arcanian PegasusKnight Gerald Level(8,Enemy,True) [3,2] 0x00 0x00 0x00 0x00 [IronLance] AttackInRangeAI
+UNIT
+
+EndingZaheva:
+UNIT Zaheva Mercenary_F 0x00 Level(8,Ally,True) [3,3] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+EndUnit

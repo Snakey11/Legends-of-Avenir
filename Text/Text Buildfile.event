@@ -49,6 +49,11 @@ promote to a new class.[X]
 ## BaseSupportSelectConvoText
 Select a conversation.[X]
 
+## PrepScreenSupportDescText
+View support[NL]
+conversations for[NL]
+this chapter.[X]
+
 ## PrepScreenSupportErrorText
 There are no[NL]
 supports to view.[X]
@@ -57,27 +62,6 @@ supports to view.[X]
 [FarLeft][LoadDerek][FarRight][LoadJasper]
 Hey, Derek. This is[NL]
 support convo number 1.[A]
-[FarLeft]Pfft. Supports are[NL]
-for losers.[A][X]
-
-## Support2Text
-[FarLeft][LoadDerek][FarRight][LoadJasper]
-Hey, Derek. This is[NL]
-support convo number 2.[A]
-[FarLeft]Pfft. Supports are[NL]
-for losers.[A][X]
-
-## Support3Text
-[FarLeft][LoadDerek][FarRight][LoadJasper]
-Hey, Derek. This is[NL]
-support convo number 3.[A]
-[FarLeft]Pfft. Supports are[NL]
-for losers.[A][X]
-
-## Support4Text
-[FarLeft][LoadDerek][FarRight][LoadJasper]
-Hey, Derek. This is[NL]
-support convo number 4.[A]
 [FarLeft]Pfft. Supports are[NL]
 for losers.[A][X]
 

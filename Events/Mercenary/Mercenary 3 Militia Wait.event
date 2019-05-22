@@ -39,6 +39,7 @@ CHAR 0x10 AvatarRecruit PlayerMBrigand Finoc 0x0
 CHAR 0x10 AvatarRecruit PlayerFMercenary Finoc 0x0
 CHAR 0x10 AvatarRecruit PlayerFMyrmidon Finoc 0x0
 CHAR 0x10 AvatarRecruit PlayerFPegasusKnight Finoc 0x0
+SupportConvo(CSupport,Arc,0xFF,Support1Text)
 END_MAIN
 
 LocationBasedEvents:
@@ -98,6 +99,7 @@ CAM1 [7,8]
 LOAD3 0x1 PlayerLoading1
 LOAD2 0x1 ArcLuke
 Text(Merc3MilitiaWaitTheyreHereText)
+AddSupport(0xFF,Luke)
 NoFade
 ENDA
 
@@ -108,19 +110,15 @@ EndingScene:
 	BLT 0x0 0x1 0xC
 		LOAD1 0x1 AltiaAllies
 		ENUN
+		SetSupport(Elanil,Finoc,CSupport)
 	LABEL 0x0
 #endif
 FADI 0x5
 TileChange(1,6) // Open the door in case it wasn't
 MUSC Into_the_Shadow_of_Victory
-SVAL 0x1 60
-ASMC MaxMercenaryHP|1
-SET_HP Arc
-SET_HP Luke
-SET_HP Elanil
-SET_HP Finoc
 CLEA 0x0
 CLEE 0x0
+ASMC RefreshAll|1
 LOAD3 0x1 PlayerLoading2
 LOAD2 0x1 EndingPeople
 ENUN
@@ -167,6 +165,7 @@ MUSS Comrades
 Text(Merc3MilitiaWaitArcRecruitText)
 TurnAlly(Elanil)
 TurnAlly(Finoc)
+SetSupport(Finoc,Elanil,Support1Text)
 MURE 0x5
 NoFade
 ENDA
@@ -176,6 +175,7 @@ MUSS Comrades
 Text(Merc3MilitiaWaitLukeRecruitText)
 TurnAlly(Elanil)
 TurnAlly(Finoc)
+SetSupport(Finoc,Elanil,Support1Text)
 MURE 0x5
 NoFade
 ENDA
@@ -185,6 +185,7 @@ MUSS Comrades
 Text(Merc3MilitiaWaitPlayerRecruitText)
 TurnAlly(Elanil)
 TurnAlly(Finoc)
+SetSupport(Finoc,Elanil,Support1Text)
 MURE 0x5
 NoFade
 ENDA
@@ -192,26 +193,26 @@ ENDA
 	/*UNIT DATA*/
 
 GerwickAdlez:
-UNIT Adlez Brigand Adlez Level(1,Enemy,True) [2,2] 0x00 0x00 0x00 0x00 [KillerAxe] [0]
-UNIT Gerwick Pirate Adlez Level(1,Enemy,True) [2,4] 0x00 0x00 0x00 0x00 [ShortAxe] [0]
+UNIT Adlez Brigand Adlez Level(1,Enemy,True) [2,2] 0x00 0x00 0x00 0x00 [KillerAxe] NoAI
+UNIT Gerwick Pirate Adlez Level(1,Enemy,True) [2,4] 0x00 0x00 0x00 0x00 [ShortAxe] NoAI
 UNIT
 
 ConnorStuff:
 UNIT Connor Mercenary Connor Level(5,Enemy,True) [2,4] 0x00 0x00 0x00 0x00 [IronBlade] GuardAI
-UNIT GerwickBandit Fighter Connor Level(5,Enemy,True) [8,11] Drop 0x00 0x00 0x00 [HandAxe,DoorKey] [0]
-UNIT GerwickBandit Fighter Connor Level(6,Enemy,True) [8,12] 0x00 0x00 0x00 0x00 [IronAxe] [0]
-UNIT GerwickBandit Fighter Connor Level(5,Enemy,True) [7,6] 0x00 0x00 0x00 0x00 [SteelAxe] [0]
-UNIT GerwickBandit Mercenary Connor Level(8,Enemy,True) [11,1] 0x00 0x00 0x00 0x00 [SteelSword] [0]
-UNIT GerwickBandit Brigand Connor Level(6,Enemy,True) [8,3] 0x00 0x00 0x00 0x00 [KillerAxe] [0]
-UNIT GerwickBandit Brigand Connor Level(5,Enemy,True) [14,2] 0x00 0x00 0x00 0x00 [IronAxe] [0]
+UNIT GerwickBandit Fighter Connor Level(5,Enemy,True) [8,11] Drop 0x00 0x00 0x00 [HandAxe,DoorKey] NoAI
+UNIT GerwickBandit Fighter Connor Level(6,Enemy,True) [8,12] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
+UNIT GerwickBandit Fighter Connor Level(5,Enemy,True) [7,6] 0x00 0x00 0x00 0x00 [SteelAxe] ChaseOnceApproachedAI
+UNIT GerwickBandit Mercenary Connor Level(8,Enemy,True) [11,1] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT GerwickBandit Brigand Connor Level(6,Enemy,True) [8,3] 0x00 0x00 0x00 0x00 [KillerAxe] ChaseOnceApproachedAI
+UNIT GerwickBandit Brigand Connor Level(5,Enemy,True) [14,2] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
 UNIT GerwickBandit Myrmidon Connor Level(6,Enemy,True) [16,5] 0x00 0x00 0x00 0x00 [IronSword] GuardAI
-UNIT GerwickBandit Soldier Connor Level(4,Enemy,True) [1,4] 0x00 0x00 0x00 0x00 [IronLance] [0]
-UNIT GerwickBandit Soldier Connor Level(3,Enemy,True) [3,4] 0x00 0x00 0x00 0x00 [Javelin] [0]
-UNIT GerwickBandit Mage Connor Level(5,Enemy,True) [17,7] 0x00 0x00 0x00 0x00 [Thunder] [0]
-UNIT GerwickBandit Soldier Connor Level(4,Enemy,True) [16,11] 0x00 0x00 0x00 0x00 [SteelLance] [0]
-UNIT GerwickBandit Soldier Connor Level(6,Enemy,True) [15,12] Drop 0x00 0x00 0x00 [IronLance,ChestKey] [0]
-UNIT GerwickBandit Archer Connor Level(7,Enemy,True) [12,7] Drop 0x00 0x00 0x00 [SteelBow,ChestKey] [0]
-UNIT GerwickBandit Mage Connor Level(6,Enemy,True) [4,7] Drop 0x00 0x00 0x00 [Elfire,DoorKey] GuardAI
+UNIT GerwickBandit Soldier Connor Level(4,Enemy,True) [1,4] 0x00 0x00 0x00 0x00 [IronLance] NoAI
+UNIT GerwickBandit Soldier Connor Level(3,Enemy,True) [3,4] 0x00 0x00 0x00 0x00 [Javelin] NoAI
+UNIT GerwickBandit Mage Connor Level(5,Enemy,True) [17,7] 0x00 0x00 0x00 0x00 [Thunder] AttackInRangeAI
+UNIT GerwickBandit Soldier Connor Level(4,Enemy,True) [16,11] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT GerwickBandit Soldier Connor Level(6,Enemy,True) [15,12] Drop 0x00 0x00 0x00 [IronLance,ChestKey] NoAI
+UNIT GerwickBandit Archer Connor Level(7,Enemy,True) [12,7] Drop 0x00 0x00 0x00 [SteelBow,ChestKey] NoAI
+UNIT GerwickBandit Mage Connor Level(6,Enemy,True) [4,7] Drop 0x00 0x00 0x00 [Elfire,DoorKey] AttackInRangeAI
 UNIT GerwickBandit Cavalier Connor Level(4,Enemy,True) [0,8] 0x00 0x00 0x00 0x00 [SteelLance] ChaseOnceApproachedAI
 UNIT GerwickBandit Pirate Connor Level(4,Enemy,True) [8,3] 0x00 0x00 0x00 0x00 [IronAxe] AttackInRangeAI
 UNIT GerwickBandit Mercenary Connor Level(4,Enemy,True) [6,4] 0x00 0x00 0x00 0x00 [Lancereaver] AttackInRangeAI
@@ -219,37 +220,37 @@ UNIT GerwickBandit Fighter Connor Level(4,Enemy,True) [7,6] 0x00 0x00 0x00 0x00 
 UNIT
 
 PlayerLoading1:
-UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [0,12] 0x00 0x00 0x1 REDA3R12 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [0,12] 0x00 0x00 0x1 REDA3R12 [IronSword,Vulnerary] NoAI 
 UNIT
 
 PlayerLoading2:
-UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
 UNIT
 
 PlayerLoading3:
-UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
+UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
 UNIT
 
 ArcLuke:
-UNIT Arc Fighter Arc Level(1,Ally,True) [0,13] 0x00 0x00 0x1 REDA3R13 [IronAxe,Elixir] [0]
-UNIT Luke Monk Arc Level(1,Ally,True) [0,11] 0x00 0x00 0x1 REDA2R11 [Lightning,Vulnerary] [0]
+UNIT Arc Fighter Arc Level(1,Ally,True) [0,13] 0x00 0x00 0x1 REDA3R13 [IronAxe,Elixir] NoAI
+UNIT Luke Monk Arc Level(1,Ally,True) [0,11] 0x00 0x00 0x1 REDA2R11 [Lightning,Vulnerary] NoAI
 UNIT
 
 AltiaPeople:
-UNIT Finoc WyvernRider Finoc Level(7,NPC,True) [18,0] 0x00 0x00 0x00 0x00 [SteelLance,Vulnerary] [0]
-UNIT Elanil Archer_F Elanil Level(7,NPC,True) [18,1] 0x00 0x00 0x00 0x00 [SteelBow,IronShortbow] [0]
+UNIT Finoc WyvernRider Finoc Level(7,NPC,True) [18,0] 0x00 0x00 0x00 0x00 [SteelLance,Vulnerary] NoAI
+UNIT Elanil Archer_F Elanil Level(7,NPC,True) [18,1] 0x00 0x00 0x00 0x00 [SteelBow,IronShortbow] NoAI
 UNIT
 
 AltiaAllies:
-UNIT Finoc WyvernRider Finoc Level(7,Ally,True) [0,13] 0x00 0x00 0x00 0x00 [SteelLance,Vulnerary] [0]
-UNIT Elanil Archer_F Elanil Level(7,Ally,True) [0,12] 0x00 0x00 0x00 0x00 [SteelBow,IronShortbow] [0]
+UNIT Finoc WyvernRider Finoc Level(7,Ally,True) [0,13] 0x00 0x00 0x00 0x00 [SteelLance,Vulnerary] NoAI
+UNIT Elanil Archer_F Elanil Level(7,Ally,True) [0,12] 0x00 0x00 0x00 0x00 [SteelBow,IronShortbow] NoAI
 UNIT
 
 EndingPeople:
 UNIT Finoc WyvernRider Finoc Level(1,Ally,True) [1,5] 0x00 0x00 0x00 0x00 [IronAxe,Elixir] AttackInRangeAI
 UNIT Elanil Archer_F Elanil Level(1,Ally,True) [3,5] 0x00 0x00 0x00 0x00 [IronAxe,Elixir] AttackInRangeAI
-UNIT Arc Fighter Arc Level(1,Ally,True) [0,4] 0x00 0x00 0x00 0x00 [IronAxe,Elixir] [0]
-UNIT Luke Monk Arc Level(1,Ally,True) [0,3] 0x00 0x00 0x00 0x00 [Lightning,Vulnerary] [0]
+UNIT Arc Fighter Arc Level(1,Ally,True) [0,4] 0x00 0x00 0x00 0x00 [IronAxe,Elixir] NoAI
+UNIT Luke Monk Arc Level(1,Ally,True) [0,3] 0x00 0x00 0x00 0x00 [Lightning,Vulnerary] NoAI
 UNIT
 
 LoadFinoc:
@@ -257,6 +258,6 @@ UNIT Finoc WyvernRider Finoc Level(1,Ally,True) [0,8] 0x00 0x00 0x1 REDA2R5 [Iro
 UNIT
 
 LoadArc:
-UNIT Arc Fighter Arc Level(1,Ally,True) [0,8] 0x00 0x00 0x1 REDA2R6 [IronAxe,Elixir] [0]
+UNIT Arc Fighter Arc Level(1,Ally,True) [0,8] 0x00 0x00 0x1 REDA2R6 [IronAxe,Elixir] NoAI
 UNIT
 

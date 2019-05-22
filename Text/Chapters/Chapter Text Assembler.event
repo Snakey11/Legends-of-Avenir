@@ -76,3 +76,9 @@
 #include "Military/Military 6 Pass Altia.event"
 
 #include "Military/Military 7 Pass Altia.event"
+
+#include "Military/Military 2 Accept.event"
+
+#include "Military/Military 3 Accept.event"
+
+#include "Military/Military 4 Accept.event"

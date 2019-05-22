@@ -22,6 +22,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+SupportConvo(ASupport,Maximus,Lux,Support1Text)
 END_MAIN
 
 LocationBasedEvents:
@@ -99,7 +100,7 @@ STAL 0x8
 MOVE 0x0 Uzkalis [12,21]
 STAL 0x40
 MUSC Tension
-CAM1 [9,7]
+CAM1 [9,5]
 LOAD3 0x1 PlayerLoading2
 LOAD2 0x1 LoadFriendPeople
 ENUN
@@ -118,14 +119,7 @@ CAM1 [9,14]
 CLEE 0x0
 CLEN 0x0
 CLEA 0x0
-SVAL 0x1 60
-SET_HP Arc
-SET_HP Luke
-SET_HP Finoc
-SET_HP Elanil
-SET_HP Jasper
-SET_HP Derek
-SET_HP Lux
+ASMC RefreshAll|1
 CHECK_ALIVE Maximus
 BEQ 0x0 0x0 0xC
 	// Maximus is alive
@@ -218,8 +212,10 @@ MoveToChapter(PrologueChapter)
 ENDA
 
 Turn1:
+FadeOutMusic
+STAL 0x10
 CAM1 [7,7]
-MUSS Binding_Vow
+MUSC Binding_Vow
 LOAD2 0x1 LoadFinocStart
 ENUN
 REVEAL Finoc
@@ -228,7 +224,7 @@ ENUN
 REVEAL Elanil
 Text(Merc7MilitiaWaitCesariaFinocHereText)
 TurnAlly(Maximus)
-MURE 0x05
+SetSupport(Maximus,Lux,BSupport)
 NoFade
 ENDA
 
@@ -303,7 +299,7 @@ UNIT Arcanian General Uzkalis Level(13,Enemy,True) [16,4] Drop 0x00 0x00 0x00 [S
 UNIT
 
 Arcanians2:
-UNIT Arcanian Mage Uzkalis Level(6,Enemy,True) [11,9] 0x00 0x00 0x00 0x00 [Meteor,Aqua] AttackInRangeAI
+UNIT Arcanian Mage Uzkalis Level(6,Enemy,True) [11,9] 0x00 0x00 0x00 0x00 [Hail,Fire] AttackInRangeAI
 UNIT Arcanian Druid Uzkalis Level(8,Enemy,True) [9,11] 0x00 0x00 0x00 0x00 [Fimbulvetr,Dulam] GuardAI
 UNIT Arcanian Myrmidon Uzkalis Level(20,Enemy,True) [8,9] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
 UNIT Arcanian Paladin Uzkalis Level(11,Enemy,True) [16,9] 0x00 0x00 0x00 0x00 [SilverLance] NoAI

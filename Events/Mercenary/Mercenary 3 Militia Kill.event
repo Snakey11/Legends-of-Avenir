@@ -32,6 +32,8 @@ CHAR 0x10 PlayerArya [PlayerMBrigand,Arya] 0x0
 CHAR 0x10 PlayerArya [PlayerFMercenary,Arya] 0x0
 CHAR 0x10 PlayerArya [PlayerFMyrmidon,Arya] 0x0
 CHAR 0x10 PlayerArya [PlayerFPegasusKnight,Arya] 0x0
+SupportConvo(CSupport,0xFF,Arya,Support1Text)
+SupportConvo(CSupport,0xFF,Arc,Support1Text)
 END_MAIN
 
 LocationBasedEvents:
@@ -114,10 +116,6 @@ CAM1 [5,5]
 MOVE 0x0 Luke [2,4]
 MoveMercenary(4,4)
 ENUN
-GiveToSupplySilent(KillingEdge)
-GiveToSupplySilent(SteelAxe)
-GiveToSupplySilent(Shine)
-GiveToSupplySilent(SlimLance)
 NoFade
 ENDA
 
@@ -127,10 +125,10 @@ STAL 0x10
 CAM1 [14,14]
 CLEA 0x0
 CLEE 0x0
-ASMC MaxMercenaryHP|1
-SVAL 0x1 60
-SET_HP Arc
-SET_HP Luke
+LOAD1 0x1 LoadKendrick
+ENUN
+CLEA 0x0
+ASMC RefreshAll|1
 MUSC Indignation
 LOAD3 0x1 PlayerLoading3
 LOAD2 0x1 EndingStuff
@@ -160,6 +158,11 @@ TEXTEND
 MUSC Advance
 TEXTCONT
 TEXTEND
+GiveToSupplySilent(SteelSword)
+GiveToSupplySilent(ShortAxe)
+GiveToSupplySilent(Hammer)
+GiveToSupplySilent(Exordium)
+GiveToSupplySilent(Vulnerary)
 MoveToChapter(MercenaryMilitiaKill4)
 ENDA
 
@@ -295,6 +298,10 @@ UNIT
 
 AryaNotRecruited:
 UNIT Arya Myrmidon_F Weston Level(7,Ally,True) [0,0] 0x00 0x00 0x0 0x0 [KillingEdge,SteelSword] [0]
+UNIT
+
+LoadKendrick:
+UNIT Kendrick Pirate PlayerMArcher Level(9,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [HandAxe,Swordreaver,Vulnerary] [0] 
 UNIT
 
 REDA1:

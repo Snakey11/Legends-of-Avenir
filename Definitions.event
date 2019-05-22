@@ -1,5 +1,6 @@
 
 //Label Item defenitions
+#undef ToxinLance
 #define Spears Lances
 #define IronSpear IronLance
 #define SteelSpear SteelLance
@@ -17,6 +18,7 @@
 //#define OceanSeal ConquerorsProof
 #define Dragonspear DragonSpear
 #define HoplonGuard HoplonShield
+#define Tempest Aircalibur
 #define ArmorSlayer 0x0E
 //#define Armorslayer 0x0E
 //#define Zanbato 0x13
@@ -60,6 +62,11 @@
 #define Elaqua 0xDB
 #define Arcaqua 0xDC
 #define Meteor 0xDD
+#define Hail 0xDE
+#define ToxinSword 0xDF
+#define ToxinLance 0xE0
+#define ToxinAxe 0xE1
+#define ToxinBow 0xE2
 //LabelEnd
 
 //Label Class defenitions
@@ -138,6 +145,7 @@
 #define ImpalerF 0x9F
 #define SoldierF2 0xA0
 #define HunterF 0xA1
+#define HighPriest 0xA2
 //LabelEnd
 
 //Label Character definitions
@@ -204,6 +212,9 @@
 #define Xexim 0x3C
 #define Rex 0x3D
 #define Sekar 0x3E
+#define Zaheva 0x3F
+#define Madeline 0x40
+#define Remus 0x41
 
 #define Henning 0x47
 #define Gerwick 0x48
@@ -260,6 +271,9 @@
 #define Richter 0x7D
 #define Defect 0x7E
 #define Shanley 0x7F
+#define Gerald 0x80
+#define Sean 0x81
+#define Looter 0x82
 //LabelEnd
 
 //Label Portrait Defenitions
@@ -282,7 +296,7 @@
 #define JohnathanMug 0xBC
 #define ElanilMug 0xBD
 #define IzukMug 0x1A // Artur
-#define MaximusMug 0xBF
+#define UzkalisMug 0xBF
 #define JurgenMug 0xC0
 #define LeonMug 0xC1
 #define JasperMug 0xC2
@@ -295,7 +309,7 @@
 #define LukeMug 0xC9
 #define ArcMug 0xCA
 #define EfilMug 0xCB
-#define UzkalisMug 0xCC
+#define MaximusMug 0xCC
 #define AryaMug 0xCD
 #define KendrickMug 0xCE
 #define LukasMug 0xCF
@@ -320,6 +334,11 @@
 #define ServiusMug 0xE2
 #define SylvaineMug 0xE3
 #define SekarMug 0xE4
+#define ZahevaMug 0xE5
+#define MadelineMug 0xE6
+#define RemusMug 0xE7
+#define BlaineMug 0xE8
+#define KnightCard 0xE9
 
 #define MerchantMug 0x31 // Breguet
 #define HenningMug 0x33 // Bazba
@@ -346,6 +365,8 @@
 #define BanditMug 0x4C // Bandit
 #define GuildsmanMug 0x51 // Fado
 #define ShanleyMug 0x46 // Lyon
+#define GeraldMug 0x29 // Knoll
+#define SeanMug 0x34 // Saar
 //LabelEnd
 
 //Label Spell Definitions
@@ -377,6 +398,8 @@
 #define ArcfireAnim 0x5E
 #define ElaquaAnim 0x5F
 #define ArcaquaAnim 0x60
+#define HailAnim 0x61
+#define TempestAnim 0x62
 
 #define WhiteFlash 0x0
 #define DarkFlash 0x1
@@ -404,19 +427,19 @@
 #define MageEscapeCesaria6 0xE
 #define MageEscapeCesaria7 0xF
 #define Military1 0x10
-#define MilitaryPromotion2 0x11
-#define MilitaryPromotion3 0x12
-#define MilitaryPromotionHold4 0x13
-#define MilitaryPromotionHold5 0x14
-#define MilitaryPromotionHold6 0x15
-#define MilitaryPromotionHold7 0x16
-#define MilitaryPromotionRetreat4 0x17
-#define MilitaryPromotionRetreatLeave5 0x18
-#define MilitaryPromotionRetreatLeave6GrowingTown1 0x19
-#define MilitaryPromotionRetreatLeave7 0x1A
-#define MilitaryPromotionRetreatHelp5 0x1B
-#define MilitaryPromotionRetreatHelp6 0x1C
-#define MilitaryPromotionRetreatHelp7 0x1D
+#define MilitaryAccept2 0x11
+#define MilitaryAccept3 0x12
+#define MilitaryAcceptHold4 0x13
+#define MilitaryAcceptHold5 0x14
+#define MilitaryAcceptHold6 0x15
+#define MilitaryAcceptHold7 0x16
+#define MilitaryAcceptRetreat4 0x17
+#define MilitaryAcceptRetreatLeave5 0x18
+#define MilitaryAcceptRetreatLeave6GrowingTown1 0x19
+#define MilitaryAcceptRetreatLeave7 0x1A
+#define MilitaryAcceptRetreatHelp5 0x1B
+#define MilitaryAcceptRetreatHelp6 0x1C
+#define MilitaryAcceptRetreatHelp7 0x1D
 #define MilitaryPass2 0x1E
 #define MilitaryPass3 0x1F
 #define MilitaryPass4 0x20
@@ -450,8 +473,8 @@
 #define MercenaryBanditDisband5 0x50
 #define MercenaryBanditDisband6 0x51
 #define MercenaryBanditDisband7 0x52
-#define MilitaryPromotionRetreatLeave6GrowingTown2 0x53
-#define MilitaryPromotionRetreatLeave6GrowingTown3 0x54
+#define MilitaryAcceptRetreatLeave6GrowingTown2 0x53
+#define MilitaryAcceptRetreatLeave6GrowingTown3 0x54
 #define ShizonShrineCutscene 0x55
 #define LeavingShizonCutscene 0x56
 #define LeavingUndergroundCutscene 0x57
@@ -670,6 +693,7 @@
 #define AltianDungeonCutsceneMap 0xBF
 #define DeidarMap 0xC0
 #define HaedricIgnefrontMap 0xC2
+#define DefenseFortMap 0xC7
 
 //Map Changes
 
@@ -704,6 +728,7 @@
 #define AltianCastleChanges 0xBE
 #define DeidarChanges 0xC1
 #define HaedricIgnefrontChanges 0xC3
+#define DefenseFortChanges 0xC8
 
 // Tilesets
 #define OutdoorSnowyObjectSet 0xB5
@@ -753,7 +778,9 @@
 #define Military5PassAltiaEvents 0xB0
 #define Military6PassAltiaEvents 0xB1
 #define Military7PassAltiaEvents 0xB2
-
+#define Military2AcceptEvents 0xC4
+#define Military3AcceptEvents 0xC5
+#define Military4AcceptEvents 0xC6
 // Good until 0xC9
 //LabelEnd
 
@@ -850,6 +877,12 @@
 #define CavalierSword 0x34
 #define CavalierLance 0x35
 #define CavalierUnarmed 0x36
+#define CavalierFSword 0x37
+#define CavalierFLance 0x38
+#define CavalierFUnarmed 0x39
+#define PaladinSword 0x3A
+#define PaladinLance 0x3B
+#define PaladinUnarmed 0x3C
 #define KnightLance 0x40
 #define KnightUnarmed 0x41
 #define GreatKnightSword 0x4E
@@ -976,12 +1009,12 @@
 #define HunterFBow 0x10D
 #define HunterFUnarmed 0x10E
 #define MasterKnightMSword 0x10F
-#define MasterKnightMLance 0x10E
-#define MasterKnightMUnarmed 0x10F
 #define CommanderAxe 0x110
 #define CommanderHandAxe 0x111
 #define HunterMSword 0x112
 #define WyvernGeneralLance 0x113
+#define MasterKnightMLance 0x114
+#define MasterKnightMUnarmed 0x115
 //LabelEnd
 
 //Label Music Definitions
@@ -1000,7 +1033,7 @@
 #define Pub_Theme 0x0407
 #define Snow_Battle 0x0408
 #define Wild_Fields 0x0409
-#define Town_of_Winds_and_Ruin 0x040A
+#define Town_of_Winds_and_Ruins 0x040A
 #define Derris_Kharlan_Appear 0x040B
 #define Shihna 0x040C
 #define Fatalize 0x040D
@@ -1024,6 +1057,12 @@
 #define Stage_One 0x041B
 #define Full_Force 0x041C
 #define Fury_Sparks 0x041D
+#define Church 0x041E
+#define Kavoc 0x041F
+#define Like_a_Glint_of_Light 0x0420
+#define Off_Key 0x0421
+#define The_Law_of_Battle 0x0422
+#define Twinrova 0x0423
 //LabelEnd
 
 //Label Skill Definitions
@@ -1088,7 +1127,7 @@
 #define CharmID 55 //Valkyrie							Kendrick
 #define VoiceOfPeaceID 56 //Troubadour, Valkyrie
 #define AmaterasuID 57 //Patriarch
-#define SpurStrID 58 //MountedBrigand					Adlez
+#define SpurStrID 58 //Warrior, MountedBrigand					Adlez
 #define SpurMagID 59 //Hunter
 #define SpurDefID 61 //GreatKnight
 #define SpurSpdID 60 //Sentinel
@@ -1132,7 +1171,7 @@
 #define ElbowRoomID 99 //Cavalier, Paladin
 #define NaturalCoverID 100 //Knight, General, GreatKnight
 #define SealStrID 101 //Druid
-#define SealSklID 102 //Pirate, Berserker
+#define SealSklID 102 //Myrmidon, Pirate, Berserker
 #define SealSpdID 103 //Mercenary, Hero
 #define SealLukID 104 //Mountainier
 #define SealDefID 105 //Brigand
@@ -1241,11 +1280,6 @@
 #define MoveMercenary(X,Y) "MOVE 0x0 PlayerMMercenary [X,Y];MOVE 0x0 PlayerMMyrmidon [X,Y];MOVE 0x0 PlayerMPirate [X,Y];MOVE 0x0 PlayerMFighter [X,Y];MOVE 0x0 PlayerMBrigand [X,Y];MOVE 0x0 PlayerFMercenary [X,Y];MOVE 0x0 PlayerFMyrmidon [X,Y];MOVE 0x0 PlayerFPegasusKnight [X,Y]"
 #define MoveMercenarySlow(X,Y) "MOVE 0x1 PlayerMMercenary [X,Y];MOVE 0x1 PlayerMMyrmidon [X,Y];MOVE 0x1 PlayerMPirate [X,Y];MOVE 0x1 PlayerMFighter [X,Y];MOVE 0x1 PlayerMBrigand [X,Y];MOVE 0x1 PlayerFMercenary [X,Y];MOVE 0x1 PlayerFMyrmidon [X,Y];MOVE 0x1 PlayerFPegasusKnight [X,Y]"
 
-#define ClearMercenary "CLEA PlayerMMercenary;CLEA PlayerMMyrmidon;CLEA PlayerMFighter;CLEA PlayerMPirate;CLEA PlayerMBrigand;CLEA PlayerFMercenary;CLEA PlayerFMyrmidon;CLEA PlayerFPegasusKnight"
-
-// In order of FMercenaryStart , FmyrmidonStart, FPegasusKnghtStart , MMercenaryStart , MMyrmidonStart , MFighterStart , MPirateStart , MBrigandStart. Uses 0x8 cond. IDs
-#define LoadingMercenary(Index,UnitPointer) "CHECK_EVENTID 0x66;BNE (0x0 + 0x8 * Index) 0xC 0x0;CHECK_EVENTID 0x69;BEQ (0x2 + 0x8 * Index) 0xC 0x0;LOAD2 0x1 (UnitPointer);GOTO (0x1 + 0x8 * Index);LABEL (0x2 + 0x8 * Index);CHECK_EVENTID 0x6A;BEQ (0x3 + 0x8 * Index) 0xC 0x0;LOAD2 0x1 (UnitPointer + 40);GOTO (0x1 + 0x8 * Index);LABEL (0x3 + 0x8 * Index);LOAD2 0x1 (UnitPointer + 80);GOTO (0x1 + 0x8 * Index);LABEL (0x0 + 0x8 * Index);CHECK_EVENTID 0x69;BEQ (0x4 + 0x8 * Index) 0xC 0x0;LOAD2 0x1 (UnitPointer + 120);GOTO (0x1 + 0x8 * Index);LABEL (0x4 + 0x8 * Index);CHECK_EVENTID 0x6A;BEQ (0x5 + 0x8 * Index) 0xC 0x0;LOAD2 0x1 (UnitPointer + 160);GOTO (0x1 + 0x8 * Index);LABEL (0x5 + 0x8 * Index);CHECK_EVENTID 0x6B;BEQ (0x6 + 0x8 * Index) 0xC 0x0;LOAD2 0x1 (UnitPointer + 200);GOTO (0x1 + 0x8 * Index);LABEL (0x6 + 0x8 * Index);CHECK_EVENTID 0x6C;BEQ 0x7 0xC 0x0;LOAD2 0x1 (UnitPointer + 240);GOTO (0x1 + 0x8 * Index);LABEL (0x7 + 0x8 * Index);LOAD2 0x1 (UnitPointer + 280);LABEL (0x1 + 0x8 * Index)"
-
 #define GuardAI NeverMoveAI
 #define ChapterDataEditor ChapterDataTable
 
@@ -1289,9 +1323,20 @@
 
 #define MoveToChapter(Chapter) "MNC2 Chapter"
 
+#define InfiniteTurnEventPlayer(EventID,Pointer,StartTurn) "TURN EventID Pointer [StartTurn, 0xFF] 0"
+#define InfiniteTurnEventEnemy(EventID,Pointer,StartTurn) "TURN EventID Pointer [StartTurn 0xFF] 8"
+#define InfiniteTurnEventNPC(EventID,Pointer,StartTurn) "TURN EventID Pointer [StartTurn, 0xFF] 0x24 0x00"
+
 #define EventMenuCommand(aTextId,Effect) "WORD 0; SHORT aTextId 0; WORD 0; POIN (0x04F448|1); WORD 0; POIN (Effect|1); WORD 0 0 0"
-#define EventMenuCommand(aTextId,Usability,Effect) "WORD 0; SHORT aTextId 0; WORD 0; POIN (Usability|1); WORD 0; POIN (Effect|1); WORD 0 0 0"
 #define EventMenuCommandEnd "WORD 0 0 0 0 0 0 0 0 0"
+
+#define EnableAIOption(Chapter,Option) "PUSH; ORG AIOptionsTable + 4*Chapter; WORD Option; POP"
+#define EnableDoorKey 1
+#define EnableLockpick 2
+#define EnableAntitoxin 4
+
+#define EnemyCountGoal 0x01
+#define TurnNumberGoal 0x02
 
 #define Twisted_Shadows_A 0x16
 #define Twisted_Shadows_B 0x17
@@ -1306,15 +1351,8 @@
 #define SandstormWeather 0x06
 #define CloudWeather 0x07
 
-#define AddSupport(Character1,Character2) "SVAL 0x1 Character1 ; SVAL 0x2 Character2 ; ASMC CallAddSupport|1"
-#define AddSupportNoPopup(Character1,Character2) "SVAL 0x1 Character1 ; SVAL 0x2 Character2 ; ASMC CallAddSupportNoPopup|1"
-#define IncreaseSupport(Character1,Character2) "SVAL 0x1 Character1 ; SVAL 0x2 Character2 ; ASMC CallIncreaseSupport|1"
-#define IncreaseSupportNoPopup(Character1,Character2) "SVAL 0x1 Character1 ; SVAL 0x2 Character2 ; ASMC CallIncreaseSupportNoPopup|1"
-#define SetSupport(Character1,Character2,Level) "SVAL 0x1 Character1 ; SVAL 0x2 Character2 ; SVAL 0x3 Level ; ASMC CallSetSupport|1"
-#define ClearSupport(Character1,Character2) "SVAL 0x1 Character1 ; SVAL 0x2 Character2 ; ASMC CallClearSupport|1"
-#define CSupport 1
-#define BSupport 2
-#define ASupport 3
+#include "ASM/SupportRework/Support Definitions.event"
+
 //LabelEnd
 #define EndUnit UNIT // Necessary for folding
 #define EndA2 ENDA
@@ -1372,7 +1410,14 @@ for /R %%F in (%FILE_MATCH%) do (
     (echo: | (call "%ASSEMBLE_BAT%" "%%~nxF")) > nul
 )
 */
+/*
 
+cd "%~dp0ASM/SupportRework"
+
+(echo: | (call "ELFAssembleARM.bat" "MasterSupportCalculations.asm")) > nul
+(echo: | (call "ELFAssembleARM.bat" "Hooks.asm")) > nul
+
+*/
 // In text, 0x97F is my magical number to start at.
 
 //#inctext PFinder Clean.gba (Vanilla memory location) NewTableLabel

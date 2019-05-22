@@ -17,27 +17,27 @@ INLINE SupplyUsabilityTable,Pointer
 0F MageEscapeCesaria7,0x00
 10 Military1,0x00
 11 MilitaryPromotion2,0x00
-12 MilitaryPromotion3,0x00
-13 MilitaryPromotionHold4,0x00
-14 MilitaryPromotionHold5,0x00
-15 MilitaryPromotionHold6,0x00
-16 MilitaryPromotionHold7,0x00
-17 MilitaryPromotionRetreat4,0x00
-18 MilitaryPromotionRetreatLeave5,0x00
-19 MilitaryPromotionRetreatLeave6(GrowingTown1Map),0x00
-1A MilitaryPromotionRetreatLeave7,0x00
-1B MilitaryPromotionRetreatHelp5,0x00
-1C MilitaryPromotionRetreatHelp6,0x00
-1D MilitaryPromotionRetreatHelp7,0x00
-1E MilitaryPass2,0x00
+12 MilitaryPromotion3,NormalSupplyList|IsPointer
+13 MilitaryPromotionHold4,NormalSupplyList|IsPointer
+14 MilitaryPromotionHold5,NormalSupplyList|IsPointer
+15 MilitaryPromotionHold6,NormalSupplyList|IsPointer
+16 MilitaryPromotionHold7,NormalSupplyList|IsPointer
+17 MilitaryPromotionRetreat4,NormalSupplyList|IsPointer
+18 MilitaryPromotionRetreatLeave5,NormalSupplyList|IsPointer
+19 MilitaryPromotionRetreatLeave6(GrowingTown1Map),NormalSupplyList|IsPointer
+1A MilitaryPromotionRetreatLeave7,NormalSupplyList|IsPointer
+1B MilitaryPromotionRetreatHelp5,NormalSupplyList|IsPointer
+1C MilitaryPromotionRetreatHelp6,NormalSupplyList|IsPointer
+1D MilitaryPromotionRetreatHelp7,NormalSupplyList|IsPointer
+1E MilitaryPass2,NormalSupplyList|IsPointer
 1F MilitaryPass3,NormalSupplyList|IsPointer
 20 MilitaryPass4,NormalSupplyList|IsPointer
-21 MilitaryPassHaedric5,NormalSupplyList|IsPointer
-22 MilitaryPassHaedric6,NormalSupplyList|IsPointer
-23 MilitaryPassHaedric7,NormalSupplyList|IsPointer
-24 MilitaryPassAltia5,NormalSupplyList|IsPointer
-25 MilitaryPassAltia6,NormalSupplyList|IsPointer
-26 MilitaryPassAltia7,NormalSupplyList|IsPointer
+21 MilitaryPass Haedric 5,NormalSupplyList|IsPointer
+22 MilitaryPass Haedric6,NormalSupplyList|IsPointer
+23 MilitaryPass Haedric 7,NormalSupplyList|IsPointer
+24 Military Pass Altia 5,NormalSupplyList|IsPointer
+25 Military Pass Altia 6,NormalSupplyList|IsPointer
+26 Military Pass Altia 7,NormalSupplyList|IsPointer
 27 Tower of Valni 4,0x00
 28 Tower of Valni 5,0x00
 29 Tower of Valni 6,0x00
@@ -96,3 +96,7 @@ INLINE SupplyUsabilityTable,Pointer
 5E MercenaryBandit2,0x00
 5F BacrunRuins1Cutscene,0x00
 60 BacrunRuins2Cutscene,0x00
+61 Kilthel Fight Cutscene,0x00
+62 Guardian Spirit Wall,0x00
+63 AltianDungeonCutscene,0x00
+64 HaedricCityCutscene,0x00

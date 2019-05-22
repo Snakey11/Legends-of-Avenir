@@ -97,8 +97,9 @@ ENUF 0x19
 ENUF 0x20
 MUSC Twisted_Shadows_A
 FADI 0x5
-CLEA Leon
-CLEE Cesarian
+CLEA 0x0
+CLEE 0x0
+ASMC RefreshAll|1
 SVAL 0x1 Adlez
 ASMC MakeNotDeadASM|1
 SVAL 0x1 Arya
@@ -402,10 +403,10 @@ UNIT Walter Archer PlayerMArcher Level(1,Ally,True) [14,12] 0x00 0x00 0x00 0x00 
 UNIT Arya Myrmidon_F PlayerMArcher Level(1,Ally,True) [8,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 UNIT Adlez Brigand PlayerMArcher Level(1,Ally,True) [9,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 UNIT Connor Mercenary PlayerMArcher Level(1,Ally,True) [7,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT Leon Gladiator PlayerMArcher Level(1,Ally,True) [12,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 UNIT
 
 LeonAndEnemies:
-UNIT Leon Gladiator PlayerMArcher Level(11,Ally,True) [12,12] 0x00 0x00 0x00 0x00 [SilverAxe,Tomahawk,Vulnerary] NoAI 
 UNIT Rex GrandPaladin Rex Level(15,Enemy,True) [5,1] 0x00 0x00 0x00 0x00 [BraveLance,Tomahawk,SilverSword] GuardAI 
 UNIT Cesarian General Rex Level(8,Enemy,True) [4,5] 0x00 0x00 0x00 0x00 [KillerLance,SteelSword] GuardAI
 UNIT Cesarian General Rex Level(7,Enemy,True) [5,5] 0x00 0x00 0x00 0x00 [ShortAxe,SteelLance] GuardAI

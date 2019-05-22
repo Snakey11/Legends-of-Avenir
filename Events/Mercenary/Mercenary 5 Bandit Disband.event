@@ -31,8 +31,8 @@ Vendor(ShopList,0,9)
 Village(0x12,TopRedHouse,12,10)
 Village(0x13,RightRedHouse,17,13)
 Village(0x14,BottomRedHouse,8,17)
-Village(0x0,WhiteHouse,10,17)
-Village(0x0,VisitInn,15,17)
+House(0x0,WhiteHouse,10,17)
+House(0x0,VisitInn,15,17)
 END_MAIN
 
 //Label MiscBasedEvents
@@ -84,6 +84,7 @@ Text(Merc5BanditDisbandMasonReturnsText)
 EnterStop
 MOVE 0x0 Mason [1,21]
 STAL 0x20
+SetSupport(Arya,Kendrick,CSupport)
 NoFade
 GotoPrepScreen
 
@@ -112,9 +113,8 @@ ALIGN 4
 
 TopRedHouse:
 MUSI
-SetBackground(0x2)
-Text(Merc5BanditDisbandHalberdHouseText)
-EndConvo
+Text(0x02,Merc5BanditDisbandHalberdHouseText)
+STAL 0x10
 GiveItem(Halberd,0xFFFF)
 MUNO
 NoFade
@@ -122,9 +122,8 @@ EndA2
 
 RightRedHouse:
 MUSI
-SetBackground(0x2)
-Text(Merc5BanditDisbandElixirHouseText)
-EndConvo
+Text(0x02,Merc5BanditDisbandElixirHouseText)
+STAL 0x10
 GiveItem(Elixir,0xFFFF)
 MUNO
 NoFade
@@ -132,9 +131,8 @@ EndA2
 
 BottomRedHouse:
 MUSI
-SetBackground(0x2)
-Text(Merc5BanditDisbandSteelBladeHouseText)
-EndConvo
+Text(0x02,Merc5BanditDisbandSteelBladeHouseText)
+STAL 0x10
 GiveItem(SteelBlade,0xFFFF)
 MUNO
 NoFade
@@ -142,25 +140,21 @@ EndA2
 
 WhiteHouse:
 MUSI
-SetBackground(0x2)
-Text(Merc5BanditDisbandHouse1Text)
-EndConvo
+Text(0x02,Merc5BanditDisbandHouse1Text)
 MUNO
 NoFade
 EndA2
 
 VisitInn:
 MUSI
-SetBackground(0x1)
-Text(Merc5BanditDisbandInnText)
-EndConvo
+Text(0x09,Merc5BanditDisbandInnText)
 MUNO
 NoFade
 ENDA
 
 	/*UNIT DATA*/
 
-//Label PlayerUnitsAndMason
+//Label Player units
 PlayerLoading1:
 UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [7,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI
 UNIT
@@ -171,14 +165,14 @@ UNIT Walter Brigand2 PlayerMArcher Level(4,Ally,True) [6,12] 0x00 0x00 0x00 0x00
 UNIT Baret Brigand2 PlayerMArcher Level(4,Ally,True) [6,10] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
 UNIT Arya Brigand2 PlayerMArcher Level(4,Ally,True) [6,8] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
 UNIT Adlez Brigand2 PlayerMArcher Level(4,Ally,True) [8,10] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
+UNIT Kendrick Brigand2 PlayerMArcher Level(4,Ally,True) [8,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI
 EndUnit
 
 //Label Kendrick and Meanies
 MasonKendrickMeanies:
-UNIT Kendrick Pirate Kendrick Level(12,Ally,True) [8,12] 0x00 0x00 0x00 0x00 [ShortAxe,Swordreaver,Vulnerary] NoAI
 UNIT Mason Ranger Mason Level(6,Enemy,True) [9,11] 0x00 0x00 0x00 0x00 [SteelBlade,SteelBow] GuardAI
 UNIT Hunter Fighter Mason Level(10,Enemy,True) [10,6] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
-UNIT Hunter Fighter Mason Level(8,Enemy,True) [14,8] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
+UNIT Hunter Fighter Mason Level(8,Enemy,True) [14,8] 0x00 0x00 0x00 0x00 [PoisonAxe] NoAI
 UNIT Hunter Hero Mason Level(4,Enemy,True) [16,10] 0x00 0x00 0x00 0x00 [SteelBlade] AttackInRangeAI
 UNIT Hunter Mercenary Mason Level(9,Enemy,True) [12,11] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
 UNIT Hunter Pirate Mason Level(10,Enemy,True) [10,15] 0x00 0x00 0x00 0x00 [ShortAxe] NoAI
@@ -194,7 +188,7 @@ UNIT
 HunterGroup2:
 UNIT Hunter Mage Mason Level(12,Enemy,True) [6,19] 0x00 0x00 0x00 0x00 [Fire] AttackInRangeAI
 UNIT Hunter Archer Mason Level(13,Enemy,True) [6,17] 0x00 0x00 0x00 0x00 [IronLongbow] AttackInRangeAI
-UNIT Hunter Halberdier Mason Level(5,Enemy,True) [8,21] 0x00 0x00 0x00 0x00 [Horseslayer] AttackInRangeAI
+UNIT Hunter Halberdier Mason Level(5,Enemy,True) [8,21] 0x00 0x00 0x00 0x00 [ToxinLance] AttackInRangeAI
 UNIT Hunter Soldier Mason Level(9,Enemy,True) [6,5] 0x00 0x00 0x00 0x00 [SteelLance] GuardAI
 UNIT Hunter Soldier Mason Level(8,Enemy,True) [7,5] 0x00 0x00 0x00 0x00 [HeavySpear] GuardAI
 UNIT Hunter Archer Mason Level(10,Enemy,True) [5,4] 0x00 0x00 0x00 0x00 [IronBow] AttackInRangeAI

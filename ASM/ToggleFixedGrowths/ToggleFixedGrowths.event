@@ -1,0 +1,5 @@
+
+ALIGN 4
+#inctext lyn "ToggleFixedGrowths.elf" "Hooks.elf"
+
+jumpToHack(UnsetFixedGrowths|1)

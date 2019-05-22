@@ -135,7 +135,6 @@ EndingScene:
 EnterStop
 MUSC Victory
 Text(Merc1PreMenuText)//Convo : Bandits flee
-ENUN
 STAL 0x10
 ASMC CallMerc1Menu+1
 MUSC Advance
@@ -211,14 +210,15 @@ UNIT
 
 AxeBandits:
 UNIT Henning Fighter Henning Level(3,Enemy,True) [9,11] 0x00 0x00 0x00 0x00 [SteelAxe] GuardAI
-UNIT GerwickBandit Brigand Henning Level(2,Enemy,True) [7,10] 0x00 0x00 0x00 0x00 [HandAxe] [0]
+UNIT GerwickBandit Brigand Henning Level(2,Enemy,True) [7,10] Drop 0x00 0x00 0x00 [IronAxe] [0]
 UNIT GerwickBandit Brigand Henning Level(1,Enemy,True) [13,2] 0x00 0x00 0x00 0x00 [IronAxe] [0]
 UNIT GerwickBandit Mercenary Henning Level(2,Enemy,True) [2,7] 0x00 0x00 0x00 0x00 [IronSword] AttackInRangeAI
 UNIT
 
 TestPeople:
-UNIT Vicar Warrior Vicar Level(6,Ally,True) [10,12] 0x00 0x00 0x00 0x00 [SteelAxe,SteelLongbow,SteelBow] NoAI
-UNIT Adlez Warrior Vicar Level(6,Ally,True) [11,12] 0x00 0x00 0x00 0x00 [SteelAxe,SteelLongbow,SteelBow] NoAI
-UNIT GerwickBandit Swordmaster Vicar Level(20,Enemy,True) [10,10] 0x00 0x00 0x00 0x00 [SlimSword] NoAI
-UNIT GerwickBandit Sniper Vicar Level(20,Enemy,True) [9,10] 0x00 0x00 0x00 0x00 [SteelBow] NoAI
+//UNIT Val Summoner Val Level(1,Ally,True) [10,12] 0x00 0x00 0x00 0x00 [Flux] NoAI
+//UNIT Xavus Summoner Xavus Level(1,Ally,True) [10,11] 0x00 0x00 0x00 0x00 [Flux] NoAI
+//UNIT Adlez Warrior Vicar Level(6,Ally,True) [11,12] 0x00 0x00 0x00 0x00 [SteelAxe,SteelLongbow,SteelBow] NoAI
+//UNIT GerwickBandit Swordmaster Vicar Level(20,Enemy,True) [10,10] 0x00 0x00 0x00 0x00 [SlimSword] NoAI
+//UNIT GerwickBandit Sniper Vicar Level(20,Enemy,True) [9,10] 0x00 0x00 0x00 0x00 [SteelBow] NoAI
 UNIT

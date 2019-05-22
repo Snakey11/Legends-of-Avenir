@@ -132,3 +132,17 @@
 #include "Warlock Hand Axe.event"
 
 #include "Warlock Unarmed.event"
+
+
+#include "Cavalier F Sword.event"
+
+#include "Cavalier F Lance.event"
+
+#include "Cavalier F Unarmed.event"
+
+
+#include "Paladin Sword.event"
+
+#include "Paladin Lance.event"
+
+#include "Paladin Unarmed.event"

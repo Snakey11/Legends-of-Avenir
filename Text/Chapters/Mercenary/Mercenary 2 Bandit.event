@@ -25,9 +25,17 @@ Adlez will have some use for her.[A][X]
 ## Merc2BanditTactMeetsOthersPart2Text
 [Right]Perhaps... What do you think, Baret?[A]
 [Left]We've been just us for ages. I see no[NL]
-reason to add another member to our group.[A]
+reason to add another member to our group.[A][X]
+
+## Merc2BanditTactMeetsOthersHeText
 [FarLeft]Lighten up, brother. He's pretty skilled,[NL]
-and Danaan's militia are no pushovers.[A]
+and Danaan's militia are no pushovers.[A][X]
+
+## Merc2BanditTactMeetsOthersSheText
+[FarLeft]Lighten up, brother. She's pretty skilled,[NL]
+and Danaan's militia are no pushovers.[A][X]
+
+## Merc2BanditTactMeetsOthersPart3Text
 [Right]I'll make the call. What's your name?[A]
 [FarRight]I'm [Tact].[A]
 [Right]My name's Vicar. I'm a former Haedrician[NL]
@@ -60,20 +68,32 @@ I left the service of the warlord we were[NL]
 under. Adlez left after his death.[A]
 [FarRight]Indeed. So, you're here[NL]
 to help with the raid?[A]
-[Left]Yeah. This is [Tact], by the way. He[NL][FarLeft][ClearFace][LoadPlayer][Left]
-disposed of a group of highwaymen[A][NL]
-that also wanted to join the raid,[NL]
-then joined up with us.[A]
-[FarRight][Tact], you say? What are[NL]
-you, a freelancer?[A]
-[FarLeft]Yeah, something like that.[A]
+[Left]Yeah. This is [Tact], by the way.[NL][FarLeft][ClearFace][LoadPlayer][Left]
+[Tact] disposed of a group of[A][NL]
+highwaymen that also wanted to join[NL]
+the raid, then joined up with us.[A]
+[FarRight]What are you, a freelancer?[A]
+[FarLeft]Yeah, something like that.[A][X]
+
+## Merc2BanditTactMeetsAdlezHeText
 [FarRight]Well, if he's a good fighter, that's good[NL]
 for me. Anyone who can deal with a whole[A][NL]
 group of highwaymen single-handedly is worth[NL]
 my attention. I already dispatched[A][NL]
 one of my men, Gerwick, to begin the[NL]
 assault on Danaan. If you want[A][NL]
-some loot, you'd better get going.[A]
+some loot, you'd better get going.[A][X]
+
+## Merc2BanditTactMeetsAdlezSheText
+[FarRight]Well, if he's a good fighter, that's good[NL]
+for me. Anyone who can deal with a whole[A][NL]
+group of highwaymen single-handedly is worth[NL]
+my attention. I already dispatched[A][NL]
+one of my men, Gerwick, to begin the[NL]
+assault on Danaan. If you want[A][NL]
+some loot, you'd better get going.[A][X]
+
+## Merc2BanditTactMeetsAdlez2Text
 [Left]We'll be back with your cut.[A]
 [FarRight]I wouldn't have it any other way.[A][X]
 

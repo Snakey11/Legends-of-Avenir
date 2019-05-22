@@ -23,6 +23,7 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
+SupportConvo(BSupport,Cougar,Finoc,Support1Text)
 END_MAIN
 
 //Label LocationBasedEvents
@@ -103,12 +104,6 @@ EndConvo
 MUSC Shihna
 STAL 0x20
 Text(Military5PassHaedricHereText)
-GiveToSupplySilent(Armorslayer)
-GiveToSupplySilent(SteelSword)
-GiveToSupplySilent(DragonSpear)
-GiveToSupplySilent(Javelin)
-GiveToSupplySilent(Exordium)
-GiveToSupplySilent(Elfire)
 GotoPrepScreen
 
 //Label EndingScene

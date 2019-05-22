@@ -25,6 +25,8 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
+SupportConvo(ASupport,Forrest,Christina,Support1Text)
+SupportConvo(BSupport,Cougar,Finoc,Support1Text)
 END_MAIN
 
 //Label LocationBasedEvents

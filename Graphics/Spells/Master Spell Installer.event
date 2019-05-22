@@ -62,7 +62,9 @@ ALIGN 4
 {
 #include "Spells/Dasher/Dasher.event"
 }
-//#include "Spells/Light Arrow/Light Arrow.event"
+{
+#include "Spells/Hail/Hail.event"
+}
 {
 #include "Spells/Meteor/Meteor.event"
 }
@@ -77,6 +79,9 @@ ALIGN 4
 }
 {
 #include "Spells/Swarm/Swarm.event"
+}
+{
+#include "Spells/Tempest/Tempest.event"
 }
 {
 #include "Spells/Thoron Elthunder/Elthunder.event"

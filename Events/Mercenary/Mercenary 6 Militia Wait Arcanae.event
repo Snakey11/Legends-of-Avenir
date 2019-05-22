@@ -14,6 +14,12 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+InfiniteTurnEventPlayer(0x15,DoorReinforcements,1)
+TurnEventPlayer(0x00,Turn2,2)
+TurnEventPlayer(0x00,Turn5,5)
+TurnEventPlayer(0x00,Turn7,7)
+TurnEventPlayer(0x00,Turn10,10)
+InfiniteTurnEventPlayer(0x00,Turn13,13)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -28,9 +34,9 @@ DOOR 0x10 [14,9] 0x12
 DOOR 0x10 [15,9] 0x12
 DOOR 0x10 [16,9] 0x12
 Chest(Swordreaver,0,16)
-Chest(Dragonshield,0,17)
-Chest(BraveSword,0,19)
-Chest(KillingEdge,0,20)
+Chest(Dragonshield,0,20)
+Chest(BraveSword,9,19)
+Chest(KillingEdge,21,19)
 END_MAIN
 
 MiscBasedEvents:
@@ -112,14 +118,10 @@ FADI 0x5
 MUSC Into_the_Shadow_of_Victory
 CLEA 0x0
 CLEE 0x0
-SVAL 0x1 60
-ASMC MaxMercenaryHP|1
-SET_HP Arc
-SET_HP Luke
-SET_HP Elanil
-SET_HP Finoc
-SET_HP Val
-SET_HP Helmer
+ASMC RefreshAll|1
+LOAD1 0x1 LoadUzkalis
+ENUN
+CLEA 0x0
 SVAL 0x1 Arc
 ASMC PrepForBattle|1 // Ensures Arc has an axe equiped for the battle.
 LOAD3 0x1 PlayerLoading2
@@ -174,6 +176,65 @@ Text(Merc6MilitiaWaitArcanaeFinocElanilEndingText)
 MoveToChapter(MercenaryMilitiaWaitArcanae7)
 ENDA
 
+DoorReinforcements:
+CHECK_EVENTID 0x10
+BEQ 0x0 0x0 0xC
+	// Door was opened the previous turn.
+	CamON
+	LOAD1 0x1 DoorUnits
+	ENUN
+	CamOFF
+	GOTO 0x1
+LABEL 0x0
+	ENUF 0x15
+LABEL 0x1
+NoFade
+ENDA
+
+Turn2:
+CamON
+LOAD1 0x1 Turn2Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn5:
+CamON
+LOAD1 0x1 Turn5Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn7:
+CamON
+LOAD1 0x1 Turn7Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn10:
+CamON
+LOAD1 0x1 Turn10Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn13:
+Every3Turns(0x00,0x01,0x02,0x13,0x14,Turn13Loop)
+NoFade
+EndA2
+
+Turn13Loop:
+CamON
+LOAD1 0x1 Turn13LoopUnits
+ENUN
+CamOFF
+NoFade
+ENDA
 
 	/*UNIT DATA*/
 
@@ -201,7 +262,7 @@ UNIT
 
 MoveZaliusCesarians:
 UNIT Rex GrandPaladin Rex Level(11,Enemy,True) [15,1] 0x00 0x00 0x00 0x00 [SteelLance,WindSword,KillerAxe] GuardAI
-UNIT Zalius EdgySwordmaster Zalius Level(13,Enemy,True) [19,24] Drop 0x00 0x00 0x00 [SilverBlade,DoorKey] GuardAI 
+UNIT Zalius EdgySwordmaster Zalius Level(6,Enemy,True) [19,24] Drop 0x00 0x00 0x00 [SteelSword,DoorKey] AttackInRangeAI
 UNIT Cesarian Sniper Rex Level(5,Enemy,True) [15,20] 0x00 0x00 0x00 0x00 [SilverLongbow] AttackInRangeAI
 UNIT Cesarian Archer Rex Level(12,Enemy,True) [6,15] 0x00 0x00 0x00 0x00 [DevilBow] AttackInRangeAI
 UNIT Cesarian Archer Rex Level(11,Enemy,True) [6,20] 0x00 0x00 0x00 0x00 [IronLongbow] AttackInRangeAI
@@ -250,11 +311,60 @@ UNIT Finoc Monk Luke Level(1,Ally,True) [16,10] 0x00 0x00 0x00 0x00 [BraveLance,
 UNIT
 
 EndingRex:
-UNIT Rex GrandPaladin Rex Level(13,Enemy,True) [15,2] 0x00 0x00 0x00 0x00 [SilverLance] GuardAI
+UNIT Rex GrandPaladin Rex Level(13,Enemy,True) [15,2] 0x00 0x00 0x00 0x00 [KillerAxe] NoAI
 UNIT
 
 MoveLukeArc:
 UNIT Arc Monk Luke Level(1,Ally,True) [14,4] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
 UNIT Luke Monk Luke Level(1,Ally,True) [17,3] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] [0]
 UNIT
-	
+
+LoadUzkalis:
+UNIT Uzkalis GaidenSage Uzkalis Level(10,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [Thoron,Arcwind] [0]
+UNIT
+
+DoorUnits:
+UNIT Cesarian Pirate Rex Level(13,Enemy,True) [24,0] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT Cesarian Pirate Rex Level(13,Enemy,True) [25,0] 0x00 0x00 0x00 0x00 [Hammer] NoAI
+UNIT Cesarian General Rex Level(13,Enemy,True) [25,10] 0x00 0x00 0x00 0x00 [SteelLance,HandAxe] NoAI
+UNIT Cesarian Knight Rex Level(13,Enemy,True) [0,10] 0x00 0x00 0x00 0x00 [IronLance] NoAI
+UNIT Cesarian Cavalier Rex Level(13,Enemy,True) [3,0] 0x00 0x00 0x00 0x00 [Wyrmslayer] NoAI
+UNIT Cesarian Cavalier Rex Level(13,Enemy,True) [4,0] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Cesarian Sentinel Rex Level(13,Enemy,True) [14,0] 0x00 0x00 0x00 0x00 [SteelSword,Javelin] AttackInRangeAI
+UNIT Cesarian Sentinel Rex Level(13,Enemy,True) [16,0] 0x00 0x00 0x00 0x00 [ToxinLance] AttackInRangeAI
+UNIT
+
+Turn2Units:
+UNIT Cesarian Fighter Rex Level(13,Enemy,True) [25,23] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT Cesarian Mage Rex Level(12,Enemy,True) [25,24] 0x00 0x00 0x01 REDA24R24 [Dasher] NoAI
+UNIT Cesarian Fighter Rex Level(11,Enemy,True) [25,25] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
+UNIT Cesarian Soldier Rex Level(13,Enemy,True) [3,0] 0x00 0x00 0x00 0x00 [Javelin] NoAI
+UNIT Cesarian Soldier Rex Level(14,Enemy,True) [5,0] 0x00 0x00 0x00 0x00 [DevilLance] NoAI
+UNIT
+
+Turn5Units:
+UNIT Cesarian Cavalier Rex Level(12,Enemy,True) [25,23] 0x00 0x00 0x00 0x00 [Horseslayer] NoAI
+UNIT Cesarian Cavalier Rex Level(13,Enemy,True) [25,25] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Cesarian Cavalier Rex Level(12,Enemy,True) [24,0] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI
+UNIT Cesarian Cavalier Rex Level(14,Enemy,True) [3,0] 0x00 0x00 0x00 0x00 [ToxinSword] NoAI
+UNIT Cesarian Valkyrie Rex Level(2,Enemy,True) [5,0] 0x00 0x00 0x00 0x00 [Shine,Physic] NoAI
+UNIT
+
+Turn7Units:
+UNIT Cesarian Soldier Rex Level(12,Enemy,True) [3,0] 0x00 0x00 0x00 0x00 [Dragonspear] NoAI
+UNIT Cesarian Halberdier Rex Level(3,Enemy,True) [4,0] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Cesarian Soldier Rex Level(13,Enemy,True) [6,0] 0x00 0x00 0x00 0x00 [Javelin] NoAI
+UNIT
+
+Turn10Units:
+UNIT Cesarian GreatKnight Rex Level(1,Enemy,True) [25,23] 0x00 0x00 0x00 0x00 [SilverLance] NoAI
+UNIT Cesarian GreatKnight Rex Level(2,Enemy,True) [25,23] 0x00 0x00 0x00 0x00 [ShortAxe,SteelLance] NoAI
+UNIT Cesarian Shaman Rex Level(15,Enemy,True) [3,0] 0x00 0x00 0x00 0x00 [Slime] NoAI
+UNIT Cesarian Shaman Rex Level(14,Enemy,True) [5,0] 0x00 0x00 0x00 0x00 [Flux] NoAI
+UNIT
+
+Turn13LoopUnits:
+UNIT Cesarian Cavalier Rex Level(16,Enemy,True) [4,0] 0x00 0x00 0x00 0x00 [Axereaver] NoAI
+UNIT Cesarian Paladin Rex Level(3,Enemy,True) [25,24] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI
+UNIT Cesarian Cavalier Rex Level(15,Enemy,True) [24,0] 0x00 0x00 0x00 0x00 [ShortSpear] NoAI
+UNIT

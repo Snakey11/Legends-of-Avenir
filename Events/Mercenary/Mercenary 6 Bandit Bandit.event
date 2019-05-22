@@ -22,6 +22,7 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
+SupportConvo(ASupport,Vicar,Baret,Support1Text)
 END_MAIN
 
 //Label LocationBasedEvents
@@ -93,14 +94,6 @@ LOAD2 0x1 BacrunFriends
 ENUN
 SetBackground(0x12)
 Text(Merc6BanditBanditPlanText) // Conference with Leon
-GiveToSupplySilent(SteelSword)
-GiveToSupplySilent(Armorslayer)
-GiveToSupplySilent(ShortSpear)
-GiveToSupplySilent(DevilLance)
-GiveToSupplySilent(SteelAxe)
-GiveToSupplySilent(KillerAxe)
-GiveToSupplySilent(SteelLongbow)
-GiveToSupplySilent(Elixir)
 STAL 0x20
 MUSC Indignation
 SetBackground(0x1C)
@@ -120,7 +113,9 @@ GotoPrepScreen
 
 //Label EndingScene
 EndingScene:
+FADI 0x5
 MUSC Into_the_Shadow_of_Victory
+LOAD1 0x1 LoadLeon
 SetBackground(0x0A)
 Text(Merc6BanditBanditEndingText)
 MoveToChapter(MercenaryBanditBandit7)
@@ -160,6 +155,10 @@ UNIT
 
 AryaEntersWithTact:
 UNIT Arya Myrmidon_F Arya Level(1,Ally,True) [8,9] 0x00 0x00 0x1 REDA8R5 [IronAxe,Vulnerary] NoAI 
+UNIT
+
+LoadLeon:
+UNIT Leon Gladiator PlayerMArcher Level(11,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [SilverAxe,Tomahawk,Vulnerary] NoAI 
 EndUnit
 
 //Label BacrunUnits

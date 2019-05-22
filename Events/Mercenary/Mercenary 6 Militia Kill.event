@@ -168,18 +168,14 @@ BLE 0x17 0x4 0xC
 	CLEA 0x0
 	CLEE 0x0
 	CLEN 0x0
+	ASMC RefreshAll|1
 	REVEAL Arya
 	REVEAL Luke
 	STAL 0x20
 	SVAL 0xB Coords(8,5)
 	LOMA ShizonShrineCutscene
 	LOAD1 0x1 LoadXexim
-	ASMC MaxMercenaryHP|1
-	SVAL 0x1 60
-	SET_HP Arc
-	SET_HP Luke
-	SET_HP Arya
-	SET_HP Kendrick
+	ENUN
 	STAL 0x40
 	FADU 0x5
 	STAL 0x20
@@ -188,6 +184,11 @@ BLE 0x17 0x4 0xC
 	FADI 0x5
 	ENUN
 	STAL 0x80
+	FADI 0x5
+	CLEA 0x0
+	CLEN 0x0
+	LOAD1 0x1 LoadNextXexim
+	ENUN
 	SetBackground(0x2E)
 	TEXTSHOW Merc6MilitiaKillEndingText
 	TEXTEND
@@ -343,6 +344,10 @@ UNIT PlayerMMyrmidon Myrmidon PlayerMArcher Level(1,Ally,True) [8,9] 0x00 0x00 0
 UNIT PlayerMFighter Fighter PlayerMArcher Level(1,Ally,True) [8,9] 0x00 0x00 0x1 REDA8R5 [IronAxe,Vulnerary] [0] 
 UNIT PlayerMPirate Pirate PlayerMArcher Level(1,Ally,True) [8,9] 0x00 0x00 0x1 REDA8R5 [IronAxe,Vulnerary] [0] 
 UNIT PlayerMBrigand Brigand PlayerMArcher Level(1,Ally,True) [8,9] 0x00 0x00 0x1 REDA8R5 [IronAxe,Vulnerary] [0] 
+UNIT
+
+LoadNextXexim:
+UNIT Xexim XeximClass PlayerMArcher Level(7,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [Shamshir, SteelBow] [0] 	
 UNIT
 
 REDA1:

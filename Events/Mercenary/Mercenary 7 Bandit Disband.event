@@ -22,6 +22,7 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
+SupportConvo(ASupport,Arya,Kendrick,Support1Text)
 END_MAIN
 
 //Label LocationBasedEvents
@@ -51,6 +52,7 @@ UNIT Baret 0x00 0x00 Level(15,Ally,True) [12,25] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Arya 0x00 0x00 Level(15,Ally,True) [12,23] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Adlez 0x00 0x00 Level(15,Ally,True) [14,27] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Kendrick 0x00 0x00 Level(15,Ally,True) [14,25] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Efil 0x00 0x00 Level(15,Ally,True) [13,24] 0x00 0x00 0x00 0x00 [0] NoAI
 EndUnit
 
 //Label BeginingScene
@@ -170,7 +172,6 @@ LOMA MercenaryBanditDisband7
 LOAD1 0x1 LoadGuardians
 LOAD3 0x1 PlayerLoading1
 LOAD2 0x1 StartingFriends
-LOAD1 0x1 LoadEfil
 ENUN
 STAL 0x50
 MUSC Anchoret
@@ -211,6 +212,7 @@ ENUF 0x13
 FADI 0x5
 CLEA 0x0
 CLEE 0x0
+ASMC RefreshAll|1
 SVAL 0xB Coords(7,5)
 LOMA GuardianSpiritWallCutscene
 LOAD3 0x1 PlayerLoading2
@@ -333,10 +335,7 @@ UNIT Baret HolySage Xylia Level(15,Ally,True) [12,25] 0x00 0x00 0x00 0x00 [0] No
 UNIT Arya HolySage Xylia Level(15,Ally,True) [12,23] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Adlez HolySage Xylia Level(15,Ally,True) [14,27] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Kendrick HolySage Xylia Level(15,Ally,True) [14,25] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT
-
-LoadEfil:
-UNIT Efil Truerblade Efil Level(11,Ally,True) [11,26] 0x00 0x00 0x00 0x00 [SilverSword,SteelBlade] NoAI
+UNIT Efil HolySage Xylia Level(15,Ally,True) [13,24] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 LoadXyliaThrone:

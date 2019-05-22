@@ -49,14 +49,14 @@ ALIGN 4
 MyrmidonSkillList:
 BYTE 1 LightWeightID
 BYTE 5 DuelistsBlowID
-BYTE 10 VantageID
+BYTE 10 SealSklID
 BYTE 00 00
 ALIGN 4
 
 SwordmasterSkillList:
 BYTE 255 LightWeightID
 BYTE 255 DuelistsBlowID
-BYTE 255 VantageID
+BYTE 255 SealSklID
 BYTE 5 SwordfaireID
 BYTE 10 AstraID
 BYTE 00 00
@@ -65,7 +65,7 @@ ALIGN 4
 AssassinSkillList:
 BYTE 255 LightWeightID
 BYTE 255 DuelistsBlowID
-BYTE 255 VantageID
+BYTE 255 SealSklID
 BYTE 10 PassID
 BYTE 00 00
 ALIGN 4
@@ -190,13 +190,13 @@ ALIGN 4
 
 FighterSkillList:
 BYTE 5 FieryBloodID
-BYTE 10 DesperationID
+BYTE 10 SpurStrID
 BYTE 00 00
 ALIGN 4
 
 WarriorSkillList:
 BYTE 255 FieryBloodID
-BYTE 255 DesperationID
+BYTE 255 SpurStrID
 BYTE 5 DeathBlowID
 BYTE 10 ColossusID
 BYTE 00 00
@@ -364,7 +364,7 @@ ALIGN 4
 TruebladeSkillList:
 BYTE 255 LightWeightID
 BYTE 255 DuelistsBlowID
-BYTE 255 VantageID
+BYTE 255 SealSklID
 BYTE 5 DazzleID
 BYTE 10 AetherID
 BYTE 00 00
@@ -373,7 +373,7 @@ ALIGN 4
 ShadowSkillList:
 BYTE 255 LightWeightID
 BYTE 255 DuelistsBlowID
-BYTE 255 VantageID
+BYTE 255 SealSklID
 BYTE 5 SlowBurnID
 BYTE 10 VantagePlusID
 BYTE 00 00
@@ -388,7 +388,7 @@ ALIGN 4
 
 WarlockSkillList:
 BYTE 255 FieryBloodID
-BYTE 255 DesperationID
+BYTE 255 SpurStrID
 BYTE 5 PragmaticID
 BYTE 10 OpportunistID
 BYTE 00 00
@@ -436,7 +436,7 @@ ALIGN 4
 
 GladiatorSkillList:
 BYTE 255 FieryBloodID
-BYTE 255 DesperationID
+BYTE 255 SpurStrID
 BYTE 5 ExpertiseID
 BYTE 7 FierceStanceID
 BYTE 10 ColossusID
@@ -453,7 +453,7 @@ ALIGN 4
 
 TruerbladeSkillList:
 BYTE 255 DuelistsBlowID
-BYTE 255 VantageID
+BYTE 255 SealSklID
 BYTE 10 KillingMachineID
 BYTE 00 00
 ALIGN 4

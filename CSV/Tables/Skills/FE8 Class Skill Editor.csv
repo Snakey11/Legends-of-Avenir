@@ -144,7 +144,7 @@ Trueerblade,CritUpID
 Gaiden Sage,0x0
 Izuk,0x0
 Nomad,CantoID
-NarratorClass,CritUpID
+NarratorClass,0x00
 Warlock,0x0
 SpearHero,0x0
 XeximClass,LethalityID

@@ -104,6 +104,7 @@ MUSC Tension
 LOAD1 0x1 CastleTrap
 ENUN
 Text(Merc5BanditBanditGetLeonText)
+SetSupport(Adlez,Connor,CSupport)
 NoFade
 GotoPrepScreen
 
@@ -115,6 +116,14 @@ Text(Merc5BanditBanditTalkLeonText)
 MUSC Reunion
 SetBackground(0x0D)
 Text(Merc5BanditBanditEndingText)
+GiveToSupplySilent(SteelSword)
+GiveToSupplySilent(Armorslayer)
+GiveToSupplySilent(ShortSpear)
+GiveToSupplySilent(DevilLance)
+GiveToSupplySilent(SteelAxe)
+GiveToSupplySilent(KillerAxe)
+GiveToSupplySilent(SteelLongbow)
+GiveToSupplySilent(Elixir)
 MoveToChapter(MercenaryBanditBandit6)
 ENDA
 
@@ -143,10 +152,10 @@ UNIT Baret Myrmidon PlayerMArcher Level(1,Ally,True) [7,9] 0x00 0x00 0x00 0x00 [
 UNIT Walter Archer PlayerMArcher Level(1,Ally,True) [9,8] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
 UNIT Arya Myrmidon_F PlayerMArcher Level(1,Ally,True) [13,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
 UNIT Adlez Brigand PlayerMArcher Level(1,Ally,True) [9,10] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT Connor Mercenary 0x00 Level(1,Ally,True) [11,11] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
 UNIT
 
 HaedricCityPeople:
-UNIT Connor Mercenary PlayerMArcher Level(11,Ally,True) [11,10] 0x00 0x00 0x00 0x00 [SteelSword,Armorslayer] NoAI 
 UNIT Xena Soldier Xena Level(1,NPC,True) [1,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
 UNIT Xena Soldier Xena Level(1,NPC,True) [4,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
 UNIT Xena Soldier Xena Level(1,NPC,True) [14,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 

@@ -138,7 +138,7 @@ MUSC Indignation
 CAM1 [6,5]
 STAL 0x30
 Text(0x0E,Merc7MilitiaKillThroneRoomText)
-//LOAD1 0x1 TestGui
+SetSupport(Arya,Xexim,CSupport)
 NoFade
 GotoPrepScreen
 
@@ -153,6 +153,7 @@ FadeOutMusic
 
 CLEE 0x0
 CLEA 0x0
+ASMC RefreshAll|1
 SetBackground(0x1B)
 CHECK_ALIVE Xexim
 BEQ 0x23 0x0 0xC
@@ -306,10 +307,10 @@ UNIT Arc Fighter PlayerMArcher Level(1,Ally,True) [19,22] 0x00 0x00 0x00 0x00 [I
 UNIT Kendrick Pirate PlayerMArcher Level(1,Ally,True) [17,22] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
 UNIT Luke Monk PlayerMArcher Level(1,Ally,True) [17,21] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
 UNIT Arya Myrmidon_F PlayerMArcher Level(1,Ally,True) [19,21] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Xexim XeximClass PlayerMArcher Level(7,Ally,True) [18,20] 0x00 0x00 0x00 0x00 [Shamshir, SteelBow] [0] 	
 UNIT
 
 DatSoldier:
-UNIT Xexim XeximClass PlayerMArcher Level(7,Ally,True) [18,20] 0x00 0x00 0x00 0x00 [Shamshir, SteelBow] [0] 	
 UNIT Cesarian Soldier PlayerMArcher Level(1,Enemy,True) [18,18] 0x00 0x00 0x00 0x00 [SteelLance] [0] 	
 UNIT
 

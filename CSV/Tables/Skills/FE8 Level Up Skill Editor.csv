@@ -161,3 +161,4 @@ MurielSage,SageSkillList|IsPointer
 Impaler F,ImpalerSkillList|IsPointer
 SoldierF2,SoldierSkillList|IsPointer
 Hunter F,HunterSkillList|IsPointer
+High Priest,PatriarchMatriarchSkillList|IsPointer

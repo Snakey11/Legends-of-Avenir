@@ -66,16 +66,16 @@
    eJxjYBgFo2AUjIJRMAqGNriKhkfNpa652AAANBQNUQ==
   </data>
  </layer>
- <layer name="Path 8" width="22" height="24" visible="0">
+ <layer name="Path 8" width="22" height="24">
   <properties>
    <property name="Height" value="3"/>
    <property name="ID" value="16"/>
-   <property name="Width" value="7"/>
+   <property name="Width" value="8"/>
    <property name="X" value="13"/>
    <property name="Y" value="17"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIJRMNLBdkbseMdgNRcNMyLhUUAfAABJ9Azw
+   eJxjYBgFo2AUjIJRMNLBdkbceMdgNBcNMyLhUUAfAAANXw5g
   </data>
  </layer>
  <layer name="Path 11" width="22" height="24" visible="0">

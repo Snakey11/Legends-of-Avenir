@@ -1623,7 +1623,7 @@ Main codes
     Turns = Turns when the event happens. First coordinate is the first
             turn the event happens on while the second is the first turn
             the event stops happening. Event is is quaranteed to happen 
-            atleast once no matter what the second coordinate is.
+            at least once no matter what the second coordinate is.
     TurnMoment = The turn moment where the event happens. 0 means at the beginning of 
                  player phase, while 8 means at the beginning of the enemy phase and
                  4 means at the beginning of the NPC phase.

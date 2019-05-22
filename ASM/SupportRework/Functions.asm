@@ -2,6 +2,11 @@
 .thumb
 .type FindCharacter, %function
 FindCharacter: @ r0 = character to find. Returns character struct.
+cmp r0, #0xFF
+bne FindCharacterNotTact
+	ldr r0, =#0x0202BE4C @ Return first character struct if this is Tact we're looking for.
+	bx lr
+FindCharacterNotTact:
 push { r4 }
 mov r4, r0
 ldr r0, =#0x0202BE4C
@@ -14,12 +19,12 @@ beq FindCharacterNoCharacter
 ldrb r1, [ r1, #0x04 ] @ Character number.
 cmp r1, r4
 bne StartFindCharacterLoop
+EndFindCharacter:
 pop { r4 }
 bx lr
 FindCharacterNoCharacter:
 mov r0, #0x00
-pop { r4 }
-bx lr
+b EndFindCharacter
 
 .type GetTextStringFromID, %function
 GetTextStringFromID: @ r0 = text ID. Returns pointer to text.
@@ -32,18 +37,56 @@ lsl r0, r0, #0x01
 lsr r0, r0, #0x01
 bx lr
 
-.type IsCharacterWithin3Tiles, %function
-IsCharacterWithin3Tiles: @ r0 = character struct to check, r1 = battle struct. Returns a boolean for whether r0 is within 3 tiles of r1.
+.type CopyString, %function
+CopyString: @ r0 = pointer to string to copy, r1 = destination. Returns the length of the string copied.
 push { r4, r5 }
-mov r4, r0 @ Character struct to check
-mov r5, r1 @ Battle struct
+mov r4, r0
+mov r5, r1
+mov r0, #0x00
+CopyStringLoop:
+ldrb r1, [ r4, r0 ]
+cmp r1, #0x00
+beq EndCopyString
+strb r1, [ r5, r0 ]
+add r0, r0, #0x01
+b CopyStringLoop
+EndCopyString:
+pop { r4, r5 }
+bx lr
+
+.type ClearMemorySlot2, %function
+ClearMemorySlot2:
+mov r0, #0x00
+ldr r1, =#0x030004C4
+str r0, [ r1 ]
+bx lr
+
+.type ClearRAM, %function
+ClearRAM: @ r0 = start offset, r1 = number of bytes to clear.
+mov r2, #0x00
+ClearRAMLoop:
+strb r2, [ r0 ]
+sub r1, r1, #0x01
+add r0, r0, #0x01
+cmp r1, #0x00
+bne ClearRAMLoop
+bx lr
+
+.type GetCharacterDistance, %function
+GetCharacterDistance: @ r0 = character struct 1, r1 = character struct 2. Returns distance between units.
+push { r4, r5 }
+mov r4, r0 @ Character struct 1
+mov r5, r1 @ Character struct 2
 ldrb r0, [ r4, #0x0C ]
 mov r1, #0x04
 tst r0, r1
-bne EndIsCharacterWithin3TilesFalse @ This character is dead. Return false.
+beq CharacterNotDead
+	mov r0, #0xFF
+	b EndIsCharacterWithin3Tiles @ This character is dead. Return 0xFF.
+CharacterNotDead:
 ldrb r0, [ r4, #0x10 ] @ X coordinate of character struct.
 cmp r0, #0xFF
-beq EndIsCharacterWithin3TilesFalse @ This character is not deployed. Return false.
+beq EndIsCharacterWithin3Tiles @ This character is not deployed. Return 0xFF.
 ldrb r1, [ r5, #0x10 ] @ X coordinate of battle struct.
 sub r0, r0, r1
 cmp r0, #0x00
@@ -58,24 +101,39 @@ bge NotNegativeY
 	neg r1, r1
 NotNegativeY:
 add r0, r0, r1 @ Has the total distance between these units.
-cmp r0, #0x03
-bgt EndIsCharacterWithin3TilesFalse
-mov r0, #0x01
 EndIsCharacterWithin3Tiles:
 pop { r4, r5 }
 bx lr
-EndIsCharacterWithin3TilesFalse:
+
+.type FindUnitCoords, %function
+FindUnitCoords: @ r0 = X, r1 = Y. Returns character struct of the allied unit at these coords. Returns 0 if none.
+ldr r2, =#0x0202BE4C @ Beginning of allied character struct.
+sub r2, r2, #0x48
+FindUnitLoop:
+add r2, r2, #0x48
+ldr r3, [ r2 ]
+cmp r3, #0x00
+beq FindUnitReturn0
+	ldrb r3, [ r2, #0x10 ]
+	cmp r0, r3
+	bne FindUnitLoop
+	ldrb r3, [ r2, #0x11 ]
+	cmp r1, r3
+	bne FindUnitLoop
+	mov r0, r2
+	bx lr
+FindUnitReturn0:
 mov r0, #0x00
-b EndIsCharacterWithin3Tiles
+bx lr
 
 .type FindSupportData, %function
-FindSupportData: @ r0 = character struct to look in, r1 = target character. Returns the number of bytes from 0x32 of the character struct to this support.
-add r0, r0, #0x32 @ Start of support data.
+FindSupportData: @ r0 = character struct to look in, r1 = target character. Returns the number of bytes from 0x34 of the character struct to this support.
+add r0, r0, #0x34 @ Start of support data.
 mov r2, #0x00 @ r2 is a counter.
 sub r2, r2, #0x01
 FindSupportDataLoop:
 add r2, r2, #0x01
-cmp r2, #0x06
+cmp r2, #0x05
 beq EndFindSupportDataNoSupport
 ldrb r3, [ r0, r2 ]
 cmp r1, r3
@@ -88,8 +146,8 @@ mvn r0, r0
 bx lr @ Return -1 is no support was found.
 
 .type GetSupportLevel, %function
-GetSupportLevel: @ r0 = character struct, r1 = number of bytes to the support from 0x32. Returns support level.
-ldrh r0, [ r0, #0x38 ] @ r0 has the support level halfword.
+GetSupportLevel: @ r0 = character struct, r1 = number of bytes to the support from 0x34. Returns support level.
+ldrh r0, [ r0, #0x32 ] @ r0 has the support level halfword.
 lsl r1, r1, #0x01 @ Multiply r1 by 2.
 lsl r0, r0, r1
 lsl r0, r0, #16
@@ -101,7 +159,7 @@ IncreaseSupport: @ r0 = character struct to set in, r1 = supporting character. A
 push { r4 - r6, lr }
 mov r4, r0 @ Character struct.
 mov r5, r1 @ Supporting character.
-bl FindSupportData @ r0 has number of bytes from 0x32 to the support.
+bl FindSupportData @ r0 has number of bytes from 0x34 to the support.
 mov r1, #0x00
 mvn r1, r1
 cmp r0, r1
@@ -137,13 +195,13 @@ lsl r3, r3, #14
 lsl r1, r1, #0x01 @ Multiply the location by 2.
 lsr r3, r3, r1
 mvn r3, r3
-ldrh r0, [ r4, #0x38 ]
+ldrh r0, [ r4, #0x32 ]
 and r0, r0, r3 @ Clears the old support level.
 
 lsl r2, r2, #14
 lsr r2, r2, r1
 orr r0, r0, r2
-strh r0, [ r4, #0x38 ]
+strh r0, [ r4, #0x32 ]
 pop { r4 }
 bx lr
 
@@ -153,19 +211,19 @@ push { r4, r5 }
 mov r4, r0
 mov r5, r1
 mov r0, #0x00 @ r0 is a counter.
-add r4, r4, #0x32
+add r4, r4, #0x34
 AddSupportLoop:
-cmp r0, #0x06
+cmp r0, #0x05
 beq EndAddSupport @ There is no room, so... let's just end.
 ldrb r1, [ r4, r0 ]
 add r0, r0, #0x01
 cmp r1, #0x00
 bne AddSupportLoop
 sub r0, r0, #0x01
-@ r0 has the number of bytes from 0x32 of the first free support.
+@ r0 has the number of bytes from 0x34 of the first free support.
 mov r1, r5
 strb r1, [ r4, r0 ] @ Stores the supporting character.
-add r4, r4, #0x06
+sub r4, r4, #0x02 @ 0x32 for the support level short.
 mov r1, #0x01
 lsl r0, r0, #0x01 @ Multiply r0 by 2.
 lsl r1, r1, #14
@@ -179,11 +237,15 @@ bx lr
 
 .type CountSupports, %function
 CountSupports: @ r0 = character struct. Returns the number of supports.
-mov r1, #0x00 @ r1 is a counter.
 mov r2, #0x00
-add r0, r0, #0x32
+ldrb r1, [ r0, #0x0B ] @ Allegiance byte.
+lsr r1, r1, #0x6
+cmp r1, #0x00
+bne EndCountSupports @ This character is not an ally. They can't have any supports.
+mov r1, #0x00 @ r1 is a counter.
+add r0, r0, #0x34
 CountSupportsLoop:
-cmp r1, #0x06
+cmp r1, #0x05
 beq EndCountSupports
 ldrb r3, [ r0, r1 ]
 add r1, r1, #0x01
@@ -194,763 +256,6 @@ b CountSupportsLoop
 EndCountSupports:
 mov r0, r2
 bx lr
-
-.align
-.ltorg
-
-.equ LoadBGConfig, 0x08001B58
-.equ GetBGMapBuffer, 0x08001C4C
-.equ FillBGMap, 0x08001220
-.equ Text_InitFont, 0x08003C94
-.equ SetColorEffectsParameters, 0x08001EA0
-.equ LoadObjUIGfx, 0x08015680
-.type SetScrollingBackground, %function
-SetScrollingBackground: @ Creates the scrolling beige background
-push { r6, lr }
-mov r6, r0
-mov r0, #0x00
-blh LoadBGConfig, r1
-mov r0, #0x00
-blh GetBGMapBuffer, r1
-mov r1, #0x00
-blh FillBGMap, r2
-blh Text_InitFont, r0 @ Sets up the text (palette, font, etc.)
-blh LoadObjUIGfx, r0 @ Sets up for the glove.
-mov r0, r6
-mov r1, #0x00
-mov r2, #0x12
-ldr r3, =#0x08086CE8 @ Seems to finalize the beige, scrolling background.
-mov lr, r3
-mov r3, #0x02 @ ree no scratch registers
-.short 0xF800
-mov r0, #0x03
-mov r1, #0x00
-mov r2, #0x00
-ldr r3, =SetColorEffectsParameters
-mov lr, r3
-mov r3, #0x10 @ ree no scratch registers
-.short 0xF800 @ Seems to disable preliminary fading.
-pop { r6 }
-pop { r0 }
-bx r0
-
-.equ TextInitClear, 0x08003D5C
-.equ TextClear, 0x08003DC8
-.equ String_GetFromIndex, 0x0800A240
-.equ Text_GetStringTextCenteredPos, 0x08003F90
-.equ Text_InsertString, 0x08004480
-.equ Text_Display, 0x08003E70
-.global DisplayBottomText
-.type DisplayBottomText, %function
-DisplayBottomText: @ Displays "Select a conversation." at the bottom
-push { r4 - r7, lr }
-ldr r6, =#0x02013590
-blh #0x080A3544, r0
-mov r7, r0
-mov r4, r6
-sub r4, #0x08
-mov r0, r4
-mov r1, #0x10
-blh TextInitClear, r2
-mov r0, r6
-mov r1, #0x09
-blh TextInitClear, r2
-mov r0, r4
-blh TextClear, r1
-ldr r0, =BaseSupportSelectConvoTextLink
-ldrh r0, [ r0 ]
-blh String_GetFromIndex, r1
-mov r5, r0
-mov r0, #0x80
-mov r1, r5
-blh Text_GetStringTextCenteredPos, r2
-mov r1, r0
-lsl r1, r1, #0x10
-asr r1, r1, #0x10
-mov r0, r4
-mov r2, #0x00
-ldr r3, =Text_InsertString
-mov lr, r3
-mov r3, r5 @ ree no scratch registers
-.short 0xF800
-ldr r5, =#0x02023136
-mov r0, r4
-mov r1, r5
-blh Text_Display, r2
-pop { r4 - r7 }
-pop { r0 }
-bx r0
-
-.align
-.ltorg
-
-.equ gLCDIOBuffer, 0x03003080
-.equ Text_SetFont, 0x08003D38
-.equ Font_LoadForUI, 0x080043A8
-.equ LoadNewUIGraphics, 0x0804EB68
-.equ StartMenuChild, 0x0804EBC8
-.global CallTestProcMenu
-.type CallTestProcMenu, %function
-CallTestProcMenu: @ Does not clear BG0 and BG1
-push { r4, lr }
-mov r4, r0
-ldr r2, =gLCDIOBuffer
-ldrb r0, [ r2, #0x01 ]
-mov r1, #0x01
-orr r0, r1
-mov r1, #0x02
-orr r0, r1
-mov r1, #0x04
-orr r0, r1
-mov r1, #0x08
-orr r0, r1
-mov r1, #0x10
-orr r0, r1
-strb r0, [ r2, #0x01 ]
-mov r0, #0x00
-blh Text_SetFont, r3
-blh Font_LoadForUI, r3
-blh LoadNewUIGraphics, r3
-@ldr r0, =BaseSupportMenuGeometry
-ldr r0, =#0x0203F278 @ This has been written to RAM to account for a variable number of menu items
-mov r1, r4
-blh StartMenuChild, r2
-pop { r4 }
-pop { r0 }
-bx r0
-
-.equ ChapterDataStruct, 0x0202BCF0
-.global BuildSupportMenuGeometry
-.type BuildSupportMenuGeometry, %function
-BuildSupportMenuGeometry:
-push { r4 - r7, lr }
-ldr r0, =BaseSupportTable
-ldr r1, =ChapterDataStruct
-ldrb r1, [ r1, #0x0E ]
-mov r2, #48
-mul r1, r2
-add r0, r0, r1 @ r0 has this chapter's entry in the Base Support Table.
-mov r4, r0 @ Save it in r4 for later.
-mov r5, #0x00 @ r5 will equal the number of supports that are viewable.
-mov r6, #0x00 @ r6 is a counter.
-sub r4, r4, #0x06
-sub r6, r6, #0x01
-StartGeometryLoop:
-add r4, r4, #0x06
-add r6, r6, #0x01
-cmp r6, #0x08
-beq EndGeometryLoop
-ldr r0, [ r4 ]
-cmp r0, #0x00
-beq StartGeometryLoop
-	ldrb r0, [ r4 ] @ First character
-	bl FindCharacter @ r0 has character struct
-	cmp r0, #0x00
-	beq StartGeometryLoop @ No character was found. Loop back.
-	mov r7, r0 @ Save the character struct in r7 for later.
-	ldrb r0, [ r0, #0x0C ]
-	mov r1, #0x04
-	tst r0, r1
-	bne StartGeometryLoop @ This character is dead. Loop back.
-	ldrb r0, [ r4, #0x01 ] @ Second character
-	bl FindCharacter
-	cmp r0, #0x00
-	beq StartGeometryLoop @ No character was found. Loop back.
-	ldrb r0, [ r0, #0x0C ]
-	mov r1, #0x04
-	tst r0, r1
-	bne StartGeometryLoop @ This character is dead. Loop back.
-		@ Both characters are alive. Let's check to make sure their support level matches tbe convo.
-		mov r0, r7
-		ldrb r1, [ r4, #0x01 ]
-		bl FindSupportData @ r0 has the number of bits to the support data from 0x32.
-		mov r1, #0x00
-		mvn r1, r1
-		cmp r0, r1
-		bne BuildMenuGeometryHandleSupport
-			mov r0, #0x00
-			b BuildMenuGeometryTestLevel
-		BuildMenuGeometryHandleSupport:
-		mov r1, r0
-		mov r0, r7
-		bl GetSupportLevel @ r0 has the support level.
-		BuildMenuGeometryTestLevel:
-		add r0, r0, #0x01
-		ldrb r1, [ r4, #0x04 ]
-		cmp r0, r1
-		bne StartGeometryLoop
-			add r5, r5, #0x01
-			b StartGeometryLoop
-EndGeometryLoop: @ At this point, r5 has the number of viewable supports.
-ldr r7, =#0x0203F278 @ Let's store this data here.
-mov r0, r7
-mov r1, #36
-bl ClearRAM @ Clear old rounds data just in case.
-mov r0, #0x06
-strb r0, [ r7 ] @ Store X position.
-cmp r5, #0x08
-bne NotMaxSupportGeometry
-	@ Wow! They have 8 possible supports to view. Let's set the Y position to 0.
-	mov r0, #0x00
-	beq GeometrySetYPosition
-NotMaxSupportGeometry:
-lsr r0, r5, #0x1 @ Divide r5 by 2 and put it in r0.
-mov r1, #0x05
-sub r0, r1, r0
-GeometrySetYPosition:
-strb r0, [ r7, #0x01 ] @ Store Y position.
-mov r0, #18
-strb r0, [ r7, #0x02 ] @ Store width.
-mov r0, #0x01
-str r0, [ r7, #0x04 ]
-ldr r0, =BaseSupportMenuCommands
-str r0, [ r7, #0x08 ] @ Pointer to commands.
-pop { r4 - r7 }
-pop { r0 }
-bx r0
-
-.global BuildSupportMenuText
-.type BuildSupportMenuText, %function
-BuildSupportMenuText: @ This function will take the names of the two characters in the
-@ support and write their names to RAM. i.e. "Arc and Luke" for usage in the base support menu.
-push { r4 - r6, lr }
-ldr r0, =#0x0203EFC0
-ldr r1, =#320
-bl ClearRAM @ Clear the RAM where the text is written.
-ldr r0, =BaseSupportTable
-ldr r1, =ChapterDataStruct
-ldrb r1, [ r1, #0x0E ]
-mov r2, #48 @ Bytes per entry
-mul r1, r2
-add r0, r0, r1 @ r0 has this chapter's entry in the Base Support Table.
-mov r6, r0 @ Save it in r6 for later.
-mov r4, #0x00
-	BuildMenuText:
-	ldrb r0, [ r6 ] @ r0 has the first character.
-	cmp r0, #0x00
-	beq BuildNextMenuText
-	ldr r1, =CharacterTable
-	mov r2, #52
-	mul r0, r2
-	add r0, r0, r1 @ r0 has this character's entry in the character table.
-	ldrh r0, [ r0 ] @ r0 has the text ID for this character's name.
-	bl GetTextStringFromID @ r0 has the pointer to the character's name data.
-	ldr r5, =#0x0203EFC0
-	mov r2, #40 @ Allocate 40 bytes in this bit of RAM for the string.
-	mul r2, r4
-	add r5, r2, r5
-	mov r1, r5
-	bl CopyString
-	add r5, r5, r0 @ Add the length of the string added to the RAM text offset.
-	mov r0, #0x20 @ ASCI (space)
-	strb r0, [ r5 ]
-	add r5, r5, #0x01
-	mov r0, #0x61 @ ASCI a
-	strb r0, [ r5 ]
-	add r5, r5, #0x01
-	mov r0, #0x6E @ ASCI n
-	strb r0, [ r5 ]
-	add r5, r5, #0x01
-	mov r0, #0x64 @ ASCI d
-	strb r0, [ r5 ]
-	add r5, r5, #0x01
-	mov r0, #0x20 @ ASCI (space)
-	strb r0, [ r5 ]
-	add r5, r5, #0x01
-	@ At this point, we have "(Name of the first character) and ". Time to add the second character
-	ldrb r0, [ r6, #0x01 ] @ Second character's character ID
-	ldr r1, =CharacterTable
-	mov r2, #52
-	mul r0, r2
-	add r0, r0, r1 @ r0 has this character's entry in the character table.
-	ldrh r0, [ r0 ] @ r0 has the text ID for this character's name.
-	bl GetTextStringFromID @ r0 has the pointer to the character's name data
-	mov r1, r5
-	bl CopyString @ Now that string was copied to follow the other text we've added
-BuildNextMenuText:
-add r4, #0x01
-add r6, r6, #0x06
-cmp r4, #0x08
-bne BuildMenuText
-EndBuildMenuText:
-pop { r4 - r6 }
-pop { r0 }
-bx r0
-
-.type CopyString, %function
-CopyString: @ r0 = pointer to string to copy, r1 = destination. Returns the length of the string copied.
-push { r4, r5 }
-mov r4, r0
-mov r5, r1
-mov r0, #0x00
-CopyStringLoop:
-ldrb r1, [ r4, r0 ]
-cmp r1, #0x00
-beq EndCopyString
-strb r1, [ r5, r0 ]
-add r0, r0, #0x01
-b CopyStringLoop
-EndCopyString:
-pop { r4, r5 }
-bx lr
-
-.type ClearMemorySlot2, %function
-ClearMemorySlot2:
-mov r0, #0x00
-ldr r1, =#0x030004C4
-str r0, [ r1 ]
-bx lr
-
-.equ ProcGoto, 0x08002F24
-.global EnsureSelection
-.type EnsureSelection, %function
-EnsureSelection:
-push { lr }
-ldr r1, =#0x030004C4
-ldrh r1, [ r1 ]
-cmp r1, #0x00
-bne EndEnsureSelection
-	mov r1, #0x02
-	blh ProcGoto, r2 @ r0 already has the parent proc
-EndEnsureSelection:
-pop { r0 }
-bx r0
-
-.equ gProcMenu, 0x085B64D0
-.equ ProcFind, 0x08002e9c
-.equ EndProc, 0x08002D6C
-.equ EndBG3Slider, 0x08086DBC
-.global SetUpConvo
-.type SetUpConvo, %function
-SetUpConvo:
-push { lr }
-ldr r0, =gProcMenu
-blh ProcFind, r1
-blh EndProc, r1 @ Ensures that the menu proc has ended.
-blh EndBG3Slider, r0
-ldr r0, =#0x0203EFC0
-ldr r1, =#320
-bl ClearRAM @ Clear the RAM where the text is written.
-ldr r0, =#0x0203F278 @ Let's store this data here.
-mov r1, #36
-bl ClearRAM @ Clear the RAM where the geometry data is written.
-ldr r0, =BaseSupportTable
-ldr r1, =ChapterDataStruct
-ldrb r1, [ r1, #0x0E ]
-mov r2, #48
-mul r1, r2
-add r0, r0, r1
-ldr r1, =#0x030004C8 @ Memory slot 0x4
-ldr r1, [ r1 ] @ r1 has the convo index.
-sub r1, r1, #0x01
-mov r2, #0x06
-mul r1, r2
-add r0, r0, r1 @ r4 has this convo.
-ldrb r0, [ r0, #0x04 ] @ r0 has this convo's level.
-sub r0, r0, #0x01
-mov r1, #0x43 @ ASCII "C"
-sub r0, r1, r0 @ r0 has the ASCII code for the letter to write (C, B, or A).
-ldr r1, =#0x0203EFC0
-strb r0, [ r1 ]
-ldr r0, =#0x030004CC @ Memory slot 0x5
-mov r1, #0x00
-str r1, [ r0 ] @ Clear memory slot 0x5.
-pop { r0 }
-bx r0
-
-.equ CallEventEngine, 0x0800D07C
-.equ StartMapEventEngine, 0x0800D0B0
-.equ CallEventEngine, 0x0800D07C
-.global CallConversation
-.type CallConversation, %function
-CallConversation:
-push { lr }
-ldr r0, =CallTestMenuProcConversationEvents
-mov r1, #0x02
-blh StartMapEventEngine, r2
-EndCallConversation:
-pop { r0 }
-bx r0
-
-.equ NewPopup, 0x08011474
-.global BaseSupportIncreaseSupport
-.type BaseSupportIncreaseSupport, %function
-BaseSupportIncreaseSupport: @ Memory slot 0x4 = convo index to look at in the base support table.
-push { r4, r5, lr }
-mov r5, r0 @ Parent proc
-ldr r0, =BaseSupportTable
-ldr r1, =ChapterDataStruct
-ldrb r1, [ r1, #0x0E ]
-mov r2, #48
-mul r1, r2
-add r0, r0, r1 @ r0 has this chapter's convos.
-ldr r1, =#0x030004C8 @ Memory slot 0x4
-ldr r1, [ r1 ] @ r1 has the convo index.
-sub r1, r1, #0x01
-mov r2, #0x06
-mul r1, r2
-add r4, r0, r1 @ r4 has this convo.
-ldrb r0, [ r4 ]
-bl FindCharacter @ r0 has character struct.
-ldrb r1, [ r4, #0x01 ]
-bl IncreaseSupport
-ldrb r0, [ r4, #0x01 ]
-bl FindCharacter @ r0 has character struct.
-ldrb r1, [ r4 ]
-bl IncreaseSupport
-ldr r0, =IncreaseSupportPopupDefinitions
-mov r1, #90 @ Duration of the popup
-mov r2, #0x00 @ Style of popup window
-ldr r3, =NewPopup
-mov lr, r3
-mov r3, r5 @ Parent proc
-.short 0xF800 @ No scratch registers ree
-pop { r4, r5 }
-pop { r0 }
-bx r0
-
-.type CheckToEnd, %function
-CheckToEnd:
-push { r4, lr }
-mov r4, r0
-ldr r0, =#0x030004CC @ Memory slot 0x5
-ldr r0, [ r0 ]
-cmp r0, #0x00
-bne EndCheckToEnd
-	@ The event ID hasn't been triggered. Continue the proc.
-	mov r0, r4
-	mov r1, #0x03
-	blh ProcGoto, r2
-EndCheckToEnd:
-pop { r4 }
-pop { r0 }
-bx r0
-
-.type UnsetFinalRAM, %function
-UnsetFinalRAM:
-ldr r0, =#0x0203EFC0
-mov r1, #0x00
-strb r1, [ r0 ]
-bx lr
-
-.type ClearRAM, %function
-ClearRAM: @ r0 = start offset, r1 = number of bytes to clear.
-mov r2, #0x00
-ClearRAMLoop:
-strb r2, [ r0 ]
-sub r1, r1, #0x01
-add r0, r0, #0x01
-cmp r1, #0x00
-bne ClearRAMLoop
-bx lr
-
-
-.global BaseSupportConvo1
-.type BaseSupportConvo1, %function
-BaseSupportConvo1:
-ldr r0, =#0x030004C0 @ Memory slot 0x2
-ldr r1, =BaseSupportTable
-ldr r2, =ChapterDataStruct
-ldrb r2, [ r2, #0x0E ]
-mov r3, #48
-mul r2, r3
-add r1, r1, r2
-ldrh r2, [ r1, #2 ] @ Text ID for this conversation
-strh r2, [ r0, #0x04 ] @ Store in memory slot 0x3.
-ldrb r2, [ r1, #5 ] @ Background for this conversation.
-strh r2, [ r0 ] @ Store in memory slot 0x2.
-mov r1, #0x01
-strb r1, [ r0, #0x08 ] @ Store 0x1 into slot 0x4 for later.
-bx lr
-
-.global BaseSupportConvo2
-.type BaseSupportConvo2, %function
-BaseSupportConvo2:
-ldr r0, =#0x030004C0 @ Memory slot 0x2
-ldr r1, =BaseSupportTable
-ldr r2, =ChapterDataStruct
-ldrb r2, [ r2, #0x0E ]
-mov r3, #48
-mul r2, r3
-add r1, r1, r2
-ldrh r2, [ r1, #8 ] @ Text ID for this conversation
-strh r2, [ r0, #0x04 ] @ Store in memory slot 0x3.
-ldrb r2, [ r1, #11 ] @ Background for this conversation.
-strh r2, [ r0 ] @ Store in memory slot 0x2.
-mov r1, #0x02
-strb r1, [ r0, #0x08 ] @ Store 0x2 into slot 0x4 for later.
-bx lr
-
-.global BaseSupportConvo3
-.type BaseSupportConvo3, %function
-BaseSupportConvo3:
-ldr r0, =#0x030004C0 @ Memory slot 0x2
-ldr r1, =BaseSupportTable
-ldr r2, =ChapterDataStruct
-ldrb r2, [ r2, #0x0E ]
-mov r3, #48
-mul r2, r3
-add r1, r1, r2
-ldrh r2, [ r1, #14 ] @ Text ID for this conversation
-strh r2, [ r0, #0x04 ] @ Store in memory slot 0x3.
-ldrb r2, [ r1, #17 ] @ Background for this conversation.
-strh r2, [ r0 ] @ Store in memory slot 0x2.
-mov r1, #0x03
-strb r1, [ r0, #0x08 ] @ Store 0x3 into slot 0x4 for later.
-bx lr
-
-.global BaseSupportConvo4
-.type BaseSupportConvo4, %function
-BaseSupportConvo4:
-ldr r0, =#0x030004C0 @ Memory slot 0x2
-ldr r1, =BaseSupportTable
-ldr r2, =ChapterDataStruct
-ldrb r2, [ r2, #0x0E ]
-mov r3, #48
-mul r2, r3
-add r1, r1, r2
-ldrh r2, [ r1, #20 ] @ Text ID for this conversation
-strh r2, [ r0, #0x04 ] @ Store in memory slot 0x3.
-ldrb r2, [ r1, #23 ] @ Background for this conversation.
-strh r2, [ r0 ] @ Store in memory slot 0x2.
-mov r1, #0x04
-strb r1, [ r0, #0x08 ] @ Store 0x4 into slot 0x4 for later.
-bx lr
-
-.global BaseSupportConvo5
-.type BaseSupportConvo5, %function
-BaseSupportConvo5:
-ldr r0, =#0x030004C0 @ Memory slot 0x2
-ldr r1, =BaseSupportTable
-ldr r2, =ChapterDataStruct
-ldrb r2, [ r2, #0x0E ]
-mov r3, #48
-mul r2, r3
-add r1, r1, r2
-ldrh r2, [ r1, #26 ] @ Text ID for this conversation
-strh r2, [ r0, #0x04 ] @ Store in memory slot 0x3.
-ldrb r2, [ r1, #29 ] @ Background for this conversation.
-strh r2, [ r0 ] @ Store in memory slot 0x2.
-mov r1, #0x05
-strb r1, [ r0, #0x08 ] @ Store 0x5 into slot 0x4 for later.
-bx lr
-
-.global BaseSupportConvo6
-.type BaseSupportConvo6, %function
-BaseSupportConvo6:
-ldr r0, =#0x030004C0 @ Memory slot 0x2
-ldr r1, =BaseSupportTable
-ldr r2, =ChapterDataStruct
-ldrb r2, [ r2, #0x0E ]
-mov r3, #48
-mul r2, r3
-add r1, r1, r2
-ldrh r2, [ r1, #32 ] @ Text ID for this conversation
-strh r2, [ r0, #0x04 ] @ Store in memory slot 0x3.
-mov r2, #35
-ldrb r2, [ r1, r2 ] @ Background for this conversation.
-strh r2, [ r0 ] @ Store in memory slot 0x2.
-mov r1, #0x06
-strb r1, [ r0, #0x08 ] @ Store 0x6 into slot 0x4 for later.
-bx lr
-
-.global BaseSupportConvo7
-.type BaseSupportConvo7, %function
-BaseSupportConvo7:
-ldr r0, =#0x030004C0 @ Memory slot 0x2
-ldr r1, =BaseSupportTable
-ldr r2, =ChapterDataStruct
-ldrb r2, [ r2, #0x0E ]
-mov r3, #48
-mul r2, r3
-add r1, r1, r2
-ldrh r2, [ r1, #38 ] @ Text ID for this conversation
-strh r2, [ r0, #0x04 ] @ Store in memory slot 0x3.
-mov r2, #39
-ldrb r2, [ r1, r2 ] @ Background for this conversation.
-strh r2, [ r0 ] @ Store in memory slot 0x2.
-mov r1, #0x07
-strb r1, [ r0, #0x08 ] @ Store 0x7 into slot 0x4 for later.
-bx lr
-
-.global BaseSupportConvo8
-.type BaseSupportConvo8, %function
-BaseSupportConvo8:
-ldr r0, =#0x030004C0 @ Memory slot 0x2
-ldr r1, =BaseSupportTable
-ldr r2, =ChapterDataStruct
-ldrb r2, [ r2, #0x0E ]
-mov r3, #48
-mul r2, r3
-add r1, r1, r2
-ldrh r2, [ r1, #44 ] @ Text ID for this conversation
-strh r2, [ r0, #0x04 ] @ Store in memory slot 0x3.
-mov r2, #47
-ldrb r2, [ r1, r2 ] @ Background for this conversation.
-strh r2, [ r0 ] @ Store in memory slot 0x2.
-mov r1, #0x08
-strb r1, [ r0, #0x08 ] @ Store 0x8 into slot 0x4 for later.
-bx lr
-
-.global BaseSupportUsability
-.type BaseSupportUsability, %function
-BaseSupportUsability: @ r7 = counter i.e. which menu item we're looking at. That's convenient.
-push { r4, r6, r7, lr }
-ldr r0, =BaseSupportTable
-ldr r1, =ChapterDataStruct
-ldrb r1, [ r1, #0x0E ]
-mov r2, #48
-mul r1, r2
-add r0, r0, r1
-mov r1, #0x06
-mul r1, r7
-add r4, r0, r1 @ r4 has this specific convo.
-ldr r0, [ r4 ]
-cmp r0, #0x00
-beq BaseSupportUsabilityReturnFalse
-	ldrb r0, [ r4 ] @ First character
-	bl FindCharacter @ r0 has character struct
-	cmp r0, #0x00
-	beq BaseSupportUsabilityReturnFalse @ No character was found. Loop back.
-	mov r7, r0 @ Save the character struct in r7 for later.
-	ldrb r0, [ r0, #0x0C ]
-	mov r1, #0x04
-	tst r0, r1
-	bne BaseSupportUsabilityReturnFalse @ This character is dead. Loop back.
-	ldrb r0, [ r4, #0x01 ] @ Second character
-	bl FindCharacter
-	cmp r0, #0x00
-	beq BaseSupportUsabilityReturnFalse @ No character was found. Loop back.
-	mov r6, r0 @ Save the character struct in r6 for later.
-	ldrb r0, [ r0, #0x0C ]
-	mov r1, #0x04
-	tst r0, r1
-	bne BaseSupportUsabilityReturnFalse @ This character is dead. Loop back.
-		@ Both characters are alive. Let's check to make sure their support level matches tbe convo.
-		mov r0, r7
-		ldrb r1, [ r4, #0x01 ]
-		bl FindSupportData @ r0 has the number of bits to the support data from 0x32.
-		mov r1, #0x00
-		mvn r1, r1
-		cmp r0, r1
-		bne BaseSupportUsabilityHandleSupport
-			mov r0, #0x00
-			b BaseSupportUsabilityLevelCheck
-		BaseSupportUsabilityHandleSupport:
-		mov r1, r0
-		mov r0, r7
-		bl GetSupportLevel @ r0 has the support level.
-		BaseSupportUsabilityLevelCheck:
-		add r0, r0, #0x01
-		ldrb r1, [ r4, #0x04 ] @ r1 has the support level of this convo.
-		cmp r0, r1
-		bne BaseSupportUsabilityReturnFalse
-			cmp r1, #0x01
-			bne BaseSupportUsabilityDontCountSupports
-				@ This convo wants to increase to a C support. Let's make sure that both characters have room.
-				mov r0, r7
-				bl CountSupports
-				cmp r0, #0x06
-				beq BaseSupportUsabilityReturnFalse @ There are 6 supports already. This convo can't be added.
-				mov r0, r6
-				bl CountSupports
-				cmp r0, #0x06
-				beq BaseSupportUsabilityReturnFalse
-			BaseSupportUsabilityDontCountSupports:
-			mov r0, #0x01
-			b EndBaseSupportUsability
-BaseSupportUsabilityReturnFalse:
-mov r0, #0x03
-EndBaseSupportUsability:
-pop { r4, r6, r7 }
-pop { r1 }
-bx r1
-
-.global SupportReturnFalse
-.type SupportReturnFalse, %function
-SupportReturnFalse: @ Used for storing support data in CharacterBasedEvents. This makes sure supports don't appear as regular talk events.
-mov r0, #0x00
-bx lr
-
-.equ GetChapterEvents, 0x080346B0
-.global SupportConvoUsability
-.type SupportConvoUsability, %function
-SupportConvoUsability: @ This function will be called from the support action menu usability to determine whether there is a viewable support. Autohook to 0x08023D14.
-@ Return 0x1 for true and 0x3 for false.
-push { r4 - r7, lr }
-ldr r0, =#0x03004E50
-ldr r4, [ r0 ] @ Store the current character struct in r4.
-ldr r0, [ r4 ] @ ROM character data
-ldrb r6, [ r0, #0x04 ] @ Store the character ID in r6.
-ldr r0, =0x0202BCF0
-ldrb r0, [ r0, #0x0E ] @ Chapter number.
-blh GetChapterEvents, r1 @ r0 has this chapter's events.
-ldr r5, [ r0, #0x04 ] @ r5 has this chapter's CharacterBasedEvents.
-sub r5, r5, #0x10
-SupportConvoUsabilityLoop:
-add r5, r5, #0x10
-ldrh r0, [ r5 ]
-cmp r0, #0x00
-beq EndSupportConvoUsabilityFalse @ End the loop if this is an END_MAIN. No support was found.
-	ldr r0, [ r5, #12 ] @ This talk convo's extra condition.
-	ldr r1, =SupportReturnFalse
-	cmp r0, r1
-	bne SupportConvoUsabilityLoop @ Loop back if this is not marked as a support convo.
-		ldrb r0, [ r5, #0x08 ] @ Character 1
-		cmp r0, r6
-		beq SupportConvoUsabilityGetCharacter2
-		ldrb r0, [ r5, #0x09 ] @ Character 2
-		cmp r0, r6
-		bne SupportConvoUsabilityLoop @ Neither character in this convo matches the active character. Loop back.
-			@ SupportConvoUsabilityGetCharacter1:
-			ldrb r7, [ r5, #0x08 ]
-			b SupportConvoUsabilityGotCharacter
-			SupportConvoUsabilityGetCharacter2
-			ldrb r7, [ r5, #0x09 ]
-			SupportConvoUsabilityGotCharacter: @ The target character is in r7. Now to check if these units can support.
-			mov r0, r4
-			mov r1, r7
-			bl FindSupportData @ r0 = bytes from 0x32 for this support.
-			mov r1, #0x00
-			mvn r1, r1
-			cmp r0, r1
-			bne SupportConvoUsabilityFoundSupport
-				@ No support was found. Let's make sure there's enough room to add this support.
-				mov r0, r4
-				bl CountSupports @ r0 = number of supports of the active character.
-				cmp r0, #0x06
-				beq SupportConvoUsabilityLoop @ Loop back if there are already 6 supports.
-				mov r0, r7
-				bl FindCharacter @ r0 = target character struct.
-				bl CountSupports @ r0 = number of supports of the target character.
-				cmp r0, #0x06
-				beq SupportConvoUsabilityLoop @ Loop back if there are already 6 supports.
-				mov r0, #0x01
-				b EndSupportConvoUsability
-			SupportConvoUsabilityFoundSupport:
-			mov r1, r0
-			mov r0, r4
-			bl GetSupportLevel @ r0 = this support level.
-			cmp r0, #0x03
-			beq SupportConvoUsabilityLoop @ Loop back if this is already an A support.
-				@ If we're here, this is already a C or B support. Return true.
-				mov r0, #0x01
-				b EndSupportConvoUsability
-EndSupportConvoUsabilityFalse:
-mov r0, #0x03
-EndSupportConvoUsability:
-pop { r4 - r7 }
-pop { r1 }
-bx r1
-
-.global BuildSupportTargetList
-.type BuildSupportTargetList, %function
-BuildSupportTargetList: @ Sets up the target list for on-map support conversations. Autohook to 0x08025644.
-push { r4 - r7, lr } @ r0 = active unit pointer.
-ldr r4, =#0x02033F3C
-str r0, [ r4 ]
-mov r2, #0x10
-ldsb 
 
 .align
 .ltorg

@@ -24,6 +24,7 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
+SupportConvo(ASupport,Support1Text,Christina,Jasper)
 CHAR 0x10 TElanilIzuk [Elanil, Izuk] 0x00
 CHAR 0x10 TFinocIzuk [Finoc, Izuk] 0x00
 CHAR 0x10 TCougarIzuk [Cougar, Izuk] 0x00
@@ -40,6 +41,7 @@ END_MAIN
 MiscBasedEvents:
 CauseGameOverIfLordDies
 DefeatBoss(EndingScene)
+AREA 0x16 CheckIzukEscape [25,7] [25,8]
 END_MAIN
 
 //Label TrapData
@@ -64,12 +66,11 @@ EndUnit
 
 //Label BeginingScene
 BeginningScene:
-ENUT 0x11
 ENUT 0x12
+ENUT 0x15
 CAM1 [18,23]
 LOAD3 0x1 PlayerLoading1
 LOAD2 0x1 Friends
-LOAD1 0x1 LoadSylvaine
 LOAD1 0x1 Meanies1
 LOAD1 0x1 Meanies2
 LOAD1 0x1 Meanies3
@@ -99,17 +100,18 @@ GOTO 0x0
 
 EndingScene:
 FADI 0x5
+CLEA 0x0
+CLEE 0x0
+CLEN 0x0
+ASMC RefreshAll|1
 ASMC PrepForEnd|1
-CHECK_ALIVE Izuk
-BEQ 0x0 0x0 0xC
-	// If Izuk is alive.
-	CHECK_EXISTS Izuk
+CHECK_EVENTID 0x16
+BNE 0x0 0x0 0xC
+	// If Izuk did not escape.
+	CHECK_ALIVE Izuk
 	BEQ 0x1 0x0 0xC
 		// If Izuk is still on the map. Bad ending.
 		ENUF 0x12
-		CLEA 0x0
-		CLEN 0x0
-		CLEE 0x0
 		CAM1 [7,19]
 		LOAD3 0x1 PlayerLoading4
 		LOAD2 0x1 EndingSylvaine
@@ -126,10 +128,42 @@ BEQ 0x0 0x0 0xC
 		TEXTEND
 		GOTO 0x3
 	LABEL 0x1
+		// If Izuk is dead. Bad ending.
+		ENUF 0x12
+		CAM1 [7,19]
+		LOAD3 0x1 PlayerLoading4
+		LOAD2 0x1 EndingSylvaine
+		ENUN
+		MUSC A_Tragic_Decision
+		SetBackground(0x0E)
+		Text(Military7PassAltiaIzukDeadText)
+		
+		LABEL 0x3
+		EndConvo
+		MUSC Anchoret
+		Text(Military7PassAltiaSylvaineEndingText)
+		MOVE 0x0 Sylvaine [22,18]
+		ENUN
+		Text(Military7PassAltiaThisIsWarText)
+		STAL 0x10
+		MUSC Return_of_the_Demon_King
+		WarpIn(5,20,BadEndingGuardianSpirit)
+		STAL 0x20
+		Text(Military7PassAltiaBadEndingGuardianSpiritText)
+		STAL 0x08
+		MOVE 0x00 Narrator [5,19]
+		ENUN
+		STAL 0x10
+		StartBattle
+		MissedAttack(0,0)
+		NormalDamage(1,30)
+		NormalDamage(1,30)
+		EndAttack
+		MilitaryNarratorFight(5,18)
+		GOTO 0x2
+LABEL 0x0
 		// If Izuk escaped. Good ending.
 		ENUF 0x11
-		CLEA 0x0
-		CLEE 0x0
 		CAM1 [7,5]
 		LOAD3 0x1 PlayerLoading2
 		LOAD2 0x1 EscapeFriends
@@ -173,41 +207,6 @@ BEQ 0x0 0x0 0xC
 		EndAttack
 		MilitaryNarratorFight(6,6)
 		GOTO 0x2
-LABEL 0x0
-	// If Izuk is dead. Bad ending.
-	ENUF 0x12
-	CLEA 0x0
-	CLEE 0x0
-	CAM1 [7,19]
-	LOAD3 0x1 PlayerLoading4
-	LOAD2 0x1 EndingSylvaine
-	ENUN
-	MUSC A_Tragic_Decision
-	SetBackground(0x0E)
-	Text(Military7PassAltiaIzukDeadText)
-	
-LABEL 0x3
-EndConvo
-MUSC Anchoret
-Text(Military7PassAltiaSylvaineEndingText)
-MOVE 0x0 Sylvaine [22,18]
-ENUN
-Text(Military7PassAltiaThisIsWarText)
-STAL 0x10
-MUSC Return_of_the_Demon_King
-WarpIn(5,20,BadEndingGuardianSpirit)
-STAL 0x20
-Text(Military7PassAltiaBadEndingGuardianSpiritText)
-STAL 0x08
-MOVE 0x00 Narrator [5,19]
-ENUN
-STAL 0x10
-StartBattle
-MissedAttack(0,0)
-NormalDamage(1,30)
-NormalDamage(1,30)
-EndAttack
-MilitaryNarratorFight(5,18)
 LABEL 0x2
 ENUF 0x67
 ENUF 0x68
@@ -280,12 +279,19 @@ NoFade
 ENDA
 
 //Label Escape Points
-NPCEscapePointPointerTable(MilitaryPassAltia7, Military7PassAltiaEscapePoints)
+NPCEscapePointPointerTable(MilitaryPassAltia7,Military7PassAltiaEscapePoints)
 
 Military7PassAltiaEscapePoints:
 EscapePoint(25,7,MoveRight)
 EscapePointEnd
-//LabelEnd
+
+CheckIzukEscape: // Used to see if Izuk escaped.
+CHECK_ALLEGIANCE 0xFFFF
+SVAL 0x1 0x1 // NPC Team. i.e. Izuk.
+BEQ 0x0 0x1 0xC
+	ENUF 0x16
+LABEL 0x0
+ENDA
 
 //Label Location Events
 ShopList:
@@ -327,9 +333,6 @@ UNIT Sekar 0x00 0x00 Level(1,Ally,True) [16,27] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Christina 0x00 0x00 Level(1,Ally,True) [18,25] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Forrest 0x00 0x00 Level(1,Ally,True) [20,25] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Clara 0x00 0x00 Level(1,Ally,True) [17,26] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT
-
-LoadSylvaine:
 UNIT Sylvaine ArmoredWyvernLord 0x00 Level(8,Ally,True) [19,26] 0x00 0x00 0x00 0x00 [SilverAxe,SteelBlade,SteelBow] NoAI
 ENDA
 
@@ -381,7 +384,7 @@ UNIT Guardian Sniper Xavus Level(10,Enemy,True) [18,8] 0x00 0x00 0x00 0x00 [Silv
 UNIT Guardian Pirate Xavus Level(18,Enemy,True) [13,1] 0x00 0x00 0x00 0x00 [HandAxe] ChaseOnceApproachedAI
 UNIT Arcanian Berserker Xavus Level(11,Enemy,True) [14,0] 0x00 0x00 0x00 0x00 [ShortAxe] AttackInRangeAI
 UNIT Arcanian Sage Xavus Level(6,Enemy,True) [13,7] 0x00 0x00 0x00 0x00 [Fire] AttackInRangeAI
-UNIT Guardian Halberdier Xavus Level(15,Enemy,True) [11,8] Drop 0x00 0x00 0x00 [Spear,DoorKey] GuardAI
+UNIT Guardian Halberdier Xavus Level(15,Enemy,True) [11,8] Drop 0x00 0x00 0x00 [Spear,DoorKey] ChaseOnceApproachedAI
 UNIT Arcanian General Xavus Level(13,Enemy,True) [8,4] Drop 0x00 0x00 0x00 [BraveLance] AttackInRangeAI
 UNIT Guardian Sentinel Xavus Level(11,Enemy,True) [6,5] 0x00 0x00 0x00 0x00 [Tomahawk,IronBlade] AttackInRangeAI
 UNIT Arcanian Sage Xavus Level(15,Enemy,True) [1,2] 0x00 0x00 0x00 0x00 [Thoron] AttackInRangeAI

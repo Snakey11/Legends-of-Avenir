@@ -1,0 +1,2390 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	songFightingOfTheSpirit_grp  voicegroup000
+	#define	songFightingOfTheSpirit_pri  0
+	#define	songFightingOfTheSpirit_rev  0
+	#define	songFightingOfTheSpirit_mvl  145
+	#define	songFightingOfTheSpirit_key  0
+	#define	songFightingOfTheSpirit_tbs  1
+	#define	songFightingOfTheSpirit_exg  0
+	#define	songFightingOfTheSpirit_cmp  1
+
+	// .rodata
+	//	songFightingOfTheSpirit
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+songFightingOfTheSpirit_001:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songFightingOfTheSpirit_key+0
+LabelFightingOfTheSpirit_0_01372DCE:
+ BYTE   TEMPO   174*songFightingOfTheSpirit_tbs/2
+ BYTE   VOICE   29
+ BYTE   VOL   23*songFightingOfTheSpirit_mvl/mxv
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   35*songFightingOfTheSpirit_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   35*songFightingOfTheSpirit_mvl/mxv
+ BYTE   N36  Cn4  v127
+ BYTE   W36
+ BYTE   Bn3
+ BYTE   W36
+ BYTE   N72  An3
+ BYTE   W24
+// 001   ----------------------------------------
+LabelFightingOfTheSpirit_0_01372DE7:
+ BYTE   W48
+ BYTE   N12  An3  v127
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W12
+ BYTE   PEND 
+// 002   ----------------------------------------
+ BYTE   N36  En4
+ BYTE   W36
+ BYTE   N84  An3
+ BYTE   W60
+// 003   ----------------------------------------
+LabelFightingOfTheSpirit_0_01372DF9:
+ BYTE   W24
+ BYTE   N24  Bn3  v127
+ BYTE   W24
+ BYTE   Cn4
+ BYTE   W24
+ BYTE   Dn4
+ BYTE   W24
+ BYTE   PEND 
+// 004   ----------------------------------------
+ BYTE   N12  Cn4
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W24
+ BYTE   Gn3
+ BYTE   W24
+ BYTE   N12
+ BYTE   W24
+ BYTE   N36
+ BYTE   W12
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_0_01372DF9
+// 005   ----------------------------------------
+ BYTE   N12  Cn4  v127
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W24
+ BYTE   N60  An3
+ BYTE   W60
+// 006   ----------------------------------------
+ BYTE   N72  En3
+ BYTE   W72
+ BYTE   N12  Cn3
+ BYTE   W24
+// 007   ----------------------------------------
+ BYTE   N36  Cn4
+ BYTE   W36
+ BYTE   Bn3
+ BYTE   W36
+ BYTE   N72  An3
+ BYTE   W24
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_0_01372DE7
+// 008   ----------------------------------------
+ BYTE   N60  En4  v127
+ BYTE   W60
+ BYTE   N24  Dn4
+ BYTE   W24
+ BYTE   N12  Cn4
+ BYTE   W12
+// 009   ----------------------------------------
+ BYTE   N36  Bn3
+ BYTE   W36
+ BYTE   N60  An3
+ BYTE   W60
+// 010   ----------------------------------------
+ BYTE   N24
+ BYTE   W24
+ BYTE   N12  Bn3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W24
+ BYTE   Dn4
+ BYTE   W24
+ BYTE   N36  En4
+ BYTE   W12
+// 011   ----------------------------------------
+ BYTE   W24
+ BYTE   N24  Dn4
+ BYTE   W24
+ BYTE   Cn4
+ BYTE   W24
+ BYTE   Bn3
+ BYTE   W24
+// 012   ----------------------------------------
+ BYTE   N12  Cn4
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W24
+ BYTE   N60  An3
+ BYTE   W36
+ BYTE   VOL   19*songFightingOfTheSpirit_mvl/mxv
+ BYTE   W06
+ BYTE   FnM1
+ BYTE   W06
+ BYTE   EnM1
+ BYTE   W06
+ BYTE   DnM1
+ BYTE   W06
+// 013   ----------------------------------------
+ BYTE   CnM1
+ BYTE   W06
+ BYTE   DnM1
+ BYTE   W06
+ BYTE   EnM1
+ BYTE   W06
+ BYTE   FnM1
+ BYTE   W06
+ BYTE   GnM1
+ BYTE   W06
+ BYTE   AnM1
+ BYTE   W06
+ BYTE   BnM1
+ BYTE   N60
+ BYTE   W06
+ BYTE   VOL   25*songFightingOfTheSpirit_mvl/mxv
+ BYTE   W06
+ BYTE   Ds0
+ BYTE   W06
+ BYTE   Fn0
+ BYTE   W06
+ BYTE   Gn0
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W24
+// 014   ----------------------------------------
+ BYTE   BnM1
+ BYTE   N84  Dn4
+ BYTE   W84
+ BYTE   N12  Cn4
+ BYTE   W12
+// 015   ----------------------------------------
+ BYTE   N48  Bn3
+ BYTE   W48
+ BYTE   N18
+ BYTE   W18
+ BYTE   Cn4
+ BYTE   W18
+ BYTE   N12  Dn4
+ BYTE   W12
+// 016   ----------------------------------------
+ BYTE   N48  Cn4
+ BYTE   W48
+ BYTE   Bn3
+ BYTE   W48
+// 017   ----------------------------------------
+ BYTE   An3
+ BYTE   W48
+ BYTE   Gn3
+ BYTE   W48
+// 018   ----------------------------------------
+ BYTE   N84  Dn4
+ BYTE   W84
+ BYTE   N12  Cn4
+ BYTE   W12
+// 019   ----------------------------------------
+ BYTE   N24
+ BYTE   W24
+ BYTE   Bn3
+ BYTE   W24
+ BYTE   Fn4
+ BYTE   W24
+ BYTE   En4
+ BYTE   W24
+// 020   ----------------------------------------
+ BYTE   N60  Dn4
+ BYTE   W60
+ BYTE   N24  Cn4
+ BYTE   W24
+ BYTE   N06  Bn3
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   W06
+// 021   ----------------------------------------
+ BYTE   N48  Bn3
+ BYTE   W48
+ BYTE   N24  An3
+ BYTE   W24
+ BYTE   Gn3
+ BYTE   W24
+// 022   ----------------------------------------
+LabelFightingOfTheSpirit_0_01372EB9:
+ BYTE   N48  An3  v127
+ BYTE   W48
+ BYTE   N12
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   N24  Dn4
+ BYTE   W12
+ BYTE   PEND 
+// 023   ----------------------------------------
+LabelFightingOfTheSpirit_0_01372EC7:
+ BYTE   W12
+ BYTE   N12  Dn4  v127
+ BYTE   W12
+ BYTE   N24  Cn4
+ BYTE   W24
+ BYTE   Bn3
+ BYTE   W24
+ BYTE   An3
+ BYTE   W24
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_0_01372EB9
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_0_01372EC7
+// 024   ----------------------------------------
+ BYTE   N48  An3  v127
+ BYTE   W48
+ BYTE   N12
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   N24  Gn4
+ BYTE   W12
+// 025   ----------------------------------------
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N24  Fn4
+ BYTE   W24
+ BYTE   En4
+ BYTE   W24
+ BYTE   Dn4
+ BYTE   W24
+// 026   ----------------------------------------
+ BYTE   N48  Bn3
+ BYTE   W48
+ BYTE   N12
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W12
+ BYTE   N24  En4
+ BYTE   W12
+// 027   ----------------------------------------
+ BYTE   W12
+ BYTE   N12  Dn4
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   N24  Bn3
+ BYTE   W24
+ BYTE   N12  An3
+ BYTE   W12
+ BYTE   N24  Bn3
+ BYTE   W24
+// 028   ----------------------------------------
+LabelFightingOfTheSpirit_0_01372F10:
+ BYTE   N36  Bn3  v127
+ BYTE   W36
+ BYTE   TIE  An3
+ BYTE   W60
+ BYTE   PEND 
+// 029   ----------------------------------------
+ BYTE   W48
+ BYTE   EOT
+ BYTE   N12
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W12
+// 030   ----------------------------------------
+LabelFightingOfTheSpirit_0_01372F22:
+ BYTE   N36  En4  v127
+ BYTE   W36
+ BYTE   TIE  An3
+ BYTE   W60
+ BYTE   PEND 
+// 031   ----------------------------------------
+ BYTE   W48
+ BYTE   EOT
+ BYTE   N12
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   En4
+ BYTE   W12
+// 032   ----------------------------------------
+LabelFightingOfTheSpirit_0_01372F34:
+ BYTE   N12  Dn4  v127
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W24
+ BYTE   Bn3
+ BYTE   W24
+ BYTE   Cn4
+ BYTE   W24
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   PEND 
+// 033   ----------------------------------------
+LabelFightingOfTheSpirit_0_01372F41:
+ BYTE   W12
+ BYTE   N12  An3  v127
+ BYTE   W24
+ BYTE   Gn3
+ BYTE   W24
+ BYTE   En3
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   PEND 
+// 034   ----------------------------------------
+ BYTE   TIE  An3
+ BYTE   W96
+// 035   ----------------------------------------
+ BYTE   W12
+ BYTE   EOT
+ BYTE   N12  En3
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   En3
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   En3
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   En3
+ BYTE   W12
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_0_01372F10
+// 036   ----------------------------------------
+ BYTE   W48
+ BYTE   EOT
+ BYTE   An3
+ BYTE   N12  An3  v127
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W12
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_0_01372F22
+// 037   ----------------------------------------
+ BYTE   W48
+ BYTE   EOT
+ BYTE   An3
+ BYTE   N12  An3  v127
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   En4
+ BYTE   W12
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_0_01372F34
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_0_01372F41
+// 038   ----------------------------------------
+ BYTE   TIE  An3  v127
+ BYTE   W96
+// 039   ----------------------------------------
+ BYTE   W12
+ BYTE   EOT
+ BYTE   N12  En3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   Bn2
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+// 040   ----------------------------------------
+LabelFightingOfTheSpirit_0_01372FA6:
+ BYTE   N12  Cn3  v127
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   Bn2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W24
+ BYTE   Bn2
+ BYTE   W24
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   PEND 
+// 041   ----------------------------------------
+LabelFightingOfTheSpirit_0_01372FB5:
+ BYTE   W12
+ BYTE   N12  Cn3  v127
+ BYTE   W12
+ BYTE   Bn2
+ BYTE   W24
+ BYTE   N36  Cn3
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_0_01372FA6
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_0_01372FB5
+// 042   ----------------------------------------
+LabelFightingOfTheSpirit_0_01372FCA:
+ BYTE   N12  Bn2  v127
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   Bn2
+ BYTE   W24
+ BYTE   An2
+ BYTE   W24
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   PEND 
+// 043   ----------------------------------------
+LabelFightingOfTheSpirit_0_01372FD9:
+ BYTE   W12
+ BYTE   N12  Bn2  v127
+ BYTE   W12
+ BYTE   An2
+ BYTE   W24
+ BYTE   N36  Bn2
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_0_01372FA6
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_0_01372FB5
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_0_01372FA6
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_0_01372FB5
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_0_01372FA6
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_0_01372FB5
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_0_01372FCA
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_0_01372FD9
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_0_01372FA6
+// 044   ----------------------------------------
+ BYTE   W12
+ BYTE   N12  Cn3  v127
+ BYTE   W12
+ BYTE   Bn2
+ BYTE   W24
+ BYTE   N36  Cn3
+ BYTE   W36
+ BYTE   VOL   35*songFightingOfTheSpirit_mvl/mxv
+ BYTE   W12
+// 045   ----------------------------------------
+ BYTE   GoTo
+  POIN2 LabelFightingOfTheSpirit_0_01372DCE
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+songFightingOfTheSpirit_002:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songFightingOfTheSpirit_key+0
+LabelFightingOfTheSpirit_1_01373026:
+ BYTE   VOICE   6
+ BYTE   VOL   7*songFightingOfTheSpirit_mvl/mxv
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   14*songFightingOfTheSpirit_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   14*songFightingOfTheSpirit_mvl/mxv
+ BYTE   N12  An2  v127
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+// 001   ----------------------------------------
+LabelFightingOfTheSpirit_1_01373046:
+ BYTE   N12  An2  v127
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373046
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373046
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373046
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373046
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373046
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373046
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373046
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373046
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373046
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373046
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373046
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373046
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373046
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373046
+// 002   ----------------------------------------
+LabelFightingOfTheSpirit_1_0137309F:
+ BYTE   N12  Fn2  v127
+ BYTE   W12
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137309F
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137309F
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137309F
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137309F
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137309F
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137309F
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137309F
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137309F
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137309F
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137309F
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137309F
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137309F
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137309F
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137309F
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137309F
+// 003   ----------------------------------------
+LabelFightingOfTheSpirit_1_013730FD:
+ BYTE   N12  Cn3  v127
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_013730FD
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_013730FD
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_013730FD
+// 004   ----------------------------------------
+LabelFightingOfTheSpirit_1_0137311F:
+ BYTE   N12  Bn2  v127
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Bn2
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Bn2
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Bn2
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137311F
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_013730FD
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_013730FD
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_013730FD
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_013730FD
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_013730FD
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_013730FD
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137311F
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137311F
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_013730FD
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_013730FD
+// 005   ----------------------------------------
+LabelFightingOfTheSpirit_1_01373169:
+ BYTE   N06  En3  v127
+ BYTE   W06
+ BYTE   Cn3
+ BYTE   W06
+ BYTE   N12  An2
+ BYTE   W12
+ BYTE   N06  En3
+ BYTE   W06
+ BYTE   Cn3
+ BYTE   W06
+ BYTE   N12  An2
+ BYTE   W12
+ BYTE   N06  En3
+ BYTE   W06
+ BYTE   Cn3
+ BYTE   W06
+ BYTE   N12  An2
+ BYTE   W12
+ BYTE   N06  En3
+ BYTE   W06
+ BYTE   Cn3
+ BYTE   W06
+ BYTE   N12  An2
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373169
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373169
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373169
+// 006   ----------------------------------------
+LabelFightingOfTheSpirit_1_0137319A:
+ BYTE   N06  Dn3  v127
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   N12  Gn2
+ BYTE   W12
+ BYTE   N06  Dn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   N12  Gn2
+ BYTE   W12
+ BYTE   N06  Dn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   N12  Gn2
+ BYTE   W12
+ BYTE   N06  Dn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   N12  Gn2
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137319A
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373169
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373169
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373169
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373169
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373169
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373169
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137319A
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_0137319A
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373169
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_1_01373169
+// 007   ----------------------------------------
+ BYTE   GoTo
+  POIN2 LabelFightingOfTheSpirit_1_01373026
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+songFightingOfTheSpirit_003:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songFightingOfTheSpirit_key+0
+LabelFightingOfTheSpirit_2_013731FE:
+ BYTE   VOICE   52
+ BYTE   VOL   7*songFightingOfTheSpirit_mvl/mxv
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   14*songFightingOfTheSpirit_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   14*songFightingOfTheSpirit_mvl/mxv
+ BYTE   TIE  An3  v127
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W24
+ BYTE   EOT
+ BYTE   N24  Fn3
+ BYTE   W24
+ BYTE   Gn3
+ BYTE   W24
+ BYTE   Dn4
+ BYTE   W24
+// 004   ----------------------------------------
+ BYTE   TIE  En3
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  Fn3
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   W96
+// 008   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  An3
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   W96
+// 010   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE
+ BYTE   W96
+// 011   ----------------------------------------
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  Gn3
+ BYTE   W96
+// 013   ----------------------------------------
+ BYTE   W96
+// 014   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  Fn3
+ BYTE   W96
+// 015   ----------------------------------------
+ BYTE   W96
+// 016   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE
+ BYTE   W96
+// 017   ----------------------------------------
+ BYTE   W96
+// 018   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  Gn3
+ BYTE   W96
+// 019   ----------------------------------------
+ BYTE   W96
+// 020   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  Fn3
+ BYTE   W96
+// 021   ----------------------------------------
+ BYTE   W96
+// 022   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  Gn3
+ BYTE   W96
+// 023   ----------------------------------------
+ BYTE   W96
+// 024   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  Fn3
+ BYTE   W96
+// 025   ----------------------------------------
+ BYTE   W96
+// 026   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE
+ BYTE   W96
+// 027   ----------------------------------------
+ BYTE   W96
+// 028   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE
+ BYTE   W96
+// 029   ----------------------------------------
+ BYTE   W96
+// 030   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  Bn2
+ BYTE   W96
+// 031   ----------------------------------------
+ BYTE   W96
+// 032   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  An3
+ BYTE   W96
+// 033   ----------------------------------------
+ BYTE   W96
+// 034   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE
+ BYTE   W96
+// 035   ----------------------------------------
+ BYTE   W96
+// 036   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  En3
+ BYTE   W96
+// 037   ----------------------------------------
+ BYTE   W96
+// 038   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  Fn3
+ BYTE   W96
+// 039   ----------------------------------------
+ BYTE   W96
+// 040   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  An3
+ BYTE   W96
+// 041   ----------------------------------------
+ BYTE   W96
+// 042   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE
+ BYTE   W96
+// 043   ----------------------------------------
+ BYTE   W96
+// 044   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  En3
+ BYTE   W96
+// 045   ----------------------------------------
+ BYTE   W96
+// 046   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  Fn3
+ BYTE   W96
+// 047   ----------------------------------------
+ BYTE   W96
+// 048   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  Cn3
+ BYTE   W96
+// 049   ----------------------------------------
+ BYTE   W96
+// 050   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  Bn2
+ BYTE   W96
+// 051   ----------------------------------------
+ BYTE   W96
+// 052   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  Gn3
+ BYTE   W96
+// 053   ----------------------------------------
+ BYTE   W96
+// 054   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  Cn3
+ BYTE   W96
+// 055   ----------------------------------------
+ BYTE   W96
+// 056   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE
+ BYTE   W96
+// 057   ----------------------------------------
+ BYTE   W96
+// 058   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  Bn2
+ BYTE   W96
+// 059   ----------------------------------------
+ BYTE   W96
+// 060   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  Gn3
+ BYTE   W96
+// 061   ----------------------------------------
+ BYTE   W96
+// 062   ----------------------------------------
+ BYTE   EOT
+ BYTE   TIE  Cn3
+ BYTE   W96
+// 063   ----------------------------------------
+ BYTE   W96
+// 064   ----------------------------------------
+ BYTE   EOT
+ BYTE   GoTo
+  POIN2 LabelFightingOfTheSpirit_2_013731FE
+ BYTE   FINE
+
+//**************** Track 4 (Midi-Chn.3) ****************//
+
+songFightingOfTheSpirit_004:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songFightingOfTheSpirit_key+0
+LabelFightingOfTheSpirit_3_013732B6:
+ BYTE   VOICE   51
+ BYTE   VOL   5*songFightingOfTheSpirit_mvl/mxv
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   13*songFightingOfTheSpirit_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   13*songFightingOfTheSpirit_mvl/mxv
+ BYTE   N36  En4  v127
+ BYTE   W36
+ BYTE   Dn4
+ BYTE   W36
+ BYTE   N72  Cn4
+ BYTE   W24
+// 001   ----------------------------------------
+LabelFightingOfTheSpirit_3_013732CD:
+ BYTE   W48
+ BYTE   N24  Cn4  v127
+ BYTE   W24
+ BYTE   Gn3
+ BYTE   W24
+ BYTE   PEND 
+// 002   ----------------------------------------
+ BYTE   TIE  Fn3
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W24
+ BYTE   EOT
+ BYTE   N24  An3
+ BYTE   W24
+ BYTE   Bn3
+ BYTE   W24
+ BYTE   Cn4
+ BYTE   W24
+// 004   ----------------------------------------
+LabelFightingOfTheSpirit_3_013732E1:
+ BYTE   N48  En4  v127
+ BYTE   W48
+ BYTE   Dn4
+ BYTE   W48
+ BYTE   PEND 
+// 005   ----------------------------------------
+LabelFightingOfTheSpirit_3_013732E8:
+ BYTE   N48  Bn3  v127
+ BYTE   W48
+ BYTE   Gn3
+ BYTE   W48
+ BYTE   PEND 
+// 006   ----------------------------------------
+ BYTE   N96  An3
+ BYTE   W96
+// 007   ----------------------------------------
+LabelFightingOfTheSpirit_3_013732F2:
+ BYTE   W12
+ BYTE   N12  En3  v127
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   En3
+ BYTE   W12
+ BYTE   En4
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   En3
+ BYTE   W12
+ BYTE   PEND 
+// 008   ----------------------------------------
+ BYTE   N36  En4
+ BYTE   W36
+ BYTE   Dn4
+ BYTE   W36
+ BYTE   N72  Cn4
+ BYTE   W24
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_3_013732CD
+// 009   ----------------------------------------
+ BYTE   N48  Fn3  v127
+ BYTE   W48
+ BYTE   An3
+ BYTE   W48
+// 010   ----------------------------------------
+ BYTE   Cn4
+ BYTE   W48
+ BYTE   Fn4
+ BYTE   W48
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_3_013732E1
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_3_013732E8
+// 011   ----------------------------------------
+ BYTE   N96  An3  v127
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_3_013732F2
+// 012   ----------------------------------------
+ BYTE   TIE  Fn3  v127
+ BYTE   W96
+// 013   ----------------------------------------
+ BYTE   W48
+ BYTE   EOT
+ BYTE   N24  Gn3
+ BYTE   W24
+ BYTE   An3
+ BYTE   W24
+// 014   ----------------------------------------
+ BYTE   N96  Gn3
+ BYTE   W96
+// 015   ----------------------------------------
+LabelFightingOfTheSpirit_3_0137333C:
+ BYTE   N48  An3  v127
+ BYTE   W48
+ BYTE   Bn3
+ BYTE   W48
+ BYTE   PEND 
+// 016   ----------------------------------------
+ BYTE   N96  An3
+ BYTE   W96
+// 017   ----------------------------------------
+ BYTE   N36  Fn3
+ BYTE   W36
+ BYTE   Gn3
+ BYTE   W36
+ BYTE   N24  An3
+ BYTE   W24
+// 018   ----------------------------------------
+ BYTE   N72  Gn3
+ BYTE   W72
+ BYTE   N24  Bn3
+ BYTE   W24
+// 019   ----------------------------------------
+ BYTE   N36  Dn4
+ BYTE   W36
+ BYTE   Cn4
+ BYTE   W36
+ BYTE   N24  Bn3
+ BYTE   W24
+// 020   ----------------------------------------
+LabelFightingOfTheSpirit_3_0137335C:
+ BYTE   N48  Fn3  v127
+ BYTE   W48
+ BYTE   N12
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   An3
+ BYTE   W12
+ BYTE   N24  Bn3
+ BYTE   W12
+ BYTE   PEND 
+// 021   ----------------------------------------
+LabelFightingOfTheSpirit_3_0137336A:
+ BYTE   W12
+ BYTE   N12  Bn3  v127
+ BYTE   W12
+ BYTE   N24  An3
+ BYTE   W24
+ BYTE   Gn3
+ BYTE   W24
+ BYTE   Fn3
+ BYTE   W24
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_3_0137335C
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_3_0137336A
+// 022   ----------------------------------------
+ BYTE   N48  Fn3  v127
+ BYTE   W48
+ BYTE   N12
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   An3
+ BYTE   W12
+ BYTE   N24  En4
+ BYTE   W12
+// 023   ----------------------------------------
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N24  Dn4
+ BYTE   W24
+ BYTE   Gn4
+ BYTE   W24
+ BYTE   Fn4
+ BYTE   W24
+// 024   ----------------------------------------
+ BYTE   En4
+ BYTE   W24
+ BYTE   Bn3
+ BYTE   W24
+ BYTE   En4
+ BYTE   W24
+ BYTE   Gs4
+ BYTE   W24
+// 025   ----------------------------------------
+ BYTE   Bn4
+ BYTE   W24
+ BYTE   Gs4
+ BYTE   W24
+ BYTE   En4
+ BYTE   W24
+ BYTE   Bn4
+ BYTE   W24
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_3_013732E1
+// 026   ----------------------------------------
+LabelFightingOfTheSpirit_3_013733AD:
+ BYTE   N48  Cn4  v127
+ BYTE   W48
+ BYTE   Bn3
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_3_0137333C
+// 027   ----------------------------------------
+LabelFightingOfTheSpirit_3_013733B9:
+ BYTE   N48  Cn4  v127
+ BYTE   W48
+ BYTE   En4
+ BYTE   W48
+ BYTE   PEND 
+// 028   ----------------------------------------
+LabelFightingOfTheSpirit_3_013733C0:
+ BYTE   N48  Dn4  v127
+ BYTE   W48
+ BYTE   Bn3
+ BYTE   W48
+ BYTE   PEND 
+// 029   ----------------------------------------
+LabelFightingOfTheSpirit_3_013733C7:
+ BYTE   N48  Gn3  v127
+ BYTE   W48
+ BYTE   Bn3
+ BYTE   W48
+ BYTE   PEND 
+// 030   ----------------------------------------
+ BYTE   An3
+ BYTE   W48
+ BYTE   En3
+ BYTE   W48
+// 031   ----------------------------------------
+ BYTE   An3
+ BYTE   W48
+ BYTE   Cn4
+ BYTE   W48
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_3_013732E1
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_3_013733AD
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_3_0137333C
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_3_013733B9
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_3_013733C0
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_3_013733C7
+// 032   ----------------------------------------
+ BYTE   TIE  Cn4  v127
+ BYTE   W96
+// 033   ----------------------------------------
+ BYTE   W96
+// 034   ----------------------------------------
+ BYTE   EOT
+ BYTE   W96
+// 035   ----------------------------------------
+ BYTE   W96
+// 036   ----------------------------------------
+ BYTE   W96
+// 037   ----------------------------------------
+ BYTE   W96
+// 038   ----------------------------------------
+ BYTE   W96
+// 039   ----------------------------------------
+ BYTE   W96
+// 040   ----------------------------------------
+ BYTE   W96
+// 041   ----------------------------------------
+ BYTE   W96
+// 042   ----------------------------------------
+ BYTE   VOL   13*songFightingOfTheSpirit_mvl/mxv
+ BYTE   TIE  An2
+ BYTE   W96
+// 043   ----------------------------------------
+ BYTE   W48
+ BYTE   EOT
+ BYTE   N24  Cn3
+ BYTE   W24
+ BYTE   En3
+ BYTE   W24
+// 044   ----------------------------------------
+ BYTE   N96  Fn2
+ BYTE   W96
+// 045   ----------------------------------------
+ BYTE   N48  En3
+ BYTE   W48
+ BYTE   Dn3
+ BYTE   W48
+// 046   ----------------------------------------
+ BYTE   N96  Gn2
+ BYTE   W96
+// 047   ----------------------------------------
+ BYTE   N48  Cn3
+ BYTE   W48
+ BYTE   Dn3
+ BYTE   W48
+// 048   ----------------------------------------
+ BYTE   TIE  An2
+ BYTE   W96
+// 049   ----------------------------------------
+ BYTE   W12
+ BYTE   EOT
+ BYTE   N12  En3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   En3
+ BYTE   W12
+ BYTE   En4
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   En3
+ BYTE   W12
+// 050   ----------------------------------------
+ BYTE   GoTo
+  POIN2 LabelFightingOfTheSpirit_3_013732B6
+ BYTE   FINE
+
+//**************** Track 5 (Midi-Chn.4) ****************//
+
+songFightingOfTheSpirit_005:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songFightingOfTheSpirit_key+0
+LabelFightingOfTheSpirit_4_0137343A:
+ BYTE   VOICE   33
+ BYTE   VOL   7*songFightingOfTheSpirit_mvl/mxv
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   14*songFightingOfTheSpirit_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   14*songFightingOfTheSpirit_mvl/mxv
+ BYTE   N12  An1  v127
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   An1
+ BYTE   W24
+ BYTE   En1
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   An1
+ BYTE   W12
+// 001   ----------------------------------------
+LabelFightingOfTheSpirit_4_01373458:
+ BYTE   W12
+ BYTE   N12  Cn1  v127
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   An1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   PEND 
+// 002   ----------------------------------------
+LabelFightingOfTheSpirit_4_0137346A:
+ BYTE   N12  Fn1  v127
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   W24
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   PEND 
+// 003   ----------------------------------------
+LabelFightingOfTheSpirit_4_0137347B:
+ BYTE   W12
+ BYTE   N12  An0  v127
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   PEND 
+// 004   ----------------------------------------
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W24
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+// 005   ----------------------------------------
+LabelFightingOfTheSpirit_4_0137349B:
+ BYTE   W12
+ BYTE   N12  Bn0  v127
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   PEND 
+// 006   ----------------------------------------
+LabelFightingOfTheSpirit_4_013734AD:
+ BYTE   N12  An1  v127
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   An1
+ BYTE   W24
+ BYTE   En1
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   An1
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_01373458
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_013734AD
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_01373458
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_0137346A
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_0137347B
+// 007   ----------------------------------------
+LabelFightingOfTheSpirit_4_013734D7:
+ BYTE   N12  Gn1  v127
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W24
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_0137349B
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_013734AD
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_01373458
+// 008   ----------------------------------------
+LabelFightingOfTheSpirit_4_013734F7:
+ BYTE   N12  Fn1  v127
+ BYTE   W36
+ BYTE   N24
+ BYTE   W24
+ BYTE   N12  Cn1
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   PEND 
+// 009   ----------------------------------------
+LabelFightingOfTheSpirit_4_01373505:
+ BYTE   N12  Fn1  v127
+ BYTE   W12
+ BYTE   N12
+ BYTE   W24
+ BYTE   N24
+ BYTE   W24
+ BYTE   N12  Cn1
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   PEND 
+// 010   ----------------------------------------
+LabelFightingOfTheSpirit_4_01373515:
+ BYTE   N12  Gn1  v127
+ BYTE   W36
+ BYTE   N24
+ BYTE   W24
+ BYTE   N12  Dn1
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   PEND 
+// 011   ----------------------------------------
+LabelFightingOfTheSpirit_4_01373523:
+ BYTE   N12  Gn1  v127
+ BYTE   W12
+ BYTE   N12
+ BYTE   W24
+ BYTE   N24
+ BYTE   W24
+ BYTE   N12  Cn2
+ BYTE   W12
+ BYTE   An1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_01373505
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_01373505
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_01373515
+// 012   ----------------------------------------
+ BYTE   N12  Gn1  v127
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   Cn2
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   Bn1
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   An1
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_013734F7
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_01373505
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_01373515
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_01373523
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_01373505
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_01373505
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_01373515
+// 013   ----------------------------------------
+ BYTE   N12  Bn1  v127
+ BYTE   W36
+ BYTE   N24
+ BYTE   W24
+ BYTE   N12  Gn1
+ BYTE   W12
+ BYTE   Bn1
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_013734AD
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_01373458
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_0137346A
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_0137347B
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_013734D7
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_0137349B
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_013734AD
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_01373458
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_013734AD
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_01373458
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_0137346A
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_0137347B
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_013734D7
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_0137349B
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_013734AD
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_01373458
+// 014   ----------------------------------------
+LabelFightingOfTheSpirit_4_013735D4:
+ BYTE   N12  An1  v127
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   An1
+ BYTE   W24
+ BYTE   Gn1
+ BYTE   W24
+ BYTE   An1
+ BYTE   W12
+ BYTE   PEND 
+// 015   ----------------------------------------
+LabelFightingOfTheSpirit_4_013735E3:
+ BYTE   W12
+ BYTE   N12  An1  v127
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W24
+ BYTE   N36  An1
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_013735D4
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_013735E3
+// 016   ----------------------------------------
+LabelFightingOfTheSpirit_4_013735F8:
+ BYTE   N12  Gn1  v127
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W24
+ BYTE   Fn1
+ BYTE   W24
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   PEND 
+// 017   ----------------------------------------
+LabelFightingOfTheSpirit_4_01373607:
+ BYTE   W12
+ BYTE   N12  Gn1  v127
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   W24
+ BYTE   N36  Gn1
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_013735D4
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_013735E3
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_013735D4
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_013735E3
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_013735D4
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_013735E3
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_013735F8
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_01373607
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_4_013735D4
+// 018   ----------------------------------------
+ BYTE   W12
+ BYTE   N12  An1  v127
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W24
+ BYTE   N36  An1
+ BYTE   W36
+ BYTE   VOL   14*songFightingOfTheSpirit_mvl/mxv
+ BYTE   W12
+// 019   ----------------------------------------
+ BYTE   GoTo
+  POIN2 LabelFightingOfTheSpirit_4_0137343A
+ BYTE   FINE
+
+//**************** Track 6 (Midi-Chn.5) ****************//
+
+songFightingOfTheSpirit_006:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songFightingOfTheSpirit_key+0
+LabelFightingOfTheSpirit_5_01373656:
+ BYTE   VOICE   121
+ BYTE   VOL   14*songFightingOfTheSpirit_mvl/mxv
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   14*songFightingOfTheSpirit_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   14*songFightingOfTheSpirit_mvl/mxv
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   14*songFightingOfTheSpirit_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   14*songFightingOfTheSpirit_mvl/mxv
+ BYTE   N06  Bn0  v127
+ BYTE   N06  An2
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   As1
+ BYTE   W12
+// 001   ----------------------------------------
+LabelFightingOfTheSpirit_5_0137368A:
+ BYTE   N06  Bn0  v127
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   As1
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_0137368A
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_0137368A
+// 002   ----------------------------------------
+LabelFightingOfTheSpirit_5_013736B1:
+ BYTE   N06  Bn0  v127
+ BYTE   N06  An2
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   As1
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_0137368A
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_0137368A
+// 003   ----------------------------------------
+ BYTE   N06  Bn0  v127
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   N06  As1
+ BYTE   W12
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_013736B1
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_0137368A
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_0137368A
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_0137368A
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_0137368A
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_0137368A
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_0137368A
+// 004   ----------------------------------------
+ BYTE   N06  Bn0  v127
+ BYTE   N06  Gn2
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Gn2
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Cn2
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   An1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+// 005   ----------------------------------------
+LabelFightingOfTheSpirit_5_01373739:
+ BYTE   N06  Bn0  v127
+ BYTE   N06  An2
+ BYTE   W24
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W24
+ BYTE   Dn1
+ BYTE   N06  Ds2
+ BYTE   W24
+ BYTE   PEND 
+// 006   ----------------------------------------
+LabelFightingOfTheSpirit_5_0137374A:
+ BYTE   N06  Bn0  v127
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W24
+ BYTE   Dn1
+ BYTE   N06  Ds2
+ BYTE   W24
+ BYTE   PEND 
+// 007   ----------------------------------------
+LabelFightingOfTheSpirit_5_0137375D:
+ BYTE   N06  Bn0  v127
+ BYTE   N06  Ds2
+ BYTE   W24
+ BYTE   N06
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W24
+ BYTE   Dn1
+ BYTE   N06  Ds2
+ BYTE   W24
+ BYTE   PEND 
+// 008   ----------------------------------------
+LabelFightingOfTheSpirit_5_0137376E:
+ BYTE   N06  Bn0  v127
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W24
+ BYTE   Dn1
+ BYTE   N06  Ds2
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   N06  Dn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   N06  Dn1
+ BYTE   W06
+ BYTE   PEND 
+// 009   ----------------------------------------
+ BYTE   Bn0
+ BYTE   N06  An2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W24
+ BYTE   Dn1
+ BYTE   N06  Ds2
+ BYTE   W24
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_0137374A
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_0137375D
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_0137376E
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_01373739
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_0137374A
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_0137375D
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_0137376E
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_01373739
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_0137374A
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_0137375D
+// 010   ----------------------------------------
+ BYTE   N06  Bn0  v127
+ BYTE   N06  An2
+ BYTE   W12
+ BYTE   Gn0
+ BYTE   W12
+ BYTE   N06
+ BYTE   N06  An2
+ BYTE   W12
+ BYTE   Gn0
+ BYTE   W12
+ BYTE   Cn2
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   An1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+// 011   ----------------------------------------
+LabelFightingOfTheSpirit_5_013737EB:
+ BYTE   N06  Bn0  v127
+ BYTE   N06  An2
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   N06  Ds2
+ BYTE   W24
+ BYTE   Fs1
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Gn0
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   PEND 
+// 012   ----------------------------------------
+LabelFightingOfTheSpirit_5_01373808:
+ BYTE   N06  Fs1  v127
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   N06
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   PEND 
+// 013   ----------------------------------------
+LabelFightingOfTheSpirit_5_01373827:
+ BYTE   N06  As1  v127
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   PEND 
+// 014   ----------------------------------------
+LabelFightingOfTheSpirit_5_01373846:
+ BYTE   N06  Bn0  v127
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   N06
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   PEND 
+// 015   ----------------------------------------
+LabelFightingOfTheSpirit_5_01373869:
+ BYTE   N06  Bn0  v127
+ BYTE   N06  As1
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   N06  Ds2
+ BYTE   W24
+ BYTE   Fs1
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   PEND 
+// 016   ----------------------------------------
+LabelFightingOfTheSpirit_5_01373886:
+ BYTE   N06  Fs1  v127
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   N06
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   PEND 
+// 017   ----------------------------------------
+LabelFightingOfTheSpirit_5_013738A3:
+ BYTE   N06  Bn0  v127
+ BYTE   N06  As1
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   N06  Ds2
+ BYTE   W24
+ BYTE   Fs1
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   PEND 
+// 018   ----------------------------------------
+LabelFightingOfTheSpirit_5_013738BE:
+ BYTE   N06  Bn0  v127
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   Gn0
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Gn0
+ BYTE   N06  As1
+ BYTE   W12
+ BYTE   Cn2
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   An1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_013737EB
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_01373808
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_01373827
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_01373846
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_01373869
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_01373886
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_013738A3
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_013738BE
+// 019   ----------------------------------------
+LabelFightingOfTheSpirit_5_01373907:
+ BYTE   N06  Bn0  v127
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_01373907
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_01373907
+// 020   ----------------------------------------
+LabelFightingOfTheSpirit_5_01373924:
+ BYTE   N06  Bn0  v127
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Gn0
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_01373907
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_01373907
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_01373907
+// 021   ----------------------------------------
+ BYTE   N06  Bn0  v127
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Gn0
+ BYTE   N06  Bn0
+ BYTE   W12
+ BYTE   Gn0
+ BYTE   W12
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_01373907
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_01373907
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_01373907
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_01373924
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_01373907
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_01373907
+ BYTE   PATT
+  POIN2 LabelFightingOfTheSpirit_5_01373907
+// 022   ----------------------------------------
+ BYTE   N06  Gn0  v127
+ BYTE   N06  An2
+ BYTE   W24
+ BYTE   Gn0
+ BYTE   W06
+ BYTE   N06
+ BYTE   W18
+ BYTE   Cn2
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   An1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+// 023   ----------------------------------------
+ BYTE   GoTo
+  POIN2 LabelFightingOfTheSpirit_5_01373656
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+songFightingOfTheSpirit:
+	BYTE	6	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	songFightingOfTheSpirit_pri	// Priority
+	BYTE	songFightingOfTheSpirit_rev	// Reverb.
+    
+	POIN2	songFightingOfTheSpirit_grp
+    
+	POIN2	songFightingOfTheSpirit_001
+	POIN2	songFightingOfTheSpirit_002
+	POIN2	songFightingOfTheSpirit_003
+	POIN2	songFightingOfTheSpirit_004
+	POIN2	songFightingOfTheSpirit_005
+	POIN2	songFightingOfTheSpirit_006
+
+	

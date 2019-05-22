@@ -109,6 +109,15 @@
 	{
 	#include "Military/Military 7 Pass Altia.event"
 	}
+	{
+	#include "Military/Military 2 Accept.event"
+	}
+	{
+	#include "Military/Military 3 Accept.event"
+	}
+	{
+	#include "Military/Military 4 Accept.event"
+	}
 	#include "Military/Narrator Fight.event"
 #endif
 #ifndef __NO_MAGE__
