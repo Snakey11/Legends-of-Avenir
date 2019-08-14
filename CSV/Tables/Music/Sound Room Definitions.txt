@@ -1,0 +1,69 @@
+0x00 The Valiant
+0x01 Main Theme
+0x02 Prologue
+0x03 The Beginning
+0x04 Treasured Memories
+0x05 Grim Journey
+0x06 Ties of Friendship
+0x07 Ray of Hope
+0x08 Distant Roads
+0x09 Rise Above
+0x0A Follow Me!
+0x0B Determination
+0x0C Truth Despair and Hope
+0x0D Land of Promise
+0x0E Binding Vow
+0x0F Grasp at Victory
+0x10 Confront the Past
+0x11 Shadows Approach
+0x12 Shadow of the Enemy
+0x13 Assault
+0x14 From the Darkness
+0x15 Twisted Shadows A
+0x16 Twisted Shadows B
+0x17 Envoy from the Dark
+0x18 Attack
+0x19 Defense
+0x1A The Battle Must Be Won
+0x1B Powerful Foe
+0x1C The Prince's Despair 
+0x1D Return of the Demon King
+0x1E Sacred Strength
+0x1F Tethys
+0x20 Healing
+0x21 Curing
+0x22 To a Higher Place
+0x23 Advance
+0x24 Tension
+0x25 Raid!
+0x26 Reunion
+0x27 Indignation
+0x28 Sorrow
+0x29 Laughter
+0x2A Legacy
+0x2B Lyon
+0x2C Lost Heart
+0x2D Lyon (Organ Arrangement)
+0x2E The Final Battle
+0x2F Solve the Riddle
+0x30 Lights in the Dark
+0x31 Comrades
+0x32 Victory
+0x33 Into the Shadow of Victory
+0x34 Main Theme (Reprise)
+0x35 Combat Preparation
+0x36 Shops
+0x37 Armories
+0x38 Bonds
+0x39 Colosseum Entrance
+0x3A In the Colosseum
+0x3B Colosseum Victory
+0x3C Colosseum Defeat
+0x3D Victory Song A
+0x3E Victory Song B 
+0x3F Game Over
+0x40 In Sorrow's Shroud
+0x41 Records
+0x42 Victory and the Future
+0x43 Fly with the Breeze
+0x44 Epilogue

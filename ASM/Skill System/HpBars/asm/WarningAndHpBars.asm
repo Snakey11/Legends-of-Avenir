@@ -245,6 +245,8 @@ mov		r0,#2
 orr		r7,r0
 
 TalkEventCheck:
+mov r0, #0x01
+mov r11, r0
 ldr		r0,[r6]
 ldrb	r0,[r0,#4]				@active unit's char id
 ldr		r1,[r4]
@@ -252,6 +254,8 @@ ldrb	r1,[r1,#4]				@current unit's char id
 ldr		r2,=Talk_Check
 mov		r14,r2
 .short	0xF800
+mov r1, #0x00
+mov r11, r1
 cmp		r0,#0
 beq		WriteToCache
 mov		r0,#4

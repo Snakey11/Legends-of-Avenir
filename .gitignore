@@ -1,21 +1,18 @@
-ups/
 *.sav
 *.sgm
 *.gba
-*.exe
-*.bat
 *.sym
 *.wav
+*.ups
+*.SNA
 UPDATE.cmd
 !EA Avenir/*.exe
-*.txt
 !ParseDefinitions.txt
 !EA Avenr/*txt
 !Table Definitions.txt
 CSV/Nightmare/
 CSV/Tables/*.event
 CSV/Tables/**/*.event
-*.ups
 CG List.png
 Animation Assembler/
 CSA Creator/
@@ -36,4 +33,3 @@ Battle Palettes/*.png
 Spells/Spells/**/*.png
 FE8 Template.event
 Testing.event
-.SNA

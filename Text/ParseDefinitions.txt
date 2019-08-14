@@ -13,7 +13,9 @@
 [Smile] = [ToggleSmile]
 [ColorInvert] = [ToggleColorInvert]
 [SendBack] = [SendToBack]
-[Pause] = [LoadOverworldFaces]
+
+[ConversationText] = [0x90]
+[BattleText] = [0x91]
 
 [LoadCurrent] = [LoadFace][0xFF][0xFF]
 [LoadPlayer] = [LoadFace][0xE0][0xE0]
@@ -88,9 +90,11 @@
 [LoadZaheva] = [LoadFace][0xE5][0x01]
 [LoadGerald] = [LoadFace][0x29][0x01]
 [LoadMadeline] = [LoadFace][0xE6][0x01]
+[LoadMadeleine] = [LoadFace][0xE6][0x01]
 [LoadRemus] = [LoadFace][0xE7][0x01]
 [LoadSean] = [LoadFace][0x34][0x01]
 [LoadBlaine] = [LoadFace][0xE8][0x01]
+[LoadHalleck] = [LoadFace][0x20][0x01]
 
 [LoadGuildsman] = [LoadFace][0x51][0x01]
 [LoadBandit1] = [LoadFace][0x4C][0x01]
