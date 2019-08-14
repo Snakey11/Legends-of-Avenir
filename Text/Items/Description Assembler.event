@@ -13,8 +13,12 @@ Effective against lancefighters.[X]
 ## AxeslayerDescText
 Effective against axefighters.[X]
 
-## SlimeDescText
-Poisons the enemy.[X]
+## SpiritDustDescText
+Increases Mag by[NL]
+2 points. Vanishes after use.[X]
+
+## SpiritDustUseText
+Raises magic.[X]
 
 ## FireDescText
 Deals additional damage to cavalry.[X]

@@ -1,4 +1,7 @@
 
+# 0x0002 textWeaponRankIncreasedTo
+ Weapon rank increased to [X]
+
 # 0x0310 GeneralDescText
 Knights of great skill.[NL]
 Equip: Swords, lances, axes.[X]
@@ -39,3 +42,10 @@ their reliability. Equip: Lances.[X]
 An experienced wizard with[NL]
 a weapon beyond comparison.[NL]
 Equip: Dark, staves.[X]
+
+# 0x0484
+Increases Str by[.][NL]
+2 points. Vanishes after use.[.][X]
+
+# 0x04C2
+Raises strength.[.][X]

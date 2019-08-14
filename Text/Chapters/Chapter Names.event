@@ -110,3 +110,9 @@ Prologue[X]
 
 ## Military3AcceptNameText
 3: Under Assault[X]
+
+## Military4AcceptRetreatNameText
+4: The Dragon Brigade[X]
+
+## Military5AcceptRetreatLeaveNameText
+5: Leaving Cesaria[X]

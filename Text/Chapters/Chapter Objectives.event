@@ -141,8 +141,15 @@ Navigate the temple[NL]
 and defeat Uzkalis.[X]
 
 ## Military2AcceptStatusText
-Defeat Gerald[X]
+Defeat Gerald.[X]
 
 ## Military3AcceptStatusText
 Defeat Sean or[NL]
 retreat to the west.[X]
+
+## Military4AcceptRetreatStatusText
+Eradicate all[NL]
+Shizonians.[X]
+
+## Military5AcceptRetreatLeaveStatusText
+Defeat Halleck[X]

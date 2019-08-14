@@ -9,6 +9,17 @@ HP Bars[.][X]
 # 0x00B2
 Set health bar display[X]
 
+## StairsNameText
+ Stairs[X]
+
+## StairsDescText
+Take this staircase to[NL]
+the connecting end.[X]
+
+## StairsBlockedText
+The staircase is blocked[NL]
+from the other side.[X]
+
 # 0x903 RaidNameText
  Raid[X]
 
@@ -48,6 +59,9 @@ promote to a new class.[X]
 
 ## BaseSupportSelectConvoText
 Select a conversation.[X]
+
+## Mov_Text_ID
+Mov[X]
 
 ## PrepScreenSupportDescText
 View support[NL]

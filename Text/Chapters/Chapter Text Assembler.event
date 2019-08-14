@@ -57,6 +57,8 @@
 #include "Mercenary/Mercenary 7 Bandit Disband.event"
 
 
+#include "Military/Pass Supports.event"
+
 #include "Military/Military 1.event"
 
 #include "Military/Military 2 Pass.event"
@@ -81,4 +83,10 @@
 
 #include "Military/Military 3 Accept.event"
 
-#include "Military/Military 4 Accept.event"
+#include "Military/Military 4 Accept Retreat.event"
+
+#include "Military/Military 5 Accept Retreat Leave.event"
+
+#include "Military/Military 6 Accept Retreat Leave.event"
+
+#include "Military/Military 7 Accept Retreat Leave.event"

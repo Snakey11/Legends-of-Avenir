@@ -110,6 +110,9 @@ Tempest[X]
 ## HailNameText
 Hail[X]
 
+## PoisonLanceNameText
+Poison Lance[X]
+
 ## ToxinSwordNameText
 Toxin Sword[X]
 
@@ -121,3 +124,6 @@ Toxin Axe[X]
 
 ## ToxinBowNameText
 Toxin Bow[X]
+
+## SpiritDustNameText
+Spirit Dust[X]
