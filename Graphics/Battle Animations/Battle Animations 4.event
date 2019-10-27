@@ -29,6 +29,8 @@
 #include "Wil Sniper Unarmed.event"
 
 
+#include "Battle Sage Sword.event"
+
 #include "Battle Sage Magic.event"
 
 
@@ -131,6 +133,8 @@
 
 #include "Warlock Hand Axe.event"
 
+#include "Warlock Staff.event"
+
 #include "Warlock Unarmed.event"
 
 
@@ -146,3 +150,19 @@
 #include "Paladin Lance.event"
 
 #include "Paladin Unarmed.event"
+
+
+#include "Hero F Sword.event"
+
+#include "Hero F Axe.event"
+
+#include "Hero F Hand Axe.event"
+
+#include "Hero F Unarmed.event"
+
+
+#include "Battle Sage F Sword.event"
+
+#include "Battle Sage F Magic.event"
+
+#include "Battle Sage F Staff.event"

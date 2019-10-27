@@ -1,0 +1,368 @@
+
+EventPointerTable(Military6AcceptRetreatLeaveEvents,ThisChapter)
+
+//Label ThisChapter
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN EndMainPointer EndMainPointer EndMainPointer
+POIN EndMainPointer
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+//LabelEnd
+
+//Label TurnBasedEvents
+TurnBasedEvents:
+TurnEventPlayer(0x00,Turn1,1)
+InfiniteTurnEventPlayer(0x14,StairHelp1,1)
+InfiniteTurnEventPlayer(0x15,StairHelp2,1)
+InfiniteTurnEventPlayer(0x16,StairHelp3,1)
+InfiniteTurnEventPlayer(0x17,StairHelp4,1)
+END_MAIN
+
+//Label CharacterBasedEvents
+ALIGN 32
+CharacterBasedEvents:
+CHAR 0x00 EndingScene [PlayerMCavalier,Xylia] 0x00
+CHAR 0x00 EndingScene [PlayerMKnight,Xylia] 0x00
+CHAR 0x00 EndingScene [PlayerMSoldier,Xylia] 0x00
+CHAR 0x00 EndingScene [PlayerMArcher,Xylia] 0x00
+CHAR 0x00 EndingScene [PlayerMWyvernRider,Xylia] 0x00
+CHAR 0x00 EndingScene [PlayerFCavalier,Xylia] 0x00
+CHAR 0x00 EndingScene [PlayerFKnight,Xylia] 0x00
+CHAR 0x00 EndingScene [PlayerFSoldier,Xylia] 0x00
+CHAR 0x00 EndingScene [PlayerFArcher,Xylia] 0x00
+CHAR 0x00 EndingScene [PlayerFWyvernRider,Xylia] 0x00
+SupportConvo(ASupport,0xFF,Derek,Military6AcceptRetreatLeaveTactDerekSupportText)
+SupportConvo(ASupport,0xFF,Jasper,Military6AcceptRetreatLeaveTactJasperSupportText)
+END_MAIN
+
+//Label LocationBasedEvents
+LocationBasedEvents:
+Stairs(0x00,27,27,32,18)
+Stairs(0x01,22,27,15,23)
+Stairs(0x02,27,16,32,7)
+Stairs(0x03,14,19,18,8)
+Stairs(0x04,28,0,11,1)
+Stairs(0x05,2,13,7,22)
+Chest(SilverLance,26,17)
+Chest(BraveAxe,30,4)
+END_MAIN
+
+//Label MiscBasedEvents
+MiscBasedEvents:
+AREA 0x10 StairHelpTrigger1 [13,18] [17,24]
+AREA 0x11 StairHelpTrigger2 [25,15] [33,18]
+AREA 0x12 StairHelpTrigger3 [16,0] [33,9]
+AREA 0x13 StairHelpTrigger4 [0,0] [11,14]
+CauseGameOverIfLordDies
+END_MAIN
+
+//Label TrapData
+TrapData:
+ENDTRAP
+ALIGN 4
+
+//Label Units
+Units:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [23,26] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [25,26] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Jasper 0x00 0x00 Level(1,Ally,True) [24,27] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [26,27] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Madeleine 0x00 0x00 Level(1,Ally,True) [25,28] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Remus 0x00 0x00 Level(1,Ally,True) [23,28] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Yvette 0x00 0x00 Level(1,Ally,True) [24,29] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
+
+//Label BeginingScene
+BeginningScene:
+CAM1 [25,25]
+LOAD1 0x1 Meanies
+LOAD1 0x1 Meanies2
+ENUN
+MUSC Kakariko_Village
+SetBackground(0x30)
+Text(Military6AcceptRetreatLeaveStartText)
+FADI 0x05
+STAL 0x04
+FADU 0x05
+Text(Military6AcceptRetreatLeaveInsideText)
+MUSC Wild_Fields
+SetBackground(0x2A)
+Text(Military6AcceptRetreatLeaveZahevaText)
+EndConvo
+MUSC Bloodpool
+STAL 0x10
+LOAD3 0x1 PlayerLoading1
+LOAD2 0x1 Friends
+ENUN
+STAL 0x40
+Text(Military6AcceptRetreatLeaveHereText)
+STAL 0x10
+CAM1 [7,25]
+STAL 0x10
+FlashCursor(Xylia,60)
+STAL 0x10
+Text(Military6AcceptRetreatLeaveXyliaText)
+GotoPrepScreen
+
+//Label EndingScene
+EndingScene:
+FADI 0x05
+CLEA 0x0
+CLEE 0x0
+CLEN 0x0
+LOAD1 0x1 LoadXylia
+ENUN
+CLEA 0x0
+MUSC Derris_Kharlan_Appear
+SetBackground(0x0A)
+Text(Military6AcceptRetreatLeaveReachText)
+MUSC A_Tragic_Decision
+SetBackground(0x27)
+Text(Military6AcceptRetreatLeaveReachZahevaText)
+MUSC Twinrova
+SetBackground(0x2A)
+Text(Military6AcceptRetreatLeaveReachMadeleineText)
+MoveToChapter(MilitaryAcceptRetreatLeave7)
+ENDA
+
+//Label TurnEvents
+Turn1:
+CAM1 [24,25]
+STAL 0x20
+SVAL 0xB Coords(30,50)
+TUTORIALTEXTBOXSTART
+TEXTSHOW Military6AcceptRetreatLeaveHelp1Text
+TEXTEND
+STAL 0x10
+
+CAM1 [18,25]
+STAL 0x10
+CUMO [22,27] // Cursors on stairs.
+CUMO [15,23]
+STAL 0x60
+CURE
+
+STAL 0x30
+
+CAM1 [33,23]
+STAL 0x10
+CUMO [27,27]
+CUMO [32,18]
+STAL 0x60
+CURE
+
+STAL 0x30
+CAM1 [24,26]
+
+NoFade
+EndA2
+
+StairHelp1:
+CHECK_EVENTID 0x10
+BEQ 0x0 0x0 0xC
+	CAM1 [14,19]
+	STAL 0x20
+	SVAL 0xB Coords(30,50)
+	TUTORIALTEXTBOXSTART
+	TEXTSHOW Military6AcceptRetreatLeaveHelp2Text
+	TEXTEND
+	STAL 0x10
+	CUMO [14,19]
+	STAL 0x60
+	CURE
+	STAL 0x10
+	CAM1 [18,18]
+	STAL 0x10
+	CUMO [18,8]
+	STAL 0x60
+	CURE
+	GOTO 0x1
+LABEL 0x0
+	ENUF 0x14
+LABEL 0x1
+NoFade
+EndA2
+
+StairHelp2:
+CHECK_EVENTID 0x11
+BEQ 0x0 0x0 0xC
+	CAM1 [29,12]
+	STAL 0x20
+	SVAL 0xB Coords(30,50)
+	TUTORIALTEXTBOXSTART
+	TEXTSHOW Military6AcceptRetreatLeaveHelp2Text
+	TEXTEND
+	STAL 0x10
+	CUMO [27,16]
+	CUMO [32,7]
+	STAL 0x60
+	CURE
+	GOTO 0x1
+LABEL 0x0
+	ENUF 0x15
+LABEL 0x1
+NoFade
+EndA2
+
+StairHelp3:
+CHECK_EVENTID 0x12
+BEQ 0x0 0x0 0xC
+	CAM1 [28,3]
+	STAL 0x20
+	SVAL 0xB Coords(30,50)
+	TUTORIALTEXTBOXSTART
+	TEXTSHOW Military6AcceptRetreatLeaveHelp2Text
+	TEXTEND
+	STAL 0x10
+	CUMO [27,0]
+	STAL 0x60
+	CURE
+	STAL 0x08
+	CAM1 [11,1]
+	STAL 0x10
+	CUMO [11,1]
+	STAL 0x60
+	CURE
+	GOTO 0x1
+LABEL 0x0
+	ENUF 0x16
+LABEL 0x1
+NoFade
+EndA2
+
+StairHelp4:
+CHECK_EVENTID 0x13
+BEQ 0x0 0x0 0xC
+	CAM1 [5,19]
+	STAL 0x20
+	SVAL 0xB Coords(30,50)
+	TUTORIALTEXTBOXSTART
+	TEXTSHOW Military6AcceptRetreatLeaveHelp2Text
+	TEXTEND
+	STAL 0x10
+	CUMO [2,13]
+	CUMO [7,22]
+	STAL 0x60
+	CURE
+	GOTO 0x1
+LABEL 0x0
+	ENUF 0x17
+LABEL 0x1
+NoFade
+ENDA
+
+//Label Area events
+StairHelpTrigger1: // There's probably a more intelligent way to do these but eh. Maybe if there were more than 4 to worry about.
+CHECK_ALLEGIANCE 0xFFFF
+BEQ 0x0 0x0 0xC
+	ENUF 0x10 // Unset event ID if not a player.
+LABEL 0x0
+NoFade
+EndA2
+
+StairHelpTrigger2:
+CHECK_ALLEGIANCE 0xFFFF
+BEQ 0x0 0x0 0xC
+	ENUF 0x11
+LABEL 0x0
+NoFade
+EndA2
+
+StairHelpTrigger3:
+CHECK_ALLEGIANCE 0xFFFF
+BEQ 0x0 0x0 0xC
+	ENUF 0x12
+LABEL 0x0
+NoFade
+EndA2
+
+StairHelpTrigger4:
+CHECK_ALLEGIANCE 0xFFFF
+BEQ 0x0 0x0 0xC
+	ENUF 0x13
+LABEL 0x0
+NoFade
+ENDA
+
+	/*UNIT DATA*/
+
+//Label PlayerLoading
+PlayerLoading1:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [24,29] 0x00 0x00 0x01 REDA24R26 [0] NoAI
+EndUnit
+	
+//Label Friends
+Friends:
+UNIT Remus 0x00 0x00 Level(1,Ally,True) [23,29] 0x00 0x00 0x01 REDA23R27 [0] NoAI
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [25,29] 0x00 0x00 0x01 REDA25R27 [0] NoAI
+UNIT Madeleine 0x00 0x00 Level(1,Ally,True) [24,29] 0x00 0x00 0x01 REDA24R28 [0] NoAI
+EndUnit
+
+//Label Guardians
+Meanies:
+UNIT Xylia HolySage Xylia Level(12,NPC,True) [0,29] 0x00 0x00 0x00 0x00 [Thani] GuardAI
+
+UNIT Guardian General Xylia Level(6,Enemy,True) [16,21] Drop 0x00 0x00 0x00 [SteelLance,Zanbato] NoAI
+UNIT Guardian Warrior Xylia Level(4,Enemy,True) [14,22] 0x00 0x00 0x00 0x00 [Hammer] NoAI
+UNIT Guardian Sniper Xylia Level(5,Enemy,True) [16,19] 0x00 0x00 0x00 0x00 [SteelShortbow] NoAI
+UNIT Guardian Monk Xylia Level(16,Enemy,True) [13,20] 0x00 0x00 0x00 0x00 [Divine] NoAI
+UNIT Guardian Mercenary Xylia Level(17,Enemy,True) [15,18] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI
+
+UNIT Guardian Hero Xylia Level(2,Enemy,True) [33,15] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
+UNIT Guardian Knight Xylia Level(17,Enemy,True) [31,17] 0x00 0x00 0x00 0x00 [IronLance] NoAI
+UNIT Guardian Sage Xylia Level(2,Enemy,True) [30,16] Drop 0x00 0x00 0x00 [Elthunder,ChestKey] NoAI
+UNIT Guardian Fighter Xylia Level(18,Enemy,True) [29,18] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT Guardian Myrmidon Xylia Level(17,Enemy,True) [29,15] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT Guardian Sniper Xylia Level(5,Enemy,True) [26,16] 0x00 0x00 0x00 0x00 [SteelBow] NoAI
+UNIT Guardian Soldier Xylia Level(18,Enemy,True) [26,18] 0x00 0x00 0x00 0x00 [PoisonLance] NoAI
+
+UNIT Guardian General Xylia Level(7,Enemy,True) [30,6] 0x00 0x00 0x00 0x00 [SilverAxe] GuardAI
+UNIT Guardian Halberdier Xylia Level(5,Enemy,True) [28,7] Drop 0x00 0x00 0x00 [SteelLance,ChestKey] AttackInRangeAI
+UNIT Guardian Mage Xylia Level(16,Enemy,True) [28,4] 0x00 0x00 0x00 0x00 [Fire] AttackInRangeAI
+UNIT Guardian Sentinel Xylia Level(4,Enemy,True) [27,2] 0x00 0x00 0x00 0x00 [BraveSword] AttackInRangeAI
+UNIT Guardian Soldier Xylia Level(15,Enemy,True) [18,6] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT Guardian Myrmidon Xylia Level(17,Enemy,True) [22,7] 0x00 0x00 0x00 0x00 [ToxinSword] AttackInRangeAI
+UNIT Guardian Sage Xylia Level(4,Enemy,True) [20,5] 0x00 0x00 0x00 0x00 [Arcaqua] [0x0C,0x03,0x00,0x00] // AttackInRangeAI except with half range.
+UNIT Guardian GreatKnight Xylia Level(3,Enemy,True) [17,4] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
+UNIT Guardian Cavalier Xylia Level(17,Enemy,True) [24,4] 0x00 0x00 0x00 0x00 [Wyrmslayer] NoAI
+UNIT Guardian Cavalier Xylia Level(17,Enemy,True) [27,0] 0x00 0x00 0x00 0x00 [HeavySpear] NoAI
+UNIT
+
+Meanies2:
+UNIT Guardian Bishop Xylia Level(10,Enemy,True) [4,4] 0x00 0x00 0x00 0x00 [Aura,Physic] GuardAI
+UNIT Guardian Sentinel Xylia Level(8,Enemy,True) [9,1] 0x00 0x00 0x00 0x00 [ShortAxe,SteelLance] NoAI
+UNIT Guardian Knight Xylia Level(19,Enemy,True) [7,0] 0x00 0x00 0x00 0x00 [KillerAxe] GuardAI
+UNIT Guardian Hero Xylia Level(5,Enemy,True) [4,1] 0x00 0x00 0x00 0x00 [SteelSword,SteelAxe] NoAI
+UNIT Guardian Shaman Xylia Level(15,Enemy,True) [1,2] 0x00 0x00 0x00 0x00 [Slime] AttackInRangeAI
+UNIT Guardian Swordmaster Xylia Level(4,Enemy,True) [3,3] 0x00 0x00 0x00 0x00 [PoisonSword] NoAI
+UNIT Guardian Halberdier Xylia Level(3,Enemy,True) [0,6] 0x00 0x00 0x00 0x00 [Horseslayer] AttackInRangeAI
+UNIT Guardian Berserker Xylia Level(5,Enemy,True) [4,9] 0x00 0x00 0x00 0x00 [BattleAxe] AttackInRangeAI
+UNIT Guardian Cavalier Xylia Level(15,Enemy,True) [0,13] 0x00 0x00 0x00 0x00 [ShortSpear] ChaseOnceApproachedAI
+UNIT Guardian Cavalier Xylia Level(16,Enemy,True) [4,13] 0x00 0x00 0x00 0x00 [IronBlade] ChaseOnceApproachedAI
+UNIT Guardian Warrior Xylia Level(5,Enemy,True) [1,10] 0x00 0x00 0x00 0x00 [IronAxe,SteelBow] NoAI
+UNIT Guardian Sage Xylia Level(3,Enemy,True) [3,12] 0x00 0x00 0x00 0x00 [Elthunder] AttackInRangeAI
+
+UNIT Guardian Sentinel Xylia Level(7,Enemy,True) [1,26] 0x00 0x00 0x00 0x00 [SilverAxe] [0x07,0x03,0x00,0x00] // Do not attack Xylia and stand still.
+UNIT Guardian Sentinel Xylia Level(8,Enemy,True) [2,27] 0x00 0x00 0x00 0x00 [SilverSword] [0x07,0x03,0x00,0x00]
+UNIT Guardian Sentinel Xylia Level(7,Enemy,True) [3,28] 0x00 0x00 0x00 0x00 [SilverLance] [0x07,0x03,0x00,0x00]
+UNIT Guardian Druid Xylia Level(3,Enemy,True) [6,29] 0x00 0x00 0x00 0x00 [Dasher] [0x07,0x03,0x00,0x00]
+UNIT Guardian Mercenary Xylia Level(19,Enemy,True) [8,27] 0x00 0x00 0x00 0x00 [SteelSword] [0x07,0x03,0x00,0x00]
+UNIT Guardian Hero Xylia Level(5,Enemy,True) [4,26] 0x00 0x00 0x00 0x00 [SteelBlade] [0x07,0x03,0x00,0x00]
+UNIT Guardian General Xylia Level(6,Enemy,True) [6,25] 0x00 0x00 0x00 0x00 [BraveLance] GuardAI
+UNIT Guardian Berserker Xylia Level(5,Enemy,True) [8,24] 0x00 0x00 0x00 0x00 [SteelAxe] [0x07,0x03,0x00,0x00]
+EndUnit
+
+LoadXylia:
+UNIT Xylia HolySage 0x00 Level(11,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [Aura] NoAI
+UNIT
+
+PUSH
+ORG $5A8A00
+BYTE Xylia // Set AI 2 0x7 to not attack Xylia.
+POP

@@ -3750,7 +3750,7 @@ Label_10_0100D8CA:
 @******************************************************@
 	.align	2
 
-DerrisKharlanAppear:
+songDerrisKharlanAppear:
 	.byte	11	@ NumTrks
 	.byte	0	@ NumBlks
 	.byte	DerrisKharlanAppear_pri	@ Priority

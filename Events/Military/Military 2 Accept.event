@@ -23,6 +23,7 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
+SupportConvo(BSupport,Jasper,Derek,Military2AcceptDerekJasperSupportText)
 END_MAIN
 
 //Label LocationBasedEvents
@@ -52,16 +53,16 @@ LOAD1 0x1 Arcanians
 LOAD3 0x1 PlayerLoading1
 LOAD2 0x1 Friends
 ENUN
-MUSC Rest_of_the_Heart
+MUSC Snow_Battle
 SetBackground(0x12)
 Text(Military2AcceptBeginningText)
+FadeOutMusic
 FADI 0x5
-MUSI
 STAL 0x60
-MUNO
+MUSC Wild_Fields
 SetBackground(0x18)
 Text(Military2AcceptTravelText)
-MUSC Advance
+MUSC Stage_One_Conquest
 SetBackground(0x1B)
 Text(Military2AcceptJurgenText)
 FADI 0x5
@@ -90,7 +91,7 @@ STAL 0x10
 FlashCursor(11,8,60)
 Text(Military2AcceptZahevaPlanText)
 STAL 0x08
-MUSC Advance
+MUSC The_Devoted
 CAM1 [7,12]
 STAL 0x10
 Text(Military2AcceptFriendsHereText)
@@ -100,19 +101,19 @@ ENDA
 //Label EndingScene
 EndingScene:
 FADI 0x5
-MUSC Victory
 CLEA 0x0
 CLEE 0x0
 CHECK_EXISTS Zaheva
 BNE 0x0 0x0 0xC
 	// If Zaheva was never recruited
+	MUSC Tension
 	LOAD1 0x1 EndingZaheva // Add Zaheva to the party
 	ENUN
 	SetBackground(0x18)
 	TEXTSTART
 	TEXTSHOW Military2AcceptZahevaNotRecruitedText
 	TEXTEND
-	MUSC Comrades
+	MUSC With_Us
 	TEXTCONT
 	TEXTEND
 	MUSC Victory
@@ -121,6 +122,7 @@ BNE 0x0 0x0 0xC
 	REMA
 	GOTO 0x1
 LABEL 0x0
+	MUSC Victorys_Delight
 	SetBackground(0x18)
 	CHECK_ALIVE Zaheva
 	BEQ 0x2 0x0 0xC
@@ -134,9 +136,10 @@ LABEL 0x0
 		Text(Military2AcceptEndingZahevaDeadText)
 LABEL 0x1
 GiveToSupplySilent(SteelSword)
-GiveToSupplySilent(PoisonLance)
+GiveToSupplySilent(IronLance)
 GiveToSupplySilent(SteelLance)
 GiveToSupplySilent(HandAxe)
+GiveToSupplySilent(SteelBow)
 MoveToChapter(MilitaryAccept3)
 NoFade
 ENDA
@@ -149,7 +152,7 @@ BEQ 0x0 0x0 0xC
 	TEXTSTART
 	TEXTSHOW Military2AcceptRecruitZahevaText
 	TEXTEND
-	MUSS Comrades
+	MUSS With_Us
 	MUNO
 	TEXTCONT
 	TEXTEND

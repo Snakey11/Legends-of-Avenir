@@ -1,6 +1,9 @@
 
 #ifdef _FE8_
 
+	//PROTECT $889A0 $889F6 // 64, 109
+
+
 	#include "Tools/Tool Helpers.txt"
 	#include "EAstdlib.event"
 	#include "Extensions/Hack Installation.txt"
@@ -8,11 +11,13 @@
 
 	#define FreeSpace
 	#define Free_Space
-		#define FreeSpaceA $B2A610
-		#define FreeSpaceB $E47200
-		#define FreeSpaceC $EFB2E0
-		#define EndOfROM $FE4000
-		#define EndofROM EndOfROM
+	#define FreeSpaceA $B2A610
+	#define FreeSpaceB $E47200
+	#define FreeSpaceC $EFB2E0
+	
+	#define EndOfROM $FE4000
+	#define EndofROM EndOfROM
+	
 	#define BLRange $1C2270
 	#define FreeSpaceBLRange BLRange
 	#define BlRange BLRange
@@ -53,28 +58,39 @@
 		#include "TEST/Test Buildfile.event"
 		
 	#else
-		
 		ORG FreeSpaceA
+		ALIGN 16
+		ORG CURRENTOFFSET + 0x08
+		ClassAnimTable:
+		ORG CURRENTOFFSET + 0x20 * 0x200 // Allocate 0x200 entries for the ClassAnimTable.
+		PUSH
+		ORG ClassAnimTable
+		#incbin "CSV/ClassAnimTable.dmp" // Vanilla ClassAnimTable.
+		POP
 		#ifdef IncludeBigStuff
+			{
 			#include "Graphics/Battle Animations/Battle Animations 2.event" // FULL!
+			}
 		#endif
-		
 		MESSAGE First animation block ends at CURRENTOFFSET
 		//MESSAGE There is ( $BFFFFF - CURRENTOFFSET ) of space available
 		ASSERT $C00000 - CURRENTOFFSET
 		
 		ORG FreeSpaceB
 		#ifdef IncludeBigStuff
+			{
 			#include "Graphics/Battle Animations/Battle Animations 1.event" // FULL!
+			}
 		#endif
-		
 		MESSAGE Second animation block ends at CURRENTOFFSET
 		//MESSAGE There is ( $EE0000 - CURRENTOFFSET ) of space available
 		ASSERT $EE0000 - CURRENTOFFSET
 		
 		ORG FreeSpaceC
 		#ifdef IncludeBigStuff
+			{
 			#include "Graphics/Battle Animations/Battle Animations 3.event" // FULL!
+			}
 		#endif
 		MESSAGE Third animation block ends at CURRENTOFFSET
 		//MESSAGE There is ( $FE0000 - CURRENTOFFSET ) of space available
@@ -82,9 +98,10 @@
 		
 		ORG EndofROM
 		#ifdef IncludeBigStuff
+			{
 			#include "Graphics/Battle Animations/Battle Animations 4.event"
+			}
 		#endif
-		
 		MESSAGE Fourth animation block ends at CURRENTOFFSET
 
 		ALIGN 16
@@ -101,7 +118,9 @@
 		
 		ALIGN 16
 		//Music
-		#include "Music/Master Music Installer.event"
+		{
+		#include "Music/_Master Music Installer.event"
+		}
 		MESSAGE Music data ends at CURRENTOFFSET
 		
 		ALIGN 16
@@ -112,7 +131,7 @@
 		ALIGN 16
 		//Maps
 		#define TMX2EA
-		#include "Map Data/FE8 Tilesets/Tileset Installer.event"
+		#include "Map Data/FE8 Tilesets/New Tilesets/Tileset Installer.event"
 		#include "Map Data/Master Map Installer.event"	
 		MESSAGE Map data ends at CURRENTOFFSET
 		

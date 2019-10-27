@@ -1,0 +1,23 @@
+
+ALIGN 4
+SentinelPortrait:
+#incbin "Sentinel.dmp"
+SentinelPortraitPalette:
+#incbin "SentinelPalette.dmp"
+HalberdierPortrait:
+#incbin "Halberdier.dmp"
+HalberdierPortraitPalette:
+#incbin "HalberdierPalette.dmp"
+AssassinPortrait:
+#incbin "Assassin.dmp"
+AssassinPortraitPalette:
+#incbin "AssassinPalette.dmp"
+KnightPortrait:
+#incbin "Knight.dmp"
+KnightPortraitPalette:
+#incbin "KnightPalette.dmp"
+
+setCardEntry(SentinelCard,SentinelPortrait,SentinelPortraitPalette)
+setCardEntry(HalberdierCard,HalberdierPortrait,HalberdierPortraitPalette)
+setCardEntry(AssassinCard,AssassinPortrait,AssassinPortraitPalette)
+setCardEntry(KnightCard,KnightPortrait,KnightPortraitPalette)

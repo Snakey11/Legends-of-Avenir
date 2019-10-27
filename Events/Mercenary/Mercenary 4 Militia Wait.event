@@ -73,7 +73,7 @@ STAL 0x60
 Text(Merc4MilitiaWaitAdlezHereText)
 STAL 0x40
 WARP_OUT // rB is already set
-DISA Adlez
+DISA BossAdlez
 STAL 0x50
 CAM1 [7,5]
 WarpIn(13,5,LoadAdlezStart2)
@@ -84,11 +84,10 @@ LOAD1 0x1 ChapterGuardians
 ENUN
 SetBackground(0x0C)
 Text(Merc4MilitiaWaitAdlezGoneText)
-EndConvo
-NoFade
 GotoPrepScreen
 
 EndingScene:
+EnterStop
 FADI 0x5
 MUSC Indignation
 CLEA 0x0
@@ -167,7 +166,7 @@ NoFade
 ENDA
 
 Turn8Stuff:
-CAM1 Adlez
+CAM1 BossAdlez
 Text(Merc4MilitiaWaitMoreGuardiansText)
 LOAD1 0x1 Turn8Units
 ENUN
@@ -194,8 +193,8 @@ UNIT PlayerMMercenary 0x0 0x0 Level(1,Ally,True) [8,9] 0x00 0x00 0x1 REDA8R6 [Ir
 UNIT
 
 StartingGuardians:
-UNIT Guardian Fighter Adlez Level(7,Enemy,True) [6,14] 0x00 0x00 0x00 0x00 [SteelAxe] [0]
-UNIT Guardian Fighter Adlez Level(7,Enemy,True) [6,16] Drop 0x00 0x00 0x00 [DragonAxe] [0]
+UNIT Guardian Fighter BossAdlez Level(7,Enemy,True) [6,14] 0x00 0x00 0x00 0x00 [SteelAxe] [0]
+UNIT Guardian Fighter BossAdlez Level(7,Enemy,True) [6,16] Drop 0x00 0x00 0x00 [DragonAxe] [0]
 UNIT
 
 StartingAllies:
@@ -206,29 +205,29 @@ UNIT Elanil Archer_F Elanil Level(7,Ally,True) [1,14] 0x00 0x00 0x00 0x00 [Steel
 UNIT
 
 LoadAdlezStart1:
-UNIT Adlez Brigand Adlez Level(8,Enemy,True) [5,15] 0x00 0x00 0x00 0x00 [Swordslayer,ShortAxe] GuardAI
+UNIT BossAdlez Brigand BossAdlez Level(8,Enemy,True) [5,15] 0x00 0x00 0x00 0x00 [Swordslayer,ShortAxe] GuardAI
 UNIT
 
 LoadAdlezStart2:
-UNIT Adlez Brigand Adlez Level(8,Enemy,True) [13,5] 0x00 0x00 0x00 0x00 [Swordslayer,ShortAxe] GuardAI
+UNIT BossAdlez Brigand BossAdlez Level(8,Enemy,True) [13,5] 0x00 0x00 0x00 0x00 [Swordslayer,ShortAxe] GuardAI
 UNIT
 
 ChapterGuardians:
-UNIT Guardian Soldier Adlez Level(8,Enemy,True) [12,16] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
-UNIT Guardian Mage Adlez Level(7,Enemy,True) [13,14] 0x00 0x00 0x00 0x00 [Elwind] AttackInRangeAI
-UNIT Guardian Myrmidon Adlez Level(6,Enemy,True) [12,9] 0x00 0x00 0x00 0x00 [SlimSword] AttackInRangeAI
-UNIT Guardian Mage Adlez Level(5,Enemy,True) [9,6] 0x00 0x00 0x00 0x00 [Thunder] ChaseOnceApproachedAI
-UNIT Guardian Shaman Adlez Level(6,Enemy,True) [12,11] 0x00 0x00 0x00 0x00 [Flux] NoAI
-UNIT Guardian Monk Adlez Level(7,Enemy,True) [3,11] 0x00 0x00 0x00 0x00 [Exordium] AttackInRangeAI
-UNIT Guardian Archer Adlez Level(8,Enemy,True) [3,7] Drop 0x00 0x00 0x00 [SteelBow,ChestKey] AttackInRangeAI
-UNIT Guardian Archer Adlez Level(6,Enemy,True) [12,6] 0x00 0x00 0x00 0x00 [IronLongbow] NoAI
-UNIT Guardian Sentinel Adlez Level(1,Enemy,True) [5,5] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
-UNIT Guardian Mercenary Adlez Level(7,Enemy,True) [0,5] 0x00 0x00 0x00 0x00 [Armorslayer] ChaseOnceApproachedAI
-UNIT Guardian Pirate Adlez Level(7,Enemy,True) [4,2] 0x00 0x00 0x00 0x00 [PoisonAxe] NoAI
-UNIT Guardian Myrmidon Adlez Level(9,Enemy,True) [3,0] 0x00 0x00 0x00 0x00 [LightBrand] AttackInRangeAI
-UNIT Guardian Shaman Adlez Level(9,Enemy,True) [8,1] 0x00 0x00 0x00 0x00 [Slime] AttackInRangeAI
-UNIT Guardian Knight Adlez Level(8,Enemy,True) [13,1] 0x00 0x00 0x00 0x00 [IronLance,IronAxe] GuardAI
-UNIT Guardian Hero Adlez Level(1,Enemy,True) [12,2] 0x00 0x00 0x00 0x00 [Swordreaver] AttackInRangeAI
+UNIT Guardian Soldier BossAdlez Level(8,Enemy,True) [12,16] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT Guardian Mage BossAdlez Level(7,Enemy,True) [13,14] 0x00 0x00 0x00 0x00 [Elwind] AttackInRangeAI
+UNIT Guardian Myrmidon BossAdlez Level(6,Enemy,True) [12,9] 0x00 0x00 0x00 0x00 [SlimSword] AttackInRangeAI
+UNIT Guardian Mage BossAdlez Level(5,Enemy,True) [9,6] 0x00 0x00 0x00 0x00 [Thunder] ChaseOnceApproachedAI
+UNIT Guardian Shaman BossAdlez Level(6,Enemy,True) [12,11] 0x00 0x00 0x00 0x00 [Flux] NoAI
+UNIT Guardian Monk BossAdlez Level(7,Enemy,True) [3,11] 0x00 0x00 0x00 0x00 [Exordium] AttackInRangeAI
+UNIT Guardian Archer BossAdlez Level(8,Enemy,True) [3,7] Drop 0x00 0x00 0x00 [SteelBow,ChestKey] AttackInRangeAI
+UNIT Guardian Archer BossAdlez Level(6,Enemy,True) [12,6] 0x00 0x00 0x00 0x00 [IronLongbow] NoAI
+UNIT Guardian Sentinel BossAdlez Level(1,Enemy,True) [5,5] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
+UNIT Guardian Mercenary BossAdlez Level(7,Enemy,True) [0,5] 0x00 0x00 0x00 0x00 [Armorslayer] ChaseOnceApproachedAI
+UNIT Guardian Pirate BossAdlez Level(7,Enemy,True) [4,2] 0x00 0x00 0x00 0x00 [PoisonAxe] NoAI
+UNIT Guardian Myrmidon BossAdlez Level(9,Enemy,True) [3,0] 0x00 0x00 0x00 0x00 [LightBrand] AttackInRangeAI
+UNIT Guardian Shaman BossAdlez Level(9,Enemy,True) [8,1] 0x00 0x00 0x00 0x00 [Slime] AttackInRangeAI
+UNIT Guardian Knight BossAdlez Level(8,Enemy,True) [13,1] 0x00 0x00 0x00 0x00 [IronLance,IronAxe] GuardAI
+UNIT Guardian Hero BossAdlez Level(1,Enemy,True) [12,2] 0x00 0x00 0x00 0x00 [Swordreaver] AttackInRangeAI
 UNIT
 
 GimmeAThief:
@@ -236,13 +235,13 @@ UNIT Looter Thief Looter Level(3,Enemy,True) [14,1] 0x00 0x00 0x00 Drop [SlimSwo
 UNIT
 
 Turn8Units:
-UNIT Guardian Cavalier Adlez Level(6,Enemy,True) [0,16] 0x00 0x00 0x1 REDA1R16 [SteelLance] [0]
-UNIT Guardian Myrmidon Adlez Level(5,Enemy,True) [0,14] 0x00 0x00 0x00 0x00 [Zanbato] [0]
-UNIT Guardian Mercenary Adlez Level(6,Enemy,True) [0,15] Drop 0x00 0x1 REDA2R15 [SteelSword] [0]
-UNIT Guardian Knight Adlez Level(8,Enemy,True) [14,9] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
-UNIT Guardian Knight Adlez Level(6,Enemy,True) [0,12] 0x00 0x00 0x00 0x00 [Javelin] NoAI
-UNIT Guardian Cavalier Adlez Level(7,Enemy,True) [14,15] 0x00 0x00 0x00 0x00 [DragonSpear] [0]
-UNIT Guardian Cavalier Adlez Level(6,Enemy,True) [14,16] 0x00 0x00 0x01 REDA13R16 [SteelSword,Javelin] [0]
+UNIT Guardian Cavalier BossAdlez Level(6,Enemy,True) [0,16] 0x00 0x00 0x1 REDA1R16 [SteelLance] [0]
+UNIT Guardian Myrmidon BossAdlez Level(5,Enemy,True) [0,14] 0x00 0x00 0x00 0x00 [Zanbato] [0]
+UNIT Guardian Mercenary BossAdlez Level(6,Enemy,True) [0,15] Drop 0x00 0x1 REDA2R15 [SteelSword] [0]
+UNIT Guardian Knight BossAdlez Level(8,Enemy,True) [14,9] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT Guardian Knight BossAdlez Level(6,Enemy,True) [0,12] 0x00 0x00 0x00 0x00 [Javelin] NoAI
+UNIT Guardian Cavalier BossAdlez Level(7,Enemy,True) [14,15] 0x00 0x00 0x00 0x00 [DragonSpear] [0]
+UNIT Guardian Cavalier BossAdlez Level(6,Enemy,True) [14,16] 0x00 0x00 0x01 REDA13R16 [SteelSword,Javelin] [0]
 UNIT
 
 EndingThrone:

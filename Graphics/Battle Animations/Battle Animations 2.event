@@ -1,9 +1,9 @@
-#ifndef ClassAnimTable
-    #define ClassAnimTable (0xc00008-0x20)
-#endif
 
+//#ifndef ClassAnimTable
+//    #define ClassAnimTable (0xc00008-0x20)
+//#endif
 
-#define AnimTableEntry(index) "ORG ClassAnimTable + (index * 0x20)"
+#define AnimTableEntry(index) "ORG ClassAnimTable - 0x20 + (index * 0x20)"
 //////////////Installed animations go here
 
 
@@ -77,14 +77,11 @@
 #include "Necromancer Staff.event"
 
 
-#include "Nomad Sword.event"
-
-#include "Nomad Bow.event"
-
-#include "Nomad Unarmed.event"
-
-
 #include "Patriarch Magic.event"
 
 #include "Patriarch Staff.event"
 
+
+#include "Mercenary F Sword.event"
+
+#include "Mercenary F Unarmed.event"

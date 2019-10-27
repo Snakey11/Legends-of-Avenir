@@ -1,0 +1,622 @@
+
+ALIGN 4
+PortraitTable:
+#incbin "Vanilla Portrait Table.dmp"
+
+ALIGN 4
+MercMAvatarPortrait:
+#incbin "MaleMercAvatar_mug.dmp"
+#incbin "MaleMercAvatar_frames.dmp"
+#incbin "MaleMercAvatar_palette.dmp"
+#incbin "MaleMercAvatar_minimug.dmp"
+
+MercFAvatarPortrait:
+#incbin "FemaleMercAvatar_mug.dmp"
+#incbin "FemaleMercAvatar_frames.dmp"
+#incbin "FemaleMercAvatar_palette.dmp"
+#incbin "FemaleMercAvatar_minimug.dmp"
+
+MilitaryMAvatarPortrait:
+#incbin "MaleMilitaryAvatar_mug.dmp"
+#incbin "MaleMilitaryAvatar_frames.dmp"
+#incbin "MaleMilitaryAvatar_palette.dmp"
+#incbin "MaleMilitaryAvatar_minimug.dmp"
+
+MilitaryFAvatarPortrait:
+#incbin "FemaleMilitaryAvatar_mug.dmp"
+#incbin "FemaleMilitaryAvatar_frames.dmp"
+#incbin "FemaleMilitaryAvatar_palette.dmp"
+#incbin "FemaleMilitaryAvatar_minimug.dmp"
+
+AdlezPortrait:
+#incbin "Adlez_mug.dmp"
+#incbin "Adlez_frames.dmp"
+#incbin "Adlez_palette.dmp"
+#incbin "Adlez_minimug.dmp"
+
+ArcPortrait:
+#incbin "Arc_mug.dmp"
+#incbin "Arc_frames.dmp"
+#incbin "Arc_palette.dmp"
+#incbin "Arc_minimug.dmp"
+
+ArveldirPortrait:
+#incbin "Arveldir_mug.dmp"
+#incbin "Arveldir_frames.dmp"
+#incbin "Arveldir_palette.dmp"
+#incbin "Arveldir_minimug.dmp"
+
+AryaPortrait:
+#incbin "Arya_mug.dmp"
+#incbin "Arya_frames.dmp"
+#incbin "Arya_palette.dmp"
+#incbin "Arya_minimug.dmp"
+
+BaretPortrait:
+#incbin "Baret_mug.dmp"
+#incbin "Baret_frames.dmp"
+#incbin "Baret_palette.dmp"
+#incbin "Baret_minimug.dmp"
+
+BlainePortrait:
+#incbin "Blaine_mug.dmp"
+#incbin "Blaine_frames.dmp"
+#incbin "Blaine_palette.dmp"
+#incbin "Blaine_minimug.dmp"
+
+ChristinaPortrait:
+#incbin "Christina_mug.dmp"
+#incbin "Christina_frames.dmp"
+#incbin "Christina_palette.dmp"
+#incbin "Christina_minimug.dmp"
+
+ClaraPortrait:
+#incbin "Clara_mug.dmp"
+#incbin "Clara_frames.dmp"
+#incbin "Clara_palette.dmp"
+#incbin "Clara_minimug.dmp"
+
+ConnorPortrait:
+#incbin "Connor_mug.dmp"
+#incbin "Connor_frames.dmp"
+#incbin "Connor_palette.dmp"
+#incbin "Connor_minimug.dmp"
+
+CougarPortrait:
+#incbin "Cougar_mug.dmp"
+#incbin "Cougar_frames.dmp"
+#incbin "Cougar_palette.dmp"
+#incbin "Cougar_minimug.dmp"
+
+DerekPortrait:
+#incbin "Derek_mug.dmp"
+#incbin "Derek_frames.dmp"
+#incbin "Derek_palette.dmp"
+#incbin "Derek_minimug.dmp"
+
+DunlasPortrait:
+#incbin "Dunlas_mug.dmp"
+#incbin "Dunlas_frames.dmp"
+#incbin "Dunlas_palette.dmp"
+#incbin "Dunlas_minimug.dmp"
+
+EfilPortrait:
+#incbin "Efil_mug.dmp"
+#incbin "Efil_frames.dmp"
+#incbin "Efil_palette.dmp"
+#incbin "Efil_minimug.dmp"
+
+ElanilPortrait:
+#incbin "Elanil_mug.dmp"
+#incbin "Elanil_frames.dmp"
+#incbin "Elanil_palette.dmp"
+#incbin "Elanil_minimug.dmp"
+
+EmperorPortrait:
+#incbin "Emperor_mug.dmp"
+#incbin "Emperor_frames.dmp"
+#incbin "Emperor_palette.dmp"
+#incbin "Emperor_minimug.dmp"
+
+FinocPortrait:
+#incbin "Finoc_mug.dmp"
+#incbin "Finoc_frames.dmp"
+#incbin "Finoc_palette.dmp"
+#incbin "Finoc_minimug.dmp"
+
+ForrestPortrait:
+#incbin "Forrest_mug.dmp"
+#incbin "Forrest_frames.dmp"
+#incbin "Forrest_palette.dmp"
+#incbin "Forrest_minimug.dmp"
+
+HelmerPortrait:
+#incbin "Helmer_mug.dmp"
+#incbin "Helmer_frames.dmp"
+#incbin "Helmer_palette.dmp"
+#incbin "Helmer_minimug.dmp"
+
+JasperPortrait:
+#incbin "Jasper_mug.dmp"
+#incbin "Jasper_frames.dmp"
+#incbin "Jasper_palette.dmp"
+#incbin "Jasper_minimug.dmp"
+
+JurgenPortrait:
+#incbin "Jurgen_mug.dmp"
+#incbin "Jurgen_frames.dmp"
+#incbin "Jurgen_palette.dmp"
+#incbin "Jurgen_minimug.dmp"
+
+KendrickPortrait:
+#incbin "Kendrick_mug.dmp"
+#incbin "Kendrick_frames.dmp"
+#incbin "Kendrick_palette.dmp"
+#incbin "Kendrick_minimug.dmp"
+
+KilthelPortrait:
+#incbin "Kilthel_mug.dmp"
+#incbin "Kilthel_frames.dmp"
+#incbin "Kilthel_palette.dmp"
+#incbin "Kilthel_minimug.dmp"
+
+LeonPortrait:
+#incbin "Leon_mug.dmp"
+#incbin "Leon_frames.dmp"
+#incbin "Leon_palette.dmp"
+#incbin "Leon_minimug.dmp"
+
+LeyosPortrait:
+#incbin "Leyos_mug.dmp"
+#incbin "Leyos_frames.dmp"
+#incbin "Leyos_palette.dmp"
+#incbin "Leyos_minimug.dmp"
+
+LukePortrait:
+#incbin "Luke_mug.dmp"
+#incbin "Luke_frames.dmp"
+#incbin "Luke_palette.dmp"
+#incbin "Luke_minimug.dmp"
+
+LuxPortrait:
+#incbin "Lux_mug.dmp"
+#incbin "Lux_frames.dmp"
+#incbin "Lux_palette.dmp"
+#incbin "Lux_minimug.dmp"
+
+MadeleinePortrait:
+#incbin "Madeleine_mug.dmp"
+#incbin "Madeleine_frames.dmp"
+#incbin "Madeleine_palette.dmp"
+#incbin "Madeleine_minimug.dmp"
+
+MaximusPortrait:
+#incbin "Maximus_mug.dmp"
+#incbin "Maximus_frames.dmp"
+#incbin "Maximus_palette.dmp"
+#incbin "Maximus_minimug.dmp"
+
+MurielPortrait:
+#incbin "Muriel_mug.dmp"
+#incbin "Muriel_frames.dmp"
+#incbin "Muriel_palette.dmp"
+#incbin "Muriel_minimug.dmp"
+
+NarratorPortrait:
+#incbin "Narrator_mug.dmp"
+#incbin "Narrator_frames.dmp"
+#incbin "Narrator_palette.dmp"
+#incbin "Narrator_minimug.dmp"
+
+RemusPortrait:
+#incbin "Remus_mug.dmp"
+#incbin "Remus_frames.dmp"
+#incbin "Remus_palette.dmp"
+#incbin "Remus_minimug.dmp"
+
+RexPortrait:
+#incbin "Rex_mug.dmp"
+#incbin "Rex_frames.dmp"
+#incbin "Rex_palette.dmp"
+#incbin "Rex_minimug.dmp"
+
+SekarPortrait:
+#incbin "Sekar_mug.dmp"
+#incbin "Sekar_frames.dmp"
+#incbin "Sekar_palette.dmp"
+#incbin "Sekar_minimug.dmp"
+
+ServiusPortrait:
+#incbin "Servius_mug.dmp"
+#incbin "Servius_frames.dmp"
+#incbin "Servius_palette.dmp"
+#incbin "Servius_minimug.dmp"
+
+SylvainePortrait:
+#incbin "Sylvaine_mug.dmp"
+#incbin "Sylvaine_frames.dmp"
+#incbin "Sylvaine_palette.dmp"
+#incbin "Sylvaine_minimug.dmp"
+
+UzkalisPortrait:
+#incbin "Uzkalis_mug.dmp"
+#incbin "Uzkalis_frames.dmp"
+#incbin "Uzkalis_palette.dmp"
+#incbin "Uzkalis_minimug.dmp"
+
+ValPortrait:
+#incbin "Val_mug.dmp"
+#incbin "Val_frames.dmp"
+#incbin "Val_palette.dmp"
+#incbin "Val_minimug.dmp"
+
+VicarPortrait:
+#incbin "Vicar_mug.dmp"
+#incbin "Vicar_frames.dmp"
+#incbin "Vicar_palette.dmp"
+#incbin "Vicar_minimug.dmp"
+
+WalterPortrait:
+#incbin "Walter_mug.dmp"
+#incbin "Walter_frames.dmp"
+#incbin "Walter_palette.dmp"
+#incbin "Walter_minimug.dmp"
+
+WestonPortrait:
+#incbin "Weston_mug.dmp"
+#incbin "Weston_frames.dmp"
+#incbin "Weston_palette.dmp"
+#incbin "Weston_minimug.dmp"
+
+XavusPortrait:
+#incbin "Xavus_mug.dmp"
+#incbin "Xavus_frames.dmp"
+#incbin "Xavus_palette.dmp"
+#incbin "Xavus_minimug.dmp"
+
+XeximPortrait:
+#incbin "Xexim_mug.dmp"
+#incbin "Xexim_frames.dmp"
+#incbin "Xexim_palette.dmp"
+#incbin "Xexim_minimug.dmp"
+
+XyliaPortrait:
+#incbin "Xylia_mug.dmp"
+#incbin "Xylia_frames.dmp"
+#incbin "Xylia_palette.dmp"
+#incbin "Xylia_minimug.dmp"
+
+YvettePortrait:
+#incbin "Yvette_mug.dmp"
+#incbin "Yvette_frames.dmp"
+#incbin "Yvette_palette.dmp"
+#incbin "Yvette_minimug.dmp"
+
+ZahevaPortrait:
+#incbin "Zaheva_mug.dmp"
+#incbin "Zaheva_frames.dmp"
+#incbin "Zaheva_palette.dmp"
+#incbin "Zaheva_minimug.dmp"
+
+ZaliusPortrait:
+#incbin "Zalius_mug.dmp"
+#incbin "Zalius_frames.dmp"
+#incbin "Zalius_palette.dmp"
+#incbin "Zalius_minimug.dmp"
+
+//setMugEntry(MugEntry,MugOffset,MouthX,MouthY,EyeX,EyeY)
+
+setMugEntry(MaleMercMug,MercMAvatarPortrait,3,5,3,3)
+setMugEntry(FemaleMercMug,MercFAvatarPortrait,3,5,3,3)
+setMugEntry(MaleMilitaryMug,MilitaryMAvatarPortrait,3,5,3,3)
+setMugEntry(FemaleMilitaryMug,MilitaryFAvatarPortrait,3,6,3,4)
+setMugEntry(AdlezMug,AdlezPortrait,2,5,2,3)
+setMugEntry(ArcMug,ArcPortrait,2,4,2,2)
+setMugEntry(ArveldirMug,ArveldirPortrait,2,5,3,3)
+setMugEntry(AryaMug,AryaPortrait,2,6,3,4)
+setMugEntry(BaretMug,BaretPortrait,3,5,3,3)
+setMugEntry(BlaineMug,BlainePortrait,3,4,3,2)
+setMugEntry(ChristinaMug,ChristinaPortrait,3,5,3,3)
+setMugEntry(ClaraMug,ClaraPortrait,3,6,3,4)
+setMugEntry(ConnorMug,ConnorPortrait,3,5,3,3)
+setMugEntry(CougarMug,CougarPortrait,2,5,3,3)
+setMugEntry(DerekMug,DerekPortrait,2,5,2,3)
+setMugEntry(DunlasMug,DunlasPortrait,3,5,2,3)
+setMugEntry(EfilMug,EfilPortrait,2,5,3,3)
+setMugEntry(ElanilMug,ElanilPortrait,4,5,4,3)
+setMugEntry(EmperorMug,EmperorPortrait,3,5,3,3)
+setMugEntry(FinocMug,FinocPortrait,2,5,3,3)
+setMugEntry(ForrestMug,ForrestPortrait,3,5,3,3)
+setMugEntry(HelmerMug,HelmerPortrait,2,5,3,4)
+setMugEntry(JasperMug,JasperPortrait,3,5,3,3)
+setMugEntry(JurgenMug,JurgenPortrait,2,6,3,3)
+setMugEntry(KendrickMug,KendrickPortrait,3,4,3,2)
+setMugEntry(KilthelMug,KilthelPortrait,3,5,3,3)
+setMugEntry(LeonMug,LeonPortrait,2,4,2,2)
+setMugEntry(LeyosMug,LeyosPortrait,3,5,3,3)
+setMugEntry(LukeMug,LukePortrait,3,5,3,3)
+setMugEntry(LuxMug,LuxPortrait,2,6,3,4)
+setMugEntry(MadelineMug,MadeleinePortrait,2,5,3,3)
+setMugEntry(MaximusMug,MaximusPortrait,2,5,2,3)
+setMugEntry(MurielMug,MurielPortrait,3,6,3,4)
+setMugEntry(NarratorMug,NarratorPortrait,3,5,3,3)
+setMugEntry(RemusMug,RemusPortrait,2,5,3,3)
+setMugEntry(RexMug,RexPortrait,2,5,2,3)
+setMugEntry(SekarMug,SekarPortrait,3,5,3,3)
+setMugEntry(ServiusMug,ServiusPortrait,3,5,3,3)
+setMugEntry(SylvaineMug,SylvainePortrait,3,5,3,3)
+setMugEntry(UzkalisMug,UzkalisPortrait,2,6,2,3)
+setMugEntry(ValMug,ValPortrait,3,5,3,3)
+setMugEntry(VicarMug,VicarPortrait,3,5,3,3)
+setMugEntry(WalterMug,WalterPortrait,3,5,3,3)
+setMugEntry(WestonMug,WestonPortrait,3,5,3,3)
+setMugEntry(XavusMug,XavusPortrait,2,5,3,3)
+setMugEntry(XeximMug,XeximPortrait,2,5,3,3)
+setMugEntry(XyliaMug,XyliaPortrait,3,6,3,4)
+setMugEntry(YvetteMug,YvettePortrait,3,5,3,3)
+setMugEntry(ZahevaMug,ZahevaPortrait,3,5,3,3)
+setMugEntry(ZaliusMug,ZaliusPortrait,3,5,3,3)
+
+setMugEntry(0x14,UzkalisPortrait,2,6,2,3)
+setMugEntry(0x02,MaximusPortrait,2,5,2,3) // Set Eirika and Ephraim to be Maximus and Uzkalis (Debug screen)
+
+/*
+MercMAvatarPortrait:
+#incext PortraitFormatter "Male Merc Avatar.png"
+MercFAvatarPortrait:
+#incext PortraitFormatter "Female Merc Avatar.png"
+MilitaryMAvatarPortrait:
+#incext PortraitFormatter "Male Military Avatar.png"
+MilitaryFAvatarPortrait:
+#incext PortraitFormatter "Female Military Avatar.png"
+ArcPortrait:
+#incext PortraitFormatter "Arc.png"
+AdlezPortrait:
+#incext PortraitFormatter "Adlez.png"
+ArveldirPortrait:
+#incext PortraitFormatter "Arveldir.png"
+AryaPortrait:
+#incext PortraitFormatter "Arya.png"
+BaretPortrait:
+#incext PortraitFormatter "Baret.png"
+BlainePortrait:
+#incext PortraitFormatter "Blaine.png"
+ChristinaPortrait:
+#incext PortraitFormatter "Christina.png"
+ClaraPortrait:
+#incext PortraitFormatter "Clara.png"
+ConnorPortrait:
+#incext PortraitFormatter "Connor.png"
+CougarPortrait:
+#incext PortraitFormatter "Cougar.png"
+DerekPortrait:
+#incext PortraitFormatter "Derek.png"
+DunlasPortrait:
+#incext PortraitFormatter "Dunlas.png"
+EfilPortrait:
+#incext PortraitFormatter "Efil.png"
+ElanilPortrait:
+#incext PortraitFormatter "Elanil.png"
+EmperorPortrait:
+#incext PortraitFormatter "Emperor.png"
+FinocPortrait:
+#incext PortraitFormatter "Finoc.png"
+ForrestPortrait:
+#incext PortraitFormatter "Forrest.png"
+HelmerPortrait:
+#incext PortraitFormatter "Helmer.png"
+JasperPortrait:
+#incext PortraitFormatter "Jasper.png"
+JurgenPortrait:
+#incext PortraitFormatter "Jurgen.png"
+KendrickPortrait:
+#incext PortraitFormatter "Kendrick.png"
+KilthelPortrait:
+#incext PortraitFormatter "Kilthel.png"
+LeonPortrait:
+#incext PortraitFormatter "Leon.png"
+LeyosPortrait:
+#incext PortraitFormatter "Leyos.png"
+LukePortrait:
+#incext PortraitFormatter "Luke.png"
+LuxPortrait:
+#incext PortraitFormatter "Lux.png"
+MadelinePortrait:
+#incext PortraitFormatter "Madeline.png"
+MaximusPortrait:
+#incext PortraitFormatter "Maximus.png"
+MurielPortrait:
+#incext PortraitFormatter "Muriel.png"
+NarratorPortrait:
+#incext PortraitFormatter "Narrator.png"
+RexPortrait:
+#incext PortraitFormatter "Rex.png"
+RemusPortrait:
+#incext PortraitFormatter "Remus.png"
+SekarPortrait:
+#incext PortraitFormatter "Sekar.png"
+ServiusPortrait:
+#incext PortraitFormatter "Servius.png"
+SylvainePortrait:
+#incext PortraitFormatter "Sylvaine.png"
+UzkalisPortrait:
+#incext PortraitFormatter "Uzkalis.png"
+ValPortrait:
+#incext PortraitFormatter "Val.png"
+VicarPortrait:
+#incext PortraitFormatter "Vicar.png"
+WalterPortrait:
+#incext PortraitFormatter "Walter.png"
+XavusPortrait:
+#incext PortraitFormatter "Xavus.png"
+XeximPortrait:
+#incext PortraitFormatter "Xexim.png"
+XyliaPortrait:
+#incext PortraitFormatter "Xylia.png"
+YvettePortrait:
+#incext PortraitFormatter "Yvette.png"
+ZahevaPortrait:
+#incext PortraitFormatter "Zaheva.png"
+ZaliusPortrait:
+#incext PortraitFormatter "Zalius.png"
+*/
+
+/*setMugEntry(1,KendrickPortrait,3,6,3,4)
+setMugEntry(2,KendrickPortrait,3,6,3,4)
+setMugEntry(3,KendrickPortrait,3,6,3,4)
+setMugEntry(4,KendrickPortrait,3,6,3,4)
+setMugEntry(5,KendrickPortrait,3,6,3,4)
+setMugEntry(6,KendrickPortrait,3,6,3,4)
+setMugEntry(7,KendrickPortrait,3,6,3,4)
+setMugEntry(8,KendrickPortrait,3,6,3,4)
+setMugEntry(9,KendrickPortrait,3,6,3,4)
+setMugEntry(10,KendrickPortrait,3,6,3,4)
+setMugEntry(11,KendrickPortrait,3,6,3,4)
+setMugEntry(12,KendrickPortrait,3,6,3,4)
+setMugEntry(13,KendrickPortrait,3,6,3,4)
+setMugEntry(14,KendrickPortrait,3,6,3,4)
+setMugEntry(15,KendrickPortrait,3,6,3,4)
+setMugEntry(16,KendrickPortrait,3,6,3,4)
+setMugEntry(17,KendrickPortrait,3,6,3,4)
+setMugEntry(18,KendrickPortrait,3,6,3,4)
+setMugEntry(19,KendrickPortrait,3,6,3,4)
+setMugEntry(20,KendrickPortrait,3,6,3,4)
+setMugEntry(21,KendrickPortrait,3,6,3,4)
+setMugEntry(22,KendrickPortrait,3,6,3,4)
+setMugEntry(23,KendrickPortrait,3,6,3,4)
+setMugEntry(24,KendrickPortrait,3,6,3,4)
+setMugEntry(25,KendrickPortrait,3,6,3,4)
+setMugEntry(26,KendrickPortrait,3,6,3,4)
+setMugEntry(27,KendrickPortrait,3,6,3,4)
+setMugEntry(28,KendrickPortrait,3,6,3,4)
+setMugEntry(29,KendrickPortrait,3,6,3,4)
+setMugEntry(30,KendrickPortrait,3,6,3,4)
+setMugEntry(31,KendrickPortrait,3,6,3,4)
+setMugEntry(32,KendrickPortrait,3,6,3,4)
+setMugEntry(33,KendrickPortrait,3,6,3,4)
+setMugEntry(34,KendrickPortrait,3,6,3,4)
+setMugEntry(35,KendrickPortrait,3,6,3,4)
+setMugEntry(36,KendrickPortrait,3,6,3,4)
+setMugEntry(37,KendrickPortrait,3,6,3,4)
+setMugEntry(38,KendrickPortrait,3,6,3,4)
+setMugEntry(39,KendrickPortrait,3,6,3,4)
+setMugEntry(40,KendrickPortrait,3,6,3,4)
+setMugEntry(41,KendrickPortrait,3,6,3,4)
+setMugEntry(42,KendrickPortrait,3,6,3,4)
+setMugEntry(43,KendrickPortrait,3,6,3,4)
+setMugEntry(44,KendrickPortrait,3,6,3,4)
+setMugEntry(45,KendrickPortrait,3,6,3,4)
+setMugEntry(46,KendrickPortrait,3,6,3,4)
+setMugEntry(47,KendrickPortrait,3,6,3,4)
+setMugEntry(48,KendrickPortrait,3,6,3,4)
+setMugEntry(49,KendrickPortrait,3,6,3,4)
+setMugEntry(50,KendrickPortrait,3,6,3,4)
+setMugEntry(50,KendrickPortrait,3,6,3,4)
+setMugEntry(51,KendrickPortrait,3,6,3,4)
+setMugEntry(52,KendrickPortrait,3,6,3,4)
+setMugEntry(53,KendrickPortrait,3,6,3,4)
+setMugEntry(54,KendrickPortrait,3,6,3,4)
+setMugEntry(55,KendrickPortrait,3,6,3,4)
+setMugEntry(56,KendrickPortrait,3,6,3,4)
+setMugEntry(57,KendrickPortrait,3,6,3,4)
+setMugEntry(58,KendrickPortrait,3,6,3,4)
+setMugEntry(59,KendrickPortrait,3,6,3,4)
+setMugEntry(60,KendrickPortrait,3,6,3,4)
+setMugEntry(61,KendrickPortrait,3,6,3,4)
+setMugEntry(62,KendrickPortrait,3,6,3,4)
+setMugEntry(63,KendrickPortrait,3,6,3,4)
+setMugEntry(64,KendrickPortrait,3,6,3,4)
+setMugEntry(65,KendrickPortrait,3,6,3,4)
+setMugEntry(66,KendrickPortrait,3,6,3,4)
+setMugEntry(67,KendrickPortrait,3,6,3,4)
+setMugEntry(68,KendrickPortrait,3,6,3,4)
+setMugEntry(69,KendrickPortrait,3,6,3,4)
+setMugEntry(70,KendrickPortrait,3,6,3,4)
+setMugEntry(71,KendrickPortrait,3,6,3,4)
+setMugEntry(72,KendrickPortrait,3,6,3,4)
+setMugEntry(73,KendrickPortrait,3,6,3,4)
+setMugEntry(74,KendrickPortrait,3,6,3,4)
+setMugEntry(75,KendrickPortrait,3,6,3,4)
+setMugEntry(76,KendrickPortrait,3,6,3,4)
+setMugEntry(77,KendrickPortrait,3,6,3,4)
+setMugEntry(78,KendrickPortrait,3,6,3,4)
+setMugEntry(79,KendrickPortrait,3,6,3,4)
+setMugEntry(80,KendrickPortrait,3,6,3,4)
+setMugEntry(81,KendrickPortrait,3,6,3,4)
+setMugEntry(82,KendrickPortrait,3,6,3,4)
+setMugEntry(83,KendrickPortrait,3,6,3,4)
+setMugEntry(84,KendrickPortrait,3,6,3,4)
+setMugEntry(85,KendrickPortrait,3,6,3,4)
+setMugEntry(86,KendrickPortrait,3,6,3,4)
+setMugEntry(87,KendrickPortrait,3,6,3,4)
+setMugEntry(88,KendrickPortrait,3,6,3,4)
+setMugEntry(89,KendrickPortrait,3,6,3,4)
+setMugEntry(90,KendrickPortrait,3,6,3,4)
+setMugEntry(91,KendrickPortrait,3,6,3,4)
+setMugEntry(92,KendrickPortrait,3,6,3,4)
+setMugEntry(93,KendrickPortrait,3,6,3,4)
+setMugEntry(94,KendrickPortrait,3,6,3,4)
+setMugEntry(95,KendrickPortrait,3,6,3,4)
+setMugEntry(96,KendrickPortrait,3,6,3,4)
+setMugEntry(97,KendrickPortrait,3,6,3,4)
+setMugEntry(98,KendrickPortrait,3,6,3,4)
+setMugEntry(99,KendrickPortrait,3,6,3,4)
+setMugEntry(100,KendrickPortrait,3,6,3,4)
+setMugEntry(0x69,KendrickPortrait,3,6,3,4)
+setMugEntry(0x6A,KendrickPortrait,3,6,3,4)
+setMugEntry(0x6A,KendrickPortrait,3,6,3,4)
+setMugEntry(0x6B,KendrickPortrait,3,6,3,4)
+setMugEntry(0x6C,KendrickPortrait,3,6,3,4)
+setMugEntry(0x6D,KendrickPortrait,3,6,3,4)
+setMugEntry(0x6E,KendrickPortrait,3,6,3,4)
+setMugEntry(0x6F,KendrickPortrait,3,6,3,4)
+setMugEntry(0x70,KendrickPortrait,3,6,3,4)
+setMugEntry(0x71,KendrickPortrait,3,6,3,4)
+
+setMugEntry(MaleMercMug,KendrickPortrait,3,6,3,4)
+setMugEntry(FemaleMercMug,KendrickPortrait,3,6,3,4)
+setMugEntry(MaleMilitaryMug,KendrickPortrait,3,6,3,4)
+setMugEntry(FemaleMilitaryMug,KendrickPortrait,3,6,3,4)
+setMugEntry(AdlezMug,KendrickPortrait,3,6,3,4)
+setMugEntry(ArcMug,KendrickPortrait,3,6,3,4)
+setMugEntry(ArveldirMug,KendrickPortrait,3,6,3,4)
+setMugEntry(AryaMug,KendrickPortrait,3,6,3,4)
+setMugEntry(BaretMug,KendrickPortrait,3,6,3,4)
+setMugEntry(ChristinaMug,KendrickPortrait,3,6,3,4)
+setMugEntry(ClaraMug,KendrickPortrait,3,6,3,4)
+setMugEntry(ConnorMug,KendrickPortrait,3,6,3,4)
+setMugEntry(CougarMug,KendrickPortrait,3,6,3,4)
+setMugEntry(DerekMug,KendrickPortrait,3,6,3,4)
+setMugEntry(DunlasMug,KendrickPortrait,3,6,3,4)
+setMugEntry(EfilMug,KendrickPortrait,3,6,3,4)
+setMugEntry(ElanilMug,KendrickPortrait,3,6,3,4)
+setMugEntry(EmperorMug,KendrickPortrait,3,6,3,4)
+setMugEntry(FinocMug,KendrickPortrait,3,6,3,4)
+setMugEntry(ForrestMug,KendrickPortrait,3,6,3,4)
+setMugEntry(HelmerMug,KendrickPortrait,3,6,3,4)
+setMugEntry(JasperMug,KendrickPortrait,3,6,3,4)
+setMugEntry(JurgenMug,KendrickPortrait,3,6,3,4)
+setMugEntry(KendrickMug,KendrickPortrait,3,6,3,4)
+setMugEntry(KilthelMug,KendrickPortrait,3,6,3,4)
+setMugEntry(LeonMug,KendrickPortrait,3,6,3,4)
+setMugEntry(LeyosMug,KendrickPortrait,3,6,3,4)
+setMugEntry(LukeMug,KendrickPortrait,3,6,3,4)
+setMugEntry(LuxMug,KendrickPortrait,3,6,3,4)
+setMugEntry(MaximusMug,KendrickPortrait,3,6,3,4)
+setMugEntry(MurielMug,KendrickPortrait,3,6,3,4)
+setMugEntry(NarratorMug,KendrickPortrait,3,6,3,4)
+setMugEntry(RexMug,KendrickPortrait,3,6,3,4)
+setMugEntry(SekarMug,KendrickPortrait,3,6,3,4)
+setMugEntry(ServiusMug,KendrickPortrait,3,6,3,4)
+setMugEntry(SylvaineMug,KendrickPortrait,3,6,3,4)
+setMugEntry(UzkalisMug,KendrickPortrait,3,6,3,4)
+setMugEntry(ValMug,KendrickPortrait,3,6,3,4)
+setMugEntry(VicarMug,KendrickPortrait,3,6,3,4)
+setMugEntry(WalterMug,KendrickPortrait,3,6,3,4)
+setMugEntry(XavusMug,KendrickPortrait,3,6,3,4)
+setMugEntry(XeximMug,KendrickPortrait,3,6,3,4)
+setMugEntry(XyliaMug,KendrickPortrait,3,6,3,4)
+setMugEntry(ZaliusMug,KendrickPortrait,3,6,3,4)
+
+setMugEntry(0x02,KendrickPortrait,3,6,3,4)
+setMugEntry(0x14,KendrickPortrait,3,6,3,4) // Set Eirika and Ephraim to be Maximus and Uzkalis (Debug screen)*/

@@ -308,4 +308,54 @@ POIN AIOptionsTable
 ORG $3976C
 POIN AIOptionsTable
 
+ORG $59BFC
+POIN PaletteTable + 4
+ORG $59CD0
+POIN PaletteTable + 4
+ORG $59D24
+POIN PaletteTable + 4
+ORG $5A7AC
+POIN PaletteTable + 4
+ORG $5A929
+POIN PaletteTable + 4
+
+ORG $57394
+POIN CharPaletteTable
+ORG $573AC
+POIN CharPaletteTable
+ORG $59C40
+POIN CharPaletteTable
+ORG $59CCC
+POIN CharPaletteTable
+ORG $59D20
+POIN CharPaletteTable
+ORG $CD088
+POIN CharPaletteTable
+
+ORG $575B4
+POIN CharClassTable
+ORG $59C3C
+POIN CharClassTable
+ORG $59CC4
+POIN CharClassTable
+ORG $59D18
+POIN CharClassTable
+ORG $CD1A0
+POIN CharClassTable
+
+ORG $59BD8
+POIN ClassAnimTable
+ORG $5A600
+POIN ClassAnimTable
+ORG $5A694
+POIN ClassAnimTable
+ORG $5A82C
+POIN ClassAnimTable
+ORG $6F6A8
+POIN ClassAnimTable
+ORG $70940
+POIN ClassAnimTable
+ORG $70A60
+POIN ClassAnimTable
+
 POP

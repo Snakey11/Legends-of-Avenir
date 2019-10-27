@@ -17,6 +17,8 @@ POIN BeginningScene EndingScene
 
 //Label TurnBasedEvents
 TurnBasedEvents:
+TurnEventPlayer(0x00,Turn3,3)
+InfiniteTurnEventPlayer(0x13,MoveForrest,1)
 END_MAIN
 
 //Label CharacterBasedEvents
@@ -32,6 +34,8 @@ END_MAIN
 MiscBasedEvents:
 CauseGameOverIfLordDies
 DefeatAll(EndingScene)
+AREA 0x12 ForrestTrigger [5,9] [14,14]
+AREA 0x12 ForrestTrigger [8,1] [14,3]
 END_MAIN
 
 //Label TrapData
@@ -48,7 +52,7 @@ BeginningScene:
 CAM1 [7,7]
 LOAD1 0x1 LoadSylvaine
 ENUN
-MUSC Advance
+MUSC Lloyd
 SetBackground(0x10)
 Text(Military1BeginningText)
 FadeOutMusic
@@ -112,7 +116,7 @@ LABEL 0x1
 LOAD1 0x1 LoadDerekJasper
 ENUN
 STAL 0x30
-MUSC In_the_Colosseum
+MUSC Stage_One
 FADI 0x5
 LOAD1 0x1 LoadChristinaForrest
 ENUN
@@ -124,9 +128,9 @@ STAL 0x8
 MOVE 0x0 Sylvaine [6,0]
 ENUN
 DISA Sylvaine
-MOVE 0x0 Christina [11,6]
-STAL 0x4
-MOVE 0x0 Forrest [11,8]
+MOVE 0x0 BossChristina [11,6]
+STAL 0x4	
+MOVE 0x0 BossForrest [11,8]
 LOAD1 0x1 ChapterMeanies
 ENUN
 LOAD1 0x1 LoadSylvaine2
@@ -141,7 +145,7 @@ ENDA
 EndingScene:
 EnterStop
 FADI 0x5
-MUSC Into_the_Shadow_of_Victory
+MUSC Nekonin
 CLEA 0x0
 CLEE 0x0
 CLEN 0x0
@@ -167,6 +171,46 @@ LABEL 0x0
 LABEL 0x1
 ENDA
 
+//Label Turn events
+Turn3:
+MUSC Ringabel
+CAM1 BossChristina
+STAL 0x10
+FlashCursor(BossChristina,60)
+STAL 0x10
+SVAL 0x1 0x0000
+CHAI BossChristina
+Text(Military1ChristinaComingText)
+NoFade
+EndA2
+
+MoveForrest:
+MUSC Ringabel
+CHECK_EVENTID 0x12
+BEQ 0x0 0x0 0xC
+	CAM1 BossForrest
+	STAL 0x10
+	FlashCursor(BossForrest,60)
+	STAL 0x10
+	SVAL 0x1 0x0000
+	CHAI BossForrest
+	Text(Military1ForrestComingText)
+	GOTO 0x1
+LABEL 0x0
+	ENUF 0x13
+LABEL 0x1
+NoFade
+ENDA
+
+//Label Area events
+ForrestTrigger:
+CHECK_ALLEGIANCE 0xFFFF
+BEQ 0x0 0x0 0xC
+	ENUF 0x12
+LABEL 0x0
+NoFade
+ENDA
+
 	/*UNIT DATA*/
 
 //Label PlayerLoading
@@ -177,7 +221,7 @@ MaleKnight:
 UNIT PlayerMKnight Knight2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [SteelLance,Vulnerary] NoAI
 UNIT
 MaleSoldier:
-UNIT PlayerMSoldier SoldierM2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [Javelin,SteelLance,Vulnerary] NoAI
+UNIT PlayerMSoldier SoldierM2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [IronLance,Javelin,Vulnerary] NoAI
 UNIT
 MaleArcher:
 UNIT PlayerMArcher ArcherM2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [SteelBow,Vulnerary] NoAI
@@ -211,9 +255,8 @@ UNIT Sylvaine ArmoredWyvernLord Sylvaine Level(9,NPC,True) [5,7] 0x00 0x00 0x00 
 UNIT
 
 LoadDerekJasper:
-UNIT Derek Knight 0x00 Level(4,Ally,True) [0,9] 0x00 0x00 0x01 REDA3R8 [SteelLance] NoAI
+UNIT Derek Knight 0x00 Level(4,Ally,True) [0,9] 0x00 0x00 0x01 REDA3R8 [SteelLance,Vulnerary] NoAI
 UNIT Jasper Cavalier 0x00 Level(5,Ally,True) [0,8] 0x00 0x00 0x01 REDA3R6 [SteelSword,Javelin,Vulnerary] NoAI
-//UNIT Lux Mage 0x00 Level(5,Ally,True) [4,6] 0x00 0x00 0x00 0x00 [Fire,Thunder,Elfire,Fimbulvetr] NoAI
 UNIT
 
 LoadSylvaine2:
@@ -222,17 +265,17 @@ EndUnit
 
 //Label ChapterMeanies
 LoadChristinaForrest:
-UNIT Christina Cavalier_F Christina Level(8,Enemy,True) [6,6] 0x00 0x00 0x00 0x00 [IronBlade] GuardAI
-UNIT Forrest Cavalier Christina Level(7,Enemy,True) [6,8] 0x00 0x00 0x00 0x00 [ShortSpear] GuardAI
+UNIT BossChristina Cavalier_F BossChristina Level(7,Enemy,True) [6,6] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
+UNIT BossForrest Cavalier BossForrest Level(6,Enemy,True) [6,8] 0x00 0x00 0x00 0x00 [SteelSword] GuardAI
 UNIT
 
 ChapterMeanies:
-UNIT Cesarian Knight Christina Level(5,Enemy,True) [14,11] 0x00 0x00 0x01 REDA7R8 [IronLance] AttackInRangeAI
-UNIT Cesarian Fighter Christina Level(4,Enemy,True) [14,1] 0x00 0x00 0x01 REDA8R2 [IronAxe] NoAI
-UNIT Cesarian Soldier Christina Level(4,Enemy,True) [14,13] 0x00 0x00 0x01 REDA6R13 [SteelLance] AttackInRangeAI
-UNIT Cesarian Mercenary Christina Level(5,Enemy,True) [11,9] 0x00 0x00 0x01 REDA13R9 [SlimSword] ChaseOnceApproachedAI
-UNIT Cesarian Soldier Christina Level(4,Enemy,True) [14,3] 0x00 0x00 0x01 REDA12R3 [IronLance] AttackInRangeAI
-UNIT Cesarian Cavalier Christina Level(5,Enemy,True) [1,14] 0x00 0x00 0x01 REDA1R13 [SteelSword] NoAI
+UNIT Cesarian Knight BossChristina Level(5,Enemy,True) [14,11] 0x00 0x00 0x01 REDA7R8 [IronLance] AttackInRangeAI
+UNIT Cesarian Fighter BossChristina Level(4,Enemy,True) [14,1] 0x00 0x00 0x01 REDA8R2 [IronAxe] NoAI
+UNIT Cesarian Soldier BossChristina Level(4,Enemy,True) [14,13] 0x00 0x00 0x01 REDA6R13 [SteelLance] AttackInRangeAI
+UNIT Cesarian Mercenary BossChristina Level(5,Enemy,True) [11,9] 0x00 0x00 0x01 REDA13R9 [SlimSword] ChaseOnceApproachedAI
+UNIT Cesarian Soldier BossChristina Level(4,Enemy,True) [14,3] 0x00 0x00 0x01 REDA12R3 [IronLance] AttackInRangeAI
+UNIT Cesarian Cavalier BossChristina Level(5,Enemy,True) [1,14] 0x00 0x00 0x01 REDA1R13 [SteelSword] NoAI
 EndUnit
 
 //Label Ending People

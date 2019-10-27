@@ -3,7 +3,7 @@
 	.equ	songTwinrova_grp, voicegroup000
 	.equ	songTwinrova_pri, 0
 	.equ	songTwinrova_rev, 0
-	.equ	songTwinrova_mvl, 127
+	.equ	songTwinrova_mvl, 80
 	.equ	songTwinrova_key, 0
 	.equ	songTwinrova_tbs, 1
 	.equ	songTwinrova_exg, 0

@@ -1,5 +1,9 @@
 //Essential Fixes for FE8
 //Install with Event Assembler
+
+#ifndef ESSENTIAL_FIXES
+#define ESSENTIAL_FIXES
+
 PUSH
 
 //Fix Stone's map animation crashing no$ due to a bad decompression
@@ -169,3 +173,5 @@ ORG $464400
 WORD 0x3D046A3D 0x022D682D 0xA5020C28 0x46AE3501 0x47284D01 0x47004801 0x08071991 0x080596CD
 }
 POP
+
+#endif // ESSENTIAL_FIXES

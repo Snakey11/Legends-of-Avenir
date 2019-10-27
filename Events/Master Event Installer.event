@@ -116,7 +116,16 @@
 	#include "Military/Military 3 Accept.event"
 	}
 	{
-	#include "Military/Military 4 Accept.event"
+	#include "Military/Military 4 Accept Retreat.event"
+	}
+	{
+	#include "Military/Military 5 Accept Retreat Leave.event"
+	}
+	{
+	#include "Military/Military 6 Accept Retreat Leave.event"
+	}
+	{
+	#include "Military/Military 7 Accept Retreat Leave.event"
 	}
 	#include "Military/Narrator Fight.event"
 #endif

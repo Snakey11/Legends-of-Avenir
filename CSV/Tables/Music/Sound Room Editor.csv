@@ -68,37 +68,88 @@ INLINE SoundRoom,Song ID,Song Length (Only Used for Shuffle Mode),Song Unlock AS
 0x42 Victory and the Future,0x41,6240,0,0x7cd
 0x43 Fly with the Breeze,0x42,9120,0,0x7ce
 0x44 Epilogue,0x46,9360,0,0x7cf
-0x45 Derris Kharlan Appear,Derris_Kharlan_Appear,9360,0,DerrisKharlanAppearText
-0x46 Anchoret,Anchoret,9360,0,AnchoretText
-0x47 Shihna,Shihna,9360,0,ShihnaText
-0x48 Old Familiar Scent,Old_Familiar_Scent,9360,0,OldFamiliarScentText
-0x49 Rest of the Heart,Rest_of_the_Heart,9360,0,RestOfTheHeartText
-0x4A Last Battle Decision,Last_Battle_Decision,9360,0,LastBattleDecisionText
-0x4B Encounter with Renegades,Encounter_with_Renegades,9360,0,EncounterWithRenegadesText
-0x4C Burning Fighting Spirit,Burning_Fighting_Spirit,9360,0,BurningFightingSpiritText
-0x4D A Tragic Decision,A_Tragic_Decision,9360,0,ATragicDecisionText
-0x4E Mars Lighthouse,Mars_Lighthouse,9360,0,MarsLighthouseText
-0x4D Lloyd,Lloyd,9360,0,LloydText
-0x4E Venus Lighthouse,Venus_Lighthouse,9360,0,VenusLighthouseText
-0x4F PubTheme,Pub_Theme,9360,0,PubThemeText
-0x50 SnowBattle,Snow_Battle,9360,0,SnowBattleText
-0x51 WildFields,Wild_Fields,9360,0,WildFieldsText
-0x52 MarbleCorridor,Marble_Corridor,9360,0,MarbleCorridorText
-0x53 NaraAndMaraBattle,Nara_and_Mara_Battle,9360,0,NaraAndMaraBattleText
-0x54 Nekonin,Nekonin,9360,0,NekoninText
-0x55 Ringabel,Ringabel,9360,0,RingabelText
-0x56 VictorysDelight,Victorys_Delight,9360,0,VictorysDelightText
-0x57 Zelos,Zelos,9360,0,ZelosText
-0x58 StageOne,Stage_One,9360,0,StageOneText
-0x59 FullForce,Full_Force,9360,0,FullForceText
-0x5A FurySparks,Fury_Sparks,9360,0,FurySparksText
-0x5B FightingOfTheSpirit,Fighting_of_the_Spirit,9360,0,FightingOfTheSpiritText
-0x5C Kratos,Kratos,9360,0,KratosText
-0x5D Church,Church,9360,0,ChurchText
-0x5E Kavok,Kavoc,9360,0,KavocText
-0x5F LikeAGlintOfLight,Like_a_Glint_of_Light,9360,0,LikeAGlintOfLightText
-0x60 OffKey,Off_Key,9360,0,OffKeyText
-0x61 TheLawOfBattle,The_Law_of_Battle,9360,0,TheLawOfBattleText
-0x62 Twinrova,Twinrova,9360,0,TwinrovaText
-0x63 TownOfWindsAndRuins,Town_of_Winds_and_Ruins,9360,0,TownOfWindsAndRuinsText
-Terminator,0xFFFFFFFF,0x0,0x0,0x0
+0x45,Derris_Kharlan_Appear,9360,0,DerrisKharlanAppearText
+0x46,Anchoret,9360,0,AnchoretText
+0x47,Shihna,9360,0,ShihnaText
+0x48,Old_Familiar_Scent,9360,0,OldFamiliarScentText
+0x49,Rest_of_the_Heart,9360,0,RestOfTheHeartText
+0x4A,Last_Battle_Decision,9360,0,LastBattleDecisionText
+0x4B,Encounter_with_Renegades,9360,0,EncounterWithRenegadesText
+0x4C,Burning_Fighting_Spirit,9360,0,BurningFightingSpiritText
+0x4D,A_Tragic_Decision,9360,0,ATragicDecisionText
+0x4E,Mars_Lighthouse,9360,0,MarsLighthouseText
+0x4F,Lloyd,9360,0,LloydText
+0x50,Venus_Lighthouse,9360,0,VenusLighthouseText
+0x51,Pub_Theme,9360,0,PubThemeText
+0x52,Snow_Battle,9360,0,SnowBattleText
+0x53,Wild_Fields,9360,0,WildFieldsText
+0x54,Nara_and_Mara_Battle,9360,0,NaraAndMaraBattleText
+0x55,Nekonin,9360,0,NekoninText
+0x56,Victorys_Delight,9360,0,VictorysDelightText
+0x57,Zelos,9360,0,ZelosText
+0x58,Stage_One,9360,0,StageOneText
+0x59,Full_Force,9360,0,FullForceText
+0x5A,Fury_Sparks,9360,0,FurySparksText
+0x5B,Fighting_of_the_Spirit,9360,0,FightingOfTheSpiritText
+0x5C,Kratos,9360,0,KratosText
+0x5D,Church,9360,0,ChurchText
+0x5E,Kavoc,9360,0,KavocText
+0x5F,Like_a_Glint_of_Light,9360,0,LikeAGlintOfLightText
+0x60,Off_Key,9360,0,OffKeyText
+0x61,The_Law_of_Battle,9360,0,TheLawOfBattleText
+0x62,Twinrova,9360,0,TwinrovaText
+0x63,Town_of_Winds_and_Ruins,9360,0,TownOfWindsAndRuinsText
+0x64,Agatio_and_Karst_Battle,9360,0,AgatioAndKarstBattleText
+0x65,Alachest_Final,9360,0,AlachestFinalText
+0x66,Destined_Fate,9360,0,DestinedFateText
+0x67,Good_Song,9360,0,GoodSongText
+0x68,Satorl_Marsh,9360,0,SatorlMarchText
+0x69,Seventh_Saga_Dungeon,9360,0,SeventhSagaDungeonText
+0x70,Stage_One_Conquest,9360,0,StageOneConquestText
+0x71,Cavern_of_Splendor,9360,0,CavernOfSplendorText
+0x72,Locked_Girl,9360,0,LockedGirlText
+0x73,Kakariko_Village,9360,0,KakarikoVillageText
+0x74,Boss_Theme,9360,0,BossThemeText
+0x75,Bloody_Tears,9360,0,BloodyTearsText
+0x76,Bergentruckung,9360,0,BergentruckungText
+0x77,Battle_Two,9360,0,BattleTwoText
+0x78,Battle_against_Demons,9360,0,BattleAgainstDemonsText
+0x79,Ordon_Village,9360,0,OrdonVillageText
+0x7A,Isaacs_Battle_Theme,9360,0,IsaacsBattleThemeText
+0x7B,The_Devoted,9360,0,TheDevotedText
+0x7C,March,9360,0,MarchText
+0x7D,Ascent,9360,0,AscentText
+0x7E,Hollow_Bastion,9360,0,HollowBastionText
+0x7F,The_First_Campaign,9360,0,TheFirstCampaignText
+0x80,Heavens_Rock_Seat,9360,0,HeavensRockSeatText
+0x81,Heavens_Gate,9360,0,HeavensGateText
+0x82,Forbidden_Forest,9360,0,ForbiddenForestText
+0x83,Puppet_Ganon,9360,0,PuppetGanonText
+0x84,End_of_the_World,9360,0,EndOfTheWorldText
+0x85,Earthbound,9360,0,EarthboundText
+0x86,Chinese_Tea,9360,0,ChineseTeaText
+0x87,Zelda_Twighlight_Shop,9360,0,ZeldaTwighlightShopText
+0x88,UN_Owen_Was_Her,9360,0,UNOwenWasHerText
+0x89,Showdown_with_Hector,9360,0,ShowdownWithHectorText
+0x8A,Saturos_Battle,9360,0,SaturosBattleText
+0x8B,Inanimate_Dream,9360,0,InanimateDreamText
+0x8C,With_Us,9360,0,WithUsText
+0x8D,A_Formidable_Foe_Stands_in_the_Way,9360,0,AFormidableFoeStandsInTheWayText
+0x8E,Showdown_with_Hector_New,9360,0,ShowdownWithHectorText
+0x8F,A_Hero_Falls,9360,0,AHeroFallsText
+0x90,Emergency,9360,0,EmergencyText
+0x91,We_Can_Handle_Em,9360,0,WeCanHandleEmText
+0x92,Overwhelming_Advance,9360,0,OverwhelmingAdvanceText
+0x93,Encroaching_Foe,9360,0,EncroachingFoeText
+0x94,All_Is_Lost,9360,0,AllIsLostText
+0x95,Divine_Providence,9360,0,DivineProvidenceText
+0x96,Fodlan_Winds,9360,0,FodlanWindsText
+0x97,Oil_Ocean,9360,0,OilOceanText
+0x98,Casino_Night,9360,0,CasinoNightText
+0x99,Aquatic_Ruin,9360,0,AquaticRuinText
+0x9A,Hill_Top,9360,0,HillTopText
+0x9B,Green_Emerald,9360,0,GreenEmeraldText
+0x9C,Chemical_Plant,9360,0,ChemicalPlantText
+0x9D,Metropolis,9360,0,MetropolisText
+0x9E,Dry_Trail,9360,0,DryTrailText
+0x9F,0xFFFFFFFF,0x0,0x0,0x0

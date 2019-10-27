@@ -7,17 +7,17 @@ Wha- where am I?
 [MidRight]What do you mean? Who are you?
 [MidLeft]You're asleep in Cesaria right now, after leaving the general for dead. You knew he was the target, and you chose to ignore him. Not very knightly of you, is it?
 [MidRight]You know about that...? What are you playing at?
-[MidLeft]Oh, nothing extreme. Maybe you think his death will give you power, but you're just a Sergeant. However, I have a proposition. 
+[MidLeft]Oh, nothing extreme. Maybe you think his death will give you power, but you're just a Sergeant. Leadership will fall to the Captains before ever being within your grasp. However, I have a proposition. 
 [MidRight]Stop right there. I'm not listening to anything you have to say until you at least give me your name.
-[MidLeft]Ha! I'm glad you're logical about this. My name is Xylia, an ancient scholar of the Vathrylian Empire.
+[MidLeft]Ha! I'm glad you're logical about this. Makes it more fun for me. My name is Xylia, an ancient scholar of the Vathrylian Empire.
 [MidRight]You're a Vathrylian? That's rich.
 [MidLeft]Believe it or not, who else could pull your consciousness away from your body while you slept?
 [MidRight]This could just be me hallucinating.
-[MidLeft]I suppose you could see it that way. Regardless, you know you won't rise to the position of General, even with Rex dead. The war will stalemate. The Captains left are able to hold off Arcanae, but they'll never gain a foothold without General Rex. Though I can stop all of that. See, I know the cause of the war, but I am trapped in the northern reaches of Draterus.
-[MidRight]The desert? Seems you should be powerful enough to bust yourself out.
-[MidLeft]It is not so simple, but, if you come and aid me, I will help you resolve this war.
+[MidLeft]I suppose you could see it that way. Regardless, you know you won't rise to the position of General, even with Rex dead. The war will stalemate. The Captains left are able to hold off Arcanae, but they'll never gain a foothold without General Rex. Though I can stop all of that. We Vathrylians have power beyond that of even the Grand Magi of Arcanae. In the northern reaches of Draterus is a temple I am trapped within. If you help me, I will help you. See, I know the cause of the war.
+[MidRight]The desert? Seems you should be plenty powerful enough to bust yourself out.
+[MidLeft]If it were that simple, I would have no need of you.
 [MidRight]Why should I trust you?
-[MidLeft]If you don't trust me on resolving this war, trust that I'll give you power like you wouldn't ever imagine. Pulling your consciousness from your body takes a small bit of effort.
+[MidLeft]It is your choice. Even if I can't help resolve the war, trust that I can give you power beyond any you could obtain in Cesaria.
 [MidRight]How do you suggest I convince my friends to come along with me?
 [MidLeft]Say you've heard of an artifact in the northern reaches of Draterus that will turn the tide against Arcanae.
 [MidRight]... Very well. But don't expect me to be too easy to manipulate when I find you, Xylia...
@@ -143,5 +143,6 @@ So, you're on your way here. Good job with those Wanderers.
 [MidRight]Very well, but I'm not helping you more until you do.[X]
 
 ## Military5AcceptRetreatLeaveVillageText
+[ConversationText]
 [MidRight][LoadCurrent][MidLeft][LoadVillagerMan5]
-Woah woah we're not Wanderers! We don't want to hurt you! We're a small independent village living off of this small oasis here. Water is really tight here, but you can take some with you. The Wanderers seem to think they have ownership over the oasis, and they demand tribute. We're a small, peaceful people. Take this, and thank you for your service to us.[X]
+What? You've run into a scuffle with Wanderers? We're not with them, we're just a small independent village surviving off this nearby Oasis. The Wanderers have given us trouble for years, always demanding tribute for living in their ancestral land or something. We don't have much to give, but please, take this. You're doing us a great service by putting them down.[X]

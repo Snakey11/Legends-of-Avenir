@@ -19,11 +19,13 @@ POIN BeginningScene EndingScene
 TurnBasedEvents:
 TurnEventPlayer(0x00,Turn3,3)
 TurnEventPlayer(0x00,Turn4,4)
+TurnEventPlayer(0x00,Turn7,7)
 END_MAIN
 
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
+SupportConvo(ASupport,Christina,Forrest,Military6PassAltiaChristinaForrestSupportText)
 END_MAIN
 
 //Label LocationBasedEvents
@@ -72,6 +74,7 @@ Text(Military6PassAltiaBeginningText)
 SetBackground(0x1D)
 Text(Military6PassAltiaTactJasperDerekText)
 EndConvo
+MUSC Raid
 STAL 0x30
 CAM1 [9,19]
 Text(Military6PassAltiaStartBattleText)
@@ -100,7 +103,16 @@ NoFade
 EndA2
 
 Turn4:
+FAWI 0x10
 WEA1 SnowWeather
+FAWU 0x5
+NoFade
+EndA2
+
+Turn7:
+FAWI 0x10
+WEA1 NoWeather
+FAWU 0x5
 NoFade
 ENDA
 
@@ -131,9 +143,9 @@ EndUnit
 //Label Chapter Meanies
 Meanies:
 UNIT Guardian Sentinel 0x00 Level(6,Enemy,True) [2,20] 0x00 0x00 0x00 0x00 [BraveSword] NoAI
-UNIT Guardian General 0x00 Level(7,Enemy,True) [5,18] Drop 0x00 0x00 0x00 [SteelAxe,KnightCrest] GuardAI
+UNIT Guardian General 0x00 Level(7,Enemy,True) [5,18] Drop 0x00 0x00 0x00 [SteelAxe] GuardAI
 UNIT Guardian Knight 0x00 Level(17,Enemy,True) [4,17] 0x00 0x00 0x00 0x00 [ShortAxe,Horseslayer] GuardAI
-UNIT Guardian Archer 0x00 Level(16,Enemy,True) [5,14] Drop 0x00 0x00 0x00 [SteelLongbow,OrionBolt] AttackInRangeAI
+UNIT Guardian Archer 0x00 Level(16,Enemy,True) [5,14] Drop 0x00 0x00 0x00 [SteelLongbow] AttackInRangeAI
 UNIT Guardian Berserker 0x00 Level(6,Enemy,True) [7,16] 0x00 0x00 0x00 0x00 [PoisonAxe] AttackInRangeAI
 UNIT Guardian Hero 0x00 Level(5,Enemy,True) [5,14] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI
 UNIT Guardian Druid 0x00 Level(3,Enemy,True) [9,12] 0x00 0x00 0x00 0x00 [Slime] AttackInRangeAI

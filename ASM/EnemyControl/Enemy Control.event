@@ -36,7 +36,7 @@ ACheck:
 //#incbin "start_check.dmp"
 //POIN SecretEvent
 
-#inctext lyn "EnemyControl.elf"
+#include "EnemyControl.lyn.event"
 
 SecretEvent:
 CHECK_EVENTID 0xB2 //slot c = 0 or 1

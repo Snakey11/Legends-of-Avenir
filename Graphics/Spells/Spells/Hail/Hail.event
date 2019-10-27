@@ -17,56 +17,60 @@ WORD 0x85000000
 WORD 0x85000040
 WORD 0x85100d29
 WORD 0x85000153
-SHORT 1; BYTE 0 0x86; POIN Hail_objimg_0; WORD 0 0; POIN Hail_bgImage_0 Hail_objPalette Hail_bgPalette_0 Hail_TSA_0
-SHORT 1; BYTE 1 0x86; POIN Hail_objimg_0; WORD 12 12; POIN Hail_bgImage_1 Hail_objPalette Hail_bgPalette_1 Hail_TSA_1
-SHORT 1; BYTE 2 0x86; POIN Hail_objimg_0; WORD 24 24; POIN Hail_bgImage_2 Hail_objPalette Hail_bgPalette_2 Hail_TSA_2
-SHORT 1; BYTE 3 0x86; POIN Hail_objimg_0; WORD 36 36; POIN Hail_bgImage_3 Hail_objPalette Hail_bgPalette_3 Hail_TSA_3
-SHORT 1; BYTE 4 0x86; POIN Hail_objimg_0; WORD 48 48; POIN Hail_bgImage_4 Hail_objPalette Hail_bgPalette_4 Hail_TSA_4
-SHORT 1; BYTE 5 0x86; POIN Hail_objimg_0; WORD 60 60; POIN Hail_bgImage_5 Hail_objPalette Hail_bgPalette_5 Hail_TSA_5
+//SHORT 3; BYTE 0 0x86; POIN Hail_objimg_0; WORD 0 0; POIN Hail_bgImage_0 Hail_objPalette Hail_bgPalette_0 Hail_TSA_0
+SHORT 3; BYTE 1 0x86; POIN Hail_objimg_0; WORD 12 12; POIN Hail_bgImage_1 Hail_objPalette Hail_bgPalette_1 Hail_TSA_1
+SHORT 3; BYTE 2 0x86; POIN Hail_objimg_0; WORD 24 24; POIN Hail_bgImage_2 Hail_objPalette Hail_bgPalette_2 Hail_TSA_2
+SHORT 3; BYTE 3 0x86; POIN Hail_objimg_0; WORD 36 36; POIN Hail_bgImage_3 Hail_objPalette Hail_bgPalette_3 Hail_TSA_3
+SHORT 3; BYTE 4 0x86; POIN Hail_objimg_0; WORD 48 48; POIN Hail_bgImage_4 Hail_objPalette Hail_bgPalette_4 Hail_TSA_4
+SHORT 3; BYTE 5 0x86; POIN Hail_objimg_0; WORD 60 60; POIN Hail_bgImage_5 Hail_objPalette Hail_bgPalette_5 Hail_TSA_5
 WORD 0x85012348
-SHORT 1; BYTE 6 0x86; POIN Hail_objimg_0; WORD 72 72; POIN Hail_bgImage_6 Hail_objPalette Hail_bgPalette_6 Hail_TSA_6
-SHORT 1; BYTE 7 0x86; POIN Hail_objimg_0; WORD 84 84; POIN Hail_bgImage_7 Hail_objPalette Hail_bgPalette_7 Hail_TSA_7
-SHORT 1; BYTE 8 0x86; POIN Hail_objimg_0; WORD 96 96; POIN Hail_bgImage_8 Hail_objPalette Hail_bgPalette_8 Hail_TSA_8
+SHORT 3; BYTE 6 0x86; POIN Hail_objimg_0; WORD 72 72; POIN Hail_bgImage_6 Hail_objPalette Hail_bgPalette_6 Hail_TSA_6
+SHORT 3; BYTE 7 0x86; POIN Hail_objimg_0; WORD 84 84; POIN Hail_bgImage_7 Hail_objPalette Hail_bgPalette_7 Hail_TSA_7
+SHORT 3; BYTE 8 0x86; POIN Hail_objimg_0; WORD 96 96; POIN Hail_bgImage_8 Hail_objPalette Hail_bgPalette_8 Hail_TSA_8
 WORD 0x85012348
-SHORT 1; BYTE 9 0x86; POIN Hail_objimg_0; WORD 108 108; POIN Hail_bgImage_9 Hail_objPalette Hail_bgPalette_9 Hail_TSA_9
-SHORT 1; BYTE 10 0x86; POIN Hail_objimg_0; WORD 120 120; POIN Hail_bgImage_10 Hail_objPalette Hail_bgPalette_10 Hail_TSA_10
-SHORT 1; BYTE 11 0x86; POIN Hail_objimg_0; WORD 132 132; POIN Hail_bgImage_11 Hail_objPalette Hail_bgPalette_11 Hail_TSA_11
+SHORT 3; BYTE 9 0x86; POIN Hail_objimg_0; WORD 108 108; POIN Hail_bgImage_9 Hail_objPalette Hail_bgPalette_9 Hail_TSA_9
+SHORT 3; BYTE 10 0x86; POIN Hail_objimg_0; WORD 120 120; POIN Hail_bgImage_10 Hail_objPalette Hail_bgPalette_10 Hail_TSA_10
+SHORT 3; BYTE 11 0x86; POIN Hail_objimg_0; WORD 132 132; POIN Hail_bgImage_11 Hail_objPalette Hail_bgPalette_11 Hail_TSA_11
 WORD 0x85012348
-SHORT 1; BYTE 12 0x86; POIN Hail_objimg_0; WORD 144 144; POIN Hail_bgImage_12 Hail_objPalette Hail_bgPalette_12 Hail_TSA_12
-SHORT 1; BYTE 13 0x86; POIN Hail_objimg_0; WORD 156 156; POIN Hail_bgImage_13 Hail_objPalette Hail_bgPalette_13 Hail_TSA_13
-SHORT 1; BYTE 14 0x86; POIN Hail_objimg_0; WORD 168 168; POIN Hail_bgImage_14 Hail_objPalette Hail_bgPalette_14 Hail_TSA_14
+SHORT 3; BYTE 12 0x86; POIN Hail_objimg_0; WORD 144 144; POIN Hail_bgImage_12 Hail_objPalette Hail_bgPalette_12 Hail_TSA_12
+SHORT 3; BYTE 13 0x86; POIN Hail_objimg_0; WORD 156 156; POIN Hail_bgImage_13 Hail_objPalette Hail_bgPalette_13 Hail_TSA_13
+SHORT 3; BYTE 14 0x86; POIN Hail_objimg_0; WORD 168 168; POIN Hail_bgImage_14 Hail_objPalette Hail_bgPalette_14 Hail_TSA_14
 WORD 0x85012348
 WORD 0x8500001a
 WORD 0x8500001f
-SHORT 1; BYTE 15 0x86; POIN Hail_objimg_0; WORD 180 180; POIN Hail_bgImage_15 Hail_objPalette Hail_bgPalette_15 Hail_TSA_15
-SHORT 1; BYTE 16 0x86; POIN Hail_objimg_0; WORD 192 192; POIN Hail_bgImage_16 Hail_objPalette Hail_bgPalette_16 Hail_TSA_16
-SHORT 1; BYTE 17 0x86; POIN Hail_objimg_0; WORD 204 204; POIN Hail_bgImage_17 Hail_objPalette Hail_bgPalette_17 Hail_TSA_17
-SHORT 1; BYTE 18 0x86; POIN Hail_objimg_0; WORD 216 216; POIN Hail_bgImage_18 Hail_objPalette Hail_bgPalette_18 Hail_TSA_18
-SHORT 1; BYTE 19 0x86; POIN Hail_objimg_0; WORD 228 228; POIN Hail_bgImage_19 Hail_objPalette Hail_bgPalette_19 Hail_TSA_19
-SHORT 1; BYTE 20 0x86; POIN Hail_objimg_0; WORD 240 240; POIN Hail_bgImage_20 Hail_objPalette Hail_bgPalette_20 Hail_TSA_20
-SHORT 1; BYTE 21 0x86; POIN Hail_objimg_0; WORD 252 252; POIN Hail_bgImage_21 Hail_objPalette Hail_bgPalette_21 Hail_TSA_21
-SHORT 1; BYTE 22 0x86; POIN Hail_objimg_0; WORD 264 264; POIN Hail_bgImage_22 Hail_objPalette Hail_bgPalette_22 Hail_TSA_22
-SHORT 1; BYTE 23 0x86; POIN Hail_objimg_0; WORD 276 276; POIN Hail_bgImage_23 Hail_objPalette Hail_bgPalette_23 Hail_TSA_23
-SHORT 1; BYTE 24 0x86; POIN Hail_objimg_0; WORD 288 288; POIN Hail_bgImage_24 Hail_objPalette Hail_bgPalette_24 Hail_TSA_24
-SHORT 1; BYTE 25 0x86; POIN Hail_objimg_0; WORD 300 300; POIN Hail_bgImage_25 Hail_objPalette Hail_bgPalette_25 Hail_TSA_25
-SHORT 1; BYTE 26 0x86; POIN Hail_objimg_0; WORD 312 312; POIN Hail_bgImage_26 Hail_objPalette Hail_bgPalette_26 Hail_TSA_26
-SHORT 1; BYTE 27 0x86; POIN Hail_objimg_0; WORD 324 324; POIN Hail_bgImage_27 Hail_objPalette Hail_bgPalette_27 Hail_TSA_27
-SHORT 1; BYTE 28 0x86; POIN Hail_objimg_0; WORD 336 336; POIN Hail_bgImage_28 Hail_objPalette Hail_bgPalette_28 Hail_TSA_28
-SHORT 1; BYTE 29 0x86; POIN Hail_objimg_0; WORD 348 348; POIN Hail_bgImage_29 Hail_objPalette Hail_bgPalette_29 Hail_TSA_29
-SHORT 1; BYTE 30 0x86; POIN Hail_objimg_0; WORD 360 360; POIN Hail_bgImage_30 Hail_objPalette Hail_bgPalette_30 Hail_TSA_30
-SHORT 1; BYTE 31 0x86; POIN Hail_objimg_0; WORD 372 372; POIN Hail_bgImage_31 Hail_objPalette Hail_bgPalette_31 Hail_TSA_31
-SHORT 1; BYTE 32 0x86; POIN Hail_objimg_0; WORD 384 384; POIN Hail_bgImage_32 Hail_objPalette Hail_bgPalette_32 Hail_TSA_32
-SHORT 1; BYTE 33 0x86; POIN Hail_objimg_0; WORD 396 396; POIN Hail_bgImage_33 Hail_objPalette Hail_bgPalette_33 Hail_TSA_33
-SHORT 1; BYTE 34 0x86; POIN Hail_objimg_0; WORD 408 408; POIN Hail_bgImage_34 Hail_objPalette Hail_bgPalette_34 Hail_TSA_34
-SHORT 1; BYTE 35 0x86; POIN Hail_objimg_0; WORD 420 420; POIN Hail_bgImage_35 Hail_objPalette Hail_bgPalette_35 Hail_TSA_35
-SHORT 1; BYTE 36 0x86; POIN Hail_objimg_0; WORD 432 432; POIN Hail_bgImage_36 Hail_objPalette Hail_bgPalette_36 Hail_TSA_36
-SHORT 1; BYTE 37 0x86; POIN Hail_objimg_0; WORD 444 444; POIN Hail_bgImage_37 Hail_objPalette Hail_bgPalette_37 Hail_TSA_37
-SHORT 1; BYTE 38 0x86; POIN Hail_objimg_0; WORD 456 456; POIN Hail_bgImage_38 Hail_objPalette Hail_bgPalette_38 Hail_TSA_38
-SHORT 1; BYTE 39 0x86; POIN Hail_objimg_0; WORD 468 468; POIN Hail_bgImage_39 Hail_objPalette Hail_bgPalette_39 Hail_TSA_39
-SHORT 1; BYTE 40 0x86; POIN Hail_objimg_0; WORD 480 480; POIN Hail_bgImage_40 Hail_objPalette Hail_bgPalette_40 Hail_TSA_40
-SHORT 10; BYTE 41 0x86; POIN Hail_objimg_0; WORD 492 492; POIN Hail_bgImage_0 Hail_objPalette Hail_bgPalette_0 Hail_TSA_0
+SHORT 3; BYTE 15 0x86; POIN Hail_objimg_0; WORD 180 180; POIN Hail_bgImage_15 Hail_objPalette Hail_bgPalette_15 Hail_TSA_15
+SHORT 3; BYTE 16 0x86; POIN Hail_objimg_0; WORD 192 192; POIN Hail_bgImage_16 Hail_objPalette Hail_bgPalette_16 Hail_TSA_16
+SHORT 3; BYTE 17 0x86; POIN Hail_objimg_0; WORD 204 204; POIN Hail_bgImage_17 Hail_objPalette Hail_bgPalette_17 Hail_TSA_17
+SHORT 3; BYTE 18 0x86; POIN Hail_objimg_0; WORD 216 216; POIN Hail_bgImage_18 Hail_objPalette Hail_bgPalette_18 Hail_TSA_18
+SHORT 3; BYTE 19 0x86; POIN Hail_objimg_0; WORD 228 228; POIN Hail_bgImage_19 Hail_objPalette Hail_bgPalette_19 Hail_TSA_19
+SHORT 3; BYTE 20 0x86; POIN Hail_objimg_0; WORD 240 240; POIN Hail_bgImage_20 Hail_objPalette Hail_bgPalette_20 Hail_TSA_20
+SHORT 3; BYTE 21 0x86; POIN Hail_objimg_0; WORD 252 252; POIN Hail_bgImage_21 Hail_objPalette Hail_bgPalette_21 Hail_TSA_21
+SHORT 3; BYTE 22 0x86; POIN Hail_objimg_0; WORD 264 264; POIN Hail_bgImage_22 Hail_objPalette Hail_bgPalette_22 Hail_TSA_22
+SHORT 3; BYTE 23 0x86; POIN Hail_objimg_0; WORD 276 276; POIN Hail_bgImage_23 Hail_objPalette Hail_bgPalette_23 Hail_TSA_23
+SHORT 3; BYTE 24 0x86; POIN Hail_objimg_0; WORD 288 288; POIN Hail_bgImage_24 Hail_objPalette Hail_bgPalette_24 Hail_TSA_24
+SHORT 3; BYTE 25 0x86; POIN Hail_objimg_0; WORD 300 300; POIN Hail_bgImage_25 Hail_objPalette Hail_bgPalette_25 Hail_TSA_25
+SHORT 3; BYTE 26 0x86; POIN Hail_objimg_0; WORD 312 312; POIN Hail_bgImage_26 Hail_objPalette Hail_bgPalette_26 Hail_TSA_26
+SHORT 3; BYTE 27 0x86; POIN Hail_objimg_0; WORD 324 324; POIN Hail_bgImage_27 Hail_objPalette Hail_bgPalette_27 Hail_TSA_27
+SHORT 3; BYTE 28 0x86; POIN Hail_objimg_0; WORD 336 336; POIN Hail_bgImage_28 Hail_objPalette Hail_bgPalette_28 Hail_TSA_28
+SHORT 3; BYTE 29 0x86; POIN Hail_objimg_0; WORD 348 348; POIN Hail_bgImage_29 Hail_objPalette Hail_bgPalette_29 Hail_TSA_29
+SHORT 3; BYTE 30 0x86; POIN Hail_objimg_0; WORD 360 360; POIN Hail_bgImage_30 Hail_objPalette Hail_bgPalette_30 Hail_TSA_30
+SHORT 3; BYTE 31 0x86; POIN Hail_objimg_0; WORD 372 372; POIN Hail_bgImage_31 Hail_objPalette Hail_bgPalette_31 Hail_TSA_31
+SHORT 3; BYTE 32 0x86; POIN Hail_objimg_0; WORD 384 384; POIN Hail_bgImage_32 Hail_objPalette Hail_bgPalette_32 Hail_TSA_32
+SHORT 3; BYTE 33 0x86; POIN Hail_objimg_0; WORD 396 396; POIN Hail_bgImage_33 Hail_objPalette Hail_bgPalette_33 Hail_TSA_33
+SHORT 3; BYTE 34 0x86; POIN Hail_objimg_0; WORD 408 408; POIN Hail_bgImage_34 Hail_objPalette Hail_bgPalette_34 Hail_TSA_34
+SHORT 3; BYTE 35 0x86; POIN Hail_objimg_0; WORD 420 420; POIN Hail_bgImage_35 Hail_objPalette Hail_bgPalette_35 Hail_TSA_35
+SHORT 3; BYTE 36 0x86; POIN Hail_objimg_0; WORD 432 432; POIN Hail_bgImage_36 Hail_objPalette Hail_bgPalette_36 Hail_TSA_36
+SHORT 3; BYTE 37 0x86; POIN Hail_objimg_0; WORD 444 444; POIN Hail_bgImage_37 Hail_objPalette Hail_bgPalette_37 Hail_TSA_37
+SHORT 3; BYTE 38 0x86; POIN Hail_objimg_0; WORD 456 456; POIN Hail_bgImage_38 Hail_objPalette Hail_bgPalette_38 Hail_TSA_38
+SHORT 3; BYTE 39 0x86; POIN Hail_objimg_0; WORD 468 468; POIN Hail_bgImage_39 Hail_objPalette Hail_bgPalette_39 Hail_TSA_39
+SHORT 3; BYTE 40 0x86; POIN Hail_objimg_0; WORD 480 480; POIN Hail_bgImage_40 Hail_objPalette Hail_bgPalette_40 Hail_TSA_40
+//SHORT 10; BYTE 41 0x86; POIN Hail_objimg_0; WORD 492 492; POIN Hail_bgImage_0 Hail_objPalette Hail_bgPalette_0 Hail_TSA_0
 WORD 0x85000053
 WORD 0x80000100
+WORD 0x80000100
+WORD 0x80000100
+WORD 0x80000100
+WORD 0x85000053
 WORD 0x80000000
 
 //OAM Data

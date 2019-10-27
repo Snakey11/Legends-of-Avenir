@@ -153,3 +153,17 @@ Shizonians.[X]
 
 ## Military5AcceptRetreatLeaveStatusText
 Defeat Halleck[X]
+
+## Military6AcceptRetreatLeaveStatusText
+Use the stairs[NL]
+to reach Xylia.[X]
+
+## ReachXyliaText
+Reach Xylia[X]
+
+## Military7AcceptRetreatLeaveStatusText
+Defeat Efil and[NL]
+avoid the Wanderers.[X]
+
+## DefeatEfilText
+Defeat Efil[X]

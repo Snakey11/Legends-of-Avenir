@@ -8,9 +8,10 @@
 .thumb
 .global BowDebuff
 .type BowDebuff, %function
-BowDebuff: @ r4 and r5 have the opposing battle structs.
+BowDebuff: @ r0 and r1 have the opposing battle structs.
 push { lr }
-mov r0, r4
+mov r4, r0
+mov r5, r1
 blh 0x08016B28, r1
 lsl r0, r0, #24
 lsr r0, r0, #24 @ Trims off item uses
@@ -46,33 +47,39 @@ bx r0
 OneRange: @ For one range... let's lower AS by 3, hit by 20, and damage by 3.
 mov r0, #3
 mov r1, #0x5A
+mov r2, r4
 bl SetDebuff @ Reduce attack by 3
 mov r0, #2
 mov r1, #0x5E
+mov r2, r4
 bl SetDebuff @ Reduce AS by 2
 mov r0, #15
 mov r1, #0x60
+mov r2, r4
 bl SetDebuff @ Reduce hit by 15
 b End
 
 ThreeRange: @ For three range... let's lower AS by 5, hit by 30, and damage by 5.
 mov r0, #5
 mov r1, #0x5A
+mov r2, r4
 bl SetDebuff @ Reduce attack by 5
 mov r0, #3
 mov r1, #0x5E
+mov r2, r4
 bl SetDebuff @ Reduce AS by 3
 mov r0, #20
 mov r1, #0x60
+mov r2, r4
 bl SetDebuff @ Reduce hit by 20
 b End
 
 SetDebuff: @ Put debuff amount in r0, byte offset in r1
-ldrh r2, [ r4, r1 ]
-sub r2, r0
-cmp r2, #0x00
+ldrh r3, [ r2, r1 ]
+sub r3, r0
+cmp r3, #0x00
 bge NotNeg3
 	mov r0, #0x00
 NotNeg3:
-strh r2, [ r4, r1 ]
+strh r3, [ r2, r1 ]
 bx r14

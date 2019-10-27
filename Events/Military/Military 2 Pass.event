@@ -23,7 +23,7 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
-SupportConvo(BSupport,0xFF,Jasper,Support1Text)
+SupportConvo(BSupport,0xFF,Jasper,Military2PassTactJasperSupportText)
 END_MAIN
 
 //Label LocationBasedEvents
@@ -187,8 +187,8 @@ UNIT Jasper 0x00 0x00 Level(5,Ally,True) [1,0] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 ElanilFinocEnemies:
-UNIT Elanil Archer_F 0x00 Level(6,Ally,True) [0,1] 0x00 0x00 0x00 0x00 [SteelLongbow,Vulnerary] NoAI
-UNIT Finoc WyvernRider 0x00 Level(6,Ally,True) [2,1] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Elanil Archer_F 0x00 Level(7,Ally,True) [0,1] 0x00 0x00 0x00 0x00 [SteelLongbow,Vulnerary] NoAI
+UNIT Finoc WyvernRider 0x00 Level(8,Ally,True) [2,1] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
 UNIT Sam Myrmidon Sam Level(10,Enemy,True) [15,16] 0x00 0x00 0x00 0x00 [SteelBlade] AttackInRangeAI
 UNIT SamBandit Brigand Sam Level(5,Enemy,True) [9,2] 0x00 0x00 0x00 0x00 [IronAxe] BrigandAI
 UNIT SamBandit Brigand Sam Level(6,Enemy,True) [13,5] 0x00 0x00 0x00 0x00 [IronAxe] BrigandAI

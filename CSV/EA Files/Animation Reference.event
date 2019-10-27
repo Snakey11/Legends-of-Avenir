@@ -14,6 +14,12 @@ LightAnim(BattleSageMagic)
 UnarmedAnim(BattleSageMagic)
 WORD 0x0 0x0
 
+BattleSageFAnim:
+SwordAnim(BattleSageFSword)
+AnimaAnim(BattleSageFMagic)
+LightAnim(BattleSageFMagic)
+UnarmedAnim(BattleSageFMagic)
+
 BlackFalcoknightAnim:
 SwordAnim(BlackFalcoknightSword)
 SpearAnim(BlackFalcoknightSpear)
@@ -87,6 +93,7 @@ HarbingerAnim:
 SwordAnim(HarbingerSword)
 AxeAnim(HarbingerAxe)
 HandAxeAnim(HarbingerHandAxe)
+AnimaAnim(HarbingerMagic)
 UnarmedAnim(HarbingerUnarmed)
 WORD 0x0 0x0
 
@@ -96,6 +103,13 @@ LanceAnim(HectorLance)
 AxeAnim(HectorAxe)
 HandAxeAnim(HectorHandAxe)
 UnarmedAnim(HectorUnarmed)
+WORD 0x0 0x0
+
+HeroFAnim:
+SwordAnim(HeroFSword)
+AxeAnim(HeroFAxe)
+HandAxeAnim(HeroFHandAxe)
+UnarmedAnim(HeroFUnarmed)
 WORD 0x0 0x0
 
 HolySageAnim:
@@ -181,6 +195,11 @@ LightAnim(MatriarchMagic)
 UnarmedAnim(MatriarchMagic)
 WORD 0x0 0x0
 
+MercenaryFAnim:
+SwordAnim(MercenaryFSword)
+UnarmedAnim(MercenaryFSword)
+WORD 0x0 0x0
+
 MonkMAnim:
 StaffAnim(MonkStaff)
 LightAnim(MonkMagic)
@@ -213,14 +232,9 @@ LightAnim(MurielSageMagic)
 UnarmedAnim(MurielSageMagic)
 WORD 0x0 0x0
 
-NomadAnim:
-SwordAnim(NomadSword)
-BowAnim(NomadBow)
-UnarmedAnim(NomadUnarmed)
-WORD 0x0 0x0
-
 PatriarchAnim:
 StaffAnim(PatriarchStaff)
+AnimaAnim(PatriarchMagic)
 LightAnim(PatriarchMagic)
 UnarmedAnim(PatriarchMagic)
 WORD 0x0 0x0
@@ -264,6 +278,7 @@ WORD 0x0 0x0
 WarlockAnim:
 AxeAnim(WarlockAxe)
 HandAxeAnim(WarlockHandAxe)
+StaffAnim(WarlockStaff)
 UnarmedAnim(WarlockUnarmed)
 WORD 0x0 0x0
 

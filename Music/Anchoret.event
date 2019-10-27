@@ -1,41 +1,41 @@
 //Event file generated from Sappy .s format.
 	#include "MPlayDef.event"
 
-	#define	songAnchoret_grp  voicegroup000
-	#define	songAnchoret_pri  0
-	#define	songAnchoret_rev  0
-	#define	songAnchoret_mvl  127
-	#define	songAnchoret_key  0
-	#define	songAnchoret_tbs  1
-	#define	songAnchoret_exg  0
-	#define	songAnchoret_cmp  1
+	#define	Anchoret_grp  voicegroup000
+	#define	Anchoret_pri  0
+	#define	Anchoret_rev  0
+	#define	Anchoret_mvl  127
+	#define	Anchoret_key  0
+	#define	Anchoret_tbs  1
+	#define	Anchoret_exg  0
+	#define	Anchoret_cmp  1
 
 	// .rodata
-	//	songAnchoret
+	//	Anchoret
 	ALIGN 4
 
 
 //**************** Track 1 (Midi-Chn.0) ****************//
 
-songAnchoret_001:
+Anchoret_001:
 // 000   ----------------------------------------
- BYTE   KEYSH   songAnchoret_key+0
+ BYTE   KEYSH   Anchoret_key+0
 Label_0_0100DEA2:
- BYTE   TEMPO   240*songAnchoret_tbs/2
+ BYTE   TEMPO   240*Anchoret_tbs/2
  BYTE   VOICE   46
  BYTE   MODT 0
  BYTE   CnM2
  BYTE   LFOS 0
  BYTE   Gs1
- BYTE   VOL   26*songAnchoret_mvl/mxv
+ BYTE   VOL   26*Anchoret_mvl/mxv
  BYTE   PAN   c_v+0
- BYTE   VOL   26*songAnchoret_mvl/mxv
+ BYTE   VOL   26*Anchoret_mvl/mxv
  BYTE   PAN   c_v+0
- BYTE   VOL   26*songAnchoret_mvl/mxv
+ BYTE   VOL   26*Anchoret_mvl/mxv
  BYTE   W18
  BYTE   Gn0
  BYTE   W06
- BYTE   TEMPO   60*songAnchoret_tbs/2
+ BYTE   TEMPO   60*Anchoret_tbs/2
  BYTE   N12  En2  v127
  BYTE   W12
  BYTE   An2
@@ -200,7 +200,7 @@ Label_0_0100DF53:
  BYTE   Cn3
  BYTE   N12  En4
  BYTE   W12
- BYTE   VOL   26*songAnchoret_mvl/mxv
+ BYTE   VOL   26*Anchoret_mvl/mxv
  BYTE   W20
  BYTE   GoTo
   POIN2 Label_0_0100DEA2
@@ -208,20 +208,20 @@ Label_0_0100DF53:
 
 //**************** Track 2 (Midi-Chn.1) ****************//
 
-songAnchoret_002:
+Anchoret_002:
 // 000   ----------------------------------------
- BYTE   KEYSH   songAnchoret_key+0
+ BYTE   KEYSH   Anchoret_key+0
 Label_1_0100DF9A:
  BYTE   VOICE   73
  BYTE   MODT 0
  BYTE   CnM2
  BYTE   LFOS 0
  BYTE   Gs1
- BYTE   VOL   26*songAnchoret_mvl/mxv
+ BYTE   VOL   26*Anchoret_mvl/mxv
  BYTE   PAN   c_v+0
- BYTE   VOL   26*songAnchoret_mvl/mxv
+ BYTE   VOL   26*Anchoret_mvl/mxv
  BYTE   PAN   c_v+0
- BYTE   VOL   26*songAnchoret_mvl/mxv
+ BYTE   VOL   26*Anchoret_mvl/mxv
  BYTE   W18
  BYTE   Cn0
  BYTE   W06
@@ -231,7 +231,7 @@ Label_1_0100DF9A:
  BYTE   N12  Cn4  v127
  BYTE   N12  En4
  BYTE   W03
- BYTE   VOL   3*songAnchoret_mvl/mxv
+ BYTE   VOL   3*Anchoret_mvl/mxv
  BYTE   W03
  BYTE   GsM1
  BYTE   W03
@@ -241,11 +241,11 @@ Label_1_0100DF9A:
  BYTE   W36
 // 001   ----------------------------------------
 Label_1_0100DFBF:
- BYTE   VOL   0*songAnchoret_mvl/mxv
+ BYTE   VOL   0*Anchoret_mvl/mxv
  BYTE   N12  Cn4  v127
  BYTE   N12  En4
  BYTE   W03
- BYTE   VOL   3*songAnchoret_mvl/mxv
+ BYTE   VOL   3*Anchoret_mvl/mxv
  BYTE   W03
  BYTE   GsM1
  BYTE   W03
@@ -257,7 +257,7 @@ Label_1_0100DFBF:
  BYTE   N12  Dn4
  BYTE   N12  Fn4
  BYTE   W03
- BYTE   VOL   3*songAnchoret_mvl/mxv
+ BYTE   VOL   3*Anchoret_mvl/mxv
  BYTE   W03
  BYTE   GsM1
  BYTE   W03
@@ -268,11 +268,11 @@ Label_1_0100DFBF:
  BYTE   PEND 
 // 002   ----------------------------------------
 Label_1_0100DFE0:
- BYTE   VOL   0*songAnchoret_mvl/mxv
+ BYTE   VOL   0*Anchoret_mvl/mxv
  BYTE   N12  Cn4  v127
  BYTE   N12  Gn4
  BYTE   W03
- BYTE   VOL   3*songAnchoret_mvl/mxv
+ BYTE   VOL   3*Anchoret_mvl/mxv
  BYTE   W03
  BYTE   GsM1
  BYTE   W03
@@ -284,7 +284,7 @@ Label_1_0100DFE0:
  BYTE   N12  Cn4
  BYTE   N12  En4
  BYTE   W03
- BYTE   VOL   3*songAnchoret_mvl/mxv
+ BYTE   VOL   3*Anchoret_mvl/mxv
  BYTE   W03
  BYTE   GsM1
  BYTE   W03
@@ -304,11 +304,11 @@ Label_1_0100DFE0:
  BYTE   PATT
   POIN2 Label_1_0100DFBF
 // 003   ----------------------------------------
- BYTE   VOL   0*songAnchoret_mvl/mxv
+ BYTE   VOL   0*Anchoret_mvl/mxv
  BYTE   N12  Cn4  v127
  BYTE   N12  Gn4
  BYTE   W03
- BYTE   VOL   3*songAnchoret_mvl/mxv
+ BYTE   VOL   3*Anchoret_mvl/mxv
  BYTE   W03
  BYTE   GsM1
  BYTE   W03
@@ -409,20 +409,20 @@ Label_1_0100DFE0:
 
 //**************** Track 3 (Midi-Chn.2) ****************//
 
-songAnchoret_003:
+Anchoret_003:
 // 000   ----------------------------------------
- BYTE   KEYSH   songAnchoret_key+0
+ BYTE   KEYSH   Anchoret_key+0
 Label_2_0100E09A:
  BYTE   VOICE   45
  BYTE   MODT 0
  BYTE   CnM2
  BYTE   LFOS 0
  BYTE   Gs1
- BYTE   VOL   35*songAnchoret_mvl/mxv
+ BYTE   VOL   35*Anchoret_mvl/mxv
  BYTE   PAN   c_v+0
- BYTE   VOL   35*songAnchoret_mvl/mxv
+ BYTE   VOL   35*Anchoret_mvl/mxv
  BYTE   PAN   c_v+0
- BYTE   VOL   35*songAnchoret_mvl/mxv
+ BYTE   VOL   35*Anchoret_mvl/mxv
  BYTE   W18
  BYTE   Fs3
  BYTE   W06
@@ -476,7 +476,7 @@ Label_2_0100E0B7:
  BYTE   An1
  BYTE   N12  An3
  BYTE   W12
- BYTE   VOL   35*songAnchoret_mvl/mxv
+ BYTE   VOL   35*Anchoret_mvl/mxv
  BYTE   W08
  BYTE   GoTo
   POIN2 Label_2_0100E09A
@@ -488,13 +488,13 @@ Label_2_0100E0B7:
 songAnchoret:
 	BYTE	3	// NumTrks
 	BYTE	0	// NumBlks
-	BYTE	songAnchoret_pri	// Priority
-	BYTE	songAnchoret_rev	// Reverb.
+	BYTE	Anchoret_pri	// Priority
+	BYTE	Anchoret_rev	// Reverb.
     
-	POIN2	songAnchoret_grp
+	POIN2	Anchoret_grp
     
-	POIN2	songAnchoret_001
-	POIN2	songAnchoret_002
-	POIN2	songAnchoret_003
+	POIN2	Anchoret_001
+	POIN2	Anchoret_002
+	POIN2	Anchoret_003
 
 	

@@ -1,0 +1,4812 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	SatorlMarsh_grp  voicegroup000
+	#define	SatorlMarsh_pri  10
+	#define	SatorlMarsh_rev  0
+	#define	SatorlMarsh_mvl  127
+	#define	SatorlMarsh_key  0
+	#define	SatorlMarsh_tbs  1
+	#define	SatorlMarsh_exg  0
+	#define	SatorlMarsh_cmp  1
+
+	// .rodata
+	//	m
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+SatorlMarsh_001:
+// 000   ----------------------------------------
+SatorlMarsh_Label_0_00:
+ BYTE   KEYSH   SatorlMarsh_key+0
+ BYTE   VOICE   10
+ BYTE   VOL   32*SatorlMarsh_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   LFOS 44
+ BYTE   MODT 0
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   BENDR  12
+ BYTE   BENDR  12
+ BYTE   N12  As5  v031
+ BYTE   N24  As1
+ BYTE   W12
+ BYTE   N11  Ds5  v027
+ BYTE   W11
+ BYTE   Fn5  v029
+ BYTE   N24  Fn2
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W11
+ BYTE   N96  Cs3
+ BYTE   N11  As5
+ BYTE   N96  Fn3  v019
+ BYTE   N96  As3
+ BYTE   W01
+ BYTE   N01  Cs3  v026
+ BYTE   W10
+ BYTE   N11  Ds5
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Fn5  v026
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v026
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+// 001   ----------------------------------------
+ BYTE   N11  As5  v026
+ BYTE   W03
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Ds5  v026
+ BYTE   W01
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Fn5  v026
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v026
+ BYTE   W06
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   N12  Gs5  v031
+ BYTE   N96  Ds3  v019
+ BYTE   N96  Cn3
+ BYTE   N96  Gs3  v031
+ BYTE   W02
+ BYTE   N48  Ds3  v019
+ BYTE   N48  Cn3
+ BYTE   N48  Gs3  v031
+ BYTE   W01
+ BYTE   N02  Cn3  v019
+ BYTE   N02  Gs3  v031
+ BYTE   N02  Ds3  v019
+ BYTE   W02
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W07
+ BYTE   N11  Cs5  v027
+ BYTE   W11
+ BYTE   Ds5  v029
+ BYTE   W11
+ BYTE   Cs5  v026
+ BYTE   W12
+// 002   ----------------------------------------
+ BYTE   Gs5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W12
+// 003   ----------------------------------------
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+// 004   ----------------------------------------
+ BYTE   BENDR  12
+ BYTE   BENDR  12
+ BYTE   N12  As5  v031
+ BYTE   N24  As1
+ BYTE   W12
+ BYTE   N11  Ds5  v027
+ BYTE   W11
+ BYTE   Fn5  v029
+ BYTE   N24  Fn2
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W11
+ BYTE   N96  Cs3
+ BYTE   N11  As5
+ BYTE   N96  As3  v019
+ BYTE   N96  Fn3
+ BYTE   W01
+ BYTE   N01  Cs3  v026
+ BYTE   W10
+ BYTE   N11  Ds5
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Fn5  v026
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v026
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  As5  v026
+ BYTE   W03
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Ds5  v026
+ BYTE   W01
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Fn5  v026
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v026
+ BYTE   W06
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   N12  Gs5  v031
+ BYTE   N96  Ds3  v019
+ BYTE   N96  Gs3  v031
+ BYTE   N96  Cn3  v019
+ BYTE   W02
+ BYTE   N48  Gs3  v031
+ BYTE   N48  Cn3  v019
+ BYTE   N48  Ds3
+ BYTE   W01
+ BYTE   N02  Cn3
+ BYTE   N02  Gs3  v031
+ BYTE   N02  Ds3  v019
+ BYTE   W02
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W07
+ BYTE   N11  Cs5  v027
+ BYTE   W11
+ BYTE   Ds5  v029
+ BYTE   W11
+ BYTE   Cs5  v026
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W08
+ BYTE   N54  As2  v019
+ BYTE   W01
+ BYTE   N01
+ BYTE   N52  Fn3
+ BYTE   W01
+ BYTE   N01
+ BYTE   N12  As5  v031
+ BYTE   N48  As3
+ BYTE   W01
+ BYTE   N01
+ BYTE   W11
+ BYTE   N11  Ds5  v027
+ BYTE   W11
+ BYTE   Fn5  v029
+ BYTE   W11
+ BYTE   Ds5  v026
+ BYTE   W12
+ BYTE   As5
+ BYTE   N48  Fn4  v031
+ BYTE   N48  Cs4  v019
+ BYTE   W01
+ BYTE   N02
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W12
+ BYTE   Fn5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   As5
+ BYTE   N24  Ds4  v031
+ BYTE   N24  As3  v019
+ BYTE   N01
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W11
+ BYTE   Fn5
+ BYTE   N24  Cs4  v019
+ BYTE   N24  Fn4  v031
+ BYTE   N01  Cs4  v019
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W08
+ BYTE   N54  Gs3  v019
+ BYTE   W01
+ BYTE   N01
+ BYTE   N52  Ds4
+ BYTE   W01
+ BYTE   N01
+ BYTE   N12  Gs5  v031
+ BYTE   N48  Gs4
+ BYTE   W01
+ BYTE   N01
+ BYTE   W11
+ BYTE   N11  Cs5  v027
+ BYTE   W11
+ BYTE   Ds5  v029
+ BYTE   W11
+ BYTE   Cs5  v026
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N92  Cn4  v016
+ BYTE   N96  Fn4  v027
+ BYTE   W02
+ BYTE   N03  Cn4  v016
+ BYTE   W10
+ BYTE   N11  Cs5  v026
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W08
+ BYTE   N54  As2  v019
+ BYTE   W01
+ BYTE   N01
+ BYTE   N52  Fn3
+ BYTE   W01
+ BYTE   N01
+ BYTE   N12  As5  v031
+ BYTE   N48  As3
+ BYTE   W01
+ BYTE   N01
+ BYTE   W11
+ BYTE   N11  Ds5  v027
+ BYTE   W11
+ BYTE   Fn5  v029
+ BYTE   W11
+ BYTE   Ds5  v026
+ BYTE   W12
+ BYTE   As5
+ BYTE   N48  Fn4  v031
+ BYTE   N48  Cs4  v019
+ BYTE   W01
+ BYTE   N02
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W12
+ BYTE   Fn5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   As5
+ BYTE   N24  Ds4  v031
+ BYTE   N24  As3  v019
+ BYTE   N01
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W11
+ BYTE   Fn5
+ BYTE   N24  Cs4  v019
+ BYTE   N24  Fn4  v031
+ BYTE   N01  Cs4  v019
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W08
+ BYTE   N30  Gs3  v019
+ BYTE   W02
+ BYTE   N36  Ds4
+ BYTE   N02
+ BYTE   W01
+ BYTE   N12  Gs5  v031
+ BYTE   N24  Gs4
+ BYTE   N01
+ BYTE   W12
+ BYTE   N11  Cs5  v027
+ BYTE   W11
+ BYTE   N24  Fn4  v019
+ BYTE   N24  As4  v031
+ BYTE   W11
+ BYTE   N11  Cs5  v026
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N92  Cn4  v016
+ BYTE   N96  Fn4  v027
+ BYTE   W02
+ BYTE   N03  Cn4  v016
+ BYTE   W10
+ BYTE   N11  Cs5  v026
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W08
+ BYTE   N54  As2  v019
+ BYTE   W01
+ BYTE   N01
+ BYTE   N52  Fn3
+ BYTE   W01
+ BYTE   N01
+ BYTE   N12  As5  v031
+ BYTE   N48  As3
+ BYTE   W01
+ BYTE   N01
+ BYTE   W11
+ BYTE   N11  Ds5  v027
+ BYTE   W11
+ BYTE   Fn5  v029
+ BYTE   W11
+ BYTE   Ds5  v026
+ BYTE   W12
+ BYTE   As5
+ BYTE   N48  Fn4  v031
+ BYTE   N48  Cs4  v019
+ BYTE   W01
+ BYTE   N02
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W12
+ BYTE   Fn5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   As5
+ BYTE   N24  Ds4  v031
+ BYTE   N24  As3  v019
+ BYTE   N01
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W11
+ BYTE   Fn5
+ BYTE   N24  Cs4  v019
+ BYTE   N24  Fn4  v031
+ BYTE   N01  Cs4  v019
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W08
+ BYTE   N30  Gs3  v019
+ BYTE   W02
+ BYTE   N36  Ds4
+ BYTE   N02
+ BYTE   W01
+ BYTE   N12  Gs5  v031
+ BYTE   N24  Gs4
+ BYTE   N01
+ BYTE   W12
+ BYTE   N11  Cs5  v027
+ BYTE   W11
+ BYTE   N24  Fn4  v019
+ BYTE   N24  As4  v031
+ BYTE   N01  Fn4  v019
+ BYTE   W11
+ BYTE   N11  Cs5  v026
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N24  Gs3  v019
+ BYTE   N24  Ds4  v031
+ BYTE   N01  Gs3  v019
+ BYTE   W11
+ BYTE   N11  Cs5  v026
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   N24  Fn4  v031
+ BYTE   N24  Cn4  v019
+ BYTE   W12
+ BYTE   N11  Cs5  v026
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N24  Cn4  v031
+ BYTE   N24  Gs3  v019
+ BYTE   N01
+ BYTE   W11
+ BYTE   N11  Cs5  v026
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   N24  Cs4  v031
+ BYTE   N24  As3  v019
+ BYTE   W11
+ BYTE   N11  Cs5  v026
+ BYTE   W12
+ BYTE   N24  Fn3  v016
+ BYTE   N96  As3  v027
+ BYTE   N96  As2  v016
+ BYTE   W02
+ BYTE   N48  As3  v027
+ BYTE   N48  As2  v016
+ BYTE   W01
+ BYTE   N01
+ BYTE   N02  As3  v027
+ BYTE   W09
+ BYTE   N96  Fn4
+ BYTE   W02
+ BYTE   N36
+ BYTE   W09
+ BYTE   N11  Gs4  v029
+ BYTE   W11
+ BYTE   As4  v026
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Fn5  v026
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs5  v026
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  Fn5  v026
+ BYTE   W03
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Gs5  v026
+ BYTE   W01
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Fn5  v026
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v026
+ BYTE   W06
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   N12  Cs5  v031
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W07
+ BYTE   N11  Ds5  v026
+ BYTE   W11
+ BYTE   Cs5  v027
+ BYTE   W11
+ BYTE   As4  v028
+ BYTE   W12
+ BYTE   Gs4  v030
+ BYTE   W12
+ BYTE   As4  v031
+ BYTE   W12
+ BYTE   Gs4
+ BYTE   W12
+ BYTE   Fn4  v032
+ BYTE   W12
+ BYTE   Ds4  v033
+ BYTE   W12
+ BYTE   Fn4  v034
+ BYTE   W11
+ BYTE   Ds4  v035
+ BYTE   W11
+ BYTE   Cn4  v036
+ BYTE   W12
+ BYTE   N24  As1  v044
+ BYTE   N48  As4
+ BYTE   N01  As1
+ BYTE   N01  As4
+ BYTE   W11
+ BYTE   N11  Ds4  v039
+ BYTE   W11
+ BYTE   Fn4  v042
+ BYTE   N24  Fn2
+ BYTE   W11
+ BYTE   N11  Ds4  v038
+ BYTE   W12
+ BYTE   N48  Gs4
+ BYTE   N96  As2  v031
+ BYTE   N96  Cs3  v045
+ BYTE   W12
+ BYTE   N11  Ds4  v038
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   N48  As4
+ BYTE   W12
+ BYTE   N11  Ds4
+ BYTE   W11
+ BYTE   Fn4
+ BYTE   W11
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   N24  Gs1  v044
+ BYTE   N96  Gs4  v038
+ BYTE   N01  Gs1  v044
+ BYTE   W01
+ BYTE   Gs4  v038
+ BYTE   W10
+ BYTE   N11  Cs4  v039
+ BYTE   W11
+ BYTE   Ds4  v042
+ BYTE   N24  Ds2
+ BYTE   W11
+ BYTE   N11  Cs4  v038
+ BYTE   W12
+ BYTE   Gs3
+ BYTE   N96  Gs2  v031
+ BYTE   N96  Cn3  v045
+ BYTE   W12
+ BYTE   N11  Cs4  v038
+ BYTE   W12
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   N48  Gs4
+ BYTE   W12
+ BYTE   N11  Cs4
+ BYTE   W11
+ BYTE   Ds4
+ BYTE   W11
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   N24  As1  v044
+ BYTE   N48  As4
+ BYTE   N01  As1
+ BYTE   As4
+ BYTE   W11
+ BYTE   N11  Ds4  v039
+ BYTE   W11
+ BYTE   Fn4  v042
+ BYTE   N24  Fn2
+ BYTE   W11
+ BYTE   N11  Ds4  v038
+ BYTE   W12
+ BYTE   N48  Gs4
+ BYTE   N96  Cs3  v045
+ BYTE   N96  As2  v031
+ BYTE   W12
+ BYTE   N11  Ds4  v038
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   N48  As4
+ BYTE   W12
+ BYTE   N11  Ds4
+ BYTE   W11
+ BYTE   Fn4
+ BYTE   W11
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   N24  Gs1  v044
+ BYTE   N96  Cn5  v038
+ BYTE   N01  Gs1  v044
+ BYTE   W01
+ BYTE   Cn5  v038
+ BYTE   W10
+ BYTE   N11  Cs4  v039
+ BYTE   W11
+ BYTE   Ds4  v042
+ BYTE   N24  Ds2
+ BYTE   W11
+ BYTE   N11  Cs4  v038
+ BYTE   W12
+ BYTE   Gs3
+ BYTE   N96  Cn3  v045
+ BYTE   N96  Gs2  v031
+ BYTE   W12
+ BYTE   N11  Cs4  v038
+ BYTE   W12
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   N48  Cn5
+ BYTE   W12
+ BYTE   N11  Cs4
+ BYTE   W11
+ BYTE   Ds4
+ BYTE   W11
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   N24  As1  v044
+ BYTE   N96  Cs5  v038
+ BYTE   N01  As1  v044
+ BYTE   W01
+ BYTE   Cs5  v038
+ BYTE   W10
+ BYTE   N11  Ds4  v039
+ BYTE   W11
+ BYTE   Fn4  v042
+ BYTE   N24  Fn2
+ BYTE   W11
+ BYTE   N11  Ds4  v038
+ BYTE   W12
+ BYTE   As3
+ BYTE   N96  As2  v031
+ BYTE   N96  Cs3  v045
+ BYTE   W12
+ BYTE   N11  Ds4  v038
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   N48  As4
+ BYTE   W12
+ BYTE   N11  Ds4
+ BYTE   W11
+ BYTE   Fn4
+ BYTE   W11
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   N24  Gs1  v044
+ BYTE   N96  Gs4  v038
+ BYTE   N01  Gs1  v044
+ BYTE   W01
+ BYTE   Gs4  v038
+ BYTE   W10
+ BYTE   N11  Cs4  v039
+ BYTE   W11
+ BYTE   Ds4  v042
+ BYTE   N24  Ds2
+ BYTE   W11
+ BYTE   N11  Cs4  v038
+ BYTE   W12
+ BYTE   Gs3
+ BYTE   N96  Gs2  v031
+ BYTE   N96  Cn3  v045
+ BYTE   W12
+ BYTE   N11  Cs4  v038
+ BYTE   W12
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   N48  Gs4
+ BYTE   W12
+ BYTE   N11  Cs4
+ BYTE   W11
+ BYTE   Ds4
+ BYTE   W11
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   N12  As4  v044
+ BYTE   N24  As1
+ BYTE   N01
+ BYTE   W12
+ BYTE   N11  Fn3  v039
+ BYTE   W11
+ BYTE   Gs3  v042
+ BYTE   N24  Fn2
+ BYTE   W11
+ BYTE   N11  As3  v038
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   N96  Cs3  v045
+ BYTE   N96  As2  v031
+ BYTE   W12
+ BYTE   N11  Ds4  v038
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   Gs4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   Gs4
+ BYTE   W11
+ BYTE   Fn4
+ BYTE   W11
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   N12  Cs4  v044
+ BYTE   N24  Gs1
+ BYTE   N01
+ BYTE   W12
+ BYTE   N11  Ds4  v039
+ BYTE   W11
+ BYTE   Cs4  v042
+ BYTE   N24  Ds2  v043
+ BYTE   W11
+ BYTE   N11  As3  v044
+ BYTE   W12
+ BYTE   Gs3  v047
+ BYTE   N84  Cn3  v054
+ BYTE   N92  Gs2  v038
+ BYTE   W12
+ BYTE   N11  As3  v049
+ BYTE   W12
+ BYTE   Gs3  v052
+ BYTE   W12
+ BYTE   Fn3  v054
+ BYTE   W12
+ BYTE   Ds3  v058
+ BYTE   W12
+ BYTE   Fn3  v060
+ BYTE   W11
+ BYTE   Ds3  v063
+ BYTE   W11
+ BYTE   N08  Cn3  v065
+ BYTE   W12
+ BYTE   N12  As2  v116
+ BYTE   N96  Fn2  v117
+ BYTE   N96  As1  v095
+ BYTE   W02
+ BYTE   N48  Fn2  v117
+ BYTE   N48  As1  v095
+ BYTE   W01
+ BYTE   N02
+ BYTE   N02  Fn2  v117
+ BYTE   W09
+ BYTE   N11  Cn3  v070
+ BYTE   W11
+ BYTE   Cs3  v073
+ BYTE   W11
+ BYTE   Fn3  v069
+ BYTE   W12
+ BYTE   As3
+ BYTE   N48  Fn3  v117
+ BYTE   N48  Cs3  v095
+ BYTE   W12
+ BYTE   N11  Cn4  v069
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   As4
+ BYTE   N24  Ds3  v117
+ BYTE   N24  As2  v095
+ BYTE   W12
+ BYTE   N11  Cn5  v069
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   N24  Cs3  v095
+ BYTE   N24  Fn3  v117
+ BYTE   W11
+ BYTE   N11  Fn5  v069
+ BYTE   W12
+ BYTE   N12  Cn3  v076
+ BYTE   N36  Gs3
+ BYTE   N96  Ds2  v117
+ BYTE   N96  Gs1  v095
+ BYTE   N01  Gs3  v076
+ BYTE   W01
+ BYTE   N48  Gs1  v095
+ BYTE   N48  Ds2  v117
+ BYTE   W01
+ BYTE   N02
+ BYTE   N02  Gs1  v095
+ BYTE   W09
+ BYTE   N11  Cs3  v070
+ BYTE   W11
+ BYTE   Ds3  v073
+ BYTE   W11
+ BYTE   Gs3  v069
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   N96  Cn3  v112
+ BYTE   N96  Fn3  v105
+ BYTE   W12
+ BYTE   N11  Cs4  v069
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Ds4  v069
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs4  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  Cn5  v069
+ BYTE   W03
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Cs5  v069
+ BYTE   W01
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Ds5  v069
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs5  v069
+ BYTE   W06
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N12  As2  v116
+ BYTE   N96  Fn2  v117
+ BYTE   N96  As1  v095
+ BYTE   W02
+ BYTE   N48  Fn2  v117
+ BYTE   N48  As1  v095
+ BYTE   W01
+ BYTE   N02
+ BYTE   N02  Fn2  v117
+ BYTE   W09
+ BYTE   N11  Cn3  v070
+ BYTE   W11
+ BYTE   Cs3  v073
+ BYTE   W11
+ BYTE   Fn3  v069
+ BYTE   W12
+ BYTE   As3
+ BYTE   N48  Fn3  v117
+ BYTE   N48  Cs3  v095
+ BYTE   W12
+ BYTE   N11  Cn4  v069
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   As4
+ BYTE   N24  Ds3  v117
+ BYTE   N24  As2  v095
+ BYTE   W12
+ BYTE   N11  Cn5  v069
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   N24  Fn3  v117
+ BYTE   N24  Cs3  v095
+ BYTE   W11
+ BYTE   N11  Fn5  v069
+ BYTE   W12
+ BYTE   N12  Cn3  v076
+ BYTE   N24  Gs3
+ BYTE   N96  Ds2  v117
+ BYTE   N96  Gs1  v095
+ BYTE   N01  Gs3  v076
+ BYTE   W01
+ BYTE   N48  Ds2  v117
+ BYTE   N48  Gs1  v095
+ BYTE   W01
+ BYTE   N02  Ds2  v117
+ BYTE   N02  Gs1  v095
+ BYTE   W09
+ BYTE   N11  Cs3  v070
+ BYTE   W11
+ BYTE   Ds3  v073
+ BYTE   N24  As3
+ BYTE   W11
+ BYTE   N11  Gs3  v069
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   N96  Fn3  v105
+ BYTE   N96  Cn3  v112
+ BYTE   W12
+ BYTE   N11  Cs4  v069
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Ds4  v069
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs4  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  Cn5  v069
+ BYTE   W03
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Cs5  v069
+ BYTE   W01
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Ds5  v069
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs5  v069
+ BYTE   W06
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N12  As2  v116
+ BYTE   N96  As1  v095
+ BYTE   N96  Fn2  v117
+ BYTE   W02
+ BYTE   N48
+ BYTE   N48  As1  v095
+ BYTE   W01
+ BYTE   N02
+ BYTE   N02  Fn2  v117
+ BYTE   W09
+ BYTE   N11  Cn3  v070
+ BYTE   W11
+ BYTE   Cs3  v073
+ BYTE   W11
+ BYTE   Fn3  v069
+ BYTE   W12
+ BYTE   As3
+ BYTE   N48  Cs3  v095
+ BYTE   N48  Fn3  v117
+ BYTE   W12
+ BYTE   N11  Cn4  v069
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   As4
+ BYTE   N24  As2  v095
+ BYTE   N24  Ds3  v117
+ BYTE   W12
+ BYTE   N11  Cn5  v069
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   N24  Fn3  v117
+ BYTE   N24  Cs3  v095
+ BYTE   W11
+ BYTE   N11  Fn5  v069
+ BYTE   W12
+ BYTE   N12  Cn3  v076
+ BYTE   N24  Gs3
+ BYTE   N96  Gs1  v095
+ BYTE   N96  Ds2  v117
+ BYTE   N01  Gs3  v076
+ BYTE   W01
+ BYTE   N48  Ds2  v117
+ BYTE   N48  Gs1  v095
+ BYTE   W01
+ BYTE   N02  Ds2  v117
+ BYTE   N02  Gs1  v095
+ BYTE   W09
+ BYTE   N11  Cs3  v070
+ BYTE   W11
+ BYTE   Ds3  v073
+ BYTE   N24  As3
+ BYTE   W11
+ BYTE   N11  Gs3  v069
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   N24  Ds3  v117
+ BYTE   N24  Gs2  v095
+ BYTE   W12
+ BYTE   N11  Cs4  v069
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Ds4  v069
+ BYTE   N24  Cn3  v095
+ BYTE   N24  Fn3  v117
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs4  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  Cn5  v069
+ BYTE   N24  Gs2  v095
+ BYTE   N24  Cn3  v117
+ BYTE   W03
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Cs5  v069
+ BYTE   W01
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Ds5  v069
+ BYTE   N24  Cs3  v117
+ BYTE   N24  As2  v095
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs5  v069
+ BYTE   W06
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N12  As2  v117
+ BYTE   N96  As1  v095
+ BYTE   N96  Fn2
+ BYTE   W02
+ BYTE   N01  As1
+ BYTE   N01  Fn2
+ BYTE   W10
+ BYTE   N11  Cn3  v070
+ BYTE   W11
+ BYTE   Cs3  v073
+ BYTE   W11
+ BYTE   Fn3  v069
+ BYTE   W12
+ BYTE   As3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   As3  v108
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W11
+ BYTE   Cs4
+ BYTE   W11
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   N12  As4  v076
+ BYTE   W13
+ BYTE   N11  Cn5  v070
+ BYTE   W11
+ BYTE   Cs5  v073
+ BYTE   W11
+ BYTE   Fn5  v069
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   N48  Cn3  v059
+ BYTE   N48  Ds3
+ BYTE   N48  Gs3  v077
+ BYTE   W12
+ BYTE   N11  Cn5  v069
+ BYTE   W12
+ BYTE   Gs4
+ BYTE   W12
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   Gs3
+ BYTE   W11
+ BYTE   Ds3
+ BYTE   W11
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   N24  As1  v076
+ BYTE   N48  As2
+ BYTE   N01  As1
+ BYTE   As2
+ BYTE   W23
+ BYTE   N24  Fn2  v073
+ BYTE   W24
+ BYTE   N48  Fn4  v077
+ BYTE   N48  Cs4  v059
+ BYTE   N48  Fn3
+ BYTE   N96  As2
+ BYTE   N96  Cs3  v077
+ BYTE   W48
+ BYTE   N24  Cn4  v059
+ BYTE   N24  Ds3
+ BYTE   N24  Ds4  v077
+ BYTE   W24
+ BYTE   Fn4
+ BYTE   N24  Fn3  v059
+ BYTE   N24  Cs4
+ BYTE   W24
+ BYTE   Gs4  v084
+ BYTE   N24  Gs1  v076
+ BYTE   N24  Cn4  v065
+ BYTE   N24  Gs3
+ BYTE   N01  Cn4
+ BYTE   N01  Gs1  v076
+ BYTE   N01  Gs3  v065
+ BYTE   N01  Gs4  v084
+ BYTE   W24
+ BYTE   N24  As4  v081
+ BYTE   N24  Ds2  v073
+ BYTE   N24  As3  v063
+ BYTE   N24  Cs4
+ BYTE   W24
+ BYTE   N48  Gs4  v077
+ BYTE   N48  Cn4  v059
+ BYTE   N48  Gs3
+ BYTE   N96  Cn3  v077
+ BYTE   N96  Gs2  v059
+ BYTE   W48
+ BYTE   N24  Cs4
+ BYTE   N24  Fn3
+ BYTE   N24  Fn4  v077
+ BYTE   W24
+ BYTE   Ds4
+ BYTE   N24  Ds3  v059
+ BYTE   N24  Cn4
+ BYTE   W24
+ BYTE   Cs1  v074
+ BYTE   N48  Cn4  v065
+ BYTE   N48  Ds4  v084
+ BYTE   N48  Ds3  v065
+ BYTE   N01  Cs1  v074
+ BYTE   N01  Ds4  v084
+ BYTE   N01  Ds3  v065
+ BYTE   N01  Cn4
+ BYTE   W23
+ BYTE   N24  Cs2  v073
+ BYTE   W24
+ BYTE   N48  Cn3  v077
+ BYTE   N48  Gs2  v059
+ BYTE   N72  Fn4  v077
+ BYTE   N72  Cs4  v059
+ BYTE   N72  Fn3
+ BYTE   W48
+ BYTE   N48  Fn2  v069
+ BYTE   W24
+ BYTE   N24  Gs3
+ BYTE   W24
+ BYTE   Fn1  v076
+ BYTE   N24  Cn4
+ BYTE   N01  Fn1
+ BYTE   N01  Cn4
+ BYTE   W24
+ BYTE   N11  As3  v073
+ BYTE   N24  Cn2
+ BYTE   W11
+ BYTE   N11  Cn4  v069
+ BYTE   W12
+ BYTE   N24  Gs3
+ BYTE   N96  Fn2  v059
+ BYTE   N96  Gs2  v077
+ BYTE   W24
+ BYTE   N24  Fn3  v069
+ BYTE   W24
+ BYTE   Ds3
+ BYTE   W24
+ BYTE   Cn3
+ BYTE   W24
+ BYTE   Fs1  v076
+ BYTE   N48  As2
+ BYTE   N01  Fs1
+ BYTE   As2
+ BYTE   W23
+ BYTE   N24  Cs2  v073
+ BYTE   W24
+ BYTE   N48  Fn4  v077
+ BYTE   N48  Cs4  v059
+ BYTE   N48  Fn3
+ BYTE   N96  As2  v077
+ BYTE   N96  Fs2  v059
+ BYTE   W48
+ BYTE   N24  Cn4
+ BYTE   N24  Ds3
+ BYTE   N24  Ds4  v077
+ BYTE   W24
+ BYTE   Fn4
+ BYTE   N24  Fn3  v059
+ BYTE   N24  Cs4
+ BYTE   W24
+ BYTE   Cn4  v065
+ BYTE   N24  Gs1  v076
+ BYTE   N24  Gs3  v065
+ BYTE   N24  Gs4  v084
+ BYTE   N01  Gs1  v076
+ BYTE   N01  Gs4  v084
+ BYTE   N01  Gs3  v065
+ BYTE   N01  Cn4
+ BYTE   W24
+ BYTE   N24  As4  v081
+ BYTE   N24  Ds2  v073
+ BYTE   N24  As3  v063
+ BYTE   N24  Cs4
+ BYTE   W24
+ BYTE   Gs4  v077
+ BYTE   N24  Cn4  v059
+ BYTE   N24  Gs3
+ BYTE   N96  Gs2
+ BYTE   N96  Cn3  v077
+ BYTE   W24
+ BYTE   N24  As4
+ BYTE   N24  As3  v059
+ BYTE   N24  Cs4
+ BYTE   W24
+ BYTE   Fn3
+ BYTE   N24  Cs4
+ BYTE   N24  Fn4  v077
+ BYTE   W24
+ BYTE   Ds4
+ BYTE   N24  Ds3  v059
+ BYTE   N24  Cn4
+ BYTE   W24
+ BYTE   Cs1  v074
+ BYTE   N48  Cn4  v065
+ BYTE   N48  Ds3
+ BYTE   N48  Ds4  v084
+ BYTE   N01  Cs1  v074
+ BYTE   N01  Ds4  v084
+ BYTE   N01  Ds3  v065
+ BYTE   N01  Cn4
+ BYTE   W23
+ BYTE   N24  Cs2  v073
+ BYTE   W24
+ BYTE   N48  Cn3  v077
+ BYTE   N48  Gs2  v059
+ BYTE   N72  Fn4  v077
+ BYTE   N72  Cs4  v059
+ BYTE   N72  Fn3
+ BYTE   W48
+ BYTE   N48  Fn2  v069
+ BYTE   W24
+ BYTE   N24  As3
+ BYTE   W20
+ BYTE   N52  Cn3  v065
+ BYTE   W01
+ BYTE   N01
+ BYTE   N48  Fn3
+ BYTE   W01
+ BYTE   N03
+ BYTE   N24  Fn1  v076
+ BYTE   N48  An3  v084
+ BYTE   N01  Fn1  v076
+ BYTE   An3  v084
+ BYTE   W23
+ BYTE   N24  Cn2  v073
+ BYTE   W24
+ BYTE   Fn3  v077
+ BYTE   N24  Ds3  v059
+ BYTE   N24  Cn3
+ BYTE   N48  Fn2
+ BYTE   N48  An2  v077
+ BYTE   W24
+ BYTE   N24  An3  v059
+ BYTE   N24  Cn4
+ BYTE   N24  An4  v077
+ BYTE   W24
+ BYTE   As4
+ BYTE   N24  Cs4  v059
+ BYTE   N24  As3
+ BYTE   N48  Fn1  v069
+ BYTE   W24
+ BYTE   N24  Cn5  v077
+ BYTE   N24  Cn4  v059
+ BYTE   N24  Ds4
+ BYTE   W24
+ BYTE   Fn4  v065
+ BYTE   N24  Fs1  v076
+ BYTE   N24  Cs4  v065
+ BYTE   N24  Cs5  v084
+ BYTE   N01  Fs1  v076
+ BYTE   N01  Cs5  v084
+ BYTE   N01  Cs4  v065
+ BYTE   N01  Fn4
+ BYTE   W24
+ BYTE   N24  Cn5  v081
+ BYTE   N24  Cs2  v073
+ BYTE   N24  Cn4  v063
+ BYTE   N24  Ds4
+ BYTE   W24
+ BYTE   As4  v077
+ BYTE   N24  Cs4  v059
+ BYTE   N24  As3
+ BYTE   N96  As2  v077
+ BYTE   N96  Fs2  v059
+ BYTE   W24
+ BYTE   N24  Cn4
+ BYTE   N24  Gs3
+ BYTE   N24  Gs4  v077
+ BYTE   W24
+ BYTE   N48  Fn4
+ BYTE   N48  Fn3  v059
+ BYTE   N48  Gs3
+ BYTE   W48
+ BYTE   N24  Ds4  v084
+ BYTE   N24  Gs1  v076
+ BYTE   N24  As3  v065
+ BYTE   N24  Ds3
+ BYTE   N01  As3
+ BYTE   N01  Gs1  v076
+ BYTE   N01  Ds3  v065
+ BYTE   N01  Ds4  v084
+ BYTE   W24
+ BYTE   N24  Fn4  v081
+ BYTE   N24  Ds2  v073
+ BYTE   N24  Fn3  v063
+ BYTE   N24  Gs3
+ BYTE   W24
+ BYTE   N48  Gs2  v059
+ BYTE   N48  Cn3  v077
+ BYTE   N48  Gs4
+ BYTE   N48  Gs3  v059
+ BYTE   N48  Cn4
+ BYTE   W48
+ BYTE   N24  Gs4  v077
+ BYTE   N24  Cn4  v059
+ BYTE   N24  Gs3
+ BYTE   N48  Gs1  v069
+ BYTE   W24
+ BYTE   N24  As4  v077
+ BYTE   N24  As3  v059
+ BYTE   N24  Cs4
+ BYTE   W24
+ BYTE   Cn5  v084
+ BYTE   N24  Fn1  v076
+ BYTE   N24  Ds4  v065
+ BYTE   N24  Cn4
+ BYTE   N01  Ds4
+ BYTE   N01  Fn1  v076
+ BYTE   N01  Cn4  v065
+ BYTE   N01  Cn5  v084
+ BYTE   W24
+ BYTE   N24  As4  v080
+ BYTE   N24  Cn2  v073
+ BYTE   N24  As3  v061
+ BYTE   N24  Cs4
+ BYTE   W24
+ BYTE   Cn5  v084
+ BYTE   N24  Ds4  v065
+ BYTE   N24  Cn4
+ BYTE   N96  Gs2  v085
+ BYTE   N96  Fn2  v066
+ BYTE   W24
+ BYTE   N24  Fn4  v069
+ BYTE   N24  Cs4
+ BYTE   N24  Cs5  v088
+ BYTE   W24
+ BYTE   Ds5  v092
+ BYTE   N24  Ds4  v073
+ BYTE   N24  As4
+ BYTE   W24
+ BYTE   Fn4  v077
+ BYTE   N24  Gs4
+ BYTE   N24  Fn5  v097
+ BYTE   W24
+ BYTE   As1  v106
+ BYTE   N48  As4  v088
+ BYTE   N48  Ds5  v109
+ BYTE   N48  Ds4  v088
+ BYTE   N01  As1  v106
+ BYTE   Ds5  v109
+ BYTE   N01  Ds4  v088
+ BYTE   N01  As4
+ BYTE   W23
+ BYTE   N24  Fn2  v103
+ BYTE   W24
+ BYTE   N48  Cs3  v108
+ BYTE   N48  As2  v087
+ BYTE   N96  Cs5  v101
+ BYTE   N96  As4  v081
+ BYTE   N96  Cs4
+ BYTE   W23
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N48  As1  v098
+ BYTE   W03
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   N24  Ds1  v105
+ BYTE   N48  Fn4  v088
+ BYTE   N48  As3
+ BYTE   N48  As4  v109
+ BYTE   N01  Ds1  v105
+ BYTE   N01  As4  v109
+ BYTE   N01  As3  v088
+ BYTE   N01  Fn4
+ BYTE   W04
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W19
+ BYTE   N24  As1  v103
+ BYTE   W24
+ BYTE   N48  Fn5  v101
+ BYTE   N48  As4  v081
+ BYTE   N48  Fn4
+ BYTE   N96  As2  v108
+ BYTE   N96  Fs2  v087
+ BYTE   N96  Ds2
+ BYTE   W48
+ BYTE   N24  Ds5  v101
+ BYTE   N24  Ds4  v081
+ BYTE   N24  As4
+ BYTE   W24
+ BYTE   Fn4
+ BYTE   N24  As4
+ BYTE   N24  Fn5  v101
+ BYTE   W24
+ BYTE   Gs5  v109
+ BYTE   N24  Fn1  v106
+ BYTE   N24  Cn5  v088
+ BYTE   N24  Gs4
+ BYTE   N01  Fn1  v106
+ BYTE   N01  Gs5  v109
+ BYTE   N01  Cn5  v088
+ BYTE   N01  Gs4
+ BYTE   W24
+ BYTE   N24  Cn2  v073
+ BYTE   N24  As5  v097
+ BYTE   N24  As4  v077
+ BYTE   W24
+ BYTE   Ds5  v092
+ BYTE   N24  Gs4  v073
+ BYTE   N24  Ds4
+ BYTE   N96  Fn2  v059
+ BYTE   N96  Gs2  v077
+ BYTE   W23
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N24  Fn4  v068
+ BYTE   N24  Fn5  v087
+ BYTE   W16
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W07
+ BYTE   N24  Cn4  v064
+ BYTE   N24  Ds4
+ BYTE   N24  Cn5  v082
+ BYTE   W10
+ BYTE   TEMPO   106*SatorlMarsh_tbs/2
+ BYTE   W14
+ BYTE   N24  Cs4  v060
+ BYTE   N24  Cs5  v078
+ BYTE   W03
+ BYTE   TEMPO   102*SatorlMarsh_tbs/2
+ BYTE   W17
+ BYTE   TEMPO   98*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N24  As1  v076
+ BYTE   N96  As3  v059
+ BYTE   N96  Fn4
+ BYTE   N96  As4  v077
+ BYTE   N01  As1  v076
+ BYTE   W01
+ BYTE   N48  As3  v059
+ BYTE   N48  Fn4
+ BYTE   N48  As4  v077
+ BYTE   W01
+ BYTE   N02
+ BYTE   N02  Fn4  v059
+ BYTE   N02  As3
+ BYTE   W10
+ BYTE   TEMPO   94*SatorlMarsh_tbs/2
+ BYTE   W11
+ BYTE   N24  Fn2  v073
+ BYTE   W06
+ BYTE   TEMPO   90*SatorlMarsh_tbs/2
+ BYTE   W17
+ BYTE   TEMPO   66*SatorlMarsh_tbs/2
+ BYTE   N84  As2  v059
+ BYTE   N84  Cs3  v077
+ BYTE   W02
+ BYTE   N02  As2  v059
+ BYTE   N02  Cs3  v077
+ BYTE   W90
+ BYTE   N76  Cs3  v065
+ BYTE   W01
+ BYTE   N01
+ BYTE   N72  Fn3
+ BYTE   W01
+ BYTE   N03
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N12  As5  v076
+ BYTE   N48  Cs5
+ BYTE   N72  As3  v084
+ BYTE   W01
+ BYTE   N01  Cs5  v076
+ BYTE   As3  v084
+ BYTE   W11
+ BYTE   N11  Ds5  v070
+ BYTE   W11
+ BYTE   Fn5  v073
+ BYTE   W11
+ BYTE   Ds5  v069
+ BYTE   W12
+ BYTE   As5
+ BYTE   N48  Cs5
+ BYTE   W12
+ BYTE   N11  Ds5
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Fn5  v069
+ BYTE   N24  As3
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  As5  v069
+ BYTE   N48  Cs5
+ BYTE   N48  As3
+ BYTE   W03
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Ds5  v069
+ BYTE   W01
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Fn5  v069
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W02
+ BYTE   N52  Cn3  v065
+ BYTE   W01
+ BYTE   N01
+ BYTE   N48  Ds3
+ BYTE   W01
+ BYTE   N03
+ BYTE   N12  Gs5  v076
+ BYTE   N48  Gs3  v084
+ BYTE   N48  Cn5  v076
+ BYTE   W01
+ BYTE   N01  Gs3  v084
+ BYTE   N01  Cn5  v076
+ BYTE   W04
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W07
+ BYTE   N11  Cs5  v070
+ BYTE   W11
+ BYTE   Ds5  v073
+ BYTE   W11
+ BYTE   Cs5  v069
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N48  Cn5
+ BYTE   N96  Gs3
+ BYTE   W12
+ BYTE   N11  Cs5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N48  Cn5
+ BYTE   W12
+ BYTE   N11  Cs5
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W08
+ BYTE   N76  Cs3  v065
+ BYTE   W01
+ BYTE   N01
+ BYTE   N72  Fn3
+ BYTE   W01
+ BYTE   N03
+ BYTE   N12  As5  v076
+ BYTE   N48  Cs5
+ BYTE   N72  As3  v084
+ BYTE   W01
+ BYTE   N01  Cs5  v076
+ BYTE   N01  As3  v084
+ BYTE   W11
+ BYTE   N11  Ds5  v070
+ BYTE   W11
+ BYTE   Fn5  v073
+ BYTE   W11
+ BYTE   Ds5  v069
+ BYTE   W12
+ BYTE   As5
+ BYTE   N48  Cs5
+ BYTE   W12
+ BYTE   N11  Ds5
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Fn5  v069
+ BYTE   N24  As3
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  As5  v069
+ BYTE   N48  Cs5
+ BYTE   N48  As3
+ BYTE   W03
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Ds5  v069
+ BYTE   W01
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Fn5  v069
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W02
+ BYTE   N96  Cn3  v059
+ BYTE   W02
+ BYTE   Ds3
+ BYTE   N54  Cn3
+ BYTE   W01
+ BYTE   N12  Gs5  v076
+ BYTE   N48  Cn5
+ BYTE   N96  Gs3  v077
+ BYTE   N52  Ds3  v059
+ BYTE   N01  Cn5  v076
+ BYTE   W01
+ BYTE   N48  Gs3  v077
+ BYTE   W01
+ BYTE   N02
+ BYTE   W02
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W07
+ BYTE   N11  Cs5  v070
+ BYTE   W11
+ BYTE   Ds5  v073
+ BYTE   W11
+ BYTE   Cs5  v069
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N48  Cn5
+ BYTE   W12
+ BYTE   N11  Cs5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N48  Cn5
+ BYTE   W12
+ BYTE   N11  Cs5
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W08
+ BYTE   N76  Cs3  v065
+ BYTE   W01
+ BYTE   N01
+ BYTE   N72  Fn3
+ BYTE   W01
+ BYTE   N03
+ BYTE   N12  As5  v076
+ BYTE   N48  Cs5
+ BYTE   N72  As3  v084
+ BYTE   W01
+ BYTE   N01  Cs5  v076
+ BYTE   As3  v084
+ BYTE   W11
+ BYTE   N11  Ds5  v070
+ BYTE   W11
+ BYTE   Fn5  v073
+ BYTE   W11
+ BYTE   Ds5  v069
+ BYTE   W12
+ BYTE   As5
+ BYTE   N48  Cs5
+ BYTE   W12
+ BYTE   N11  Ds5
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Fn5  v069
+ BYTE   N24  As3
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  As5  v069
+ BYTE   N48  Cs5
+ BYTE   N48  As3
+ BYTE   W03
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Ds5  v069
+ BYTE   W01
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Fn5  v069
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W02
+ BYTE   N96  Cn3  v059
+ BYTE   W02
+ BYTE   Ds3
+ BYTE   N05  Cn3
+ BYTE   W01
+ BYTE   N12  Gs5  v076
+ BYTE   N48  Cn5
+ BYTE   N96  Gs3  v077
+ BYTE   N03  Ds3  v059
+ BYTE   N01  Cn5  v076
+ BYTE   W01
+ BYTE   Gs3  v077
+ BYTE   W03
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W07
+ BYTE   N11  Cs5  v070
+ BYTE   W11
+ BYTE   Ds5  v073
+ BYTE   W11
+ BYTE   Cs5  v069
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N48  Cn5
+ BYTE   W12
+ BYTE   N11  Cs5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N48  Cn5
+ BYTE   N48  Cn4
+ BYTE   W12
+ BYTE   N11  Cs5
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W08
+ BYTE   N96  Cs3  v059
+ BYTE   W02
+ BYTE   Fn3
+ BYTE   N96  Cs3
+ BYTE   W01
+ BYTE   N12  As5  v076
+ BYTE   N48  Cs5
+ BYTE   N96  As3  v072
+ BYTE   N96  Fn3  v059
+ BYTE   N96  Cs3
+ BYTE   N01  Cs5  v076
+ BYTE   W01
+ BYTE   N96  As3  v072
+ BYTE   N96  Fn3  v059
+ BYTE   N08  Cs3
+ BYTE   W01
+ BYTE   N96  As3  v072
+ BYTE   N06  Fn3  v059
+ BYTE   W02
+ BYTE   N04  As3  v072
+ BYTE   W06
+ BYTE   N11  Ds5  v070
+ BYTE   W11
+ BYTE   Fn5  v073
+ BYTE   W11
+ BYTE   Ds5  v069
+ BYTE   W12
+ BYTE   As5
+ BYTE   N48  Cs5
+ BYTE   W12
+ BYTE   N11  Ds5
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Fn5  v069
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  As5  v069
+ BYTE   N48  Cs5
+ BYTE   W03
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Ds5  v069
+ BYTE   W01
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Fn5  v069
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   N12  Gs5  v076
+ BYTE   N48  Cn5
+ BYTE   W01
+ BYTE   N01
+ BYTE   W04
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W07
+ BYTE   N11  Cs5  v070
+ BYTE   W11
+ BYTE   Ds5  v073
+ BYTE   W11
+ BYTE   Cs5  v069
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N48  Cn5
+ BYTE   W12
+ BYTE   N11  Cs5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N48  Cn5
+ BYTE   W12
+ BYTE   N11  Cs5
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N12  As5  v076
+ BYTE   N24  As1
+ BYTE   N01
+ BYTE   W12
+ BYTE   N11  Ds5  v070
+ BYTE   W11
+ BYTE   Fn5  v073
+ BYTE   N24  Fn2
+ BYTE   W11
+ BYTE   N11  Ds5  v069
+ BYTE   W11
+ BYTE   N96  Cs3
+ BYTE   N11  As5
+ BYTE   N96  Fn3  v059
+ BYTE   N96  As3
+ BYTE   W01
+ BYTE   N01  Cs3  v069
+ BYTE   W10
+ BYTE   N11  Ds5
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Fn5  v069
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  As5  v069
+ BYTE   W03
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Ds5  v069
+ BYTE   W01
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Fn5  v069
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   N12  Gs5  v076
+ BYTE   N96  Ds3  v059
+ BYTE   N96  Cn3
+ BYTE   N96  Gs3  v077
+ BYTE   W02
+ BYTE   N48  Cn3  v059
+ BYTE   N48  Ds3
+ BYTE   N48  Gs3  v077
+ BYTE   W01
+ BYTE   N02  Cn3  v059
+ BYTE   N02  Ds3
+ BYTE   N02  Gs3  v077
+ BYTE   W02
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W07
+ BYTE   N11  Cs5  v070
+ BYTE   W11
+ BYTE   Ds5  v073
+ BYTE   W11
+ BYTE   Cs5  v069
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N12  As5  v076
+ BYTE   N24  As1
+ BYTE   N01
+ BYTE   W12
+ BYTE   N11  Ds5  v070
+ BYTE   W11
+ BYTE   Fn5  v073
+ BYTE   N24  Fn2
+ BYTE   W11
+ BYTE   N11  Ds5  v069
+ BYTE   W11
+ BYTE   N96  Cs3
+ BYTE   N11  As5
+ BYTE   N96  As3  v059
+ BYTE   N96  Fn3
+ BYTE   W01
+ BYTE   N01  Cs3  v069
+ BYTE   W10
+ BYTE   N11  Ds5
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Fn5  v069
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  As5  v069
+ BYTE   W03
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Ds5  v069
+ BYTE   W01
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Fn5  v069
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   N12  Gs5  v076
+ BYTE   N96  Gs3  v077
+ BYTE   N96  Ds3  v059
+ BYTE   N96  Cn3
+ BYTE   W02
+ BYTE   N48  Ds3
+ BYTE   N48  Cn3
+ BYTE   N48  Gs3  v077
+ BYTE   W01
+ BYTE   N02  Cn3  v059
+ BYTE   N02  Gs3  v077
+ BYTE   N02  Ds3  v059
+ BYTE   W02
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W07
+ BYTE   N11  Cs5  v070
+ BYTE   W11
+ BYTE   Ds5  v073
+ BYTE   W11
+ BYTE   Cs5  v069
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   N12  As2  v076
+ BYTE   N96  As1  v059
+ BYTE   N96  Fn2  v077
+ BYTE   W02
+ BYTE   N48
+ BYTE   N48  As1  v059
+ BYTE   W01
+ BYTE   N02
+ BYTE   N02  Fn2  v077
+ BYTE   W09
+ BYTE   N11  Cn3  v070
+ BYTE   W11
+ BYTE   Cs3  v073
+ BYTE   W11
+ BYTE   Fn3  v069
+ BYTE   W12
+ BYTE   As3
+ BYTE   N48  Cs3  v059
+ BYTE   N48  Fn3  v077
+ BYTE   W12
+ BYTE   N11  Cn4  v069
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   As4
+ BYTE   N24  As2  v059
+ BYTE   N24  Ds3  v077
+ BYTE   W12
+ BYTE   N11  Cn5  v069
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   N24  Fn3  v077
+ BYTE   N24  Cs3  v059
+ BYTE   W11
+ BYTE   N11  Fn5  v069
+ BYTE   W12
+ BYTE   N12  Cn3  v076
+ BYTE   N36  Gs3
+ BYTE   N96  Ds2  v077
+ BYTE   N96  Gs1  v059
+ BYTE   N01  Gs3  v076
+ BYTE   W01
+ BYTE   N48  Ds2  v077
+ BYTE   N48  Gs1  v059
+ BYTE   W01
+ BYTE   N02
+ BYTE   N02  Ds2  v077
+ BYTE   W09
+ BYTE   N11  Cs3  v070
+ BYTE   W11
+ BYTE   Ds3  v073
+ BYTE   W11
+ BYTE   Gs3  v069
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   N96  Cn3  v073
+ BYTE   N96  Fn3  v066
+ BYTE   W12
+ BYTE   N11  Cs4  v069
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Ds4  v069
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs4  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  Cn5  v069
+ BYTE   W03
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Cs5  v069
+ BYTE   W01
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Ds5  v069
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs5  v069
+ BYTE   W06
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N12  As2  v076
+ BYTE   N96  Fn2  v077
+ BYTE   N96  As1  v059
+ BYTE   W02
+ BYTE   N48  Fn2  v077
+ BYTE   N48  As1  v059
+ BYTE   W01
+ BYTE   N02
+ BYTE   N02  Fn2  v077
+ BYTE   W09
+ BYTE   N11  Cn3  v070
+ BYTE   W11
+ BYTE   Cs3  v073
+ BYTE   W11
+ BYTE   Fn3  v069
+ BYTE   W12
+ BYTE   As3
+ BYTE   N48  Cs3  v059
+ BYTE   N48  Fn3  v077
+ BYTE   W12
+ BYTE   N11  Cn4  v069
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   As4
+ BYTE   N24  As2  v059
+ BYTE   N24  Ds3  v077
+ BYTE   W12
+ BYTE   N11  Cn5  v069
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   N24  Fn3  v077
+ BYTE   N24  Cs3  v059
+ BYTE   W11
+ BYTE   N11  Fn5  v069
+ BYTE   W12
+ BYTE   N12  Cn3  v076
+ BYTE   N24  Gs3
+ BYTE   N96  Gs1  v059
+ BYTE   N96  Ds2  v077
+ BYTE   N01  Gs3  v076
+ BYTE   W01
+ BYTE   N48  Ds2  v077
+ BYTE   N48  Gs1  v059
+ BYTE   W01
+ BYTE   N02  Ds2  v077
+ BYTE   N02  Gs1  v059
+ BYTE   W09
+ BYTE   N11  Cs3  v070
+ BYTE   W11
+ BYTE   Ds3  v073
+ BYTE   N24  As3
+ BYTE   W11
+ BYTE   N11  Gs3  v069
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   N96  Cn3  v073
+ BYTE   N96  Fn3  v066
+ BYTE   W12
+ BYTE   N11  Cs4  v069
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Ds4  v069
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs4  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  Cn5  v069
+ BYTE   W03
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Cs5  v069
+ BYTE   W01
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Ds5  v069
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs5  v069
+ BYTE   W06
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N12  As2  v076
+ BYTE   N96  As1  v059
+ BYTE   N96  Fn2  v077
+ BYTE   W02
+ BYTE   N48  As1  v059
+ BYTE   N48  Fn2  v077
+ BYTE   W01
+ BYTE   N02
+ BYTE   N02  As1  v059
+ BYTE   W09
+ BYTE   N11  Cn3  v070
+ BYTE   W11
+ BYTE   Cs3  v073
+ BYTE   W11
+ BYTE   Fn3  v069
+ BYTE   W12
+ BYTE   As3
+ BYTE   N48  Cs3  v059
+ BYTE   N48  Fn3  v077
+ BYTE   W12
+ BYTE   N11  Cn4  v069
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   As4
+ BYTE   N24  Ds3  v077
+ BYTE   N24  As2  v059
+ BYTE   W12
+ BYTE   N11  Cn5  v069
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   N24  Cs3  v059
+ BYTE   N24  Fn3  v077
+ BYTE   W11
+ BYTE   N11  Fn5  v069
+ BYTE   W12
+ BYTE   N12  Cn3  v076
+ BYTE   N24  Gs3
+ BYTE   N96  Gs1  v059
+ BYTE   N96  Ds2  v077
+ BYTE   N01  Gs3  v076
+ BYTE   W01
+ BYTE   N48  Ds2  v077
+ BYTE   N48  Gs1  v059
+ BYTE   W01
+ BYTE   N02
+ BYTE   N02  Ds2  v077
+ BYTE   W09
+ BYTE   N11  Cs3  v070
+ BYTE   W11
+ BYTE   Ds3  v073
+ BYTE   N24  As3
+ BYTE   W11
+ BYTE   N11  Gs3  v069
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   N24  Gs2  v059
+ BYTE   N24  Ds3  v077
+ BYTE   W12
+ BYTE   N11  Cs4  v069
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Ds4  v069
+ BYTE   N24  Fn3  v077
+ BYTE   N24  Cn3  v059
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs4  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  Cn5  v069
+ BYTE   N24  Cn3  v077
+ BYTE   N24  Gs2  v059
+ BYTE   W03
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Cs5  v069
+ BYTE   W01
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Ds5  v069
+ BYTE   N24  As2  v059
+ BYTE   N24  Cs3  v077
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs5  v069
+ BYTE   W06
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N12  As2  v077
+ BYTE   N96  As1  v059
+ BYTE   N96  Fn2
+ BYTE   W02
+ BYTE   N48
+ BYTE   N48  As1
+ BYTE   W01
+ BYTE   N02  Fn2
+ BYTE   N02  As1
+ BYTE   W09
+ BYTE   N11  Cn3  v070
+ BYTE   W11
+ BYTE   Cs3  v073
+ BYTE   W11
+ BYTE   Fn3  v069
+ BYTE   W12
+ BYTE   As3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   As4
+ BYTE   W12
+ BYTE   Cn5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W11
+ BYTE   Fn5
+ BYTE   W12
+ BYTE   N12  As5
+ BYTE   N96  Fn4  v059
+ BYTE   N96  Cs4
+ BYTE   N96  As3
+ BYTE   N96  Gs4  v077
+ BYTE   W02
+ BYTE   N36
+ BYTE   N36  As3  v059
+ BYTE   N36  Cs4
+ BYTE   N36  Fn4
+ BYTE   N01
+ BYTE   N01  Cs4
+ BYTE   N01  As3
+ BYTE   N01  Gs4  v077
+ BYTE   W09
+ BYTE   N11  Ds5  v066
+ BYTE   W11
+ BYTE   Fn5  v063
+ BYTE   W11
+ BYTE   Ds5  v060
+ BYTE   W12
+ BYTE   As5  v056
+ BYTE   W12
+ BYTE   Ds5  v054
+ BYTE   W12
+ BYTE   Fn5  v050
+ BYTE   W12
+ BYTE   Ds5  v047
+ BYTE   W12
+ BYTE   As5  v045
+ BYTE   W12
+ BYTE   Ds5  v042
+ BYTE   W11
+ BYTE   Fn5  v039
+ BYTE   W11
+ BYTE   GoTo
+  POIN2 SatorlMarsh_Label_0_00
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+SatorlMarsh_002:
+// 000   ----------------------------------------
+SatorlMarsh_Label_1_00:
+ BYTE   KEYSH   SatorlMarsh_key+0
+ BYTE   VOICE   0
+ BYTE   VOL   46*SatorlMarsh_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   LFOS 44
+ BYTE   MODT 0
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   BENDR  12
+ BYTE   BENDR  12
+ BYTE   N12  As5  v031
+ BYTE   N24  As1
+ BYTE   W12
+ BYTE   N11  Ds5  v027
+ BYTE   W11
+ BYTE   Fn5  v029
+ BYTE   N24  Fn2
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W11
+ BYTE   N96  Cs3
+ BYTE   N11  As5
+ BYTE   N96  As3  v019
+ BYTE   N96  Fn3
+ BYTE   W01
+ BYTE   N01  Cs3  v026
+ BYTE   W10
+ BYTE   N11  Ds5
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Fn5  v026
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v026
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+// 001   ----------------------------------------
+ BYTE   N11  As5  v026
+ BYTE   W03
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Ds5  v026
+ BYTE   W01
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Fn5  v026
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v026
+ BYTE   W06
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   N12  Gs5  v031
+ BYTE   N96  Ds3  v019
+ BYTE   N96  Gs3  v031
+ BYTE   N96  Cn3  v019
+ BYTE   W02
+ BYTE   N48  Ds3
+ BYTE   N48  Gs3  v031
+ BYTE   N48  Cn3  v019
+ BYTE   W01
+ BYTE   N02  Gs3  v031
+ BYTE   N02  Cn3  v019
+ BYTE   N02  Ds3
+ BYTE   W02
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W07
+ BYTE   N11  Cs5  v027
+ BYTE   W11
+ BYTE   Ds5  v029
+ BYTE   W11
+ BYTE   Cs5  v026
+ BYTE   W12
+// 002   ----------------------------------------
+ BYTE   Gs5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W12
+// 003   ----------------------------------------
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+// 004   ----------------------------------------
+ BYTE   BENDR  12
+ BYTE   BENDR  12
+ BYTE   N12  As5  v031
+ BYTE   N24  As1
+ BYTE   W12
+ BYTE   N11  Ds5  v027
+ BYTE   W11
+ BYTE   Fn5  v029
+ BYTE   N24  Fn2
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W11
+ BYTE   N96  Cs3
+ BYTE   N11  As5
+ BYTE   N96  Fn3  v019
+ BYTE   N96  As3
+ BYTE   W01
+ BYTE   N01  Cs3  v026
+ BYTE   W10
+ BYTE   N11  Ds5
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Fn5  v026
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v026
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  As5  v026
+ BYTE   W03
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Ds5  v026
+ BYTE   W01
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Fn5  v026
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v026
+ BYTE   W06
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   N12  Gs5  v031
+ BYTE   N96  Ds3  v019
+ BYTE   N96  Cn3
+ BYTE   N96  Gs3  v031
+ BYTE   W02
+ BYTE   N48  Cn3  v019
+ BYTE   N48  Gs3  v031
+ BYTE   N48  Ds3  v019
+ BYTE   W01
+ BYTE   N02
+ BYTE   N02  Cn3
+ BYTE   N02  Gs3  v031
+ BYTE   W02
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W07
+ BYTE   N11  Cs5  v027
+ BYTE   W11
+ BYTE   Ds5  v029
+ BYTE   W11
+ BYTE   Cs5  v026
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W08
+ BYTE   N54  As2  v019
+ BYTE   W01
+ BYTE   N01
+ BYTE   N52  Fn3
+ BYTE   W01
+ BYTE   N01
+ BYTE   N12  As5  v031
+ BYTE   N48  As3
+ BYTE   W01
+ BYTE   N01
+ BYTE   W11
+ BYTE   N11  Ds5  v027
+ BYTE   W11
+ BYTE   Fn5  v029
+ BYTE   W11
+ BYTE   Ds5  v026
+ BYTE   W12
+ BYTE   As5
+ BYTE   N48  Fn4  v031
+ BYTE   N48  Cs4  v019
+ BYTE   W01
+ BYTE   N02
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W12
+ BYTE   Fn5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   As5
+ BYTE   N24  As3  v019
+ BYTE   N24  Ds4  v031
+ BYTE   N01  As3  v019
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W11
+ BYTE   Fn5
+ BYTE   N24  Fn4  v031
+ BYTE   N24  Cs4  v019
+ BYTE   N01
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W08
+ BYTE   N54  Gs3  v019
+ BYTE   W01
+ BYTE   N01
+ BYTE   N52  Ds4
+ BYTE   W01
+ BYTE   N01
+ BYTE   N12  Gs5  v031
+ BYTE   N48  Gs4
+ BYTE   W01
+ BYTE   N01
+ BYTE   W11
+ BYTE   N11  Cs5  v027
+ BYTE   W11
+ BYTE   Ds5  v029
+ BYTE   W11
+ BYTE   Cs5  v026
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N92  Cn4  v016
+ BYTE   N96  Fn4  v027
+ BYTE   W02
+ BYTE   N03  Cn4  v016
+ BYTE   W10
+ BYTE   N11  Cs5  v026
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W08
+ BYTE   N54  As2  v019
+ BYTE   W01
+ BYTE   N01
+ BYTE   N52  Fn3
+ BYTE   W01
+ BYTE   N01
+ BYTE   N12  As5  v031
+ BYTE   N48  As3
+ BYTE   W01
+ BYTE   N01
+ BYTE   W11
+ BYTE   N11  Ds5  v027
+ BYTE   W11
+ BYTE   Fn5  v029
+ BYTE   W11
+ BYTE   Ds5  v026
+ BYTE   W12
+ BYTE   As5
+ BYTE   N48  Cs4  v019
+ BYTE   N48  Fn4  v031
+ BYTE   W01
+ BYTE   N02  Cs4  v019
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W12
+ BYTE   Fn5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   As5
+ BYTE   N24  As3  v019
+ BYTE   N24  Ds4  v031
+ BYTE   N01  As3  v019
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W11
+ BYTE   Fn5
+ BYTE   N24  Cs4  v019
+ BYTE   N24  Fn4  v031
+ BYTE   N01  Cs4  v019
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W08
+ BYTE   N30  Gs3  v019
+ BYTE   W02
+ BYTE   N36  Ds4
+ BYTE   N02
+ BYTE   W01
+ BYTE   N12  Gs5  v031
+ BYTE   N24  Gs4
+ BYTE   N01
+ BYTE   W12
+ BYTE   N11  Cs5  v027
+ BYTE   W11
+ BYTE   N24  As4  v031
+ BYTE   N24  Fn4  v019
+ BYTE   W11
+ BYTE   N11  Cs5  v026
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N92  Cn4  v016
+ BYTE   N96  Fn4  v027
+ BYTE   W02
+ BYTE   N03  Cn4  v016
+ BYTE   W10
+ BYTE   N11  Cs5  v026
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W08
+ BYTE   N54  As2  v019
+ BYTE   W01
+ BYTE   N01
+ BYTE   N52  Fn3
+ BYTE   W01
+ BYTE   N01
+ BYTE   N12  As5  v031
+ BYTE   N48  As3
+ BYTE   W01
+ BYTE   N01
+ BYTE   W11
+ BYTE   N11  Ds5  v027
+ BYTE   W11
+ BYTE   Fn5  v029
+ BYTE   W11
+ BYTE   Ds5  v026
+ BYTE   W12
+ BYTE   As5
+ BYTE   N48  Fn4  v031
+ BYTE   N48  Cs4  v019
+ BYTE   W01
+ BYTE   N02
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W12
+ BYTE   Fn5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   As5
+ BYTE   N24  As3  v019
+ BYTE   N24  Ds4  v031
+ BYTE   N01  As3  v019
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W11
+ BYTE   Fn5
+ BYTE   N24  Fn4  v031
+ BYTE   N24  Cs4  v019
+ BYTE   N01
+ BYTE   W11
+ BYTE   N11  Ds5  v026
+ BYTE   W08
+ BYTE   N30  Gs3  v019
+ BYTE   W02
+ BYTE   N36  Ds4
+ BYTE   N02
+ BYTE   W01
+ BYTE   N12  Gs5  v031
+ BYTE   N24  Gs4
+ BYTE   N01
+ BYTE   W12
+ BYTE   N11  Cs5  v027
+ BYTE   W11
+ BYTE   N24  Fn4  v019
+ BYTE   N24  As4  v031
+ BYTE   N01  Fn4  v019
+ BYTE   W11
+ BYTE   N11  Cs5  v026
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N24  Gs3  v019
+ BYTE   N24  Ds4  v031
+ BYTE   N01  Gs3  v019
+ BYTE   W11
+ BYTE   N11  Cs5  v026
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   N24  Cn4  v019
+ BYTE   N24  Fn4  v031
+ BYTE   W12
+ BYTE   N11  Cs5  v026
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N24  Gs3  v019
+ BYTE   N24  Cn4  v031
+ BYTE   N01  Gs3  v019
+ BYTE   W11
+ BYTE   N11  Cs5  v026
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   N24  As3  v019
+ BYTE   N24  Cs4  v031
+ BYTE   W11
+ BYTE   N11  Cs5  v026
+ BYTE   W12
+ BYTE   N24  Fn3  v016
+ BYTE   N96  As3  v027
+ BYTE   N96  As2  v016
+ BYTE   W02
+ BYTE   N48
+ BYTE   N48  As3  v027
+ BYTE   W01
+ BYTE   N01  As2  v016
+ BYTE   N02  As3  v027
+ BYTE   W09
+ BYTE   N96  Fn4
+ BYTE   W02
+ BYTE   N36
+ BYTE   W09
+ BYTE   N11  Gs4  v029
+ BYTE   W11
+ BYTE   As4  v026
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Fn5  v026
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs5  v026
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  Fn5  v026
+ BYTE   W03
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Gs5  v026
+ BYTE   W01
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Fn5  v026
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v026
+ BYTE   W06
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   N12  Cs5  v031
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W07
+ BYTE   N11  Ds5  v026
+ BYTE   W11
+ BYTE   Cs5  v027
+ BYTE   W11
+ BYTE   As4  v028
+ BYTE   W12
+ BYTE   Gs4  v030
+ BYTE   W12
+ BYTE   As4  v031
+ BYTE   W12
+ BYTE   Gs4
+ BYTE   W12
+ BYTE   Fn4  v032
+ BYTE   W12
+ BYTE   Ds4  v033
+ BYTE   W12
+ BYTE   Fn4  v034
+ BYTE   W11
+ BYTE   Ds4  v035
+ BYTE   W11
+ BYTE   Cn4  v036
+ BYTE   W12
+ BYTE   N24  As1  v044
+ BYTE   N48  As4
+ BYTE   N01  As1
+ BYTE   N01  As4
+ BYTE   W11
+ BYTE   N11  Ds4  v039
+ BYTE   W11
+ BYTE   Fn4  v042
+ BYTE   N24  Fn2
+ BYTE   W11
+ BYTE   N11  Ds4  v038
+ BYTE   W12
+ BYTE   N48  Gs4
+ BYTE   N96  As2  v031
+ BYTE   N96  Cs3  v045
+ BYTE   W12
+ BYTE   N11  Ds4  v038
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   N48  As4
+ BYTE   W12
+ BYTE   N11  Ds4
+ BYTE   W11
+ BYTE   Fn4
+ BYTE   W11
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   N24  Gs1  v044
+ BYTE   N96  Gs4  v038
+ BYTE   N01  Gs1  v044
+ BYTE   W01
+ BYTE   Gs4  v038
+ BYTE   W10
+ BYTE   N11  Cs4  v039
+ BYTE   W11
+ BYTE   Ds4  v042
+ BYTE   N24  Ds2
+ BYTE   W11
+ BYTE   N11  Cs4  v038
+ BYTE   W12
+ BYTE   Gs3
+ BYTE   N96  Cn3  v045
+ BYTE   N96  Gs2  v031
+ BYTE   W12
+ BYTE   N11  Cs4  v038
+ BYTE   W12
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   N48  Gs4
+ BYTE   W12
+ BYTE   N11  Cs4
+ BYTE   W11
+ BYTE   Ds4
+ BYTE   W11
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   N24  As1  v044
+ BYTE   N48  As4
+ BYTE   N01  As1
+ BYTE   As4
+ BYTE   W11
+ BYTE   N11  Ds4  v039
+ BYTE   W11
+ BYTE   Fn4  v042
+ BYTE   N24  Fn2
+ BYTE   W11
+ BYTE   N11  Ds4  v038
+ BYTE   W12
+ BYTE   N48  Gs4
+ BYTE   N96  Cs3  v045
+ BYTE   N96  As2  v031
+ BYTE   W12
+ BYTE   N11  Ds4  v038
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   N48  As4
+ BYTE   W12
+ BYTE   N11  Ds4
+ BYTE   W11
+ BYTE   Fn4
+ BYTE   W11
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   N24  Gs1  v044
+ BYTE   N96  Cn5  v038
+ BYTE   N01  Gs1  v044
+ BYTE   W01
+ BYTE   Cn5  v038
+ BYTE   W10
+ BYTE   N11  Cs4  v039
+ BYTE   W11
+ BYTE   Ds4  v042
+ BYTE   N24  Ds2
+ BYTE   W11
+ BYTE   N11  Cs4  v038
+ BYTE   W12
+ BYTE   Gs3
+ BYTE   N96  Gs2  v031
+ BYTE   N96  Cn3  v045
+ BYTE   W12
+ BYTE   N11  Cs4  v038
+ BYTE   W12
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   N48  Cn5
+ BYTE   W12
+ BYTE   N11  Cs4
+ BYTE   W11
+ BYTE   Ds4
+ BYTE   W11
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   N24  As1  v044
+ BYTE   N96  Cs5  v038
+ BYTE   N01  As1  v044
+ BYTE   W01
+ BYTE   Cs5  v038
+ BYTE   W10
+ BYTE   N11  Ds4  v039
+ BYTE   W11
+ BYTE   Fn4  v042
+ BYTE   N24  Fn2
+ BYTE   W11
+ BYTE   N11  Ds4  v038
+ BYTE   W12
+ BYTE   As3
+ BYTE   N96  Cs3  v045
+ BYTE   N96  As2  v031
+ BYTE   W12
+ BYTE   N11  Ds4  v038
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   N48  As4
+ BYTE   W12
+ BYTE   N11  Ds4
+ BYTE   W11
+ BYTE   Fn4
+ BYTE   W11
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   N24  Gs1  v044
+ BYTE   N96  Gs4  v038
+ BYTE   N01  Gs1  v044
+ BYTE   W01
+ BYTE   Gs4  v038
+ BYTE   W10
+ BYTE   N11  Cs4  v039
+ BYTE   W11
+ BYTE   Ds4  v042
+ BYTE   N24  Ds2
+ BYTE   W11
+ BYTE   N11  Cs4  v038
+ BYTE   W12
+ BYTE   Gs3
+ BYTE   N96  Cn3  v045
+ BYTE   N96  Gs2  v031
+ BYTE   W12
+ BYTE   N11  Cs4  v038
+ BYTE   W12
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   N48  Gs4
+ BYTE   W12
+ BYTE   N11  Cs4
+ BYTE   W11
+ BYTE   Ds4
+ BYTE   W11
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   N12  As4  v044
+ BYTE   N24  As1
+ BYTE   N01
+ BYTE   W12
+ BYTE   N11  Fn3  v039
+ BYTE   W11
+ BYTE   Gs3  v042
+ BYTE   N24  Fn2
+ BYTE   W11
+ BYTE   N11  As3  v038
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   N96  Cs3  v045
+ BYTE   N96  As2  v031
+ BYTE   W12
+ BYTE   N11  Ds4  v038
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   Gs4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   Gs4
+ BYTE   W11
+ BYTE   Fn4
+ BYTE   W11
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   N12  Cs4  v044
+ BYTE   N24  Gs1
+ BYTE   N01
+ BYTE   W12
+ BYTE   N11  Ds4  v039
+ BYTE   W11
+ BYTE   Cs4  v042
+ BYTE   N24  Ds2  v043
+ BYTE   W11
+ BYTE   N11  As3  v044
+ BYTE   W12
+ BYTE   Gs3  v047
+ BYTE   N84  Cn3  v054
+ BYTE   N92  Gs2  v038
+ BYTE   W12
+ BYTE   N11  As3  v049
+ BYTE   W12
+ BYTE   Gs3  v052
+ BYTE   W12
+ BYTE   Fn3  v054
+ BYTE   W12
+ BYTE   Ds3  v058
+ BYTE   W12
+ BYTE   Fn3  v060
+ BYTE   W11
+ BYTE   Ds3  v063
+ BYTE   W11
+ BYTE   N08  Cn3  v065
+ BYTE   W12
+ BYTE   N12  As2  v116
+ BYTE   N96  Fn2  v117
+ BYTE   N96  As1  v095
+ BYTE   W02
+ BYTE   N48
+ BYTE   N48  Fn2  v117
+ BYTE   W01
+ BYTE   N02  As1  v095
+ BYTE   N02  Fn2  v117
+ BYTE   W09
+ BYTE   N11  Cn3  v070
+ BYTE   W11
+ BYTE   Cs3  v073
+ BYTE   W11
+ BYTE   Fn3  v069
+ BYTE   W12
+ BYTE   As3
+ BYTE   N48  Fn3  v117
+ BYTE   N48  Cs3  v095
+ BYTE   W12
+ BYTE   N11  Cn4  v069
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   As4
+ BYTE   N24  As2  v095
+ BYTE   N24  Ds3  v117
+ BYTE   W12
+ BYTE   N11  Cn5  v069
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   N24  Fn3  v117
+ BYTE   N24  Cs3  v095
+ BYTE   W11
+ BYTE   N11  Fn5  v069
+ BYTE   W12
+ BYTE   N12  Cn3  v076
+ BYTE   N36  Gs3
+ BYTE   N96  Gs1  v095
+ BYTE   N96  Ds2  v117
+ BYTE   N01  Gs3  v076
+ BYTE   W01
+ BYTE   N48  Ds2  v117
+ BYTE   N48  Gs1  v095
+ BYTE   W01
+ BYTE   N02
+ BYTE   N02  Ds2  v117
+ BYTE   W09
+ BYTE   N11  Cs3  v070
+ BYTE   W11
+ BYTE   Ds3  v073
+ BYTE   W11
+ BYTE   Gs3  v069
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   N96  Fn3  v105
+ BYTE   N96  Cn3  v112
+ BYTE   W12
+ BYTE   N11  Cs4  v069
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Ds4  v069
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs4  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  Cn5  v069
+ BYTE   W03
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Cs5  v069
+ BYTE   W01
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Ds5  v069
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs5  v069
+ BYTE   W06
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N12  As2  v116
+ BYTE   N96  As1  v095
+ BYTE   N96  Fn2  v117
+ BYTE   W02
+ BYTE   N48  As1  v095
+ BYTE   N48  Fn2  v117
+ BYTE   W01
+ BYTE   N02
+ BYTE   N02  As1  v095
+ BYTE   W09
+ BYTE   N11  Cn3  v070
+ BYTE   W11
+ BYTE   Cs3  v073
+ BYTE   W11
+ BYTE   Fn3  v069
+ BYTE   W12
+ BYTE   As3
+ BYTE   N48  Fn3  v117
+ BYTE   N48  Cs3  v095
+ BYTE   W12
+ BYTE   N11  Cn4  v069
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   As4
+ BYTE   N24  Ds3  v117
+ BYTE   N24  As2  v095
+ BYTE   W12
+ BYTE   N11  Cn5  v069
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   N24  Cs3  v095
+ BYTE   N24  Fn3  v117
+ BYTE   W11
+ BYTE   N11  Fn5  v069
+ BYTE   W12
+ BYTE   N12  Cn3  v076
+ BYTE   N24  Gs3
+ BYTE   N96  Ds2  v117
+ BYTE   N96  Gs1  v095
+ BYTE   N01  Gs3  v076
+ BYTE   W01
+ BYTE   N48  Gs1  v095
+ BYTE   N48  Ds2  v117
+ BYTE   W01
+ BYTE   N02  Gs1  v095
+ BYTE   N02  Ds2  v117
+ BYTE   W09
+ BYTE   N11  Cs3  v070
+ BYTE   W11
+ BYTE   Ds3  v073
+ BYTE   N24  As3
+ BYTE   W11
+ BYTE   N11  Gs3  v069
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   N96  Fn3  v105
+ BYTE   N96  Cn3  v112
+ BYTE   W12
+ BYTE   N11  Cs4  v069
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Ds4  v069
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs4  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  Cn5  v069
+ BYTE   W03
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Cs5  v069
+ BYTE   W01
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Ds5  v069
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs5  v069
+ BYTE   W06
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N12  As2  v116
+ BYTE   N96  As1  v095
+ BYTE   N96  Fn2  v117
+ BYTE   W02
+ BYTE   N48
+ BYTE   N48  As1  v095
+ BYTE   W01
+ BYTE   N02  Fn2  v117
+ BYTE   N02  As1  v095
+ BYTE   W09
+ BYTE   N11  Cn3  v070
+ BYTE   W11
+ BYTE   Cs3  v073
+ BYTE   W11
+ BYTE   Fn3  v069
+ BYTE   W12
+ BYTE   As3
+ BYTE   N48  Fn3  v117
+ BYTE   N48  Cs3  v095
+ BYTE   W12
+ BYTE   N11  Cn4  v069
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   As4
+ BYTE   N24  As2  v095
+ BYTE   N24  Ds3  v117
+ BYTE   W12
+ BYTE   N11  Cn5  v069
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   N24  Cs3  v095
+ BYTE   N24  Fn3  v117
+ BYTE   W11
+ BYTE   N11  Fn5  v069
+ BYTE   W12
+ BYTE   N12  Cn3  v076
+ BYTE   N24  Gs3
+ BYTE   N96  Ds2  v117
+ BYTE   N96  Gs1  v095
+ BYTE   N01  Gs3  v076
+ BYTE   W01
+ BYTE   N48  Gs1  v095
+ BYTE   N48  Ds2  v117
+ BYTE   W01
+ BYTE   N02  Gs1  v095
+ BYTE   N02  Ds2  v117
+ BYTE   W09
+ BYTE   N11  Cs3  v070
+ BYTE   W11
+ BYTE   Ds3  v073
+ BYTE   N24  As3
+ BYTE   W11
+ BYTE   N11  Gs3  v069
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   N24  Ds3  v117
+ BYTE   N24  Gs2  v095
+ BYTE   W12
+ BYTE   N11  Cs4  v069
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Ds4  v069
+ BYTE   N24  Fn3  v117
+ BYTE   N24  Cn3  v095
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs4  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  Cn5  v069
+ BYTE   N24  Cn3  v117
+ BYTE   N24  Gs2  v095
+ BYTE   W03
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Cs5  v069
+ BYTE   W01
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Ds5  v069
+ BYTE   N24  Cs3  v117
+ BYTE   N24  As2  v095
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs5  v069
+ BYTE   W06
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N12  As2  v117
+ BYTE   N96  Fn2  v095
+ BYTE   N96  As1
+ BYTE   W02
+ BYTE   N01  Fn2
+ BYTE   N01  As1
+ BYTE   W10
+ BYTE   N11  Cn3  v070
+ BYTE   W11
+ BYTE   Cs3  v073
+ BYTE   W11
+ BYTE   Fn3  v069
+ BYTE   W12
+ BYTE   As3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   As3  v108
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W11
+ BYTE   Cs4
+ BYTE   W11
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   N12  As4  v076
+ BYTE   W13
+ BYTE   N11  Cn5  v070
+ BYTE   W11
+ BYTE   Cs5  v073
+ BYTE   W11
+ BYTE   Fn5  v069
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   N48  Gs3  v077
+ BYTE   N48  Ds3  v059
+ BYTE   N48  Cn3
+ BYTE   W12
+ BYTE   N11  Cn5  v069
+ BYTE   W12
+ BYTE   Gs4
+ BYTE   W12
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   Gs3
+ BYTE   W11
+ BYTE   Ds3
+ BYTE   W11
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   N24  As1  v076
+ BYTE   N48  As2
+ BYTE   N01  As1
+ BYTE   As2
+ BYTE   W23
+ BYTE   N24  Fn2  v073
+ BYTE   W24
+ BYTE   N48  Fn3  v059
+ BYTE   N48  Cs4
+ BYTE   N48  Fn4  v077
+ BYTE   N96  Cs3
+ BYTE   N96  As2  v059
+ BYTE   W48
+ BYTE   N24  Ds3
+ BYTE   N24  Ds4  v077
+ BYTE   N24  Cn4  v059
+ BYTE   W24
+ BYTE   Fn3
+ BYTE   N24  Cs4
+ BYTE   N24  Fn4  v077
+ BYTE   W24
+ BYTE   Gs4  v084
+ BYTE   N24  Gs3  v065
+ BYTE   N24  Gs1  v076
+ BYTE   N24  Cn4  v065
+ BYTE   N01  Gs3
+ BYTE   N01  Cn4
+ BYTE   N01  Gs1  v076
+ BYTE   N01  Gs4  v084
+ BYTE   W24
+ BYTE   N24  Cs4  v063
+ BYTE   N24  As3
+ BYTE   N24  Ds2  v073
+ BYTE   N24  As4  v081
+ BYTE   W24
+ BYTE   N48  Gs3  v059
+ BYTE   N48  Cn4
+ BYTE   N48  Gs4  v077
+ BYTE   N96  Cn3
+ BYTE   N96  Gs2  v059
+ BYTE   W48
+ BYTE   N24  Fn3
+ BYTE   N24  Fn4  v077
+ BYTE   N24  Cs4  v059
+ BYTE   W24
+ BYTE   Ds3
+ BYTE   N24  Cn4
+ BYTE   N24  Ds4  v077
+ BYTE   W24
+ BYTE   Cs1  v074
+ BYTE   N48  Cn4  v065
+ BYTE   N48  Ds3
+ BYTE   N48  Ds4  v084
+ BYTE   N01  Cs1  v074
+ BYTE   N01  Ds3  v065
+ BYTE   N01  Cn4
+ BYTE   N01  Ds4  v084
+ BYTE   W23
+ BYTE   N24  Cs2  v073
+ BYTE   W24
+ BYTE   N48  Gs2  v059
+ BYTE   N48  Cn3  v077
+ BYTE   N72  Fn3  v059
+ BYTE   N72  Cs4
+ BYTE   N72  Fn4  v077
+ BYTE   W48
+ BYTE   N48  Fn2  v069
+ BYTE   W24
+ BYTE   N24  Gs3
+ BYTE   W24
+ BYTE   Cn4  v076
+ BYTE   N24  Fn1
+ BYTE   N01  Cn4
+ BYTE   N01  Fn1
+ BYTE   W24
+ BYTE   N11  As3  v073
+ BYTE   N24  Cn2
+ BYTE   W11
+ BYTE   N11  Cn4  v069
+ BYTE   W12
+ BYTE   N24  Gs3
+ BYTE   N96  Gs2  v077
+ BYTE   N96  Fn2  v059
+ BYTE   W24
+ BYTE   N24  Fn3  v069
+ BYTE   W24
+ BYTE   Ds3
+ BYTE   W24
+ BYTE   Cn3
+ BYTE   W24
+ BYTE   Fs1  v076
+ BYTE   N48  As2
+ BYTE   N01  Fs1
+ BYTE   As2
+ BYTE   W23
+ BYTE   N24  Cs2  v073
+ BYTE   W24
+ BYTE   N48  Fn3  v059
+ BYTE   N48  Cs4
+ BYTE   N48  Fn4  v077
+ BYTE   N96  As2
+ BYTE   N96  Fs2  v059
+ BYTE   W48
+ BYTE   N24  Ds4  v077
+ BYTE   N24  Cn4  v059
+ BYTE   N24  Ds3
+ BYTE   W24
+ BYTE   Fn3
+ BYTE   N24  Cs4
+ BYTE   N24  Fn4  v077
+ BYTE   W24
+ BYTE   Gs4  v084
+ BYTE   N24  Gs3  v065
+ BYTE   N24  Gs1  v076
+ BYTE   N24  Cn4  v065
+ BYTE   N01  Gs3
+ BYTE   N01  Cn4
+ BYTE   N01  Gs1  v076
+ BYTE   N01  Gs4  v084
+ BYTE   W24
+ BYTE   N24  Cs4  v063
+ BYTE   N24  As3
+ BYTE   N24  Ds2  v073
+ BYTE   N24  As4  v081
+ BYTE   W24
+ BYTE   Gs3  v059
+ BYTE   N24  Cn4
+ BYTE   N24  Gs4  v077
+ BYTE   N96  Cn3
+ BYTE   N96  Gs2  v059
+ BYTE   W24
+ BYTE   N24  Cs4
+ BYTE   N24  As4  v077
+ BYTE   N24  As3  v059
+ BYTE   W24
+ BYTE   Fn3
+ BYTE   N24  Fn4  v077
+ BYTE   N24  Cs4  v059
+ BYTE   W24
+ BYTE   Ds3
+ BYTE   N24  Cn4
+ BYTE   N24  Ds4  v077
+ BYTE   W24
+ BYTE   Cs1  v074
+ BYTE   N48  Ds4  v084
+ BYTE   N48  Ds3  v065
+ BYTE   N48  Cn4
+ BYTE   N01  Cs1  v074
+ BYTE   N01  Ds3  v065
+ BYTE   N01  Cn4
+ BYTE   N01  Ds4  v084
+ BYTE   W23
+ BYTE   N24  Cs2  v073
+ BYTE   W24
+ BYTE   N48  Gs2  v059
+ BYTE   N48  Cn3  v077
+ BYTE   N72  Fn3  v059
+ BYTE   N72  Cs4
+ BYTE   N72  Fn4  v077
+ BYTE   W48
+ BYTE   N48  Fn2  v069
+ BYTE   W24
+ BYTE   N24  As3
+ BYTE   W20
+ BYTE   N52  Cn3  v065
+ BYTE   W01
+ BYTE   N01
+ BYTE   N48  Fn3
+ BYTE   W01
+ BYTE   N03
+ BYTE   N24  Fn1  v076
+ BYTE   N48  An3  v084
+ BYTE   N01  Fn1  v076
+ BYTE   An3  v084
+ BYTE   W23
+ BYTE   N24  Cn2  v073
+ BYTE   W24
+ BYTE   Cn3  v059
+ BYTE   N24  Ds3
+ BYTE   N24  Fn3  v077
+ BYTE   N48  Fn2  v059
+ BYTE   N48  An2  v077
+ BYTE   W24
+ BYTE   N24  An3  v059
+ BYTE   N24  Cn4
+ BYTE   N24  An4  v077
+ BYTE   W24
+ BYTE   As3  v059
+ BYTE   N24  Cs4
+ BYTE   N24  As4  v077
+ BYTE   N48  Fn1  v069
+ BYTE   W24
+ BYTE   N24  Cn4  v059
+ BYTE   N24  Ds4
+ BYTE   N24  Cn5  v077
+ BYTE   W24
+ BYTE   Fn4  v065
+ BYTE   N24  Cs4
+ BYTE   N24  Cs5  v084
+ BYTE   N24  Fs1  v076
+ BYTE   N01  Cs5  v084
+ BYTE   N01  Cs4  v065
+ BYTE   N01  Fs1  v076
+ BYTE   N01  Fn4  v065
+ BYTE   W24
+ BYTE   N24  Ds4  v063
+ BYTE   N24  Cn4
+ BYTE   N24  Cs2  v073
+ BYTE   N24  Cn5  v081
+ BYTE   W24
+ BYTE   As3  v059
+ BYTE   N24  Cs4
+ BYTE   N24  As4  v077
+ BYTE   N96  As2
+ BYTE   N96  Fs2  v059
+ BYTE   W24
+ BYTE   N24  Gs3
+ BYTE   N24  Gs4  v077
+ BYTE   N24  Cn4  v059
+ BYTE   W24
+ BYTE   N48  Fn3
+ BYTE   N48  Gs3
+ BYTE   N48  Fn4  v077
+ BYTE   W48
+ BYTE   N24  As3  v065
+ BYTE   N24  Ds3
+ BYTE   N24  Ds4  v084
+ BYTE   N24  Gs1  v076
+ BYTE   N01  Ds4  v084
+ BYTE   N01  Ds3  v065
+ BYTE   N01  Gs1  v076
+ BYTE   N01  As3  v065
+ BYTE   W24
+ BYTE   N24  Gs3  v063
+ BYTE   N24  Fn3
+ BYTE   N24  Ds2  v073
+ BYTE   N24  Fn4  v081
+ BYTE   W24
+ BYTE   N48  Cn4  v059
+ BYTE   N48  Gs3
+ BYTE   N48  Gs4  v077
+ BYTE   N48  Cn3
+ BYTE   N48  Gs2  v059
+ BYTE   W48
+ BYTE   N24  Gs3
+ BYTE   N24  Cn4
+ BYTE   N24  Gs4  v077
+ BYTE   N48  Gs1  v069
+ BYTE   W24
+ BYTE   N24  As3  v059
+ BYTE   N24  Cs4
+ BYTE   N24  As4  v077
+ BYTE   W24
+ BYTE   Ds4  v065
+ BYTE   N24  Cn4
+ BYTE   N24  Cn5  v084
+ BYTE   N24  Fn1  v076
+ BYTE   N01  Cn4  v065
+ BYTE   N01  Ds4
+ BYTE   N01  Cn5  v084
+ BYTE   N01  Fn1  v076
+ BYTE   W24
+ BYTE   N24  Cs4  v061
+ BYTE   N24  As3
+ BYTE   N24  Cn2  v073
+ BYTE   N24  As4  v080
+ BYTE   W24
+ BYTE   Cn4  v065
+ BYTE   N24  Ds4
+ BYTE   N24  Cn5  v084
+ BYTE   N96  Fn2  v066
+ BYTE   N96  Gs2  v085
+ BYTE   W24
+ BYTE   N24  Fn4  v069
+ BYTE   N24  Cs5  v088
+ BYTE   N24  Cs4  v069
+ BYTE   W24
+ BYTE   Ds4  v073
+ BYTE   N24  Ds5  v092
+ BYTE   N24  As4  v073
+ BYTE   W24
+ BYTE   Fn4  v077
+ BYTE   N24  Gs4
+ BYTE   N24  Fn5  v097
+ BYTE   W24
+ BYTE   As1  v106
+ BYTE   N48  Ds5  v109
+ BYTE   N48  Ds4  v088
+ BYTE   N48  As4
+ BYTE   N01  As1  v106
+ BYTE   Ds4  v088
+ BYTE   N01  As4
+ BYTE   N01  Ds5  v109
+ BYTE   W23
+ BYTE   N24  Fn2  v103
+ BYTE   W24
+ BYTE   N48  As2  v087
+ BYTE   N48  Cs3  v108
+ BYTE   N96  As4  v081
+ BYTE   N96  Cs4
+ BYTE   N96  Cs5  v101
+ BYTE   W23
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N48  As1  v098
+ BYTE   W03
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   N24  Ds1  v105
+ BYTE   N48  Fn4  v088
+ BYTE   N48  As3
+ BYTE   N48  As4  v109
+ BYTE   N01  Ds1  v105
+ BYTE   N01  As3  v088
+ BYTE   N01  Fn4
+ BYTE   N01  As4  v109
+ BYTE   W04
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W19
+ BYTE   N24  As1  v103
+ BYTE   W24
+ BYTE   N48  Fn4  v081
+ BYTE   N48  As4
+ BYTE   N48  Fn5  v101
+ BYTE   N96  As2  v108
+ BYTE   N96  Fs2  v087
+ BYTE   N96  Ds2
+ BYTE   W48
+ BYTE   N24  Ds5  v101
+ BYTE   N24  As4  v081
+ BYTE   N24  Ds4
+ BYTE   W24
+ BYTE   Fn4
+ BYTE   N24  As4
+ BYTE   N24  Fn5  v101
+ BYTE   W24
+ BYTE   Gs5  v109
+ BYTE   N24  Gs4  v088
+ BYTE   N24  Fn1  v106
+ BYTE   N24  Cn5  v088
+ BYTE   N01  Gs4
+ BYTE   N01  Cn5
+ BYTE   N01  Fn1  v106
+ BYTE   N01  Gs5  v109
+ BYTE   W24
+ BYTE   N24  As4  v077
+ BYTE   N24  As5  v097
+ BYTE   N24  Cn2  v073
+ BYTE   W24
+ BYTE   Ds4
+ BYTE   N24  Gs4
+ BYTE   N24  Ds5  v092
+ BYTE   N96  Gs2  v077
+ BYTE   N96  Fn2  v059
+ BYTE   W23
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N24  Fn4  v068
+ BYTE   N24  Fn5  v087
+ BYTE   W16
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W07
+ BYTE   N24  Cn4  v064
+ BYTE   N24  Cn5  v082
+ BYTE   N24  Ds4  v064
+ BYTE   W10
+ BYTE   TEMPO   106*SatorlMarsh_tbs/2
+ BYTE   W14
+ BYTE   N24  Cs4  v060
+ BYTE   N24  Cs5  v078
+ BYTE   W03
+ BYTE   TEMPO   102*SatorlMarsh_tbs/2
+ BYTE   W17
+ BYTE   TEMPO   98*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N24  As1  v076
+ BYTE   N96  As3  v059
+ BYTE   N96  As4  v077
+ BYTE   N96  Fn4  v059
+ BYTE   N01  As1  v076
+ BYTE   W01
+ BYTE   N48  Fn4  v059
+ BYTE   N48  As4  v077
+ BYTE   N48  As3  v059
+ BYTE   W01
+ BYTE   N02  As4  v077
+ BYTE   N02  Fn4  v059
+ BYTE   N02  As3
+ BYTE   W10
+ BYTE   TEMPO   94*SatorlMarsh_tbs/2
+ BYTE   W11
+ BYTE   N24  Fn2  v073
+ BYTE   W06
+ BYTE   TEMPO   90*SatorlMarsh_tbs/2
+ BYTE   W17
+ BYTE   TEMPO   66*SatorlMarsh_tbs/2
+ BYTE   N84  As2  v059
+ BYTE   N84  Cs3  v077
+ BYTE   W02
+ BYTE   N02  As2  v059
+ BYTE   N02  Cs3  v077
+ BYTE   W90
+ BYTE   N76  Cs3  v065
+ BYTE   W01
+ BYTE   N01
+ BYTE   N72  Fn3
+ BYTE   W01
+ BYTE   N03
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N12  As5  v076
+ BYTE   N48  Cs5
+ BYTE   N72  As3  v084
+ BYTE   W01
+ BYTE   N01  Cs5  v076
+ BYTE   As3  v084
+ BYTE   W11
+ BYTE   N11  Ds5  v070
+ BYTE   W11
+ BYTE   Fn5  v073
+ BYTE   W11
+ BYTE   Ds5  v069
+ BYTE   W12
+ BYTE   As5
+ BYTE   N48  Cs5
+ BYTE   W12
+ BYTE   N11  Ds5
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Fn5  v069
+ BYTE   N24  As3
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  As5  v069
+ BYTE   N48  As3
+ BYTE   N48  Cs5
+ BYTE   W03
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Ds5  v069
+ BYTE   W01
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Fn5  v069
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W02
+ BYTE   N52  Cn3  v065
+ BYTE   W01
+ BYTE   N01
+ BYTE   N48  Ds3
+ BYTE   W01
+ BYTE   N03
+ BYTE   N12  Gs5  v076
+ BYTE   N48  Gs3  v084
+ BYTE   N48  Cn5  v076
+ BYTE   W01
+ BYTE   N01
+ BYTE   N01  Gs3  v084
+ BYTE   W04
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W07
+ BYTE   N11  Cs5  v070
+ BYTE   W11
+ BYTE   Ds5  v073
+ BYTE   W11
+ BYTE   Cs5  v069
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N48  Cn5
+ BYTE   N96  Gs3
+ BYTE   W12
+ BYTE   N11  Cs5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N48  Cn5
+ BYTE   W12
+ BYTE   N11  Cs5
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W08
+ BYTE   N76  Cs3  v065
+ BYTE   W01
+ BYTE   N01
+ BYTE   N72  Fn3
+ BYTE   W01
+ BYTE   N03
+ BYTE   N12  As5  v076
+ BYTE   N48  Cs5
+ BYTE   N72  As3  v084
+ BYTE   W01
+ BYTE   N01  Cs5  v076
+ BYTE   N01  As3  v084
+ BYTE   W11
+ BYTE   N11  Ds5  v070
+ BYTE   W11
+ BYTE   Fn5  v073
+ BYTE   W11
+ BYTE   Ds5  v069
+ BYTE   W12
+ BYTE   As5
+ BYTE   N48  Cs5
+ BYTE   W12
+ BYTE   N11  Ds5
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Fn5  v069
+ BYTE   N24  As3
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  As5  v069
+ BYTE   N48  As3
+ BYTE   N48  Cs5
+ BYTE   W03
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Ds5  v069
+ BYTE   W01
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Fn5  v069
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W02
+ BYTE   N96  Cn3  v059
+ BYTE   W02
+ BYTE   Ds3
+ BYTE   N54  Cn3
+ BYTE   W01
+ BYTE   N12  Gs5  v076
+ BYTE   N48  Cn5
+ BYTE   N96  Gs3  v077
+ BYTE   N52  Ds3  v059
+ BYTE   N01  Cn5  v076
+ BYTE   W01
+ BYTE   N48  Gs3  v077
+ BYTE   W01
+ BYTE   N02
+ BYTE   W02
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W07
+ BYTE   N11  Cs5  v070
+ BYTE   W11
+ BYTE   Ds5  v073
+ BYTE   W11
+ BYTE   Cs5  v069
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N48  Cn5
+ BYTE   W12
+ BYTE   N11  Cs5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N48  Cn5
+ BYTE   W12
+ BYTE   N11  Cs5
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W08
+ BYTE   N76  Cs3  v065
+ BYTE   W01
+ BYTE   N01
+ BYTE   N72  Fn3
+ BYTE   W01
+ BYTE   N03
+ BYTE   N12  As5  v076
+ BYTE   N48  Cs5
+ BYTE   N72  As3  v084
+ BYTE   W01
+ BYTE   N01  Cs5  v076
+ BYTE   As3  v084
+ BYTE   W11
+ BYTE   N11  Ds5  v070
+ BYTE   W11
+ BYTE   Fn5  v073
+ BYTE   W11
+ BYTE   Ds5  v069
+ BYTE   W12
+ BYTE   As5
+ BYTE   N48  Cs5
+ BYTE   W12
+ BYTE   N11  Ds5
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Fn5  v069
+ BYTE   N24  As3
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  As5  v069
+ BYTE   N48  Cs5
+ BYTE   N48  As3
+ BYTE   W03
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Ds5  v069
+ BYTE   W01
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Fn5  v069
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W02
+ BYTE   N96  Cn3  v059
+ BYTE   W02
+ BYTE   Ds3
+ BYTE   N05  Cn3
+ BYTE   W01
+ BYTE   N12  Gs5  v076
+ BYTE   N48  Cn5
+ BYTE   N96  Gs3  v077
+ BYTE   N03  Ds3  v059
+ BYTE   N01  Cn5  v076
+ BYTE   W01
+ BYTE   Gs3  v077
+ BYTE   W03
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W07
+ BYTE   N11  Cs5  v070
+ BYTE   W11
+ BYTE   Ds5  v073
+ BYTE   W11
+ BYTE   Cs5  v069
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N48  Cn5
+ BYTE   W12
+ BYTE   N11  Cs5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N48  Cn4
+ BYTE   N48  Cn5
+ BYTE   W12
+ BYTE   N11  Cs5
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W08
+ BYTE   N96  Cs3  v059
+ BYTE   W02
+ BYTE   Fn3
+ BYTE   N96  Cs3
+ BYTE   W01
+ BYTE   N12  As5  v076
+ BYTE   N48  Cs5
+ BYTE   N96  As3  v072
+ BYTE   N96  Fn3  v059
+ BYTE   N96  Cs3
+ BYTE   N01  Cs5  v076
+ BYTE   W01
+ BYTE   N96  As3  v072
+ BYTE   N96  Fn3  v059
+ BYTE   N08  Cs3
+ BYTE   W01
+ BYTE   N96  As3  v072
+ BYTE   N06  Fn3  v059
+ BYTE   W02
+ BYTE   N04  As3  v072
+ BYTE   W06
+ BYTE   N11  Ds5  v070
+ BYTE   W11
+ BYTE   Fn5  v073
+ BYTE   W11
+ BYTE   Ds5  v069
+ BYTE   W12
+ BYTE   As5
+ BYTE   N48  Cs5
+ BYTE   W12
+ BYTE   N11  Ds5
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Fn5  v069
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  As5  v069
+ BYTE   N48  Cs5
+ BYTE   W03
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Ds5  v069
+ BYTE   W01
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Fn5  v069
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   N12  Gs5  v076
+ BYTE   N48  Cn5
+ BYTE   W01
+ BYTE   N01
+ BYTE   W04
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W07
+ BYTE   N11  Cs5  v070
+ BYTE   W11
+ BYTE   Ds5  v073
+ BYTE   W11
+ BYTE   Cs5  v069
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N48  Cn5
+ BYTE   W12
+ BYTE   N11  Cs5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   N48  Cn5
+ BYTE   W12
+ BYTE   N11  Cs5
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N12  As5  v076
+ BYTE   N24  As1
+ BYTE   N01
+ BYTE   W12
+ BYTE   N11  Ds5  v070
+ BYTE   W11
+ BYTE   Fn5  v073
+ BYTE   N24  Fn2
+ BYTE   W11
+ BYTE   N11  Ds5  v069
+ BYTE   W11
+ BYTE   N96  Cs3
+ BYTE   N11  As5
+ BYTE   N96  As3  v059
+ BYTE   N96  Fn3
+ BYTE   W01
+ BYTE   N01  Cs3  v069
+ BYTE   W10
+ BYTE   N11  Ds5
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Fn5  v069
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  As5  v069
+ BYTE   W03
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Ds5  v069
+ BYTE   W01
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Fn5  v069
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   N12  Gs5  v076
+ BYTE   N96  Cn3  v059
+ BYTE   N96  Gs3  v077
+ BYTE   N96  Ds3  v059
+ BYTE   W02
+ BYTE   N48  Cn3
+ BYTE   N48  Gs3  v077
+ BYTE   N48  Ds3  v059
+ BYTE   W01
+ BYTE   N02  Cn3
+ BYTE   N02  Gs3  v077
+ BYTE   N02  Ds3  v059
+ BYTE   W02
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W07
+ BYTE   N11  Cs5  v070
+ BYTE   W11
+ BYTE   Ds5  v073
+ BYTE   W11
+ BYTE   Cs5  v069
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N12  As5  v076
+ BYTE   N24  As1
+ BYTE   N01
+ BYTE   W12
+ BYTE   N11  Ds5  v070
+ BYTE   W11
+ BYTE   Fn5  v073
+ BYTE   N24  Fn2
+ BYTE   W11
+ BYTE   N11  Ds5  v069
+ BYTE   W11
+ BYTE   N96  Cs3
+ BYTE   N11  As5
+ BYTE   N96  As3  v059
+ BYTE   N96  Fn3
+ BYTE   W01
+ BYTE   N01  Cs3  v069
+ BYTE   W10
+ BYTE   N11  Ds5
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Fn5  v069
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  As5  v069
+ BYTE   W03
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Ds5  v069
+ BYTE   W01
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Fn5  v069
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Ds5  v069
+ BYTE   W06
+ BYTE   TEMPO   110*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   N12  Gs5  v076
+ BYTE   N96  Ds3  v059
+ BYTE   N96  Gs3  v077
+ BYTE   N96  Cn3  v059
+ BYTE   W02
+ BYTE   N48  Gs3  v077
+ BYTE   N48  Ds3  v059
+ BYTE   N48  Cn3
+ BYTE   W01
+ BYTE   N02  Gs3  v077
+ BYTE   N02  Ds3  v059
+ BYTE   N02  Cn3
+ BYTE   W02
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W07
+ BYTE   N11  Cs5  v070
+ BYTE   W11
+ BYTE   Ds5  v073
+ BYTE   W11
+ BYTE   Cs5  v069
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   Gs5
+ BYTE   W12
+ BYTE   Cs5
+ BYTE   W11
+ BYTE   Ds5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W12
+ BYTE   N12  As2  v076
+ BYTE   N96  Fn2  v077
+ BYTE   N96  As1  v059
+ BYTE   W02
+ BYTE   N48  Fn2  v077
+ BYTE   N48  As1  v059
+ BYTE   W01
+ BYTE   N02  Fn2  v077
+ BYTE   N02  As1  v059
+ BYTE   W09
+ BYTE   N11  Cn3  v070
+ BYTE   W11
+ BYTE   Cs3  v073
+ BYTE   W11
+ BYTE   Fn3  v069
+ BYTE   W12
+ BYTE   As3
+ BYTE   N48  Fn3  v077
+ BYTE   N48  Cs3  v059
+ BYTE   W12
+ BYTE   N11  Cn4  v069
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   As4
+ BYTE   N24  Ds3  v077
+ BYTE   N24  As2  v059
+ BYTE   W12
+ BYTE   N11  Cn5  v069
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   N24  Cs3  v059
+ BYTE   N24  Fn3  v077
+ BYTE   W11
+ BYTE   N11  Fn5  v069
+ BYTE   W12
+ BYTE   N12  Cn3  v076
+ BYTE   N36  Gs3
+ BYTE   N96  Gs1  v059
+ BYTE   N96  Ds2  v077
+ BYTE   N01  Gs3  v076
+ BYTE   W01
+ BYTE   N48  Gs1  v059
+ BYTE   N48  Ds2  v077
+ BYTE   W01
+ BYTE   N02
+ BYTE   N02  Gs1  v059
+ BYTE   W09
+ BYTE   N11  Cs3  v070
+ BYTE   W11
+ BYTE   Ds3  v073
+ BYTE   W11
+ BYTE   Gs3  v069
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   N96  Fn3  v066
+ BYTE   N96  Cn3  v073
+ BYTE   W12
+ BYTE   N11  Cs4  v069
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Ds4  v069
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs4  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  Cn5  v069
+ BYTE   W03
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Cs5  v069
+ BYTE   W01
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Ds5  v069
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs5  v069
+ BYTE   W06
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N12  As2  v076
+ BYTE   N96  As1  v059
+ BYTE   N96  Fn2  v077
+ BYTE   W02
+ BYTE   N48  As1  v059
+ BYTE   N48  Fn2  v077
+ BYTE   W01
+ BYTE   N02
+ BYTE   N02  As1  v059
+ BYTE   W09
+ BYTE   N11  Cn3  v070
+ BYTE   W11
+ BYTE   Cs3  v073
+ BYTE   W11
+ BYTE   Fn3  v069
+ BYTE   W12
+ BYTE   As3
+ BYTE   N48  Fn3  v077
+ BYTE   N48  Cs3  v059
+ BYTE   W12
+ BYTE   N11  Cn4  v069
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   As4
+ BYTE   N24  As2  v059
+ BYTE   N24  Ds3  v077
+ BYTE   W12
+ BYTE   N11  Cn5  v069
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   N24  Fn3  v077
+ BYTE   N24  Cs3  v059
+ BYTE   W11
+ BYTE   N11  Fn5  v069
+ BYTE   W12
+ BYTE   N12  Cn3  v076
+ BYTE   N24  Gs3
+ BYTE   N96  Gs1  v059
+ BYTE   N96  Ds2  v077
+ BYTE   N01  Gs3  v076
+ BYTE   W01
+ BYTE   N48  Gs1  v059
+ BYTE   N48  Ds2  v077
+ BYTE   W01
+ BYTE   N02  Gs1  v059
+ BYTE   N02  Ds2  v077
+ BYTE   W09
+ BYTE   N11  Cs3  v070
+ BYTE   W11
+ BYTE   Ds3  v073
+ BYTE   N24  As3
+ BYTE   W11
+ BYTE   N11  Gs3  v069
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   N96  Cn3  v073
+ BYTE   N96  Fn3  v066
+ BYTE   W12
+ BYTE   N11  Cs4  v069
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Ds4  v069
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs4  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  Cn5  v069
+ BYTE   W03
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Cs5  v069
+ BYTE   W01
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Ds5  v069
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs5  v069
+ BYTE   W06
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N12  As2  v076
+ BYTE   N96  Fn2  v077
+ BYTE   N96  As1  v059
+ BYTE   W02
+ BYTE   N48  Fn2  v077
+ BYTE   N48  As1  v059
+ BYTE   W01
+ BYTE   N02
+ BYTE   N02  Fn2  v077
+ BYTE   W09
+ BYTE   N11  Cn3  v070
+ BYTE   W11
+ BYTE   Cs3  v073
+ BYTE   W11
+ BYTE   Fn3  v069
+ BYTE   W12
+ BYTE   As3
+ BYTE   N48  Cs3  v059
+ BYTE   N48  Fn3  v077
+ BYTE   W12
+ BYTE   N11  Cn4  v069
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   As4
+ BYTE   N24  Ds3  v077
+ BYTE   N24  As2  v059
+ BYTE   W12
+ BYTE   N11  Cn5  v069
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   N24  Fn3  v077
+ BYTE   N24  Cs3  v059
+ BYTE   W11
+ BYTE   N11  Fn5  v069
+ BYTE   W12
+ BYTE   N12  Cn3  v076
+ BYTE   N24  Gs3
+ BYTE   N96  Gs1  v059
+ BYTE   N96  Ds2  v077
+ BYTE   N01  Gs3  v076
+ BYTE   W01
+ BYTE   N48  Ds2  v077
+ BYTE   N48  Gs1  v059
+ BYTE   W01
+ BYTE   N02
+ BYTE   N02  Ds2  v077
+ BYTE   W09
+ BYTE   N11  Cs3  v070
+ BYTE   W11
+ BYTE   Ds3  v073
+ BYTE   N24  As3
+ BYTE   W11
+ BYTE   N11  Gs3  v069
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   N24  Ds3  v077
+ BYTE   N24  Gs2  v059
+ BYTE   W12
+ BYTE   N11  Cs4  v069
+ BYTE   W11
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N11  Ds4  v069
+ BYTE   N24  Cn3  v059
+ BYTE   N24  Fn3  v077
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs4  v069
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W05
+ BYTE   N11  Cn5  v069
+ BYTE   N24  Gs2  v059
+ BYTE   N24  Cn3  v077
+ BYTE   W03
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W08
+ BYTE   N11  Cs5  v069
+ BYTE   W01
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W09
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   W01
+ BYTE   N11  Ds5  v069
+ BYTE   N24  Cs3  v077
+ BYTE   N24  As2  v059
+ BYTE   W08
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W03
+ BYTE   N11  Gs5  v069
+ BYTE   W06
+ BYTE   TEMPO   112*SatorlMarsh_tbs/2
+ BYTE   W06
+ BYTE   TEMPO   114*SatorlMarsh_tbs/2
+ BYTE   N12  As2  v077
+ BYTE   N96  Fn2  v059
+ BYTE   N96  As1
+ BYTE   W02
+ BYTE   N48
+ BYTE   N48  Fn2
+ BYTE   W01
+ BYTE   N02  As1
+ BYTE   N02  Fn2
+ BYTE   W09
+ BYTE   N11  Cn3  v070
+ BYTE   W11
+ BYTE   Cs3  v073
+ BYTE   W11
+ BYTE   Fn3  v069
+ BYTE   W12
+ BYTE   As3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   As4
+ BYTE   W12
+ BYTE   Cn5
+ BYTE   W11
+ BYTE   Cs5
+ BYTE   W11
+ BYTE   Fn5
+ BYTE   W12
+ BYTE   N12  As5
+ BYTE   N96  Gs4  v077
+ BYTE   N96  Cs4  v059
+ BYTE   N96  Fn4
+ BYTE   N96  As3
+ BYTE   W02
+ BYTE   N36
+ BYTE   N36  Gs4  v077
+ BYTE   N36  Cs4  v059
+ BYTE   N36  Fn4
+ BYTE   N01  Cs4
+ BYTE   N01  Fn4
+ BYTE   N01  Gs4  v077
+ BYTE   N01  As3  v059
+ BYTE   W09
+ BYTE   N11  Ds5  v066
+ BYTE   W11
+ BYTE   Fn5  v063
+ BYTE   W11
+ BYTE   Ds5  v060
+ BYTE   W12
+ BYTE   As5  v056
+ BYTE   W12
+ BYTE   Ds5  v054
+ BYTE   W12
+ BYTE   Fn5  v050
+ BYTE   W12
+ BYTE   Ds5  v047
+ BYTE   W12
+ BYTE   As5  v045
+ BYTE   W12
+ BYTE   Ds5  v042
+ BYTE   W11
+ BYTE   Fn5  v039
+ BYTE   W11
+ BYTE   GoTo
+  POIN2 SatorlMarsh_Label_1_00
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+songSatorlMarsh:
+	BYTE	2	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	SatorlMarsh_pri	// Priority
+	BYTE	SatorlMarsh_rev	// Reverb.
+    
+	POIN2	SatorlMarsh_grp
+    
+	POIN2	SatorlMarsh_001
+	POIN2	SatorlMarsh_002
+
+	

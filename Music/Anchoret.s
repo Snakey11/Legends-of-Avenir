@@ -484,7 +484,7 @@ Label_2_0100E0B7:
 @******************************************************@
 	.align	2
 
-Anchoret:
+songAnchoret:
 	.byte	3	@ NumTrks
 	.byte	0	@ NumBlks
 	.byte	Anchoret_pri	@ Priority

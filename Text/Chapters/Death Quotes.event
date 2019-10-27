@@ -169,3 +169,26 @@ I'm sorry, everyone.[A][X]
 [FarRight][LoadSylvaine]
 I musn't fall...[CloseEyes] Altia[NL]
 must be liberated...[A][X]
+
+## ZahevaDeathText
+[FarRight][LoadZaheva]
+[Tact], it's been fun...[NL]
+Hold on and keep pushing.[A][X]
+
+## YvetteDeathText
+[FarRight][LoadYvette]
+Ah! I'm sorry, [Tact]. We[NL]
+can barely fly anymore.[A][NL]
+Watch your back out there![A][X]
+
+## MadeleineDeathText
+[FarLeft][LoadMadeleine]
+No... I... can't keep pushing...[NL]
+Remus... I'm sorry.[A][NL]
+I'm pulling back.[A][X]
+
+## RemusDeathText
+[FarLeft][LoadRemus]
+Ouch! Wrong place at the wrong[NL]
+time for me? Sorry everyone...[A][NL]
+Watch yourselves out there.[A][X]

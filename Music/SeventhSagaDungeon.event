@@ -1,0 +1,1351 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	SeventhSagaDungeon_grp  voicegroup000
+	#define	SeventhSagaDungeon_pri  10
+	#define	SeventhSagaDungeon_rev  0
+	#define	SeventhSagaDungeon_mvl  127
+	#define	SeventhSagaDungeon_key  0
+	#define	SeventhSagaDungeon_tbs  1
+	#define	SeventhSagaDungeon_exg  0
+	#define	SeventhSagaDungeon_cmp  1
+
+	// .rodata
+	//	m
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+SeventhSagaDungeon_001:
+// 000   ----------------------------------------
+SeventhSageDungeon_Label_0_00:
+ BYTE   TEMPO   146*SeventhSagaDungeon_tbs/2
+ BYTE   KEYSH   SeventhSagaDungeon_key+0
+ BYTE   VOICE   116
+ BYTE   VOL   46*SeventhSagaDungeon_mvl/mxv
+ BYTE   W96
+ BYTE   W96
+// 001   ----------------------------------------
+SeventhSageDungeon_Label_0_0C00:
+ BYTE   N04  Gn2  v100
+ BYTE   N04  Gn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N04  An3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   N04  Gn3
+ BYTE   W06
+ BYTE   Fn2
+ BYTE   N04  Fn3
+ BYTE   W06
+ BYTE   N24  Gn3
+ BYTE   N32  Gn2
+ BYTE   W36
+ BYTE   N08
+ BYTE   N08  Gn3
+ BYTE   W12
+ BYTE   An2
+ BYTE   N08  An3
+ BYTE   W12
+ BYTE   As2
+ BYTE   N08  As3
+ BYTE   W12
+ BYTE   PEND 
+// 002   ----------------------------------------
+SeventhSageDungeon_Label_0_1200:
+ BYTE   N16  An2  v100
+ BYTE   N16  An3
+ BYTE   W24
+ BYTE   N24  Fn2
+ BYTE   N24  Fn3
+ BYTE   W36
+ BYTE   N08  Dn2
+ BYTE   N08  Dn3
+ BYTE   W12
+ BYTE   As2
+ BYTE   N08  As3
+ BYTE   W12
+ BYTE   An2
+ BYTE   N08  An3
+ BYTE   W12
+ BYTE   PEND 
+// 003   ----------------------------------------
+ BYTE   N96  Gn3  v100
+ BYTE   N96  Gn2
+ BYTE   W96
+ BYTE   W96
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_0_0C00
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_0_1200
+// 004   ----------------------------------------
+ BYTE   N96  Gn3  v100
+ BYTE   N96  Gn2
+ BYTE   W96
+ BYTE   W60
+// 005   ----------------------------------------
+ BYTE   N08  Bn2
+ BYTE   N08  Bn3
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   N08  Cn4
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   N08  Dn4
+ BYTE   W12
+ BYTE   N48  Cn4
+ BYTE   N64  Cn3
+ BYTE   W72
+// 006   ----------------------------------------
+SeventhSageDungeon_Label_0_4080:
+ BYTE   N16  An2  v100
+ BYTE   N16  An3
+ BYTE   W24
+ BYTE   N48  Fn2
+ BYTE   N48  Fn3
+ BYTE   W60
+ BYTE   N08  Dn2
+ BYTE   N08  Dn3
+ BYTE   W12
+ BYTE   PEND 
+// 007   ----------------------------------------
+ BYTE   N08  As2  v100
+ BYTE   N08  As3
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   N08  Cn4
+ BYTE   W12
+ BYTE   N24  As3
+ BYTE   N32  As2
+ BYTE   W18
+ BYTE   N04  Cn4
+ BYTE   N04  Cn3
+ BYTE   W06
+ BYTE   N32  Dn4
+ BYTE   N48  Dn3
+ BYTE   W48
+// 008   ----------------------------------------
+ BYTE   N16  Gn2
+ BYTE   N16  Gn3
+ BYTE   W24
+ BYTE   N48  Ds2
+ BYTE   N96  Ds3
+ BYTE   W72
+// 009   ----------------------------------------
+ BYTE   N16  As2
+ BYTE   N16  As3
+ BYTE   W24
+ BYTE   N48  An2
+ BYTE   N48  An3
+ BYTE   W60
+ BYTE   N08  As2
+ BYTE   N08  As3
+ BYTE   W12
+// 010   ----------------------------------------
+ BYTE   Cn3
+ BYTE   N08  Cn4
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   N08  Dn4
+ BYTE   W12
+ BYTE   N48  An2
+ BYTE   N48  An3
+ BYTE   W72
+// 011   ----------------------------------------
+ BYTE   N16  Fs2
+ BYTE   N16  Fs3
+ BYTE   W24
+ BYTE   N08  Gn2
+ BYTE   N08  Gn3
+ BYTE   W12
+ BYTE   Fs2
+ BYTE   N08  Fs3
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   N08  Gn3
+ BYTE   W12
+ BYTE   An2
+ BYTE   N08  An3
+ BYTE   W12
+ BYTE   As2
+ BYTE   N08  As3
+ BYTE   W12
+ BYTE   An2
+ BYTE   N08  An3
+ BYTE   W12
+// 012   ----------------------------------------
+ BYTE   As2
+ BYTE   N08  As3
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   N08  Cn4
+ BYTE   W12
+ BYTE   N48  Dn3
+ BYTE   N48  Dn4
+ BYTE   W60
+ BYTE   N08  Bn2
+ BYTE   N08  Bn3
+ BYTE   W12
+// 013   ----------------------------------------
+ BYTE   Cn3
+ BYTE   N08  Cn4
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   N08  Dn4
+ BYTE   W12
+ BYTE   N48  Cn4
+ BYTE   N64  Cn3
+ BYTE   W72
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_0_4080
+// 014   ----------------------------------------
+ BYTE   N08  As2  v100
+ BYTE   N08  As3
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   N08  Cn4
+ BYTE   W12
+ BYTE   N12  As3
+ BYTE   N32  As2
+ BYTE   W18
+ BYTE   N04  Cn3
+ BYTE   N04  Cn4
+ BYTE   W06
+ BYTE   N32  Dn4
+ BYTE   N48  Dn3
+ BYTE   W48
+// 015   ----------------------------------------
+ BYTE   N16  Gn2
+ BYTE   N16  Gn3
+ BYTE   W24
+ BYTE   N48  Ds2
+ BYTE   N48  Ds3
+ BYTE   W60
+ BYTE   N04  As2
+ BYTE   N04  As3
+ BYTE   W12
+// 016   ----------------------------------------
+ BYTE   As2
+ BYTE   N04  As3
+ BYTE   W12
+ BYTE   As2
+ BYTE   N04  As3
+ BYTE   W12
+ BYTE   N24  An3
+ BYTE   N48  An2
+ BYTE   W36
+ BYTE   N24  Cn3
+ BYTE   N24  Cn4
+ BYTE   W36
+// 017   ----------------------------------------
+ BYTE   N16  As2
+ BYTE   N16  As3
+ BYTE   W24
+ BYTE   N48  An2
+ BYTE   N48  An3
+ BYTE   W60
+ BYTE   N08  Fs2
+ BYTE   N08  Fs3
+ BYTE   W12
+// 018   ----------------------------------------
+ BYTE   Gn2
+ BYTE   N08  Gn3
+ BYTE   W12
+ BYTE   An2
+ BYTE   N08  An3
+ BYTE   W12
+ BYTE   N96  Gn3
+ BYTE   N96  Gn2
+ BYTE   W96
+ BYTE   W84
+// 019   ----------------------------------------
+SeventhSageDungeon_Label_0_9B40:
+ BYTE   N04  Dn3  v100
+ BYTE   N04  Dn4
+ BYTE   W12
+ BYTE   N08  Dn3
+ BYTE   N08  Dn4
+ BYTE   W12
+ BYTE   N04  Gn2
+ BYTE   N04  Gn3
+ BYTE   W12
+ BYTE   N08  Gn2
+ BYTE   N08  Gn3
+ BYTE   W12
+ BYTE   N04  Dn3
+ BYTE   N04  Dn4
+ BYTE   W12
+ BYTE   N08  Dn3
+ BYTE   N08  Dn4
+ BYTE   W12
+ BYTE   N04  Gn2
+ BYTE   N04  Gn3
+ BYTE   W12
+ BYTE   N08  Gn2
+ BYTE   N08  Gn3
+ BYTE   W12
+ BYTE   PEND 
+// 020   ----------------------------------------
+ BYTE   N04  Dn3  v100
+ BYTE   N04  Dn4
+ BYTE   W12
+ BYTE   N08
+ BYTE   N16  Dn3
+ BYTE   W18
+ BYTE   N04  Gn2
+ BYTE   N04  Gn3
+ BYTE   W06
+ BYTE   N48  Gn2
+ BYTE   N48  Gn3
+ BYTE   W60
+// 021   ----------------------------------------
+SeventhSageDungeon_Label_0_A740:
+ BYTE   N04  Dn3  v100
+ BYTE   N04  Dn4
+ BYTE   W12
+ BYTE   N08  Dn3
+ BYTE   N08  Dn4
+ BYTE   W12
+ BYTE   N04  Gn2
+ BYTE   N04  Gn3
+ BYTE   W12
+ BYTE   N08  Gn2
+ BYTE   N08  Gn3
+ BYTE   W12
+ BYTE   N04  Dn3
+ BYTE   N04  Dn4
+ BYTE   W12
+ BYTE   N08  Dn3
+ BYTE   N08  Dn4
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   N08  Gn3
+ BYTE   W12
+ BYTE   As2
+ BYTE   N16  As3
+ BYTE   W12
+ BYTE   PEND 
+// 022   ----------------------------------------
+ BYTE   N08  Cn3  v100
+ BYTE   N08  Cn4
+ BYTE   W12
+ BYTE   N16  As2
+ BYTE   N24  As3
+ BYTE   W18
+ BYTE   N04  An3
+ BYTE   N04  An2
+ BYTE   W06
+ BYTE   N48  Gn2
+ BYTE   N48  Gn3
+ BYTE   W60
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_0_9B40
+// 023   ----------------------------------------
+ BYTE   N04  Dn3  v100
+ BYTE   N04  Dn4
+ BYTE   W12
+ BYTE   N12
+ BYTE   N16  Dn3
+ BYTE   W18
+ BYTE   N04  Gn2
+ BYTE   N04  Gn3
+ BYTE   W06
+ BYTE   N48  Gn2
+ BYTE   N48  Gn3
+ BYTE   W60
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_0_A740
+// 024   ----------------------------------------
+ BYTE   N08  Cn3  v100
+ BYTE   N08  Cn4
+ BYTE   W12
+ BYTE   N16  As2
+ BYTE   N24  As3
+ BYTE   W18
+ BYTE   N04  An2
+ BYTE   N04  An3
+ BYTE   W06
+ BYTE   N48  Gn2
+ BYTE   N48  Gn3
+ BYTE   W96
+// 025   ----------------------------------------
+ BYTE   GoTo
+  POIN2 SeventhSageDungeon_Label_0_00
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+SeventhSagaDungeon_002:
+// 000   ----------------------------------------
+SeventhSageDungeon_Label_1_00:
+ BYTE   TEMPO   146*SeventhSagaDungeon_tbs/2
+ BYTE   KEYSH   SeventhSagaDungeon_key+0
+ BYTE   VOICE   47
+ BYTE   VOL   69*SeventhSagaDungeon_mvl/mxv
+ BYTE   N08  Gn1  v100
+ BYTE   W12
+ BYTE   N04
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   W06
+ BYTE   N08
+ BYTE   W12
+ BYTE   N04  Gn1
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W36
+// 001   ----------------------------------------
+SeventhSageDungeon_Label_1_0600:
+ BYTE   N08  Gn1  v100
+ BYTE   W12
+ BYTE   N04
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   W06
+ BYTE   N08
+ BYTE   W12
+ BYTE   N04  Gn1
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W36
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_1_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_1_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_1_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_1_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_1_0600
+// 002   ----------------------------------------
+ BYTE   N08  Fn2  v100
+ BYTE   W12
+ BYTE   N06  Fn3
+ BYTE   W06
+ BYTE   N02
+ BYTE   W06
+ BYTE   N04  Fn2
+ BYTE   W12
+ BYTE   N08  Fn3
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   N04  Fn3
+ BYTE   W06
+ BYTE   Fn3
+ BYTE   W06
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   N08  Fn3
+ BYTE   W12
+// 003   ----------------------------------------
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+// 004   ----------------------------------------
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Ds3
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Ds3
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Fn3
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Fn3
+ BYTE   W12
+// 005   ----------------------------------------
+SeventhSageDungeon_Label_1_3C00:
+ BYTE   N08  Ds2  v100
+ BYTE   W12
+ BYTE   Ds3
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Ds3
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Ds3
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Ds3
+ BYTE   W12
+ BYTE   PEND 
+// 006   ----------------------------------------
+ BYTE   N08  Fn2  v100
+ BYTE   W12
+ BYTE   Fn3
+ BYTE   N08  An2
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Fn3
+ BYTE   N08  An2
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Fn3
+ BYTE   N08  An2
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Fn3
+ BYTE   N08  An2
+ BYTE   W12
+// 007   ----------------------------------------
+SeventhSageDungeon_Label_1_4800:
+ BYTE   N08  As1  v100
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   As1
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   As1
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   As1
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   PEND 
+// 008   ----------------------------------------
+SeventhSageDungeon_Label_1_4E00:
+ BYTE   N08  En1  v100
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   PEND 
+// 009   ----------------------------------------
+SeventhSageDungeon_Label_1_5400:
+ BYTE   N08  Dn1  v100
+ BYTE   W12
+ BYTE   Cn2
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   Cn2
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   Cn2
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   Cn2
+ BYTE   W12
+ BYTE   PEND 
+// 010   ----------------------------------------
+SeventhSageDungeon_Label_1_5A00:
+ BYTE   N08  Dn1  v100
+ BYTE   W12
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   PEND 
+// 011   ----------------------------------------
+ BYTE   N08  Gn2  v100
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+// 012   ----------------------------------------
+SeventhSageDungeon_Label_1_6600:
+ BYTE   N08  Fn2  v100
+ BYTE   W12
+ BYTE   Fn3
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Fn3
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Fn3
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Fn3
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_1_3C00
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_1_6600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_1_4800
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_1_4E00
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_1_5400
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_1_5A00
+// 013   ----------------------------------------
+SeventhSageDungeon_Label_1_9000:
+ BYTE   N08  Gn1  v100
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_1_9000
+// 014   ----------------------------------------
+SeventhSageDungeon_Label_1_9C00:
+ BYTE   N08  Ds1  v100
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Ds1
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_1_9000
+// 015   ----------------------------------------
+SeventhSageDungeon_Label_1_A800:
+ BYTE   N08  Ds1  v100
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   Ds1
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_1_9000
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_1_9C00
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_1_9000
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_1_A800
+// 016   ----------------------------------------
+ BYTE   N08  Gn1  v100
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W36
+// 017   ----------------------------------------
+ BYTE   GoTo
+  POIN2 SeventhSageDungeon_Label_1_00
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+SeventhSagaDungeon_003:
+// 000   ----------------------------------------
+SeventhSageDungeon_Label_2_00:
+ BYTE   TEMPO   146*SeventhSagaDungeon_tbs/2
+ BYTE   KEYSH   SeventhSagaDungeon_key+0
+ BYTE   VOICE   49
+ BYTE   VOL   61*SeventhSagaDungeon_mvl/mxv
+ BYTE   W96
+ BYTE   W96
+// 001   ----------------------------------------
+SeventhSageDungeon_Label_2_0C00:
+ BYTE   N04  Gn2  v100
+ BYTE   W06
+ BYTE   An2
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   W06
+ BYTE   Fn2
+ BYTE   W06
+ BYTE   N32  Gn2
+ BYTE   W36
+ BYTE   N08
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   PEND 
+// 002   ----------------------------------------
+SeventhSageDungeon_Label_2_1200:
+ BYTE   N16  An2  v100
+ BYTE   W24
+ BYTE   N24  Fn2
+ BYTE   W36
+ BYTE   N08  Dn2
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   PEND 
+// 003   ----------------------------------------
+ BYTE   N96  Gn2  v100
+ BYTE   W96
+ BYTE   W96
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_2_0C00
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_2_1200
+// 004   ----------------------------------------
+ BYTE   N96  Gn2  v100
+ BYTE   W96
+ BYTE   W60
+// 005   ----------------------------------------
+ BYTE   N08  Bn2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   N64  Cn3
+ BYTE   W72
+// 006   ----------------------------------------
+SeventhSageDungeon_Label_2_4080:
+ BYTE   N16  An2  v100
+ BYTE   W24
+ BYTE   N48  Fn2
+ BYTE   W60
+ BYTE   N08  Dn2
+ BYTE   W12
+ BYTE   PEND 
+// 007   ----------------------------------------
+SeventhSageDungeon_Label_2_4680:
+ BYTE   N08  As2  v100
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   N32  As2
+ BYTE   W18
+ BYTE   N04  Cn3
+ BYTE   W06
+ BYTE   N48  Dn3
+ BYTE   W48
+ BYTE   PEND 
+// 008   ----------------------------------------
+ BYTE   N16  Gn2  v100
+ BYTE   W24
+ BYTE   N48  Ds2
+ BYTE   W72
+// 009   ----------------------------------------
+ BYTE   N16  As2
+ BYTE   W24
+ BYTE   N48  An2
+ BYTE   W60
+ BYTE   N08  As2
+ BYTE   W12
+// 010   ----------------------------------------
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   N48  An2
+ BYTE   W72
+// 011   ----------------------------------------
+ BYTE   N16  Fs2
+ BYTE   W24
+ BYTE   N08  Gn2
+ BYTE   W12
+ BYTE   Fs2
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+// 012   ----------------------------------------
+ BYTE   As2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   N48  Dn3
+ BYTE   W60
+ BYTE   N08  Bn2
+ BYTE   W12
+// 013   ----------------------------------------
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   N64  Cn3
+ BYTE   W72
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_2_4080
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_2_4680
+// 014   ----------------------------------------
+ BYTE   N16  Gn2  v100
+ BYTE   W24
+ BYTE   N48  Ds2
+ BYTE   W60
+ BYTE   N04  As2
+ BYTE   W12
+// 015   ----------------------------------------
+ BYTE   As2
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   N48  An2
+ BYTE   W36
+ BYTE   N24  Cn3
+ BYTE   W36
+// 016   ----------------------------------------
+ BYTE   N16  As2
+ BYTE   W24
+ BYTE   N48  An2
+ BYTE   W60
+ BYTE   N08  Fs2
+ BYTE   W12
+// 017   ----------------------------------------
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   N96  Gn2
+ BYTE   W96
+ BYTE   W84
+// 018   ----------------------------------------
+SeventhSageDungeon_Label_2_9B40:
+ BYTE   N04  Dn3  v100
+ BYTE   W12
+ BYTE   N08
+ BYTE   W12
+ BYTE   N04  Gn2
+ BYTE   W12
+ BYTE   N08
+ BYTE   W12
+ BYTE   N04  Dn3
+ BYTE   W12
+ BYTE   N08
+ BYTE   W12
+ BYTE   N04  Gn2
+ BYTE   W12
+ BYTE   N08
+ BYTE   W12
+ BYTE   PEND 
+// 019   ----------------------------------------
+SeventhSageDungeon_Label_2_A140:
+ BYTE   N04  Dn3  v100
+ BYTE   W12
+ BYTE   N16
+ BYTE   W18
+ BYTE   N04  Gn2
+ BYTE   W06
+ BYTE   N48
+ BYTE   W60
+ BYTE   PEND 
+// 020   ----------------------------------------
+SeventhSageDungeon_Label_2_A740:
+ BYTE   N04  Dn3  v100
+ BYTE   W12
+ BYTE   N08
+ BYTE   W12
+ BYTE   N04  Gn2
+ BYTE   W12
+ BYTE   N08
+ BYTE   W12
+ BYTE   N04  Dn3
+ BYTE   W12
+ BYTE   N08
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   PEND 
+// 021   ----------------------------------------
+ BYTE   N08  Cn3  v100
+ BYTE   W12
+ BYTE   N16  As2
+ BYTE   W18
+ BYTE   N04  An2
+ BYTE   W06
+ BYTE   N48  Gn2
+ BYTE   W60
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_2_9B40
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_2_A140
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_2_A740
+// 022   ----------------------------------------
+ BYTE   N08  Cn3  v100
+ BYTE   W12
+ BYTE   N16  As2
+ BYTE   W18
+ BYTE   N04  An2
+ BYTE   W06
+ BYTE   N48  Gn2
+ BYTE   W96
+// 023   ----------------------------------------
+ BYTE   GoTo
+  POIN2 SeventhSageDungeon_Label_2_00
+ BYTE   FINE
+
+//**************** Track 4 (Midi-Chn.3) ****************//
+
+SeventhSagaDungeon_004:
+// 000   ----------------------------------------
+SeventhSageDungeon_Label_3_00:
+ BYTE   TEMPO   146*SeventhSagaDungeon_tbs/2
+ BYTE   KEYSH   SeventhSagaDungeon_key+0
+ BYTE   VOICE   47
+ BYTE   VOL   56*SeventhSagaDungeon_mvl/mxv
+ BYTE   N96  Gn1  v100
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   N48
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   N32  Fn1
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   Dn1
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   Ds1
+ BYTE   W48
+ BYTE   Fn1
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W72
+// 006   ----------------------------------------
+SeventhSageDungeon_Label_3_9D80:
+ BYTE   N16  Ds1  v100
+ BYTE   W48
+ BYTE   Fn1
+ BYTE   W48
+ BYTE   PEND 
+// 007   ----------------------------------------
+SeventhSageDungeon_Label_3_A380:
+ BYTE   N16  Gn1  v100
+ BYTE   W48
+ BYTE   N08
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W36
+ BYTE   PEND 
+// 008   ----------------------------------------
+SeventhSageDungeon_Label_3_A980:
+ BYTE   N16  As1  v100
+ BYTE   W48
+ BYTE   An1
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_3_A380
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_3_9D80
+// 009   ----------------------------------------
+SeventhSageDungeon_Label_3_BB80:
+ BYTE   N16  Gn1  v100
+ BYTE   W48
+ BYTE   N12
+ BYTE   W12
+ BYTE   N04
+ BYTE   W36
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_3_A980
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_3_BB80
+// 010   ----------------------------------------
+ BYTE   GoTo
+  POIN2 SeventhSageDungeon_Label_3_00
+ BYTE   FINE
+
+//**************** Track 5 (Midi-Chn.4) ****************//
+
+SeventhSagaDungeon_005:
+// 000   ----------------------------------------
+SeventhSageDungeon_Label_4_00:
+ BYTE   TEMPO   146*SeventhSagaDungeon_tbs/2
+ BYTE   KEYSH   SeventhSagaDungeon_key+0
+ BYTE   VOICE   52
+ BYTE   VOL   50*SeventhSagaDungeon_mvl/mxv
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W36
+// 001   ----------------------------------------
+ BYTE   N24  An3  v100
+ BYTE   W36
+ BYTE   N16  Gn3
+ BYTE   W24
+ BYTE   N64  Fs3
+ BYTE   W72
+// 002   ----------------------------------------
+ BYTE   N16
+ BYTE   W24
+ BYTE   N32  Gn3
+ BYTE   W48
+ BYTE   Gn3
+ BYTE   W48
+// 003   ----------------------------------------
+ BYTE   Fn3
+ BYTE   W48
+ BYTE   Dn3
+ BYTE   W48
+// 004   ----------------------------------------
+ BYTE   N48  Ds3
+ BYTE   W48
+ BYTE   Gn3
+ BYTE   W48
+// 005   ----------------------------------------
+SeventhSageDungeon_Label_4_7200:
+ BYTE   N48  As3  v100
+ BYTE   W48
+ BYTE   An3
+ BYTE   W48
+ BYTE   PEND 
+// 006   ----------------------------------------
+ BYTE   N48  As3  v100
+ BYTE   W48
+ BYTE   Fn3
+ BYTE   W48
+// 007   ----------------------------------------
+ BYTE   Ds3
+ BYTE   W48
+ BYTE   N32  Gn3
+ BYTE   W48
+// 008   ----------------------------------------
+ BYTE   Fs3
+ BYTE   W36
+ BYTE   N24  An3
+ BYTE   W36
+ BYTE   N16  Gn3
+ BYTE   W24
+// 009   ----------------------------------------
+ BYTE   N48  Fs3
+ BYTE   W72
+ BYTE   N24  Dn3
+ BYTE   W24
+// 010   ----------------------------------------
+ BYTE   N96  Gn3
+ BYTE   W96
+ BYTE   W96
+// 011   ----------------------------------------
+SeventhSageDungeon_Label_4_9C00:
+ BYTE   N48  Ds3  v100
+ BYTE   W48
+ BYTE   Fn3
+ BYTE   W48
+ BYTE   PEND 
+// 012   ----------------------------------------
+ BYTE   N96  Gn3  v100
+ BYTE   W96
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_4_7200
+// 013   ----------------------------------------
+ BYTE   N96  Gn3  v100
+ BYTE   W96
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_4_9C00
+// 014   ----------------------------------------
+ BYTE   N96  Gn3  v100
+ BYTE   W96
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_4_7200
+// 015   ----------------------------------------
+ BYTE   N96  Gn3  v100
+ BYTE   W96
+ BYTE   W24
+// 016   ----------------------------------------
+ BYTE   GoTo
+  POIN2 SeventhSageDungeon_Label_4_00
+ BYTE   FINE
+
+//**************** Track 6 (Midi-Chn.5) ****************//
+
+SeventhSagaDungeon_006:
+// 000   ----------------------------------------
+SeventhSageDungeon_Label_5_00:
+ BYTE   TEMPO   146*SeventhSagaDungeon_tbs/2
+ BYTE   KEYSH   SeventhSagaDungeon_key+0
+ BYTE   VOICE   116
+ BYTE   VOL   54*SeventhSagaDungeon_mvl/mxv
+ BYTE   N08  Cn1  v100
+ BYTE   W12
+ BYTE   N04  En1
+ BYTE   W12
+ BYTE   N08  Cn1
+ BYTE   W12
+ BYTE   N04  En1
+ BYTE   W12
+ BYTE   N08  Cn1
+ BYTE   W12
+ BYTE   N04  En1
+ BYTE   W12
+ BYTE   N06  Cn1
+ BYTE   W06
+ BYTE   N02
+ BYTE   W06
+ BYTE   N04  En1
+ BYTE   W12
+// 001   ----------------------------------------
+SeventhSageDungeon_Label_5_0600:
+ BYTE   N08  Cn1  v100
+ BYTE   W12
+ BYTE   N04  En1
+ BYTE   W12
+ BYTE   N08  Cn1
+ BYTE   W12
+ BYTE   N04  En1
+ BYTE   W12
+ BYTE   N08  Cn1
+ BYTE   W12
+ BYTE   N04  En1
+ BYTE   W12
+ BYTE   N06  Cn1
+ BYTE   W06
+ BYTE   N02
+ BYTE   W06
+ BYTE   N04  En1
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+ BYTE   PATT
+  POIN2 SeventhSageDungeon_Label_5_0600
+// 002   ----------------------------------------
+ BYTE   N08  Cn1  v100
+ BYTE   W12
+ BYTE   N04  En1
+ BYTE   W12
+ BYTE   N08  Cn1
+ BYTE   W12
+ BYTE   N04  En1
+ BYTE   W12
+ BYTE   N08  Cn1
+ BYTE   W12
+ BYTE   N04  En1
+ BYTE   W12
+ BYTE   N06  Cn1
+ BYTE   W06
+ BYTE   N02
+ BYTE   W06
+ BYTE   N04  En1
+ BYTE   W36
+// 003   ----------------------------------------
+ BYTE   GoTo
+  POIN2 SeventhSageDungeon_Label_5_00
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+songSeventhSageDungeon:
+	BYTE	6	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	SeventhSagaDungeon_pri	// Priority
+	BYTE	SeventhSagaDungeon_rev	// Reverb.
+    
+	POIN2	SeventhSagaDungeon_grp
+    
+	POIN2	SeventhSagaDungeon_001
+	POIN2	SeventhSagaDungeon_002
+	POIN2	SeventhSagaDungeon_003
+	POIN2	SeventhSagaDungeon_004
+	POIN2	SeventhSagaDungeon_005
+	POIN2	SeventhSagaDungeon_006
+
+	

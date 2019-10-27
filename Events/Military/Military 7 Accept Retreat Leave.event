@@ -1,0 +1,479 @@
+
+EventPointerTable(Military7AcceptRetreatLeaveEvents,ThisChapter)
+
+//Label ThisChapter
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN EndMainPointer EndMainPointer EndMainPointer
+POIN EndMainPointer
+POIN TrapData TrapData
+POIN Units Units
+POIN GoodEnding BadEnding $0 $0 $0 $0
+POIN BeginningScene EndingScene
+//LabelEnd
+
+//Label TurnBasedEvents
+TurnBasedEvents:
+TurnEventPlayer(0x00,Turn7,7)
+TurnEventPlayer(0x00,Turn9,9)
+InfiniteTurnEventPlayer(0x00,Turn11,11)
+END_MAIN
+
+//Label CharacterBasedEvents
+ALIGN 32
+CharacterBasedEvents:
+SupportConvo(ASupport,0xFF,Zaheva,Military7AcceptRetreatLeaveTactZahevaSupportText)
+END_MAIN
+
+//Label LocationBasedEvents
+LocationBasedEvents:
+Chest(Speedwing,17,0)
+Chest(SilverSword,17,3)
+Armory(ArmoryList,17,23)
+Vendor(ShopList,18,24)
+END_MAIN
+
+//Label MiscBasedEvents
+MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
+END_MAIN
+
+//Label TrapData
+TrapData:
+ENDTRAP
+ALIGN 4
+
+//Label Units
+Units:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [14,22] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [13,23] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Jasper 0x00 0x00 Level(1,Ally,True) [15,23] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [12,22] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Yvette 0x00 0x00 Level(1,Ally,True) [16,22] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Madeleine 0x00 0x00 Level(1,Ally,True) [12,24] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Remus 0x00 0x00 Level(1,Ally,True) [16,24] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Xylia 0x00 0x00 Level(1,Ally,True) [14,24] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
+
+//Label BeginingScene
+BeginningScene:
+ENUT 0x13 // Disable Tact's special death quotes until the ending.
+ENUT 0x14
+CAM1 [18,24]
+LOAD1 0x1 Meanies
+LOAD1 0x1 Meanies2
+LOAD2 0x1 Friends
+LOAD3 0x1 PlayerLoading1
+MUSC Shihna
+SetBackground(0x27)
+Text(Military7AcceptRetreatLeaveBeginningText)
+MUSC Derris_Kharlan_Appear
+SetBackground(0x2D)
+Text(Military7AcceptRetreatLeavePast1Text)
+SetBackground(0x27)
+Text(Military7AcceptRetreatLeaveReturnText)
+MUSC Raid
+SetBackground(0x26)
+Text(Military7AcceptRetreatLeavePast2Text)
+MUSC A_Tragic_Decision
+SetBackground(0x2D)
+Text(Military7AcceptRetreatLeavePast3Text)
+SetBackground(0x27)
+Text(Military7AcceptRetreatLeavePresentText)
+FadeOutMusic
+FADI 0x05
+STAL 0x40
+MUSC Twinrova
+SetBackground(0x0A)
+Text(Military7AcceptRetreatLeaveOthersText)
+MUSC Distant_Roads
+SetBackground(0x0C)
+Text(Military7AcceptRetreatLeaveJasperDerekText)
+MUSC Shihna
+SetBackground(0x30)
+Text(Military7AcceptRetreatLeaveDesertText)
+EndConvo
+STAL 0x20
+Text(Military7AcceptRetreatLeaveHereText)
+STAL 0x10
+CAM1 [1,24]
+STAL 0x10
+FlashCursor(BossEfil,60)
+STAL 0x08
+Text(Military7AcceptRetreatLeaveEfilText)
+GotoPrepScreen
+
+//Label EndingScene
+GoodEnding:
+#ifdef _DEBUG_
+	SVAL 0x01 0x01 // Xylia is alive.
+	GOTO 0x10
+#endif
+BadEnding:
+#ifdef _DEBUG_
+	SVAL 0x01 0x00 // Xylia is dead.
+	GOTO 0x10
+#endif
+EndingScene:
+#ifdef _DEBUG_
+	CHECK_ALIVE Xylia
+	SADD 0x0C1 // Move slot 0xC into slot 0x1.
+LABEL 0x10
+#endif
+FADI 0x5
+CLEA 0x0
+CLEE 0x0
+ENUT 0xA0 // Disable death quotes
+ASMC RefreshAll|1
+ASMC PrepForEnd|1
+SVAL 0x1 Madeleine
+ASMC MakeNotDeadASM|1
+SVAL 0x1 Yvette
+ASMC MakeNotDeadASM|1
+SVAL 0x1 Derek
+ASMC MakeNotDeadASM|1
+CAM1 [2,23]
+MUSC A_Tragic_Decision
+LOAD3 0x1 PlayerLoading2
+LOAD2 0x1 EndingFriends
+ENUN
+CHECK_ALIVE Xylia
+#ifdef _DEBUG_
+	SADD 0x01C // Move slot 0x1 into slot 0xC. Used for ending debug menu shenanigans.
+#endif
+BEQ 0x0 0x0 0xC
+	// If Xylia is alive.
+	ENUF 0x13 // Enable Tact's death quote.
+	Text(0x0C,Military7AcceptRetreatLeaveXyliaAliveText)
+	MUSC Raid
+	STAL 0x20
+	TEXTSTART
+	TEXTSHOW Military7AcceptRetreatLeaveAliveTurnText
+	TEXTEND
+	LOAD2 0x1 YvetteHere
+	ENUN
+	TEXTCONT
+	TEXTEND
+	REMA
+	STAL 0x08
+	MOVE 0x00 Yvette [1,21]
+	ENUN
+	STAL 0x08
+	StartBattle
+	NormalDamage(0,20)
+	CriticalHit(1,60)
+	EndAttack
+	CHECK_EVENTID 0x6E
+	BNE 0x40 0xC 0x0
+		CHECK_EVENTID 0x69 // Female
+		BEQ 0x42 0xC 0x0
+			FIG1 Yvette PlayerFCavalier 0x0
+			GOTO 0x41
+		LABEL 0x42
+		CHECK_EVENTID 0x6A
+		BEQ 0x43 0xC 0x0
+			FIG1 Yvette PlayerFKnight 0x0
+			GOTO 0x41
+		LABEL 0x43
+		CHECK_EVENTID 0x6B
+		BEQ 0x48 0xC 0x0
+			FIG1 Yvette PlayerFSoldier 0x0
+			GOTO 0x41
+		LABEL 0x48
+		CHECK_EVENTID 0x6C
+		BEQ 0x49 0xC 0x0
+			FIG1 Yvette PlayerFArcher 0x0
+			GOTO 0x41
+		LABEL 0x49
+			FIG1 Yvette PlayerFWyvernRider 0x0
+	LABEL 0x40
+		CHECK_EVENTID 0x69 // Male
+		BEQ 0x44 0xC 0x0
+			FIG1 Yvette PlayerMCavalier 0x0
+			GOTO 0x41
+		LABEL 0x44
+		CHECK_EVENTID 0x6A
+		BEQ 0x45 0xC 0x0
+			FIG1 Yvette PlayerMKnight 0x0
+			GOTO 0x41
+		LABEL 0x45
+		CHECK_EVENTID 0x6B
+		BEQ 0x46 0xC 0x0
+			FIG1 Yvette PlayerMSoldier 0x0
+			GOTO 0x41
+		LABEL 0x46
+		CHECK_EVENTID 0x6C
+		BEQ 0x47 0xC 0x0
+			FIG1 Yvette PlayerMArcher 0x0
+			GOTO 0x41
+		LABEL 0x47
+		CHECK_EVENTID 0x6D
+		BEQ 0x41 0x0 0xC
+			FIG1 Yvette PlayerMWyvernRider 0x0
+	LABEL 0x41
+	KillUnit(1,21) // Kill Yvette.
+	MOVE 0x0 Madeleine [0,25]
+	ENUN
+	STAL 0x08
+	StartBattle
+	NormalDamage(6,0)
+	MissedAttack(0,0)
+	EndAttack
+	FIG1 Madeleine Derek 0x0
+	STAL 0x10
+	MOVE 0x0 Derek [0,24]
+	ENUN
+	STAL 0x08
+	StartBattle
+	CriticalHit(0,60)
+	EndAttack
+	FIG1 Derek Madeleine 0x0
+	KillUnit(0,25) // Kill Madeleine.
+	STAL 0x50
+	Text(Military7AcceptRetreatLeaveAliveFightText)
+	STAL 0x08
+	MUSC Return_of_the_Demon_King
+	WarpIn(2,25,LoadNarrator)
+	STAL 0x30
+	Text(Military7AcceptRetreatLeaveAliveNarratorText)
+	STAL 0x08
+	MOVE 0x0 Narrator [1,25]
+	ENUN
+	StartBattle
+	NormalDamage(0,40)
+	EndAttack
+	FIG1 Narrator Derek Tomahawk
+	KillUnit(1,24)
+	STAL 0x20
+	Text(Military7AcceptRetreatLeaveAliveDerekDeadText)
+	STAL 0x10
+	WarpOut(3,24,Xylia)
+	STAL 0x10
+	Text(Military7AcceptRetreatLeaveAliveDerekDead2Text)
+	STAL 0x08
+	MOVE 0x0 Narrator [1,23]
+	ENUN
+	StartBattle
+	CriticalHit(1,60)
+	EndAttack
+	GOTO 0x01
+LABEL 0x0
+	// If Xylia is dead.
+	ENUF 0x14 // Enable Tact's death quote.
+	FADU 0x05
+	STAL 0x10
+	Text(Military7AcceptRetreatLeaveDeadEndingText)
+	MOVE 0x0 Derek [1,23]
+	ENUN
+	StartBattle
+	CriticalHit(0,35)
+	NormalDamage(0,60)
+	EndAttack
+	FIG1 Madeleine Derek 0x0
+	KillUnit(1,23) // Kill Derek.
+	STAL 0x10
+	Text(Military7AcceptRetreatLeaveDeadDerekDeadText)
+	MUSC Return_of_the_Demon_King
+	WarpIn(3,24,LoadNarrator2)
+	STAL 0x18
+	Text(Military7AcceptRetreatLeaveDeadNarratorHereText)
+	MOVE 0x0 Narrator [1,24]
+	ENUN
+	StartBattle
+	NormalDamage(0,40)
+	NormalDamage(0,60)
+	EndAttack
+	FIG1 Narrator Madeleine 0x00
+	KillUnit(1,25)
+	STAL 0x20
+	Text(Military7AcceptRetreatLeaveDeadMadeleineDeadText)
+	MOVE 0x0 Narrator [1,23]
+	ENUN
+	StartBattle
+	NormalDamage(0,31)
+	MissedAttack(1,0)
+	NormalDamage(0,60)
+	EndAttack
+LABEL 0x01
+MilitaryNarratorFight(1,22)
+ENUF 0x67
+ENUF 0x68
+ENUF 0x69
+ENUF 0x6A
+ENUF 0x6B
+ENUF 0x6C
+ENUF 0x6D
+ENUF 0x6E
+ENUF 0xA0
+DISA Jasper
+DISA Derek
+DISA Zaheva
+DISA Madeleine
+DISA Remus
+DISA Yvette
+DISA Xylia
+MoveToChapter(PrologueChapter)
+ENDA
+
+//Label Turn events
+Turn7:
+CamON
+LOAD1 0x1 Turn5Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn9:
+CamON
+LOAD1 0x1 Turn7Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn11:
+Every3Turns(0x00,0x01,0x02,0x15,0x16,UnitLoop1)
+Every2Turns(0x03,0x04,0x17,UnitLoop2)
+ENUN
+NoFade
+EndA2
+
+UnitLoop1:
+LOAD1 0x1 LoopUnits1
+NoFade
+EndA2
+
+UnitLoop2:
+LOAD1 0x1 LoopUnits2
+NoFade
+ENDA
+
+//Label Shops
+ArmoryList:
+SHLI SteelSword KillingEdge BraveSword SteelLance Spear SteelAxe Tomahawk SilverAxe SteelBow SteelLongbow BraveBow
+ALIGN 4
+
+ShopList:
+SHLI Elfire Elwind Elthunder Elaqua Worm Dulam Exordium Divine Mend Vulnerary Elixir PureWater
+ALIGN 4
+//LabelEnd
+
+	/*UNIT DATA*/
+
+//Label PlayerLoading
+PlayerLoading1:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [14,22] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+PlayerLoading2:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [1,22] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
+
+//Label Cutscene Units
+Friends:
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [13,23] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Jasper 0x00 0x00 Level(1,Ally,True) [15,23] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [12,22] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Yvette 0x00 0x00 Level(1,Ally,True) [16,22] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Madeleine 0x00 0x00 Level(1,Ally,True) [12,24] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Remus 0x00 0x00 Level(1,Ally,True) [16,24] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+EndingFriends:
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [0,23] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Madeleine 0x00 0x00 Level(1,Ally,True) [1,25] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Xylia 0x00 0x00 Level(1,Ally,True) [3,24] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+YvetteHere:
+UNIT Yvette 0x00 0x00 Level(1,Ally,True) [0,11] 0x00 0x00 0x01 REDA1R19 [0] NoAI
+UNIT
+
+LoadNarrator:
+UNIT Narrator NarratorClass Narrator Level(15,Enemy,True) [2,25] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI
+UNIT
+
+LoadNarrator2:
+UNIT Narrator NarratorClass Narrator Level(15,Enemy,True) [3,24] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI
+EndUnit
+
+//Label Chapter Units
+Meanies:
+UNIT Xylia HolySage 0x00 Level(11,Ally,True) [14,24] 0x00 0x00 0x00 0x00 [Aura] NoAI
+UNIT BossEfil Truerblade BossEfil Level(14,Enemy,True) [3,24] 0x00 0x00 0x00 0x00 [KillingEdge] ChaseOnceApproachedAI
+UNIT Guardian Paladin BossEfil Level(6,Enemy,True) [1,25] 0x00 0x00 0x00 0x00 [SilverLance] NoAI
+UNIT Guardian Paladin BossEfil Level(7,Enemy,True) [0,24] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI
+UNIT Guardian General BossEfil Level(9,Enemy,True) [1,18] 0x00 0x00 0x00 0x00 [HeavySpear,ShortAxe] GuardAI
+UNIT Guardian General BossEfil Level(8,Enemy,True) [2,18] 0x00 0x00 0x00 0x00 [Spear,SteelSword] GuardAI
+UNIT Guardian Berserker BossEfil Level(5,Enemy,True) [4,17] 0x00 0x00 0x00 0x00 [SilverAxe] ChaseOnceApproachedAI
+UNIT Guardian Hero BossEfil Level(6,Enemy,True) [0,15] 0x00 0x00 0x00 0x00 [IronBlade,HandAxe] AttackInRangeAI
+UNIT Guardian Shaman BossEfil Level(18,Enemy,True) [0,15] 0x00 0x00 0x00 0x00 [Fenrir] AttackInRangeAI
+UNIT Guardian Sentinel BossEfil Level(5,Enemy,True) [2,13] 0x00 0x00 0x00 0x00 [BraveAxe] ChaseOnceApproachedAI
+UNIT Guardian Halberdier BossEfil Level(7,Enemy,True) [0,13] 0x00 0x00 0x00 0x00 [BraveLance] ChaseOnceApproachedAI
+UNIT Guardian Sniper BossEfil Level(6,Enemy,True) [3,14] 0x00 0x00 0x00 0x00 [SteelBow] ChaseOnceApproachedAI
+UNIT Guardian GreatKnight BossEfil Level(4,Enemy,True) [1,9] 0x00 0x00 0x00 0x00 [SteelAxe,Javelin] AttackInRangeAI
+UNIT Guardian Cavalier BossEfil Level(18,Enemy,True) [1,9] 0x00 0x00 0x00 0x00 [LightBrand] AttackInRangeAI
+UNIT Guardian Cavalier BossEfil Level(19,Enemy,True) [1,9] 0x00 0x00 0x00 0x00 [SilverSword] AttackInRangeAI
+UNIT Guardian Sage BossEfil Level(4,Enemy,True) [0,5] 0x00 0x00 0x00 0x00 [Thoron] ChaseOnceApproachedAI
+UNIT Guardian Swordmaster BossEfil Level(7,Enemy,True) [1,0] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
+UNIT Guardian General BossEfil Level(9,Enemy,True) [3,2] 0x00 0x00 0x00 0x00 [Horseslayer] AttackInRangeAI
+UNIT Guardian WyvernKnight BossEfil Level(6,Enemy,True) [6,1] 0x00 0x00 0x00 0x00 [ShortSpear] AttackInRangeAI
+UNIT
+
+Meanies2:
+UNIT Guardian General BossEfil Level(8,Enemy,True) [5,6] 0x00 0x00 0x00 0x00 [Tomahawk,SteelSword] GuardAI
+UNIT Guardian Bishop BossEfil Level(6,Enemy,True) [4,8] 0x00 0x00 0x00 0x00 [Divine,Physic] ChaseOnceApproachedAI
+UNIT Guardian GreatKnight BossEfil Level(7,Enemy,True) [6,7] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Guardian GreatKnight BossEfil Level(8,Enemy,True) [6,9] 0x00 0x00 0x00 0x00 [Hammer] NoAI
+UNIT Guardian Swordmaster BossEfil Level(3,Enemy,True) [8,8] 0x00 0x00 0x00 0x00 [Runesword] AttackInRangeAI
+UNIT Guardian Knight BossEfil Level(20,Enemy,True) [11,19] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT Guardian Mercenary BossEfil Level(19,Enemy,True) [11,2] Drop 0x00 0x00 0x00 [SteelSword,ChestKey] NoAI
+UNIT Guardian Sage BossEfil Level(5,Enemy,True) [15,2] Drop 0x00 0x00 0x00 [Arcfire,ChestKey] ChaseOnceApproachedAI
+UNIT Guardian Ranger BossEfil Level(5,Enemy,True) [10,0] 0x00 0x00 0x00 0x00 [Armorslayer,SteelBow] NoAI
+UNIT Guardian Ranger BossEfil Level(6,Enemy,True) [10,0] 0x00 0x00 0x00 0x00 [SteelLongbow,SteelSword] NoAI
+UNIT Guardian WyvernLord BossEfil Level(7,Enemy,True) [19,7] 0x00 0x00 0x00 0x00 [HeavySpear,SteelSword] ChaseOnceApproachedAI
+UNIT Guardian WyvernLord BossEfil Level(5,Enemy,True) [19,8] 0x00 0x00 0x00 0x00 [ToxinSword] ChaseOnceApproachedAI
+UNIT Guardian Warrior BossEfil Level(7,Enemy,True) [10,5] 0x00 0x00 0x00 0x00 [BattleAxe,SteelBow] AttackInRangeAI
+UNIT Guardian MageKnight BossEfil Level(5,Enemy,True) [10,5] Drop 0x00 0x00 0x00 [Fimbulvetr,Elixir] NoAI
+UNIT Guardian Halberdier BossEfil Level(7,Enemy,True) [13,13] 0x00 0x00 0x00 0x00 [BraveLance] NoAI
+UNIT Guardian Berserker BossEfil Level(8,Enemy,True) [11,16] Drop 0x00 0x00 0x00 [HandAxe] NoAI
+UNIT Guardian Mage BossEfil Level(17,Enemy,True) [19,13] 0x00 0x00 0x00 0x00 [Elwind] NoAI
+UNIT Guardian Soldier BossEfil Level(20,Enemy,True) [16,15] 0x00 0x00 0x00 0x00 [PoisonLance] NoAI
+UNIT Guardian Hero BossEfil Level(8,Enemy,True) [17,16] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI
+UNIT Guardian Archer BossEfil Level(17,Enemy,True) [11,14] Drop 0x00 0x00 0x00 [SilverShortbow,Dragonshield] NoAI
+UNIT Guardian Sniper BossEfil Level(9,Enemy,True) [7,13] 0x00 0x00 0x00 0x00 [SteelLongbow] AttackInRangeAI
+UNIT Guardian Sage BossEfil Level(4,Enemy,True) [7,16] 0x00 0x00 0x00 0x00 [Hail,Fire] AttackInRangeAI
+UNIT
+
+Turn5Units:
+UNIT Wanderer Cavalier BossEfil Level(19,Enemy,True) [10,25] 0x00 0x00 0x00 0x00 [ToxinLance] NoAI
+UNIT Wanderer Paladin BossEfil Level(8,Enemy,True) [16,25] 0x00 0x00 0x00 0x00 [LightBrand] NoAI
+UNIT Wanderer Ranger BossEfil Level(7,Enemy,True) [13,25] 0x00 0x00 0x00 0x00 [SteelLongbow] NoAI
+UNIT Wanderer Valkyrie BossEfil Level(5,Enemy,True) [15,25] 0x00 0x00 0x00 0x00 [Shine,Mend] NoAI
+UNIT
+
+Turn7Units:
+UNIT Wanderer Hero BossEfil Level(9,Enemy,True) [19,8] 0x00 0x00 0x00 0x00 [ShortAxe] NoAI
+UNIT Wanderer Warrior BossEfil Level(8,Enemy,True) [19,7] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI
+UNIT Wanderer Sage BossEfil Level(5,Enemy,True) [10,0] 0x00 0x00 0x00 0x00 [Arcthunder] NoAI
+UNIT Wanderer Knight BossEfil Level(20,Enemy,True) [12,0] Drop 0x00 0x00 0x00 [Dragonspear] NoAI
+UNIT Wanderer Ranger BossEfil Level(5,Enemy,True) [13,25] 0x00 0x00 0x00 0x00 [SteelBlade,IronBow] NoAI
+UNIT Wanderer Ranger BossEfil Level(6,Enemy,True) [15,25] Drop 0x00 0x00 0x00 [SteelSword,SilverBow] NoAI
+UNIT
+
+LoopUnits1: // Every 3 turns.
+UNIT Wanderer Berserker BossEfil Level(7,Enemy,True) [9,0] 0x00 0x00 0x00 0x00 [BraveAxe] NoAI
+UNIT Wanderer Bishop BossEfil Level(8,Enemy,True) [11,0] 0x00 0x00 0x00 0x00 [Shine] NoAI
+UNIT Wanderer GreatKnight BossEfil Level(7,Enemy,True) [13,0] 0x00 0x00 0x00 0x00 [ShortSpear,Zanbato] NoAI
+UNIT Wanderer Swordmaster BossEfil Level(9,Enemy,True) [19,8] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT Wanderer Soldier BossEfil Level(19,Enemy,True) [19,7] 0x00 0x00 0x00 0x00 [IronLance] NoAI
+UNIT
+
+LoopUnits2: // Every 2 turns.
+UNIT Wanderer Falcoknight BossEfil Level(19,Enemy,True) [12,25] 0x00 0x00 0x00 0x00 [Wyrmslayer,Javelin] NoAI
+UNIT Wanderer WyvernLord BossEfil Level(19,Enemy,True) [16,25] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+EndUnit

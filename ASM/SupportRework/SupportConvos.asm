@@ -29,7 +29,7 @@ ldrh r0, [ r5 ]
 cmp r0, #0x00
 beq EndSupportConvoUsabilityFalse @ End the loop if this is an END_MAIN. No support was found.
 	ldr r0, [ r5, #12 ] @ This talk convo's extra condition.
-	ldr r1, =SupportReturnFalse
+	ldr r1, =CHARSupportConvoUsability
 	cmp r0, r1
 	bne SupportConvoUsabilityLoop @ Loop back if this is not marked as a support convo.
 		ldrb r0, [ r5, #0x08 ] @ Character 1
@@ -132,7 +132,7 @@ beq BuildSupportTargetListLoop
 	cmp r0, #0x00
 	beq BuildSupportTargetListLoop @ Loop back to the main loop if this is an END_MAIN.
 		ldr r0, [ r7, #12 ] @ Extra ASM condition.
-		ldr r1, =SupportReturnFalse
+		ldr r1, =CHARSupportConvoUsability
 		cmp r0, r1
 		bne BuildSupportTargetListCHARLoop @ Loop back to the CHAR loop if this is not a support convo.
 			ldr r2, [ r4 ]
@@ -251,7 +251,7 @@ add r6, r6, #0x10
 ldrh r0, [ r6 ]
 cmp r0, #0x00
 beq EndSupportSelected @ No CHAR was found... let's just end...
-	ldr r0, =SupportReturnFalse
+	ldr r0, =CHARSupportConvoUsability
 	ldr r1, [ r6, #12 ]
 	cmp r0, r1
 	bne SupportSelectedLoop @ Loop back if this isn't a support convo.
@@ -391,12 +391,85 @@ EndGetNextAdjacentUnit:
 pop { r1 }
 bx r1
 
-.global SupportReturnFalse
-.type SupportReturnFalse, %function
-SupportReturnFalse: @ Used for storing support data in CharacterBasedEvents. This makes sure supports don't appear as regular talk events.
-mov r0, #0x00
-bx lr
+.equ Proc_TI, 0x08A018AC
+.equ ProcFind, 0x08002E9C
 
+.global CHARSupportConvoUsability
+.type CHARSupportConvoUsability, %function
+CHARSupportConvoUsability: @ Used for storing support data in CharacterBasedEvents. This makes sure supports don't appear as regular talk events.
+@ When this is called, r0 = a stack allocation, +0x00 = pointer to this character event, +0x1A = character ID of current unit, +0x1C = character struct of unit currently checking (not active unit).
+push { r4 - r6, lr }
+mov r4, r0 @ r4 = stack allocation.
+
+ldr r0, =Proc_TI
+blh ProcFind, r1
+cmp r0, #0x00
+beq CHARSupportConvoUsabilityReturnFalse
+@ If Proc_TI exists, we're showing the movement squares.
+
+ldr r0, [ r4, #0x1C ]
+ldr r1, [ r0 ]
+ldrb r5, [ r1, #0x04 ] @ r5 = character ID of unit checking.
+ldr r1, =#0x0202BE4C
+cmp r0, r1
+bne ReturnFalseNotTact
+	mov r5, #0xFF
+ReturnFalseNotTact:
+ldrb r6, [ r4, #0x1A ] @ r6 = Active character ID.
+ldr r0, =#0x03004E50
+ldr r0, [ r0 ]
+cmp r0, r1
+bne ReturnFalseNotTact2
+	mov r6, #0xFF
+ReturnFalseNotTact2:
+ldr r0, [ r4 ] @ Pointer to this CHARASM (Presumably).
+ldrb r1, [ r0, #0x08 ] @ Character 1 in CHARASM.
+cmp r1, r5
+bne CheckSecond
+	ldrb r1, [ r0, #0x09 ] @ Character 2 in CHARASM.
+	cmp r1, r6
+	beq ReturnFalseCheckLevel
+CheckSecond:
+ldrb r1, [ r0, #0x08 ] @ Character 1 in CHARASM.
+cmp r1, r6
+bne CHARSupportConvoUsabilityReturnFalse
+	ldrb r1, [ r0, #0x09 ] @ Character 2 in CHARASM.
+	cmp r1, r5
+	bne CHARSupportConvoUsabilityReturnFalse
+ReturnFalseCheckLevel:
+@ These are 2 valid characters. Let's check to make sure their support level is valid.
+ldr r0, [ r4, #0x1C ] @ Character struct of checking unit.
+mov r1, r6 @ Character ID of current unit.
+bl FindSupportData @ r0 = location of this support.
+mov r1, #0x00
+mvn r1, r1
+cmp r0, r1
+bne ReturnFalseFound
+	mov r0, #0x00 @ There is no support currently.
+	b ReturnFalseHaveLevel
+ReturnFalseFound:
+	mov r1, r0
+	ldr r0, [ r4, #0x1C ] @ Character struct of checking unit.
+	bl GetSupportLevel @ r0 = current support level.
+ReturnFalseHaveLevel:
+cmp r0, #0x03
+beq CHARSupportConvoUsabilityReturnFalse @ Exit if this is already an A support.
+add r0, r0, #0x01
+ldr r1, [ r4 ] @ Pointer to this CHARASM.
+ldrb r1, [ r1, #0x02 ] @ Support level to raise to.
+cmp r0, r1
+bne CHARSupportConvoUsabilityReturnFalse
+@ If we're here, both characters match, and the level works. Great!
+mov r1, #0x01
+str r1, [ r4, #0x04 ]
+mov r0, #0x02
+CHAREndSupportConvoUsability:
+pop { r4 - r6 }
+pop { r1 }
+bx r1
+CHARSupportConvoUsabilityReturnFalse:
+mov r0, #0x00
+b CHAREndSupportConvoUsability
 
 .align
 .ltorg

@@ -136,6 +136,8 @@ ENDA
 		
 		SVAL 0x1 MilitaryPassHaedric7
 		BEQ 0x3 0x1 0xC
+		SVAL 0x1 MilitaryAcceptRetreatLeave7
+		BEQ 0x3 0x1 0xC
 		GOTO 0x1
 		
 			LABEL 0x3
@@ -188,7 +190,7 @@ ENDA
 	POIN MilitaryPass4DebugMenuCommands // Command Definitions
 	WORD 0 0 0 0 0 0        // No routines to handle B press/R press/construction/etc
 	MilitaryPass4DebugMenuCommands:
-		EventMenuCommand(Military4PassNameText,Set00Command)
+		EventMenuCommand(Military5PassHaedricNameText,Set00Command)
 		EventMenuCommand(Military5PassAltiaNameText,Set01Command)
 	EventMenuCommandEnd
 	

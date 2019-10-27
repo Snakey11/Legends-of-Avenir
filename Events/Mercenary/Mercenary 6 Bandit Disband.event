@@ -382,7 +382,7 @@ UNIT Daniel Swordmaster Daniel Level(1,Enemy,True) [7,9] 0x00 0x00 0x00 0x00 [0]
 UNIT
 
 LoadEfil:
-UNIT Efil Truerblade Efil Level(11,Ally,True) [11,26] 0x00 0x00 0x00 0x00 [SilverSword,SteelBlade] NoAI
+UNIT Efil Truerblade Efil Level(11,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [SilverSword,SteelBlade] NoAI
 EndUnit
 
 //Label Chapter Friends

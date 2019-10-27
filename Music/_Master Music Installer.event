@@ -1,0 +1,296 @@
+
+#define SongTableOffset MusicTable
+#include "drumfix_fe8.event"
+ALIGN 4
+voicegroup000:
+//#incbin "FE8_NI_Map.bin"
+#incbin "FE8_NI_2.bin"
+
+#define SongTable(index,SongPointer,Group) "PUSH; ORG SongTableOffset+(8*index); POIN SongPointer; SHORT Group Group; POP"
+#define BattleMusicGroup 0
+#define MapMusicGroup 1
+#define SFXGroup 6
+
+#define SongTable(index,SongPointer) "SongTable(index,SongPointer,MapMusicGroup)"
+
+//Example song
+//SongTable(99,My_song)
+//#include "My_song.event"
+
+SongTable(Town_of_Winds_and_Ruins,songTownOfWindsAndRuins)
+#include "TownOfWindsAndRuins.event"
+
+SongTable(Derris_Kharlan_Appear,songDerrisKharlanAppear)
+#include "DerrisKharlanAppear.event"
+
+SongTable(Shihna,songShihna)
+#include "Shihna.event"
+
+SongTable(Fatalize,songFatalize)
+#include "Fatalize.event"
+
+SongTable(Fighting_of_the_Spirit,songFightingOfTheSpirit)
+#include "FightingOfTheSpirit.event"
+
+SongTable(Anchoret,songAnchoret)
+#include "Anchoret.event"
+
+SongTable(Kratos,songKratos)
+#include "Kratos.event"
+
+SongTable(Lloyd,songLloyd)
+#include "Lloyd.event"
+
+
+SongTable(Beedles_Shop,songBeedlesShop)
+#include "BeedlesShop.event"
+
+SongTable(Dry_Trail,songDryTrail)
+#include "DryTrail.event"
+
+SongTable(Encounter_with_Renegades,songEncounterWithRenegades)
+#include "EncounterWithRenegades.event"
+
+SongTable(Last_Battle_Decision,songLastBattleDecision)
+#include "LastBattleDecision.event"
+
+SongTable(Mars_Lighthouse,songMarsLighthouse)
+#include "MarsLighthouse.event"
+
+SongTable(Old_Familiar_Scent,songOldFamiliarScent)
+#include "OldFamiliarScent.event"
+
+SongTable(Rest_of_the_Heart,songRestOfTheHeart)
+#include "RestOfTheHeart.event"
+
+SongTable(Venus_Lighthouse,songVenusLighthouse)
+#include "VenusLighthouse.event"
+
+
+SongTable(Burning_Fighting_Spirit,songBurningFightingSpirit)
+#include "BurningFightingSpirit.event"
+
+SongTable(A_Tragic_Decision,songATragicDecision)
+#include "ATragicDecision.event"
+
+SongTable(Presidents_Office,songPresidentsOffice)
+#include "PresidentsOffice.event"
+
+SongTable(Bloodpool,songBloodpool)
+#include "Bloodpool.event"
+
+SongTable(Pub_Theme,songPubTheme)
+#include "PubTheme.event"
+
+SongTable(Snow_Battle,songSnowBattle)
+#include "SnowBattle.event"
+
+SongTable(Wild_Fields,songWildFields)
+#include "WildFields.event"
+
+//SongTable(Marble_Corridor,songMarbleCorridor)
+//#include "MarbleCorridor.event"
+
+SongTable(Nara_and_Mara_Battle,songNaraAndMaraBattle)
+#include "NaraAndMaraBattle.event"
+
+SongTable(Nekonin,songNekonin)
+#include "Nekonin.event"
+
+SongTable(Ringabel,songRingabel)
+#include "Ringabel.event"
+
+SongTable(Victorys_Delight,songVictorysDelight)
+#include "VictorysDelight.event"
+
+SongTable(Zelos,songZelos)
+#include "Zelos.event"
+
+SongTable(Stage_One,songStageOne)
+#include "StageOne.event"
+
+SongTable(Full_Force,songFullForce)
+#include "FullForce.event"
+
+SongTable(Fury_Sparks,songFurySparks)
+#include "FurySparks.event"
+
+
+SongTable(Church,songChurch)
+#include "Church.event"
+
+SongTable(Kavoc,songKavoc)
+#include "Kavoc.event"
+
+SongTable(Like_a_Glint_of_Light,songLikeAGlintOfLight)
+#include "LikeAGlintOfLight.event"
+
+SongTable(Off_Key,songOffKey)
+#include "OffKey.event"
+
+SongTable(The_Law_of_Battle,songTheLawOfBattle)
+#include "TheLawOfBattle.event"
+
+SongTable(Twinrova,songTwinrova)
+#include "Twinrova.event"
+
+
+SongTable(Agatio_and_Karst_Battle,songAgatioAndKarstBattle)
+#include "AgatioAndKarstBattle.event"
+
+SongTable(Alachest_Final,songAlcahestFinal)
+#include "AlcahestFinal.event"
+
+SongTable(Destined_Fate,songDestinedFate)
+#include "DestinedFate.event"
+
+SongTable(Good_Song,songGoodSong)
+#include "GoodSong.event"
+
+SongTable(Satorl_Marsh,songSatorlMarsh)
+#include "SatorlMarsh.event"
+
+SongTable(Seventh_Saga_Dungeon,songSeventhSageDungeon)
+#include "SeventhSagaDungeon.event"
+
+SongTable(Stage_One_Conquest,songStageOneConquest)
+#include "StageOneConquest.event"
+
+
+SongTable(Cavern_of_Splendor,songCavernOfSplendor)
+#include "CavernOfSplendor.event"
+
+SongTable(Boss_Theme,songBossTheme)
+#include "BossTheme.event"
+
+SongTable(Bloody_Tears,songBloodyTears)
+#include "BloodyTears.event"
+
+SongTable(Bergentruckung,songBergentruckung)
+#include "Bergentruckung.event"
+
+SongTable(Battle_Two,songBattleTwo)
+#include "BattleTwo.event"
+
+SongTable(Battle_against_Demons,songBattleAgainstDemons)
+#include "BattleAgainstDemons.event"
+
+SongTable(Isaacs_Battle_Theme,songIsaacsBattleTheme)
+#include "IsaacsBattleTheme.event" // Little too loud, and gets out of phase
+
+SongTable(The_Devoted,songTheDevoted)
+#include "TheDevoted.event"
+
+SongTable(March,songMarch)
+#include "March.event"
+
+SongTable(Ascent,songAscent)
+#include "Ascent.event"
+
+SongTable(The_First_Campaign,songTheFirstCampaign)
+#include "TheFirstCampaign.event"
+
+SongTable(Heavens_Rock_Seat,songHeavensRockSeat)
+#include "HeavensRockSeat.event"
+
+SongTable(Heavens_Gate,songHeavensGate)
+#include "HeavensGate.event"
+
+SongTable(Forbidden_Forest,songForbiddenForest)
+#include "ForbiddenForest.event"
+
+SongTable(End_of_the_World,songEndOfTheWorld)
+#include "EndOfTheWorld.event"
+
+SongTable(Earthbound,songEarthbound)
+#include "Earthbound.event"
+
+SongTable(Chinese_Tea,songChineseTea)
+#include "ChineseTea.event"
+
+SongTable(Zelda_Twighlight_Shop,songZeldaTwighlightShop)
+#include "ZeldaTwighlightShop.event"
+
+SongTable(UN_Owen_Was_Her,songUNOwenWasHer)
+#include "U.N.OwenWasHer.event"
+
+SongTable(Showdown_with_Hector,songShowdownWithHector)
+#include "ShowdownWithHector.event"
+
+SongTable(Saturos_Battle,songSaturosBattle)
+#include "SaturosBattle.event"
+
+SongTable(Puppet_Ganon,songPuppetGanon)
+#include "PuppetGanon.event"
+
+SongTable(Ordon_Village,songOrdonVillage)
+#include "OrdonVillage.event"
+
+SongTable(Locked_Girl,songLockedGirl)
+#include "LockedGirl.event"
+
+SongTable(Kakariko_Village,songKakarikoVillage)
+#include "KakarikoVillage.event"
+
+SongTable(Hollow_Bastion,songHollowBastion)
+#include "HollowBastion.event"
+
+SongTable(Inanimate_Dream,songInanimateDream)
+#include "InanimateDream.event"
+
+
+// NOTE: Test Isaac Battle, Dry Trail, and Locked Girl
+
+SongTable(With_Us,songWithUs)
+#include "WithUs.event"
+
+SongTable(A_Formidable_Foe_Stands_in_the_Way,songAFormidableFoeStandsInTheWay)
+#include "AFormidableFoeStandsInTheWay.event"
+
+SongTable(Showdown_with_Hector_New,songShowdownWithHectorNew)
+#include "ShowdownWithHectorNew.event"
+
+SongTable(A_Hero_Falls,songAHeroFalls)
+#include "AHeroFalls.event"
+
+SongTable(Emergency,songEmergency)
+#include "Emergency.event"
+
+SongTable(We_Can_Handle_Em,songWeCanHandleEm)
+#include "WeCanHandleEm.event"
+
+SongTable(Overwhelming_Advance,songOverwhelmingAdvance)
+#include "OverwhelmingAdvance.event"
+
+SongTable(Encroaching_Foe,songEncroachingFoe)
+#include "EncroachingFoe.event"
+
+SongTable(All_Is_Lost,songAllIsLost)
+#include "AllIsLost.event"
+
+SongTable(Divine_Providence,songDivineProvidence)
+#include "DivineProvidence.event"
+
+SongTable(Fodlan_Winds,songFodlanWinds)
+#include "FodlanWinds.event"
+
+SongTable(Oil_Ocean,songOilOcean)
+#include "OilOcean.event"
+
+SongTable(Casino_Night,songCasinoNight)
+#include "CasinoNight.event"
+
+SongTable(Aquatic_Ruin,songAquaticRuin)
+#include "AquaticRuin.event"
+
+SongTable(Hill_Top,songHillTop)
+#include "HillTop.event"
+
+SongTable(Green_Emerald,songGreenEmerald)
+#include "GreenEmerald.event"
+
+SongTable(Chemical_Plant,songChemicalPlant)
+#include "ChemicalPlant.event"
+
+SongTable(Metropolis,songMetropolis)
+#include "Metropolis.event"

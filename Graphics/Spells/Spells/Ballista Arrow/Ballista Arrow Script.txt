@@ -1,0 +1,72 @@
+/// - Start Animation
+C00
+C00
+C00
+C00
+C00
+C100029
+C000040
+C00
+C00
+C00
+C00
+C00
+C00BC48
+O p- blank.PNG
+B p- blankbg.PNG
+2
+O p- blank.PNG
+B p- blankbg.PNG
+2
+O p- blank.PNG
+B p- blankbg.PNG
+2
+O p- blank.PNG
+B p- BLT2.PNG
+1
+O p- blank.PNG
+B p- BLT3.PNG
+1
+C00001A
+C00001F
+~~~
+C100829
+C03CF48
+C14
+O p- blank.PNG
+B p- BLT4.PNG
+1
+O p- blank.PNG
+B p- BLT5.PNG
+1
+O p- blank.PNG
+B p- BLT6.PNG
+1
+O p- blank.PNG
+B p- BLT7.PNG
+1
+O p- blank.PNG
+B p- BLT8.PNG
+1
+O p- blank.PNG
+B p- BLT9.PNG
+1
+O p- blank.PNG
+B p- BLT10.PNG
+1
+O p- blank.PNG
+B p- BLT11.PNG
+1
+O p- blank.PNG
+B p- BLT12.PNG
+1
+O p- blank.PNG
+B p- BLT13.PNG
+1
+O p- blank.PNG
+B p- BLT14.PNG
+1
+O p- blank.PNG
+B p- blankbg.PNG
+1
+/// - End Animation

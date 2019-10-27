@@ -67,7 +67,6 @@ LOAD2 0x1 ArcKendrickStart
 LOAD1 0x1 Others
 SetBackground(0x5)
 Text(Merc6MilitiaKillBeginningText)
-EndConvo
 NoFade
 GotoPrepScreen
 
@@ -85,7 +84,7 @@ BLE 0x10 0x4 0xC
 		REVEAL Luke
 		SVAL 0x1 0x1
 		SET_STATE Luke
-		CAM1 [10,9]
+		CAM1 [10,5]
 		SetBackground(0x5)
 		Text(Merc6MilitiaKillLukeHereText)
 		EndConvo
@@ -178,10 +177,9 @@ BLE 0x17 0x4 0xC
 	ENUN
 	STAL 0x40
 	FADU 0x5
-	STAL 0x20
+	STAL 0x40
 	LOAD3 0x1 PlayerLoading2
 	LOAD2 0x1 EndingPeople
-	FADI 0x5
 	ENUN
 	STAL 0x80
 	FADI 0x5

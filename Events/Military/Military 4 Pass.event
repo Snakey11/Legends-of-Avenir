@@ -11,7 +11,7 @@ POIN EndMainPointer EndMainPointer EndMainPointer
 POIN EndMainPointer
 POIN TrapData TrapData
 POIN Units Units
-POIN $0 $0 $0 $0 $0 $0
+POIN DunlasDead $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 //LabelEnd
 
@@ -102,7 +102,7 @@ LOAD1 0x1 StartingMeanies
 ENUN
 STAL 0x10
 Text(Military4PassDunlasHereText)
-SetSupport(Forrest,Christina,BSupport)
+SetSupport(Forrest,Christina,CSupport)
 NoFade
 GotoPrepScreen
 	

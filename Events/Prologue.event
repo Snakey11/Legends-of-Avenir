@@ -316,6 +316,7 @@ ENUN
 FADU 0x5
 Text(PrologueWhatGenderText)//Asks for gender
 
+STAL 0x20
 ASMC CallGenderMenu+1
 BNE 0x0 0xC 0x0
 	ENUT 0x6E//0x6E triggered = male

@@ -1,0 +1,256 @@
+v1.8
+New military route featuring 6 new chapters: Accept the promotion at the end of chapter 1!
+Very large update of the Skill System, including full integration of the Strength/Magic Split holy shit
+The Stat Screen is undergoing renovations, including custom support bonus displays on page 4
+	No page 4 exists for units without supports
+Toxin weapons! Making use of the Poison Rework to make poison weapons that apply more poison
+Hail has been added as an anima water/ice type seige tome
+Sentinel EXP has been reduced (again)
+Quick new C hack: EXP is reduced by 2% for every level your unit has (not accounting for promotions)
+	This is in hope to slightly surb units "Running away" with EXP and power when they get overleveled
+	i.e. a level 5 unit will have an overall 10% EXP reduction, level 10 with 20% reduction, etc
+	Also potentially an extra incentive for early promo...? Kind of a side effect really
+Fixed Efil not being in 7 Bandit Disband with you
+Fixed 3 and 4 Militia Wait having broken completion
+Forest has a slightly updated mug
+Remus has a new mug! -- credit Levin
+Luke has a new mug! -- credit Atey (Sponsored by Bartz)
+So much new music! Check out the Sound Room!
+	Along with new music choices in chapters of course
+New palettes! -- credit Pikmin1211
+AI changes in 4 Bandit
+"Support" in the prep screen has been changed to "Base"
+Derek or Jasper dying in chapter 1 is a game over
+Zaheva has a new mug! -- credit Atey (Sponsored by Bartz)
+Sylvaine has a new mug! -- credit Atey (Sponsored by Bartz)
+Efil has a new mug! -- credit Levin
+Weston (3 Assassin boss) has a new mug! -- credit Vlak
+Fixed a small bug in Support Rework where some support convos wouldn't increase support level
+Battle sage F is the new promotion for female mercenary Tact
+"Talk" and "Support" in the unit menu have been moved above "Rally"
+Myrmidons (and mercenaries a bit) have had a base skill and speed reduction
+Victory music, prep screen, and support music have been changed to custom songs
+Updated some character descriptions
+Replaced Life and Death on Shamans and co with Seal Magic
+
+v1.7
+Gave Connor, Adlez, and Arc their own character IDs for when they're bosses (Fixes battle music)
+Slightly rebalanced Cougar and Finoc to make them more niched
+Elanil and Finoc spawn at slightly higher level in Military Pass 2
+Support Rework supports speech bubbles with range shown (Public support soon)
+Fixed Support Rework not getting stat increases correnctly and a couple other minor things (Also public support soon)
+Written support convos in Military Altia route! (More coming soon)
+Changed an item drop from killer lance to devil lance in Military Pass Haedric 5
+Luke's staff EXP has been lowered
+Archer Tact no longer loses con upon promotion
+Soldier Tact no longer loses con upon promotion
+Spear should no longer be hideously expensive
+Modular Supply is used now
+QoL for Snek only! .sym files are nicely integrated by a custom program
+Madeleine has a custom mug -- credit Levin
+Vicar has a custom mug -- credit Atey (Sponsored by Bartz)
+Walter has a custom mug -- credit Atey (Sponsored by Bartz)
+Adlez has a custom mug -- credit Arey (Sponsored by Bartz)
+
+v1.6
+Updated the map for mercenary 1 a bit: Fixed a couple mountain issues and added forests
+Fixed a camera issue in 2 Bandit
+Fixed where you couldn't bring Efil to 7 Bandit Disband
+Kendrick has a custom mug -- credit Atey (Sponsored by Bartz)
+Maximus has a custom mug -- credit Star and Lenh
+Christina has a custom mug -- credit Zanryu, Star, and NickT
+Removed reaver and slayer weapon crit
+Changed poison weapon desc text to say how much poison they apply
+Basic text fixes in the mercenary militia wait routes
+Changed around AI in mercenary militia 3 wait
+Luke doesn't spawn at level 1 anymore
+Armored Blow only gives 5 defense now like it says it should
+Fixed the Haedric military route loop causing a game over in the next playthrough
+Izuk has a custom class instead of a lazy placeholder
+Sylvaine's battle music is now correct
+Various fixes in 6 Mercenary Arcanae, including adding renforcements and nerfing Zalius
+Sages have C in anima and light with D in staves, and summoners have D in staves
+Items given silently to the supply can't be given multiple times with the prep screen save exploit
+Characters added to the party right before a prep screen (Adlez, Sylvaine) can't have their items infinitely generated with the prep screen save exploit
+Fixed units loading off screen in a cutscene in 7 Mercenary Arcanae
+Fixed a few descriptions
+Arc has been given a little bit more speed
+Commander (Tact knight promo) can use axes now
+Fixed a couple spells not turning off screen stretching (I think)
+Fixed Black Falcoknight's caps
+Forrest has a custom mug -- credit Zanryu and Star
+Inserted SALV F Cavs, SALV Paladins, and SALV Knights
+Inserted updated Tornado, Tempest (replacing Aircalibur), Hail, and Ice Shard (replacing Aqua)
+Added turn counters to some defense maps
+Added toxin weapons: Apply 5 poison
+Supports with bonuses have been added! This includes chapter and base supports. No text yet
+The Shadow map sprite's palette has been fixed
+All instances where map cutscenes where HP bars and status effects were shown have been fixed
+Fixed the promotion from Tact archer glitch
+Res has been reassigned to all classes and characters in preparation for str/mag split
+	Res bases/growths do not necessarily coorelate with physical vs magical units
+Also generally increased def and skl of player units
+Autoleveling now has fixed growths! No more drastic differences between the same units loaded because of RNs
+All uses of Desperation and Vantage have been removed amid weird glitch reports with them
+Arc is loaded as a mercenary if you choose an axe unit in 2 Mercenary Militia
+Fixed Tact's pegasus knight palette
+
+v1.5
+KENDRICK
+Completion of two military routes for private release
+Fighter animation has been replaced
+Fixed a glitch involving scripted fights with the Guardian Spirit
+Base Support system is finished but not yet implemented
+	Method of storing data and basic setting and retrieval functions are all done
+	Last step is in-chapter talk convos that raise support levels (in progress)
+Animations and palettes for military Tact promotions
+Rangers no longer get Galeforce and Canto+ (that was an oof)
+New music
+	Uh there's A LOT. Check the bottom of the sound room!
+Various text/balance issues in mercenary routes
+Untraversable house in mercenary 1 has been removed
+A few raid glitches have been fixed
+(I think) fixed a glitch where you could get infinite weapons from Adlez in the prep screen by cheesing saving
+Snek has decided to keep better track of changes because
+	A lot has changed, and he doesn't remember most of it oof
+Added Konami code in debug versions (Private release only)
+	Up up down down left right left right B A Start on the map
+	You will be able to control enemies during enemy phase
+Promotions in general are now different
+	A unit can promote with an item at level 10
+	A unit can promote without an item at level 15 with a menu command
+	Only about half as many promotion items are given as units you have in each route now
+Val has a custom mug -- credit Hypergammaspaces
+Clara has a custom mug -- credit Zanryu
+New military palettes -- credit Author Pendragon -- You guys are awesome!
+
+v1.4
+Insertion of the GK palette fix, improved soldier, SALV cavs, and improved knights (now with axes), including some palette reworks of these and other characters
+Poison rework is being implemented
+Lots of balancing in the Bandit Disband route
+Character balancing
+Custom music insertion
+	Implementation is not yet complete
+	"Derris Kharlan Appear," "Anchoret," "Shihna," "Old Familiar Scent," Rest of the Heart,"
+	"Last Battle Decision," "Encounter with Renegades," "Burning Fighting Spirit,"
+	"A Tragic Decision," "Mars Lighthouse," and "Lloyd" -- Credit A_Reliable_Chair for formatting and tweaks
+	Check the bottom of the sound room!
+The supply no longer carries over after route looping
+Fixed the escape cutscene in 7 Assassin
+Fixed a potential graphical glitch in the ending of 3 Assassin
+Various text formatting fixes
+Prep screens have been included in many of the later chapters
+	Also prep screen hacks: Ensuring "Tower" or "Ruins" doesn't display (Not yet visible)
+	"Support" does not display (Later planned feature: Base support convos)
+	"Save" should always display (Was disabled in Valni and Lagdou chapter IDs)
+	"Pick Units" should always be greyed out for the time being.
+Fixed a few event glitches in 6 Disband
+Fixed a bug with raid in 7 Bandit Bandit
+The prices of spells has been made not outrageous
+More gold has been handed out
+The debuff for longbows at 3 range has been decreased, and the hit for longbows in general has been increased a bit
+Breaker skills have been heavily debuffed from +50 hit/avoid to +15 hit/avoid. That shit was whack.
+
+v.1.3
+Some palettes have been redone - credit Author Pendragon
+Multiple summon glitch has been fixed
+Some enemy growths have been increased
+EXP has multiplier has been increased to 3/2 for unpromoted units and 5/2 for promoted units.
+Miscellaneous eventing/text fixes
+
+v1.2
+4 Militia Wait has had some unit placement changes
+Phantoms now can't access the supply
+Phantoms now use the phantom battle animation
+Jasper now has a custom mug - credit Lenh
+7 Assassin is now an escape chapter with some reinforcement edits.
+Big skill system update
+ Many people have personal skills
+ Provoke and wary fighter have been axed
+ Integrated new skills and some reworked class skill lists
+Xexim, Zalius, Uzkalis, and maybe someone else have new placeholder mugs
+References to a new major character: Cesarian Captain Sylvaine of the Leopard Brigade
+7 Cesaria has basically been flipped upside down
+5 Arcanae is less scrunched
+7 Arcanae now has a good/bad win condition
+Generic soldiers have gotten a buff
+Units who needed love got it
+Red-green palettes on the growths page of the statscreen has been pushed more to the green side
+Zalius now has a custom battle animation
+Fixed an issue with elwind's miss terminators
+ When in doubt, use 3 miss terminators instead of 1 lol
+Lots of chapter text edits everywhere
+A few spell icons needed to be shifted down a pixel
+HP has been added to the mini-box
+Battle convos have been fixed (finally)
+
+v1.1
+Fixed lots of minor text issues
+Included 4 new battle animations. 2 of which will show up in the military routes
+One is a new animation for Leyos (Brave Hector)
+Unmounted Great Lord Ephraim is now the animation for Sentinel
+Halberdier now uses TLP Halberdier 2.0 (formerly used for Sentinel)
+Fixed attacking Hawken breaking the game
+Fixed a bug in an ending of a bandit route
+Female myrmidon Tact has an updated palette
+Baret is now a soldier
+Weston now has a palette
+Some weapon ranks were broken; now fixed
+By playtester request, the win button now has confirmation text (Debug version only)
+New statscreen
+New mug for Arc - credit P33rless
+Chapter text edits for chapters 1, 2 militia, and 3 and 4 assassin
+Other palette fixes
+Lots of other minor fixes
+Shoutout to all of our playtesters for catching a shitload of stuff!
+
+
+v1.0 : First formal demo release. All mercenary routes are finished.
+Many battle animation and palette fixes.
+ Also some new battle animations.
+Chapter 6 of a bandit path has been heavily reworked.
+Chapter 7 of that path has been dumped and completely redone from scratch.
+Chapter status and objective texts should be less broken.
+Modular Mini Box has been added.
+Arms scrolls have been fixed (again).
+Various fixes to cutscenes.
+Music priority has been fixed.
+ Fixes the cutscene music cutting out after a scripted battle.
+A few balancing things for characters
+Supply has been added.
+ Along with silent events to add items to the supply.
+Pegasus knight selection has been added.
+Spicy suspend text now has the Guardian Spirit sassing you.
+Enjoy the demo!
+
+v0.1.3
+The anima effectiveness has been changed to a static +7 damage boost.
+ It was absolutely OP late game...
+Also, shortbows and longbows have been debuffed only at 1 and 3 range respecitvely.
+ When used at 1 or 3 range, bows have reduced damage, AS, and hit
+
+v0.1.2
+One of the bandit paths has been fixed up and polished.
+ The win conditions and much of the writing has been completely redone.
+The item icon for elthunder has been redone.
+The male mercenary and female myrmidon promoted map sprites have been redone.
+The Guardian Spirit now uses the Harbinger animation.
+Adlez, Connor, and Xavus have been given boss ability for when they're bosses.
+Anima triangle glitch with physical weapons affecting it has been fixed.
+A few more boss palettes have been added.
+Chapter 6 of a bandit route has been toned down in difficulty a bit.
+Other stuff I'm forgetting.
+
+v0.1.1
+The raid glitch has been fixed. Silly NUPS.......
+Changes to a bandit path have been added but not tested.
+More small balancing things.
+
+v0.1
+7 Cesaria's events have been changed to match the now not bad map.
+Gave out promotion items in the Cesaria route in a more sane manner.
+Changed player stats a bit.
+
+
+This is the beginning of the changelog. I will assume all versions before this are v0.0.
+At this point, all paths are mostly functional with minor issues.

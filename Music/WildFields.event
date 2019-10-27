@@ -1,5 +1,4 @@
 //Event file generated from Sappy .s format.
-//Event file generated from Sappy .s format.
 	#include "MPlayDef.event"
 
 	#define	songWildFields_grp  voicegroup000

@@ -1,0 +1,129 @@
+//Nimap FE8
+//midi(Decimal)	midiname	fingerprint
+0	Acoustic Grand Piano	ecf854cbd791505ccf7c455f6f90b180
+1	Bright Acoustic Piano	b24b8f8c47eb2ffaf05d03708a90a8bb
+2	Electric Grand Piano	be1e9e181c70906bf610dcc8feab6a5c
+4	Electric Piano1	1c527d8a59bd3edaf255390344ac01c2
+6	Harpsichord	196a3bd207cfa7c6d9ca877bbadbc505
+8	Celesta	78be8d70fa9b2e8f81ccdede95bf75ee
+10	Music Box	1d7e32e54b863df5899a5c4c74b1ef22
+11	Vibraphone	a0ffa4b2e958aab25b9a03dbadecabb5
+12	Marimba	215d7df651b0422fec0031b9d277c017
+13	Xylophone	100673381776f52326eb6e6847fff4b8
+14	Tubular Bells	74efbf0bfdb870fd823c55483588ec50
+15	Dulcimer	5406ebaf2cd01856a437f7ed7f316064
+18	Rock Organ	1ee735a527f401b68967006089d66953
+19	Church Organ	e84b7ac7f10222e5688ce314ede33c7b
+20	Reed Organ	10be4e00f61e49391e01f85bf6fbe443
+21	Accordion	baaa7443fbfa4b50bc219101eded9622
+23	Tango Accordion	7681217ec25cde23b3fed09d3b5daa34
+24	Acoustic Guitar (nylon)	67ca844421353175b7b7ad9dfa4a7e61
+28	Electric Guitar (muted)	51c47e67fc7a3534abd03ec5ad8c0603
+29	Overdriven Guitar	82fc415dbc8ce17ef489760e3352dbc7
+30	Distortion Guitar	5147a06a0902b522202a6629c7244b2d
+31	Guitar harmonics	4c2a71b290dcf74d0360de6f6ed5d34d
+32	Acoustic Bass	287d17b15b12ad3a7bd504c22199f12a
+33	Electric Bass (finger)	169dc8763a2b46da5e5140026cb6f8d4
+34	Electric Bass (pick)	169dc8763a2b46da5e5140026cb6f8d4
+36	Slap Bass 1	9060cf344e45139d98a7e3e48d7a983f
+38	Synth Bass 1	7f9101e918a0667117eaaa263daa2414
+39	Synth Bass 2	c8ed9e6ab524e2e7f18aefbb67e76258
+40	Violin	5982fbcd78893e405089f4b8c56e40b2
+41	Viola	325dd5ad1c398073e6377f33c86abca3
+42	Cello	d80cc4926aed7570908be5523b745c51
+45	Pizzicato Strings	3b67549fcce8b926b9e4856f607fa404
+46	Orchestral Harp	bfdf6ac8c6295b9b12fd5c8a742996ce
+47	Timpani	30ab0ba0b1f13378ed34269ab7098a0d
+50	SynthStrings 1	8146978088c30bd6671be80be5c4f651
+51	SynthStrings 2	4bd74ec8153ef8f70e1411799d100092
+52	Choir Aahs	bd57ac7b99e292e414ff37bcff02945b
+56	Trumpet	bbf16ee1ea5faac20d4f8f60b5d91630
+57	Trombone	71549ac056cfc9102ba0a9bb41ab2117
+60	French Horn	5a264a8dfcb95b7a571946c47c6dd13b
+61	Brass Section	d939e17521de4b6a9c3052cdfd4d43f6
+62	SynthBrass 1	f6924b2dcb58611f1fe14b3aa22ad9b9
+63	SynthBrass 2	4712742ad714b27b325da7b2d5c03709
+67	Baritone Sax	557406e079f654703099cddb3f0e3cd9
+68	Oboe	204c50e26ab74a4106064f3a7b8d7d0b
+69	English Horn 	27d759ce3bb0a879589d41cc38586711
+70	Bassoon	5fb13bd51e85aabc808333fd6fa98672
+71	Clarinet	a10f4070ec98db0cf41a4066c6202d1c
+73	Flute	93ab6109caa7ebe421f734428022d68a
+74	Recorder	60e8e2907be97c1ac1d59e8272f3eb80
+75	Pan Flute	986178240849e1ebe3ef4e3a3c96b5ce
+77	Shakuhachi	f64047ae222d1a9ca869c8b3a8f12af0
+78	Whistle	28e51daa98b6a72598e63b220fa834f0
+79	Ocarina	ddf146e601527cc167ad94d831ea5fea
+80	Lead 1 (square)	65a77c19add1ea576a95e5a8c83e2e8f
+81	Lead 2 (sawtooth)	2bd8613eb9a972d50600ea12cdc3720d
+85	Lead 6 voice	5738c883814317fd61ff9b5344edb7cc
+90	Pad 3 (polysynth)	8c17edf46744c5d550f4ffd737a827cc
+91	Pad 4 (choir)	390b702215e67c645f1084742a7f6357
+92	Pad 5 bowed	f404f492272a074f767e1131bc7ae16c
+93	Pad 6 (metallic)	f9af78284210d1a68b90ce9a098b4cd5
+94	Pad 7 halo	e8dc20b35d53265a3e5c3dad38d2d80f
+98	FX 4 (atmosphere)	f5f8fca242c8b75416839ebcee1af39e
+100	FX 5 (brightness)	5fc76ec07915281c30b9869f295ee879
+101	FX 6 (goblins)	f6c871b1bfe10027d05fe57ed298dfe2
+102	FX 7 (echoes)	ae7f14b455ff0bd2eae8e7bbc34a7fdd
+103	FX 8 SF	3321d6e81218d794498a513f9209528c
+104	Sitar	61463dac52c507fe37d0b5cdb19cb8d5
+105	Banjo	e231a7352240fe1de3c63be3049f618d
+106	Shamisen	02a2f8f0d212959f0a62f541dc46b367
+107	Koto	a24d2c58f1c8b79e578a7d6c5fe9af40
+108	Kalimba	dfbcf58942e9438ce419b19178b182fe
+109	Bag pipe	56d083a36236de695c9ff56f711bc5b6
+110	Fiddle	509d40d6abbe772730caea2c4a088001
+111	Shanai	37d1ae2ab123a18bbc1e04c243ee4922
+118	Synth Drum	1df8222fec12ec6e76cb320bf2646197
+119	Reverse Cymbal	2614e9bcf9ec3497a612bc9896e66cb5
+126	Applause	340e795dfbe01f3b333cd0c727f70de6
+
+//NIMAP2
+7	Electric Piano2	b41ac04efbd36c65d040dbf9f38bd1bc
+23	Accordion	10a6aba2095580e874e64f6ba61aef84
+28	Electric Guitar (jazz)	4e0806b29a67c8726ab706b89bb0d68d
+31	Overdriven Guitar	9545d09bc9dc4247ccb172ba917f33d0
+33	Electric Bass (finger)	b03a186720a8c8a48b05dac3e37db0fe
+34	Electric Bass (pick)	a213b19052a07d89f2d8b7e636a3dacc
+35	Fretless Bass	ec34d5bb1ba95154eec46469d407c5dc
+36	Slap Bass 1		7bf67f3697356ee338bf0f00afad162c
+38	Synth Bass 1	958d3d26961da81bfea59a989faf7e69
+40	Violin	299d57b69b3e1d922f86e35bb0bac1d0
+46	Tremolo Strings	2505fe44417a449ff3c50a15527aa0be
+48	Orchestral Harp	55d20c32feae12247684583e0e28f04e
+49	Timpani	6a2feb60bdbbdbba64635f268197b183
+50	String Ensemble 1		4b48e6c504c9f5b891b9e7f589e324f8
+51	String Ensemble 2	cdfe68e8da96f3bcd633dd1819d764b4
+54	Choir Aahs	eee32b2c8f9f5d25da83bdb928f18760
+58	Trumpet	65f9bd7bbd5b80b1782ed7dff3877c2f
+59	Trombone	ec12f2d67392c42319bceb93a89218f6
+60	Tuba	d1aa2cfbea46a7e57c15626a2cc07049
+61	Muted Trumpet		461af8946078673b22872520261ec327
+62	French Horn	73ca178e865af94d9b92ec092994172f
+64	SynthBrass 1		bc858e4d62a0ccf841bc8cf19c091441
+65	SynthBrass 2	9eb208b99902d30ab5e2d2930b75c468
+66	Soprano Sax		8c11a1bb72239eaa541852857711e901
+75	Flute	d6e20f3fc0a7c6a84e43f5674f683e71
+76	Recorder	b2effb64748cea85e3973c35cef200e2
+77	Pan Flute	806c84219415fa577c5c2e129be274ab
+78	Blown Bottle	744e2ab4ced5792d3377af3e6377759e
+86	Lead 5 (charang)	e05da7589f6ff7ea974c583b03b42dc7
+88	Lead 7 (fifths)	6f4ea30c0a4626ac23654fdd5c4953a1
+89	Lead 8 (bass + lead)	125a264c3fade53ed4b88ce2642815e0
+91	Pad 2 (warm)	272ba3ab817b30ff89ede6268e4dc5e7
+92	Pad 3 (polysynth)	9576369d9b3e4514644d7b11c873bfaa
+93	Pad 4 (choir)	471f14246ce011537189b667430aabea
+94	Pad 5 (bowed)	ee98d84f5355f313451f488e2daa6a57
+95	Pad 6 (metallic)		8048e2312b978630a5ad413a11b2416f
+98	FX 1 (ice rain)	a141a5564f04f28dceccdcaa1ac888e9
+99	FX 2 (soundtrack)	b41e8e406c2d4b9d05994c3fb74bb34b
+100	FX 3 (crystal)	7ad886ae6cf2ef4e732ece3dc2add96b
+101	FX 4 (atmosphere)	9b830e6d98204e6061b95eea5c29cbef
+102	FX 5 (brightness)	9cbebc66610c3b9463da5325aa2bf89a
+109	Koto	bef99f06b3c711ef479d3924840a88ee
+112	Fiddle	3fd1c1dbc60688a3ef011a311aa0ed18
+116	Steel Drums	9a3f1e82dc65d0a10e416178c7a391a9
+117	Woodblock	935387dcc202b7a6640c5e4c1994cf53
+118	Taiko Drum	add253ac8c0a4de95ae836f7441a264b
+125	Bird Tweet	c782bf47f86f6d5128b9d706820a2d0c

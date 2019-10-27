@@ -257,5 +257,41 @@ EndCountSupports:
 mov r0, r2
 bx lr
 
+.type GetSupportBonusTableEntry, %function
+GetSupportBonusTableEntry: @ r0 = character 1, r1 = character 2, r2 = support level. Returns pointer to bonus data.
+push { r4 - r7 }
+mov r4, r0 @ Character 1.
+mov r5, r1 @ Character 2.
+mov r6, r2 @ Support level.
+ldr r7, =SupportReworkBonusTable
+sub r7, r7, #20
+StartSupportBonusLoop:
+add r7, r7, #20
+ldr r1, [ r7 ]
+mov r0, #0x00
+cmp r1, #0x00
+beq EndGetSupportBonusTableEntry @ End if the end of the bonus table was reached.
+	ldrb r0, [ r7 ] @ First character in the bonus table.
+	ldrb r1, [ r7, #0x01 ] @ Second character in the bonus table.
+	cmp r0, r4
+	bne NotFirstSupporting
+		cmp r1, r5
+		bne StartSupportBonusLoop
+		b SupportBonusLoopSuccess
+	NotFirstSupporting:
+	cmp r0, r5
+	bne StartSupportBonusLoop
+		cmp r1, r4
+		bne StartSupportBonusLoop
+	SupportBonusLoopSuccess: @ r7 = entry in the table for these 2 characters.
+	add r7, r7, #0x02 @ Remove character IDs.
+	sub r0, r6, #0x01
+	mov r1, #0x06
+	mul r0, r1 @ Get entry for this support level.
+	add r0, r0, r7
+EndGetSupportBonusTableEntry:
+pop { r4 - r7 }
+bx lr
+
 .align
 .ltorg

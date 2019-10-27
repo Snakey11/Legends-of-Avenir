@@ -20,7 +20,7 @@
 songNekonin_001:
 // 000   ----------------------------------------
  BYTE   KEYSH   songNekonin_key+0
-Label_0_0104AE32:
+LabelNekonin_0_0104AE32:
  BYTE   TEMPO   110*songNekonin_tbs/2
  BYTE   VOICE   81
  BYTE   VOL   56*songNekonin_mvl/mxv
@@ -506,7 +506,7 @@ Label_0_0104AE32:
 // 024   ----------------------------------------
  BYTE   W24
  BYTE   GoTo
-  POIN2 Label_0_0104AE32
+  POIN2 LabelNekonin_0_0104AE32
  BYTE   FINE
 
 //**************** Track 2 (Midi-Chn.1) ****************//
@@ -514,7 +514,7 @@ Label_0_0104AE32:
 songNekonin_002:
 // 000   ----------------------------------------
  BYTE   KEYSH   songNekonin_key+0
-Label_1_0104B012:
+LabelNekonin_1_0104B012:
  BYTE   VOICE   81
  BYTE   VOL   56*songNekonin_mvl/mxv
  BYTE   MODT 0
@@ -527,7 +527,7 @@ Label_1_0104B012:
  BYTE   W72
  BYTE   W72
 // 001   ----------------------------------------
-Label_1_0104B022:
+LabelNekonin_1_0104B022:
  BYTE   N12  Fn4  v048
  BYTE   W12
  BYTE   Fn5
@@ -576,7 +576,7 @@ Label_1_0104B022:
  BYTE   W72
  BYTE   W72
  BYTE   PATT
-  POIN2 Label_1_0104B022
+  POIN2 LabelNekonin_1_0104B022
 // 010   ----------------------------------------
  BYTE   W72
  BYTE   W72
@@ -678,7 +678,7 @@ Label_1_0104B022:
 // 018   ----------------------------------------
  BYTE   W24
  BYTE   GoTo
-  POIN2 Label_1_0104B012
+  POIN2 LabelNekonin_1_0104B012
  BYTE   FINE
 
 //**************** Track 3 (Midi-Chn.2) ****************//
@@ -686,7 +686,7 @@ Label_1_0104B022:
 songNekonin_003:
 // 000   ----------------------------------------
  BYTE   KEYSH   songNekonin_key+0
-Label_2_0104B0B6:
+LabelNekonin_2_0104B0B6:
  BYTE   VOICE   18
  BYTE   VOL   85*songNekonin_mvl/mxv
  BYTE   MODT 0
@@ -708,7 +708,7 @@ Label_2_0104B0B6:
  BYTE   W12
  BYTE   N06
  BYTE   W12
-Label_2_0104B0D2:
+LabelNekonin_2_0104B0D2:
  BYTE   N06  As2  v048
  BYTE   W12
  BYTE   N06
@@ -723,7 +723,7 @@ Label_2_0104B0D2:
  BYTE   N06
  BYTE   W12
  BYTE   PEND 
-Label_2_0104B0E1:
+LabelNekonin_2_0104B0E1:
  BYTE   N06  Cn3  v048
  BYTE   W12
  BYTE   N06
@@ -739,9 +739,9 @@ Label_2_0104B0E1:
  BYTE   W12
  BYTE   PEND 
  BYTE   PATT
-  POIN2 Label_2_0104B0D2
+  POIN2 LabelNekonin_2_0104B0D2
 // 003   ----------------------------------------
-Label_2_0104B0F5:
+LabelNekonin_2_0104B0F5:
  BYTE   N06  As2  v048
  BYTE   W12
  BYTE   N06
@@ -755,7 +755,7 @@ Label_2_0104B0F5:
  BYTE   N06
  BYTE   W12
  BYTE   PEND 
-Label_2_0104B104:
+LabelNekonin_2_0104B104:
  BYTE   N06  Cn3  v048
  BYTE   W12
  BYTE   N06
@@ -771,9 +771,9 @@ Label_2_0104B104:
  BYTE   W12
  BYTE   PEND 
  BYTE   PATT
-  POIN2 Label_2_0104B0D2
+  POIN2 LabelNekonin_2_0104B0D2
 // 005   ----------------------------------------
-Label_2_0104B118:
+LabelNekonin_2_0104B118:
  BYTE   N06  As2  v048
  BYTE   W12
  BYTE   N06
@@ -788,31 +788,31 @@ Label_2_0104B118:
  BYTE   W12
  BYTE   PEND 
  BYTE   PATT
-  POIN2 Label_2_0104B0D2
+  POIN2 LabelNekonin_2_0104B0D2
  BYTE   PATT
-  POIN2 Label_2_0104B0D2
+  POIN2 LabelNekonin_2_0104B0D2
  BYTE   PATT
-  POIN2 Label_2_0104B0E1
+  POIN2 LabelNekonin_2_0104B0E1
  BYTE   PATT
-  POIN2 Label_2_0104B0D2
+  POIN2 LabelNekonin_2_0104B0D2
  BYTE   PATT
-  POIN2 Label_2_0104B0F5
+  POIN2 LabelNekonin_2_0104B0F5
  BYTE   PATT
-  POIN2 Label_2_0104B104
+  POIN2 LabelNekonin_2_0104B104
  BYTE   PATT
-  POIN2 Label_2_0104B0D2
+  POIN2 LabelNekonin_2_0104B0D2
  BYTE   PATT
-  POIN2 Label_2_0104B118
+  POIN2 LabelNekonin_2_0104B118
  BYTE   PATT
-  POIN2 Label_2_0104B0D2
+  POIN2 LabelNekonin_2_0104B0D2
  BYTE   PATT
-  POIN2 Label_2_0104B0D2
+  POIN2 LabelNekonin_2_0104B0D2
  BYTE   PATT
-  POIN2 Label_2_0104B0E1
+  POIN2 LabelNekonin_2_0104B0E1
  BYTE   PATT
-  POIN2 Label_2_0104B0D2
+  POIN2 LabelNekonin_2_0104B0D2
  BYTE   PATT
-  POIN2 Label_2_0104B0F5
+  POIN2 LabelNekonin_2_0104B0F5
 // 006   ----------------------------------------
  BYTE   N06  Cn3  v048
  BYTE   W12
@@ -1036,7 +1036,7 @@ Label_2_0104B118:
  BYTE   W06
  BYTE   W24
  BYTE   GoTo
-  POIN2 Label_2_0104B0B6
+  POIN2 LabelNekonin_2_0104B0B6
  BYTE   FINE
 
 //**************** Track 4 (Midi-Chn.3) ****************//
@@ -1044,7 +1044,7 @@ Label_2_0104B118:
 songNekonin_004:
 // 000   ----------------------------------------
  BYTE   KEYSH   songNekonin_key+0
-Label_3_0104B24A:
+LabelNekonin_3_0104B24A:
  BYTE   VOICE   18
  BYTE   VOL   85*songNekonin_mvl/mxv
  BYTE   MODT 0
@@ -1066,7 +1066,7 @@ Label_3_0104B24A:
  BYTE   W12
  BYTE   N06
  BYTE   W12
-Label_3_0104B266:
+LabelNekonin_3_0104B266:
  BYTE   N06  Dn3  v048
  BYTE   W12
  BYTE   N06
@@ -1081,7 +1081,7 @@ Label_3_0104B266:
  BYTE   N06
  BYTE   W12
  BYTE   PEND 
-Label_3_0104B275:
+LabelNekonin_3_0104B275:
  BYTE   N06  Fn3  v048
  BYTE   W12
  BYTE   N06
@@ -1096,7 +1096,7 @@ Label_3_0104B275:
  BYTE   N06
  BYTE   W12
  BYTE   PEND 
-Label_3_0104B284:
+LabelNekonin_3_0104B284:
  BYTE   N06  Dn3  v048
  BYTE   W12
  BYTE   N06
@@ -1111,7 +1111,7 @@ Label_3_0104B284:
  BYTE   W12
  BYTE   PEND 
 // 003   ----------------------------------------
-Label_3_0104B293:
+LabelNekonin_3_0104B293:
  BYTE   N06  Ds3  v048
  BYTE   W12
  BYTE   N06
@@ -1125,7 +1125,7 @@ Label_3_0104B293:
  BYTE   N06
  BYTE   W12
  BYTE   PEND 
-Label_3_0104B2A2:
+LabelNekonin_3_0104B2A2:
  BYTE   N06  Fn3  v048
  BYTE   W12
  BYTE   N06
@@ -1140,7 +1140,7 @@ Label_3_0104B2A2:
  BYTE   N06
  BYTE   W12
  BYTE   PEND 
-Label_3_0104B2B1:
+LabelNekonin_3_0104B2B1:
  BYTE   N06  Dn3  v048
  BYTE   W12
  BYTE   N06
@@ -1155,7 +1155,7 @@ Label_3_0104B2B1:
  BYTE   N06
  BYTE   W12
  BYTE   PEND 
-Label_3_0104B2C0:
+LabelNekonin_3_0104B2C0:
  BYTE   N06  Ds3  v048
  BYTE   W12
  BYTE   N06
@@ -1170,31 +1170,31 @@ Label_3_0104B2C0:
  BYTE   W12
  BYTE   PEND 
  BYTE   PATT
-  POIN2 Label_3_0104B284
+  POIN2 LabelNekonin_3_0104B284
  BYTE   PATT
-  POIN2 Label_3_0104B266
+  POIN2 LabelNekonin_3_0104B266
  BYTE   PATT
-  POIN2 Label_3_0104B275
+  POIN2 LabelNekonin_3_0104B275
  BYTE   PATT
-  POIN2 Label_3_0104B284
+  POIN2 LabelNekonin_3_0104B284
  BYTE   PATT
-  POIN2 Label_3_0104B293
+  POIN2 LabelNekonin_3_0104B293
  BYTE   PATT
-  POIN2 Label_3_0104B2A2
+  POIN2 LabelNekonin_3_0104B2A2
  BYTE   PATT
-  POIN2 Label_3_0104B2B1
+  POIN2 LabelNekonin_3_0104B2B1
  BYTE   PATT
-  POIN2 Label_3_0104B2C0
+  POIN2 LabelNekonin_3_0104B2C0
  BYTE   PATT
-  POIN2 Label_3_0104B284
+  POIN2 LabelNekonin_3_0104B284
  BYTE   PATT
-  POIN2 Label_3_0104B266
+  POIN2 LabelNekonin_3_0104B266
  BYTE   PATT
-  POIN2 Label_3_0104B275
+  POIN2 LabelNekonin_3_0104B275
  BYTE   PATT
-  POIN2 Label_3_0104B284
+  POIN2 LabelNekonin_3_0104B284
  BYTE   PATT
-  POIN2 Label_3_0104B293
+  POIN2 LabelNekonin_3_0104B293
 // 006   ----------------------------------------
  BYTE   N06  Fn3  v048
  BYTE   W12
@@ -1218,7 +1218,7 @@ Label_3_0104B2C0:
  BYTE   W24
 // 012   ----------------------------------------
  BYTE   GoTo
-  POIN2 Label_3_0104B24A
+  POIN2 LabelNekonin_3_0104B24A
  BYTE   FINE
 
 //**************** Track 5 (Midi-Chn.4) ****************//
@@ -1226,7 +1226,7 @@ Label_3_0104B2C0:
 songNekonin_005:
 // 000   ----------------------------------------
  BYTE   KEYSH   songNekonin_key+0
-Label_4_0104B32A:
+LabelNekonin_4_0104B32A:
  BYTE   VOICE   18
  BYTE   VOL   85*songNekonin_mvl/mxv
  BYTE   MODT 0
@@ -1248,7 +1248,7 @@ Label_4_0104B32A:
  BYTE   W12
  BYTE   N06
  BYTE   W12
-Label_4_0104B346:
+LabelNekonin_4_0104B346:
  BYTE   N06  Fn3  v048
  BYTE   W12
  BYTE   N06
@@ -1263,7 +1263,7 @@ Label_4_0104B346:
  BYTE   N06
  BYTE   W12
  BYTE   PEND 
-Label_4_0104B355:
+LabelNekonin_4_0104B355:
  BYTE   N06  An3  v048
  BYTE   W12
  BYTE   N06
@@ -1278,7 +1278,7 @@ Label_4_0104B355:
  BYTE   N06
  BYTE   W12
  BYTE   PEND 
-Label_4_0104B364:
+LabelNekonin_4_0104B364:
  BYTE   N06  Fn3  v048
  BYTE   W12
  BYTE   N06
@@ -1293,7 +1293,7 @@ Label_4_0104B364:
  BYTE   W12
  BYTE   PEND 
 // 003   ----------------------------------------
-Label_4_0104B373:
+LabelNekonin_4_0104B373:
  BYTE   N06  Gn3  v048
  BYTE   W12
  BYTE   N06
@@ -1307,7 +1307,7 @@ Label_4_0104B373:
  BYTE   N06
  BYTE   W12
  BYTE   PEND 
-Label_4_0104B382:
+LabelNekonin_4_0104B382:
  BYTE   N06  An3  v048
  BYTE   W12
  BYTE   N06
@@ -1322,7 +1322,7 @@ Label_4_0104B382:
  BYTE   N06
  BYTE   W12
  BYTE   PEND 
-Label_4_0104B391:
+LabelNekonin_4_0104B391:
  BYTE   N06  Fn3  v048
  BYTE   W12
  BYTE   N06
@@ -1337,7 +1337,7 @@ Label_4_0104B391:
  BYTE   N06
  BYTE   W12
  BYTE   PEND 
-Label_4_0104B3A0:
+LabelNekonin_4_0104B3A0:
  BYTE   N06  Gn3  v048
  BYTE   W12
  BYTE   N06
@@ -1352,31 +1352,31 @@ Label_4_0104B3A0:
  BYTE   W12
  BYTE   PEND 
  BYTE   PATT
-  POIN2 Label_4_0104B364
+  POIN2 LabelNekonin_4_0104B364
  BYTE   PATT
-  POIN2 Label_4_0104B346
+  POIN2 LabelNekonin_4_0104B346
  BYTE   PATT
-  POIN2 Label_4_0104B355
+  POIN2 LabelNekonin_4_0104B355
  BYTE   PATT
-  POIN2 Label_4_0104B364
+  POIN2 LabelNekonin_4_0104B364
  BYTE   PATT
-  POIN2 Label_4_0104B373
+  POIN2 LabelNekonin_4_0104B373
  BYTE   PATT
-  POIN2 Label_4_0104B382
+  POIN2 LabelNekonin_4_0104B382
  BYTE   PATT
-  POIN2 Label_4_0104B391
+  POIN2 LabelNekonin_4_0104B391
  BYTE   PATT
-  POIN2 Label_4_0104B3A0
+  POIN2 LabelNekonin_4_0104B3A0
  BYTE   PATT
-  POIN2 Label_4_0104B364
+  POIN2 LabelNekonin_4_0104B364
  BYTE   PATT
-  POIN2 Label_4_0104B346
+  POIN2 LabelNekonin_4_0104B346
  BYTE   PATT
-  POIN2 Label_4_0104B355
+  POIN2 LabelNekonin_4_0104B355
  BYTE   PATT
-  POIN2 Label_4_0104B364
+  POIN2 LabelNekonin_4_0104B364
  BYTE   PATT
-  POIN2 Label_4_0104B373
+  POIN2 LabelNekonin_4_0104B373
 // 006   ----------------------------------------
  BYTE   N06  An3  v048
  BYTE   W12
@@ -1400,7 +1400,7 @@ Label_4_0104B3A0:
  BYTE   W24
 // 012   ----------------------------------------
  BYTE   GoTo
-  POIN2 Label_4_0104B32A
+  POIN2 LabelNekonin_4_0104B32A
  BYTE   FINE
 
 //**************** Track 6 (Midi-Chn.5) ****************//
@@ -1408,7 +1408,7 @@ Label_4_0104B3A0:
 songNekonin_006:
 // 000   ----------------------------------------
  BYTE   KEYSH   songNekonin_key+0
-Label_5_0104B40A:
+LabelNekonin_5_0104B40A:
  BYTE   VOICE   21
  BYTE   VOL   38*songNekonin_mvl/mxv
  BYTE   MODT 0
@@ -1425,7 +1425,7 @@ Label_5_0104B40A:
  BYTE   W24
  BYTE   N06
  BYTE   W12
-Label_5_0104B421:
+LabelNekonin_5_0104B421:
  BYTE   W12
  BYTE   N06  Fn3  v048
  BYTE   W24
@@ -1435,7 +1435,7 @@ Label_5_0104B421:
  BYTE   N06
  BYTE   W12
  BYTE   PEND 
-Label_5_0104B42B:
+LabelNekonin_5_0104B42B:
  BYTE   W12
  BYTE   N06  An3  v048
  BYTE   W24
@@ -1445,7 +1445,7 @@ Label_5_0104B42B:
  BYTE   Fn3
  BYTE   W12
  BYTE   PEND 
-Label_5_0104B435:
+LabelNekonin_5_0104B435:
  BYTE   W12
  BYTE   N06  Fn3  v048
  BYTE   W24
@@ -1454,7 +1454,7 @@ Label_5_0104B435:
  BYTE   N06
  BYTE   W12
  BYTE   PEND 
-Label_5_0104B43F:
+LabelNekonin_5_0104B43F:
  BYTE   W12
 // 003   ----------------------------------------
  BYTE   N06  Gn3  v048
@@ -1473,7 +1473,7 @@ Label_5_0104B43F:
  BYTE   W24
  BYTE   N06
  BYTE   W12
-Label_5_0104B451:
+LabelNekonin_5_0104B451:
  BYTE   W12
  BYTE   N06  Fn3  v048
  BYTE   W24
@@ -1491,9 +1491,9 @@ Label_5_0104B451:
  BYTE   N06
  BYTE   W12
  BYTE   PATT
-  POIN2 Label_5_0104B435
+  POIN2 LabelNekonin_5_0104B435
  BYTE   PATT
-  POIN2 Label_5_0104B421
+  POIN2 LabelNekonin_5_0104B421
 // 006   ----------------------------------------
  BYTE   W12
  BYTE   N06  An3  v048
@@ -1505,9 +1505,9 @@ Label_5_0104B451:
  BYTE   Fn3
  BYTE   W12
  BYTE   PATT
-  POIN2 Label_5_0104B435
+  POIN2 LabelNekonin_5_0104B435
  BYTE   PATT
-  POIN2 Label_5_0104B43F
+  POIN2 LabelNekonin_5_0104B43F
 // 007   ----------------------------------------
  BYTE   W12
  BYTE   N06  An3  v048
@@ -1517,7 +1517,7 @@ Label_5_0104B451:
  BYTE   N06
  BYTE   W12
  BYTE   PATT
-  POIN2 Label_5_0104B451
+  POIN2 LabelNekonin_5_0104B451
 // 008   ----------------------------------------
  BYTE   W12
  BYTE   N06  Gn3  v048
@@ -1529,15 +1529,15 @@ Label_5_0104B451:
  BYTE   An3
  BYTE   W12
  BYTE   PATT
-  POIN2 Label_5_0104B435
+  POIN2 LabelNekonin_5_0104B435
  BYTE   PATT
-  POIN2 Label_5_0104B421
+  POIN2 LabelNekonin_5_0104B421
  BYTE   PATT
-  POIN2 Label_5_0104B42B
+  POIN2 LabelNekonin_5_0104B42B
  BYTE   PATT
-  POIN2 Label_5_0104B435
+  POIN2 LabelNekonin_5_0104B435
  BYTE   PATT
-  POIN2 Label_5_0104B43F
+  POIN2 LabelNekonin_5_0104B43F
 // 009   ----------------------------------------
  BYTE   N06  Cn4  v048
  BYTE   W12
@@ -1761,7 +1761,7 @@ Label_5_0104B451:
  BYTE   W06
  BYTE   W24
  BYTE   GoTo
-  POIN2 Label_5_0104B40A
+  POIN2 LabelNekonin_5_0104B40A
  BYTE   FINE
 
 //**************** Track 7 (Midi-Chn.6) ****************//
@@ -1769,7 +1769,7 @@ Label_5_0104B451:
 songNekonin_007:
 // 000   ----------------------------------------
  BYTE   KEYSH   songNekonin_key+0
-Label_6_0104B592:
+LabelNekonin_6_0104B592:
  BYTE   VOICE   21
  BYTE   VOL   38*songNekonin_mvl/mxv
  BYTE   MODT 0
@@ -1786,7 +1786,7 @@ Label_6_0104B592:
  BYTE   W24
  BYTE   N06
  BYTE   W12
-Label_6_0104B5A9:
+LabelNekonin_6_0104B5A9:
  BYTE   W12
  BYTE   N06  Dn3  v048
  BYTE   W24
@@ -1804,7 +1804,7 @@ Label_6_0104B5A9:
 // 002   ----------------------------------------
  BYTE   Dn3
  BYTE   W12
-Label_6_0104B5BA:
+LabelNekonin_6_0104B5BA:
  BYTE   W12
  BYTE   N06  Dn3  v048
  BYTE   W24
@@ -1813,7 +1813,7 @@ Label_6_0104B5BA:
  BYTE   N06
  BYTE   W12
  BYTE   PEND 
-Label_6_0104B5C4:
+LabelNekonin_6_0104B5C4:
  BYTE   W12
 // 003   ----------------------------------------
  BYTE   N06  Ds3  v048
@@ -1832,7 +1832,7 @@ Label_6_0104B5C4:
  BYTE   W24
  BYTE   N06
  BYTE   W12
-Label_6_0104B5D6:
+LabelNekonin_6_0104B5D6:
  BYTE   W12
  BYTE   N06  Dn3  v048
  BYTE   W24
@@ -1850,9 +1850,9 @@ Label_6_0104B5D6:
  BYTE   N06
  BYTE   W12
  BYTE   PATT
-  POIN2 Label_6_0104B5BA
+  POIN2 LabelNekonin_6_0104B5BA
  BYTE   PATT
-  POIN2 Label_6_0104B5A9
+  POIN2 LabelNekonin_6_0104B5A9
 // 006   ----------------------------------------
  BYTE   W12
  BYTE   N06  Fn3  v048
@@ -1864,9 +1864,9 @@ Label_6_0104B5D6:
  BYTE   Dn3
  BYTE   W12
  BYTE   PATT
-  POIN2 Label_6_0104B5BA
+  POIN2 LabelNekonin_6_0104B5BA
  BYTE   PATT
-  POIN2 Label_6_0104B5C4
+  POIN2 LabelNekonin_6_0104B5C4
 // 007   ----------------------------------------
  BYTE   W12
  BYTE   N06  Cn4  v048
@@ -1876,7 +1876,7 @@ Label_6_0104B5D6:
  BYTE   N06
  BYTE   W12
  BYTE   PATT
-  POIN2 Label_6_0104B5D6
+  POIN2 LabelNekonin_6_0104B5D6
 // 008   ----------------------------------------
  BYTE   W12
  BYTE   N06  Ds3  v048
@@ -1888,9 +1888,9 @@ Label_6_0104B5D6:
  BYTE   Cn4
  BYTE   W12
  BYTE   PATT
-  POIN2 Label_6_0104B5BA
+  POIN2 LabelNekonin_6_0104B5BA
  BYTE   PATT
-  POIN2 Label_6_0104B5A9
+  POIN2 LabelNekonin_6_0104B5A9
 // 009   ----------------------------------------
  BYTE   W12
  BYTE   N06  Fn3  v048
@@ -1900,7 +1900,7 @@ Label_6_0104B5D6:
  BYTE   Dn3
  BYTE   W12
  BYTE   PATT
-  POIN2 Label_6_0104B5BA
+  POIN2 LabelNekonin_6_0104B5BA
 // 010   ----------------------------------------
  BYTE   W12
  BYTE   N06  Ds3  v048
@@ -1931,7 +1931,7 @@ Label_6_0104B5D6:
 // 016   ----------------------------------------
  BYTE   W24
  BYTE   GoTo
-  POIN2 Label_6_0104B592
+  POIN2 LabelNekonin_6_0104B592
  BYTE   FINE
 
 //**************** Track 8 (Midi-Chn.7) ****************//
@@ -1939,7 +1939,7 @@ Label_6_0104B5D6:
 songNekonin_008:
 // 000   ----------------------------------------
  BYTE   KEYSH   songNekonin_key+0
-Label_7_0104B65A:
+LabelNekonin_7_0104B65A:
  BYTE   VOICE   21
  BYTE   VOL   38*songNekonin_mvl/mxv
  BYTE   MODT 0
@@ -1956,7 +1956,7 @@ Label_7_0104B65A:
  BYTE   W24
  BYTE   N06
  BYTE   W12
-Label_7_0104B671:
+LabelNekonin_7_0104B671:
  BYTE   W12
  BYTE   N06  As3  v048
  BYTE   W24
@@ -1975,9 +1975,9 @@ Label_7_0104B671:
  BYTE   As3
  BYTE   W12
  BYTE   PATT
-  POIN2 Label_7_0104B671
+  POIN2 LabelNekonin_7_0104B671
 // 003   ----------------------------------------
-Label_7_0104B687:
+LabelNekonin_7_0104B687:
  BYTE   W12
  BYTE   N06  As3  v048
  BYTE   W24
@@ -1996,7 +1996,7 @@ Label_7_0104B687:
  BYTE   N06
  BYTE   W12
  BYTE   PATT
-  POIN2 Label_7_0104B671
+  POIN2 LabelNekonin_7_0104B671
 // 005   ----------------------------------------
  BYTE   W12
  BYTE   N06  As3  v048
@@ -2006,9 +2006,9 @@ Label_7_0104B687:
  BYTE   N06
  BYTE   W12
  BYTE   PATT
-  POIN2 Label_7_0104B671
+  POIN2 LabelNekonin_7_0104B671
  BYTE   PATT
-  POIN2 Label_7_0104B671
+  POIN2 LabelNekonin_7_0104B671
 // 006   ----------------------------------------
  BYTE   W12
  BYTE   N06  Cn4  v048
@@ -2020,9 +2020,9 @@ Label_7_0104B687:
  BYTE   As3
  BYTE   W12
  BYTE   PATT
-  POIN2 Label_7_0104B671
+  POIN2 LabelNekonin_7_0104B671
  BYTE   PATT
-  POIN2 Label_7_0104B687
+  POIN2 LabelNekonin_7_0104B687
 // 007   ----------------------------------------
  BYTE   W12
  BYTE   N06  Fn3  v048
@@ -2032,7 +2032,7 @@ Label_7_0104B687:
  BYTE   N06
  BYTE   W12
  BYTE   PATT
-  POIN2 Label_7_0104B671
+  POIN2 LabelNekonin_7_0104B671
 // 008   ----------------------------------------
  BYTE   W12
  BYTE   N06  As3  v048
@@ -2044,9 +2044,9 @@ Label_7_0104B687:
  BYTE   N06
  BYTE   W12
  BYTE   PATT
-  POIN2 Label_7_0104B671
+  POIN2 LabelNekonin_7_0104B671
  BYTE   PATT
-  POIN2 Label_7_0104B671
+  POIN2 LabelNekonin_7_0104B671
 // 009   ----------------------------------------
  BYTE   W12
  BYTE   N06  Cn4  v048
@@ -2056,7 +2056,7 @@ Label_7_0104B687:
  BYTE   As3
  BYTE   W12
  BYTE   PATT
-  POIN2 Label_7_0104B671
+  POIN2 LabelNekonin_7_0104B671
 // 010   ----------------------------------------
  BYTE   W12
  BYTE   N06  As3  v048
@@ -2087,7 +2087,7 @@ Label_7_0104B687:
 // 016   ----------------------------------------
  BYTE   W24
  BYTE   GoTo
-  POIN2 Label_7_0104B65A
+  POIN2 LabelNekonin_7_0104B65A
  BYTE   FINE
 
 //**************** Track 9 (Midi-Chn.8) ****************//
@@ -2095,7 +2095,7 @@ Label_7_0104B687:
 songNekonin_009:
 // 000   ----------------------------------------
  BYTE   KEYSH   songNekonin_key+0
-Label_8_0104B71A:
+LabelNekonin_8_0104B71A:
  BYTE   VOICE   35
  BYTE   VOL   47*songNekonin_mvl/mxv
  BYTE   MODT 0
@@ -2154,7 +2154,7 @@ Label_8_0104B71A:
  BYTE   W06
  BYTE   N06
  BYTE   W06
-Label_8_0104B763:
+LabelNekonin_8_0104B763:
  BYTE   N12  As1  v048
  BYTE   W12
  BYTE   Fn2
@@ -2297,7 +2297,7 @@ Label_8_0104B763:
  BYTE   N06
  BYTE   W06
  BYTE   PATT
-  POIN2 Label_8_0104B763
+  POIN2 LabelNekonin_8_0104B763
 // 009   ----------------------------------------
  BYTE   N12  Ds2  v048
  BYTE   W12
@@ -2546,7 +2546,7 @@ Label_8_0104B763:
  BYTE   W18
  BYTE   N06
  BYTE   W06
-Label_8_0104B902:
+LabelNekonin_8_0104B902:
  BYTE   N18  Fn1  v048
  BYTE   W18
  BYTE   N06
@@ -2600,11 +2600,11 @@ Label_8_0104B902:
  BYTE   N06
  BYTE   W06
  BYTE   PATT
-  POIN2 Label_8_0104B902
+  POIN2 LabelNekonin_8_0104B902
 // 024   ----------------------------------------
  BYTE   W24
  BYTE   GoTo
-  POIN2 Label_8_0104B71A
+  POIN2 LabelNekonin_8_0104B71A
  BYTE   FINE
 
 //**************** Track 10 (Midi-Chn.9) ****************//
@@ -2612,7 +2612,7 @@ Label_8_0104B902:
 songNekonin_010:
 // 000   ----------------------------------------
  BYTE   KEYSH   songNekonin_key+0
-Label_9_0104B94E:
+LabelNekonin_9_0104B94E:
  BYTE   VOICE   121
  BYTE   VOL   85*songNekonin_mvl/mxv
  BYTE   MODT 0
@@ -3561,7 +3561,7 @@ Label_9_0104B94E:
 // 024   ----------------------------------------
  BYTE   W24
  BYTE   GoTo
-  POIN2 Label_9_0104B94E
+  POIN2 LabelNekonin_9_0104B94E
  BYTE   FINE
 
 //**************** Track 11 (Midi-Chn.10) ****************//
@@ -3569,7 +3569,7 @@ Label_9_0104B94E:
 songNekonin_011:
 // 000   ----------------------------------------
  BYTE   KEYSH   songNekonin_key+0
-Label_10_0104BE86:
+LabelNekonin_10_0104BE86:
  BYTE   VOICE   13
  BYTE   VOL   38*songNekonin_mvl/mxv
  BYTE   MODT 0
@@ -3751,7 +3751,7 @@ Label_10_0104BE86:
  BYTE   W06
  BYTE   W24
  BYTE   GoTo
-  POIN2 Label_10_0104BE86
+  POIN2 LabelNekonin_10_0104BE86
  BYTE   FINE
 
 //******************************************************//

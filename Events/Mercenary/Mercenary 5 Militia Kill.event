@@ -223,23 +223,22 @@ UNIT Xexim XeximClass PlayerMArcher Level(1,NPC,True) [11,3] 0x00 0x00 0x00 0x00
 UNIT
 
 Ghosts1:
-UNIT TankGhost Knight BossGhost Level(9,Enemy,True) [13,4] 0x00 0x00 0x00 0x00 [KillerLance] GuardAI
-UNIT TankGhost Sentinel BossGhost Level(3,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [Hammer,ShortSpear] GuardAI
-UNIT TankGhost Knight BossGhost Level(10,Enemy,True) [9,8] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
+UNIT TankGhost Knight BossGhost Level(10,Enemy,True) [13,4] 0x00 0x00 0x00 0x00 [KillerLance] GuardAI
+UNIT TankGhost Sentinel BossGhost Level(4,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [Hammer,ShortSpear] GuardAI
+UNIT TankGhost Knight BossGhost Level(11,Enemy,True) [9,8] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
 
-UNIT FastGhost Assassin BossGhost Level(4,Enemy,True) [9,1] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI 
-UNIT FastGhost Halberdier BossGhost Level(3,Enemy,True) [8,7] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI 
-UNIT FastGhost Mercenary BossGhost Level(8,Enemy,True) [7,16] 0x00 0x00 0x00 0x00 [IronBlade] AttackInRangeAI 
+UNIT FastGhost Assassin BossGhost Level(5,Enemy,True) [9,1] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI 
+UNIT FastGhost Halberdier BossGhost Level(4,Enemy,True) [8,7] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI 
+UNIT FastGhost Mercenary BossGhost Level(9,Enemy,True) [7,16] 0x00 0x00 0x00 0x00 [IronBlade] AttackInRangeAI 
 
-UNIT MageGhost Mage BossGhost Level(7,Enemy,True) [6,3] 0x00 0x00 0x00 0x00 [Arcaqua] ChaseOnceApproachedAI 
-UNIT MageGhost Mage BossGhost Level(5,Enemy,True) [3,8] 0x00 0x00 0x00 0x00 [Meteor] GuardAI
-UNIT MageGhost Druid BossGhost Level(3,Enemy,True) [8,10] 0x00 0x00 0x00 0x00 [Dulam] GuardAI
-UNIT MageGhost Troubadour BossGhost Level(11,Enemy,True) [3,18] 0x00 0x00 0x00 0x00 [Mend] HealAlliesAI
+UNIT MageGhost Mage BossGhost Level(8,Enemy,True) [6,3] 0x00 0x00 0x00 0x00 [Arcaqua] ChaseOnceApproachedAI 
+UNIT MageGhost Mage BossGhost Level(6,Enemy,True) [3,8] 0x00 0x00 0x00 0x00 [Meteor] GuardAI
+UNIT MageGhost Druid BossGhost Level(4,Enemy,True) [8,10] 0x00 0x00 0x00 0x00 [Dulam] GuardAI
 
-UNIT StrongGhost Swordmaster BossGhost Level(3,Enemy,True) [13,10] 0x00 0x00 0x00 0x00 [Runesword] AttackInRangeAI
-UNIT StrongGhost Fighter BossGhost Level(9,Enemy,True) [9,4] Drop 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT StrongGhost GreatKnight BossGhost Level(2,Enemy,True) [2,10] 0x00 0x00 0x00 0x00 [Tomahawk] ChaseOnceApproachedAI
-UNIT StrongGhost Sniper BossGhost Level(4,Enemy,True) [12,16] 0x00 0x00 0x00 0x00 [SilverLongbow] GuardAI 
+UNIT StrongGhost Swordmaster BossGhost Level(4,Enemy,True) [13,10] 0x00 0x00 0x00 0x00 [Runesword] AttackInRangeAI
+UNIT StrongGhost Fighter BossGhost Level(10,Enemy,True) [9,4] Drop 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT StrongGhost GreatKnight BossGhost Level(3,Enemy,True) [2,10] 0x00 0x00 0x00 0x00 [Tomahawk] ChaseOnceApproachedAI
+UNIT StrongGhost Sniper BossGhost Level(5,Enemy,True) [12,16] 0x00 0x00 0x00 0x00 [SilverLongbow] GuardAI 
 UNIT
 
 LoadKendrick:
@@ -247,25 +246,25 @@ UNIT Kendrick Pirate PlayerMArcher Level(9,Ally,True) [8,0] 0x00 0x00 0x1 REDA1 
 UNIT
 
 LoadTroops1:
-UNIT FastGhost Myrmidon BossGhost Level(10,Enemy,True) [14,9] 0x00 0x00 0x00 0x00 [SteelSword] [0] 
-UNIT FastGhost Ranger BossGhost Level(3,Enemy,True) [13,20] 0x00 0x00 0x00 0x00 [SteelLongbow,IronBlade] [0]
-UNIT TankGhost Knight BossGhost Level(9,Enemy,True) [0,16] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
-UNIT StrongGhost Cavalier BossGhost Level(10,Enemy,True) [12,20] 0x00 0x00 0x00 0x00 [DevilSpear,IronSword] [0] 
-UNIT MageGhost Monk BossGhost Level(8,Enemy,True) [5,20] 0x00 0x00 0x00 0x00 [Divine] [0] 
+UNIT FastGhost Myrmidon BossGhost Level(11,Enemy,True) [14,9] 0x00 0x00 0x00 0x00 [SteelSword] [0] 
+UNIT FastGhost Ranger BossGhost Level(4,Enemy,True) [13,20] 0x00 0x00 0x00 0x00 [SteelLongbow,IronBlade] [0]
+UNIT TankGhost Knight BossGhost Level(10,Enemy,True) [0,16] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT StrongGhost Cavalier BossGhost Level(11,Enemy,True) [12,20] 0x00 0x00 0x00 0x00 [DevilSpear,IronSword] [0] 
+UNIT MageGhost Monk BossGhost Level(9,Enemy,True) [5,20] 0x00 0x00 0x00 0x00 [Divine] [0] 
 UNIT
 
 LoadTroops2:
-UNIT BossGhost Swordmaster BossGhost Level(5,Enemy,True) [12,20] 0x00 0x00 0x1 REDA2 [BraveSword] AttackInRangeAI 
-UNIT FastGhost Assassin BossGhost Level(3,Enemy,True) [14,20] 0x00 0x00 0x1 REDA3 [KillingEdge] [0] 
-UNIT StrongGhost Hero BossGhost Level(3,Enemy,True) [13,20] 0x00 0x00 0x1 REDA4 [SilverAxe] [0] 
+UNIT BossGhost Swordmaster BossGhost Level(6,Enemy,True) [12,20] 0x00 0x00 0x1 REDA2 [BraveSword] AttackInRangeAI 
+UNIT FastGhost Assassin BossGhost Level(4,Enemy,True) [14,20] 0x00 0x00 0x1 REDA3 [KillingEdge] [0] 
+UNIT StrongGhost Hero BossGhost Level(4,Enemy,True) [13,20] 0x00 0x00 0x1 REDA4 [SilverAxe] [0] 
 UNIT
 
 FortPirates1:
-UNIT StrongGhost Pirate BossGhost Level(5,Enemy,True) [4,0] 0x00 0x00 0x0 0x0 [IronAxe] [0] 
+UNIT StrongGhost Pirate BossGhost Level(8,Enemy,True) [4,0] 0x00 0x00 0x0 0x0 [IronAxe] [0] 
 UNIT
 
 FortPirates2:
-UNIT StrongGhost Pirate BossGhost Level(6,Enemy,True) [4,0] 0x00 0x00 0x0 0x0 [HandAxe] [0] 
+UNIT StrongGhost Pirate BossGhost Level(10	,Enemy,True) [4,0] 0x00 0x00 0x0 0x0 [HandAxe] [0] 
 UNIT
 
 

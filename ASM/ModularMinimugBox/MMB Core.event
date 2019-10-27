@@ -4,38 +4,38 @@
 
 	#include "Internal/UI1 Proc Code.event"
 
-	#inctevent lyn "Internal/MMBInit.elf" "Internal/Definitions.elf"
+	#include "Internal/MMBInit.lyn.event"
 	WORD MMBNameWidth
 	WORD MMBAltTextWidth
 
-	#inctevent lyn "Internal/MMBSetup.elf" "Internal/Definitions.elf"
+	#include "Internal/MMBSetup.lyn.event"
 
-	#inctevent lyn "Internal/MMBGetUnitAtCursor.elf" "Internal/Definitions.elf"
+	#include "Internal/MMBGetUnitAtCursor.lyn.event"
 
-	#inctevent lyn "Internal/MMBBuildWindow.elf" "Internal/Definitions.elf"
+	#include "Internal/MMBBuildWindow.lyn.event"
 	WORD ((1 << 24) | ((0x40 * MMBHeight * 2) >> 3))
 
-	#inctevent lyn "Internal/MMBBuildDynamics.elf" "Internal/Definitions.elf"
+	#include "Internal/MMBBuildDynamics.lyn.event"
 
-	#inctevent lyn "Internal/MMBSetWindowPosition.elf" "Internal/Definitions.elf"
+	#include "Internal/MMBSetWindowPosition.lyn.event"
 	WORD MMBWidth
 	WORD MMBHeight
 
-	#inctevent lyn "Internal/MMBClearScrolledWindow.elf" "Internal/Definitions.elf"
+	#include "Internal/MMBClearScrolledWindow.lyn.event"
 	WORD MMBWidth
 	WORD MMBHeight
 
-	#inctevent lyn "Internal/MMBExtendWindow.elf" "Internal/Definitions.elf"
+	#include "Internal/MMBExtendWindow.lyn.event"
 
-	#inctevent lyn "Internal/MMBRetractWindow.elf" "Internal/Definitions.elf"
+	#include "Internal/MMBRetractWindow.lyn.event"
 
-	#inctevent lyn "Internal/MMBCheckCursor.elf" "Internal/Definitions.elf"
+	#include "Internal/MMBCheckCursor.lyn.event"
 
-	#inctevent lyn "Internal/MMBRedrawTilemap.elf" "Internal/Definitions.elf"
+	#include "Internal/MMBRedrawTilemap.lyn.event"
 	WORD MMBWidth
 	WORD MMBHeight
 
-	#inctevent lyn "Internal/MMBUpdateInfo.elf" "Internal/Definitions.elf"
+	#include "Internal/MMBUpdateInfo.lyn.event"
 
 	ALIGN 4
 
@@ -52,7 +52,7 @@
 	// Tilemap modules
 
 		#ifdef MMBStandardTilemap
-			#inctevent lyn "Modules/MMBDrawTilemap.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawTilemap.lyn.event"
 			POIN MMBTilemap
 			WORD MMBTilemapPaletteIndex
 		#endif // MMBStandardTilemap
@@ -60,14 +60,14 @@
 	// Unit name modules
 
 		#ifdef MMBName
-			#inctevent lyn "Modules/MMBDrawNameUncentered.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawNameUncentered.lyn.event"
 			WORD MMBNameColor
 			WORD MMBNameX
 			WORD MMBNameY
 		#endif // MMBName
 
 		#ifdef MMBNameCentered
-			#inctevent lyn "Modules/MMBDrawNameCentered.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawNameCentered.lyn.event"
 			WORD MMBNameWidth * 8
 			WORD MMBNameColor
 			WORD MMBNameX
@@ -75,7 +75,7 @@
 		#endif // MMBNameCentered
 
 		#ifdef MMBNameAffinityShifted
-			#inctevent lyn "Modules/MMBDrawNameAffinityShifted.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawNameAffinityShifted.lyn.event"
 			WORD MMBNameColor
 			WORD MMBNameX
 			WORD MMBNameY
@@ -84,7 +84,7 @@
 	// Inventory modules
 
 		#ifdef MMBInventory
-			#inctevent lyn "Modules/MMBDrawInventory.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawInventory.lyn.event"
 			WORD MMBInventoryTileIndex
 			#ifndef MMBIconPrep
 				#define MMBIconPrep
@@ -95,7 +95,7 @@
 		#endif // MMBInventory
 
 		#ifdef MMBEquippedWeapon
-			#inctevent lyn "Modules/MMBDrawEquippedWeapon.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawEquippedWeapon.lyn.event"
 			WORD MMBInventoryTileIndex
 			#ifndef MMBIconPrep
 				#define MMBIconPrep
@@ -106,7 +106,7 @@
 		#endif // MMBEquippedWeapon
 
 		#ifdef MMBEquippedWeaponName
-			#inctevent lyn "Modules/MMBDrawEquippedWeaponName.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawEquippedWeaponName.lyn.event"
 			SHORT MMBInventoryTileIndex
 			SHORT MMBTextAltColor
 			WORD (2 * ((32 * MMBInventoryTextY) + MMBInventoryTextX))
@@ -119,7 +119,7 @@
 		#endif // MMBEquippedWeaponName
 
 		#ifdef MMBEquippedWeaponNameCentered
-			#inctevent lyn "Modules/MMBDrawEquippedWeaponNameCentered.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawEquippedWeaponNameCentered.lyn.event"
 			SHORT MMBInventoryTileIndex
 			SHORT MMBTextAltColor
 			WORD (2 * ((32 * MMBInventoryTextY) + MMBInventoryTextX))
@@ -133,7 +133,7 @@
 		#endif // MMBEquippedWeaponNameCentered
 
 		#ifdef MMBInventoryOrEquippedWeaponName
-			#inctevent lyn "Modules/MMBDrawInventoryOrEquippedWeaponName.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawInventoryOrEquippedWeaponName.lyn.event"
 			SHORT MMBInventoryTileIndex
 			SHORT MMBTextAltColor
 			WORD (2 * ((32 * MMBInventoryTextY) + MMBInventoryTextX))
@@ -146,7 +146,7 @@
 		#endif // MMBInventoryOrEquippedWeaponName
 
 		#ifdef MMBInventoryOrEquippedWeaponNameCentered
-			#inctevent lyn "Modules/MMBDrawInventoryOrEquippedWeaponNameCentered.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawInventoryOrEquippedWeaponNameCentered.lyn.event"
 			SHORT MMBInventoryTileIndex
 			SHORT MMBTextAltColor
 			WORD (2 * ((32 * MMBInventoryTextY) + MMBInventoryTextX))
@@ -160,13 +160,13 @@
 		#endif // MMBInventoryOrEquippedWeaponNameCentered
 
 		#ifdef MMBEquippedWeaponNameOnly
-			#inctevent lyn "Modules/MMBDrawEquippedWeaponNameOnly.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawEquippedWeaponNameOnly.lyn.event"
 			WORD MMBTextAltColor
 			WORD (2 * ((32 * MMBInventoryTextY) + MMBInventoryTextX))
 		#endif // MMBEquippedWeaponNameOnly
 
 		#ifdef MMBEquippedWeaponNameOnlyCentered
-			#inctevent lyn "Modules/MMBDrawEquippedWeaponNameOnlyCentered.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawEquippedWeaponNameOnlyCentered.lyn.event"
 			WORD MMBTextAltColor
 			WORD (2 * ((32 * MMBInventoryTextY) + MMBInventoryTextX))
 			WORD MMBAltTextWidth * 8
@@ -175,7 +175,7 @@
 	// Minimug modules
 
 		#ifdef MMBMinimug
-			#inctevent lyn "Modules/MMBDrawMinimug.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawMinimug.lyn.event"
 			WORD MMBMinimugX
 			WORD MMBMinimugY
 			WORD MMBMinimugTileIndexStart
@@ -183,7 +183,7 @@
 		#endif // MMBMinimug
 
 		#ifdef MMBMinimugEnemyFlip
-			#inctevent lyn "Modules/MMBDrawMinimugEnemyFlip.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawMinimugEnemyFlip.lyn.event"
 			WORD MMBMinimugX
 			WORD MMBMinimugY
 			WORD MMBMinimugTileIndexStart
@@ -193,7 +193,7 @@
 	// Combination modules
 
 		#ifdef MMBHPStatus
-			#inctevent lyn "Modules/MMBDrawHPStatus.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawHPStatus.lyn.event"
 			WORD MMBHPStatusX
 			WORD MMBHPStatusY
 			WORD MMBHeight
@@ -203,7 +203,7 @@
 		#endif // MMBHPStatus
 
 		#ifdef MMBHP
-			#inctevent lyn "Modules/MMBDrawHP.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawHP.lyn.event"
 			WORD MMBHPX
 			WORD MMBHPY
 			WORD MMBHeight
@@ -213,7 +213,7 @@
 		#endif // MMBHP
 
 		#ifdef MMBDEFRES
-			#inctevent lyn "Modules/MMBDrawDEFRES.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawDEFRES.lyn.event"
 			WORD (2 * ((32 * MMBDEFRESY) + MMBDEFRESX))
 			SHORT ((MMBDEFRESX+3)*8) (MMBDEFRESY*8)
 			WORD MMBHeight
@@ -222,17 +222,17 @@
 			POIN MMBRESLabelGraphic
 			ALIGN 4
 			MMBDEFLabelGraphic:
-			#incext Png2Dmp "Modules/DEFLabel.png"
+			#incbin "Modules/DEFLabel.dmp"
 			ALIGN 4
 			MMBRESLabelGraphic:
-			#incext Png2Dmp "Modules/RESLabel.png"
+			#incbin "Modules/RESLabel.dmp"
 			#ifndef MMBNumberDrawing
 				#define MMBNumberDrawing
 			#endif // MMBNumberDrawing
 		#endif // MMBDEFRES
 
 		#ifdef MMBAVODOD
-			#inctevent lyn "Modules/MMBDrawAVODOD.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawAVODOD.lyn.event"
 			WORD (2 * ((32 * MMBAVODODY) + MMBAVODODX))
 			SHORT ((MMBAVODODX+3)*8) (MMBAVODODY*8)
 			WORD MMBHeight
@@ -241,12 +241,12 @@
 			POIN MMBDODLabelGraphic
 			ALIGN 4
 			MMBAVOLabelGraphic:
-			#incext Png2Dmp "Modules/AVOLabel.png"
+			#incbin "Modules/AVOLabel.dmp"
 			ALIGN 4
 			MMBDODLabelGraphic:
-			#incext Png2Dmp "Modules/DODLabel.png"
-			#inctevent lyn "Modules/MMBAVOGetter.elf" "Internal/Definitions.elf"
-			#inctevent lyn "Modules/MMBDODGetter.elf" "Internal/Definitions.elf"
+			#incbin "Modules/DODLabel.dmp"
+			#include "Modules/MMBAVOGetter.lyn.event"
+			#include "Modules/MMBDODGetter.lyn.event"
 			#ifndef MMBNumberDrawing
 				#define MMBNumberDrawing
 			#endif // MMBNumberDrawing
@@ -255,7 +255,7 @@
 	// Bar modules
 
 		#ifdef MMBHPBar
-			#inctevent lyn "Modules/MMBDrawHPBar.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawHPBar.lyn.event"
 			WORD MMBHPBarX
 			WORD MMBHPBarY
 			WORD MMBHPBarTileWidth
@@ -266,7 +266,7 @@
 		#endif // MMBHPBar
 
 		#ifdef MMBHPBarStatus
-			#inctevent lyn "Modules/MMBDrawHPBarStatus.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawHPBarStatus.lyn.event"
 			WORD MMBHPBarX
 			WORD MMBHPBarY
 			WORD MMBHPBarTileWidth
@@ -279,7 +279,7 @@
 	// Affinity modules
 
 		#ifdef MMBAffinity
-			#inctevent lyn "Modules/MMBDrawAffinity.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawAffinity.lyn.event"
 			WORD MMBAffinityTile
 			BYTE MMBAffinityX MMBAffinityY
 			ALIGN 4
@@ -294,9 +294,9 @@
 	// Skills modules
 
 		#ifdef MMBSkillsAlternate
-			#inctevent lyn "Modules/MMBDrawSkills.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawSkills.lyn.event"
 			WORD MMBSkillTile
-			#inctevent lyn "Modules/MMBDrawSkillAlternatingObjs.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawSkillAlternatingObjs.lyn.event"
 			WORD MMBHeight
 			SHORT (4 << 12) | MMBSkillTile
 			BYTE MMBSkillsX MMBSkillsY
@@ -312,7 +312,7 @@
 		#ifdef MMBASLabel
 			ALIGN 4
 			MMBASLabelGraphic:
-			#incext Png2Dmp "Modules/ASLabel.png"
+			#incbin "Modules/ASLabel.dmp"
 			#ifndef MMBLabelDrawing
 				#define MMBLabelDrawing
 			#endif // MMBLabelDrawing
@@ -321,7 +321,7 @@
 		#ifdef MMBATKLabel
 			ALIGN 4
 			MMBATKLabelGraphic:
-			#incext Png2Dmp "Modules/ATKLabel.png"
+			#incbin "Modules/ATKLabel.dmp"
 			#ifndef MMBLabelDrawing
 				#define MMBLabelDrawing
 			#endif // MMBLabelDrawing
@@ -330,7 +330,7 @@
 		#ifdef MMBAVOLabel
 			ALIGN 4
 			MMBAVOLabelGraphic:
-			#incext Png2Dmp "Modules/AVOLabel.png"
+			#incbin "Modules/AVOLabel.dmp"
 			#ifndef MMBLabelDrawing
 				#define MMBLabelDrawing
 			#endif // MMBLabelDrawing
@@ -339,7 +339,7 @@
 		#ifdef MMBCHRLabel
 			ALIGN 4
 			MMBCHRLabelGraphic:
-			#incext Png2Dmp "Modules/CHRLabel.png"
+			#incbin "Modules/CHRLabel.dmp"
 			#ifndef MMBLabelDrawing
 				#define MMBLabelDrawing
 			#endif // MMBLabelDrawing
@@ -348,7 +348,7 @@
 		#ifdef MMBCRTLabel
 			ALIGN 4
 			MMBCRTLabelGraphic:
-			#incext Png2Dmp "Modules/CRTLabel.png"
+			#incbin "Modules/CRTLabel.dmp"
 			#ifndef MMBLabelDrawing
 				#define MMBLabelDrawing
 			#endif // MMBLabelDrawing
@@ -357,7 +357,7 @@
 		#ifdef MMBDEFLabel
 			ALIGN 4
 			MMBDEFLabelGraphic:
-			#incext Png2Dmp "Modules/DEFLabel.png"
+			#incbin "Modules/DEFLabel.dmp"
 			#ifndef MMBLabelDrawing
 				#define MMBLabelDrawing
 			#endif // MMBLabelDrawing
@@ -366,7 +366,7 @@
 		#ifdef MMBDODLabel
 			ALIGN 4
 			MMBDODLabelGraphic:
-			#incext Png2Dmp "Modules/DODLabel.png"
+			#incbin "Modules/DODLabel.dmp"
 			#ifndef MMBLabelDrawing
 				#define MMBLabelDrawing
 			#endif // MMBLabelDrawing
@@ -375,7 +375,7 @@
 		#ifdef MMBEXPLabel
 			ALIGN 4
 			MMBEXPLabelGraphic:
-			#incext Png2Dmp "Modules/EXPLabel.png"
+			#incbin "Modules/EXPLabel.dmp"
 			#ifndef MMBLabelDrawing
 				#define MMBLabelDrawing
 			#endif // MMBLabelDrawing
@@ -384,7 +384,7 @@
 		#ifdef MMBHITLabel
 			ALIGN 4
 			MMBHITLabelGraphic:
-			#incext Png2Dmp "Modules/HITLabel.png"
+			#incbin "Modules/HITLabel.dmp"
 			#ifndef MMBLabelDrawing
 				#define MMBLabelDrawing
 			#endif // MMBLabelDrawing
@@ -393,7 +393,7 @@
 		#ifdef MMBLevelLabel
 			ALIGN 4
 			MMBLevelLabelGraphic:
-			#incext Png2Dmp "Modules/LevelLabel.png"
+			#incbin "Modules/LevelLabel.dmp"
 			#ifndef MMBLabelDrawing
 				#define MMBLabelDrawing
 			#endif // MMBLabelDrawing
@@ -402,7 +402,7 @@
 		#ifdef MMBRESLabel
 			ALIGN 4
 			MMBRESLabelGraphic:
-			#incext Png2Dmp "Modules/RESLabel.png"
+			#incbin "Modules/RESLabel.dmp"
 			#ifndef MMBLabelDrawing
 				#define MMBLabelDrawing
 			#endif // MMBLabelDrawing
@@ -411,7 +411,7 @@
 		#ifdef MMBRTGLabel
 			ALIGN 4
 			MMBRTGLabelGraphic:
-			#incext Png2Dmp "Modules/RTGLabel.png"
+			#incbin "Modules/RTGLabel.dmp"
 			#ifndef MMBLabelDrawing
 				#define MMBLabelDrawing
 			#endif // MMBLabelDrawing
@@ -420,7 +420,7 @@
 	// Number modules
 
 		#ifdef MMBLevelNumber
-			#inctevent lyn "Modules/MMBDrawLevelNumber.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawLevelNumber.lyn.event"
 			WORD MMBLevelX
 			WORD MMBLevelY
 			WORD MMBHeight
@@ -430,7 +430,7 @@
 		#endif // MMBLevelNumber
 
 		#ifdef MMBEXPNumber
-			#inctevent lyn "Modules/MMBDrawEXPNumber.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDrawEXPNumber.lyn.event"
 			WORD MMBEXPX
 			WORD MMBEXPY
 			WORD MMBHeight
@@ -442,7 +442,7 @@
 	// Number drawing switchboard
 
 		#ifdef MMBASNumber
-			#inctevent lyn "Modules/MMBASGetter.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBASGetter.lyn.event"
 			#ifndef MMBNumberListDrawing
 				#define MMBNumberListDrawing
 			#endif // MMBNumberListDrawing
@@ -452,7 +452,7 @@
 		#endif // MMBASNumber
 
 		#ifdef MMBATKNumber
-			#inctevent lyn "Modules/MMBATKGetter.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBATKGetter.lyn.event"
 			#ifndef MMBNumberListDrawing
 				#define MMBNumberListDrawing
 			#endif // MMBNumberListDrawing
@@ -462,7 +462,7 @@
 		#endif // MMBATKNumber
 
 		#ifdef MMBAVONumber
-			#inctevent lyn "Modules/MMBAVOGetter.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBAVOGetter.lyn.event"
 			#ifndef MMBNumberListDrawing
 				#define MMBNumberListDrawing
 			#endif // MMBNumberListDrawing
@@ -472,7 +472,7 @@
 		#endif // MMBAVONumber
 
 		#ifdef MMBCHRNumber
-			#inctevent lyn "Modules/MMBCHRGetter.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBCHRGetter.lyn.event"
 			#ifndef MMBNumberListDrawing
 				#define MMBNumberListDrawing
 			#endif // MMBNumberListDrawing
@@ -482,7 +482,7 @@
 		#endif // MMBCHRNumber
 
 		#ifdef MMBCRTNumber
-			#inctevent lyn "Modules/MMBCRTGetter.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBCRTGetter.lyn.event"
 			#ifndef MMBNumberListDrawing
 				#define MMBNumberListDrawing
 			#endif // MMBNumberListDrawing
@@ -492,7 +492,7 @@
 		#endif // MMBCRTNumber
 
 		#ifdef MMBDEFNumber
-			#inctevent lyn "Modules/MMBDEFGetter.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDEFGetter.lyn.event"
 			#ifndef MMBNumberListDrawing
 				#define MMBNumberListDrawing
 			#endif // MMBNumberListDrawing
@@ -502,7 +502,7 @@
 		#endif // MMBDEFNumber
 
 		#ifdef MMBDODNumber
-			#inctevent lyn "Modules/MMBDODGetter.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBDODGetter.lyn.event"
 			#ifndef MMBNumberListDrawing
 				#define MMBNumberListDrawing
 			#endif // MMBNumberListDrawing
@@ -512,7 +512,7 @@
 		#endif // MMBDODNumber
 
 		#ifdef MMBHITNumber
-			#inctevent lyn "Modules/MMBHITGetter.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBHITGetter.lyn.event"
 			#ifndef MMBNumberListDrawing
 				#define MMBNumberListDrawing
 			#endif // MMBNumberListDrawing
@@ -522,7 +522,7 @@
 		#endif // MMBHITNumber
 
 		#ifdef MMBRESNumber
-			#inctevent lyn "Modules/MMBRESGetter.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBRESGetter.lyn.event"
 			#ifndef MMBNumberListDrawing
 				#define MMBNumberListDrawing
 			#endif // MMBNumberListDrawing
@@ -532,7 +532,7 @@
 		#endif // MMBRESNumber
 
 		#ifdef MMBRTGNumber
-			#inctevent lyn "Modules/MMBRTGGetter.elf" "Internal/Definitions.elf"
+			#include "Modules/MMBRTGGetter.lyn.event"
 			#ifndef MMBNumberListDrawing
 				#define MMBNumberListDrawing
 			#endif // MMBNumberListDrawing
@@ -544,30 +544,30 @@
 	// Module helpers
 
 		#ifdef MMBNumberDrawing
-			#inctevent lyn "Internal/MMBDrawNumberOAM.elf" "Internal/Definitions.elf"
-			#inctevent lyn "Internal/MMBDrawUnsignedNumber.elf" "Internal/Definitions.elf"
-			#inctevent lyn "Internal/MMBDrawSignedNumber.elf" "Internal/Definitions.elf"
+			#include "Internal/MMBDrawNumberOAM.lyn.event"
+			#include "Internal/MMBDrawUnsignedNumber.lyn.event"
+			#include "Internal/MMBDrawSignedNumber.lyn.event"
 		#endif // MMBNumberDrawing
 
 		#ifdef MMBBarDrawing
-			#inctevent lyn "Internal/MMBDrawBar.elf" "Internal/Definitions.elf"
+			#include "Internal/MMBDrawBar.lyn.event"
 		#endif // MMBBarDrawing
 
 		#ifdef MMBBattleStruct
-			#inctevent lyn "Internal/MMBPrepStats.elf" "Internal/Definitions.elf"
+			#include "Internal/MMBPrepStats.lyn.event"
 		#endif // MMBBattleStruct
 
 		#ifdef MMBIconPrep
-			#inctevent lyn "Internal/MMBPrepIcons.elf" "Internal/Definitions.elf"
+			#include "Internal/MMBPrepIcons.lyn.event"
 		#endif // MMBIconPrep
 
 		#ifdef MMBAffinityObjs
-			#inctevent lyn "Internal/MMBDrawAffinityObjs.elf" "Internal/Definitions.elf"
+			#include "Internal/MMBDrawAffinityObjs.lyn.event"
 			WORD MMBHeight
 		#endif // MMBAffinityObjs
 
 		#ifdef MMBInventoryObjs
-			#inctevent lyn "Internal/MMBDrawInventoryObjs.elf" "Internal/Definitions.elf"
+			#include "Internal/MMBDrawInventoryObjs.lyn.event"
 			WORD MMBHeight
 			SHORT (0x04 << 12) | MMBInventoryTileIndex
 			BYTE MMBInventoryX MMBInventoryY
@@ -576,7 +576,7 @@
 	ALIGN 4
 
 	#ifdef MMBNumberListDrawing
-		#inctevent lyn "Internal/MMBDrawNumberList.elf" "Internal/Definitions.elf"
+		#include "Internal/MMBDrawNumberList.lyn.event"
 		WORD MMBHeight
 		ALIGN 4
 		MMBNumberTable:
@@ -636,7 +636,7 @@
 	ALIGN 4
 
 	#ifdef MMBLabelDrawing
-		#inctevent lyn "Internal/MMBDrawLabelList.elf" "Internal/Definitions.elf"
+		#include "Internal/MMBDrawLabelList.lyn.event"
 		ALIGN 4
 		MMBLabelTable:
 		#ifdef MMBASLabel

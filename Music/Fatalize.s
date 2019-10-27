@@ -3509,7 +3509,7 @@ Fatalize_7_B2:
 @******************************************************@
 	.align	2
 
-Fatalize:
+songFatalize:
 	.byte	7	@ NumTrks
 	.byte	0	@ NumBlks
 	.byte	Fatalize_pri	@ Priority

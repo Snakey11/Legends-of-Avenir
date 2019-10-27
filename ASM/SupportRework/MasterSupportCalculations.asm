@@ -8,6 +8,7 @@
 .include "Functions.asm"
 .include "PrepScreenSupport.asm"
 .include "SupportConvos.asm"
+.include "StatScreen.asm"
 
 @ Vanilla does A > 0xF0 > B > 0xA0 > C > 0x50. This is read and analyzed at 0x0802823C
 	@ The most efficient way to do this is store both the character ID and support level in the character struct, but this will take up 10 bits.
@@ -29,18 +30,19 @@
 		
 		@ I think I should be able to completely rewrite the support calculation system. All I need to do is rewrite the master function to reflect this... easier said than done...?
 	
-	@ Here's the plan: Each support will consist of a character ID starting at 0x34 and ending at 0x38 inclusive. 0x32 as a short will hold each two bit support level in order
+	@ Here's the plan: Each support will consist of a character ID starting at 0x34 and ending at 0x38 inclusive. 0x32 as a short will hold each two bit support level in order.
 
 .global MasterSupportCalculation
 .type MasterSupportCalculation, %function
-MasterSupportCalculation: @ Autohook to 0x080285B0. r0 = battle struct, r1 = r4 = Support Bonus Temp. This handle the support bonuses in the battle calculation.
+MasterSupportCalculation: @ Autohook to 0x080285B0. r0 = battle struct, r1 = Support Bonus Temp. This handle the support bonuses in the battle calculation.
 push { r5 - r7, lr }
 mov r6, r0 @ Store the battle struct in r6.
+mov r4, r1 @ Store the support bonus temp in r4.
 mov r0, #0x00
 str r0, [ r4, #0x04 ] @ Clears the support bonus temp
 str r0, [ r4 ]
 ldrb r0, [ r6, #0x0B ]
-lsr r1, r1, #0x06
+lsr r1, r0, #0x06
 cmp r1, #0x00
 bne EndMasterSupportCalculation
 sub r6, r6, #0x01
@@ -79,54 +81,26 @@ push { r4 - r7, lr }
 mov r4, r0 @ Support bonus temp
 mov r5, r1 @ Battle struct
 mov r6, r2 @ Counter
+
 mov r0, r5
 mov r1, r6
 bl GetSupportLevel @ r0 = this support level.
-push { r0 }
-ldr r7, =SupportReworkBonusTable
-sub r7, r7, #20
-StartHandleBonusLoop:
-add r7, r7, #20
-ldr r1, [ r7 ]
-cmp r1, #0x00
-beq EndHandleBonus @ End if the end of the bonus table was reached.
-mov r1, r5
-add r1, r1, #0x34
-ldrb r1, [ r1, r6 ] @ Supporting character
-ldrb r2, [ r7 ] @ Character in the bonus table
-cmp r1, r2
-bne NotFirstSupporting
-	ldr r3, [ r5 ]
-	ldrb r2, [ r3, #0x04 ] @ Character ID of this battle struct.
-	ldr r0, =#0x0202BE4C
-	cmp r0, r3
-	bne HandleBonusNotTact1
-		mov r2, #0xFF
-	HandleBonusNotTact1:
-	ldrb r3, [ r7, #0x01 ] @ Other character in the bonus table.
-	cmp r2, r3
-	beq ApplyHandleBonus
-NotFirstSupporting:
-ldrb r2, [ r7, #0x01 ] @ Other character in the bonus table
-cmp r1, r2
-bne StartHandleBonusLoop @ Neither the first nor the second characters in the bonus table match the supporting character. Loop back.
-	ldr r3, [ r5 ]
-	ldrb r2, [ r3, #0x04 ] @ Character ID of this battle struct.
-	ldr r0, =#0x0202BE4C
-	cmp r0, r2
-	bne HandleBonusNotTact2
-		mov r2, #0xFF
-	HandleBonusNotTact2:
-	ldrb r3, [ r7 ] @ First character in the bonus table.
-	cmp r2, r3
-	bne StartHandleBonusLoop
-ApplyHandleBonus: @ So at this point, r7 has this entry of the bonus table.
-add r7, r7, #0x02
-mov r1, #0x06
-ldr r0, [ sp ] @ Get this support level off of the stack.
-sub r0, r0, #0x01
-mul r0, r1
-add r7, r0, r7 @ Now r4 has this entry of this support level
+mov r2, r0
+ldr r0, [ r5 ]
+ldrb r0, [ r0, #0x04 ] @ Character ID of this character.
+ldr r1, =#0x0202BE4C
+cmp r1, r5
+bne HandleBonusNotTact1
+	mov r0, #0xFF
+HandleBonusNotTact1:
+mov r1, #0x34
+add r1, r1, r6
+ldrb r1, [ r5, r1 ] @ Character ID of supporting character.
+bl GetSupportBonusTableEntry @ r0 = this entry in the SupportReworkBonusTable, accounting for support level.
+cmp r0, #0x00
+beq EndHandleBonus @ No bonus found. Just end.
+mov r7, r0 @ Store it in r7.
+
 add r4, r4, #0x01
 mov r0, #0x00 @ r0 is a counter.
 StartApplyHandleBonusLoop:
@@ -138,7 +112,6 @@ add r0, r0, #0x01
 cmp r0, #0x06
 bne StartApplyHandleBonusLoop
 EndHandleBonus:
-pop { r0 }
 pop { r4 - r7 }
 pop { r0 }
 bx r0
@@ -336,7 +309,8 @@ ldrb r1, [ r0, #0x0C ]
 mov r2, #0x04
 tst r1, r2
 bne EndCallIncreaseSupportNoPopupFalse @ This character is dead.
-mov r1, r4
+mov r0, r6
+mov r1, r5
 bl FindSupportData
 mov r1, #0x00
 mvn r1, r1

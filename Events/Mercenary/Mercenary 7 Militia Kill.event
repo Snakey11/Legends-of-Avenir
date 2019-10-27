@@ -138,8 +138,8 @@ MUSC Indignation
 CAM1 [6,5]
 STAL 0x30
 Text(0x0E,Merc7MilitiaKillThroneRoomText)
+FADI 0x5
 SetSupport(Arya,Xexim,CSupport)
-NoFade
 GotoPrepScreen
 
 BadEnding:
@@ -214,9 +214,11 @@ NoFade
 ENDA
 
 LoadDoorOpenedUnits:
+Text(Merc7MilitiaKillGuardsHereText)
+CamON
 LOAD1 0x1 DoorUnits
 ENUN
-Text(Merc7MilitiaKillGuardsHereText)
+CamOFF
 NoFade
 ENDA
 

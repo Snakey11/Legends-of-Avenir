@@ -3,7 +3,7 @@
 	.equ	songRingabelgrp, voicegroup000
 	.equ	songRingabelpri, 10
 	.equ	songRingabelrev, 0
-	.equ	songRingabelmvl, 70
+	.equ	songRingabelmvl, 60
 	.equ	songRingabelkey, 0
 	.equ	songRingabeltbs, 1
 	.equ	songRingabelexg, 0

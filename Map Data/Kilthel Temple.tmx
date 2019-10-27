@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="26" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="6C006D6E" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/6C006D6E.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="20" height="26">
+  <properties>
+   <property name="Anims" value="_6CAnims"/>
+   <property name="ChapterID" value="MilitaryAcceptRetreatLeave7"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="KilthelTempleChanges"/>
+   <property name="MapID" value="KilthelTempleMap"/>
+   <property name="ObjectType" value="0x6C"/>
+   <property name="PaletteID" value="0x6D"/>
+   <property name="TileConfig" value="0x6E"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJy9lTFLw1AQx58pxU9QEEchbXBxqvYDCBEcnHRykSJmcVToB1DQgmZyFREES8HJjyAOEXTxc3R2847c4eVyeX1dHH68y+Xun3v3Lsms5dyMmAIv4joGusrHFMK/5ko7UTEfwFeg3kjYOa1aT+PTs9B61yoXr5/IN1WrjNX75ZhE5UyA86XS5l7wmgg9vV8dw9cr0Z+e3hvWt2yg9y9zB6C3FVXPiMHaT4AO3N+MyhrzAD3E6j3r9Imm8wnV60dV/kOPe7wu+tsmrFmadx7Y44zq/KT+xqTHcy1nKTPQ7yTrYc7Y0ONZKgL0RlST7KPW07Ea+X5Y59Kk50N/V6Qe2ji3PeG7oN5fGr55c2Pp9Tw+n96Y7B9Xz23yhdT3beQ2+eSc8oy2BV2KS0Vc6vFNhI+/GbGhdye+W2gfGL57V/2vFA16Hcp9A/udcs9add+hq/5XeEa13iswhNhnIHel/UjrLZABA1fuwzqP2n6BbYg9Jb1dYA+4ATaAB7i/Cuv+AnrHVA/mX+HZkjbWifeOaA+L1Ie5KWkxO/ScIen+AquOOV8=
+  </data>
+ </layer>
+ <layer name="BottomChest" width="20" height="26" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="17"/>
+   <property name="Y" value="3"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFpAKmgXbAKBgFo2AUjIJRQGMAABX4AAM=
+  </data>
+ </layer>
+ <layer name="TopChest" width="20" height="26" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="17"/>
+   <property name="Y" value="0"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYKAcMFHBjFEwCkbBKBgFo2AUDB4AABfYAAM=
+  </data>
+ </layer>
+</map>

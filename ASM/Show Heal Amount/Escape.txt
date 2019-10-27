@@ -1,0 +1,11 @@
+.thumb
+.global EscapeActive
+.type EscapeActive, %function
+EscapeActive:
+ldr r0, =#0x03004E50
+ldr r0, [ r0 ] @ Current character struct.
+ldr r0, [ r0, #0x04 ] @ Current pointer to ROM class data.
+ldrb r0, [ r0, #0x04 ] @ Current class ID.
+ldr r1, =0x030004B8
+str r0, [ r1, #0x30 ] @ Write current class ID to slot 0xC
+bx lr

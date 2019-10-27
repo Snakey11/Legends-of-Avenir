@@ -4,7 +4,7 @@
 	#define	songTwinrova_grp  voicegroup000
 	#define	songTwinrova_pri  0
 	#define	songTwinrova_rev  0
-	#define	songTwinrova_mvl  127
+	#define	songTwinrova_mvl  80
 	#define	songTwinrova_key  0
 	#define	songTwinrova_tbs  1
 	#define	songTwinrova_exg  0

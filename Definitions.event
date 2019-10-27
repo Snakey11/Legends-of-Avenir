@@ -67,6 +67,7 @@
 #define ToxinLance 0xE0
 #define ToxinAxe 0xE1
 #define ToxinBow 0xE2
+#define SpiritDust 0xE3
 //LabelEnd
 
 //Label Class defenitions
@@ -126,7 +127,8 @@
 #define Truerblade 0x8D
 #define GaidenSage 0x8E
 #define IzukClass 0x8F
-#define Nomad 0x90
+#define BattleSageF 0x90
+#define Combatant BattleSageF
 #define NarratorClass 0x91
 #define GuardianSpirit NarratorClass
 #define Warlock 0x92
@@ -214,6 +216,7 @@
 #define Sekar 0x3E
 #define Zaheva 0x3F
 #define Madeline 0x40
+#define Madeleine 0x40
 #define Remus 0x41
 
 #define Henning 0x47
@@ -274,6 +277,13 @@
 #define Gerald 0x80
 #define Sean 0x81
 #define Looter 0x82
+#define BossArya 0x83
+#define BossAdlez 0x84
+#define BossConnor 0x85
+#define Halleck 0x86
+#define BossEfil 0x87
+#define BossChristina 0x88
+#define BossForrest 0x89
 //LabelEnd
 
 //Label Portrait Defenitions
@@ -339,13 +349,13 @@
 #define RemusMug 0xE7
 #define BlaineMug 0xE8
 #define KnightCard 0xE9
+#define WestonMug 0xF0
 
 #define MerchantMug 0x31 // Breguet
 #define HenningMug 0x33 // Bazba
 #define GerwickMug 0x32 // Bone
 #define InkeeperMug 0x29 // Knoll
 #define MilitiaManMug 0x0E // Garcia
-#define WestonMug 0x35 // Zonta
 #define EscortMug 0x4B // Glen
 #define OfficialMug 0x20 // Saleh
 #define RobertMug 0x34 // Saar
@@ -367,6 +377,7 @@
 #define ShanleyMug 0x46 // Lyon
 #define GeraldMug 0x29 // Knoll
 #define SeanMug 0x34 // Saar
+#define HalleckMug 0x20 // Saleh
 //LabelEnd
 
 //Label Spell Definitions
@@ -435,7 +446,7 @@
 #define MilitaryAcceptHold7 0x16
 #define MilitaryAcceptRetreat4 0x17
 #define MilitaryAcceptRetreatLeave5 0x18
-#define MilitaryAcceptRetreatLeave6GrowingTown1 0x19
+#define MilitaryAcceptRetreatLeave6 0x19
 #define MilitaryAcceptRetreatLeave7 0x1A
 #define MilitaryAcceptRetreatHelp5 0x1B
 #define MilitaryAcceptRetreatHelp6 0x1C
@@ -557,7 +568,7 @@
 #define MercenaryFMercenaryPaletteID 0x3D
 #define MercenaryFMyrmidonPaletteID 0x3E
 #define MercenaryFPegasusKnightPaletteID 0x3F
-#define MercenaryFNomadPaletteID 0x40
+#define MercenaryFCombatantPaletteID 0x40
 #define MercenaryFShadowPaletteID 0x41
 #define MercenaryFBlackFalcoknightPaletteID 0x42
 #define GerwickPiratePaletteID 0x43
@@ -616,6 +627,18 @@
 #define MilitaryFSoldierPaletteID 0x78
 #define MilitaryFWyvernRiderPaletteID 0x79
 #define MilitaryFArcherPaletteID 0x7A
+#define RemusSoldierPaletteID 0x7B
+#define RemusSentinelPaletteID 0x7C
+#define RemusHalberdierPaletteID 0x7D
+#define MadeleineArcherPaletteID 0x7E
+#define MadeleineSniperPaletteID 0x7F
+#define MadeleineRangerPaletteID 0x80
+#define ZahevaMercenaryPaletteID 0x81
+#define ZahevaHeroPaletteID 0x82
+#define ZahevaRangerPaletteID 0x83
+#define YvettePegasusKnightPaletteID 0x84
+#define YvetteFalcoknightPaletteID 0x85
+#define YvetteWyvernKnightPaletteID 0x86
 //LabelEnd
 
 //Label Maps, Map Changes, Events, and Tilesets
@@ -694,6 +717,10 @@
 #define DeidarMap 0xC0
 #define HaedricIgnefrontMap 0xC2
 #define DefenseFortMap 0xC7
+#define CesarianCapitalRetreatMap 0xCA
+#define RetreatDesertMap 0xD0
+#define XyliaStairTempleMap 0xD2
+#define KilthelTempleMap 0xD4
 
 //Map Changes
 
@@ -729,6 +756,10 @@
 #define DeidarChanges 0xC1
 #define HaedricIgnefrontChanges 0xC3
 #define DefenseFortChanges 0xC8
+#define CesarianCapitalRetreatChanges 0xCB
+#define RetreatDesertChanges 0xD1
+#define XyliaStairTempleChanges 0xD3
+#define KilthelTempleChanges 0xD5
 
 // Tilesets
 #define OutdoorSnowyObjectSet 0xB5
@@ -780,8 +811,11 @@
 #define Military7PassAltiaEvents 0xB2
 #define Military2AcceptEvents 0xC4
 #define Military3AcceptEvents 0xC5
-#define Military4AcceptEvents 0xC6
-// Good until 0xC9
+#define Military4AcceptRetreatEvents 0xC6
+#define Military5AcceptRetreatLeaveEvents 0xCC
+#define Military6AcceptRetreatLeaveEvents 0xCD
+#define Military7AcceptRetreatLeaveEvents 0xCF
+// Good until 0xEB
 //LabelEnd
 
 //Label Tileset stuff
@@ -834,7 +868,8 @@
 #define MatriarchSprite 0x77
 #define MonkFSprite 0x78
 #define MountedBrigandSprite 0x79
-#define NomadSprite 0x7A
+#define CombatantSprite 0x7A
+#define BattleSageFSprite CombatantSprite
 #define PatriarchSprite 0x7B
 #define SentinelSprite 0x7C
 #define TruebladeSprite 0x7D
@@ -843,6 +878,7 @@
 #define ShadowSprite 0x80
 #define HarbingerSprite 0x81
 #define EdgySwordmasterSprite 0x82
+#define BattleSageSprite 0x83
 //LabelEnd
 
 //Label Battle Animations
@@ -943,9 +979,6 @@
 #define MountedBrigandUnarmed 0xB8
 #define NecromancerMagic 0x9D
 #define NecromancerStaff 0x9E
-#define NomadSword 0xDF
-#define NomadBow 0xE0
-#define NomadUnarmed 0xE1
 #define PatriarchMagic 0xB9
 #define PatriarchStaff 0xBA
 #define SentinelSpear 0xBB
@@ -1015,6 +1048,18 @@
 #define WyvernGeneralLance 0x113
 #define MasterKnightMLance 0x114
 #define MasterKnightMUnarmed 0x115
+#define WarlockStaff 0x116
+#define BattleSageSword 0x117
+#define MercenaryFSword 0x118
+#define MercenaryFUnarmed 0x119
+#define HeroFSword 0x11A
+#define HeroFAxe 0x11B
+#define HeroFHandAxe 0x11C
+#define HeroFUnarmed 0x11D
+#define BattleSageFSword 0x11E
+#define BattleSageFMagic 0x11F
+#define BattleSageFStaff 0x120
+#define HarbingerMagic 0x121
 //LabelEnd
 
 //Label Music Definitions
@@ -1025,11 +1070,6 @@
 #define Old_Familiar_Scent 0x0404
 #define Rest_of_the_Heart 0x0405
 #define Burning_Fighting_Spirit 0x0406
-//#define Presidents_Office 0x0182
-//#define Altin_Caves 0x0177
-//#define Wicked_Child 0x03DE
-//#define Bloodpool 0x03E2
-//#define Stage_One 0x03E6
 #define Pub_Theme 0x0407
 #define Snow_Battle 0x0408
 #define Wild_Fields 0x0409
@@ -1043,15 +1083,12 @@
 #define Lloyd 0x0411
 #define Beedles_Shop 0x0412
 #define A_Tragic_Decision 0x0413
+#define A_Tragic_Desicion A_Tragic_Decision
 #define Tragic_Decision A_Tragic_Decision
 #define Venus_Lighthouse 0x0414
-//#define End_Peaceful_World 0x0300
-//#define Karma 0x0301
-#define Marble_Corridor 0x0415
 #define Nara_and_Mara_Battle 0x0416
 #define Nekonin 0x0417
 #define Ringabel 0x0418
-//#define The_More_I_Try 0x0405
 #define Victorys_Delight 0x0419
 #define Zelos 0x041A
 #define Stage_One 0x041B
@@ -1063,9 +1100,64 @@
 #define Off_Key 0x0421
 #define The_Law_of_Battle 0x0422
 #define Twinrova 0x0423
+#define Presidents_Office 0x0424
+#define Bloodpool 0x0425
+#define Stage_One_Conquest 0x0426
+#define Agatio_and_Karst_Battle 0x0427
+#define Alachest_Final 0x0428
+#define Destined_Fate 0x0429
+#define Good_Song 0x042A
+#define Satorl_Marsh 0x042B
+#define Seventh_Saga_Dungeon 0x042C
+#define Cavern_of_Splendor 0x042D
+#define Locked_Girl 0x042E
+#define Kakariko_Village 0x042F
+#define Boss_Theme 0x0430
+#define Bloody_Tears 0x0431
+#define Bergentruckung 0x0432
+#define Battle_Two 0x0433
+#define Battle_against_Demons 0x0434
+#define Ordon_Village 0x0435
+#define Isaacs_Battle_Theme 0x0436
+#define The_Devoted 0x0437
+#define March 0x0438
+#define Ascent 0x0439
+#define Hollow_Bastion 0x043A
+#define The_First_Campaign 0x043B
+#define Heavens_Rock_Seat 0x043C
+#define Heavens_Gate 0x044D
+#define Forbidden_Forest 0x043E
+#define Puppet_Ganon 0x044F
+#define End_of_the_World 0x0440
+#define Earthbound 0x0441
+#define Chinese_Tea 0x0442
+#define Zelda_Twighlight_Shop 0x0443
+#define UN_Owen_Was_Her 0x0444
+#define Showdown_with_Hector 0x0445
+#define Saturos_Battle 0x0446
+#define Inanimate_Dream 0x0447
+#define With_Us 0x448
+#define Showdown_with_Hector_New 0x449
+#define A_Hero_Falls 0x44A
+#define Emergency 0x44B
+#define We_Can_Handle_Em 0x44C
+#define Overwhelming_Advance 0x44D
+#define Encroaching_Foe 0x44E
+#define All_Is_Lost 0x44F
+#define Divine_Providence 0x450
+#define Fodlan_Winds 0x451
+#define Oil_Ocean 0x452
+#define Casino_Night 0x453
+#define Aquatic_Ruin 0x454
+#define Hill_Top 0x455
+#define Green_Emerald 0x456
+#define Chemical_Plant 0x457
+#define Metropolis 0x458
+#define A_Formidable_Foe_Stands_in_the_Way 0x459
 //LabelEnd
 
 //Label Skill Definitions
+/*
 #define AcrobatID 1 //Thief, Assassin, Rogue
 #define PassID 2 //Assassin
 #define CantoPlusID 3 //Ranger
@@ -1150,7 +1242,7 @@
 #define StaffSavantID 78 //half done (mag/2 only)
 #define LiveToServeID 79 //Bishop
 #define IgnisID 80 //DONE
-#define LifeAndDeathID 81 //Shaman, Druid, Summoner
+#define LifeAndDeathID 81 // DONE
 #define LockTouchID 82 //Display only: Rogue
 #define LungeID 83 //Rogue, Champion
 #define IntimidateID 84 //Brigand							Gerwick
@@ -1193,7 +1285,7 @@
 #define MoonbowID 121 //Unused
 #define ShoveID 122 //DONE
 #define SmiteID 123 //Champion
-#define BaneID 124 //DONE
+#define BaneID 124 //DONE								Halleck
 #define DownWithArchID 125 //DONE
 #define UpWithArchID 126 //DONE
 #define RightfulArchID 127 //DONE
@@ -1260,14 +1352,47 @@
 #define HexID 186 //								Xavus
 #define BarricadeID 187 //General
 #define BarricadePlusID 188 //Commander
+#define PointBlankID 189 //DONE
+#define PerfectionistID 190 //DONE
+#define PuissanceID 191 //DONE
+#define BattleVeteranID 192 //DONE
+#define HolyAuraID 193 //DONE
+#define SilentPrideID 194 //DONE
+#define LoyaltyID 195 //DONE
+#define ThunderstormID 196 //DONE
+#define OutriderID 197 //DONE
+#define HeavyStrikesID 198 //DONE
+#define ChargeID 199 //DONE
+#define InfiltratorID 200 //DONE
+#define VanityID 201 //DONE
+#define MageSlayerID 202 //							Zaheva
+#define KnightAspirantID 203 //DONE
+#define DisciplinePlusID 204 //DONE
+#define WatchfulID 205 //DONE
+#define HeroID 206 //DONE
+#define BoonID 207 //DONE
+#define ReMoveID 208 //DONE
+#define PowerstaffID 209 //DONE
+#define SealMagID 210 //Shaman, Summoner, Druid
+*/
+
+#include "ASM/SkillSystem_FE8/EngineHacks/SkillSystem/skill_definitions.event"
+
+//#ifndef DebuffTable
+  //#define DebuffTable     0x0203F100
+  #define DebuffTableSize 0x00000900
+//#endif
 //LabelEnd
 
 //Label Misc.
 #define SetChapterData(ChapterID,ObjectType1,ObjectType2,PaletteID,TileConfig,MapID,MapPointer,Anims1,Anims2,MapChanges) "PUSH; ORG ChapterDataTable+(ChapterID*148)+4; BYTE ObjectType1 ObjectType2 PaletteID TileConfig MapID Anims1 Anims2 MapChanges; EventPointerTable(MapID,MapPointer); POP"
 
- #define TilesetAnimation(speed, size, pointer)    "BYTE speed 0; SHORT size; POIN pointer"
+#define StatBonus(HPB,StrB,MagB,SklB,SpdB,DefB,ResB,LckB,MovB,ConB) "BYTE HPB StrB SklB SpdB DefB ResB LckB MovB ConB MagB 0x0 0x0"
+
+#define TilesetAnimation(speed, size, pointer)    "BYTE speed 0; SHORT size; POIN pointer"
 
 #define DeathQuote(Character,Chapter,EventID,TextID) "SHORT Character; BYTE 0xFF Chapter; SHORT EventID TextID 0 0"
+#define DeathQuote(Character,Chapter,EventID,TextID,Pointer) "SHORT Character; BYTE 0xFF Chapter; SHORT EventID TextID ; POIN Pointer"
 #define AllChapters 0xFF
 
 //#define SpecifiedBattleConvo(Character1,Character2,Chapter,EventID,TextID) "BYTE Character1 0x0 Character2 0x0 Chapter 0x0 EventID 0x0 ; SHORT TextID 0x0 0x0 0x0 ; BYTE Character2 0x0 Character1 0x0 Chapter 0x0 EventID 0x0 ; SHORT TextID 0x0 0x0 0x0"
@@ -1298,12 +1423,12 @@
 
 #define EnterStop "EVBIT_T 0x4"
 
-#define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
+//#define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
 
 #define KillUnit(X,Y) "SVAL 0xB Coords(X,Y) ; SET_SOMETHING 0xFFFE ; DISA_IF 0xFFFE"
 
-#define Raid(EventID,Pointer,X,Y) "LOCA EventID Pointer [X,Y] 0x21"
-#define TileChange(X,Y) "SETVAL 0xB Coords(X,Y) ; TILECHANGE 0xFFFF"
+//#define Raid(EventID,Pointer,X,Y) "LOCA EventID Pointer [X,Y] 0x21"
+//#define TileChange(X,Y) "SETVAL 0xB Coords(X,Y) ; TILECHANGE 0xFFFF"
 
 #define CamON "EVBIT_T 0x9"
 #define CamOFF "EVBIT_F 0x9"
@@ -1327,6 +1452,8 @@
 #define InfiniteTurnEventEnemy(EventID,Pointer,StartTurn) "TURN EventID Pointer [StartTurn 0xFF] 8"
 #define InfiniteTurnEventNPC(EventID,Pointer,StartTurn) "TURN EventID Pointer [StartTurn, 0xFF] 0x24 0x00"
 
+#define SandPickup(EventID,Item) "CHECK_ALLEGIANCE 0xFFFF ; BNE 0x0 0x0 0xC ; RANDOMNUMBER 20 ; SADD 0xC01 ; CHECK_LUCK 0xFFFF ; BGE 0x0 0x1 0xC ; GiveItem(Item,0xFFFF) ; GOTO 0x1 ; LABEL 0x0 ; ENUF EventID ; LABEL 0x1"
+
 #define EventMenuCommand(aTextId,Effect) "WORD 0; SHORT aTextId 0; WORD 0; POIN (0x04F448|1); WORD 0; POIN (Effect|1); WORD 0 0 0"
 #define EventMenuCommandEnd "WORD 0 0 0 0 0 0 0 0 0"
 
@@ -1343,6 +1470,7 @@
 #define The_Battle_to_Be_Won 0x1B
 #define Return_of_the_Demon_King 0x1E
 
+#define NoWeather 0x00
 #define SnowWeather 0x01
 #define BlizzardWeather 0x02
 #define BlueWeather 0x03

@@ -1,0 +1,255 @@
+
+EventPointerTable(Military5AcceptRetreatLeaveEvents,ThisChapter)
+
+//Label ThisChapter
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN EndMainPointer EndMainPointer EndMainPointer
+POIN EndMainPointer
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+//LabelEnd
+
+//Label TurnBasedEvents
+TurnBasedEvents:
+TurnEventPlayer(0x00,Turn3,3)
+TurnEventPlayer(0x00,Turn4,4)
+TurnEventPlayer(0x00,Turn6,6)
+TurnEventPlayer(0x00,Turn7,7)
+END_MAIN
+
+//Label CharacterBasedEvents
+ALIGN 32
+CharacterBasedEvents:
+SupportConvo(BSupport,Madeleine,Yvette,Military5AcceptRetreatLeaveMadeleineYvetteSupportText)
+END_MAIN
+
+//Label LocationBasedEvents
+LocationBasedEvents:
+Village(0x16,VisitVillage,14,4)
+Armory(ShopList,16,5)
+END_MAIN
+
+//Label MiscBasedEvents
+MiscBasedEvents:
+DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+AREA 0x11 WyrmslayerPickup [0,5] [1,6]
+AREA 0x12 HammerPickup [4,10] [7,11]
+AREA 0x13 BraveSwordPickup [11,11] [16,13]
+AREA 0x14 BlueGemPickup [17,8] [20,10]
+AREA 0x14 BlueGemPickup [20,11] [23,14]
+AREA 0x15 ShortSpearPickup [23,8] [24,12]
+END_MAIN
+
+//Label TrapData
+TrapData:
+ENDTRAP
+ALIGN 4
+
+//Label Units
+Units:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [4,0] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [6,0] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Jasper 0x00 0x00 Level(1,Ally,True) [5,1] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [3,1] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Madeleine 0x00 0x00 Level(1,Ally,True) [4,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Remus 0x00 0x00 Level(1,Ally,True) [6,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Yvette 0x00 0x00 Level(1,Ally,True) [3,3] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
+
+//Label BeginingScene
+BeginningScene:
+EnterStop
+CAM1 [19,10]
+LOAD1 0x1 Wanderers
+ENUN
+MUSC Derris_Kharlan_Appear
+SetBackground(0x28)
+Text(Military5AcceptRetreatLeaveXyliaText)
+FADI 0x02
+MUSC Kavoc
+SetBackground(0x12)
+Text(Military5AcceptRetreatLeaveAwakeText)
+MUSC Stage_One
+SetBackground(0x0A)
+Text(Military5AcceptRetreatLeaveSettingOutText)
+MUSC Kakariko_Village
+SetBackground(0x30)
+TEXTSTART
+TEXTSHOW Military5AcceptRetreatLeaveInDesertText
+TEXTEND
+MUSC March
+TEXTCONT
+TEXTEND
+REMA
+EndConvo
+STAL 0x20
+FlashCursor(Halleck,60)
+STAL 0x10
+Text(Military5AcceptRetreatLeaveHalleckText)
+GotoPrepScreen
+
+//Label EndingScene
+EndingScene:
+MUSC Victorys_Delight
+CLEA 0x0
+CLEE 0x0
+SetBackground(0x30)
+Text(Military5AcceptRetreatLeaveVictoryText)
+FadeOutMusic
+FADI 0x5
+STAL 0x50
+FADU 0x5
+MUSC Anchoret
+Text(Military5AcceptRetreatLeaveWatchText)
+FadeOutMusic
+FADI 0x03
+STAL 0x50
+MUSC Derris_Kharlan_Appear
+SetBackground(0x28)
+Text(Military5AcceptRetreatLeaveEndingText)
+MoveToChapter(MilitaryAcceptRetreatLeave6)
+NoFade
+ENDA
+
+//Label Location events
+VisitVillage:
+MUSI
+Text(0x02,Military5AcceptRetreatLeaveVillageText)
+STAL 0x08
+GiveItem(ShortAxe,0xFFFF)
+NoFade
+EndA2
+
+ShopList:
+SHLI SteelSword IronBlade SteelLance Javelin SteelAxe HandAxe SteelBow SteelShortbow Vulnerary
+ALIGN 4
+//LabelEnd
+
+//Label Item pickups
+WyrmslayerPickup:
+SandPickup(0x11,Wyrmslayer)
+NoFade
+EndA2
+
+HammerPickup:
+SandPickup(0x12,Hammer)
+NoFade
+EndA2
+
+BraveSwordPickup:
+SandPickup(0x13,BraveSword)
+NoFade
+EndA2
+
+BlueGemPickup:
+SandPickup(0x14,BlueGem)
+NoFade
+EndA2
+
+ShortSpearPickup:
+SandPickup(0x15,ShortSpear)
+NoFade
+ENDA
+
+//Label Turn events
+Turn3:
+CamON
+LOAD1 0x1 Turn3Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn4:
+CamON
+LOAD1 0x1 Turn4Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn6:
+CamON
+LOAD1 0x1 Turn6Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn7:
+CamON
+LOAD1 0x1 Turn7Units
+ENUN
+CamOFF
+NoFade
+ENDA
+
+	/*UNIT DATA*/
+
+//Label Wanderers
+Wanderers:
+UNIT Halleck Bishop Halleck Level(5,Enemy,True) [21,7] 0x00 0x00 0x00 0x00 [Divine] GuardAI
+UNIT Wanderer Archer Halleck Level(11,Enemy,True) [23,6] 0x00 0x00 0x00 0x00 [SteelBow] AttackInRangeAI
+UNIT Wanderer Archer Halleck Level(14,Enemy,True) [23,8] 0x00 0x00 0x00 0x00 [IronBow] AttackInRangeAI
+UNIT Wanderer Sniper Halleck Level(3,Enemy,True) [20,4] Drop 0x00 0x00 0x00 [SilverShortbow] AttackInRangeAI
+UNIT Wanderer Mage Halleck Level(13,Enemy,True) [20,9] 0x00 0x00 0x00 0x00 [Elwind] NoAI
+UNIT Wanderer Knight Halleck Level(15,Enemy,True) [17,7] 0x00 0x00 0x00 0x00 [ShortSpear] GuardAI
+UNIT Wanderer Soldier Halleck Level(9,Enemy,True) [14,5] 0x00 0x00 0x00 0x00 [Horseslayer] ChaseOnceApproachedAI
+UNIT Wanderer PegasusKnight Halleck Level(17,Enemy,True) [21,1] 0x00 0x00 0x00 0x00 [SlimLance] NoAI
+UNIT Wanderer Cavalier Halleck Level(15,Enemy,True) [22,11] Drop 0x00 0x00 0x00 [Javelin] ChaseOnceApproachedAI
+UNIT Wanderer Myrmidon Halleck Level(16,Enemy,True) [11,12] 0x00 0x00 0x00 0x00 [ToxinSword] ChaseOnceApproachedAI
+UNIT Wanderer Archer Halleck Level(13,Enemy,True) [9,12] 0x00 0x00 0x00 0x00 [SteelLongbow] AttackInRangeAI
+UNIT Wanderer Mercenary Halleck Level(12,Enemy,True) [9,12] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI
+UNIT Wanderer PegasusKnight Halleck Level(16,Enemy,True) [7,14] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT Wanderer Halberdier Halleck Level(4,Enemy,True) [11,8] 0x00 0x00 0x00 0x00 [Dragonspear] AttackInRangeAI
+UNIT Wanderer Fighter Halleck Level(16,Enemy,True) [11,8] 0x00 0x00 0x00 0x00 [ShortAxe] AttackInRangeAI
+UNIT Wanderer Berserker Halleck Level(1,Enemy,True) [11,4] Drop 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT Wanderer Mage Halleck Level(14,Enemy,True) [11,6] 0x00 0x00 0x00 0x00 [Thunder] AttackInRangeAI
+UNIT Wanderer Druid Halleck Level(2,Enemy,True) [5,10] 0x00 0x00 0x00 0x00 [Luna] NoAI
+UNIT Wanderer Mage Halleck Level(15,Enemy,True) [0,10] 0x00 0x00 0x00 0x00 [Elfire] AttackInRangeAI
+UNIT Wanderer Fighter Halleck Level(14,Enemy,True) [4,8] 0x00 0x00 0x00 0x00 [Swordreaver] AttackInRangeAI
+UNIT Wanderer Hero Halleck Level(3,Enemy,True) [1,6] 0x00 0x00 0x00 0x00 [BraveAxe] NoAI
+UNIT Wanderer Myrmidon Halleck Level(15,Enemy,True) [4,6] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT Wanderer Swordmaster Halleck Level(4,Enemy,True) [8,8] Drop 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
+EndUnit
+
+//Label Reinforcements
+Turn3Units:
+UNIT Wanderer Pirate Halleck Level(16,Enemy,True) [0,13] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
+UNIT Wanderer Mercenary Halleck Level(14,Enemy,True) [1,14] 0x00 0x00 0x00 0x00 [IronBlade] NoAI
+UNIT
+
+Turn4Units:
+UNIT Wanderer Mage Halleck Level(13,Enemy,True) [15,14] 0x00 0x00 0x00 0x00 [Elthunder] NoAI
+UNIT Wanderer Monk Halleck Level(15,Enemy,True) [13,14] 0x00 0x00 0x00 0x00 [Shine,Physic] NoAI
+UNIT Wanderer Warrior Halleck Level(4,Enemy,True) [12,14] Drop 0x00 0x00 0x00 [Halberd,SteelBow] ChaseOnceApproachedAI
+UNIT Wanderer Mercenary Halleck Level(13,Enemy,True) [10,14] 0x00 0x00 0x00 0x00 [SteelSword] ChaseOnceApproachedAI
+UNIT
+
+Turn6Units:
+UNIT Wanderer Ranger Halleck Level(5,Enemy,True) [5,0] 0x00 0x00 0x00 0x00 [KillingEdge,IronBow] NoAI
+UNIT Wanderer PegasusKnight Halleck Level(15,Enemy,True) [3,0] 0x00 0x00 0x00 0x00 [Javelin] NoAI
+UNIT Wanderer PegasusKnight Halleck Level(16,Enemy,True) [7,0] Drop 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Wanderer Myrmidon Halleck Level(14,Enemy,True) [6,0] 0x00 0x00 0x01 REDA6R1 [ToxinSword] NoAI
+UNIT Wanderer Halberdier Halleck Level(2,Enemy,True) [4,0] 0x00 0x00 0x01 REDA4R1 [DragonSpear] NoAI
+
+UNIT Wanderer Shaman Halleck Level(17,Enemy,True) [24,4] 0x00 0x00 0x00 0x00 [Flux] AttackInRangeAI
+UNIT Wanderer Soldier Halleck Level(13,Enemy,True) [24,5] 0x00 0x00 0x00 0x00 [PoisonLance] ChaseOnceApproachedAI
+UNIT Wanderer Sniper Halleck Level(2,Enemy,True) [24,6] 0x00 0x00 0x00 0x00 [IronBow] ChaseOnceApproachedAI
+UNIT
+
+Turn7Units:
+UNIT Wanderer PegasusKnight Halleck Level(15,Enemy,True) [19,0] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Wanderer PegasusKnight Halleck Level(16,Enemy,True) [19,14] Drop 0x00 0x00 0x00 [HeavySpear] NoAI
+UNIT Wanderer Pirate Halleck Level(14,Enemy,True) [0,8] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
+UNIT Wanderer Fighter Halleck Level(13,Enemy,True) [0,10] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT Wanderer Mercenary Halleck Level(15,Enemy,True) [15,14] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI
+UNIT Wanderer Mage Halleck Level(15,Enemy,True) [14,14] 0x00 0x00 0x00 0x00 [Elfire] NoAI
+EndUnit

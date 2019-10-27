@@ -1,0 +1,435 @@
+
+EventPointerTable(Military4AcceptRetreatEvents,ThisChapter)
+
+//Label ThisChapter
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN EndMainPointer EndMainPointer EndMainPointer
+POIN EndMainPointer
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+//LabelEnd
+
+//Label TurnBasedEvents
+TurnBasedEvents:
+InfiniteTurnEventPlayer(0x14,StairHelp,1)
+TurnEventPlayer(0x00,Turn1,1)
+TurnEventPlayer(0x00,Turn3,3)
+TurnEventPlayer(0x00,Turn4,4)
+TurnEventPlayer(0x00,Turn6,6)
+TurnEventPlayer(0x00,Turn7,7)
+TurnEventPlayer(0x00,Turn9,9)
+END_MAIN
+
+//Label CharacterBasedEvents
+ALIGN 32
+CharacterBasedEvents:
+CharacterEventBothWays(0x10,TTactYvette,PlayerMCavalier,Yvette)
+CharacterEventBothWays(0x10,TTactYvette,PlayerMSoldier,Yvette)
+CharacterEventBothWays(0x10,TTactYvette,PlayerMKnight,Yvette)
+CharacterEventBothWays(0x10,TTactYvette,PlayerMWyvernRider,Yvette)
+CharacterEventBothWays(0x10,TTactYvette,PlayerMArcher,Yvette)
+CharacterEventBothWays(0x10,TTactYvette,PlayerFCavalier,Yvette)
+CharacterEventBothWays(0x10,TTactYvette,PlayerFSoldier,Yvette)
+CharacterEventBothWays(0x10,TTactYvette,PlayerFKnight,Yvette)
+CharacterEventBothWays(0x10,TTactYvette,PlayerFWyvernRider,Yvette)
+CharacterEventBothWays(0x10,TTactYvette,PlayerFArcher,Yvette)
+SupportConvo(BSupport,Madeleine,Remus,Military4AcceptRetreatMadeleineRemusSupportText)
+SupportConvo(BSupport,0xFF,Zaheva,Military4AcceptRetreatTactZahevaSupportText)
+END_MAIN
+
+//Label LocationBasedEvents
+LocationBasedEvents:
+Stairs(0x00,5,6,11,1)
+Door(10,12)
+Door(11,12)
+Door(12,12)
+Door(16,5)
+Door(17,5)
+Door(16,6)
+Door(17,6)
+Chest(KnightCrest,10,0)
+Chest(Axeslayer,12,0)
+Chest(KillerBow,7,6)
+ChestMoney(6000,10,9)
+Chest(Elixir,12,9)
+END_MAIN
+
+//Label MiscBasedEvents
+MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatAll(EndingScene)
+AREA 0x13 CheckStairHelp [4,5] [8,14]
+END_MAIN
+
+//Label TrapData
+TrapData:
+ENDTRAP
+ALIGN 4
+
+//Label Units
+Units:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [14,16] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Jasper 0x00 0x00 Level(1,Ally,True) [15,15] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [13,17] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [13,19] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Madeline 0x00 0x00 Level(1,Ally,True) [14,18] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Remus 0x00 0x00 Level(1,Ally,True) [15,19] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
+
+//Label BeginingScene
+BeginningScene:
+SVAL 0xB Coords(15,5)
+LOMA MercenaryMilitiaWaitArcanae6
+TileChange(13,8) // Open throne room door.
+LOAD3 0x1 PlayerLoading1
+LOAD2 0x1 CastleCutsceneFriends
+LOAD1 0x1 CesariansCutscene
+ENUN
+MUSC Anchoret
+SetBackground(0x16)
+Text(Military4AcceptRetreatBeginningText)
+FADI 0x05
+STAL 0x30
+EndConvo
+MUSC End_of_the_World
+STAL 0x40
+FlashCursor(15,1,60)
+STAL 0x20
+FADI 0x5
+CLEA 0x0
+CLEN 0x0
+SVAL 0xB Coords(11,15)
+LOMA MilitaryAcceptRetreat4
+LOAD3 0x1 PlayerLoading2
+LOAD2 0x1 ChapterFriends
+LOAD1 0x1 CesarianFriends
+LOAD1 0x1 Shizonians
+LOAD1 0x1 Shizonians2
+ENUN
+SetBackground(0x0E)
+Text(Military4AcceptRetreatRexMeetingText)
+FadeOutMusic
+FADI 0x5
+STAL 0x50
+MUSC March
+SetBackground(0x2A)
+Text(Military4AcceptRetreatWakeUpText)
+EndConvo
+MUSC The_Law_of_Battle
+STAL 0x40
+Text(Military4AcceptRetreatInCorridorsText)
+GotoPrepScreen
+
+//Label EndingScene
+EndingScene:
+EnterStop
+FADI 0x5
+CLEA 0x0
+CLEN 0x0
+CLEE 0x0
+ASMC RefreshAll|1
+VCWF 0x0
+CAM1 [7,5]
+CHECK_EVENTID 0x11
+BEQ 0x0 0x0 0xC
+	// Tact fought Arya
+	MUSC Heavens_Rock_Seat
+	LOAD3 0x1 PlayerLoading3
+	LOAD2 0x1 AryaFoughtFriends
+	ENUN
+	FADU 0x5
+	STAL 0x20
+	FlashCursor(4,1,60)
+	STAL 0x10
+	TEXTSTART
+	TEXTSHOW Military4AcceptRetreatTactDecisionText
+	TEXTEND
+	MOVE 0x0 Zaheva [5,2]
+	MOVE 0x0 Yvette [2,3]
+	ENUN
+	TEXTCONT
+	TEXTEND
+	REMA
+	STAL 0x10
+	ASMC CallMilitary4AcceptRetreatMenu|1
+	STAL 0x10
+	BNE 0x1 0x0 0xC
+		// Check on the Emperor
+		Text(Military4AcceptRetreatGoToEmperorText)
+		MUSI
+		FADI 0x05
+		STAL 0x50
+		MUNO
+		SetBackground(0x0B)
+		TEXTSTART
+		TEXTSHOW Military4AcceptRetreatEmperorDeadText
+		TEXTEND
+		FadeOutMusic
+		TEXTCONT
+		TEXTEND
+		MUSC A_Tragic_Decision
+		TEXTCONT
+		TEXTEND
+		REMA
+		MoveToChapter(MilitaryAcceptRetreatLeave5)
+		GOTO 0x2
+	LABEL 0x1
+		// Check on Rex
+		MUSC Bloodpool
+		Text(Military4AcceptRetreatGoToRexText)
+		FADI 0x5
+		STAL 0x40
+		MUSC Derris_Kharlan_Appear
+		SetBackground(0x0E)
+		Text(Military4AcceptRetreatXeximHereText)
+		MoveToChapter(MilitaryAcceptRetreatHelp5)
+		GOTO 0x2
+LABEL 0x0
+	// Tact did not fight Arya
+	MUSC Into_the_Shadow_of_Victory
+	CAM1 [11,15]
+	LOAD3 0x1 PlayerLoading5
+	LOAD2 0x1 NoFightFriends
+	LOAD1 0x1 EndCesarians
+	ENUN
+	SetBackground(0x0D)
+	Text(Military4AcceptRetreatNoFightText)
+	EndConvo
+	STAL 0x30
+	FlashCursor(Emperor,60)
+	STAL 0x10
+	SetBackground(0x0B)
+	Text(Military4AcceptRetreatNoFight2Text)
+	MoveToChapter(MilitaryAcceptRetreatHelp5)
+LABEL 0x2
+NoFade
+ENDA
+
+//Label Turn Events
+StairHelp:
+CHECK_EVENTID 0x13
+BEQ 0x0 0x0 0xC
+	CAM1 [8,3]
+	STAL 0x10
+	SVAL 0xB Coords(50,50)
+	TUTORIALTEXTBOXSTART
+	TEXTSHOW Military4AcceptRetreatStairHelpText
+	TEXTEND
+	STAL 0x10
+
+	CUMO [5,6] // Show cursors on stairs.
+	CUMO [11,1]
+	STAL 0x60
+	CURE
+	GOTO 0x1
+LABEL 0x0
+	ENUF 0x14
+LABEL 0x1
+NoFade
+EndA2
+
+Turn1:
+MUSC Bloodpool
+CAM1 BossArya
+STAL 0x18
+FlashCursor(BossArya,60)
+STAL 0x10
+Text(Military4AcceptRetreatDouseText)
+STAL 0x20
+FADI 0x05
+CAM1 [11,15]
+VCWF 5 // Set vision distance to 5.
+STAL 0x40
+FADU 0x03
+STAL 0x10
+Text(Military4AcceptRetreatStartBattleText)
+NoFade
+EndA2
+
+Turn3:
+MUSS With_Us
+CAM1 [11,15]
+LOAD1 0x1 LoadYvette
+ENUN
+SetSupport(Madeleine,Yvette,CSupport)
+STAL 0x10
+FlashCursor(Yvette,60)
+STAL 0x10
+Text(Military4AcceptRetreatYvetteHereText)
+MURE 0x5
+NoFade
+EndA2
+
+Turn4:
+LOAD1 0x1 Turn4Units
+ENUN
+NoFade
+EndA2
+
+Turn6:
+LOAD1 0x1 Turn6Units
+ENUN
+NoFade
+EndA2
+
+Turn7:
+LOAD1 0x1 Turn7Units
+ENUN
+NoFade
+EndA2
+
+Turn9:
+LOAD1 0x1 Turn9Units
+ENUN
+NoFade
+ENDA
+
+//Label Talk Events
+TTactYvette:
+MUSI
+Text(Military4AcceptRetreatTactYvetteText)
+MUNO
+NoFade
+ENDA
+
+//Label Musc Events
+CheckStairHelp:
+CHECK_ALLEGIANCE 0xFFFF
+BEQ 0x0 0x0 0xC
+	ENUF 0x13 // Only have 0x13 set if this is a player.
+LABEL 0x0
+NoFade
+ENDA
+
+	/*UNIT DATA*/
+
+//Label PlayerLoading
+PlayerLoading1:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [14,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+PlayerLoading2:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [15,15] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+PlayerLoading3:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [4,1] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+PlayerLoading5:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [14,15] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
+
+//Label Cutscene Units
+CastleCutsceneFriends:
+UNIT Madeline 0x00 0x00 Level(1,Ally,True) [16,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Remus 0x00 0x00 Level(1,Ally,True) [17,4] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+CesariansCutscene:
+UNIT Rex GrandPaladin 0x00 Level(1,NPC,True) [15,1] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Cesarian Halberdier 0x00 Level(1,NPC,True) [11,4] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Cesarian Halberdier 0x00 Level(1,NPC,True) [19,4] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+AryaFoughtFriends:
+UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [8,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Yvette 0x00 0x00 Level(1,Ally,True) [0,5] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+HesDeadSoldier:
+UNIT Cesarian Soldier 0x00 Level(1,NPC,True) [1,19] 0x00 0x00 0x01 REDA13R19 [0] NoAI
+UNIT
+
+NoFightFriends:
+UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [15,13] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Madeline 0x00 0x00 Level(1,Ally,True) [14,14] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+EndCesarians:
+UNIT Emperor EmperorClass 0x00 Level(1,NPC,True) [16,17] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Leyos HectorClass 0x00 Level(1,NPC,True) [16,19] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Cesarian General 0x00 Level(1,NPC,True) [12,20] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Cesarian General 0x00 Level(1,NPC,True) [11,14] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
+
+//Label Chapter Units
+ChapterFriends:
+UNIT Madeline 0x00 0x00 Level(1,Ally,True) [14,18] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Remus 0x00 0x00 Level(1,Ally,True) [13,16] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+CesarianFriends:
+UNIT Leyos HectorClass Leyos Level(8,NPC,True) [15,17] 0x00 0x00 0x00 0x00 [SilverAxe,Spear] [0x0C,0x03,0x00,0x00] // AttackInRangeAI except with half range.
+UNIT Cesarian Knight Leyos Level(8,NPC,True) [11,19] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT Cesarian Knight Leyos Level(8,NPC,True) [16,16] 0x00 0x00 0x00 0x00 [KillerLance] AttackInRangeAI
+UNIT
+
+Shizonians:
+UNIT BossArya Assassin_F BossArya Level(4,Enemy,True) [2,1] Drop 0x00 0x00 0x00 [SteelSword,RuneSword] GuardAI
+UNIT Shizonian Myrmidon BossArya Level(11,Enemy,True) [8,20] Drop 0x00 0x00 0x00 [IronSword,Torch] NoAI
+UNIT Shizonian Myrmidon BossArya Level(12,Enemy,True) [7,19] 0x00 0x00 0x00 0x00 [DevilSword] NoAI
+UNIT Shizonian Fighter BossArya Level(10,Enemy,True) [10,16] Drop 0x00 0x00 0x00 [SteelAxe,DoorKey] NoAI
+UNIT Shizonian Mercenary BossArya Level(13,Enemy,True) [16,11] 0x00 0x00 0x00 0x00 [IronBlade] NoAI
+UNIT Shizonian Knight BossArya Level(14,Enemy,True) [13,13] Drop 0x00 0x00 0x00 [ShortSpear,ChestKey_5] GuardAI
+UNIT Shizonian Swordmaster BossArya Level(2,Enemy,True) [17,8] Drop 0x00 0x00 0x00 [SlimSword,DoorKey] AttackInRangeAI
+UNIT Shizonian Mage BossArya Level(12,Enemy,True) [8,12] 0x00 0x00 0x00 0x00 [Thunder] ChaseOnceApproachedAI
+UNIT Shizonian Fighter BossArya Level(13,Enemy,True) [5,17] 0x00 0x00 0x00 0x00 [HandAxe] ChaseOnceApproachedAI
+UNIT Shizonian Pirate BossArya Level(12,Enemy,True) [6,16] 0x00 0x00 0x00 0x00 [DragonAxe] NoAI
+UNIT Shizonian Knight BossArya Level(12,Enemy,True) [4,12] 0x00 0x00 0x00 0x00 [KillerLance] GuardAI
+UNIT
+
+Shizonians2:
+UNIT Shizonian Archer BossArya Level(10,Enemy,True) [7,9] 0x00 0x00 0x00 0x00 [IronShortbow] NoAI
+UNIT Shizonian Myrmidon BossArya Level(13,Enemy,True) [6,5] 0x00 0x00 0x00 0x00 [IronSword] ChaseOnceApproachedAI
+UNIT Shizonian Soldier BossArya Level(14,Enemy,True) [2,19] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Shizonian Shaman BossArya Level(13,Enemy,True) [0,18] 0x00 0x00 0x00 0x00 [Luna] AttackInRangeAI
+UNIT Shizonian Mage BossArya Level(13,Enemy,True) [1,14] 0x00 0x00 0x00 0x00 [Aqua] ChaseOnceApproachedAI
+UNIT Shizonian Soldier BossArya Level(13,Enemy,True) [7,8] 0x00 0x00 0x00 0x00 [IronLance] AttackInRangeAI
+UNIT Shizonian Mercenary BossArya Level(14,Enemy,True) [0,10] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
+UNIT Shizonian Hero BossArya Level(3,Enemy,True) [2,19] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
+UNIT Shizonian Knight BossArya Level(12,Enemy,True) [1,5] 0x00 0x00 0x00 0x00 [HandAxe] AttackInRangeAI
+UNIT Shizonian Myrmidon BossArya Level(12,Enemy,True) [7,2] 0x00 0x00 0x00 0x00 [Lancereaver] AttackInRangeAI
+UNIT Shizonian Knight BossArya Level(13,Enemy,True) [11,3] 0x00 0x00 0x00 0x00 [SteelAxe] GuardAI
+UNIT Shizonian Mage BossArya Level(12,Enemy,True) [17,2] 0x00 0x00 0x00 0x00 [Thunder] NoAI
+UNIT
+
+LoadYvette:
+UNIT Yvette PegasusKnight 0x00 Level(13,Ally,True) [18,11] 0x00 0x00 0x01 REDA17R12 [KillerLance,Axereaver,Vulnerary] NoAI
+UNIT
+
+Turn4Units:
+UNIT Shizonian Assassin BossArya Level(2,Enemy,True) [0,19] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT Shizonian Fighter BossArya Level(15,Enemy,True) [0,13] 0x00 0x00 0x00 0x00 [Hammer] NoAI
+UNIT Shizonian Cavalier BossArya Level(13,Enemy,True) [1,0] 0x00 0x00 0x00 0x00 [Dragonspear] NoAI
+UNIT Shizonian Cavalier BossArya Level(12,Enemy,True) [0,1] 0x00 0x00 0x00 0x00 [IronSword,Javelin] NoAI
+UNIT Shizonian Soldier BossArya Level(11,Enemy,True) [18,9] 0x00 0x00 0x00 0x00 [IronLance] NoAI
+UNIT
+
+Turn6Units:
+UNIT Shizonian Soldier BossArya Level(12,Enemy,True) [0,19] 0x00 0x00 0x00 0x00 [Axereaver] ChaseOnceApproachedAI
+UNIT Shizonian Mercenary BossArya Level(13,Enemy,True) [0,20] 0x00 0x00 0x00 0x00 [PoisonSword] ChaseOnceApproachedAI
+UNIT Shizonian Pirate BossArya Level(11,Enemy,True) [0,12] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
+UNIT Shizonian Pirate BossArya Level(12,Enemy,True) [0,14] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
+UNIT
+
+Turn7Units:
+UNIT Shizonian Sage BossArya Level(1,Enemy,True) [0,12] Drop 0x00 0x00 0x00 [Thunder,Talisman] NoAI
+UNIT Shizonian Myrmidon BossArya Level(13,Enemy,True) [0,14] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT Shizonian Archer BossArya Level(14,Enemy,True) [2,0] 0x00 0x00 0x00 0x00 [IronBow] NoAI
+UNIT Shizonian Knight BossArya Level(14,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [Dragonspear] NoAI
+UNIT
+
+Turn9Units:
+UNIT Shizonian Swordmaster BossArya Level(3,Enemy,True) [16,0] 0x00 0x00 0x00 0x00 [IronSword] NoAI
+UNIT Shizonian Mercenary BossArya Level(13,Enemy,True) [1,0] 0x00 0x00 0x00 0x00 [IronSword] ChaseOnceApproachedAI
+UNIT Shizonian Mercenary BossArya Level(12,Enemy,True) [0,1] Drop 0x00 0x00 0x00 [SteelBlade] ChaseOnceApproachedAI
+UNIT Shizonian Fighter BossArya Level(14,Enemy,True) [2,0] 0x00 0x00 0x00 0x00 [ToxinAxe] ChaseOnceApproachedAI
+UNIT Shizonian Fighter BossArya Level(14,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [SteelAxe] ChaseOnceApproachedAI
+EndUnit

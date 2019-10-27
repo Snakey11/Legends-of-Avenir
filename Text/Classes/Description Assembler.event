@@ -9,7 +9,7 @@ about to make a major decision.[X]
 
 ## PatriarchMatriarchDescText
 Truly devout and highly-ranking[NL]
-monks. Equip: Light, Staves.[X]
+monks. Equip: Anima, Light, Staves.[X]
 
 ## DarkKnightDescText
 Powerful, mounted mages who study[NL]
@@ -78,12 +78,13 @@ Balanced and reliable soldiers.[NL]
 Equip: Swords, Lances, Axes.[X]
 
 ## GuardianClassDescText
-Bodyguard of an important figure[NL]
-in the world. Equip: Swords, Axes.[X]
+Bodyguard of an important[NL]
+figure in the world.[NL]
+Equip: Swords, Lances Axes.[X]
 
-## NomadDescText
-Mounted archers who call the plains[NL]
-their home. Equip: Swords, Bows.[X]
+## CombatantDescText
+Battle veterans skilled both in magic[NL]
+and in sword. Equip: Swords, Anima.[X]
 
 ## MountedBrigandDescText
 Riders who strike fear in the hearts[NL]

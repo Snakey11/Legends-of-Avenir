@@ -1,0 +1,4638 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	Earthb_grp  voicegroup000
+	#define	Earthb_pri  0
+	#define	Earthb_rev  0
+	#define	Earthb_mvl  35
+	#define	Earthb_key  0
+	#define	Earthb_tbs  1
+	#define	Earthb_exg  0
+	#define	Earthb_cmp  1
+
+	// .rodata
+	//	Earthb
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+Earthb_1:
+	BYTE	KEYSH   Earthb_key+0
+// 000   ----------------------------------------
+	BYTE	TEMPO   140*Earthb_tbs/2
+	BYTE		VOICE   48
+	BYTE		VOL     100*Earthb_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W24
+// 001   ----------------------------------------
+	BYTE		        c_v-64
+	BYTE		N68     An3   v116
+	BYTE	W72
+	BYTE		N12     En4 
+	BYTE	W16
+	BYTE		N68     Dn4 
+	BYTE	W08
+// 002   ----------------------------------------
+	BYTE	W64
+	BYTE		N07     An3 
+	BYTE	W08
+	BYTE		        Dn4 
+	BYTE	W08
+	BYTE		        En4 
+	BYTE	W08
+	BYTE		N30     Fn4 
+	BYTE	W08
+// 003   ----------------------------------------
+	BYTE	W24
+	BYTE		N07     Cn4 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE	W08
+	BYTE		        Fn3 
+	BYTE	W08
+	BYTE		        Gn3 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		N92     An3 
+	BYTE	W08
+// 004   ----------------------------------------
+	BYTE	W88
+	BYTE		N52     En4 
+	BYTE	W08
+// 005   ----------------------------------------
+	BYTE	W48
+	BYTE		N22     An4 
+	BYTE	W24
+	BYTE		N12     Gn4 
+	BYTE	W16
+	BYTE		N52     Fs4 
+	BYTE	W08
+// 006   ----------------------------------------
+	BYTE	W48
+	BYTE		N22     Dn4 
+	BYTE	W24
+	BYTE		N12     En4 
+	BYTE	W16
+	BYTE		N52     Fn4 
+	BYTE	W08
+// 007   ----------------------------------------
+	BYTE	W48
+	BYTE		N22     An4 
+	BYTE	W24
+	BYTE		N12     Cn5 
+	BYTE	W16
+	BYTE		N76     Bn4 
+	BYTE	W08
+// 008   ----------------------------------------
+	BYTE	W68
+	BYTE	W03
+	BYTE		N07     An3 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W05
+Earthb_1_B1:
+	BYTE	W03
+	BYTE		N76     Cn4   v116
+	BYTE	W09
+// 009   ----------------------------------------
+Earthb_1_009:
+	BYTE	W68
+	BYTE	W03
+	BYTE		N07     Gn3   v116
+	BYTE	W08
+	BYTE		        An3 
+	BYTE	W08
+	BYTE		N76     Bn3 
+	BYTE	W09
+	BYTE	PEND
+// 010   ----------------------------------------
+Earthb_1_010:
+	BYTE	W68
+	BYTE	W03
+	BYTE		N07     Bn3   v116
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		TIE     An3 
+	BYTE	W09
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W66
+	BYTE	W01
+	BYTE		EOT   
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		N76     Cn4 
+	BYTE	W09
+// 013   ----------------------------------------
+Earthb_1_013:
+	BYTE	W68
+	BYTE	W03
+	BYTE		N07     Dn4   v116
+	BYTE	W08
+	BYTE		        En4 
+	BYTE	W08
+	BYTE		N76     Cn4 
+	BYTE	W09
+	BYTE	PEND
+// 014   ----------------------------------------
+Earthb_1_014:
+	BYTE	W68
+	BYTE	W03
+	BYTE		N07     Cn4   v116
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		TIE     An3 
+	BYTE	W09
+	BYTE	PEND
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W66
+	BYTE	W01
+	BYTE		EOT   
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		N76     Cn4 
+	BYTE	W09
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_1_009
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_1_010
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W66
+	BYTE	W01
+	BYTE		EOT     An3 
+	BYTE	W04
+	BYTE		N07     An3   v116
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		N76     Cn4 
+	BYTE	W09
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_1_013
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_1_014
+// 023   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     An3 
+	BYTE	W05
+	BYTE		N07     Fn3   v116
+	BYTE	W01
+// 024   ----------------------------------------
+	BYTE	W07
+	BYTE		        Gn3 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE	W08
+	BYTE		        Dn3 
+	BYTE	W08
+	BYTE		        En3 
+	BYTE	W08
+	BYTE		        Dn3 
+	BYTE	W08
+	BYTE		        Cn3 
+	BYTE	W08
+	BYTE		        Bn2 
+	BYTE	W17
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W92
+	BYTE	W03
+	BYTE		VOL     127*Earthb_mvl/mxv
+	BYTE		N07     Fn3   v127
+	BYTE	W01
+// 032   ----------------------------------------
+	BYTE	W07
+	BYTE		        Gn3 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		        Fn4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		        Fn4 
+	BYTE	W08
+	BYTE		        Gn4 
+	BYTE	W08
+	BYTE		        An4 
+	BYTE	W08
+	BYTE		        Cn5 
+	BYTE	W08
+	BYTE		        Fn5 
+	BYTE	W08
+	BYTE		N22     An4 
+	BYTE	W01
+// 033   ----------------------------------------
+Earthb_1_033:
+	BYTE	W23
+	BYTE		N22     En4   v127
+	BYTE	W24
+	BYTE		        An4 
+	BYTE	W24
+	BYTE		N07     En5 
+	BYTE	W16
+	BYTE		N68     Dn5 
+	BYTE	W09
+	BYTE	PEND
+// 034   ----------------------------------------
+Earthb_1_034:
+	BYTE	W60
+	BYTE	W03
+	BYTE		N07     An4   v127
+	BYTE	W08
+	BYTE		        Dn5 
+	BYTE	W08
+	BYTE		        En5 
+	BYTE	W08
+	BYTE		N30     Fn5 
+	BYTE	W09
+	BYTE	PEND
+// 035   ----------------------------------------
+	BYTE	W23
+	BYTE		N07     Cn5 
+	BYTE	W08
+	BYTE		        Bn4 
+	BYTE	W08
+	BYTE		        An4 
+	BYTE	W08
+	BYTE		        Fn4 
+	BYTE	W08
+	BYTE		        Gn4 
+	BYTE	W08
+	BYTE		        An4 
+	BYTE	W08
+	BYTE		        Cn5 
+	BYTE	W08
+	BYTE		        Bn4 
+	BYTE	W08
+	BYTE		TIE     An4 
+	BYTE	W09
+// 036   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W05
+	BYTE		N22   
+	BYTE	W01
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_1_033
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_1_034
+// 039   ----------------------------------------
+	BYTE	W23
+	BYTE		N22     Cn5   v127
+	BYTE	W24
+	BYTE		        An4 
+	BYTE	W24
+	BYTE		N07     Fn5 
+	BYTE	W16
+	BYTE		N76     En5 
+	BYTE	W09
+// 040   ----------------------------------------
+	BYTE	W68
+	BYTE	W03
+	BYTE		VOL     120*Earthb_mvl/mxv
+	BYTE		N07     An3 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W03
+	BYTE	GoTo
+	 POIN2	Earthb_1_B1
+Earthb_1_B2:
+	BYTE	W05
+	BYTE		N08     Cn4   v127
+	BYTE	W08
+	BYTE		N68     Cn4   v116
+	BYTE	W01
+// 041   ----------------------------------------
+	BYTE	W11
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE		N07     Gn3 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE	W04
+	BYTE	W04
+	BYTE		N76     Bn3 
+	BYTE	W08
+	BYTE	W01
+// 042   ----------------------------------------
+	BYTE	W11
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W04
+	BYTE	W04
+	BYTE		TIE     An3 
+	BYTE	W08
+	BYTE	W01
+// 043   ----------------------------------------
+	BYTE	W11
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W01
+// 044   ----------------------------------------
+	BYTE	W11
+	BYTE	W56
+	BYTE		EOT   
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W13
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+Earthb_2:
+	BYTE	KEYSH   Earthb_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   77
+	BYTE		VOL     100*Earthb_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W24
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE		VOL     127*Earthb_mvl/mxv
+	BYTE		PAN     c_v-43
+	BYTE	W24
+	BYTE		N04     Dn4   v120
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		N20     An3 
+	BYTE	W32
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W24
+	BYTE		N04     En4 
+	BYTE	W08
+	BYTE		        Dn4 
+	BYTE	W08
+	BYTE		N04   
+	BYTE	W08
+	BYTE		N04   
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		N04   
+	BYTE	W08
+	BYTE		N04   
+	BYTE	W08
+	BYTE		N06     Bn3 
+	BYTE	W16
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W24
+	BYTE		N08     An3 
+	BYTE	W08
+	BYTE		        Dn4 
+	BYTE	W08
+	BYTE		        En4 
+	BYTE	W08
+	BYTE		        Fs4 
+	BYTE	W08
+	BYTE		        Gn4 
+	BYTE	W08
+	BYTE		        Fs4 
+	BYTE	W08
+	BYTE		        En4 
+	BYTE	W08
+	BYTE		        Dn4 
+	BYTE	W08
+	BYTE		N32     Cn5 
+	BYTE	W08
+// 007   ----------------------------------------
+	BYTE	W24
+	BYTE		N24     An4 
+	BYTE	W24
+	BYTE		        Fn4 
+	BYTE	W24
+	BYTE		N16     Cn4 
+	BYTE	W16
+	BYTE		N24     En4 
+	BYTE	W08
+// 008   ----------------------------------------
+	BYTE	W16
+	BYTE		N08     Dn4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE	W08
+	BYTE		        Gs3 
+	BYTE	W08
+	BYTE		        En3 
+	BYTE	W08
+	BYTE		        Bn2 
+	BYTE	W08
+	BYTE		N24     En2 
+	BYTE	W12
+Earthb_2_B1:
+	BYTE	W12
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W24
+	BYTE		N04     An3   v120
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		N12     Bn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+// 012   ----------------------------------------
+	BYTE		        Fn3 
+	BYTE	W16
+	BYTE		        Cn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		N04     Gn3 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE	W08
+	BYTE		N20     Bn3 
+	BYTE	W32
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W24
+	BYTE		N04     An3 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		N12     Dn4 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+// 016   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Fn3 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+	BYTE		N04     Bn3 
+	BYTE	W08
+	BYTE		        Bn2 
+	BYTE	W08
+	BYTE		        Dn3 
+	BYTE	W08
+	BYTE		        Gn3 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W16
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W24
+	BYTE		        An3 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		N12     Fn4 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+	BYTE		        Gn4 
+	BYTE	W16
+// 020   ----------------------------------------
+	BYTE		        An4 
+	BYTE	W16
+	BYTE		        Bn4 
+	BYTE	W16
+	BYTE		        Cn5 
+	BYTE	W16
+	BYTE		N04     Bn4 
+	BYTE	W08
+	BYTE		        An4 
+	BYTE	W08
+	BYTE		N20     Gn4 
+	BYTE	W32
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W24
+	BYTE		N04     En5 
+	BYTE	W08
+	BYTE		        Dn5 
+	BYTE	W08
+	BYTE		N04   
+	BYTE	W08
+	BYTE		N04   
+	BYTE	W08
+	BYTE		        Cn5 
+	BYTE	W08
+	BYTE		N04   
+	BYTE	W08
+	BYTE		N04   
+	BYTE	W08
+	BYTE		        Bn4 
+	BYTE	W08
+	BYTE		N04   
+	BYTE	W08
+// 024   ----------------------------------------
+	BYTE		        An4 
+	BYTE	W08
+	BYTE		        Bn4 
+	BYTE	W08
+	BYTE		        Cn5 
+	BYTE	W08
+	BYTE		        Fn4 
+	BYTE	W08
+	BYTE		        Gn4 
+	BYTE	W08
+	BYTE		        An4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		        Fn4 
+	BYTE	W08
+	BYTE		        Gn4 
+	BYTE	W08
+	BYTE		        An4 
+	BYTE	W08
+	BYTE		        Bn4 
+	BYTE	W08
+	BYTE		N30     An3 
+	BYTE	W08
+// 025   ----------------------------------------
+Earthb_2_025:
+	BYTE	W24
+	BYTE		N22     Bn3   v120
+	BYTE	W24
+	BYTE		        Cn4 
+	BYTE	W24
+	BYTE		N15     En4 
+	BYTE	W16
+	BYTE		N30     Dn4 
+	BYTE	W08
+	BYTE	PEND
+// 026   ----------------------------------------
+Earthb_2_026:
+	BYTE	W24
+	BYTE		N22     Cn4   v120
+	BYTE	W24
+	BYTE		        Bn3 
+	BYTE	W24
+	BYTE		N15     An3 
+	BYTE	W16
+	BYTE		N30     Gn3 
+	BYTE	W08
+	BYTE	PEND
+// 027   ----------------------------------------
+	BYTE	W24
+	BYTE		N22     An3 
+	BYTE	W24
+	BYTE		        Bn3 
+	BYTE	W24
+	BYTE		N15     Dn4 
+	BYTE	W16
+	BYTE		N19     Cn4 
+	BYTE	W08
+// 028   ----------------------------------------
+	BYTE	W12
+	BYTE		N03     Dn4 
+	BYTE	W04
+	BYTE		        Cn4 
+	BYTE	W04
+	BYTE		        Bn3 
+	BYTE	W04
+	BYTE		N60     Cn4 
+	BYTE	W64
+	BYTE		N30     An3 
+	BYTE	W08
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_2_025
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_2_026
+// 031   ----------------------------------------
+	BYTE	W24
+	BYTE		N22     An3   v120
+	BYTE	W24
+	BYTE		N12     Bn3 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+// 032   ----------------------------------------
+	BYTE		N32   
+	BYTE	W36
+	BYTE		N05     Cn4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		N44     An3 
+	BYTE	W48
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W24
+	BYTE		N04     En4 
+	BYTE	W08
+	BYTE		        Dn4 
+	BYTE	W08
+	BYTE		N04   
+	BYTE	W08
+	BYTE		N04   
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		N04   
+	BYTE	W08
+	BYTE		N04   
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		N04   
+	BYTE	W08
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	W80
+	BYTE	W02
+	BYTE	GoTo
+	 POIN2	Earthb_2_B1
+Earthb_2_B2:
+	BYTE	W14
+// 041   ----------------------------------------
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+// 042   ----------------------------------------
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+// 043   ----------------------------------------
+	BYTE	W12
+	BYTE	W12
+	BYTE		N04     An3   v120
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W04
+	BYTE	W04
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		N12     Bn3 
+	BYTE	W12
+	BYTE	W04
+	BYTE		        An3 
+	BYTE	W08
+	BYTE	W08
+	BYTE		        Gn3 
+	BYTE	W04
+	BYTE	W12
+// 044   ----------------------------------------
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE	W04
+	BYTE		        Cn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		N04     Gn3 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE	W08
+	BYTE		N20     Bn3 
+	BYTE	W28
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+Earthb_3:
+	BYTE	KEYSH   Earthb_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   62
+	BYTE		VOL     100*Earthb_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W24
+// 001   ----------------------------------------
+	BYTE		        c_v-22
+	BYTE		N68     En3   v100
+	BYTE	W72
+	BYTE		N07   
+	BYTE	W16
+	BYTE		N84     Fs3 
+	BYTE	W08
+// 002   ----------------------------------------
+	BYTE	W88
+	BYTE		N78     Fn3 
+	BYTE	W08
+// 003   ----------------------------------------
+Earthb_3_003:
+	BYTE	W72
+	BYTE		N07     Fn3   v100
+	BYTE	W16
+	BYTE		N84     En3 
+	BYTE	W08
+	BYTE	PEND
+// 004   ----------------------------------------
+	BYTE	W88
+	BYTE		N78   
+	BYTE	W08
+// 005   ----------------------------------------
+Earthb_3_005:
+	BYTE	W72
+	BYTE		N07     En3   v100
+	BYTE	W16
+	BYTE		N78     Fs3 
+	BYTE	W08
+	BYTE	PEND
+// 006   ----------------------------------------
+Earthb_3_006:
+	BYTE	W72
+	BYTE		N07     Fs3   v100
+	BYTE	W16
+	BYTE		N78     An3 
+	BYTE	W08
+	BYTE	PEND
+// 007   ----------------------------------------
+Earthb_3_007:
+	BYTE	W72
+	BYTE		N07     An3   v100
+	BYTE	W16
+	BYTE		N54     Gs3 
+	BYTE	W08
+	BYTE	PEND
+// 008   ----------------------------------------
+	BYTE	W48
+	BYTE		N23   
+	BYTE	W24
+	BYTE		N07     Gs2 
+	BYTE	W12
+Earthb_3_B1:
+	BYTE	W04
+	BYTE		N84     En3   v100
+	BYTE	W08
+// 009   ----------------------------------------
+	BYTE	W88
+	BYTE		        Dn3 
+	BYTE	W08
+// 010   ----------------------------------------
+Earthb_3_010:
+	BYTE	W88
+	BYTE		TIE     Cn3   v100
+	BYTE	W08
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE	W92
+	BYTE	W02
+	BYTE		EOT   
+	BYTE	W02
+// 012   ----------------------------------------
+Earthb_3_012:
+	BYTE		N60     Cn3   v100
+	BYTE	W64
+	BYTE		N15     Dn3 
+	BYTE	W24
+	BYTE		N84     En3 
+	BYTE	W08
+	BYTE	PEND
+// 013   ----------------------------------------
+	BYTE	W88
+	BYTE		        Fn3 
+	BYTE	W08
+// 014   ----------------------------------------
+	BYTE	W88
+	BYTE		N68     Dn3 
+	BYTE	W08
+// 015   ----------------------------------------
+	BYTE	W64
+	BYTE		N15   
+	BYTE	W32
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_3_012
+// 017   ----------------------------------------
+	BYTE	W88
+	BYTE		N84     Dn3   v100
+	BYTE	W08
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_3_010
+// 019   ----------------------------------------
+	BYTE	W92
+	BYTE	W02
+	BYTE		EOT     Cn3 
+	BYTE	W02
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_3_012
+// 021   ----------------------------------------
+	BYTE	W88
+	BYTE		N84     Fn3   v100
+	BYTE	W08
+// 022   ----------------------------------------
+	BYTE	W88
+	BYTE		N68     Dn3 
+	BYTE	W08
+// 023   ----------------------------------------
+	BYTE	W64
+	BYTE		N15   
+	BYTE	W32
+// 024   ----------------------------------------
+	BYTE		N60     Cn3 
+	BYTE	W64
+	BYTE		N15     Gn2 
+	BYTE	W24
+	BYTE		N84     Cn3 
+	BYTE	W08
+// 025   ----------------------------------------
+	BYTE	W88
+	BYTE		        Dn3 
+	BYTE	W08
+// 026   ----------------------------------------
+	BYTE	W88
+	BYTE		        Bn2 
+	BYTE	W08
+// 027   ----------------------------------------
+	BYTE	W88
+	BYTE		N68     Cn3 
+	BYTE	W08
+// 028   ----------------------------------------
+	BYTE	W64
+	BYTE		N15     Bn2 
+	BYTE	W24
+	BYTE		N84     Cn3 
+	BYTE	W08
+// 029   ----------------------------------------
+	BYTE	W88
+	BYTE		        Dn3 
+	BYTE	W08
+// 030   ----------------------------------------
+	BYTE	W88
+	BYTE		TIE     Bn2 
+	BYTE	W08
+// 031   ----------------------------------------
+	BYTE	W92
+	BYTE	W02
+	BYTE		EOT   
+	BYTE	W02
+// 032   ----------------------------------------
+	BYTE		N92     An2 
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE		N68     En3 
+	BYTE	W72
+	BYTE		N07   
+	BYTE	W16
+	BYTE		N84     Fs3 
+	BYTE	W08
+// 034   ----------------------------------------
+	BYTE	W88
+	BYTE		N78     Fn3 
+	BYTE	W08
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_3_003
+// 036   ----------------------------------------
+	BYTE	W88
+	BYTE		N78     En3   v100
+	BYTE	W08
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_3_005
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_3_006
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_3_007
+// 040   ----------------------------------------
+	BYTE	W48
+	BYTE		N23     Gs3   v100
+	BYTE	W24
+	BYTE		N07     Gs2 
+	BYTE	W10
+	BYTE	GoTo
+	 POIN2	Earthb_3_B1
+Earthb_3_B2:
+	BYTE	W06
+	BYTE		N08     En3   v100
+	BYTE	W08
+// 041   ----------------------------------------
+	BYTE		N78   
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W04
+	BYTE		N84     Dn3 
+	BYTE	W08
+// 042   ----------------------------------------
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W04
+	BYTE		TIE     Cn3 
+	BYTE	W08
+// 043   ----------------------------------------
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W10
+	BYTE		EOT   
+	BYTE	W02
+// 044   ----------------------------------------
+	BYTE		N60   
+	BYTE	W12
+	BYTE	W52
+	BYTE		N15     Dn3 
+	BYTE	W28
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+Earthb_4:
+	BYTE	KEYSH   Earthb_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   62
+	BYTE		VOL     100*Earthb_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W24
+// 001   ----------------------------------------
+	BYTE		        c_v-1
+	BYTE		N68     An2   v100
+	BYTE	W72
+	BYTE		N07   
+	BYTE	W16
+	BYTE		N84   
+	BYTE	W08
+// 002   ----------------------------------------
+	BYTE	W88
+	BYTE		N78   
+	BYTE	W08
+// 003   ----------------------------------------
+Earthb_4_003:
+	BYTE	W72
+	BYTE		N07     An2   v100
+	BYTE	W16
+	BYTE		N84   
+	BYTE	W08
+	BYTE	PEND
+// 004   ----------------------------------------
+	BYTE	W88
+	BYTE		N78   
+	BYTE	W08
+// 005   ----------------------------------------
+	BYTE	W72
+	BYTE		N07   
+	BYTE	W16
+	BYTE		N78   
+	BYTE	W08
+// 006   ----------------------------------------
+	BYTE	W72
+	BYTE		N07   
+	BYTE	W16
+	BYTE		N78     Cn3 
+	BYTE	W08
+// 007   ----------------------------------------
+	BYTE	W72
+	BYTE		N07   
+	BYTE	W16
+	BYTE		N54     Bn2 
+	BYTE	W08
+// 008   ----------------------------------------
+	BYTE	W48
+	BYTE		N23   
+	BYTE	W24
+	BYTE		N07   
+	BYTE	W12
+Earthb_4_B1:
+	BYTE	W04
+	BYTE		N84     An2   v100
+	BYTE	W08
+// 009   ----------------------------------------
+	BYTE	W88
+	BYTE		        Gn2 
+	BYTE	W08
+// 010   ----------------------------------------
+Earthb_4_010:
+	BYTE	W88
+	BYTE		TIE     Fn2   v100
+	BYTE	W08
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE	W92
+	BYTE	W02
+	BYTE		EOT   
+	BYTE	W02
+// 012   ----------------------------------------
+Earthb_4_012:
+	BYTE		N60     Fn2   v100
+	BYTE	W64
+	BYTE		N15     Gn2 
+	BYTE	W24
+	BYTE		N84     An2 
+	BYTE	W08
+	BYTE	PEND
+// 013   ----------------------------------------
+	BYTE	W88
+	BYTE		N84   
+	BYTE	W08
+// 014   ----------------------------------------
+	BYTE	W88
+	BYTE		N68     Fs2 
+	BYTE	W08
+// 015   ----------------------------------------
+	BYTE	W64
+	BYTE		N15   
+	BYTE	W32
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_4_012
+// 017   ----------------------------------------
+	BYTE	W88
+	BYTE		N84     Gn2   v100
+	BYTE	W08
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_4_010
+// 019   ----------------------------------------
+	BYTE	W92
+	BYTE	W02
+	BYTE		EOT     Fn2 
+	BYTE	W02
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_4_012
+// 021   ----------------------------------------
+	BYTE	W88
+	BYTE		N84     An2   v100
+	BYTE	W08
+// 022   ----------------------------------------
+	BYTE	W88
+	BYTE		N68     Fs2 
+	BYTE	W08
+// 023   ----------------------------------------
+	BYTE	W64
+	BYTE		N15   
+	BYTE	W32
+// 024   ----------------------------------------
+	BYTE		N60     Fn2 
+	BYTE	W64
+	BYTE		N15     Dn2 
+	BYTE	W24
+	BYTE		N84     Fn2 
+	BYTE	W08
+// 025   ----------------------------------------
+	BYTE	W88
+	BYTE		        Gn2 
+	BYTE	W08
+// 026   ----------------------------------------
+	BYTE	W88
+	BYTE		        En2 
+	BYTE	W08
+// 027   ----------------------------------------
+	BYTE	W88
+	BYTE		N68     Fn2 
+	BYTE	W08
+// 028   ----------------------------------------
+	BYTE	W64
+	BYTE		N15     Dn2 
+	BYTE	W24
+	BYTE		N84     Fn2 
+	BYTE	W08
+// 029   ----------------------------------------
+	BYTE	W88
+	BYTE		        Gn2 
+	BYTE	W08
+// 030   ----------------------------------------
+	BYTE	W88
+	BYTE		TIE     En2 
+	BYTE	W08
+// 031   ----------------------------------------
+	BYTE	W92
+	BYTE	W02
+	BYTE		EOT   
+	BYTE	W02
+// 032   ----------------------------------------
+	BYTE		N92     Cn2 
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE		N68     An2 
+	BYTE	W72
+	BYTE		N07   
+	BYTE	W16
+	BYTE		N84   
+	BYTE	W08
+// 034   ----------------------------------------
+	BYTE	W88
+	BYTE		N78   
+	BYTE	W08
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_4_003
+// 036   ----------------------------------------
+	BYTE	W88
+	BYTE		N78     An2   v100
+	BYTE	W08
+// 037   ----------------------------------------
+	BYTE		VOL     70*Earthb_mvl/mxv
+	BYTE		PAN     c_v+41
+	BYTE	W72
+	BYTE		N07   
+	BYTE	W16
+	BYTE		N84   
+	BYTE	W08
+// 038   ----------------------------------------
+	BYTE	W88
+	BYTE		        Cn3 
+	BYTE	W08
+// 039   ----------------------------------------
+	BYTE	W88
+	BYTE		N54     Bn2 
+	BYTE	W08
+// 040   ----------------------------------------
+	BYTE	W48
+	BYTE		N30   
+	BYTE	W32
+	BYTE	W02
+	BYTE	GoTo
+	 POIN2	Earthb_4_B1
+Earthb_4_B2:
+	BYTE	W06
+	BYTE		N08     An2   v100
+	BYTE	W08
+// 041   ----------------------------------------
+	BYTE		N78   
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W04
+	BYTE		N84     Gn2 
+	BYTE	W08
+// 042   ----------------------------------------
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W04
+	BYTE		TIE     Fn2 
+	BYTE	W08
+// 043   ----------------------------------------
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W10
+	BYTE		EOT   
+	BYTE	W02
+// 044   ----------------------------------------
+	BYTE		N60   
+	BYTE	W12
+	BYTE	W52
+	BYTE		N15     Gn2 
+	BYTE	W28
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+Earthb_5:
+	BYTE	KEYSH   Earthb_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   62
+	BYTE		VOL     100*Earthb_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W24
+// 001   ----------------------------------------
+	BYTE		        c_v+20
+	BYTE		N68     Cn3   v100
+	BYTE	W72
+	BYTE		N07   
+	BYTE	W16
+	BYTE		N84     Dn3 
+	BYTE	W08
+// 002   ----------------------------------------
+	BYTE	W88
+	BYTE		N78     Cn3 
+	BYTE	W08
+// 003   ----------------------------------------
+Earthb_5_003:
+	BYTE	W72
+	BYTE		N07     Cn3   v100
+	BYTE	W16
+	BYTE		N84   
+	BYTE	W08
+	BYTE	PEND
+// 004   ----------------------------------------
+	BYTE	W88
+	BYTE		N78   
+	BYTE	W08
+// 005   ----------------------------------------
+Earthb_5_005:
+	BYTE	W72
+	BYTE		N07     Cn3   v100
+	BYTE	W16
+	BYTE		N78     Dn3 
+	BYTE	W08
+	BYTE	PEND
+// 006   ----------------------------------------
+Earthb_5_006:
+	BYTE	W72
+	BYTE		N07     Dn3   v100
+	BYTE	W16
+	BYTE		N78     Fn3 
+	BYTE	W08
+	BYTE	PEND
+// 007   ----------------------------------------
+Earthb_5_007:
+	BYTE	W72
+	BYTE		N07     Fn3   v100
+	BYTE	W16
+	BYTE		N54     En3 
+	BYTE	W08
+	BYTE	PEND
+// 008   ----------------------------------------
+	BYTE	W48
+	BYTE		N23   
+	BYTE	W24
+	BYTE		N07     En2 
+	BYTE	W12
+Earthb_5_B1:
+	BYTE	W04
+	BYTE		N84     Cn3   v100
+	BYTE	W08
+// 009   ----------------------------------------
+	BYTE	W88
+	BYTE		        Bn2 
+	BYTE	W08
+// 010   ----------------------------------------
+Earthb_5_010:
+	BYTE	W88
+	BYTE		TIE     An2   v100
+	BYTE	W08
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE	W92
+	BYTE	W02
+	BYTE		EOT   
+	BYTE	W02
+// 012   ----------------------------------------
+Earthb_5_012:
+	BYTE		N60     An2   v100
+	BYTE	W64
+	BYTE		N15     Bn2 
+	BYTE	W24
+	BYTE		N84     Cn3 
+	BYTE	W08
+	BYTE	PEND
+// 013   ----------------------------------------
+	BYTE	W88
+	BYTE		N07     An2 
+	BYTE	W08
+// 014   ----------------------------------------
+Earthb_5_014:
+	BYTE		N78     An2   v100
+	BYTE	W88
+	BYTE		N68   
+	BYTE	W08
+	BYTE	PEND
+// 015   ----------------------------------------
+	BYTE	W64
+	BYTE		N15   
+	BYTE	W32
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_5_012
+// 017   ----------------------------------------
+	BYTE	W88
+	BYTE		N84     Bn2   v100
+	BYTE	W08
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_5_010
+// 019   ----------------------------------------
+	BYTE	W92
+	BYTE	W02
+	BYTE		EOT     An2 
+	BYTE	W02
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_5_012
+// 021   ----------------------------------------
+	BYTE	W88
+	BYTE		N07     An2   v100
+	BYTE	W08
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_5_014
+// 023   ----------------------------------------
+	BYTE	W64
+	BYTE		N15     An2   v100
+	BYTE	W32
+// 024   ----------------------------------------
+	BYTE		N60   
+	BYTE	W64
+	BYTE		N15     Bn2 
+	BYTE	W24
+	BYTE		N84     An2 
+	BYTE	W08
+// 025   ----------------------------------------
+	BYTE	W88
+	BYTE		        Bn2 
+	BYTE	W08
+// 026   ----------------------------------------
+	BYTE	W88
+	BYTE		        Gn2 
+	BYTE	W08
+// 027   ----------------------------------------
+	BYTE	W88
+	BYTE		N68     An2 
+	BYTE	W08
+// 028   ----------------------------------------
+	BYTE	W64
+	BYTE		N15     Gn2 
+	BYTE	W24
+	BYTE		N84     An2 
+	BYTE	W08
+// 029   ----------------------------------------
+	BYTE	W88
+	BYTE		        Bn2 
+	BYTE	W08
+// 030   ----------------------------------------
+	BYTE	W88
+	BYTE		TIE     Gn2 
+	BYTE	W08
+// 031   ----------------------------------------
+	BYTE	W92
+	BYTE	W02
+	BYTE		EOT   
+	BYTE	W02
+// 032   ----------------------------------------
+	BYTE		N92     Fn2 
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE		N68     Cn3 
+	BYTE	W72
+	BYTE		N07   
+	BYTE	W16
+	BYTE		N84     Dn3 
+	BYTE	W08
+// 034   ----------------------------------------
+	BYTE	W88
+	BYTE		N78     Cn3 
+	BYTE	W08
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_5_003
+// 036   ----------------------------------------
+	BYTE	W88
+	BYTE		N78     Cn3   v100
+	BYTE	W08
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_5_005
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_5_006
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_5_007
+// 040   ----------------------------------------
+	BYTE	W48
+	BYTE		N23     En3   v100
+	BYTE	W24
+	BYTE		N07     En2 
+	BYTE	W10
+	BYTE	GoTo
+	 POIN2	Earthb_5_B1
+Earthb_5_B2:
+	BYTE	W06
+	BYTE		N08     Cn3   v100
+	BYTE	W08
+// 041   ----------------------------------------
+	BYTE		N78   
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W04
+	BYTE		N84     Bn2 
+	BYTE	W08
+// 042   ----------------------------------------
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W04
+	BYTE		TIE     An2 
+	BYTE	W08
+// 043   ----------------------------------------
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W10
+	BYTE		EOT   
+	BYTE	W02
+// 044   ----------------------------------------
+	BYTE		N60   
+	BYTE	W12
+	BYTE	W52
+	BYTE		N15     Bn2 
+	BYTE	W28
+	BYTE	FINE
+
+//**************** Track 6 (Midi-Chn.6) ****************//
+
+Earthb_6:
+	BYTE	KEYSH   Earthb_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   10
+	BYTE		VOL     100*Earthb_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W24
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W84
+Earthb_6_B1:
+	BYTE	W12
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE		VOL     127*Earthb_mvl/mxv
+	BYTE		PAN     c_v+41
+	BYTE	W88
+	BYTE		N32     Fn3   v116
+	BYTE	W08
+// 025   ----------------------------------------
+	BYTE	W24
+	BYTE		N24     Gn3 
+	BYTE	W24
+	BYTE		        An3 
+	BYTE	W24
+	BYTE		N16     Cn4 
+	BYTE	W16
+	BYTE		N32     Bn3 
+	BYTE	W08
+// 026   ----------------------------------------
+	BYTE	W24
+	BYTE		N24     An3 
+	BYTE	W24
+	BYTE		        Gn3 
+	BYTE	W24
+	BYTE		N16     Fn3 
+	BYTE	W16
+	BYTE		N32     En3 
+	BYTE	W08
+// 027   ----------------------------------------
+	BYTE	W24
+	BYTE		N24     Fn3 
+	BYTE	W24
+	BYTE		        Gn3 
+	BYTE	W24
+	BYTE		N16     Bn3 
+	BYTE	W16
+	BYTE		N20     An3 
+	BYTE	W08
+// 028   ----------------------------------------
+	BYTE	W12
+	BYTE		N04     Bn3 
+	BYTE	W04
+	BYTE		        An3 
+	BYTE	W04
+	BYTE		        Gn3 
+	BYTE	W04
+	BYTE		N08     An3 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		        Dn4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		        Dn4 
+	BYTE	W08
+	BYTE		N56     En4 
+	BYTE	W08
+// 029   ----------------------------------------
+	BYTE	W48
+	BYTE		N40     An4 
+	BYTE	W40
+	BYTE		N32     Gn4 
+	BYTE	W08
+// 030   ----------------------------------------
+	BYTE	W24
+	BYTE		N24     Fn4 
+	BYTE	W24
+	BYTE		        En4 
+	BYTE	W24
+	BYTE		N16     Dn4 
+	BYTE	W16
+	BYTE		N56     En4 
+	BYTE	W08
+// 031   ----------------------------------------
+	BYTE	W48
+	BYTE		N16     Gn3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	W80
+	BYTE	W02
+	BYTE	GoTo
+	 POIN2	Earthb_6_B1
+Earthb_6_B2:
+	BYTE	W14
+// 041   ----------------------------------------
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE	W92
+	BYTE	FINE
+
+//**************** Track 7 (Midi-Chn.7) ****************//
+
+Earthb_7:
+	BYTE	KEYSH   Earthb_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   10
+	BYTE		VOL     100*Earthb_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W24
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W84
+Earthb_7_B1:
+	BYTE	W12
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE		VOL     127*Earthb_mvl/mxv
+	BYTE		PAN     c_v+41
+	BYTE	W88
+	BYTE		N32     Fn3   v116
+	BYTE	W08
+// 025   ----------------------------------------
+	BYTE	W24
+	BYTE		N24     Gn3 
+	BYTE	W24
+	BYTE		        An3 
+	BYTE	W24
+	BYTE		N16     Cn4 
+	BYTE	W16
+	BYTE		N32     Bn3 
+	BYTE	W08
+// 026   ----------------------------------------
+	BYTE	W24
+	BYTE		N24     An3 
+	BYTE	W24
+	BYTE		        Gn3 
+	BYTE	W24
+	BYTE		N16     Fn3 
+	BYTE	W16
+	BYTE		N32     En3 
+	BYTE	W08
+// 027   ----------------------------------------
+	BYTE	W24
+	BYTE		N24     Fn3 
+	BYTE	W24
+	BYTE		        Gn3 
+	BYTE	W24
+	BYTE		N16     Bn3 
+	BYTE	W16
+	BYTE		N20     An3 
+	BYTE	W08
+// 028   ----------------------------------------
+	BYTE	W12
+	BYTE		N04     Bn3 
+	BYTE	W04
+	BYTE		        An3 
+	BYTE	W04
+	BYTE		        Gn3 
+	BYTE	W04
+	BYTE		N08     An3 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		        Dn4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		        Dn4 
+	BYTE	W08
+	BYTE		N56     En4 
+	BYTE	W08
+// 029   ----------------------------------------
+	BYTE	W48
+	BYTE		N40     An4 
+	BYTE	W40
+	BYTE		N32     Gn4 
+	BYTE	W08
+// 030   ----------------------------------------
+	BYTE	W24
+	BYTE		N24     Fn4 
+	BYTE	W24
+	BYTE		        En4 
+	BYTE	W24
+	BYTE		N16     Dn4 
+	BYTE	W16
+	BYTE		N56     En4 
+	BYTE	W08
+// 031   ----------------------------------------
+	BYTE	W48
+	BYTE		N16     Gn3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	W80
+	BYTE	W02
+	BYTE	GoTo
+	 POIN2	Earthb_7_B1
+Earthb_7_B2:
+	BYTE	W14
+// 041   ----------------------------------------
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE	W92
+	BYTE	FINE
+
+//**************** Track 8 (Midi-Chn.8) ****************//
+
+Earthb_8:
+	BYTE	KEYSH   Earthb_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   28
+	BYTE		VOL     100*Earthb_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W24
+// 001   ----------------------------------------
+	BYTE		VOL     120*Earthb_mvl/mxv
+	BYTE		N14     An0   v112
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+// 002   ----------------------------------------
+Earthb_8_002:
+	BYTE		N14     An0   v112
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE	PEND
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_8_002
+// 004   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_8_002
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_8_002
+// 006   ----------------------------------------
+	BYTE		N14     An0   v112
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14     Dn0 
+	BYTE	W16
+	BYTE		N22     Fn0 
+	BYTE	W08
+// 007   ----------------------------------------
+	BYTE	W16
+	BYTE		N07     Fn0   v100
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14     Fn0   v112
+	BYTE	W16
+	BYTE		N48     En0 
+	BYTE	W08
+// 008   ----------------------------------------
+	BYTE	W48
+	BYTE		N07     En1 
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		        En0 
+	BYTE	W08
+	BYTE		        Cn0 
+	BYTE	W04
+Earthb_8_B1:
+	BYTE	W04
+	BYTE		N22     An0   v112
+	BYTE	W08
+// 009   ----------------------------------------
+Earthb_8_009:
+	BYTE	W16
+	BYTE		N07     An0   v112
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N22   
+	BYTE	W08
+	BYTE	PEND
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_8_009
+// 011   ----------------------------------------
+Earthb_8_011:
+	BYTE	W16
+	BYTE		N07     An0   v112
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W08
+	BYTE		        En1 
+	BYTE	W08
+	BYTE	PEND
+// 012   ----------------------------------------
+Earthb_8_012:
+	BYTE		N14     Fn0   v112
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14     Gn0 
+	BYTE	W16
+	BYTE		N22     An0 
+	BYTE	W08
+	BYTE	PEND
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_8_009
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_8_009
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_8_011
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_8_012
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_8_009
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_8_009
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_8_011
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_8_012
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_8_009
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_8_009
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_8_011
+// 024   ----------------------------------------
+	BYTE		N14     Fn0   v112
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Fn1 
+	BYTE	W08
+	BYTE		        Gn0 
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		N22     Fn0 
+	BYTE	W08
+// 025   ----------------------------------------
+Earthb_8_025:
+	BYTE	W16
+	BYTE		N07     Fn0   v112
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W08
+	BYTE		N14     Fn1 
+	BYTE	W16
+	BYTE		N22     Gn0 
+	BYTE	W08
+	BYTE	PEND
+// 026   ----------------------------------------
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Bn0 
+	BYTE	W08
+	BYTE		        Dn1 
+	BYTE	W08
+	BYTE		N14     Gn1 
+	BYTE	W16
+	BYTE		N22     En1 
+	BYTE	W08
+// 027   ----------------------------------------
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Bn0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Gn0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        En1 
+	BYTE	W08
+	BYTE		        Bn0 
+	BYTE	W08
+	BYTE		N22     Fn0 
+	BYTE	W08
+// 028   ----------------------------------------
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Gn0 
+	BYTE	W08
+	BYTE		        Gn1 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		        An1 
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		        Gn1 
+	BYTE	W08
+	BYTE		        Gn0 
+	BYTE	W08
+	BYTE		N22     Fn0 
+	BYTE	W08
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_8_025
+// 030   ----------------------------------------
+	BYTE	W16
+	BYTE		N07     Gn0   v112
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Bn0 
+	BYTE	W08
+	BYTE		        Dn1 
+	BYTE	W08
+	BYTE		        Gn1 
+	BYTE	W08
+	BYTE		        Fn1 
+	BYTE	W08
+	BYTE		N22     En0 
+	BYTE	W08
+// 031   ----------------------------------------
+	BYTE	W16
+	BYTE		N07     Gn0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        En0 
+	BYTE	W08
+	BYTE		        Gn0 
+	BYTE	W08
+	BYTE		        Bn0 
+	BYTE	W08
+// 032   ----------------------------------------
+	BYTE		N14     En0 
+	BYTE	W16
+	BYTE		N07     Gn0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Gn0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_8_002
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_8_002
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_8_002
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_8_002
+// 037   ----------------------------------------
+	BYTE		N14     An0   v112
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14     Cn1 
+	BYTE	W16
+	BYTE		N22     Dn1 
+	BYTE	W08
+// 038   ----------------------------------------
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N21     An0 
+	BYTE	W24
+	BYTE		        Dn1 
+	BYTE	W24
+	BYTE		N14     En1 
+	BYTE	W16
+	BYTE		N22     Fn1 
+	BYTE	W08
+// 039   ----------------------------------------
+	BYTE	W16
+	BYTE		N07     An0 
+	BYTE	W08
+	BYTE		N21   
+	BYTE	W24
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Bn0 
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W08
+	BYTE		        Dn1 
+	BYTE	W08
+	BYTE		        En1 
+	BYTE	W08
+	BYTE		N48     En0 
+	BYTE	W08
+// 040   ----------------------------------------
+	BYTE	W48
+	BYTE		N07     En1 
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		        En0 
+	BYTE	W08
+	BYTE		        Cn0 
+	BYTE	W02
+	BYTE	GoTo
+	 POIN2	Earthb_8_B1
+Earthb_8_B2:
+	BYTE	W06
+	BYTE		N08     An0   v112
+	BYTE	W08
+// 041   ----------------------------------------
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N22   
+	BYTE	W08
+// 042   ----------------------------------------
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N22   
+	BYTE	W08
+// 043   ----------------------------------------
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W04
+	BYTE	W04
+	BYTE		        En1 
+	BYTE	W08
+// 044   ----------------------------------------
+	BYTE		N14     Fn0 
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14     Gn0 
+	BYTE	W20
+	BYTE	FINE
+
+//**************** Track 9 (Midi-Chn.9) ****************//
+
+Earthb_9:
+	BYTE	KEYSH   Earthb_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   36
+	BYTE		VOL     100*Earthb_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W24
+// 001   ----------------------------------------
+	BYTE		VOL     120*Earthb_mvl/mxv
+	BYTE		PAN     c_v-43
+	BYTE		N14     An0   v112
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+// 002   ----------------------------------------
+Earthb_9_002:
+	BYTE		N14     An0   v112
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE	PEND
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_9_002
+// 004   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_9_002
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_9_002
+// 006   ----------------------------------------
+	BYTE		N14     An0   v112
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14     Dn0 
+	BYTE	W16
+	BYTE		N22     Fn0 
+	BYTE	W08
+// 007   ----------------------------------------
+	BYTE	W16
+	BYTE		N07     Fn0   v100
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14     Fn0   v112
+	BYTE	W16
+	BYTE		N48     En0 
+	BYTE	W08
+// 008   ----------------------------------------
+	BYTE	W48
+	BYTE		N07     En1 
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		        En0 
+	BYTE	W08
+	BYTE		        Cn0 
+	BYTE	W04
+Earthb_9_B1:
+	BYTE	W04
+	BYTE		N22     An0   v112
+	BYTE	W08
+// 009   ----------------------------------------
+Earthb_9_009:
+	BYTE	W16
+	BYTE		N07     An0   v112
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N22   
+	BYTE	W08
+	BYTE	PEND
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_9_009
+// 011   ----------------------------------------
+Earthb_9_011:
+	BYTE	W16
+	BYTE		N07     An0   v112
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W08
+	BYTE		        En1 
+	BYTE	W08
+	BYTE	PEND
+// 012   ----------------------------------------
+Earthb_9_012:
+	BYTE		N14     Fn0   v112
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14     Gn0 
+	BYTE	W16
+	BYTE		N22     An0 
+	BYTE	W08
+	BYTE	PEND
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_9_009
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_9_009
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_9_011
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_9_012
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_9_009
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_9_009
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_9_011
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_9_012
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_9_009
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_9_009
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_9_011
+// 024   ----------------------------------------
+	BYTE		N14     Fn0   v112
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Fn1 
+	BYTE	W08
+	BYTE		        Gn0 
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		N22     Fn0 
+	BYTE	W08
+// 025   ----------------------------------------
+Earthb_9_025:
+	BYTE	W16
+	BYTE		N07     Fn0   v112
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W08
+	BYTE		N14     Fn1 
+	BYTE	W16
+	BYTE		N22     Gn0 
+	BYTE	W08
+	BYTE	PEND
+// 026   ----------------------------------------
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Bn0 
+	BYTE	W08
+	BYTE		        Dn1 
+	BYTE	W08
+	BYTE		N14     Gn1 
+	BYTE	W16
+	BYTE		N22     En1 
+	BYTE	W08
+// 027   ----------------------------------------
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Bn0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Gn0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        En1 
+	BYTE	W08
+	BYTE		        Bn0 
+	BYTE	W08
+	BYTE		N22     Fn0 
+	BYTE	W08
+// 028   ----------------------------------------
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Gn0 
+	BYTE	W08
+	BYTE		        Gn1 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		        An1 
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		        Gn1 
+	BYTE	W08
+	BYTE		        Gn0 
+	BYTE	W08
+	BYTE		N22     Fn0 
+	BYTE	W08
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_9_025
+// 030   ----------------------------------------
+	BYTE	W16
+	BYTE		N07     Gn0   v112
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Bn0 
+	BYTE	W08
+	BYTE		        Dn1 
+	BYTE	W08
+	BYTE		        Gn1 
+	BYTE	W08
+	BYTE		        Fn1 
+	BYTE	W08
+	BYTE		N22     En0 
+	BYTE	W08
+// 031   ----------------------------------------
+	BYTE	W16
+	BYTE		N07     Gn0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        En0 
+	BYTE	W08
+	BYTE		        Gn0 
+	BYTE	W08
+	BYTE		        Bn0 
+	BYTE	W08
+// 032   ----------------------------------------
+	BYTE		N14     En0 
+	BYTE	W16
+	BYTE		N07     Gn0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Gn0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_9_002
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_9_002
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_9_002
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_9_002
+// 037   ----------------------------------------
+	BYTE		N14     An0   v112
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14     Cn1 
+	BYTE	W16
+	BYTE		N22     Dn1 
+	BYTE	W08
+// 038   ----------------------------------------
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N21     An0 
+	BYTE	W24
+	BYTE		        Dn1 
+	BYTE	W24
+	BYTE		N14     En1 
+	BYTE	W16
+	BYTE		N22     Fn1 
+	BYTE	W08
+// 039   ----------------------------------------
+	BYTE	W16
+	BYTE		N07     An0 
+	BYTE	W08
+	BYTE		N21   
+	BYTE	W24
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Bn0 
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W08
+	BYTE		        Dn1 
+	BYTE	W08
+	BYTE		        En1 
+	BYTE	W08
+	BYTE		N48     En0 
+	BYTE	W08
+// 040   ----------------------------------------
+	BYTE	W48
+	BYTE		N07     En1 
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		        En0 
+	BYTE	W08
+	BYTE		        Cn0 
+	BYTE	W02
+	BYTE	GoTo
+	 POIN2	Earthb_9_B1
+Earthb_9_B2:
+	BYTE	W06
+	BYTE		N08     An0   v112
+	BYTE	W08
+// 041   ----------------------------------------
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N22   
+	BYTE	W08
+// 042   ----------------------------------------
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N22   
+	BYTE	W08
+// 043   ----------------------------------------
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W04
+	BYTE	W04
+	BYTE		        En1 
+	BYTE	W08
+// 044   ----------------------------------------
+	BYTE		N14     Fn0 
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14     Gn0 
+	BYTE	W20
+	BYTE	FINE
+
+//**************** Track 10 (Midi-Chn.11) ****************//
+
+Earthb_10:
+	BYTE	KEYSH   Earthb_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   127
+	BYTE		VOL     100*Earthb_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W24
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE		VOL     127*Earthb_mvl/mxv
+	BYTE	W88
+	BYTE		N20     Cn2   v072
+	BYTE	W08
+// 007   ----------------------------------------
+	BYTE	W16
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        Bn1 
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        Cn1   v080
+	BYTE	W08
+	BYTE		        An1   v072
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        Cn1   v080
+	BYTE	W08
+	BYTE		        Gn1   v072
+	BYTE	W08
+	BYTE		N64     An2   v112
+	BYTE	W08
+// 008   ----------------------------------------
+	BYTE	W16
+	BYTE		N06     Cn2   v072
+	BYTE	W08
+	BYTE		        Gn1 
+	BYTE	W08
+	BYTE		        Bn1 
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE	W08
+	BYTE		        An1   v072
+	BYTE	W08
+	BYTE		        Gn1 
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE	W08
+	BYTE		N12   
+	BYTE	W04
+Earthb_10_B1:
+	BYTE	W04
+	BYTE		N08     An2   v112
+	BYTE	W08
+// 009   ----------------------------------------
+Earthb_10_009:
+	BYTE	W16
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N20     As1 
+	BYTE	W08
+	BYTE	PEND
+// 010   ----------------------------------------
+Earthb_10_010:
+	BYTE	W16
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N14     As1 
+	BYTE	W08
+	BYTE	PEND
+// 011   ----------------------------------------
+Earthb_10_011:
+	BYTE	W08
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE	PEND
+// 012   ----------------------------------------
+	BYTE		        As1 
+	BYTE	W08
+	BYTE		        Fs1 
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N12     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N14     As1 
+	BYTE	W08
+// 013   ----------------------------------------
+Earthb_10_013:
+	BYTE	W08
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N14     As1 
+	BYTE	W08
+	BYTE	PEND
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_10_013
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_10_011
+// 016   ----------------------------------------
+	BYTE		N06     As1   v112
+	BYTE	W08
+	BYTE		        Fs1 
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N14     As1 
+	BYTE	W08
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_10_013
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_10_013
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_10_011
+// 020   ----------------------------------------
+	BYTE		N06     As1   v112
+	BYTE	W08
+	BYTE		        Fs1 
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N14     As1 
+	BYTE	W08
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_10_013
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_10_013
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_10_011
+// 024   ----------------------------------------
+	BYTE		N06     As1   v112
+	BYTE	W08
+	BYTE		        Fs1 
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE		N06     Cn2   v072
+	BYTE	W08
+	BYTE		        Fs1   v112
+	BYTE		N06     Bn1   v072
+	BYTE	W08
+	BYTE		        Fs1   v112
+	BYTE		N06     An1   v072
+	BYTE	W08
+	BYTE		        Fs1   v112
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N20     An2 
+	BYTE	W08
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_10_009
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_10_009
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_10_010
+// 028   ----------------------------------------
+	BYTE	W08
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N14     As1   v112
+	BYTE	W08
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_10_013
+// 030   ----------------------------------------
+	BYTE	W08
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N14     As1 
+	BYTE	W08
+// 031   ----------------------------------------
+	BYTE	W08
+	BYTE		N06     Fs1 
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		        As1 
+	BYTE	W08
+// 032   ----------------------------------------
+	BYTE		N12     Bn0   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        Bn0   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N19     Fs1   v112
+	BYTE	W08
+	BYTE		N06     Bn1   v072
+	BYTE	W08
+	BYTE		        An1 
+	BYTE	W08
+	BYTE		        Fs1   v112
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N19     Gn2   v112
+	BYTE	W08
+	BYTE		N06     En1   v080
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+// 033   ----------------------------------------
+	BYTE		N12     An2   v112
+	BYTE	W16
+	BYTE		N06     Fs1 
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     As1   v112
+	BYTE	W08
+	BYTE		        Fs1 
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+// 034   ----------------------------------------
+Earthb_10_034:
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     As1   v112
+	BYTE	W08
+	BYTE		        Fs1 
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     As1   v112
+	BYTE	W08
+	BYTE		        Fs1 
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE	PEND
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_10_034
+// 036   ----------------------------------------
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     As1   v112
+	BYTE	W08
+	BYTE		        Fs1 
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		        As1 
+	BYTE	W08
+// 037   ----------------------------------------
+	BYTE		N12     An2 
+	BYTE	W16
+	BYTE		N06     Fs1 
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     As1   v112
+	BYTE	W08
+	BYTE		        Fs1 
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE	W08
+	BYTE		N19   
+	BYTE	W16
+	BYTE		N64     An2   v112
+	BYTE	W08
+// 038   ----------------------------------------
+	BYTE	W16
+	BYTE		N06     Cn2   v072
+	BYTE	W08
+	BYTE		        Bn1 
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        An1 
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        Gn1 
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N24     An2   v112
+	BYTE	W08
+// 039   ----------------------------------------
+	BYTE	W24
+	BYTE		N19     En1   v080
+	BYTE		N19     As1   v112
+	BYTE	W24
+	BYTE		N19   
+	BYTE	W24
+	BYTE		        En1   v080
+	BYTE		N12     As1   v112
+	BYTE	W16
+	BYTE		N64     An2 
+	BYTE	W08
+// 040   ----------------------------------------
+	BYTE	W16
+	BYTE		N06     Bn1   v072
+	BYTE	W08
+	BYTE		        An1 
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        Gn1 
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        An1   v072
+	BYTE	W08
+	BYTE		        Gn1 
+	BYTE	W02
+	BYTE	GoTo
+	 POIN2	Earthb_10_B1
+Earthb_10_B2:
+	BYTE	W06
+	BYTE		N08     An2   v112
+	BYTE	W08
+// 041   ----------------------------------------
+	BYTE	W12
+	BYTE	W04
+	BYTE		N06     Fs1 
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W04
+	BYTE	W04
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W04
+	BYTE	W04
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W04
+	BYTE	W04
+	BYTE		N20     As1 
+	BYTE	W08
+// 042   ----------------------------------------
+	BYTE	W12
+	BYTE	W04
+	BYTE		N06     Fs1 
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W04
+	BYTE	W04
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W04
+	BYTE	W04
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W04
+	BYTE	W04
+	BYTE		N14     As1 
+	BYTE	W08
+// 043   ----------------------------------------
+	BYTE	W08
+	BYTE		N06     Fs1 
+	BYTE	W04
+	BYTE	W04
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W04
+	BYTE	W04
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W04
+	BYTE	W04
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W04
+	BYTE	W04
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+// 044   ----------------------------------------
+	BYTE		        As1 
+	BYTE	W08
+	BYTE		        Fs1 
+	BYTE	W04
+	BYTE	W04
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N19     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		N06   
+	BYTE	W08
+	BYTE		        En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W08
+	BYTE		N12     En1   v080
+	BYTE		N06     Fs1   v112
+	BYTE	W12
+	BYTE	FINE
+
+//**************** Track 11 (Midi-Chn.13) ****************//
+
+Earthb_11:
+	BYTE	KEYSH   Earthb_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   48
+	BYTE		VOL     100*Earthb_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W24
+// 001   ----------------------------------------
+	BYTE		VOL     120*Earthb_mvl/mxv
+	BYTE		N68     An3   v116
+	BYTE	W72
+	BYTE		N12     En4 
+	BYTE	W16
+	BYTE		N68     Dn4 
+	BYTE	W08
+// 002   ----------------------------------------
+	BYTE	W64
+	BYTE		N07     An3 
+	BYTE	W08
+	BYTE		        Dn4 
+	BYTE	W08
+	BYTE		        En4 
+	BYTE	W08
+	BYTE		N30     Fn4 
+	BYTE	W08
+// 003   ----------------------------------------
+	BYTE	W24
+	BYTE		N07     Cn4 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE	W08
+	BYTE		        Fn3 
+	BYTE	W08
+	BYTE		        Gn3 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		N92     An3 
+	BYTE	W08
+// 004   ----------------------------------------
+	BYTE	W88
+	BYTE		N52     En4 
+	BYTE	W08
+// 005   ----------------------------------------
+	BYTE	W48
+	BYTE		N22     An4 
+	BYTE	W24
+	BYTE		N12     Gn4 
+	BYTE	W16
+	BYTE		N52     Fs4 
+	BYTE	W08
+// 006   ----------------------------------------
+	BYTE	W48
+	BYTE		N22     Dn4 
+	BYTE	W24
+	BYTE		N12     En4 
+	BYTE	W16
+	BYTE		N52     Fn4 
+	BYTE	W08
+// 007   ----------------------------------------
+	BYTE	W48
+	BYTE		N22     An4 
+	BYTE	W24
+	BYTE		N12     Cn5 
+	BYTE	W16
+	BYTE		N76     Bn4 
+	BYTE	W08
+// 008   ----------------------------------------
+	BYTE	W72
+	BYTE		N07     An3 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W04
+Earthb_11_B1:
+	BYTE	W04
+	BYTE		N76     Cn4   v116
+	BYTE	W08
+// 009   ----------------------------------------
+Earthb_11_009:
+	BYTE	W72
+	BYTE		N07     Gn3   v116
+	BYTE	W08
+	BYTE		        An3 
+	BYTE	W08
+	BYTE		N76     Bn3 
+	BYTE	W08
+	BYTE	PEND
+// 010   ----------------------------------------
+Earthb_11_010:
+	BYTE	W72
+	BYTE		N07     Bn3   v116
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		TIE     An3 
+	BYTE	W08
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W68
+	BYTE		EOT   
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		N76     Cn4 
+	BYTE	W08
+// 013   ----------------------------------------
+Earthb_11_013:
+	BYTE	W72
+	BYTE		N07     Dn4   v116
+	BYTE	W08
+	BYTE		        En4 
+	BYTE	W08
+	BYTE		N76     Cn4 
+	BYTE	W08
+	BYTE	PEND
+// 014   ----------------------------------------
+Earthb_11_014:
+	BYTE	W72
+	BYTE		N07     Cn4   v116
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		TIE     An3 
+	BYTE	W08
+	BYTE	PEND
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W68
+	BYTE		EOT   
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		N76     Cn4 
+	BYTE	W08
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_11_009
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_11_010
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W68
+	BYTE		EOT     An3 
+	BYTE	W04
+	BYTE		N07     An3   v116
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		N76     Cn4 
+	BYTE	W08
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_11_013
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_11_014
+// 023   ----------------------------------------
+	BYTE	W90
+	BYTE	W01
+	BYTE		EOT     An3 
+	BYTE	W05
+// 024   ----------------------------------------
+	BYTE		N07     Fn3   v116
+	BYTE	W08
+	BYTE		        Gn3 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE	W08
+	BYTE		        Dn3 
+	BYTE	W08
+	BYTE		        En3 
+	BYTE	W08
+	BYTE		        Dn3 
+	BYTE	W08
+	BYTE		        Cn3 
+	BYTE	W08
+	BYTE		        Bn2 
+	BYTE	W16
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE		VOL     127*Earthb_mvl/mxv
+	BYTE		N07     Fn3   v127
+	BYTE	W08
+	BYTE		        Gn3 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		        Fn4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		        Fn4 
+	BYTE	W08
+	BYTE		        Gn4 
+	BYTE	W08
+	BYTE		        An4 
+	BYTE	W08
+	BYTE		        Cn5 
+	BYTE	W08
+	BYTE		        Fn5 
+	BYTE	W08
+// 033   ----------------------------------------
+Earthb_11_033:
+	BYTE		N22     An4   v127
+	BYTE	W24
+	BYTE		        En4 
+	BYTE	W24
+	BYTE		        An4 
+	BYTE	W24
+	BYTE		N07     En5 
+	BYTE	W16
+	BYTE		N68     Dn5 
+	BYTE	W08
+	BYTE	PEND
+// 034   ----------------------------------------
+Earthb_11_034:
+	BYTE	W64
+	BYTE		N07     An4   v127
+	BYTE	W08
+	BYTE		        Dn5 
+	BYTE	W08
+	BYTE		        En5 
+	BYTE	W08
+	BYTE		N30     Fn5 
+	BYTE	W08
+	BYTE	PEND
+// 035   ----------------------------------------
+	BYTE	W24
+	BYTE		N07     Cn5 
+	BYTE	W08
+	BYTE		        Bn4 
+	BYTE	W08
+	BYTE		        An4 
+	BYTE	W08
+	BYTE		        Fn4 
+	BYTE	W08
+	BYTE		        Gn4 
+	BYTE	W08
+	BYTE		        An4 
+	BYTE	W08
+	BYTE		        Cn5 
+	BYTE	W08
+	BYTE		        Bn4 
+	BYTE	W08
+	BYTE		TIE     An4 
+	BYTE	W08
+// 036   ----------------------------------------
+	BYTE	W90
+	BYTE	W01
+	BYTE		EOT   
+	BYTE	W05
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_11_033
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_11_034
+// 039   ----------------------------------------
+	BYTE	W24
+	BYTE		N22     Cn5   v127
+	BYTE	W24
+	BYTE		        An4 
+	BYTE	W24
+	BYTE		N07     Fn5 
+	BYTE	W16
+	BYTE		N76     En5 
+	BYTE	W08
+// 040   ----------------------------------------
+	BYTE	W72
+	BYTE		VOL     120*Earthb_mvl/mxv
+	BYTE		N07     An3 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W02
+	BYTE	GoTo
+	 POIN2	Earthb_11_B1
+Earthb_11_B2:
+	BYTE	W06
+	BYTE		N08     Cn4   v127
+	BYTE	W08
+// 041   ----------------------------------------
+	BYTE		N68     Cn4   v116
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE		N07     Gn3 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE	W04
+	BYTE	W04
+	BYTE		N76     Bn3 
+	BYTE	W08
+// 042   ----------------------------------------
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W04
+	BYTE	W04
+	BYTE		TIE     An3 
+	BYTE	W08
+// 043   ----------------------------------------
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+	BYTE	W12
+// 044   ----------------------------------------
+	BYTE	W12
+	BYTE	W56
+	BYTE		EOT   
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W12
+	BYTE	FINE
+
+//**************** Track 12 (Midi-Chn.15) ****************//
+
+Earthb_12:
+	BYTE	KEYSH   Earthb_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   36
+	BYTE		VOL     100*Earthb_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W24
+// 001   ----------------------------------------
+	BYTE		VOL     120*Earthb_mvl/mxv
+	BYTE		PAN     c_v+41
+	BYTE		N14     An0   v112
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+// 002   ----------------------------------------
+Earthb_12_002:
+	BYTE		N14     An0   v112
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE	PEND
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_12_002
+// 004   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_12_002
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_12_002
+// 006   ----------------------------------------
+	BYTE		N14     An0   v112
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14     Dn0 
+	BYTE	W16
+	BYTE		N22     Fn0 
+	BYTE	W08
+// 007   ----------------------------------------
+	BYTE	W16
+	BYTE		N07     Fn0   v100
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14     Fn0   v112
+	BYTE	W16
+	BYTE		N48     En0 
+	BYTE	W08
+// 008   ----------------------------------------
+	BYTE	W48
+	BYTE		N07     En1 
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		        En0 
+	BYTE	W08
+	BYTE		        Cn0 
+	BYTE	W04
+Earthb_12_B1:
+	BYTE	W04
+	BYTE		N22     An0   v112
+	BYTE	W08
+// 009   ----------------------------------------
+Earthb_12_009:
+	BYTE	W16
+	BYTE		N07     An0   v112
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N22   
+	BYTE	W08
+	BYTE	PEND
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_12_009
+// 011   ----------------------------------------
+Earthb_12_011:
+	BYTE	W16
+	BYTE		N07     An0   v112
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W08
+	BYTE		        En1 
+	BYTE	W08
+	BYTE	PEND
+// 012   ----------------------------------------
+Earthb_12_012:
+	BYTE		N14     Fn0   v112
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14     Gn0 
+	BYTE	W16
+	BYTE		N22     An0 
+	BYTE	W08
+	BYTE	PEND
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_12_009
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_12_009
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_12_011
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_12_012
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_12_009
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_12_009
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_12_011
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_12_012
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_12_009
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_12_009
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_12_011
+// 024   ----------------------------------------
+	BYTE		N14     Fn0   v112
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Fn1 
+	BYTE	W08
+	BYTE		        Gn0 
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		N22     Fn0 
+	BYTE	W08
+// 025   ----------------------------------------
+Earthb_12_025:
+	BYTE	W16
+	BYTE		N07     Fn0   v112
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W08
+	BYTE		N14     Fn1 
+	BYTE	W16
+	BYTE		N22     Gn0 
+	BYTE	W08
+	BYTE	PEND
+// 026   ----------------------------------------
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Bn0 
+	BYTE	W08
+	BYTE		        Dn1 
+	BYTE	W08
+	BYTE		N14     Gn1 
+	BYTE	W16
+	BYTE		N22     En1 
+	BYTE	W08
+// 027   ----------------------------------------
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Bn0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Gn0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        En1 
+	BYTE	W08
+	BYTE		        Bn0 
+	BYTE	W08
+	BYTE		N22     Fn0 
+	BYTE	W08
+// 028   ----------------------------------------
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Gn0 
+	BYTE	W08
+	BYTE		        Gn1 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		        An1 
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		        Gn1 
+	BYTE	W08
+	BYTE		        Gn0 
+	BYTE	W08
+	BYTE		N22     Fn0 
+	BYTE	W08
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_12_025
+// 030   ----------------------------------------
+	BYTE	W16
+	BYTE		N07     Gn0   v112
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Bn0 
+	BYTE	W08
+	BYTE		        Dn1 
+	BYTE	W08
+	BYTE		        Gn1 
+	BYTE	W08
+	BYTE		        Fn1 
+	BYTE	W08
+	BYTE		N22     En0 
+	BYTE	W08
+// 031   ----------------------------------------
+	BYTE	W16
+	BYTE		N07     Gn0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        En0 
+	BYTE	W08
+	BYTE		        Gn0 
+	BYTE	W08
+	BYTE		        Bn0 
+	BYTE	W08
+// 032   ----------------------------------------
+	BYTE		N14     En0 
+	BYTE	W16
+	BYTE		N07     Gn0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Gn0 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_12_002
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_12_002
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_12_002
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Earthb_12_002
+// 037   ----------------------------------------
+	BYTE		N14     An0   v112
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14     Cn1 
+	BYTE	W16
+	BYTE		N22     Dn1 
+	BYTE	W08
+// 038   ----------------------------------------
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N21     An0 
+	BYTE	W24
+	BYTE		        Dn1 
+	BYTE	W24
+	BYTE		N14     En1 
+	BYTE	W16
+	BYTE		N22     Fn1 
+	BYTE	W08
+// 039   ----------------------------------------
+	BYTE	W16
+	BYTE		N07     An0 
+	BYTE	W08
+	BYTE		N21   
+	BYTE	W24
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Bn0 
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W08
+	BYTE		        Dn1 
+	BYTE	W08
+	BYTE		        En1 
+	BYTE	W08
+	BYTE		N48     En0 
+	BYTE	W08
+// 040   ----------------------------------------
+	BYTE	W48
+	BYTE		N07     En1 
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W08
+	BYTE		        An0 
+	BYTE	W08
+	BYTE		        En0 
+	BYTE	W08
+	BYTE		        Cn0 
+	BYTE	W02
+	BYTE	GoTo
+	 POIN2	Earthb_12_B1
+Earthb_12_B2:
+	BYTE	W06
+	BYTE		N08     An0   v112
+	BYTE	W08
+// 041   ----------------------------------------
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N22   
+	BYTE	W08
+// 042   ----------------------------------------
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N22   
+	BYTE	W08
+// 043   ----------------------------------------
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE	W04
+	BYTE	W04
+	BYTE		        En1 
+	BYTE	W08
+// 044   ----------------------------------------
+	BYTE		N14     Fn0 
+	BYTE	W12
+	BYTE	W04
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14   
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N14     Gn0 
+	BYTE	W20
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+songEarthbound:
+	BYTE	12	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	Earthb_pri	// Priority
+	BYTE	Earthb_rev	// Reverb.
+
+	POIN2	Earthb_grp
+
+	POIN2	Earthb_1
+	POIN2	Earthb_2
+	POIN2	Earthb_3
+	POIN2	Earthb_4
+	POIN2	Earthb_5
+	POIN2	Earthb_6
+	POIN2	Earthb_7
+	POIN2	Earthb_8
+	POIN2	Earthb_9
+	POIN2	Earthb_10
+	POIN2	Earthb_11
+	POIN2	Earthb_12
+
+	

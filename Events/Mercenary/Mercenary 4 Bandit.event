@@ -148,7 +148,7 @@ ENDA
 
 //Label Raid Events
 DVillage1:
-GiveItem(ShortAxe,0xFFFF)
+GiveItem(Vulnerary,0xFFFF)
 TileChange(7,2)
 NoFade
 EndA2
@@ -251,18 +251,18 @@ UNIT Militiaman Fighter Militiaman Level(12,Enemy,True) [11,15] 0x00 0x00 0x00 0
 UNIT Militiaman Myrmidon Militiaman Level(10,Enemy,True) [9,13] 0x00 0x00 0x00 0x00 [IronBlade] AttackInRangeAI
 UNIT Militiaman Cavalier Militiaman Level(12,Enemy,True) [10,11] 0x00 0x00 0x00 0x00 [ShortSpear,IronSword] AttackInRangeAI
 UNIT Militiaman Pirate Militiaman Level(13,Enemy,True) [6,12] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
-UNIT Militiaman Knight Militiaman Level(11,Enemy,True) [5,10] 0x00 0x00 0x00 0x00 [BraveLance] GuardAI
+UNIT Militiaman Knight Militiaman Level(11,Enemy,True) [5,10] 0x00 0x00 0x00 0x00 [BraveLance] ChaseOnceApproachedAI
 UNIT Militiaman Archer Militiaman Level(12,Enemy,True) [4,8] 0x00 0x00 0x00 0x00 [SteelShortbow] AttackInRangeAI
 UNIT Militiaman Mage Militiaman Level(10,Enemy,True) [4,6] 0x00 0x00 0x00 0x00 [Elwind] ChaseOnceApproachedAI
 UNIT Militiaman Berserker Militiaman Level(3,Enemy,True) [5,6] 0x00 0x00 0x00 0x00 [KillerAxe,HandAxe] GuardAI
 UNIT Militiaman Soldier Militiaman Level(12,Enemy,True) [5,4] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
 UNIT Militiaman Myrmidon Militiaman Level(13,Enemy,True) [7,5] 0x00 0x00 0x00 0x00 [Wyrmslayer] ChaseOnceApproachedAI
-UNIT Militiaman Monk Militiaman Level(13,Enemy,True) [8,3] 0x00 0x00 0x00 0x00 [Divine] GuardAI
+UNIT Militiaman Monk Militiaman Level(13,Enemy,True) [8,3] 0x00 0x00 0x00 0x00 [Divine] AttackInRangeAI
 UNIT Militiaman Cavalier Militiaman Level(12,Enemy,True) [9,1] 0x00 0x00 0x00 0x00 [SteelLance,Armorslayer] ChaseOnceApproachedAI
 UNIT Militiaman Fighter Militiaman Level(11,Enemy,True) [10,4] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
 UNIT Militiaman Mercenary Militiaman Level(12,Enemy,True) [12,3] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
 UNIT Militiaman Soldier Militiaman Level(12,Enemy,True) [13,4] 0x00 0x00 0x00 0x00 [HeavySpear] NoAI
-UNIT Militiaman Halberdier Militiaman Level(4,Enemy,True) [15,3] 0x00 0x00 0x00 0x00 [ShortSpear] GuardAI
+UNIT Militiaman Halberdier Militiaman Level(4,Enemy,True) [15,3] 0x00 0x00 0x00 0x00 [ShortSpear] ChaseOnceApproachedAI
 UNIT Militiaman Archer Militiaman Level(12,Enemy,True) [18,2] 0x00 0x00 0x00 0x00 [KillerBow] AttackInRangeAI
 UNIT Militiaman Fighter Militiaman Level(13,Enemy,True) [17,4] 0x00 0x00 0x00 0x00 [HandAxe] ChaseOnceApproachedAI
 UNIT Militiaman PegasusKnight Militiaman Level(11,Enemy,True) [14,5] 0x00 0x00 0x00 0x00 [SlimLance] ChaseOnceApproachedAI

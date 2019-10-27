@@ -1,0 +1,305 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	AllIsLost_grp  voicegroup000
+	#define	AllIsLost_pri  0
+	#define	AllIsLost_rev  0
+	#define	AllIsLost_mvl  127
+	#define	AllIsLost_key  0
+	#define	AllIsLost_tbs  1
+	#define	AllIsLost_exg  0
+	#define	AllIsLost_cmp  1
+
+	// .rodata
+	//	AllIsLost
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+AllIsLost_001:
+// 000   ----------------------------------------
+ BYTE   KEYSH   AllIsLost_key+0
+ BYTE   TEMPO   78*AllIsLost_tbs/2
+ BYTE   VOICE   0
+ BYTE   VOL   62*AllIsLost_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   N22  Cn5  v080
+ BYTE   N22  Cn6
+ BYTE   W24
+ BYTE   Ds5
+ BYTE   N22  Ds6
+ BYTE   W24
+ BYTE   Gn5
+ BYTE   N22  Gn6
+ BYTE   W24
+Label_0_01131620:
+ BYTE   N44  Fn5  v080
+ BYTE   N44  Fn6
+ BYTE   W48
+// 001   ----------------------------------------
+ BYTE   N22  Dn5
+ BYTE   N22  Dn6
+ BYTE   W24
+ BYTE   PEND 
+Label_0_0113162C:
+ BYTE   N22  Ds5  v080
+ BYTE   N22  Ds6
+ BYTE   W24
+ BYTE   Cn5
+ BYTE   N22  Cn6
+ BYTE   W24
+ BYTE   Gs4
+ BYTE   N22  Gs5
+ BYTE   W24
+ BYTE   PEND 
+// 002   ----------------------------------------
+Label_0_0113163B:
+ BYTE   N22  Dn5  v080
+ BYTE   N22  Dn6
+ BYTE   W24
+ BYTE   Gn4
+ BYTE   N22  Gn5
+ BYTE   W24
+ BYTE   Bn4
+ BYTE   N22  Bn5
+ BYTE   W24
+ BYTE   PEND 
+Label_0_0113164A:
+ BYTE   N32  Cn5  v080
+ BYTE   N32  Cn6
+ BYTE   W36
+// 003   ----------------------------------------
+ BYTE   Gs4
+ BYTE   N32  Gs5
+ BYTE   W36
+ BYTE   PEND 
+Label_0_01131655:
+ BYTE   N32  As4  v080
+ BYTE   N32  As5
+ BYTE   W36
+ BYTE   Gn4
+ BYTE   N32  Gn5
+ BYTE   W36
+ BYTE   PEND 
+// 004   ----------------------------------------
+Label_0_01131660:
+ BYTE   N22  Gn4  v080
+ BYTE   N22  Gn5
+ BYTE   W24
+ BYTE   Ds4
+ BYTE   N22  Ds5
+ BYTE   W24
+ BYTE   Dn4
+ BYTE   N22  Dn5
+ BYTE   W24
+ BYTE   PEND 
+Label_0_0113166F:
+ BYTE   N44  Dn4  v080
+ BYTE   N44  Dn5
+ BYTE   W48
+// 005   ----------------------------------------
+ BYTE   N22  Bn3
+ BYTE   N22  Bn4
+ BYTE   W24
+ BYTE   PEND 
+ BYTE   N68  Cn4
+ BYTE   N68  Cn5
+ BYTE   W72
+// 006   ----------------------------------------
+ BYTE   W72
+Label_0_01131681:
+ BYTE   N22  Cn5  v080
+ BYTE   N22  Cn6
+ BYTE   W24
+// 007   ----------------------------------------
+ BYTE   Ds5
+ BYTE   N22  Ds6
+ BYTE   W24
+ BYTE   Gn5
+ BYTE   N22  Gn6
+ BYTE   W24
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_0_01131620
+ BYTE   PATT
+  POIN2 Label_0_0113162C
+ BYTE   PATT
+  POIN2 Label_0_0113163B
+ BYTE   PATT
+  POIN2 Label_0_0113164A
+ BYTE   PATT
+  POIN2 Label_0_01131655
+ BYTE   PATT
+  POIN2 Label_0_01131660
+ BYTE   PATT
+  POIN2 Label_0_0113166F
+// 008   ----------------------------------------
+ BYTE   N68  Cn4  v080
+ BYTE   N68  Cn5
+ BYTE   W72
+ BYTE   W72
+ BYTE   PATT
+  POIN2 Label_0_01131681
+ BYTE   PATT
+  POIN2 Label_0_01131620
+ BYTE   PATT
+  POIN2 Label_0_0113162C
+ BYTE   PATT
+  POIN2 Label_0_0113163B
+ BYTE   PATT
+  POIN2 Label_0_0113164A
+ BYTE   PATT
+  POIN2 Label_0_01131655
+ BYTE   PATT
+  POIN2 Label_0_01131660
+ BYTE   PATT
+  POIN2 Label_0_0113166F
+// 009   ----------------------------------------
+ BYTE   N68  Cn4  v080
+ BYTE   N68  Cn5
+ BYTE   W68
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+AllIsLost_002:
+// 000   ----------------------------------------
+ BYTE   KEYSH   AllIsLost_key+0
+ BYTE   VOICE   0
+ BYTE   VOL   62*AllIsLost_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   W72
+Label_1_01131705:
+ BYTE   N22  Fn2  v080
+ BYTE   W24
+// 001   ----------------------------------------
+ BYTE   Gs2
+ BYTE   W24
+ BYTE   Dn3
+ BYTE   W24
+ BYTE   PEND 
+Label_1_0113170E:
+ BYTE   N22  Cn2  v080
+ BYTE   W24
+ BYTE   Ds2
+ BYTE   W24
+// 002   ----------------------------------------
+ BYTE   N11  Fn2
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   PEND 
+Label_1_0113171A:
+ BYTE   N44  Gs2  v080
+ BYTE   W48
+ BYTE   N22  Gn2
+ BYTE   W24
+ BYTE   PEND 
+// 003   ----------------------------------------
+Label_1_01131722:
+ BYTE   N22  Gs2  v080
+ BYTE   W24
+ BYTE   N11  Fn2
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Gs2
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   PEND 
+Label_1_01131730:
+ BYTE   N11  Cn3  v080
+ BYTE   W12
+ BYTE   Cn2
+ BYTE   W12
+// 004   ----------------------------------------
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   PEND 
+Label_1_0113173F:
+ BYTE   N22  Gs2  v080
+ BYTE   W24
+ BYTE   As2
+ BYTE   W24
+// 005   ----------------------------------------
+ BYTE   Gs2
+ BYTE   W24
+ BYTE   PEND 
+Label_1_01131748:
+ BYTE   N22  Gn2  v080
+ BYTE   W24
+ BYTE   N44  Gn1
+ BYTE   W48
+ BYTE   PEND 
+// 006   ----------------------------------------
+ BYTE   N68  Cn2
+ BYTE   W72
+ BYTE   Cn3
+ BYTE   W72
+// 007   ----------------------------------------
+ BYTE   W72
+ BYTE   PATT
+  POIN2 Label_1_01131705
+ BYTE   PATT
+  POIN2 Label_1_0113170E
+ BYTE   PATT
+  POIN2 Label_1_0113171A
+ BYTE   PATT
+  POIN2 Label_1_01131722
+ BYTE   PATT
+  POIN2 Label_1_01131730
+ BYTE   PATT
+  POIN2 Label_1_0113173F
+ BYTE   PATT
+  POIN2 Label_1_01131748
+// 008   ----------------------------------------
+ BYTE   N68  Cn2  v080
+ BYTE   W72
+ BYTE   Cn3
+ BYTE   W72
+// 009   ----------------------------------------
+ BYTE   W72
+ BYTE   PATT
+  POIN2 Label_1_01131705
+ BYTE   PATT
+  POIN2 Label_1_0113170E
+ BYTE   PATT
+  POIN2 Label_1_0113171A
+ BYTE   PATT
+  POIN2 Label_1_01131722
+ BYTE   PATT
+  POIN2 Label_1_01131730
+ BYTE   PATT
+  POIN2 Label_1_0113173F
+ BYTE   PATT
+  POIN2 Label_1_01131748
+// 010   ----------------------------------------
+ BYTE   N68  Cn2  v080
+ BYTE   W72
+ BYTE   Cn3
+ BYTE   W68
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+songAllIsLost:
+	BYTE	2	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	AllIsLost_pri	// Priority
+	BYTE	AllIsLost_rev	// Reverb.
+    
+	POIN2	AllIsLost_grp
+    
+	POIN2	AllIsLost_001
+	POIN2	AllIsLost_002
+
+	

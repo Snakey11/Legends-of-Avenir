@@ -1,0 +1,30 @@
+#ifndef NICE_INCLUDED
+#define NICE_INCLUDED
+
+ALIGN 4
+NuBattleRoll2RN:
+	WORD $881B4B07 $79BB510 $2101D406 $D0032845 $F0004B04 $1F809 $BC100008 $4708BC02 $203A4D4 $8000CB9 $46C04718
+
+PUSH
+
+	ORG $2A558
+		WORD $46C04778 $E59FC000 $E12FFF1C; POIN NuBattleRoll2RN|1
+
+POP
+
+/* // Source:
+
+int NuBattleRoll2RN(int chance, int simDefault)
+{
+	if (gBattleStats.config & BATTLE_CONFIG_SIMULATE)
+		return simDefault;
+
+	if (chance == 69)
+		return TRUE;
+
+	return Roll2RN(chance);
+}
+
+// */
+
+#endif // NICE_INCLUDED

@@ -1,0 +1,9095 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	ChineseTea_grp  voicegroup000
+	#define	ChineseTea_pri  0
+	#define	ChineseTea_rev  0
+	#define	ChineseTea_mvl  45
+	#define	ChineseTea_key  0
+	#define	ChineseTea_tbs  1
+	#define	ChineseTea_exg  0
+	#define	ChineseTea_cmp  1
+
+	// .rodata
+	//	ChineseTea
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+ChineseTea_1:
+	BYTE	KEYSH   ChineseTea_key+0
+// 000   ----------------------------------------
+	BYTE	TEMPO   143*ChineseTea_tbs/2
+	BYTE		VOICE   34
+	BYTE		PAN     c_v+0
+	BYTE		VOL     127*ChineseTea_mvl/mxv
+// 001   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W24
+	BYTE	W03
+	BYTE	TEMPO   142*ChineseTea_tbs/2
+	BYTE	W10
+	BYTE	TEMPO   131*ChineseTea_tbs/2
+	BYTE	W48
+	BYTE	W02
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W52
+	BYTE	TEMPO   132*ChineseTea_tbs/2
+	BYTE	W10
+	BYTE	TEMPO   133*ChineseTea_tbs/2
+	BYTE	W11
+	BYTE	TEMPO   134*ChineseTea_tbs/2
+	BYTE	W09
+	BYTE	TEMPO   135*ChineseTea_tbs/2
+	BYTE	W14
+// 006   ----------------------------------------
+	BYTE	W02
+	BYTE	TEMPO   136*ChineseTea_tbs/2
+	BYTE	W10
+	BYTE	TEMPO   135*ChineseTea_tbs/2
+	BYTE	W10
+	BYTE	TEMPO   136*ChineseTea_tbs/2
+	BYTE	W24
+	BYTE	TEMPO   135*ChineseTea_tbs/2
+	BYTE	W05
+	BYTE	TEMPO   136*ChineseTea_tbs/2
+	BYTE	W44
+	BYTE	W01
+// 007   ----------------------------------------
+	BYTE	W36
+	BYTE	W03
+	BYTE	TEMPO   135*ChineseTea_tbs/2
+	BYTE	W07
+	BYTE	TEMPO   136*ChineseTea_tbs/2
+	BYTE	W04
+	BYTE	TEMPO   135*ChineseTea_tbs/2
+	BYTE	W05
+	BYTE	TEMPO   134*ChineseTea_tbs/2
+	BYTE	W04
+	BYTE	TEMPO   133*ChineseTea_tbs/2
+	BYTE	W04
+	BYTE	TEMPO   132*ChineseTea_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   131*ChineseTea_tbs/2
+	BYTE	W04
+	BYTE	TEMPO   130*ChineseTea_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   129*ChineseTea_tbs/2
+	BYTE	W04
+	BYTE	TEMPO   128*ChineseTea_tbs/2
+	BYTE	W04
+	BYTE	TEMPO   127*ChineseTea_tbs/2
+	BYTE	W06
+	BYTE	TEMPO   126*ChineseTea_tbs/2
+	BYTE	W09
+// 008   ----------------------------------------
+	BYTE	W01
+	BYTE	TEMPO   125*ChineseTea_tbs/2
+	BYTE	W92
+	BYTE	W03
+// 009   ----------------------------------------
+	BYTE	W22
+	BYTE	TEMPO   143*ChineseTea_tbs/2
+	BYTE		BEND    c_v+0
+	BYTE		N23     Fs1   v100
+	BYTE		N23     Cs2   v120
+	BYTE	W08
+	BYTE		BEND    c_v-1
+	BYTE	W02
+	BYTE		        c_v-2
+	BYTE	W02
+	BYTE		        c_v-3
+	BYTE	W01
+	BYTE		        c_v-4
+	BYTE	W01
+	BYTE		        c_v-5
+	BYTE	W01
+	BYTE		        c_v-6
+	BYTE	W01
+	BYTE		        c_v-8
+	BYTE	W01
+	BYTE		        c_v-10
+	BYTE	W01
+	BYTE		        c_v-13
+	BYTE	W01
+	BYTE		        c_v-16
+	BYTE	W01
+	BYTE		        c_v-20
+	BYTE	W01
+	BYTE		        c_v-26
+	BYTE	W01
+	BYTE		        c_v-33
+	BYTE	W01
+	BYTE		        c_v-42
+	BYTE	W01
+	BYTE		        c_v+0
+	BYTE		N23     Dn1 
+	BYTE		N23     An1 
+	BYTE	W24
+	BYTE		N06     An0 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N06     Fs1 
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE		N23     En1 
+	BYTE		N23     Bn1 
+	BYTE	W02
+// 010   ----------------------------------------
+ChineseTea_1_010:
+	BYTE	W22
+	BYTE		N06     Bn0   v120
+	BYTE	W06
+	BYTE		N11     Gs1 
+	BYTE		N11     Bn1 
+	BYTE	W12
+	BYTE		N06   
+	BYTE		N06     En2 
+	BYTE	W06
+	BYTE		N17     Fs1 
+	BYTE		N17     Cs2 
+	BYTE	W18
+	BYTE		        Fs1 
+	BYTE		N17     Cs2 
+	BYTE	W18
+	BYTE		N11     An1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		N17     Fs1 
+	BYTE		N17     An1 
+	BYTE	W02
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE	W16
+	BYTE		        Fs1 
+	BYTE		N17     An1 
+	BYTE	W18
+	BYTE		N11     Cs2 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N23     Dn1 
+	BYTE		N23     An1 
+	BYTE	W12
+ChineseTea_1_B1:
+	BYTE	W12
+	BYTE		N06     An0   v120
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N06     Fs1 
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE		N23     Fn1 
+	BYTE		N23     Bn1 
+	BYTE	W02
+// 012   ----------------------------------------
+ChineseTea_1_012:
+	BYTE	W22
+	BYTE		N06     Fn1   v120
+	BYTE	W06
+	BYTE		N11   
+	BYTE		N11     Gs1 
+	BYTE	W12
+	BYTE		N06   
+	BYTE		N06     Bn1 
+	BYTE	W06
+	BYTE		N17     An1 
+	BYTE		N17     Fs2 
+	BYTE	W18
+	BYTE		        An1 
+	BYTE		N17     Cs2 
+	BYTE	W18
+	BYTE		N11     Fs1 
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE		N17     Bn1 
+	BYTE		N17     En2 
+	BYTE	W02
+	BYTE	PEND
+// 013   ----------------------------------------
+ChineseTea_1_013:
+	BYTE	W16
+	BYTE		N17     Gs1   v120
+	BYTE		N17     Bn1 
+	BYTE	W18
+	BYTE		N11     En1 
+	BYTE		N11     Gs1 
+	BYTE	W12
+	BYTE		N23     Dn1 
+	BYTE		N23     An1 
+	BYTE	W24
+	BYTE		N06     An0 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N06     Fs1 
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE		N23     En1 
+	BYTE		N23     Bn1 
+	BYTE	W02
+	BYTE	PEND
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_010
+// 015   ----------------------------------------
+ChineseTea_1_015:
+	BYTE	W16
+	BYTE		N17     Fs1   v120
+	BYTE		N17     An1 
+	BYTE	W18
+	BYTE		N11     Cs2 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N23     Dn1 
+	BYTE		N23     An1 
+	BYTE	W24
+	BYTE		N06     An0 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N06     Fs1 
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE		N23     En1 
+	BYTE		N23     Bn1 
+	BYTE	W02
+	BYTE	PEND
+// 016   ----------------------------------------
+ChineseTea_1_016:
+	BYTE	W22
+	BYTE		N06     Gs1   v120
+	BYTE	W06
+	BYTE		N23   
+	BYTE		N11     Bn1 
+	BYTE	W12
+	BYTE		N06     En2 
+	BYTE		N06     Gs2 
+	BYTE	W06
+	BYTE		N17     Fs1 
+	BYTE		N17     Cs2 
+	BYTE	W18
+	BYTE		        Fs1 
+	BYTE		N17     Cs2 
+	BYTE	W18
+	BYTE		N11     An1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		N17     Cs2 
+	BYTE		N17     An2 
+	BYTE	W02
+	BYTE	PEND
+// 017   ----------------------------------------
+ChineseTea_1_017:
+	BYTE	W16
+	BYTE		N17     An1   v120
+	BYTE		N17     Cs2 
+	BYTE	W18
+	BYTE		N11   
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N23     Dn1 
+	BYTE		N23     An1 
+	BYTE	W24
+	BYTE		N06     An0 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N06     Fs1 
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE		N23     En1 
+	BYTE		N23     Bn1 
+	BYTE	W02
+	BYTE	PEND
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_010
+// 019   ----------------------------------------
+ChineseTea_1_019:
+	BYTE	W16
+	BYTE		N17     Fs1   v120
+	BYTE		N17     An1 
+	BYTE	W18
+	BYTE		N11     Cs2 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N23     Dn1 
+	BYTE		N23     An1 
+	BYTE	W24
+	BYTE		N06     An0 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N06     Fs1 
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE		N23     Fn1 
+	BYTE		N23     Bn1 
+	BYTE	W02
+	BYTE	PEND
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_012
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_013
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_010
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_015
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_016
+// 025   ----------------------------------------
+	BYTE	W16
+	BYTE		N17     An1   v120
+	BYTE		N17     Cs2 
+	BYTE	W18
+	BYTE		N11   
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Cs2 
+	BYTE	W12
+	BYTE		N03     Cs1   v100
+	BYTE	W06
+	BYTE		N06     Fs1   v120
+	BYTE	W06
+	BYTE		        Cs2 
+	BYTE	W06
+	BYTE		N17     Fs1 
+	BYTE	W08
+// 026   ----------------------------------------
+ChineseTea_1_026:
+	BYTE	W10
+	BYTE		N11     Cs2   v120
+	BYTE	W12
+	BYTE		N17     Fs1 
+	BYTE	W18
+	BYTE		N06     Cs2 
+	BYTE	W06
+	BYTE		N11     En1 
+	BYTE	W12
+	BYTE		        Cs2 
+	BYTE	W12
+	BYTE		N03     Cs1   v100
+	BYTE	W06
+	BYTE		N06     En1   v120
+	BYTE	W06
+	BYTE		        Cs2 
+	BYTE	W06
+	BYTE		N17     En1 
+	BYTE	W08
+	BYTE	PEND
+// 027   ----------------------------------------
+ChineseTea_1_027:
+	BYTE	W10
+	BYTE		N11     Cs2   v120
+	BYTE	W12
+	BYTE		N06     En1   v060
+	BYTE	W06
+	BYTE		        En1   v120
+	BYTE	W06
+	BYTE		N11     Cs2 
+	BYTE	W12
+	BYTE		        Ds1 
+	BYTE	W12
+	BYTE		        Bn1 
+	BYTE	W12
+	BYTE		N03     Bn0   v100
+	BYTE	W06
+	BYTE		N06     Ds1   v120
+	BYTE	W06
+	BYTE		        Bn1 
+	BYTE	W06
+	BYTE		N17     Ds1 
+	BYTE	W08
+	BYTE	PEND
+// 028   ----------------------------------------
+ChineseTea_1_028:
+	BYTE	W10
+	BYTE		N11     Bn1   v120
+	BYTE	W12
+	BYTE		N17     Ds1 
+	BYTE	W18
+	BYTE		N06     Bn1 
+	BYTE	W06
+	BYTE		N11     Ds1 
+	BYTE	W12
+	BYTE		N17     Bn1 
+	BYTE	W18
+	BYTE		N06     Ds1 
+	BYTE	W06
+	BYTE		N11     Bn1 
+	BYTE	W12
+	BYTE		        Ds1 
+	BYTE	W02
+	BYTE	PEND
+// 029   ----------------------------------------
+ChineseTea_1_029:
+	BYTE	W10
+	BYTE		N11     Bn1   v120
+	BYTE	W12
+	BYTE		N17     Ds1 
+	BYTE	W18
+	BYTE		N06     Bn1 
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		N03     Dn1   v100
+	BYTE	W06
+	BYTE		N06     Dn1   v120
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE		N17     Dn1 
+	BYTE	W08
+	BYTE	PEND
+// 030   ----------------------------------------
+ChineseTea_1_030:
+	BYTE	W10
+	BYTE		N11     An1   v120
+	BYTE	W12
+	BYTE		N17     Dn1 
+	BYTE	W18
+	BYTE		N06     An1 
+	BYTE	W06
+	BYTE		N11     En1 
+	BYTE	W12
+	BYTE		        Bn1 
+	BYTE	W12
+	BYTE		N03     En1   v100
+	BYTE	W06
+	BYTE		N06     Gs1   v120
+	BYTE	W06
+	BYTE		        Bn1 
+	BYTE	W06
+	BYTE		N17     En1 
+	BYTE	W08
+	BYTE	PEND
+// 031   ----------------------------------------
+ChineseTea_1_031:
+	BYTE	W10
+	BYTE		N11     Bn1   v120
+	BYTE	W12
+	BYTE		N06     En1   v060
+	BYTE	W06
+	BYTE		        Gs1   v120
+	BYTE	W06
+	BYTE		N11     Bn1 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Cs2 
+	BYTE	W12
+	BYTE		N03     Cs1   v100
+	BYTE	W06
+	BYTE		N06     Fs1   v120
+	BYTE	W06
+	BYTE		        Cs2 
+	BYTE	W06
+	BYTE		N17     An1 
+	BYTE	W08
+	BYTE	PEND
+// 032   ----------------------------------------
+	BYTE	W10
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		N17     Cs2 
+	BYTE	W18
+	BYTE		N06     Fs1 
+	BYTE	W06
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N17     Cs2 
+	BYTE	W18
+	BYTE		N06     An1 
+	BYTE	W06
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W02
+// 033   ----------------------------------------
+	BYTE	W10
+	BYTE		        Cs2 
+	BYTE	W12
+	BYTE		N17     An1 
+	BYTE	W18
+	BYTE		N06     Cs2 
+	BYTE	W06
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		        Cs2 
+	BYTE	W12
+	BYTE		N03     Cs1   v100
+	BYTE	W06
+	BYTE		N06     Fs1   v120
+	BYTE	W06
+	BYTE		        Cs2 
+	BYTE	W06
+	BYTE		N17     Fs1 
+	BYTE	W08
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_026
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_027
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_028
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_029
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_030
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_031
+// 040   ----------------------------------------
+	BYTE	W10
+	BYTE		N11     Fs1   v120
+	BYTE	W12
+	BYTE		N17     Cs2 
+	BYTE	W18
+	BYTE		N06     Fs1 
+	BYTE	W06
+	BYTE	TEMPO   142*ChineseTea_tbs/2
+	BYTE		N11   
+	BYTE	W06
+	BYTE	TEMPO   143*ChineseTea_tbs/2
+	BYTE	W01
+	BYTE	TEMPO   142*ChineseTea_tbs/2
+	BYTE	W05
+	BYTE		N17     Cs2 
+	BYTE	W14
+	BYTE	TEMPO   141*ChineseTea_tbs/2
+	BYTE	W04
+	BYTE		N06     An1 
+	BYTE	W06
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W02
+// 041   ----------------------------------------
+	BYTE	W05
+	BYTE	TEMPO   140*ChineseTea_tbs/2
+	BYTE	W05
+	BYTE		        Cs2 
+	BYTE	W12
+	BYTE		N17     An1 
+	BYTE	W18
+	BYTE		N06     Cs2 
+	BYTE	W06
+	BYTE		N23     Dn1 
+	BYTE		N23     An1 
+	BYTE	W24
+	BYTE	TEMPO   139*ChineseTea_tbs/2
+	BYTE		N06     An0 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N06     Fs1 
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     An1 
+	BYTE	W10
+	BYTE	TEMPO   138*ChineseTea_tbs/2
+	BYTE	W02
+	BYTE		N23     En1 
+	BYTE		N23     Bn1 
+	BYTE	W02
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_010
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_019
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_012
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_013
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_010
+// 047   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_015
+// 048   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_016
+// 049   ----------------------------------------
+	BYTE	W07
+	BYTE	TEMPO   139*ChineseTea_tbs/2
+	BYTE	W09
+	BYTE		N17     An1   v120
+	BYTE		N17     Cs2 
+	BYTE	W02
+	BYTE	TEMPO   140*ChineseTea_tbs/2
+	BYTE	W09
+	BYTE	TEMPO   141*ChineseTea_tbs/2
+	BYTE	W07
+	BYTE		N11   
+	BYTE		N11     An2 
+	BYTE	W04
+	BYTE	TEMPO   142*ChineseTea_tbs/2
+	BYTE	W08
+	BYTE		N23     Dn1 
+	BYTE		N23     An1 
+	BYTE	W24
+	BYTE		N06     An0 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N06     Fs1 
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE		N23     En1 
+	BYTE		N23     Bn1 
+	BYTE	W02
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_010
+// 051   ----------------------------------------
+	BYTE	W16
+	BYTE		N17     Fs1   v120
+	BYTE		N17     An1 
+	BYTE	W18
+	BYTE		N11     Cs2 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N23     Dn1 
+	BYTE		N23     An1 
+	BYTE	W15
+	BYTE	GoTo
+	 POIN2	ChineseTea_1_B1
+ChineseTea_1_B2:
+	BYTE	W09
+	BYTE		N06     An0   v120
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N06     Fs1 
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE		N23     Fn1 
+	BYTE		N23     Bn1 
+	BYTE	W02
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_012
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_013
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_010
+// 055   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_015
+// 056   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_016
+// 057   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_017
+// 058   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_010
+// 059   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_019
+// 060   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_012
+// 061   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_013
+// 062   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_010
+// 063   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_015
+// 064   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_016
+// 065   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_017
+// 066   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_010
+// 067   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_019
+// 068   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_012
+// 069   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_013
+// 070   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_010
+// 071   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_015
+// 072   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_016
+// 073   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_017
+// 074   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_010
+// 075   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_019
+// 076   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_012
+// 077   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_013
+// 078   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_010
+// 079   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_015
+// 080   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_1_016
+// 081   ----------------------------------------
+	BYTE	W16
+	BYTE		N17     An1   v120
+	BYTE		N17     Cs2 
+	BYTE	W18
+	BYTE		N11   
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+ChineseTea_2:
+	BYTE	KEYSH   ChineseTea_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   110
+	BYTE		PAN     c_v+0
+	BYTE		VOL     127*ChineseTea_mvl/mxv
+// 001   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W36
+	BYTE	W01
+	BYTE		N32     Fs3   v100
+	BYTE	W36
+	BYTE		N11     Fs4 
+	BYTE	W12
+	BYTE		N17     En4 
+	BYTE	W02
+// 002   ----------------------------------------
+	BYTE	W16
+	BYTE		        An4   v080
+	BYTE	W18
+	BYTE		N11     Gs4   v100
+	BYTE	W12
+	BYTE		N09     En4 
+	BYTE	W12
+	BYTE		        Cs4   v080
+	BYTE	W12
+	BYTE		N11     En4   v100
+	BYTE	W12
+	BYTE		N06     En4   v092
+	BYTE	W06
+	BYTE		N52     Fs4   v112
+	BYTE	W08
+// 003   ----------------------------------------
+	BYTE	W09
+	BYTE	W07
+	BYTE	W04
+	BYTE	W03
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     Fs3   v100
+	BYTE	W36
+	BYTE		N11     Fs4   v080
+	BYTE	W12
+	BYTE		N17     Fn4   v100
+	BYTE	W02
+// 004   ----------------------------------------
+	BYTE	W16
+	BYTE		        Fs4   v080
+	BYTE	W18
+	BYTE		N15     Gs4   v092
+	BYTE	W12
+	BYTE		N92     Cs4   v100
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+// 005   ----------------------------------------
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE		N32     Fs3 
+	BYTE	W36
+	BYTE		N11     Fs4 
+	BYTE	W12
+	BYTE		N17     En4 
+	BYTE	W02
+// 006   ----------------------------------------
+	BYTE	W16
+	BYTE		        Fs4   v080
+	BYTE	W18
+	BYTE		N11     Gs4   v100
+	BYTE	W12
+	BYTE		N09     An4 
+	BYTE	W12
+	BYTE		        Cs4   v080
+	BYTE	W12
+	BYTE		N11     Gs4   v100
+	BYTE	W12
+	BYTE		N06     Gs4   v092
+	BYTE	W06
+	BYTE		N28     An4 
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+// 007   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N23     Bn4 
+	BYTE	W24
+	BYTE		N11     Cs5   v100
+	BYTE	W12
+	BYTE		N09     Fs4   v092
+	BYTE	W24
+	BYTE		N06     Gs4   v100
+	BYTE	W06
+	BYTE		        An4   v092
+	BYTE	W06
+	BYTE		N17     Gs4   v100
+	BYTE	W02
+// 008   ----------------------------------------
+	BYTE	W16
+	BYTE		        En4   v080
+	BYTE	W18
+	BYTE		N11     Cs4   v092
+	BYTE	W12
+	BYTE		N09     En4   v100
+	BYTE	W12
+	BYTE		        Cs4   v080
+	BYTE	W12
+	BYTE		N11     En4   v100
+	BYTE	W12
+	BYTE		N06     En4   v092
+	BYTE	W06
+	BYTE		N52     Fs4   v112
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+// 009   ----------------------------------------
+ChineseTea_2_009:
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     Fs3   v120
+	BYTE	W36
+	BYTE		N11     Fs4 
+	BYTE	W12
+	BYTE		N17     En4 
+	BYTE	W02
+	BYTE	PEND
+// 010   ----------------------------------------
+ChineseTea_2_010:
+	BYTE	W16
+	BYTE		N17     An4   v100
+	BYTE	W18
+	BYTE		N11     Gs4   v120
+	BYTE	W12
+	BYTE		N09     En4 
+	BYTE	W12
+	BYTE		        Cs4   v100
+	BYTE	W12
+	BYTE		N11     En4   v120
+	BYTE	W12
+	BYTE		N06     En4   v112
+	BYTE	W06
+	BYTE		N52     Fs4   v127
+	BYTE	W08
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE	W09
+	BYTE	W07
+	BYTE	W04
+	BYTE	W03
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     Fs3   v120
+	BYTE	W12
+ChineseTea_2_B1:
+	BYTE	W24
+	BYTE		N11     Fs4   v100
+	BYTE	W12
+	BYTE		N17     Fn4   v120
+	BYTE	W02
+// 012   ----------------------------------------
+ChineseTea_2_012:
+	BYTE	W16
+	BYTE		N17     Fs4   v100
+	BYTE	W18
+	BYTE		N15     Gs4   v112
+	BYTE	W12
+	BYTE		N92     Cs4   v120
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	PEND
+// 013   ----------------------------------------
+ChineseTea_2_013:
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE		N32     Fs3   v120
+	BYTE	W36
+	BYTE		N11     Fs4 
+	BYTE	W12
+	BYTE		N17     En4 
+	BYTE	W02
+	BYTE	PEND
+// 014   ----------------------------------------
+ChineseTea_2_014:
+	BYTE	W16
+	BYTE		N17     Fs4   v100
+	BYTE	W18
+	BYTE		N11     Gs4   v120
+	BYTE	W12
+	BYTE		N09     An4 
+	BYTE	W12
+	BYTE		        Cs4   v100
+	BYTE	W12
+	BYTE		N11     Gs4   v120
+	BYTE	W12
+	BYTE		N06     Gs4   v112
+	BYTE	W06
+	BYTE		N28     An4 
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	PEND
+// 015   ----------------------------------------
+ChineseTea_2_015:
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N23     Bn4   v112
+	BYTE	W24
+	BYTE		N11     Cs5   v120
+	BYTE	W12
+	BYTE		N09     Fs4   v112
+	BYTE	W24
+	BYTE		N06     Gs4   v120
+	BYTE	W06
+	BYTE		        An4   v112
+	BYTE	W06
+	BYTE		N17     Gs4   v120
+	BYTE	W02
+	BYTE	PEND
+// 016   ----------------------------------------
+ChineseTea_2_016:
+	BYTE	W16
+	BYTE		N17     En4   v100
+	BYTE	W18
+	BYTE		N11     Cs4   v112
+	BYTE	W12
+	BYTE		N09     En4   v120
+	BYTE	W12
+	BYTE		        Cs4   v100
+	BYTE	W12
+	BYTE		N11     En4   v120
+	BYTE	W12
+	BYTE		N06     En4   v112
+	BYTE	W06
+	BYTE		N52     Fs4   v127
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	PEND
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_009
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_010
+// 019   ----------------------------------------
+ChineseTea_2_019:
+	BYTE	W09
+	BYTE	W07
+	BYTE	W04
+	BYTE	W03
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     Fs3   v120
+	BYTE	W36
+	BYTE		N11     Fs4   v100
+	BYTE	W12
+	BYTE		N17     Fn4   v120
+	BYTE	W02
+	BYTE	PEND
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_012
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_013
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_014
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_015
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_016
+// 025   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W48
+	BYTE	W02
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		N32     Fs2   v120
+	BYTE	W36
+	BYTE		N11     Fs3 
+	BYTE	W12
+	BYTE		N17     En3 
+	BYTE	W02
+// 042   ----------------------------------------
+	BYTE	W16
+	BYTE		        An3   v100
+	BYTE	W18
+	BYTE		N11     Gs3   v120
+	BYTE	W12
+	BYTE		N09     En3 
+	BYTE	W12
+	BYTE		        Cs3   v100
+	BYTE	W12
+	BYTE		N11     En3   v120
+	BYTE	W12
+	BYTE		N06     En3   v112
+	BYTE	W06
+	BYTE		N52     Fs3   v127
+	BYTE	W08
+// 043   ----------------------------------------
+	BYTE	W09
+	BYTE	W07
+	BYTE	W04
+	BYTE	W03
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     Fs2   v120
+	BYTE	W36
+	BYTE		N11     Fs3   v100
+	BYTE	W12
+	BYTE		N17     Fn3   v120
+	BYTE	W02
+// 044   ----------------------------------------
+	BYTE	W16
+	BYTE		        Fs3   v100
+	BYTE	W18
+	BYTE		N15     Gs3   v112
+	BYTE	W12
+	BYTE		N92     Cs3   v120
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+// 045   ----------------------------------------
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE		N32     Fs2 
+	BYTE	W36
+	BYTE		N11     Fs3 
+	BYTE	W12
+	BYTE		N17     En3 
+	BYTE	W02
+// 046   ----------------------------------------
+	BYTE	W16
+	BYTE		        Fs3   v100
+	BYTE	W18
+	BYTE		N11     Gs3   v120
+	BYTE	W12
+	BYTE		N09     An3 
+	BYTE	W12
+	BYTE		        Cs3   v100
+	BYTE	W12
+	BYTE		N11     Gs3   v120
+	BYTE	W12
+	BYTE		N06     Gs3   v112
+	BYTE	W06
+	BYTE		N28     An3 
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+// 047   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N23     Bn3 
+	BYTE	W24
+	BYTE		N11     Cs4   v120
+	BYTE	W12
+	BYTE		N09     Fs3   v112
+	BYTE	W24
+	BYTE		N06     Gs3   v120
+	BYTE	W06
+	BYTE		        An3   v112
+	BYTE	W06
+	BYTE		N17     Gs3   v120
+	BYTE	W02
+// 048   ----------------------------------------
+	BYTE	W16
+	BYTE		        En3   v100
+	BYTE	W18
+	BYTE		N11     Cs3   v112
+	BYTE	W12
+	BYTE		N09     En3   v120
+	BYTE	W12
+	BYTE		        Cs3   v100
+	BYTE	W12
+	BYTE		N11     En3   v120
+	BYTE	W12
+	BYTE		N06     En3   v112
+	BYTE	W06
+	BYTE		N52     Fs3   v127
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+// 049   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_009
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_010
+// 051   ----------------------------------------
+	BYTE	W09
+	BYTE	W07
+	BYTE	W04
+	BYTE	W03
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     Fs3   v120
+	BYTE	W15
+	BYTE	GoTo
+	 POIN2	ChineseTea_2_B1
+ChineseTea_2_B2:
+	BYTE	W21
+	BYTE		N11     Fs4   v100
+	BYTE	W12
+	BYTE		N17     Fn4   v120
+	BYTE	W02
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_012
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_013
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_014
+// 055   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_015
+// 056   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_016
+// 057   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_009
+// 058   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_010
+// 059   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_019
+// 060   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_012
+// 061   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_013
+// 062   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_014
+// 063   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_015
+// 064   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_016
+// 065   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_009
+// 066   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_010
+// 067   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_019
+// 068   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_012
+// 069   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_013
+// 070   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_014
+// 071   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_015
+// 072   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_016
+// 073   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_009
+// 074   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_010
+// 075   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_019
+// 076   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_012
+// 077   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_013
+// 078   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_014
+// 079   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_015
+// 080   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_2_016
+// 081   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+ChineseTea_3:
+	BYTE	KEYSH   ChineseTea_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   1
+	BYTE		PAN     c_v+0
+	BYTE		VOL     90*ChineseTea_mvl/mxv
+// 001   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W36
+	BYTE	W01
+	BYTE		N17     Dn2   v060
+	BYTE	W18
+	BYTE		N28     An2 
+	BYTE	W30
+	BYTE		N17     Gs2 
+	BYTE	W02
+// 002   ----------------------------------------
+	BYTE	W16
+	BYTE		        Bn2 
+	BYTE	W18
+	BYTE		N11     En3 
+	BYTE	W12
+	BYTE		N08     Fs3 
+	BYTE	W09
+	BYTE		        Bn3 
+	BYTE	W09
+	BYTE		N06     An2 
+	BYTE	W06
+	BYTE		N08     En3 
+	BYTE	W09
+	BYTE		        Bn2 
+	BYTE	W09
+	BYTE		N06     Gs2 
+	BYTE	W06
+	BYTE		N44     An2 
+	BYTE	W02
+// 003   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		N17     Fs2 
+	BYTE	W18
+	BYTE		N18     Dn3 
+	BYTE	W18
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N17     Fn3 
+	BYTE	W02
+// 004   ----------------------------------------
+	BYTE	W16
+	BYTE		        Bn2 
+	BYTE	W18
+	BYTE		N11     Gs3 
+	BYTE	W12
+	BYTE		N44     An2 
+	BYTE	W48
+	BYTE		N08     Cs3 
+	BYTE	W02
+// 005   ----------------------------------------
+	BYTE	W07
+	BYTE		        An3 
+	BYTE	W09
+	BYTE		N06     Gs3 
+	BYTE	W06
+	BYTE		N08     Bn2 
+	BYTE	W09
+	BYTE		        Gs3 
+	BYTE	W09
+	BYTE		N06     Fs3 
+	BYTE	W06
+	BYTE		N06   
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W02
+// 006   ----------------------------------------
+	BYTE	W04
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Cs3 
+	BYTE	W02
+// 007   ----------------------------------------
+	BYTE	W04
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W02
+// 008   ----------------------------------------
+	BYTE	W04
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W02
+// 009   ----------------------------------------
+	BYTE	W04
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Fs3   v100
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W02
+// 010   ----------------------------------------
+ChineseTea_3_010:
+	BYTE	W04
+	BYTE		N06     En3   v100
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Cs3 
+	BYTE	W02
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE	W04
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+ChineseTea_3_B1:
+	BYTE		N06     Dn3   v100
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W02
+// 012   ----------------------------------------
+ChineseTea_3_012:
+	BYTE	W04
+	BYTE		N06     En3   v100
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W02
+	BYTE	PEND
+// 013   ----------------------------------------
+ChineseTea_3_013:
+	BYTE	W04
+	BYTE		N06     Gs4   v100
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W02
+	BYTE	PEND
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_010
+// 015   ----------------------------------------
+ChineseTea_3_015:
+	BYTE	W04
+	BYTE		N06     Gs3   v100
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W02
+	BYTE	PEND
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_012
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_013
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_010
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_015
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_012
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_013
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_010
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_015
+// 024   ----------------------------------------
+ChineseTea_3_024:
+	BYTE	W04
+	BYTE		N06     En3   v100
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		N23     An3   v120
+	BYTE		N23     Fs4 
+	BYTE	W02
+	BYTE	PEND
+// 025   ----------------------------------------
+ChineseTea_3_025:
+	BYTE	W22
+	BYTE		N23     Bn3   v120
+	BYTE		N23     Gs4 
+	BYTE	W24
+	BYTE		N68     Cs4 
+	BYTE		N68     An4 
+	BYTE	W48
+	BYTE	W02
+	BYTE	PEND
+// 026   ----------------------------------------
+ChineseTea_3_026:
+	BYTE	W22
+	BYTE		N23     An4   v120
+	BYTE		N23     Cs5 
+	BYTE	W24
+	BYTE		N44     Cs4 
+	BYTE		N44     Gs4 
+	BYTE	W48
+	BYTE		N44   
+	BYTE		N44     Cs5 
+	BYTE	W02
+	BYTE	PEND
+// 027   ----------------------------------------
+ChineseTea_3_027:
+	BYTE	W44
+	BYTE	W02
+	BYTE		TIE     Ds4   v120
+	BYTE		TIE     Fs4 
+	BYTE	W48
+	BYTE	W02
+	BYTE	PEND
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W15
+	BYTE		EOT     Ds4 
+	BYTE	W04
+	BYTE		N11   
+	BYTE	W02
+	BYTE		EOT     Fs4 
+	BYTE	W01
+	BYTE		N11   
+	BYTE	W12
+	BYTE		        Ds4 
+	BYTE		N11     Gs4 
+	BYTE	W12
+	BYTE		N32     Cs4 
+	BYTE		N32     An4 
+	BYTE	W36
+	BYTE		N23     An3 
+	BYTE		N23     Cs4 
+	BYTE	W14
+// 030   ----------------------------------------
+	BYTE	W10
+	BYTE		N11     Bn3 
+	BYTE		N11     Gs4 
+	BYTE	W12
+	BYTE		        Cs4 
+	BYTE		N11     An4 
+	BYTE	W12
+	BYTE		N44     Bn3 
+	BYTE		N44     Gs4 
+	BYTE	W48
+	BYTE		N32   
+	BYTE		N32     Bn4 
+	BYTE	W14
+// 031   ----------------------------------------
+	BYTE	W22
+	BYTE		N23     An4 
+	BYTE		N23     Cs5 
+	BYTE	W24
+	BYTE		TIE     Cs4 
+	BYTE		TIE     An4 
+	BYTE	W48
+	BYTE	W02
+// 032   ----------------------------------------
+	BYTE	W92
+	BYTE		EOT     Cs4 
+	BYTE		        An4 
+	BYTE	W02
+	BYTE		N23     An3 
+	BYTE		N23     Fs4 
+	BYTE	W02
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_025
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_026
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_027
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W15
+	BYTE		EOT     Ds4 
+	BYTE	W04
+	BYTE		N11     Ds4   v120
+	BYTE	W02
+	BYTE		EOT     Fs4 
+	BYTE	W01
+	BYTE		N11   
+	BYTE	W12
+	BYTE		        Ds4 
+	BYTE		N11     Gs4 
+	BYTE	W12
+	BYTE		N32     Cs4 
+	BYTE		N32     An4 
+	BYTE	W36
+	BYTE		N23     An3 
+	BYTE		N23     Cs4 
+	BYTE	W14
+// 038   ----------------------------------------
+	BYTE	W10
+	BYTE		N11     Bn3 
+	BYTE		N11     Gs4 
+	BYTE	W12
+	BYTE		        Cs4 
+	BYTE		N11     An4 
+	BYTE	W12
+	BYTE		N28     Bn3 
+	BYTE		N28     Gs4 
+	BYTE	W30
+	BYTE		N17     Gs3 
+	BYTE		N17     Bn3 
+	BYTE	W18
+	BYTE		N23     Gs4 
+	BYTE	W12
+	BYTE		        An4 
+	BYTE	W02
+// 039   ----------------------------------------
+	BYTE	W10
+	BYTE		N06     Bn4 
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		TIE     An4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W56
+// 040   ----------------------------------------
+	BYTE	W44
+	BYTE	W01
+	BYTE		EOT   
+	BYTE		EOT     An4 
+	BYTE	W01
+	BYTE		N92   
+	BYTE		N92     Fs5 
+	BYTE	W48
+	BYTE	W02
+// 041   ----------------------------------------
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W96
+// 046   ----------------------------------------
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE	W96
+// 048   ----------------------------------------
+	BYTE	W96
+// 049   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		N06     Fs3   v100
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W02
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_010
+// 051   ----------------------------------------
+	BYTE	W04
+	BYTE		N06     Gs3   v100
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W03
+	BYTE	GoTo
+	 POIN2	ChineseTea_3_B1
+ChineseTea_3_B2:
+	BYTE	W03
+	BYTE		N06     An3   v100
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W02
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_012
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_013
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_010
+// 055   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_015
+// 056   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_012
+// 057   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_013
+// 058   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_010
+// 059   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_015
+// 060   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_012
+// 061   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_013
+// 062   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_010
+// 063   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_015
+// 064   ----------------------------------------
+	BYTE	W04
+	BYTE		N06     En3   v100
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W02
+// 065   ----------------------------------------
+	BYTE	W04
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W02
+// 066   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_010
+// 067   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_015
+// 068   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_012
+// 069   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_013
+// 070   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_010
+// 071   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_015
+// 072   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_012
+// 073   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_013
+// 074   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_010
+// 075   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_015
+// 076   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_012
+// 077   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_013
+// 078   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_010
+// 079   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_015
+// 080   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_3_024
+// 081   ----------------------------------------
+	BYTE	W22
+	BYTE		N23     Bn3   v120
+	BYTE		N23     Gs4 
+	BYTE	W24
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+ChineseTea_4:
+	BYTE	KEYSH   ChineseTea_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   75
+	BYTE		PAN     c_v-1
+	BYTE		VOL     127*ChineseTea_mvl/mxv
+// 001   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W84
+	BYTE	W03
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W56
+	BYTE	W02
+ChineseTea_4_B1:
+	BYTE	W36
+	BYTE	W02
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W22
+	BYTE		N23     Gs5   v120
+	BYTE	W24
+	BYTE		        An5 
+	BYTE	W24
+	BYTE		N12     Cs5 
+	BYTE	W12
+	BYTE		        An5 
+	BYTE	W12
+	BYTE		        Gs5 
+	BYTE	W02
+// 042   ----------------------------------------
+ChineseTea_4_042:
+	BYTE	W10
+	BYTE		N12     Fs5   v120
+	BYTE	W12
+	BYTE		        En5 
+	BYTE	W12
+	BYTE		        Dn5 
+	BYTE	W12
+	BYTE		N09     Cs5 
+	BYTE	W12
+	BYTE		        En5 
+	BYTE	W12
+	BYTE		        Bn4 
+	BYTE	W12
+	BYTE		        Cs5 
+	BYTE	W12
+	BYTE		N32     An4 
+	BYTE	W02
+	BYTE	PEND
+// 043   ----------------------------------------
+ChineseTea_4_043:
+	BYTE	W32
+	BYTE	W02
+	BYTE		N11     An4   v120
+	BYTE	W12
+	BYTE		        Bn4 
+	BYTE	W12
+	BYTE		        Cs5 
+	BYTE	W12
+	BYTE		        En5 
+	BYTE	W12
+	BYTE		        Cs5 
+	BYTE	W12
+	BYTE		        Bn4 
+	BYTE	W02
+	BYTE	PEND
+// 044   ----------------------------------------
+	BYTE	W10
+	BYTE		N08     Cs5 
+	BYTE	W09
+	BYTE		N02     An4 
+	BYTE	W03
+	BYTE		N11     Bn4 
+	BYTE	W12
+	BYTE		        An4 
+	BYTE	W12
+	BYTE		        Fs4 
+	BYTE	W12
+	BYTE		        An4 
+	BYTE	W12
+	BYTE		N02     Fs4   v060
+	BYTE	W03
+	BYTE		        En4 
+	BYTE	W03
+	BYTE		        Fs4   v072
+	BYTE	W03
+	BYTE		        En4   v080
+	BYTE	W03
+	BYTE		        Fs4   v092
+	BYTE	W03
+	BYTE		        En4   v100
+	BYTE	W03
+	BYTE		        Fs4   v112
+	BYTE	W03
+	BYTE		        En4   v120
+	BYTE	W03
+	BYTE		N32     Fs4 
+	BYTE	W02
+// 045   ----------------------------------------
+	BYTE	W32
+	BYTE	W02
+	BYTE		        An5 
+	BYTE	W36
+	BYTE		N12     Cs5 
+	BYTE	W12
+	BYTE		        An5 
+	BYTE	W12
+	BYTE		        Gs5 
+	BYTE	W02
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_4_042
+// 047   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_4_043
+// 048   ----------------------------------------
+	BYTE	W10
+	BYTE		N08     Cs5   v120
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N11     En5 
+	BYTE	W12
+	BYTE		        Fs5 
+	BYTE	W12
+	BYTE		        An5 
+	BYTE	W12
+	BYTE		        Fs5 
+	BYTE	W12
+	BYTE		N02     En5   v060
+	BYTE	W03
+	BYTE		        Fs5 
+	BYTE	W03
+	BYTE		        En5   v072
+	BYTE	W03
+	BYTE		        Fs5   v080
+	BYTE	W03
+	BYTE		        En5   v092
+	BYTE	W03
+	BYTE		        Fs5   v100
+	BYTE	W03
+	BYTE		        En5   v112
+	BYTE	W03
+	BYTE		        Fs5   v120
+	BYTE	W03
+	BYTE		N44   
+	BYTE	W02
+// 049   ----------------------------------------
+	BYTE	W96
+// 050   ----------------------------------------
+	BYTE	W96
+// 051   ----------------------------------------
+	BYTE	W60
+	BYTE	W01
+	BYTE	GoTo
+	 POIN2	ChineseTea_4_B1
+ChineseTea_4_B2:
+	BYTE	W32
+	BYTE	W03
+// 052   ----------------------------------------
+	BYTE	W96
+// 053   ----------------------------------------
+	BYTE	W96
+// 054   ----------------------------------------
+	BYTE	W96
+// 055   ----------------------------------------
+	BYTE	W96
+// 056   ----------------------------------------
+	BYTE	W96
+// 057   ----------------------------------------
+	BYTE	W96
+// 058   ----------------------------------------
+	BYTE	W96
+// 059   ----------------------------------------
+	BYTE	W96
+// 060   ----------------------------------------
+	BYTE	W96
+// 061   ----------------------------------------
+	BYTE	W96
+// 062   ----------------------------------------
+	BYTE	W96
+// 063   ----------------------------------------
+	BYTE	W96
+// 064   ----------------------------------------
+	BYTE	W96
+// 065   ----------------------------------------
+	BYTE	W96
+// 066   ----------------------------------------
+	BYTE	W96
+// 067   ----------------------------------------
+	BYTE	W96
+// 068   ----------------------------------------
+	BYTE	W96
+// 069   ----------------------------------------
+	BYTE	W96
+// 070   ----------------------------------------
+	BYTE	W96
+// 071   ----------------------------------------
+	BYTE	W96
+// 072   ----------------------------------------
+	BYTE	W96
+// 073   ----------------------------------------
+	BYTE	W96
+// 074   ----------------------------------------
+	BYTE	W96
+// 075   ----------------------------------------
+	BYTE	W96
+// 076   ----------------------------------------
+	BYTE	W96
+// 077   ----------------------------------------
+	BYTE	W96
+// 078   ----------------------------------------
+	BYTE	W96
+// 079   ----------------------------------------
+	BYTE	W96
+// 080   ----------------------------------------
+	BYTE	W96
+// 081   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+ChineseTea_5:
+	BYTE	KEYSH   ChineseTea_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   40
+	BYTE		PAN     c_v-1
+	BYTE		VOL     127*ChineseTea_mvl/mxv
+// 001   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W36
+	BYTE	W01
+	BYTE		TIE     Fs2   v072
+	BYTE	W48
+	BYTE	W02
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W44
+	BYTE	W01
+	BYTE		EOT   
+	BYTE	W01
+	BYTE		N44     Dn2 
+	BYTE	W48
+	BYTE		        Fn2 
+	BYTE	W02
+// 004   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		N92     Cs2 
+	BYTE	W48
+	BYTE	W02
+// 005   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		N44     Dn2 
+	BYTE	W48
+	BYTE		        Gs2 
+	BYTE	W02
+// 006   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		        An2 
+	BYTE	W48
+	BYTE		        Cs3 
+	BYTE	W02
+// 007   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		        An2 
+	BYTE		N44     Fs3 
+	BYTE	W48
+	BYTE		        Bn2 
+	BYTE		N44     Gs3 
+	BYTE	W02
+// 008   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		BEND    c_v+0
+	BYTE		N92     Cs3 
+	BYTE		N92     An3 
+	BYTE	W28
+	BYTE		BEND    c_v-1
+	BYTE	W12
+	BYTE		        c_v-2
+	BYTE	W06
+	BYTE		        c_v-3
+	BYTE	W04
+// 009   ----------------------------------------
+	BYTE	W01
+	BYTE		        c_v-4
+	BYTE	W04
+	BYTE		        c_v-5
+	BYTE	W03
+	BYTE		        c_v-6
+	BYTE	W03
+	BYTE		        c_v-7
+	BYTE	W02
+	BYTE		        c_v-8
+	BYTE	W02
+	BYTE		        c_v-9
+	BYTE	W02
+	BYTE		        c_v-10
+	BYTE	W02
+	BYTE		        c_v-11
+	BYTE	W01
+	BYTE		        c_v-12
+	BYTE	W01
+	BYTE		        c_v-13
+	BYTE	W02
+	BYTE		        c_v-14
+	BYTE	W01
+	BYTE		        c_v-15
+	BYTE	W01
+	BYTE		        c_v-16
+	BYTE	W01
+	BYTE		        c_v-17
+	BYTE	W01
+	BYTE		        c_v-18
+	BYTE	W01
+	BYTE		        c_v-19
+	BYTE	W01
+	BYTE		        c_v-21
+	BYTE	W01
+	BYTE		        c_v-22
+	BYTE	W01
+	BYTE		        c_v-23
+	BYTE	W01
+	BYTE		        c_v-25
+	BYTE	W01
+	BYTE		        c_v-26
+	BYTE	W01
+	BYTE		        c_v-27
+	BYTE	W01
+	BYTE		        c_v-29
+	BYTE	W01
+	BYTE		        c_v-31
+	BYTE	W01
+	BYTE		        c_v-33
+	BYTE	W01
+	BYTE		        c_v-35
+	BYTE	W01
+	BYTE		        c_v-37
+	BYTE	W01
+	BYTE		        c_v-39
+	BYTE	W01
+	BYTE		        c_v-42
+	BYTE	W01
+	BYTE		        c_v-44
+	BYTE	W01
+	BYTE		        c_v-47
+	BYTE	W01
+	BYTE		        c_v-50
+	BYTE	W01
+	BYTE		        c_v-52
+	BYTE	W01
+	BYTE		        c_v+0
+	BYTE		N44     Dn2   v112
+	BYTE		N44     An2 
+	BYTE	W48
+	BYTE		        En2 
+	BYTE		N44     Bn2 
+	BYTE	W02
+// 010   ----------------------------------------
+ChineseTea_5_010:
+	BYTE	W44
+	BYTE	W02
+	BYTE		N92     Fs2   v112
+	BYTE		N92     Cs3 
+	BYTE	W48
+	BYTE	W02
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		N44     Dn2 
+	BYTE		N44     An2 
+	BYTE	W12
+ChineseTea_5_B1:
+	BYTE	W36
+	BYTE		N44     Fn2   v112
+	BYTE		N44     Bn2 
+	BYTE	W02
+// 012   ----------------------------------------
+ChineseTea_5_012:
+	BYTE	W44
+	BYTE	W02
+	BYTE		N92     Fs2   v112
+	BYTE		N92     An2 
+	BYTE	W48
+	BYTE	W02
+	BYTE	PEND
+// 013   ----------------------------------------
+ChineseTea_5_013:
+	BYTE	W44
+	BYTE	W02
+	BYTE		N44     Dn2   v112
+	BYTE		N44     An2 
+	BYTE	W48
+	BYTE		        En2 
+	BYTE		N44     Bn2 
+	BYTE	W02
+	BYTE	PEND
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_010
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_013
+// 016   ----------------------------------------
+ChineseTea_5_016:
+	BYTE	W44
+	BYTE	W02
+	BYTE		N92     An2   v112
+	BYTE		N92     Fs3 
+	BYTE	W48
+	BYTE	W02
+	BYTE	PEND
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_013
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_010
+// 019   ----------------------------------------
+ChineseTea_5_019:
+	BYTE	W44
+	BYTE	W02
+	BYTE		N44     Dn2   v112
+	BYTE		N44     An2 
+	BYTE	W48
+	BYTE		        Fn2 
+	BYTE		N44     Bn2 
+	BYTE	W02
+	BYTE	PEND
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_012
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_013
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_010
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_013
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_016
+// 025   ----------------------------------------
+ChineseTea_5_025:
+	BYTE	W44
+	BYTE	W02
+	BYTE		N96     Fs2   v080
+	BYTE	W48
+	BYTE	W02
+	BYTE	PEND
+// 026   ----------------------------------------
+ChineseTea_5_026:
+	BYTE	W44
+	BYTE	W02
+	BYTE		N96     En2   v080
+	BYTE	W48
+	BYTE	W02
+	BYTE	PEND
+// 027   ----------------------------------------
+ChineseTea_5_027:
+	BYTE	W44
+	BYTE	W02
+	BYTE		TIE     Ds2   v080
+	BYTE	W48
+	BYTE	W02
+	BYTE	PEND
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		EOT   
+	BYTE		N96     Dn2 
+	BYTE	W48
+	BYTE	W02
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_026
+// 031   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		TIE     Cs2   v080
+	BYTE	W48
+	BYTE	W02
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		EOT   
+	BYTE		N96     Fs2 
+	BYTE	W48
+	BYTE	W02
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_026
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_027
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		EOT     Ds2 
+	BYTE		N96     Dn2   v080
+	BYTE	W48
+	BYTE	W02
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_026
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_025
+// 040   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		N68     Fs3   v080
+	BYTE	W48
+	BYTE	W02
+// 041   ----------------------------------------
+	BYTE	W22
+	BYTE		N23     Gs5   v120
+	BYTE	W24
+	BYTE		        An5 
+	BYTE	W24
+	BYTE		N12     Cs5 
+	BYTE	W12
+	BYTE		        An5 
+	BYTE	W12
+	BYTE		        Gs5 
+	BYTE	W02
+// 042   ----------------------------------------
+ChineseTea_5_042:
+	BYTE	W10
+	BYTE		N12     Fs5   v120
+	BYTE	W12
+	BYTE		        En5 
+	BYTE	W12
+	BYTE		        Dn5 
+	BYTE	W12
+	BYTE		N09     Cs5 
+	BYTE	W12
+	BYTE		        En5 
+	BYTE	W12
+	BYTE		        Bn4 
+	BYTE	W12
+	BYTE		        Cs5 
+	BYTE	W12
+	BYTE		N32     An4 
+	BYTE	W02
+	BYTE	PEND
+// 043   ----------------------------------------
+ChineseTea_5_043:
+	BYTE	W32
+	BYTE	W02
+	BYTE		N11     An4   v120
+	BYTE	W12
+	BYTE		        Bn4 
+	BYTE	W12
+	BYTE		        Cs5 
+	BYTE	W12
+	BYTE		        En5 
+	BYTE	W12
+	BYTE		        Cs5 
+	BYTE	W12
+	BYTE		        Bn4 
+	BYTE	W02
+	BYTE	PEND
+// 044   ----------------------------------------
+	BYTE	W10
+	BYTE		N08     Cs5 
+	BYTE	W09
+	BYTE		N02     An4 
+	BYTE	W03
+	BYTE		N11     Bn4 
+	BYTE	W12
+	BYTE		        An4 
+	BYTE	W12
+	BYTE		        Fs4 
+	BYTE	W12
+	BYTE		        An4 
+	BYTE	W12
+	BYTE		N02     Fs4   v060
+	BYTE	W03
+	BYTE		        En4 
+	BYTE	W03
+	BYTE		        Fs4   v072
+	BYTE	W03
+	BYTE		        En4   v080
+	BYTE	W03
+	BYTE		        Fs4   v092
+	BYTE	W03
+	BYTE		        En4   v100
+	BYTE	W03
+	BYTE		        Fs4   v112
+	BYTE	W03
+	BYTE		        En4   v120
+	BYTE	W03
+	BYTE		N32     Fs4 
+	BYTE	W02
+// 045   ----------------------------------------
+	BYTE	W32
+	BYTE	W02
+	BYTE		        An5 
+	BYTE	W36
+	BYTE		N12     Cs5 
+	BYTE	W12
+	BYTE		        An5 
+	BYTE	W12
+	BYTE		        Gs5 
+	BYTE	W02
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_042
+// 047   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_043
+// 048   ----------------------------------------
+	BYTE	W10
+	BYTE		N08     Cs5   v120
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N11     En5 
+	BYTE	W12
+	BYTE		        Fs5 
+	BYTE	W12
+	BYTE		        An5 
+	BYTE	W12
+	BYTE		        Fs5 
+	BYTE	W12
+	BYTE		N02     En5   v060
+	BYTE	W03
+	BYTE		        Fs5 
+	BYTE	W03
+	BYTE		        En5   v072
+	BYTE	W03
+	BYTE		        Fs5   v080
+	BYTE	W03
+	BYTE		        En5   v092
+	BYTE	W03
+	BYTE		        Fs5   v100
+	BYTE	W03
+	BYTE		        En5   v112
+	BYTE	W03
+	BYTE		        Fs5   v120
+	BYTE	W03
+	BYTE		N44   
+	BYTE	W02
+// 049   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_013
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_010
+// 051   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		N44     Dn2   v112
+	BYTE		N44     An2 
+	BYTE	W15
+	BYTE	GoTo
+	 POIN2	ChineseTea_5_B1
+ChineseTea_5_B2:
+	BYTE	W32
+	BYTE	W01
+	BYTE		N44     Fn2   v112
+	BYTE		N44     Bn2 
+	BYTE	W02
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_012
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_013
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_010
+// 055   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_013
+// 056   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_016
+// 057   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_013
+// 058   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_010
+// 059   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_019
+// 060   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_012
+// 061   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_013
+// 062   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_010
+// 063   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_013
+// 064   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_016
+// 065   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_013
+// 066   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_010
+// 067   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_019
+// 068   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_012
+// 069   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_013
+// 070   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_010
+// 071   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_013
+// 072   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_016
+// 073   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_013
+// 074   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_010
+// 075   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_019
+// 076   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_012
+// 077   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_013
+// 078   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_010
+// 079   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_013
+// 080   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_5_016
+// 081   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE	FINE
+
+//**************** Track 6 (Midi-Chn.6) ****************//
+
+ChineseTea_6:
+	BYTE	KEYSH   ChineseTea_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   57
+	BYTE		PAN     c_v+0
+	BYTE		VOL     127*ChineseTea_mvl/mxv
+// 001   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W84
+	BYTE	W03
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		N32     Fs3   v120
+	BYTE	W36
+	BYTE		N11     Fs4 
+	BYTE	W12
+	BYTE		N17     En4 
+	BYTE	W02
+// 010   ----------------------------------------
+ChineseTea_6_010:
+	BYTE	W16
+	BYTE		N17     An4   v100
+	BYTE	W18
+	BYTE		N11     Gs4   v120
+	BYTE	W12
+	BYTE		N09     En4 
+	BYTE	W12
+	BYTE		        Cs4   v100
+	BYTE	W12
+	BYTE		N11     En4   v120
+	BYTE	W12
+	BYTE		N06     En4   v112
+	BYTE	W06
+	BYTE		N52     Fs4   v127
+	BYTE	W08
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE	W09
+	BYTE	W07
+	BYTE	W04
+	BYTE	W03
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     Fs3   v120
+	BYTE	W12
+ChineseTea_6_B1:
+	BYTE	W24
+	BYTE		N11     Fs4   v100
+	BYTE	W12
+	BYTE		N17     Fn4   v120
+	BYTE	W02
+// 012   ----------------------------------------
+ChineseTea_6_012:
+	BYTE	W16
+	BYTE		N17     Fs4   v100
+	BYTE	W18
+	BYTE		N15     Gs4   v112
+	BYTE	W12
+	BYTE		N92     Cs4   v120
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	PEND
+// 013   ----------------------------------------
+ChineseTea_6_013:
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE		N32     Fs3   v120
+	BYTE	W36
+	BYTE		N11     Fs4 
+	BYTE	W12
+	BYTE		N17     En4 
+	BYTE	W02
+	BYTE	PEND
+// 014   ----------------------------------------
+ChineseTea_6_014:
+	BYTE	W16
+	BYTE		N17     Fs4   v100
+	BYTE	W18
+	BYTE		N11     Gs4   v120
+	BYTE	W12
+	BYTE		N09     An4 
+	BYTE	W12
+	BYTE		        Cs4   v100
+	BYTE	W12
+	BYTE		N11     Gs4   v120
+	BYTE	W12
+	BYTE		N06     Gs4   v112
+	BYTE	W06
+	BYTE		N28     An4 
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	PEND
+// 015   ----------------------------------------
+ChineseTea_6_015:
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N23     Bn4   v112
+	BYTE	W24
+	BYTE		N11     Cs5   v120
+	BYTE	W12
+	BYTE		N09     Fs4   v112
+	BYTE	W24
+	BYTE		N06     Gs4   v120
+	BYTE	W06
+	BYTE		        An4   v112
+	BYTE	W06
+	BYTE		N17     Gs4   v120
+	BYTE	W02
+	BYTE	PEND
+// 016   ----------------------------------------
+ChineseTea_6_016:
+	BYTE	W16
+	BYTE		N17     En4   v100
+	BYTE	W18
+	BYTE		N11     Cs4   v112
+	BYTE	W12
+	BYTE		N09     En4   v120
+	BYTE	W12
+	BYTE		        Cs4   v100
+	BYTE	W12
+	BYTE		N11     En4   v120
+	BYTE	W12
+	BYTE		N06     En4   v112
+	BYTE	W06
+	BYTE		N52     Fs4   v127
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	PEND
+// 017   ----------------------------------------
+ChineseTea_6_017:
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     Fs3   v120
+	BYTE	W36
+	BYTE		N11     Fs4 
+	BYTE	W12
+	BYTE		N17     En4 
+	BYTE	W02
+	BYTE	PEND
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_010
+// 019   ----------------------------------------
+ChineseTea_6_019:
+	BYTE	W09
+	BYTE	W07
+	BYTE	W04
+	BYTE	W03
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     Fs3   v120
+	BYTE	W36
+	BYTE		N11     Fs4   v100
+	BYTE	W12
+	BYTE		N17     Fn4   v120
+	BYTE	W02
+	BYTE	PEND
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_012
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_013
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_014
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_015
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_016
+// 025   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W48
+	BYTE	W02
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		N09     En3   v120
+	BYTE	W12
+	BYTE		        Cs3   v100
+	BYTE	W12
+	BYTE		N11     En3   v120
+	BYTE	W12
+	BYTE		N06     En3   v112
+	BYTE	W06
+	BYTE		N52     Fs3   v127
+	BYTE	W08
+// 041   ----------------------------------------
+	BYTE	W09
+	BYTE	W07
+	BYTE	W04
+	BYTE	W03
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     Fs2   v120
+	BYTE	W36
+	BYTE		N11     Fs3 
+	BYTE	W12
+	BYTE		N17     En3 
+	BYTE	W02
+// 042   ----------------------------------------
+	BYTE	W16
+	BYTE		        An3   v100
+	BYTE	W18
+	BYTE		N11     Gs3   v120
+	BYTE	W12
+	BYTE		N09     En3 
+	BYTE	W12
+	BYTE		        Cs3   v100
+	BYTE	W12
+	BYTE		N11     En3   v120
+	BYTE	W12
+	BYTE		N06     En3   v112
+	BYTE	W06
+	BYTE		N52     Fs3   v127
+	BYTE	W08
+// 043   ----------------------------------------
+	BYTE	W09
+	BYTE	W07
+	BYTE	W04
+	BYTE	W03
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     Fs2   v120
+	BYTE	W36
+	BYTE		N11     Fs3   v100
+	BYTE	W12
+	BYTE		N17     Fn3   v120
+	BYTE	W02
+// 044   ----------------------------------------
+	BYTE	W16
+	BYTE		        Fs3   v100
+	BYTE	W18
+	BYTE		N15     Gs3   v112
+	BYTE	W12
+	BYTE		N92     Cs3   v120
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+// 045   ----------------------------------------
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE		N32     Fs2 
+	BYTE	W36
+	BYTE		N11     Fs3 
+	BYTE	W12
+	BYTE		N17     En3 
+	BYTE	W02
+// 046   ----------------------------------------
+	BYTE	W16
+	BYTE		        Fs3   v100
+	BYTE	W18
+	BYTE		N11     Gs3   v120
+	BYTE	W12
+	BYTE		N09     An3 
+	BYTE	W12
+	BYTE		        Cs3   v100
+	BYTE	W12
+	BYTE		N11     Gs3   v120
+	BYTE	W12
+	BYTE		N06     Gs3   v112
+	BYTE	W06
+	BYTE		N28     An3 
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+// 047   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N23     Bn3 
+	BYTE	W24
+	BYTE		N11     Cs4   v120
+	BYTE	W12
+	BYTE		N09     Fs3   v112
+	BYTE	W24
+	BYTE		N06     Gs3   v120
+	BYTE	W06
+	BYTE		        An3   v112
+	BYTE	W06
+	BYTE		N17     Gs3   v120
+	BYTE	W02
+// 048   ----------------------------------------
+	BYTE	W16
+	BYTE		        En3   v100
+	BYTE	W18
+	BYTE		N11     Cs3   v112
+	BYTE	W12
+	BYTE		N09     En3   v120
+	BYTE	W12
+	BYTE		        Cs3   v100
+	BYTE	W12
+	BYTE		N11     En3   v120
+	BYTE	W12
+	BYTE		N06     En3   v112
+	BYTE	W06
+	BYTE		N52     Fs3   v127
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+// 049   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_017
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_010
+// 051   ----------------------------------------
+	BYTE	W09
+	BYTE	W07
+	BYTE	W04
+	BYTE	W03
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     Fs3   v120
+	BYTE	W15
+	BYTE	GoTo
+	 POIN2	ChineseTea_6_B1
+ChineseTea_6_B2:
+	BYTE	W21
+	BYTE		N11     Fs4   v100
+	BYTE	W12
+	BYTE		N17     Fn4   v120
+	BYTE	W02
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_012
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_013
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_014
+// 055   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_015
+// 056   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_016
+// 057   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_017
+// 058   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_010
+// 059   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_019
+// 060   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_012
+// 061   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_013
+// 062   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_014
+// 063   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_015
+// 064   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_016
+// 065   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_017
+// 066   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_010
+// 067   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_019
+// 068   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_012
+// 069   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_013
+// 070   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_014
+// 071   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_015
+// 072   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_016
+// 073   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_017
+// 074   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_010
+// 075   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_019
+// 076   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_012
+// 077   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_013
+// 078   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_014
+// 079   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_015
+// 080   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_6_016
+// 081   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	FINE
+
+//**************** Track 7 (Midi-Chn.7) ****************//
+
+ChineseTea_7:
+	BYTE	KEYSH   ChineseTea_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   56
+	BYTE		PAN     c_v-1
+	BYTE		VOL     127*ChineseTea_mvl/mxv
+// 001   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W84
+	BYTE	W03
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		N32     Dn3   v120
+	BYTE	W36
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		N17     Gs2 
+	BYTE	W02
+// 010   ----------------------------------------
+ChineseTea_7_010:
+	BYTE	W16
+	BYTE		N17     En3   v100
+	BYTE	W18
+	BYTE		N11     Bn2   v120
+	BYTE	W12
+	BYTE		N09     Cs3 
+	BYTE	W12
+	BYTE		        Fs2   v100
+	BYTE	W12
+	BYTE		N11     An2   v120
+	BYTE	W12
+	BYTE		N06     Gs2   v112
+	BYTE	W06
+	BYTE		N52     An2   v127
+	BYTE	W08
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE	W09
+	BYTE	W07
+	BYTE	W04
+	BYTE	W03
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     An2   v120
+	BYTE	W12
+ChineseTea_7_B1:
+	BYTE	W24
+	BYTE		N11     An3   v100
+	BYTE	W12
+	BYTE		N17     Fn3   v120
+	BYTE	W02
+// 012   ----------------------------------------
+ChineseTea_7_012:
+	BYTE	W16
+	BYTE		N17     Fs3   v100
+	BYTE	W18
+	BYTE		N15     Gs3   v112
+	BYTE	W12
+	BYTE		N92     An3   v120
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	PEND
+// 013   ----------------------------------------
+ChineseTea_7_013:
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE		N32     An2   v120
+	BYTE	W36
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		N17     Gs3 
+	BYTE	W02
+	BYTE	PEND
+// 014   ----------------------------------------
+ChineseTea_7_014:
+	BYTE	W16
+	BYTE		N17     An3   v100
+	BYTE	W18
+	BYTE		N11     Bn3   v120
+	BYTE	W12
+	BYTE		N09     Cs4 
+	BYTE	W12
+	BYTE		        Fs3   v100
+	BYTE	W12
+	BYTE		N11     En3   v120
+	BYTE	W12
+	BYTE		N06     En3   v112
+	BYTE	W06
+	BYTE		N30     Fs3 
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	PEND
+// 015   ----------------------------------------
+ChineseTea_7_015:
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N23     Gs3   v112
+	BYTE	W24
+	BYTE		N11     An3   v120
+	BYTE	W12
+	BYTE		N09     Dn3   v112
+	BYTE	W24
+	BYTE		N06     En3   v120
+	BYTE	W06
+	BYTE		        Fs3   v112
+	BYTE	W06
+	BYTE		N17     En3   v120
+	BYTE	W02
+	BYTE	PEND
+// 016   ----------------------------------------
+ChineseTea_7_016:
+	BYTE	W16
+	BYTE		N17     Gs3   v100
+	BYTE	W18
+	BYTE		N11     An3   v112
+	BYTE	W12
+	BYTE		N09     Bn3   v120
+	BYTE	W12
+	BYTE		        En3   v100
+	BYTE	W12
+	BYTE		N11     Gs3   v120
+	BYTE	W12
+	BYTE		N06     Gs3   v112
+	BYTE	W06
+	BYTE		N54     An3   v127
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	PEND
+// 017   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     Dn3   v120
+	BYTE	W36
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		N17     Gs2 
+	BYTE	W02
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_010
+// 019   ----------------------------------------
+	BYTE	W09
+	BYTE	W07
+	BYTE	W04
+	BYTE	W03
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     An2   v120
+	BYTE	W36
+	BYTE		N11     An3   v100
+	BYTE	W12
+	BYTE		N17     Fn3   v120
+	BYTE	W02
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_012
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_013
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_014
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_015
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_016
+// 025   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W48
+	BYTE	W02
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W96
+// 046   ----------------------------------------
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE	W96
+// 048   ----------------------------------------
+	BYTE	W96
+// 049   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		N32     Dn4   v120
+	BYTE	W36
+	BYTE		N11     An4 
+	BYTE	W12
+	BYTE		N17     Gs3 
+	BYTE	W02
+// 050   ----------------------------------------
+ChineseTea_7_050:
+	BYTE	W16
+	BYTE		N17     En4   v100
+	BYTE	W18
+	BYTE		N11     Bn3   v120
+	BYTE	W12
+	BYTE		N09     Cs4 
+	BYTE	W12
+	BYTE		        Fs3   v100
+	BYTE	W12
+	BYTE		N11     An3   v120
+	BYTE	W12
+	BYTE		N06     Gs3   v112
+	BYTE	W06
+	BYTE		N52     An3   v127
+	BYTE	W08
+	BYTE	PEND
+// 051   ----------------------------------------
+	BYTE	W09
+	BYTE	W07
+	BYTE	W04
+	BYTE	W03
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     An3   v120
+	BYTE	W15
+	BYTE	GoTo
+	 POIN2	ChineseTea_7_B1
+ChineseTea_7_B2:
+	BYTE	W21
+	BYTE		N11     An4   v100
+	BYTE	W12
+	BYTE		N17     Bn3   v120
+	BYTE	W02
+// 052   ----------------------------------------
+ChineseTea_7_052:
+	BYTE	W16
+	BYTE		N17     Cs4   v100
+	BYTE	W18
+	BYTE		N15     Fn4   v112
+	BYTE	W12
+	BYTE		N92     An4   v120
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	PEND
+// 053   ----------------------------------------
+ChineseTea_7_053:
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE		N32     An3   v120
+	BYTE	W36
+	BYTE		N11     An4 
+	BYTE	W12
+	BYTE		N17     Gs4 
+	BYTE	W02
+	BYTE	PEND
+// 054   ----------------------------------------
+ChineseTea_7_054:
+	BYTE	W16
+	BYTE		N17     An4   v100
+	BYTE	W18
+	BYTE		N11     Bn4   v120
+	BYTE	W12
+	BYTE		N09     Cs5 
+	BYTE	W12
+	BYTE		        Fs4   v100
+	BYTE	W12
+	BYTE		N11     En4   v120
+	BYTE	W12
+	BYTE		N06     En4   v112
+	BYTE	W06
+	BYTE		N30     Fs4 
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	PEND
+// 055   ----------------------------------------
+ChineseTea_7_055:
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N23     Gs4   v112
+	BYTE	W24
+	BYTE		N11     An4   v120
+	BYTE	W12
+	BYTE		N09     Dn4   v112
+	BYTE	W24
+	BYTE		N06     En4   v120
+	BYTE	W06
+	BYTE		        Fs4   v112
+	BYTE	W06
+	BYTE		N17     En4   v120
+	BYTE	W02
+	BYTE	PEND
+// 056   ----------------------------------------
+ChineseTea_7_056:
+	BYTE	W16
+	BYTE		N17     Gs4   v100
+	BYTE	W18
+	BYTE		N11     An4   v112
+	BYTE	W12
+	BYTE		N09     Bn4   v120
+	BYTE	W12
+	BYTE		        En4   v100
+	BYTE	W12
+	BYTE		N11     Gs4   v120
+	BYTE	W12
+	BYTE		N06     Gs4   v112
+	BYTE	W06
+	BYTE		N54     An4   v127
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	PEND
+// 057   ----------------------------------------
+ChineseTea_7_057:
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     Dn4   v120
+	BYTE	W36
+	BYTE		N11     An4 
+	BYTE	W12
+	BYTE		N17     Gs3 
+	BYTE	W02
+	BYTE	PEND
+// 058   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_050
+// 059   ----------------------------------------
+ChineseTea_7_059:
+	BYTE	W09
+	BYTE	W07
+	BYTE	W04
+	BYTE	W03
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     An3   v120
+	BYTE	W36
+	BYTE		N11     An4   v100
+	BYTE	W12
+	BYTE		N17     Bn3   v120
+	BYTE	W02
+	BYTE	PEND
+// 060   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_052
+// 061   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_053
+// 062   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_054
+// 063   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_055
+// 064   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_056
+// 065   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_057
+// 066   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_050
+// 067   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_059
+// 068   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_052
+// 069   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_053
+// 070   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_054
+// 071   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_055
+// 072   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_056
+// 073   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_057
+// 074   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_050
+// 075   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_059
+// 076   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_052
+// 077   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_053
+// 078   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_054
+// 079   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_055
+// 080   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_7_056
+// 081   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	FINE
+
+//**************** Track 8 (Midi-Chn.9) ****************//
+
+ChineseTea_8:
+	BYTE	KEYSH   ChineseTea_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   1
+	BYTE		PAN     c_v+0
+	BYTE		VOL     127*ChineseTea_mvl/mxv
+// 001   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W36
+	BYTE	W01
+	BYTE		N17     Dn3   v060
+	BYTE	W18
+	BYTE		N28     An3 
+	BYTE	W30
+	BYTE		N17     Gs3 
+	BYTE	W02
+// 002   ----------------------------------------
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W18
+	BYTE		N11     En4 
+	BYTE	W12
+	BYTE		N08     Fs4 
+	BYTE	W09
+	BYTE		        Bn4 
+	BYTE	W09
+	BYTE		N06     An3 
+	BYTE	W06
+	BYTE		N08     En4 
+	BYTE	W09
+	BYTE		        Bn3 
+	BYTE	W09
+	BYTE		N06     Gs3 
+	BYTE	W06
+	BYTE		N44     An3 
+	BYTE	W02
+// 003   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		N17     Fs3 
+	BYTE	W18
+	BYTE		N18     Dn4 
+	BYTE	W18
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		N17     Fn4 
+	BYTE	W02
+// 004   ----------------------------------------
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W18
+	BYTE		N11     Gs4 
+	BYTE	W12
+	BYTE		N44     An3 
+	BYTE	W48
+	BYTE		N08     Cs4 
+	BYTE	W02
+// 005   ----------------------------------------
+	BYTE	W07
+	BYTE		        An4 
+	BYTE	W09
+	BYTE		N06     Gs4 
+	BYTE	W06
+	BYTE		N08     Bn3 
+	BYTE	W09
+	BYTE		        Gs4 
+	BYTE	W09
+	BYTE		N06     Fs4 
+	BYTE	W06
+	BYTE		N06   
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W02
+// 006   ----------------------------------------
+	BYTE	W04
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Cs5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W02
+// 007   ----------------------------------------
+	BYTE	W04
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W02
+// 008   ----------------------------------------
+	BYTE	W04
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Cs5 
+	BYTE	W06
+	BYTE		        Fs5 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+	BYTE		        Gs5 
+	BYTE	W06
+	BYTE		        Cs5 
+	BYTE	W06
+	BYTE		        Fs5 
+	BYTE	W06
+	BYTE		        An5 
+	BYTE	W02
+// 009   ----------------------------------------
+	BYTE	W04
+	BYTE		        Gs5 
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Fs5 
+	BYTE	W06
+	BYTE		        Cs5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Fs4   v100
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W02
+// 010   ----------------------------------------
+ChineseTea_8_010:
+	BYTE	W04
+	BYTE		N06     En4   v100
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Cs5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W02
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE	W04
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+ChineseTea_8_B1:
+	BYTE		N06     Dn4   v100
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W02
+// 012   ----------------------------------------
+ChineseTea_8_012:
+	BYTE	W04
+	BYTE		N06     En4   v100
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Cs5 
+	BYTE	W06
+	BYTE		        Fs5 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+	BYTE		        Gs5 
+	BYTE	W06
+	BYTE		        Cs5 
+	BYTE	W06
+	BYTE		        Fs5 
+	BYTE	W06
+	BYTE		        An5 
+	BYTE	W02
+	BYTE	PEND
+// 013   ----------------------------------------
+ChineseTea_8_013:
+	BYTE	W04
+	BYTE		N06     Gs5   v100
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Fs5 
+	BYTE	W06
+	BYTE		        Cs5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W02
+	BYTE	PEND
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_010
+// 015   ----------------------------------------
+ChineseTea_8_015:
+	BYTE	W04
+	BYTE		N06     Gs4   v100
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W02
+	BYTE	PEND
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_012
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_013
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_010
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_015
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_012
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_013
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_010
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_015
+// 024   ----------------------------------------
+ChineseTea_8_024:
+	BYTE	W04
+	BYTE		N06     En4   v100
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Cs5 
+	BYTE	W06
+	BYTE		        Fs5 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+	BYTE		        Gs5 
+	BYTE	W06
+	BYTE		        Cs5 
+	BYTE	W06
+	BYTE		        Fs5 
+	BYTE	W06
+	BYTE		N23     An4   v120
+	BYTE		N23     Fs5 
+	BYTE	W02
+	BYTE	PEND
+// 025   ----------------------------------------
+ChineseTea_8_025:
+	BYTE	W22
+	BYTE		N23     Bn4   v120
+	BYTE		N23     Gs5 
+	BYTE	W24
+	BYTE		N68     Cs5 
+	BYTE		N68     An5 
+	BYTE	W48
+	BYTE	W02
+	BYTE	PEND
+// 026   ----------------------------------------
+ChineseTea_8_026:
+	BYTE	W22
+	BYTE		N23     An5   v120
+	BYTE		N23     Cs6 
+	BYTE	W24
+	BYTE		N44     Cs5 
+	BYTE		N44     Gs5 
+	BYTE	W48
+	BYTE		N44   
+	BYTE		N44     Cs6 
+	BYTE	W02
+	BYTE	PEND
+// 027   ----------------------------------------
+ChineseTea_8_027:
+	BYTE	W44
+	BYTE	W02
+	BYTE		TIE     Ds5   v120
+	BYTE		TIE     Fs5 
+	BYTE	W48
+	BYTE	W02
+	BYTE	PEND
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W15
+	BYTE		EOT     Ds5 
+	BYTE	W04
+	BYTE		N11   
+	BYTE	W02
+	BYTE		EOT     Fs5 
+	BYTE	W01
+	BYTE		N11   
+	BYTE	W12
+	BYTE		        Ds5 
+	BYTE		N11     Gs5 
+	BYTE	W12
+	BYTE		N32     Cs5 
+	BYTE		N32     An5 
+	BYTE	W36
+	BYTE		N23     An4 
+	BYTE		N23     Cs5 
+	BYTE	W14
+// 030   ----------------------------------------
+	BYTE	W10
+	BYTE		N11     Bn4 
+	BYTE		N11     Gs5 
+	BYTE	W12
+	BYTE		        Cs5 
+	BYTE		N11     An5 
+	BYTE	W12
+	BYTE		N44     Bn4 
+	BYTE		N44     Gs5 
+	BYTE	W48
+	BYTE		N32   
+	BYTE		N32     Bn5 
+	BYTE	W14
+// 031   ----------------------------------------
+	BYTE	W22
+	BYTE		N23     An5 
+	BYTE		N23     Cs6 
+	BYTE	W24
+	BYTE		TIE     Cs5 
+	BYTE		TIE     An5 
+	BYTE	W48
+	BYTE	W02
+// 032   ----------------------------------------
+	BYTE	W92
+	BYTE		EOT     Cs5 
+	BYTE		        An5 
+	BYTE	W02
+	BYTE		N23     An4 
+	BYTE		N23     Fs5 
+	BYTE	W02
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_025
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_026
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_027
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W15
+	BYTE		EOT     Ds5 
+	BYTE	W04
+	BYTE		N11     Ds5   v120
+	BYTE	W02
+	BYTE		EOT     Fs5 
+	BYTE	W01
+	BYTE		N11   
+	BYTE	W12
+	BYTE		        Ds5 
+	BYTE		N11     Gs5 
+	BYTE	W12
+	BYTE		N32     Cs5 
+	BYTE		N32     An5 
+	BYTE	W36
+	BYTE		N23     An4 
+	BYTE		N23     Cs5 
+	BYTE	W14
+// 038   ----------------------------------------
+	BYTE	W10
+	BYTE		N11     Bn4 
+	BYTE		N11     Gs5 
+	BYTE	W12
+	BYTE		        Cs5 
+	BYTE		N11     An5 
+	BYTE	W12
+	BYTE		N28     Bn4 
+	BYTE		N28     Gs5 
+	BYTE	W30
+	BYTE		N17     Gs4 
+	BYTE		N17     Bn4 
+	BYTE	W18
+	BYTE		N23     Gs5 
+	BYTE	W12
+	BYTE		        An5 
+	BYTE	W02
+// 039   ----------------------------------------
+	BYTE	W10
+	BYTE		N06     Bn5 
+	BYTE	W06
+	BYTE		        En6 
+	BYTE	W06
+	BYTE		        Bn5 
+	BYTE	W06
+	BYTE		        Gs5 
+	BYTE	W06
+	BYTE		TIE     An5 
+	BYTE	W06
+	BYTE		        Fs5 
+	BYTE	W56
+// 040   ----------------------------------------
+	BYTE	W44
+	BYTE	W01
+	BYTE		EOT   
+	BYTE		EOT     An5 
+	BYTE	W01
+	BYTE		N92   
+	BYTE		N92     Fs6 
+	BYTE	W48
+	BYTE	W02
+// 041   ----------------------------------------
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W96
+// 046   ----------------------------------------
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE	W96
+// 048   ----------------------------------------
+	BYTE	W96
+// 049   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		N06     Fs4   v100
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W02
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_010
+// 051   ----------------------------------------
+	BYTE	W04
+	BYTE		N06     Gs4   v100
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W03
+	BYTE	GoTo
+	 POIN2	ChineseTea_8_B1
+ChineseTea_8_B2:
+	BYTE	W03
+	BYTE		N06     An4   v100
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W02
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_012
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_013
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_010
+// 055   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_015
+// 056   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_012
+// 057   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_013
+// 058   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_010
+// 059   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_015
+// 060   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_012
+// 061   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_013
+// 062   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_010
+// 063   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_015
+// 064   ----------------------------------------
+	BYTE	W04
+	BYTE		N06     En4   v100
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Cs5 
+	BYTE	W06
+	BYTE		        Fs5 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+	BYTE		        Gs5 
+	BYTE	W06
+	BYTE		        Cs5 
+	BYTE	W06
+	BYTE		        Fs5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W02
+// 065   ----------------------------------------
+	BYTE	W04
+	BYTE		        Cs5 
+	BYTE	W06
+	BYTE		        Fs5 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+	BYTE		        Gs5 
+	BYTE	W06
+	BYTE		        Cs5 
+	BYTE	W06
+	BYTE		        Fs5 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W02
+// 066   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_010
+// 067   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_015
+// 068   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_012
+// 069   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_013
+// 070   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_010
+// 071   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_015
+// 072   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_012
+// 073   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_013
+// 074   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_010
+// 075   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_015
+// 076   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_012
+// 077   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_013
+// 078   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_010
+// 079   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_015
+// 080   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_8_024
+// 081   ----------------------------------------
+	BYTE	W22
+	BYTE		N23     Bn4   v120
+	BYTE		N23     Gs5 
+	BYTE	W24
+	BYTE	FINE
+
+//**************** Track 9 (Midi-Chn.11) ****************//
+
+ChineseTea_9:
+	BYTE	KEYSH   ChineseTea_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   0
+	BYTE		VOL     127*ChineseTea_mvl/mxv
+// 001   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		PAN     c_v+0
+	BYTE	W01
+	BYTE	W01
+	BYTE	W84
+	BYTE	W03
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W56
+	BYTE	W02
+ChineseTea_9_B1:
+	BYTE	W36
+	BYTE	W02
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		N12     Gs2   v092
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        Cs3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W02
+// 026   ----------------------------------------
+	BYTE	W04
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+	BYTE		        Fs2 
+	BYTE	W06
+	BYTE		        Gs2 
+	BYTE	W06
+	BYTE		        Cs3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W02
+// 027   ----------------------------------------
+	BYTE	W04
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Ds2 
+	BYTE	W06
+	BYTE		        Gs2 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Ds4 
+	BYTE	W02
+// 028   ----------------------------------------
+	BYTE	W04
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Ds4 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Ds4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W02
+// 029   ----------------------------------------
+	BYTE	W04
+	BYTE		        Gs2 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        Cs3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+	BYTE		        Fs2 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W02
+// 030   ----------------------------------------
+	BYTE	W04
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+	BYTE		        Gs2 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W02
+// 031   ----------------------------------------
+	BYTE	W04
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Fs2 
+	BYTE	W06
+	BYTE		        Gs2 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        Cs3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W02
+// 032   ----------------------------------------
+	BYTE	W04
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Cs5 
+	BYTE	W06
+	BYTE		        Fs5 
+	BYTE	W06
+	BYTE		        Cs5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W02
+// 033   ----------------------------------------
+	BYTE	W04
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Gs2   v100
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        Cs3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        An4   v104
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W02
+// 034   ----------------------------------------
+	BYTE	W04
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+	BYTE		        Fs2 
+	BYTE	W06
+	BYTE		        Gs2 
+	BYTE	W06
+	BYTE		        Cs3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W02
+// 035   ----------------------------------------
+	BYTE	W04
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Ds2 
+	BYTE	W06
+	BYTE		        Gs2 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Ds4 
+	BYTE	W02
+// 036   ----------------------------------------
+	BYTE	W04
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Ds4 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Ds4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W02
+// 037   ----------------------------------------
+	BYTE	W04
+	BYTE		        Gs2 
+	BYTE	W06
+	BYTE		        An2   v108
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        Cs3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+	BYTE		        Fs2 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W02
+// 038   ----------------------------------------
+	BYTE	W04
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+	BYTE		        Gs2 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W02
+// 039   ----------------------------------------
+	BYTE	W04
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Fs2 
+	BYTE	W06
+	BYTE		        Gs2 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		        Cs3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W02
+// 040   ----------------------------------------
+	BYTE	W04
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Cs5 
+	BYTE	W06
+	BYTE		        Fs5 
+	BYTE	W06
+	BYTE		        Cs5   v112
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W02
+// 041   ----------------------------------------
+	BYTE	W04
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		N11     Dn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Fs4 
+	BYTE		N11     An4 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Fs4 
+	BYTE		N11     An4 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE		N11     Bn3 
+	BYTE	W02
+// 042   ----------------------------------------
+ChineseTea_9_042:
+	BYTE	W10
+	BYTE		N11     Gs4   v112
+	BYTE		N11     Bn4 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Gs4 
+	BYTE		N11     Bn4 
+	BYTE	W12
+	BYTE		        Fs3 
+	BYTE		N11     Cs4 
+	BYTE	W12
+	BYTE		        Fs4 
+	BYTE		N11     An4 
+	BYTE	W12
+	BYTE		        Fs3 
+	BYTE		N11     Cs4 
+	BYTE	W12
+	BYTE		        Fs4 
+	BYTE		N11     An4 
+	BYTE	W12
+	BYTE		        Fs3 
+	BYTE		N11     Cs4 
+	BYTE	W02
+	BYTE	PEND
+// 043   ----------------------------------------
+ChineseTea_9_043:
+	BYTE	W10
+	BYTE		N11     Fs4   v112
+	BYTE		N11     An4 
+	BYTE	W12
+	BYTE		        Fs3 
+	BYTE		N11     Cs4 
+	BYTE	W12
+	BYTE		        Fs4 
+	BYTE		N11     An4 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE		N11     Fs4 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE		N11     Fs4 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE		N11     Bn3 
+	BYTE	W02
+	BYTE	PEND
+// 044   ----------------------------------------
+ChineseTea_9_044:
+	BYTE	W10
+	BYTE		N11     En4   v112
+	BYTE		N11     Gs4 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        En4 
+	BYTE		N11     Gs4 
+	BYTE	W12
+	BYTE		        Fs3 
+	BYTE		N11     Cs4 
+	BYTE	W12
+	BYTE		        Fs4 
+	BYTE		N11     An4 
+	BYTE	W12
+	BYTE		        Fs3 
+	BYTE		N11     Cs4 
+	BYTE	W12
+	BYTE		        Gs4 
+	BYTE		N11     Bn4 
+	BYTE	W12
+	BYTE		        Fs3 
+	BYTE		N11     Cs4 
+	BYTE	W02
+	BYTE	PEND
+// 045   ----------------------------------------
+	BYTE	W10
+	BYTE		        An4 
+	BYTE		N11     Cs5 
+	BYTE	W12
+	BYTE		        Fs3 
+	BYTE		N11     Cs4 
+	BYTE	W12
+	BYTE		        An4 
+	BYTE		N11     Fs5 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Fs4 
+	BYTE		N11     An4 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Fs4 
+	BYTE		N11     An4 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE		N11     Bn3 
+	BYTE	W02
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_9_042
+// 047   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_9_043
+// 048   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_9_044
+// 049   ----------------------------------------
+	BYTE	W10
+	BYTE		N11     An4   v112
+	BYTE		N11     Cs5 
+	BYTE	W12
+	BYTE		        Fs3 
+	BYTE		N11     Cs4 
+	BYTE	W12
+	BYTE		        An4 
+	BYTE		N11     Fs5 
+	BYTE	W60
+	BYTE	W02
+// 050   ----------------------------------------
+	BYTE	W96
+// 051   ----------------------------------------
+	BYTE	W60
+	BYTE	W01
+	BYTE	GoTo
+	 POIN2	ChineseTea_9_B1
+ChineseTea_9_B2:
+	BYTE	W32
+	BYTE	W03
+// 052   ----------------------------------------
+	BYTE	W96
+// 053   ----------------------------------------
+	BYTE	W96
+// 054   ----------------------------------------
+	BYTE	W96
+// 055   ----------------------------------------
+	BYTE	W96
+// 056   ----------------------------------------
+	BYTE	W96
+// 057   ----------------------------------------
+	BYTE	W96
+// 058   ----------------------------------------
+	BYTE	W96
+// 059   ----------------------------------------
+	BYTE	W96
+// 060   ----------------------------------------
+	BYTE	W96
+// 061   ----------------------------------------
+	BYTE	W96
+// 062   ----------------------------------------
+	BYTE	W96
+// 063   ----------------------------------------
+	BYTE	W96
+// 064   ----------------------------------------
+	BYTE	W96
+// 065   ----------------------------------------
+	BYTE	W96
+// 066   ----------------------------------------
+	BYTE	W96
+// 067   ----------------------------------------
+	BYTE	W96
+// 068   ----------------------------------------
+	BYTE	W96
+// 069   ----------------------------------------
+	BYTE	W96
+// 070   ----------------------------------------
+	BYTE	W96
+// 071   ----------------------------------------
+	BYTE	W96
+// 072   ----------------------------------------
+	BYTE	W96
+// 073   ----------------------------------------
+	BYTE	W96
+// 074   ----------------------------------------
+	BYTE	W96
+// 075   ----------------------------------------
+	BYTE	W96
+// 076   ----------------------------------------
+	BYTE	W96
+// 077   ----------------------------------------
+	BYTE	W96
+// 078   ----------------------------------------
+	BYTE	W96
+// 079   ----------------------------------------
+	BYTE	W96
+// 080   ----------------------------------------
+	BYTE	W96
+// 081   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE	FINE
+
+//**************** Track 10 (Midi-Chn.12) ****************//
+
+ChineseTea_10:
+	BYTE	KEYSH   ChineseTea_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   110
+	BYTE		PAN     c_v-1
+	BYTE		VOL     127*ChineseTea_mvl/mxv
+// 001   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W36
+	BYTE	W01
+	BYTE		N32     Fs2   v100
+	BYTE	W36
+	BYTE		N11     Fs3 
+	BYTE	W12
+	BYTE		N17     En3 
+	BYTE	W02
+// 002   ----------------------------------------
+	BYTE	W16
+	BYTE		        An3   v080
+	BYTE	W18
+	BYTE		N11     Gs3   v100
+	BYTE	W12
+	BYTE		N09     En3 
+	BYTE	W12
+	BYTE		        Cs3   v080
+	BYTE	W12
+	BYTE		N11     En3   v100
+	BYTE	W12
+	BYTE		N06     En3   v092
+	BYTE	W06
+	BYTE		N52     Fs3   v112
+	BYTE	W08
+// 003   ----------------------------------------
+	BYTE	W09
+	BYTE	W07
+	BYTE	W04
+	BYTE	W03
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     Fs2   v100
+	BYTE	W36
+	BYTE		N11     Fs3   v080
+	BYTE	W12
+	BYTE		N17     Fn3   v100
+	BYTE	W02
+// 004   ----------------------------------------
+	BYTE	W16
+	BYTE		        Fs3   v080
+	BYTE	W18
+	BYTE		N15     Gs3   v092
+	BYTE	W12
+	BYTE		N92     Cs3   v100
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+// 005   ----------------------------------------
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE		N32     Fs2 
+	BYTE	W36
+	BYTE		N11     Fs3 
+	BYTE	W12
+	BYTE		N17     En3 
+	BYTE	W02
+// 006   ----------------------------------------
+	BYTE	W16
+	BYTE		        Fs3   v080
+	BYTE	W18
+	BYTE		N11     Gs3   v100
+	BYTE	W12
+	BYTE		N09     An3 
+	BYTE	W12
+	BYTE		        Cs3   v080
+	BYTE	W12
+	BYTE		N11     Gs3   v100
+	BYTE	W12
+	BYTE		N06     Gs3   v092
+	BYTE	W06
+	BYTE		N28     An3 
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+// 007   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N23     Bn3 
+	BYTE	W24
+	BYTE		N11     Cs4   v100
+	BYTE	W12
+	BYTE		N09     Fs3   v092
+	BYTE	W24
+	BYTE		N06     Gs3   v100
+	BYTE	W06
+	BYTE		        An3   v092
+	BYTE	W06
+	BYTE		N17     Gs3   v100
+	BYTE	W02
+// 008   ----------------------------------------
+	BYTE	W16
+	BYTE		        En3   v080
+	BYTE	W18
+	BYTE		N11     Cs3   v092
+	BYTE	W12
+	BYTE		N09     En3   v100
+	BYTE	W12
+	BYTE		        Cs3   v080
+	BYTE	W12
+	BYTE		N11     En3   v100
+	BYTE	W12
+	BYTE		N06     En3   v092
+	BYTE	W06
+	BYTE		N52     Fs3   v112
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+// 009   ----------------------------------------
+ChineseTea_10_009:
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     Fs2   v120
+	BYTE	W36
+	BYTE		N11     Fs3 
+	BYTE	W12
+	BYTE		N17     En3 
+	BYTE	W02
+	BYTE	PEND
+// 010   ----------------------------------------
+ChineseTea_10_010:
+	BYTE	W16
+	BYTE		N17     An3   v100
+	BYTE	W18
+	BYTE		N11     Gs3   v120
+	BYTE	W12
+	BYTE		N09     En3 
+	BYTE	W12
+	BYTE		        Cs3   v100
+	BYTE	W12
+	BYTE		N11     En3   v120
+	BYTE	W12
+	BYTE		N06     En3   v112
+	BYTE	W06
+	BYTE		N52     Fs3   v127
+	BYTE	W08
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE	W09
+	BYTE	W07
+	BYTE	W04
+	BYTE	W03
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     Fs2   v120
+	BYTE	W12
+ChineseTea_10_B1:
+	BYTE	W24
+	BYTE		N11     Fs3   v100
+	BYTE	W12
+	BYTE		N17     Fn3   v120
+	BYTE	W02
+// 012   ----------------------------------------
+ChineseTea_10_012:
+	BYTE	W16
+	BYTE		N17     Fs3   v100
+	BYTE	W18
+	BYTE		N15     Gs3   v112
+	BYTE	W12
+	BYTE		N92     Cs3   v120
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	PEND
+// 013   ----------------------------------------
+ChineseTea_10_013:
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE		N32     Fs2   v120
+	BYTE	W36
+	BYTE		N11     Fs3 
+	BYTE	W12
+	BYTE		N17     En3 
+	BYTE	W02
+	BYTE	PEND
+// 014   ----------------------------------------
+ChineseTea_10_014:
+	BYTE	W16
+	BYTE		N17     Fs3   v100
+	BYTE	W18
+	BYTE		N11     Gs3   v120
+	BYTE	W12
+	BYTE		N09     An3 
+	BYTE	W12
+	BYTE		        Cs3   v100
+	BYTE	W12
+	BYTE		N11     Gs3   v120
+	BYTE	W12
+	BYTE		N06     Gs3   v112
+	BYTE	W06
+	BYTE		N28     An3 
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	PEND
+// 015   ----------------------------------------
+ChineseTea_10_015:
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N23     Bn3   v112
+	BYTE	W24
+	BYTE		N11     Cs4   v120
+	BYTE	W12
+	BYTE		N09     Fs3   v112
+	BYTE	W24
+	BYTE		N06     Gs3   v120
+	BYTE	W06
+	BYTE		        An3   v112
+	BYTE	W06
+	BYTE		N17     Gs3   v120
+	BYTE	W02
+	BYTE	PEND
+// 016   ----------------------------------------
+ChineseTea_10_016:
+	BYTE	W16
+	BYTE		N17     En3   v100
+	BYTE	W18
+	BYTE		N11     Cs3   v112
+	BYTE	W12
+	BYTE		N09     En3   v120
+	BYTE	W12
+	BYTE		        Cs3   v100
+	BYTE	W12
+	BYTE		N11     En3   v120
+	BYTE	W12
+	BYTE		N06     En3   v112
+	BYTE	W06
+	BYTE		N52     Fs3   v127
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	PEND
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_009
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_010
+// 019   ----------------------------------------
+ChineseTea_10_019:
+	BYTE	W09
+	BYTE	W07
+	BYTE	W04
+	BYTE	W03
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     Fs2   v120
+	BYTE	W36
+	BYTE		N11     Fs3   v100
+	BYTE	W12
+	BYTE		N17     Fn3   v120
+	BYTE	W02
+	BYTE	PEND
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_012
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_013
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_014
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_015
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_016
+// 025   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W48
+	BYTE	W02
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W44
+	BYTE	W02
+	BYTE		N32     Fs1   v120
+	BYTE	W36
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		N17     En2 
+	BYTE	W02
+// 042   ----------------------------------------
+	BYTE	W16
+	BYTE		        An2   v100
+	BYTE	W18
+	BYTE		N11     Gs2   v120
+	BYTE	W12
+	BYTE		N09     En2 
+	BYTE	W12
+	BYTE		        Cs2   v100
+	BYTE	W12
+	BYTE		N11     En2   v120
+	BYTE	W12
+	BYTE		N06     En2   v112
+	BYTE	W06
+	BYTE		N52     Fs2   v127
+	BYTE	W08
+// 043   ----------------------------------------
+	BYTE	W09
+	BYTE	W07
+	BYTE	W04
+	BYTE	W03
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     Fs1   v120
+	BYTE	W36
+	BYTE		N11     Fs2   v100
+	BYTE	W12
+	BYTE		N17     Fn2   v120
+	BYTE	W02
+// 044   ----------------------------------------
+	BYTE	W16
+	BYTE		        Fs2   v100
+	BYTE	W18
+	BYTE		N15     Gs2   v112
+	BYTE	W12
+	BYTE		N92     Cs2   v120
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+// 045   ----------------------------------------
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W02
+	BYTE		N32     Fs1 
+	BYTE	W36
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		N17     En2 
+	BYTE	W02
+// 046   ----------------------------------------
+	BYTE	W16
+	BYTE		        Fs2   v100
+	BYTE	W18
+	BYTE		N11     Gs2   v120
+	BYTE	W12
+	BYTE		N09     An2 
+	BYTE	W12
+	BYTE		        Cs2   v100
+	BYTE	W12
+	BYTE		N11     Gs2   v120
+	BYTE	W12
+	BYTE		N06     Gs2   v112
+	BYTE	W06
+	BYTE		N28     An2 
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+// 047   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N23     Bn2 
+	BYTE	W24
+	BYTE		N11     Cs3   v120
+	BYTE	W12
+	BYTE		N09     Fs2   v112
+	BYTE	W24
+	BYTE		N06     Gs2   v120
+	BYTE	W06
+	BYTE		        An2   v112
+	BYTE	W06
+	BYTE		N17     Gs2   v120
+	BYTE	W02
+// 048   ----------------------------------------
+	BYTE	W16
+	BYTE		        En2   v100
+	BYTE	W18
+	BYTE		N11     Cs2   v112
+	BYTE	W12
+	BYTE		N09     En2   v120
+	BYTE	W12
+	BYTE		        Cs2   v100
+	BYTE	W12
+	BYTE		N11     En2   v120
+	BYTE	W12
+	BYTE		N06     En2   v112
+	BYTE	W06
+	BYTE		N52     Fs2   v127
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+// 049   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_009
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_010
+// 051   ----------------------------------------
+	BYTE	W09
+	BYTE	W07
+	BYTE	W04
+	BYTE	W03
+	BYTE	W02
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W02
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		N32     Fs2   v120
+	BYTE	W15
+	BYTE	GoTo
+	 POIN2	ChineseTea_10_B1
+ChineseTea_10_B2:
+	BYTE	W21
+	BYTE		N11     Fs3   v100
+	BYTE	W12
+	BYTE		N17     Fn3   v120
+	BYTE	W02
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_012
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_013
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_014
+// 055   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_015
+// 056   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_016
+// 057   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_009
+// 058   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_010
+// 059   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_019
+// 060   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_012
+// 061   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_013
+// 062   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_014
+// 063   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_015
+// 064   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_016
+// 065   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_009
+// 066   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_010
+// 067   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_019
+// 068   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_012
+// 069   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_013
+// 070   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_014
+// 071   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_015
+// 072   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_016
+// 073   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_009
+// 074   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_010
+// 075   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_019
+// 076   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_012
+// 077   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_013
+// 078   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_014
+// 079   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_015
+// 080   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_10_016
+// 081   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	FINE
+
+//**************** Track 11 (Midi-Chn.13) ****************//
+
+ChineseTea_11:
+	BYTE	KEYSH   ChineseTea_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   127
+	BYTE		VOL     127*ChineseTea_mvl/mxv
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+// 001   ----------------------------------------
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE		PAN     c_v+0
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W01
+	BYTE	W84
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W22
+	BYTE		N01     Cn1   v108
+	BYTE		N01     En1 
+	BYTE		N01     Cs2   v092
+	BYTE	W24
+	BYTE		        Cn1   v108
+	BYTE		N01     Cs2   v092
+	BYTE	W06
+	BYTE		        Fs1   v064
+	BYTE	W06
+	BYTE		N01   
+	BYTE	W12
+	BYTE		        En1   v080
+	BYTE		N01     As1   v092
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		N01   
+	BYTE	W08
+// 010   ----------------------------------------
+ChineseTea_11_010:
+	BYTE	W04
+	BYTE		N01     Cn1   v092
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE	W06
+	BYTE		        En1   v108
+	BYTE		N01     Fs1   v080
+	BYTE	W06
+	BYTE		        As1   v092
+	BYTE	W12
+	BYTE		        Cn1   v080
+	BYTE	W06
+	BYTE		        Cn1   v108
+	BYTE	W06
+	BYTE		        Fs1   v064
+	BYTE	W06
+	BYTE		        Cn1   v080
+	BYTE		N01     Fs1   v064
+	BYTE	W12
+	BYTE		        En1   v080
+	BYTE		N01     As1   v092
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		N01   
+	BYTE	W08
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE	W04
+	BYTE		        Cn1 
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE	W06
+	BYTE		        En1   v108
+	BYTE		N01     Fs1   v080
+	BYTE	W06
+	BYTE		        As1   v092
+	BYTE	W06
+	BYTE		        Dn1   v080
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		        Cn1   v108
+	BYTE		N01     Cs2   v092
+	BYTE	W06
+	BYTE		        Fs1   v064
+	BYTE	W06
+ChineseTea_11_B1:
+	BYTE		N01     Fs1   v064
+	BYTE	W12
+	BYTE		        En1   v080
+	BYTE		N01     As1   v092
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		N01   
+	BYTE	W08
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_010
+// 013   ----------------------------------------
+ChineseTea_11_013:
+	BYTE	W04
+	BYTE		N01     Cn1   v092
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE	W06
+	BYTE		        En1   v108
+	BYTE		N01     Fs1   v080
+	BYTE	W06
+	BYTE		        As1   v092
+	BYTE	W06
+	BYTE		        Dn1   v080
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		        Cn1   v108
+	BYTE		N01     Cs2   v092
+	BYTE	W06
+	BYTE		        Fs1   v064
+	BYTE	W06
+	BYTE		N01   
+	BYTE	W12
+	BYTE		        En1   v080
+	BYTE		N01     As1   v092
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		N01   
+	BYTE	W08
+	BYTE	PEND
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_010
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_013
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_010
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_013
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_010
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_013
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_010
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_013
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_010
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_013
+// 024   ----------------------------------------
+ChineseTea_11_024:
+	BYTE	W04
+	BYTE		N01     Cn1   v092
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE	W06
+	BYTE		        En1   v108
+	BYTE		N01     Fs1   v080
+	BYTE	W06
+	BYTE		        As1   v092
+	BYTE	W12
+	BYTE		        Cn1   v080
+	BYTE	W06
+	BYTE		        Cn1   v108
+	BYTE		N01     Fn1   v080
+	BYTE	W06
+	BYTE		        Dn1   v092
+	BYTE		N01     Fs1   v064
+	BYTE		N01     Cn2   v080
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N01     Dn1   v092
+	BYTE		N01     Fs1   v064
+	BYTE		N01     An1   v080
+	BYTE	W06
+	BYTE		N01   
+	BYTE	W06
+	BYTE		        Dn1   v092
+	BYTE		N01     En1   v080
+	BYTE		N01     Fn1 
+	BYTE		N01     As1   v092
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N01     Dn1 
+	BYTE		N01     Fn1   v080
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE		N01     Dn1 
+	BYTE		N01     Fn1   v080
+	BYTE		N01     Fs1   v092
+	BYTE	W06
+	BYTE		        En1   v108
+	BYTE		N01     Fn1   v080
+	BYTE		N01     Fs1   v092
+	BYTE	W06
+	BYTE		        Cn1   v108
+	BYTE		N01     En1 
+	BYTE	W02
+	BYTE	PEND
+// 025   ----------------------------------------
+	BYTE	W04
+	BYTE		        Cn1   v092
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE	W06
+	BYTE		        Cn1   v108
+	BYTE		N01     En1 
+	BYTE		N01     Fs1   v080
+	BYTE		N01     Cs2   v108
+	BYTE	W06
+	BYTE		        As1   v092
+	BYTE	W06
+	BYTE		        Dn1   v080
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE		N01     Cs2   v092
+	BYTE	W12
+	BYTE		        Fs1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE	W06
+	BYTE		        Fs1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     Fs1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N01     Fs1   v108
+	BYTE	W02
+// 026   ----------------------------------------
+ChineseTea_11_026:
+	BYTE	W10
+	BYTE		N01     Fs1   v108
+	BYTE	W12
+	BYTE		        Cn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W12
+	BYTE		        Cn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W12
+	BYTE		        Cn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W12
+	BYTE		N01   
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE	W06
+	BYTE		        Fs1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     Fs1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N01     Fs1   v108
+	BYTE	W02
+	BYTE	PEND
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_026
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_026
+// 029   ----------------------------------------
+	BYTE	W10
+	BYTE		N01     En1   v080
+	BYTE		N01     Fs1   v108
+	BYTE	W06
+	BYTE		        En1   v080
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W06
+	BYTE		        En1   v092
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N01     En1 
+	BYTE		N01     Fs1   v108
+	BYTE	W06
+	BYTE		        En1   v092
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N01     Fs1   v108
+	BYTE		N01     Cs2   v092
+	BYTE	W12
+	BYTE		        Fs1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE	W06
+	BYTE		        Fs1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     Fs1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N01     Fs1   v108
+	BYTE	W02
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_026
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_026
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_026
+// 033   ----------------------------------------
+	BYTE	W10
+	BYTE		N01     En1   v080
+	BYTE		N01     Fs1   v108
+	BYTE	W06
+	BYTE		        En1   v080
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W06
+	BYTE		        En1   v092
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N01     En1 
+	BYTE		N01     Fs1   v108
+	BYTE	W06
+	BYTE		        En1   v092
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N01     Fs1   v108
+	BYTE		N01     Cs2   v092
+	BYTE	W12
+	BYTE		        As1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W06
+	BYTE		        Dn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE	W06
+	BYTE		        Fs1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE	W06
+	BYTE		        Fs1   v108
+	BYTE	W02
+// 034   ----------------------------------------
+ChineseTea_11_034:
+	BYTE	W10
+	BYTE		N01     Cn1   v092
+	BYTE		N01     As1   v108
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Dn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W12
+	BYTE		        Cn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W12
+	BYTE		        Cn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W12
+	BYTE		        Cn1   v092
+	BYTE		N01     As1   v108
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Dn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W12
+	BYTE		N01   
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     Fs1   v108
+	BYTE	W02
+	BYTE	PEND
+// 035   ----------------------------------------
+ChineseTea_11_035:
+	BYTE	W04
+	BYTE		N01     Cn1   v092
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     As1   v108
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Dn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     Dn1   v064
+	BYTE		N01     Fs1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE		N01     Dn1   v052
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W06
+	BYTE		        Dn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE	W06
+	BYTE		        Fs1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE	W06
+	BYTE		        Fs1   v108
+	BYTE	W02
+	BYTE	PEND
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_034
+// 037   ----------------------------------------
+	BYTE	W04
+	BYTE		N01     Cn1   v092
+	BYTE		N01     Dn1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N01     Dn1 
+	BYTE		N01     As1   v108
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Dn1   v092
+	BYTE		N01     En1 
+	BYTE		N01     Fs1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     Dn1   v064
+	BYTE		N01     En1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE		N01     Dn1   v052
+	BYTE		N01     En1   v092
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N01     Fs1   v108
+	BYTE		N01     Cs2   v092
+	BYTE	W12
+	BYTE		        As1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W06
+	BYTE		        Dn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE	W06
+	BYTE		        Fs1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE	W06
+	BYTE		        Fs1   v108
+	BYTE	W02
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_034
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_035
+// 040   ----------------------------------------
+	BYTE	W10
+	BYTE		N01     Cn1   v092
+	BYTE		N01     As1   v108
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Dn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W12
+	BYTE		        Cn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W12
+	BYTE		        Cn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W12
+	BYTE		        Cn1   v092
+	BYTE		N01     As1   v108
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Dn1   v092
+	BYTE		N01     Fs1   v108
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE		N01     Cn2 
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE		N01     An1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE		N01     Fn1   v108
+	BYTE		N01     Fs1 
+	BYTE	W02
+// 041   ----------------------------------------
+	BYTE	W04
+	BYTE		        Cn1   v092
+	BYTE		N01     Dn1 
+	BYTE		N01     Cn2   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE		N01     Dn1 
+	BYTE		N01     An1   v108
+	BYTE		N01     As1 
+	BYTE	W06
+	BYTE		        Fn1 
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		        Dn1   v092
+	BYTE		N01     En1 
+	BYTE		N01     Fs1   v108
+	BYTE		N01     Cn2 
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE		N01     Fn1   v108
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE		N01     Dn1   v064
+	BYTE		N01     En1   v092
+	BYTE		N01     Fs1   v108
+	BYTE		N01     Cn2 
+	BYTE	W06
+	BYTE		        Cn1   v092
+	BYTE		N01     Dn1   v052
+	BYTE		N01     En1   v092
+	BYTE		N01     Fn1   v108
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N01     Cs2   v120
+	BYTE	W06
+	BYTE		        Fs1   v052
+	BYTE	W06
+	BYTE		N01   
+	BYTE	W12
+	BYTE		        Fs1   v108
+	BYTE	W06
+	BYTE		        Fs1   v064
+	BYTE	W18
+	BYTE		        Cn1   v108
+	BYTE		N01     Fs1   v052
+	BYTE	W02
+// 042   ----------------------------------------
+	BYTE	W10
+	BYTE		N01   
+	BYTE	W12
+	BYTE		        Fs1   v108
+	BYTE	W06
+	BYTE		        Fs1   v064
+	BYTE	W18
+	BYTE		        Cn1   v108
+	BYTE		N01     Fs1   v064
+	BYTE	W06
+	BYTE		        Fs1   v052
+	BYTE	W06
+	BYTE		N01   
+	BYTE	W12
+	BYTE		        Fs1   v108
+	BYTE	W06
+	BYTE		        Fs1   v064
+	BYTE	W18
+	BYTE		        Cn1   v108
+	BYTE		N01     Fs1   v052
+	BYTE	W02
+// 043   ----------------------------------------
+	BYTE	W10
+	BYTE		N01   
+	BYTE	W12
+	BYTE		        Fs1   v108
+	BYTE	W06
+	BYTE		        Fs1   v064
+	BYTE	W18
+	BYTE		        Cn1   v108
+	BYTE		N01     Fs1   v064
+	BYTE	W06
+	BYTE		        Fs1   v052
+	BYTE	W06
+	BYTE		N01   
+	BYTE	W12
+	BYTE		        Cn1   v108
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		        Fs1   v064
+	BYTE	W18
+	BYTE		        Cn1   v108
+	BYTE		N01     Fs1   v052
+	BYTE	W02
+// 044   ----------------------------------------
+	BYTE	W10
+	BYTE		N01   
+	BYTE	W12
+	BYTE		        Cn1   v108
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		        Fs1   v064
+	BYTE	W18
+	BYTE		        Cn1   v108
+	BYTE		N01     Fs1   v064
+	BYTE	W06
+	BYTE		        Fs1   v052
+	BYTE	W06
+	BYTE		N01   
+	BYTE	W12
+	BYTE		        Cn1   v108
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		        Fs1   v064
+	BYTE	W18
+	BYTE		        Cn1   v108
+	BYTE		N01     Fs1   v052
+	BYTE	W02
+// 045   ----------------------------------------
+	BYTE	W10
+	BYTE		N01   
+	BYTE	W06
+	BYTE		        Cn1   v036
+	BYTE	W06
+	BYTE		        Dn1   v092
+	BYTE		N01     En1   v120
+	BYTE		N01     Fs1   v108
+	BYTE		N01     Ds2 
+	BYTE	W06
+	BYTE		        Fs1   v064
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N01     En1   v120
+	BYTE	W12
+	BYTE		        Cn1   v108
+	BYTE		N01     Fs1 
+	BYTE	W12
+	BYTE		        Cn1 
+	BYTE		N01     As1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE		N01     Fs1 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W12
+	BYTE		        Cn1 
+	BYTE		N01     Fs1 
+	BYTE	W02
+// 046   ----------------------------------------
+ChineseTea_11_046:
+	BYTE	W04
+	BYTE		N01     Cn1   v092
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     As1   v108
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE	W12
+	BYTE		        Cn1 
+	BYTE		N01     As1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N01     Fs1 
+	BYTE	W12
+	BYTE		        Cn1 
+	BYTE		N01     As1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE		N01     Fs1 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W12
+	BYTE		        Cn1 
+	BYTE		N01     Fs1 
+	BYTE	W02
+	BYTE	PEND
+// 047   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_046
+// 048   ----------------------------------------
+	BYTE	W04
+	BYTE		N01     Cn1   v092
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     As1   v108
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE	W12
+	BYTE		        Cn1 
+	BYTE		N01     As1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N01     Fs1 
+	BYTE		N01     Cs2   v080
+	BYTE	W12
+	BYTE		        Cn1   v108
+	BYTE		N01     As1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE		N01     Fn1 
+	BYTE		N01     Fs1 
+	BYTE	W03
+	BYTE		        Fn1 
+	BYTE	W03
+	BYTE		        Fn1   v120
+	BYTE	W03
+	BYTE		N01   
+	BYTE	W03
+	BYTE		        An1 
+	BYTE		N01     As1   v108
+	BYTE		N01     Cs2   v092
+	BYTE	W03
+	BYTE		        An1   v120
+	BYTE	W03
+	BYTE		        En1   v108
+	BYTE		N01     An1   v120
+	BYTE	W03
+	BYTE		N01   
+	BYTE	W03
+	BYTE		        Cn1   v108
+	BYTE		N01     En1   v120
+	BYTE		N01     Fs1   v108
+	BYTE		N01     Cn2   v120
+	BYTE	W02
+// 049   ----------------------------------------
+	BYTE	W01
+	BYTE		        En1 
+	BYTE		N01     Cn2 
+	BYTE	W03
+	BYTE		        Cn1   v092
+	BYTE		N01     En1   v120
+	BYTE		N01     Cn2 
+	BYTE	W03
+	BYTE		        En1 
+	BYTE		N01     Cn2 
+	BYTE	W03
+	BYTE		        Cn1   v092
+	BYTE		N01     En1   v120
+	BYTE		N01     As1   v108
+	BYTE		N01     Cn2   v120
+	BYTE	W03
+	BYTE		        En1 
+	BYTE		N01     Cn2 
+	BYTE	W03
+	BYTE		        Dn1 
+	BYTE		N01     En1   v108
+	BYTE		N01     Fs1 
+	BYTE		N01     An1   v120
+	BYTE	W03
+	BYTE		        Dn1 
+	BYTE		N01     An1 
+	BYTE	W03
+	BYTE		        Dn1 
+	BYTE		N01     En1   v108
+	BYTE		N01     An1   v120
+	BYTE		N01     Cs2 
+	BYTE	W03
+	BYTE		        Dn1 
+	BYTE		N01     An1 
+	BYTE	W03
+	BYTE		        Dn1 
+	BYTE		N01     An1 
+	BYTE	W03
+	BYTE		        Dn1 
+	BYTE		N01     An1 
+	BYTE	W03
+	BYTE		        Cn1 
+	BYTE		N01     Dn1 
+	BYTE		N01     En1 
+	BYTE		N01     Fn1   v108
+	BYTE		N01     As1 
+	BYTE	W03
+	BYTE		        Cn1   v120
+	BYTE		N01     Fn1   v108
+	BYTE	W03
+	BYTE		        Cn1   v120
+	BYTE		N01     Dn1 
+	BYTE		N01     En1 
+	BYTE		N01     Fn1   v108
+	BYTE		N01     Fs1 
+	BYTE	W03
+	BYTE		        Cn1   v120
+	BYTE		N01     Fn1   v108
+	BYTE	W03
+	BYTE		        Cn1 
+	BYTE		N01     Dn1   v120
+	BYTE		N01     En1 
+	BYTE		N01     Fn1 
+	BYTE		N01     Cs2 
+	BYTE	W06
+	BYTE		        Fs1   v064
+	BYTE	W06
+	BYTE		N01   
+	BYTE	W12
+	BYTE		        En1   v080
+	BYTE		N01     As1   v092
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		N01   
+	BYTE	W08
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_010
+// 051   ----------------------------------------
+	BYTE	W04
+	BYTE		N01     Cn1   v092
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE	W06
+	BYTE		        En1   v108
+	BYTE		N01     Fs1   v080
+	BYTE	W06
+	BYTE		        As1   v092
+	BYTE	W06
+	BYTE		        Dn1   v080
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		        Cn1   v108
+	BYTE		N01     Cs2   v092
+	BYTE	W06
+	BYTE		        Fs1   v064
+	BYTE	W06
+	BYTE		N01   
+	BYTE	W03
+	BYTE	GoTo
+	 POIN2	ChineseTea_11_B1
+ChineseTea_11_B2:
+	BYTE	W09
+	BYTE		N01     En1   v080
+	BYTE		N01     As1   v092
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		N01   
+	BYTE	W08
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_010
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_013
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_010
+// 055   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_013
+// 056   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_010
+// 057   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_013
+// 058   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_010
+// 059   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_013
+// 060   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_010
+// 061   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_013
+// 062   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_010
+// 063   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_013
+// 064   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_024
+// 065   ----------------------------------------
+	BYTE	W04
+	BYTE		N01     Cn1   v092
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE	W06
+	BYTE		        Cn1   v108
+	BYTE		N01     En1 
+	BYTE		N01     Fs1   v080
+	BYTE		N01     Cs2   v108
+	BYTE	W06
+	BYTE		        As1   v092
+	BYTE	W06
+	BYTE		        Dn1   v080
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		        Cn1   v108
+	BYTE		N01     Dn1   v120
+	BYTE		N01     En1 
+	BYTE		N01     Fn1 
+	BYTE		N01     Cs2 
+	BYTE	W06
+	BYTE		        Fs1   v064
+	BYTE	W06
+	BYTE		N01   
+	BYTE	W12
+	BYTE		        En1   v080
+	BYTE		N01     As1   v092
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		N01   
+	BYTE	W08
+// 066   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_010
+// 067   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_013
+// 068   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_010
+// 069   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_013
+// 070   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_010
+// 071   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_013
+// 072   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_010
+// 073   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_013
+// 074   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_010
+// 075   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_013
+// 076   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_010
+// 077   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_013
+// 078   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_010
+// 079   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_013
+// 080   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChineseTea_11_024
+// 081   ----------------------------------------
+	BYTE	W04
+	BYTE		N01     Cn1   v092
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE	W06
+	BYTE		        Cn1   v108
+	BYTE		N01     En1 
+	BYTE		N01     Fs1   v080
+	BYTE		N01     Cs2   v108
+	BYTE	W06
+	BYTE		        As1   v092
+	BYTE	W06
+	BYTE		        Dn1   v080
+	BYTE	W06
+	BYTE		N01   
+	BYTE		N01     Fs1 
+	BYTE	W06
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+songChineseTea:
+	BYTE	11	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	ChineseTea_pri	// Priority
+	BYTE	ChineseTea_rev	// Reverb.
+
+	POIN2	ChineseTea_grp
+
+	POIN2	ChineseTea_1
+	POIN2	ChineseTea_2
+	POIN2	ChineseTea_3
+	POIN2	ChineseTea_4
+	POIN2	ChineseTea_5
+	POIN2	ChineseTea_6
+	POIN2	ChineseTea_7
+	POIN2	ChineseTea_8
+	POIN2	ChineseTea_9
+	POIN2	ChineseTea_10
+	POIN2	ChineseTea_11
+
+	

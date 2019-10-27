@@ -94,7 +94,7 @@ ENUN
 SetBackground(0x26)
 Text(Merc3MilitiaWaitAdlezConnorText)
 EndConvo
-MOVE 0x0 Connor [2,2]
+MOVE 0x0 BossConnor [2,2]
 CAM1 [7,8]
 LOAD3 0x1 PlayerLoading1
 LOAD2 0x1 ArcLuke
@@ -198,25 +198,25 @@ UNIT Gerwick Pirate Adlez Level(1,Enemy,True) [2,4] 0x00 0x00 0x00 0x00 [ShortAx
 UNIT
 
 ConnorStuff:
-UNIT Connor Mercenary Connor Level(5,Enemy,True) [2,4] 0x00 0x00 0x00 0x00 [IronBlade] GuardAI
-UNIT GerwickBandit Fighter Connor Level(5,Enemy,True) [8,11] Drop 0x00 0x00 0x00 [HandAxe,DoorKey] NoAI
-UNIT GerwickBandit Fighter Connor Level(6,Enemy,True) [8,12] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
-UNIT GerwickBandit Fighter Connor Level(5,Enemy,True) [7,6] 0x00 0x00 0x00 0x00 [SteelAxe] ChaseOnceApproachedAI
-UNIT GerwickBandit Mercenary Connor Level(8,Enemy,True) [11,1] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
-UNIT GerwickBandit Brigand Connor Level(6,Enemy,True) [8,3] 0x00 0x00 0x00 0x00 [KillerAxe] ChaseOnceApproachedAI
-UNIT GerwickBandit Brigand Connor Level(5,Enemy,True) [14,2] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
-UNIT GerwickBandit Myrmidon Connor Level(6,Enemy,True) [16,5] 0x00 0x00 0x00 0x00 [IronSword] GuardAI
-UNIT GerwickBandit Soldier Connor Level(4,Enemy,True) [1,4] 0x00 0x00 0x00 0x00 [IronLance] NoAI
-UNIT GerwickBandit Soldier Connor Level(3,Enemy,True) [3,4] 0x00 0x00 0x00 0x00 [Javelin] NoAI
-UNIT GerwickBandit Mage Connor Level(5,Enemy,True) [17,7] 0x00 0x00 0x00 0x00 [Thunder] AttackInRangeAI
-UNIT GerwickBandit Soldier Connor Level(4,Enemy,True) [16,11] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
-UNIT GerwickBandit Soldier Connor Level(6,Enemy,True) [15,12] Drop 0x00 0x00 0x00 [IronLance,ChestKey] NoAI
-UNIT GerwickBandit Archer Connor Level(7,Enemy,True) [12,7] Drop 0x00 0x00 0x00 [SteelBow,ChestKey] NoAI
-UNIT GerwickBandit Mage Connor Level(6,Enemy,True) [4,7] Drop 0x00 0x00 0x00 [Elfire,DoorKey] AttackInRangeAI
-UNIT GerwickBandit Cavalier Connor Level(4,Enemy,True) [0,8] 0x00 0x00 0x00 0x00 [SteelLance] ChaseOnceApproachedAI
-UNIT GerwickBandit Pirate Connor Level(4,Enemy,True) [8,3] 0x00 0x00 0x00 0x00 [IronAxe] AttackInRangeAI
-UNIT GerwickBandit Mercenary Connor Level(4,Enemy,True) [6,4] 0x00 0x00 0x00 0x00 [Lancereaver] AttackInRangeAI
-UNIT GerwickBandit Fighter Connor Level(4,Enemy,True) [7,6] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
+UNIT BossConnor Mercenary BossConnor Level(5,Enemy,True) [2,4] 0x00 0x00 0x00 0x00 [IronBlade] GuardAI
+UNIT GerwickBandit Fighter BossConnor Level(5,Enemy,True) [8,11] Drop 0x00 0x00 0x00 [HandAxe,DoorKey] NoAI
+UNIT GerwickBandit Fighter BossConnor Level(6,Enemy,True) [8,12] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
+UNIT GerwickBandit Fighter BossConnor Level(5,Enemy,True) [7,6] 0x00 0x00 0x00 0x00 [SteelAxe] ChaseOnceApproachedAI
+UNIT GerwickBandit Mercenary BossConnor Level(8,Enemy,True) [11,1] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT GerwickBandit Brigand BossConnor Level(6,Enemy,True) [8,3] 0x00 0x00 0x00 0x00 [KillerAxe] ChaseOnceApproachedAI
+UNIT GerwickBandit Brigand BossConnor Level(5,Enemy,True) [14,2] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
+UNIT GerwickBandit Myrmidon BossConnor Level(6,Enemy,True) [16,5] 0x00 0x00 0x00 0x00 [IronSword] GuardAI
+UNIT GerwickBandit Soldier BossConnor Level(4,Enemy,True) [1,4] 0x00 0x00 0x00 0x00 [IronLance] NoAI
+UNIT GerwickBandit Soldier BossConnor Level(3,Enemy,True) [3,4] 0x00 0x00 0x00 0x00 [Javelin] NoAI
+UNIT GerwickBandit Mage BossConnor Level(5,Enemy,True) [17,7] 0x00 0x00 0x00 0x00 [Thunder] AttackInRangeAI
+UNIT GerwickBandit Soldier BossConnor Level(4,Enemy,True) [16,11] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT GerwickBandit Soldier BossConnor Level(6,Enemy,True) [15,12] Drop 0x00 0x00 0x00 [IronLance,ChestKey] NoAI
+UNIT GerwickBandit Archer BossConnor Level(7,Enemy,True) [12,7] Drop 0x00 0x00 0x00 [SteelBow,ChestKey] NoAI
+UNIT GerwickBandit Mage BossConnor Level(6,Enemy,True) [4,7] Drop 0x00 0x00 0x00 [Elfire,DoorKey] AttackInRangeAI
+UNIT GerwickBandit Cavalier BossConnor Level(4,Enemy,True) [0,8] 0x00 0x00 0x00 0x00 [SteelLance] ChaseOnceApproachedAI
+UNIT GerwickBandit Pirate BossConnor Level(4,Enemy,True) [8,3] 0x00 0x00 0x00 0x00 [IronAxe] AttackInRangeAI
+UNIT GerwickBandit Mercenary BossConnor Level(4,Enemy,True) [6,4] 0x00 0x00 0x00 0x00 [Lancereaver] AttackInRangeAI
+UNIT GerwickBandit Fighter BossConnor Level(4,Enemy,True) [7,6] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
 UNIT
 
 PlayerLoading1:

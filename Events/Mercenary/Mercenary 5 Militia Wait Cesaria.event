@@ -180,66 +180,22 @@ NoFade
 ENDA
 
 MendPickup:
-CHECK_ALLEGIANCE 0xFFFF
-BNE 0x10 0x0 0xC
-	//If allied
-	RANDOMNUMBER 20
-	SADD 0xC01 // Moves the random number to slot 1
-	CHECK_LUCK 0xFFFF
-	BGE 0x10 0x1 0xC // Branch if 0x1 is less than 0xC?
-		GiveItem(Mend,0xFFFF)
-GOTO 0x11
-LABEL 0x10
-	ENUF 0x13
-LABEL 0x11
+SandPickup(0x13,Mend)
 NoFade
 ENDA
 
 AircaliburPickup:
-CHECK_ALLEGIANCE 0xFFFF
-BNE 0x12 0x0 0xC
-	//If allied
-	RANDOMNUMBER 20
-	SADD 0xC01 // Moves the random number to slot 1
-	CHECK_LUCK 0xFFFF
-	BGE 0x12 0x1 0xC // Branch if 0x1 is less than 0xC?
-		GiveItem(Aircalibur,0xFFFF)
-GOTO 0x13
-LABEL 0x12
-	ENUF 0x14
-LABEL 0x13
+SandPickup(0x14,Aircalibur)
 NoFade
 ENDA
 
 TalismanPickup:
-CHECK_ALLEGIANCE 0xFFFF
-BNE 0x14 0x0 0xC
-	//If allied
-	RANDOMNUMBER 20
-	SADD 0xC01 // Moves the random number to slot 1
-	CHECK_LUCK 0xFFFF
-	BLE 0x14 0x1 0xC // Branch if 0x1 is less than 0xC?
-		GiveItem(Talisman,0xFFFF)
-GOTO 0x15
-LABEL 0x14
-	ENUF 0x15
-LABEL 0x15
+SandPickup(0x15,Talisman)
 NoFade
 ENDA
 
 SteelLongbowPickup:
-CHECK_ALLEGIANCE 0xFFFF
-BNE 0x16 0x0 0xC
-	//If allied
-	RANDOMNUMBER 20
-	SADD 0xC01 // Moves the random number to slot 1
-	CHECK_LUCK 0xFFFF
-	BGT 0x16 0x1 0xC // Branch if 0x1 is less than 0xC
-		GiveItem(SteelLongbow,0xFFFF)
-GOTO 0x17
-LABEL 0x16
-	ENUF 0x16
-LABEL 0x17
+SandPickup(0x16,SteelLongbow)
 NoFade
 ENDA
 

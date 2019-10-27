@@ -4,7 +4,7 @@
 	#define	songRingabelgrp  voicegroup000
 	#define	songRingabelpri  10
 	#define	songRingabelrev  0
-	#define	songRingabelmvl  70
+	#define	songRingabelmvl  60
 	#define	songRingabelkey  0
 	#define	songRingabeltbs  1
 	#define	songRingabelexg  0

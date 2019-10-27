@@ -3,7 +3,7 @@
 	.equ	songSnowBattle_grp, voicegroup000
 	.equ	songSnowBattle_pri, 0
 	.equ	songSnowBattle_rev, 0
-	.equ	songSnowBattle_mvl, 127
+	.equ	songSnowBattle_mvl, 110
 	.equ	songSnowBattle_key, 0
 	.equ	songSnowBattle_tbs, 1
 	.equ	songSnowBattle_exg, 0

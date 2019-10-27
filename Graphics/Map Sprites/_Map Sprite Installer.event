@@ -1,0 +1,256 @@
+
+ALIGN 4
+
+BattleSageSt:
+#incbin "BattleSageSt.dmp"
+ALIGN 4
+
+BattleSageMv:
+#incbin "BattleSageMv.dmp"
+ALIGN 4
+
+BattleSageFSt:
+#incbin "BattleSageFSt.dmp"
+ALIGN 4
+
+BattleSageFMv:
+#incbin "BattleSageFMv.dmp"
+ALIGN 4
+
+BlackFalcoknightSt:
+#incbin "BlackFalcoknightSt.dmp"
+ALIGN 4
+
+BlackFalcoknightMv:
+#incbin "BlackFalcoknightMv.dmp"
+ALIGN 4
+
+
+ChampionSt:
+#incbin "ChampionSt.dmp"
+ALIGN 4
+
+ChampionMv:
+#incbin "ChampionMv.dmp"
+ALIGN 4
+
+
+CommanderSt:
+#incbin "CommanderSt.dmp"
+ALIGN 4
+
+CommanderMv:
+#incbin "CommanderMv.dmp"
+ALIGN 4
+
+
+DarkKnightSt:
+#incbin "DarkKnightSt.dmp"
+ALIGN 4
+
+DarkKnightMv:
+#incbin "DarkKnightMv.dmp"
+ALIGN 4
+
+
+EdgySwordmasterSt:
+#incbin "EdgySwordmasterSt.dmp"
+ALIGN 4
+
+EdgySwordmasterMv:
+#incbin "EdgySwordmasterMv.dmp"
+ALIGN 4
+
+
+GladiatorSt:
+#incbin "GladiatorSt.dmp"
+ALIGN 4
+
+GladiatorMv:
+#incbin "GladiatorMv.dmp"
+ALIGN 4
+
+
+HalberdierSt:
+#incbin "HalberdierSt.dmp"
+ALIGN 4
+
+HalberdierMv:
+#incbin "HalberdierMv.dmp"
+ALIGN 4
+
+
+HarbingerSt:
+#incbin "HarbingerSt.dmp"
+ALIGN 4
+
+HarbingerMv:
+#incbin "HarbingerMv.dmp"
+ALIGN 4
+
+
+HectorSt:
+#incbin "HectorSt.dmp"
+ALIGN 4
+
+HectorMv:
+#incbin "HectorMv.dmp"
+ALIGN 4
+
+
+HunterSt:
+#incbin "HunterSt.dmp"
+ALIGN 4
+
+HunterMv:
+#incbin "HunterMv.dmp"
+ALIGN 4
+
+
+ImaplerSt:
+#incbin "ImpalerSt.dmp"
+ALIGN 4
+
+ImpalerMv:
+#incbin "ImpalerMv.dmp"
+ALIGN 4
+
+
+IzukSt:
+#incbin "IzukSt.dmp"
+ALIGN 4
+
+IzukMv:
+#incbin "IzukMv.dmp"
+ALIGN 4
+
+
+KnightSt:
+#incbin "KnightSt.dmp"
+ALIGN 4
+
+KnightMv:
+#incbin "KnightMv.dmp"
+ALIGN 4
+
+
+MagusMSt:
+#incbin "MagusMSt.dmp"
+ALIGN 4
+
+MagusMMv:
+#incbin "MagusMMv.dmp"
+ALIGN 4
+
+
+MagusFSt:
+#incbin "MagusFSt.dmp"
+ALIGN 4
+
+MagusFMv:
+#incbin "MagusFMv.dmp"
+ALIGN 4
+
+
+MatriarchSt:
+#incbin "MatriarchSt.dmp"
+ALIGN 4
+
+MatriarchMv:
+#incbin "MatriarchMv.dmp"
+ALIGN 4
+
+
+MonkFSt:
+#incbin "FemaleMonkSt.dmp"
+ALIGN 4
+
+MonkFMv:
+#incbin "FemaleMonkMv.dmp"
+ALIGN 4
+
+
+MountedBrigandSt:
+#incbin "MountedBrigandSt.dmp"
+ALIGN 4
+
+MountedBrigandMv:
+#incbin "MountedBrigandMv.dmp"
+ALIGN 4
+
+
+NomadSt:
+//#incbin "NomadSt.dmp"
+ALIGN 4
+
+NomadMv:
+//#incbin "NomadMv.dmp"
+ALIGN 4
+
+
+PatriarchSt:
+#incbin "PatriarchSt.dmp"
+ALIGN 4
+
+PatriarchMv:
+#incbin "PatriarchMv.dmp"
+ALIGN 4
+
+
+SentinelSt:
+#incbin "SentinelSt.dmp"
+ALIGN 4
+
+SentinelMv:
+#incbin "SentinelMv.dmp"
+ALIGN 4
+
+
+ShadowSt:
+#incbin "ShadowSt.dmp"
+ALIGN 4
+
+ShadowMv:
+#incbin "ShadowMv.dmp"
+ALIGN 4
+
+
+TruebladeSt:
+#incbin "TruebladeSt.dmp"
+ALIGN 4
+
+TruebladeMv:
+#incbin "TruebladeMv.dmp"
+ALIGN 4
+
+
+TruerbladeSt:
+#incbin "TruerbladeSt.dmp"
+ALIGN 4
+
+TruerbladeMv:
+#incbin "TruerbladeMv.dmp"
+ALIGN 4
+
+
+WarlockSt:
+#incbin "WarlockSt.dmp"
+ALIGN 4
+
+WarlockMv:
+#incbin "WarlockMv.dmp"
+ALIGN 4
+
+
+FMercenaryFix:
+#incbin "FemaleMercenaryFix.dmp"
+ALIGN 4
+
+
+ALIGN 4
+HectorAnimationData:
+#incbin "Hector Animation Data.dmp"
+
+ALIGN 4
+GladiatorAnimationData:
+#incbin "Gladiator Animation Data.dmp"

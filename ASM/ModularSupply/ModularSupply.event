@@ -1,0 +1,18 @@
+
+#ifndef MODULAR_SUPPLY
+
+	#define MODULAR_SUPPLY
+	
+	ALIGN 4
+	#include "SupplyUsability.lyn.event"
+	
+	ALIGN 4
+	NormalSupplyList:
+	BYTE PlayerMMonk PlayerMShaman PlayerMMage PlayerFMonk PlayerFShaman PlayerFMage
+	BYTE PlayerMCavalier PlayerMKnight PlayerMSoldier PlayerMWyvernRider PlayerMArcher PlayerFCavalier PlayerFKnight PlayerFSoldier PlayerFWyvernRider PlayerFArcher
+	BYTE PlayerMMercenary PlayerMMyrmidon PlayerMFighter PlayerMPirate PlayerMBrigand PlayerFMercenary PlayerFMyrmidon PlayerFPegasusKnight 0x00
+	ALIGN 4
+	SupplyUsabilityPhantomIDLink:
+	BYTE Phantom
+	
+#endif // MODULAR_SUPPLY

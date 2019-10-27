@@ -24,7 +24,6 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
-SupportConvo(ASupport,Support1Text,Christina,Jasper)
 CHAR 0x10 TElanilIzuk [Elanil, Izuk] 0x00
 CHAR 0x10 TFinocIzuk [Finoc, Izuk] 0x00
 CHAR 0x10 TCougarIzuk [Cougar, Izuk] 0x00
@@ -89,20 +88,24 @@ GotoPrepScreen
 //Label EndingScene
 IzukEscapes:
 FADI 0x5
-ASMC PrepForEnd|1
+CLEA 0x0
+CLEE 0x0
 CLEN 0x0
-GOTO 0x1
+ASMC PrepForEnd|1
+GOTO 0x0
 
 IzukDies:
 FADI 0x5
+CLEA 0x0
+CLEE 0x0
+CLEN 0x0
 ASMC PrepForEnd|1
-GOTO 0x0
+GOTO 0x1
 
 EndingScene:
 FADI 0x5
 CLEA 0x0
 CLEE 0x0
-CLEN 0x0
 ASMC RefreshAll|1
 ASMC PrepForEnd|1
 CHECK_EVENTID 0x16
@@ -111,6 +114,7 @@ BNE 0x0 0x0 0xC
 	CHECK_ALIVE Izuk
 	BEQ 0x1 0x0 0xC
 		// If Izuk is still on the map. Bad ending.
+		CLEN 0x0
 		ENUF 0x12
 		CAM1 [7,19]
 		LOAD3 0x1 PlayerLoading4
@@ -163,7 +167,7 @@ BNE 0x0 0x0 0xC
 		GOTO 0x2
 LABEL 0x0
 		// If Izuk escaped. Good ending.
-		ENUF 0x11
+		ENUF 0x15
 		CAM1 [7,5]
 		LOAD3 0x1 PlayerLoading2
 		LOAD2 0x1 EscapeFriends
@@ -206,7 +210,6 @@ LABEL 0x0
 		CriticalHit(1,60)
 		EndAttack
 		MilitaryNarratorFight(6,6)
-		GOTO 0x2
 LABEL 0x2
 ENUF 0x67
 ENUF 0x68
@@ -231,6 +234,7 @@ ENDA
 
 //Label Turn Events
 XavusNotices:
+MUSC From_the_Darkness
 CAM1 [7,5]
 STAL 0x10
 Text(Military7PassAltiaXavusNoticesText)
@@ -291,6 +295,7 @@ SVAL 0x1 0x1 // NPC Team. i.e. Izuk.
 BEQ 0x0 0x1 0xC
 	ENUF 0x16
 LABEL 0x0
+NoFade
 ENDA
 
 //Label Location Events
@@ -339,7 +344,7 @@ ENDA
 //Label Meanies
 Meanies1:
 UNIT Izuk Patriarch Izuk Level(8,NPC,True) [13,4] 0x00 0x00 0x00 0x00 [0] [0,DontMove,0,0]
-UNIT Xavus Necromancer Xavus Level(14,Enemy,True) [3,1] 0x00 0x00 0x00 0x00 [Swarm,Dulam] GuardAI
+UNIT Xavus Necromancer Xavus Level(10,Enemy,True) [3,1] 0x00 0x00 0x00 0x00 [Fenrir,Dulam] GuardAI
 UNIT Guardian Sentinel Xavus Level(8,Enemy,True) [13,23] Drop 0x00 0x00 0x00 [SteelAxe,KillingEdge] NoAI
 UNIT Guardian Sentinel Xavus Level(9,Enemy,True) [11,24] 0x00 0x00 0x00 0x00 [Spear] NoAI
 UNIT Arcanian Sage Xavus Level(7,Enemy,True) [11,22] 0x00 0x00 0x00 0x00 [Arcaqua] NoAI

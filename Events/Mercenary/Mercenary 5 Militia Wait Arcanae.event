@@ -136,6 +136,7 @@ Text(Merc5MilitiaWaitArcanaeCesarianPlansText)
 FADI 0x5
 FadeOutMusic
 STAL 0x40
+GiveToSupplySilent(SwordSlayer)
 MoveToChapter(MercenaryMilitiaWaitArcanae6)
 ENDA
 

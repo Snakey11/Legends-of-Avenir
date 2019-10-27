@@ -3,7 +3,7 @@
 	.equ	Bloodpool_grp, voicegroup000
 	.equ	Bloodpool_pri, 10
 	.equ	Bloodpool_rev, 0
-	.equ	Bloodpool_mvl, 127
+	.equ	Bloodpool_mvl, 200
 	.equ	Bloodpool_key, 0
 	.equ	Bloodpool_tbs, 1
 	.equ	Bloodpool_exg, 0
@@ -23,8 +23,7 @@ Bloodpool_Label_0_00:
  .byte   KEYSH , Bloodpool_key+0
  .byte   VOICE , 6
  .byte   VOL , 10*Bloodpool_mvl/mxv
- .byte   W48
- .byte   W03
+ .byte   W01
 @ 001   ----------------------------------------
  .byte   PAN , c_v-4
  .byte   W10
@@ -375,8 +374,7 @@ Bloodpool_Label_1_00:
  .byte   KEYSH , Bloodpool_key+0
  .byte   VOICE , 0
  .byte   VOL , 19*Bloodpool_mvl/mxv
- .byte   W48
- .byte   W03
+ .byte   W01
 @ 001   ----------------------------------------
  .byte   PAN , c_v-9
  .byte   W10
@@ -723,8 +721,7 @@ Bloodpool_Label_2_00:
  .byte   KEYSH , Bloodpool_key+0
  .byte   VOICE , 40
  .byte   VOL , 18*Bloodpool_mvl/mxv
- .byte   W48
- .byte   W03
+ .byte   W01
 @ 001   ----------------------------------------
  .byte   PAN , c_v+11
  .byte   W10
@@ -1265,8 +1262,7 @@ Bloodpool_Label_3_00:
  .byte   KEYSH , Bloodpool_key+0
  .byte   VOICE , 24
  .byte   VOL , 11*Bloodpool_mvl/mxv
- .byte   W48
- .byte   W03
+ .byte   W01
 @ 001   ----------------------------------------
  .byte   PAN , c_v-6
  .byte   W10
@@ -1741,8 +1737,7 @@ Bloodpool_Label_4_00:
  .byte   KEYSH , Bloodpool_key+0
  .byte   VOICE , 11
  .byte   VOL , 13*Bloodpool_mvl/mxv
- .byte   W48
- .byte   W03
+ .byte   W01
 @ 001   ----------------------------------------
  .byte   PAN , c_v-4
  .byte   W10
@@ -2773,10 +2768,7 @@ Bloodpool_Label_5_00:
  .byte   KEYSH , Bloodpool_key+0
  .byte   VOICE , 11
  .byte   VOL , 13*Bloodpool_mvl/mxv
- .byte   W36
- .byte   W01
  .byte   VOICE , 57
- .byte   W13
 @ 001   ----------------------------------------
  .byte   PAN , c_v-6
  .byte   W10
@@ -3021,10 +3013,7 @@ Bloodpool_Label_6_00:
  .byte   TEMPO , 160*Bloodpool_tbs/2
  .byte   KEYSH , Bloodpool_key+0
  .byte   VOL , 16*Bloodpool_mvl/mxv
- .byte   W36
- .byte   W01
  .byte   VOICE , 56
- .byte   W13
 @ 001   ----------------------------------------
  .byte   PAN , c_v-4
  .byte   W10
@@ -4054,10 +4043,7 @@ Bloodpool_Label_7_00:
  .byte   TEMPO , 160*Bloodpool_tbs/2
  .byte   KEYSH , Bloodpool_key+0
  .byte   VOL , 18*Bloodpool_mvl/mxv
- .byte   W36
- .byte   W01
  .byte   VOICE , 56
- .byte   W13
 @ 001   ----------------------------------------
  .byte   PAN , c_v-8
  .byte   W10

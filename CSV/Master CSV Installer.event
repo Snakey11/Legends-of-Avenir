@@ -26,7 +26,7 @@ BattleQuoteTable:
 ALIGN 16
 #include "EA Files/Character Forcer Table.event"
 
-ALIGN 16
+ALIGN 4
 AIOptionsTable: // Whether AI should use door keys, lockpicks, etc. Set within event files with macros.
 ORG ( CURRENTOFFSET + 4 * 0xFF ) // Allocate space for 0xFF chapters.
 

@@ -39,6 +39,13 @@ Skip this chapter.[X]
 ## PromoteNameText
  Promote[X]
  
+## PromoteDescText
+This unit is eligible to[NL]
+promote to a new class.[X]
+
+## BaseSupportSelectConvoText
+Select a conversation.[X]
+
 ## EscapeNameText
  Escape[X]
 
@@ -52,13 +59,6 @@ leave this chapter.[X]
 ## ArriveDescText
 Complete this chapter[NL]
 by having this unit arrive.[X]
- 
-## PromoteDescText
-This unit is eligible to[NL]
-promote to a new class.[X]
-
-## BaseSupportSelectConvoText
-Select a conversation.[X]
 
 ## Mov_Text_ID
 Mov[X]
@@ -131,6 +131,18 @@ for one turn[X]
 
 ## BaseSupportTextID8
 [X]
+
+## SupportBonusesText
+Bonuses:[X]
+
+## AvdText
+Avd[.][X]
+
+## CrtText
+Crt[.][X]
+
+## CAvdText
+Ddg[.][X]
 
 ## FinalTextID
 [X]

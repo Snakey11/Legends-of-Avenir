@@ -124,12 +124,12 @@ EndAttack
 FIG1 Maximus Servius 0x0
 STAL 0x10
 Text(Merc7BanditDisbandEfilPanicsFlashbackText)
-MOVE 0x0 Efil [9,3]
+MOVE 0x0 BossEfil [9,3]
 ENUN
 StartBattle
 CriticalHit(0,70)
 EndAttack
-FIG1 Efil Servius 0x0
+FIG1 BossEfil Servius 0x0
 STAL 0x8
 KillUnit(9,4)
 STAL 0x20
@@ -144,14 +144,14 @@ NormalDamage(1,24)
 EndAttack
 FIG1 Uzkalis Kilthel 0x0
 STAL 0x10
-MOVE 0x0 Efil [7,2]
+MOVE 0x0 BossEfil [7,2]
 ENUN
 StartBattle
 MissedAttack(1,0)
 NormalDamage(0,20)
 CriticalHit(0,60)
 EndAttack
-FIG1 Efil Kilthel 0x0
+FIG1 BossEfil Kilthel 0x0
 STAL 0x8
 KillUnit(7,1)
 STAL 0x30
@@ -302,7 +302,7 @@ EndUnit
 
 //Label Cutscene people
 EfilMaximusKilthelCutscene:
-UNIT Efil Truerblade Efil Level(11,NPC,True) [5,2] 0x00 0x00 0x00 0x00 [SilverSword] NoAI
+UNIT BossEfil Truerblade BossEfil Level(11,NPC,True) [5,2] 0x00 0x00 0x00 0x00 [SilverSword] NoAI
 UNIT Maximus BattleSage Maximus Level(12,NPC,True) [7,2] 0x00 0x00 0x00 0x00 [Bolganone] NoAI
 UNIT
 
@@ -311,7 +311,7 @@ UNIT Uzkalis GaidenSage Uzkalis Level(12,NPC,True) [6,4] 0x00 0x00 0x00 0x00 [Th
 UNIT
 
 StartingKilthelFightPeople:
-UNIT Efil Truerblade Efil Level(11,NPC,True) [11,1] 0x00 0x00 0x00 0x00 [SilverSword] NoAI
+UNIT BossEfil Truerblade BossEfil Level(11,NPC,True) [11,1] 0x00 0x00 0x00 0x00 [SilverSword] NoAI
 UNIT Maximus BattleSage Maximus Level(16,NPC,True) [10,4] 0x00 0x00 0x00 0x00 [Bolganone] NoAI
 UNIT Uzkalis GaidenSage Uzkalis Level(17,NPC,True)[12,3] 0x00 0x00 0x00 0x00 [Thoron] NoAI
 UNIT Kilthel GuardianSpirit Kilthel Level(15,Enemy,True) [7,1] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI

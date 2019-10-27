@@ -1,17 +1,29 @@
 
 ALIGN 4
+#ifdef SkillSystemIncluded
+	#include "SkillSystem_FE8/EngineHacks/_MasterHackInstaller.event"
+#else
+	#define SkillTester 0
+	#include "Delete with Skills.event"
+	#include "Skill System/EngineHacks/SkillSystem/skill_lists.event"
+	#include "Skill System/EngineHacks/SkillSystem/Proc Skills/Proc Skills Installer.event"
+	ALIGN 4
+	#include "FE8 Battle Stats with Anims Off/FE8-Battle Stats.event"
+#endif
+
+ALIGN 4
 #include "Always Display Ranged Animation/Ranged Animation by Table Installer.event"
 
 ALIGN 4
-#inctext lyn "AnimaEffectiveness/AnimaEffectiveness.elf"
-ALIGN 4
+#include "AnimaEffectiveness/AnimaEffectiveness.lyn.event"
+/*ALIGN 4
 #inctext lyn "AnimaTriangle/NewAnimaTriangle.elf" "AnimaTriangle/Definitions.elf"
 FireList:
 BYTE Fire Elfire Arcfire Bolganone Meteor Flare 0x00
 ThunderList:
 BYTE Thunder Elthunder Arcthunder Thoron Bolting 0x00
 WindList:
-BYTE Wind Elwind Arcwind Tornado Aircalibur WindSword 0x00
+BYTE Wind Elwind Arcwind Tornado Aircalibur WindSword 0x00*/
 WaterList:
 BYTE Aqua Elaqua Arcaqua Fimbulvetr 0x00
 
@@ -19,7 +31,10 @@ ALIGN 4
 #include "Arms Scroll/EA Installer.event"
 
 ALIGN 4
-#inctext lyn "AutoPromote/AutoPromote.elf"
+#include "AutoNewline/Installer.event"
+
+ALIGN 4
+#include "AutoPromote/AutoPromote.lyn.event"
 
 AutoPromoteTestEvents:
 ASMC PromotionTime|1
@@ -27,10 +42,13 @@ NoFade
 ENDA
 
 ALIGN 4
-#inctext lyn "BowDebuff/BowDebuff.elf"
+#include "BowDebuff/BowDebuff.lyn.event"
 
 ALIGN 4
 #include "Chapter Names/fe8_chnames.event"
+
+ALIGN 4
+#include "Class Expansion.event"
 
 ALIGN 4
 #include "Display All Weapon Level Ups/Promotion Ranks Fix Installer.event"
@@ -38,30 +56,59 @@ ALIGN 4
 ALIGN 4
 #include "EnemyControl/Enemy Control.event"
 
-ALIGN 4
-#include "Escape-Arrive/Escape Installer.event"
+//ALIGN 4
+//#include "Escape-Arrive/Escape Installer.event"
 
 ALIGN 4
-#inctext lyn "GiveToSupply/GiveToSupply.elf"
+#include "GiveToSupply/GiveToSupply.lyn.event"
+
+//ALIGN 4
+//#inctext lyn "LevelUP/LevelUP.elf" "LevelUp/Definitions.elf"
 
 ALIGN 4
-#inctext lyn "LevelUP/LevelUP.elf" "LevelUp/Definitions.elf"
-
-ALIGN 4
-#inctext lyn "MakeNotDead/MakeNotDead.elf"
+#include "MakeNotDead/MakeNotDead.lyn.event"
 
 ALIGN 4
 #include "Menus/Menu Commands.event"
 
-ALIGN 4
+/*ALIGN 4
 #inctext lyn "ModularEXP/ModularEXP.elf" "ModularEXP/Hooks.elf"
 #define ModularEXPEntry(Character,Chapter,EventID,Multiplier,Divisor) "BYTE Character Chapter EventID Multiplier Divisor 0x00 0x00 0x00"
 ModularEXPChapterTable:
-ModularEXPEntry(0,0,0,0,0)
+ModularEXPEntry(0,0,0,0,0)*/
+
+ALIGN 4
+#include "MiscMusics/MiscMusics.lyn.event"
+gVictoryMusic:
+SHORT The_First_Campaign
+gSupportMusic:
+SHORT Pub_Theme
+gPrepScreenMusic:
+SHORT Cavern_of_Splendor
+PUSH
+ORG $160AE
+SHORT 0x46C0
+POP
 
 ALIGN 4
 #include "ModularMinimugBox/MMB Installer Default.event"
 
+ALIGN 4
+#include "NameSelection/SetName.lyn.event"
+KendrickName:
+String(Kendrick)
+BYTE 0x00
+
+ALIGN 4
+#include "New CHAI/New CHAI.event"
+
+ALIGN 4
+#include "Nice.event"
+
+ALIGN 4
+#include "PC_and_Generic_Music_FE8.event" // Basically boss music
+
+/*
 ALIGN 4
 #define PortraitSelectionEntry(TruePortraitID,FalsePortraitID,EventIDPointerList,ControlCode) "POIN EventIDPointerList ; SHORT ControlCode TruePortraitID FalsePortraitID 0"
 //#inctext lyn "PortraitSelectASM/SelectPortrait.elf" "PortraitSelectASM/Definitions.elf"
@@ -91,76 +138,41 @@ MaleMageList:
 BYTE 0x6E True  0x67 True  0x00 0x00
 FemaleMageList:
 BYTE 0x6E False  0x67 True  0x00 0x00
+*/
+ALIGN 4
+#include "PoisonRework/PoisonRework.lyn.event"
 
 ALIGN 4
-#inctext lyn "PoisonRework/PoisonRework.elf" "PoisonRework/Hooks.elf"
+#include "PrepForBattle/PrepForBattle.lyn.event"
 
 ALIGN 4
-#inctext lyn "PrepForBattle/PrepForBattle.elf"
-
-ALIGN 4
-#inctext lyn "PrepForEnd/PrepForEnd.elf"
+#include "PrepForEnd/PrepForEnd.lyn.event"
 PrepForEndItemList:
 BYTE SteelSword SteelLance SteelAxe SteelShortbow 0x00 Elwind Divine Worm
 
 ALIGN 4
-#inctext lyn "PrepScreen/PrepScreen.elf" "PrepScreen/Hooks.elf"
-
+#include "PrepScreen/PrepScreen.lyn.event"
+/*
 ALIGN 4
 #include "Raid/Raid.event"
-
-ALIGN 4
-#inctext lyn "RefreshAll/RefreshAll.o" "RefreshAll/Definitions.o"
-
-ALIGN 4
-#inctext lyn "RemoveBallistae/RemoveBallistae.elf"
-
-/*
-PUSH
-
-ORG $1C2270
-
-ReversePortrait:
-#incbin "ReversePortrait/ReversePortrait.dmp"
-
-ORG $7856
-
-BL(ReversePortrait)
-
-POP
 */
 ALIGN 4
-#inctext lyn "NameSelection/SetName.elf"
-KendrickName:
-String(Kendrick)
-BYTE 0x00
+#include "RefreshAll/RefreshAll.lyn.event"
+
+ALIGN 4
+#include "RemoveBallistae/RemoveBallistae.lyn.event"
+
+ALIGN 4
+#include "SetEXP/SetEXP.lyn.event"
 
 ALIGN 4
 #include "Show Heal Amount/Show Heal Amount.event"
 
-ALIGN 4
-#ifdef SkillSystemIncluded
-	#include "Skill System/_MasterHackInstaller.event"
-#else
-	#define SkillTester 0
-	#include "Delete with Skills.event"
-	#include "Skill System/Engine Hacks/Skill System/skill_lists.event"
-	#include "Skill System/Engine Hacks/Skill System/Proc Skills/Proc Skills Installer.event"
-	ALIGN 4
-	#include "FE8 Battle Stats with Anims Off/FE8-Battle Stats.event"
-#endif
+//ALIGN 4
+//#include "SummonStuff/Summon.event"
 
 ALIGN 4
-#include "SummonStuff/Summon.event"
-
-ALIGN 4
-#inctext lyn "SupplyUsability/SupplyUsability.elf"
-NormalSupplyList:
-BYTE PlayerMMonk PlayerMShaman PlayerMMage PlayerFMonk PlayerFShaman PlayerFMage
-BYTE PlayerMCavalier PlayerMKnight PlayerMSoldier PlayerMWyvernRider PlayerMArcher PlayerFCavalier PlayerFKnight PlayerFSoldier PlayerFWyvernRider PlayerFArcher
-BYTE PlayerMMercenary PlayerMMyrmidon PlayerMFighter PlayerMPirate PlayerMBrigand PlayerFMercenary PlayerFMyrmidon PlayerFPegasusKnight 0x00
-SupplyUsabilityPhantomIDLink:
-BYTE Phantom
+#include "ModularSupply/ModularSupply.event"
 
 ALIGN 4
 #include "SupportRework/SupportRework.event"
@@ -171,13 +183,6 @@ ALIGN 4
 ALIGN 4
 #include "Walking Sounds Fix/FE8-Walking Sounds EA.event"
 
-ALIGN 4
-#include "Class Expansion.event"
-
-ALIGN 4
-#include "PC_and_Generic_Music_FE8.event" // Basically boss music
-
-
 PUSH
 ORG $96B1C
 SHORT 0xE00A // Eliminate "Tower" in prep screens
@@ -187,9 +192,9 @@ ORG $96B4C
 SHORT 0xE003 // Eliminate "Ex.map" in prep screens
 
 ORG $44800 //Enabling name selection
-BYTE 0x8 //max name length
+BYTE 0x9 //max name length
 ORG $482BA
-BYTE 0x8 //max cursor position
+BYTE 0x9 //max cursor position
 
 //Allow Visit from any tile
 ORG $23072
@@ -235,11 +240,6 @@ WORD 0x203EE80
 ORG 0xD5B80
 WORD 0x203EE80
 
-ORG $16C94	// For real eliminate slayer
-BYTE 0x00
-ORG $16C98
-BYTE 0x00
-
 ORG (TextTable+(4*TactNameText))
 WORD 0x8202bd10//tactician name
 
@@ -275,6 +275,16 @@ ORG $26A52
 SHORT 0x2000
 ORG $26B42
 SHORT 0x2000
+
+ORG $2889C // Break ItemUsabilityTable upper bound
+SHORT 0x2800 0xDC00 // cmp r0, #0x00 ; bgt #0x080288A2
+ORG $2FC74 // Break ItemEffectTable upper bound
+SHORT 0x2800 0xDC00 // cmp r0, #0x00 ; bgt #0x0802FC7A
+ORG $29F1E // Break PrepScreenUsabilityTable upper bound
+SHORT 0x2800 0xDC00 // cmp r0, #0x00 ; bgt #0x08029F24
+
+ORG $2BA0A // Allow non-player units to gain EXP if their EXP byte isn't 0xFF.
+SHORT 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0
 
 /*
 ORG 0x33750 // Allow repositioning of forced units

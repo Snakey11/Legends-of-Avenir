@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="15" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="42004344" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/42004344.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="25" height="15">
+  <properties>
+   <property name="Anims" value="_42Anims"/>
+   <property name="ChapterID" value="MilitaryAcceptRetreatLeave5"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="RetreatDesertChanges"/>
+   <property name="MapID" value="RetreatDesertMap"/>
+   <property name="ObjectType" value="0x42"/>
+   <property name="PaletteID" value="0x43"/>
+   <property name="TileConfig" value="0x44"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJx1lD9LXEEUxWf2NdokKoLgN0iKVdOJpBJxUdAgBCTaqyl0EZIoglYiiKjsd9BdLUS2UMtYrK5b+VDULyBqoRAUTem5zBne3XEtfszbeffPOffNbN4akwPbYDpyz0WbrP75C7g1xnST2ZRbP2I/Rl4eawFssFYae+tgAJTw+w6UWS9OuZq+blh7Bu+7wG/2+MTYkq3WV2CftSipl4mqtTeAXvAdtUbAH/AV/AB7iN0HB+DeOB9Z6r1RvTat83GGnHOl3esQ7VJ/QTFH/RfIuwRXYJHxh+y1q2ZzRC+PyHlKVc/+Vs18GPxVsxGekfcC/oNjU63tX1ArXIXP4EzmhNh55I9ibcHah7UHZMS3db2k/kT0dgY55U2/878fjKslNVqN89CpvrmwiL0+xPaD5RpnMOzXHOgoo8YYaiyBcfCLc5pg358yW8TVgyaSC8jU8FbkHP2+z60DjeQD57Nik2/g70I7ag5Fyf3K8c5MgdXgzsm+xJ+qeD3TJpuc03xwF9ZVnyLj0jy3Pt9rauO9meQ93eI59xra1Pm85vksMWY6mFFMH97TSaBJ/Gyo2RY4kzW+889p5algEx+S08HaMfVq76IpH3wzPzOJ3+G8dunTa69Q36CadcyeWeW9Qu+yHlv3P1brLnltJ4G2du5/C85ArTP93nOcevvO/0+VbfK9tI9XTprT5g==
+  </data>
+ </layer>
+ <layer name="Close Village" width="25" height="15" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="14"/>
+   <property name="Y" value="4"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFwwFMZR5oF4yCUTAKBhMAAHHXAJk=
+  </data>
+ </layer>
+</map>

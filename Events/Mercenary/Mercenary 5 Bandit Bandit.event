@@ -182,9 +182,7 @@ UNIT
 
 CoupleHaedricans:
 UNIT Leon Gladiator Leon Level(9,Enemy,True) [17,1] 0x00 0x00 0x00 0x00 [SilverAxe,Tomahawk] GuardAI
-UNIT Haedrican Soldier Haedrican Level(10,Enemy,True) [15,14] Drop 0x00 0x00 0x00 [SlimLance] GuardAI
 UNIT Haedrican Soldier Haedrican Level(11,Enemy,True) [16,13] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
-UNIT Haedrican Soldier Haedrican Level(12,Enemy,True) [18,13] 0x00 0x00 0x00 0x00 [SteelLance] NoAI	
 UNIT Haedrican Soldier Haedrican Level(11,Enemy,True) [19,14] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
 UNIT Haedrican Mage Haedrican Level(9,Enemy,True) [17,8] Drop 0x00 0x00 0x00 [Elfire,ChestKey_5] AttackInRangeAI
 UNIT Haedrican Archer Haedrican Level(10,Enemy,True) [11,12] 0x00 0x00 0x00 0x00 [IronLongbow] NoAI

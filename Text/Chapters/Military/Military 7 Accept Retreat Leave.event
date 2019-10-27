@@ -1,0 +1,283 @@
+
+## Military7AcceptRetreatLeaveBeginningText
+[ConversationText]
+[Left][LoadZaheva][Right][LoadXylia][FarRight][LoadRemus][FarLeft][LoadPlayer]
+So, Xylia, what is our plan of action for this?
+[Right]Efil has sealed himself into the Temple of Kilthel in Draterus. Reaching the lower sanctum where he resides typically requires a Vathrylian artifact, but...
+[Left]Let me guess, you can force your way in?
+[Right]Essentially, considering the other Orden and I created the Temple in the first place.
+[FarRight]Why the Temple of Kilthel of all places? Didn't you say that Efil was the sworn enemy of Kilthel?
+[Right]It's... a long story. That is where the battle all those years ago ended.
+[Left]Battle? I still don't quite understand just why you hate Efil so much.
+[Right]... I suppose it would be much easier to show you then to tell you. Sit down for a moment and relax, so that I may show you just what transpired ten years ago...[X]
+
+## Military7AcceptRetreatLeavePast1Text
+[ConversationText]
+[FarLeft][LoadArveldir][Left][LoadXylia][FarRight][LoadServius][Right][LoadKilthel]
+Efil is moving quickly. He's trying to find a way of stabilizing the Inge and Vene...
+[Left]He's a fool. They are too far out of balance. If we don't do something, all of Avenir-
+[FarRight]We know, Xylia. But you can't expect all of humanity to stand by as we harvest them for their Inge to rebalance the energies. The Pura conversion will be very exhausting but should do the trick.
+[Left]I know... You'd think they'd a bit less selfish...
+[Right]Humans only care for their lives, not for the world they inhabit. They will die either way. This way, our world can endure, and other life can continue on.
+[FarLeft]Regardless, we don't have much time. Efil is mobilizing the Sateenkaari to the north, and his close alliance with Maximus of Cesaria and Uzkalis of Arcanae...
+[FarRight]The Arcanians and Cesarians will never cease fighting, and because of that, the energies will only grow more imbalanced. I don't care what Efil thinks he'll accomplish...
+[FarLeft]You did give him his chance, Servius.
+[Right]My Orden, I will need you to aid me with this.
+[FarRight]My blade is yours, Kilthel.
+[Right]Servius and Arveldir, you two will stay here with me. I need your Artifacts to complete the spell.
+[Left]And I?
+[Right]Go to the Temple of the Sateenkaari with your Guardians. Demolish all of them that you can.
+[Left]Of course. It would be my pleasure.[X]
+
+## Military7AcceptRetreatLeaveReturnText
+[ConversationText]
+[Left][LoadZaheva][Right][LoadXylia][FarRight][LoadRemus][FarLeft][LoadPlayer]
+So you were planning on... sacrificing humanity? To save the world?
+[Right]As Kilthel said, you humans only care for your lives. Servius and I were more than prepared to give our lives to save Avenir.
+[FarLeft]... Continue.[X]
+
+## Military7AcceptRetreatLeavePast2Text
+[ConversationText]
+[MidLeft][LoadSoldier4][MidRight][LoadXylia]
+They are routed. Much of Efil's followers lay defeated... But where is the man himself?
+[MidLeft]Lady Xylia. Efil has escaped. They are sealing us within.
+[MidRight]What? No! Dammit! I'll try to break the seal...
+[MidLeft]It is a perfect one way seal. There is no way out.
+[MidRight]So we'll need someone to come here to break it? Dammit...
+[MidLeft]Efil is already moving on Kilthel...
+[MidRight]Kilthel... No![X]
+
+## Military7AcceptRetreatLeavePast3Text
+[ConversationText]
+[MidLeft][LoadKilthel][FarRight][LoadUzkalis][Right][LoadEfil]
+Kilthel! Your tyranny ends here!
+[MidLeft]If you are here... What has happened to Xylia!?
+[Right]We've sealed her inside our Temple. She won't be able to help you now.
+[MidLeft]My other Orden are still here.
+[Right]We're aware. We think we can take them.
+[MidLeft]And then what? All of Avenir will fall victim to the overflowing Vene!
+[FarRight]Lies. Arcanae has agreed to halt their research in favor of protecting the world. Temporarily, of course, until we can find a better way to do it.
+[MidLeft]And as soon as me, the threat to your livelihoods is gone, then what? Cesaria and Arcanae will return to their war! The Vene and Inge will grow ever more unbalanced! At that point, if you aren't willing to give up your lives to balance the energies, then you'll die in the blight that will sweep Avenir.
+[FarRight][ClearFace][LoadMaximus]That's a risk we're willing to take. It at least gives us time to figure something out.
+[MidLeft]So you mean to oppose me, a Higher Being?
+[Right]If it gives us a chance at living, gladly.[X]
+
+## Military7AcceptRetreatLeavePresentText
+[ConversationText]
+[Left][LoadZaheva][Right][LoadXylia][FarRight][LoadRemus][FarLeft][LoadPlayer]
+Efil was willing to bank on such an unreliable strategy?
+[FarRight]But... all of humanity... Was it really worth that?
+[Right]Kilthel was going to give it time for the energies to stabilize before reintroducing humanity to Avenir. Sure, all of us who existed at the time were going to be gone-
+[FarLeft]It seems like, as much as I don't like it, Kilthel was in the right. Efil's idea could have worked had he seen it through, but as is, I don't buy it.
+[Right]So you understand now?
+[Left]I do.
+[FarRight]It all just seems to go a bit over my head.
+[FarLeft]We'll help you defeat Efil, Xylia.
+[Left]Agreed. It was foolish of him to risk so much and not see it through.
+[Right]I'm glad you understand. 
+[FarRight]I'm not sure about this...
+[FarLeft]I won't force you, Remus, but consider your other options.
+[FarRight]Yeah. I think you're right. I'll notify Madeleine and Yvette.
+[FarLeft]I'll tell Derek and Jasper to get ready as well. A few hours of rest and we'll be good to move out to the Temple of Kilthel.
+[Right]Perfect. Thank you, all of you.[X]
+
+## Military7AcceptRetreatLeaveOthersText
+[ConversationText]
+[FarLeft][LoadYvette][MidRight][LoadRemus][Left][LoadMadeleine]
+Hm... What you've told us is concerning, Remus.
+[MidRight]I know. But our best option is to go along with it. Best case scenario, she helps us after this is all through.
+[FarLeft]I think Remus is right.
+[Left]So it's just me finding this all suspicious?
+[FarLeft]Oh I find it suspicious, but I bet that if we were to try and fight Xylia now, we'd be dead too quickly. This way, if she's willing to help us, we still face that eventuality. If she isn't, at least the others will be on our side.
+[Left]You make a good point, Yvette. We'll head out and help her with this task. But we all need to be on guard.
+[MidRight]Right.[X]
+
+## Military7AcceptRetreatLeaveJasperDerekText
+[ConversationText]
+[MidLeft][LoadPlayer][FarRight][LoadDerek][Right][LoadJasper]
+So... This is our last task before heading back to Cesaria. And you're sure Xylia will help us?
+[MidLeft]If she doesn't, we'll just have to take her down and head back to Cesaria empty handed.
+[FarRight]Right.
+[Right]We've been fighting alongside together long enough that I trust you, [Tact], but I hope you know how big of a risk this is.
+[MidLeft]I'm aware. But we have the strength of numbers over her. If she tries to turn on us, we make our move quickly and swiftly.
+[Right]If you say so. Let's go ahead and get ready for this, then.[X]
+
+## Military7AcceptRetreatLeaveDesertText
+[ConversationText]
+[FarRight][LoadPlayer][Right][LoadYvette][MidLeft][LoadXylia]
+This is the entrance to the Temple of Kilthel. Normally you require a Vathrylian Artifact to enter...
+[Right]Let me guess, you have a way in?
+[MidLeft]Vathrylian Artifacts are really just solid forms of Vene with Vathrylian incantations on them. The magic I use will have the same effect upon this gate.
+[Right]...[.....] Sure enough. It opened.
+[MidLeft][Tact]! Are you and your men ready to head inside?
+[FarRight]If we weren't ready now, we'd never be ready.
+[Right]Right. Let's do this.[X]
+
+## Military7AcceptRetreatLeaveHereText
+[ConversationText]
+[Right][LoadPlayer]
+This is it. The last fight.
+[FarLeft][LoadMadeleine][Left][LoadDerek]After this, we can crush Arcanae and finish off this war.
+[FarLeft]I can only hope so...
+[FarRight][LoadRemus]We will.
+[FarLeft][ClearFace][LoadYvette]It's our only hope.
+[FarRight][ClearFace][LoadZaheva]Never thought this is where I'd end up after joining with Cesaria, but hey. It's been a fun ride.
+[Left][ClearFace][LoadJasper]Don't let me down now, [Tact].
+[Right][Smile]Don't worry, I won't.
+[FarRight][ClearFace][LoadXylia]Remember everyone, we have to move quickly. Efil has some Vathrylian Guardians in service to him, but the Wanderers will also be swarming in here soon enough. They wouldn't want to miss a chance at my head.
+[Right][Smile]Right! Let's move it![X]
+
+## Military7AcceptRetreatLeaveEfilText
+[ConversationText]
+[FarLeft][LoadEfil]
+It seems she has come... Ha. I suppose this is it for me. Okay, Guardians! Do what you can to bring down Xylia. This has to end here, with either my death, or hers![X]
+
+## Military7AcceptRetreatLeaveEfilBattleText
+[BattleText]
+[FarLeft][LoadEfil]I am so sorry that Xylia twisted you all in this way...[X]
+
+## Military7AcceptRetreatLeaveEfilDeathText
+[BattleText]
+[FarLeft][LoadEfil]So this is... where it ends... I'm sorry, Avenir...[X]
+
+## Military7AcceptRetreatLeaveXyliaEfilBattleText
+[BattleText]
+[FarLeft][LoadEfil]So, Xylia, you finally found some people to manipulate into helping you, eh?[ClearFace]
+[FarRight][LoadXylia]Anything to bring you down.[ClearFace]
+[FarLeft][LoadEfil]Do they know the truth?[ClearFace]
+[FarRight][LoadXylia]They do. All of it.[ClearFace]
+[FarLeft][LoadEfil]Interesting... perhaps... no matter. One of us will fall here.[ClearFace]
+[FarRight][LoadXylia]I guarantee it'll be you![X]
+
+## Military7AcceptRetreatLeaveTactEfilBattleText
+[BattleText]
+[FarRight][LoadPlayer]So... You're Efil?[ClearFace]
+[FarLeft][LoadEfil]I am. You must be the one Xylia manipulated.[ClearFace]
+[FarRight][LoadPlayer]I need her strength to defeat Arcanae. It's the only way.[ClearFace]
+[FarLeft][LoadEfil]You've made a mistake. She'll never help you.[ClearFace]
+[FarRight][LoadPlayer]I've got her under control![ClearFace]
+[FarLeft][LoadEfil]Ha! Nobody has Xylia under control. Come. If words won't sway you, then perhaps a blade will![X]
+
+## Military7AcceptRetreatLeaveMadeleineEfilBattleText
+[BattleText]
+[FarLeft][LoadEfil]I sense hesitancy in you.[ClearFace]
+[FarRight][LoadMadeleine]...[....] Did you really have no plan for when Kilthel was defeated?[ClearFace]
+[FarLeft][LoadEfil]Ah, so that's what she told you all.[ClearFace]
+[FarRight][LoadMadeleine]I want to hear the truth.[ClearFace]
+[FarLeft][LoadEfil]I trusted my friends. I believed they could fix the world above. I had done my part.[ClearFace]
+[FarRight][LoadMadeleine]...[ClearFace]
+[FarLeft][LoadEfil]I can see there is still hesitancy. But it matters not. You stand before me as an enemy![X]
+
+## Military7AcceptRetreatLeaveXyliaAliveText
+[ConversationText]
+[Right][LoadPlayer][FarRight][LoadMadeleine][MidLeft][LoadXylia]
+So... That's that... Efil is defeated...
+[Right]Right. He was definitely tough.
+[FarRight]...[....] Why did we do this?
+[Right]What?
+[FarRight]You're a madman, [Tact]. An absolute madman.
+[MidLeft]Ha! You think you're one to talk?
+[FarRight]I'm not a fool, Xylia. I know you won't help Cesaria now.[X]
+
+## Military7AcceptRetreatLeaveAliveTurnText
+[ConversationText]
+[Right][LoadPlayer][FarRight][LoadMadeleine][MidLeft][LoadXylia]
+Seems you are a clever one.
+[Right][MoveRight]What!?
+[MidLeft]Oh, [Tact], you fool. I never cared for your petty conflict. I simply saw your rage and desire to be noticed amongst Cesarians, and manipulated to make you help me. It was all rather easy, not gonna lie.
+[Right]You... lied. You lied!
+[FarRight][MoveFarRight]Dammit, [Tact]!
+[MidLeft]Yes... Fight each other! See who has more power![CloseSpeech]
+[Events]
+[CloseSpeech][MoveLeft][FarLeft][LoadYvette]I'm here Madeleine! Remus is trying to deal with Zaheva!
+[Right]Damn you, Xylia.
+[Left]Have fun![ClearFace][....][LoadDerek]
+[Tact]! Are you okay?
+[Right]Help me out here![X]
+
+## Military7AcceptRetreatLeaveAliveFightText
+[ConversationText]
+[MidLeft][LoadPlayer][MidRight][LoadXylia]
+I'm impressed. Most impressed.
+[MidLeft]Don't think you're getting off easy, Xylia![X]
+
+## Military7AcceptRetreatLeaveAliveNarratorText
+[ConversationText]
+[MidRight][LoadNarrator][MidLeft][LoadDerek]
+Another enemy?
+[MidRight]You don't interest me. Stand aside.
+[MidLeft]No!
+[MidRight]Very well then.[X]
+
+## Military7AcceptRetreatLeaveAliveDerekDeadText
+[ConversationText]
+[MidLeft][LoadNarrator][MidRight][LoadXylia]
+Well this is unexpected...
+[MidLeft]Oh, it's you.
+[MidRight]Long time no see.
+[MidLeft]Yeah, really. What mess have you caused this time?
+[MidRight]Nothing, just getting a bit of revenge on Efil.
+[MidLeft]Huh. Well, I have beef with [Tact] here, so...
+[MidRight]Oh no worries, I'll get out of your way.[X]
+
+## Military7AcceptRetreatLeaveAliveDerekDead2Text
+[ConversationText]
+[MidLeft][LoadNarrator][MidRight][LoadPlayer]Who are you?
+[MidLeft]You really forget so quickly? Disappointing. I am the Guardian Spirit.
+[MidRight]Kilthel?
+[MidLeft][MoveMidLeft]Ha! Wrong. Kilthel's dead, remember, bud?
+[MidRight]Wait... I remember you now!
+[MidLeft]Oh good, good, I'm proud of you! Now, unfortunately, I can't let you live.
+[MidRight]Excuse me?
+[MidLeft]See, when you're a lost soul, I can't let you influence the events of the world too much, and I mean, if I really just "let" Xylia go, there'd be no Avenir to speak of! So, unfortunately, your fun, and mine, ends here. I just have to kill you and then roll time back to before I ever let you out of my realm.
+[MidRight]I won't let that happen.
+[MidLeft]Try me.[X]
+
+## Military7AcceptRetreatLeaveGoodEndingPlayerDeathText
+[BattleText]
+[FarRight][LoadPlayer]No... Not when I'm so... close...[X]
+
+## Military7AcceptRetreatLeaveDeadEndingText
+[ConversationText]
+[MidRight][LoadMadeleine][MidLeft][LoadPlayer]
+He's gone... But... Xylia...
+[MidRight][Tact]... You fool.
+[MidLeft]Spare me, Madeleine. I know what you're going to say.
+[MidRight]You're a madman. You're a madman, and a traitor, and it falls to us to put you down.
+[MidLeft]...[....] It's treason, then.
+[MidRight]Damn you. Damn you to oblivion![CloseSpeech][MidLeft][MoveFarLeft]
+[Left][LoadDerek][Tact]![X]
+
+## Military7AcceptRetreatLeaveDeadDerekDeadText
+[ConversationText]
+[MidLeft][LoadMadeleine][MidRight][LoadPlayer]
+Derek!
+[MidLeft]Dammit...
+[MidRight]You bastard. I'll kill you for this!
+[MidLeft]Not if I kill you first.[X]
+
+## Military7AcceptRetreatLeaveDeadNarratorHereText
+[ConversationText]
+[MidLeft][LoadMadeleine][MidRight][LoadNarrator]
+Woah there, hey now!
+[MidLeft]Who are you?
+[MidRight]...[....] Your voice is irritating.[X]
+
+## Military7AcceptRetreatLeaveDeadMadeleineDeadText
+[ConversationText]
+[MidRight][LoadNarrator][MidLeft][LoadPlayer]
+Thank you...?
+[MidRight]No, no, no, you misunderstand. I just needed her out of the way. You're not surviving much longer anyway.
+[MidLeft]Then you're my enemy!
+[MidRight]Well, yes, and no. I'm responsible for your existence, so in a way, I'm your closest ally. But yeah, I'm about to murder you, so that would make me your enemy.
+[MidLeft]None of this confusing nonsense. We fight!
+[MidRight]Your funeral.[X]
+
+## Military7AcceptRetreatLeaveBadEndingPlayerDeathText
+[BattleText]
+[FarRight][LoadPlayer]Dammit... I was so close...[X]
+
+## Military7AcceptRetreatLeaveXyliaDeathText
+[FarLeft][LoadXylia]
+This... this is unprecidented...[NL][CloseEyes]
+May as well let them finish the job...[A][X]

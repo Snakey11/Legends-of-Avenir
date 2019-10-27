@@ -4,7 +4,7 @@
 	#define	songSnowBattle_grp  voicegroup000
 	#define	songSnowBattle_pri  0
 	#define	songSnowBattle_rev  0
-	#define	songSnowBattle_mvl  127
+	#define	songSnowBattle_mvl  110
 	#define	songSnowBattle_key  0
 	#define	songSnowBattle_tbs  1
 	#define	songSnowBattle_exg  0

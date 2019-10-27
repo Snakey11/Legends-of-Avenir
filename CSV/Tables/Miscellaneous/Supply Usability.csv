@@ -29,7 +29,7 @@ INLINE SupplyUsabilityTable,Pointer
 1B MilitaryPromotionRetreatHelp5,NormalSupplyList|IsPointer
 1C MilitaryPromotionRetreatHelp6,NormalSupplyList|IsPointer
 1D MilitaryPromotionRetreatHelp7,NormalSupplyList|IsPointer
-1E MilitaryPass2,NormalSupplyList|IsPointer
+1E MilitaryPass2,0x00
 1F MilitaryPass3,NormalSupplyList|IsPointer
 20 MilitaryPass4,NormalSupplyList|IsPointer
 21 MilitaryPass Haedric 5,NormalSupplyList|IsPointer

@@ -142,7 +142,7 @@ Hector,HectorMv|IsPointer,HectorAnimationData|IsPointer
 Trueerblade,TruerbladeMv|IsPointer,0x81cd1bc
 Gaiden Sage,0x81d91e4,0x81d9b58
 Izuk,IzukMv|IsPointer,0x81d9b58
-Nomad,NomadMv|IsPointer,0x81db0f8
+BattleSageF,BattleSageFMv|IsPointer,0x81d9b58
 NarratorClass,HarbingerMv|IsPointer,0x81cd1bc
 Warlock,WarlockMv|IsPointer,0x81f95f4
 SpearHero,0x81cb438,0x81cbd94
@@ -150,7 +150,7 @@ XeximClass,0x81cf040,0x81cf7e8
 GrandPaladin,0x81c6a84,0x81c7428
 HolySage,0x81d9cb0,0x81da694
 WilSniper,0x81d1520,0x81d1d48
-BattleSage,0x81d91e4,0x81d9b58
+BattleSage,BattleSageMv|IsPointer,0x81d9b58
 LostSoul,0x81ffd24,0x8200348
 LostSoul,0x82004a0,0x8200afc
 ArmoredWyvernLord,0x81d504c,0x81d5e58

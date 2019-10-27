@@ -1,0 +1,105 @@
+
+ALIGN 4
+OutdoorSnowyTilesetObjects: // lz77 compressed
+#incbin "Compressed Outdoor Snowy.dmp"
+
+ALIGN 4
+OutdoorSnowyTilesetPalette:
+#incbin "Snowy Tileset Outdoor Palette.dmp"
+
+ALIGN 4
+OutdoorSnowyTilesetTileConfig:
+#incext compress "Snowy Tileset Outdoor Tile Configuration.mapchip_config"
+
+EventPointerTable(OutdoorSnowyObjectSet,OutdoorSnowyTilesetObjects)
+EventPointerTable(OutdoorSnowyPalette,OutdoorSnowyTilesetPalette)
+EventPointerTable(OutdoorSnowyTileConfig,OutdoorSnowyTilesetTileConfig)
+
+
+ALIGN 4
+IndoorSnowyTilesetObjects: // lz77 compressed
+#incbin "Compressed Indoor Snowy.dmp"
+
+ALIGN 4
+IndoorSnowyTilesetPalette:
+#incbin "Snowy Tileset Indoor Palette.dmp"
+
+ALIGN 4
+IndoorSnowyTilesetTileConfig:
+#incext compress "Snowy Tileset Indoor Tile Configuration.mapchip_config"
+
+EventPointerTable(IndoorSnowyObjectSet,IndoorSnowyTilesetObjects)
+EventPointerTable(IndoorSnowyPalette,IndoorSnowyTilesetPalette)
+EventPointerTable(IndoorSnowyTileConfig,IndoorSnowyTilesetTileConfig)
+
+
+ALIGN 4
+FE6WaterTilesetAnimation:
+TilesetAnimation(28,0x1000,FE6Water1)
+TilesetAnimation(28,0x1000,FE6Water2)
+TilesetAnimation(28,0x1000,FE6Water3)
+TilesetAnimation(28,0x1000,FE6Water4)
+TilesetAnimation(28,0x1000,FE6Water5)
+TilesetAnimation(28,0x1000,FE6Water6)
+TilesetAnimation(28,0x1000,FE6Water7)
+TilesetAnimation(28,0x1000,FE6Water8)
+TilesetAnimation(28,0x1000,FE6Water9)
+TilesetAnimation(28,0x1000,FE6Water10)
+TilesetAnimation(28,0x1000,FE6Water11)
+TilesetAnimation(28,0x1000,FE6Water12)
+TilesetAnimation(28,0x1000,FE6Water13)
+TilesetAnimation(28,0x1000,FE6Water14)
+TilesetAnimation(28,0x1000,FE6Water15)
+TilesetAnimation(28,0x1000,FE6Water16)
+WORD 0x00 0x00
+
+EventPointerTable(FE6WaterAnimation,FE6WaterTilesetAnimation)
+
+ALIGN 4
+FE6Water1: // None of these are compressed
+#incbin "FE6 Water Tile Animations.mapanime 1_000.dmp"
+ALIGN 4
+FE6Water2:
+#incbin "FE6 Water Tile Animations.mapanime 1_001.dmp"
+ALIGN 4
+FE6Water3:
+#incbin "FE6 Water Tile Animations.mapanime 1_002.dmp"
+ALIGN 4
+FE6Water4:
+#incbin "FE6 Water Tile Animations.mapanime 1_003.dmp"
+ALIGN 4
+FE6Water5:
+#incbin "FE6 Water Tile Animations.mapanime 1_004.dmp"
+ALIGN 4
+FE6Water6:
+#incbin "FE6 Water Tile Animations.mapanime 1_005.dmp"
+ALIGN 4
+FE6Water7:
+#incbin "FE6 Water Tile Animations.mapanime 1_006.dmp"
+ALIGN 4
+FE6Water8:
+#incbin "FE6 Water Tile Animations.mapanime 1_007.dmp"
+ALIGN 4
+FE6Water9:
+#incbin "FE6 Water Tile Animations.mapanime 1_008.dmp"
+ALIGN 4
+FE6Water10:
+#incbin "FE6 Water Tile Animations.mapanime 1_009.dmp"
+ALIGN 4
+FE6Water11:
+#incbin "FE6 Water Tile Animations.mapanime 1_010.dmp"
+ALIGN 4
+FE6Water12:
+#incbin "FE6 Water Tile Animations.mapanime 1_011.dmp"
+ALIGN 4
+FE6Water13:
+#incbin "FE6 Water Tile Animations.mapanime 1_012.dmp"
+ALIGN 4
+FE6Water14:
+#incbin "FE6 Water Tile Animations.mapanime 1_013.dmp"
+ALIGN 4
+FE6Water15:
+#incbin "FE6 Water Tile Animations.mapanime 1_014.dmp"
+ALIGN 4
+FE6Water16:
+#incbin "FE6 Water Tile Animations.mapanime 1_015.dmp"

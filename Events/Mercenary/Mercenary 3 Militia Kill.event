@@ -163,6 +163,7 @@ GiveToSupplySilent(ShortAxe)
 GiveToSupplySilent(Hammer)
 GiveToSupplySilent(Exordium)
 GiveToSupplySilent(Vulnerary)
+GiveToSupplySilent(SteelBow)
 MoveToChapter(MercenaryMilitiaKill4)
 ENDA
 
@@ -182,20 +183,26 @@ NoFade
 ENDA
 
 Reinforcements1:
+CamON
 LOAD1 0x1 LoadReinforcements1
 ENUN
+CamOFF
 NoFade
 ENDA
 
 Reinforcements2:
+CamON
 LOAD1 0x1 LoadReinforcements2
 ENUN
+CamOFF
 NoFade
 ENDA
 
 Reinforcements3:
+CamON
 LOAD1 0x1 LoadReinforcements3
 ENUN
+CamOFF
 NoFade
 ENDA
 
@@ -260,34 +267,34 @@ UNIT
 
 BanditPeople2:
 UNIT Arya Myrmidon_F Weston Level(7,Enemy,True) [21,14] 0x00 0x00 0x1 AryaREDA [KillingEdge,SteelSword,HeroCrest] AttackInRangeAI
-UNIT WestonBandit Archer Weston Level(7,Enemy,True) [0,12] 0x00 0x00 0x1 REDA5 [IronLongbow] GuardAI
-UNIT WestonBandit Archer Weston Level(6,Enemy,True) [0,12] 0x00 0x00 0x1 REDA6 [SteelLongbow] GuardAI
-UNIT WestonBandit Pirate Weston Level(5,Enemy,True) [0,13] 0x00 0x00 0x1 REDA7 [HandAxe] AttackInRangeAI
-UNIT WestonBandit Soldier Weston Level(8,Enemy,True) [0,13] 0x00 0x00 0x1 REDA8 [SteelLance] AttackInRangeAI
-UNIT WestonBandit Knight Weston Level(9,Enemy,True) [0,14] 0x00 0x00 0x1 REDA9 [ShortAxe] GuardAI
-UNIT WestonBandit Brigand Weston Level(6,Enemy,True) [0,15] 0x00 0x00 0x1 REDA10 [SwordSlayer] [0]
-UNIT WestonBandit Fighter Weston Level(7,Enemy,True) [21,13] 0x00 0x00 0x1 REDA11 [IronAxe] ChaseOnceApproachedAI
-UNIT WestonBandit Archer Weston Level(5,Enemy,True) [11,1] 0x00 0x00 0x0 0x0 [SteelLongbow] GuardAI
-UNIT WestonBandit Cavalier Weston Level(4,Enemy,True) [21,8] 0x00 0x00 0x0 0x0 [SteelLance] AttackInRangeAI
-UNIT WestonBandit Shaman Weston Level(7,Enemy,True) [21,10] 0x00 0x00 0x1 REDA13 [Worm] AttackInRangeAI 
+UNIT WestonBandit Archer Weston Level(8,Enemy,True) [0,12] 0x00 0x00 0x1 REDA5 [IronLongbow] GuardAI
+UNIT WestonBandit Archer Weston Level(7,Enemy,True) [0,12] 0x00 0x00 0x1 REDA6 [SteelLongbow] GuardAI
+UNIT WestonBandit Pirate Weston Level(6,Enemy,True) [0,13] 0x00 0x00 0x1 REDA7 [HandAxe] AttackInRangeAI
+UNIT WestonBandit Soldier Weston Level(9,Enemy,True) [0,13] 0x00 0x00 0x1 REDA8 [SteelLance] AttackInRangeAI
+UNIT WestonBandit Knight Weston Level(10,Enemy,True) [0,14] 0x00 0x00 0x1 REDA9 [ShortAxe] GuardAI
+UNIT WestonBandit Brigand Weston Level(7,Enemy,True) [0,15] 0x00 0x00 0x1 REDA10 [SwordSlayer] [0]
+UNIT WestonBandit Fighter Weston Level(8,Enemy,True) [21,13] 0x00 0x00 0x1 REDA11 [IronAxe] ChaseOnceApproachedAI
+UNIT WestonBandit Archer Weston Level(6,Enemy,True) [11,1] 0x00 0x00 0x0 0x0 [SteelLongbow] GuardAI
+UNIT WestonBandit Cavalier Weston Level(5,Enemy,True) [21,8] 0x00 0x00 0x0 0x0 [SteelLance] AttackInRangeAI
+UNIT WestonBandit Shaman Weston Level(8,Enemy,True) [21,10] 0x00 0x00 0x1 REDA13 [Worm] AttackInRangeAI 
 UNIT
 
 LoadReinforcements1:
-UNIT WestonBandit Cavalier Weston Level(6,Enemy,True) [8,19] 0x00 0x00 0x1 REDA14 [Lancereaver] PursueWithoutHeedAI
-UNIT WestonBandit Cavalier Weston Level(5,Enemy,True) [7,19] 0x00 0x00 0x1 REDA15 [SteelSword,Javelin] PursueWithoutHeedAI
-UNIT WestonBandit Mage Weston Level(5,Enemy,True) [9,19] 0x00 0x00 0x1 REDA16 [Elaqua] [0] 
-UNIT WestonBandit Mercenary Weston Level(4,Enemy,True) [8,19] 0x00 0x00 0x1 REDA17 [IronBlade] ChaseOnceApproachedAI
-UNIT WestonBandit Mercenary Weston Level(7,Enemy,True) [9,19] 0x00 0x00 0x1 REDA18 [ArmorSlayer] ChaseOnceApproachedAI
+UNIT WestonBandit Cavalier Weston Level(7,Enemy,True) [8,19] 0x00 0x00 0x1 REDA14 [Lancereaver] PursueWithoutHeedAI
+UNIT WestonBandit Cavalier Weston Level(6,Enemy,True) [7,19] 0x00 0x00 0x1 REDA15 [SteelSword,Javelin] PursueWithoutHeedAI
+UNIT WestonBandit Mage Weston Level(6,Enemy,True) [9,19] 0x00 0x00 0x1 REDA16 [Elaqua] [0] 
+UNIT WestonBandit Mercenary Weston Level(5,Enemy,True) [8,19] 0x00 0x00 0x1 REDA17 [IronBlade] ChaseOnceApproachedAI
+UNIT WestonBandit Mercenary Weston Level(8,Enemy,True) [9,19] 0x00 0x00 0x1 REDA18 [ArmorSlayer] ChaseOnceApproachedAI
 UNIT
 
 LoadReinforcements2:
-UNIT WestonBandit Pirate Weston Level(6,Enemy,True) [18,7] 0x00 0x00 0x1 REDA19 [ShortAxe] PursueWithoutHeedAI
-UNIT WestonBandit Myrmidon Weston Level(5,Enemy,True) [18,7] 0x00 0x00 0x1 REDA20 [LanceSlayer] PursueWithoutHeedAI
-UNIT WestonBandit Mage Weston Level(5,Enemy,True) [18,7] 0x0 0x00 0x1 REDA22 [Wind] [0]
+UNIT WestonBandit Pirate Weston Level(7,Enemy,True) [18,7] 0x00 0x00 0x1 REDA19 [ShortAxe] PursueWithoutHeedAI
+UNIT WestonBandit Myrmidon Weston Level(6,Enemy,True) [18,7] 0x00 0x00 0x1 REDA20 [LanceSlayer] PursueWithoutHeedAI
+UNIT WestonBandit Mage Weston Level(6,Enemy,True) [18,7] 0x0 0x00 0x1 REDA22 [Wind] [0]
 UNIT
 
 LoadReinforcements3:
-UNIT WestonBandit Soldier Weston Level(5,Enemy,True) [18,7] 0x00 0x00 0x0 0x0 [SteelLance] [0]
+UNIT WestonBandit Soldier Weston Level(7,Enemy,True) [18,7] 0x00 0x00 0x0 0x0 [SteelLance] [0]
 UNIT
 
 EndingStuff:

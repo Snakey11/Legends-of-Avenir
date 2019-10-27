@@ -19,3 +19,6 @@ INLINE SupportReworkBonusTable,Character 1,Character 2,C Attack,C Defense,C Hit,
 17,Cougar,Finoc,2,0,10,0,0,0,2,0,10,5,0,0,2,0,10,5,5,0
 18,Christina,Forrest,0,1,10,0,0,0,1,1,10,5,0,0,1,2,10,10,0,0
 19,Clara,Muriel,1,1,5,5,0,0,1,2,5,10,0,0,1,2,5,10,5,5
+20,Madeleine,Remus,1,0,0,10,0,0,1,1,5,20,0,0,2,1,5,15,0,0
+21,Madeleine,Yvette,0,0,5,5,0,5,1,0,5,10,5,5,1,0,5,15,5,10
+22,Zaheva,0xFF,2,0,0,0,5,0,2,0,5,5,5,0,3,0,5,5,10,0

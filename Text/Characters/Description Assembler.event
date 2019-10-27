@@ -4,8 +4,16 @@ The current Guardian Spirit[NL]
 who keeps the world in order.[X]
 
 ## PlayerMercenaryDescText
-A freelancer with a[NL]
-normal background.[X]
+A young freelancer of Haedric[NL]
+seeking a path in life.[X]
+
+## PlayerMilitaryDescText
+A young recruit of Cesaria[NL]
+seeking his role in the war.[X]
+
+## PlayerMageDescText
+A young mage of Arcanae[NL]
+seeking new knowledge.[X]
 
 ## PrologueAvatarDescText
 A lost soul with[NL]
@@ -24,7 +32,7 @@ A rather lighthearted member[NL]
 of a small mercenary group.[X]
 
 ## BaretDescText
-A spiteful, self-trained swordsman[NL]
+A spiteful, self-trained spearman[NL]
 who lost his parents in childhood.[X]
 
 ## ValDescText
@@ -71,20 +79,22 @@ The Basileus of Haedric. Also[NL]
 an old friend of the Four Orden.[X]
 
 ## JasperDescText
-A loyal Cesarian recruit.[NL]
-Can be lazy at times.[X]
+A recent Cesarian recruit with a[NL]
+distrust for Arcanians. Wishes[NL]
+for a peaceful end to the war.[X]
 
 ## DerekDescText
-A very loyal and simple-minded[NL]
-soldier of Cesaria.[X]
+An honest and pure Cesarian recruit.[NL]
+Can be a bit lazy, but is very loyal.[X]
 
 ## LuxDescText
 The young, yet assertive vice-[NL]
 captain of the Tiger Brigade[X]
 
 ## YvetteDescText
-A quirky and cheerful Cesarian[NL]
-fighter originally from Altia.[X]
+A Cesarian soldier attached[NL]
+to the Cheetah Brigade.[NL]
+Fiercely loyal to her Captain.[X]
 
 ## ZaliusDescText
 Captian of the Cesarian Cheetah[NL]
@@ -92,9 +102,8 @@ Brigade. Very secretive[NL]
 and skilled in spying.[X]
 
 ## LeyosDescText
-Former general of the Cesarian[NL]
-military now serving as the[NL]
-secret bodyguard of the emperor.[X]
+The former General of Cesaria[NL]
+and personal bodyguard to the Emperor.[X]
 
 ## ClaraDescText
 A kind and softspoken curate of Haedric[NL]
@@ -142,12 +151,12 @@ A Grand Magus of Arcanae. She[NL]
 fights against Xavus and Uzaklis.[X]
 
 ## ChristinaDescText
-A strong rider who remains loyal[NL]
-but often questions leadership.[X]
+A laid back and relaxed[NL]
+Sergeant of Cesaria.[X]
 
 ## ForrestDescText
-A rider who prefers diplomacy[NL]
-and only fights when necessary.[X]
+A refined and professional[NL]
+Sergeant of Cesaria.[X]
 
 ## ShannonDescText
 A pacifist who wishes to[NL]
@@ -281,7 +290,7 @@ group of highwaymen.[X]
 ## XyliaDescText
 One of the Four Orden.[NL]
 Locked in the temple of[NL]
-Sateenkaari for years.[X]
+Sateenkaari by Efil.[X]
 
 ## SylvaineDescText
 A young Cesarian captain[NL]
@@ -314,22 +323,20 @@ An Arcanian captain[NL]
 under Uzkalis.[X]
 
 ## ZahevaDescText
-A freelancer mercenary[NL]
-trying to get close to[NL]
-an Arcanian captain.[X]
+An Arcanian swordswoman seeking[NL]
+revenge against her former teacher.[X]
 
 ## GeraldDescText
 An Arcanian heading an[NL]
 infantry squadron.[X]
 
 ## MadelineDescText
-A Cesarian corporal[NL]
-with a strong[NL]
-hatred for Arcanae.[X]
+A stoic archer of Cesaria with a[NL]
+burning hatred towards all Arcanians.[X]
 
 ## RemusDescText
-A loyal, unambitious[NL]
-Cesarian private.[X]
+An honest and loyal but[NL]
+quiet soldier of Cesaria.[X]
 
 ## SeanDescText
 An overconfident[NL]

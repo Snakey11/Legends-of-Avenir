@@ -1,25 +1,21 @@
 
 #include "Spells/Master Spell Installer.event"
 
-ALIGN 16
-#include "Portraits/Portrait Installer.event"
-
+#include "Portraits/_Portrait Installer.event"
 
 #include "Item Icons/Item Icon Installer.event"
 
-ALIGN 16
-#include "Map Sprites/Map Sprite Installer.event"
+#include "Map Sprites/_Map Sprite Installer.event"
+
+#include "Class Cards/Class Card Installer.event"
 
 #ifdef IncludeBigStuff
-ALIGN 16
-#include "Battle Palettes/Battle Palette Installer.event"
+#include "Battle Palettes/_Battle Palette Installer.event"
 #endif
 
 PUSH
 ORG $88638
 POIN NewStatScreen
-ORG $88620
-POIN RemoveGlowy
 ORG $88640
 POIN NewStatScreenPal
 POP
@@ -29,7 +25,3 @@ NewStatScreen:
 #incext Png2Dmp "StatScreen.png" --lz77
 NewStatScreenPal:
 #incext Png2Dmp "StatScreen.png" --palette-only
-
-ALIGN 4
-RemoveGlowy:
-#incext Png2Dmp "Remove Glowy.png" --lz77

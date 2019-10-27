@@ -122,7 +122,7 @@ ENUN
 TEXTCONT
 TEXTEND
 REMA
-MOVE 0x0 Arc [10,1]
+MOVE 0x0 BossArc [10,1]
 ENUN
 STAL 0x20
 Text(Merc2BanditEndingBeginningSceneText)
@@ -235,26 +235,26 @@ EndUnit
 
 //Label MilitiaMen
 MilitiaMen:
-//UNIT Arc Fighter Arc Level(1,Enemy,True) [7,14] 0x00 0x00 0x1 REDA9R13 [SteelAxe,ShortAxe] GuardAI
-UNIT Militiaman Knight Arc Level(6,Enemy,True) [7,13] 0x00 0x00 0x00 0x00 [IronAxe] GuardAI
-UNIT Militiaman Myrmidon Arc Level(5,Enemy,True) [4,13] 0x00 0x00 0x00 0x00 [SlimSword] [0]
-UNIT Militiaman Fighter Arc Level(5,Enemy,True) [3,11] 0x00 0x00 0x00 0x00 [HandAxe] AttackInRangeAI
-UNIT Militiaman Fighter Arc Level(4,Enemy,True) [3,8] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
-UNIT Militiaman Mage Arc Level(3,Enemy,True) [1,9] 0x00 0x00 0x00 0x00 [Thunder] AttackInRangeAI
-UNIT Militiaman Cavalier Arc Level(5,Enemy,True) [0,6] 0x00 0x00 0x00 0x00 [SteelLance,IronSword] ChaseOnceApproachedAI
-UNIT Militiaman Soldier Arc Level(6,Enemy,True) [7,7] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
-UNIT Militiaman Soldier Arc Level(5,Enemy,True) [7,5] 0x00 0x00 0x00 0x00 [IronLance] AttackInRangeAI
-UNIT Militiaman Fighter Arc Level(4,Enemy,True) [9,5] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
-UNIT Militiaman Mercenary Arc Level(7,Enemy,True) [8,4] 0x00 0x00 0x00 0x00 [IronSword] NoAI
-UNIT Militiaman Mercenary Arc Level(2,Enemy,True) [11,6] 0x00 0x00 0x00 0x00 [SteelSword] ChaseOnceApproachedAI
-UNIT Militiaman Fighter Arc Level(5,Enemy,True) [9,3] 0x00 0x00 0x00 0x00 [IronAxe] AttackInRangeAI
-UNIT Militiaman Soldier Arc Level(6,Enemy,True) [11,3] 0x00 0x00 0x00 0x00 [DevilLance] AttackInRangeAI
-UNIT Militiaman Knight Arc Level(8,Enemy,True) [10,4] 0x00 0x00 0x00 0x00 [Javelin] GuardAI
+//UNIT BossArc Fighter BossArc Level(1,Enemy,True) [7,14] 0x00 0x00 0x1 REDA9R13 [SteelAxe,ShortAxe] GuardAI
+UNIT Militiaman Knight BossArc Level(6,Enemy,True) [7,13] 0x00 0x00 0x00 0x00 [IronAxe] GuardAI
+UNIT Militiaman Myrmidon BossArc Level(5,Enemy,True) [4,13] 0x00 0x00 0x00 0x00 [SlimSword] [0]
+UNIT Militiaman Fighter BossArc Level(5,Enemy,True) [3,11] 0x00 0x00 0x00 0x00 [HandAxe] AttackInRangeAI
+UNIT Militiaman Fighter BossArc Level(4,Enemy,True) [3,8] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
+UNIT Militiaman Mage BossArc Level(3,Enemy,True) [1,9] 0x00 0x00 0x00 0x00 [Thunder] AttackInRangeAI
+UNIT Militiaman Cavalier BossArc Level(5,Enemy,True) [0,6] 0x00 0x00 0x00 0x00 [SteelLance,IronSword] ChaseOnceApproachedAI
+UNIT Militiaman Soldier BossArc Level(6,Enemy,True) [7,7] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
+UNIT Militiaman Soldier BossArc Level(5,Enemy,True) [7,5] 0x00 0x00 0x00 0x00 [IronLance] AttackInRangeAI
+UNIT Militiaman Fighter BossArc Level(4,Enemy,True) [9,5] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
+UNIT Militiaman Mercenary BossArc Level(7,Enemy,True) [8,4] 0x00 0x00 0x00 0x00 [IronSword] NoAI
+UNIT Militiaman Mercenary BossArc Level(2,Enemy,True) [11,6] 0x00 0x00 0x00 0x00 [SteelSword] ChaseOnceApproachedAI
+UNIT Militiaman Fighter BossArc Level(5,Enemy,True) [9,3] 0x00 0x00 0x00 0x00 [IronAxe] AttackInRangeAI
+UNIT Militiaman Soldier BossArc Level(6,Enemy,True) [11,3] 0x00 0x00 0x00 0x00 [DevilLance] AttackInRangeAI
+UNIT Militiaman Knight BossArc Level(8,Enemy,True) [10,4] 0x00 0x00 0x00 0x00 [Javelin] GuardAI
 EndUnit
 
 //Label LoadArc
 LoadArc:
-UNIT Arc Fighter Arc Level(7,Enemy,True) [5,14] 0x00 0x00 0x1 SlowREDA [SteelAxe,ShortAxe] GuardAI
+UNIT BossArc Fighter BossArc Level(7,Enemy,True) [5,14] 0x00 0x00 0x1 SlowREDA [SteelAxe,ShortAxe] GuardAI
 EndUnit
 
 //Label LoadWalter

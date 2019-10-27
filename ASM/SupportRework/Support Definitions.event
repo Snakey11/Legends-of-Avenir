@@ -13,8 +13,8 @@
 	#define Csupport CSupport
 	#define Bsupport BSupport
 	#define Asupport ASupport
-	#define SupportConvo(Level,Character1,Character2,Text) "SHORT 0x04 Level Text 0x00 ; BYTE Character1 Character2 0x00 0x00 ; POIN SupportReturnFalse|1" // This is the same as CHARASM Level Text [Character1, Character2] SupportReturnFalse|1 
-	#define SupportEvent(Level,Character1,Character2,EventPointer) "SHORT 0x04 Level ; POIN EventPointer ; BYTE Character1 Character2 0x00 0x00 ; POIN SupportReturnFalse|1"
+	#define SupportConvo(Level,Character1,Character2,Text) "SHORT 0x04 Level Text 0x00 ; BYTE Character1 Character2 0x00 0x00 ; POIN CHARSupportConvoUsability|1" // This is the same as CHARASM Level Text [Character1, Character2] SupportReturnFalse|1 
+	#define SupportEvent(Level,Character1,Character2,EventPointer) "SHORT 0x04 Level ; POIN EventPointer ; BYTE Character1 Character2 0x00 0x00 ; POIN CHARSupportConvoUsability|1"
 	// Not using CHARASM because for some reason in raws it's disallowed for FE8.
 	
 	#define EventMenuCommand(aTextId,Usability,Effect) "WORD 0; SHORT aTextId 0; WORD 0; POIN (Usability|1); WORD 0; POIN (Effect|1); WORD 0 0 0"

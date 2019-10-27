@@ -1,5 +1,8 @@
 
 ALIGN 4
-#inctext lyn "ToggleFixedGrowths.elf" "Hooks.elf"
+#include "ToggleFixedGrowths.lyn.event"
 
+PUSH
+ORG 0x17D34
 jumpToHack(UnsetFixedGrowths|1)
+POP

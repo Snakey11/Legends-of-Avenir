@@ -81,9 +81,10 @@ STAL 0x20
 MUSC Zelos
 STAL 0x20
 EndConvo
+STAL 0x20
 LOAD2 0x1 HesHere
 ENUN
-STAL 0x8
+STAL 0x20
 Text(0x7,Merc4MilitiaKillKendrickHereText)
 STAL 0x40
 FADI 0x5
@@ -105,9 +106,6 @@ TEXTEND
 MUSC Tension
 TEXTCONT
 TEXTEND
-EndConvo
-STAL 0x20
-ENUN
 SetSupport(Arya,Kendrick,CSupport)
 NoFade
 GotoPrepScreen
@@ -201,46 +199,46 @@ UNIT Arc Fighter PlayerMArcher Level(1,Ally,True) [3,9] 0x00 0x00 0x00 0x00 [Iro
 UNIT Luke Monk PlayerMArcher Level(1,Ally,True) [2,7] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
 UNIT Arya Myrmidon_F PlayerMArcher Level(1,Ally,True) [4,8] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
 UNIT Kendrick Pirate PlayerMArcher Level(9,Ally,True) [4,12] 0x00 0x00 0x00 0x00 [HandAxe,Swordreaver,Vulnerary] [0] 
-UNIT KendrickFriend Pirate Kendrick Level(1,NPC,True) [5,13] 0x00 0x00 0x00 0x00 [SteelAxe] [0] 
-UNIT KendrickFriend Pirate Kendrick Level(1,NPC,True) [2,11] 0x00 0x00 0x00 0x00 [Hammer] [0] 
-UNIT KendrickFriend Myrmidon Kendrick Level(1,NPC,True) [4,16] 0x00 0x00 0x00 0x00 [LightBrand] [0]
+UNIT KendrickFriend Pirate Kendrick Level(5,NPC,True) [5,13] 0x00 0x00 0x00 0x00 [SteelAxe] [0] 
+UNIT KendrickFriend Pirate Kendrick Level(6,NPC,True) [2,11] 0x00 0x00 0x00 0x00 [Hammer] [0] 
+UNIT KendrickFriend Myrmidon Kendrick Level(5,NPC,True) [4,16] 0x00 0x00 0x00 0x00 [LightBrand] [0]
 UNIT
 
 BoatMeanies:
 UNIT Robert Berserker Robert Level(3,Enemy,True) [12,6] Drop 0x00 0x00 0x00 [KillerAxe,Tomahawk] GuardAI
 UNIT RobertPirate Hero Robert Level(1,Enemy,True) [15,11] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
-UNIT RobertPirate Pirate Robert Level(7,Enemy,True) [6,11] 0x00 0x00 0x00 0x00 [SteelAxe] [0]
-UNIT RobertPirate Mercenary Robert Level(8,Enemy,True) [10,11] 0x00 0x00 0x00 0x00 [ToxinSword] [0]
-UNIT RobertPirate Pirate Robert Level(5,Enemy,True) [12,9] 0x00 0x00 0x00 0x00 [Halberd] PursueWithoutHeedAI
-UNIT RobertPirate Pirate Robert Level(7,Enemy,True) [17,11] 0x00 0x00 0x00 0x00 [DevilAxe] PursueWithoutHeedAI
-UNIT RobertPirate Archer Robert Level(8,Enemy,True) [18,10] 0x00 0x00 0x00 0x00 [SteelShortbow] AttackInRangeAI
+UNIT RobertPirate Pirate Robert Level(8,Enemy,True) [6,11] 0x00 0x00 0x00 0x00 [SteelAxe] [0]
+UNIT RobertPirate Mercenary Robert Level(9,Enemy,True) [10,11] 0x00 0x00 0x00 0x00 [ToxinSword] [0]
+UNIT RobertPirate Pirate Robert Level(6,Enemy,True) [12,9] 0x00 0x00 0x00 0x00 [Halberd] PursueWithoutHeedAI
+UNIT RobertPirate Pirate Robert Level(8,Enemy,True) [17,11] 0x00 0x00 0x00 0x00 [DevilAxe] PursueWithoutHeedAI
+UNIT RobertPirate Archer Robert Level(9,Enemy,True) [18,10] 0x00 0x00 0x00 0x00 [SteelShortbow] AttackInRangeAI
 UNIT RobertPirate Sentinel Robert Level(1,Enemy,True) [18,7] 0x00 0x00 0x00 0x00 [SlimLance,HandAxe] [0]
-UNIT RobertPirate Mage Robert Level(5,Enemy,True) [12,15] 0x00 0x00 0x00 0x00 [Elthunder] AttackInRangeAI
+UNIT RobertPirate Mage Robert Level(9,Enemy,True) [12,15] 0x00 0x00 0x00 0x00 [Elthunder] AttackInRangeAI
 UNIT
 
 LoadTroops1:
-UNIT RobertPirate PegasusKnight Robert Level(4,Enemy,True) [18,0] 0x00 0x00 0x00 0x00 [Axereaver] [0]
-UNIT RobertPirate PegasusKnight Robert Level(3,Enemy,True) [17,0] 0x00 0x00 0x00 0x00 [Javelin] [0]
-UNIT RobertPirate PegasusKnight Robert Level(6,Enemy,True) [18,1] 0x00 0x00 0x00 0x00 [SteelSpear] [0]
-UNIT KendrickFriend Mercenary Robert Level(5,Enemy,True) [18,8] 0x00 0x00 0x00 0x00 [KillingEdge] [0]
-UNIT RobertPirate Shaman Robert Level(6,Enemy,True) [13,7] 0x00 0x00 0x00 0x00 [Dulam] AttackInRangeAI
+UNIT RobertPirate PegasusKnight Robert Level(5,Enemy,True) [18,0] 0x00 0x00 0x00 0x00 [Axereaver] [0]
+UNIT RobertPirate PegasusKnight Robert Level(4,Enemy,True) [17,0] 0x00 0x00 0x00 0x00 [Javelin] [0]
+UNIT RobertPirate PegasusKnight Robert Level(7,Enemy,True) [18,1] 0x00 0x00 0x00 0x00 [SteelSpear] [0]
+UNIT KendrickFriend Mercenary Robert Level(6,Enemy,True) [18,8] 0x00 0x00 0x00 0x00 [KillingEdge] [0]
+UNIT RobertPirate Shaman Robert Level(9,Enemy,True) [13,7] 0x00 0x00 0x00 0x00 [Dulam] AttackInRangeAI
 UNIT
 
 LoadTroops2:
-UNIT RobertPirate PegasusKnight Robert Level(8,Enemy,True) [12,24] 0x00 0x00 0x00 0x00 [KillerLance] [0]
-UNIT RobertPirate WyvernRider Robert Level(4,Enemy,True) [11,24] 0x00 0x00 0x00 0x00 [DevilSpear] [0]
-UNIT RobertPirate WyvernRider Robert Level(5,Enemy,True) [13,24] 0x00 0x00 0x00 0x00 [ShortSpear] [0]
+UNIT RobertPirate PegasusKnight Robert Level(9,Enemy,True) [12,24] 0x00 0x00 0x00 0x00 [KillerLance] [0]
+UNIT RobertPirate WyvernRider Robert Level(6,Enemy,True) [11,24] 0x00 0x00 0x00 0x00 [DevilSpear] [0]
+UNIT RobertPirate WyvernRider Robert Level(6,Enemy,True) [13,24] 0x00 0x00 0x00 0x00 [ShortSpear] [0]
 UNIT
 
 LoadTroops3:
-UNIT RobertPirate Pirate Robert Level(6,Enemy,True) [11,15] 0x00 0x00 0x00 0x00 [KillerAxe] [0]
-UNIT RobertPirate Shaman Robert Level(5,Enemy,True) [12,15] 0x00 0x00 0x00 0x00 [Luna] [0]
+UNIT RobertPirate Pirate Robert Level(7,Enemy,True) [11,15] 0x00 0x00 0x00 0x00 [KillerAxe] [0]
+UNIT RobertPirate Shaman Robert Level(6,Enemy,True) [12,15] 0x00 0x00 0x00 0x00 [Luna] [0]
 UNIT
 
 LoadTroops4:
-UNIT RobertPirate Myrmidon Robert Level(8,Enemy,True) [18,5] 0x00 0x00 0x00 0x00 [IronBlade] PursueWithoutHeedAI
-UNIT RobertPirate Thief Robert Level(6,Enemy,True) [18,9] 0x00 0x00 0x00 0x00 [SlimSword] StealingThiefAI
-UNIT RobertPirate Mage Robert Level(7,Enemy,True) [13,7] 0x00 0x00 0x00 0x00 [Elwind] [0]
+UNIT RobertPirate Myrmidon Robert Level(9,Enemy,True) [18,5] 0x00 0x00 0x00 0x00 [IronBlade] PursueWithoutHeedAI
+UNIT RobertPirate Thief Robert Level(7,Enemy,True) [18,9] 0x00 0x00 0x00 0x00 [SlimSword] StealingThiefAI
+UNIT RobertPirate Mage Robert Level(8,Enemy,True) [13,7] 0x00 0x00 0x00 0x00 [Elwind] [0]
 UNIT
 
 EndingPeople:

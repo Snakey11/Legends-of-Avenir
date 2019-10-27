@@ -1,4 +1,4 @@
-0 ; POP ; ALIGN 4 ; SkillAnimationPointerTable:,Skill Pointer
+INLINE SkillAnimationPointerTable,Skill Pointer
 0x0,0
 AcrobatID 1 ,0
 PassID 2 ,0
@@ -254,4 +254,4 @@ LilysPoiseID 95 ,0
 0xfc,0
 0xfd,0
 0xfe,0
-0xff,0 ; PUSH
+0xff,0
