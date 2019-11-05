@@ -1,9 +1,6 @@
 
 #ifdef _FE8_
 
-	//PROTECT $889A0 $889F6 // 64, 109
-
-
 	#include "Tools/Tool Helpers.txt"
 	#include "EAstdlib.event"
 	#include "Extensions/Hack Installation.txt"
