@@ -48,3 +48,15 @@ Izuk Doesn't Escape[X]
 
 ## Military7PassAltiaDeathDebugMenuText
 Izuk Dies[X]
+
+## Military3AcceptEscapeDebugMenuText
+Escape[X]
+
+## Military3AcceptKillBossDebugMenuText
+Kill boss[X]
+
+## Military4AcceptRetreatFoughtDebugMenuText
+Tact fought Arya[X]
+
+## Military4AcceptRetreatNotFoughtDebugMenuText
+Tact didn't fight Arya[X]
