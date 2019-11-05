@@ -141,17 +141,11 @@ SongTable(Agatio_and_Karst_Battle,songAgatioAndKarstBattle)
 SongTable(Alachest_Final,songAlcahestFinal)
 #include "AlcahestFinal.event"
 
-SongTable(Destined_Fate,songDestinedFate)
-#include "DestinedFate.event"
-
 SongTable(Good_Song,songGoodSong)
 #include "GoodSong.event"
 
 SongTable(Satorl_Marsh,songSatorlMarsh)
 #include "SatorlMarsh.event"
-
-SongTable(Seventh_Saga_Dungeon,songSeventhSageDungeon)
-#include "SeventhSagaDungeon.event"
 
 SongTable(Stage_One_Conquest,songStageOneConquest)
 #include "StageOneConquest.event"
@@ -294,3 +288,6 @@ SongTable(Chemical_Plant,songChemicalPlant)
 
 SongTable(Metropolis,songMetropolis)
 #include "Metropolis.event"
+
+SongTable(Legends_of_Avenir,songLegendsOfAvenir)
+#include "LegendsOfAvenir.event"

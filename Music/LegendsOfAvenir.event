@@ -1,0 +1,430 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	LegendsOfAvenir_grp  voicegroup000
+	#define	LegendsOfAvenir_pri  0
+	#define	LegendsOfAvenir_rev  0
+	#define	LegendsOfAvenir_mvl  150
+	#define	LegendsOfAvenir_key  0
+	#define	LegendsOfAvenir_tbs  1
+	#define	LegendsOfAvenir_exg  0
+	#define	LegendsOfAvenir_cmp  1
+
+	// .rodata
+	//	LegendsOfAvenir
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+LegendsOfAvenir_001:
+// 000   ----------------------------------------
+ BYTE   VOL   60*LegendsOfAvenir_mvl/mxv
+ BYTE   KEYSH   LegendsOfAvenir_key+0
+Label_LegendsOfAvenir_0_0146E320:
+ BYTE   TEMPO   120*LegendsOfAvenir_tbs/2
+ BYTE   VOICE   46
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   N12  Fn3  v060
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   An3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+Label_LegendsOfAvenir_0_0146E336:
+ BYTE   N12  Dn3  v060
+ BYTE   W12
+ BYTE   Fn3
+ BYTE   W12
+// 001   ----------------------------------------
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   An3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W12
+ BYTE   PEND 
+Label_LegendsOfAvenir_0_0146E345:
+ BYTE   N12  Fn4  v060
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   An3
+ BYTE   W12
+// 002   ----------------------------------------
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   Fn3
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_0_0146E336
+// 003   ----------------------------------------
+Label_LegendsOfAvenir_0_0146E359:
+ BYTE   N12  Fn3  v060
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   An3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_0_0146E336
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_0_0146E345
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_0_0146E336
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_0_0146E359
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_0_0146E336
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_0_0146E345
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_0_0146E336
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_0_0146E359
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_0_0146E336
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_0_0146E345
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_0_0146E336
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_0_0146E359
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_0_0146E336
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_0_0146E345
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_0_0146E336
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_0_0146E359
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_0_0146E336
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_0_0146E345
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_0_0146E336
+// 004   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_LegendsOfAvenir_0_0146E320
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+LegendsOfAvenir_002:
+// 000   ----------------------------------------
+ BYTE   VOL   60*LegendsOfAvenir_mvl/mxv
+ BYTE   KEYSH   LegendsOfAvenir_key+0
+Label_LegendsOfAvenir_1_0146E3D4:
+ BYTE   VOICE   61
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   N72  Fn2  v088
+ BYTE   W72
+Label_LegendsOfAvenir_1_0146E3DE:
+ BYTE   N12  Dn2  v088
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+// 001   ----------------------------------------
+ BYTE   N48  Gn2
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   N12  Dn3
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   N48  An2
+ BYTE   W48
+// 002   ----------------------------------------
+Label_LegendsOfAvenir_1_0146E3F0:
+ BYTE   N12  Dn2  v088
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   N24  Gn2
+ BYTE   W24
+ BYTE   PEND 
+Label_LegendsOfAvenir_1_0146E3FE:
+ BYTE   N12  Fn2  v088
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+// 003   ----------------------------------------
+ BYTE   An2
+ BYTE   W12
+ BYTE   N36  Cn3
+ BYTE   W36
+ BYTE   PEND 
+Label_LegendsOfAvenir_1_0146E40A:
+ BYTE   N12  Dn2  v088
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+// 004   ----------------------------------------
+ BYTE   N24  An2
+ BYTE   W24
+ BYTE   PEND 
+ BYTE   N12  Fn3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+// 005   ----------------------------------------
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   N24  Gn2
+ BYTE   W24
+ BYTE   An2
+ BYTE   W24
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_1_0146E3FE
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_1_0146E40A
+// 006   ----------------------------------------
+ BYTE   N36  Fn3  v088
+ BYTE   W36
+ BYTE   Cn3
+ BYTE   W36
+ BYTE   N72  An2
+ BYTE   W72
+// 007   ----------------------------------------
+ BYTE   Fn2
+ BYTE   W72
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_1_0146E3DE
+// 008   ----------------------------------------
+ BYTE   N12  Cn3  v088
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   N48  Cn3
+ BYTE   W48
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_1_0146E3F0
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_1_0146E3FE
+// 009   ----------------------------------------
+ BYTE   N12  Dn2  v088
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   N24  Cn3
+ BYTE   W24
+ BYTE   N12  An2
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+// 010   ----------------------------------------
+ BYTE   N24  Fn3
+ BYTE   W24
+ BYTE   Dn3
+ BYTE   W24
+ BYTE   N12  Gn2
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+// 011   ----------------------------------------
+ BYTE   N24  An2
+ BYTE   W24
+ BYTE   N12  Fn2
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   N24  Gn2
+ BYTE   W24
+ BYTE   N12  Fn2
+ BYTE   W12
+// 012   ----------------------------------------
+ BYTE   N24  Dn2
+ BYTE   W24
+ BYTE   N12  Gn2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   N24  An2
+ BYTE   W24
+ BYTE   N12  Fn3
+ BYTE   W12
+ BYTE   N24  Dn3
+ BYTE   W24
+// 013   ----------------------------------------
+ BYTE   N12  An2
+ BYTE   W12
+ BYTE   N24  Cn3
+ BYTE   W24
+ BYTE   N72  An2
+ BYTE   W72
+// 014   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_LegendsOfAvenir_1_0146E3D4
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+LegendsOfAvenir_003:
+// 000   ----------------------------------------
+ BYTE   VOL   60*LegendsOfAvenir_mvl/mxv
+ BYTE   KEYSH   LegendsOfAvenir_key+0
+Label_LegendsOfAvenir_2_0146E4B0:
+ BYTE   VOICE   49
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   N72  Fn2  v028
+ BYTE   W72
+ BYTE   Fn2  v036
+ BYTE   W72
+// 001   ----------------------------------------
+ BYTE   Fn2  v048
+ BYTE   W72
+ BYTE   Fn2  v060
+ BYTE   W72
+// 002   ----------------------------------------
+Label_LegendsOfAvenir_2_0146E4C3:
+ BYTE   N72  Fn2  v048
+ BYTE   N72  An2
+ BYTE   N72  Cn3
+ BYTE   W72
+ BYTE   PEND 
+Label_LegendsOfAvenir_2_0146E4CC:
+ BYTE   N72  An2  v048
+ BYTE   N72  Dn3
+ BYTE   N72  Fn3
+ BYTE   W72
+ BYTE   PEND 
+// 003   ----------------------------------------
+Label_LegendsOfAvenir_2_0146E4D5:
+ BYTE   TIE  An2  v048
+ BYTE   TIE  Cn3
+ BYTE   TIE  En3
+ BYTE   W72
+ BYTE   PEND 
+ BYTE   W72
+// 004   ----------------------------------------
+ BYTE   EOT
+ BYTE   An2  v060
+ BYTE   En3
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_2_0146E4C3
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_2_0146E4CC
+// 005   ----------------------------------------
+Label_LegendsOfAvenir_2_0146E4ED:
+ BYTE   TIE  An2  v048
+ BYTE   TIE  Cn3
+ BYTE   TIE  Gn3
+ BYTE   W72
+ BYTE   PEND 
+ BYTE   W72
+// 006   ----------------------------------------
+ BYTE   EOT
+ BYTE   An2  v060
+ BYTE   Gn3
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_2_0146E4C3
+// 007   ----------------------------------------
+ BYTE   N72  Fn2  v048
+ BYTE   N72  An2
+ BYTE   N72  Dn3
+ BYTE   W72
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_2_0146E4D5
+// 008   ----------------------------------------
+ BYTE   W72
+ BYTE   EOT
+ BYTE   An2  v060
+ BYTE   En3
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_2_0146E4C3
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_2_0146E4CC
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_2_0146E4D5
+// 009   ----------------------------------------
+ BYTE   W72
+ BYTE   EOT
+ BYTE   An2  v060
+ BYTE   En3
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_2_0146E4C3
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_2_0146E4CC
+ BYTE   PATT
+  POIN2 Label_LegendsOfAvenir_2_0146E4ED
+// 010   ----------------------------------------
+ BYTE   W72
+ BYTE   EOT
+ BYTE   An2  v060
+ BYTE   Gn3
+ BYTE   GoTo
+  POIN2 Label_LegendsOfAvenir_2_0146E4B0
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+songLegendsOfAvenir:
+	BYTE	3	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	LegendsOfAvenir_pri	// Priority
+	BYTE	LegendsOfAvenir_rev	// Reverb.
+    
+	POIN2	LegendsOfAvenir_grp
+    
+	POIN2	LegendsOfAvenir_001
+	POIN2	LegendsOfAvenir_002
+	POIN2	LegendsOfAvenir_003
+
+	
