@@ -13,7 +13,7 @@ POIN EndMainPointer EndMainPointer EndMainPointer
 POIN EndMainPointer
 POIN TrapData TrapData
 POIN Units Units
-POIN $0 $0 $0 $0 $0 $0
+POIN Retreat $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 //LabelEnd
 
@@ -117,6 +117,14 @@ GotoPrepScreen
 //Label EndingScene
 EndingScene: // The boss was killed.
 MUSC Victorys_Delight
+#ifdef __DEBUG__
+	CHECK_TURNS
+	SVAL 0x1 3
+	BLT 0x0 0x1 0xC
+		LOAD1 0x1 MadelineRemus
+		ENUN
+	LABEL 0x0
+#endif
 CALL RevealAll
 SetBackground(0x25)
 Text(Military3AcceptBossDeadText)
@@ -126,6 +134,14 @@ EndA2
 
 Retreat: // Tact activated the escape.
 MUSC Heavens_Rock_Seat
+#ifdef __DEBUG__
+	CHECK_TURNS
+	SVAL 0x1 3
+	BLT 0x0 0x1 0xC
+		LOAD1 0x1 MadelineRemus
+		ENUN
+	LABEL 0x0
+#endif
 CALL RevealAll
 SetBackground(0x22)
 Text(Military3AcceptRetreat1Text)

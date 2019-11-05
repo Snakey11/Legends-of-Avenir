@@ -11,7 +11,7 @@ POIN EndMainPointer EndMainPointer EndMainPointer
 POIN EndMainPointer
 POIN TrapData TrapData
 POIN Units Units
-POIN $0 $0 $0 $0 $0 $0
+POIN FoughtDebug $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 //LabelEnd
 
@@ -127,7 +127,17 @@ Text(Military4AcceptRetreatInCorridorsText)
 GotoPrepScreen
 
 //Label EndingScene
+FoughtDebug:
+ENUT 0x11
 EndingScene:
+#ifdef __DEBUG__
+	CHECK_TURNS
+	SVAL 0x1 3
+	BLT 0x10 0x1 0xC
+		LOAD1 0x1 LoadYvette
+		ENUN
+	LABEL 0x10
+#endif
 EnterStop
 FADI 0x5
 CLEA 0x0
