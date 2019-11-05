@@ -163,6 +163,9 @@ ALIGN 4
 #include "RemoveBallistae/RemoveBallistae.lyn.event"
 
 ALIGN 4
+#include "ScriptedBattles/ScriptedBattles.event"
+
+ALIGN 4
 #include "SetEXP/SetEXP.lyn.event"
 
 ALIGN 4
