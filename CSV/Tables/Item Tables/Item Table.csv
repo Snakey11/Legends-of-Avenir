@@ -1,4 +1,4 @@
-INLINE ItemTable,Name,Description,Use Description,Item Number,Weapon Type,Attributes,Stat Bonuses Pointer,Effectiveness|IsPointer Pointer,Durability,Might,Hit,Weight,Crit,Range (Min-Max),Cost Per Use,Weapon Rank,Item Icon Index,Staff/Use Effect,Weapon Effect,Weapon Experience,##UNKNOWN##
+INLINE ItemTable,Name,Description,Use Description,Item Number,Weapon Type,Attributes,Stat Bonuses Pointer,Effectiveness Pointer,Durability,Might,Hit,Weight,Crit,Range (Min-Max),Cost Per Use,Weapon Rank,Item Icon Index,Staff/Use Effect,Weapon Effect,Weapon Experience,##UNKNOWN##
 Nothing,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0,0,0,0,0,0x0,0,0,0x0,0x0,0,0,0x0
 Iron Sword,0x354,0x404,0x0,0x1,0x0,0x1,0x0,0x0,46,5,90,5,0,0x11,10,1,0x0,0x0,0,2,0x0
 Thin Sword,0x355,0x405,0x0,0x2,0x0,0x1,0x0,0x0,30,3,100,2,5,0x11,16,1,0x1,0x0,0,2,0x0

@@ -6,13 +6,13 @@ FE 8 Map sprite pointer table editor by Nintenlord
 Class list.txt
 NULL
 
-Animation pointer
+Graphics
 0
 4
 NEHU
 NULL
 
-Another pointer
+Animation
 4
 4
 NEHU

@@ -1,4 +1,4 @@
-INLINE SetPoisonItemTable,
+INLINE SetPoisonItemTable,PoisonApplied
 Nothing,0
 Iron Sword,0
 Thin Sword,0

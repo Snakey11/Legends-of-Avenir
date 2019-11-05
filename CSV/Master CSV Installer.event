@@ -1,13 +1,14 @@
 
+ALIGN 4
 #include "EA Files/Effectiveness.event"
 
 ALIGN 16
 #include "Tables/Table Installer.event"
 
-ALIGN 16
+ALIGN 4
 #include "EA Files/Animation Reference.event"
 
-ALIGN 16
+ALIGN 4
 #include "EA Files/Promotion Item Lists.event"
 
 PUSH
@@ -15,15 +16,15 @@ ORG 0x29408
 POIN OceanSealList|IsPointer
 POP
 
-ALIGN 16
+ALIGN 4
 DeathQuoteTable:
 #include "EA Files/Death Quote Table.event"
 
-ALIGN 16
+ALIGN 4
 BattleQuoteTable:
 #include "EA Files/Battle Quote Table.event"
 
-ALIGN 16
+ALIGN 4
 #include "EA Files/Character Forcer Table.event"
 
 ALIGN 4
@@ -32,5 +33,6 @@ ORG ( CURRENTOFFSET + 4 * 0xFF ) // Allocate space for 0xFF chapters.
 
 #include "EA Files/Repointers.event"
 
+ALIGN 4
 WeaponDebuffTable:
 defWeaponDebuffs(0,0,0,0,0,0,0) //0x0: let 0-index entry be no debuffs.

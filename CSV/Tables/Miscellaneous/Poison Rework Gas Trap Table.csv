@@ -1,4 +1,4 @@
-INLINE PoisonReworkGasTrapTable,
+INLINE PoisonReworkGasTrapTable,Poison Applied
 00 Prologue,4
 01 Mage1,4
 02 MageEscape2,4

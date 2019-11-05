@@ -1,6 +1,3 @@
-#FE8 Class Editor by SpyroDi
-#
-
 1
 FE8 Class Editor by SpyroDi
 0xC0C0C0
@@ -47,15 +44,9 @@ Walking Speed.txt
 
 Default Portrait
 8
-1
+2
 NDHU
 Portrait List.txt
-
-***UNKNOWN***
-9
-1
-NEHU
-NULL
 
 ***UNKNOWN***
 10
@@ -69,7 +60,7 @@ Base HP
 NEDS
 NULL
 
-Base STR/MGC
+Base STR
 12
 1
 NEDS
