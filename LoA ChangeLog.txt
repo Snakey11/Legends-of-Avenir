@@ -34,6 +34,7 @@ Updated some character descriptions
 Replaced Life and Death on Shamans and co with Seal Magic
 Scripted battle number displays are no longer complete lies!
 WEXP from some items being absurd has been fixed
+New original title theme thanks to A_Reliable_Chair!
 
 v1.7
 Gave Connor, Adlez, and Arc their own character IDs for when they're bosses (Fixes battle music)

@@ -1063,6 +1063,7 @@
 //LabelEnd
 
 //Label Music Definitions
+#define Legends_of_Avenir 0x0043 // Overwrite the main theme
 #define Encounter_with_Renegades 0x0400
 #define Dry_Trail 0x0401
 #define Last_Battle_Decision 0x0402
@@ -1105,7 +1106,7 @@
 #define Stage_One_Conquest 0x0426
 #define Agatio_and_Karst_Battle 0x0427
 #define Alachest_Final 0x0428
-#define Legends_of_Avenir 0x429
+#define A_Formidable_Foe_Stands_in_the_Way 0x429
 #define Good_Song 0x042A
 #define Satorl_Marsh 0x042B
 #define Seventh_Saga_Dungeon 0x042C
@@ -1125,7 +1126,7 @@
 #define Hollow_Bastion 0x043A
 #define The_First_Campaign 0x043B
 #define Heavens_Rock_Seat 0x043C
-#define Heavens_Gate 0x044D
+#define Heavens_Gate 0x043D
 #define Forbidden_Forest 0x043E
 #define Puppet_Ganon 0x044F
 #define End_of_the_World 0x0440
@@ -1153,7 +1154,6 @@
 #define Green_Emerald 0x456
 #define Chemical_Plant 0x457
 #define Metropolis 0x458
-#define A_Formidable_Foe_Stands_in_the_Way 0x459
 //LabelEnd
 
 //Label Skill Definitions
