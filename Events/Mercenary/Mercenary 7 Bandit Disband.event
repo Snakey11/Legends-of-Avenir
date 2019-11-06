@@ -107,6 +107,7 @@ StartBattle
 MissedAttack(1,0)
 CriticalHit(0,80)
 EndAttack
+SetBattleNumbers(78,29,12,87,26,9)
 FIG1 Uzkalis Arveldir 0x0
 KillUnit(8,2)
 STAL 0x20
@@ -117,9 +118,10 @@ STAL 0x8
 MOVE 0x0 Servius [9,4]
 ENUN
 StartBattle
-NormalDamage(1,31)
+NormalDamage(1,21)
 NormalDamage(0,27)
 MissedAttack(1,0)
+SetBattleNumbers(71,27,4,85,21,19)
 EndAttack
 FIG1 Maximus Servius 0x0
 STAL 0x10
@@ -129,6 +131,7 @@ ENUN
 StartBattle
 CriticalHit(0,70)
 EndAttack
+SetBattleNumbers(87,24,72,84,34,16)
 FIG1 BossEfil Servius 0x0
 STAL 0x8
 KillUnit(9,4)
@@ -142,6 +145,7 @@ StartBattle
 NormalDamage(0,30)
 NormalDamage(1,24)
 EndAttack
+SetBattleNumbers(69,30,8,81,24,12)
 FIG1 Uzkalis Kilthel 0x0
 STAL 0x10
 MOVE 0x0 BossEfil [7,2]
@@ -151,6 +155,7 @@ MissedAttack(1,0)
 NormalDamage(0,20)
 CriticalHit(0,60)
 EndAttack
+SetBattleNumbers(95,20,67,57,39,9)
 FIG1 BossEfil Kilthel 0x0
 STAL 0x8
 KillUnit(7,1)
@@ -245,6 +250,7 @@ ENUN
 StartBattle
 CriticalHit(1,80)
 EndAttack
+SetBattleNumbers(15,8,0,87,31,23)
 MercenaryNarratorFight(7,3)
 STAL 0x20
 DISA Vicar

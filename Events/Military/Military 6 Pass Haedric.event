@@ -92,6 +92,7 @@ StartBattle
 MissedAttack(0,0)
 CriticalHit(1,80)
 EndAttack
+SetBattleNumbers(78,26,10,82,29,18)
 FIG1 Tyrone Uzkalis 0x00
 STAL 0x08
 KillUnit(15,10)
@@ -191,6 +192,7 @@ NormalDamage(1,21)
 NormalDamage(0,10)
 NormalDamage(0,10)
 EndAttack
+SetBattleNumbers(90,10,10,71,21,9)
 FIG1 Muriel Uzkalis 0x00
 STAL 0x10
 Text(Military6PassHaedricMurielUzkalis2Text)

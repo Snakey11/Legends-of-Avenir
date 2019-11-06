@@ -182,6 +182,7 @@ StartBattle
 MissedAttack(1,0)
 CriticalHit(0,60)
 EndAttack
+SetBattleNumbers(100,28,81,56,7,1)
 FIG1 Efil Guardian 0x0
 STAL 0x8
 KillUnit(2,6)

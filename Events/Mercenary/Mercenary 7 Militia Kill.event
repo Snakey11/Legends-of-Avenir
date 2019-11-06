@@ -113,6 +113,7 @@ StartBattle
 MissedAttack(1,0)
 CriticalHit(0,40)
 EndAttack
+SetBattleNumbers(99,21,54,45,10,0)
 FIG1 Xexim Cesarian 0x0
 KillUnit(18,18)
 STAL 0x20
@@ -191,6 +192,7 @@ ENUN
 StartBattle
 CriticalHit(1,80)
 EndAttack
+SetBattleNumbers(17,7,0,93,29,21)
 MercenaryNarratorFight(7,2) // Calls the fight and kills [Tact], located at [7,2]
 DISA Xexim
 DISA Kendrick

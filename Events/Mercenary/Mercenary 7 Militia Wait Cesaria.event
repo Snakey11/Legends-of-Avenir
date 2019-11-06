@@ -92,6 +92,7 @@ MissedAttack(1,0)
 NormalDamage(0,10)
 NormalDamage(1,15)
 EndAttack
+SetBattleNumbers(73,10,4,82,15,6)
 FIG1 Maximus Uzkalis 0x0
 ENUF 0x13
 Text(Merc7MilitiaWaitCesariaMaximusWoundedText)
@@ -164,6 +165,7 @@ BEQ 0x0 0x0 0xC
 	NormalDamage(0,10)
 	CriticalHit(1,60)
 	EndAttack
+	SetBattleNumbers(21,10,1,87,23,19)
 	GOTO 0x1
 LABEL 0x0
 	// Maximus is dead.
@@ -193,6 +195,7 @@ LABEL 0x0
 	MissedAttack(0,0)
 	NormalDamage(1,60)
 	EndAttack
+	SetBattleNumbers(19,9,0,90,31,18)
 LABEL 0x1
 MercenaryNarratorFight(11,13)
 DISA Arc

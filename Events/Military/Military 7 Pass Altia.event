@@ -160,9 +160,10 @@ BNE 0x0 0x0 0xC
 		STAL 0x10
 		StartBattle
 		MissedAttack(0,0)
-		NormalDamage(1,30)
+		NormalDamage(1,32)
 		NormalDamage(1,30)
 		EndAttack
+		SetBattleNumbers(13,5,0,93,32,18)
 		MilitaryNarratorFight(5,18)
 		GOTO 0x2
 LABEL 0x0
@@ -209,6 +210,7 @@ LABEL 0x0
 		StartBattle
 		CriticalHit(1,60)
 		EndAttack
+		SetBattleNumbers(12,6,1,93,35,20)
 		MilitaryNarratorFight(6,6)
 LABEL 0x2
 ENUF 0x67

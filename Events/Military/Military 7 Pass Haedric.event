@@ -177,6 +177,7 @@ BEQ 0x0 0x0 0xC
 	MissedAttack(0,0)
 	CriticalHit(1,60)
 	EndAttack
+	SetBattleNumbers(17,6,0,89,23,20)
 	MilitaryNarratorFight(11,18)
 	DISA Elanil
 	GOTO 0x1
@@ -221,6 +222,7 @@ LABEL 0x0
 	NormalDamage(1,30)
 	NormalDamage(1,30)
 	EndAttack
+	SetBattleNumbers(17,6,0,85,30,18)
 	MilitaryNarratorFight(8,8)
 LABEL 0x1
 ENUF 0x67

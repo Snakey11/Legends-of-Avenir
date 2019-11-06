@@ -163,6 +163,7 @@ ENUN
 StartBattle
 CriticalHit(0,70)
 EndAttack
+SetBattleNumbers(90,29,20,19,9,7)
 FIG1 Narrator Adlez 0x0
 KillUnit(4,6)
 STAL 0x10
@@ -176,6 +177,7 @@ NormalDamage(1,39)
 MissedAttack(0,0)
 NormalDamage(1,40)
 EndAttack
+SetBattleNumbers(25,8,5,91,39,18)
 MercenaryNarratorFight(2,4)
 DISA Vicar
 DISA Walter
@@ -227,6 +229,7 @@ StartBattle
 NormalDamage(0,20)
 CriticalHit(0,60)
 EndAttack
+SetBattleNumbers(88,20,24,39,10,8)
 FIG1 Narrator Adlez 0x0
 KillUnit(4,7)
 STAL 0x10
@@ -236,6 +239,7 @@ StartBattle
 MissedAttack(1,0)
 CriticalHit(0,70)
 EndAttack
+SetBattleNumbers(78,24,18,50,17,11)
 FIG1 Narrator Leon 0x0
 KillUnit(6,8)
 STAL 0x10
@@ -255,6 +259,7 @@ NormalDamage(1,30)
 NormalDamage(0,10)
 NormalDamage(1,40)
 EndAttack
+SetBattleNumbers(26,7,2,87,30,17)
 MercenaryNarratorFight(5,5)
 DISA Vicar
 DISA Walter

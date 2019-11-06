@@ -84,6 +84,7 @@ NormalDamage(0,18)
 MissedAttack(1,0)
 NormalDamage(0,18)
 EndAttack
+SetBattleNumbers(76,18,2,51,13,0)
 FIG1 Adlez Gerwick 0x00
 MURE 0x5
 KillUnit(2,4)

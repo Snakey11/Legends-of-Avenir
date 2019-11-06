@@ -164,9 +164,10 @@ BEQ 0x0 0x0 0xC
 	ENUN
 	STAL 0x08
 	StartBattle
-	NormalDamage(0,20)
+	NormalDamage(0,18)
 	CriticalHit(1,60)
 	EndAttack
+	SetBattleNumbers(79,18,7,74,22,10)
 	CHECK_EVENTID 0x6E
 	BNE 0x40 0xC 0x0
 		CHECK_EVENTID 0x69 // Female
@@ -220,9 +221,10 @@ BEQ 0x0 0x0 0xC
 	ENUN
 	STAL 0x08
 	StartBattle
-	NormalDamage(6,0)
+	NormalDamage(13,0)
 	MissedAttack(0,0)
 	EndAttack
+	SetBattleNumbers(84,13,5,0xFF,0xFF,0xFF)
 	FIG1 Madeleine Derek 0x0
 	STAL 0x10
 	MOVE 0x0 Derek [0,24]
@@ -231,6 +233,7 @@ BEQ 0x0 0x0 0xC
 	StartBattle
 	CriticalHit(0,60)
 	EndAttack
+	SetBattleNumbers(74,21,7,0xFF,0xFF,0xFF)
 	FIG1 Derek Madeleine 0x0
 	KillUnit(0,25) // Kill Madeleine.
 	STAL 0x50
@@ -246,13 +249,14 @@ BEQ 0x0 0x0 0xC
 	StartBattle
 	NormalDamage(0,40)
 	EndAttack
+	SetBattleNumbers(100,40,21,0xFF,0xFF,0xFF)
 	FIG1 Narrator Derek Tomahawk
-	KillUnit(1,24)
+	KillUnit(0,24)
 	STAL 0x20
 	Text(Military7AcceptRetreatLeaveAliveDerekDeadText)
-	STAL 0x10
+	STAL 0x20
 	WarpOut(3,24,Xylia)
-	STAL 0x10
+	STAL 0x20
 	Text(Military7AcceptRetreatLeaveAliveDerekDead2Text)
 	STAL 0x08
 	MOVE 0x0 Narrator [1,23]
@@ -260,6 +264,7 @@ BEQ 0x0 0x0 0xC
 	StartBattle
 	CriticalHit(1,60)
 	EndAttack
+	SetBattleNumbers(10,2,0,95,44,18)
 	GOTO 0x01
 LABEL 0x0
 	// If Xylia is dead.
@@ -270,23 +275,25 @@ LABEL 0x0
 	MOVE 0x0 Derek [1,23]
 	ENUN
 	StartBattle
-	CriticalHit(0,35)
+	CriticalHit(0,36)
 	NormalDamage(0,60)
 	EndAttack
+	SetBattleNumbers(84,13,5,0xFF,0xFF,0xFF)
 	FIG1 Madeleine Derek 0x0
 	KillUnit(1,23) // Kill Derek.
 	STAL 0x10
 	Text(Military7AcceptRetreatLeaveDeadDerekDeadText)
 	MUSC Return_of_the_Demon_King
 	WarpIn(3,24,LoadNarrator2)
-	STAL 0x18
+	STAL 0x20
 	Text(Military7AcceptRetreatLeaveDeadNarratorHereText)
 	MOVE 0x0 Narrator [1,24]
 	ENUN
 	StartBattle
-	NormalDamage(0,40)
+	NormalDamage(0,30)
 	NormalDamage(0,60)
 	EndAttack
+	SetBattleNumbers(93,30,17,0xFF,0xFF,0xFF)
 	FIG1 Narrator Madeleine 0x00
 	KillUnit(1,25)
 	STAL 0x20
@@ -294,10 +301,11 @@ LABEL 0x0
 	MOVE 0x0 Narrator [1,23]
 	ENUN
 	StartBattle
-	NormalDamage(0,31)
-	MissedAttack(1,0)
-	NormalDamage(0,60)
+	NormalDamage(1,34)
+	MissedAttack(0,0)
+	NormalDamage(1,60)
 	EndAttack
+	SetBattleNumbers(19,5,0,97,34,20)
 LABEL 0x01
 MilitaryNarratorFight(1,22)
 ENUF 0x67
