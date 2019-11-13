@@ -28,8 +28,8 @@ Walter,0
 Baret,0
 Val,0
 Helmer,0
-Xavus,Powerful_Foe
-Dunlas,Powerful_Foe
+Xavus,Battle_against_Demons
+Dunlas,Saturos_Battle
 Johnathan,0
 Elanil,0
 Izuk,Powerful_Foe
@@ -124,9 +124,9 @@ KendrickFriend,0
 Sylvaine,Powerful_Foe
 Sam,The_Battle_to_Be_Won
 SamBandit,0
-Richter,The_Battle_to_Be_Won
+Richter,Saturos_Battle
 Defect,0
-Shanley,The_Battle_to_Be_Won
+Shanley,Saturos_Battle
 Gerald,Battle_against_Demons
 Sean,Battle_against_Demons
 Looter,0
@@ -134,7 +134,7 @@ BossArya,Saturos_Battle
 BossAdlez,The_Battle_to_Be_Won
 BossConnor,The_Battle_to_Be_Won
 Halleck,Battle_against_Demons
-BossEfil,Powerful_Foe
+BossEfil,Inanimate_Dream
 BossChristina,Saturos_Battle
 BossForrest,Saturos_Battle
 0x0,0
