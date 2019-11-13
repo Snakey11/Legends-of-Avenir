@@ -98,7 +98,7 @@ ENDA
 		LABEL 0x4
 		SVAL 0x1 MercenaryBandit4
 		BNE 0x5 0x1 0xC
-			ASMC MercenaryBandit4DebugMenu|1	
+			ASMC MercenaryBandit4DebugMenu|1
 			BEQ 0x1 0x0 0xC // Go to regular (just run EndingScene)
 				ASMC Win_Effect_Special|1
 				GOTO 0x0
@@ -115,22 +115,22 @@ ENDA
 			ASMC MilitaryPassAltia7DebugMenu|1 // Because this one acutally has 3 endings
 			BEQ 0x1 0x0 0xC // Go to regular (EndingScene should have Izuk is alive and did not escape)
 				SVAL 0x2 1
-				BNE 0x8 0x2 0xC
+				BNE 0x100 0x2 0xC
 					// Go to Escape
 					ASMC Win_Effect_Special|1
 					GOTO 0x0
-				LABEL 0x8
+				LABEL 0x100
 					// Go to Izuk dies
 					ASMC Win_Effect_Special_2|1
 					GOTO 0x0
 		LABEL 0x7
-		/*SVAL 0x1 MilitaryAccept3
+		SVAL 0x1 MilitaryAccept3
 		BNE 0x8 0x1 0xC
 			ASMC MilitaryAccept3DebugMenu|1
 			BNE 0x1 0x0 0xC // Go to regular (just run EndingScene)
 				ASMC Win_Effect_Special|1
 				GOTO 0x0
-		LABEL 0x8*/
+		LABEL 0x8
 		SVAL 0x1 MilitaryAcceptRetreat4
 		BNE 0x9 0x1 0xC
 			ASMC MilitaryAcceptRetreat4DebugMenu|1
