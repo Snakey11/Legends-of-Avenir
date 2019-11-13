@@ -104,8 +104,12 @@
 #define CavalierM2 0x79
 #define CavalierF2 0x7A
 #define Knight2 0x7B
+#define KnightM2 Knight2
+#define KnightF2 Knight2
 #define SoldierM2 0x7C
 #define WyvernRider2 0x7D
+#define WyvernRiderM2 WyvernRider2
+#define WyvernRiderF2 WyvernRider2
 #define ArcherM2 0x7E
 #define ArcherF2 0x7F
 #define MercenaryM2 0x80
@@ -289,6 +293,9 @@
 //Label Portrait Defenitions
 #define setCardEntry(cardEntry,cardLocation,cardPaletteLocation) "PUSH; ORG PortraitTable+cardEntry*0x1C; POIN 0 0 cardPaletteLocation 0 cardLocation; POP"
 
+#define KnightCard 0x76
+#define PirateCard 0x8C
+
 #define MaleMageMug 0xAE
 #define FemaleMageMug 0xAF
 #define MaleMercMug 0xB0
@@ -348,8 +355,7 @@
 #define MadelineMug 0xE6
 #define RemusMug 0xE7
 #define BlaineMug 0xE8
-#define KnightCard 0xE9
-#define WestonMug 0xF0
+#define WestonMug 0xE9
 
 #define MerchantMug 0x31 // Breguet
 #define HenningMug 0x33 // Bazba
@@ -851,6 +857,7 @@
 #define Medium 0x01
 #define Small 0x00
 
+#define PirateSprite 0x34
 #define EmperorSprite 0x62
 
 #define BlackFalcoknightSprite 0x6B
@@ -941,6 +948,9 @@
 #define GaidenSageStaff 0x97
 #define SoldierLance 0x98
 #define SoldierUnarmed 0x99
+#define PirateAxe 0x9A
+#define PirateHandAxe 0x9B
+#define PirateUnarmed 0x9C
 #define GladiatorAxe 0xA1
 #define GladiatorHandAxe 0xA2
 #define GladiatorUnarmed 0xA3
@@ -1114,6 +1124,7 @@
 #define Locked_Girl 0x042E
 #define Kakariko_Village 0x042F
 #define Boss_Theme 0x0430
+#define Boss_Battle Boss_Theme
 #define Bloody_Tears 0x0431
 #define Bergentruckung 0x0432
 #define Battle_Two 0x0433
@@ -1154,6 +1165,7 @@
 #define Green_Emerald 0x456
 #define Chemical_Plant 0x457
 #define Metropolis 0x458
+#define Marble_Corridor 0x459
 //LabelEnd
 
 //Label Skill Definitions
@@ -1376,7 +1388,7 @@
 #define SealMagID 210 //Shaman, Summoner, Druid
 */
 
-#include "ASM/SkillSystem_FE8/EngineHacks/SkillSystem/skill_definitions.event"
+#include "ASM/SkillSystem_FE8/Engine Hacks/SkillSystem/skill_definitions.event"
 
 //#ifndef DebuffTable
   //#define DebuffTable     0x0203F100
