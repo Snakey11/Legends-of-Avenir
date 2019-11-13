@@ -94,6 +94,7 @@ SwordAnim(HarbingerSword)
 AxeAnim(HarbingerAxe)
 HandAxeAnim(HarbingerHandAxe)
 AnimaAnim(HarbingerMagic)
+DarkAnim(HarbingerMagic)
 UnarmedAnim(HarbingerUnarmed)
 WORD 0x0 0x0
 
