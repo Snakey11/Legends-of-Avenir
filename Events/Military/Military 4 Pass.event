@@ -72,10 +72,10 @@ CAM1 [6,8]
 LOAD3 0x1 PlayerLoading1
 LOAD2 0x1 OldFriends
 ENUN
-MUSC Binding_Vow
+MUSC End_of_the_World
 SetBackground(0x1D)
 Text(Military4PassBeginningText)
-MUSC Distant_Roads
+MUSC Dry_Trail
 SetBackground(0x1B)
 Text(Military4PassSekarText)
 MUSC Advance
@@ -84,7 +84,7 @@ Text(Military4PassPlanningText)
 FADI 0x5
 FadeOutMusic
 STAL 0x50
-MUSC Tension
+MUSC Stage_One_Conquest
 FADU 0x5
 Text(Military4PassWakeUpText)
 EndConvo
@@ -109,7 +109,7 @@ GotoPrepScreen
 //Label EndingScene
 EndingScene: // Haedric
 FADI 0x5
-MUSC Into_the_Shadow_of_Victory
+MUSC Heavens_Rock_Seat
 CLEA 0x0
 CLEE 0x0
 ASMC RefreshAll|1

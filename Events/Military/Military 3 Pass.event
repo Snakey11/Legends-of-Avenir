@@ -56,7 +56,7 @@ LOAD3 0x1 PlayerLoading1
 LOAD2 0x1 LoadJasperDerek
 LOAD1 0x1 LoadSylvaine
 ENUN
-MUSC Indignation
+MUSC Dry_Trail
 FADU 0x5
 STAL 0x40
 FADI 0x5
@@ -77,14 +77,15 @@ STAL 0x50
 MUSC Advance
 SetBackground(0x03)
 Text(Military3PassMorningText)
-MUSC Reunion
+MUSC Forbidden_Forest
 SetBackground(0x1D)
 TEXTSHOW Military3PassMountainPassText
 TEXTEND
-MUSC Tension
+MUSC March
 TEXTCONT
 TEXTEND
 EndConvo
+MUSC Stage_One
 STAL 0x30
 Text(Military3PassBattlefieldText)
 STAL 0x10

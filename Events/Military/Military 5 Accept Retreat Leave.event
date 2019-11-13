@@ -97,7 +97,7 @@ GotoPrepScreen
 
 //Label EndingScene
 EndingScene:
-MUSC Victorys_Delight
+MUSC Victory
 CLEA 0x0
 CLEE 0x0
 SetBackground(0x30)

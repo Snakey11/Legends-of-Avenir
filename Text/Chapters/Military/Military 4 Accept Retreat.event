@@ -97,6 +97,28 @@ is our opportunity to get ahead...[A]
 some rest. I think we've earned it.[A]
 [Right]Hell yeah we have.[A][X]
 
+## Military4AcceptRetreatSchemingText
+[ConversationText]
+[MidLeft][LoadPlayer][MidRight][LoadJasper]
+Hey [Tact]? You okay?
+[MidLeft]Huh? Oh hey Jasper. Yeah I'm fine.
+[MidRight]It's not like you to be so distracted. Shouldn't you be getting some rest?
+[MidLeft]I was just thinking... This military is such a mess. I mean, Captain Jurgen was free to do whatever he wanted, but General Rex just kind of... ignored it.
+[MidRight]Derek did point out the lack of communication.
+[MidLeft]Right? It seems like no way to operate. Maybe there are bigger problems here.
+[MidRight]Like what?
+[MidLeft]Is it fair to our soldiers if our commanders don't care and bicker back and forth about what to do with our lives?
+[MidRight]I suppose not... How would we fix that?
+[MidLeft]I don't know. Move up in the ranks?
+[MidRight]Change the system from the inside... Yeah. Makes sense to me.
+[MidLeft]We'll have to do our best to excel in this war.
+[MidRight]Right. We've got this. I agree with you. Something has to change.
+[MidLeft]We should tell the others at some point.
+[MidRight]I'd be careful. Don't want anyone to think you're trying to betray Cesaria.
+[MidLeft]Don't worry. Get some rest Jasper.
+[MidRight]I will. Don't stay up too long. You need your rest too.[ClearFace]
+[MidLeft]I've got it. ... He's gone. None of us are going to move up in the ranks unless someone in a high rank is removed... Hm... No, I can't think that way. I need some rest.[X]
+
 ## Military4AcceptRetreatWakeUpText
 [MidRight][LoadRemus]
 [Tact]! Wake up![A][MidLeft][LoadPlayer]

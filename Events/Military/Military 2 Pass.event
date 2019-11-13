@@ -59,10 +59,10 @@ LOAD3 0x1 PlayerLoading1
 LOAD2 0x1 TownDerekJasper
 LOAD1 0x1 MayorSylvaine
 ENUN
-MUSC Advance
+MUSC Snow_Battle
 SetBackground(0x12)
 Text(Military2PassSettingOutText)
-MUSC Distant_Roads
+MUSC Ordon_Village
 SetBackground(0x18)
 Text(Military2PassCountrysideText)
 EndConvo
@@ -79,7 +79,7 @@ ENUN
 SetBackground(0x03)
 TEXTSHOW Military2PassMayorText
 TEXTEND
-MUSC Raid
+MUSC Emergency
 TEXTCONT
 TEXTEND
 EndConvo

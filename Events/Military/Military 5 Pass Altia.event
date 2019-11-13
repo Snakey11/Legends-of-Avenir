@@ -60,11 +60,13 @@ ENUN
 MUSC Indignation
 SetBackground(0x18)
 Text(Military5PassAltiaBeginningText)
+MUSC Battle_Two
 SetBackground(0x23)
 Text(Military5PassAltiaMovingOutText)
+MUSC Encroaching_Foe
 SetBackground(0x19)
 Text(Military5PassAltiaOutInHaedricText)
-MUSC Tension
+MUSC Emergency
 SetBackground(0x22)
 Text(Military5PassAltiaRichterHereText)
 EndConvo
@@ -75,7 +77,7 @@ ENDA
 
 //Label EndingScene
 EndingScene:
-MUSC Into_the_Shadow_of_Victory
+MUSC Heavens_Rock_Seat
 GiveToSupplySilent(Shine)
 GiveToSupplySilent(SteelSword)
 GiveToSupplySilent(Javelin)

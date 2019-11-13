@@ -51,16 +51,7 @@ END_MAIN
 MiscBasedEvents:
 CauseGameOverIfLordDies
 DefeatBoss(EndingScene)
-//AREA 0x0 ChaiTest [0,0] [20,20]
 END_MAIN
-
-ChaiTest:
-SVAL 0x1 0x0303 // GuardAI
-CHECK_ACTIVE
-SADD 0x0C2
-CHAI 0xFFFF
-NoFade
-ENDA
 
 //Label TrapData
 TrapData:

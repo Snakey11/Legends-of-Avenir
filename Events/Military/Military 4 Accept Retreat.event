@@ -116,8 +116,14 @@ SetBackground(0x0E)
 Text(Military4AcceptRetreatRexMeetingText)
 FadeOutMusic
 FADI 0x5
+STAL 0x30
+MUSC Anchoret
+SetBackground(0x0D)
+Text(Military4AcceptRetreatSchemingText)
+FadeOutMusic
+FADI 0x5
 STAL 0x50
-MUSC March
+MUSC Encroaching_Foe
 SetBackground(0x2A)
 Text(Military4AcceptRetreatWakeUpText)
 EndConvo

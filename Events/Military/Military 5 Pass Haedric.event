@@ -67,7 +67,7 @@ TileChange(16,3)
 TileChange(16,9)
 LOAD1 0x1 EvilCutsceneDudes
 ENUN
-MUSC Indignation
+MUSC Heavens_Rock_Seat
 SetBackground(0x05)
 Text(Military5PassHaedricBeginningText)
 FADI 0x5
@@ -75,7 +75,7 @@ STAL 0x40
 MUSC Lloyd
 FADU 0x5
 Text(Military5PassHaedricDerekTactJasperText)
-MUSC Advance
+MUSC Stage_One
 SetBackground(0x24)
 Text(Military5PassHaedricGateText)
 SetBackground(0x22)
@@ -83,7 +83,7 @@ Text(Military5PassHaedricTravelText)
 FadeOutMusic
 FADI 0x5
 STAL 0x50
-MUSC Derris_Kharlan_Appear
+MUSC Kratos
 EndConvo
 STAL 0x30
 FADI 0x5

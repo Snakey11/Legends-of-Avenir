@@ -120,14 +120,14 @@ BNE 0x0 0x0 0xC
 		LOAD3 0x1 PlayerLoading4
 		LOAD2 0x1 EndingSylvaine
 		ENUN
-		MUSC Tension
+		MUSC Emergency
 		SetBackground(0x0E)
 		TEXTSHOW Military7PassAltiaNoEscapeText
 		TEXTEND
 		MUSC A_Tragic_Decision
 		TEXTCONT
 		TEXTEND
-		MUSC Into_the_Shadow_of_Victory
+		MUSC Overwhelming_Advance
 		TEXTCONT
 		TEXTEND
 		GOTO 0x3
@@ -138,7 +138,7 @@ BNE 0x0 0x0 0xC
 		LOAD3 0x1 PlayerLoading4
 		LOAD2 0x1 EndingSylvaine
 		ENUN
-		MUSC A_Tragic_Decision
+		MUSC Overwhelming_Advance
 		SetBackground(0x0E)
 		Text(Military7PassAltiaIzukDeadText)
 		

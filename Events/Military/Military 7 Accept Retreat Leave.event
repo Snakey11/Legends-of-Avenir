@@ -68,7 +68,7 @@ LOAD1 0x1 Meanies
 LOAD1 0x1 Meanies2
 LOAD2 0x1 Friends
 LOAD3 0x1 PlayerLoading1
-MUSC Shihna
+MUSC End_of_the_World
 SetBackground(0x27)
 Text(Military7AcceptRetreatLeaveBeginningText)
 MUSC Derris_Kharlan_Appear
@@ -90,13 +90,14 @@ STAL 0x40
 MUSC Twinrova
 SetBackground(0x0A)
 Text(Military7AcceptRetreatLeaveOthersText)
-MUSC Distant_Roads
+MUSC Lloyd
 SetBackground(0x0C)
 Text(Military7AcceptRetreatLeaveJasperDerekText)
 MUSC Shihna
 SetBackground(0x30)
 Text(Military7AcceptRetreatLeaveDesertText)
 EndConvo
+MUSC End_of_the_World
 STAL 0x20
 Text(Military7AcceptRetreatLeaveHereText)
 STAL 0x10
@@ -411,7 +412,7 @@ EndUnit
 
 //Label Chapter Units
 Meanies:
-UNIT Xylia HolySage 0x00 Level(11,Ally,True) [14,24] 0x00 0x00 0x00 0x00 [Aura] NoAI
+UNIT Xylia HolySage 0x00 Level(11,Ally,True) [14,24] 0x00 0x00 0x00 0x00 [Thani] NoAI
 UNIT BossEfil Truerblade BossEfil Level(14,Enemy,True) [3,24] 0x00 0x00 0x00 0x00 [KillingEdge] ChaseOnceApproachedAI
 UNIT Guardian Paladin BossEfil Level(6,Enemy,True) [1,25] 0x00 0x00 0x00 0x00 [SilverLance] NoAI
 UNIT Guardian Paladin BossEfil Level(7,Enemy,True) [0,24] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI

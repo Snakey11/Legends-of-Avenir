@@ -122,7 +122,7 @@ BNE 0x0 0x0 0xC
 	REMA
 	GOTO 0x1
 LABEL 0x0
-	MUSC Victorys_Delight
+	MUSC Victory
 	SetBackground(0x18)
 	CHECK_ALIVE Zaheva
 	BEQ 0x2 0x0 0xC
@@ -157,6 +157,8 @@ BEQ 0x0 0x0 0xC
 	TEXTCONT
 	TEXTEND
 	REMA
+	SVAL 0x1 0x0306 // DoNothing
+	CHAI Zaheva
 	ENUT 0x12 // Disable Zaheva's red death quote and enable her blue quote
 	MURE 0x5
 LABEL 0x0

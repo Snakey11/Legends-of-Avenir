@@ -68,13 +68,13 @@ ENUN
 MUSC Solve_the_Riddle
 SetBackground(0x0E)
 Text(Military6PassAltiaXavusText)
-MUSC Advance
+MUSC The_Devoted
 SetBackground(0x1B)
 Text(Military6PassAltiaBeginningText)
 SetBackground(0x1D)
 Text(Military6PassAltiaTactJasperDerekText)
 EndConvo
-MUSC Raid
+MUSC Emergency
 STAL 0x30
 CAM1 [9,19]
 Text(Military6PassAltiaStartBattleText)
