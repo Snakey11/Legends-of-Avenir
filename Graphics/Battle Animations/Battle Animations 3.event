@@ -67,4 +67,6 @@
 
 #include "Harbinger Hand Axe.event"
 
+#include "Harbinger Magic.event"
+
 #include "Harbinger Unarmed.event"

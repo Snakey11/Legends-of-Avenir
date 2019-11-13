@@ -16,8 +16,13 @@ KnightPortrait:
 #incbin "Knight.dmp"
 KnightPortraitPalette:
 #incbin "KnightPalette.dmp"
+PiratePortrait:
+#incbin "Pirate.dmp"
+PiratePortraitPalette:
+#incbin "PiratePalette.dmp"
 
 setCardEntry(SentinelCard,SentinelPortrait,SentinelPortraitPalette)
 setCardEntry(HalberdierCard,HalberdierPortrait,HalberdierPortraitPalette)
 setCardEntry(AssassinCard,AssassinPortrait,AssassinPortraitPalette)
 setCardEntry(KnightCard,KnightPortrait,KnightPortraitPalette)
+setCardEntry(PirateCard,PiratePortrait,PiratePortraitPalette)

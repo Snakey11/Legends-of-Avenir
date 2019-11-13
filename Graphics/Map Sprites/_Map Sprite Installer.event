@@ -197,6 +197,15 @@ PatriarchMv:
 ALIGN 4
 
 
+PirateSt:
+#incbin "PirateSt.dmp"
+ALIGN 4
+
+PirateMv:
+#incbin "PirateMv.dmp"
+ALIGN 4
+
+
 SentinelSt:
 #incbin "SentinelSt.dmp"
 ALIGN 4

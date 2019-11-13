@@ -166,3 +166,10 @@
 #include "Battle Sage F Magic.event"
 
 #include "Battle Sage F Staff.event"
+
+
+#include "Pirate Axe.event"
+
+#include "Pirate Hand Axe.event"
+
+#include "Pirate Unarmed.event"
