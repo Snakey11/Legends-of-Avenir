@@ -11,7 +11,7 @@ WORD 0x0 0x0// Remove that stupid hardcoded phantom check in the EXP routine tha
 POP
 
 ALIGN 4
-#inctext lyn "SummonEXPMaster.elf" "Hooks.elf"
+#include "SummonEXPMaster.lyn.event"
 
 PhantomIDSummonASM:
 BYTE GhostFighter 0x00

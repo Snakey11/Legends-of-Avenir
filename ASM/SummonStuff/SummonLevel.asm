@@ -15,24 +15,24 @@ mov r0, r4
 blh LevelUpCalc, r2 @ Checks for defender level up
 
 mov r0, r5
-ldr r1, [ r5, #0x04 ]
-ldrb r1, [ r1, #0x04 ] @ Class ID
-ldr r2, =PhantomIDSummonASM
-ldrb r2, [ r2 ]
-cmp r1, r2
-beq WeGotAPhantom @ Attacker is a phantom
+ldr r0, [ r5, #0x04 ]
+ldrb r0, [ r0, #0x04 ] @ Class ID
+bl IsPhantom
+mov r1, r5
+cmp r0, #0x00
+bne WeGotAPhantom @ Attacker is a phantom
 mov r0, r4
-ldr r1, [ r4, #0x04 ]
-ldrb r1, [ r1, #0x04 ] @ Class ID
-ldr r2, =PhantomIDSummonASM
-ldrb r2, [ r2 ]
-cmp r1, r2
-bne EndSummonLevel @ No phantom found
+ldr r0, [ r0, #0x04 ]
+ldrb r0, [ r0, #0x04 ] @ Class ID
+bl IsPhantom
+mov r1, r4
+cmp r0, #0x00
+beq EndSummonLevel @ No phantom found
 @ Defender is a phantom
 
 WeGotAPhantom:
-push { r0 } @ Save the battle struct
-ldrb r0, [ r0, #0x0B ]
+push { r1 } @ Save the battle struct
+ldrb r0, [ r1, #0x0B ]
 blh GetUnit, r1 @ r0 = Phantom's character struct.
 mov r4, r0 @ Save this for later
 mov r1, #0xFF

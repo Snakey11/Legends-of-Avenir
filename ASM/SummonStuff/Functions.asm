@@ -43,11 +43,11 @@ FindSummonerLoop:
 ldrb r3, [ r1, r2 ]
 cmp r3, #0x00
 beq FindSummonerNoSummoner
-add r2, #0x02
+add r2, #0x04
 cmp r0, r3
 bne FindSummonerLoop
 @ If we're here, this entry has the summoner's character ID.
-sub r2, r2, #0x03
+sub r2, r2, #0x05
 ldrb r0, [ r1, r2 ] @ Summoner's character ID.
 bl FindCharacter @ r0 = summoner's character struct.
 EndFindSummoner:
@@ -56,3 +56,21 @@ bx r1
 FindSummonerNoSummoner: @ No summoner was found. Let's just return 0.
 mov r0, #0x00
 b EndFindSummoner
+
+.type IsPhantom, %function
+IsPhantom: @ r0 = character ID. Returns boolean for whether this unit is a phantom class.
+ldr r1, =PhantomIDSummonASM
+mov r2, #0x00 @ 2 is a counter.
+IsPhantomLoop:
+ldrb r3, [ r1, r2 ]
+cmp r0, r3
+bne IsPhantomNotFound
+	mov r0, #0x01
+	b EndIsPhantom
+IsPhantomNotFound:
+add r2, r2, #0x01
+cmp r3, #0x00
+bne IsPhantomLoop
+mov r0, #0x00
+EndIsPhantom:
+bx lr

@@ -19,11 +19,10 @@ FixSettingGrowths:
 push { r4, r5 }
 mov r0, r5 @ r0 now has battle struct
 ldr r0, [ r5, #0x04 ]
-ldrb r1, [ r0, #0x04 ]
-ldr r0, =PhantomIDSummonASM
-ldrb r0, [ r0 ]
-cmp r1, r0
-bne NormalGrowths
+ldrb r0, [ r0, #0x04 ]
+bl IsPhantom
+cmp r0, #0x00
+beq NormalGrowths
 @ So it's a phantom. This means I have to put the summoner's character struct in.
 mov r0, r4
 bl FindSummoner @ r0 = Summoner's character struct.
@@ -100,12 +99,14 @@ asr r0, r0, #0x18
 blh GetUnit, r2 @ All this and before from vanilla routine
 @ r0 = Character struct.
 @ All I really care about here is checking if the unit is a phantom and putting in the summoner's character struct if necessary
-ldr r1, [ r0, #0x04 ]
-ldrb r1, [ r1, #0x04 ] @ Class ID.
-ldr r2, =PhantomIDSummonASM
-ldrb r2, [ r2 ]
-cmp r1, r2
-bne EndSummonProc
+push { r0 }
+ldr r0, [ r0, #0x04 ]
+ldrb r0, [ r0, #0x04 ] @ Class ID.
+bl IsPhantom
+mov r1, r0
+pop { r0 }
+cmp r1, #0x00
+beq EndSummonProc
 @ So it's a phantom. r0 still has the phantom's character struct.
 bl FindSummoner @ r0 = summoner's character struct.
 
@@ -129,12 +130,14 @@ lsl r0, #0x02
 add r0, r2
 ldr r0, [ r0 ] @ From vanilla routine
 @ r0 now has pointer to character struct.... or battle struct. It really doesn't matter.
-ldr r1, [ r0, #0x04 ]
-ldrb r1, [ r1, #0x04 ] @ Class ID
-ldr r2, =#PhantomIDSummonASM
-ldrb r2, [ r2 ]
-cmp r1, r2
-bne EndSummonPortrait
+push { r0 }
+ldr r0, [ r0, #0x04 ]
+ldrb r0, [ r0, #0x04 ] @ Class ID
+bl IsPhantom
+mov r1, r0
+pop { r0 }
+cmp r1, #0x00
+beq EndSummonPortrait
 @ So it's a phantom. Find the summoner's character struct and return the portrait ID in r1.
 @ r0 still has the phantom's character struct.
 bl FindSummoner
@@ -164,12 +167,14 @@ lsl r0, #0x02
 add r7, r0, r1
 ldr r0, [ r7 ]
 @ r0 has the battle struct
-ldr r1, [ r0, #0x04 ]
-ldrb r1, [ r1, #0x04 ] @ Class ID
-ldr r2, =PhantomIDSummonASM
-ldrb r2, [ r2 ]
-cmp r1, r2
-bne EndClassText
+push { r0 }
+ldr r0, [ r0, #0x04 ]
+ldrb r0, [ r0, #0x04 ] @ Class ID
+bl IsPhantom
+mov r1, r0
+pop { r0 }
+cmp r1, #0x00
+beq EndClassText
 @ So it's a phantom. Find the summoner's character struct and return the class name ID.
 @ r0 still has the phantom's character struct.
 bl FindSummoner @ r0 = Summoner's character struct.

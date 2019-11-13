@@ -3,12 +3,11 @@
 .type SetUpSummonProcAnimsOn, %function
 SetUpSummonProcAnimsOn: @ Autohook to 0x0807357C
 @ Now to check if this is a phantom. r5 has phantom's character struct (and also r0)
-ldr r1, [ r5, #0x04 ]
-ldrb r1, [ r1, #0x04 ] @ Class ID
-ldr r0, =PhantomIDSummonASM
-ldrb r0, [ r0 ]
-cmp r0, r1
-bne EndProcAnimsOn @ If this isn't a phantom, end.
+ldr r0, [ r5, #0x04 ]
+ldrb r0, [ r0, #0x04 ] @ Class ID
+bl IsPhantom
+cmp r0, #0x00
+beq EndProcAnimsOn @ If this isn't a phantom, end.
 @ So we have a phantom. Now to insert the character struct of the summoner.
 mov r0, r5
 bl FindSummoner @ r0 = Summoner's character struct.
@@ -32,12 +31,13 @@ bx r1
 .type FixSummonAnimsOnLevelUpPortrait, %function
 FixSummonAnimsOnLevelUpPortrait: @ Autohook to 0x08073DBC
 @ r1 has the battle struct
-ldr r2, [ r1, #0x04 ]
-ldrb r2, [ r2, #0x04 ] @ Class ID
-ldr r0, =PhantomIDSummonASM
-ldrb r0, [ r0 ]
-cmp r0, r2
-bne EndPortraitAnimsOn
+ldr r0, [ r1, #0x04 ]
+ldrb r0, [ r0, #0x04 ] @ Class ID
+push { r1 }
+bl IsPhantom
+pop { r1 }
+cmp r0, #0x00
+beq EndPortraitAnimsOn
 
 @ So if I'm here, I have a phantom. Use the summoner's character struct to get the portrait ID.
 mov r0, r1
@@ -65,12 +65,14 @@ bx r0
 .type FixSummonAnimsOnClassText, %function
 FixSummonAnimsOnClassText: @ Autohook to 0x08073808
 ldr r0, [ r0 ] @ Character struct in r0
-ldr r1, [ r0, #0x04 ]
-ldrb r1, [ r1, #0x04 ] @ Class ID
-ldr r2, =PhantomIDSummonASM
-ldrb r2, [ r2 ]
-cmp r1, r2
-bne EndTextClassOn
+push { r0 }
+ldr r0, [ r0, #0x04 ]
+ldrb r0, [ r0, #0x04 ] @ Class ID
+bl IsPhantom
+mov r1, r0
+pop { r0 }
+cmp r1, #0x00
+beq EndTextClassOn
 @ If I'm here, I have a phantom yadda yadda
 bl FindSummoner @ r0 = Summoner's character struct.
 

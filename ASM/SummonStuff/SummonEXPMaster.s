@@ -33,15 +33,17 @@
 .global SummonEXPHack
 .type SummonEXPHack, %function
 SummonEXPHack:
-ldr r0, [ r2, #0x04 ]
+push { r2, r4, r5 }
+mov r4, r2
+ldr r0, [ r4, #0x04 ]
 ldrb r0, [ r0, #0x04 ] @ Class ID
-ldr r3, =PhantomIDSummonASM
-ldrb r3, [ r3 ]
-cmp r0, r3
-beq EndEXPTrue
+bl IsPhantom
+cmp r0, #0x00
+bne EndEXPTrue
 
 EndFalse:
-ldrb r0, [ r2, #0x9 ]
+ldrb r0, [ r4, #0x9 ]
+pop { r2, r4, r5 }
 cmp r0, #0xFF
 bne SkipEXP
 mov r0, #0x00
@@ -54,30 +56,28 @@ ldr r1, =#0x0802BA0D
 bx r1
 
 EndEXPTrue:
-push { r2 } @ Save the battle struct for later.
 @ So this is a phantom. Make it able to gain EXP, but first, we need to make the phantom's EXP match the phantom's EXP for the EXP bar.
 @ I need to find both character structs of the phantom and the summoner. First is the summoner so I can get the EXP value I need.
-mov r0, r2
+mov r0, r4
 bl FindSummoner
-pop { r2 }
 cmp r0, #0x00
 beq EndFalse @ No summoner was found. End.
 @ r0 = Summoner's character struct, r2 = (phantom's) battle struct.
-push { r0, r2 }
-ldrb r0, [ r2, #0x0B ]
+mov r5, r0
+ldrb r0, [ r4, #0x0B ]
 lsl r0, r0, #0x18
 asr r0, r0, #0x18
 blh GetUnit, r1 @ r0 = Phantom's character struct.
 mov r1, r0
-pop { r0, r2 }
-ldrb r3, [ r0, #0x09 ] @ Summoner's current EXP.
+ldrb r3, [ r5, #0x09 ] @ Summoner's current EXP.
 strb r3, [ r1, #0x09 ] @ Store the summoner's EXP into the phantom's character struct.
-strb r3, [ r2, #0x09 ] @ Put the summoner's EXP into the phantom's battle struct.
+strb r3, [ r4, #0x09 ] @ Put the summoner's EXP into the phantom's battle struct.
 mov r1, #0x71
-strb r3, [ r2, r1 ] @... and the EXP prior to battle byte.
+strb r3, [ r4, r1 ] @... and the EXP prior to battle byte.
 
 @ Whew. Time to return valid to gain EXP.
 mov r0, #0x01
+pop { r2, r4, r5 }
 pop { r1 }
 bx r1
 
