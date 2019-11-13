@@ -68,7 +68,7 @@ INLINE SoundRoom,Song ID,Song Length (Only Used for Shuffle Mode),Song Unlock AS
 0x42 Victory and the Future,0x41,6240,0,0x7cd
 0x43 Fly with the Breeze,0x42,9120,0,0x7ce
 0x44 Epilogue,0x46,9360,0,0x7cf
-0x45,Derris_Kharlan_Appear,9360,0,DerrisKharlanAppearText
+0x45,Legends_of_Avenir,9360,0,LegendsOfAvenirText
 0x46,Anchoret,9360,0,AnchoretText
 0x47,Shihna,9360,0,ShihnaText
 0x48,Old_Familiar_Scent,9360,0,OldFamiliarScentText
@@ -151,5 +151,6 @@ INLINE SoundRoom,Song ID,Song Length (Only Used for Shuffle Mode),Song Unlock AS
 0x9B,Chemical_Plant,9360,0,ChemicalPlantText
 0x9C,Metropolis,9360,0,MetropolisText
 0x9D,Dry_Trail,9360,0,DryTrailText
-0x9E,Legends_of_Avenir,9360,0,LegendsOfAvenirText
-0x9F,0xFFFFFFFF,0x0,0x0,0x0
+0x9E,Derris_Kharlan_Appear,9360,0,DerrisKharlanAppearText
+0x9F,Marble_Corridor,9360,0,MarbleCorridorText
+0xA0,0xFFFFFFFF,0x0,0x0,0x0
