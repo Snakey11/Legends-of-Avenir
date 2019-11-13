@@ -1,7 +1,7 @@
 
 ALIGN 4
 #ifdef SkillSystemIncluded
-	#include "SkillSystem_FE8/EngineHacks/_MasterHackInstaller.event"
+	#include "SkillSystem_FE8/Engine Hacks/_MasterHackInstaller.event"
 #else
 	#define SkillTester 0
 	#include "Delete with Skills.event"
@@ -185,6 +185,25 @@ ALIGN 4
 
 ALIGN 4
 #include "Walking Sounds Fix/FE8-Walking Sounds EA.event"
+
+#ifdef __DEBUG__
+	ALIGN 4
+	#include "SkillSystem_FE8/Engine Hacks/Debug.event"
+	
+	ALIGN 4
+	#inctext lyn "SkillSystem_FE8/Engine Hacks/WinAddition.elf"
+	ALIGN 4
+	#inctext lyn "SkillSystem_FE8/Engine Hacks/winbuttonusability.elf"
+	ALIGN 4
+	WinButtonUsabilityCharacterList:
+	BYTE PlayerMMage PlayerMMonk PlayerMShaman PlayerFMage PlayerFMonk PlayerFShaman
+	BYTE PlayerMCavalier PlayerMKnight PlayerMSoldier PlayerMWyvernRider PlayerMArcher PlayerFCavalier PlayerFKnight PlayerFSoldier PlayerFWyvernRider PlayerFArcher
+	BYTE PlayerMMercenary PlayerMMyrmidon PlayerMFighter PlayerMPirate PlayerMBrigand PlayerFMercenary PlayerFMyrmidon PlayerFPegasusKnight
+	ALIGN 4
+	WinButtonUsabilityChapterExceptionList:
+	BYTE PrologueChapter
+	
+#endif // __DEBUG__
 
 PUSH
 ORG $96B1C

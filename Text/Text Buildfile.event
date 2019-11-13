@@ -46,17 +46,17 @@ promote to a new class.[X]
 ## BaseSupportSelectConvoText
 Select a conversation.[X]
 
-## EscapeNameText
+## EscapeName
  Escape[X]
 
-## EscapeDescText
+## EscapeDesc
 Have this unit[NL]
 leave this chapter.[X]
 
-## ArriveNameText
+## ArriveName
  Arrive[X]
 
-## ArriveDescText
+## ArriveDesc
 Complete this chapter[NL]
 by having this unit arrive.[X]
 
