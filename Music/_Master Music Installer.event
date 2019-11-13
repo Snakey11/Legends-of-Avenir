@@ -88,8 +88,8 @@ SongTable(Snow_Battle,songSnowBattle)
 SongTable(Wild_Fields,songWildFields)
 #include "WildFields.event"
 
-//SongTable(Marble_Corridor,songMarbleCorridor)
-//#include "MarbleCorridor.event"
+SongTable(Marble_Corridor,songMarbleCorridor)
+#include "MarbleCorridor.event"
 
 SongTable(Nara_and_Mara_Battle,songNaraAndMaraBattle)
 #include "NaraAndMaraBattle.event"
