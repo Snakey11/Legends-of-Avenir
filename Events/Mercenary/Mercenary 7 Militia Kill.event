@@ -243,6 +243,7 @@ CUMO [19,22]
 CUMO [20,22]
 STAL 0x70
 CURE
+SetChapterObjectiveText(EscapeText,Merc7MilitiaKillStatus2Text)
 NoFade
 EndA2
 
@@ -406,10 +407,6 @@ UNIT Cesarian Paladin Rex Level(7,Enemy,True) [20,0] 0x00 0x00 0x00 0x00 [Wyrmsl
 UNIT Cesarian GreatKnight Rex Level(7,Enemy,True) [26,16] 0x00 0x00 0x00 0x00 [KillerAxe,ShortSpear] NoAI
 UNIT Cesarian Sentinel Rex Level(7,Enemy,True) [15,0] 0x00 0x00 0x00 0x00 [SteelSword,SteelLance,SteelAxe] NoAI
 UNIT Cesarian Sentinel Rex Level(7,Enemy,True) [16,0] 0x00 0x00 0x00 0x00 [DragonSpear] NoAI
-UNIT
-
-TestGui:
-UNIT Xexim XeximClass Xexim Level(7,Ally,True) [6,3] 0x00 0x00 0x00 0x00 [Shamshir] NoAI
 UNIT
 
 REDA1:
