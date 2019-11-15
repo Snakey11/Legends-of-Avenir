@@ -11,6 +11,9 @@ Defeat All[X]
 ## UnknownText
 ???[X]
 
+## EscapeText
+Escape[X]
+
 ## ReachLeonText
 Reach Leon[X]
 
@@ -64,8 +67,10 @@ about your enemy.[X]
 Defend the town.[X]
 
 ## Merc7MilitiaKillStatusText
-Assassinate Rex[NL]
-then escape.[X]
+Assassinate Rex.[X]
+
+## Merc7MilitiaKillStatus2Text
+Escape to the south.[X]
 
 ## Merc2BanditStatusText
 Raid Danaan and[NL]
