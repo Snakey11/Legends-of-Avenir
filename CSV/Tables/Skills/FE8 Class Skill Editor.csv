@@ -1,27 +1,27 @@
 INLINE ClassSkillTable,Skill
 0x00 Separator/Nothing,0x0
-Ephraim Lord,0x0
-Eirika Lord,0x0
+Ephraim Lord,ShoveID
+Eirika Lord,ShoveID
 Ephraim Master Lord,CantoID
 Eirika Master Lord,CantoID
 Socialknight,CantoID
 Socialknight (F),CantoID
 Paladin,CantoID
 Paladin (F),CantoID
-Armour Knight,0x0
-Armour Knight (F),0x0
-General,0x0
-General (F),0x0
+Armour Knight,ShoveID
+Armour Knight (F),ShoveID
+General,ShoveID
+General (F),ShoveID
 Thief,CunningID
 Mamkute,0x0
 Mercenary,0x0
-Mercenary (F),0x0
-Hero,0x0
-Hero (F),0x0
+Mercenary (F),ShoveID
+Hero,ShoveID
+Hero (F),ShoveID
 Swordfighter,0x0
 Swordfighter (F),0x0
-Swordmaster,CritUpID
-Swordmaster (F),CritUpID
+Swordmaster,0x0
+Swordmaster (F),0x0
 Assassin,LethalityID
 Assassin (F),LethalityID
 Archer,0x0
@@ -62,11 +62,11 @@ Mamkute,0x0
 Mamkute (F),0x0
 Trainee Fighter (1),0x0
 Trainee Mage (1),0x0
-Fighter,0x0
-Warrior,0x0
-Mountain Thief,0x0
-Pirate,0x0
-Berserker,CritUpID
+Fighter,ShoveID
+Warrior,ShoveID
+Mountain Thief,ShoveID
+Pirate,ShoveID
+Berserker,ShoveID
 Monk,0x0
 Priest,0x0
 Bard,0x0
@@ -77,7 +77,7 @@ Sister,0x0
 Troubadour,CantoID
 Valkyrie,CantoID
 Dancer,DanceID
-Soldier,0x0
+Soldier,ShoveID
 Necromancer,SummonID
 Fleet,0x0
 Ghost Fighter,0x0
@@ -88,17 +88,17 @@ Dark Knight F,CantoID
 Magus,0x0
 Magus F,0x0
 Master Knight_F,CantoID
-Commander,0x0
-Impaler,0x0
+Commander,ShoveID
+Impaler,ShoveID
 Wyvern General,CantoID
 Hunter,0x0
 Master Knight,CantoID
-Champion,0x0
+Champion,ShoveID
 Shadow,LethalityID
-Trueblade,CritUpID
+Trueblade,0x0
 MountedBrigand,CantoID
 BUGGED,0x0
-Mountainier,0x0
+Mountainier,ShoveID
 Black Falcoknight,CantoID
 Dragon Zombie,0x0
 Demon King,SummonID
@@ -122,46 +122,46 @@ Monk2,0x0
 MonkF2,0x0
 Cavalier2,CantoID
 CavalierF2,CantoID
-Knight2,0x0
-Soldier2,0x0
+Knight2,ShoveID
+Soldier2,ShoveID
 Wyvern Rider2,CantoID
 Archer2,0x0
 ArcherF2,0x0
-Mercenary2,0x0
-MercenaryF2,0x0
-Fighter2,0x0
-Brigand2,0x0
-Pirate2,0x0
+Mercenary2,ShoveID
+MercenaryF2,ShoveID
+Fighter2,ShoveID
+Brigand2,ShoveID
+Pirate2,ShoveID
 Myrmidon2,0x0
 MyrmidonF2,0x0
 Pegasus Knight2,CantoID
-Halberdier,CritUpID
-Sentinel,0x0
-Jacket Hero,0x0
-Gladiator,0x0
-Hector,0x0
-Trueerblade,CritUpID
+Halberdier,ShoveID
+Sentinel,ShoveID
+Jacket Hero,ShoveID
+Gladiator,ShoveID
+Hector,ShoveID
+Trueerblade,0x0
 Gaiden Sage,0x0
 Izuk,0x0
 Nomad,CantoID
-NarratorClass,0x00
-Warlock,0x0
-SpearHero,0x0
+NarratorClass,0x0
+Warlock,ShoveID
+SpearHero,ShoveID
 XeximClass,LethalityID
 GrandPaladin,CantoID
 HolySage,0x0
 WilSniper,0x0
-Battle Sage,0x0
+Battle Sage,ShoveID
 Civilian,0x0
 Civilian (F),0x0
 ArmoredWyvernLord,CantoID
-EdgySwordmaster,CritUpID
+EdgySwordmaster,0x0
 Emperor,0x0
 MurielSage,0x0
--,0x0
--,0x0
--,0x0
--,0x0
+Impaler F,ShoveID
+SoldierF2,ShoveID
+Hunter F,0x0
+High Priest,0x0
 -,0x0
 -,0x0
 -,0x0
