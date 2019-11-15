@@ -31,6 +31,7 @@ END_MAIN
 
 //Label MiscBasedEvents
 MiscBasedEvents:
+AREA 0x12 CavAI [11,10] [16,17]
 DefeatBoss(EndingScene)
 CauseGameOverIfLordDies
 END_MAIN
@@ -91,7 +92,6 @@ MUSC Tension
 CAM1 [9,13]
 STAL 0x10
 Text(Merc3RogerNoticesText)
-DISA Xena
 CAM1 [8,6]
 Text(Merc3BanditFormUpText)
 NoFade
@@ -108,6 +108,19 @@ SetBackground(0x1D)
 Text(Merc3BanditEndingText)
 GiveGold(1000)
 MoveToChapter(MercenaryBandit4)
+ENDA
+
+//Label Area events
+CavAI:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x0 0x0 0xC
+	SVAL 0x1 0x0000
+	CHAI [4,14]
+	CHAI [3,13]
+LABEL 0x0
+	ENUF 0x12
+LABEL 0x1
+NoFade
 ENDA
 
 	/*UNIT DATA*/
