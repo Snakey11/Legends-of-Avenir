@@ -16,6 +16,7 @@ Forest has a slightly updated mug
 Remus has a new mug! -- credit Levin
 Luke has a new mug! -- credit Atey (Sponsored by Bartz)
 So much new music! Check out the Sound Room!
+	Seriously like, it's kinda crazy
 	Along with new music choices in chapters of course
 New palettes! -- credit Pikmin1211
 AI changes in 4 Bandit
@@ -34,12 +35,18 @@ Updated some character descriptions
 Replaced Life and Death on Shamans and co with Seal Magic
 Scripted battle number displays are no longer complete lies!
 WEXP from some items being absurd has been fixed
-New original title theme thanks to A_Reliable_Chair!
+New original title theme -- thanks to A_Reliable_Chair!
 Snek is using a new method to compile CSVs (no in game change)
 Zane's weather behind UI is being used
 Der pirates are being used
 Skill System update
 New skill activation animations
+Vicar's battle quote with Arc is correct
+Changed cavalier AI in 3 Bandit
+Shove is being handed out like candy to a lot of foot units
+Certain blow has been changed to +20 hit
+Christina's mug has gotten an update -- thanks to Star for that
+Miscellaneous palette updates -- thanks, Pikmin1211!
 
 v1.7
 Gave Connor, Adlez, and Arc their own character IDs for when they're bosses (Fixes battle music)
