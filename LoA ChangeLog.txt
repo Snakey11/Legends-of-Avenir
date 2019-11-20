@@ -1,3 +1,7 @@
+Hotfixes before v1.9:
+Promotion items have been fixed
+Description for AxeFaith has been changed to include "Axes don't lose durability"
+
 v1.8
 New military route featuring 6 new chapters: Accept the promotion at the end of chapter 1!
 Very large update of the Skill System, including full integration of the Strength/Magic Split holy shit
