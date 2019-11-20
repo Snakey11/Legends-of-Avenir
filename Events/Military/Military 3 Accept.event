@@ -36,9 +36,9 @@ END_MAIN
 
 //Label LocationBasedEvents
 LocationBasedEvents:
-Seize(0x00,Retreat,0,4)
-Seize(0x00,Retreat,0,5)
-Seize(0x00,Retreat,0,6)
+Escape(0x00,Retreat,0,4)
+Escape(0x00,Retreat,0,5)
+Escape(0x00,Retreat,0,6)
 Door(9,2)
 Door(1,11)
 Door(2,11)
@@ -50,7 +50,11 @@ END_MAIN
 //Label MiscBasedEvents
 MiscBasedEvents:
 CauseGameOverIfLordDies
-DefeatBoss(EndingScene)
+#ifndef __PRIVATE__
+#ifndef __PUBLIC__
+DefeatBoss(EndingScene) // This split doesn't exist yet!
+#endif
+#endif
 END_MAIN
 
 //Label TrapData
@@ -114,6 +118,7 @@ MUSC Victorys_Delight
 	BLT 0x0 0x1 0xC
 		LOAD1 0x1 MadelineRemus
 		ENUN
+		SetSupport(Madeleine,Remus,CSupport)
 	LABEL 0x0
 #endif
 CALL RevealAll
@@ -131,6 +136,7 @@ MUSC Heavens_Rock_Seat
 	BLT 0x0 0x1 0xC
 		LOAD1 0x1 MadelineRemus
 		ENUN
+		SetSupport(Madeleine,Remus,CSupport)
 	LABEL 0x0
 #endif
 CALL RevealAll
