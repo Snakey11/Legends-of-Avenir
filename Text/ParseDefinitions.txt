@@ -58,7 +58,7 @@
 [LoadGerwick] = [LoadFace][0x32][0x01]
 [LoadInkeeper] = [LoadFace][0x29][0x01]
 [LoadMilitiaMan] = [LoadFace][0x0E][0x01]
-[LoadWeston] = [LoadFace][0xF0][0x01]
+[LoadWeston] = [LoadFace][0xE9][0x01]
 [LoadConnor] = [LoadFace][0xD6][0x01]
 [LoadEscort] = [LoadFace][0x4B][0x01]
 [LoadOfficial] = [LoadFace][0x20][0x01]
