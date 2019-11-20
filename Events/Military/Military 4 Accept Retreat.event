@@ -152,8 +152,12 @@ CLEE 0x0
 ASMC RefreshAll|1
 VCWF 0x0
 CAM1 [7,5]
-CHECK_EVENTID 0x11
+#ifndef __PUBLIC__
+#ifndef __PRIVATE__
+CHECK_EVENTID 0x11 // Comment out this check because the other path doesn't exist yet!
 BEQ 0x0 0x0 0xC
+#endif
+#endif
 	// Tact fought Arya
 	MUSC Heavens_Rock_Seat
 	LOAD3 0x1 PlayerLoading3
