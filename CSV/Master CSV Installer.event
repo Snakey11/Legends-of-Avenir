@@ -11,11 +11,6 @@ ALIGN 4
 ALIGN 4
 #include "EA Files/Promotion Item Lists.event"
 
-PUSH
-ORG 0x29408
-POIN OceanSealList|IsPointer
-POP
-
 ALIGN 4
 DeathQuoteTable:
 #include "EA Files/Death Quote Table.event"

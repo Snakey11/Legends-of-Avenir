@@ -360,4 +360,19 @@ POIN ClassAnimTable
 ORG $70A60
 POIN ClassAnimTable
 
+ORG $29398
+POIN HeroCrestList
+ORG $293A0
+POIN KnightCrestList
+ORG $293A8
+POIN OrionBoltList
+ORG $293B0
+POIN ElysianWhipList
+ORG $293B8
+POIN GuidingRingList
+ORG $293C0
+POIN MasterSealList
+ORG 0x29408
+POIN OceanSealList|IsPointer
+
 POP
