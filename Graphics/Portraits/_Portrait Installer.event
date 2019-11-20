@@ -354,7 +354,7 @@ setMugEntry(XavusMug,XavusPortrait,2,5,3,3)
 setMugEntry(XeximMug,XeximPortrait,2,5,3,3)
 setMugEntry(XyliaMug,XyliaPortrait,3,6,3,4)
 setMugEntry(YvetteMug,YvettePortrait,3,5,3,3)
-setMugEntry(ZahevaMug,ZahevaPortrait,3,5,3,3)
+setMugEntry(ZahevaMug,ZahevaPortrait,3,4,3,2)
 setMugEntry(ZaliusMug,ZaliusPortrait,3,5,3,3)
 
 setMugEntry(0x14,UzkalisPortrait,2,6,2,3)
