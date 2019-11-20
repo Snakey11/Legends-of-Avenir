@@ -15,7 +15,7 @@
    <property name="TileConfig" value="0x3E"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJx9lL9KA0EQxmcvoEYhD6CVhYimsEowpXqFNiL+eQEjCCL4EjlQ0JdQjKImvaWYqCCCCnaWKRTxCbTwG3eGm6wXix+7s3vftzP758o5onIP7h3RU0T0LHC8QURtEJPvMzXq7dHLhz2qRq+e//kUoD2H9sr5dhLxtXgk4qfxrfPcOL9eCfrHyLccF9E/lpZR/b7zbVXyqktePK8+U2BNfKYlt4rwCq9LMIJ+gvk+8VP/uvGx+1MKav3V49uW6FbwzYDz+iTIRzUfQZ0N2SdmUGqcQH/ZjDNNPg+zX8Wou85TjK2Tr5XXHAK74J3S/VNsDZWgphOXjrHPJ/RvIO/S/asYndZRDuJ81J071/VAvq6se6N1hLHeA4XvTRFj4+J9CI6Cvcqi6dK7rGddk5h9Z7DWbO7vXmXREY89sGi8+H0Mw+Ml8nfsS85T19R1D8ACWBK2wLbJR98He33DY9Xknpj5TdAvnJm32pJcIudzrYlmDPE8KATvhzUNsAMuwJz5d7A+xvejLq07kTPgu3Vn8tL/RCLrd2TdWHQ/1YGGgA==
+   eJx9lLtKQ0EQhmdPQI1CHkArCxFNYZVgSvUU2oh4eQEjCCL4EjmgoC+hGEVNeksxXkCEKNhZplDEJ9DCf9wZzmTNsfjYnd3z/zuzl1POEZUzeHBETxHRs8DxBhHdgJh8n6lRtkeWD3tUjV49//MpQHsO7ZXz7STia/FIxE/jO+e5dX69EvTtyLccF9E/lpZR/b7zbVXyqktePK8+U2BNfKYlt4rwCq9LMIJ+gvk+8VP/uvGx+1MKav3V49uW6FbwzYDz+iTIRzUfQZ0N2SdmUGqcQH/ZjDNNPg+zX8Wou85TjK2Tr5XXHAK74J3S/VNsPpWgphOXjrHPJ/RvIO/S/asYXTvw0zgfdefOdT2Sr6vXvdE6wljvgcL3poixcfE+BEfBXvWi6dK7rGddk5h9Z7DWbO7vXvWiIx57YNF48fsYhsdL5O/Yl5ynrqnrHoAFsCRsgW2Tj74P9vqGx6rJPTHzm6BfODNvtSW5RM7nWhPNGOJ5UAjeD2saYAdcgDnz72B9jO9HXVp3ImfAd+ve5KX/iUTW78i6seh+ANMJhn8=
   </data>
  </layer>
  <layer name="Main Door" width="18" height="17" visible="0">
