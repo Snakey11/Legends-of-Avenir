@@ -27,10 +27,10 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
-Seize(0x16,EndingScene,17,22)
-Seize(0x16,EndingScene,18,22)
-Seize(0x16,EndingScene,19,22)
-Seize(0x16,EndingScene,20,22)
+Escape(0x16,EndingScene,17,22)
+Escape(0x16,EndingScene,18,22)
+Escape(0x16,EndingScene,19,22)
+Escape(0x16,EndingScene,20,22)
 Chest(SilverSword,23,18)
 DOOR 0x11 [5,9] 0x12
 DOOR 0x11 [6,9] 0x12
