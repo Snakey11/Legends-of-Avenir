@@ -74,8 +74,8 @@ STAL 0x30
 Text(Merc7MilitiaWaitArcanaeBeginningText)
 MUSC Solve_the_Riddle
 WarpIn(7,4,LoadUzkalisTemple)
-LOAD1 0x1 LoadUzkalisTemple
-ENUN
+//LOAD1 0x1 LoadUzkalisTemple
+//ENUN
 STAL 0x20
 Text(Merc7MilitiaWaitArcanaeUzkalisHereText)
 SVAL 0xB Coords(7,4)
@@ -129,6 +129,7 @@ CAM1 [14,11]
 STAL 0x10
 LOAD3 0x1 PlayerLoading3
 LOAD2 0x1 LoadTempleAllies
+LOAD1 0x1 LoadUzkalisAlly
 ENUN
 REVEAL Finoc
 DISA Maximus
@@ -380,6 +381,9 @@ UNIT Elanil Monk Luke Level(1,Ally,True) [21,9] 0x00 0x00 0x00 0x00 [BraveLance,
 UNIT Finoc Monk Luke Level(1,Ally,True) [21,8] 0x00 0x00 0x1 REDA20R8 [BraveLance,HandAxe] [0]
 UNIT Val Shaman_F Val Level(9,Ally,True) [21,12] 0x00 0x00 0x00 0x00 [Worm,Nosferatu] [0]
 UNIT Helmer Soldier Helmer Level(11,Ally,True) [21,13] 0x00 0x00 0x00 0x00 [SteelLance,KnightCrest] [0]
+UNIT
+
+LoadUzkalisAlly:
 UNIT Uzkalis GaidenSage Uzkalis Level(10,Ally,True) [21,12] 0x00 0x00 0x00 0x00 [Thoron,Arcwind] [0]
 UNIT
 
