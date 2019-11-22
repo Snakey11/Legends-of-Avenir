@@ -94,6 +94,7 @@ STAL 0x10
 Text(Merc3RogerNoticesText)
 CAM1 [8,6]
 Text(Merc3BanditFormUpText)
+DISA Xena
 NoFade
 ENDA
 
@@ -164,5 +165,5 @@ UNIT Haedrican Myrmidon Haedrican Level(6,Enemy,True) [8,10] Drop 0x00 0x00 0x00
 UNIT Haedrican Archer Haedrican Level(5,Enemy,True) [14,15] 0x0 0x00 0x00 0x00 [IronBow] ChaseOnceApproachedAI
 UNIT Haedrican Soldier Haedrican Level(6,Enemy,True) [15,14] 0x0 0x00 0x00 0x00 [ShortSpear] ChaseOnceApproachedAI
 UNIT Haedrican Pirate Haedrican Level(7,Enemy,True) [15,12] 0x0 0x00 0x00 0x00 [SteelAxe] ChaseOnceApproachedAI
-UNIT Xena Civilian Xena Level(1,Enemy,True) [16,14] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Xena 0x6F Xena Level(1,Enemy,True) [16,14] 0x00 0x00 0x00 0x00 [0] NoAI
 EndUnit
