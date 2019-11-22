@@ -1,6 +1,14 @@
 Hotfixes before v1.9:
 Promotion items have been fixed
 Description for AxeFaith has been changed to include "Axes don't lose durability"
+Reaver WTA has been fixed
+Chests in 6 Merc Arcanae have been fixed
+Uzkalis exists in 7 Merc Arcanae now
+Crazy assassin class card is fixed
+Male and female battle sage map sprites have been fixed
+Heal staves are usable
+1 Mercenary and 3 Bandit cutscene civilians are no longer children
+	And the civilian in 3 Bandit actually gets cleared now
 
 v1.8
 New military route featuring 6 new chapters: Accept the promotion at the end of chapter 1!
