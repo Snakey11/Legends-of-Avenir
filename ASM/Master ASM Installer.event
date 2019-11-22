@@ -302,11 +302,11 @@ ORG $26B42
 SHORT 0x2000
 
 ORG $2889C // Break ItemUsabilityTable upper bound
-SHORT 0x2800 0xDC00 // cmp r0, #0x00 ; bgt #0x080288A2
+SHORT 0x2800 0xDA00 // cmp r0, #0x00 ; bge #0x080288A2
 ORG $2FC74 // Break ItemEffectTable upper bound
-SHORT 0x2800 0xDC00 // cmp r0, #0x00 ; bgt #0x0802FC7A
+SHORT 0x2800 0xDA00 // cmp r0, #0x00 ; bge #0x0802FC7A
 ORG $29F1E // Break PrepScreenUsabilityTable upper bound
-SHORT 0x2800 0xDC00 // cmp r0, #0x00 ; bgt #0x08029F24
+SHORT 0x2800 0xDA00 // cmp r0, #0x00 ; bge #0x08029F24
 
 ORG $2BA0A // Allow non-player units to gain EXP if their EXP byte isn't 0xFF.
 SHORT 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0
