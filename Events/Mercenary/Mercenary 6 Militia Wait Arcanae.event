@@ -15,7 +15,7 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 InfiniteTurnEventPlayer(0x15,DoorReinforcements,1)
-TurnEventPlayer(0x00,Turn2,2)
+TurnEventPlayer(0x00,Turn4,4)
 TurnEventPlayer(0x00,Turn5,5)
 TurnEventPlayer(0x00,Turn7,7)
 TurnEventPlayer(0x00,Turn10,10)
@@ -192,9 +192,9 @@ LABEL 0x1
 NoFade
 ENDA
 
-Turn2:
+Turn4:
 CamON
-LOAD1 0x1 Turn2Units
+LOAD1 0x1 Turn4Units
 ENUN
 CamOFF
 NoFade
@@ -335,7 +335,7 @@ UNIT Cesarian Sentinel Rex Level(13,Enemy,True) [14,0] 0x00 0x00 0x00 0x00 [Stee
 UNIT Cesarian Sentinel Rex Level(13,Enemy,True) [16,0] 0x00 0x00 0x00 0x00 [ToxinLance] AttackInRangeAI
 UNIT
 
-Turn2Units:
+Turn4Units:
 UNIT Cesarian Fighter Rex Level(13,Enemy,True) [25,23] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
 UNIT Cesarian Mage Rex Level(12,Enemy,True) [25,24] 0x00 0x00 0x01 REDA24R24 [Dasher] NoAI
 UNIT Cesarian Fighter Rex Level(11,Enemy,True) [25,25] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
