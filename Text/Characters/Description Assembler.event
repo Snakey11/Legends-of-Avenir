@@ -20,33 +20,43 @@ A lost soul with[NL]
 boundless potential.[X]
 
 ## XenaDescText
-A wise and supportive[NL]
-teacher for aspiring mages.[X]
+A wise and kindhearted Arcanian instructor[NL]
+assigned to search for artifacts.[X]
 
 ## VicarDescText
-A father-like leader of[NL]
-a small mercenary group.[X]
+A harsh mercenary from Haedric who acts[NL]
+as a father figure to Walter and Baret.[X]
 
 ## WalterDescText
-A rather lighthearted member[NL]
-of a small mercenary group.[X]
+A friendly yet skilled archer of[NL]
+Haedric, the younger brother of Baret.[X]
 
 ## BaretDescText
-A spiteful, self-trained spearman[NL]
-who lost his parents in childhood.[X]
+The older brother of Walter who harbors[NL]
+a resentment towards anyone[NL]
+outside his mercenary group.[X]
 
 ## ValDescText
-A loyal dark mage who cares[NL]
-for her friends but hates[NL]
-her enemies with passion.[X]
+A Sergeant of Arcanae with[NL]
+a grudge against Cesarians.[X]
 
 ## HelmerDescText
-A young, obedient soldier hoping[NL]
-to support his elderly parents.[X]
+A Corporal of Arcanae[NL]
+with a mysterious past.[X]
 
 ## XavusDescText
-One of the Five Grand Magi[NL]
-who has been corrupted by power.[X]
+The leader of New Arcanae[NL]
+and Grand Magus of Darkness.[NL]
+An extremely powerful mage.[X]
+
+## AlexisDescText
+The pacifistic Magus of Light.[NL]
+Known to care for every[NL]
+human she comes across.[X]
+
+## MistlainDescText
+The Ancient Magus of Fire, an[NL]
+old man dedicated to his research.[X]
 
 ## DunlasDescText
 Xavus' extremely quiet[NL]
@@ -57,26 +67,26 @@ A very skilled scout of Altia. He[NL]
 can be clumsy in other situations.[X]
 
 ## ElanilDescText
-A friendly and[NL]
-professional Altian archer.[X]
+A skilled archer of Altia.[NL]
+Professional yet friendly.[X]
 
 ## IzukDescText
-The high preist of Altia with power[NL]
-on par with the Grand Magi of Arcanae.[X]
+The High Priest of Altia. The[NL]
+right hand man to the Anguis[NL]
+and a master of fire magic.[X]
 
 ## MaximusDescText
-Captian of the Cesarian Tiger[NL]
-Bigade. He's a master strategist[NL]
-known for stunning victories.[X]
+The Captain of the Tiger Brigade,[NL]
+a bold and skilled strategist.[X]
 
 ## JurgenDescText
-Captian of the Cesarian Lion[NL]
-Brigade and General Rex's former[NL]
-aide. Only fights if necessary.[X]
+The harsh Cesarian Captain of[NL]
+the Lion Brigade. Leads[NL]
+the front lines against Arcanae.[X]
 
 ## LeonDescText
-The Basileus of Haedric. Also[NL]
-an old friend of the Four Orden.[X]
+The Basileus of Haedric,[NL]
+an unparalleled warrior.[X]
 
 ## JasperDescText
 A recent Cesarian recruit with a[NL]
@@ -88,8 +98,8 @@ An honest and pure Cesarian recruit.[NL]
 Can be a bit lazy, but is very loyal.[X]
 
 ## LuxDescText
-The young, yet assertive vice-[NL]
-captain of the Tiger Brigade[X]
+A soldier of Cesaria. Fiercely[NL]
+loyal to Captain Maximus.[X]
 
 ## YvetteDescText
 A Cesarian soldier attached[NL]
@@ -97,58 +107,56 @@ to the Cheetah Brigade.[NL]
 Fiercely loyal to her Captain.[X]
 
 ## ZaliusDescText
-Captian of the Cesarian Cheetah[NL]
-Brigade. Very secretive[NL]
-and skilled in spying.[X]
+The mysterious Captain of the Cesarian[NL]
+Cheetah Brigade. Very little is known of him.[X]
 
 ## LeyosDescText
 The former General of Cesaria[NL]
 and personal bodyguard to the Emperor.[X]
 
 ## ClaraDescText
-A kind and softspoken curate of Haedric[NL]
-who is not afraid to heal allies in battle.[X]
+A young and honest Arcanian girl[NL]
+being trained by one of the Grand Magi.[X]
 
 ## LukeDescText
-An open-minded monk of Haedric.[NL]
-He has many doubts about religion.[X]
+A monk hailing from Haedric who seeks[NL]
+to better understand the Higher Beings.[X]
 
 ## ArcDescText
-A kindhearted militia captain who[NL]
-is serious when it comes to his job.[X]
+A Militia leader of Haedric who cares[NL]
+deeply for his hometown of Danaan.[X]
 
 ## MilitiaManDescText
 A Militiaman who valiantly[NL]
 protects his hometown.[X]
 
 ## EfilDescText
-Guardian of the temple of Kilthel[NL]
-and a hero from the Great War[NL]
-years ago. Wishes for peace.[X]
+The hero of the war ten years ago[NL]
+who sealed himself away in Draterus.[X]
 
 ## UzkalisDescText
-Close ally of Xavus and[NL]
-yearns for power too.[X]
+The Grand Magus of Thunder[NL]
+and a leader of New Arcanae.[X]
 
 ## AryaDescText
-A reserved and shady[NL]
-assassin of Shizon.[X]
+A determined assassin of Shizon[NL]
+seeking to prove her country's honor.[X]
 
 ## KendrickDescText
-A skilled yet shady[NL]
-merchant of many trades.[X]
+A sarcastic businessman[NL]
+with a shady past.[X]
 
 ## ConnorDescText
-A ruthless member of a bandit clan[NL]
-but cares for his fellow clanmembers.[X]
+The brutal right-hand man to[NL]
+Adlez. Desires money and power.[X]
 
 ## AdlezDescText
-Leader of a bandit clan. Only holds[NL]
-his position to live comfortably.[X]
+A former Haedrician warrior turned[NL]
+bandit with ulterior motives.[X]
 
 ## MurielDescText
-A Grand Magus of Arcanae. She[NL]
-fights against Xavus and Uzaklis.[X]
+The Grand Magus of Wind. Comes[NL]
+into conflict with Xavus and Uzkalis.[X]
 
 ## ChristinaDescText
 A laid back and relaxed[NL]
@@ -163,12 +171,12 @@ A pacifist who wishes to[NL]
 avoid all conflict.[X]
 
 ## CougarDescText
-A reserved and calm Altian rider.[NL]
-Cares deeply for duty to his nation.[X]
+An Altian scout and courier[NL]
+who's still reliable in a fight.[X]
 
 ## XeximDescText
-The extremely skilled leader of[NL]
-Shizon. Protects Shizon's secrets.[X]
+The mysterious leader of Shizon[NL]
+who rarely leaves the island.[X]
 
 ## GhostDescText
 A mysterious,[NL]
@@ -186,12 +194,12 @@ An inhabitant of the[NL]
 mysterious island of Shizon.[X]
 
 ## RexDescText
-The head general of[NL]
-the Cesarian military.[X]
+The General of the Cesarian military.[NL]
+One of the most powerful men in Avenir.[X]
 
 ## FinocDescText
-A loyal, Altian scout and[NL]
-close friend of Elanil.[X]
+A relaxed Wyvern Rider of Altia who places[NL]
+great trust in his country's leaders.[X]
 
 ## ArcanianDescText
 A soldier of the[NL]
@@ -293,9 +301,8 @@ Locked in the temple of[NL]
 Sateenkaari by Efil.[X]
 
 ## SylvaineDescText
-A young Cesarian captain[NL]
-who is passionate about[NL]
-her loyalty.[X]
+The calm, skilled, but caring Captain[NL]
+of the Cesarian Leopard Brigade.[X]
 
 ## SamDescText
 A greedy Altian bandit who has[NL]
@@ -307,8 +314,8 @@ An Altian bandit[NL]
 following Sam.[X]
 
 ## SekarDescText
-An experienced and reliable[NL]
-Haedrican warrior.[X]
+A quiet warrior of Haedric[NL]
+fiercely loyal to the Basileus.[X]
 
 ## RichterDescText
 An ambitious warlord who[NL]
@@ -349,3 +356,7 @@ seeking treasure.[X]
 ## HalleckDescText
 The priest-leader[NL]
 of a band of Wanderers.[X]
+
+## AjaxDescText
+An Arcanian man dedicated to[NL]
+justice. Has no regard for authority.[X]
