@@ -88,7 +88,7 @@ Magus,MagusMMv|IsPointer,0x81f249c
 Magus F,MagusFMv|IsPointer,0x81f249c
 Master Knight_F,0x81c6a84,0x81c7428
 Commander,CommanderMv|IsPointer,0x81f3fa0
-Impaler,ImpalerMv|IsPointer,0x81f49b8
+Impaler,ImpalerMv|IsPointer,0x81c3d7c
 Wyvern General,0x81d6ec4,0x81d7cc8
 Hunter,HunterMv|IsPointer,0x81f607c
 Master Knight,0x81c6a84,0x81c7428
