@@ -1,8 +1,4 @@
 
-## KnightDescText
-Heavily armored knights with poor[NL]
-movement. Equip: Lances, axes.[X]
-
 ## LostSoulDescText
 A soul without a body who's[NL]
 about to make a major decision.[X]
@@ -108,4 +104,8 @@ Equip: Swords, Lances, Axes, Bows.[X]
 
 ## HighPriestDescText
 Lord of fire and dragons of[NL]
-Altia Equip: Fire, Staves.[X]
+Altia Equip: Anima, Staves.[X]
+
+## BattleSageDescText
+Talented physical and magical[NL]
+fighters. Equip: Swords, Anima.[X]
