@@ -204,14 +204,15 @@ ENUF 0x17
 ENUF 0x19
 ENUF 0x21
 FADI 0x5
+CLEA 0x0
+CLEE 0x0
+ASMC RefreshAll|1
 SVAL 0x1 Adlez
 ASMC MakeNotDeadASM|1
 SVAL 0x1 Leon
 ASMC MakeNotDeadASM|1
 CAM1 [5,8]
 MUSC Victory
-CLEA Vicar
-CLEE Cesarian
 LOAD3 0x1 PlayerLoading3
 LOAD2 0x1 GoodEndingAdlezLeon
 ENUN

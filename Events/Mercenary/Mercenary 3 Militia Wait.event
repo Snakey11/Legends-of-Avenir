@@ -166,7 +166,7 @@ MUSS Comrades
 Text(Merc3MilitiaWaitArcRecruitText)
 TurnAlly(Elanil)
 TurnAlly(Finoc)
-SetSupport(Finoc,Elanil,Support1Text)
+SetSupport(Finoc,Elanil,CSupport)
 MURE 0x5
 NoFade
 ENDA
@@ -176,7 +176,7 @@ MUSS Comrades
 Text(Merc3MilitiaWaitLukeRecruitText)
 TurnAlly(Elanil)
 TurnAlly(Finoc)
-SetSupport(Finoc,Elanil,Support1Text)
+SetSupport(Finoc,Elanil,CSupport)
 MURE 0x5
 NoFade
 ENDA
@@ -186,7 +186,7 @@ MUSS Comrades
 Text(Merc3MilitiaWaitPlayerRecruitText)
 TurnAlly(Elanil)
 TurnAlly(Finoc)
-SetSupport(Finoc,Elanil,Support1Text)
+SetSupport(Finoc,Elanil,CSupport)
 MURE 0x5
 NoFade
 ENDA

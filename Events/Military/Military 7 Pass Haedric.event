@@ -76,6 +76,7 @@ EndUnit
 //Label BeginingScene
 BeginningScene:
 ENUT 0x12 // Prevents the good ending Tact death quote.
+ENUT 0x13
 SVAL 0xB Coords(7,5)
 LOMA MilitaryPassAltia5
 LOAD1 0x1 OutsideUzkalis
