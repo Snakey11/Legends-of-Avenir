@@ -154,7 +154,7 @@ PrepForEndItemList:
 BYTE SteelSword SteelLance SteelAxe SteelShortbow 0x00 Elwind Divine Worm
 
 ALIGN 4
-#include "PrepScreen/PrepScreen.lyn.event"
+#include "PrepScreen/PrepScreen.event"
 /*
 ALIGN 4
 #include "Raid/Raid.event"
@@ -181,7 +181,10 @@ ALIGN 4
 #include "ModularSupply/ModularSupply.event"
 
 ALIGN 4
-#include "SupportRework/SupportRework.event"
+#include "SupportRework/CBaseConvos/SupportRework/SupportRework.event"
+
+ALIGN 4
+#include "SupportRework/CBaseConvos/BaseConvos.event"
 
 ALIGN 4
 #include "ToggleFixedGrowths/ToggleFixedGrowths.event"

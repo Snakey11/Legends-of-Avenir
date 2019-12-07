@@ -43,7 +43,7 @@ Skip this chapter.[X]
 This unit is eligible to[NL]
 promote to a new class.[X]
 
-## BaseSupportSelectConvoText
+## BaseConvoSelectConvoText
 Select a conversation.[X]
 
 ## EscapeName
@@ -64,13 +64,12 @@ by having this unit arrive.[X]
 Mov[X]
 
 ## PrepScreenSupportDescText
-View support[NL]
-conversations for[NL]
+View conversations for[NL]
 this chapter.[X]
 
 ## PrepScreenSupportErrorText
 There are no[NL]
-supports to view.[X]
+conversations to view.[X]
 
 ## Support1Text
 [FarLeft][LoadDerek][FarRight][LoadJasper]
@@ -78,6 +77,21 @@ Hey, Derek. This is[NL]
 support convo number 1.[A]
 [FarLeft]Pfft. Supports are[NL]
 for losers.[A][X]
+
+## Support2Text
+[FarLeft][LoadRemus][FarRight][LoadMadeleine]
+Okay, Remus. The commander ordered[NL]
+us to develop our characters.[A]
+[FarLeft]Really? [Tact][NL]
+ordered that?[A]
+[FarRight]Whelp, let's get to it.[A]
+[FarLeft]Uh here take this sword.[A]
+[FarRight]Okay.[A][X]
+
+## Support3Text
+[FarLeft][LoadKendrick]
+Anyone wanna support with me?[A][CloseSpeech][......]
+Anyone?[A][X]
 
 ## SupportIncreasedToText
 Support level increased to [X]
@@ -108,28 +122,28 @@ for one turn[X]
 
 #include "Chapters/Sassy.event"
 
-## BaseSupportTextID1
+## BaseConvoTextID1
 [X]
 
-## BaseSupportTextID2
+## BaseConvoTextID2
 [X]
 
-## BaseSupportTextID3
+## BaseConvoTextID3
 [X]
 
-## BaseSupportTextID4
+## BaseConvoTextID4
 [X]
 
-## BaseSupportTextID5
+## BaseConvoTextID5
 [X]
 
-## BaseSupportTextID6
+## BaseConvoTextID6
 [X]
 
-## BaseSupportTextID7
+## BaseConvoTextID7
 [X]
 
-## BaseSupportTextID8
+## BaseConvoTextID8
 [X]
 
 ## SupportBonusesText

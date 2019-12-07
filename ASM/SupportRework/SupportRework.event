@@ -129,6 +129,9 @@
 			EventMenuCommand(BaseSupportTextID8,BaseSupportUsability,BaseSupportConvo8)
 		EventMenuCommandEnd
 		
+		BaseSupportProcName:
+		String("BaseSupports")
+		
 		ALIGN 4
 		SupportReworkBlueBox:
 		#incext compress "Blue Box.dmp"

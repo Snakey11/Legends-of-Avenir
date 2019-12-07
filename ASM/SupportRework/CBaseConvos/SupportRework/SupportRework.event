@@ -1,0 +1,104 @@
+
+#ifdef _FE8_
+	#ifndef SUPPORT_REWORK
+		#define SUPPORT_REWORK
+		
+		#include "MasterSupportCalculations.lyn.event" // Main ASM installer.
+		
+		#include "CHARASM/CHARASM.event" // Small hack necessary for handling speech bubbles on the map.
+		
+		ALIGN 4
+		IncreaseSupportPopupDefinitions:
+		WORD 0x0C 0x5A // Play sound 0x5A
+		WORD 0x06 SupportIncreasedToText // Show "Support level increased to ".
+		WORD 0x07 0x0203EFC0 // Show string at 0x0203EFC0 (This will be C, B, or A).
+		WORD 0x06 0x22 // Show "." at the end.
+		WORD 0x00 0x00 // End
+		
+		ALIGN 4
+		SupportConvoEvents: // This is called when viewing a support (talk) convo.
+		EVBIT_T 0x4
+		MUSI
+		TEXTSTART
+		TEXTSHOW -1 // Shows text in slot 0x2.
+		TEXTEND
+		REMA
+		SADD 0x032 // Move slot 0x3 into 0x2
+		ASMC CallIncreaseSupport|1
+		MUNO
+		NoFade
+		ENDA
+		
+		PUSH
+		ORG $28290
+		SHORT 0x4770 // bx lr. Eliminate gaining support points.
+		ORG $87698
+		SHORT 0x4770 // bx lr. Eliminate vanilla support drawing.
+		POP
+		
+		// Stuff for stat screen below here:
+		#ifndef AtkText
+			#define AtkText 0x4F3
+		#endif
+		#ifndef DefText
+			#define DefText 0x4EF
+		#endif
+		#ifndef HitText
+			#define HitText 0x4F4
+		#endif
+		
+		ALIGN 4
+		SupportBonusesTextLink:
+		SHORT SupportBonusesText
+		
+		ALIGN 4
+		SupportBonusesStatNames:
+		SHORT AtkText DefText HitText AvdText CrtText CAvdText
+		
+		ALIGN 4
+		SupportReworkBlueBox:
+		#incext compress "Blue Box.dmp"
+		/*
+			SupportReworkBlueBox:
+			BYTE 0x08 0x03 // Width, height
+			SHORT 0x07 0x0409 0x0A 0x0A 0x0A 0x0A 0x0A 0x09 0x08 // Bottom row, dark background
+			SHORT 0x04 0x05 0x05 0x05 0x05 0x05 0x05 0x05 0x06
+			SHORT 0x04 0x0409 0x0A 0x0A 0x0A 0x0A 0x0A 0x09 0x06 // Dark background
+			//SHORT 0x04 0x040E 0x0D 0x0D 0x0D 0x0D 0x0D 0x0E 0x06 // White line
+			//SHORT 0x04 0x05 0x05 0x05 0x05 0x05 0x05 0x05 0x06
+			SHORT 0x01 0x02 0x02 0x02 0x02 0x02 0x02 0x05 0x03 // Top row
+			
+			SupportReworkMiddleBox:
+			BYTE 0x04 0x03
+			SHORT 0x0A 0x0A 0x0A 0x0A 0x0A
+			SHORT 0x05 0x05 0x05 0x05 0x05
+			SHORT 0x0A 0x0A 0x0A 0x0A 0x0A
+			//SHORT 0x0D 0x0D 0x0D 0x0D 0x0D
+			//SHORT 0x05 0x05 0x05 0x05 0x05
+			SHORT 0x02 0x02 0x02 0x02 0x02
+			
+			// Tile notes:
+				0x00 = Blank
+				0x01 = Upper left corner
+				0x02 = Normal but upper edge is a darker horizontal line. This is intended as an upper border
+				0x03 = Upper right corner
+				0x04 = Left edge border without corners
+				0x05 = Normal
+				0x06 = Right edge border without corners
+				0x07 = Bottom left corner
+				0x08 = Bottom right corner
+				0x09 = Normal but darker. 0x09 seems to surround lines of 0x0A. Maybe a transition between 0x05 and 0x0A?
+				0x0A = Darker blue designed to be behind numbers
+				0x0B = Right-facing white arrow
+				0x0C = Small flourish on white horizontal line (leads into center rhombus shape)
+				0x0D = White horizontal line
+				0x0E = Wite horizontal line beginning/end
+				0x0F+ = Blank
+				
+				0x04 in the higher byte is a horizontal flip
+		*/
+		
+	#endif // SUPPORT_REWORK
+#else
+	ERROR Support Rework is for FE8 only!
+#endif

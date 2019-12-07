@@ -1,0 +1,103 @@
+
+#define BaseConvoSize 32 // This NEEDS to be divisible by 4.
+// I'd really prefer to be able to access sizeof(BaseConvoEntry), but idk if that's possible yet.
+
+ALIGN 4
+BaseConvoTable: // Allocate 0xFF * 8 entries. 0xFF chapters, 8 entries per chapter.
+ORG CURRENTOFFSET + 0xFF*8*BaseConvoSize
+
+{
+#include "ConvoTableDefs.event"
+PUSH
+
+Chapter(MilitaryAccept3)
+	Entry
+		bg(0x30)
+		name(Military3AcceptNameText)
+		text(Support1Text)
+		music(Aquatic_Ruin)
+	Entry
+		bg(0x2F)
+		name(Military4AcceptRetreatNameText)
+		text(Support2Text)
+		item(SilverSword,Zaheva)
+		music(Venus_Lighthouse)
+		importance(2)
+	Entry
+		name(Military5AcceptRetreatLeaveNameText)
+		event(BaseConvoTestEvent)
+	Entry
+		bg(0x2D)
+		name(Military6AcceptRetreatLeaveNameText)
+		text(Military1BeginningText)
+		item(Elixir,0xFF)
+		music(Derris_Kharlan_Appear)
+		importance(2)
+	Entry
+		bg(0x2C)
+		name(Military7AcceptRetreatLeaveNameText)
+		text(Military1SylvaineBriefingText)
+		importance(1)
+	Entry
+		bg(0x2B)
+		name(Merc1NameText)
+		text(Military1EndingBeginningText)
+		music(Last_Battle_Decision)
+		unit(LoadBaseConvoSylvaine)
+		importance(3)
+	Entry
+		bg(0x2A)
+		name(Merc2BanditNameText)
+		text(Military1ForrestBattleText)
+		item(SteelBlade,Madeleine)
+		music(Green_Emerald)
+		importance(1)
+	Entry
+		bg(0x29)
+		name(Merc3BanditNameText)
+		text(Military1ChristinaBattleText)
+		music(Oil_Ocean)
+		unit(LoadBaseConvoChristinaForrest)
+		importance(3)
+Chapter(MilitaryAcceptRetreat4)
+	Entry
+		bg(0x10)
+		name(Military6AcceptRetreatLeaveNameText)
+		text(Support3Text)
+		music(Casino_Night)
+	Entry
+		bg(0x13)
+		name(Military7AcceptRetreatLeaveNameText)
+		text(Support1Text)
+		music(Heavens_Gate)
+
+POP
+}
+
+ALIGN 4
+BaseConvoTestEvent: // Refer to the generic event in BaeConvos.event.
+EVBIT_T 0x4
+SetBackground(0x10) // REQUIRED, Load a background!
+MUSC A_Tragic_Decision
+TEXTSTART
+TEXTSHOW Military4AcceptRetreatTactDecisionText // Example usage of a custom event: TEXTCONT with music changes.
+TEXTEND
+MUSC Emergency
+TEXTCONT
+TEXTEND
+REMA
+FADI 0x5 // This fade is highly recommended.
+CLEAN // This is REQUIRED.
+SVAL 0xB 0x1 // REQUIRED to mark when events are finished running.
+NoFade
+ENDA
+
+
+LoadBaseConvoSylvaine:
+UNIT Sylvaine ArmoredWyvernLord Sylvaine Level(9,Ally,True) [0xFF,0] 0x00 0x00 0x00 0x00 [SilverLongbow] NoAI
+UNIT
+
+LoadBaseConvoChristinaForrest:
+UNIT Christina Cavalier_F Sylvaine Level(9,Ally,True) [0xFF,0] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI
+UNIT Forrest Cavalier Sylvaine Level(9,Ally,True) [0xFF,0] 0x00 0x00 0x00 0x00 [ShortSpear] NoAI
+UNIT

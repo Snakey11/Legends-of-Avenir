@@ -129,8 +129,8 @@ bx r0
 DisplayBottomText: @ Displays "Select a conversation." at the bottom
 push { r4 - r7, lr }
 ldr r6, =#0x02013590
-blh #0x080A3544, r0
-mov r7, r0
+@blh #0x080A3544, r0 @ Preeeety sure this doesn't do anything for me.
+@mov r7, r0
 mov r4, r6
 sub r4, #0x08
 mov r0, r4
@@ -189,7 +189,7 @@ orr r0, r1
 mov r1, #0x08
 orr r0, r1
 mov r1, #0x10
-orr r0, r1
+orr r0, r1 @ Isn't all of this the same as mov r1, #0x1F; orr r0, r1...?
 strb r0, [ r2, #0x01 ]
 mov r0, #0x00
 blh Text_SetFont, r3
@@ -389,7 +389,7 @@ bx r0
 .type EnsureSelection, %function
 EnsureSelection:
 push { lr }
-ldr r1, =#0x030004C4
+ldr r1, =#0x030004C4 @ Memory slot 0x3
 ldrh r1, [ r1 ]
 cmp r1, #0x00
 bne EndEnsureSelection
@@ -758,6 +758,7 @@ bx r1
 .global PrepScreenSupportProc
 PrepScreenSupportProc: @ This is the proc that is called to build the prep screen support screen.
 .word 0x000E, 0
+.word 0x0001, BaseSupportProcName
 .short 0x000B, 0x0, 0x0, 0x0 @ Label 0x0
 	.word 0x0002, ClearMemorySlot2
 	.word 0x0002, SetScrollingBackground @ The vanilla support screen is constructed at 0x080A1270
@@ -780,6 +781,15 @@ PrepScreenSupportProc: @ This is the proc that is called to build the prep scree
 		.word 0x0002, UnsetFinalRAM
 		.word 0x0002, 0x080A1931 @ Return to prep screen theme
 .word 0x0000, 0x0 @ End
+
+@ I can use this proc body to store information!
+@ 0x28: menuX
+@ 0x29: menuY
+@ 0x2A: menuWidth
+@ 0x2B: menuHeight
+@ 0x2C: menuIdk
+@ Allocate 6 more words for unused routines.
+
 
 .align
 .ltorg
