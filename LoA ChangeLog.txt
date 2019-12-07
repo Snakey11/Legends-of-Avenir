@@ -1,3 +1,23 @@
+v1.9
+Stance skills have been fixed back to +2 and +3 stats
+Knight descriptions have been changed to include 
+Luna has been changed to FE7 Luna without the crit
+Muriel no longer has a staff rank nor a light rank
+Fixed game over glitch after 7 Military Haedric endinge
+Elthunder description has been fixed
+Flare has a new description
+Arya stays with the party now after 3 Mercenary Militia Kill
+Fixed Tact brigand promotion map sprite
+Fixed Tact soldier promotion map sprite
+Warding blow has been changed to +5 res
+Certain blow has been changed to +15 hit
+Fixed Elaqua icon
+Buffed Maximus's stats and fixed his weapon ranks
+Fixed the prep screen help text bug
+Base conversations are implemented!
+Fixed the prep screen unusable menu item description text bug
+Updated character descriptions
+
 Hotfixes before v1.9:
 Promotion items have been fixed
 Description for AxeFaith has been changed to include "Axes don't lose durability"
