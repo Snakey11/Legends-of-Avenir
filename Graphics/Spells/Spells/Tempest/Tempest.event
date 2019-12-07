@@ -76,6 +76,8 @@ SHORT 1; BYTE 51 0x86; POIN Tempest_objimg_0; WORD 612 1224; POIN Tempest_bgImag
 SHORT 10; BYTE 52 0x86; POIN Tempest_objimg_0; WORD 624 1248; POIN Tempest_bgImage_0 Tempest_objPalette Tempest_bgPalette_0 Tempest_TSA_0
 WORD 0x85000053
 WORD 0x80000100
+WORD 0x80000100
+WORD 0x80000100
 WORD 0x80000000
 
 //OAM Data
