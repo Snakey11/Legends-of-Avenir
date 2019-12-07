@@ -123,11 +123,11 @@ Darting Blow: +5 Attack Speed[N]
 when initiating battle.[X]
 
 ## SD_WardingBlow
-Warding Blow: +20 Res[N]
+Warding Blow: +5 Res[N]
 when initiating battle.[X]
 
 ## SD_CertainBlow
-Certain Blow: +20 Hit[N]
+Certain Blow: +15 Hit[N]
 when initiating battle.[X]
 
 ## SD_ArmoredBlow
