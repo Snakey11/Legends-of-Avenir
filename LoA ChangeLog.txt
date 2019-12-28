@@ -1,4 +1,5 @@
 v1.9
+New route! Kill the boss of chapter 4 after accepting the promotion in the military
 Stance skills have been fixed back to +2 and +3 stats
 Knight descriptions have been changed to include 
 Luna has been changed to FE7 Luna without the crit
@@ -17,6 +18,10 @@ Fixed the prep screen help text bug
 Base conversations are implemented!
 Fixed the prep screen unusable menu item description text bug
 Updated character descriptions
+HP bars!
+Knights have 5 movement, generals have 6, and great knights have 7
+Sentinel stats have been buffed
+Slayer weapons have reduced uses
 
 Hotfixes before v1.9:
 Promotion items have been fixed
