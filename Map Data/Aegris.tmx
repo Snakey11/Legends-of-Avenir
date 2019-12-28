@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="23" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="0E000F10" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/0E000F10.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="25" height="23">
+  <properties>
+   <property name="Anims" value="_0EAnims"/>
+   <property name="ChapterID" value="MilitaryAcceptRetreatHelp5"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="AegrisChanges"/>
+   <property name="MapID" value="AegrisMap"/>
+   <property name="ObjectType" value="0x0E"/>
+   <property name="PaletteID" value="0x0F"/>
+   <property name="TileConfig" value="0x10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJx9lstOFEEUhqu6GQhgom6RDSzACOLCFTEuFEQQwbXRmEhQcaEv4ArCNfgSXMSJ8BLDVYGoL+BixoAwXvdDov+f+itdNI2LLzVVfeqcOpc6NV+tMc2RMTFYNcbkwAgogQ9gGxQhsw5exPgOuccYh0ALmAcXwRXreA35GTBl3LwR30oYi5j3g1vgHmgHO6AH38oYm6yzTxt5/B7FOAZ6wCroBX+kczrQT/7aRHeHaDFO3zfJTWpu5UfZOl9oa8+6sR/zrijZ46EPFevOzdg04/dN60bKH2JtT3vaIhc72qCtO5jfFdRf1Bm2UjY6ZeNlnM1g7M5fBx31ytXAf2Q/n+JDRX4PY/4EPAUHig194dlogzL0ZVF+cp1+vUnpzdLvbYxjbQJMgiqsfcLeDdaUvns49/Dcm6AWv8+CH/h9LkN/JThnHjI1mMc2qZE9rO8zF9HxWl0IanVF9X5GfnVm2GD+NjC+Ny7PZcWJ8jnIV4MI1Aa1ugZale8C5J6BXjAL7mfY8Hn1sWDcfX35+snbk7AOmlSDbar5rVNsXILMXBCDetU6z1eQT3XyNZeSbYuS+igqH+lYHRl31kIQA8a4T7bbhc85z1/QHafsEvbPYX0eLOgOhn5Qf2PGffMMBz2pVT0ppxyUVN+kQF/AGljG/Chy+i9Yp/86dTG/YAm02sSWr2fm+bZ6Ur1i4ntBaKuku/7FOBvXpP8RdTHWYFN58DXge5Ef2af69L1b95F9k7W+LruMr7fxAAzJRpfqg7XEsaAchXeP8Wm2iRz3zMpf3sWPxvlXF9h4BcZk4zlrVcTStWqSe8P4TJjkXu+CG+p/7xC/ZbASJz1hCuMImAYPZWOG+bLuHeEZ2eerjfvt703Yz87bpPduY74DdoN6SNsYBlU6P/fVQvcguCrffcyY/331M8ZnU/0sjOeB9vhYNcjGuD3en2tkw/fwjtjZOVTOw9reh9xv8FZ5+SXf0zYYq5XIsQsmrWNHa3yTuK9bNftd94jxKup+My959bnTbFibvBUDehN9v8p6k+jvZdXrgHwN3wPf20MbRd2dXPB/YVHr3p+QtL/09ac5+TY1BPfjH0BADuk=
+  </data>
+ </layer>
+ <layer name="Destroy South" width="25" height="23" visible="0">
+  <properties>
+   <property name="Height" value="2"/>
+   <property name="ID" value="7"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="8"/>
+   <property name="Y" value="12"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjILhAR4zMTA8A+LnTLSzg5mZgYENiNmZaWfHKBgFo4C2AACsBgLQ
+  </data>
+ </layer>
+ <layer name="Close South" width="25" height="23" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="6"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="9"/>
+   <property name="Y" value="13"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRQApQHGgHjIJRMAooAgCFQAAi
+  </data>
+ </layer>
+ <layer name="Destroy West" width="25" height="23" visible="0">
+  <properties>
+   <property name="Height" value="2"/>
+   <property name="ID" value="5"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="1"/>
+   <property name="Y" value="10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzcEJACAMwMBQUfcfUl3D7iB9mYO8A5J+sAJ2dqLu0RuMbLa6hyS9ukAHAtQ=
+  </data>
+ </layer>
+ <layer name="Close West" width="25" height="23" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="4"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="2"/>
+   <property name="Y" value="11"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjALqAcWBdsAoGAWjYBQQAACipAAi
+  </data>
+ </layer>
+ <layer name="Destroy Center" width="25" height="23" visible="0">
+  <properties>
+   <property name="Height" value="2"/>
+   <property name="ID" value="3"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="11"/>
+   <property name="Y" value="7"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2D4g8dMDAzPgPg5E+3sYGZmYGADYnZm2tkxCkbBKBgFo4ByAAAG+ALQ
+  </data>
+ </layer>
+ <layer name="Close Center" width="25" height="23" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="2"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="12"/>
+   <property name="Y" value="8"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUUAsoDrQDRsEoGAWjYBQQBADEKAAi
+  </data>
+ </layer>
+ <layer name="Destroy North" width="25" height="23" visible="0">
+  <properties>
+   <property name="Height" value="2"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="15"/>
+   <property name="Y" value="0"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYCAfPGZiYHgGxM+ZKDCEAGBmZmBgA2J2ZtrZMQpGwSgYBaNgFIyCkQMAiHUC0A==
+  </data>
+ </layer>
+ <layer name="Close North" width="25" height="23" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="16"/>
+   <property name="Y" value="1"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBj8QHGgHTAKRsEoGAWjYBSMgmEDABxjACI=
+  </data>
+ </layer>
+</map>
