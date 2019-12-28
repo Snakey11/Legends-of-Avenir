@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="18" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="0E007210" tilewidth="16" tileheight="16">
+  <image source="../../../Tools/Tiled/Tiled Inserter/Tilesets/FE8 Tilesets/0E007210.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="20" height="18">
+  <properties>
+   <property name="Anims" value="_0EAnims"/>
+   <property name="ChapterID" value="MilitaryAcceptRetreatHelp6Grow2"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="ShizonLandingChanges"/>
+   <property name="MapID" value="ShizonLanding2Map"/>
+   <property name="ObjectType" value="0x0E"/>
+   <property name="PaletteID" value="0x0F"/>
+   <property name="TileConfig" value="0x10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJx1lMtOVEEQhuuc48TgEJQ1MWEjicwCHkEl0QiJvoIXUBI17k1YqDAQRR7AncKIcWHCA7gQYVS8BANbN8QLIIxrMhu/SlXn9ByZxZeurqnzd3VV9TQTkZ5M5IOIDKUix2AfGjAI58QYjPwadxPfJfjB96Psx+AG9LJvuuY6v5fwbWJvZKbR7XRF/mXiKtAHZ/FPwhRU4YzrTWAPJKYXayxlRqxdSU1zy/kIa7DA91dc702k9wTm0v/zU//r1GLWEtP9hM557F3WMhyI6TULenfaEPQC+s2253nB9b67P+hp3e+2Qfvx0+u8S/wv7Feudwqm8Y3DTJKfqXX/1obQjxPEV8Xuuypmbx2ip+cdwf7s9dUzLzvaz2XX6OC3Rdar6F+D6zBbuG93YrP1XmxfF9O9BbddvwydHreP7z46D+AhNKJ+6PyphvbtGfZzmHdfNcpL7/bV7Wl4CX8dvVfQCznqnd9qjeBdZvFHE9M5zb4fKjAGe8TO+Bl114/nRWu3KK3zoPGZ9/4iGsMwAlPQ6fkvsNbgRZbXb9vrsyP5PIT+6Kz+ljx/nRNlBLuGfwWdVahneX4nM6u91vmx10V1VyTvkWqVUzs3vDXlj9dP4+8V3q/Wfsdr+4j1S2EmSv5+Vac/zWdgyH1PC+9XZya8yVJi94xnIty3I22dg1nPtZnkhJkJ1F1X7zfsOiXPSXsaz0HjEL3wnzDg7/I4615UJ9WtSWtMPHsa8w88f8Ed
+  </data>
+ </layer>
+ <layer name="blank" width="20" height="18">
+  <properties>
+   <property name="Height" value="0"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="0"/>
+   <property name="X" value="0"/>
+   <property name="Y" value="0"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjZBgFo2AUjIJRMBgBAAtAAAI=
+  </data>
+ </layer>
+</map>
