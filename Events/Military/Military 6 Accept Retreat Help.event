@@ -21,7 +21,7 @@ POIN BeginningScene EndingScene
 TurnBasedEvents:
 TurnEventPlayer(0x00,Turn1,1)
 InfiniteTurnEventPlayer(0x00,CheckToAdvance,1)
-InfiniteTurnEventPlayer(0x12,ChackToChangeAI,1)
+InfiniteTurnEventPlayer(0x12,CheckToChangeAI,1)
 END_MAIN
 
 //Label CharacterBasedEvents
@@ -187,7 +187,7 @@ DNorth:
 EnterStop
 GiveItem(BraveAxe,0xFFFF)
 TileChange(5,9)
-COUNTER_ADD 0x0
+COUNTER_ADD 0x0 0x0
 NoFade
 EndA2
 
@@ -195,7 +195,7 @@ DCenter:
 EnterStop
 GiveItem(KillerLance,0xFFFF)
 TileChange(11,10)
-COUNTER_ADD 0x0
+COUNTER_ADD 0x0 0x0
 NoFade
 EndA2
 
@@ -203,15 +203,15 @@ DSouth:
 EnterStop
 GiveItem(Dragonshield,0xFFFF)
 TileChange(15,15)
-COUNTER_ADD 0x0
+COUNTER_ADD 0x0 0x0
 NoFade
 EndA2
 
 DEast:
 EnterStop
-GiveItem(Runesowrd,0xFFFF)
+GiveItem(Runesword,0xFFFF)
 TileChange(21,15)
-COUNTER_ADD 0x0
+COUNTER_ADD 0x0 0x0
 NoFade
 ENDA
 

@@ -95,6 +95,7 @@
 [LoadSean] = [LoadFace][0x34][0x01]
 [LoadBlaine] = [LoadFace][0xE8][0x01]
 [LoadHalleck] = [LoadFace][0x20][0x01]
+[LoadPascal] = [LoadFace][0x1B][0x01]
 
 [LoadGuildsman] = [LoadFace][0x51][0x01]
 [LoadBandit1] = [LoadFace][0x4C][0x01]

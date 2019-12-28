@@ -230,8 +230,8 @@ A former resident of Danaan[NL]
 who turned to petty banditry.[X]
 
 ## GerwickBanditDescText
-A bandit subservient[NL]
-to Gerwick.[X]
+A member of a large and[NL]
+powerful bandit clan.[X]
 
 ## WestonDescText
 A bandit who is in charge[NL]
@@ -360,3 +360,11 @@ of a band of Wanderers.[X]
 ## AjaxDescText
 An Arcanian man dedicated to[NL]
 justice. Has no regard for authority.[X]
+
+## GenericBanditDescText
+A roaming bandit laying waste[NL]
+to homes and villages.[X]
+
+## PascalDescText
+A loyal Shizonian tasked[NL]
+with defending his home.[X]
