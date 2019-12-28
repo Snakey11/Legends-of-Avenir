@@ -54,6 +54,9 @@ ALIGN 4
 #include "Class Expansion.event"
 
 ALIGN 4
+#include "CopyUnit/Installer.event"
+
+ALIGN 4
 #include "Display All Weapon Level Ups/Promotion Ranks Fix Installer.event"
 
 ALIGN 4
@@ -64,6 +67,9 @@ ALIGN 4
 
 ALIGN 4
 #include "GiveToSupply/GiveToSupply.lyn.event"
+
+ALIGN 4
+#include "HPBars/HPBars.event"
 
 //ALIGN 4
 //#inctext lyn "LevelUP/LevelUP.elf" "LevelUp/Definitions.elf"
