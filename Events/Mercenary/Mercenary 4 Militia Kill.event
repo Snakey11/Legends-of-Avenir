@@ -52,8 +52,7 @@ UNIT Kendrick 0x00 0x00 Level(1,Ally,True) [4,12] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 BeginningScene:
-SVAL 0xB 0x0E0016
-LOMA MilitaryAcceptRetreatLeave6GrowingTown3
+LOMA PortSelsingCutscene
 LOAD2 0x1 DockAllies
 ENUN
 MUSC Zelos

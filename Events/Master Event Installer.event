@@ -127,6 +127,15 @@
 	{
 	#include "Military/Military 7 Accept Retreat Leave.event"
 	}
+	{
+	#include "Military/Military 5 Accept Retreat Help.event"
+	}
+	{
+	#include "Military/Military 6 Accept Retreat Help.event"
+	}
+	{
+	#include "Military/Military 7 Accept Retreat Help.event"
+	}
 	#include "Military/Narrator Fight.event"
 #endif
 #ifndef __NO_MAGE__
