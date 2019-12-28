@@ -118,5 +118,7 @@ SpecifiedBattleConvo(BossEfil,PlayerFArcher,MilitaryAcceptRetreatLeave7,0x11,Mil
 SpecifiedBattleConvo(BossEfil,PlayerFWyvernRider,MilitaryAcceptRetreatLeave7,0x11,Military7AcceptRetreatLeaveTactEfilBattleText)
 SpecifiedBattleConvo(BossEfil,Madeleine,MilitaryAcceptRetreatLeave7,0x12,Military7AcceptRetreatLeaveMadeleineEfilBattleText)
 UnspecifiedBattleConvo(BossEfil,MilitaryAcceptRetreatLeave7,0x13,Military7AcceptRetreatLeaveEfilBattleText)
+UnspecifiedBattleConvo(Shanley,MilitaryAcceptRetreatHelp5,0x13,Military5AcceptRetreatHelpShanleyBattleText)
+UnspecifiedBattleConvo(Pascal,MilitaryAcceptRetreatHelp6,0x17,Military6AcceptRetreatHelpPascalBattleText)
 
 BYTE 0xFF 0xFF 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Terminator

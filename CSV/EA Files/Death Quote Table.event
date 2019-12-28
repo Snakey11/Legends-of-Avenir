@@ -191,6 +191,10 @@ DeathQuote(BossArya,MilitaryAcceptRetreat4,0x02,Military4AcceptRetreatAryaDeathT
 DeathQuote(Halleck,MilitaryAcceptRetreatLeave5,0x02,Military5AcceptRetreatLeaveHalleckDeathText)
 DeathQuote(BossEfil,MilitaryAcceptRetreatLeave7,0x02,Military7AcceptRetreatLeaveEfilDeathText)
 DeathQuote(Xylia,MilitaryAcceptRetreatLeave7,0x00,Military7AcceptRetreatLeaveXyliaDeathText)
+DeathQuote(Kendrick,MilitaryAcceptRetreatHelp5,0x11,0x00,Military5AcceptRetreatHelpTransferKendrick)
+DeathQuote(Kendrick,MilitaryAcceptRetreatHelp5,0x12,Military5AcceptRetreatHelpKendrickBlueDeathText)
+DeathQuote(Shanley,MilitaryAcceptRetreatHelp5,0x00,Military5AcceptRetreatHelpShanleyDeathText)
+DeathQuote(Pascal,MilitaryAcceptRetreatHelp6,0x00,Military6AcceptRetreatHelpPascalDeathText)
 
 // Nonspecific death quotes come after.
 DeathQuote(Vicar,AllChapters,0x00,VicarDeathText)
@@ -251,3 +255,11 @@ DeathQuote(PlayerFMage,AllChapters,0x65,PlayerDeathText)
 DeathQuote(PlayerFShaman,AllChapters,0x65,PlayerDeathText)
 
 DeathQuote(0xFFFF,0,0,0)//Terminator
+
+//Label Kendrick's death as a greenie in MilitaryAcceptRetreatHelp5.
+Military5AcceptRetreatHelpTransferKendrick:
+Text(Military5AcceptRetreatHelpKendrickGreenDeathText)
+SVAL 0x1 Xena // This dummy unit was spawned in in the opening event.
+ASMC CallCopyUnitBattle|1 // Copy the green Kendrick's stats to the new blue Kendrick.
+NoFade
+ENDA

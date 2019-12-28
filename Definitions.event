@@ -288,6 +288,8 @@
 #define BossEfil 0x87
 #define BossChristina 0x88
 #define BossForrest 0x89
+#define GenericBandit 0x8A
+#define Pascal 0x8B
 //LabelEnd
 
 //Label Portrait Defenitions
@@ -384,6 +386,7 @@
 #define GeraldMug 0x29 // Knoll
 #define SeanMug 0x34 // Saar
 #define HalleckMug 0x20 // Saleh
+#define PascalMug 0x1B // Gerik
 //LabelEnd
 
 //Label Spell Definitions
@@ -490,8 +493,8 @@
 #define MercenaryBanditDisband5 0x50
 #define MercenaryBanditDisband6 0x51
 #define MercenaryBanditDisband7 0x52
-#define MilitaryAcceptRetreatLeave6GrowingTown2 0x53
-#define MilitaryAcceptRetreatLeave6GrowingTown3 0x54
+#define MilitaryAcceptRetreatHelp6Grow2 0x53
+#define MilitaryAcceptRetreatHelp6Grow3 0x54
 #define ShizonShrineCutscene 0x55
 #define LeavingShizonCutscene 0x56
 #define LeavingUndergroundCutscene 0x57
@@ -508,6 +511,7 @@
 #define GuardianSpiritWallCutscene 0x62
 #define AltianDungeonCutscene 0x63
 #define HaedricCityCutscene 0x64
+#define PortSelsingCutscene 0x65
 //LabelEnd
 
 //Label Palette Definitions
@@ -671,9 +675,9 @@
 #define DesertyMap 0x1F
 #define FarmyTownMap 0x20
 #define FortressMap 0x21
-#define GrowingTown1Map 0x22
-#define GrowingTown2Map 0x23
-#define GrowingTown3Map 0x24
+#define AegrisMap 0x22
+#define PortSelsingMap 0x23
+#define KilthelTempleMap 0x24
 #define HaedricHideoutMap 0x25
 #define HaedricCastleMap 0x26
 #define HaedricCityMap 0x27
@@ -726,7 +730,9 @@
 #define CesarianCapitalRetreatMap 0xCA
 #define RetreatDesertMap 0xD0
 #define XyliaStairTempleMap 0xD2
-#define KilthelTempleMap 0xD4
+#define ShizonLanding1Map 0xD9
+#define ShizonLanding2Map 0xDA
+#define ShizonLanding3Map 0xDB
 
 //Map Changes
 
@@ -739,8 +745,8 @@
 #define CesarianCapitalAssassinChanges 0x4D
 #define DefenseHallChanges 0x4E
 #define DesertChanges 0x4F
-#define GrowingTown1Changes 0x53
-#define GrowingTown23Changes 0x55
+#define AegrisChanges 0x53
+#define KilthelTempleChanges 0x55
 #define HaedricCastleChanges 0x56
 #define HaedricCityChanges 0x58
 #define LavaChanges 0x59
@@ -765,7 +771,7 @@
 #define CesarianCapitalRetreatChanges 0xCB
 #define RetreatDesertChanges 0xD1
 #define XyliaStairTempleChanges 0xD3
-#define KilthelTempleChanges 0xD5
+#define ShizonLandingChanges 0xDC
 
 // Tilesets
 #define OutdoorSnowyObjectSet 0xB5
@@ -821,6 +827,9 @@
 #define Military5AcceptRetreatLeaveEvents 0xCC
 #define Military6AcceptRetreatLeaveEvents 0xCD
 #define Military7AcceptRetreatLeaveEvents 0xCF
+#define Military5AcceptRetreatHelpEvents 0xD6
+#define Military6AcceptRetreatHelpEvents 0xD7
+#define Military7AcceptRetreatHelpEvents 0xD8
 // Good until 0xEB
 //LabelEnd
 
@@ -1131,6 +1140,7 @@
 #define Battle_against_Demons 0x0434
 #define Ordon_Village 0x0435
 #define Isaacs_Battle_Theme 0x0436
+#define Isaac_Battle Isaacs_Battle_Theme
 #define The_Devoted 0x0437
 #define March 0x0438
 #define Ascent 0x0439
@@ -1416,6 +1426,7 @@
 
 #define MoveMercenary(X,Y) "MOVE 0x0 PlayerMMercenary [X,Y];MOVE 0x0 PlayerMMyrmidon [X,Y];MOVE 0x0 PlayerMPirate [X,Y];MOVE 0x0 PlayerMFighter [X,Y];MOVE 0x0 PlayerMBrigand [X,Y];MOVE 0x0 PlayerFMercenary [X,Y];MOVE 0x0 PlayerFMyrmidon [X,Y];MOVE 0x0 PlayerFPegasusKnight [X,Y]"
 #define MoveMercenarySlow(X,Y) "MOVE 0x1 PlayerMMercenary [X,Y];MOVE 0x1 PlayerMMyrmidon [X,Y];MOVE 0x1 PlayerMPirate [X,Y];MOVE 0x1 PlayerMFighter [X,Y];MOVE 0x1 PlayerMBrigand [X,Y];MOVE 0x1 PlayerFMercenary [X,Y];MOVE 0x1 PlayerFMyrmidon [X,Y];MOVE 0x1 PlayerFPegasusKnight [X,Y]"
+#define MoveMilitary(X,Y) "MOVE 0x0 PlayerMCavalier [X,Y] ; MOVE 0x0 PlayerMKnight [X,Y] ; MOVE 0x0 PlayerMSoldier [X,Y] ; MOVE 0x0 PlayerMArcher [X,Y] ; MOVE 0x0 PlayerMWyvernRider [X,Y] ; MOVE 0x0 PlayerFCavalier [X,Y] ; MOVE 0x0 PlayerFKnight [X,Y] ; MOVE 0x0 PlayerFSoldier [X,Y] ; MOVE 0x0 PlayerFArcher [X,Y] ; MOVE 0x0 PlayerFWyvernRider [X,Y]"
 
 #define GuardAI NeverMoveAI
 #define ChapterDataEditor ChapterDataTable
