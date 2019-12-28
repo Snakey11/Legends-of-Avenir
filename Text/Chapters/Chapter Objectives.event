@@ -179,3 +179,8 @@ Defeat Efil[X]
 ## Military5AcceptRetreatHelpStatusText
 Defeat all[NL]
 Arcanians.[X]
+
+## Military6AcceptRetreatHelpStatusText
+Defeat all Shizonians.[NL]
+Defeat many before[NL]
+advancing the map.[X]
