@@ -1,0 +1,11 @@
+
+#include eastdlib.event
+
+#include "CopyUnit.lyn.event"
+
+ALIGN 4
+gMatchTable:
+//BYTE Character1 Character2
+BYTE Madeleine Remus
+BYTE Jasper Derek
+BYTE 0x00 0x00
