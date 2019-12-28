@@ -48,7 +48,10 @@ SHORT 3; BYTE 24 0x86; POIN Bolganone_objimg_0; WORD 288 288; POIN Bolganone_bgI
 SHORT 3; BYTE 25 0x86; POIN Bolganone_objimg_0; WORD 300 300; POIN Bolganone_bgImage_24 Bolganone_objPalette Bolganone_bgPalette_24 Bolganone_TSA_24
 WORD 0x8500001f
 WORD 0x8500001a
+WORD 0x85000053
 WORD 0x80000100
+WORD 0x80000100
+WORD 0x85000153
 SHORT 3; BYTE 26 0x86; POIN Bolganone_objimg_0; WORD 312 312; POIN Bolganone_bgImage_25 Bolganone_objPalette Bolganone_bgPalette_25 Bolganone_TSA_25
 SHORT 3; BYTE 27 0x86; POIN Bolganone_objimg_0; WORD 324 324; POIN Bolganone_bgImage_26 Bolganone_objPalette Bolganone_bgPalette_26 Bolganone_TSA_26
 SHORT 3; BYTE 28 0x86; POIN Bolganone_objimg_0; WORD 336 336; POIN Bolganone_bgImage_27 Bolganone_objPalette Bolganone_bgPalette_27 Bolganone_TSA_27
