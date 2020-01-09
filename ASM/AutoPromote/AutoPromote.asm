@@ -12,6 +12,10 @@
 AutoPromoteUsability:
 ldr r0, =#0x03004E50
 ldr r0, [ r0 ] @ r0 has current unit's character struct.
+ldr r1, [ r0, #0x0C ] @ Turn status bitfield.
+mov r2, #0x40
+tst r1, r2
+bne EndFalse @ Disable promotion while cantoing
 ldrb r1, [ r0, #0x08 ]
 cmp r1, #15
 blt EndFalse
