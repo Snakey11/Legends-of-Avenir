@@ -273,19 +273,19 @@ CallCopyUnitBattle:
 @ CopyUnit.c:39: 		dead = &defender;
 	ldr	r4, .L25+4	@ dead,
 .L22:
-@ CopyUnit.c:41: 	CopyUnitSpecial(dead,GetUnitByCharId(gMemorySlot[1]),0);
+@ CopyUnit.c:41: 	CopyUnitSpecial(dead,GetUnitByCharId(gMemorySlot[1]),1);
 	ldr	r3, .L25+8	@ tmp117,
-@ CopyUnit.c:41: 	CopyUnitSpecial(dead,GetUnitByCharId(gMemorySlot[1]),0);
+@ CopyUnit.c:41: 	CopyUnitSpecial(dead,GetUnitByCharId(gMemorySlot[1]),1);
 	ldr	r0, [r3, #4]	@ gMemorySlot, gMemorySlot
 	lsls	r0, r0, #24	@ tmp120, gMemorySlot,
 	ldr	r3, .L25+12	@ tmp122,
 	lsrs	r0, r0, #24	@ tmp120, tmp120,
 	bl	.L9		@
-@ CopyUnit.c:41: 	CopyUnitSpecial(dead,GetUnitByCharId(gMemorySlot[1]),0);
-	movs	r2, #0	@,
-@ CopyUnit.c:41: 	CopyUnitSpecial(dead,GetUnitByCharId(gMemorySlot[1]),0);
+@ CopyUnit.c:41: 	CopyUnitSpecial(dead,GetUnitByCharId(gMemorySlot[1]),1);
+	movs	r2, #1	@,
+@ CopyUnit.c:41: 	CopyUnitSpecial(dead,GetUnitByCharId(gMemorySlot[1]),1);
 	movs	r1, r0	@ _4,
-@ CopyUnit.c:41: 	CopyUnitSpecial(dead,GetUnitByCharId(gMemorySlot[1]),0);
+@ CopyUnit.c:41: 	CopyUnitSpecial(dead,GetUnitByCharId(gMemorySlot[1]),1);
 	movs	r0, r4	@, dead
 	bl	CopyUnitSpecial		@
 @ CopyUnit.c:42: }

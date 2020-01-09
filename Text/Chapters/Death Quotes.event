@@ -182,13 +182,17 @@ can barely fly anymore.[A][NL]
 Watch your back out there![A][X]
 
 ## MadeleineDeathText
-[FarLeft][LoadMadeleine]
+[FarRight][LoadMadeleine]
 No... I... can't keep pushing...[NL]
 Remus... I'm sorry.[A][NL]
 I'm pulling back.[A][X]
 
 ## RemusDeathText
-[FarLeft][LoadRemus]
-Ouch! Wrong place at the wrong[NL]
-time for me? Sorry everyone...[A][NL]
-Watch yourselves out there.[A][X]
+[BattleText]
+[FarRight][LoadRemus]
+I never wanted this, but... it seems peaceful...[X]
+
+## RexDeathText
+[BattleText]
+[FarRight][LoadRex]
+No... I thought I was strong enough... My liege, I'm sorry... I've failed Cesaria...[X]

@@ -22,6 +22,13 @@ HP bars!
 Knights have 5 movement, generals have 6, and great knights have 7
 Sentinel stats have been buffed
 Slayer weapons have reduced uses
+No more autopromotions while cantoing
+Fighting of the Spirit has been reverted to an older version
+Supply is fixed
+Green units in the prologue have their movement shown
+Forrest and Christina in Military 1 have been buffed
+Enemies in Military 2 Accept have been buffed
+Madeleine's starting level has been lowered in Military 3 Accept
 
 Hotfixes before v1.9:
 Promotion items have been fixed

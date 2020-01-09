@@ -150,6 +150,7 @@ CLEA 0x0
 CLEE 0x0
 CLEN 0x0
 ASMC RefreshAll|1
+CAM1 [7,7]
 LOAD3 0x1 PlayerLoading1
 LOAD2 0x1 EndingFriends
 LOAD1 0x1 EndingMeanies
@@ -265,8 +266,8 @@ EndUnit
 
 //Label ChapterMeanies
 LoadChristinaForrest:
-UNIT BossChristina Cavalier_F BossChristina Level(7,Enemy,True) [6,6] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
-UNIT BossForrest Cavalier BossForrest Level(6,Enemy,True) [6,8] 0x00 0x00 0x00 0x00 [SteelSword] GuardAI
+UNIT BossChristina Cavalier_F BossChristina Level(9,Enemy,True) [6,6] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
+UNIT BossForrest Cavalier BossForrest Level(8,Enemy,True) [6,8] 0x00 0x00 0x00 0x00 [SteelSword] GuardAI
 UNIT
 
 ChapterMeanies:

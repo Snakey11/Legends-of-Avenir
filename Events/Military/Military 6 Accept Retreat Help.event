@@ -31,8 +31,9 @@ END_MAIN
 
 //Label LocationBasedEvents
 LocationBasedEvents:
-Chest(Elixir,8,0)
-Chest(SilverSword,9,0)
+Armory(ArmoryList,18,1)
+CHES 0x18 Elixir [8,0] 0x14
+CHES 0x19 SilverSword [9,0] 0x14
 Raid(0x13,DNorth,6,10)
 Raid(0x14,DCenter,12,11)
 Raid(0x15,DSouth,16,16)
@@ -52,22 +53,24 @@ ALIGN 4
 
 //Label Units
 Units:
-UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [6,2] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT Derek 0x00 0x00 Level(1,Ally,True) [5,1] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT Jasper 0x00 0x00 Level(1,Ally,True) [6,0] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [4,0] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT Madeleine 0x00 0x00 Level(1,Ally,True) [4,2] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT Remus 0x00 0x00 Level(1,Ally,True) [3,1] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT Yvette 0x00 0x00 Level(1,Ally,True) [3,3] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT Kendrick 0x00 0x00 Level(1,Ally,True) [3,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [0,6] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [0,7] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Jasper 0x00 0x00 Level(1,Ally,True) [2,6] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [2,7] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Madeleine 0x00 0x00 Level(1,Ally,True) [3,5] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Remus 0x00 0x00 Level(1,Ally,True) [3,8] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Yvette 0x00 0x00 Level(1,Ally,True) [4,6] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Kendrick 0x00 0x00 Level(1,Ally,True) [4,7] 0x00 0x00 0x00 0x00 [0] NoAI
 EndUnit
 
 //Label BeginingScene
 BeginningScene:
+COUNTER_SET 0x1 0x0
 MUSC Zelos
 LOAD1 0x1 Meanies
 LOAD1 0x1 Meanies2
 ENUN
+CAM1 Pascal
 SetBackground(0x08)
 Text(Military6AcceptRetreatHelpStartingText)
 FadeOutMusic
@@ -93,13 +96,16 @@ BEQ 0x0 0x0 0xC
 	MUSC Heavens_Rock_Seat
 	FADI 0x5
 	CLEA 0x0
+	LOAD1 0x1 LoadRex
+	ENUN
+	CLEA 0x0
 	SetBackground(0x07)
 	TEXTSTART
 	TEXTSHOW Military6AcceptRetreatHelpFinishedText
 	TEXTEND
-	COUNTER_CHECK 0x0
+	COUNTER_CHECK 0x1
 	SVAL 0x1 1
-	BGT 0x1 0x1 0xC
+	BGT 0x1 0xC 0x1
 		// Not many houses were raided.
 		TEXTSHOW Military6AcceptRetreatHelpGoodText
 		TEXTEND
@@ -116,9 +122,13 @@ BEQ 0x0 0x0 0xC
 		MUSC A_Tragic_Decision
 		SetBackground(0x05)
 		Text(Military6AcceptRetreatHelpBadRexText)
+		ENUT 0x6F // Used in chapter 7 for the good/bad ending.
 	LABEL 0x2
 	MoveToChapter(MilitaryAcceptRetreatHelp7)
+	GOTO 0x3
 LABEL 0x0
+	ENUF 0x02
+LABEL 0x3
 NoFade
 ENDA
 
@@ -135,26 +145,63 @@ CheckToAdvance: // Determines if it's time to load the next phase.
 CHECK_EVENTID 0x11
 BNE 0x0 0x0 0xC // It's already phase 3. Nothing new after this.
 	CHECK_ENEMIES
-	SVAL 0x1 3
-	BGT 0x0 0x1 0xC // There more more than 3 enemies on the map.
+	SVAL 0x1 4
+	BEQ 0x2 0x0 0xC // I don't know why checking against 0 doesn't work...
+	BLE 0x0 0x1 0xC // There are more more than 3 enemies on the map.
+	LABEL 0x2
 		CHECK_EVENTID 0x10
 		BNE 0x1 0x0 0xC
 			// We need to load phase 2.
+			ENUT 0x10
 			FADI 0x5
 			LOMA MilitaryAcceptRetreatHelp6Grow2
+			CALL ResetTileChanges
+			CAM1 [16,15]
 			LOAD1 0x1 Wave2
 			LOAD1 0x1 Wave22
 			ENUN
 			FADU 0x5
+			STAL 0x20
+			Text(Military6AcceptRetreatHelpGrow2Text)
 			GOTO 0x0
 		LABEL 0x1
 			// We need to load phase 3.
+			ENUT 0x11
 			FADI 0x5
 			LOMA MilitaryAcceptRetreatHelp6Grow3
+			CALL ResetTileChanges
+			CAM1 [23,9]
 			LOAD1 0x1 Wave3
 			ENUN
-			FADU 0x5
+			FADU 0x5		
+			STAL 0x20
+			Text(Military6AcceptRetreatHelpGrow3Text)
 LABEL 0x0
+NoFade
+EndA2
+
+ResetTileChanges: // Reset all tilechanges on the map.
+CHECK_EVENTID 0x13 // Reset the raid tilechanges.
+BEQ 0x0 0x0 0xC
+	TileChange(5,9)
+LABEL 0x0
+CHECK_EVENTID 0x14
+BEQ 0x1 0x0 0xC
+	TileChange(11,10)
+LABEL 0x1
+CHECK_EVENTID 0x15
+BEQ 0x2 0x0 0xC
+	TileChange(15,15)
+LABEL 0x2
+// No point in checking the last raid since it only appears on the last phase.
+CHECK_EVENTID 0x18 // Reset the chests.
+BEQ 0x3 0x0 0xC
+	TileChange(8,0)
+LABEL 0x3
+CHECK_EVENTID 0x19
+BEQ 0x4 0x0 0xC
+	TileChange(9,0)
+LABEL 0x4
 NoFade
 EndA2
 
@@ -162,10 +209,10 @@ CheckToChangeAI:
 CHECK_EVENTID 0x11
 BEQ 0x0 0x0 0xC
 	// If wave 3.
-	COUNTER_CHECK 0x0
-	SVAL 0x1 1
-	BLE 0x0 0x1 0xC
-		CHECK_ALIVE Pascal
+	COUNTER_CHECK 0x1
+	SVAL 0x1 0x1
+	BLE 0x0 0xC 0x1
+		CHECK_EXISTS Pascal
 		BEQ 0x0 0x0 0xC
 			// If more than 1 villages have been raided.
 			CAM1 Pascal
@@ -183,39 +230,48 @@ NoFade
 ENDA
 
 //Label Location events
+ArmoryList:
+SHLI SteelSword IronBlade SteelLance ShortSpear SteelAxe DevilAxe SteelBow KillerBow Vulnerary
+ALIGN 4
+
 DNorth:
 EnterStop
-GiveItem(BraveAxe,0xFFFF)
 TileChange(5,9)
-COUNTER_ADD 0x0 0x0
+GiveItem(BraveAxe,0xFFFF)
+COUNTER_INC 0x1
 NoFade
 EndA2
 
 DCenter:
 EnterStop
-GiveItem(KillerLance,0xFFFF)
 TileChange(11,10)
-COUNTER_ADD 0x0 0x0
+GiveItem(KillerLance,0xFFFF)
+COUNTER_INC 0x1
 NoFade
 EndA2
 
 DSouth:
 EnterStop
-GiveItem(Dragonshield,0xFFFF)
 TileChange(15,15)
-COUNTER_ADD 0x0 0x0
+GiveItem(Dragonshield,0xFFFF)
+COUNTER_INC 0x1
 NoFade
 EndA2
 
 DEast:
 EnterStop
-GiveItem(Runesword,0xFFFF)
 TileChange(21,15)
-COUNTER_ADD 0x0 0x0
+GiveItem(Lancereaver,0xFFFF)
+COUNTER_INC 0x1
 NoFade
 ENDA
 
 	/*UNIT DATA*/
+
+//Label Cutscene units
+LoadRex:
+UNIT Rex GrandPaladin 0x00 Level(11,Ally,True) [0,255] 0x00 0x00 0x00 0x00 [Spear,SilverSword,Elixir] NoAI
+EndUnit
 
 //Label Chapter units
 Meanies:
@@ -223,7 +279,7 @@ UNIT Pascal Sniper Pascal Level(1,Enemy,True) [9,8] 0x00 0x00 0x00 0x00 [SilverS
 UNIT Xexim XeximClass 0x00 Level(1,Enemy,True) [10,9] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Shizonian General Pascal Level(5,Enemy,True) [6,2] Drop 0x00 0x00 0x00 [Tomahawk,ChestKey] GuardAI
 UNIT Shizonian General Pascal Level(6,Enemy,True) [11,2] 0x00 0x00 0x00 0x00 [Spear] GuardAI
-UNIT Shizonian Sniper Pascal Level(4,Enemy,True) [8,1] 0x00 0x00 0x00 0x00 [DevilBow] [0x0C,0x03,0x00,0x00] // AttackInRangeAI except with half range.
+UNIT Shizonian Sniper Pascal Level(4,Enemy,True) [8,1] Drop 0x00 0x00 0x00 [DevilBow,ChestKey] [0x0C,0x03,0x00,0x00] // AttackInRangeAI except with half range.
 UNIT Shizonian Mage Pascal Level(19,Enemy,True) [9,3] 0x00 0x00 0x00 0x00 [Arcaqua] AttackInRangeAI
 UNIT Shizonian Soldier Pascal Level(20,Enemy,True) [3,2] 0x00 0x00 0x00 0x00 [IronLance] NoAI
 UNIT Shizonian Soldier Pascal Level(18,Enemy,True) [4,1] 0x00 0x00 0x00 0x00 [ShortSpear] NoAI
@@ -246,9 +302,9 @@ UNIT
 Wave2:
 UNIT Shizonian GreatKnight Pascal Level(5,Enemy,True) [4,16] 0x00 0x00 0x00 0x00 [ShortAxe,SteelSword] AttackInRangeAI
 UNIT Shizonian GreatKnight Pascal Level(6,Enemy,True) [6,16] 0x00 0x00 0x00 0x00 [SilverLance] AttackInRangeAI
-UNIT Shizonian GreatKnight Pascal Level(6,Enemy,True) [8,16] 0x00 0x00 0x00 0x00 [BattleAxe] AttackInRangeAI
+UNIT Shizonian GreatKnight Pascal Level(6,Enemy,True) [8,16] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
 UNIT Shizonian Sentinel Pascal Level(5,Enemy,True) [5,14] 0x00 0x00 0x00 0x00 [BattleAxe] NoAI
-UNIT Shizonian Sentinel Pascal Level(8,Enemy,True) [7,14] 0x00 0x00 0x00 0x00 [BattleAxe] NoAI
+UNIT Shizonian Sentinel Pascal Level(8,Enemy,True) [7,14] 0x00 0x00 0x00 0x00 [Zanbato] NoAI
 UNIT Shizonian Archer Pascal Level(19,Enemy,True) [3,13] 0x00 0x00 0x00 0x00 [SteelShortbow] NoAI
 UNIT Shizonian WyvernRider Pascal Level(20,Enemy,True) [0,16] 0x00 0x00 0x00 0x00 [IronLance] ChaseOnceApproachedAI
 UNIT Shizonian WyvernRider Pascal Level(18,Enemy,True) [1,17] 0x00 0x00 0x00 0x00 [HeavySpear] ChaseOnceApproachedAI
@@ -267,7 +323,7 @@ UNIT Shizonian Knight Pascal Level(20,Enemy,True) [18,10] 0x00 0x00 0x00 0x00 [S
 UNIT Shizonian Knight Pascal Level(20,Enemy,True) [18,2] 0x00 0x00 0x00 0x00 [HandAxe] GuardAI
 UNIT Shizonian Swordmaster Pascal Level(8,Enemy,True) [17,4] 0x00 0x00 0x00 0x00 [SteelBlade] AttackInRangeAI
 UNIT Shizonian Myrmidon Pascal Level(18,Enemy,True) [18,5] 0x00 0x00 0x00 0x00 [Wyrmslayer] ChaseOnceApproachedAI
-UNIT Shizonian Falcoknight Pascal Level(7,Enemy,True) [18,5] 0x00 0x00 0x00 0x00 [WindSword] NoAI
+UNIT Shizonian Falcoknight Pascal Level(7,Enemy,True) [18,6] 0x00 0x00 0x00 0x00 [WindSword] NoAI
 UNIT
 
 Wave3:

@@ -22,6 +22,7 @@ TurnEventPlayer(0x00,Turn4,4)
 TurnEventPlayer(0x00,Turn5,5)
 TurnEventPlayer(0x00,Turn8,8)
 TurnEventPlayer(0x00,Turn9,9)
+TurnEventPlayer(0x00,Turn10,10)
 END_MAIN
 
 //Label CharacterBasedEvents
@@ -32,6 +33,8 @@ END_MAIN
 
 //Label LocationBasedEvents
 LocationBasedEvents:
+Armory(ArmoryList,1,14)
+Vendor(ShopList,17,11)
 Village(0x14,NorthRedHouse,16,1)
 Village(0x15,CenterRedHouse,12,8)
 Village(0x16,WestRedHouse,2,11)
@@ -161,6 +164,7 @@ GotoPrepScreen
 
 //Label EndingScene
 EndingScene:
+MUSC Victory
 FADI 0x5
 CHECK_EVENTID 0x10
 BEQ 0x0 0x0 0xC
@@ -250,6 +254,14 @@ LOAD1 0x1 Turn9Units
 ENUN
 CamOFF
 NoFade
+EndA2
+
+Turn10:
+CamON
+LOAD1 0x1 Turn10Units
+ENUN
+CamOFF
+NoFade
 ENDA
 
 //Label Character events
@@ -288,7 +300,7 @@ EndA2
 SouthRedHouse:
 EnterStop
 Text(0x01,Military5AcceptRetreatHelpSRedHouseText)
-GiveItem(ShortSpear,0xFFFF)
+GiveItem(KnightCrest,0xFFFF)
 NoFade
 EndA2
 
@@ -302,7 +314,16 @@ YellowHouse:
 EnterStop
 Text(0x01,Military5AcceptRetreatHelpYellowHouseText)
 NoFade
-ENDA
+EndA2
+
+ArmoryList:
+SHLI SteelSword KillingEdge SteelLance ToxinLance SteelAxe ShortAxe SteelBow SteelShortbow
+ALIGN 4
+
+ShopList:
+SHLI Elwind Elthunder Worm Nosferatu Divine Exordium Mend Vulnerary Elixir Antitoxin
+ALIGN 4
+//LabelEnd
 
 
 	/*UNIT DATA*/
@@ -319,7 +340,7 @@ UNIT
 
 KendrickFriends:
 UNIT Kendrick Pirate Kendrick Level(10,NPC,True) [24,16] 0x00 0x00 0x00 0x00 [HandAxe,Swordreaver,Vulnerary] GuardAI
-UNIT KendrickFriend Pirate Kendrick Level(8,NPC,True) [24,15] 0x00 0x00 0x00 0x00 [IronAxe] [0x0C,0x03,0x00,0x00] // AttackInRangeAI except with half range.
+UNIT KendrickFriend Pirate Kendrick Level(8,NPC,True) [24,15] 0x00 0x00 0x00 0x00 [IronAxe] AttackInRangeAI
 UNIT KendrickFriend Mercenary Kendrick Level(8,NPC,True) [23,19] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
 UNIT
 
@@ -332,13 +353,12 @@ UNIT Xena Pirate 0x00 Level(10,Ally,False) [0,255] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 NewKendrick:
-UNIT Kendrick Pirate 0x00 Level(10,NPC,False) [0,255] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Kendrick Pirate 0x00 Level(10,Ally,False) [0,255] 0x00 0x00 0x00 0x00 [0] NoAI
 EndUnit
 
 //Label Chapter Units
 Arcanians:
 UNIT Shanley Sage Shanley Level(4,Enemy,True) [13,20] 0x00 0x00 0x00 0x00 [Bolganone] AttackInRangeAI
-UNIT Arcanian Soldier Shanley Level(17,Enemy,True) [16,17] 0x00 0x00 0x01 REDA16R18 [SteelLance] NoAI
 UNIT Arcanian Mercenary Shanley Level(16,Enemy,True) [10,18] 0x00 0x00 0x01 REDA11R19 [IronSword] AttackInRangeAI
 UNIT Arcanian Fighter Shanley Level(16,Enemy,True) [19,8] 0x00 0x00 0x01 REDA19R13 [SteelAxe] NoAI
 UNIT Arcanian Mage Shanley Level(15,Enemy,True) [18,22] 0x00 0x00 0x01 REDA18R20 [Thunder] NoAI
@@ -385,7 +405,7 @@ UNIT
 
 Turn4Units:
 UNIT GenericBandit Brigand Shanley Level(15,Enemy,True) [20,0] 0x00 0x00 0x00 0x00 [IronAxe] BrigandAI
-UNIT GenericBandit Berserker Shanley Level(16,Enemy,True) [21,0] Drop 0x00 0x00 0x00 [HandAxe,Vulnerary] BrigandAI
+UNIT GenericBandit Berserker Shanley Level(3,Enemy,True) [21,0] Drop 0x00 0x00 0x00 [HandAxe,Vulnerary] BrigandAI
 
 UNIT Arcanian Fighter Shanley Level(15,Enemy,True) [21,0] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
 
@@ -402,17 +422,20 @@ UNIT
 
 Turn8Units:
 UNIT Arcanian MageKnight Shanley Level(3,Enemy,True) [2,22] 0x00 0x00 0x00 0x00 [Elthunder] NoAI
-UNIT Arcanian Paladin Shanley Level(4,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [LightBrand] NoAI
+UNIT Arcanian Cavalier Shanley Level(18,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [Wyrmslayer] NoAI
 UNIT Arcanian Cavalier Shanley Level(19,Enemy,True) [0,3] 0x00 0x00 0x00 0x00 [IronLance] NoAI
 UNIT Arcanian Cavalier Shanley Level(17,Enemy,True) [4,0] Drop 0x00 0x00 0x00 [SteelLance,PoisonSword] NoAI
 UNIT Arcanian Ranger Shanley Level(2,Enemy,True) [5,0] 0x00 0x00 0x00 0x00 [SteelBow,IronBlade] NoAI
+UNIT
+
+Turn9Units:
 UNIT Arcanian PegasusKnight Shanley Level(18,Enemy,True) [20,0] 0x00 0x00 0x00 0x00 [IronLance] NoAI
 UNIT Arcanian PegasusKnight Shanley Level(19,Enemy,True) [21,0] 0x00 0x00 0x00 0x00 [Dragonspear] NoAI
 UNIT Arcanian Fighter Shanley Level(17,Enemy,True) [17,22] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
 UNIT Arcanian Sentinel Shanley Level(4,Enemy,True) [18,22] 0x00 0x00 0x00 0x00 [ShortSpear,Zanbato] NoAI
 UNIT
 
-Turn9Units:
+Turn10Units:
 UNIT Arcanian Mercenary Shanley Level(17,Enemy,True) [13,22] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
 UNIT Arcanian Mercenary Shanley Level(18,Enemy,True) [14,22] 0x00 0x00 0x00 0x00 [Lancereaver] NoAI
 UNIT Arcanian Mage Shanley Level(17,Enemy,True) [17,22] 0x00 0x00 0x00 0x00 [Arcfire] NoAI

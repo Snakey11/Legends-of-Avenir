@@ -24,7 +24,7 @@ INLINE SupplyUsabilityTable,Pointer
 16 MilitaryPromotionHold7,NormalSupplyList|IsPointer
 17 MilitaryPromotionRetreat4,NormalSupplyList|IsPointer
 18 MilitaryPromotionRetreatLeave5,NormalSupplyList|IsPointer
-19 MilitaryPromotionRetreatLeave6(GrowingTown1Map),NormalSupplyList|IsPointer
+19 MilitaryPromotionRetreatLeave6,NormalSupplyList|IsPointer
 1A MilitaryPromotionRetreatLeave7,NormalSupplyList|IsPointer
 1B MilitaryPromotionRetreatHelp5,NormalSupplyList|IsPointer
 1C MilitaryPromotionRetreatHelp6,NormalSupplyList|IsPointer
@@ -82,8 +82,8 @@ INLINE SupplyUsabilityTable,Pointer
 50 MercenaryBanditDisband5,NormalSupplyList|IsPointer
 51 MercenaryBanditDisband6,NormalSupplyList|IsPointer
 52 MercenaryBanditDisband7,NormalSupplyList|IsPointer
-53 MilitaryPromotionRetreatLeave6(GrowingTown2),0x00
-54 MilitaryPromotionRetreatLeave6(GrowingTown3),0x00
+53 MilitaryAcceptRetreatHelp6Grow2,NormalSupplyList|IsPointer
+54 MilitaryAcceptRetreatHelp6Grow3,NormalSupplyList|IsPointer
 55 ShizonShrineCutscene,0x00
 56 LeavingShizonCutscene,0x00
 57 Leaving Underground Cutscene,0x00
@@ -100,3 +100,4 @@ INLINE SupplyUsabilityTable,Pointer
 62 Guardian Spirit Wall,0x00
 63 AltianDungeonCutscene,0x00
 64 HaedricCityCutscene,0x00
+65 PortSelsingCutscene,0x00

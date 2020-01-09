@@ -23,6 +23,9 @@ Reach Leon[X]
 ## ReachEfilText
 Reach Efil[X]
 
+## DefeatClonesText
+Kill All Clones[X]
+
 ## Merc1StatusText
 Defeat Henning.[X]
 
@@ -184,3 +187,7 @@ Arcanians.[X]
 Defeat all Shizonians.[NL]
 Defeat many before[NL]
 advancing the map.[X]
+
+## Military7AcceptRetreatHelpStatusText
+Defeat all clones[NL]
+of Xexim.[X]

@@ -2,14 +2,6 @@
 #include <stddef.h>
 #include "FE-CLib-master/include/gbafe.h"
 
-/* Plan:
-At a specific chapter, some units will be REMUed.
-New units with matching character IDs will be loaded as enemies. Their stats will be copied from their matching blue character.
-These red characters die, and upon death, their stats are copied back to the matching blue character struct.
-Any remaining alive red units have their stats copied back at the end of the chapter.
-All REMUed units are REVEALed at the end of the chapter.
-*/
-
 extern struct Unit attacker;
 extern struct Unit defender;
 extern u32 gMemorySlot[];
@@ -38,7 +30,7 @@ void CallCopyUnitBattle(void) // Called via ASMC in battle. Unit who just died g
 	{
 		dead = &defender;
 	}
-	CopyUnitSpecial(dead,GetUnitByCharId(gMemorySlot[1]),0);
+	CopyUnitSpecial(dead,GetUnitByCharId(gMemorySlot[1]),1);
 }
 
 void CopyUnitSpecial(Unit *origin, Unit *dest, int level) // Copies some parts of the origin destination to the destination. Bool is whether to copy level and EXP.

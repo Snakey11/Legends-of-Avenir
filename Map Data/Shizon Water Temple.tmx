@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="17" height="24" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="1800B91A" tilewidth="16" tileheight="16">
+  <image source="../../../Tools/Tiled/Tiled Inserter/Tilesets/FE8 Tilesets/1800B91A.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="17" height="24">
+  <properties>
+   <property name="Anims" value="_18Anims"/>
+   <property name="ChapterID" value="MilitaryAcceptRetreatHelp7"/>
+   <property name="Main" value=""/>
+   <property name="MapID" value="ShizonWaterShrineMap"/>
+   <property name="ObjectType" value="0x18"/>
+   <property name="PaletteID" value="0xB9"/>
+   <property name="TileConfig" value="0x1A"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJytlD9KREEMxmeylcfYWryAJ3iweIyFV8keYy8geAG1EC1FXC0U1NY/WKmNsthuYaUIfmEmmMlm345o8ePNJJnvJS+ZN+iFsEoh3II7RYR9EkM4BWexXLNPxw+wn8Z5jT7sj7A/gedYrvuORgMu4bvOXIExfENwAbZC4jzv2afjWaMFa720FtYR94VzRw7s4/gbPDdzvF4Lx4h96IBjRurdIycPT2+RvwarwT3YV5yEVMdE1Sv1SY1WYxfn7umHj6zx6dQqNa5kRGMvlnNQU/e2yk/XInNVo2Hz4HmKlJ5vseytaHgzofPgedrIT7FJ3TUz8dfe2ny82dRov83P5r9IQ/wNzWs05v0ya4cx2Q/MDLZU7sWmNaaUeAE78L9SaRtTee95re8+/yfkO3kzzzPk/QPk7kseUqM3801Hv2t72v5Cw/Z5Wd8tfO9m4F3dwxl1992e/w++AcOL4Zg=
+  </data>
+ </layer>
+</map>

@@ -290,6 +290,7 @@
 #define BossForrest 0x89
 #define GenericBandit 0x8A
 #define Pascal 0x8B
+#define XeximClone 0x8C
 //LabelEnd
 
 //Label Portrait Defenitions
@@ -512,6 +513,7 @@
 #define AltianDungeonCutscene 0x63
 #define HaedricCityCutscene 0x64
 #define PortSelsingCutscene 0x65
+#define KendrickShipCutscene 0x66
 //LabelEnd
 
 //Label Palette Definitions
@@ -733,6 +735,8 @@
 #define ShizonLanding1Map 0xD9
 #define ShizonLanding2Map 0xDA
 #define ShizonLanding3Map 0xDB
+#define ShizonWaterShrineMap 0xDD
+#define KendrickShipMap 0xDE
 
 //Map Changes
 
@@ -1149,7 +1153,7 @@
 #define Heavens_Rock_Seat 0x043C
 #define Heavens_Gate 0x043D
 #define Forbidden_Forest 0x043E
-#define Puppet_Ganon 0x044F
+#define Puppet_Ganon 0x043F
 #define End_of_the_World 0x0440
 #define Earthbound 0x0441
 #define Chinese_Tea 0x0442
@@ -1165,7 +1169,7 @@
 #define We_Can_Handle_Em 0x44C
 #define Overwhelming_Advance 0x44D
 #define Encroaching_Foe 0x44E
-#define All_Is_Lost 0x44F
+#define All_Is_Lost 0x044F
 #define Divine_Providence 0x450
 #define Fodlan_Winds 0x451
 #define Oil_Ocean 0x452

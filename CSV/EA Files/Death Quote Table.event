@@ -135,6 +135,28 @@ DeathQuote(PlayerFSoldier,MilitaryAcceptRetreatLeave7,0x14,Military7AcceptRetrea
 DeathQuote(PlayerFArcher,MilitaryAcceptRetreatLeave7,0x14,Military7AcceptRetreatLeaveBadEndingPlayerDeathText)
 DeathQuote(PlayerFWyvernRider,MilitaryAcceptRetreatLeave7,0x14,Military7AcceptRetreatLeaveBadEndingPlayerDeathText)
 
+DeathQuote(PlayerMCavalier,KendrickShipCutscene,0x10,0x0) // Military Accept Retreat Help Good Ending
+DeathQuote(PlayerMKnight,KendrickShipCutscene,0x10,0x0)
+DeathQuote(PlayerMSoldier,KendrickShipCutscene,0x10,0x0)
+DeathQuote(PlayerMArcher,KendrickShipCutscene,0x10,0x0)
+DeathQuote(PlayerMWyvernRider,KendrickShipCutscene,0x10,0x0)
+DeathQuote(PlayerFCavalier,KendrickShipCutscene,0x10,0x0)
+DeathQuote(PlayerFKnight,KendrickShipCutscene,0x10,0x0)
+DeathQuote(PlayerFSoldier,KendrickShipCutscene,0x10,0x0)
+DeathQuote(PlayerFArcher,KendrickShipCutscene,0x10,0x0)
+DeathQuote(PlayerFWyvernRider,KendrickShipCutscene,0x10,0x0)
+
+DeathQuote(PlayerMCavalier,MilitaryAcceptRetreatHelp7,0x10,0x0) // Military Accept Retreat Help Bad Ending
+DeathQuote(PlayerMKnight,MilitaryAcceptRetreatHelp7,0x10,0x0)
+DeathQuote(PlayerMSoldier,MilitaryAcceptRetreatHelp7,0x10,0x0)
+DeathQuote(PlayerMArcher,MilitaryAcceptRetreatHelp7,0x10,0x0)
+DeathQuote(PlayerMWyvernRider,MilitaryAcceptRetreatHelp7,0x10,0x0)
+DeathQuote(PlayerFCavalier,MilitaryAcceptRetreatHelp7,0x10,0x0)
+DeathQuote(PlayerFKnight,MilitaryAcceptRetreatHelp7,0x10,0x0)
+DeathQuote(PlayerFSoldier,MilitaryAcceptRetreatHelp7,0x10,0x0)
+DeathQuote(PlayerFArcher,MilitaryAcceptRetreatHelp7,0x10,0x0)
+DeathQuote(PlayerFWyvernRider,MilitaryAcceptRetreatHelp7,0x10,0x0)
+
 // Specific death quotes need to come first.
 DeathQuote(Henning,Mercenary1,0x02,Merc1HenningDeathText)
 DeathQuote(Gerwick,MercenaryMilitia2,0x2,Merc2MilitiaGerwickDeathText)
@@ -194,7 +216,10 @@ DeathQuote(Xylia,MilitaryAcceptRetreatLeave7,0x00,Military7AcceptRetreatLeaveXyl
 DeathQuote(Kendrick,MilitaryAcceptRetreatHelp5,0x11,0x00,Military5AcceptRetreatHelpTransferKendrick)
 DeathQuote(Kendrick,MilitaryAcceptRetreatHelp5,0x12,Military5AcceptRetreatHelpKendrickBlueDeathText)
 DeathQuote(Shanley,MilitaryAcceptRetreatHelp5,0x00,Military5AcceptRetreatHelpShanleyDeathText)
-DeathQuote(Pascal,MilitaryAcceptRetreatHelp6,0x00,Military6AcceptRetreatHelpPascalDeathText)
+DeathQuote(Pascal,MilitaryAcceptRetreatHelp6Grow3,0x00,Military6AcceptRetreatHelpPascalDeathText)
+DeathQuote(XeximClone,MilitaryAcceptRetreatHelp7,0x13,0x00)
+DeathQuote(Rex,MilitaryAcceptRetreatHelp7,0x11,0x00) // Event IDs to prevent Rex and Derek having death quotes in the bad ending cutscene.
+DeathQuote(Derek,MilitaryAcceptRetreatHelp7,0x12,0x00)
 
 // Nonspecific death quotes come after.
 DeathQuote(Vicar,AllChapters,0x00,VicarDeathText)
@@ -207,7 +232,7 @@ DeathQuote(Elanil,AllChapters,0x00,ElanilDeathText)
 DeathQuote(Maximus,AllChapters,0x00,MaximusDeathText)
 DeathQuote(Leon,AllChapters,0x65,LeonDeathText)
 DeathQuote(Jasper,AllChapters,0x00,JasperDeathText)
-DeathQuote(Derek,AllChapters,0xA0,DerekDeathText)
+DeathQuote(Derek,AllChapters,0x00,DerekDeathText)
 DeathQuote(Lux,AllChapters,0x00,LuxDeathText)
 DeathQuote(Luke,AllChapters,0x00,LukeDeathText)
 DeathQuote(Arc,AllChapters,0x00,ArcDeathText)
@@ -225,9 +250,10 @@ DeathQuote(Christina,AllChapters,0x00,ChristinaDeathText)
 DeathQuote(Clara,AllChapters,0x00,ClaraDeathText)
 DeathQuote(Sylvaine,AllChapters,0x00,SylvaineDeathText)
 DeathQuote(Zaheva,AllChapters,0x00,ZahevaDeathText)
-DeathQuote(Yvette,AllChapters,0xA0,YvetteDeathText) // TREAT 0xA0 AS DISABLE DEATH QUOTES FOR ENDINGS.
-DeathQuote(Madeleine,AllChapters,0xA0,MadeleineDeathText)
-DeathQuote(Remus,AllChapters,0xA0,RemusDeathText)
+DeathQuote(Yvette,AllChapters,0x00,YvetteDeathText) // TREAT 0xA0 AS DISABLE DEATH QUOTES FOR ENDINGS.
+DeathQuote(Madeleine,AllChapters,0x00,MadeleineDeathText)
+DeathQuote(Remus,AllChapters,0x00,RemusDeathText)
+DeathQuote(Rex,AllChapters,0x00,RexDeathText)
 
 DeathQuote(PlayerMMercenary,AllChapters,0x65,PlayerDeathText)
 DeathQuote(PlayerMMyrmidon,AllChapters,0x65,PlayerDeathText)

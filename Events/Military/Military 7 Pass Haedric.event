@@ -134,11 +134,6 @@ CLEA 0x0
 CLEE 0x0
 ASMC RefreshAll|1
 ASMC PrepForEnd|1
-SVAL 0x1 60
-SET_HP Jasper
-SET_HP Derek
-SET_HP Christina
-SET_HP Elanil
 CHECK_EVENTID 0x10
 BEQ 0x0 0x0 0xC
 	// Muriel engaged in combat with Uzkalis. Good ending.

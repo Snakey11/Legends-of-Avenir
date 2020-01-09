@@ -53,7 +53,6 @@ STAL 0x50
 SET_SOMETHING 0xFFFE
 DISA_IF 0xFFFE // Kills [Tact] assuming that the coordinates were set from the macro call.
 STAL 0x30
-FADI 0x5
 DISA PlayerFCavalier
 DISA PlayerFKnight
 DISA PlayerFSoldier

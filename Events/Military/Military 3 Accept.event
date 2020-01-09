@@ -287,7 +287,7 @@ UNIT Arcanian Mercenary Sean Level(7,Enemy,True) [17,7] Drop 0x00 0x00 0x00 [Iro
 UNIT
 
 MadelineRemus:
-UNIT Madeline Archer_F 0x00 Level(10,Ally,True) [0,5] 0x00 0x00 0x01 REDA5R4 [SteelLongbow,IronBow,Vulnerary] NoAI
+UNIT Madeline Archer_F 0x00 Level(7,Ally,True) [0,5] 0x00 0x00 0x01 REDA5R4 [SteelLongbow,IronBow,Vulnerary] NoAI
 UNIT Remus Soldier 0x00 Level(8,Ally,True) [0,4] 0x00 0x00 0x01 REDA5R5 [SteelLance,Vulnerary] NoAI
 UNIT
 

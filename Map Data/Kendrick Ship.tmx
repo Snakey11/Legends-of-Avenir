@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="0E000F10" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/0E000F10.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="10">
+  <properties>
+   <property name="Anims" value="_0EAnims"/>
+   <property name="ChapterID" value="KendrickShipCutscene"/>
+   <property name="Main" value=""/>
+   <property name="MapID" value="KendrickShipMap"/>
+   <property name="ObjectType" value="0x0E"/>
+   <property name="PaletteID" value="0x0F"/>
+   <property name="TileConfig" value="0x10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJyTYWJgkEHC1owMDDZAHABk2wHpREYIbQ/EDkB8hxFVPTKOBsrFAHErVE8jEjsBiP/g0VsNlKsF4hqoGSA9dVCxBiC2Zsat9xcDA8NMRghug2IY35KAvSC9+4Hy9VA77aDseiL1xiDpg+F0KuiVxqEPWW8KUljB2MTa2wLE86B6YWxy3WyHRS8ATU0wzQ==
+  </data>
+ </layer>
+</map>
