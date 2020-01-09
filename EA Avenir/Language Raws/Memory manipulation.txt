@@ -92,12 +92,11 @@ COUNTER_SET, 0x0F21, 4, -game:FE8 -indexMode:8
 	Bitshift value, 2, 1
 	Counter value, 3, 1
 
-#Add and subtract value at counter by (Base operand)*(2^Bistshift Value).
-COUNTER_ADD, 0x0F22, 4, -game:FE8 -indexMode:8
-	Bitshift value, 2, 1
-	Base operand, 3, 1
+## Increments value of given counter (max 15, won't overflow)
+COUNTER_INC, 0x0F22, 4, -language:FE8 -indexMode:8
+    Id, 2, 1
 
-COUNTER_SUBTRACT, 0x0F23, 4, -game:FE8 -indexMode:8
-	Bitshift value, 2, 1
-	Base operand, 3, 1
+## Decrements value of given counter (min 0, won't underflow)
+COUNTER_DEC, 0x0F23, 4, -language:FE8 -indexMode:8
+    Id, 2, 1
 
