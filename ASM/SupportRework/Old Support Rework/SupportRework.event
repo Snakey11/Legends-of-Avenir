@@ -76,8 +76,8 @@
 		
 		ORG $28290
 		SHORT 0x4770 // bx lr. Eliminate gaining support points.
-		ORG $87698
-		SHORT 0x4770 // bx lr. Eliminate vanilla support drawing.
+		//ORG $87698
+		//SHORT 0x4770 // bx lr. Eliminate vanilla support drawing.
 		POP
 		
 		ALIGN 4
