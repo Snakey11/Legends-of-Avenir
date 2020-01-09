@@ -47,25 +47,25 @@ SHORT 2; BYTE 25 0x86; POIN arcwind_objimg_0; WORD 300 300; POIN arcwind_bgImage
 SHORT 2; BYTE 26 0x86; POIN arcwind_objimg_0; WORD 312 312; POIN arcwind_bgImage_26 arcwind_objPalette arcwind_bgPalette_26 arcwind_TSA_26
 SHORT 2; BYTE 27 0x86; POIN arcwind_objimg_0; WORD 324 324; POIN arcwind_bgImage_27 arcwind_objPalette arcwind_bgPalette_27 arcwind_TSA_27
 SHORT 2; BYTE 28 0x86; POIN arcwind_objimg_0; WORD 336 336; POIN arcwind_bgImage_28 arcwind_objPalette arcwind_bgPalette_28 arcwind_TSA_28
-WORD 0x8502bf48
+//WORD 0x8502bf48
 SHORT 3; BYTE 29 0x86; POIN arcwind_objimg_0; WORD 348 348; POIN arcwind_bgImage_29 arcwind_objPalette arcwind_bgPalette_29 arcwind_TSA_29
 SHORT 3; BYTE 30 0x86; POIN arcwind_objimg_0; WORD 360 360; POIN arcwind_bgImage_30 arcwind_objPalette arcwind_bgPalette_30 arcwind_TSA_30
 SHORT 3; BYTE 31 0x86; POIN arcwind_objimg_0; WORD 372 372; POIN arcwind_bgImage_31 arcwind_objPalette arcwind_bgPalette_31 arcwind_TSA_31
 SHORT 16; BYTE 32 0x86; POIN arcwind_objimg_0; WORD 384 384; POIN arcwind_bgImage_32 arcwind_objPalette arcwind_bgPalette_32 arcwind_TSA_32
-WORD 0x850c2048
-WORD 0x8500001f
+//WORD 0x850c2048
+//WORD 0x8500001f
 SHORT 4; BYTE 33 0x86; POIN arcwind_objimg_0; WORD 396 396; POIN arcwind_bgImage_33 arcwind_objPalette arcwind_bgPalette_33 arcwind_TSA_33
 SHORT 4; BYTE 34 0x86; POIN arcwind_objimg_0; WORD 408 408; POIN arcwind_bgImage_34 arcwind_objPalette arcwind_bgPalette_34 arcwind_TSA_34
 SHORT 4; BYTE 35 0x86; POIN arcwind_objimg_0; WORD 420 420; POIN arcwind_bgImage_35 arcwind_objPalette arcwind_bgPalette_35 arcwind_TSA_35
-WORD 0x8500001f
+//WORD 0x8500001f
 SHORT 4; BYTE 36 0x86; POIN arcwind_objimg_0; WORD 432 432; POIN arcwind_bgImage_36 arcwind_objPalette arcwind_bgPalette_36 arcwind_TSA_36
 SHORT 4; BYTE 37 0x86; POIN arcwind_objimg_0; WORD 444 444; POIN arcwind_bgImage_37 arcwind_objPalette arcwind_bgPalette_37 arcwind_TSA_37
 SHORT 4; BYTE 38 0x86; POIN arcwind_objimg_0; WORD 456 456; POIN arcwind_bgImage_38 arcwind_objPalette arcwind_bgPalette_38 arcwind_TSA_38
 SHORT 4; BYTE 39 0x86; POIN arcwind_objimg_0; WORD 468 468; POIN arcwind_bgImage_39 arcwind_objPalette arcwind_bgPalette_39 arcwind_TSA_39
-WORD 0x8500001f
+//WORD 0x8500001f
 SHORT 4; BYTE 40 0x86; POIN arcwind_objimg_0; WORD 480 480; POIN arcwind_bgImage_40 arcwind_objPalette arcwind_bgPalette_40 arcwind_TSA_40
 SHORT 4; BYTE 41 0x86; POIN arcwind_objimg_0; WORD 492 492; POIN arcwind_bgImage_41 arcwind_objPalette arcwind_bgPalette_41 arcwind_TSA_41
-WORD 0x8500001f
+//WORD 0x8500001f
 SHORT 4; BYTE 42 0x86; POIN arcwind_objimg_0; WORD 504 504; POIN arcwind_bgImage_42 arcwind_objPalette arcwind_bgPalette_42 arcwind_TSA_42
 SHORT 4; BYTE 43 0x86; POIN arcwind_objimg_0; WORD 516 516; POIN arcwind_bgImage_43 arcwind_objPalette arcwind_bgPalette_43 arcwind_TSA_43
 SHORT 4; BYTE 44 0x86; POIN arcwind_objimg_0; WORD 528 528; POIN arcwind_bgImage_44 arcwind_objPalette arcwind_bgPalette_44 arcwind_TSA_44
