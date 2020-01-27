@@ -22,8 +22,8 @@ Swordfighter,0x0
 Swordfighter (F),0x0
 Swordmaster,0x0
 Swordmaster (F),0x0
-Assassin,LethalityID
-Assassin (F),LethalityID
+Assassin,CunningID
+Assassin (F),CunningID
 Archer,0x0
 Archer (F),0x0
 Sniper,0x0

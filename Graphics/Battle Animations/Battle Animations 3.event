@@ -1,4 +1,5 @@
 
+{
 #include "Shadow Sword.event"
 
 #include "Shadow Unarmed.event"
@@ -6,15 +7,15 @@
 #include "Truerblade Sword.event"
 
 #include "Truerblade Unarmed.event"
-
-
+}
+{
 #include "Fighter Axe.event"
 
 #include "Fighter Hand Axe.event"
 
 #include "Fighter Unarmed.event"
-
-
+}
+{
 #include "Wyvern General Axe.event"
 
 #include "Wyvern General Hand Axe.event"
@@ -22,8 +23,8 @@
 #include "Wyvern General Lance.event"
 
 #include "Wyvern General Unarmed.event"
-
-
+}
+{
 #include "Sentinel Sword.event"
 
 #include "Sentinel Lance.event"
@@ -33,13 +34,13 @@
 #include "Sentinel Hand Axe.event"
 
 #include "Sentinel Unarmed.event"
-
-
+}
+{
 #include "Trueblade Sword.event"
 
 #include "Trueblade Unarmed.event"
-
-
+}
+{
 #include "Grand Paladin Sword.event"
 
 #include "Grand Paladin Lance.event"
@@ -49,18 +50,18 @@
 #include "Grand Paladin Hand Axe.event"
 
 #include "Grand Paladin Unarmed.event"
-
-
+}
+{
 #include "Spear Hero.event"
-
-
+}
+{
 #include "Xexim Sword.event"
 
 #include "Xexim Bow.event"
 
 #include "Xexim Unarmed.event"
-
-
+}
+{
 #include "Harbinger Sword.event"
 
 #include "Harbinger Axe.event"
@@ -70,3 +71,4 @@
 #include "Harbinger Magic.event"
 
 #include "Harbinger Unarmed.event"
+}

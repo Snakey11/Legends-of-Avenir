@@ -6,15 +6,15 @@
 #define AnimTableEntry(index) "ORG ClassAnimTable - 0x20 + (index * 0x20)"
 //////////////Installed animations go here
 
-
+{
 #include "Impaler M Lance.event"
 
 #include "Impaler M Unarmed.event"
-
-
+}
+{
 #include "Izuk Magic.event"
-
-
+}
+{
 #include "Jacket Hero Sword.event"
 
 #include "Jacket Hero Axe.event"
@@ -22,11 +22,11 @@
 #include "Jacket Hero Hand Axe.event"
 
 #include "Jacket Hero Unarmed.event"
-
-
+}
+{
 #include "Monk F Magic.event"
-
-
+}
+{
 #include "Magus M Magic.event"
 
 #include "Magus M Staff.event"
@@ -34,8 +34,8 @@
 #include "Magus F Magic.event"
 
 #include "Magus F Staff.event"
-
-
+}
+{
 #include "Master Knight M Sword.event"
 
 #include "Master Knight M Lance.event"
@@ -45,8 +45,8 @@
 #include "Master Knight M Hand Axe.event"
 
 #include "Master Knight M Unarmed.event"
-
-
+}
+{
 #include "Master Knight F Sword.event"
 
 #include "Master Knight F Lance.event"
@@ -56,13 +56,13 @@
 #include "Master Knight F Hand Axe.event"
 
 #include "Master Knight F Unarmed.event"
-
-
+}
+{
 #include "Matriarch Magic.event"
 
 #include "Matriarch Staff.event"
-
-
+}
+{
 #include "Mounted Brigand Axe.event"
 
 #include "Mounted Brigand Hand Axe.event"
@@ -70,18 +70,19 @@
 #include "Mounted Brigand Bow.event"
 
 #include "Mounted Brigand Unarmed.event"
-
-
+}
+{
 #include "Necromancer Magic.event"
 
 #include "Necromancer Staff.event"
-
-
+}
+{
 #include "Patriarch Magic.event"
 
 #include "Patriarch Staff.event"
-
-
+}
+{
 #include "Mercenary F Sword.event"
 
 #include "Mercenary F Unarmed.event"
+}

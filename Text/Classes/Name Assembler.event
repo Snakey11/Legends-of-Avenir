@@ -40,8 +40,8 @@ Warlock[X]
 ## MountainierNameText
 Mountainier[X]
 
-## DarkFalcoknightNameText
-Dark Falcoknight[X]
+## SeraphKnightNameText
+Seraph Knight[X]
 
 ## HalberdierNameText
 Halberdier[X]
@@ -63,3 +63,15 @@ High Priest[X]
 
 ## BattleSageNameText
 Battle Sage[X]
+
+## SpellswordNameText
+Spellsword[X]
+
+## DreadFighterNameText
+Dread Fighter[X]
+
+## MaligKnightNameText
+Malig Knight[X]
+
+## StrategistNameText
+Strategist[X]

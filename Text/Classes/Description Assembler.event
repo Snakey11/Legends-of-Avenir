@@ -33,9 +33,10 @@ Talented wyvern riders[NL]
 who have mastered their[NL]
 art. Equip: Lances, Axes.[X]
 
-## BlackFalcoknightDescText
-A pegasus rider with very high magical[NL]
-resistance. Equip: Swords, Lances.[X]
+## SeraphKnightDescText
+Pegasus knights excelling in[NL]
+combat and magic. Equip: Swords,[NL]
+Lances, Anima, Staves.[X]
 
 ## HunterClassDescText
 Skilled sharpshooters known[NL]
@@ -107,5 +108,26 @@ Lord of fire and dragons of[NL]
 Altia Equip: Anima, Staves.[X]
 
 ## BattleSageDescText
-Talented physical and magical[NL]
-fighters. Equip: Swords, Anima.[X]
+Defensive physical and magical[NL]
+fighters. Cannot counter with[NL]
+magic. Equip: Swords, Anima.[X]
+
+## SpellswordDescText
+Fighters adept in swordwork magic.[NL]
+Cannot coutner with magic. Equip:[NL]
+Swords, E-rank Anima and Dark.[X]
+
+## DreadFighterDescText
+Dangerous opponents utilizing both[NL]
+swords and ancient magic. Cannot counter[NL]
+with magic. Equip: Swords, Dark.[X]
+
+## MaligKnightDescText
+Unique and powerful wyvern[NL]
+riders. Cannot counter with[NL]
+magic. Equip: Axes, Dark.[X]
+
+## StrategistDescText
+Experienced commanders with many[NL]
+talents: Cannot counter with[NL]
+magic. Equip: Swords, Anima.[X]

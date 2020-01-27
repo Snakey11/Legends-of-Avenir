@@ -98,7 +98,7 @@ Trueblade,TruebladeMv|IsPointer,0x81f876c
 MountedBrigand,MountedBrigandMv|IsPointer,0x81f90a0
 BUGGED,WarlockMv|IsPointer,0x81f95f4
 Mountainier,0x81e640c,0x81e6df4
-Black Falcoknight,BlackFalcoknightMv|IsPointer,0x81faf40
+Black Falcoknight,0x81e9848,0x81faf40
 Dragon Zombie,0x81fb098,0x81fbe5c
 Demon King,0x81fbfbc,0x81fd028
 Archer on Ballista,0x81fd180,0x81fd808
@@ -161,3 +161,9 @@ Impaler F,ImpalerMv|IsPointer,0x81f49b8
 SoldierF2,0x81ed418,0x81edbc4
 Hunter F,HunterMv|IsPointer,0x81f607c
 High Priest,PatriarchMv|IsPointer,0x81efe70
+DreadFighterM,DreadFighterMMv|IsPointer,0x81ce4fc
+DreadFighterF,DreadFighterFMv|IsPointer,0x81ce4fc
+MaligKnight,MaligKnightMv|IsPointer,0x81d5e58
+Strategist,BattleSageFMv|IsPointer,0x81d9b58
+SpellswordM,0x81cc9d4,0x81cd1bc
+SpellswordF,0x81cd314,0x81cdb58

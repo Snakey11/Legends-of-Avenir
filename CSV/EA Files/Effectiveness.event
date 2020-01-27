@@ -13,7 +13,7 @@ BYTE Knight Knight_F General General_F GreatKnight GreatKnight_F Commander Knigh
 
 ALIGN 16
 FlierEffectiveness:
-BYTE PegasusKnight FalcoKnight PegasusKnight2 BlackFalcoknight WyvernRider WyvernRider_F WyvernLord WyvernLord_F WyvernKnight WyvernKnight_F WyvernRider2 WyvernGeneral ArmoredWyvernLord 0x0 0x0 0x0 0x0
+BYTE PegasusKnight FalcoKnight PegasusKnight2 BlackFalcoknight WyvernRider WyvernRider_F WyvernLord WyvernLord_F WyvernKnight WyvernKnight_F WyvernRider2 WyvernGeneral ArmoredWyvernLord MaligKnight 0x0 0x0 0x0 0x0
 
 ALIGN 16
 PegasusEffectiveness:
@@ -21,11 +21,11 @@ BYTE PegasusKnight FalcoKnight PegasusKnight2 BlackFalcoknight 0x0 0x0 0x0 0x0
 
 ALIGN 16
 WyvernEffectiveness:
-BYTE WyvernRider WyvernRider_F WyvernLord WyvernLord_F WyvernKnight WyvernKnight_F WyvernRider2 WyvernGeneral ArmoredWyvernLord 0x0 0x0 0x0 0x0
+BYTE WyvernRider WyvernRider_F WyvernLord WyvernLord_F WyvernKnight WyvernKnight_F WyvernRider2 WyvernGeneral ArmoredWyvernLord MaligKnight 0x0 0x0 0x0 0x0
 
 ALIGN 16
 SwordEffectiveness:
-BYTE Thief Mercenary Mercenary_F Hero Hero_F Myrmidon Myrmidon_F Swordmaster Swordmaster_F Assassin Assassin_F Rogue Champion MercenaryM2 MercenaryF2 MyrmidonM2 MyrmidonF2 JacketHero Hector Truerblade TruebladeM TruebladeF EdgySwordmaster Combatant 0x0 0x0 0x0 0x0
+BYTE Thief Mercenary Mercenary_F Hero Hero_F Myrmidon Myrmidon_F Swordmaster Swordmaster_F Assassin Assassin_F Rogue Champion MercenaryM2 MercenaryF2 MyrmidonM2 MyrmidonF2 JacketHero Hector Truerblade TruebladeM TruebladeF EdgySwordmaster Combatant SpellswordM SpellswordF DreadFighterM DreadFighterF BattleSageM BattleSageF Strategist 0x0 0x0 0x0 0x0
 
 ALIGN 16
 LanceEffectiveness:
@@ -33,7 +33,7 @@ BYTE Knight Knight_F General General_F PegasusKnight FalcoKnight PegasusKnight2 
 
 ALIGN 16
 AxeEffectiveness:
-BYTE Hero Hero_F Fighter Warrior Brigand Pirate Berserker Champion Warlock Mountainier Fighter2 Brigand2 Pirate2 JacketHero Gladiator MountedBrigand 0x0 0x0 0x0 0x0
+BYTE Hero Hero_F Fighter Warrior Brigand Pirate Berserker Champion Warlock Mountainier Fighter2 Brigand2 Pirate2 JacketHero Gladiator MountedBrigand MaligKnight 0x0 0x0 0x0 0x0
 
 ALIGN 16
 MageEffectiveness:

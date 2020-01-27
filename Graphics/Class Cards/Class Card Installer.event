@@ -4,25 +4,57 @@ SentinelPortrait:
 #incbin "Sentinel.dmp"
 SentinelPortraitPalette:
 #incbin "SentinelPalette.dmp"
+
 HalberdierPortrait:
 #incbin "Halberdier.dmp"
 HalberdierPortraitPalette:
 #incbin "HalberdierPalette.dmp"
+
 AssassinPortrait:
 #incbin "Assassin.dmp"
 AssassinPortraitPalette:
 #incbin "AssassinPalette.dmp"
+
 KnightPortrait:
 #incbin "Knight.dmp"
 KnightPortraitPalette:
 #incbin "KnightPalette.dmp"
+
 PiratePortrait:
 #incbin "Pirate.dmp"
 PiratePortraitPalette:
 #incbin "PiratePalette.dmp"
+
+BattleSageMPortrait:
+#incbin "BattleSageM.dmp"
+BattleSageMPortraitPalette:
+#incbin "BattleSageMPalette.dmp"
+BattleSageFPortrait:
+#incbin "BattleSageF.dmp"
+BattleSageFPortraitPalette:
+#incbin "BattleSageFPalette.dmp"
+
+DreadFighterMPortrait:
+#incbin "DreadFighterM.dmp"
+DreadFighterMPortraitPalette:
+#incbin "DreadFighterMPalette.dmp"
+DreadFighterFPortrait:
+#incbin "DreadFighterF.dmp"
+DreadFighterFPortraitPalette:
+#incbin "DreadFighterFPalette.dmp"
+
+MaligKnightPortrait:
+#incbin "MaligKnight.dmp"
+MaligKnightPortraitPalette:
+#incbin "MaligKnightPalette.dmp"
 
 setCardEntry(SentinelCard,SentinelPortrait,SentinelPortraitPalette)
 setCardEntry(HalberdierCard,HalberdierPortrait,HalberdierPortraitPalette)
 setCardEntry(AssassinCard,AssassinPortrait,AssassinPortraitPalette)
 setCardEntry(KnightCard,KnightPortrait,KnightPortraitPalette)
 setCardEntry(PirateCard,PiratePortrait,PiratePortraitPalette)
+setCardEntry(BattleSageMCard,BattleSageMPortrait,BattleSageMPortraitPalette)
+setCardEntry(BattleSageFCard,BattleSageFPortrait,BattleSageFPortraitPalette)
+setCardEntry(DreadFighterMCard,DreadFighterMPortrait,DreadFighterMPortraitPalette)
+setCardEntry(DreadFighterFCard,DreadFighterFPortrait,DreadFighterFPortraitPalette)
+setCardEntry(MaligKnightCard,MaligKnightPortrait,MaligKnightPortraitPalette)

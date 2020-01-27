@@ -1,14 +1,13 @@
 
+{
 #include "Berserker Sword.event"
+}
+{
+#include "Seraph Knight Magic.event"
 
-
-#include "Black Falcoknight Sword.event"
-
-#include "Black Falcoknight Lance.event"
-
-#include "Black Falcoknight Disarmed.event"
-
-
+#include "Seraph Knight Staff.event"
+}
+{
 #include "Champion Sword.event"
 
 #include "Champion Axe.event"
@@ -16,32 +15,29 @@
 #include "Champion Hand Axe.event"
 
 #include "Champion Unarmed.event"
+}
+{
+#include "Dark Knight Sword.event"
 
+#include "Dark Knight Magic.event"
 
-#include "Dark Knight M Magic.event"
-
-#include "Dark Knight M Staff.event"
-
-
-#include "Dark Knight F Magic.event"
-
-#include "Dark Knight F Staff.event"
-
-
+#include "Dark Knight Staff.event"
+}
+{
 #include "Gaiden Sage Magic.event"
 
 #include "Gaiden Sage Staff.event"
-
-
+}
+{
 #include "Gladiator Axe.event"
 
 #include "Gladiator Hand Axe.event"
 
 #include "Gladiator Unarmed.event"
-
-
+}
+{
 #include "Halberdier Spear.event"
 
 #include "Halberdier Unarmed.event"
-
+}
 //End of free space block

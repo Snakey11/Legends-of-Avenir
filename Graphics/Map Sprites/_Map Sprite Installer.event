@@ -17,14 +17,6 @@ BattleSageFMv:
 #incbin "BattleSageFMv.dmp"
 ALIGN 4
 
-BlackFalcoknightSt:
-#incbin "BlackFalcoknightSt.dmp"
-ALIGN 4
-
-BlackFalcoknightMv:
-#incbin "BlackFalcoknightMv.dmp"
-ALIGN 4
-
 
 ChampionSt:
 #incbin "ChampionSt.dmp"
@@ -50,6 +42,23 @@ ALIGN 4
 
 DarkKnightMv:
 #incbin "DarkKnightMv.dmp"
+ALIGN 4
+
+
+DreadFighterMSt:
+#incbin "DreadFighterMSt.dmp"
+ALIGN 4
+
+DreadFighterMMv:
+#incbin "DreadFighterMMv.dmp"
+ALIGN 4
+
+DreadFighterFSt:
+#incbin "DreadFighterFSt.dmp"
+ALIGN 4
+
+DreadFighterFMv:
+#incbin "DreadFighterFMv.dmp"
 ALIGN 4
 
 
@@ -151,6 +160,14 @@ MagusFMv:
 #incbin "MagusFMv.dmp"
 ALIGN 4
 
+
+MaligKnightSt:
+#incbin "MaligKnightSt.dmp"
+ALIGN 4
+
+MaligKnightMv:
+#incbin "MaligKnightMv.dmp"
+ALIGN 4
 
 MatriarchSt:
 #incbin "MatriarchSt.dmp"

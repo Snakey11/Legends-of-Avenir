@@ -143,7 +143,7 @@ Hector,HectorSkillList|IsPointer
 Trueerblade,TruerbladeSkillList|IsPointer
 Gaiden Sage,GaidenSageSkillList|IsPointer
 Izuk,IzukSkillList|IsPointer
-Nomad,NomadSkillList|IsPointer
+F BattleSage,BattleSageSkillList|IsPointer
 Guardian Spirit,HectorSkillList|IsPointer
 Warlock,WarlockSkillList|IsPointer
 SpearHero,HeroSkillList|IsPointer
@@ -151,7 +151,7 @@ XeximClass,AssassinSkillList|IsPointer
 GrandPaladin,PaladinSkillList|IsPointer
 HolySage,SageSkillList|IsPointer
 WilSniper,SniperSkillList|IsPointer
-BattleSage,SageSkillList|IsPointer
+BattleSage,BattleSageSkillList|IsPointer
 LostSoulM,0x0
 LostSoulF,0x0
 ArmoredWyvernLord,WyvernLordSkillList|IsPointer
@@ -160,5 +160,11 @@ EmperorClass,EmperorClassSkillList|IsPointer
 MurielSage,SageSkillList|IsPointer
 Impaler F,ImpalerSkillList|IsPointer
 SoldierF2,SoldierSkillList|IsPointer
-Hunter F,HunterSkillList|IsPointer
+Hunter F,SoldierSkillList|IsPointer
 High Priest,PatriarchMatriarchSkillList|IsPointer
+DreadFighterM,DreadFighterSkillList|IsPointer
+DreadFighterF,DreadFighterSkillList|IsPointer
+MaligKnight,MaligKnightSkillList|IsPointer
+Strategist,BattleSageSkillList|IsPointer
+SpellswordM,SpellswordSkillList|IsPointer
+SpellswordF,SpellswordSkillList|IsPointer

@@ -76,6 +76,7 @@
 #define Patriarch 0x52
 #define Matriarch 0x53
 #define DarkKnightM 0x54
+#define DarkKnight DarkKnightM
 #define DarkKnightF 0x55
 #define MagusM 0x56
 #define Magus MagusM
@@ -94,7 +95,8 @@
 #define MountedBrigand 0x61
 #define Maurader 0x61
 #define Mountainier 0x63
-#define BlackFalcoknight 0x64
+#define SeraphKnight 0x64
+#define BlackFalcoknight SeraphKnight // Old Tact peg promo.
 #define MageM2 0x73
 #define MageF2 0x74
 #define ShamanM2 0x75
@@ -136,12 +138,14 @@
 #define NarratorClass 0x91
 #define GuardianSpirit NarratorClass
 #define Warlock 0x92
+#define WarMonk Warlock
 #define SpearHero 0x93
 #define XeximClass 0x94
 #define GrandPaladin 0x95
 #define HolySage 0x96
 #define WilSniper 0x97
-#define BattleSage 0x98
+#define BattleSageM 0x98
+#define BattleSage BattleSageM
 #define LostSoulM 0x99
 #define LostSoulF 0x9A
 #define ArmoredWyvernLord 0x9B
@@ -152,6 +156,14 @@
 #define SoldierF2 0xA0
 #define HunterF 0xA1
 #define HighPriest 0xA2
+#define DreadFighterM 0xA3
+#define DreadFighter DreadFighterM
+#define DreadFighterF 0xA4
+#define MaligKnight 0xA5
+#define Strategist 0xA6
+#define SpellswordM 0xA7
+#define Spellsword SpellswordM
+#define SpellswordF 0xA8
 //LabelEnd
 
 //Label Character definitions
@@ -359,6 +371,11 @@
 #define RemusMug 0xE7
 #define BlaineMug 0xE8
 #define WestonMug 0xE9
+#define BattleSageMCard 0xEA
+#define BattleSageFCard 0xEB
+#define DreadFighterMCard 0xEC
+#define DreadFighterFCard 0xED
+#define MaligKnightCard 0xEE
 
 #define MerchantMug 0x31 // Breguet
 #define HenningMug 0x33 // Bazba
@@ -873,7 +890,7 @@
 #define PirateSprite 0x34
 #define EmperorSprite 0x62
 
-#define BlackFalcoknightSprite 0x6B
+#define MaligKnightSprite 0x6B
 #define ChampionSprite 0x6C
 #define CommanderSprite  0x6D
 #define DarkKnightSprite  0x6E
@@ -898,7 +915,10 @@
 #define ShadowSprite 0x80
 #define HarbingerSprite 0x81
 #define EdgySwordmasterSprite 0x82
-#define BattleSageSprite 0x83
+#define BattleSageMSprite 0x83
+#define BattleSageSprite BattleSageMSprite
+#define DreadFighterMSprite 0x84
+#define DreadFighterFSprite 0x85
 //LabelEnd
 
 //Label Battle Animations
@@ -914,16 +934,17 @@
 #define DarkAnim(Animation) "BYTE Dark 0x01 ; SHORT Animation"
 #define UnarmedAnim(Animation) "BYTE Item 0x01 ; SHORT Animation"
 #define SpecialAnim(Animation,Weapon) "BYTE Weapon 0x00 ; SHORT Animation"
-#define BerserkerSword 0x01
 #define FighterAxe 0x19
 #define FighterHandAxe 0x1A
 #define FighterUnarmed 0x1B
 #define BerserkerAxe 0x23
 #define BerserkerHandAxe 0x24
 #define BerserkerUnarmed 0x25
-#define BlackFalcoknightSpear 0x02
-#define BlackFalcoknightSword 0x03
-#define BlackFalcoknightUnarmed 0x04
+#define BerserkerSword 0x01
+#define SeraphKnightSword 0x68
+#define SeraphKnightSpear 0x69
+#define SeraphKnightMagic 0x02
+#define SeraphKnightStaff 0x03
 #define ChampionSword 0x05
 #define ChampionAxe 0x06
 #define ChampionHandAxe 0x07
@@ -948,15 +969,19 @@
 #define GreatKnightUnarmed 0x52
 #define WyvernKnightLance 0x62
 #define WyvernKnightUnarmed 0x63
+#define MageKnightMMagic 0x71
+#define MageKnightMStaff 0x72
+#define MageKnightFMagic 0x73
+#define MageKnightFStaff 0x74
 #define MonkMagic 0x7D
 #define MonkStaff 0x7F
 #define MonkFStaff 0x80
+#define ValkyrieMagic 0x87
+#define ValkyrieStaff 0x88
 #define AssassinSword 0x8B
 #define AssassinUnarmed 0x8C
-#define DarkKnightMMagic 0x92
-#define DarkKnightMStaff 0x93
-#define DarkKnightFMagic 0x94
-#define DarkKnightFStaff 0x95
+#define DarkKnightMagic 0x92
+#define DarkKnightStaff 0x93
 #define GaidenSageMagic 0x96
 #define GaidenSageStaff 0x97
 #define SoldierLance 0x98
@@ -1083,6 +1108,24 @@
 #define BattleSageFMagic 0x11F
 #define BattleSageFStaff 0x120
 #define HarbingerMagic 0x121
+#define DarkKnightSword 0x122
+#define DreadFighterMSword 0x123
+#define DreadFighterMMagic 0x124
+#define DreadFighterMUnarmed 0x125
+#define DreadFighterFSword 0x126
+#define DreadFighterFMagic 0x127
+#define DreadFighterFUnarmed 0x128
+#define MageKnightMSword 0x129
+#define MageKnightFSword 0x12A
+#define MaligKnightAxe 0x12B
+#define MaligKnightHandAxe 0x12C
+#define MaligKnightMagic 0x12D
+#define MaximusBattleSageSword 0x12E
+#define MaximusBattleSageUnarmed 0x12F
+#define SpellswordMSword 0x130
+#define SpellswordMUnarmed 0x131
+#define SpellswordFSword 0x132
+#define SpellswordFUnarmed 0x133
 //LabelEnd
 
 //Label Music Definitions
@@ -1506,7 +1549,7 @@
 #define SandstormWeather 0x06
 #define CloudWeather 0x07
 
-#include "ASM/SupportRework/Support Definitions.event"
+#include "ASM/SupportRework/SupportReworkDefinitions.event"
 
 //LabelEnd
 #define EndUnit UNIT // Necessary for folding

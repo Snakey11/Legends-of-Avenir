@@ -9,6 +9,7 @@ UnarmedAnim(ArmoredWyvernLordUnarmed)
 WORD 0x0 0x0
 
 BattleSageAnim:
+SwordAnim(BattleSageSword)
 AnimaAnim(BattleSageMagic)
 LightAnim(BattleSageMagic)
 UnarmedAnim(BattleSageMagic)
@@ -19,12 +20,6 @@ SwordAnim(BattleSageFSword)
 AnimaAnim(BattleSageFMagic)
 LightAnim(BattleSageFMagic)
 UnarmedAnim(BattleSageFMagic)
-
-BlackFalcoknightAnim:
-SwordAnim(BlackFalcoknightSword)
-SpearAnim(BlackFalcoknightSpear)
-UnarmedAnim(BlackFalcoknightUnarmed)
-WORD 0x0 0x0
 
 ChampionAnim:
 SwordAnim(ChampionSword)
@@ -41,16 +36,23 @@ HandAxeAnim(CommanderHandAxe)
 UnarmedAnim(CommanderUnarmed)
 WORD 0x0 0x0
 
-DarkKnightMAnim:
-StaffAnim(DarkKnightMStaff)
-DarkAnim(DarkKnightMMagic)
-UnarmedAnim(DarkKnightMMagic)
+DarkKnightAnim:
+SwordAnim(DarkKnightSword)
+StaffAnim(DarkKnightStaff)
+DarkAnim(DarkKnightMagic)
+UnarmedAnim(DarkKnightMagic)
 WORD 0x0 0x0
 
-DarkKnightFAnim:
-StaffAnim(DarkKnightFStaff)
-DarkAnim(DarkKnightFMagic)
-UnarmedAnim(DarkKnightFMagic)
+DreadFighterMAnim:
+SwordAnim(DreadFighterMSword)
+DarkAnim(DreadFighterMMagic)
+UnarmedAnim(DreadFighterMUnarmed)
+WORD 0x0 0x0
+
+DreadFighterFAnim:
+SwordAnim(DreadFighterFSword)
+DarkAnim(DreadFighterFMagic)
+UnarmedAnim(DreadFighterFUnarmed)
 WORD 0x0 0x0
 
 EdgySwordmasterAnim:
@@ -160,6 +162,20 @@ HandAxeAnim(KnightHandAxe)
 UnarmedAnim(KnightUnarmed)
 WORD 0x0 0x0
 
+MageKnightMAnim:
+SwordAnim(MageKnightMSword)
+StaffAnim(MageKnightMStaff)
+AnimaAnim(MageKnightMMagic)
+UnarmedAnim(MageKnightMMagic)
+WORD 0x0 0x0
+
+MageKnightFAnim:
+SwordAnim(MageKnightFSword)
+StaffAnim(MageKnightFStaff)
+AnimaAnim(MageKnightFMagic)
+UnarmedAnim(MageKnightFMagic)
+WORD 0x0 0x0
+
 MagusMAnim:
 StaffAnim(MagusMStaff)
 AnimaAnim(MagusMMagic)
@@ -172,6 +188,14 @@ StaffAnim(MagusFStaff)
 AnimaAnim(MagusFMagic)
 LightAnim(MagusFMagic)
 UnarmedAnim(MagusFMagic)
+WORD 0x0 0x0
+
+MaligKnightAnim:
+AxeAnim(MaligKnightAxe)
+HandAxeAnim(MaligKnightHandAxe)
+AnimaAnim(MaligKnightMagic)
+DarkAnim(MaligKnightMagic)
+UnarmedAnim(MaligKnightMagic)
 WORD 0x0 0x0
 
 MasterKnightMAnim:
@@ -254,6 +278,34 @@ HandAxeAnim(SentinelHandAxe)
 UnarmedAnim(SentinelUnarmed)
 WORD 0x0 0x0
 
+SeraphKnightAnim:
+SwordAnim(SeraphKnightSword)
+SpearAnim(SeraphKnightSpear)
+StaffAnim(SeraphKnightStaff)
+AnimaAnim(SeraphKnightMagic)
+UnarmedAnim(SeraphKnightMagic)
+WORD 0x0 0x0
+
+SpellswordMAnim:
+SwordAnim(SpellswordMSword)
+AnimaAnim(SpellswordMSword)
+DarkAnim(SpellswordMSword)
+UnarmedAnim(SpellswordMUnarmed)
+WORD 0x0 0x0
+
+SpellswordFAnim:
+SwordAnim(SpellswordFSword)
+AnimaAnim(SpellswordFSword)
+DarkAnim(SpellswordFSword)
+UnarmedAnim(SpellswordFUnarmed)
+WORD 0x0 0x0
+
+StrategistAnim:
+SwordAnim(MaximusBattleSageSword)
+AnimaAnim(MaximusBattleSageSword)
+UnarmedAnim(MaximusBattleSageUnarmed)
+WORD 0x0 0x0
+
 TruebladeMAnim:
 SwordAnim(TruebladeMSword)
 UnarmedAnim(TruebladeMUnarmed)
@@ -274,6 +326,13 @@ WORD 0x0 0x0
 TruerbladeAnim:
 SwordAnim(TruerbladeSword)
 UnarmedAnim(TruerbladeUnarmed)
+WORD 0x0 0x0
+
+ValkyrieAnim:
+StaffAnim(ValkyrieStaff)
+AnimaAnim(ValkyrieMagic)
+LightAnim(ValkyrieMagic)
+UnarmedAnim(ValkyrieMagic)
 WORD 0x0 0x0
 
 WarlockAnim:
