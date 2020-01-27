@@ -1,0 +1,19 @@
+
+#ifndef EVENT_PARAMETER_HAX
+	#define EVENT_PARAMETER_HAX
+	
+	// Compiled C source.
+	#include "EventParameters.lyn.event"
+	
+	#define EventParameter(key,function) "WORD key ; POIN function|1"
+	EventParametersTable:
+	
+	// These mimick vanilla behavior.
+	EventParameter(0xFFFF,EventParameterFFFF) // Get current unit.
+	EventParameter(0xFFFE,EventParameterFFFE) // Get unit at coordinates in memory slot 0xB.
+	EventParameter(0xFFFD,EventParameterFFFD) // Get unit in memory slot 0x2.
+	
+	EventParameter(0,0)
+	
+	
+#endif // EVENT_PARAMETER_HAX
