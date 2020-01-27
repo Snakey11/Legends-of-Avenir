@@ -1,11 +1,16 @@
 
 @echo off
+setlocal enabledelayedexpansion
 
 echo ---------------------------
 
 cd %~dp0
 
 copy Clean.gba "Legends of Avenir.gba"
+
+if exist "Legends of Avenir.sav" (
+	copy "Legends of Avenir.sav" "../Tools/No$GBADebugger/BATTERY/Legends of Avenir.SAV"
+)
 
 cd "%~dp0EA Avenir"
 
