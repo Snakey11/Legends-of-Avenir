@@ -187,7 +187,7 @@ LABEL 0x0
 		SVAL 0x1 Xena
 		SVAL 0x2 Kendrick
 		ASMC CallCopyUnit|1
-		AddSupportNoPopup(Kendrick,Yvette)
+		AddSupport(Kendrick,Yvette,0,0)
 		CLEA 0x0
 		CLEN 0x0
 		DISA Xena
@@ -269,7 +269,7 @@ TYvetteKendrick:
 MUSS Zelos
 Text(Military5AcceptRetreatHelpRecruitKendrickText)
 TurnAlly(Kendrick)
-AddSupportNoPopup(Kendrick,Yvette)
+AddSupport(Kendrick,Yvette,0,0)
 ENUT 0x11 // Prevent Kendrick's death quote as a green unit.
 MURE 0x05
 NoFade

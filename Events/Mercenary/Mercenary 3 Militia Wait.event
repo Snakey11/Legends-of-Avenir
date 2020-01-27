@@ -100,7 +100,6 @@ CAM1 [7,8]
 LOAD3 0x1 PlayerLoading1
 LOAD2 0x1 ArcLuke
 Text(Merc3MilitiaWaitTheyreHereText)
-AddSupport(0xFF,Luke)
 NoFade
 ENDA
 
