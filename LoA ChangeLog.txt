@@ -29,6 +29,17 @@ Green units in the prologue have their movement shown
 Forrest and Christina in Military 1 have been buffed
 Enemies in Military 2 Accept have been buffed
 Madeleine's starting level has been lowered in Military 3 Accept
+A few skills have been shuffled around
+Support Rework Rework!
+New classes: Spellsword is a generic T1 swordfighter who can use E rank anima and dark tomes.
+	They get normal WEXP for both ranks, are locked by weapon usability to E, and lose a rank depending on who they promote to
+		Can promote into Battle Sage (Swords + anima) or Dread Fighter (Swords + dark)
+	Hybrid classes can only use magic on their phase and will auto-equip a physical weapon after attacking if one exists
+Zaheva is now a Spellsword
+Sylvaine is now a Malig Knight
+Maximus has a new animation but is still a Battle Sage (to compensate for new generic Battle Sages)
+Mage Knights can now use swords
+Tact peg promo has been changed to Seraph Knight (Swords + lances + anima + staff)
 
 Hotfixes before v1.9:
 Promotion items have been fixed
