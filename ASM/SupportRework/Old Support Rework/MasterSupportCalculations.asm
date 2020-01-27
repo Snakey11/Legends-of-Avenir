@@ -21,12 +21,12 @@
 @ For now, I'll call this the Support Bonus Temp
 	@ These are then used to add bonuses to the battle struct.
 	@ These are added at 0x0802A9F4
-		@ 0x01: Byte: Attack bonus
-		@ 0x02: Byte: Defense bonus
-		@ 0x03: Byte: Hit bonus
-		@ 0x04: Byte: Avoid bonus
-		@ 0x05: Byte: Crit bonus
-		@ 0x06: Byte: Crit avoid bonus
+		@ 0x00: Byte: Attack bonus
+		@ 0x01: Byte: Defense bonus
+		@ 0x02: Byte: Hit bonus
+		@ 0x03: Byte: Avoid bonus
+		@ 0x04: Byte: Crit bonus
+		@ 0x05: Byte: Crit avoid bonus
 		
 		@ I think I should be able to completely rewrite the support calculation system. All I need to do is rewrite the master function to reflect this... easier said than done...?
 	

@@ -1,103 +1,230 @@
 
-#define BaseConvoSize 32 // This NEEDS to be divisible by 4.
-// I'd really prefer to be able to access sizeof(BaseConvoEntry), but idk if that's possible yet.
+#ifndef BASE_CONVO_TABLE
+	#define BASE_CONVO_TABLE
 
-ALIGN 4
-BaseConvoTable: // Allocate 0xFF * 8 entries. 0xFF chapters, 8 entries per chapter.
-ORG CURRENTOFFSET + 0xFF*8*BaseConvoSize
+	#define BaseConvoSize 32 // This NEEDS to be divisible by 4.
+	// I'd really prefer to be able to access sizeof(BaseConvoEntry), but idk if that's possible yet.
 
-{
-#include "ConvoTableDefs.event"
-PUSH
+	ALIGN 4
+	BaseConvoTable: // Allocate 0xFF * 8 entries. 0xFF chapters, 8 entries per chapter.
+	ORG CURRENTOFFSET + 0xFF*8*BaseConvoSize
 
-Chapter(MilitaryAccept3)
-	Entry
-		bg(0x30)
-		name(Military3AcceptNameText)
-		text(Support1Text)
-		music(Aquatic_Ruin)
-	Entry
-		bg(0x2F)
-		name(Military4AcceptRetreatNameText)
-		text(Support2Text)
-		item(SilverSword,Zaheva)
-		music(Venus_Lighthouse)
-		importance(2)
-	Entry
-		name(Military5AcceptRetreatLeaveNameText)
-		event(BaseConvoTestEvent)
-	Entry
-		bg(0x2D)
-		name(Military6AcceptRetreatLeaveNameText)
-		text(Military1BeginningText)
-		item(Elixir,0xFF)
-		music(Derris_Kharlan_Appear)
-		importance(2)
-	Entry
-		bg(0x2C)
-		name(Military7AcceptRetreatLeaveNameText)
-		text(Military1SylvaineBriefingText)
-		importance(1)
-	Entry
-		bg(0x2B)
-		name(Merc1NameText)
-		text(Military1EndingBeginningText)
-		music(Last_Battle_Decision)
-		unit(LoadBaseConvoSylvaine)
-		importance(3)
-	Entry
-		bg(0x2A)
-		name(Merc2BanditNameText)
-		text(Military1ForrestBattleText)
-		item(SteelBlade,Madeleine)
-		music(Green_Emerald)
-		importance(1)
-	Entry
-		bg(0x29)
-		name(Merc3BanditNameText)
-		text(Military1ChristinaBattleText)
-		music(Oil_Ocean)
-		unit(LoadBaseConvoChristinaForrest)
-		importance(3)
-Chapter(MilitaryAcceptRetreat4)
-	Entry
-		bg(0x10)
-		name(Military6AcceptRetreatLeaveNameText)
-		text(Support3Text)
-		music(Casino_Night)
-	Entry
-		bg(0x13)
-		name(Military7AcceptRetreatLeaveNameText)
-		text(Support1Text)
-		music(Heavens_Gate)
+	{
+	#include "ConvoTableDefs.event"
+	PUSH
 
-POP
-}
+	Chapter(MilitaryAccept3)
+		Entry
+			bg(0x18)
+			text(Military3AcceptTactDerekSupportText)
+			baseSupport(0xFF,Derek,BSupport)
+		Entry
+			bg(0x18)
+			text(Military3AcceptTactJasperSupportText)
+			baseSupport(0xFF,Jasper,BSupport)
+	Chapter(MilitaryAcceptRetreatLeave5)
+		Entry
+			bg(0x30)
+			text(Military5AcceptRetreatLeaveDerekJasperSupportText)
+			baseSupport(Derek,Jasper,ASupport)
+	Chapter(MilitaryAcceptRetreatLeave7)
+		Entry
+			bg(0x27)
+			text(Military7AcceptRetreatLeaveMadeleineRemusSupportText)
+			baseSupport(Madeleine,Remus,ASupport)
+		Entry
+			bg(0x0A)
+			text(Military7AcceptRetreatLeaveMadeleineYvetteSupportText)
+			baseSupport(Madeleine,Yvette,ASupport)
+	Chapter(MilitaryPass4)
+		Entry
+			bg(0x05)
+			text(Military4PassTactDerekSupportText)
+			baseSupport(0xFF,Derek,BSupport)
+		Entry
+			bg(0x05)
+			text(Military4PassElanilFinocSupportText)
+			baseSupport(Elanil,Finoc,BSupport)
+	Chapter(MilitaryPassHaedric5)
+		Entry
+			bg(0x05)
+			text(Support1Text) // Placeholder.
+			baseSupport(0xFF,Derek,ASupport)
+	Chapter(MilitaryPassHaedric6)
+		Entry
+			bg(0x2A)
+			text(Support1Text)
+			baseSupport(Derek,Jasper,ASupport)
+		Entry
+			bg(0x10)
+			text(Support1Text)
+			baseSupport(Elanil,Finoc,ASupport)
+	Chapter(MilitaryPassHaedric7)
+		Entry
+			bg(0x2F)
+			text(Support1Text)
+			baseSupport(Clara,Muriel,ASupport)
+		Entry
+			bg(0x1D)
+			text(Support1Text)
+			baseSupport(0xFF,Jasper,ASupport)
+		Entry
+			bg(0x1D)
+			text(Support1Text)
+			baseSupport(Cougar,Finoc,ASupport)
+	Chapter(MilitaryPassAltia6)
+		Entry
+			bg(0x1D)
+			text(Military6PassAltiaDerekJasperSupportText)
+			baseSupport(Derek,Jasper,ASupport)
+		Entry
+			bg(0x1D)
+			text(Military6PassAltiaTactJasperSupportText)
+			baseSupport(0xFF,Jasper,ASupport)
+	Chapter(MilitaryPassAltia7)
+		Entry
+			bg(0x1D)
+			text(Military7PassAltiaTactDerekSupportText)
+			baseSupport(0xFF,Derek,ASupport)
+		Entry
+			bg(0x1D)
+			text(Military7PassAltiaElanilFinocSupportText)
+			baseSupport(Elanil,Finoc,ASupport)
+		Entry
+			bg(0x1D)
+			text(Military7PassAltiaCougarFinocSupportText)
+			baseSupport(Finoc,Cougar,ASupport)
 
-ALIGN 4
-BaseConvoTestEvent: // Refer to the generic event in BaeConvos.event.
-EVBIT_T 0x4
-SetBackground(0x10) // REQUIRED, Load a background!
-MUSC A_Tragic_Decision
-TEXTSTART
-TEXTSHOW Military4AcceptRetreatTactDecisionText // Example usage of a custom event: TEXTCONT with music changes.
-TEXTEND
-MUSC Emergency
-TEXTCONT
-TEXTEND
-REMA
-FADI 0x5 // This fade is highly recommended.
-CLEAN // This is REQUIRED.
-SVAL 0xB 0x1 // REQUIRED to mark when events are finished running.
-NoFade
-ENDA
+	Chapter(MercenaryMilitiaWait4)
+		Entry
+			bg(0x2A)
+			text(Support1Text)
+			baseSupport(Arc,Luke,BSupport)
+		Entry
+			bg(0x2A)
+			text(Support1Text)
+			baseSupport(Elanil,Finoc,BSupport)
+	Chapter(MercenaryMilitiaWaitArcanae6)
+		Entry
+			bg(0x0D)
+			text(Support1Text)
+			baseSupport(Elanil,Finoc,ASupport)
+	Chapter(MercenaryMilitiaWaitArcanae7)
+		Entry
+			bg(0x32)
+			text(Support1Text)
+			baseSupport(Val,Helmer,ASupport)
+	Chapter(MercenaryMilitiaWaitCesaria5)
+		Entry
+			bg(0x30)
+			text(Support1Text)
+			baseSupport(Jasper,Derek,BSupport)
+		Entry
+			bg(0x30)
+			text(Support1Text)
+			baseSupport(Arc,Luke,ASupport)
+	Chapter(MercenaryMilitiaWaitCesaria6)
+		Entry
+			bg(0x21)
+			text(Support1Text)
+			baseSupport(Jasper,Derek,ASupport)
+	Chapter(MercenaryMilitiaWaitCesaria7)
+		Entry
+			bg(0x30)
+			text(Support1Text)
+			baseSupport(0xFF,Arc,ASupport)
+	Chapter(MercenaryMilitiaKill4)
+		Entry
+			bg(0x08)
+			text(Support1Text)
+			baseSupport(Arc,Luke,BSupport)
+		Entry
+			bg(0x08)
+			text(Support1Text)
+			baseSupport(0xFF,Arya,BSupport)
+	Chapter(MercenaryMilitiaKill5)
+		Entry
+			bg(0x22)
+			text(Support1Text)
+			baseSupport(0xFF,Arc,BSupport)
+		Entry
+			bg(0x22)
+			text(Support1Text)
+			baseSupport(0xFF,Arya,ASupport)
+	Chapter(MercenaryMilitiaKill6)
+		Entry
+			bg(0x05)
+			text(Support1Text)
+			baseSupport(0xFF,Arc,ASupport)
+	Chapter(MercenaryMilitiaKill7)
+		Entry
+			bg(0x0A)
+			text(Support1Text)
+			baseSupport(Arya,Xexim,BSupport)
+		Entry
+			bg(0x0C)
+			text(Support1Text)
+			baseSupport(Arc,Luke,ASupport)
+		Entry
+			bg(0x12)
+			text(Support1Text)
+			baseSupport(Arya,Kendrick,ASupport)
+	Chapter(MercenaryBandit4)
+		Entry
+			bg(0x18)
+			text(Support1Text)
+			baseSupport(Vicar,Walter,BSupport)
+		Entry
+			bg(0x18)
+			text(Support1Text)
+			baseSupport(0xFF,Vicar,BSupport)
+	Chapter(MercenaryBanditBandit5)
+		Entry
+			bg(0x2A)
+			text(Support1Text)
+			baseSupport(Adlez,Connor,BSupport)
+		Entry
+			bg(0x12)
+			text(Support1Text)
+			baseSupport(Vicar,Walter,ASupport)
+	Chapter(MercenaryBanditBandit6)
+		Entry
+			bg(0x0A)
+			text(Support1Text)
+			baseSupport(0xFF,Vicar,ASupport)
+	Chapter(MercenaryBanditBandit7)
+		Entry
+			bg(0x05)
+			text(Support1Text)
+			baseSupport(Adlez,Connor,ASupport)
+		Entry
+			bg(0x05)
+			text(Support1Text)
+			baseSupport(Walter,Baret,ASupport)
+	Chapter(MercenaryBanditDisband5)
+		Entry
+			bg(0x05)
+			text(Support1Text)
+			baseSupport(Baret,Walter,ASupport)
+	Chapter(MercenaryBanditDisband6)
+		Entry
+			bg(0x0C)
+			text(Support1Text)
+			baseSupport(Arya,Kendrick,BSupport)
+		Entry
+			bg(0x0C)
+			text(Support1Text)
+			baseSupport(0xFF,Vicar,ASupport)
+		Entry
+			bg(0x10)
+			text(Support1Text)
+			baseSupport(Vicar,Baret,ASupport)
+	Chapter(MercenaryBanditDisband7)
+		Entry
+			bg(0x0C)
+			text(Support1Text)
+			baseSupport(Vicar,Walter,ASupport)
 
-
-LoadBaseConvoSylvaine:
-UNIT Sylvaine ArmoredWyvernLord Sylvaine Level(9,Ally,True) [0xFF,0] 0x00 0x00 0x00 0x00 [SilverLongbow] NoAI
-UNIT
-
-LoadBaseConvoChristinaForrest:
-UNIT Christina Cavalier_F Sylvaine Level(9,Ally,True) [0xFF,0] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI
-UNIT Forrest Cavalier Sylvaine Level(9,Ally,True) [0xFF,0] 0x00 0x00 0x00 0x00 [ShortSpear] NoAI
-UNIT
+	POP
+	}
+#endif // BASE_CONVO_TABLE

@@ -17,18 +17,20 @@ ARCH   := -mcpu=arm7tdmi -mthumb -mthumb-interwork
 CFLAGS := $(ARCH) -Wall -Os -mtune=arm7tdmi -mlong-calls
 
 # C to ASM rule
-%.s: %.c
+%.s: %.c *.c
 	$(CC) $(CFLAGS) -S $< -o $@ -fverbose-asm
 
 # C to OBJ rule
-%.o: %.c
+%.o: %.c *.c
 	$(CC) $(CFLAGS) -c $< -o $@
 	
 # OBJ to EVENT rule
-%.lyn.event: %.o Definitions.o
-	$(LYN) $^ > $@
+%.lyn.event: %.o
+	$(MAKE) $(dir $<)Definitions.o
+	$(LYN) $< $(dir $<)Definitions.o > $@
+	rm $(dir $<)Definitions.o
 	
 # ASM to OBJ
-%.o: %.s
+%.o: %.s *.s
 	$(AS) $(ARCH) $< -o $@
 	

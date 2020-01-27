@@ -1,6 +1,6 @@
 
 #include <stddef.h>
-#include "FE-CLib-master/include/gbafe.h"
+#include "../FE-CLib-master/include/gbafe.h"
 
 typedef struct BaseConvoEntry BaseConvoEntry;
 typedef struct BaseConvoProc BaseConvoProc;
@@ -12,11 +12,11 @@ struct BaseConvoEntry
 	u8 character2;
 	u8 background;
 	u8 supportLevel;
-	int (*usability)(const struct BaseConvoEntry* entry); // ASM usability pointer.
+	int (*usability)(const BaseConvoEntry* entry); // ASM usability pointer.
 	void* event;
 	u16 title;
 	u16 music;
-	char* (*textGetter)(void); // Returns a pointer to the string of text to use.
+	char* (*textGetter)(const BaseConvoEntry* entry); // Returns a pointer to the string of text to use.
 	u16 textID;
 	u8 item;
 	u8 giveTo; // Give the item to this person.
@@ -27,7 +27,9 @@ struct BaseConvoEntry
 struct BaseConvoProc
 {
 	PROC_HEADER;
-	struct MenuDefinition menuData;
+	u8 pad1; // 0x29.
+	u16 pad2; // 0x2A.
+	struct MenuDefinition menuData; // 0x2C.
 	u8 viewingEntry;
 	u8 wasBPressed;
 };
@@ -139,8 +141,8 @@ void BuildBaseConvoMenuGeometry(Proc* parent)
 	{
 		baseProc->menuData.geometry.y = 0;
 	}
-	baseProc->menuData.geometry.h = 0;
-	baseProc->menuData.geometry.w = 18;
+	baseProc->menuData.geometry.h = 18; // I honestly have no idea why these are swapped now. They didn't use to be this way I swear.
+	baseProc->menuData.geometry.w = 0;
 	baseProc->menuData.style = 1;
 	baseProc->menuData.commandList = &BaseConvoMenuCommands;
 	baseProc->menuData.onInit = NULL;
@@ -181,7 +183,7 @@ void BuildBaseConvoMenuText(void)
 		else if ( entry->textGetter != NULL )
 		{
 			// Okay so they don't have a text ID, but they have a getter. Run it.
-			HandleText(entry->textGetter(),&WriteTextTo+40*i,entry);
+			HandleText(entry->textGetter(entry),&WriteTextTo+40*i,entry);
 		}
 		else
 		{
@@ -220,8 +222,10 @@ int EnsureSelection(Proc* parent)
 	0x5 = Item ID to give.
 	0x6 = Give item to this character.
 	0x7 = UNIT pointer to load.
+	0x8 = Character 1.
+	0x9 = Character 2.
 	
-	0xC = Pointer to this base support entry.
+	0xC = Pointer to this base convo entry.
 */
 void SetUpConvo(Proc* parent)
 {
@@ -238,14 +242,15 @@ void SetUpConvo(Proc* parent)
 	}
 	else
 	{
-		gMemorySlot[0x6] = gUnitArrayBlue[0].pCharacterData->number; // 0xFF = give to character in first 
+		gMemorySlot[0x6] = GetUnit(1).pCharacterData->number; // 0xFF = give to character in first 
 	}
 	gMemorySlot[0x7] = (u32)(entry->unit);
+	gMemorySlot[0x8] = entry->character1;
+	gMemorySlot[0x9] = entry->character2;
 	gMemorySlot[0xB] = 0;
 	// While we're here, why don't we set this conversation set as "viewed"?
 	Proc* sallycursor = ProcFind(&SALLYCURSOR);
 	*(((char*)sallycursor)+0x4C) = *(((char*)sallycursor)+0x4C) | 1 << ((BaseConvoProc*)parent)->viewingEntry;
-	
 }
 
 void CallConversation(Proc* parent)

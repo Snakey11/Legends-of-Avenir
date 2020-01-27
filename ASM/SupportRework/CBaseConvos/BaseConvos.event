@@ -80,6 +80,11 @@
 			#define BaseConvoTextID8 0x34
 		#endif
 		
+		#define EventMenuCommand(aTextId,Usability,Effect) "WORD 0; SHORT aTextId 0; WORD 0; POIN (Usability|1); WORD 0; POIN (Effect|1); WORD 0 0 0"
+		#ifndef EventMenuCommandEnd
+			#define EventMenuCommandEnd "WORD 0 0 0 0 0 0 0 0 0"
+		#endif
+		
 		BaseConvoMenuCommands:
 			EventMenuCommand(BaseConvoTextID1,BaseConvoMenuUsability,BaseConvoMenuEffect)
 			EventMenuCommand(BaseConvoTextID2,BaseConvoMenuUsability,BaseConvoMenuEffect)
