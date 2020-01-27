@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="17" height="24" tilewidth="16" tileheight="16" nextobjectid="1">
  <tileset firstgid="1" name="1800B91A" tilewidth="16" tileheight="16">
-  <image source="../../../Tools/Tiled/Tiled Inserter/Tilesets/FE8 Tilesets/1800B91A.png" width="512" height="512"/>
+  <image source="../../Tools/Tiled/Tiled Inserter/Tilesets/FE8 Tilesets/1800B91A.png" width="512" height="512"/>
  </tileset>
  <layer name="Tile Layer 1" width="17" height="24">
   <properties>
