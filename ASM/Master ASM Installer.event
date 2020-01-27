@@ -71,6 +71,16 @@ ALIGN 4
 ALIGN 4
 #include "HPBars/HPBars.event"
 
+ALIGN 4
+#include "HybridClasses/Hybrids.lyn.event"
+ALIGN 4
+SpellswordList:
+BYTE SpellswordM SpellswordF BattleSage BattleSageF DreadFighterM DreadFighterF MaligKnight DarkKnightM DarkKnightF MageKnight MageKnight_F 0x00
+
+ALIGN 4
+SpellswordERankList:
+BYTE SpellswordM SpellswordF 0x00
+
 //ALIGN 4
 //#inctext lyn "LevelUP/LevelUP.elf" "LevelUp/Definitions.elf"
 
@@ -221,6 +231,9 @@ ALIGN 4
 #endif // __DEBUG__
 
 PUSH
+ORG $2BE38
+#incbin "LoseRanksOnPromo.dmp" // Promoting to a class with a 0 in an existing rank removes that rank. Credit Venno.
+
 ORG $96B1C
 SHORT 0xE00A // Eliminate "Tower" in prep screens
 ORG $96B3A
