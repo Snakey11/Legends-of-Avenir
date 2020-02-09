@@ -73,92 +73,115 @@ SpellswordLimits:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, r5, r6, lr}	@
-@ Hybrids.c:15: {
-	movs	r4, r0	@ unit, tmp155
-@ Hybrids.c:16: 	if ( !IsItemInu8List(SpellswordList,unit->pClassData->number) || !IsItemATome(item) ) { return 1; } // Pass these checks if this unit is not a spellsword or this isn't a tome.
-	ldr	r3, [r0, #4]	@ tmp160, unit_23(D)->pClassData
-@ Hybrids.c:15: {
-	movs	r5, r1	@ item, tmp156
-@ Hybrids.c:16: 	if ( !IsItemInu8List(SpellswordList,unit->pClassData->number) || !IsItemATome(item) ) { return 1; } // Pass these checks if this unit is not a spellsword or this isn't a tome.
+@ Hybrids.c:17: {
+	movs	r4, r0	@ unit, tmp181
+@ Hybrids.c:18: 	if ( !IsItemInu8List(SpellswordList,unit->pClassData->number) || !IsItemATome(item) ) { return 1; } // Pass these checks if this unit is not a spellsword or this isn't a tome.
+	ldr	r3, [r0, #4]	@ tmp187, unit_27(D)->pClassData
+@ Hybrids.c:17: {
+	movs	r5, r1	@ item, tmp182
+@ Hybrids.c:18: 	if ( !IsItemInu8List(SpellswordList,unit->pClassData->number) || !IsItemATome(item) ) { return 1; } // Pass these checks if this unit is not a spellsword or this isn't a tome.
 	ldrb	r1, [r3, #4]	@ _2,
-	ldr	r3, .L13	@ ivtmp.19,
+	ldr	r3, .L15	@ ivtmp.21,
 .L2:
-@ Hybrids.c:35: 	for ( int i = 0 ; list[i] ; i++ )
-	ldrb	r2, [r3]	@ _29, MEM[base: _42, offset: 0B]
-@ Hybrids.c:35: 	for ( int i = 0 ; list[i] ; i++ )
-	cmp	r2, #0	@ _29,
+@ Hybrids.c:41: 	for ( int i = 0 ; list[i] ; i++ )
+	ldrb	r2, [r3]	@ _35, MEM[base: _48, offset: 0B]
+@ Hybrids.c:41: 	for ( int i = 0 ; list[i] ; i++ )
+	cmp	r2, #0	@ _35,
 	bne	.L4		@,
-.L9:
-@ Hybrids.c:16: 	if ( !IsItemInu8List(SpellswordList,unit->pClassData->number) || !IsItemATome(item) ) { return 1; } // Pass these checks if this unit is not a spellsword or this isn't a tome.
+.L10:
+@ Hybrids.c:18: 	if ( !IsItemInu8List(SpellswordList,unit->pClassData->number) || !IsItemATome(item) ) { return 1; } // Pass these checks if this unit is not a spellsword or this isn't a tome.
 	movs	r0, #1	@ <retval>,
 .L1:
-@ Hybrids.c:31: }
+@ Hybrids.c:37: }
 	@ sp needed	@
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
 .L4:
-	adds	r3, r3, #1	@ ivtmp.19,
-@ Hybrids.c:37: 		if ( list[i] == item ) { return 1; }
-	cmp	r1, r2	@ _2, _29
+	adds	r3, r3, #1	@ ivtmp.21,
+@ Hybrids.c:43: 		if ( list[i] == item ) { return 1; }
+	cmp	r1, r2	@ _2, _35
 	bne	.L2		@,
-@ Hybrids.c:44: 	int type = GetItemType(item);
+@ Hybrids.c:50: 	int type = GetItemType(item);
 	movs	r0, r5	@, item
-	ldr	r3, .L13+4	@ tmp153,
-	bl	.L15		@
-@ Hybrids.c:45: 	return type >= ITYPE_STAFF && type <=ITYPE_DARK;
-	subs	r0, r0, #4	@ tmp154,
-@ Hybrids.c:16: 	if ( !IsItemInu8List(SpellswordList,unit->pClassData->number) || !IsItemATome(item) ) { return 1; } // Pass these checks if this unit is not a spellsword or this isn't a tome.
-	cmp	r0, #3	@ tmp154,
-	bhi	.L9		@,
-@ Hybrids.c:19: 	if ( gChapterData.currentPhase != (unit->index & 0xC0) ) { return 0; }
-	ldr	r3, .L13+8	@ tmp137,
-	ldrb	r2, [r3, #15]	@ tmp138,
-@ Hybrids.c:19: 	if ( gChapterData.currentPhase != (unit->index & 0xC0) ) { return 0; }
-	movs	r3, #11	@ tmp139,
-@ Hybrids.c:19: 	if ( gChapterData.currentPhase != (unit->index & 0xC0) ) { return 0; }
-	movs	r1, #192	@ tmp141,
-@ Hybrids.c:19: 	if ( gChapterData.currentPhase != (unit->index & 0xC0) ) { return 0; }
-	ldrsb	r3, [r4, r3]	@ tmp139,
-@ Hybrids.c:19: 	if ( gChapterData.currentPhase != (unit->index & 0xC0) ) { return 0; }
-	movs	r0, #0	@ <retval>,
-@ Hybrids.c:19: 	if ( gChapterData.currentPhase != (unit->index & 0xC0) ) { return 0; }
-	ands	r3, r1	@ tmp140, tmp141
-@ Hybrids.c:19: 	if ( gChapterData.currentPhase != (unit->index & 0xC0) ) { return 0; }
-	cmp	r2, r3	@ tmp138, tmp140
-	bne	.L1		@,
-@ Hybrids.c:22: 	if ( IsItemInu8List(SpellswordERankList,unit->pClassData->number) )
-	ldr	r3, [r4, #4]	@ unit_23(D)->pClassData, unit_23(D)->pClassData
-	ldrb	r1, [r3, #4]	@ _12,
-	ldr	r3, .L13+12	@ ivtmp.12,
-.L6:
-@ Hybrids.c:35: 	for ( int i = 0 ; list[i] ; i++ )
-	ldrb	r2, [r3]	@ _41, MEM[base: _3, offset: 0B]
-@ Hybrids.c:35: 	for ( int i = 0 ; list[i] ; i++ )
-	cmp	r2, #0	@ _41,
-	beq	.L9		@,
-	adds	r3, r3, #1	@ ivtmp.12,
-@ Hybrids.c:37: 		if ( list[i] == item ) { return 1; }
-	cmp	r1, r2	@ _12, _41
+	ldr	r3, .L15+4	@ tmp179,
+	bl	.L17		@
+@ Hybrids.c:51: 	return type >= ITYPE_STAFF && type <=ITYPE_DARK;
+	subs	r0, r0, #4	@ tmp180,
+@ Hybrids.c:18: 	if ( !IsItemInu8List(SpellswordList,unit->pClassData->number) || !IsItemATome(item) ) { return 1; } // Pass these checks if this unit is not a spellsword or this isn't a tome.
+	cmp	r0, #3	@ tmp180,
+	bhi	.L10		@,
+@ Hybrids.c:21: 	if ( !(gChapterData.chapterStateBits & 0x10) && gChapterData.currentPhase != (unit->index & 0xC0) )
+	ldr	r3, .L15+8	@ tmp143,
+@ Hybrids.c:21: 	if ( !(gChapterData.chapterStateBits & 0x10) && gChapterData.currentPhase != (unit->index & 0xC0) )
+	ldrb	r1, [r3, #20]	@ tmp145,
+	movs	r2, #16	@ tmp147,
+	movs	r0, r1	@ tmp149, tmp145
+	ands	r0, r2	@ tmp149, tmp147
+	tst	r1, r2	@ tmp145, tmp147
 	bne	.L6		@,
-@ Hybrids.c:25: 		return GetItemData(GetItemIndex(item))->weaponRank == WPN_LEVEL_E; // Return the boolean for "is this E rank?"
-	ldr	r3, .L13+16	@ tmp144,
+@ Hybrids.c:21: 	if ( !(gChapterData.chapterStateBits & 0x10) && gChapterData.currentPhase != (unit->index & 0xC0) )
+	ldrb	r2, [r3, #15]	@ tmp152,
+@ Hybrids.c:21: 	if ( !(gChapterData.chapterStateBits & 0x10) && gChapterData.currentPhase != (unit->index & 0xC0) )
+	movs	r3, #11	@ tmp153,
+@ Hybrids.c:21: 	if ( !(gChapterData.chapterStateBits & 0x10) && gChapterData.currentPhase != (unit->index & 0xC0) )
+	movs	r1, #192	@ tmp155,
+@ Hybrids.c:21: 	if ( !(gChapterData.chapterStateBits & 0x10) && gChapterData.currentPhase != (unit->index & 0xC0) )
+	ldrsb	r3, [r4, r3]	@ tmp153,
+@ Hybrids.c:21: 	if ( !(gChapterData.chapterStateBits & 0x10) && gChapterData.currentPhase != (unit->index & 0xC0) )
+	ands	r3, r1	@ tmp154, tmp155
+@ Hybrids.c:21: 	if ( !(gChapterData.chapterStateBits & 0x10) && gChapterData.currentPhase != (unit->index & 0xC0) )
+	cmp	r2, r3	@ tmp152, tmp154
+	beq	.L6		@,
+@ Hybrids.c:24: 		if ( gpSubjectMap != gMapRange || (gBattleStats.config & BATTLE_CONFIG_REAL) ) { return 0; }
+	ldr	r3, .L15+12	@ tmp156,
+	ldr	r2, [r3]	@ gpSubjectMap, gpSubjectMap
+	ldr	r3, .L15+16	@ tmp157,
+	ldr	r3, [r3]	@ gMapRange, gMapRange
+	cmp	r2, r3	@ gpSubjectMap, gMapRange
+	bne	.L1		@,
+@ Hybrids.c:24: 		if ( gpSubjectMap != gMapRange || (gBattleStats.config & BATTLE_CONFIG_REAL) ) { return 0; }
+	ldr	r3, .L15+20	@ tmp160,
+@ Hybrids.c:24: 		if ( gpSubjectMap != gMapRange || (gBattleStats.config & BATTLE_CONFIG_REAL) ) { return 0; }
+	ldrh	r3, [r3]	@ gBattleStats, gBattleStats
+	lsls	r3, r3, #31	@ tmp186, gBattleStats,
+	bmi	.L1		@,
+.L6:
+@ Hybrids.c:28: 	if ( IsItemInu8List(SpellswordERankList,unit->pClassData->number) )
+	ldr	r3, [r4, #4]	@ unit_27(D)->pClassData, unit_27(D)->pClassData
+	ldrb	r1, [r3, #4]	@ _16,
+	ldr	r3, .L15+24	@ ivtmp.14,
+.L7:
+@ Hybrids.c:41: 	for ( int i = 0 ; list[i] ; i++ )
+	ldrb	r2, [r3]	@ _47, MEM[base: _3, offset: 0B]
+@ Hybrids.c:41: 	for ( int i = 0 ; list[i] ; i++ )
+	cmp	r2, #0	@ _47,
+	beq	.L10		@,
+	adds	r3, r3, #1	@ ivtmp.14,
+@ Hybrids.c:43: 		if ( list[i] == item ) { return 1; }
+	cmp	r1, r2	@ _16, _47
+	bne	.L7		@,
+@ Hybrids.c:31: 		return GetItemData(GetItemIndex(item))->weaponRank == WPN_LEVEL_E; // Return the boolean for "is this E rank?"
+	ldr	r3, .L15+28	@ tmp170,
 	movs	r0, r5	@, item
-	bl	.L15		@
-	ldr	r3, .L13+20	@ tmp147,
-	bl	.L15		@
-@ Hybrids.c:25: 		return GetItemData(GetItemIndex(item))->weaponRank == WPN_LEVEL_E; // Return the boolean for "is this E rank?"
-	ldrb	r0, [r0, #28]	@ tmp149,
-	subs	r0, r0, #1	@ tmp151,
-	rsbs	r3, r0, #0	@ tmp152, tmp151
-	adcs	r0, r0, r3	@ <retval>, tmp151, tmp152
+	bl	.L17		@
+	ldr	r3, .L15+32	@ tmp173,
+	bl	.L17		@
+@ Hybrids.c:31: 		return GetItemData(GetItemIndex(item))->weaponRank == WPN_LEVEL_E; // Return the boolean for "is this E rank?"
+	ldrb	r0, [r0, #28]	@ tmp175,
+	subs	r0, r0, #1	@ tmp177,
+	rsbs	r3, r0, #0	@ tmp178, tmp177
+	adcs	r0, r0, r3	@ <retval>, tmp177, tmp178
 	b	.L1		@
-.L14:
+.L16:
 	.align	2
-.L13:
+.L15:
 	.word	SpellswordList
 	.word	GetItemType
 	.word	gChapterData
+	.word	gpSubjectMap
+	.word	gMapRange
+	.word	gBattleStats
 	.word	SpellswordERankList
 	.word	GetItemIndex
 	.word	GetItemData
@@ -166,5 +189,5 @@ SpellswordLimits:
 	.ident	"GCC: (devkitARM release 53) 9.1.0"
 	.code 16
 	.align	1
-.L15:
+.L17:
 	bx	r3

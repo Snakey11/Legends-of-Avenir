@@ -5,6 +5,8 @@
 extern u8 SpellswordList[0xFF]; // 0-terminated list of classes to be defined as spellswords.
 extern u8 SpellswordERankList[0xFF]; // 0-terminated list of classes to be affected by E-rank limitations this.
 
+extern u8** gpSubjectMap; // 0x030049A0.
+
 int SpellswordLimits(Unit* unit, int item, int rank);
 static int IsItemInu8List(u8 list[0xFF], int item);
 static int IsItemATome(int item);
@@ -16,7 +18,11 @@ int SpellswordLimits(Unit* unit, int item, int rank) // Item is the item halfwor
 	if ( !IsItemInu8List(SpellswordList,unit->pClassData->number) || !IsItemATome(item) ) { return 1; } // Pass these checks if this unit is not a spellsword or this isn't a tome.
 	
 	// This class is a spellsword, and they're trying to use a tome. Only allow them to use magic on their phase.
-	if ( gChapterData.currentPhase != (unit->index & 0xC0) ) { return 0; }
+	if ( !(gChapterData.chapterStateBits & 0x10) && gChapterData.currentPhase != (unit->index & 0xC0) )
+	{
+		// Liitle curiosity. If gMapRange is the current subject map, then we're trying to load that map. Also ensure we're not in a battle lol.
+		if ( gpSubjectMap != gMapRange || (gBattleStats.config & BATTLE_CONFIG_REAL) ) { return 0; }
+	}
 	
 	// It is their phase. Are they a T1 spellsword that's disallowed from using > E-rank tomes?
 	if ( IsItemInu8List(SpellswordERankList,unit->pClassData->number) )
