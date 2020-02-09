@@ -14,7 +14,7 @@ Dark Knight[X]
 Magus[X]
 
 ## MasterKnightNameText
-Master Knight[X]
+Gold Knight[X]
 
 ## CommanderNameText
 Commander[X]
@@ -24,6 +24,9 @@ Impaler[X]
 
 ## WyvernGeneralNameText
 W. General[X]
+
+## MarksmanNameText
+Marksman[X]
 
 ## ChampionNameText
 Champion[X]
@@ -68,10 +71,31 @@ Battle Sage[X]
 Spellsword[X]
 
 ## DreadFighterNameText
-Dread Fighter[X]
+[S_D][S_r][S_e][S_a][S_d][S_ShortSpace][S_F][S_i][S_g][S_h][S_t][S_e][S_r][X]
 
 ## MaligKnightNameText
 Malig Knight[X]
 
 ## StrategistNameText
 Strategist[X]
+
+## GaidenSageNameText
+Magus[X]
+
+## LegendNameText
+Legend[X]
+
+## OperativeNameText
+Operative[X]
+
+## AssailantNameText
+Assailant[X]
+
+## BaronNameText
+Baron[X]
+
+## GladiatorNameText
+Gladiator[X]
+
+## BowKnightNameText
+Bow Knight[X]
