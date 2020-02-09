@@ -73,32 +73,32 @@ EventParameters:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, lr}	@
-	ldr	r3, .L6	@ ivtmp.13,
+	ldr	r3, .L6	@ ivtmp.16,
 .L2:
-@ EventParameters.c:21: 	for ( int i = 0 ; EventParameterTable[i].getter ; i++ )
-	ldr	r2, [r3, #4]	@ _3, MEM[base: _19, offset: 4B]
-@ EventParameters.c:21: 	for ( int i = 0 ; EventParameterTable[i].getter ; i++ )
-	cmp	r2, #0	@ _3,
+@ EventParameters.c:23: 	for ( int i = 0 ; EventParameterTable[i].getter ; i++ )
+	ldr	r2, [r3, #4]	@ _4, MEM[base: _19, offset: 4B]
+@ EventParameters.c:23: 	for ( int i = 0 ; EventParameterTable[i].getter ; i++ )
+	cmp	r2, #0	@ _4,
 	bne	.L4		@,
-@ EventParameters.c:30: 	return GetUnitByCharId(charID);
+@ EventParameters.c:32: 	return GetUnitByCharId(charID);
 	lsls	r0, r0, #24	@ tmp120, charID,
 	ldr	r3, .L6+4	@ tmp122,
 	lsrs	r0, r0, #24	@ tmp120, tmp120,
 	bl	.L8		@
 	b	.L1		@
 .L4:
-	adds	r3, r3, #8	@ ivtmp.13,
-@ EventParameters.c:23: 		if ( EventParameterTable[i].key == charID )
-	movs	r1, r3	@ tmp118, ivtmp.13
+	adds	r3, r3, #8	@ ivtmp.16,
+@ EventParameters.c:25: 		if ( EventParameterTable[i].key == charID )
+	movs	r1, r3	@ tmp118, ivtmp.16
 	subs	r1, r1, #8	@ tmp118,
-@ EventParameters.c:23: 		if ( EventParameterTable[i].key == charID )
+@ EventParameters.c:25: 		if ( EventParameterTable[i].key == charID )
 	ldr	r1, [r1]	@ MEM[base: _18, offset: 4294967288B], MEM[base: _18, offset: 4294967288B]
 	cmp	r1, r0	@ MEM[base: _18, offset: 4294967288B], charID
 	bne	.L2		@,
-@ EventParameters.c:26: 			return EventParameterTable[i].getter(charID);
+@ EventParameters.c:28: 			return EventParameterTable[i].getter(EventParameterTable[i].key);
 	bl	.L9		@
 .L1:
-@ EventParameters.c:31: }
+@ EventParameters.c:33: }
 	@ sp needed	@
 	pop	{r4}
 	pop	{r1}
@@ -110,65 +110,65 @@ EventParameters:
 	.word	GetUnitByCharId
 	.size	EventParameters, .-EventParameters
 	.align	1
-	.global	EventParameterFFFF
+	.global	EventParameterGetActive
 	.syntax unified
 	.code	16
 	.thumb_func
 	.fpu softvfp
-	.type	EventParameterFFFF, %function
-EventParameterFFFF:
+	.type	EventParameterGetActive, %function
+EventParameterGetActive:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
-@ EventParameters.c:35: 	return gActiveUnit;
+@ EventParameters.c:37: 	return gActiveUnit;
 	ldr	r3, .L11	@ tmp113,
-@ EventParameters.c:36: }
+@ EventParameters.c:38: }
 	@ sp needed	@
-@ EventParameters.c:35: 	return gActiveUnit;
+@ EventParameters.c:37: 	return gActiveUnit;
 	ldr	r0, [r3]	@ gActiveUnit, gActiveUnit
-@ EventParameters.c:36: }
+@ EventParameters.c:38: }
 	bx	lr
 .L12:
 	.align	2
 .L11:
 	.word	gActiveUnit
-	.size	EventParameterFFFF, .-EventParameterFFFF
+	.size	EventParameterGetActive, .-EventParameterGetActive
 	.align	1
-	.global	EventParameterFFFE
+	.global	EventParameterGetCoordsInSlotB
 	.syntax unified
 	.code	16
 	.thumb_func
 	.fpu softvfp
-	.type	EventParameterFFFE, %function
-EventParameterFFFE:
+	.type	EventParameterGetCoordsInSlotB, %function
+EventParameterGetCoordsInSlotB:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-@ EventParameters.c:40: 	int x = gMemorySlot[2] & 0xFF;
-	ldr	r3, .L14	@ tmp124,
-@ EventParameters.c:42: 	return GetUnit(gMapUnit[y][x]);
-	ldr	r1, .L14+4	@ tmp128,
-@ EventParameters.c:40: 	int x = gMemorySlot[2] & 0xFF;
-	ldr	r3, [r3, #8]	@ _2, gMemorySlot
-@ EventParameters.c:39: {
+@ EventParameters.c:42: 	int x = gMemorySlot[0xB] & 0xFFFF;
+	ldr	r3, .L14	@ tmp123,
+@ EventParameters.c:44: 	return GetUnit(gMapUnit[y][x]);
+	ldr	r1, .L14+4	@ tmp126,
+@ EventParameters.c:42: 	int x = gMemorySlot[0xB] & 0xFFFF;
+	ldr	r3, [r3, #44]	@ _1, gMemorySlot
+@ EventParameters.c:41: {
 	push	{r4, lr}	@
-@ EventParameters.c:42: 	return GetUnit(gMapUnit[y][x]);
+@ EventParameters.c:44: 	return GetUnit(gMapUnit[y][x]);
 	ldr	r1, [r1]	@ gMapUnit, gMapUnit
-@ EventParameters.c:41: 	int y = gMemorySlot[2] & 0xFFFF0000;
-	lsrs	r2, r3, #16	@ tmp126, _2,
-@ EventParameters.c:42: 	return GetUnit(gMapUnit[y][x]);
-	lsls	r2, r2, #18	@ tmp129, tmp126,
-@ EventParameters.c:42: 	return GetUnit(gMapUnit[y][x]);
+@ EventParameters.c:43: 	int y = gMemorySlot[0xB] >> 0x10;
+	lsrs	r2, r3, #16	@ tmp124, _1,
+@ EventParameters.c:44: 	return GetUnit(gMapUnit[y][x]);
+	lsls	r2, r2, #2	@ tmp127, tmp124,
+@ EventParameters.c:44: 	return GetUnit(gMapUnit[y][x]);
 	ldr	r2, [r2, r1]	@ *_6, *_6
-@ EventParameters.c:40: 	int x = gMemorySlot[2] & 0xFF;
-	lsls	r3, r3, #24	@ x, _2,
-	lsrs	r3, r3, #24	@ x, x,
-@ EventParameters.c:42: 	return GetUnit(gMapUnit[y][x]);
+@ EventParameters.c:42: 	int x = gMemorySlot[0xB] & 0xFFFF;
+	lsls	r3, r3, #16	@ x, _1,
+	lsrs	r3, r3, #16	@ x, x,
+@ EventParameters.c:44: 	return GetUnit(gMapUnit[y][x]);
 	ldrb	r0, [r2, r3]	@ *_9, *_9
-	ldr	r3, .L14+8	@ tmp134,
+	ldr	r3, .L14+8	@ tmp132,
 	bl	.L8		@
-@ EventParameters.c:43: }
+@ EventParameters.c:45: }
 	@ sp needed	@
 	pop	{r4}
 	pop	{r1}
@@ -179,32 +179,101 @@ EventParameterFFFE:
 	.word	gMemorySlot
 	.word	gMapUnit
 	.word	GetUnit
-	.size	EventParameterFFFE, .-EventParameterFFFE
+	.size	EventParameterGetCoordsInSlotB, .-EventParameterGetCoordsInSlotB
 	.align	1
-	.global	EventParameterFFFD
+	.global	EventParameterGetUnitInSlot2
 	.syntax unified
 	.code	16
 	.thumb_func
 	.fpu softvfp
-	.type	EventParameterFFFD, %function
-EventParameterFFFD:
+	.type	EventParameterGetUnitInSlot2, %function
+EventParameterGetUnitInSlot2:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
-@ EventParameters.c:47: 	return (Unit*)gMemorySlot[0x2];
-	ldr	r3, .L17	@ tmp114,
-@ EventParameters.c:48: }
+@ EventParameters.c:49: 	if ( gMemorySlot[0x2] == key ) { return NULL; } // We're gonna support recursive calls with this, but let's maybe try to avoid infinite loops.
+	ldr	r3, .L19	@ tmp115,
+	ldr	r2, [r3, #8]	@ _1, gMemorySlot
+@ EventParameters.c:48: {
+	push	{r4, lr}	@
+@ EventParameters.c:49: 	if ( gMemorySlot[0x2] == key ) { return NULL; } // We're gonna support recursive calls with this, but let's maybe try to avoid infinite loops.
+	movs	r3, #0	@ <retval>,
+@ EventParameters.c:49: 	if ( gMemorySlot[0x2] == key ) { return NULL; } // We're gonna support recursive calls with this, but let's maybe try to avoid infinite loops.
+	cmp	r2, r0	@ _1, tmp117
+	beq	.L16		@,
+@ EventParameters.c:50: 	return EventParameters(gMemorySlot[0x2]);
+	movs	r0, r2	@, _1
+	bl	EventParameters		@
+	movs	r3, r0	@ <retval>, tmp118
+.L16:
+@ EventParameters.c:51: }
+	movs	r0, r3	@, <retval>
 	@ sp needed	@
-@ EventParameters.c:47: 	return (Unit*)gMemorySlot[0x2];
-	ldr	r0, [r3, #8]	@ gMemorySlot, gMemorySlot
-@ EventParameters.c:48: }
-	bx	lr
-.L18:
+	pop	{r4}
+	pop	{r1}
+	bx	r1
+.L20:
 	.align	2
-.L17:
+.L19:
 	.word	gMemorySlot
-	.size	EventParameterFFFD, .-EventParameterFFFD
+	.size	EventParameterGetUnitInSlot2, .-EventParameterGetUnitInSlot2
+	.align	1
+	.global	EventParameterGetFirstUnit
+	.syntax unified
+	.code	16
+	.thumb_func
+	.fpu softvfp
+	.type	EventParameterGetFirstUnit, %function
+EventParameterGetFirstUnit:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	push	{r4, lr}	@
+@ EventParameters.c:55: 	return GetUnit(1);
+	movs	r0, #1	@,
+	ldr	r3, .L22	@ tmp112,
+	bl	.L8		@
+@ EventParameters.c:56: }
+	@ sp needed	@
+	pop	{r4}
+	pop	{r1}
+	bx	r1
+.L23:
+	.align	2
+.L22:
+	.word	GetUnit
+	.size	EventParameterGetFirstUnit, .-EventParameterGetFirstUnit
+	.align	1
+	.global	EventParametersGetLeader
+	.syntax unified
+	.code	16
+	.thumb_func
+	.fpu softvfp
+	.type	EventParametersGetLeader, %function
+EventParametersGetLeader:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	push	{r4, lr}	@
+@ EventParameters.c:60: 	return GetUnitByCharId(GetPlayerLeaderUnitId());
+	ldr	r3, .L25	@ tmp114,
+	bl	.L8		@
+@ EventParameters.c:60: 	return GetUnitByCharId(GetPlayerLeaderUnitId());
+	lsls	r0, r0, #24	@ tmp115, tmp119,
+	ldr	r3, .L25+4	@ tmp117,
+	lsrs	r0, r0, #24	@ tmp115, tmp115,
+	bl	.L8		@
+@ EventParameters.c:61: }
+	@ sp needed	@
+	pop	{r4}
+	pop	{r1}
+	bx	r1
+.L26:
+	.align	2
+.L25:
+	.word	GetPlayerLeaderUnitId
+	.word	GetUnitByCharId
+	.size	EventParametersGetLeader, .-EventParametersGetLeader
 	.ident	"GCC: (devkitARM release 53) 9.1.0"
 	.code 16
 	.align	1
