@@ -37,3 +37,6 @@ FE-CLib-master
 *.lnk
 desktop.ini
 Legends of Avenir.png
+Tools/Py/
+Tools/FE-CLib/
+ASM/SkillSystem_FE8
