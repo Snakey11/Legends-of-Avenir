@@ -261,7 +261,7 @@ Byte	Type	Description
 
 Just before the attacker's battle struct is data used to display the pre-battle numbers and calculate the rounds data
 203A4D4 (FE8) 203A4D0 (FE8J)
-0x00	Short	Seems to be a bitfield (0x2 seems to be 'battle hasn't started yet') (0x20 is arena) (0x80 is staff?)
+0x00	Short	Seems to be a bitfield (0x1 is 'battle has started') (0x2 seems to be 'battle hasn't started yet') (0x04 is selecting an item) (0x20 is arena) (0x80 is staff?)
 0x02	Short	Type of animation? No idea, really. -Appears to be range
 0x04	Short	Damage (Attack - defense)
 0x06	Short	Attack

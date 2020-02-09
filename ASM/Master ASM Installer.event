@@ -66,6 +66,9 @@ ALIGN 4
 //#include "Escape-Arrive/Escape Installer.event"
 
 ALIGN 4
+#include "EventParameters/EventParameters.event"
+
+ALIGN 4
 #include "GiveToSupply/GiveToSupply.lyn.event"
 
 ALIGN 4
@@ -75,7 +78,7 @@ ALIGN 4
 #include "HybridClasses/Hybrids.lyn.event"
 ALIGN 4
 SpellswordList:
-BYTE SpellswordM SpellswordF BattleSage BattleSageF DreadFighterM DreadFighterF MaligKnight DarkKnightM DarkKnightF MageKnight MageKnight_F 0x00
+BYTE SpellswordM SpellswordF BattleSage BattleSageF DreadFighterM DreadFighterF MaligKnight 0x00
 
 ALIGN 4
 SpellswordERankList:
@@ -117,6 +120,9 @@ ALIGN 4
 KendrickName:
 String(Kendrick)
 BYTE 0x00
+
+ALIGN 4
+#include "NarrowFont/Narrowfont installer.event"
 
 ALIGN 4
 #include "New CHAI/New CHAI.event"
@@ -186,6 +192,9 @@ ALIGN 4
 
 ALIGN 4
 #include "SetEXP/SetEXP.lyn.event"
+
+ALIGN 4
+#include "SetUnitState/SetUnitState.lyn.event"
 
 ALIGN 4
 #include "Show Heal Amount/Show Heal Amount.event"
