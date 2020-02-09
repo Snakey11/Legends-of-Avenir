@@ -145,11 +145,7 @@ EventMenuCommandEnd
 
 Military4AcceptRetreatMenuCommands:
 	EventMenuCommand(Military4AcceptRetreatCheckOnEmperorText,Set00Command)
-	#ifndef __PUBLIC__
-	#ifndef __PRIVATE__
 	EventMenuCommand(Military4AcceptRetreatCheckOnRexText,Set01Command)
-	#endif
-	#endif
 EventMenuCommandEnd
 
 Set00Command:
