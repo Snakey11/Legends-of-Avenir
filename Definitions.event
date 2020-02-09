@@ -82,19 +82,19 @@
 #define Magus MagusM
 #define MagusF 0x57
 #define MasterKnightF 0x58
-#define Commander 0x59
+#define Baron 0x59
 #define ImpalerM 0x5A
 #define WyvernGeneral 0x5B
-#define HunterM 0x5C
+#define Marksman 0x5C
+#define HunterM Marksman
 #define MasterKnightM 0x5D
 #define Champion 0x5E
 #define TruebladeF 0x5F
-#define Shadow 0x5F
 #define TruebladeM 0x60
 #define Trueblade 0x60
 #define MountedBrigand 0x61
 #define Maurader 0x61
-#define Mountainier 0x63
+#define Gladiator 0x63
 #define SeraphKnight 0x64
 #define BlackFalcoknight SeraphKnight // Old Tact peg promo.
 #define MageM2 0x73
@@ -125,9 +125,8 @@
 #define Halberdier 0x88
 #define Sentinel 0x89
 #define JacketHero 0x8A
-#define Gladiator 0x8B
-#define Basileus Gladiator
-#define Baselius Gladiator
+#define Basileus 0x8B
+#define Baselius 0x8B
 #define HectorClass 0x8C
 #define Hector HectorClass
 #define Truerblade 0x8D
@@ -154,7 +153,8 @@
 #define MurielSage 0x9E
 #define ImpalerF 0x9F
 #define SoldierF2 0xA0
-#define HunterF 0xA1
+#define BowKnight 0xA1
+#define HunterF BowKnight
 #define HighPriest 0xA2
 #define DreadFighterM 0xA3
 #define DreadFighter DreadFighterM
@@ -164,6 +164,7 @@
 #define SpellswordM 0xA7
 #define Spellsword SpellswordM
 #define SpellswordF 0xA8
+#define ChampionF 0xA9
 //LabelEnd
 
 //Label Character definitions
@@ -231,8 +232,7 @@
 #define Rex 0x3D
 #define Sekar 0x3E
 #define Zaheva 0x3F
-#define Madeline 0x40
-#define Madeleine 0x40
+#define Adeline 0x40
 #define Remus 0x41
 
 #define Henning 0x47
@@ -327,7 +327,6 @@
 #define DunlasMug 0xBB
 #define JohnathanMug 0xBC
 #define ElanilMug 0xBD
-#define IzukMug 0x1A // Artur
 #define UzkalisMug 0xBF
 #define JurgenMug 0xC0
 #define LeonMug 0xC1
@@ -367,7 +366,7 @@
 #define SylvaineMug 0xE3
 #define SekarMug 0xE4
 #define ZahevaMug 0xE5
-#define MadelineMug 0xE6
+#define AdelineMug 0xE6
 #define RemusMug 0xE7
 #define BlaineMug 0xE8
 #define WestonMug 0xE9
@@ -376,9 +375,11 @@
 #define DreadFighterMCard 0xEC
 #define DreadFighterFCard 0xED
 #define MaligKnightCard 0xEE
+#define HenningMug 0xEF
+#define IzukMug 0xF0
+#define WilliamMug 0xF1
 
 #define MerchantMug 0x31 // Breguet
-#define HenningMug 0x33 // Bazba
 #define GerwickMug 0x32 // Bone
 #define InkeeperMug 0x29 // Knoll
 #define MilitiaManMug 0x0E // Garcia
@@ -386,7 +387,6 @@
 #define OfficialMug 0x20 // Saleh
 #define RobertMug 0x34 // Saar
 #define AaronMug 0x1B // Gerik
-#define WilliamMug 0x41 // Vigarde
 #define GrantMug 0x3A // Pablo
 #define PatMug 0x16 // Forde
 #define RogerMug 0x43 // Caellach
@@ -599,7 +599,7 @@
 #define MercenaryFPegasusKnightPaletteID 0x3F
 #define MercenaryFCombatantPaletteID 0x40
 #define MercenaryFShadowPaletteID 0x41
-#define MercenaryFBlackFalcoknightPaletteID 0x42
+#define MercenaryFSeraphKnightPaletteID 0x42
 #define GerwickPiratePaletteID 0x43
 #define GhostSwordmasterPaletteID 0x44
 #define GrantRangerPaletteID 0x45
@@ -659,9 +659,9 @@
 #define RemusSoldierPaletteID 0x7B
 #define RemusSentinelPaletteID 0x7C
 #define RemusHalberdierPaletteID 0x7D
-#define MadeleineArcherPaletteID 0x7E
-#define MadeleineSniperPaletteID 0x7F
-#define MadeleineRangerPaletteID 0x80
+#define AdelineArcherPaletteID 0x7E
+#define AdelineSniperPaletteID 0x7F
+#define AdelineRangerPaletteID 0x80
 #define ZahevaMercenaryPaletteID 0x81
 #define ZahevaHeroPaletteID 0x82
 #define ZahevaRangerPaletteID 0x83
@@ -912,13 +912,16 @@
 #define TruebladeSprite 0x7D
 #define TruerbladeSprite 0x7E
 #define WarlockSprite 0x7F
-#define ShadowSprite 0x80
+#define TruebladeFSprite 0x80
 #define HarbingerSprite 0x81
 #define EdgySwordmasterSprite 0x82
 #define BattleSageMSprite 0x83
 #define BattleSageSprite BattleSageMSprite
 #define DreadFighterMSprite 0x84
 #define DreadFighterFSprite 0x85
+#define GoldKnightSprite 0x86
+#define SpellswordMSprite 0x87
+#define SpellswordFSprite 0x88
 //LabelEnd
 
 //Label Battle Animations
@@ -937,18 +940,17 @@
 #define FighterAxe 0x19
 #define FighterHandAxe 0x1A
 #define FighterUnarmed 0x1B
-#define BerserkerAxe 0x23
-#define BerserkerHandAxe 0x24
-#define BerserkerUnarmed 0x25
-#define BerserkerSword 0x01
+#define RangerFSword 0x31
+#define RangerFBow 0x32
+#define RangerFUnarmed 0x33
 #define SeraphKnightSword 0x68
 #define SeraphKnightSpear 0x69
 #define SeraphKnightMagic 0x02
 #define SeraphKnightStaff 0x03
-#define ChampionSword 0x05
-#define ChampionAxe 0x06
-#define ChampionHandAxe 0x07
-#define ChampionUnarmed 0x08
+#define ChampionMSword 0x05
+#define ChampionMAxe 0x06
+#define ChampionMHandAxe 0x07
+#define ChampionMUnarmed 0x08
 #define CommanderLance 0x09
 #define CommanderUnarmed 0x0A
 #define CavalierSword 0x34
@@ -989,17 +991,19 @@
 #define PirateAxe 0x9A
 #define PirateHandAxe 0x9B
 #define PirateUnarmed 0x9C
-#define GladiatorAxe 0xA1
-#define GladiatorHandAxe 0xA2
-#define GladiatorUnarmed 0xA3
+#define BasileusAxe 0xA1
+#define BasileusHandAxe 0xA2
+#define BasileusUnarmed 0xA3
 #define HalberdierSpear 0xA4
 #define HalberdierUnarmed 0xA5
 #define HectorSword 0xA6
 #define HectorAxe 0xA7
 #define HectorHandAxe 0xA8
 #define HectorUnarmed 0xA9
-#define HunterMBow 0xAA
-#define HunterMUnarmed 0xAB
+#define MarksmanMBow 0xAA
+#define MarksmanBow MarksmanMBow
+#define MarksmanMUnarmed 0xAB
+#define MarksmanUnarmed MarksmanMUnarmed
 #define ImpalerMLance 0xAC
 #define ImpalerMUnarmed 0xAD
 #define IzukMagic 0xAE
@@ -1011,13 +1015,8 @@
 #define MagusMStaff 0xB0
 #define MagusFMagic 0xB1
 #define MagusFStaff 0xB2
-#define MasterKnightMAxe 0xD8
-#define MasterKnightMHandAxe 0xD9
-#define MasterKnightFSword 0xDA
-#define MasterKnightFLance 0xDB
-#define MasterKnightFAxe 0xDC
-#define MasterKnightFHandAxe 0xDD
-#define MasterKnightFUnarmed 0xDE
+#define MasterKnightAxe 0xD8
+#define MasterKnightHandAxe 0xD9
 #define MatriarchMagic 0xB3
 #define MatriarchStaff 0xB4
 #define MonkFMagic 0xD3
@@ -1036,8 +1035,8 @@
 #define TruebladeSword 0xBD
 #define TruebladeMUnarmed 0xBE
 #define TruebladeUnarmed 0xBE
-#define ShadowSword 0xBF
-#define ShadowUnarmed 0xC0
+#define TruebladeFSword 0xBF
+#define TruebladeFUnarmed 0xC0
 #define TruerbladeSword 0xC1
 #define TruerbladeUnarmed 0xCA
 #define WarlockAxe 0xCB
@@ -1087,15 +1086,14 @@
 #define MurielSageMagic 0x10A
 #define ImpalerFLance 0x10B
 #define ImpalerFUnarmed 0x10C
-#define HunterFBow 0x10D
-#define HunterFUnarmed 0x10E
-#define MasterKnightMSword 0x10F
+#define MasterKnightSword 0x10F
 #define CommanderAxe 0x110
 #define CommanderHandAxe 0x111
-#define HunterMSword 0x112
+#define MarksmanMSword 0x112
+#define MarksmanSword MarksmanMSword
 #define WyvernGeneralLance 0x113
-#define MasterKnightMLance 0x114
-#define MasterKnightMUnarmed 0x115
+#define MasterKnightLance 0x114
+#define MasterKnightUnarmed 0x115
 #define WarlockStaff 0x116
 #define BattleSageSword 0x117
 #define MercenaryFSword 0x118
@@ -1126,6 +1124,16 @@
 #define SpellswordMUnarmed 0x131
 #define SpellswordFSword 0x132
 #define SpellswordFUnarmed 0x133
+#define ChampionFSword 0x134
+#define ChampionFAxe 0x135
+#define ChampionFHandAxe 0x136
+#define ChampionFUnarmed 0x137
+#define TruebladeFBow 0x138
+#define GladiatorSword 0x139
+#define GladiatorAxe 0x13A
+#define GladiatorHandAxe 0x13B
+#define GladiatorUnarmed 0x13C
+#define RangerFLance 0x13D
 //LabelEnd
 
 //Label Music Definitions
