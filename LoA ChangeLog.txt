@@ -1,7 +1,7 @@
 v1.9
 New route! Kill the boss of chapter 4 after accepting the promotion in the military
 Stance skills have been fixed back to +2 and +3 stats
-Knight descriptions have been changed to include 
+Knight descriptions have been changed to include axes
 Luna has been changed to FE7 Luna without the crit
 Muriel no longer has a staff rank nor a light rank
 Fixed game over glitch after 7 Military Haedric endinge
@@ -14,7 +14,6 @@ Warding blow has been changed to +5 res
 Certain blow has been changed to +15 hit
 Fixed Elaqua icon
 Buffed Maximus's stats and fixed his weapon ranks
-Fixed the prep screen help text bug
 Base conversations are implemented!
 Fixed the prep screen unusable menu item description text bug
 Updated character descriptions
@@ -28,7 +27,7 @@ Supply is fixed
 Green units in the prologue have their movement shown
 Forrest and Christina in Military 1 have been buffed
 Enemies in Military 2 Accept have been buffed
-Madeleine's starting level has been lowered in Military 3 Accept
+Adeline's starting level has been lowered in Military 3 Accept
 A few skills have been shuffled around
 Support Rework Rework!
 New classes: Spellsword is a generic T1 swordfighter who can use E rank anima and dark tomes.
@@ -40,6 +39,20 @@ Sylvaine is now a Malig Knight
 Maximus has a new animation but is still a Battle Sage (to compensate for new generic Battle Sages)
 Mage Knights can now use swords
 Tact peg promo has been changed to Seraph Knight (Swords + lances + anima + staff)
+Syvlaine is a lot better
+Christina and Forrest as bosses in Military 1 have been buffed AGAIN
+Slightly decreased base cavalier defense and increased base knight defense
+Military Accept 3 has been expanded for buffer room for reinforcements
+	More units have been added, and more escape points have been added to the top right and center left
+Barricade has been taken off generals (finally). They have Heavy Strikes instead
+Moved around/added some supports to Military Pass Haedric
+We're changing some animations, skills, and names for Tact promo classes and unique characters (like the Cesarian captains). Blame Noguchi
+Flux has been moved to E rank, and its stats as well as Worm's have been changed
+Generic Knights should have more HP
+Female wyvern Tact should be less insanely broken (male a bit as well)
+Izuk has a new mug! -- credit Vlak
+Henning has a new mug! -- credit RandomWizard
+William has a new mug! -- credit RandomWizard
 
 Hotfixes before v1.9:
 Promotion items have been fixed
@@ -117,7 +130,7 @@ Soldier Tact no longer loses con upon promotion
 Spear should no longer be hideously expensive
 Modular Supply is used now
 QoL for Snek only! .sym files are nicely integrated by a custom program
-Madeleine has a custom mug -- credit Levin
+Adeline has a custom mug -- credit Levin
 Vicar has a custom mug -- credit Atey (Sponsored by Bartz)
 Walter has a custom mug -- credit Atey (Sponsored by Bartz)
 Adlez has a custom mug -- credit Arey (Sponsored by Bartz)
