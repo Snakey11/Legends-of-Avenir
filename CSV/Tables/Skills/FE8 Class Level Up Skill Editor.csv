@@ -141,7 +141,7 @@ Jacket Hero,JacketHeroSkillList|IsPointer
 Gladiator,GladiatorSkillList|IsPointer
 Hector,HectorSkillList|IsPointer
 Trueerblade,TruerbladeSkillList|IsPointer
-Gaiden Sage,GaidenSageSkillList|IsPointer
+Gaiden Sage,SageSkillList|IsPointer
 Izuk,IzukSkillList|IsPointer
 F BattleSage,BattleSageSkillList|IsPointer
 Guardian Spirit,HectorSkillList|IsPointer
@@ -168,3 +168,4 @@ MaligKnight,MaligKnightSkillList|IsPointer
 Strategist,BattleSageSkillList|IsPointer
 SpellswordM,SpellswordSkillList|IsPointer
 SpellswordF,SpellswordSkillList|IsPointer
+Champion,ChampionSkillList|IsPointer

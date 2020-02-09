@@ -251,7 +251,7 @@ DeathQuote(Clara,AllChapters,0x00,ClaraDeathText)
 DeathQuote(Sylvaine,AllChapters,0x00,SylvaineDeathText)
 DeathQuote(Zaheva,AllChapters,0x00,ZahevaDeathText)
 DeathQuote(Yvette,AllChapters,0x00,YvetteDeathText) // TREAT 0xA0 AS DISABLE DEATH QUOTES FOR ENDINGS.
-DeathQuote(Madeleine,AllChapters,0x00,MadeleineDeathText)
+DeathQuote(Adeline,AllChapters,0x00,AdelineDeathText)
 DeathQuote(Remus,AllChapters,0x00,RemusDeathText)
 DeathQuote(Rex,AllChapters,0x00,RexDeathText)
 

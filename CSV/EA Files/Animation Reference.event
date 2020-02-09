@@ -8,24 +8,45 @@ BowAnim(ArmoredWyvernLordBow)
 UnarmedAnim(ArmoredWyvernLordUnarmed)
 WORD 0x0 0x0
 
+BasileusAnim:
+AxeAnim(BasileusAxe)
+HandAxeAnim(BasileusHandAxe)
+UnarmedAnim(BasileusUnarmed)
+WORD 0x0 0x0
+
 BattleSageAnim:
 SwordAnim(BattleSageSword)
 AnimaAnim(BattleSageMagic)
-LightAnim(BattleSageMagic)
+DarkAnim(BattleSageMagic)
 UnarmedAnim(BattleSageMagic)
 WORD 0x0 0x0
 
 BattleSageFAnim:
 SwordAnim(BattleSageFSword)
 AnimaAnim(BattleSageFMagic)
-LightAnim(BattleSageFMagic)
+DarkAnim(BattleSageFMagic)
 UnarmedAnim(BattleSageFMagic)
+WORD 0x0 0x0
 
-ChampionAnim:
-SwordAnim(ChampionSword)
-AxeAnim(ChampionAxe)
-HandAxeAnim(ChampionHandAxe)
-UnarmedAnim(ChampionUnarmed)
+BowKnightAnim:
+SwordAnim(RangerFSword)
+LanceAnim(RangerFLance)
+BowAnim(RangerFBow)
+UnarmedAnim(RangerFUnarmed)
+WORD 0x0 0x0
+
+ChampionMAnim:
+SwordAnim(ChampionMSword)
+AxeAnim(ChampionMAxe)
+HandAxeAnim(ChampionMHandAxe)
+UnarmedAnim(ChampionMUnarmed)
+WORD 0x0 0x0
+
+ChampionFAnim:
+SwordAnim(ChampionFSword)
+AxeAnim(ChampionFAxe)
+HandAxeAnim(ChampionFHandAxe)
+UnarmedAnim(ChampionFUnarmed)
 WORD 0x0 0x0
 
 CommanderAnim:
@@ -45,12 +66,14 @@ WORD 0x0 0x0
 
 DreadFighterMAnim:
 SwordAnim(DreadFighterMSword)
+AnimaAnim(DreadFighterMMagic) // To display correctly in the promotion preview if the spellsword has anima equiped. Will lose anima on promo.
 DarkAnim(DreadFighterMMagic)
 UnarmedAnim(DreadFighterMUnarmed)
 WORD 0x0 0x0
 
 DreadFighterFAnim:
 SwordAnim(DreadFighterFSword)
+AnimaAnim(DreadFighterFMagic)
 DarkAnim(DreadFighterFMagic)
 UnarmedAnim(DreadFighterFUnarmed)
 WORD 0x0 0x0
@@ -73,6 +96,7 @@ UnarmedAnim(GaidenSageMagic)
 WORD 0x0 0x0
 
 GladiatorAnim:
+SwordAnim(GladiatorSword)
 AxeAnim(GladiatorAxe)
 HandAxeAnim(GladiatorHandAxe)
 UnarmedAnim(GladiatorUnarmed)
@@ -119,17 +143,6 @@ HolySageAnim:
 LightAnim(HolySageMagic)
 DarkAnim(HolySageMagic)
 StaffAnim(HolySageStaff)
-WORD 0x0 0x0
-
-HunterMAnim:
-SwordAnim(HunterMSword)
-BowAnim(HunterMBow)
-UnarmedAnim(HunterMUnarmed)
-WORD 0x0 0x0
-
-HunterFAnim:
-BowAnim(HunterFBow)
-UnarmedAnim(HunterFUnarmed)
 WORD 0x0 0x0
 
 ImpalerMAnim:
@@ -198,20 +211,18 @@ DarkAnim(MaligKnightMagic)
 UnarmedAnim(MaligKnightMagic)
 WORD 0x0 0x0
 
-MasterKnightMAnim:
-SwordAnim(MasterKnightMSword)
-SpearAnim(MasterKnightMLance)
-AxeAnim(MasterKnightMAxe)
-HandAxeAnim(MasterKnightMHandAxe)
-UnarmedAnim(MasterKnightMUnarmed)
+MarksmanAnim:
+SwordAnim(MarksmanSword)
+BowAnim(MarksmanBow)
+UnarmedAnim(MarksmanUnarmed)
 WORD 0x0 0x0
 
-MasterKnightFAnim:
-SwordAnim(MasterKnightFSword)
-SpearAnim(MasterKnightFLance)
-AxeAnim(MasterKnightFAxe)
-HandAxeAnim(MasterKnightFHandAxe)
-UnarmedAnim(MasterKnightFUnarmed)
+MasterKnightAnim:
+SwordAnim(MasterKnightSword)
+SpearAnim(MasterKnightLance)
+AxeAnim(MasterKnightAxe)
+HandAxeAnim(MasterKnightHandAxe)
+UnarmedAnim(MasterKnightUnarmed)
 WORD 0x0 0x0
 
 MatriarchAnim:
@@ -235,13 +246,6 @@ MonkFAnim:
 StaffAnim(MonkFStaff)
 LightAnim(MonkFMagic)
 UnarmedAnim(MonkFMagic)
-WORD 0x0 0x0
-
-MountainierAnim:
-SwordAnim(BerserkerSword)
-AxeAnim(BerserkerAxe)
-HandAxeAnim(BerserkerHandAxe)
-UnarmedAnim(BerserkerUnarmed)
 WORD 0x0 0x0
 
 MountedBrigandAnim:
@@ -311,9 +315,10 @@ SwordAnim(TruebladeMSword)
 UnarmedAnim(TruebladeMUnarmed)
 WORD 0x0 0x0
 
-ShadowAnim:
-SwordAnim(ShadowSword)
-UnarmedAnim(ShadowUnarmed)
+TruebladeFAnim:
+SwordAnim(TruebladeFSword)
+BowAnim(TruebladeFBow)
+UnarmedAnim(TruebladeFUnarmed)
 WORD 0x0 0x0
 
 SpearHeroAnim:
@@ -347,10 +352,12 @@ BowAnim(WilSniperBow)
 WORD 0x0
 
 WyvernGeneralAnim:
-SpearAnim(WyvernGeneralLance)
-AxeAnim(WyvernGeneralAxe)
-HandAxeAnim(WyvernGeneralHandAxe)
-UnarmedAnim(WyvernGeneralUnarmed)
+SwordAnim(ArmoredWyvernLordSword)
+LanceAnim(ArmoredWyvernLordLance)
+AxeAnim(ArmoredWyvernLordAxe)
+HandAxeAnim(ArmoredWyvernLordHandAxe)
+BowAnim(ArmoredWyvernLordBow)
+UnarmedAnim(ArmoredWyvernLordUnarmed)
 WORD 0x0 0x0
 
 XeximAnim:

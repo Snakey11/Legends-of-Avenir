@@ -151,7 +151,7 @@ XeximClass,10,30,26,3
 GrandPaladin,3,25,25,2
 HolySage,9,55,30,3
 WilSniper,3,20,23,1
-Battle Sage,6,30,26,2
+Battle Sage,4,30,26,2
 Civilian,1,10,20,0
 Civilian (F),1,10,20,0
 ArmoredWyvernLord,2,15,21,1
@@ -162,13 +162,13 @@ Impaler F,1,15,22,1
 SoldierF2,0,10,20,0
 Hunter F,1,10,22,0
 High Priest,7,50,28,3
-DreadFighterM,5,30,26,2
-DreadFighterF,5,30,26,2
-MaligKnight,4,25,25,3
+DreadFighterM,3,25,26,2
+DreadFighterF,3,25,26,2
+MaligKnight,9,25,25,3
 Strategist,6,30,26,2
 SpellswordM,1,30,20,0
 SpellswordF,1,30,20,0
-Ephraim Lord,1,10,20,0
+ChampionF,2,15,22,1
 Ephraim Lord,1,10,20,0
 Ephraim Lord,1,10,20,0
 Ephraim Lord,1,10,20,0

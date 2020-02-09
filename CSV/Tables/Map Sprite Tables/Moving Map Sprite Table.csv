@@ -86,14 +86,14 @@ Dark Knight M,DarkKnightMv|IsPointer,0x81f1080
 Dark Knight F,DarkKnightMv|IsPointer,0x81f1a54
 Magus,MagusMMv|IsPointer,0x81f249c
 Magus F,MagusFMv|IsPointer,0x81f249c
-Master Knight_F,0x81c6a84,0x81c7428
+Master Knight_F,GoldKnightMv|IsPointer,0x81c7428
 Commander,CommanderMv|IsPointer,0x81f3fa0
 Impaler,ImpalerMv|IsPointer,0x81c3d7c
 Wyvern General,0x81d6ec4,0x81d7cc8
 Hunter,HunterMv|IsPointer,0x81f607c
-Master Knight,0x81c6a84,0x81c7428
+Master Knight,GoldKnightMv|IsPointer,0x81c7428
 Champion,ChampionMv|IsPointer,0x81cbd94
-Shadow,ShadowMv|IsPointer,0x81d0160
+TruebladeF,TruebladeFMv|IsPointer,0x81d0160
 Trueblade,TruebladeMv|IsPointer,0x81f876c
 MountedBrigand,MountedBrigandMv|IsPointer,0x81f90a0
 BUGGED,WarlockMv|IsPointer,0x81f95f4
@@ -137,7 +137,7 @@ Pegasus Knight2,0x81e89d0,0x81e96f0
 Halberdier,HalberdierMv|IsPointer,0x81edbc4
 Sentinel,SentinelMv|IsPointer,0x81edbc4
 Jacket Hero,0x81cb438,0x81cbd94
-Gladiator,GladiatorMv|IsPointer,GladiatorAnimationData|IsPointer
+Gladiator,0x81e4498,0x81e4ea4
 Hector,HectorMv|IsPointer,HectorAnimationData|IsPointer
 Trueerblade,TruerbladeMv|IsPointer,0x81cd1bc
 Gaiden Sage,0x81d91e4,0x81d9b58
@@ -159,11 +159,12 @@ Emperor,0x8201CDC,0x8202558
 MurielSage,0x81d9cb0,0x81da694
 Impaler F,ImpalerMv|IsPointer,0x81f49b8
 SoldierF2,0x81ed418,0x81edbc4
-Hunter F,HunterMv|IsPointer,0x81f607c
+BowKnight,0x81d286c,0x81d3194
 High Priest,PatriarchMv|IsPointer,0x81efe70
 DreadFighterM,DreadFighterMMv|IsPointer,0x81ce4fc
 DreadFighterF,DreadFighterFMv|IsPointer,0x81ce4fc
 MaligKnight,MaligKnightMv|IsPointer,0x81d5e58
 Strategist,BattleSageFMv|IsPointer,0x81d9b58
-SpellswordM,0x81cc9d4,0x81cd1bc
-SpellswordF,0x81cd314,0x81cdb58
+SpellswordM,SpellswordMMv|IsPointer,0x81cd1bc
+SpellswordF,SpellswordFMv|IsPointer,0x81cdb58
+ChampionF,ChampionMv|IsPointer,0x81cbd94

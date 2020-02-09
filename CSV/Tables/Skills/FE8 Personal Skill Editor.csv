@@ -33,8 +33,8 @@ Dunlas,0x0
 Johnathan,0x0
 Elanil,DartingStanceID
 Izuk,0x0
-Maximus,0x0
-Jurgen,0x0
+Maximus,RallySpectrumID
+Jurgen,HeavyStrikesID
 Leon,0x0
 Jasper,0x0
 Derek,FullMetalBodyID
@@ -60,10 +60,10 @@ PlayerMArcher,0x0
 PlayerFArcher,0x0
 Finoc,0x0
 Xexim,AetherID
-Rex,CharismaID
+Rex,SpectrumStanceID
 Sekar,0x0
 Zaheva,MageSlayerID
-Madeline,0x0
+Adeline,0x0
 Remus,SpurSpdID
 BLANK,0x0
 BLANK,0x0
@@ -94,7 +94,7 @@ William,LiquidOozeID
 Emperor,0x0
 Grant,0x0
 Pat,OpportunistID
-BossUzkalis,0x0
+BossUzkalis,TomeRangeUpID
 BossArc,AxeFaithID
 Roger,0x0
 Haedrican,0x0

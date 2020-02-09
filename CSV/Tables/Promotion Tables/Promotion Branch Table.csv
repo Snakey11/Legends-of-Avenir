@@ -121,16 +121,16 @@ Monk2,Patriarch,0x0
 MonkF2,Matriarch,0x0
 Cavalier2,MasterKnightM,0x0
 CavalierF2,MasterKnightF,0x0
-Knight2,Commander,0x0
+Knight2,Baron,0x0
 SoldierM2,ImpalerM,0x0
 Wyvern Rider2,WyvernGeneral,0x0
 Archer2,HunterM,0x0
 ArcherF2,HunterF,0x0
 Mercenary2,Champion,0x0
-MercenaryF2,Combatant,0x0
+MercenaryF2,ChampionF,0x0
 Fighter2,Warlock,0x0
 Brigand2,MountedBrigand,0x0
-Pirate2,Mountainier,0x0
+Pirate2,Gladiator,0x0
 Myrmidon2,TruebladeM,0x0
 MyrmidonF2,TruebladeF,0x0
 Pegasus Knight2,BlackFalcoknight,0x0
@@ -167,3 +167,4 @@ MaligKnight,0x0,0x0
 Strategist,0x0,0x0
 SpellswordM,BattleSageM,DreadFighterM
 SpellswordF,BattleSageF,DreadFighterF
+ChampionF,0x0,0x0
