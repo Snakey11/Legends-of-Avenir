@@ -196,11 +196,11 @@ LuxPortrait:
 #incbin "Lux_palette.dmp"
 #incbin "Lux_minimug.dmp"
 
-MadeleinePortrait:
-#incbin "Madeleine_mug.dmp"
-#incbin "Madeleine_frames.dmp"
-#incbin "Madeleine_palette.dmp"
-#incbin "Madeleine_minimug.dmp"
+AdelinePortrait:
+#incbin "Adeline_mug.dmp"
+#incbin "Adeline_frames.dmp"
+#incbin "Adeline_palette.dmp"
+#incbin "Adeline_minimug.dmp"
 
 MaximusPortrait:
 #incbin "Maximus_mug.dmp"
@@ -356,7 +356,7 @@ setMugEntry(LeonMug,LeonPortrait,2,4,2,2)
 setMugEntry(LeyosMug,LeyosPortrait,3,5,3,3)
 setMugEntry(LukeMug,LukePortrait,3,5,3,3)
 setMugEntry(LuxMug,LuxPortrait,2,6,3,4)
-setMugEntry(MadelineMug,MadeleinePortrait,2,5,3,3)
+setMugEntry(AdelineMug,AdelinePortrait,2,5,3,3)
 setMugEntry(MaximusMug,MaximusPortrait,2,5,2,3)
 setMugEntry(MurielMug,MurielPortrait,3,6,3,4)
 setMugEntry(NarratorMug,NarratorPortrait,3,5,3,3)
@@ -442,8 +442,8 @@ LukePortrait:
 #incext PortraitFormatter "Luke.png"
 LuxPortrait:
 #incext PortraitFormatter "Lux.png"
-MadelinePortrait:
-#incext PortraitFormatter "Madeline.png"
+AdelinePortrait:
+#incext PortraitFormatter "Adeline.png"
 MaximusPortrait:
 #incext PortraitFormatter "Maximus.png"
 MurielPortrait:

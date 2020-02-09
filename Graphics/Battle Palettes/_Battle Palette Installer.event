@@ -88,9 +88,9 @@ setPalette(LukeSagePaletteID,LukeSagePalette)
 setPalette(LuxMagePaletteID,LuxMagePalette)
 setPalette(LuxMageKnightPaletteID,LuxMageKnightPalette)
 setPalette(LuxSagePaletteID,LuxSagePalette)
-setPalette(MadeleineArcherPaletteID,MadeleineArcherPalette)
-setPalette(MadeleineSniperPaletteID,MadeleineSniperPalette)
-setPalette(MadeleineRangerPaletteID,MadeleineRangerPalette)
+setPalette(AdelineArcherPaletteID,AdelineArcherPalette)
+setPalette(AdelineSniperPaletteID,AdelineSniperPalette)
+setPalette(AdelineRangerPaletteID,AdelineRangerPalette)
 setPalette(MasonRangerPaletteID,MasonRangerPalette)
 setPalette(MaximusSagePaletteID,MaximusSagePalette)
 setPalette(PatMageKnightPaletteID,PatMageKnightPalette)
@@ -626,16 +626,16 @@ LuxSagePalette:
 #incbin "Lux Sage.dmp"
 
 ALIGN 4
-MadeleineArcherPalette:
-#incbin "Madeleine Archer.dmp"
+AdelineArcherPalette:
+#incbin "Adeline Archer.dmp"
 
 ALIGN 4
-MadeleineSniperPalette:
-#incbin "Madeleine Sniper.dmp"
+AdelineSniperPalette:
+#incbin "Adeline Sniper.dmp"
 
 ALIGN 4
-MadeleineRangerPalette:
-#incbin "Madeleine Ranger.dmp"
+AdelineRangerPalette:
+#incbin "Adeline Ranger.dmp"
 
 ALIGN 4
 MasonRangerPalette:
