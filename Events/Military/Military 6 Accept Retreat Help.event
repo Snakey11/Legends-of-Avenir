@@ -13,7 +13,7 @@ POIN EndMainPointer EndMainPointer EndMainPointer
 POIN EndMainPointer
 POIN TrapData TrapData
 POIN Units Units
-POIN $0 $0 $0 $0 $0 $0
+POIN EndingSpecial $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 //LabelEnd
 
@@ -27,11 +27,13 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
+SupportConvo(BSupport,Kendrick,Yvette,Military6AcceptRetreatHelpKendrickYvetteSupportText)
 END_MAIN
 
 //Label LocationBasedEvents
 LocationBasedEvents:
 Armory(ArmoryList,18,1)
+Vendor(ShopList,21,2)
 CHES 0x18 Elixir [8,0] 0x14
 CHES 0x19 SilverSword [9,0] 0x14
 Raid(0x13,DNorth,6,10)
@@ -57,7 +59,7 @@ UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [0,6] 0x00 0x00 0x00 0x00 [0] 
 UNIT Derek 0x00 0x00 Level(1,Ally,True) [0,7] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Jasper 0x00 0x00 Level(1,Ally,True) [2,6] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [2,7] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT Madeleine 0x00 0x00 Level(1,Ally,True) [3,5] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Adeline 0x00 0x00 Level(1,Ally,True) [3,5] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Remus 0x00 0x00 Level(1,Ally,True) [3,8] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Yvette 0x00 0x00 Level(1,Ally,True) [4,6] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Kendrick 0x00 0x00 Level(1,Ally,True) [4,7] 0x00 0x00 0x00 0x00 [0] NoAI
@@ -89,6 +91,8 @@ DISA Xexim
 GotoPrepScreen
 
 //Label EndingScene
+EndingSpecial:
+ENUT 0x11
 EndingScene: // 0x10 true = wave 2. 0x11 true = wave 3.
 CHECK_EVENTID 0x11
 BEQ 0x0 0x0 0xC
@@ -234,6 +238,10 @@ ArmoryList:
 SHLI SteelSword IronBlade SteelLance ShortSpear SteelAxe DevilAxe SteelBow KillerBow Vulnerary
 ALIGN 4
 
+ShopList:
+SHLI Shine Elthunder Dasher Worm Mend Vulnerary Elixir
+ALIGN 4
+
 DNorth:
 EnterStop
 TileChange(5,9)
@@ -291,7 +299,7 @@ Meanies2:
 UNIT Shizonian Cavalier Pascal Level(18,Enemy,True) [9,10] 0x00 0x00 0x00 0x00 [ToxinLance] AttackInRangeAI
 UNIT Shizonian Cavalier Pascal Level(19,Enemy,True) [8,11] 0x00 0x00 0x00 0x00 [ShortSpear] AttackInRangeAI
 UNIT Shizonian Halberdier Pascal Level(7,Enemy,True) [12,12] 0x00 0x00 0x00 0x00 [Horseslayer] AttackInRangeAI
-UNIT Shizonian Druid Pascal Level(5,Enemy,True) [14,0] 0x00 0x00 0x00 0x00 [Nosferatu] AttackInRangeAI
+UNIT Shizonian DreadFighter Pascal Level(5,Enemy,True) [14,0] 0x00 0x00 0x00 0x00 [Armorslayer,Nosferatu] AttackInRangeAI
 UNIT Shizonian Fighter Pascal Level(20,Enemy,True) [13,3] 0x00 0x00 0x00 0x00 [SteelAxe] ChaseOnceApproachedAI
 UNIT Shizonian Myrmidon Pascal Level(19,Enemy,True) [13,5] 0x00 0x00 0x00 0x00 [KillingEdge] ChaseOnceApproachedAI
 UNIT Shizonian Berserker Pascal Level(7,Enemy,True) [13,5] 0x00 0x00 0x00 0x00 [BraveAxe] AttackInRangeAI
@@ -310,7 +318,7 @@ UNIT Shizonian WyvernRider Pascal Level(20,Enemy,True) [0,16] 0x00 0x00 0x00 0x0
 UNIT Shizonian WyvernRider Pascal Level(18,Enemy,True) [1,17] 0x00 0x00 0x00 0x00 [HeavySpear] ChaseOnceApproachedAI
 UNIT Shizonian Pirate Pascal Level(17,Enemy,True) [10,13] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
 UNIT Shizonian General Pascal Level(8,Enemy,True) [16,11] 0x00 0x00 0x00 0x00 [ShortAxe,BraveLance] GuardAI
-UNIT Shizonian Myrmidon Pascal Level(18,Enemy,True) [14,15] 0x00 0x00 0x00 0x00 [IronSword] ChaseOnceApproachedAI
+UNIT Shizonian Spellsword Pascal Level(18,Enemy,True) [14,15] 0x00 0x00 0x00 0x00 [IronSword,Flux] ChaseOnceApproachedAI
 UNIT Shizonian Myrmidon Pascal Level(19,Enemy,True) [14,15] 0x00 0x00 0x00 0x00 [SteelSword] ChaseOnceApproachedAI
 UNIT
 
@@ -318,7 +326,7 @@ Wave22:
 UNIT Shizonian MageKnight Pascal Level(5,Enemy,True) [13,17] 0x00 0x00 0x00 0x00 [Arcthunder] AttackInRangeAI
 UNIT Shizonian Ranger Pascal Level(6,Enemy,True) [18,17] 0x00 0x00 0x00 0x00 [SilverLongbow] AttackInRangeAI
 UNIT Shizonian Warrior Pascal Level(4,Enemy,True) [10,17] 0x00 0x00 0x00 0x00 [SteelAxe,IronBow] NoAI
-UNIT Shizonian Sage Pascal Level(5,Enemy,True) [19,13] 0x00 0x00 0x00 0x00 [Artemis] AttackInRangeAI
+UNIT Shizonian BattleSage Pascal Level(5,Enemy,True) [19,13] 0x00 0x00 0x00 0x00 [Elfire,SteelBlade] AttackInRangeAI
 UNIT Shizonian Knight Pascal Level(20,Enemy,True) [18,10] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
 UNIT Shizonian Knight Pascal Level(20,Enemy,True) [18,2] 0x00 0x00 0x00 0x00 [HandAxe] GuardAI
 UNIT Shizonian Swordmaster Pascal Level(8,Enemy,True) [17,4] 0x00 0x00 0x00 0x00 [SteelBlade] AttackInRangeAI

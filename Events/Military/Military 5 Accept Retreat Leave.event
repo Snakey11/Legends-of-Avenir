@@ -26,7 +26,7 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
-SupportConvo(BSupport,Madeleine,Yvette,Military5AcceptRetreatLeaveMadeleineYvetteSupportText)
+SupportConvo(BSupport,Adeline,Yvette,Military5AcceptRetreatLeaveAdelineYvetteSupportText)
 END_MAIN
 
 //Label LocationBasedEvents
@@ -58,7 +58,7 @@ UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [4,0] 0x00 0x00 0x00 0x00 [0] 
 UNIT Derek 0x00 0x00 Level(1,Ally,True) [6,0] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Jasper 0x00 0x00 Level(1,Ally,True) [5,1] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [3,1] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT Madeleine 0x00 0x00 Level(1,Ally,True) [4,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Adeline 0x00 0x00 Level(1,Ally,True) [4,2] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Remus 0x00 0x00 Level(1,Ally,True) [6,2] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Yvette 0x00 0x00 Level(1,Ally,True) [3,3] 0x00 0x00 0x00 0x00 [0] NoAI
 EndUnit

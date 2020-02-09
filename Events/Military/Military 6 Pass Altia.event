@@ -137,7 +137,7 @@ UNIT Clara 0x00 0x00 Level(1,Ally,True) [11,23] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 LoadSylvaine:
-UNIT Sylvaine ArmoredWyvernLord 0x00 Level(8,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [SilverAxe,SteelBlade,SteelBow] NoAI
+UNIT Sylvaine MaligKnight 0x00 Level(8,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [SilverAxe,Nosferatu] NoAI
 EndUnit
 
 //Label Chapter Meanies

@@ -25,7 +25,7 @@ END_MAIN
 ALIGN 32
 CharacterBasedEvents:
 CHAR 0x10 TalkToLeon [Sekar,Leon] 0x00
-SupportConvo(ASupport,Christina,Forrest,Support1Text)
+SupportConvo(ASupport,Elanil,Finoc,Military6PassHaedricElanilFinocSupportText)
 END_MAIN
 
 //Label LocationBasedEvents

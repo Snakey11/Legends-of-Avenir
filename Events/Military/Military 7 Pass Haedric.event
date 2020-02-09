@@ -36,6 +36,7 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
+SupportConvo(ASupport,Clara,Sekar,Military7PassHaedricClaraSekarSupportText)
 END_MAIN
 
 //Label LocationBasedEvents

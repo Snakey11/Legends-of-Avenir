@@ -39,7 +39,7 @@ CharacterEventBothWays(0x10,TTactYvette,PlayerFSoldier,Yvette)
 CharacterEventBothWays(0x10,TTactYvette,PlayerFKnight,Yvette)
 CharacterEventBothWays(0x10,TTactYvette,PlayerFWyvernRider,Yvette)
 CharacterEventBothWays(0x10,TTactYvette,PlayerFArcher,Yvette)
-SupportConvo(BSupport,Madeleine,Remus,Military4AcceptRetreatMadeleineRemusSupportText)
+SupportConvo(BSupport,Adeline,Remus,Military4AcceptRetreatAdelineRemusSupportText)
 SupportConvo(BSupport,0xFF,Zaheva,Military4AcceptRetreatTactZahevaSupportText)
 END_MAIN
 
@@ -53,8 +53,8 @@ Door(16,5)
 Door(17,5)
 Door(16,6)
 Door(17,6)
-Chest(KnightCrest,10,0)
-Chest(Axeslayer,12,0)
+Chest(OrionBolt,10,0)
+Chest(Armorslayer,12,0)
 Chest(KillerBow,7,6)
 ChestMoney(6000,10,9)
 Chest(Elixir,12,9)
@@ -78,13 +78,13 @@ UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [14,16] 0x00 0x00 0x00 0x00 [0
 UNIT Jasper 0x00 0x00 Level(1,Ally,True) [15,15] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Derek 0x00 0x00 Level(1,Ally,True) [13,17] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [13,19] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT Madeline 0x00 0x00 Level(1,Ally,True) [14,18] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Adeline 0x00 0x00 Level(1,Ally,True) [14,18] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Remus 0x00 0x00 Level(1,Ally,True) [15,19] 0x00 0x00 0x00 0x00 [0] NoAI
 EndUnit
 
 //Label BeginingScene
 BeginningScene:
-SVAL 0xB Coords(15,5)
+SVAL 0xB Coords(16,5)
 LOMA MercenaryMilitiaWaitArcanae6
 TileChange(13,8) // Open throne room door.
 LOAD3 0x1 PlayerLoading1
@@ -277,7 +277,7 @@ MUSS With_Us
 CAM1 [11,15]
 LOAD1 0x1 LoadYvette
 ENUN
-SetSupport(Madeleine,Yvette,CSupport)
+SetSupport(Adeline,Yvette,CSupport)
 STAL 0x10
 FlashCursor(Yvette,60)
 STAL 0x10
@@ -348,7 +348,7 @@ EndUnit
 
 //Label Cutscene Units
 CastleCutsceneFriends:
-UNIT Madeline 0x00 0x00 Level(1,Ally,True) [16,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Adeline 0x00 0x00 Level(1,Ally,True) [16,3] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Remus 0x00 0x00 Level(1,Ally,True) [17,4] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
@@ -369,7 +369,7 @@ UNIT
 
 NoFightFriends:
 UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [15,13] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT Madeline 0x00 0x00 Level(1,Ally,True) [14,14] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Adeline 0x00 0x00 Level(1,Ally,True) [14,14] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 EndCesarians:
@@ -381,7 +381,7 @@ EndUnit
 
 //Label Chapter Units
 ChapterFriends:
-UNIT Madeline 0x00 0x00 Level(1,Ally,True) [14,18] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Adeline 0x00 0x00 Level(1,Ally,True) [14,18] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Remus 0x00 0x00 Level(1,Ally,True) [13,16] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
@@ -394,7 +394,7 @@ UNIT
 Shizonians:
 UNIT BossArya Assassin_F BossArya Level(4,Enemy,True) [2,1] Drop 0x00 0x00 0x00 [SteelSword,RuneSword] GuardAI
 UNIT Shizonian Myrmidon BossArya Level(11,Enemy,True) [8,20] Drop 0x00 0x00 0x00 [IronSword,Torch] NoAI
-UNIT Shizonian Myrmidon BossArya Level(12,Enemy,True) [7,19] 0x00 0x00 0x00 0x00 [DevilSword] NoAI
+UNIT Shizonian Spellsword BossArya Level(12,Enemy,True) [7,19] 0x00 0x00 0x00 0x00 [DevilSword,Fire] NoAI
 UNIT Shizonian Fighter BossArya Level(10,Enemy,True) [10,16] Drop 0x00 0x00 0x00 [SteelAxe,DoorKey] NoAI
 UNIT Shizonian Mercenary BossArya Level(13,Enemy,True) [16,11] 0x00 0x00 0x00 0x00 [IronBlade] NoAI
 UNIT Shizonian Knight BossArya Level(14,Enemy,True) [13,13] Drop 0x00 0x00 0x00 [ShortSpear,ChestKey_5] GuardAI
@@ -416,7 +416,7 @@ UNIT Shizonian Mercenary BossArya Level(14,Enemy,True) [0,10] 0x00 0x00 0x00 0x0
 UNIT Shizonian Hero BossArya Level(3,Enemy,True) [2,19] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
 UNIT Shizonian Knight BossArya Level(12,Enemy,True) [1,5] 0x00 0x00 0x00 0x00 [HandAxe] AttackInRangeAI
 UNIT Shizonian Myrmidon BossArya Level(12,Enemy,True) [7,2] 0x00 0x00 0x00 0x00 [Lancereaver] AttackInRangeAI
-UNIT Shizonian Knight BossArya Level(13,Enemy,True) [11,3] 0x00 0x00 0x00 0x00 [SteelAxe] GuardAI
+UNIT Shizonian Knight BossArya Level(13,Enemy,True) [11,3] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
 UNIT Shizonian Mage BossArya Level(12,Enemy,True) [17,2] 0x00 0x00 0x00 0x00 [Thunder] NoAI
 UNIT
 
@@ -440,7 +440,7 @@ UNIT Shizonian Pirate BossArya Level(12,Enemy,True) [0,14] 0x00 0x00 0x00 0x00 [
 UNIT
 
 Turn7Units:
-UNIT Shizonian Sage BossArya Level(1,Enemy,True) [0,12] Drop 0x00 0x00 0x00 [Thunder,Talisman] NoAI
+UNIT Shizonian BattleSage BossArya Level(1,Enemy,True) [0,12] Drop 0x00 0x00 0x00 [IronSword,Thunder,Talisman] NoAI
 UNIT Shizonian Myrmidon BossArya Level(13,Enemy,True) [0,14] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
 UNIT Shizonian Archer BossArya Level(14,Enemy,True) [2,0] 0x00 0x00 0x00 0x00 [IronBow] NoAI
 UNIT Shizonian Knight BossArya Level(14,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [Dragonspear] NoAI

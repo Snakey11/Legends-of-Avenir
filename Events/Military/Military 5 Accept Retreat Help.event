@@ -29,12 +29,13 @@ END_MAIN
 ALIGN 32
 CharacterBasedEvents:
 CHAR 0x10 TYvetteKendrick [Yvette,Kendrick] 0x00
+SupportConvo(BSupport,Adeline,Yvette,Military5AcceptRetreatHelpAdelineYvetteSupportText)
 END_MAIN
 
 //Label LocationBasedEvents
 LocationBasedEvents:
 Armory(ArmoryList,1,14)
-Vendor(ShopList,17,11)
+Vendor(ShopList,17,12)
 Village(0x14,NorthRedHouse,16,1)
 Village(0x15,CenterRedHouse,12,8)
 Village(0x16,WestRedHouse,2,11)
@@ -60,7 +61,7 @@ UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [6,2] 0x00 0x00 0x00 0x00 [0] 
 UNIT Derek 0x00 0x00 Level(1,Ally,True) [5,1] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Jasper 0x00 0x00 Level(1,Ally,True) [6,0] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [4,0] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT Madeleine 0x00 0x00 Level(1,Ally,True) [4,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Adeline 0x00 0x00 Level(1,Ally,True) [4,2] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Remus 0x00 0x00 Level(1,Ally,True) [3,1] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Yvette 0x00 0x00 Level(1,Ally,True) [3,3] 0x00 0x00 0x00 0x00 [0] NoAI
 EndUnit
@@ -72,7 +73,7 @@ ENUN
 REMU Xena
 CAM1 [10,10]
 LOAD1 0x1 KendrickFriends
-LOAD2 0x1 StartingMadeleine
+LOAD2 0x1 StartingAdeline
 LOAD3 0x1 PlayerLoading1
 ENUN
 SVAL 0x1 Kendrick
@@ -89,7 +90,7 @@ STAL 0x10
 Text(Military5AcceptRetreatHelpInTownText)
 STAL 0x10
 MoveMilitary(15,13)
-MOVE 0x00 Madeleine [14,12]
+MOVE 0x00 Adeline [14,12]
 STAL 0x04
 CAM1 [14,12]
 ENUN
@@ -105,7 +106,7 @@ TEXTSTART
 TEXTSHOW Military5AcceptRetreatHelpMeetArcanianText
 TEXTEND
 LOAD1 0x1 ThatArcanian
-STAL 0x0C
+STAL 0x08
 TEXTCONT
 TEXTEND
 MOVE 0x00 Kendrick [18,16]
@@ -116,8 +117,12 @@ TEXTCONT
 TEXTEND
 REMA
 TurnEnemy(Arcanian)
+SVAL 0xB Coords(18,17)
+SVAL 0x1 0xFFFE
+SVAL 0x2 0x00001000
+ASMC SetUnitState|1 // Sets that Arcanian to have the talisman as droppable because apparently that bit doesn't save the allegiance change lol.
 STAL 0x10
-SetBattleNumbers(78,7,0,75,12,3)
+SetBattleNumbers(78,12,3,75,7,3)
 StartBattle
 MissedAttack(1,0)
 MissedAttack(0,0)
@@ -140,9 +145,11 @@ FADI 0x5
 CLEA 0x0
 CAM1 [18,17]
 SVAL 0xB Coords(18,17)
-DISA 0xFFFE
-LOAD1 0x1 LoadShanley2
+MOVE 0xFFFF 0xFFFE [16,20] // Move that Arcanian who fought Kendrick down lower in the map.
+MOVE 0xFFFF Shanley [18,18] // Move Shanley near Kendrick.
 LOAD1 0x1 ShanleyUnits
+LOAD1 0x1 ShanleyUnits2
+ENUN
 SetBackground(0x24)
 Text(Military5AcceptRetreatHelpWhatHappenedText)
 EndConvo
@@ -153,13 +160,11 @@ MOVE 0x00 Kendrick [23,16]
 STAL 0x04
 FADI 0x5
 ENUN
-LOAD1 0x1 LoadShanley3
-SVAL 0xB Coords(18,18)
-DISA 0xFFFE
+MOVE 0xFFFF Shanley [13,20] // Move Shanley and co back.
 SVAL 0xB Coords(17,19)
-DISA 0xFFFE
+MOVE 0xFFFF 0xFFFE [12,19]
 SVAL 0xB Coords(19,19)
-DISA 0xFFFE
+MOVE 0xFFFF 0xFFFE [14,19]
 GotoPrepScreen
 
 //Label EndingScene
@@ -269,7 +274,7 @@ TYvetteKendrick:
 MUSS Zelos
 Text(Military5AcceptRetreatHelpRecruitKendrickText)
 TurnAlly(Kendrick)
-AddSupport(Kendrick,Yvette,0,0)
+AddSupport(Kendrick,Yvette,0)
 ENUT 0x11 // Prevent Kendrick's death quote as a green unit.
 MURE 0x05
 NoFade
@@ -300,7 +305,7 @@ EndA2
 SouthRedHouse:
 EnterStop
 Text(0x01,Military5AcceptRetreatHelpSRedHouseText)
-GiveItem(KnightCrest,0xFFFF)
+GiveItem(MasterSeal,0xFFFF)
 NoFade
 EndA2
 
@@ -334,18 +339,18 @@ UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [10,9] 0x00 0x00 0x00 0x00 [0]
 EndUnit
 
 //Label Cutscene Units
-StartingMadeleine:
-UNIT Madeleine 0x00 0x00 Level(1,Ally,True) [11,11] 0x00 0x00 0x00 0x00 [0] NoAI
+StartingAdeline:
+UNIT Adeline 0x00 0x00 Level(1,Ally,True) [11,11] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 KendrickFriends:
-UNIT Kendrick Pirate Kendrick Level(10,NPC,True) [24,16] 0x00 0x00 0x00 0x00 [HandAxe,Swordreaver,Vulnerary] GuardAI
+UNIT Kendrick Pirate Kendrick Level(13,NPC,True) [24,16] 0x00 0x00 0x00 0x00 [HandAxe,Swordreaver,Vulnerary] GuardAI
 UNIT KendrickFriend Pirate Kendrick Level(8,NPC,True) [24,15] 0x00 0x00 0x00 0x00 [IronAxe] AttackInRangeAI
 UNIT KendrickFriend Mercenary Kendrick Level(8,NPC,True) [23,19] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
 UNIT
 
 ThatArcanian:
-UNIT Arcanian Mage Shanley Level(11,NPC,True) [14,22] 0x00 0x00 0x01 REDA18R17 [Elwind] NoAI
+UNIT Arcanian Mage Shanley Level(11,NPC,True) [14,22] 0x00 0x00 0x01 REDA18R17 [Elwind,Talisman] AttackInRangeAI
 UNIT
 
 BlankKendrick:
@@ -364,8 +369,24 @@ UNIT Arcanian Fighter Shanley Level(16,Enemy,True) [19,8] 0x00 0x00 0x01 REDA19R
 UNIT Arcanian Mage Shanley Level(15,Enemy,True) [18,22] 0x00 0x00 0x01 REDA18R20 [Thunder] NoAI
 UNIT
 
-LoadShanley2:
-UNIT Shanley Sage Shanley Level(7,Enemy,True) [18,18] 0x00 0x00 0x00 0x00 [Bolganone] AttackInRangeAI
+ShanleyUnits:
+UNIT Arcanian Fighter Shanley Level(14,Enemy,True) [7,5] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT Arcanian Soldier Shanley Level(13,Enemy,True) [10,3] 0x00 0x00 0x00 0x00 [Dragonspear] NoAI
+UNIT Arcanian Sentinel Shanley Level(4,Enemy,True) [12,9] 0x00 0x00 0x00 0x00 [BraveSword,HandAxe] GuardAI
+UNIT Arcanian Monk Shanley Level(16,Enemy,True) [10,10] 0x00 0x00 0x00 0x00 [Lightning,Physic] AttackInRangeAI
+UNIT Arcanian Archer Shanley Level(13,Enemy,True) [15,6] 0x00 0x00 0x00 0x00 [SteelShortbow] AttackInRangeAI
+UNIT Arcanian Archer Shanley Level(14,Enemy,True) [13,2] 0x00 0x00 0x00 0x00 [IronLongbow] AttackInRangeAI
+UNIT Arcanian Shaman Shanley Level(15,Enemy,True) [14,3] 0x00 0x00 0x00 0x00 [Dulam] AttackInRangeAI
+UNIT Arcanian Cavalier Shanley Level(15,Enemy,True) [12,14] 0x00 0x00 0x00 0x00 [Javelin,Zanbato] AttackInRangeAI
+UNIT Arcanian DreadFighter Shanley Level(5,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [ToxinSword,Slime] AttackInRangeAI
+UNIT Arcanian GreatKnight Shanley Level(2,Enemy,True) [21,1] 0x00 0x00 0x00 0x00 [HeavySpear] ChaseOnceApproachedAI
+UNIT Arcanian WyvernRider Shanley Level(14,Enemy,True) [18,5] 0x00 0x00 0x00 0x00 [IronLance] AttackInRangeAI
+UNIT Arcanian Monk Shanley Level(18,Enemy,True) [13,13] 0x00 0x00 0x00 0x00 [Divine] AttackInRangeAI
+UNIT Arcanian Pirate Shanley Level(19,Enemy,True) [14,15] 0x00 0x00 0x00 0x00 [Hammer] AttackInRangeAI
+UNIT Arcanian WyvernRider Shanley Level(20,Enemy,True) [18,9] 0x00 0x00 0x00 0x00 [Horseslayer] AttackInRangeAI
+UNIT
+
+ShanleyUnits2:
 UNIT Arcanian Shaman Shanley Level(16,Enemy,True) [17,19] 0x00 0x00 0x00 0x00 [Worm] AttackInRangeAI
 UNIT Arcanian Shaman Shanley Level(15,Enemy,True) [19,19] 0x00 0x00 0x00 0x00 [Flux] AttackInRangeAI
 UNIT Arcanian Cavalier Shanley Level(16,Enemy,True) [3,19] 0x00 0x00 0x00 0x00 [SteelBlade] ChaseOnceApproachedAI
@@ -380,39 +401,15 @@ UNIT Arcanian General Shanley Level(3,Enemy,True) [5,7] 0x00 0x00 0x00 0x00 [Dev
 UNIT Arcanian Knight Shanley Level(18,Enemy,True) [9,4] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
 UNIT
 
-ShanleyUnits:
-UNIT Arcanian Fighter Shanley Level(14,Enemy,True) [7,5] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
-UNIT Arcanian Soldier Shanley Level(13,Enemy,True) [10,3] 0x00 0x00 0x00 0x00 [Dragonspear] NoAI
-UNIT Arcanian Sentinel Shanley Level(4,Enemy,True) [12,9] 0x00 0x00 0x00 0x00 [BraveSword,HandAxe] GuardAI
-UNIT Arcanian Monk Shanley Level(16,Enemy,True) [10,10] 0x00 0x00 0x00 0x00 [Lightning,Physic] AttackInRangeAI
-UNIT Arcanian Archer Shanley Level(13,Enemy,True) [15,6] 0x00 0x00 0x00 0x00 [SteelShortbow] AttackInRangeAI
-UNIT Arcanian Archer Shanley Level(14,Enemy,True) [13,2] 0x00 0x00 0x00 0x00 [IronLongbow] AttackInRangeAI
-UNIT Arcanian Shaman Shanley Level(15,Enemy,True) [14,3] 0x00 0x00 0x00 0x00 [Dulam] AttackInRangeAI
-UNIT Arcanian Cavalier Shanley Level(15,Enemy,True) [12,14] 0x00 0x00 0x00 0x00 [Javelin,Zanbato] AttackInRangeAI
-UNIT Arcanian Myrmidon Shanley Level(16,Enemy,True) [15,11] 0x00 0x00 0x00 0x00 [ToxinSword] ChaseOnceApproachedAI
-UNIT Arcanian GreatKnight Shanley Level(2,Enemy,True) [21,1] 0x00 0x00 0x00 0x00 [HeavySpear] ChaseOnceApproachedAI
-UNIT Arcanian WyvernRider Shanley Level(14,Enemy,True) [18,5] 0x00 0x00 0x00 0x00 [IronLance] AttackInRangeAI
-UNIT Arcanian Monk Shanley Level(18,Enemy,True) [13,13] 0x00 0x00 0x00 0x00 [Divine] AttackInRangeAI
-UNIT Arcanian Pirate Shanley Level(19,Enemy,True) [14,15] 0x00 0x00 0x00 0x00 [Hammer] AttackInRangeAI
-UNIT Arcanian WyvernRider Shanley Level(20,Enemy,True) [18,9] 0x00 0x00 0x00 0x00 [Horseslayer] AttackInRangeAI
-UNIT
-
-LoadShanley3:
-UNIT Shanley Sage Shanley Level(4,Enemy,True) [13,20] Drop 0x00 0x00 0x00 [Bolganone,AngelicRobe] AttackInRangeAI
-UNIT Arcanian Shaman Shanley Level(19,Enemy,True) [12,19] 0x00 0x00 0x00 0x00 [Worm] AttackInRangeAI
-UNIT Arcanian Shaman Shanley Level(20,Enemy,True) [14,19] 0x00 0x00 0x00 0x00 [Flux] AttackInRangeAI
-UNIT
-
 Turn4Units:
 UNIT GenericBandit Brigand Shanley Level(15,Enemy,True) [20,0] 0x00 0x00 0x00 0x00 [IronAxe] BrigandAI
 UNIT GenericBandit Berserker Shanley Level(3,Enemy,True) [21,0] Drop 0x00 0x00 0x00 [HandAxe,Vulnerary] BrigandAI
 
-UNIT Arcanian Fighter Shanley Level(15,Enemy,True) [21,0] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT Arcanian Spellsword Shanley Level(15,Enemy,True) [21,0] 0x00 0x00 0x00 0x00 [IronBlade,Fire] NoAI
 
 UNIT Arcanian Cavalier Shanley Level(16,Enemy,True) [3,22] 0x00 0x00 0x00 0x00 [ToxinSword] NoAI
 UNIT Arcanian Cavalier Shanley Level(18,Enemy,True) [4,22] 0x00 0x00 0x00 0x00 [Javelin,IronSword] NoAI
 
-UNIT Arcanian Soldier Shanley Level(19,Enemy,True) [18,22] 0x00 0x00 0x01 REDA18R18 [IronLance] NoAI
 UNIT Arcanian Mage Shanley Level(18,Enemy,True) [17,22] 0x00 0x00 0x00 0x00 [Arcwind] NoAI
 UNIT
 
@@ -421,9 +418,8 @@ UNIT GenericBandit Brigand Shanley Level(17,Enemy,True) [0,9] 0x00 0x00 0x00 0x0
 UNIT
 
 Turn8Units:
-UNIT Arcanian MageKnight Shanley Level(3,Enemy,True) [2,22] 0x00 0x00 0x00 0x00 [Elthunder] NoAI
+UNIT Arcanian MageKnight Shanley Level(3,Enemy,True) [2,22] 0x00 0x00 0x00 0x00 [SteelSword,Elthunder] NoAI
 UNIT Arcanian Cavalier Shanley Level(18,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [Wyrmslayer] NoAI
-UNIT Arcanian Cavalier Shanley Level(19,Enemy,True) [0,3] 0x00 0x00 0x00 0x00 [IronLance] NoAI
 UNIT Arcanian Cavalier Shanley Level(17,Enemy,True) [4,0] Drop 0x00 0x00 0x00 [SteelLance,PoisonSword] NoAI
 UNIT Arcanian Ranger Shanley Level(2,Enemy,True) [5,0] 0x00 0x00 0x00 0x00 [SteelBow,IronBlade] NoAI
 UNIT
@@ -437,8 +433,6 @@ UNIT
 
 Turn10Units:
 UNIT Arcanian Mercenary Shanley Level(17,Enemy,True) [13,22] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
-UNIT Arcanian Mercenary Shanley Level(18,Enemy,True) [14,22] 0x00 0x00 0x00 0x00 [Lancereaver] NoAI
 UNIT Arcanian Mage Shanley Level(17,Enemy,True) [17,22] 0x00 0x00 0x00 0x00 [Arcfire] NoAI
-UNIT Arcanian WyvernRider Shanley Level(16,Enemy,True) [24,6] 0x00 0x00 0x00 0x00 [Javelin] NoAI
 UNIT Arcanian WyvernRider Shanley Level(17,Enemy,True) [24,7] 0x00 0x00 0x00 0x00 [Axereaver] NoAI
 EndUnit

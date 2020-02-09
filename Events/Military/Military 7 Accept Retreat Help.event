@@ -24,6 +24,7 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
+SupportConvo(ASupport,Adeline,Yvette,Military7AcceptRetreatHelpAdelineYvetteSupportText)
 END_MAIN
 
 //Label LocationBasedEvents
@@ -32,9 +33,10 @@ END_MAIN
 
 //Label MiscBasedEvents
 MiscBasedEvents:
-CauseGameOverIfLordDies
-AFEV 0x14 CheckToEnd 0x13 // Called by a XeximClone dying.
+AFEV 0x19 CheckToGameOverForRex 0x11
+AFEV 0x14 AreAllXeximsDead 0x13 // Called by a XeximClone dying.
 DefeatBoss(EndingScene) // Set manually by the last XeximClone's death.
+CauseGameOverIfLordDies
 END_MAIN
 
 //Label TrapData
@@ -48,7 +50,7 @@ UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [12,21] 0x00 0x00 0x00 0x00 [0
 UNIT Derek 0x00 0x00 Level(1,Ally,True) [14,21] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Jasper 0x00 0x00 Level(1,Ally,True) [14,23] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [15,22] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT Madeleine 0x00 0x00 Level(1,Ally,True) [13,22] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Adeline 0x00 0x00 Level(1,Ally,True) [13,22] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Remus 0x00 0x00 Level(1,Ally,True) [16,21] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Yvette 0x00 0x00 Level(1,Ally,True) [16,23] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Kendrick 0x00 0x00 Level(1,Ally,True) [12,23] 0x00 0x00 0x00 0x00 [0] NoAI
@@ -206,7 +208,7 @@ ENUF 0x6E
 DISA Jasper
 DISA Derek
 DISA Zaheva
-DISA Madeleine
+DISA Adeline
 DISA Remus
 DISA Yvette
 DISA Kendrick
@@ -215,18 +217,29 @@ MoveToChapter(PrologueChapter)
 NoFade
 EndA2
 
-CheckToEnd:
+AreAllXeximsDead:
 COUNTER_CHECK 0x1
-SVAL 0x1 5
+SVAL 0x1 4
 BLT 0x0 0xC 0x1
 	// This was the last XeximClone on the map.
 	Text(Military7AcceptRetreatHelpXeximDeathText)
-	ENUT 0x02 // Set the seize flag to call EndingScene.
+	CALL EndingScene // Set the seize flag to call EndingScene.
+	GOTO 0x1
 LABEL 0x0
 	// There are XeximClones left on the map. Unset both event IDs.
 	ENUF 0x13 // XeximClone death quote.
 	ENUF 0x14 // AFEV event ID.
 	COUNTER_INC 0x1
+LABEL 0x1
+NoFade
+EndA2
+
+CheckToGameOverForRex: // If Tact's ending quote (0x10) is disabled (true), then game over because it's not EndingScene yet.
+CHECK_EVENTID 0x10
+BEQ 0x0 0x0 0xC
+	ENUT 0x02
+LABEL 0x0
+	ENUF 0x19
 LABEL 0x1
 NoFade
 ENDA
@@ -268,7 +281,7 @@ Friends:
 UNIT Derek 0x00 0x00 Level(1,Ally,True) [14,21] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Jasper 0x00 0x00 Level(1,Ally,True) [14,23] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [15,22] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT Madeleine 0x00 0x00 Level(1,Ally,True) [13,22] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Adeline 0x00 0x00 Level(1,Ally,True) [13,22] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Remus 0x00 0x00 Level(1,Ally,True) [16,21] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Yvette 0x00 0x00 Level(1,Ally,True) [16,23] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Kendrick 0x00 0x00 Level(1,Ally,True) [12,23] 0x00 0x00 0x00 0x00 [0] NoAI
@@ -307,13 +320,13 @@ UNIT XeximClone XeximClass XeximClone Level(6,Enemy,True) [15,7] 0x00 0x00 0x00 
 UNIT XeximClone XeximClass XeximClone Level(5,Enemy,True) [6,9] 0x00 0x00 0x00 0x00 [SilverSword] AttackInRangeAI
 UNIT XeximClone XeximClass XeximClone Level(6,Enemy,True) [3,0] 0x00 0x00 0x00 0x00 [SilverSword,SteelLongbow] AttackInRangeAI
 UNIT XeximClone XeximClass XeximClone Level(5,Enemy,True) [15,0] 0x00 0x00 0x00 0x00 [KillingEdge,BraveBow] AttackInRangeAI
-UNIT Shizonian Sage XeximClone Level(7,Enemy,True) [2,21] 0x00 0x00 0x00 0x00 [Fimbulvetr] NoAI
+UNIT Shizonian BattleSage XeximClone Level(7,Enemy,True) [2,21] 0x00 0x00 0x00 0x00 [Fimbulvetr,SteelSword] NoAI
 UNIT Shizonian Sage XeximClone Level(8,Enemy,True) [2,23] 0x00 0x00 0x00 0x00 [Thoron] NoAI
 UNIT Shizonian Sentinel XeximClone Level(10,Enemy,True) [6,20] Drop 0x00 0x00 0x00 [BraveAxe] NoAI
 UNIT Shizonian General XeximClone Level(9,Enemy,True) [7,23] 0x00 0x00 0x00 0x00 [SilverLance,HandAxe] AttackInRangeAI
 UNIT Shizonian Halberdier XeximClone Level(7,Enemy,True) [8,21] 0x00 0x00 0x00 0x00 [ShortSpear] NoAI
 UNIT Shizonian Warrior XeximClone Level(8,Enemy,True) [0,20] 0x00 0x00 0x00 0x00 [DevilAxe,SteelBow] AttackInRangeAI
-UNIT Shizonian Hero XeximClone Level(5,Enemy,True) [3,14] 0x00 0x00 0x00 0x00 [SilverAxe] AttackInRangeAI
+UNIT Shizonian DreadFighter XeximClone Level(5,Enemy,True) [3,14] 0x00 0x00 0x00 0x00 [SilverSword,Dulam] AttackInRangeAI
 UNIT Shizonian Hero XeximClone Level(6,Enemy,True) [2,15] 0x00 0x00 0x00 0x00 [BraveSword] AttackInRangeAI
 UNIT Shizonian Hero XeximClone Level(5,Enemy,True) [4,15] Drop 0x00 0x00 0x00 [Tomahawk,SteelBlade] AttackInRangeAI
 UNIT Shizonian Sniper XeximClone Level(7,Enemy,True) [3,13] 0x00 0x00 0x00 0x00 [SteelBow] AttackInRangeAI
@@ -345,7 +358,7 @@ UNIT Shizonian Sniper XeximClone Level(9,Enemy,True) [16,10] 0x00 0x00 0x00 0x00
 UNIT Shizonian Sentinel XeximClone Level(11,Enemy,True) [13,12] 0x00 0x00 0x00 0x00 [Tomahawk] GuardAI
 UNIT Shizonian Druid XeximClone Level(7,Enemy,True) [12,11] 0x00 0x00 0x00 0x00 [Worm] AttackInRangeAI
 UNIT Shizonian GreatKnight XeximClone Level(9,Enemy,True) [13,5] 0x00 0x00 0x00 0x00 [Spear] AttackInRangeAI
-UNIT Shizonian Halberdier XeximClone Level(10,Enemy,True) [14,3] 0x00 0x00 0x00 0x00 [BraveLance] ChaseOnceApproachedAI
+UNIT Shizonian DreadFighter XeximClone Level(10,Enemy,True) [14,3] 0x00 0x00 0x00 0x00 [BraveSword,Luna] ChaseOnceApproachedAI
 UNIT Shizonian Hero XeximClone Level(11,Enemy,True) [16,4] 0x00 0x00 0x00 0x00 [SilverSword] ChaseOnceApproachedAI
 UNIT Shizonian Sage XeximClone Level(10,Enemy,True) [16,1] 0x00 0x00 0x00 0x00 [Arcwind] AttackInRangeAI
 UNIT
@@ -358,5 +371,10 @@ UNIT Shizonian Paladin XeximClone Level(13,Enemy,True) [2,23] 0x00 0x00 0x00 0x0
 UNIT Shizonian GreatKnight XeximClone Level(10,Enemy,True) [4,23] 0x00 0x00 0x00 0x00 [Tomahawk,Dragonspear] NoAI
 UNIT
 
-Tun8Units:
+Turn8Units:
+UNIT Shizonian GreatKnight XeximClone Level(10,Enemy,True) [3,23] 0x00 0x00 0x00 0x00 [SilverLance] NoAI
+UNIT Shizonian Sage XeximClone Level(10,Enemy,True) [2,23] 0x00 0x00 0x00 0x00 [Meteor,Elwind] NoAI
+UNIT Shizonian Halberdier XeximClone Level(10,Enemy,True) [14,23] 0x00 0x00 0x00 0x00 [Spear] NoAI
+UNIT Shizonian WyvernLord XeximClone Level(10,Enemy,True) [15,23] 0x00 0x00 0x00 0x00 [Runesword] NoAI
+UNIT Shizonian WyvernKnight XeximClone Level(10,Enemy,True) [16,22] 0x00 0x00 0x00 0x00 [HeavySpear] NoAI
 EndUnit

@@ -138,6 +138,11 @@ ENDA
 				ASMC Win_Effect_Special|1
 				GOTO 0x0
 		LABEL 0x9
+		SVAL 0x1 MilitaryAcceptRetreatHelp6
+		BNE 0xA 0x1 0xC
+			ASMC Win_Effect_Special|1
+			GOTO 0x0
+		LABEL 0xA
 		SVAL 0x1 MercenaryMilitiaKill7
 		BEQ 0x3 0x1 0xC
 		SVAL 0x1 MercenaryMilitiaWaitCesaria7

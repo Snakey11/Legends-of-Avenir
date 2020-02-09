@@ -95,8 +95,31 @@ MUSC The_Devoted
 CAM1 [7,12]
 STAL 0x10
 Text(Military2AcceptFriendsHereText)
+
+	//LOAD1 0x1 TestFriends
+	//ENUN
+
 NoFade
 ENDA
+
+/*
+TestFriends:
+UNIT Finoc Spellsword Gerald Level(1,Ally,True) [5,16] 0x00 0x00 0x00 0x00 [SteelSword,Thunder,Elwind,Flux] NoAI
+UNIT Cougar SpellswordF Gerald Level(1,Ally,True) [6,16] 0x00 0x00 0x00 0x00 [SteelSword,Thunder,Elwind,Flux] NoAI
+UNIT Elanil BattleSage Gerald Level(1,Ally,True) [7,16] 0x00 0x00 0x00 0x00 [SteelSword,Elwind,Thunder,Flux] NoAI
+UNIT Izuk BattleSageF Gerald Level(1,Ally,True) [8,16] 0x00 0x00 0x00 0x00 [SteelSword,Elwind,Thunder,Flux] NoAI
+UNIT Leyos DreadFighter Gerald Level(1,Ally,True) [9,16] 0x00 0x00 0x00 0x00 [SteelSword,Elwind,Thunder,Flux] NoAI
+UNIT Jurgen DreadFighterF Gerald Level(1,Ally,True) [10,16] 0x00 0x00 0x00 0x00 [SteelSword,Elwind,Thunder,Flux] NoAI
+UNIT Maximus Strategist Gerald Level(1,Ally,True) [11,16] 0x00 0x00 0x00 0x00 [SteelSword,Elwind,Thunder,Flux] NoAI
+UNIT Zalius SeraphKnight Gerald Level(1,Ally,True) [11,15] 0x00 0x00 0x00 0x00 [SteelSword,SteelLance,Elfire,Mend] NoAI
+UNIT Emperor WarMonk Gerald Level(1,Ally,True) [10,15] 0x00 0x00 0x00 0x00 [SteelAxe,HandAxe,Mend] NoAI
+UNIT Sylvaine MaligKnight Gerald Level(1,Ally,True) [9,15] 0x00 0x00 0x00 0x00 [SteelAxe,HandAxe,Flux] NoAI
+UNIT Rex MageKnight Gerald Level(1,Ally,True) [8,15] 0x00 0x00 0x00 0x00 [SteelSword,Elfire,Mend] NoAI
+UNIT Muriel MageKnight_F Gerald Level(1,Ally,True) [7,15] 0x00 0x00 0x00 0x00 [SteelSword,Elfire,Mend] NoAI
+UNIT Uzkalis DarkKnight Gerald Level(1,Ally,True) [6,15] 0x00 0x00 0x00 0x00 [SteelSword,Flux,Mend] NoAI
+UNIT Xavus DarkKnightF Gerald Level(1,Ally,True) [5,15] 0x00 0x00 0x00 0x00 [SteelSword,Flux,Mend] NoAI
+UNIT
+*/
 
 //Label EndingScene
 EndingScene:
@@ -140,6 +163,7 @@ GiveToSupplySilent(IronLance)
 GiveToSupplySilent(SteelLance)
 GiveToSupplySilent(HandAxe)
 GiveToSupplySilent(SteelBow)
+GiveToSupplySilent(Flux)
 MoveToChapter(MilitaryAccept3)
 NoFade
 ENDA
@@ -192,13 +216,13 @@ UNIT Derek 0x00 0x00 Level(1,Ally,True) [3,15] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 Arcanians:
-UNIT Gerald Mage Gerald Level(11,Enemy,True) [9,1] 0x00 0x00 0x00 0x00 [Elfire] GuardAI
-UNIT Zaheva Mercenary_F Gerald Level(7,Enemy,True) [12,10] 0x00 0x00 0x00 0x00 [SteelSword,Vulnerary] AttackInRangeAI
+UNIT Gerald Mage Gerald Level(11,Enemy,True) [9,1] 0x00 0x00 0x00 0x00 [Elfire] AttackInRangeAI
+UNIT Zaheva SpellswordF Gerald Level(7,Enemy,True) [12,10] 0x00 0x00 0x00 0x00 [SteelSword,Vulnerary] AttackInRangeAI
 UNIT Arcanian Knight Gerald Level(7,Enemy,True) [1,14] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
 UNIT Arcanian Soldier Gerald Level(8,Enemy,True) [2,11] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
 UNIT Arcanian Mercenary Gerald Level(7,Enemy,True) [10,11] Drop 0x00 0x00 0x00 [IronBlade] AttackInRangeAI
 UNIT Arcanian Fighter Gerald Level(8,Enemy,True) [12,12] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
-UNIT Arcanian Archer Gerald Level(7,Enemy,True) [14,9] 0x00 0x00 0x00 0x00 [IronBow] AttackInRangeAI
+UNIT Arcanian Mage Gerald Level(7,Enemy,True) [14,9] Drop 0x00 0x00 0x00 [Fire] AttackInRangeAI
 UNIT Arcanian Knight Gerald Level(6,Enemy,True) [10,5] 0x00 0x00 0x00 0x00 [HandAxe] GuardAI
 UNIT Arcanian Fighter Gerald Level(8,Enemy,True) [11,4] Drop 0x00 0x00 0x00 [SteelAxe] NoAI
 UNIT Arcanian Soldier Gerald Level(9,Enemy,True) [13,3] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
@@ -209,5 +233,5 @@ UNIT Arcanian PegasusKnight Gerald Level(10,Enemy,True) [3,2] 0x00 0x00 0x00 0x0
 UNIT
 
 EndingZaheva:
-UNIT Zaheva Mercenary_F 0x00 Level(8,Ally,True) [3,3] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT Zaheva SpellswordF 0x00 Level(8,Ally,True) [3,3] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
 EndUnit

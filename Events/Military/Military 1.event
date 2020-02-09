@@ -174,7 +174,14 @@ ENDA
 
 //Label Turn events
 Turn3:
-MUSC Ringabel
+SVAL 0x1 1
+CHECK_ENEMIES
+BEQ 0x0 0x1 0xC
+	MUSC Ringabel
+	GOTO 0x1
+LABEL 0x0
+	MUSC The_First_Campaign // Near-victory music.
+LABEL 0x1
 CAM1 BossChristina
 STAL 0x10
 FlashCursor(BossChristina,60)
@@ -186,9 +193,16 @@ NoFade
 EndA2
 
 MoveForrest:
-MUSC Ringabel
+SVAL 0x1 1
+CHECK_ENEMIES
+BEQ 0x0 0x1 0xC
+	MUSC Ringabel
+	GOTO 0x1
+LABEL 0x0
+	MUSC The_First_Campaign // Near-victory music.
+LABEL 0x1
 CHECK_EVENTID 0x12
-BEQ 0x0 0x0 0xC
+BEQ 0x2 0x0 0xC
 	CAM1 BossForrest
 	STAL 0x10
 	FlashCursor(BossForrest,60)
@@ -196,10 +210,10 @@ BEQ 0x0 0x0 0xC
 	SVAL 0x1 0x0000
 	CHAI BossForrest
 	Text(Military1ForrestComingText)
-	GOTO 0x1
-LABEL 0x0
+	GOTO 0x3
+LABEL 0x2
 	ENUF 0x13
-LABEL 0x1
+LABEL 0x3
 NoFade
 ENDA
 
@@ -252,7 +266,7 @@ EndUnit
 
 //Label Starting people
 LoadSylvaine:
-UNIT Sylvaine ArmoredWyvernLord Sylvaine Level(9,NPC,True) [5,7] 0x00 0x00 0x00 0x00 [SilverLongbow] GuardAI
+UNIT Sylvaine MaligKnight Sylvaine Level(9,NPC,True) [5,7] 0x00 0x00 0x00 0x00 [SilverAxe] GuardAI
 UNIT
 
 LoadDerekJasper:
@@ -261,7 +275,7 @@ UNIT Jasper Cavalier 0x00 Level(5,Ally,True) [0,8] 0x00 0x00 0x01 REDA3R6 [Steel
 UNIT
 
 LoadSylvaine2:
-UNIT Sylvaine ArmoredWyvernLord Sylvaine Level(9,NPC,True) [2,0] 0x00 0x00 0x00 0x00 [SilverLongbow] GuardAI
+UNIT Sylvaine MaligKnight Sylvaine Level(9,NPC,True) [2,0] 0x00 0x00 0x00 0x00 [SilverAxe] GuardAI
 EndUnit
 
 //Label ChapterMeanies
