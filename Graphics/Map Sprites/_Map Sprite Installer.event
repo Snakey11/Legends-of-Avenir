@@ -71,6 +71,15 @@ EdgySwordmasterMv:
 ALIGN 4
 
 
+GoldKnightSt:
+#incbin "GoldKnightSt.dmp"
+ALIGN 4
+
+GoldKnightMv:
+#incbin "GoldKnightMv.dmp"
+ALIGN 4
+
+
 GladiatorSt:
 #incbin "GladiatorSt.dmp"
 ALIGN 4
@@ -232,12 +241,29 @@ SentinelMv:
 ALIGN 4
 
 
-ShadowSt:
-#incbin "ShadowSt.dmp"
+SpellswordMSt:
+#incbin "SpellswordMSt.dmp"
 ALIGN 4
 
-ShadowMv:
-#incbin "ShadowMv.dmp"
+SpellswordMMv:
+#incbin "SpellswordMMv.dmp"
+ALIGN 4
+
+SpellswordFSt:
+#incbin "SpellswordFSt.dmp"
+ALIGN 4
+
+SpellswordFMv:
+#incbin "SpellswordFMv.dmp"
+ALIGN 4
+
+
+TruebladeFSt:
+#incbin "TruebladeFSt.dmp"
+ALIGN 4
+
+TruebladeFMv:
+#incbin "TruebladeFMv.dmp"
 ALIGN 4
 
 
