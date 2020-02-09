@@ -124,7 +124,22 @@
 		
 		SupportIncreasedText:
 		String("Support level increased to ") ; BYTE 0x00
-	
+		
+		PUSH // Don't ask me why the vanilla function literally starts the array at 1. I- yeah I'm changing that.
+		ORG $2A9F8
+		SHORT 0x7821 // ldrb r1, [ r4 ].
+		ORG $2AA02
+		SHORT 0x7861 // ldrb r1, [ r4, #0x01 ].
+		ORG $2AA0C
+		SHORT 0x78A1 // ldrb r1, [ r4, #0x02 ].
+		ORG $2AA1A
+		SHORT 0x78E2 // ldrb r2, [ r4, #0x03 ]. Let's swap around the registers because why not? Thanks, IS's compiler...
+		ORG $2AA24
+		SHORT 0x7922 // ldrb r2, [ r4, #0x04 ].
+		ORG $2AA2E
+		SHORT 0x7964 // ldrb r4, [ r4, #0x05 ].
+		POP
+		
 	#endif // SUPPORT_REWORK
 
 #else

@@ -82,15 +82,19 @@
 		support(CSupport,0,1,10,0,0,0)
 		support(BSupport,1,1,10,5,0,0)
 		support(ASupport,1,2,10,10,0,0)
+	entry(Clara,Sekar)
+		support(CSupport,0,1,0,5,0,5)
+		support(BSupport,0,2,0,10,0,5)
+		support(ASupport,0,2,5,15,0,5)
 	entry(Clara,Muriel)
 		support(CSupport,1,1,5,5,0,0)
 		support(BSupport,1,2,5,10,0,0)
 		support(ASupport,1,2,5,10,5,5)
-	entry(Madeleine,Remus)
+	entry(Adeline,Remus)
 		support(CSupport,1,0,0,10,0,0)
 		support(BSupport,1,0,0,20,0,0)
 		support(ASupport,2,1,0,20,0,0)
-	entry(Madeleine,Yvette)
+	entry(Adeline,Yvette)
 		support(CSupport,0,0,5,5,0,5)
 		support(BSupport,1,0,5,10,0,5)
 		support(ASupport,1,0,5,15,0,10)
@@ -98,7 +102,10 @@
 		support(CSupport,2,0,0,0,5,0)
 		support(BSupport,2,0,5,5,5,0)
 		support(ASupport,3,0,5,5,10,0)
-	
+	entry(Kendrick,Yvette)
+		support(CSupport,1,1,0,0,0,5)
+		support(BSupport,2,1,5,0,0,5)
+		support(ASupport,2,1,5,5,5,5)
 	entry(0,0) // Terminator
 	}
 

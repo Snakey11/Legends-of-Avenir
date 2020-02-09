@@ -35,15 +35,15 @@ SP_HP:
 //X/Y values are relative to the "moving supports around" edits above, will need to be changed if you're keeping them on page 3
 
 SP_Support_1:
-  RMenu(0, SP_Support_2, SP_Name, 0, 0x66, 0x18, 0x00, SupportScreenRTextLooper, SupportScreenRTextGetter)
+  RMenu(0, SP_Support_2, SP_Name, 0, 0x66, 0x10, 0x00, SupportScreenRTextLooper, SupportScreenRTextGetter)
 SP_Support_2:
-  RMenu(SP_Support_1, SP_Support_3, SP_Name, 0, 0x66, 0x28, 0x0001, SupportScreenRTextLooper, SupportScreenRTextGetter)
+  RMenu(SP_Support_1, SP_Support_3, SP_Name, 0, 0x66, 0x20, 0x0001, SupportScreenRTextLooper, SupportScreenRTextGetter)
 SP_Support_3:
-  RMenu(SP_Support_2, SP_Support_4, SP_Name, 0, 0x66, 0x38, 0x0002, SupportScreenRTextLooper, SupportScreenRTextGetter)
+  RMenu(SP_Support_2, SP_Support_4, SP_Name, 0, 0x66, 0x30, 0x0002, SupportScreenRTextLooper, SupportScreenRTextGetter)
 SP_Support_4:
-  RMenu(SP_Support_3, SP_Support_5, SP_Name, 0, 0x66, 0x48, 0x0003, SupportScreenRTextLooper, SupportScreenRTextGetter)
+  RMenu(SP_Support_3, SP_Support_5, SP_Name, 0, 0x66, 0x40, 0x0003, SupportScreenRTextLooper, SupportScreenRTextGetter)
 SP_Support_5:
-  RMenu(SP_Support_4, SP_HP, SP_Class, SP_Exp, 0x66, 0x58, 0x0004, SupportScreenRTextLooper, SupportScreenRTextGetter)
+  RMenu(SP_Support_4, SP_HP, SP_Class, SP_Exp, 0x66, 0x50, 0x0004, SupportScreenRTextLooper, SupportScreenRTextGetter)
 
 ALIGN 4
 SupportStatScreenBlueBox:

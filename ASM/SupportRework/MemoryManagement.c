@@ -37,8 +37,7 @@ static int AddSupport(Unit* unit, int supporting) // Create a new support for bo
 		if ( otherUnit->supports[i] == 0 )
 		{
 			otherUnit->supports[i] = thisCharID;
-			SetSupport(otherUnit,thisCharID,0);
-			return 1;
+			return SetSupport(otherUnit,thisCharID,0);
 		}
 	}
 }

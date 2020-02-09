@@ -64,10 +64,8 @@ struct CharacterEvent // This definition is really only relevant to Support Rewo
 struct CharacterStackAlloc // There's a lot in here I don't understand, but these pieces are really all I need.
 {
 	CharacterEvent* event; // 0x00.
-	u8 returnThing; // For some reason, I have to store 1 in this upon returning true? // 0x04.
-	u8 pad1; // 0x05.
-	u16 pad2; // 0x06
-	int pad3, pad4, pad5; // 0x08, 0x0A, 0x10, 0x14.
+	int returnThing; // For some reason, I have to store 1 in this upon returning true? // 0x04.
+	int pad1, pad2, pad3, pad4; // 0x08, 0x0C, 0x10, 0x14.
 	u16 pad6; // 0x18.
 	u8 currCharID; // 0x1A.
 	u8 otherCharID; // 0x1B. This value isn't particularly useful because it doesn't account for 0xFF = first character struct.
@@ -126,7 +124,7 @@ extern char* SupportLevelNameTable[7];
 extern char SupportLevelNameForPopup; // 0x0203EFC0. The string for the name of this level of support is stored here
 extern Unit* ActiveUnit; // 0x03004E50.
 extern Unit* gUnitSubject; // 0x02033F3C.
-extern const ProcInstruction* Proc_TI; // 0x08A018AC.
+extern const ProcInstruction Proc_TI; // 0x08A018AC.
 extern const void SupportConvoEvents;
 extern const void BaseConvoSupportReworkEvent;
 extern u8 MaxSupportLevel;
@@ -148,7 +146,7 @@ extern void RTextDown(RTextProc* proc); // 0x08089384.
 extern void RTextLeft(RTextProc* proc); // 0x080893B4.
 extern void RTextRight(RTextProc* proc); // 0x080893E4.
 
-void MasterSupportCalculation(BattleUnit* unit, BonusStruct* bonuses);
+void MasterSupportCalculation(Unit* unit, BonusStruct* bonuses);
 static int GetCharacterDistance(Unit* unit1, Unit* unit2);
 static void GetBonusByCharacter(BonusStruct* bonuses, Unit* unit, int supporting);
 static BonusStruct* GetSupportTableEntry(int char1, int char2, int level);
@@ -180,7 +178,7 @@ int CHARSupportConvoUsability(CharacterStackAlloc* alloc);
 void BuildSupportTargetList(Unit* active);
 int SupportSelected(Proc* parent);
 static CharacterEvent* GetCharacterEvents(void);
-static CharacterEvent* FindValidConvo(CharacterEvent* event, Unit* active, int target, int checkAdjacent, int checkConvo);
+static CharacterEvent* FindValidConvo(CharacterEvent* event, Unit* active, int target);
 
 int SupportBaseConvoUsability(BaseConvoEntry* entry);
 char* SupportBaseConvoMenuTextGetter(BaseConvoEntry* entry);
@@ -205,22 +203,23 @@ void SupportScreenRTextLooper(RTextProc* proc);
 #include "StatScreen.c" // Drawing stuff for the stat screen.
 #include "Base.c" // Integration with the base conversation system.
 
-void MasterSupportCalculation(BattleUnit* unit, BonusStruct* bonuses) // Called to loop through supports and fill the bonus struct. Autohook to 0x080285B0.
+void MasterSupportCalculation(Unit* unit, BonusStruct* bonuses) // Called to loop through supports and fill the bonus struct. Autohook to 0x080285B0.
 {
 	for ( int i = 0 ; i < 6 ; i++ ) { bonuses->vals[i] = 0; } // Clear the bonus struct.
-	if ( unit->unit.index >> 6 ) { return; } // For high unit index, i.e. non-blue unit, exit.
+	if ( unit->index >> 6 ) { return; } // For high unit index, i.e. non-blue unit, exit.
+	unit = GetUnit(unit->index); // We need to do this because this parameter can also be a BattleUnit* type which doesn't play nicely with my ToCharID function.
 	for ( int i = 0 ; i < 5 ; i++ )
 	{
-		int supportingChar = unit->unit.supports[i];
+		int supportingChar = unit->supports[i];
 		if ( supportingChar )
 		{
 			// If supporting is nonzero.
 			Unit* supportingUnit = ToUnit(supportingChar);
 			if ( !supportingUnit ) { continue; } // Continue if unit does not exist.
 			if ( supportingUnit->state & (US_DEAD|US_NOT_DEPLOYED) ) { continue; } // Continue if dead or not deployed.
-			if ( GetCharacterDistance(&unit->unit,supportingUnit) <= 3 )
+			if ( GetCharacterDistance(unit,supportingUnit) <= 3 )
 			{
-				GetBonusByCharacter(bonuses,&unit->unit,supportingChar);
+				GetBonusByCharacter(bonuses,unit,supportingChar);
 			}
 		}
 	}

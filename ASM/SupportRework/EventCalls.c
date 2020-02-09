@@ -1,7 +1,7 @@
 
 void CallAddSupport(Proc* parent) // Memory slot 0x1 = character ID 1, 0x2 = character ID 2, 0x3 = level to set to, 0x4 = boolean for adding a popup.
 {
-	if ( gMemorySlot[4] > 0 && gMemorySlot[4] <= MaxSupportLevel && FindSupport(ToUnit(gMemorySlot[1]),gMemorySlot[2]) == 0xFF ) // Ensure valid level before trying to add the support.
+	if ( gMemorySlot[4] >= 0 && gMemorySlot[4] <= MaxSupportLevel && FindSupport(ToUnit(gMemorySlot[1]),gMemorySlot[2]) == 0xFF ) // Ensure valid level before trying to add the support.
 	{
 		if ( AddSupport(ToUnit(gMemorySlot[1]),gMemorySlot[2]) )
 		{
@@ -46,7 +46,8 @@ void CallGetSupportLevel(Proc* parent) // Memory slot 0x1 = character ID 1, 0x2 
 
 static void SupportPopup(Proc* parent, int level)
 {
-	CopyString(SupportLevelNameTable[level],&SupportLevelNameForPopup);
+	int l = CopyString(SupportLevelNameTable[level],&SupportLevelNameForPopup);
+	*(&SupportLevelNameForPopup + l) = 0;
 		// The popup uses SupportLevelNameForPopup to know the name of the support. It shows that string after "Support level increased to ".
 	Popup_Create(&SupportPopupDefinitions,90,0,parent);
 }

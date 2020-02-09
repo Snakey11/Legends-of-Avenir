@@ -41,7 +41,7 @@ void DrawSupports(void) // Autohook to 0x8087698.
 	textBase++;
 	
 	BonusStruct bonuses;
-	MasterSupportCalculation((BattleUnit*)current,&bonuses);
+	MasterSupportCalculation(current,&bonuses);
 	x = 14;
 	y = 14;
 	for ( int i = 0 ; i < 3 ; i++ )
