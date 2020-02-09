@@ -46,7 +46,7 @@ This temple... it's very old. It's definitely been untouched. There are faint tr
 
 ## Military6AcceptRetreatLeaveHereText
 [ConversationText]
-[FarLeft][LoadRemus][Right][LoadPlayer][FarRight][LoadDerek][Left][LoadMadeleine]
+[FarLeft][LoadRemus][Right][LoadPlayer][FarRight][LoadDerek][Left][LoadAdeline]
 Well, there's certainly a horde of Vathrylian Guardians...
 [Right]It's nothing we can't handle. We'll have to get through them if we want to find any artifact that may be here.
 [Left]Right. Remus, let's tear through these things.
@@ -63,9 +63,9 @@ Looks like [Tact] finally found his way here. Good. I can already feel the seal 
 [Right][LoadPlayer][FarRight][LoadZaheva][MidLeft][LoadXylia]
 So, you made it.
 [FarRight][Tact], who is this...?
-[Right]Honestly, I'm not entirely sure. I wasn't perfectly convinced she really existed.[Right][ClearFace][LoadMadeleine]
+[Right]Honestly, I'm not entirely sure. I wasn't perfectly convinced she really existed.[Right][ClearFace][LoadAdeline]
 You knew about her?! You had us come here for a person instead of an artifact!?
-[FarRight][MoveFarRight]Madeleine, calm down! It's fine. Who are you?
+[FarRight][MoveFarRight]Adeline, calm down! It's fine. Who are you?
 [MidLeft]My name is Xylia. Some might call me an ancient remnant of the Vathrylian Empire.
 [FarRight]Are you a Vathrylian?
 [MidLeft]I suppose so. I do have extraordinary control over Vene.
@@ -84,7 +84,7 @@ I thought that Efil resolved the war?
 [FarRight]Why exactly did he want to kill the Four Orden and Kilthel?
 [MidLeft]The Vene and Inge was becoming unbalanced. Last time this happened, Vathryl was totally obliterated. Kilthel thought the easiest option was to convert all human lives into Pura to balance it out. Amassing an amount of Pura would allow it to turn into Vene and Inge at will, balancing the natural and magical energies of the world.
 [FarRight][MoveFarRight]He wanted to mass murder everyone!?
-[MidLeft]Essentially. But that's not my mission now. Arcanae has taken steps to make their research more efficient. Now, all I want is revenge. I want to kill Efil for what he did to me and my friends. Then, I'll help you with what you need.[FarRight][ClearFace][LoadMadeleine]
+[MidLeft]Essentially. But that's not my mission now. Arcanae has taken steps to make their research more efficient. Now, all I want is revenge. I want to kill Efil for what he did to me and my friends. Then, I'll help you with what you need.[FarRight][ClearFace][LoadAdeline]
 You'll help us win the war?
 [MidLeft]Win the war, or at least end it.
 [FarRight]I suppose that's good enough...
@@ -100,22 +100,22 @@ Yeah. Of course.[X]
 [Left]Who knows if she's trustworthy? It sounds like she's using us.
 [MidRight]If she's not trustworthy, we'll have to deal with her ourselves. I think we've got it in us.
 [FarLeft][Tact], if you trust her, I'm not gonna doubt you.
-[Left]I wish I had your confidence. I'll trust you on this. I don't think Madeleine's caught on yet, but as soon as she figures out how untrustworthy Xylia is...
+[Left]I wish I had your confidence. I'll trust you on this. I don't think Adeline's caught on yet, but as soon as she figures out how untrustworthy Xylia is...
 [MidRight]It'll be fine. Derek will help keep her in the dark.
-[FarLeft]Yeah. Jasper trusts me, and I think Madeleine trusts him. If he works with us, I think Madeleine will be fine.
+[FarLeft]Yeah. Jasper trusts me, and I think Adeline trusts him. If he works with us, I think Adeline will be fine.
 [Left]You'd better bring him up to speed.
 [MidRight]Yeah. You're right. This'll be fine. I don't trust Xylia, but she's just a tool for us.
 [Left]You'd better hope so.
 [FarLeft]Don't push your luck, [Tact].
-[MidRight]Don't worry, I don't intend to. She thinks she's got control over us. Derek, if you keep Madeleine at bay, Zaheva and I will keep an eye on Xylia.
+[MidRight]Don't worry, I don't intend to. She thinks she's got control over us. Derek, if you keep Adeline at bay, Zaheva and I will keep an eye on Xylia.
 [FarLeft]Sounds good to me. The further away I am from that woman, the better.
 [Left]Don't think she won't be onto us, [Tact].
 [MidRight]We'll just have to be careful. We're good at that.
 [Left]I suppose so.[X]
 
-## Military6AcceptRetreatLeaveReachMadeleineText
+## Military6AcceptRetreatLeaveReachAdelineText
 [ConversationText]
-[MidLeft][LoadYvette][MidRight][LoadMadeleine]
+[MidLeft][LoadYvette][MidRight][LoadAdeline]
 I don't like this, Yvette.
 [MidLeft]Why's that?
 [MidRight][Tact]... They're not telling us everything. Who is this figure?
@@ -129,7 +129,7 @@ Well... I'm not one to go against my direct commanding officer.
 [MidRight]What?
 [FarLeft][Tact] is our commander here. If they choose to trust this Xylia character...
 [MidRight]Dammit, Remus, have you learned anything?
-[Left]He has a point, Madeleine. It's not our place to question [Tact], though I'll admit, this whole venture has seemed sketchy from the beginning...
+[Left]He has a point, Adeline. It's not our place to question [Tact], though I'll admit, this whole venture has seemed sketchy from the beginning...
 [MidRight]If Xylia is willing to help us win this war after we kill some hero who hid himself away, that's fine, but if she or [Tact] tries to make a move against Cesaria's interest...
 [Left]Agreed.
 [FarLeft]I...

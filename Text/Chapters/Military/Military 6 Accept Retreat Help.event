@@ -26,7 +26,7 @@ The trip to Shizon doesn't take too long. Get some rest while you can. My men ca
 [Right][LoadKendrick]
 Get up! We're landing at Shizon! They're not going to wait around for you to get ready!
 [Left][LoadPlayer]You guys heard him!
-[FarRight][LoadRemus][FarLeft][LoadMadeleine]Right! Remus, take point!
+[FarRight][LoadRemus][FarLeft][LoadAdeline]Right! Remus, take point!
 [FarRight]I'm on it![ClearFace][LoadYvette]
 What's our objective, [Tact]?
 [Left]The General told us to deal with the Shizonians. Let's fight our way through this city and clear the way to Xexim.
@@ -84,14 +84,14 @@ I think that's all of them.
 [Left]The rest seem to have retreated into that temple. Xexim's probably in there...
 [Right]General Rex told us not to engage Xexim without him.
 [Left]Right.
-[Right]We'll do as he says.[X]
+[Right]We'll do as he says.[ClearFace][X]
 
 ## Military6AcceptRetreatHelpGoodText
 [ConversationText]
-[FarRight][LoadMadeleine]I'm glad we spared most of the town. It's hard to imagine all Shizonians are at fault.
+[FarRight][LoadAdeline]I'm glad we spared most of the town. It's hard to imagine all Shizonians are at fault.
 [FarLeft]That was my thought. I also didn't want to do too much without direct orders from General Rex. He told us to deal with resistance, not destroy their entire town.
 [FarRight]Right.
-[Right][LoadKendrick]You're soft, [Tact]. Think of all the treasure available here had we just... asked nicely!
+[Right][ClearFace][LoadKendrick]You're soft, [Tact]. Think of all the treasure available here had we just... asked nicely!
 [Left]Kendrick, burning someone's house to the ground isn't "asking nicely."
 [Right]It is if you say please.
 [Left][MoveLeft]That is not how this works!
@@ -116,7 +116,7 @@ I think that's all of them.
 
 ## Military6AcceptRetreatHelpBadText
 [ConversationText]
-[FarRight][LoadMadeleine]I can't believe we destroyed so much of the town...
+[FarRight][LoadAdeline]I can't believe we destroyed so much of the town...
 [FarLeft]Most of the Shizonians were going to die anyway. Didn't we come here to wipe them off the map?
 [FarRight]I don't... I don't know...
 [Right][LoadKendrick]Hey, we got some good loot out of it. Might as well take this opportunity to get some rest until your General gets back. We'll want to keep a close eye out, though. My men can take care of that, since they didn't help during the battle.

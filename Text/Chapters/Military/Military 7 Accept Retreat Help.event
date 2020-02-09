@@ -1,7 +1,7 @@
 
 ## Military7AcceptRetreatHelpBeginningText
 [ConversationText]
-[Left][LoadYvette][Right][LoadKendrick][FarRight][LoadMadeleine][FarLeft][LoadRex]
+[Left][LoadYvette][Right][LoadKendrick][FarRight][LoadAdeline][FarLeft][LoadRex]
 Are we all here? Good. This is the day where we fight Xexim.
 [FarRight]The leader of Shizon... Greatest Assassin in Avenir...
 [Right]Don't underestimate him. I've left my crew back at the ship. They'll ensure that we have a way back home.
@@ -31,7 +31,7 @@ So, Rex, you've arrived.
 [MidLeft]... I owe you nothing. This place will become your tomb, Rex.[CloseSpeech][MidRight][MoveRight][FarRight][LoadKendrick]
 I hear it isn't so bad to be buried in a temple... Something about higher beings blessing you.
 [Right][ClearFace][LoadYvette]If we fall here, we're bringing you with us!
-[FarRight][ClearFace][LoadMadeleine]You transgressed against Cesaria, Xexim. We won't let you win!
+[FarRight][ClearFace][LoadAdeline]You transgressed against Cesaria, Xexim. We won't let you win!
 [Right][ClearFace][LoadRemus]I will stand by General Rex. You can't stop us!
 [FarRight][ClearFace][LoadJasper]We've made it this far... We won't lose now.
 [Right][ClearFace][LoadDerek]Allow me to be your shield, General, so that you may strike at this man!
@@ -40,7 +40,7 @@ I hear it isn't so bad to be buried in a temple... Something about higher beings
 
 ## Military7AcceptRetreatHelpStartBattleText
 [ConversationText]
-[FarLeft][LoadXexim][Left][LoadXexim][Right][LoadKendrick][FarRight][LoadMadeleine]
+[FarLeft][LoadXexim][Left][LoadXexim][Right][LoadKendrick][FarRight][LoadAdeline]
 There's... so many...
 [Right]As if one wasn't enough... Nobody wants to see more of your face, Xexim.
 [Left]You will have to defeat all of us to defeat me. The Higher Being resting within this temple has given me his favor.[ClearFace][FarLeft][ClearFace]
@@ -90,7 +90,7 @@ Indeed we do... Today, we fight![X]
 ## Military7AcceptRetreatHelpGoodEndingText
 [ConversationText]
 [MidRight][CloseEyes][LoadRex]
-He is defeated...[FarLeft][LoadMadeleine][Left][LoadPlayer]
+He is defeated...[FarLeft][LoadAdeline][Left][LoadPlayer]
 What about the Higher Being within this temple?
 [MidRight][OpenEyes]Higher Beings are gone. Even if there is one here, it won't care.
 [FarLeft]Are you sure...?
@@ -176,4 +176,20 @@ Stand aside!
 [MidLeft][LoadNarrator][FarRight][LoadKendrick][Right][LoadPlayer]
 No...[ClearFace]
 [FarRight]We have to go, now![ClearFace]
-[MidLeft]Yes, run away... None of you will escape my rolling back of time. Farewall, Cesarians. You fought valiantly.[X]
+[MidLeft]Yes, run away... None of you will escape my rolling back of time. Farewell, Cesarians. You fought valiantly.[X]
+
+## Military7AcceptRetreatHelpTactRexBaseText
+[ConversationText]
+[MidLeft][LoadRex][MidRight][LoadPlayer]
+General... Why is it that we're here? What caused this?
+[MidLeft]Arcanae enlisted Shizon. We've discussed this.
+[MidRight]Yes, but what would have pushed Shizon to drop their avoidance of the war? And what would have dragged Xexim himself into this?
+[MidLeft]... Xexim and I fought alongside each other ten years ago, when the Hero Efil defeated the Guardian Spirit Kilthel. Despite being his ally, I didn't trust him. He was one of the Kilthel's most trusted allies, one of the Four Orden. I warned Efil about him, and he never listened... At the end of the war, Xexim returned to Shizon. 
+[MidRight]Did he ever do anything that seemed sketchy to you?
+[MidLeft]Not directly to us, but I found it hard to believe he'd align with us after centuries of serving Kilthel. If he was willing to betray him after that long, I found it likely he'd betray us quickly. Look what's happened now.
+[MidRight]But why would he attack Cesaria...?
+[MidLeft]Shizonians are followers of the Higher Beings. To a large degree, Cesaria has left any sort of reverence of them behind in light of what Kilthel was doing ten years ago. That disagreement has always left us slightly at odds...
+[MidRight]So it's a religious disagreement?
+[MidLeft]In a way, yes. It's also personal. Xexim's spent too much time in this world, and I think it's time for him to be done. It was wrong for Efil to trust him ten years ago, and he started this by making a move against me.
+[MidRight]... I'm under your command, sir.
+[MidLeft]I appreciate it, [Tact]. Here, take this. It's one of my personal weapons, but it'll serve you well in the coming battle.[X]

@@ -19,10 +19,9 @@ of nature. Equip, Anima, Light, Staves.[X]
 Efficient commanders who lead their[NL]
 troops well. Equip, Swords, Lances, Axes.[X]
 
-## CommanderDescText
-Armored veterans who set good[NL]
-examples for their troops.[NL]
-Equip, Swords, Lances, Axes.[X]
+## BaronDescText
+Heavily armored fighters weilding a variety[NL]
+of arms. Equip: Swords, Lances, Axes.[X]
 
 ## ImpalerDescText
 Experienced footsoldiers who[NL]
@@ -38,9 +37,9 @@ Pegasus knights excelling in[NL]
 combat and magic. Equip: Swords,[NL]
 Lances, Anima, Staves.[X]
 
-## HunterClassDescText
+## MarksmanDescText
 Skilled sharpshooters known[NL]
-for accuracy. Equip: Bows.[X]
+for accuracy. Equip: Swords, Bows.[X]
 
 ## ChampionDescText
 Skilled fighters who have proven[NL]
@@ -108,19 +107,17 @@ Lord of fire and dragons of[NL]
 Altia Equip: Anima, Staves.[X]
 
 ## BattleSageDescText
-Defensive physical and magical[NL]
-fighters. Cannot counter with[NL]
-magic. Equip: Swords, Anima.[X]
+Formidable and versatile fighters. Cannot[NL]
+counter with magic. Equip: Swords, Anima.[X]
 
 ## SpellswordDescText
-Fighters adept in swordwork magic.[NL]
-Cannot coutner with magic. Equip:[NL]
+Fighters adept in swordwork and magic.[NL]
+Cannot counter with magic. Equip:[NL]
 Swords, E-rank Anima and Dark.[X]
 
 ## DreadFighterDescText
-Dangerous opponents utilizing both[NL]
-swords and ancient magic. Cannot counter[NL]
-with magic. Equip: Swords, Dark.[X]
+Fighters wielding ancient magic. Cannot[NL]
+counter with magic. Equip: Swords, Dark.[X]
 
 ## MaligKnightDescText
 Unique and powerful wyvern[NL]
@@ -131,3 +128,31 @@ magic. Equip: Axes, Dark.[X]
 Experienced commanders with many[NL]
 talents: Cannot counter with[NL]
 magic. Equip: Swords, Anima.[X]
+
+## GaidenSageDescText
+Unchallenged master of Thunder magic.[NL]
+Equip: Staves, Anima, Light.[X]
+
+## LegendDescText
+Peerless swordsman of the war[NL]
+10 years ago. Equip: Swords.[X]
+
+## OperativeDescText
+Talented fighters with a variety of skills,[NL]
+especially spying. Equip: Swords.[X]
+
+## DarkMagusDescText
+Master of ancient magics with[NL]
+unparalleled power. Equip: Staves, Dark.[X]
+
+## CommanderDescText
+Respected leader of the Cesarian[NL]
+military. Equip: Swords, Lances, Axes.[X]
+
+## GladiatorDescText
+Frightening skilled physical[NL]
+fighters. Equip: Swords, Axes.[X]
+
+## BowKnightDescText
+Versatile, mounted archers trained with many[NL]
+weapons. Equip: Swords, Lances, Bows.[X]

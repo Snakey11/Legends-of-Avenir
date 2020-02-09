@@ -124,6 +124,193 @@ Derek all seem to be good people.[A]
 help out. Let's not let them down.[A]
 [MidRight]Yeah.[A][X]
 
+## Military5PassHaedricClaraSekarSupportText
+[ConversationText]
+[MidLeft][LoadSekar][MidRight][LoadClara]
+Sekar! You're wounded!
+[MidLeft]Huh? I suppose I didn't notice...
+[MidRight]Let me heal you!
+[MidLeft]Don't worry about it. I'll bandage myself up later.
+[MidRight]What?
+[MidLeft]We Haedricians take care of ourselves. I don't need an Arcanian's pity.
+[MidRight]Sekar, that wound looks pretty deep. I should really heal you before you lose too much blood...
+[MidLeft]I'll be fine!
+[MidRight]What's come over you?
+[MidLeft]Just... don't worry about it. Look out for yourself. We can't get distracted in the midst of battle.[ClearFace]
+[MidRight]What an odd reaction... I'll have to talk to him after the battle.[X]
+
+## Military5PassHaedricCougarFinocSupportText
+[ConversationText]
+[MidRight][LoadFinoc][MidLeft][LoadCougar]
+Never expected us to find ourselves all the way out here in Haedric.
+[MidRight]No kidding. It's so odd to see such lush forests. Very different from home.
+[MidLeft]Not to mention the design of cities is far different too. It's amazing how little we see of the world sometimes.
+[MidRight]You've seen more than me.
+[MidLeft]What do you mean?
+[MidRight]I'm a soldier. Altia very rarely goes to war, so I've rarely traveled beyond the mountains of Altia. You're a courier, though. You've been all over.
+[MidLeft]Still, though, it never fails to catch me off guard. I don't think I'll ever get used to the heat outside of Altia.
+[MidRight]Yeah, especially since our clothing is so thick. [Smile]I've thought about going shopping for some of these thinner Haedrician clothes.
+[MidLeft]Let's focus on the task at hand first...
+[MidRight]Don't worry, don't worry, I know![X]
+
+## Military5PassHaedricTactDerekSupportText
+[ConversationText]
+[MidLeft][LoadPlayer][MidRight][LoadDerek]
+So, Haedric has fallen...
+[MidLeft]Not quite yet. That's what we fight for, after all.
+[MidRight]I never thought we'd end up all the way out here, y'know? I just kinda wanted to get my pay, fight in the war, and go home. I didn't imagine it would suddenly move so quickly.
+[MidLeft]That's war. Sometimes it drags on, sometimes in the span of a few days, a country is captured. It all just depends. We'll end it though. One way or another.
+[MidRight]You think so?
+[MidLeft]We've created an alliance against Arcanae. It's only a matter of time. 
+[MidRight]Yeah, I suppose so. That's a good way of looking at it. If we can turn this around... Yeah. We'll be home sooner rather than later.
+[MidLeft]Yeah. Until then, don't go dying on me. We've got this.
+[MidRight]Right![X]
+
+## Military6PassHaedricDerekJasperSupportText
+[ConversationText]
+[MidLeft][LoadJasper][MidRight][LoadDerek]
+Can you believe it, Jasper? We're about to retake Haedric. We're making ground in the war.
+[MidLeft]It's been amazing to witness all of our countries come together to combat Arcanae.
+[MidRight]No kidding. You played our cards right on trying to help peace discussions.
+[MidLeft]I'm glad I had you and [Tact] there to support me.
+[MidRight]We have Captain Sylvaine and her strategies to thank too. She really is an outstanding leader.
+[MidLeft]Very true. I'm glad we got to serve under her. We'd probably be dead by now if we were under Captain Jurgen.
+[MidRight]Be careful, Jasper. Don't want someone to overhear you.
+[MidLeft]Right, sorry. I keep forgetting how easy it is to be labeled a traitor here.
+[MidRight]Don't worry, I don't think anyone here will question your loyalty. But you can't speak poorly of any Captain. We're happy to be under Captain Sylvaine. That's enough.
+[MidLeft]Right. I'm still not entirely sure about Muriel, though...
+[MidRight]The Captain trusts her, so I trust her.
+[MidLeft]Really? She's an Arcanian.
+[MidRight]Yeah, but she's known to be opposed to Xavus and Uzkalis. She's in charge of us, so my opinion doesn't really matter.
+[MidLeft]I suppose so...
+[MidRight]Look at it this way. She wants this war to end more than any of us. She's been fighting this war longer than any of us. She can be trusted.
+[MidLeft]Yeah... Right. Sorry I was doubtful. Thanks, Derek.
+[MidRight]No problem. Now let's get ready for this next battle.[X]
+
+## Military6PassHaedricChristinaForrestSupportText
+[ConversationText]
+[MidRight][LoadForrest]
+Dammit, where is she? We need to plan for this next battle...[MidLeft][LoadChristina]
+Forrest?
+[MidRight][MoveMidRight]Christina, where have you been?
+[MidLeft]Um... I was out patrolling.
+[MidRight]Seems unlikely.
+[MidLeft]I was sharpening my weapons!
+[MidRight]Somewhere other than the armory?
+[MidLeft]Ugh... I was at the pub.
+[MidRight]Of course you were.
+[MidLeft][Smile]I'd heard a lot of good things about Haedrician Mead!
+[MidRight]Come back when the war is over then. You need to act like a Sergeant.
+[MidLeft]These kids need some time to relax when they can get it. It wouldn't hurt you to relax-
+[MidRight]I'm sworn to Cesaria. If I have to stay awake multiple nights in a row to defend my country, I'd do it in a heartbeat.
+[MidLeft]Dying for your country isn't all that helpful, you know. Come on, Forrest. I didn't overindulge myself this time. Just tried a couple of drinks and was out.
+[MidRight]At least you aren't horrifically drunk...
+[MidLeft]I would never!
+[MidRight]Yes you would.
+[MidLeft]You're right, but still. Think about it. Relaxation is important. Especially before a battle. Night, Forrest!
+[MidRight]Wait! Dammit Christina, we had things to discuss![X]
+
+## Military6PassHaedricElanilFinocSupportText
+[ConversationText]
+[MidRight][LoadElanil][MidLeft][LoadFinoc]
+Elanil, I need you to watch my back.
+[MidRight]I'm on it.
+[MidLeft]These damn Arcanian casters are tough for me.
+[MidRight]Don't worry about it.
+[MidLeft]I've always been able to count on you, haven't I?
+[MidRight]Is right now the time for nostalgia, Finoc?
+[MidLeft]No, I suppose not. My bad.
+[MidRight]Yes. You have.
+[MidLeft]Didn't you just say it wasn't the time-
+[MidRight]Yes. I did. But you can count on me. And I can count on you. That makes me happy.
+[MidLeft]... Yeah. It makes me happy too.
+[MidRight]Now, no more distractions.
+[MidLeft]Right![X]
+
+## Military6PassHaedricClaraSekarSupportText
+[ConversationText]
+[MidLeft][LoadSekar][FarFarRight]
+Sekar?
+[MidLeft]What is it!? Oh, sorry, it's you Clara.[FarRight][LoadClara]
+Are you... okay?
+[MidLeft]Ugh... I'm fine.
+[FarRight]Do you distrust me because I'm Arcanian?
+[MidLeft]Would you blame me if I did?[CloseSpeech][FarRight][MoveMidRight]
+Not necessarily. They have run over your country. But we're allies, at the very least.
+[MidLeft]I know, but your people...
+[MidRight]They aren't my people. I serve only Lady Muriel. I want to help you, Sekar.
+[MidLeft]I'm sorry, Clara.
+[MidRight]Don't apologize. I don't blame you for being closed off. I can't imagine how hard it is, but they've taken my homeland too. Arcanae is my home, but I've been denied from being there as long as I know.
+[MidLeft]You can't go to Arcanae?
+[MidRight]No. Xavus and Uzkalis have banished Mistlain and Muriel. I have no other options but to travel with Lady Muriel. Helping your Basileus and your country helps me get back to Arcanae. So please. Let me help you.
+[MidLeft]... Thank you, Clara. I understand you better now. I'd be honored to let you help me in battle.
+[MidRight]Thank you, Sekar. Hang in there. Your home will be returned to you soon.[X]
+
+## Military7PassHaedricClaraMurielSupportText
+[ConversationText]
+[MidRight][LoadMuriel][MidLeft][LoadClara]
+I'm so glad you're okay, Lady Muriel...
+[MidRight]I'm glad you're okay too, Clara. I wasn't sure how it would be, working with these foreigners you've never met.
+[MidLeft]It was alright. They kept me safe. I felt that I helped them.
+[MidRight]I can tell you've grown more powerful. I'm proud of you.
+[MidLeft]... Lady Muriel?
+[MidRight]What is it?
+[MidLeft]What happens if we kill Uzkalis?
+[MidRight]... I don't know. Even if we remove Uzkalis and Xavus, they have plenty of supporters in Arcanae. The call of power isn't easily resisted, especially to an Arcanian. Their seats on the council will likely remain vacant until things can stabilize. It's possible even the concept of a council will disappear entirely.
+[MidLeft]Really?!
+[MidRight]That's an extreme possibility, but it exists. Don't worry, Clara. You'll remain my student as long as you wish.
+[MidLeft]That's good... I'm glad. Let's stop Uzkalis.
+[MidRight]Right![X]
+
+## Military7PassHaedricTactJasperSupportText
+[ConversationText]
+[MidRight][LoadPlayer][MidLeft][LoadJasper]
+This is it... Our last battle.
+[MidRight]Don't get too hasty.
+[MidLeft]You think fighting will continue?
+[MidRight]I doubt Xavus will give up so easily, even with Uzkalis dead and the rest of Avenir united against him.
+[MidLeft]I'd hope he'd be more reasonable...
+[MidRight]We all do. None of us like war any more than you do. You're just the optimist that thinks peace is an option.
+[MidLeft]Do they really care so little for all the meaningless lives lost?
+[MidRight]They probably think it's a worthy sacrifice.
+[MidLeft]Pathetic...
+[MidRight]We're prepared to lose our lives in the line of duty, aren't we? Most of the lives lost in this war were too. We all know the risk.
+[MidLeft]... Right. You're right.
+[MidRight]That doesn't mean you're wrong, though.
+[MidLeft]Huh?
+[MidRight]This war needs to end. I believe that it will. I want to believe that it'll be through peaceful means. I really do. But we have to be prepared for anything. Hang in there, Jasper. Don't lose your optimism.
+[MidLeft]Right... Right! I won't. Thank you, [Tact].
+
+## Military7PassHaedricCougarFinocSupportText
+[ConversationText]
+[MidLeft][LoadCougar][MidRight][LoadFinoc]
+It's so beautiful in the Ingefont...
+[MidLeft]I've never seen anything like this.
+[MidRight]I can imagine. This isn't something most people ever get to see. It must be one of the best-kept secrets of Haedric...
+[MidLeft]I meant to tell you, Finoc, that I've not seen as much of the world as you might think I have.
+[MidRight]Huh?
+[MidLeft]I have to be pretty focused when I'm flying between locations. I don't get much time to stop and admire the scenery.
+[MidRight]Oh...
+[MidLeft]Most of what I get to see are just the large cities. There are some pretty amazing things though. The Spire of the Magi in Arcanae's capital? Absolutely stunning, especially at sundown.
+[MidRight]You've been to Arcanae?
+[MidLeft]When Altia was neutral, we couriers ran messages there too. Not always tremendously often, but often enough. It's an interesting country. Very advanced. Nothing like Altia.
+[MidRight]I'd like to see it one day.
+[MidLeft]Let's finish this today, then. Win the war. Then we can visit Arcanae together. And all sorts of other places.
+[MidRight]Right. I couldn't agree more.[X]
+
+## Military7PassHaedricClaraSekarSupportText
+[ConversationText]
+[MidRight][LoadClara][MidLeft][LoadSekar]
+Clara, thanks for your help.
+[MidRight]No problem, Sekar. I was glad to be able to help your wound.
+[MidLeft]I never realized just how much my wounds hold me back, sometimes. I never would have realized my potential.
+[MidRight]We're all stronger as a team. Even you Haedricians.
+[MidLeft]We Haedricians are all so used to fighting as individuals... I never understood what it meant to have help. I'm happy I have you to count on, Clara.
+[MidRight]It's not just me. Everyone else here is here for you too. We've all got your back. That's why we're here. To save Haedric.
+[MidLeft]I'm sorry... I've been ungrateful...
+[MidRight]Don't worry about it. You're a Haedrician. It's in your nature to turn down help. What's important is that we've saved Basileus Leon and stop Uzkalis.
+[MidLeft]... Of course. Thank you, Clara. We've got this.[X]
+
 ## Military5PassAltiaCougarFinocSupportText
 [MidLeft][LoadCougar][MidRight][LoadFinoc]
 You getting more comfortable[NL]

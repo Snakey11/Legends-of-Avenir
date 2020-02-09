@@ -79,13 +79,13 @@ Efil was willing to bank on such an unreliable strategy?
 [Right]I'm glad you understand. 
 [FarRight]I'm not sure about this...
 [FarLeft]I won't force you, Remus, but consider your other options.
-[FarRight]Yeah. I think you're right. I'll notify Madeleine and Yvette.
+[FarRight]Yeah. I think you're right. I'll notify Adeline and Yvette.
 [FarLeft]I'll tell Derek and Jasper to get ready as well. A few hours of rest and we'll be good to move out to the Temple of Kilthel.
 [Right]Perfect. Thank you, all of you.[X]
 
 ## Military7AcceptRetreatLeaveOthersText
 [ConversationText]
-[FarLeft][LoadYvette][MidRight][LoadRemus][Left][LoadMadeleine]
+[FarLeft][LoadYvette][MidRight][LoadRemus][Left][LoadAdeline]
 Hm... What you've told us is concerning, Remus.
 [MidRight]I know. But our best option is to go along with it. Best case scenario, she helps us after this is all through.
 [FarLeft]I think Remus is right.
@@ -119,7 +119,7 @@ This is the entrance to the Temple of Kilthel. Normally you require a Vathrylian
 [ConversationText]
 [Right][LoadPlayer]
 This is it. The last fight.
-[FarLeft][LoadMadeleine][Left][LoadDerek]After this, we can crush Arcanae and finish off this war.
+[FarLeft][LoadAdeline][Left][LoadDerek]After this, we can crush Arcanae and finish off this war.
 [FarLeft]I can only hope so...
 [FarRight][LoadRemus]We will.
 [FarLeft][ClearFace][LoadYvette]It's our only hope.
@@ -160,19 +160,19 @@ It seems she has come... Ha. I suppose this is it for me. Okay, Guardians! Do wh
 [FarRight][LoadPlayer]I've got her under control![ClearFace]
 [FarLeft][LoadEfil]Ha! Nobody has Xylia under control. Come. If words won't sway you, then perhaps a blade will![X]
 
-## Military7AcceptRetreatLeaveMadeleineEfilBattleText
+## Military7AcceptRetreatLeaveAdelineEfilBattleText
 [BattleText]
 [FarLeft][LoadEfil]I sense hesitancy in you.[ClearFace]
-[FarRight][LoadMadeleine]...[....] Did you really have no plan for when Kilthel was defeated?[ClearFace]
+[FarRight][LoadAdeline]...[....] Did you really have no plan for when Kilthel was defeated?[ClearFace]
 [FarLeft][LoadEfil]Ah, so that's what she told you.[ClearFace]
-[FarRight][LoadMadeleine]I want to hear the truth.[ClearFace]
+[FarRight][LoadAdeline]I want to hear the truth.[ClearFace]
 [FarLeft][LoadEfil]I trusted my friends. I believed they could fix the world above. I had done my part.[ClearFace]
-[FarRight][LoadMadeleine]...[ClearFace]
+[FarRight][LoadAdeline]...[ClearFace]
 [FarLeft][LoadEfil]I can see there is still hesitancy in you. But it matters not. You stand before me as an enemy![X]
 
 ## Military7AcceptRetreatLeaveXyliaAliveText
 [ConversationText]
-[Right][LoadPlayer][FarRight][LoadMadeleine][MidLeft][LoadXylia]
+[Right][LoadPlayer][FarRight][LoadAdeline][MidLeft][LoadXylia]
 So... That's that... Efil is defeated...
 [Right]Right. He was definitely tough.
 [FarRight]...[....] Why did we do this?
@@ -183,7 +183,7 @@ So... That's that... Efil is defeated...
 
 ## Military7AcceptRetreatLeaveAliveTurnText
 [ConversationText]
-[Right][LoadPlayer][FarRight][LoadMadeleine][MidLeft][LoadXylia]
+[Right][LoadPlayer][FarRight][LoadAdeline][MidLeft][LoadXylia]
 Seems you are a clever one.
 [Right][MoveRight]What!?
 [MidLeft]Oh, [Tact], you fool. I never cared for your petty conflict. I simply saw your rage and desire to be noticed amongst Cesarians, and manipulatedyou to help me. You wanted to prove yourself. I convinced you that you had that opportunity.
@@ -191,7 +191,7 @@ Seems you are a clever one.
 [FarRight][MoveFarRight]Dammit, [Tact]!
 [MidLeft]Yes... Fight each other! See who has more power![CloseSpeech]
 [Events]
-[CloseSpeech][MoveLeft][FarLeft][LoadYvette]I'm here Madeleine! Remus is trying to deal with Zaheva!
+[CloseSpeech][MoveLeft][FarLeft][LoadYvette]I'm here Adeline! Remus is trying to deal with Zaheva!
 [Right]Damn you, Xylia.
 [Left]Have fun![ClearFace][....][LoadDerek]
 [Tact]! Are you okay?
@@ -199,9 +199,9 @@ Seems you are a clever one.
 
 ## Military7AcceptRetreatLeaveAliveFightText
 [ConversationText]
-[MidRight][LoadXylia][FarLeft][LoadYvette][Left][LoadMadeline]
+[MidRight][LoadXylia][FarLeft][LoadYvette][Left][LoadAdeline]
 No... Cesaria...[CloseEyes]
-[FarLeft]We gave it our best shot, [CloseEyes]Madeleine... I'm sorry, Captain Zalius...[ClearFace][Left][ClearFace]
+[FarLeft]We gave it our best shot, [CloseEyes]Adeline... I'm sorry, Captain Zalius...[ClearFace][Left][ClearFace]
 [MidRight]I'm impressed. Most impressed.[CloseSpeech][MidLeft][LoadPlayer]
 Don't think you're getting off easy, Xylia![X]
 
@@ -243,18 +243,18 @@ Well this is unexpected...
 
 ## Military7AcceptRetreatLeaveDeadEndingText
 [ConversationText]
-[MidRight][LoadMadeleine][MidLeft][LoadPlayer]
+[MidRight][LoadAdeline][MidLeft][LoadPlayer]
 He's gone... But... Xylia...
 [MidRight][Tact]... You fool.
-[MidLeft]Spare me, Madeleine. I know what you're going to say.
+[MidLeft]Spare me, Adeline. I know what you're going to say.
 [MidRight]You're a madman. You're a madman, and a traitor, and it falls to us to put you down.
-[MidLeft]Madeleine, I believed this was for the best-
+[MidLeft]Adeline, I believed this was for the best-
 [MidRight]Damn you. Damn you to oblivion![CloseSpeech][MidLeft][MoveFarLeft]
 [Left][LoadDerek][Tact]![X]
 
 ## Military7AcceptRetreatLeaveDeadDerekDeadText
 [ConversationText]
-[MidLeft][LoadMadeleine][MidRight][LoadPlayer]
+[MidLeft][LoadAdeline][MidRight][LoadPlayer]
 Derek!
 [MidLeft]Dammit...
 [MidRight]You bastard. I'll kill you for this!
@@ -262,12 +262,12 @@ Derek!
 
 ## Military7AcceptRetreatLeaveDeadNarratorHereText
 [ConversationText]
-[MidLeft][LoadMadeleine][MidRight][LoadNarrator]
+[MidLeft][LoadAdeline][MidRight][LoadNarrator]
 Woah there, hey now!
 [MidLeft]Who are you?
 [MidRight]...[....] Your voice is irritating.[X]
 
-## Military7AcceptRetreatLeaveDeadMadeleineDeadText
+## Military7AcceptRetreatLeaveDeadAdelineDeadText
 [ConversationText]
 [MidRight][LoadNarrator][MidLeft][LoadPlayer]
 Thank you...?

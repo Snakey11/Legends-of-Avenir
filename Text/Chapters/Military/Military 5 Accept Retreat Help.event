@@ -1,7 +1,7 @@
 
 ## Military5AcceptRetreatHelpStartText
 [ConversationText]
-[Right][LoadPlayer][FarRight][LoadMadeleine][MidLeft][LoadRex]
+[Right][LoadPlayer][FarRight][LoadAdeline][MidLeft][LoadRex]
 [Tact]! Good, you're all here.
 [Right]You said you wanted to meet with us.
 [MidLeft]Yes, of course. Obviously, we made an important discovery about the war last night.
@@ -15,7 +15,7 @@
 [FarRight]It's on the southern side of Cesaria. It's one of the few ports that has easy access to Shizon.
 [ClearFace][LoadYvette]My informant didn't make any mention of Xexim, though. It's possible the other Shizonians were left in the dark as to the true mission.
 [Right]It seems safe to assume at least their commander knew, judging by Xexim's reaction to seeing us.
-[ClearFace][LoadMadeleine]Xexim normally doesn't leave Shizon at all, right?
+[ClearFace][LoadAdeline]Xexim normally doesn't leave Shizon at all, right?
 [MidLeft]That's correct. Now, I hate to ask this of you all, but we're going on a mission.
 [FarRight]What?
 [MidLeft]Shizon will continue making attempts on my life. We were barely able to repel them last night. We can't afford to fight two wars...
@@ -23,11 +23,11 @@
 [MidLeft]Yes, but I'm coming with you.
 [Right][MoveRight]What!?
 [ClearFace][LoadYvette]General Rex, you can't-!
-[MidLeft]Calm down! I've brought Leyos up to speed on the status of the front line of the war, and dispatched couriers to the Captains in the field. Arcanae won't know that I'm leaving, and Leyos is a more than capable commander. He's my predecessor, after all.
+[MidLeft]Calm down! I've brought Leyos up to speed on the status of the front line of the war and dispatched couriers to the Captains in the field. Arcanae won't know that I'm leaving, and Leyos is a more than capable commander. He's my predecessor, after all.
 [FarRight]So our small group is going to take on all of Shizon... alone?
 [MidLeft]We should be fine. There's not as many Shizonians as you might think, and I'd hardly call them an organized military. Their defenses are also heavily lacking.
 [Right]We'll want to head to Aegris, then.
-[FarRight][ClearFace][LoadMadeleine]Yvette is right. It's the only way to get passage to Shizon without going into Arcanae.
+[FarRight][ClearFace][LoadAdeline]Yvette is right. It's the only way to get passage to Shizon without going into Arcanae.
 [Right]My informant will be able to help us, if he's still there.
 [MidLeft]We're heading out within the hour. Make sure everyone is suited up and ready to go.
 [Right][ClearFace][LoadPlayer]Sir, yes, sir![X]
@@ -42,14 +42,14 @@ He probably carefully calculated out what needed to be done. Xexim's a powerful 
 [Left]Leave most of the fighting to us, then.
 [Right]Don't worry, I suspect we'll be seeing plenty of action.
 [FarFarRight][Tact]![CloseSpeech][FarRight][ClearFace][Left][ClearFace][Right][MoveLeft][ClearFace][LoadPlayer]
-What is it, Madeleine?[A][FarRight][LoadMadeleine]
+What is it, Adeline?[A][FarRight][LoadAdeline]
 [FarRight]We're nearing Aegris. The General wants us to scout ahead and see if we can spot Yvette's informant. Something about a big dude with an outlandish green coat. A businessman.
 [Left]A businessman? The Cheetah Brigade sure keeps odd company. Jasper, can you three hold down the fort here?
 [FarLeft]We're on it.[X]
 
 ## Military5AcceptRetreatHelpInTownText
 [ConversationText]
-[MidLeft][LoadPlayer][MidRight][LoadMadeleine]
+[MidLeft][LoadPlayer][MidRight][LoadAdeline]
 It doesn't look like there's too much going on here.
 [MidLeft]Yeah. I'm not seeing anyone matching this informant's description. Did Yvette give you a name?
 [MidRight]No, she just said we'd know him when we see him.
@@ -58,14 +58,14 @@ It doesn't look like there's too much going on here.
 
 ## Military5AcceptRetreatHelpNoOneHereText
 [ConversationText]
-[MidRight][LoadMadeleine][MidLeft][LoadPlayer]
+[MidRight][LoadAdeline][MidLeft][LoadPlayer]
 I'm not seeing anyone in an "outlandish green coat."
 [MidRight]Me neither... Wait, look at that man getting off the ship![X]
 
 ## Military5AcceptRetreatHelpMeetArcanianText
 [ConversationText]
 [MidRight][LoadKendrick]
-Let's see, how was that trip... Got some fine Arcanian cloth, a couple of rare books, some valuable metals, some weird sword... I should be able to turn a profit off this.
+Let's see, how was that trip... Got some fine Arcanian cloth, a couple of rare books, some valuable metals, some weird sword... I should be able to turn a profit off this.[CloseSpeech]
 [Events]
 [MoveLeft]
 [Events]
@@ -93,14 +93,14 @@ It's a whole operation, eh? Alright, boys! We're holding down this ship! They ma
 
 ## Military5AcceptRetreatHelpArcaniansHereText
 [ConversationText]
-[MidLeft][LoadPlayer][MidRight][LoadMadeleine]
+[MidLeft][LoadPlayer][MidRight][LoadAdeline]
 An Arcanian squadron? Here!?
 [MidLeft]We have to get back and report this to the General, now!
 [MidRight]Right![X]
 
 ## Military5AcceptRetreatHelpWhatHappenedText
 [ConversationText]
-[Left][LoadYvette][Right][LoadMadeleine][FarRight][LoadPlayer][FarLeft][LoadRex]
+[Left][LoadYvette][Right][LoadAdeline][FarRight][LoadPlayer][FarLeft][LoadRex]
 What happened?
 [Right]There was a squadron of Arcanian forces disguised amongst the civilians of Aegris!
 [Left]What!? They must be trying to cover the Shizonians escape...
@@ -169,7 +169,7 @@ None of them escaped. Good work. You must be Yvette's informant.
 [Right]Oh... I see. That explains a lot actually...
 [FarRight]What were the Arcanians doing here?
 [FarLeft]They were likely either trying to cut off our trade routes or trying to stop us from tracking Shizon. That doesn't bode well...
-[FarRight][ClearFace][LoadMadeleine]What do you want us to do?
+[FarRight][ClearFace][LoadAdeline]What do you want us to do?
 [FarLeft]Kendrick, how much would it cost for you to take us all to Shizon?
 [Right]Huh? To Shizon? Uh... I don't know. Free, I suppose?
 [Left][MoveLeft]Free? Are you okay, Kendrick?
@@ -182,8 +182,8 @@ None of them escaped. Good work. You must be Yvette's informant.
 [Right]You're really dragging me into this?
 [FarLeft]Yes.
 [Right]... Ah, well.
-[FarRight][ClearFace][LoadMadeleine]What if Xexim attacks us?
-[FarLeft]Try to hold off until I get there. [Tact], I leave you in command for now. Yvette, Madeleine, I expect you to work with him.
+[FarRight][ClearFace][LoadAdeline]What if Xexim attacks us?
+[FarLeft]Try to hold off until I get there. [Tact], I leave you in command for now. Yvette, Adeline, I expect you to work with him.
 [FarRight]Of course.
 [Left]You can count on us.
 [FarRight][ClearFace][LoadPlayer]Thank you, sir.
@@ -207,7 +207,7 @@ Kendrick!
 [Left]Did you start this mess?
 [Right]No, they started it. I just replied in fashion.
 [Left]Ugh, dammit, Kendrick.[FarLeft][LoadRex][FarRight][LoadPlayer]
-Yeah, Madeleine and I witnessed an Arcanian attack him, and he responded appropriately.
+Yeah, Adeline and I witnessed an Arcanian attack him, and he responded appropriately.
 [FarLeft]Kendrick, can you take us to Shizon?
 [Right]Excuse me? I'm a businessman, not a smuggler.
 [FarLeft]You're not smuggling. Just transporting.
@@ -223,12 +223,12 @@ Yeah, Madeleine and I witnessed an Arcanian attack him, and he responded appropr
 [Left][Smile]Wow, are you taking something seriously?
 [Right]I take everything seriously. I just try to lighten the mood.
 [FarLeft]We have a deal then. I'll have to meet up with you all later, though.
-[Left][ClearFace][LoadMadeleine]What, why?
+[Left][ClearFace][LoadAdeline]What, why?
 [FarLeft]I can't ignore Arcanae's presence here. I'm going to have to ride back and notify Leyos. There could be other groups like this one. I know some people, I'll be able to get to Shizon fine.
 [FarRight]What do you want us to do when we get there?
 [FarLeft]They'll try to fight you. Deal with them. But don't fight Xexim, you all aren't strong enough. Wait for me.
 [Left]What if Xexim tries to attack us?
-[FarLeft]Try to hold out. [Tact], I'm leaving you in charge for now. Madeleine, Yvette, I expect you to work with him on this.
+[FarLeft]Try to hold out. [Tact], I'm leaving you in charge for now. Adeline, Yvette, I expect you to work with him on this.
 [Left]Absolutely.[ClearFace][LoadYvette]
 You can count on me.
 [FarRight]Thank you, sir.

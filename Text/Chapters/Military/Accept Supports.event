@@ -57,13 +57,13 @@ I guess your Captain really had it in for us, sending us to man this fort with s
 [MidRight]Right. It's your call, [Tact]. I'll follow you.
 [MidLeft]I appreciate that. Don't die on me.[X]
 
-## Military4AcceptRetreatMadeleineRemusSupportText
+## Military4AcceptRetreatAdelineRemusSupportText
 [ConversationText]
-[MidRight][LoadRemus][MidLeft][LoadMadeleine]
+[MidRight][LoadRemus][MidLeft][LoadAdeline]
 What do you think of this, Remus?
 [MidRight]It seems... odd, that Shizon would make a move to attack the Emperor.
 [MidLeft]It means they're setting their sights higher. This isn't good.
-[MidRight]I know you're probably mad, Madeleine, but this is the middle of a battle.
+[MidRight]I know you're probably mad, Adeline, but this is the middle of a battle.
 [MidLeft]I know. But we can't ignore this. Either these aren't true Shizonians, or...
 [MidRight]Or what?
 [MidLeft]Shizon has decided to fully ally with Arcanae, which would be a bad omen for us Cesarians.
@@ -88,24 +88,24 @@ You've really got us into it this time, [Tact]. Shizonians? Really?
 [MidLeft]Thanks for the warning.
 [MidRight]Just give me a chance to get at his neck, and we'll have no problems.[X]
 
-## Military5AcceptRetreatLeaveMadeleineRemusSupportText
+## Military5AcceptRetreatLeaveAdelineRemusSupportText
 [ConversationText]
-[MidRight][LoadRemus][MidLeft][LoadMadeleine]
+[MidRight][LoadRemus][MidLeft][LoadAdeline]
 I can't believe the General is dead...
 [MidRight]It's kind of crazy. Now Captain Zalius is commanding us, and we're going on this arbitrary mission.
 [MidLeft]It seems weird to you, too?
 [MidRight]A bit. But... I've never been one to question my superior.
 [MidLeft]It just seems weird that the General was unable to hold his own against Xexim. If [Tact] had just ordered some of us to check on the General...
-[MidRight]They had no way of knowing, Madeleine.
+[MidRight]They had no way of knowing, Adeline.
 [MidLeft]I don't know. I don't trust them. Not one bit.
 [MidRight]Even so, we don't have much choice right now. You can't expect to accuse them of anything without reasonable suspicion.
 [MidLeft]We'll have to keep an eye out. This mission seems fishy to me.
 [MidRight]You do that. I'm going to do my duty as a soldier of Cesaria and obey my commanding officer.[ClearFace]
 [MidLeft]Remus... You're too honorable for your own good sometimes. Soon, you'll see that I'm right...[X]
 
-## Military5AcceptRetreatLeaveMadeleineYvetteSupportText
+## Military5AcceptRetreatLeaveAdelineYvetteSupportText
 [ConversationText]
-[MidLeft][LoadYvette][MidRight][LoadMadeleine]
+[MidLeft][LoadYvette][MidRight][LoadAdeline]
 What do you make of all this, Yvette?
 [MidLeft]Hm... It's hard to say. I don't think anyone knows. I mean, our General was just killed, and Leyos isn't informed enough about the current state of the war to step back into the role...
 [MidRight]I mean this assignment.
@@ -115,7 +115,7 @@ What do you make of all this, Yvette?
 [MidRight]You mean you trust [Tact] in this?
 [MidLeft]I think it's plausible that [Tact] is being entirely honest with us. Captain Zalius and the Cheetah Brigade are information gatherers. Spies. Some are even assassins. It wouldn't be in line with his typical style of command to try and win this war through the direct confrontation on the front lines.
 [MidRight]Hm... I suppose that makes sense. I still don't see how this is the best plan.
-[MidLeft]I'm not sure anyone does, but it's not our duty to question the Captain, even in times like these. You'd do well to remember that, Madeleine. Keep an open mind, but don't try to sabotage [Tact].
+[MidLeft]I'm not sure anyone does, but it's not our duty to question the Captain, even in times like these. You'd do well to remember that, Adeline. Keep an open mind, but don't try to sabotage [Tact].
 [MidRight]Very well. Understood.[X]
 
 ## Military5AcceptRetreatLeaveDerekJasperSupportText
@@ -131,7 +131,7 @@ Derek, I still don't understand. What are we doing out here?
 [MidRight]Really?
 [MidLeft]I was never fond of the direct aggression route. This seems like a better alternative than suicide on the front lines.
 [MidRight]I'm surprised to hear that, but I guess I'm really not... You never really do change. I don't know why [Tact] and I were so worried.
-[MidLeft]We're friends. I'm in. Keep an eye out for Madeleine, though. I think she's fiercely loyal to Cesaria and doesn't understand our mission out here.
+[MidLeft]We're friends. I'm in. Keep an eye out for Adeline, though. I think she's fiercely loyal to Cesaria and doesn't understand our mission out here.
 [MidRight]Way ahead of you, don't worry.
 [MidLeft]Good. Thanks for filling me in, Derek. I appreciate it.
 [MidRight]I'm just glad you're with us on this.
@@ -146,7 +146,7 @@ So, [Tact], are you gonna tell the rest of them?
 [MidRight]I'm sorry?
 [MidLeft]Please. I'm not blaming you. I just want to know if you'll tell them.
 [MidRight]They wouldn't understand...
-[MidLeft]No, I daresay they wouldn't. Especially Madeleine. Don't worry, I'm not going to tell them.
+[MidLeft]No, I daresay they wouldn't. Especially Adeline. Don't worry, I'm not going to tell them.
 [MidRight]I appreciate that. Why do you not care...?
 [MidLeft]I'm not in this for Cesaria. You know that. For all I care, both Cesaria and Arcanae can burn to the ground.
 [MidRight]So why are you with us?
@@ -187,22 +187,22 @@ I'm glad this worked out, [Tact].
 [MidLeft][LoadPlayer][MidRight][LoadJasper]
 Are you sure we'll find something here, [Tact]?
 [MidLeft]How do you mean?
-[MidRight]Madeleine is getting impatient. You're gonna need to find something soon if you want to keep her on your good side.
-[MidLeft]Madeleine's a later problem. So long as she fights with us, for now, it's no problem.
+[MidRight]Adeline is getting impatient. You're gonna need to find something soon if you want to keep her on your good side.
+[MidLeft]Adeline's a later problem. So long as she fights with us, for now, it's no problem.
 [MidRight]She's fiercely loyal to Cesaria. Sooner or later she'll realize exactly why we're out here.
 [MidLeft]But, if she doesn't realize it until we've saved Cesaria from Arcanae, there's no problem.
 [MidRight]I suppose, but that's a big risk.
 [MidLeft]Why have you come this far, Jasper?
 [MidRight]You know me. I never wanted to go head to head with Cesaria. Sure this isn't diplomacy, but it's a lot better than being another part of another one of Captain Jurgen's suicide squadrons.
 [MidLeft]I'm glad you think so and understand.
-[MidRight]Me, you, and Derek have been a team for years now. We might as well stay a team. Don't worry, [Tact]. If Madeleine turns on us, I'll be right there.
+[MidRight]Me, you, and Derek have been a team for years now. We might as well stay a team. Don't worry, [Tact]. If Adeline turns on us, I'll be right there.
 [MidLeft]I appreciate that, Jasper.
 [MidRight]No more time for talking, however. Battle awaits.[X]
 
-## Military7AcceptRetreatLeaveMadeleineRemusSupportText
+## Military7AcceptRetreatLeaveAdelineRemusSupportText
 [ConversationText]
-[MidRight][LoadMadeleine][MidLeft][LoadRemus]
-I think you've been right this entire time, Madeleine.
+[MidRight][LoadAdeline][MidLeft][LoadRemus]
+I think you've been right this entire time, Adeline.
 [MidRight]You seem surprised.
 [MidLeft]I don't know... I really wanted to believe [Tact] had Cesaria's best interests at heart. But what are we doing here? Xylia should work for us, not us for her.
 [MidRight]Remus... Not everyone is as fiercely loyal as you are. Sometimes, I envy it. Life would be easier if I weren't questioning everything...
@@ -213,10 +213,10 @@ I think you've been right this entire time, Madeleine.
 [MidLeft]Right. Let's finish this with Xylia, then see what happens. 
 [MidRight]Right. [Tact] may still have good intentions.[X]
 
-## Military7AcceptRetreatLeaveMadeleineYvetteSupportText
+## Military7AcceptRetreatLeaveAdelineYvetteSupportText
 [ConversationText]
-[MidLeft][LoadMadeleine][MidRight][LoadYvette]
-Madeleine, you need to be more careful.
+[MidLeft][LoadAdeline][MidRight][LoadYvette]
+Adeline, you need to be more careful.
 [MidLeft]How so?
 [MidRight]There's no way [Tact] and the others don't suspect us of something. You've been too direct.
 [MidLeft]Yvette, he's on the verge of betraying Cesaria!
@@ -224,7 +224,7 @@ Madeleine, you need to be more careful.
 [MidLeft]But this Xylia character...
 [MidRight]Is most definitely a threat. Whether [Tact] realizes that or not, I don't know. But if we do anything that makes [Tact] turn on us, we're all dead.
 [MidLeft]Dying to save Cesaria would be well worth it.
-[MidRight]I agree, but you'd be dying pointlessly if [Tact] or Xylia just up and kills you. You need to be careful. We're in this together. I'm trying to work discreetly here and I can't do that with you exploding every other time [Tact] does something suspicious. We're in this together, Madeleine.
+[MidRight]I agree, but you'd be dying pointlessly if [Tact] or Xylia just up and kills you. You need to be careful. We're in this together. I'm trying to work discreetly here and I can't do that with you exploding every other time [Tact] does something suspicious. We're in this together, Adeline.
 [MidLeft] ... You're right. I'm sorry, Yvette...
 [MidRight]I forgive you, but you have to be more careful. This is going to come to a head soon, and I'd prefer you be alive for that.
 [MidLeft]Right. Let's finish this for Xylia and see what happens...
@@ -250,3 +250,139 @@ Madeleine, you need to be more careful.
 [MidLeft]I don't know. I'm glad I went this route. Even if I died, I learned more about history than I ever thought I would or could.
 [MidRight]I suppose so. Let's finish this. Xylia will work for us.
 [MidLeft]... Yes. Let's do this.[X]
+
+## Military5AcceptRetreatHelpAdelineYvetteSupportText
+[ConversationText]
+[MidRight][LoadYvette][MidLeft][LoadAdeline]
+Yvette, what do you make of the Arcanians trying to sneak into Cesaria like this?
+[MidRight]It has me wary. There could be more groups like this, and if there are, the war could take a nasty turn soon.
+[MidLeft]Yeah. I don't think we're prepared for attacks from within our own borders.
+[MidRight]Hopefully we can get a message out after the battle so that the small squadrons stationed in each town can keep an eye out.
+[MidLeft]Is it really best for General Rex to leave at a time like this?
+[MidRight]... I don't know. But it's true that Xexim is likely far beyond any of our abilities to fight.
+[MidLeft]That's true...
+[MidRight]Aside from that, the General probably feels a bit responsible for allowing them to cause such chaos in the capital. He probably wants to clean it up himself.
+[MidLeft]We'll have to do our part. Cesaria needs him to survive.
+[MidRight]Agreed. Let's make short work of this.[X]
+
+## Military5AcceptRetreatHelpAdelineRemusSupportText
+[ConversationText]
+[MidLeft][LoadAdeline][MidRight][LoadRemus]
+Hey, Adeline!
+[MidLeft]Remus! What is it?
+[MidRight]I was just kind of wondering... What do you think will happen when the war is over?
+[MidLeft]What sparked that?
+[MidRight]I don't know. But I feel like the tide is about to turn. Arcanae is getting desperate if they're employing Shizon, and if we defeat Xexim, that's their last resource gone.
+[MidLeft]I suppose. But why the concern over what to do after the war? I'm sure there will still be plenty of work for us.
+[MidRight]You're a soldier through and through, aren't you?
+[MidLeft]Well... Yeah. Even though I let down Vice-Captain Blaine and Captain Jurgen by retreating with [Tact]... It seems to have worked out. I imagine once we return from this journey, we'll rejoin the front lines. Take the fight to Arcanae. What about you?
+[MidRight]I don't know... I'm good at fighting, but I can't say it's what I want to do the rest of my life.
+[MidLeft]I mean, I'd retire eventually.
+[MidRight]I was thinking about resigning after we finish up at Shizon.
+[MidLeft]If you think that's what's best... Go for it, but let's keep in touch, alright? I know we haven't always seen eye to eye on some things, but... I've enjoyed fighting alongside you.
+[MidRight]Of course! The same goes for you, Adeline.[X]
+
+## Military6AcceptRetreatHelpKendrickYvetteSupportText
+[ConversationText]
+[MidRight][LoadKendrick][MidLeft][LoadYvette]
+Kendrick, what's that?
+[MidRight]What's what?
+[MidLeft]That stone you have there.
+[MidRight]It's just a nice gemstone I like to hold on to from... uh... my wife!
+[MidLeft]You don't have a wife.
+[MidRight]Dammit.
+[MidLeft]Where'd you steal it from?
+[MidRight]Hey, I'm an HONEST businessman!
+[MidLeft]Kendrick, I've worked with you too often to buy that anymore.
+[MidRight]Ugh... I took it off one of the Arcanians back in Aegris.
+[MidLeft]Dammit!
+[MidRight]Spoils of war!
+[MidLeft]Honoring the fallen, even when they're enemies, is more important than a damn profit!
+[MidRight]You think the Arcanians would have given you the same courtesy?
+[MidLeft]It doesn't matter.
+[MidRight]Oh well. You know, a battlefield is far from the best place to discuss this. I've got some heads to knock together.
+[MidLeft]I wasn't finished! Get back here!... Ugh, he's impossible.[X]
+
+## Military6AcceptRetreatHelpTactZahevaSupportText
+[ConversationText]
+[MidLeft][LoadZaheva][MidRight][LoadPlayer]
+Hey, Zaheva!
+[MidLeft]What is it?
+[MidRight]I just wanted to tell you... It's okay if you leave.
+[MidLeft]What? Where is this coming from?
+[MidRight]I know you wanted to fight Arcanae. This mission to Shizon really has nothing to do with them, or with you.
+[MidLeft]I know. I appreciate the thought, but... I don't know. I've grown rather attached to you guys. I had very few friends growing up, and I've spent the last few years almost entirely on my own. Being able to fight alongside people again... it's a good feeling.
+[MidRight]I understand. We're happy to have you along as long as you're feeling that way.
+[MidLeft]Thanks. You can rely on me.[X]
+
+## Military6AcceptRetreatHelpTactDerekSupportText
+[ConversationText]
+[MidLeft][LoadDerek][MidRight][LoadPlayer]
+Never thought we'd be on our way to fight in Shizon, eh, Derek?
+[MidLeft]No kidding. Here I was hoping I'd be able to dodge boats for most of my tenure as a soldier...
+[MidRight]Not a fan?
+[MidLeft]It's one thing when you're used to being mobile. I'm not very fast, so all these surging motions... Really aren't great...[CloseSpeech]
+[MidRight][MoveFarRight]Oh jeez, I'll get a bucket!
+[MidLeft][CloseEyes]No, no... It's not that bad... Just gotta... Focus...
+[FarRight]I'll leave you to it, then.[ClearFace]
+[MidLeft]Appreciated...[X]
+
+## Military6AcceptRetreatHelpTactJasperSupportText
+[ConversationText]
+[MidRight][LoadJasper][MidLeft][LoadPlayer]
+Hey, Jasper, how's the horse doing?
+[MidRight]He's alright. Kendrick has some space below decks that can carry horses.
+[MidLeft]Probably from illegal animal trading or something...
+[MidRight]No, remember [Tact]? He's an HONEST businessman.
+[MidLeft]Oh yeah, and Vice-Captain Blaine is a nice human being.
+[MidRight]Ha! You're right. Regardless, Kendrick seems trustworthy.
+[MidLeft]Agreed. I just think he has a very loose moral code.
+[MidRight]That's my impression. Have to wonder what his history with Yvette is.
+[MidLeft]I think they've just worked together a couple of times. They seem to have total conflicts in personality.
+[MidRight]True, but that doesn't necessarily mean they're bad at working together.
+[MidLeft]True. You're all good for the landing in Shizon?
+[MidRight]Yeah. You can count on me. I'll be right there by your side.
+[MidLeft]I'm glad. Thanks for sticking with me through all of this.
+[MidRight]We're a team. It's what we do.[X]
+
+## Military7AcceptRetreatHelpKendrickYvetteSupportText
+[ConversationText]
+[MidRight][LoadYvette][MidLeft][LoadKendrick]
+Hey, Yvette...
+[MidRight]What do you want?
+[MidLeft]... Here.
+[MidRight]This is... that gemstone.
+[MidLeft]Yeah. I figure you'll have a better idea what to do with it than me.
+[MidRight]You continue to surprise us all, Kendrick.
+[MidLeft]Well, you know what they say! A predictable businessman lives in poverty.
+[MidRight]... Thanks for helping us out on this mission. I know how much you hate dirtying your hands these days.
+[MidLeft]It's a worthy cause. If Shizonians are out targeting people like Rex, it's only a matter of time before I wake up with a dagger in my back.
+[MidRight]Admit it, you care about the war effort.
+[MidLeft]War is good for business. That being said... It has gotten tiresome. If I have to throw my money behind someone, it might as well be you guys.
+[MidRight]We're glad to have you along.
+[MidLeft]And I'm glad to be here. Your boss will be getting one hell of a bill, though.
+[MidRight]Yeah... Take it up with him. Not me.
+[MidLeft]Haha! Don't worry, I know.[X]
+
+## Military7AcceptRetreatHelpAdelineYvetteSupportText
+[ConversationText]
+[MidLeft][LoadYvette][MidRight][LoadAdeline]
+This is it, Yvette. The last battle against Shizon.
+[MidLeft]I know. Watch your back out there. These are seasoned killers.
+[MidRight]You too. We can't afford to lose anyone here. Especially the General.
+[MidLeft]Right. I'm prepared to lay down my life for him if I must...
+[MidRight]As am I. His leadership is far more important than any of our contributions to the effort.
+[MidLeft]We've got this. We defeated them on the waterfront, we can defeat them here.
+[MidRight]Right. We've got this.[X]
+
+## Military7AcceptRetreatHelpDerekJasperSupportText
+[ConversationText]
+[MidLeft][LoadJasper][MidRight][LoadDerek]
+Hey, Jasper. You ready for this?
+[MidLeft]You know, we've made it this far. Me, you, and [Tact].
+[MidRight]Yeah. We get each other. If we got through the academy and everything leading up to this and now, here we are, fighting against Shizon with the General at our side.
+[MidLeft]It's pretty amazing. Hey, Derek?
+[MidRight]What's up?
+[MidLeft]Don't die on me.
+[MidRight]Same goes for you. [Tact] would be lost without us, wouldn't they? Ha!
+[MidLeft]You know it. We'll win this. For Cesaria.[X]
