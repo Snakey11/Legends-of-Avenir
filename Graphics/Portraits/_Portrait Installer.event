@@ -136,6 +136,18 @@ HelmerPortrait:
 #incbin "Helmer_palette.dmp"
 #incbin "Helmer_minimug.dmp"
 
+HenningPortrait:
+#incbin "Henning_mug.dmp"
+#incbin "Henning_frames.dmp"
+#incbin "Henning_palette.dmp"
+#incbin "Henning_minimug.dmp"
+
+IzukPortrait:
+#incbin "Izuk_mug.dmp"
+#incbin "Izuk_frames.dmp"
+#incbin "Izuk_palette.dmp"
+#incbin "Izuk_minimug.dmp"
+
 JasperPortrait:
 #incbin "Jasper_mug.dmp"
 #incbin "Jasper_frames.dmp"
@@ -268,6 +280,12 @@ WestonPortrait:
 #incbin "Weston_palette.dmp"
 #incbin "Weston_minimug.dmp"
 
+WilliamPortrait:
+#incbin "William_mug.dmp"
+#incbin "William_frames.dmp"
+#incbin "William_palette.dmp"
+#incbin "William_minimug.dmp"
+
 XavusPortrait:
 #incbin "Xavus_mug.dmp"
 #incbin "Xavus_frames.dmp"
@@ -328,6 +346,8 @@ setMugEntry(EmperorMug,EmperorPortrait,3,5,3,3)
 setMugEntry(FinocMug,FinocPortrait,2,5,3,3)
 setMugEntry(ForrestMug,ForrestPortrait,3,5,3,3)
 setMugEntry(HelmerMug,HelmerPortrait,2,5,3,4)
+setMugEntry(HenningMug,HenningPortrait,3,5,3,3)
+setMugEntry(IzukMug,IzukPortrait,3,5,3,3)
 setMugEntry(JasperMug,JasperPortrait,3,5,3,3)
 setMugEntry(JurgenMug,JurgenPortrait,2,6,3,3)
 setMugEntry(KendrickMug,KendrickPortrait,3,4,3,2)
@@ -350,6 +370,7 @@ setMugEntry(ValMug,ValPortrait,3,5,3,3)
 setMugEntry(VicarMug,VicarPortrait,3,5,3,3)
 setMugEntry(WalterMug,WalterPortrait,3,5,3,3)
 setMugEntry(WestonMug,WestonPortrait,3,5,3,3)
+setMugEntry(WilliamMug,WilliamPortrait,3,5,3,3)
 setMugEntry(XavusMug,XavusPortrait,2,5,3,3)
 setMugEntry(XeximMug,XeximPortrait,2,5,3,3)
 setMugEntry(XyliaMug,XyliaPortrait,3,6,3,4)
