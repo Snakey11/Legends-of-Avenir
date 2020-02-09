@@ -1,5 +1,12 @@
 
 {
+#include "Fighter Axe.event"
+
+#include "Fighter Hand Axe.event"
+
+#include "Fighter Unarmed.event"
+}
+{
 #include "Hector Sword.event"
 
 #include "Hector Lance.event"
@@ -117,16 +124,11 @@
 #include "Commander Unarmed.event"
 }
 {
-#include "Hunter F Bow.event"
+#include "Marksman M Sword.event"
 
-#include "Hunter F Unarmed.event"
-}
-{
-#include "Hunter M Sword.event"
+#include "Marksman M Bow.event"
 
-#include "Hunter M Bow.event"
-
-#include "Hunter M Unarmed.event"
+#include "Marksman M Unarmed.event"
 }
 {
 #include "Warlock Axe.event"
@@ -215,4 +217,25 @@
 #include "Spellsword F Sword.event"
 
 #include "Spellsword F Unarmed.event"
+}
+{
+#include "Champion F Sword.event"
+
+#include "Champion F Axe.event"
+
+#include "Champion F Hand Axe.event"
+
+#include "Champion F Unarmed.event"
+}
+{
+#include "Gladiator Sword.event"
+
+#include "Gladiator Axe.event"
+
+#include "Gladiator Hand Axe.event"
+
+#include "Gladiator Unarmed.event"
+}
+{
+#include "Ranger F Lance.event"
 }

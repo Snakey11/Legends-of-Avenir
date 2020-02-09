@@ -1,19 +1,15 @@
 
 {
-#include "Shadow Sword.event"
+#include "Trueblade F Sword.event"
 
-#include "Shadow Unarmed.event"
+#include "Trueblade F Bow.event"
 
+#include "Trueblade F Unarmed.event"
+}
+{
 #include "Truerblade Sword.event"
 
 #include "Truerblade Unarmed.event"
-}
-{
-#include "Fighter Axe.event"
-
-#include "Fighter Hand Axe.event"
-
-#include "Fighter Unarmed.event"
 }
 {
 #include "Wyvern General Axe.event"

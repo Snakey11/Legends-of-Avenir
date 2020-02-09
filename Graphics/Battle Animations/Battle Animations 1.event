@@ -1,20 +1,17 @@
 
 {
-#include "Berserker Sword.event"
-}
-{
 #include "Seraph Knight Magic.event"
 
 #include "Seraph Knight Staff.event"
 }
 {
-#include "Champion Sword.event"
+#include "Champion M Sword.event"
 
-#include "Champion Axe.event"
+#include "Champion M Axe.event"
 
-#include "Champion Hand Axe.event"
+#include "Champion M Hand Axe.event"
 
-#include "Champion Unarmed.event"
+#include "Champion M Unarmed.event"
 }
 {
 #include "Dark Knight Sword.event"
@@ -29,11 +26,11 @@
 #include "Gaiden Sage Staff.event"
 }
 {
-#include "Gladiator Axe.event"
+#include "Baselius Axe.event"
 
-#include "Gladiator Hand Axe.event"
+#include "Baselius Hand Axe.event"
 
-#include "Gladiator Unarmed.event"
+#include "Baselius Unarmed.event"
 }
 {
 #include "Halberdier Spear.event"

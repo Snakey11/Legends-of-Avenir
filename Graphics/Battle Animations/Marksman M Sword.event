@@ -1,7 +1,7 @@
 ///////Animation Install.event///////
     
 PUSH
-AnimTableEntry(HunterMSword) //CHANGE THIS TO THE SLOT YOU ARE REPLACING
+AnimTableEntry(MarksmanMSword) //CHANGE THIS TO THE SLOT YOU ARE REPLACING
 WORD 0 0 0 //empty name field, who cares
 POIN Anim_HunterSword_sectiondata
 POIN Anim_HunterSword_framedata

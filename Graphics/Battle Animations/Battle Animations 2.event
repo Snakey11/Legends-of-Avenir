@@ -36,26 +36,15 @@
 #include "Magus F Staff.event"
 }
 {
-#include "Master Knight M Sword.event"
+#include "Master Knight Sword.event"
 
-#include "Master Knight M Lance.event"
+#include "Master Knight Lance.event"
 
-#include "Master Knight M Axe.event"
+#include "Master Knight Axe.event"
 
-#include "Master Knight M Hand Axe.event"
+#include "Master Knight Hand Axe.event"
 
-#include "Master Knight M Unarmed.event"
-}
-{
-#include "Master Knight F Sword.event"
-
-#include "Master Knight F Lance.event"
-
-#include "Master Knight F Axe.event"
-
-#include "Master Knight F Hand Axe.event"
-
-#include "Master Knight F Unarmed.event"
+#include "Master Knight Unarmed.event"
 }
 {
 #include "Matriarch Magic.event"
