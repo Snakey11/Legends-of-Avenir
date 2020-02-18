@@ -1,4 +1,4 @@
-# Legends-of-Avenir
+# Legends of Avenir
 Legends of Avenir is a fan-made fully-fledged GBA Fire Emblem game. This buildfile is the source for building the game from a clean, English FE8. Written by 1st_Lieutenant_Noguchi and coded by Snakey1.
 
 Although most FE games are more or less linear (with the exception of the occasional route split) Legends of Avenir is unique in that it is entirely composed of route splits! Each "route" is seven chapters long and contains fully custom maps, events, characters, gameplay mechanics, story, and more. Begin your journey in the prologue by choosing your name, gender, and a starting class for your Tactician, and begin making choices. There are over 70 planned chapters, though the project is still in development.
