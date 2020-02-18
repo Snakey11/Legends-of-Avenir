@@ -52,12 +52,13 @@ UNIT Kendrick 0x00 0x00 Level(1,Ally,True) [4,12] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 BeginningScene:
+SVAL 0xB Coords(7,5)
 LOMA PortSelsingCutscene
+LOAD3 0x1 PlayerLoading1
 LOAD2 0x1 DockAllies
 ENUN
 MUSC Zelos
 STAL 0x20
-LOAD3 0x1 PlayerLoading1
 SetBackground(0x7)
 TEXTSHOW Merc4MilitiaKillBeginningText
 TEXTEND
@@ -71,8 +72,11 @@ MUSC Solve_the_Riddle
 STAL 0x10
 FADI 0x5
 CLEN Xena
-LOAD2 0x1 RepositionPeople
-CAM1 [19,15]
+MOVE 0xFFFF Arc [7,6] // Reposition Arc, Luke, and Tact respectively.
+MOVE 0xFFFF Luke [7,5]
+MOVE 0xFFFF 0x00 [6,8]
+ENUN
+TILECHANGE 0x0
 SetBackground(0x7)
 Text(Merc4MilitiaKillOfficialsText)
 FADI 0x5
@@ -87,8 +91,9 @@ STAL 0x20
 Text(0x7,Merc4MilitiaKillKendrickHereText)
 STAL 0x40
 FADI 0x5
+CLEA 0x0
 
-SVAL 0xB 0x080007
+SVAL 0xB Coords(7,8)
 LOMA MercenaryMilitiaKill4
 LOAD3 0x1 PlayerLoading2
 LOAD2 0x1 BoatAllies
@@ -155,7 +160,7 @@ ENDA
 	/*UNIT DATA*/
 
 PlayerLoading1:
-UNIT PlayerMMercenary 0x00 0x00 Level(1,Ally,True) [17,14] 0x00 0x00 0x00 0x00 [0] NoAI 
+UNIT PlayerMMercenary 0x00 0x00 Level(1,Ally,True) [10,6] 0x00 0x00 0x00 0x00 [0] NoAI 
 UNIT
 
 PlayerLoading2:
@@ -166,31 +171,20 @@ PlayerLoading3:
 UNIT PlayerMMercenary 0x00 0x00 Level(1,Ally,True) [12,8] 0x00 0x00 0x00 0x00 [0] NoAI 
 UNIT	
 	
-VillageAllies:
-UNIT Arc Fighter PlayerMArcher Level(1,Ally,True) [12,2] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Luke Monk PlayerMArcher Level(1,Ally,True) [12,4] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Arya Myrmidon_F PlayerMArcher Level(1,Ally,True) [13,4] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT
-	
 DockAllies:
-UNIT Arc Fighter PlayerMArcher Level(1,Ally,True) [17,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Luke Monk PlayerMArcher Level(1,Ally,True) [18,15] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Arya Myrmidon_F PlayerMArcher Level(1,Ally,True) [17,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Arc Fighter PlayerMArcher Level(1,Ally,True) [9,8] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Luke Monk PlayerMArcher Level(1,Ally,True) [8,9] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Arya Myrmidon_F PlayerMArcher Level(1,Ally,True) [9,7] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
 UNIT
 
 Officials:
-UNIT Xena MageKnight PlayerMArcher Level(9,NPC,True) [19,8] 0x00 0x00 0x1 REDA1 [HandAxe,Swordreaver,Vulnerary] [0] 
-UNIT Val Shaman_F PlayerMArcher Level(9,NPC,True) [20,9] 0x00 0x00 0x1 REDA2 [HandAxe,Swordreaver,Vulnerary] [0] 
-UNIT Helmer Mage PlayerMArcher Level(9,NPC,True) [21,9] 0x00 0x00 0x1 REDA3 [HandAxe,Swordreaver,Vulnerary] [0] 
-UNIT
-
-RepositionPeople:
-UNIT Arc Fighter PlayerMArcher Level(1,Ally,True) [19,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
-UNIT Luke Monk PlayerMArcher Level(1,Ally,True) [17,15] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] [0] 
+UNIT Xena MageKnight PlayerMArcher Level(9,NPC,True) [4,0] 0x00 0x00 0x1 REDA7R7 [HandAxe,Swordreaver,Vulnerary] [0] 
+UNIT Val Shaman_F PlayerMArcher Level(9,NPC,True) [4,0] 0x00 0x00 0x1 REDA6R6 [HandAxe,Swordreaver,Vulnerary] [0] 
+UNIT Helmer Soldier PlayerMArcher Level(9,NPC,True) [3,0] 0x00 0x00 0x1 REDA7R5 [HandAxe,Swordreaver,Vulnerary] [0] 
 UNIT
 
 HesHere:
-UNIT Kendrick Pirate PlayerMArcher Level(9,Ally,True) [26,16] 0x00 0x00 0x1 REDA4 [HandAxe,Swordreaver,Vulnerary] [0] 
+UNIT Kendrick Pirate PlayerMArcher Level(9,Ally,True) [0,6] 0x00 0x00 0x1 REDA6R6 [HandAxe,Swordreaver,Vulnerary] [0] 
 UNIT
 
 BoatAllies:
@@ -246,12 +240,3 @@ UNIT Luke Monk PlayerMArcher Level(1,Ally,True) [10,9] 0x00 0x00 0x00 0x00 [Iron
 UNIT Arya Myrmidon_F PlayerMArcher Level(1,Ally,True) [12,8] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] [0] 
 UNIT Kendrick Pirate PlayerMArcher Level(9,Ally,True) [11,8] 0x00 0x00 0x00 0x00 [HandAxe,Swordreaver,Vulnerary] [0] 
 UNIT
-
-REDA1:
-REDA [19,14] 0x0 0x0 0x0 0x0
-REDA2:
-REDA [20,14] 0x0 0x0 0x0 0x0
-REDA3:
-REDA [19,13] 0x0 0x0 0x0 0x0
-REDA4:
-REDA [20,15] 0x0 0x0 0x0 0x0
