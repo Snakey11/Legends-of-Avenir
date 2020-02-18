@@ -793,6 +793,7 @@
 #define RetreatDesertChanges 0xD1
 #define XyliaStairTempleChanges 0xD3
 #define ShizonLandingChanges 0xDC
+#define PortSelsingChanges 0xDF
 
 // Tilesets
 #define OutdoorSnowyObjectSet 0xB5

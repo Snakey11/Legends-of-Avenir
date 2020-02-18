@@ -1583,6 +1583,7 @@ SupportReworkPageSwitch:
 			bne NoSupportsStatScreen
 				mov r0, #0x00
 				strb r0, [ r5 ] @ Move to page 1 instead of 4.
+				str r0, [ r5, #0x14 ] @ null out the pointer to R-text (to prevent glitches there).
 		NoSupportsStatScreen:
 		mov r0, r1
 		strb r0, [ r5, #0x01 ]
@@ -1593,7 +1594,7 @@ SupportReworkPageSwitch:
 		bx r0
 		.ltorg
 @ 0 "" 2
-@ StatScreen.c:106: }
+@ StatScreen.c:107: }
 	.thumb
 	.syntax unified
 	@ sp needed	@
@@ -1611,9 +1612,9 @@ PassSupportDataToRTextHandler:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
-@ StatScreen.c:112: 	asm("@ jumpToHack at 0x08088F50.\n\
+@ StatScreen.c:113: 	asm("@ jumpToHack at 0x08088F50.\n\
 	.syntax divided
-@ 112 "StatScreen.c" 1
+@ 113 "StatScreen.c" 1
 	@ jumpToHack at 0x08088F50.
 		ldrh r0, [ r7 ]	@ +4E
 		ldrh r1, [ r6 ]	@ +4C
@@ -1627,7 +1628,7 @@ PassSupportDataToRTextHandler:
 		bx r1
 		.ltorg
 @ 0 "" 2
-@ StatScreen.c:124: }
+@ StatScreen.c:125: }
 	.thumb
 	.syntax unified
 	@ sp needed	@
@@ -1645,46 +1646,46 @@ CreateNewHelpBubbleProc:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, r5, r6, lr}	@
-@ StatScreen.c:127: {
+@ StatScreen.c:128: {
 	movs	r4, r2	@ proc, tmp142
 	movs	r6, r0	@ idk1, tmp140
 	movs	r5, r1	@ idk2, tmp141
-@ StatScreen.c:128: 	RTextProc* newProc = (RTextProc*)ProcStart(&HelpTextProcCode,(Proc*)3); // idk what's up with the second parameter.
+@ StatScreen.c:129: 	RTextProc* newProc = (RTextProc*)ProcStart(&HelpTextProcCode,(Proc*)3); // idk what's up with the second parameter.
 	ldr	r3, .L198	@ tmp118,
 	movs	r1, #3	@,
 	ldr	r0, .L198+4	@,
 	bl	.L15		@
-@ StatScreen.c:131: 	newProc->char1 = proc->char1;
+@ StatScreen.c:132: 	newProc->char1 = proc->char1;
 	movs	r3, r4	@ tmp121, proc
-@ StatScreen.c:129: 	newProc->idk10 = idk1;
+@ StatScreen.c:130: 	newProc->idk10 = idk1;
 	str	r6, [r0, #88]	@ idk1, newProc_6->idk10
-@ StatScreen.c:130: 	newProc->idk11 = idk2;
+@ StatScreen.c:131: 	newProc->idk11 = idk2;
 	str	r5, [r0, #92]	@ idk2, newProc_6->idk11
-@ StatScreen.c:131: 	newProc->char1 = proc->char1;
+@ StatScreen.c:132: 	newProc->char1 = proc->char1;
 	adds	r3, r3, #41	@ tmp121,
 	ldrb	r2, [r3]	@ _1,
-@ StatScreen.c:131: 	newProc->char1 = proc->char1;
+@ StatScreen.c:132: 	newProc->char1 = proc->char1;
 	movs	r3, r0	@ tmp124, newProc
 	adds	r3, r3, #41	@ tmp124,
 	strb	r2, [r3]	@ _1, newProc_6->char1
-@ StatScreen.c:132: 	newProc->char2 = proc->char2;
+@ StatScreen.c:133: 	newProc->char2 = proc->char2;
 	movs	r3, r4	@ tmp128, proc
 	adds	r3, r3, #42	@ tmp128,
 	ldrb	r2, [r3]	@ _2,
-@ StatScreen.c:132: 	newProc->char2 = proc->char2;
+@ StatScreen.c:133: 	newProc->char2 = proc->char2;
 	movs	r3, r0	@ tmp131, newProc
 	adds	r3, r3, #42	@ tmp131,
 	strb	r2, [r3]	@ _2, newProc_6->char2
-@ StatScreen.c:133: 	newProc->level = proc->level;
+@ StatScreen.c:134: 	newProc->level = proc->level;
 	adds	r4, r4, #43	@ tmp135,
 	ldrb	r3, [r4]	@ _3,
-@ StatScreen.c:133: 	newProc->level = proc->level;
+@ StatScreen.c:134: 	newProc->level = proc->level;
 	adds	r0, r0, #43	@ tmp138,
-@ StatScreen.c:134: }
+@ StatScreen.c:135: }
 	@ sp needed	@
-@ StatScreen.c:133: 	newProc->level = proc->level;
+@ StatScreen.c:134: 	newProc->level = proc->level;
 	strb	r3, [r0]	@ _3, newProc_6->level
-@ StatScreen.c:134: }
+@ StatScreen.c:135: }
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
@@ -1706,9 +1707,9 @@ DrawRTextStatLabelsForSupport:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
-@ StatScreen.c:138: 	asm("@jumpToHack at 0x08089F70.\n\
+@ StatScreen.c:139: 	asm("@jumpToHack at 0x08089F70.\n\
 	.syntax divided
-@ 138 "StatScreen.c" 1
+@ 139 "StatScreen.c" 1
 	@jumpToHack at 0x08089F70.
 		mov r1, r0
 		cmp r1, #0x1
@@ -1747,7 +1748,7 @@ DrawRTextStatLabelsForSupport:
 		bx r1
 		.ltorg
 @ 0 "" 2
-@ StatScreen.c:175: }
+@ StatScreen.c:176: }
 	.thumb
 	.syntax unified
 	@ sp needed	@
@@ -1765,7 +1766,7 @@ DrawRTextStatLabels:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, r5, r6, lr}	@
-@ StatScreen.c:181: 		Text_InsertString(&SomeTextHandle,RTextLabels[i],8,SupportRTextStatNames[i].name);
+@ StatScreen.c:182: 		Text_InsertString(&SomeTextHandle,RTextLabels[i],8,SupportRTextStatNames[i].name);
 	ldr	r5, .L202	@ tmp113,
 	ldr	r4, .L202+4	@ tmp114,
 	movs	r0, r5	@, tmp113
@@ -1783,7 +1784,7 @@ DrawRTextStatLabels:
 	movs	r1, #88	@,
 	ldr	r3, .L202+16	@,
 	bl	.L50		@
-@ StatScreen.c:185: 		Text_InsertString(&SomeTextHandle+1,RTextLabels[i],8,SupportRTextStatNames[i+3].name);
+@ StatScreen.c:186: 		Text_InsertString(&SomeTextHandle+1,RTextLabels[i],8,SupportRTextStatNames[i+3].name);
 	ldr	r5, .L202+20	@ tmp122,
 	movs	r2, #8	@,
 	movs	r0, r5	@, tmp122
@@ -1800,7 +1801,7 @@ DrawRTextStatLabels:
 	movs	r1, #88	@,
 	ldr	r3, .L202+32	@,
 	bl	.L50		@
-@ StatScreen.c:188: }
+@ StatScreen.c:189: }
 	@ sp needed	@
 	movs	r0, #2	@,
 	pop	{r4, r5, r6}
@@ -1831,9 +1832,9 @@ DrawRTextStatValuesForSupport:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
-@ StatScreen.c:192: 	asm("@jumpToHack at 0x08089FD8, just add an extra condition for 0x4\n\
+@ StatScreen.c:193: 	asm("@jumpToHack at 0x08089FD8, just add an extra condition for 0x4\n\
 	.syntax divided
-@ 192 "StatScreen.c" 1
+@ 193 "StatScreen.c" 1
 	@jumpToHack at 0x08089FD8, just add an extra condition for 0x4
 		mov r0, r4
 		blh #0x080892D0, r3 @GetRtextItemBoxType
@@ -1860,7 +1861,7 @@ DrawRTextStatValuesForSupport:
 		bx r1
 		.ltorg
 @ 0 "" 2
-@ StatScreen.c:217: }
+@ StatScreen.c:218: }
 	.thumb
 	.syntax unified
 	@ sp needed	@
@@ -1878,27 +1879,27 @@ DrawRTextStatValues:
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r0, r1, r2, r4, r5, lr}	@
-@ StatScreen.c:222: 	for ( int i = 0 ; i < 6 ; i++ ) { bonuses.vals[i] = 0; }
+@ StatScreen.c:223: 	for ( int i = 0 ; i < 6 ; i++ ) { bonuses.vals[i] = 0; }
 	movs	r3, #0	@ tmp122,
 	mov	r2, sp	@ tmp161,
 	str	r3, [sp]	@ tmp122, MEM[(unsigned char *)&bonuses]
 	strh	r3, [r2, #4]	@ tmp122, MEM[(unsigned char *)&bonuses + 4B]
-@ StatScreen.c:223: 	GetBonusByCharacter(&bonuses,ToUnit(proc->char1),proc->char2);
+@ StatScreen.c:224: 	GetBonusByCharacter(&bonuses,ToUnit(proc->char1),proc->char2);
 	movs	r3, r0	@ tmp128, proc
 	adds	r3, r3, #41	@ tmp128,
-@ StatScreen.c:220: {
+@ StatScreen.c:221: {
 	movs	r4, r0	@ proc, tmp159
-@ StatScreen.c:223: 	GetBonusByCharacter(&bonuses,ToUnit(proc->char1),proc->char2);
+@ StatScreen.c:224: 	GetBonusByCharacter(&bonuses,ToUnit(proc->char1),proc->char2);
 	ldrb	r0, [r3]	@ tmp129,
 	bl	ToUnit		@
-@ StatScreen.c:223: 	GetBonusByCharacter(&bonuses,ToUnit(proc->char1),proc->char2);
+@ StatScreen.c:224: 	GetBonusByCharacter(&bonuses,ToUnit(proc->char1),proc->char2);
 	adds	r4, r4, #42	@ tmp132,
-@ StatScreen.c:223: 	GetBonusByCharacter(&bonuses,ToUnit(proc->char1),proc->char2);
+@ StatScreen.c:224: 	GetBonusByCharacter(&bonuses,ToUnit(proc->char1),proc->char2);
 	movs	r1, r0	@ _3, tmp160
 	ldrb	r2, [r4]	@ tmp133,
 	mov	r0, sp	@,
 	bl	GetBonusByCharacter		@
-@ StatScreen.c:226: 		Text_InsertNumberOr2Dashes(&SomeTextHandle,RTextStats[i],7,bonuses.vals[i]);
+@ StatScreen.c:227: 		Text_InsertNumberOr2Dashes(&SomeTextHandle,RTextStats[i],7,bonuses.vals[i]);
 	mov	r3, sp	@ tmp163,
 	ldr	r5, .L206	@ tmp137,
 	ldr	r4, .L206+4	@ tmp138,
@@ -1919,7 +1920,7 @@ DrawRTextStatValues:
 	movs	r1, #120	@,
 	ldrb	r3, [r3, #2]	@ tmp144,
 	bl	.L50		@
-@ StatScreen.c:230: 		Text_InsertNumberOr2Dashes(&SomeTextHandle+1,RTextStats[i],7,bonuses.vals[i+3]);
+@ StatScreen.c:231: 		Text_InsertNumberOr2Dashes(&SomeTextHandle+1,RTextStats[i],7,bonuses.vals[i+3]);
 	mov	r3, sp	@ tmp166,
 	ldr	r5, .L206+8	@ tmp149,
 	movs	r2, #7	@,
@@ -1939,7 +1940,7 @@ DrawRTextStatValues:
 	movs	r1, #120	@,
 	ldrb	r3, [r3, #5]	@ tmp156,
 	bl	.L50		@
-@ StatScreen.c:232: }
+@ StatScreen.c:233: }
 	@ sp needed	@
 	pop	{r0, r1, r2, r4, r5}
 	pop	{r0}
@@ -1963,9 +1964,9 @@ NewBoxType:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
-@ StatScreen.c:236: 	asm("ldr r0, =#0xFFFE\n\
+@ StatScreen.c:237: 	asm("ldr r0, =#0xFFFE\n\
 	.syntax divided
-@ 236 "StatScreen.c" 1
+@ 237 "StatScreen.c" 1
 	ldr r0, =#0xFFFE
 		cmp r4, r0
 		bne CheckForSupportData
@@ -1984,7 +1985,7 @@ NewBoxType:
 		bx r1
 		.ltorg
 @ 0 "" 2
-@ StatScreen.c:253: }
+@ StatScreen.c:254: }
 	.thumb
 	.syntax unified
 	@ sp needed	@
@@ -2001,19 +2002,19 @@ SupportScreenRTextGetter:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-@ StatScreen.c:258: 	Unit* current = gStatScreen.curr;
+@ StatScreen.c:259: 	Unit* current = gStatScreen.curr;
 	ldr	r3, .L222	@ tmp125,
-@ StatScreen.c:257: {
+@ StatScreen.c:258: {
 	push	{r4, r5, r6, lr}	@
-@ StatScreen.c:258: 	Unit* current = gStatScreen.curr;
+@ StatScreen.c:259: 	Unit* current = gStatScreen.curr;
 	ldr	r6, [r3, #12]	@ current, gStatScreen.curr
 @ MemoryManagement.c:131: 		if ( unit->supports[i] )
 	movs	r2, r6	@ tmp127, current
-@ StatScreen.c:257: {
+@ StatScreen.c:258: {
 	movs	r5, r0	@ proc, tmp146
 @ MemoryManagement.c:129: 	for ( int i = 0 ; i < 5 ; i++ )
 	movs	r4, #0	@ i,
-@ StatScreen.c:259: 	int loc = GetNthValidSupport(current,*(proc->rTextData+0x12));
+@ StatScreen.c:260: 	int loc = GetNthValidSupport(current,*(proc->rTextData+0x12));
 	ldr	r3, [r0, #44]	@ tmp149, proc_14(D)->rTextData
 	ldrb	r3, [r3, #18]	@ n, MEM[(char *)_1 + 18B]
 @ MemoryManagement.c:131: 		if ( unit->supports[i] )
@@ -2037,39 +2038,39 @@ SupportScreenRTextGetter:
 @ MemoryManagement.c:137: 	return 0xFF; // nth valid support doesn't exist.
 	adds	r4, r4, #250	@ i,
 .L211:
-@ StatScreen.c:261: 	proc->textID = 0x046B; // Store text ID for RText.
+@ StatScreen.c:262: 	proc->textID = 0x046B; // Store text ID for RText.
 	ldr	r3, .L222+4	@ tmp129,
-@ StatScreen.c:262: 	proc->char1 = ToCharID(current); // Store the characters and support level.
+@ StatScreen.c:263: 	proc->char1 = ToCharID(current); // Store the characters and support level.
 	movs	r0, r6	@, current
-@ StatScreen.c:261: 	proc->textID = 0x046B; // Store text ID for RText.
+@ StatScreen.c:262: 	proc->textID = 0x046B; // Store text ID for RText.
 	str	r3, [r5, #76]	@ tmp129, MEM[(short unsigned int *)proc_14(D) + 76B]
-@ StatScreen.c:262: 	proc->char1 = ToCharID(current); // Store the characters and support level.
+@ StatScreen.c:263: 	proc->char1 = ToCharID(current); // Store the characters and support level.
 	bl	ToCharID		@
-@ StatScreen.c:262: 	proc->char1 = ToCharID(current); // Store the characters and support level.
+@ StatScreen.c:263: 	proc->char1 = ToCharID(current); // Store the characters and support level.
 	movs	r3, r5	@ tmp132, proc
 	adds	r3, r3, #41	@ tmp132,
-@ StatScreen.c:269: 		proc->char2 = 0;
+@ StatScreen.c:270: 		proc->char2 = 0;
 	movs	r1, #0	@ cstore_23,
-@ StatScreen.c:262: 	proc->char1 = ToCharID(current); // Store the characters and support level.
+@ StatScreen.c:263: 	proc->char1 = ToCharID(current); // Store the characters and support level.
 	strb	r0, [r3]	@ tmp147, proc_14(D)->char1
-@ StatScreen.c:263: 	if ( loc != 0xFF )
+@ StatScreen.c:264: 	if ( loc != 0xFF )
 	cmp	r4, #255	@ i,
 	beq	.L213		@,
-@ StatScreen.c:265: 		proc->char2 = current->supports[loc]; // This is getting which index this is from the ROM RText data, representing the nth valid support.
+@ StatScreen.c:266: 		proc->char2 = current->supports[loc]; // This is getting which index this is from the ROM RText data, representing the nth valid support.
 	adds	r4, r6, r4	@ tmp134, current, i
 	adds	r4, r4, #52	@ tmp137,
 	ldrb	r1, [r4]	@ cstore_23, *current_13
 .L213:
 	movs	r3, r5	@ tmp140, proc
 	adds	r3, r3, #42	@ tmp140,
-@ StatScreen.c:271: 	proc->level = GetSupportLevel(current,proc->char2);
+@ StatScreen.c:272: 	proc->level = GetSupportLevel(current,proc->char2);
 	movs	r0, r6	@, current
 	strb	r1, [r3]	@ cstore_23, proc_14(D)->char2
 	bl	GetSupportLevel		@
-@ StatScreen.c:271: 	proc->level = GetSupportLevel(current,proc->char2);
+@ StatScreen.c:272: 	proc->level = GetSupportLevel(current,proc->char2);
 	adds	r5, r5, #43	@ tmp144,
 	strb	r0, [r5]	@ tmp148, proc_14(D)->level
-@ StatScreen.c:272: }
+@ StatScreen.c:273: }
 	@ sp needed	@
 	pop	{r4, r5, r6}
 	pop	{r0}
@@ -2091,41 +2092,41 @@ SupportScreenRTextLooper:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-@ StatScreen.c:276: 	Unit* current = gStatScreen.curr;
+@ StatScreen.c:277: 	Unit* current = gStatScreen.curr;
 	ldr	r3, .L238	@ tmp123,
-@ StatScreen.c:275: {
+@ StatScreen.c:276: {
 	push	{r4, r5, r6, lr}	@
-@ StatScreen.c:276: 	Unit* current = gStatScreen.curr;
+@ StatScreen.c:277: 	Unit* current = gStatScreen.curr;
 	ldr	r5, [r3, #12]	@ current, gStatScreen.curr
-@ StatScreen.c:275: {
+@ StatScreen.c:276: {
 	movs	r4, r0	@ proc, tmp132
-@ StatScreen.c:277: 	if ( !CountSupports(current) ) { RTextLeft(proc); }
+@ StatScreen.c:278: 	if ( !CountSupports(current) ) { RTextLeft(proc); }
 	movs	r0, r5	@, current
 	bl	CountSupports		@
-@ StatScreen.c:277: 	if ( !CountSupports(current) ) { RTextLeft(proc); }
+@ StatScreen.c:278: 	if ( !CountSupports(current) ) { RTextLeft(proc); }
 	cmp	r0, #0	@ tmp133,
 	bne	.L225		@,
-@ StatScreen.c:277: 	if ( !CountSupports(current) ) { RTextLeft(proc); }
+@ StatScreen.c:278: 	if ( !CountSupports(current) ) { RTextLeft(proc); }
 	movs	r0, r4	@, proc
 	ldr	r3, .L238+4	@ tmp124,
 .L237:
-@ StatScreen.c:284: 			if ( GetNthValidSupport(current,*(proc->rTextData+0x12)) == 0xFF ) { RTextDown(proc) ; return; }
+@ StatScreen.c:285: 			if ( GetNthValidSupport(current,*(proc->rTextData+0x12)) == 0xFF ) { RTextDown(proc) ; return; }
 	bl	.L15		@
 .L224:
-@ StatScreen.c:293: }
+@ StatScreen.c:294: }
 	@ sp needed	@
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
 .L225:
-@ StatScreen.c:281: 		if ( proc->direction == 0x80 )
+@ StatScreen.c:282: 		if ( proc->direction == 0x80 )
 	movs	r3, r4	@ tmp127, proc
 	adds	r3, r3, #80	@ tmp127,
-@ StatScreen.c:281: 		if ( proc->direction == 0x80 )
+@ StatScreen.c:282: 		if ( proc->direction == 0x80 )
 	ldrh	r3, [r3]	@ tmp128,
 	cmp	r3, #128	@ tmp128,
 	bne	.L224		@,
-@ StatScreen.c:284: 			if ( GetNthValidSupport(current,*(proc->rTextData+0x12)) == 0xFF ) { RTextDown(proc) ; return; }
+@ StatScreen.c:285: 			if ( GetNthValidSupport(current,*(proc->rTextData+0x12)) == 0xFF ) { RTextDown(proc) ; return; }
 	ldr	r3, [r4, #44]	@ tmp135, proc_10(D)->rTextData
 	ldrb	r2, [r3, #18]	@ n, MEM[(char *)_3 + 18B]
 	movs	r3, r5	@ ivtmp.208, current
@@ -2146,7 +2147,7 @@ SupportScreenRTextLooper:
 @ MemoryManagement.c:129: 	for ( int i = 0 ; i < 5 ; i++ )
 	cmp	r3, r5	@ ivtmp.208, _22
 	bne	.L228		@,
-@ StatScreen.c:284: 			if ( GetNthValidSupport(current,*(proc->rTextData+0x12)) == 0xFF ) { RTextDown(proc) ; return; }
+@ StatScreen.c:285: 			if ( GetNthValidSupport(current,*(proc->rTextData+0x12)) == 0xFF ) { RTextDown(proc) ; return; }
 	movs	r0, r4	@, proc
 	ldr	r3, .L238+8	@ tmp131,
 	b	.L237		@

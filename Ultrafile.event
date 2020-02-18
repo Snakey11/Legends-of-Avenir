@@ -26,28 +26,28 @@
 	#endif
 	//#define TESTING
 	#ifdef __PRIVATE__
-		MESSAGE Compiling PRIVATE release
+		MESSAGE Assembling PRIVATE release
 	#endif
 	#ifdef __PUBLIC__
-		MESSAGE Compiling PUBLIC release
+		MESSAGE Assembling PUBLIC release
 	#endif
 	#ifndef __NO_MERCENARY__
-		MESSAGE Compiling with mercenary
+		MESSAGE Assembling with mercenary
 	#else
-		MESSAGE Compiling without mercenary
+		MESSAGE Assembling without mercenary
 	#endif
 	#ifndef __NO_MILITARY__
-		MESSAGE Compiling with military
+		MESSAGE Assembling with military
 	#else
-		MESSAGE Compiling without military
+		MESSAGE Assembling without military
 	#endif
 	#ifndef __NO_MAGE__
-		MESSAGE Compiling with mage
+		MESSAGE Assembling with mage
 	#else
-		MESSAGE Compiling without mage
+		MESSAGE Assembling without mage
 	#endif
 	#ifdef __DEBUG__
-		MESSAGE Compiling with debug features
+		MESSAGE Assembling with debug features
 	#endif
 	
 	#ifdef TESTING // For clean-ROM-style testing

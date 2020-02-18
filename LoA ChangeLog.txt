@@ -1,3 +1,9 @@
+Hotfixes before v1.10
+Fixed a bug in the ending of Military Accept Retreat Leave where character death quotes would play during battles
+Fixed Mercenary Militia Kill 4 crashing at the start (with a new cutscene map)
+Made some minot text edits
+Also fixed a bug where the new route wouldn't be accessible. Oops
+
 v1.9
 New route! Kill the boss of chapter 4 after accepting the promotion in the military
 Stance skills have been fixed back to +2 and +3 stats

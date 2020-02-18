@@ -94,6 +94,7 @@ void SupportReworkPageSwitch(void)
 			bne NoSupportsStatScreen\n\
 				mov r0, #0x00\n\
 				strb r0, [ r5 ] @ Move to page 1 instead of 4.\n\
+				str r0, [ r5, #0x14 ] @ null out the pointer to R-text (to prevent glitches there).\n\
 		NoSupportsStatScreen:\n\
 		mov r0, r1\n\
 		strb r0, [ r5, #0x01 ]\n\

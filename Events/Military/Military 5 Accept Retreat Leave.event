@@ -123,7 +123,7 @@ VisitVillage:
 MUSI
 Text(0x02,Military5AcceptRetreatLeaveVillageText)
 STAL 0x08
-GiveItem(ShortAxe,0xFFFF)
+GiveItem(Elixir,0xFFFF)
 NoFade
 EndA2
 

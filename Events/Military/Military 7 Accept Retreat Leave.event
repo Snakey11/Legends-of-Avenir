@@ -149,6 +149,9 @@ CHECK_ALIVE Xylia
 BEQ 0x0 0x0 0xC
 	// If Xylia is alive.
 	ENUF 0x13 // Enable Tact's death quote.
+	ENUF 0x18 // Disable some death quotes.
+	ENUF 0x19
+	ENUF 0x1A
 	Text(0x0C,Military7AcceptRetreatLeaveXyliaAliveText)
 	MUSC Raid
 	STAL 0x20
@@ -270,6 +273,9 @@ BEQ 0x0 0x0 0xC
 LABEL 0x0
 	// If Xylia is dead.
 	ENUF 0x14 // Enable Tact's death quote.
+	ENUT 0x18 // Disable some death quotes.
+	ENUT 0x19
+	ENUT 0x1A
 	FADU 0x05
 	STAL 0x10
 	Text(Military7AcceptRetreatLeaveDeadEndingText)

@@ -17,7 +17,7 @@ So, Xylia, what is our plan of action for this?
 Efil is moving quickly. He's trying to find a way of stabilizing the Inge and Vene...
 [Left]He's a fool. They are too far out of balance. If we don't do something, all of Avenir-
 [FarRight]We know, Xylia. But you can't expect all of humanity to stand by as we harvest them for their Inge to rebalance the energies. They will fight to the bitter end.
-[Left]I know... You'd think they'd a bit less selfish...
+[Left]I know... You'd think they'd be a bit less selfish...
 [Right]Humans only care for their lives, not for the world they inhabit. They will die either way. This way, our world can endure, and other life can continue on.
 [FarLeft]Regardless, we don't have much time. Efil is mobilizing the Sateenkaari to the north, and his close alliance with Maximus of Cesaria and Uzkalis of Arcanae means that we can expect parts of both those countries on our doorstep.
 [FarRight]The Arcanians and Cesarians will never cease fighting, and because of that, the energies will only grow more imbalanced. I don't care what Efil thinks he'll accomplish... Unless he can convince them to permanently stop their warring, this world will end.
@@ -40,10 +40,10 @@ So you were planning on... sacrificing humanity? To save the world?
 ## Military7AcceptRetreatLeavePast2Text
 [ConversationText]
 [MidLeft][LoadSoldier4][MidRight][LoadXylia]
-They are routed. Much of Efil's followers lay defeated... But where is the man himself?
+They are routed. Many of Efil's followers lie defeated... But where is the man himself?
 [MidLeft]Lady Xylia. Efil has escaped. They are sealing us within.
 [MidRight]What? No! Dammit! I'll try to break the seal...
-[MidLeft]It is a perfect one way seal. There is no way out.
+[MidLeft]It is a perfect one-way seal. There is no way out.
 [MidRight]So we'll need someone to come here to break it? Dammit...
 [MidLeft]Efil is already moving on Kilthel...
 [MidRight]Kilthel... No![X]
@@ -58,7 +58,7 @@ Kilthel! Your tyranny ends here!
 [Right]We're aware. We think we can take them.
 [MidLeft]And then what? All of Avenir will fall victim to the overflowing Vene!
 [FarRight]Lies. Arcanae has agreed to halt their research in favor of protecting the world. Temporarily, of course, until we can find a better way to do it.
-[MidLeft]And as soon as me, the threat to your livelihoods is gone, then what? Cesaria and Arcanae will return to their war! The Vene and Inge will grow ever more unbalanced! At that point, if you aren't willing to give up your lives to balance the energies, then you'll die in the blight that will sweep Avenir.
+[MidLeft]And as soon as I, the threat to your livelihoods, is gone, then what? Cesaria and Arcanae will return to their war! The Vene and Inge will grow ever more unbalanced! At that point, if you aren't willing to give up your lives to balance the energies, then you'll die in the blight that will sweep Avenir.
 [FarRight][ClearFace][LoadMaximus]That's a risk we're willing to take. It at least gives us time to figure something out.
 [MidLeft]So you mean to oppose me, a Higher Being?
 [Right]If it gives us a chance at living, we'll do it.[X]
@@ -90,7 +90,7 @@ Hm... What you've told us is concerning, Remus.
 [MidRight]I know. But our best option is to go along with it. Best case scenario, she helps us after this is all through.
 [FarLeft]I think Remus is right.
 [Left]So it's just me finding this all suspicious?
-[FarLeft]Oh I find it suspicious, but I bet that if we were to try and fight Xylia now, we'd be dead too quickly. This way, if she's willing to help us, we've not screwed Cesaria over. If she isn't, at least the others will be on our side.
+[FarLeft]Oh, I find it suspicious, but I bet that if we were to try and fight Xylia now, we'd be dead too quickly. This way, if she's willing to help us, we've not screwed Cesaria over. If she isn't, at least the others will be on our side.
 [Left]You make a good point, Yvette. We'll head out and help her with this task. But we all need to be on guard.
 [MidRight]Right.[X]
 
@@ -98,7 +98,7 @@ Hm... What you've told us is concerning, Remus.
 [ConversationText]
 [MidLeft][LoadPlayer][FarRight][LoadDerek][Right][LoadJasper]
 So... This is our last task before heading back to Cesaria. And you're sure Xylia will help us?
-[MidLeft]If she doesn't, we'll just have to take her down and head back to Cesaria empty handed.
+[MidLeft]If she doesn't, we'll just have to take her down and head back to Cesaria empty-handed.
 [FarRight]Right.
 [Right]We've been fighting alongside together long enough that I trust you, [Tact], but I hope you know how big of a risk this is.
 [MidLeft]I'm aware. But we have the strength of numbers over her. If she tries to turn on us, we make our move quickly and swiftly.
@@ -186,12 +186,12 @@ So... That's that... Efil is defeated...
 [Right][LoadPlayer][FarRight][LoadAdeline][MidLeft][LoadXylia]
 Seems you are a clever one.
 [Right][MoveRight]What!?
-[MidLeft]Oh, [Tact], you fool. I never cared for your petty conflict. I simply saw your rage and desire to be noticed amongst Cesarians, and manipulatedyou to help me. You wanted to prove yourself. I convinced you that you had that opportunity.
+[MidLeft]Oh, [Tact], you fool. I never cared for your petty conflict. I simply saw your rage and desire to be noticed amongst Cesarians, and manipulated you to help me. You wanted to prove yourself. I convinced you that you had that opportunity.
 [Right]You... lied. You lied!
 [FarRight][MoveFarRight]Dammit, [Tact]!
 [MidLeft]Yes... Fight each other! See who has more power![CloseSpeech]
 [Events]
-[CloseSpeech][MoveLeft][FarLeft][LoadYvette]I'm here Adeline! Remus is trying to deal with Zaheva!
+[CloseSpeech][MoveLeft][FarLeft][LoadYvette]I'm here, Adeline! Remus is trying to deal with Zaheva!
 [Right]Damn you, Xylia.
 [Left]Have fun![ClearFace][....][LoadDerek]
 [Tact]! Are you okay?
@@ -211,18 +211,18 @@ Don't think you're getting off easy, Xylia![X]
 Another enemy?
 [MidRight]You don't interest me. Stand aside.
 [MidLeft]No!
-[MidRight]Very well then.[X]
+[MidRight]Very well, then.[X]
 
 ## Military7AcceptRetreatLeaveAliveDerekDeadText
 [ConversationText]
 [MidLeft][LoadNarrator][MidRight][LoadXylia]
-Well this is unexpected...
+Well, this is unexpected...
 [MidLeft]Oh, it's you.
 [MidRight]Long time no see.
 [MidLeft]Yeah, really. What mess have you caused this time?
 [MidRight]Nothing, just getting a bit of revenge on Efil.
 [MidLeft]Huh. Well, I have beef with [Tact] here, so...
-[MidRight]Oh no worries, I'll get out of your way.[X]
+[MidRight]Oh, no worries, I'll get out of your way.[X]
 
 ## Military7AcceptRetreatLeaveAliveDerekDead2Text
 [ConversationText]
