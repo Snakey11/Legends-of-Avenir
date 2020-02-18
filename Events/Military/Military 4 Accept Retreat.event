@@ -402,7 +402,7 @@ UNIT Shizonian Knight BossArya Level(12,Enemy,True) [4,12] 0x00 0x00 0x00 0x00 [
 UNIT
 
 Shizonians2:
-UNIT Shizonian Archer BossArya Level(10,Enemy,True) [7,9] 0x00 0x00 0x00 0x00 [IronShortbow] NoAI
+UNIT Shizonian Archer BossArya Level(10,Enemy,True) [7,9] Drop 0x00 0x00 0x00 [IronShortbow,Vulnerary] NoAI
 UNIT Shizonian Myrmidon BossArya Level(13,Enemy,True) [6,5] 0x00 0x00 0x00 0x00 [IronSword] ChaseOnceApproachedAI
 UNIT Shizonian Soldier BossArya Level(14,Enemy,True) [2,19] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
 UNIT Shizonian Shaman BossArya Level(13,Enemy,True) [0,18] 0x00 0x00 0x00 0x00 [Luna] AttackInRangeAI
