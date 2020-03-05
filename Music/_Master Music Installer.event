@@ -42,8 +42,8 @@ SongTable(Lloyd,songLloyd)
 #include "Lloyd.event"
 
 
-SongTable(Beedles_Shop,songBeedlesShop)
-#include "BeedlesShop.event"
+//SongTable(Beedles_Shop,songBeedlesShop)
+//#include "BeedlesShop.event"
 
 SongTable(Dry_Trail,songDryTrail)
 #include "DryTrail.event"

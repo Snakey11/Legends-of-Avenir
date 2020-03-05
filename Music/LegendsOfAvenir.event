@@ -1,10 +1,11 @@
 //Event file generated from Sappy .s format.
+
 	#include "MPlayDef.event"
 
 	#define	LegendsOfAvenir_grp  voicegroup000
 	#define	LegendsOfAvenir_pri  0
 	#define	LegendsOfAvenir_rev  0
-	#define	LegendsOfAvenir_mvl  190
+	#define	LegendsOfAvenir_mvl  150
 	#define	LegendsOfAvenir_key  0
 	#define	LegendsOfAvenir_tbs  1
 	#define	LegendsOfAvenir_exg  0
