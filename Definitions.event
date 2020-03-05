@@ -1147,6 +1147,19 @@
 //LabelEnd
 
 //Label Music Definitions
+#define Wind_Sound 0x47
+#define Wind_Sound_with_Birds 0x48
+#define Lava_Sound 0x49
+#define Night_Sound 0x4A
+#define Water_Sound 0x4B
+#define Birds_Sound 0x4C
+#define Swoosh_Sound 0x4D
+#define Strong_Wind_Sound 0x4E
+#define Strong_Wind_Sound_Stopping 0x4F
+#define Blizzard_Sound 0x50
+#define Soft_Birds_Sound 0x52
+#define River_Sound 0x53
+
 #define Legends_of_Avenir 0x0043 // Overwrite the main theme
 #define Encounter_with_Renegades 0x0400
 #define Dry_Trail 0x0401
