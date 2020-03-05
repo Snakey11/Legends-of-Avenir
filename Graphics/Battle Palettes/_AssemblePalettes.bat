@@ -9,11 +9,11 @@ rem does not call png2dmp for files where the existing .dmp file is newer than t
 set FILE_MATCH=*.png
 set png2dmp=%~dp0Png2Dmp.exe
 
-for /R %%F in (%FILE_MATCH%) do (
+for /R "%~dp0" %%F in (%FILE_MATCH%) do (
     set SHOULD_COMPILE=0
-    set DUMP_FILE=%%~nF%.dmp
+    set DUMP_FILE=%%~dF%%~pF%%~nF%.dmp
     if exist "!DUMP_FILE!" (
-	For /F "Delims=" %%I In ('dir /b /OD "!DUMP_FILE!" "%%~nxF" ^| more +1') Do Set NEWER=%%I
+	For /F "Delims=" %%I In ('dir /b /OD "!DUMP_FILE!" "%%F" ^| more +1') Do Set NEWER=%%I
 	if "!NEWER!" == "%%~nxF" (
 	    set SHOULD_COMPILE=1
 	)
