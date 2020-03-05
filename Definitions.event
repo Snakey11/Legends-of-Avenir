@@ -303,6 +303,9 @@
 #define GenericBandit 0x8A
 #define Pascal 0x8B
 #define XeximClone 0x8C
+#define BossVal 0x8D
+#define Clint 0x8E
+#define Blaine 0x8F
 //LabelEnd
 
 //Label Portrait Defenitions
@@ -378,6 +381,7 @@
 #define HenningMug 0xEF
 #define IzukMug 0xF0
 #define WilliamMug 0xF1
+#define ClintMug 0xF2
 
 #define MerchantMug 0x31 // Breguet
 #define GerwickMug 0x32 // Bone
@@ -1431,7 +1435,7 @@
 #define BarricadeID 187 //General
 #define BarricadePlusID 188 //Commander
 #define PointBlankID 189 //DONE
-#define PerfectionistID 190 //DONE
+#define PerfectionistID 190 //DONE					Clint	
 #define PuissanceID 191 //DONE
 #define BattleVeteranID 192 //DONE
 #define HolyAuraID 193 //DONE

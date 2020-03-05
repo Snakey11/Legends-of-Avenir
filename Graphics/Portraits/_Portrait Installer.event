@@ -76,6 +76,12 @@ ClaraPortrait:
 #incbin "Clara_palette.dmp"
 #incbin "Clara_minimug.dmp"
 
+ClintPortrait:
+#incbin "Clint_mug.dmp"
+#incbin "Clint_frames.dmp"
+#incbin "Clara_palette.dmp"
+#incbin "Clint_minimug.dmp"
+
 ConnorPortrait:
 #incbin "Connor_mug.dmp"
 #incbin "Connor_frames.dmp"
@@ -336,6 +342,7 @@ setMugEntry(BaretMug,BaretPortrait,3,5,3,3)
 setMugEntry(BlaineMug,BlainePortrait,3,4,3,2)
 setMugEntry(ChristinaMug,ChristinaPortrait,3,5,3,3)
 setMugEntry(ClaraMug,ClaraPortrait,3,6,3,4)
+setMugEntry(ClintMug,ClintPortrait,2,5,3,3)
 setMugEntry(ConnorMug,ConnorPortrait,3,5,3,3)
 setMugEntry(CougarMug,CougarPortrait,2,5,3,3)
 setMugEntry(DerekMug,DerekPortrait,2,5,2,3)
