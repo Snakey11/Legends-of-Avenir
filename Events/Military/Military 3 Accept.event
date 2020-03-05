@@ -126,6 +126,7 @@ GotoPrepScreen
 //Label EndingScene
 EndingScene: // The boss was killed.
 MUSC Victorys_Delight
+FADI 0x5
 #ifdef __DEBUG__
 	CHECK_TURNS
 	SVAL 0x1 3
@@ -136,6 +137,14 @@ MUSC Victorys_Delight
 	LABEL 0x0
 #endif
 CALL RevealAll
+LOAD1 0x1 LoadCougar
+ENUN
+GiveToSupplySilent(SteelSword)
+GiveToSupplySilent(Armorslayer)
+GiveToSupplySilent(Javelin)
+GiveToSupplySilent(HandAxe)
+GiveToSupplySilent(SteelAxe)
+GiveToSupplySilent(ToxinBow)
 SetBackground(0x25)
 Text(Military3AcceptBossDeadText)
 MoveToChapter(MilitaryAcceptHold4)
@@ -143,6 +152,7 @@ NoFade
 EndA2
 
 Retreat: // Tact activated the escape.
+FADI 0x5
 MUSC Heavens_Rock_Seat
 #ifdef __DEBUG__
 	CHECK_TURNS
@@ -347,4 +357,8 @@ UNIT Arcanian Cavalier Sean Level(9,Enemy,True) [11,23] 0x00 0x00 0x00 0x00 [Poi
 UNIT Arcanian Cavalier Sean Level(10,Enemy,True) [20,10] 0x00 0x00 0x00 0x00 [IronBlade] NoAI
 UNIT Arcanian Pirate Sean Level(9,Enemy,True) [6,23] 0x00 0x00 0x00 0x00 [Hammer] NoAI
 UNIT Arcanian Mage Sean Level(8,Enemy,True) [20,5] 0x00 0x00 0x00 0x00 [Elfire] NoAI
+UNIT
+
+LoadCougar:
+UNIT Cougar WyvernRider 0x00 Level(9,Ally,True) [0xFF,0] 0x00 0x00 0x00 0x00 [Javelin,Axereaver,MasterSeal] NoAI
 EndUnit
