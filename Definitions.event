@@ -856,6 +856,10 @@
 #define Military5AcceptRetreatHelpEvents 0xD6
 #define Military6AcceptRetreatHelpEvents 0xD7
 #define Military7AcceptRetreatHelpEvents 0xD8
+#define Military4AcceptHoldEvents 0xE0
+#define Military5AcceptHoldEvents 0xE1
+#define Military6AcceptHoldEvents 0xE2
+#define Military7AcceptHoldEvents 0xE3
 // Good until 0xEB
 //LabelEnd
 

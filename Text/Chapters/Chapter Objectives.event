@@ -194,3 +194,17 @@ advancing the map.[X]
 ## Military7AcceptRetreatHelpStatusText
 Defeat all clones[NL]
 of Xexim.[X]
+
+## Military4AcceptHoldStatusText
+Defeat Val.[X]
+
+## Military5AcceptHoldStatusText
+Defeat all Arcanians[NL]
+and free the soldiers.[X]
+
+## Military6AcceptHoldStatusText
+Defeat Clint.[X]
+
+## Military7AcceptHoldStatusText
+Defeat Xavus[NL]
+and Uzkalis.[X]
