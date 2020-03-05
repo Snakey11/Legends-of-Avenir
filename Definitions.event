@@ -758,6 +758,7 @@
 #define ShizonLanding3Map 0xDB
 #define ShizonWaterShrineMap 0xDD
 #define KendrickShipMap 0xDE
+#define RipBlaineMap 0xE4
 
 //Map Changes
 
