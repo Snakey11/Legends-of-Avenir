@@ -21,8 +21,8 @@ POIN BeginningScene EndingScene
 TurnBasedEvents:
 TurnEventPlayer(0x00,Turn2,2)
 TurnEventPlayer(0x00,AdelineRemusHere,3)
-TurnEventPlayer(0x00,Turn4,4)
 TurnEventEnemy(0x00,ThiefHere,4)
+TurnEventPlayer(0x00,Turn5,5)
 InfiniteTurnEventPlayer(0x00,Turn7,7)
 TurnEventPlayer(0x00,Turn9,9)
 InfiniteTurnEventPlayer(0x00,Turn10,10)
@@ -212,9 +212,9 @@ Text(Military3AcceptAdelineRemusText)
 NoFade
 EndA2
 
-Turn4:
+Turn5:
 CamON
-LOAD1 0x1 Turn4Units
+LOAD1 0x1 Turn5Units
 ENUN
 CamOFF
 NoFade
@@ -324,7 +324,7 @@ UNIT Adeline Archer_F 0x00 Level(8,Ally,True) [0,5] 0x00 0x00 0x01 REDA5R4 [Stee
 UNIT Remus Soldier 0x00 Level(9,Ally,True) [0,4] 0x00 0x00 0x01 REDA5R5 [SteelLance,Vulnerary] NoAI
 UNIT
 
-Turn4Units:
+Turn5Units:
 UNIT Arcanian Cavalier Sean Level(8,Enemy,True) [0,22] Drop 0x00 0x00 0x00 [Dragonspear] NoAI
 UNIT Arcanian Knight Sean Level(12,Enemy,True) [6,23] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
 UNIT Arcanian Shaman Sean Level(9,Enemy,True) [7,23] 0x00 0x00 0x00 0x00 [Flux] NoAI
@@ -337,7 +337,6 @@ UNIT Looter Thief Looter Level(6,Enemy,True) [9,0] Drop 0x00 0x00 0x00 [SlimSwor
 UNIT
 
 LoopUnits1:
-UNIT Arcanian Cavalier Sean Level(10,Enemy,True) [20,3] 0x00 0x00 0x00 0x00 [Horseslayer] NoAI
 UNIT Arcanian Cavalier Sean Level(9,Enemy,True) [20,4] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
 UNIT Arcanian Mage Sean Level(9,Enemy,True) [20,6] 0x00 0x00 0x00 0x00 [Aqua] NoAI
 UNIT Arcanian Spellsword Sean Level(10,Enemy,True) [6,23] 0x00 0x00 0x00 0x00 [SteelSword,Thunder] NoAI
@@ -356,7 +355,6 @@ UNIT Arcanian Paladin Sean Level(2,Enemy,True) [20,16] 0x00 0x00 0x00 0x00 [Stee
 UNIT Arcanian Cavalier Sean Level(9,Enemy,True) [11,23] 0x00 0x00 0x00 0x00 [PoisonLance] NoAI
 UNIT Arcanian Cavalier Sean Level(10,Enemy,True) [20,10] 0x00 0x00 0x00 0x00 [IronBlade] NoAI
 UNIT Arcanian Pirate Sean Level(9,Enemy,True) [6,23] 0x00 0x00 0x00 0x00 [Hammer] NoAI
-UNIT Arcanian Mage Sean Level(8,Enemy,True) [20,5] 0x00 0x00 0x00 0x00 [Elfire] NoAI
 UNIT
 
 LoadCougar:
