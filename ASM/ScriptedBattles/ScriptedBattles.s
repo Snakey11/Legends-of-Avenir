@@ -13,8 +13,7 @@
 
 .global SetScriptedNumbers
 .type SetScriptedNumbers, %function
-SetScriptedNumbers: @ jumpToHack at 0x08011FD0. Reee too small for an autohook.
-@ Replaces the function call to 0x08011EC8.
+SetScriptedNumbers: @ Autohook at 0x080120C0.
 @ Instead of running calculations for the number display, let's grab the numbers from memory slots.
 @ We'll want to set damage, hit %, and crit % for each unit. That's 6 shorts. We can use 3 memory slots as parameters.
 @ Since memory slot 0x1 is already used for scripted battle macros, let's use slots 0x2, 0x3, and 0x4 for hit, damage, and crit respectively.
@@ -23,9 +22,6 @@ SetScriptedNumbers: @ jumpToHack at 0x08011FD0. Reee too small for an autohook.
 @ r4 is some proc. r5 is the action struct + 0x1C. r6... may be a boolean? Haven't seen it nonzero.
 
 push { r4 }
-mov r0, r7
-mov r1, r8
-blh #0x08011EC8, r2
 
 ldr r4, =gMemorySlots
 ldr r1, =gAttackStruct
@@ -77,5 +73,16 @@ strh r0, [ r2, r3 ]
 pop { r4 }
 
 @ End:
-ldr r0, =#0x08011FE3
-bx r0
+ldr r0, =gAttackStruct
+add r0, r0, #0x6E
+mov r1, #0x00
+strb r1, [ r0 ]
+ldr r0, =gDefenseStruct
+add r0, r0, #0x6E
+mov r1, #0x00
+strb r1, [ r0 ]
+mov r0, r10
+lsl r0, r0, #0x18
+
+ldr r1, =#0x080120D1
+bx r1
