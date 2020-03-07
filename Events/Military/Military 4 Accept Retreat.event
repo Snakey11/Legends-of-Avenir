@@ -382,7 +382,7 @@ UNIT Remus 0x00 0x00 Level(1,Ally,True) [13,16] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 CesarianFriends:
-UNIT Leyos HectorClass Leyos Level(8,NPC,True) [15,17] 0x00 0x00 0x00 0x00 [SilverAxe,Spear] [0x0C,0x03,0x00,0x00] // AttackInRangeAI except with half range.
+UNIT Leyos HectorClass Leyos Level(8,NPC,True) [15,17] 0x00 0x00 0x00 0x00 [SilverAxe,Spear] AttackIfCloseAI
 UNIT Cesarian Knight Leyos Level(8,NPC,True) [11,19] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
 UNIT Cesarian Knight Leyos Level(8,NPC,True) [16,16] 0x00 0x00 0x00 0x00 [KillerLance] AttackInRangeAI
 UNIT
