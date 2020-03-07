@@ -79,7 +79,7 @@ ClaraPortrait:
 ClintPortrait:
 #incbin "Clint_mug.dmp"
 #incbin "Clint_frames.dmp"
-#incbin "Clara_palette.dmp"
+#incbin "Clint_palette.dmp"
 #incbin "Clint_minimug.dmp"
 
 ConnorPortrait:
