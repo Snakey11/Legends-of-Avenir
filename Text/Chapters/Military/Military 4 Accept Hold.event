@@ -60,6 +60,7 @@ I don't get how you manage to stay so calm with him. How that man ever rose in t
 [MidLeft]It's not that you shouldn't trust your own countrymen, but you should always look at a person's convictions first.
 [MidRight]... What do you mean by that?
 [MidLeft]Not every Cesarian is good, and not every Arcanian is evil.
+[Events]
 [MidRight]I'll believe it when I see it. Hey, what's that coming our way?
 [MidLeft]Is that a courier?
 [MidRight]It must be.[CloseSpeech][MidLeft][MoveFarLeft][MidRight][MoveLeft][ClearFace][LoadAdeline][MidRight][LoadCougar]
@@ -87,8 +88,9 @@ There they are!
 There weren't as many when I left... It looks like your Vice-Captain's taken up a defensive position there.
 [MidLeft]Who's the Arcanian Commander?
 [Right]A Duke by the name of Clint. He's known as a cunning man with little patience for others.[FarRight][ClearFace][LoadZaheva]
-Clint...[CloseSpeech][MoveFarLeft][....][Right][MoveFarRight][MidLeft][MoveRight][ClearFace][LoadPlayer]
+Clint...[CloseSpeech][MoveFarLeft]
 [Events]
+[....][Right][MoveFarRight][MidLeft][MoveRight][ClearFace][LoadPlayer]
 Zaheva! What are you doing?[FarLeft][ClearFace][LoadZaheva]
 Taking my revenge.[CloseSpeech][Right][MoveLeft]
 Wait! You won't make it halfway to him right now. We'll get him sooner or later. But right now, we have to rescue the Vice-Captain.
@@ -106,11 +108,16 @@ So... You're the fabled Vice-Captain Blaine. I've heard wonders of your ability 
 [MidLeft]You can't honestly expect me to sit down and die in front of you like a dog!
 [MidRight]Oh, but I do.[X]
 
+## Military4AcceptHoldBlaineDeathText
+[BattleText]
+[FarRight][LoadBlaine]
+No... I can't... Fall...[X]
+
 ## Military4AcceptHoldBlaineDeadText
 [ConversationText]
-[MidRight][Smile][LoadClint][MidLeft][LoadBlaine]No... I can't... Fall...[ClearFace]
+[MidRight][Smile][LoadClint]
 [FarFarLeft]The Vice-Captain has fallen! We need to retreat!
-[MidRight]He lives... Pathetic. He'll be dead soon. Helmer![CloseSpeech][MoveFarRight][Right][LoadHelmer]
+[MidRight]Pathetic. He'll be dead soon. Helmer![CloseSpeech][MoveFarRight][Right][LoadHelmer]
 Sir!
 [FarRight]Take these soldiers captive and back to the fort. I'm going to go report to Lord Uzkalis.
 [Right]Yes, sir.[X]
@@ -130,8 +137,10 @@ I'm on it!
 ## Military4AcceptHoldClintLeavesText
 [ConversationText]
 [MidRight][LoadVal][MidLeft][LoadClint]
-Well, well, well... Looks like there are more Cesarians out and about. Val, I leave them to you!
-[MidRight]Understood, sir! Soldiers, form up! We must deal with this threat swiftly![X]
+Well, well, well... Looks like there are more Cesarians out and about. Val, I leave them to you![X]
+
+## Military4AcceptHoldClintGoneText
+[MidRight][LoadVal]Soldiers, form up! We must deal with this threat swiftly![X]
 
 ## Military4AcceptHoldStartBattleText
 [ConversationText]
@@ -177,7 +186,7 @@ Adeline... [Tact]...
 [FarRight]Vice-Captain...
 [MidLeft]You have to... Push on...
 [Right]To the fort? We're obliterated. Your entire platoon is gone.
-[MidLeft]Rescue them... I failed them... You can't let them die...
+[MidLeft]Rescue them...[CloseEyes] I failed them... You can't let them die...
 [FarRight]We will, sir. We will.
 [MidLeft]Send Cougar... Tiger Brigade... Vice-Captain Lux...
 [FarRight]What?

@@ -223,6 +223,7 @@ DeathQuote(Pascal,MilitaryAcceptRetreatHelp6Grow3,0x00,Military6AcceptRetreatHel
 DeathQuote(XeximClone,MilitaryAcceptRetreatHelp7,0x13,0x00)
 DeathQuote(Rex,MilitaryAcceptRetreatHelp7,0x11,0x00) // Event IDs to prevent Rex and Derek having death quotes in the bad ending cutscene.
 DeathQuote(Derek,MilitaryAcceptRetreatHelp7,0x12,0x00)
+DeathQuote(Blaine,MilitaryAcceptHold4,0x00,Military4AcceptHoldBlaineDeathText)
 DeathQuote(BossVal,MilitaryAcceptHold4,0x02,Military4AcceptHoldValDeathText)
 
 // Nonspecific death quotes come after.
