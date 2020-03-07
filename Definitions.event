@@ -1524,6 +1524,8 @@
 
 #define EnterStop "EVBIT_T 0x4"
 
+#define AttackIfCloseAI [0x0C,0x03,0x00,0x00]
+
 //#define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
 
 #define KillUnit(X,Y) "SVAL 0xB Coords(X,Y) ; SET_SOMETHING 0xFFFE ; DISA_IF 0xFFFE"
