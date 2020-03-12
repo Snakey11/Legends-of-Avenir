@@ -140,7 +140,9 @@ I'm on it!
 Well, well, well... Looks like there are more Cesarians out and about. Val, I leave them to you![X]
 
 ## Military4AcceptHoldClintGoneText
-[MidRight][LoadVal]Soldiers, form up! We must deal with this threat swiftly![X]
+[ConversationText]
+[MidRight][LoadVal]
+Soldiers, form up! We must deal with this threat swiftly![X]
 
 ## Military4AcceptHoldStartBattleText
 [ConversationText]

@@ -147,12 +147,13 @@ GotoPrepScreen
 EndingScene:
 MUSC Strong_Wind_Sound
 FADI 0x5
+REMU Cougar
 CHECK_OTHERS // Count the number of greens still on the map.
 SVAL 0x1 1
 SVAL 0x2 2
 SVAL 0x3 3
 SVAL 0x4 4
-BLT 0x0 0x4 0xC
+BGT 0x0 0x4 0xC
 	// 4 or more greens are alive.
 	GiveToSupplySilent(BraveLance)
 LABEL 0x0
@@ -168,6 +169,10 @@ BNE 0x3 0x1 0xC
 	// 1 green is alive.
 	GiveToSupplySilent(RedGem)
 LABEL 0x3
+GiveToSupplySilent(SteelSword)
+GiveToSupplySilent(IronLance)
+GiveToSupplySilent(HandAxe)
+GiveToSupplySilent(Vulnerary)
 
 CAM1 [16,2]
 CLEA 0x0
@@ -325,8 +330,8 @@ EndUnit
 //Label Chapter units
 StartingMeanies:
 UNIT Clint DreadFighter Clint Level(7,Enemy,True) [7,4] 0x00 0x00 0x00 0x00 [Lancereaver,Fenrir] NoAI
-UNIT BossVal Druid_F BossVal Level(18,Enemy,True) [19,1] Drop 0x00 0x00 0x00 [Nosferatu,Dulam,AngelicRobe] GuardAI
-UNIT Helmer Soldier BossVal Level(18,Enemy,True) [8,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT BossVal Druid_F BossVal Level(9,Enemy,True) [19,1] Drop 0x00 0x00 0x00 [Nosferatu,Dulam,AngelicRobe] GuardAI
+UNIT Helmer Sentinel BossVal Level(18,Enemy,True) [8,3] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Arcanian Shaman BossVal Level(16,Enemy,True) [16,0] 0x00 0x00 0x00 0x00 [Worm] AttackInRangeAI
 UNIT Arcanian Shaman BossVal Level(17,Enemy,True) [17,1] 0x00 0x00 0x00 0x00 [Fenrir] AttackInRangeAI
 UNIT Arcanian Shaman BossVal Level(14,Enemy,True) [18,2] 0x00 0x00 0x00 0x00 [Flux] AttackInRangeAI
@@ -369,13 +374,12 @@ UNIT Cesarian Knight Blaine Level(17,NPC,True) [4,2] 0x00 0x00 0x00 0x00 [Killer
 UNIT Cesarian Soldier Blaine Level(16,NPC,True) [2,3] 0x00 0x00 0x00 0x00 [SteelLance] AttackIfCloseAI
 UNIT Cesarian Bishop Blaine Level(3,NPC,True) [2,1] 0x00 0x00 0x00 0x00 [Shine,Mend] HealAlliesAI
 UNIT Cesarian Cavalier Blaine Level(15,NPC,True) [1,2] 0x00 0x00 0x00 0x00 [SteelBlade] AttackIfCloseAI
-UNIT Cesarian Knight Blaine Level(16,NPC,True) [2,5] 0x00 0x00 0x00 0x00 [ToxinLance] GuardAI
+UNIT Cesarian Soldier Blaine Level(16,NPC,True) [2,5] 0x00 0x00 0x00 0x00 [ToxinLance] GuardAI
 UNIT
 
 TriggerCavs:
 UNIT Arcanian Cavalier BossVal Level(16,Enemy,True) [20,15] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
 UNIT Arcanian Cavalier BossVal Level(15,Enemy,True) [20,16] 0x00 0x00 0x00 0x00 [Javelin] NoAI
-UNIT Arcanian Cavalier BossVal Level(19,Enemy,True) [20,14] 0x00 0x00 0x00 0x00 [Armorslayer,IronLance] NoAI
 UNIT Arcanian GreatKnight BossVal Level(2,Enemy,True) [7,17] Drop 0x00 0x00 0x00 [ShortAxe,Zanbato] NoAI
 UNIT
 
@@ -396,8 +400,6 @@ Turn4Units:
 UNIT Arcanian Mercenary BossVal Level(18,Enemy,True) [0,1] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
 UNIT Arcanian Mercenary BossVal Level(16,Enemy,True) [1,0] 0x00 0x00 0x00 0x00 [Zanbato] NoAI
 UNIT Arcanian Shaman BossVal Level(14,Enemy,True) [0,11] 0x00 0x00 0x00 0x00 [Worm] NoAI
-UNIT Arcanian Knight BossVal Level(19,Enemy,True) [0,10] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI
-UNIT Arcanian Ranger BossVal Level(2,Enemy,True) [4,16] 0x00 0x00 0x00 0x00 [Armorslayer,ToxinBow] NoAI
 UNIT Arcanian Cavalier BossVal Level(17,Enemy,True) [3,16] 0x00 0x00 0x00 0x00 [ShortSpear] NoAI
 UNIT Arcanian MageKnight BossVal Level(3,Enemy,True) [20,12] 0x00 0x00 0x00 0x00 [Elwind] NoAI
 UNIT
@@ -407,7 +409,6 @@ UNIT Arcanian Cavalier BossVal Level(17,Enemy,True) [20,2] 0x00 0x00 0x00 0x00 [
 UNIT Arcanian WyvernRider BossVal Level(16,Enemy,True) [20,6] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
 UNIT Arcanian Fighter BossVal Level(14,Enemy,True) [20,11] 0x00 0x00 0x00 0x00 [Hammer] NoAI
 UNIT Arcanian Spellsword BossVal Level(16,Enemy,True) [10,17] 0x00 0x00 0x00 0x00 [IronSword,Flux] NoAI
-UNIT Arcanian MageKnight BossVal Level(1,Enemy,True) [0,11] 0x00 0x00 0x00 0x00 [Elaqua] NoAI
 UNIT
 
 Turn8Units:
