@@ -68,6 +68,7 @@
 #define ToxinAxe 0xE1
 #define ToxinBow 0xE2
 #define SpiritDust 0xE3
+#define DoorKey_5 0xE4
 //LabelEnd
 
 //Label Class defenitions
