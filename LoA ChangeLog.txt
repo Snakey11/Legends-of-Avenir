@@ -1,3 +1,9 @@
+v1.10
+5th and final Military route is a go. Kill Sean after accepting the promotion in chapter 3
+Tons of new music again! Visit the sound room
+Female archers can use master seals
+
+
 Hotfixes before v1.10
 Fixed a bug in the ending of Military Accept Retreat Leave where character death quotes would play during battles
 Fixed Mercenary Militia Kill 4 crashing at the start (with a new cutscene map)
