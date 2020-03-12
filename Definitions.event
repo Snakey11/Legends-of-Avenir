@@ -761,6 +761,7 @@
 #define ShizonWaterShrineMap 0xDD
 #define KendrickShipMap 0xDE
 #define RipBlaineMap 0xE4
+#define PrisonBreakMap 0xE5
 
 //Map Changes
 
@@ -801,6 +802,7 @@
 #define XyliaStairTempleChanges 0xD3
 #define ShizonLandingChanges 0xDC
 #define PortSelsingChanges 0xDF
+#define PrisonBreakChanges 0xE6
 
 // Tilesets
 #define OutdoorSnowyObjectSet 0xB5
