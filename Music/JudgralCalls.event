@@ -1,0 +1,635 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	JudgralCalls_grp  voicegroup000
+	#define	JudgralCalls_pri  0
+	#define	JudgralCalls_rev  0
+	#define	JudgralCalls_mvl  127
+	#define	JudgralCalls_key  0
+	#define	JudgralCalls_tbs  1
+	#define	JudgralCalls_exg  0
+	#define	JudgralCalls_cmp  1
+
+	// .rodata
+	//	JudgralCalls
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+JudgralCalls_001:
+// 000   ----------------------------------------
+ BYTE   KEYSH   JudgralCalls_key+0
+Label_JudgralCalls0_011D9A72:
+ BYTE   TEMPO   160*JudgralCalls_tbs/2
+ BYTE   VOICE   56
+ BYTE   VOL   82*JudgralCalls_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   N23  En3  v080
+ BYTE   W24
+ BYTE   N11  Fs3
+ BYTE   W12
+ BYTE   N23  Gn3
+ BYTE   W24
+ BYTE   N11  An3
+ BYTE   W12
+ BYTE   N23  Gn3
+ BYTE   W24
+// 001   ----------------------------------------
+ BYTE   Fs3
+ BYTE   W24
+ BYTE   Dn3
+ BYTE   W24
+ BYTE   En3
+ BYTE   W24
+ BYTE   N11  Fs3
+ BYTE   W12
+ BYTE   N23  Gn3
+ BYTE   W12
+// 002   ----------------------------------------
+ BYTE   W12
+ BYTE   N11  An3
+ BYTE   W12
+ BYTE   N23  Gn3
+ BYTE   W24
+ BYTE   Fs3
+ BYTE   W24
+ BYTE   Dn3
+ BYTE   W24
+// 003   ----------------------------------------
+ BYTE   Fs3
+ BYTE   W24
+ BYTE   En3
+ BYTE   W24
+ BYTE   N23
+ BYTE   W24
+ BYTE   N11
+ BYTE   W12
+ BYTE   N23
+ BYTE   W12
+// 004   ----------------------------------------
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N23  Dn3
+ BYTE   W24
+ BYTE   N23
+ BYTE   W24
+ BYTE   N23
+ BYTE   W24
+// 005   ----------------------------------------
+ BYTE   Cn3
+ BYTE   W24
+ BYTE   N11
+ BYTE   W12
+ BYTE   N23
+ BYTE   W24
+ BYTE   N11
+ BYTE   W12
+ BYTE   N23
+ BYTE   W24
+// 006   ----------------------------------------
+ BYTE   N23
+ BYTE   W24
+ BYTE   Ds3
+ BYTE   W24
+ BYTE   N23
+ BYTE   W24
+ BYTE   N24  Bn3  v064
+ BYTE   W24
+// 007   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_JudgralCalls0_011D9A72
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+JudgralCalls_002:
+// 000   ----------------------------------------
+ BYTE   KEYSH   JudgralCalls_key+0
+Label_JudgralCalls1_011D9AD2:
+ BYTE   VOICE   19
+ BYTE   PAN   c_v+0
+ BYTE   VOL   62*JudgralCalls_mvl/mxv
+ BYTE   N11  En3  v080
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   Bn2
+ BYTE   W12
+ BYTE   En3
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+// 001   ----------------------------------------
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   Fs3
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+// 002   ----------------------------------------
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   An3
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+// 003   ----------------------------------------
+ BYTE   An3
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W24
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   An3
+ BYTE   W24
+ BYTE   Fs3
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+// 004   ----------------------------------------
+ BYTE   W12
+ BYTE   En3
+ BYTE   W12
+ BYTE   Fs3
+ BYTE   W24
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   En3
+ BYTE   W24
+ BYTE   Cn3
+ BYTE   W12
+// 005   ----------------------------------------
+ BYTE   Dn3
+ BYTE   W24
+ BYTE   Bn2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W24
+ BYTE   An2
+ BYTE   W12
+ BYTE   Bn2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+// 006   ----------------------------------------
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   En3
+ BYTE   W12
+ BYTE   Fs3
+ BYTE   W12
+ BYTE   En3
+ BYTE   W12
+ BYTE   Ds3
+ BYTE   W12
+ BYTE   Fs3
+ BYTE   W12
+ BYTE   N12  En3  v064
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+// 007   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_JudgralCalls1_011D9AD2
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+JudgralCalls_003:
+// 000   ----------------------------------------
+ BYTE   KEYSH   JudgralCalls_key+0
+Label_JudgralCalls2_011D9B4A:
+ BYTE   VOICE   57
+ BYTE   VOL   102*JudgralCalls_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   N23  En2  v080
+ BYTE   W24
+ BYTE   N11  Bn1
+ BYTE   W12
+ BYTE   N23  En1
+ BYTE   W24
+ BYTE   N11  Bn1
+ BYTE   W12
+ BYTE   N23  En2
+ BYTE   W24
+// 001   ----------------------------------------
+ BYTE   N23
+ BYTE   W24
+ BYTE   N23
+ BYTE   W24
+ BYTE   N23
+ BYTE   W24
+ BYTE   N11  Bn1
+ BYTE   W12
+ BYTE   N23  En1
+ BYTE   W12
+// 002   ----------------------------------------
+ BYTE   W12
+ BYTE   N11  Bn1
+ BYTE   W12
+ BYTE   N23  En2
+ BYTE   W24
+ BYTE   N23
+ BYTE   W24
+ BYTE   N23
+ BYTE   W24
+// 003   ----------------------------------------
+ BYTE   Dn2
+ BYTE   W24
+ BYTE   En2
+ BYTE   W36
+ BYTE   N11
+ BYTE   W24
+ BYTE   N11
+ BYTE   W12
+// 004   ----------------------------------------
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   N11
+ BYTE   W24
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W24
+// 005   ----------------------------------------
+ BYTE   N11
+ BYTE   W12
+ BYTE   Cn2
+ BYTE   W24
+ BYTE   N11
+ BYTE   W12
+ BYTE   Bn1
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N23
+ BYTE   W24
+// 006   ----------------------------------------
+ BYTE   N23
+ BYTE   W24
+ BYTE   N23
+ BYTE   W24
+ BYTE   Ds1
+ BYTE   W24
+ BYTE   N24  Ds2  v064
+ BYTE   W24
+// 007   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_JudgralCalls2_011D9B4A
+ BYTE   FINE
+
+//**************** Track 4 (Midi-Chn.3) ****************//
+
+JudgralCalls_004:
+// 000   ----------------------------------------
+ BYTE   KEYSH   JudgralCalls_key+0
+Label_JudgralCalls3_011D9BAA:
+ BYTE   VOICE   56
+ BYTE   VOL   72*JudgralCalls_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W48
+ BYTE   N23  Dn3  v080
+ BYTE   W24
+ BYTE   N11
+ BYTE   W12
+ BYTE   N23
+ BYTE   W12
+// 004   ----------------------------------------
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N23  Cn3
+ BYTE   W24
+ BYTE   N23
+ BYTE   W24
+ BYTE   N23
+ BYTE   W24
+// 005   ----------------------------------------
+ BYTE   Bn2
+ BYTE   W24
+ BYTE   N11
+ BYTE   W12
+ BYTE   N23
+ BYTE   W24
+ BYTE   N11
+ BYTE   W12
+ BYTE   N23
+ BYTE   W24
+// 006   ----------------------------------------
+ BYTE   N23
+ BYTE   W24
+ BYTE   N23
+ BYTE   W24
+ BYTE   N23
+ BYTE   W48
+// 007   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_JudgralCalls3_011D9BAA
+ BYTE   FINE
+
+//**************** Track 5 (Midi-Chn.4) ****************//
+
+JudgralCalls_005:
+// 000   ----------------------------------------
+ BYTE   KEYSH   JudgralCalls_key+0
+Label_JudgralCalls4_011D9BDE:
+ BYTE   VOICE   73
+ BYTE   VOL   47*JudgralCalls_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   N11  En4  v080
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   En4
+ BYTE   W12
+ BYTE   Bn4
+ BYTE   W12
+// 001   ----------------------------------------
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   Fs4
+ BYTE   W12
+ BYTE   Bn4
+ BYTE   W12
+ BYTE   Cn5
+ BYTE   W12
+// 002   ----------------------------------------
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   Bn4
+ BYTE   W12
+ BYTE   An4
+ BYTE   W12
+ BYTE   Gn4
+ BYTE   W12
+// 003   ----------------------------------------
+ BYTE   An4
+ BYTE   W12
+ BYTE   Bn4
+ BYTE   W24
+ BYTE   Gn4
+ BYTE   W12
+ BYTE   An4
+ BYTE   W24
+ BYTE   Fs4
+ BYTE   W12
+ BYTE   Gn4
+ BYTE   W12
+// 004   ----------------------------------------
+ BYTE   W12
+ BYTE   En4
+ BYTE   W12
+ BYTE   Fs4
+ BYTE   W24
+ BYTE   Dn4
+ BYTE   W12
+ BYTE   En4
+ BYTE   W24
+ BYTE   Cn4
+ BYTE   W12
+// 005   ----------------------------------------
+ BYTE   Dn4
+ BYTE   W24
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W24
+ BYTE   An3
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+// 006   ----------------------------------------
+ BYTE   Dn4
+ BYTE   W12
+ BYTE   En4
+ BYTE   W12
+ BYTE   Fs4
+ BYTE   W12
+ BYTE   En4
+ BYTE   W12
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   Fs4
+ BYTE   W12
+ BYTE   N12  En4  v064
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W12
+// 007   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_JudgralCalls4_011D9BDE
+ BYTE   FINE
+
+//**************** Track 6 (Midi-Chn.5) ****************//
+
+JudgralCalls_006:
+// 000   ----------------------------------------
+ BYTE   KEYSH   JudgralCalls_key+0
+Label_JudgralCalls5_011D9C56:
+ BYTE   VOICE   121
+ BYTE   VOL   127*JudgralCalls_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   N11  Cn1  v080
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+// 001   ----------------------------------------
+Label_JudgralCalls5_011D9C6E:
+ BYTE   N11  Cn1  v080
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_JudgralCalls5_011D9C6E
+// 002   ----------------------------------------
+ BYTE   N05  Cn1  v080
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   N11
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+// 003   ----------------------------------------
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   N05
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   N11
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+// 004   ----------------------------------------
+ BYTE   N05
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   N11
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N05  Ds2
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   N11
+ BYTE   W12
+// 005   ----------------------------------------
+ BYTE   N05  Cn1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   N11
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   N05
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   N11
+ BYTE   W12
+ BYTE   N12  Cn1  v064
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+// 006   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_JudgralCalls5_011D9C56
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+songJudgralCalls:
+	BYTE	6	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	JudgralCalls_pri	// Priority
+	BYTE	JudgralCalls_rev	// Reverb.
+    
+	POIN2	JudgralCalls_grp
+    
+	POIN2	JudgralCalls_001
+	POIN2	JudgralCalls_002
+	POIN2	JudgralCalls_003
+	POIN2	JudgralCalls_004
+	POIN2	JudgralCalls_005
+	POIN2	JudgralCalls_006
+
+	

@@ -1,0 +1,1152 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	EvilApproaches_grp  voicegroup000
+	#define	EvilApproaches_pri  0
+	#define	EvilApproaches_rev  0
+	#define	EvilApproaches_mvl  230
+	#define	EvilApproaches_key  0
+	#define	EvilApproaches_tbs  1
+	#define	EvilApproaches_exg  0
+	#define	EvilApproaches_cmp  1
+
+	// .rodata
+	//	EvilApproaches
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+EvilApproaches_001:
+// 000   ----------------------------------------
+ BYTE   VOL   100*EvilApproaches_mvl/mxv
+ BYTE   KEYSH   EvilApproaches_key+0
+Label_EvilApproaches0_01472594:
+ BYTE   TEMPO   110*EvilApproaches_tbs/2
+ BYTE   VOICE   57
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+Label_EvilApproaches0_0147259A:
+ BYTE   W24
+ BYTE   N12  Dn3  v064
+ BYTE   N12  An3
+ BYTE   W36
+ BYTE   Dn3
+ BYTE   N12  An3
+ BYTE   W36
+ BYTE   PEND 
+// 003   ----------------------------------------
+Label_EvilApproaches0_014725A6:
+ BYTE   W12
+ BYTE   N12  Dn3  v064
+ BYTE   N12  An3
+ BYTE   W24
+ BYTE   Dn3
+ BYTE   N12  An3
+ BYTE   W12
+ BYTE   N24  Ds3
+ BYTE   N24  As3
+ BYTE   W24
+ BYTE   Ds3
+ BYTE   N24  Cn4
+ BYTE   W24
+ BYTE   PEND 
+// 004   ----------------------------------------
+Label_EvilApproaches0_014725BB:
+ BYTE   N12  An3  v064
+ BYTE   N12  Dn4
+ BYTE   W24
+ BYTE   An3
+ BYTE   N12  Dn4
+ BYTE   W36
+ BYTE   An3
+ BYTE   N12  Dn4
+ BYTE   W36
+ BYTE   PEND 
+// 005   ----------------------------------------
+Label_EvilApproaches0_014725CA:
+ BYTE   W12
+ BYTE   N12  As3  v064
+ BYTE   N12  Ds4
+ BYTE   W24
+ BYTE   As3
+ BYTE   N12  Ds4
+ BYTE   W12
+ BYTE   N06  As3
+ BYTE   N06  Ds4
+ BYTE   W06
+ BYTE   An3
+ BYTE   N06  Dn4
+ BYTE   W06
+ BYTE   Gn3
+ BYTE   N06  Cn4
+ BYTE   W06
+ BYTE   As3
+ BYTE   N06  Ds4
+ BYTE   W06
+ BYTE   An3
+ BYTE   N06  Dn4
+ BYTE   W06
+ BYTE   Gn3
+ BYTE   N06  Cn4
+ BYTE   W06
+ BYTE   Fn3
+ BYTE   N06  As3
+ BYTE   W06
+ BYTE   Gn3
+ BYTE   N06  Cn4
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_EvilApproaches0_014725BB
+// 006   ----------------------------------------
+Label_EvilApproaches0_014725FC:
+ BYTE   W12
+ BYTE   N06  Cn4  v064
+ BYTE   N06  Fn4
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   N06  Fn4
+ BYTE   W06
+ BYTE   N12  Cn4
+ BYTE   N12  Fn4
+ BYTE   W12
+ BYTE   As3
+ BYTE   N12  Ds4
+ BYTE   W24
+ BYTE   As3
+ BYTE   N12  Ds4
+ BYTE   W12
+ BYTE   As3
+ BYTE   N12  Fn4
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   N12  Gn4
+ BYTE   W12
+ BYTE   PEND 
+// 007   ----------------------------------------
+Label_EvilApproaches0_0147261D:
+ BYTE   TIE  Dn4  v064
+ BYTE   TIE  An4
+ BYTE   W96
+ BYTE   PEND 
+// 008   ----------------------------------------
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   EOT
+ BYTE   Dn4  v081
+Label_EvilApproaches0_01472628:
+ BYTE   TIE  As2  v064
+ BYTE   N96  Fn3
+ BYTE   W96
+ BYTE   PEND 
+// 010   ----------------------------------------
+ BYTE   Fn2
+ BYTE   W96
+// 011   ----------------------------------------
+ BYTE   EOT
+ BYTE   As2
+Label_EvilApproaches0_01472633:
+ BYTE   W12
+ BYTE   N06  Fn3  v064
+ BYTE   N06  As3
+ BYTE   W06
+ BYTE   As2
+ BYTE   N06  Fn3
+ BYTE   W06
+ BYTE   Ds3
+ BYTE   N06  Gs3
+ BYTE   W06
+ BYTE   Fn3
+ BYTE   N06  As3
+ BYTE   W12
+ BYTE   Fn3
+ BYTE   N06  As3
+ BYTE   W18
+ BYTE   Fn3
+ BYTE   N06  As3
+ BYTE   W06
+ BYTE   Cs3
+ BYTE   N06  Fs3
+ BYTE   W06
+ BYTE   Ds3
+ BYTE   N06  Gs3
+ BYTE   W06
+ BYTE   Fn3
+ BYTE   N06  As3
+ BYTE   W18
+ BYTE   PEND 
+// 012   ----------------------------------------
+Label_EvilApproaches0_0147265B:
+ BYTE   W06
+ BYTE   N06  Bn2  v064
+ BYTE   N06  Fs3
+ BYTE   W06
+ BYTE   As2
+ BYTE   N06  Fn3
+ BYTE   W06
+ BYTE   Gs2
+ BYTE   N06  Ds3
+ BYTE   W12
+ BYTE   Cs3
+ BYTE   N06  Gs3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   N06  Fs3
+ BYTE   W06
+ BYTE   As2
+ BYTE   N06  Fn3
+ BYTE   W12
+ BYTE   Ds3
+ BYTE   N06  As3
+ BYTE   W06
+ BYTE   Cs3
+ BYTE   N06  Gs3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   N06  Fs3
+ BYTE   W12
+ BYTE   En3
+ BYTE   N06  Bn3
+ BYTE   W06
+ BYTE   Ds3
+ BYTE   N06  As3
+ BYTE   W06
+ BYTE   Cs3
+ BYTE   N06  Gs3
+ BYTE   W06
+ BYTE   PEND 
+// 013   ----------------------------------------
+Label_EvilApproaches0_0147268F:
+ BYTE   W12
+ BYTE   N06  Gs3  v064
+ BYTE   N06  Cs4
+ BYTE   W06
+ BYTE   Cs3
+ BYTE   N06  Gs3
+ BYTE   W06
+ BYTE   Fs3
+ BYTE   N06  Bn3
+ BYTE   W06
+ BYTE   Gs3
+ BYTE   N06  Cs4
+ BYTE   W12
+ BYTE   Gs3
+ BYTE   N06  Cs4
+ BYTE   W18
+ BYTE   An3
+ BYTE   N06  Dn4
+ BYTE   W06
+ BYTE   Gs3
+ BYTE   N06  Cs4
+ BYTE   W06
+ BYTE   Fs3
+ BYTE   N06  Bn3
+ BYTE   W06
+ BYTE   En3
+ BYTE   N06  An3
+ BYTE   W06
+ BYTE   N30  Fs3
+ BYTE   N30  Bn3
+ BYTE   W12
+ BYTE   PEND 
+// 014   ----------------------------------------
+Label_EvilApproaches0_014726BC:
+ BYTE   W24
+ BYTE   N06  En3  v064
+ BYTE   N06  Bn3
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   N06  An3
+ BYTE   W06
+ BYTE   Cs3
+ BYTE   N06  Gs3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   N06  Fs3
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   N06  An3
+ BYTE   W06
+ BYTE   Cs3
+ BYTE   N06  Gs3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   N06  Fs3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  En3
+ BYTE   W06
+ BYTE   N06
+ BYTE   N06  Bn3
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   N06  An3
+ BYTE   W06
+ BYTE   Cs3
+ BYTE   N06  Gs3
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   N06  Fs3
+ BYTE   W06
+ BYTE   PEND 
+// 015   ----------------------------------------
+Label_EvilApproaches0_014726F0:
+ BYTE   N48  Cs3  v064
+ BYTE   W48
+ BYTE   N06  Gs3
+ BYTE   W06
+ BYTE   An3
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Cs4
+ BYTE   W06
+ BYTE   N48  Dn4
+ BYTE   W24
+ BYTE   PEND 
+// 016   ----------------------------------------
+Label_EvilApproaches0_01472701:
+ BYTE   W24
+ BYTE   N24  Cs4  v064
+ BYTE   W24
+ BYTE   Bn3
+ BYTE   W24
+ BYTE   Dn4
+ BYTE   W24
+ BYTE   PEND 
+// 017   ----------------------------------------
+Label_EvilApproaches0_0147270B:
+ BYTE   N48  An3  v064
+ BYTE   W48
+ BYTE   Gs3
+ BYTE   W48
+ BYTE   PEND 
+// 018   ----------------------------------------
+Label_EvilApproaches0_01472712:
+ BYTE   N06  Gs3  v064
+ BYTE   W06
+ BYTE   Cs4
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   Cs4
+ BYTE   W06
+ BYTE   Gs3
+ BYTE   W06
+ BYTE   Cs4
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   Cs4
+ BYTE   W06
+ BYTE   Gs3
+ BYTE   W06
+ BYTE   Cs4
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   Cs4
+ BYTE   W06
+ BYTE   Gs3
+ BYTE   W06
+ BYTE   Cs4
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   Cs4
+ BYTE   W06
+ BYTE   PEND 
+// 019   ----------------------------------------
+ BYTE   N96  Dn4
+ BYTE   N96  An4
+ BYTE   W96
+// 020   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_EvilApproaches0_0147259A
+ BYTE   PATT
+  POIN2 Label_EvilApproaches0_014725A6
+ BYTE   PATT
+  POIN2 Label_EvilApproaches0_014725BB
+ BYTE   PATT
+  POIN2 Label_EvilApproaches0_014725CA
+ BYTE   PATT
+  POIN2 Label_EvilApproaches0_014725BB
+ BYTE   PATT
+  POIN2 Label_EvilApproaches0_014725FC
+ BYTE   PATT
+  POIN2 Label_EvilApproaches0_0147261D
+// 021   ----------------------------------------
+ BYTE   W96
+// 022   ----------------------------------------
+ BYTE   EOT
+ BYTE   Dn4  v081
+ BYTE   PATT
+  POIN2 Label_EvilApproaches0_01472628
+// 023   ----------------------------------------
+ BYTE   N96  Fn2  v064
+ BYTE   W96
+// 024   ----------------------------------------
+ BYTE   EOT
+ BYTE   As2
+ BYTE   PATT
+  POIN2 Label_EvilApproaches0_01472633
+ BYTE   PATT
+  POIN2 Label_EvilApproaches0_0147265B
+ BYTE   PATT
+  POIN2 Label_EvilApproaches0_0147268F
+ BYTE   PATT
+  POIN2 Label_EvilApproaches0_014726BC
+ BYTE   PATT
+  POIN2 Label_EvilApproaches0_014726F0
+ BYTE   PATT
+  POIN2 Label_EvilApproaches0_01472701
+ BYTE   PATT
+  POIN2 Label_EvilApproaches0_0147270B
+ BYTE   PATT
+  POIN2 Label_EvilApproaches0_01472712
+// 025   ----------------------------------------
+ BYTE   N96  Dn4  v064
+ BYTE   N96  An4
+ BYTE   W96
+// 026   ----------------------------------------
+ BYTE   W96
+// 027   ----------------------------------------
+ BYTE   W96
+// 028   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_EvilApproaches0_01472594
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+EvilApproaches_002:
+// 000   ----------------------------------------
+ BYTE   VOL   80*EvilApproaches_mvl/mxv
+ BYTE   KEYSH   EvilApproaches_key+0
+Label_EvilApproaches1_014727A8:
+ BYTE   VOICE   57
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   W96
+// 008   ----------------------------------------
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   W96
+// 010   ----------------------------------------
+ BYTE   W96
+// 011   ----------------------------------------
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   W96
+// 013   ----------------------------------------
+ BYTE   W96
+// 014   ----------------------------------------
+ BYTE   W96
+// 015   ----------------------------------------
+ BYTE   W96
+// 016   ----------------------------------------
+Label_EvilApproaches1_014727BA:
+ BYTE   N06  Fn3  v064
+ BYTE   W06
+ BYTE   Fs3
+ BYTE   W06
+ BYTE   Gs3
+ BYTE   W06
+ BYTE   As3
+ BYTE   W06
+ BYTE   N96  Bn3
+ BYTE   W72
+ BYTE   PEND 
+// 017   ----------------------------------------
+Label_EvilApproaches1_014727C8:
+ BYTE   W24
+ BYTE   N24  An3  v064
+ BYTE   W24
+ BYTE   Gs3
+ BYTE   W24
+ BYTE   Bn3
+ BYTE   W24
+ BYTE   PEND 
+// 018   ----------------------------------------
+Label_EvilApproaches1_014727D2:
+ BYTE   N72  Cs4  v064
+ BYTE   W72
+ BYTE   N06
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   W06
+ BYTE   PEND 
+// 019   ----------------------------------------
+ BYTE   N96  Gs4
+ BYTE   W96
+// 020   ----------------------------------------
+ BYTE   W96
+// 021   ----------------------------------------
+ BYTE   W96
+// 022   ----------------------------------------
+ BYTE   W96
+// 023   ----------------------------------------
+ BYTE   W96
+// 024   ----------------------------------------
+ BYTE   W96
+// 025   ----------------------------------------
+ BYTE   W96
+// 026   ----------------------------------------
+ BYTE   W96
+// 027   ----------------------------------------
+ BYTE   W96
+// 028   ----------------------------------------
+ BYTE   W96
+// 029   ----------------------------------------
+ BYTE   W96
+// 030   ----------------------------------------
+ BYTE   W96
+// 031   ----------------------------------------
+ BYTE   W96
+// 032   ----------------------------------------
+ BYTE   W96
+// 033   ----------------------------------------
+ BYTE   W96
+// 034   ----------------------------------------
+ BYTE   W96
+// 035   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_EvilApproaches1_014727BA
+ BYTE   PATT
+  POIN2 Label_EvilApproaches1_014727C8
+ BYTE   PATT
+  POIN2 Label_EvilApproaches1_014727D2
+// 036   ----------------------------------------
+ BYTE   N96  Gs4  v064
+ BYTE   W96
+// 037   ----------------------------------------
+ BYTE   W96
+// 038   ----------------------------------------
+ BYTE   W96
+// 039   ----------------------------------------
+ BYTE   W96
+// 040   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_EvilApproaches1_014727A8
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+EvilApproaches_003:
+// 000   ----------------------------------------
+ BYTE   VOL   70*EvilApproaches_mvl/mxv
+ BYTE   KEYSH   EvilApproaches_key+0
+Label_EvilApproaches2_01472814:
+ BYTE   VOICE   66
+ BYTE   N84  An2  v064
+ BYTE   N84  Dn3
+ BYTE   W84
+ BYTE   As2
+ BYTE   N84  Ds3
+ BYTE   W12
+// 001   ----------------------------------------
+Label_EvilApproaches2_01472820:
+ BYTE   W72
+ BYTE   N24  Gn2  v064
+ BYTE   N24  Cn3
+ BYTE   W24
+ BYTE   PEND 
+// 002   ----------------------------------------
+Label_EvilApproaches2_01472828:
+ BYTE   N84  An2  v064
+ BYTE   N84  Dn3
+ BYTE   W84
+ BYTE   N60  Cn3
+ BYTE   N60  Fn3
+ BYTE   W12
+ BYTE   PEND 
+// 003   ----------------------------------------
+Label_EvilApproaches2_01472834:
+ BYTE   W48
+ BYTE   N48  As2  v064
+ BYTE   N48  Ds3
+ BYTE   W48
+ BYTE   PEND 
+// 004   ----------------------------------------
+Label_EvilApproaches2_0147283C:
+ BYTE   N84  An2  v064
+ BYTE   N84  Dn3
+ BYTE   W84
+ BYTE   As2
+ BYTE   N84  Ds3
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_01472820
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_01472828
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_01472834
+// 005   ----------------------------------------
+Label_EvilApproaches2_01472856:
+ BYTE   N48  An2  v064
+ BYTE   N48  Dn3
+ BYTE   W48
+ BYTE   As2
+ BYTE   N48  Ds3
+ BYTE   W48
+ BYTE   PEND 
+// 006   ----------------------------------------
+Label_EvilApproaches2_01472861:
+ BYTE   N48  Cn3  v064
+ BYTE   N48  Fn3
+ BYTE   W48
+ BYTE   As2
+ BYTE   N48  Ds3
+ BYTE   W48
+ BYTE   PEND 
+// 007   ----------------------------------------
+Label_EvilApproaches2_0147286C:
+ BYTE   N48  An2  v064
+ BYTE   N48  Dn3
+ BYTE   W48
+ BYTE   Gs2
+ BYTE   N48  Cs3
+ BYTE   W48
+ BYTE   PEND 
+// 008   ----------------------------------------
+Label_EvilApproaches2_01472877:
+ BYTE   N48  Gn2  v064
+ BYTE   N48  Cn3
+ BYTE   W48
+ BYTE   Fs2
+ BYTE   N48  Bn2
+ BYTE   W48
+ BYTE   PEND 
+// 009   ----------------------------------------
+Label_EvilApproaches2_01472882:
+ BYTE   N84  Fn2  v064
+ BYTE   N84  As2
+ BYTE   W84
+ BYTE   N36  Fs2
+ BYTE   N36  Bn2
+ BYTE   W12
+ BYTE   PEND 
+// 010   ----------------------------------------
+Label_EvilApproaches2_0147288E:
+ BYTE   W24
+ BYTE   N24  Ds2  v064
+ BYTE   N24  Gs2
+ BYTE   W24
+ BYTE   Fn2
+ BYTE   N24  As2
+ BYTE   W24
+ BYTE   Fs2
+ BYTE   N24  Bn2
+ BYTE   W24
+ BYTE   PEND 
+// 011   ----------------------------------------
+Label_EvilApproaches2_0147289E:
+ BYTE   N84  Gs2  v064
+ BYTE   N84  Cs3
+ BYTE   W84
+ BYTE   N36  An2
+ BYTE   N36  Dn3
+ BYTE   W12
+ BYTE   PEND 
+// 012   ----------------------------------------
+Label_EvilApproaches2_014728AA:
+ BYTE   W24
+ BYTE   N24  Gs2  v064
+ BYTE   N24  Cs3
+ BYTE   W24
+ BYTE   Fs2
+ BYTE   N24  Bn2
+ BYTE   W24
+ BYTE   An2
+ BYTE   N24  Dn3
+ BYTE   W24
+ BYTE   PEND 
+// 013   ----------------------------------------
+ BYTE   N96  Gs2
+ BYTE   N96  Cs3
+ BYTE   W96
+// 014   ----------------------------------------
+Label_EvilApproaches2_014728BF:
+ BYTE   N24  An2  v064
+ BYTE   N24  Dn3
+ BYTE   W24
+ BYTE   Gs2
+ BYTE   N24  Cs3
+ BYTE   W24
+ BYTE   Fs2
+ BYTE   N24  Bn2
+ BYTE   W24
+ BYTE   An2
+ BYTE   N24  Dn3
+ BYTE   W24
+ BYTE   PEND 
+// 015   ----------------------------------------
+Label_EvilApproaches2_014728D2:
+ BYTE   TIE  Gs2  v064
+ BYTE   TIE  Cs3
+ BYTE   W96
+ BYTE   PEND 
+// 016   ----------------------------------------
+ BYTE   W96
+// 017   ----------------------------------------
+ BYTE   EOT
+ BYTE   Gs2  v061
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_0147283C
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_01472820
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_01472828
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_01472834
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_0147283C
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_01472820
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_01472828
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_01472834
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_01472856
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_01472861
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_0147286C
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_01472877
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_01472882
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_0147288E
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_0147289E
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_014728AA
+// 018   ----------------------------------------
+ BYTE   N96  Gs2  v064
+ BYTE   N96  Cs3
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_014728BF
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_014728D2
+// 019   ----------------------------------------
+ BYTE   W96
+// 020   ----------------------------------------
+ BYTE   EOT
+ BYTE   Gs2  v061
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_0147283C
+ BYTE   PATT
+  POIN2 Label_EvilApproaches2_01472820
+// 021   ----------------------------------------
+ BYTE   N96  An2  v064
+ BYTE   N96  Dn3
+ BYTE   W96
+// 022   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_EvilApproaches2_01472814
+ BYTE   FINE
+
+//**************** Track 4 (Midi-Chn.3) ****************//
+
+EvilApproaches_004:
+// 000   ----------------------------------------
+ BYTE   VOL   75*EvilApproaches_mvl/mxv
+ BYTE   KEYSH   EvilApproaches_key+0
+Label_EvilApproaches3_0147295C:
+ BYTE   VOICE   0
+ BYTE   N06  Dn1  v048
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   An1
+ BYTE   W06
+ BYTE   Dn2
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   An1
+ BYTE   W06
+ BYTE   Dn2
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   An1
+ BYTE   W06
+ BYTE   Dn2
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   An1
+ BYTE   W06
+ BYTE   Dn2
+ BYTE   W06
+// 001   ----------------------------------------
+Label_EvilApproaches3_01472980:
+ BYTE   N06  Dn1  v048
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   An1
+ BYTE   W06
+ BYTE   Dn2
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   An1
+ BYTE   W06
+ BYTE   Dn2
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   An1
+ BYTE   W06
+ BYTE   Dn2
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   An1
+ BYTE   W06
+ BYTE   Dn2
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472980
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472980
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472980
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472980
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472980
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472980
+// 002   ----------------------------------------
+Label_EvilApproaches3_014729C1:
+ BYTE   N06  Dn1  v048
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   An1
+ BYTE   W06
+ BYTE   Dn2
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   An1
+ BYTE   W06
+ BYTE   Dn2
+ BYTE   W06
+ BYTE   Ds1
+ BYTE   W06
+ BYTE   Gs1
+ BYTE   W06
+ BYTE   As1
+ BYTE   W06
+ BYTE   Ds2
+ BYTE   W06
+ BYTE   Ds1
+ BYTE   W06
+ BYTE   Gs1
+ BYTE   W06
+ BYTE   As1
+ BYTE   W06
+ BYTE   Ds2
+ BYTE   W06
+ BYTE   PEND 
+// 003   ----------------------------------------
+Label_EvilApproaches3_014729E4:
+ BYTE   N06  Fn1  v048
+ BYTE   W06
+ BYTE   As1
+ BYTE   W06
+ BYTE   Cn2
+ BYTE   W06
+ BYTE   Fn2
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+ BYTE   As1
+ BYTE   W06
+ BYTE   Cn2
+ BYTE   W06
+ BYTE   Fn2
+ BYTE   W06
+ BYTE   Ds1
+ BYTE   W06
+ BYTE   Gs1
+ BYTE   W06
+ BYTE   As1
+ BYTE   W06
+ BYTE   Ds2
+ BYTE   W06
+ BYTE   Ds1
+ BYTE   W06
+ BYTE   Gs1
+ BYTE   W06
+ BYTE   As1
+ BYTE   W06
+ BYTE   Ds2
+ BYTE   W06
+ BYTE   PEND 
+// 004   ----------------------------------------
+Label_EvilApproaches3_01472A07:
+ BYTE   N06  As0  v048
+ BYTE   W06
+ BYTE   Ds1
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+ BYTE   As1
+ BYTE   W06
+ BYTE   As0
+ BYTE   W06
+ BYTE   Ds1
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+ BYTE   As1
+ BYTE   W06
+ BYTE   As0
+ BYTE   W06
+ BYTE   Ds1
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+ BYTE   As1
+ BYTE   W06
+ BYTE   As0
+ BYTE   W06
+ BYTE   Ds1
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+ BYTE   As1
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472A07
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472A07
+// 005   ----------------------------------------
+Label_EvilApproaches3_01472A34:
+ BYTE   N06  As0  v048
+ BYTE   W06
+ BYTE   Ds1
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+ BYTE   As1
+ BYTE   W06
+ BYTE   As0
+ BYTE   W06
+ BYTE   Ds1
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+ BYTE   As1
+ BYTE   W06
+ BYTE   As0
+ BYTE   W06
+ BYTE   Ds1
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+ BYTE   As1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   En1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   PEND 
+// 006   ----------------------------------------
+Label_EvilApproaches3_01472A57:
+ BYTE   N06  Cs1  v048
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   W06
+ BYTE   Gs1
+ BYTE   W06
+ BYTE   Cs2
+ BYTE   W06
+ BYTE   Cs1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   W06
+ BYTE   Gs1
+ BYTE   W06
+ BYTE   Cs2
+ BYTE   W06
+ BYTE   Cs1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   W06
+ BYTE   Gs1
+ BYTE   W06
+ BYTE   Cs2
+ BYTE   W06
+ BYTE   Cs1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   W06
+ BYTE   Gs1
+ BYTE   W06
+ BYTE   Cs2
+ BYTE   W06
+ BYTE   PEND 
+// 007   ----------------------------------------
+Label_EvilApproaches3_01472A7A:
+ BYTE   N06  Cs1  v048
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   W06
+ BYTE   Gs1
+ BYTE   W06
+ BYTE   Cs2
+ BYTE   W06
+ BYTE   Cs1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   W06
+ BYTE   Gs1
+ BYTE   W06
+ BYTE   Cs2
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   En1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   An1
+ BYTE   W06
+ BYTE   Dn2
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472A57
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472A7A
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472A57
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472A57
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472980
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472980
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472980
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472980
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472980
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472980
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472980
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472980
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_014729C1
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_014729E4
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472A07
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472A07
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472A07
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472A34
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472A57
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472A7A
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472A57
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472A7A
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472A57
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472A57
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472980
+ BYTE   PATT
+  POIN2 Label_EvilApproaches3_01472980
+// 008   ----------------------------------------
+ BYTE   N96  Dn1  v048
+ BYTE   N96  Dn2
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_EvilApproaches3_0147295C
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+songEvilApproaches:
+	BYTE	4	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	EvilApproaches_pri	// Priority
+	BYTE	EvilApproaches_rev	// Reverb.
+    
+	POIN2	EvilApproaches_grp
+    
+	POIN2	EvilApproaches_001
+	POIN2	EvilApproaches_002
+	POIN2	EvilApproaches_003
+	POIN2	EvilApproaches_004
+
+	

@@ -1258,6 +1258,30 @@
 #define Chemical_Plant 0x457
 #define Metropolis 0x458
 #define Marble_Corridor 0x459
+#define FE5_Advance 0x45A
+#define FE5_Adversity 0x45B
+#define FE5_Destiny 0x460
+#define FE5_Field 0x461
+#define FE5_In_Search_of_Victory 0x462
+#define FE5_Loptr_B 0x465
+#define FE5_Map_A 0x466
+#define FE5_Searching_the_Enemy 0x469
+#define FE5_Victory 0x46B
+#define FE5_Victory_Minor 0x46C
+#define Victory_March 0x46D
+#define Battle_One 0x46E
+#define Courage_and_Pride_from_the_Heart 0x46F
+#define Cutting_Edge_of_Notion 0x470
+#define Hand_Combat 0x471
+#define Justice 0x472
+#define Team_Making 0x473
+#define Dark_Clouds_Gather 0x474
+#define Wrath_Strike 0x475
+#define Blindly_Charging 0x476
+#define Darker 0x477
+#define Evil_Approaches 0x478
+#define Judgral_Calls 0x47AC
+#define Roar_of_Dominion 0x47D
 //LabelEnd
 
 //Label Skill Definitions

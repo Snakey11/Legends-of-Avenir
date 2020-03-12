@@ -1,0 +1,2541 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	FE5InSearchOfVictory_grp  voicegroup000
+	#define	FE5InSearchOfVictory_pri  0
+	#define	FE5InSearchOfVictory_rev  0
+	#define	FE5InSearchOfVictory_mvl  160
+	#define	FE5InSearchOfVictory_key  0
+	#define	FE5InSearchOfVictory_tbs  1
+	#define	FE5InSearchOfVictory_exg  0
+	#define	FE5InSearchOfVictory_cmp  1
+
+	// .rodata
+	//	FE5InSearchOfVictory
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+FE5InSearchOfVictory_001:
+// 000   ----------------------------------------
+ BYTE   KEYSH   FE5InSearchOfVictory_key+0
+ BYTE   TEMPO   126*FE5InSearchOfVictory_tbs/2
+ BYTE   VOICE   48
+ BYTE   VOL   59*FE5InSearchOfVictory_mvl/mxv
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+Label_FE5InSearchOfVictory0_01574B5A:
+ BYTE   N48  Ds3  v100
+ BYTE   W48
+ BYTE   Fn3
+ BYTE   W48
+ BYTE   PEND 
+// 003   ----------------------------------------
+Label_FE5InSearchOfVictory0_01574B61:
+ BYTE   N48  Gn3  v100
+ BYTE   W48
+ BYTE   As3
+ BYTE   W48
+ BYTE   PEND 
+// 004   ----------------------------------------
+Label_FE5InSearchOfVictory0_01574B68:
+ BYTE   N48  Gs3  v100
+ BYTE   W48
+ BYTE   Fn3
+ BYTE   W48
+ BYTE   PEND 
+// 005   ----------------------------------------
+ BYTE   N84  Gn3
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B5A
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B61
+// 006   ----------------------------------------
+Label_FE5InSearchOfVictory0_01574B7C:
+ BYTE   N72  Cn4  v100
+ BYTE   W72
+ BYTE   N24  As3
+ BYTE   W24
+ BYTE   PEND 
+// 007   ----------------------------------------
+Label_FE5InSearchOfVictory0_01574B84:
+ BYTE   N12  As3  v100
+ BYTE   W12
+ BYTE   N48  Gn3
+ BYTE   W60
+ BYTE   N12
+ BYTE   W12
+ BYTE   Fn3
+ BYTE   W12
+ BYTE   PEND 
+// 008   ----------------------------------------
+Label_FE5InSearchOfVictory0_01574B90:
+ BYTE   N48  Gn3  v100
+ BYTE   W48
+ BYTE   Ds3
+ BYTE   W48
+ BYTE   PEND 
+// 009   ----------------------------------------
+Label_FE5InSearchOfVictory0_01574B97:
+ BYTE   N48  Ds3  v100
+ BYTE   W48
+ BYTE   N24  Dn3
+ BYTE   W24
+ BYTE   Cn3
+ BYTE   W24
+ BYTE   PEND 
+// 010   ----------------------------------------
+ BYTE   TIE  Fn3
+ BYTE   W96
+// 011   ----------------------------------------
+ BYTE   W72
+ BYTE   EOT
+ BYTE   W24
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B5A
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B61
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B68
+// 012   ----------------------------------------
+ BYTE   N84  Gn3  v100
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B5A
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B61
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B7C
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B84
+// 013   ----------------------------------------
+Label_FE5InSearchOfVictory0_01574BCE:
+ BYTE   N48  Ds3  v100
+ BYTE   W48
+ BYTE   Gs3
+ BYTE   W48
+ BYTE   PEND 
+// 014   ----------------------------------------
+Label_FE5InSearchOfVictory0_01574BD5:
+ BYTE   N48  Fn3  v100
+ BYTE   W48
+ BYTE   Dn3
+ BYTE   W48
+ BYTE   PEND 
+// 015   ----------------------------------------
+ BYTE   N96  Fn3
+ BYTE   W96
+// 016   ----------------------------------------
+ BYTE   N72  Ds3
+ BYTE   W96
+// 017   ----------------------------------------
+Label_FE5InSearchOfVictory0_01574BE2:
+ BYTE   N48  Cn4  v100
+ BYTE   W48
+ BYTE   Gs4
+ BYTE   W48
+ BYTE   PEND 
+// 018   ----------------------------------------
+Label_FE5InSearchOfVictory0_01574BE9:
+ BYTE   N24  Gn4  v100
+ BYTE   W24
+ BYTE   Dn4
+ BYTE   W24
+ BYTE   N36  Ds4
+ BYTE   W48
+ BYTE   PEND 
+// 019   ----------------------------------------
+Label_FE5InSearchOfVictory0_01574BF3:
+ BYTE   N36  Fn4  v100
+ BYTE   W48
+ BYTE   N24  Cn4
+ BYTE   W24
+ BYTE   N12  Dn4
+ BYTE   W12
+ BYTE   N06  Ds4
+ BYTE   W12
+ BYTE   PEND 
+// 020   ----------------------------------------
+Label_FE5InSearchOfVictory0_01574C01:
+ BYTE   N36  Ds4  v100
+ BYTE   W48
+ BYTE   Dn4
+ BYTE   W48
+ BYTE   PEND 
+// 021   ----------------------------------------
+Label_FE5InSearchOfVictory0_01574C08:
+ BYTE   N36  Dn4  v100
+ BYTE   W48
+ BYTE   N24  Gn4
+ BYTE   W24
+ BYTE   N12  Dn4
+ BYTE   W12
+ BYTE   N06  Fn4
+ BYTE   W12
+ BYTE   PEND 
+// 022   ----------------------------------------
+Label_FE5InSearchOfVictory0_01574C16:
+ BYTE   N24  Fn4  v100
+ BYTE   W24
+ BYTE   Ds4
+ BYTE   W24
+ BYTE   Dn4
+ BYTE   W24
+ BYTE   Cn4
+ BYTE   W24
+ BYTE   PEND 
+// 023   ----------------------------------------
+ BYTE   VOL   59*FE5InSearchOfVictory_mvl/mxv
+ BYTE   N36  Fn4
+ BYTE   W48
+ BYTE   N24  Cn4
+ BYTE   W36
+ BYTE   N12  Dn4
+ BYTE   W12
+// 024   ----------------------------------------
+Label_FE5InSearchOfVictory0_01574C2C:
+ BYTE   N48  Ds4  v100
+ BYTE   W48
+ BYTE   Dn4
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B5A
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B61
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B68
+// 025   ----------------------------------------
+ BYTE   N84  Gn3  v100
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B5A
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B61
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B7C
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B84
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B90
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B97
+// 026   ----------------------------------------
+ BYTE   TIE  Fn3  v100
+ BYTE   W96
+// 027   ----------------------------------------
+ BYTE   W72
+ BYTE   EOT
+ BYTE   W24
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B5A
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B61
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B68
+// 028   ----------------------------------------
+ BYTE   N84  Gn3  v100
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B5A
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B61
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B7C
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574B84
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574BCE
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574BD5
+// 029   ----------------------------------------
+ BYTE   N96  Fn3  v100
+ BYTE   W96
+// 030   ----------------------------------------
+ BYTE   N72  Ds3
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574BE2
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574BE9
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574BF3
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574C01
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574C08
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574C16
+// 031   ----------------------------------------
+ BYTE   N36  Fn4  v100
+ BYTE   W48
+ BYTE   N24  Cn4
+ BYTE   W36
+ BYTE   N12  Dn4
+ BYTE   W12
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory0_01574C2C
+// 032   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_FE5InSearchOfVictory0_01574B5A
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+FE5InSearchOfVictory_002:
+// 000   ----------------------------------------
+ BYTE   KEYSH   FE5InSearchOfVictory_key+0
+ BYTE   VOICE   48
+ BYTE   VOL   55*FE5InSearchOfVictory_mvl/mxv
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574CE0:
+ BYTE   W03
+ BYTE   N48  Ds3  v080
+ BYTE   W48
+ BYTE   Fn3
+ BYTE   W44
+ BYTE   W01
+ BYTE   PEND 
+// 003   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574CE9:
+ BYTE   W03
+ BYTE   N48  Gn3  v080
+ BYTE   W48
+ BYTE   As3
+ BYTE   W44
+ BYTE   W01
+ BYTE   PEND 
+// 004   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574CF2:
+ BYTE   W03
+ BYTE   N48  Gs3  v080
+ BYTE   W48
+ BYTE   Fn3
+ BYTE   W44
+ BYTE   W01
+ BYTE   PEND 
+// 005   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574CFB:
+ BYTE   W03
+ BYTE   N84  Gn3  v080
+ BYTE   W92
+ BYTE   W01
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574CE0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574CE9
+// 006   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574D0C:
+ BYTE   W03
+ BYTE   N72  Cn4  v080
+ BYTE   W72
+ BYTE   N24  As3
+ BYTE   W21
+ BYTE   PEND 
+// 007   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574D15:
+ BYTE   W03
+ BYTE   N06  As3  v080
+ BYTE   W12
+ BYTE   N48  Gn3
+ BYTE   W60
+ BYTE   N12
+ BYTE   W12
+ BYTE   Fn3
+ BYTE   W09
+ BYTE   PEND 
+// 008   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574D22:
+ BYTE   W03
+ BYTE   N48  Gn3  v080
+ BYTE   W48
+ BYTE   Ds3
+ BYTE   W44
+ BYTE   W01
+ BYTE   PEND 
+// 009   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574D2B:
+ BYTE   W03
+ BYTE   N48  Ds3  v080
+ BYTE   W48
+ BYTE   N24  Dn3
+ BYTE   W24
+ BYTE   Cn3
+ BYTE   W21
+ BYTE   PEND 
+// 010   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574D36:
+ BYTE   W03
+ BYTE   TIE  Fn3  v080
+ BYTE   W92
+ BYTE   W01
+ BYTE   PEND 
+// 011   ----------------------------------------
+ BYTE   W72
+ BYTE   W03
+ BYTE   EOT
+ BYTE   W21
+// 012   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574D41:
+ BYTE   N48  Ds2  v100
+ BYTE   W48
+ BYTE   Fn2
+ BYTE   W48
+ BYTE   PEND 
+// 013   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574D48:
+ BYTE   N48  Gn2  v100
+ BYTE   W48
+ BYTE   As2
+ BYTE   W48
+ BYTE   PEND 
+// 014   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574D4F:
+ BYTE   N48  Gs2  v100
+ BYTE   W48
+ BYTE   Fn2
+ BYTE   W48
+ BYTE   PEND 
+// 015   ----------------------------------------
+ BYTE   N84  Gn2
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574D41
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574D48
+// 016   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574D63:
+ BYTE   N72  Cn3  v100
+ BYTE   W72
+ BYTE   N24  As2
+ BYTE   W24
+ BYTE   PEND 
+// 017   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574D6B:
+ BYTE   N12  As2  v100
+ BYTE   W12
+ BYTE   N48  Gn2
+ BYTE   W60
+ BYTE   N12
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   PEND 
+// 018   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574D77:
+ BYTE   N48  Ds2  v100
+ BYTE   W48
+ BYTE   Gs2
+ BYTE   W48
+ BYTE   PEND 
+// 019   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574D7E:
+ BYTE   N48  Fn2  v100
+ BYTE   W48
+ BYTE   Dn2
+ BYTE   W48
+ BYTE   PEND 
+// 020   ----------------------------------------
+ BYTE   N96  Fn2
+ BYTE   W96
+// 021   ----------------------------------------
+ BYTE   N72  Ds2
+ BYTE   W96
+// 022   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574D8B:
+ BYTE   N48  Cn3  v100
+ BYTE   W48
+ BYTE   Gs3
+ BYTE   W48
+ BYTE   PEND 
+// 023   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574D92:
+ BYTE   N24  Gn3  v100
+ BYTE   W24
+ BYTE   Dn3
+ BYTE   W24
+ BYTE   N36  Ds3
+ BYTE   W48
+ BYTE   PEND 
+// 024   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574D9C:
+ BYTE   N36  Fn3  v100
+ BYTE   W48
+ BYTE   N24  Cn3
+ BYTE   W24
+ BYTE   N12  Dn3
+ BYTE   W12
+ BYTE   N06  Ds3
+ BYTE   W12
+ BYTE   PEND 
+// 025   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574DAA:
+ BYTE   N36  Ds3  v100
+ BYTE   W48
+ BYTE   Dn3
+ BYTE   W48
+ BYTE   PEND 
+// 026   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574DB1:
+ BYTE   N36  Dn3  v100
+ BYTE   W48
+ BYTE   N24  Gn3
+ BYTE   W24
+ BYTE   N12  Dn3
+ BYTE   W12
+ BYTE   N06  Fn3
+ BYTE   W12
+ BYTE   PEND 
+// 027   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574DBF:
+ BYTE   N24  Fn3  v100
+ BYTE   W24
+ BYTE   Ds3
+ BYTE   W24
+ BYTE   Dn3
+ BYTE   W24
+ BYTE   Cn3
+ BYTE   W24
+ BYTE   PEND 
+// 028   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574DCA:
+ BYTE   N36  Fn3  v100
+ BYTE   W48
+ BYTE   N24  Cn3
+ BYTE   W36
+ BYTE   N12  Dn3
+ BYTE   W12
+ BYTE   PEND 
+// 029   ----------------------------------------
+Label_FE5InSearchOfVictory1_01574DD5:
+ BYTE   N48  Ds3  v100
+ BYTE   W48
+ BYTE   N36  Dn3
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574CE0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574CE9
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574CF2
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574CFB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574CE0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574CE9
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574D0C
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574D15
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574D22
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574D2B
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574D36
+// 030   ----------------------------------------
+ BYTE   W72
+ BYTE   W03
+ BYTE   EOT
+ BYTE   Fn3
+ BYTE   W21
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574D41
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574D48
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574D4F
+// 031   ----------------------------------------
+ BYTE   N84  Gn2  v100
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574D41
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574D48
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574D63
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574D6B
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574D77
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574D7E
+// 032   ----------------------------------------
+ BYTE   N96  Fn2  v100
+ BYTE   W96
+// 033   ----------------------------------------
+ BYTE   N72  Ds2
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574D8B
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574D92
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574D9C
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574DAA
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574DB1
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574DBF
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574DCA
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory1_01574DD5
+// 034   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_FE5InSearchOfVictory1_01574CE0
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+FE5InSearchOfVictory_003:
+// 000   ----------------------------------------
+ BYTE   KEYSH   FE5InSearchOfVictory_key+0
+ BYTE   VOICE   56
+ BYTE   VOL   77*FE5InSearchOfVictory_mvl/mxv
+ BYTE   N12  Ds1  v100
+ BYTE   W12
+ BYTE   Ds1  v092
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   Ds1  v080
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   Ds1  v092
+ BYTE   W12
+ BYTE   Ds1  v100
+ BYTE   W12
+// 001   ----------------------------------------
+ BYTE   N12
+ BYTE   W12
+ BYTE   Ds1  v092
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   Ds1  v080
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   Ds1  v092
+ BYTE   W12
+ BYTE   Ds1  v100
+ BYTE   W12
+// 002   ----------------------------------------
+Label_FE5InSearchOfVictory2_01574EB0:
+ BYTE   N12  Ds1  v100
+ BYTE   W12
+ BYTE   Ds1  v072
+ BYTE   W12
+ BYTE   Ds1  v060
+ BYTE   W12
+ BYTE   Ds1  v100
+ BYTE   W12
+ BYTE   Ds1  v060
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   Ds1  v072
+ BYTE   W12
+ BYTE   Ds1  v092
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+// 003   ----------------------------------------
+Label_FE5InSearchOfVictory2_01574EE2:
+ BYTE   N12  Gs1  v100
+ BYTE   W12
+ BYTE   Gs1  v072
+ BYTE   W12
+ BYTE   Gs1  v060
+ BYTE   W12
+ BYTE   Gs1  v100
+ BYTE   W12
+ BYTE   Gs1  v060
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   Gs1  v072
+ BYTE   W12
+ BYTE   Gs1  v092
+ BYTE   W12
+ BYTE   PEND 
+// 004   ----------------------------------------
+Label_FE5InSearchOfVictory2_01574EFB:
+ BYTE   N12  Ds1  v100
+ BYTE   W12
+ BYTE   Ds1  v072
+ BYTE   W12
+ BYTE   Ds1  v060
+ BYTE   W12
+ BYTE   Ds1  v100
+ BYTE   W12
+ BYTE   Ds1  v060
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   Ds1  v072
+ BYTE   W12
+ BYTE   Dn1  v092
+ BYTE   W12
+ BYTE   PEND 
+// 005   ----------------------------------------
+Label_FE5InSearchOfVictory2_01574F14:
+ BYTE   N12  Cn1  v100
+ BYTE   W12
+ BYTE   Cn1  v072
+ BYTE   W12
+ BYTE   Cn1  v060
+ BYTE   W12
+ BYTE   Cn1  v100
+ BYTE   W12
+ BYTE   Cn1  v060
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   Cn1  v072
+ BYTE   W12
+ BYTE   Cn1  v092
+ BYTE   W12
+ BYTE   PEND 
+// 006   ----------------------------------------
+Label_FE5InSearchOfVictory2_01574F2D:
+ BYTE   N12  Fn1  v100
+ BYTE   W12
+ BYTE   Fn1  v072
+ BYTE   W12
+ BYTE   Fn1  v060
+ BYTE   W12
+ BYTE   Fn1  v100
+ BYTE   W12
+ BYTE   Fn1  v060
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   Fn1  v072
+ BYTE   W12
+ BYTE   Fn1  v092
+ BYTE   W12
+ BYTE   PEND 
+// 007   ----------------------------------------
+Label_FE5InSearchOfVictory2_01574F46:
+ BYTE   N12  As0  v100
+ BYTE   W12
+ BYTE   As0  v072
+ BYTE   W12
+ BYTE   As0  v060
+ BYTE   W12
+ BYTE   As0  v100
+ BYTE   W12
+ BYTE   As0  v060
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   As0  v072
+ BYTE   W12
+ BYTE   As0  v092
+ BYTE   W12
+ BYTE   PEND 
+// 008   ----------------------------------------
+Label_FE5InSearchOfVictory2_01574F5F:
+ BYTE   N12  As0  v100
+ BYTE   W24
+ BYTE   N12
+ BYTE   W24
+ BYTE   N12
+ BYTE   W24
+ BYTE   N12
+ BYTE   W24
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EE2
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EFB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574F14
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574F46
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+// 009   ----------------------------------------
+ BYTE   N96  Gs1  v080
+ BYTE   W96
+// 010   ----------------------------------------
+Label_FE5InSearchOfVictory2_01574FAA:
+ BYTE   N48  Gn1  v080
+ BYTE   W48
+ BYTE   N24  Cn2  v100
+ BYTE   W24
+ BYTE   As1
+ BYTE   W24
+ BYTE   PEND 
+// 011   ----------------------------------------
+ BYTE   N96  Gs1  v080
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   N84  As1
+ BYTE   W96
+// 013   ----------------------------------------
+ BYTE   Bn1
+ BYTE   W96
+// 014   ----------------------------------------
+Label_FE5InSearchOfVictory2_01574FBE:
+ BYTE   N48  Cn2  v080
+ BYTE   W72
+ BYTE   N24  As1  v100
+ BYTE   W24
+ BYTE   PEND 
+// 015   ----------------------------------------
+ BYTE   N84  An1  v080
+ BYTE   W96
+// 016   ----------------------------------------
+ BYTE   As1
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EE2
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EFB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574F14
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574F2D
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574F46
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574F5F
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EE2
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EFB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574F14
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574F46
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+// 017   ----------------------------------------
+ BYTE   N96  Gs1  v080
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574FAA
+// 018   ----------------------------------------
+ BYTE   N96  Gs1  v080
+ BYTE   W96
+// 019   ----------------------------------------
+ BYTE   N84  As1
+ BYTE   W96
+// 020   ----------------------------------------
+ BYTE   Bn1
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory2_01574FBE
+// 021   ----------------------------------------
+ BYTE   N84  An1  v080
+ BYTE   W96
+// 022   ----------------------------------------
+ BYTE   As1
+ BYTE   W96
+// 023   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_FE5InSearchOfVictory2_01574EB0
+ BYTE   FINE
+
+//**************** Track 4 (Midi-Chn.3) ****************//
+
+FE5InSearchOfVictory_004:
+// 000   ----------------------------------------
+ BYTE   KEYSH   FE5InSearchOfVictory_key+0
+ BYTE   VOICE   56
+ BYTE   VOL   60*FE5InSearchOfVictory_mvl/mxv
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+Label_FE5InSearchOfVictory3_01575070:
+ BYTE   N12  Ds2  v100
+ BYTE   W36
+ BYTE   N12
+ BYTE   W48
+ BYTE   As1
+ BYTE   W12
+ BYTE   PEND 
+// 003   ----------------------------------------
+Label_FE5InSearchOfVictory3_01575079:
+ BYTE   N12  Ds2  v100
+ BYTE   W36
+ BYTE   N12
+ BYTE   W60
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_01575070
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_01575079
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_01575070
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_01575079
+// 004   ----------------------------------------
+Label_FE5InSearchOfVictory3_01575094:
+ BYTE   N12  Gs2  v100
+ BYTE   W36
+ BYTE   N12
+ BYTE   W60
+ BYTE   PEND 
+// 005   ----------------------------------------
+Label_FE5InSearchOfVictory3_0157509B:
+ BYTE   N12  Ds2  v100
+ BYTE   W36
+ BYTE   N12
+ BYTE   W36
+ BYTE   N24  Dn2
+ BYTE   W24
+ BYTE   PEND 
+// 006   ----------------------------------------
+ BYTE   N72  Ds2  v104
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   Ds2  v100
+ BYTE   W96
+// 008   ----------------------------------------
+Label_FE5InSearchOfVictory3_015750AC:
+ BYTE   W24
+ BYTE   N24  Fn2  v100
+ BYTE   W24
+ BYTE   As2
+ BYTE   W24
+ BYTE   Fn3
+ BYTE   W24
+ BYTE   PEND 
+// 009   ----------------------------------------
+Label_FE5InSearchOfVictory3_015750B6:
+ BYTE   N24  As2  v100
+ BYTE   W24
+ BYTE   Fn3
+ BYTE   W24
+ BYTE   N48  As3
+ BYTE   W48
+ BYTE   PEND 
+// 010   ----------------------------------------
+Label_FE5InSearchOfVictory3_015750C0:
+ BYTE   N12  As2  v100
+ BYTE   W36
+ BYTE   N12
+ BYTE   W60
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_015750C0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_015750C0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_015750C0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_015750C0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_015750C0
+// 011   ----------------------------------------
+Label_FE5InSearchOfVictory3_015750E0:
+ BYTE   N12  Ds3  v100
+ BYTE   W36
+ BYTE   N12
+ BYTE   W60
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_015750C0
+// 012   ----------------------------------------
+ BYTE   W96
+// 013   ----------------------------------------
+ BYTE   W96
+// 014   ----------------------------------------
+Label_FE5InSearchOfVictory3_015750EE:
+ BYTE   W24
+ BYTE   N24  As1  v100
+ BYTE   W24
+ BYTE   Fn2
+ BYTE   W24
+ BYTE   As2
+ BYTE   W24
+ BYTE   PEND 
+// 015   ----------------------------------------
+Label_FE5InSearchOfVictory3_015750F8:
+ BYTE   N24  Ds2  v100
+ BYTE   W24
+ BYTE   As2
+ BYTE   W24
+ BYTE   Ds3
+ BYTE   W24
+ BYTE   As3
+ BYTE   W24
+ BYTE   PEND 
+// 016   ----------------------------------------
+Label_FE5InSearchOfVictory3_01575103:
+ BYTE   W36
+ BYTE   N06  Gs3  v092
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N48
+ BYTE   W48
+ BYTE   PEND 
+// 017   ----------------------------------------
+Label_FE5InSearchOfVictory3_0157510D:
+ BYTE   N24  Gn3  v092
+ BYTE   W24
+ BYTE   Fn3
+ BYTE   W24
+ BYTE   Ds3
+ BYTE   W24
+ BYTE   N12  Dn3
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   PEND 
+// 018   ----------------------------------------
+Label_FE5InSearchOfVictory3_0157511B:
+ BYTE   N48  Fn3  v092
+ BYTE   W48
+ BYTE   N12
+ BYTE   W24
+ BYTE   N12
+ BYTE   W24
+ BYTE   PEND 
+// 019   ----------------------------------------
+Label_FE5InSearchOfVictory3_01575124:
+ BYTE   N48  Ds3  v092
+ BYTE   W48
+ BYTE   N36  Dn3
+ BYTE   W48
+ BYTE   PEND 
+// 020   ----------------------------------------
+Label_FE5InSearchOfVictory3_0157512C:
+ BYTE   N48  Gs3  v092
+ BYTE   W48
+ BYTE   N24  Gn3
+ BYTE   W24
+ BYTE   Fn3
+ BYTE   W24
+ BYTE   PEND 
+// 021   ----------------------------------------
+Label_FE5InSearchOfVictory3_01575136:
+ BYTE   N72  Ds3  v092
+ BYTE   W84
+ BYTE   N12
+ BYTE   W12
+ BYTE   PEND 
+// 022   ----------------------------------------
+ BYTE   N72  Fn3
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_01575124
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_01575070
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_01575079
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_01575070
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_01575079
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_01575070
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_01575079
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_01575094
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_0157509B
+// 023   ----------------------------------------
+ BYTE   N72  Ds2  v104
+ BYTE   W96
+// 024   ----------------------------------------
+ BYTE   Ds2  v100
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_015750AC
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_015750B6
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_015750C0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_015750C0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_015750C0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_015750C0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_015750C0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_015750C0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_015750E0
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_015750C0
+// 025   ----------------------------------------
+ BYTE   W96
+// 026   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_015750EE
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_015750F8
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_01575103
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_0157510D
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_0157511B
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_01575124
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_0157512C
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_01575136
+// 027   ----------------------------------------
+ BYTE   N72  Fn3  v092
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory3_01575124
+// 028   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_FE5InSearchOfVictory3_01575070
+ BYTE   FINE
+
+//**************** Track 5 (Midi-Chn.4) ****************//
+
+FE5InSearchOfVictory_005:
+// 000   ----------------------------------------
+ BYTE   KEYSH   FE5InSearchOfVictory_key+0
+ BYTE   VOICE   56
+ BYTE   VOL   54*FE5InSearchOfVictory_mvl/mxv
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+Label_FE5InSearchOfVictory4_015751E8:
+ BYTE   N12  As2  v100
+ BYTE   W36
+ BYTE   N12
+ BYTE   W60
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_015751E8
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_015751E8
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_015751E8
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_015751E8
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_015751E8
+// 003   ----------------------------------------
+Label_FE5InSearchOfVictory4_01575208:
+ BYTE   N12  Ds3  v100
+ BYTE   W36
+ BYTE   N12
+ BYTE   W60
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_015751E8
+// 004   ----------------------------------------
+ BYTE   N72  Cn3  v100
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   N72
+ BYTE   W96
+// 006   ----------------------------------------
+Label_FE5InSearchOfVictory4_0157521A:
+ BYTE   W24
+ BYTE   W03
+ BYTE   N24  Fn2  v100
+ BYTE   W24
+ BYTE   As2
+ BYTE   W24
+ BYTE   Fn3
+ BYTE   W21
+ BYTE   PEND 
+// 007   ----------------------------------------
+Label_FE5InSearchOfVictory4_01575225:
+ BYTE   W03
+ BYTE   N24  As2  v100
+ BYTE   W24
+ BYTE   Fn3
+ BYTE   W24
+ BYTE   N44  As3
+ BYTE   W44
+ BYTE   W01
+ BYTE   PEND 
+// 008   ----------------------------------------
+Label_FE5InSearchOfVictory4_01575231:
+ BYTE   N12  Ds2  v100
+ BYTE   W36
+ BYTE   N12
+ BYTE   W48
+ BYTE   As1
+ BYTE   W12
+ BYTE   PEND 
+// 009   ----------------------------------------
+Label_FE5InSearchOfVictory4_0157523A:
+ BYTE   N12  Ds2  v100
+ BYTE   W36
+ BYTE   N12
+ BYTE   W60
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_01575231
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_0157523A
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_01575231
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_0157523A
+// 010   ----------------------------------------
+Label_FE5InSearchOfVictory4_01575255:
+ BYTE   N12  Gs2  v100
+ BYTE   W36
+ BYTE   N12
+ BYTE   W60
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_0157523A
+// 011   ----------------------------------------
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   W96
+// 013   ----------------------------------------
+Label_FE5InSearchOfVictory4_01575263:
+ BYTE   W24
+ BYTE   W03
+ BYTE   N24  As1  v100
+ BYTE   W24
+ BYTE   Fn2
+ BYTE   W24
+ BYTE   As2
+ BYTE   W21
+ BYTE   PEND 
+// 014   ----------------------------------------
+Label_FE5InSearchOfVictory4_0157526E:
+ BYTE   W03
+ BYTE   N24  Ds2  v100
+ BYTE   W24
+ BYTE   As2
+ BYTE   W24
+ BYTE   Ds3
+ BYTE   W24
+ BYTE   N21  As3
+ BYTE   W21
+ BYTE   PEND 
+// 015   ----------------------------------------
+Label_FE5InSearchOfVictory4_0157527B:
+ BYTE   W36
+ BYTE   N06  Cn3  v092
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N48
+ BYTE   W48
+ BYTE   PEND 
+// 016   ----------------------------------------
+Label_FE5InSearchOfVictory4_01575285:
+ BYTE   N24  Bn2  v092
+ BYTE   W48
+ BYTE   N48  Cn3
+ BYTE   W48
+ BYTE   PEND 
+// 017   ----------------------------------------
+Label_FE5InSearchOfVictory4_0157528D:
+ BYTE   N48  Gs2  v092
+ BYTE   W72
+ BYTE   N12
+ BYTE   W24
+ BYTE   PEND 
+// 018   ----------------------------------------
+Label_FE5InSearchOfVictory4_01575294:
+ BYTE   N48  Gn2  v092
+ BYTE   W48
+ BYTE   N36  Fn2
+ BYTE   W48
+ BYTE   PEND 
+// 019   ----------------------------------------
+ BYTE   W96
+// 020   ----------------------------------------
+Label_FE5InSearchOfVictory4_0157529D:
+ BYTE   N72  Gn2  v092
+ BYTE   W84
+ BYTE   N12
+ BYTE   W12
+ BYTE   PEND 
+// 021   ----------------------------------------
+ BYTE   N72  An2
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_01575294
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_015751E8
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_015751E8
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_015751E8
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_015751E8
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_015751E8
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_015751E8
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_01575208
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_015751E8
+// 022   ----------------------------------------
+ BYTE   N72  Cn3  v100
+ BYTE   W96
+// 023   ----------------------------------------
+ BYTE   N72
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_0157521A
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_01575225
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_01575231
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_0157523A
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_01575231
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_0157523A
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_01575231
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_0157523A
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_01575255
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_0157523A
+// 024   ----------------------------------------
+ BYTE   W96
+// 025   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_01575263
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_0157526E
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_0157527B
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_01575285
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_0157528D
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_01575294
+// 026   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_0157529D
+// 027   ----------------------------------------
+ BYTE   N72  An2  v092
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory4_01575294
+// 028   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_FE5InSearchOfVictory4_015751E8
+ BYTE   FINE
+
+//**************** Track 6 (Midi-Chn.5) ****************//
+
+FE5InSearchOfVictory_006:
+// 000   ----------------------------------------
+ BYTE   KEYSH   FE5InSearchOfVictory_key+0
+ BYTE   VOICE   47
+ BYTE   VOL   45*FE5InSearchOfVictory_mvl/mxv
+ BYTE   N24  Fs2  v100
+ BYTE   W36
+ BYTE   N24
+ BYTE   W24
+ BYTE   Ds2
+ BYTE   W24
+ BYTE   N06  Fs2
+ BYTE   W06
+ BYTE   Ds2
+ BYTE   W06
+// 001   ----------------------------------------
+Label_FE5InSearchOfVictory5_01575357:
+ BYTE   N24  Fs2  v100
+ BYTE   W36
+ BYTE   N24
+ BYTE   W36
+ BYTE   N12  Ds2
+ BYTE   W12
+ BYTE   N06  Fs2
+ BYTE   W06
+ BYTE   Ds2
+ BYTE   W06
+ BYTE   PEND 
+// 002   ----------------------------------------
+Label_FE5InSearchOfVictory5_01575366:
+ BYTE   N24  Fs2  v100
+ BYTE   W36
+ BYTE   N24
+ BYTE   W24
+ BYTE   Ds2
+ BYTE   W24
+ BYTE   N06  Fs2
+ BYTE   W06
+ BYTE   Ds2
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575366
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575366
+// 003   ----------------------------------------
+Label_FE5InSearchOfVictory5_0157537E:
+ BYTE   N24  Fs2  v100
+ BYTE   W36
+ BYTE   N24
+ BYTE   W24
+ BYTE   N12
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Fs2
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575366
+// 004   ----------------------------------------
+Label_FE5InSearchOfVictory5_01575390:
+ BYTE   N24  Fs2  v100
+ BYTE   W36
+ BYTE   N24
+ BYTE   W24
+ BYTE   Ds2
+ BYTE   W24
+ BYTE   N06  Fs2
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   PEND 
+// 005   ----------------------------------------
+Label_FE5InSearchOfVictory5_0157539E:
+ BYTE   N24  Ds2  v100
+ BYTE   W36
+ BYTE   N24
+ BYTE   W36
+ BYTE   N12  Fs2
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   PEND 
+// 006   ----------------------------------------
+Label_FE5InSearchOfVictory5_015753AA:
+ BYTE   N24  Ds2  v100
+ BYTE   W36
+ BYTE   N24
+ BYTE   W24
+ BYTE   N12  Fs2
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Fs2
+ BYTE   W12
+ BYTE   PEND 
+// 007   ----------------------------------------
+Label_FE5InSearchOfVictory5_015753B8:
+ BYTE   N24  Ds2  v100
+ BYTE   W84
+ BYTE   N12  Fn2
+ BYTE   W12
+ BYTE   PEND 
+// 008   ----------------------------------------
+ BYTE   N24  Ds2
+ BYTE   W96
+// 009   ----------------------------------------
+Label_FE5InSearchOfVictory5_015753C3:
+ BYTE   N24  Ds2  v100
+ BYTE   W72
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   PEND 
+// 010   ----------------------------------------
+Label_FE5InSearchOfVictory5_015753CC:
+ BYTE   N12  Fs2  v100
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Fs2
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Fs2
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Fs2
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575366
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575357
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575357
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575357
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575357
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575357
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575357
+// 011   ----------------------------------------
+Label_FE5InSearchOfVictory5_01575402:
+ BYTE   N12  Fs2  v100
+ BYTE   W12
+ BYTE   N24  Ds2
+ BYTE   W24
+ BYTE   Fs2
+ BYTE   W24
+ BYTE   Ds2
+ BYTE   W24
+ BYTE   N12
+ BYTE   W12
+ BYTE   PEND 
+// 012   ----------------------------------------
+Label_FE5InSearchOfVictory5_01575410:
+ BYTE   N24  Fs2  v100
+ BYTE   W84
+ BYTE   N06  Ds2
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   PEND 
+// 013   ----------------------------------------
+Label_FE5InSearchOfVictory5_0157541A:
+ BYTE   N24  Fs2  v100
+ BYTE   W84
+ BYTE   N06
+ BYTE   W06
+ BYTE   Ds2
+ BYTE   W06
+ BYTE   PEND 
+// 014   ----------------------------------------
+ BYTE   N24  Fs2
+ BYTE   W96
+// 015   ----------------------------------------
+Label_FE5InSearchOfVictory5_01575426:
+ BYTE   N24  Fs2  v100
+ BYTE   W24
+ BYTE   N12
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   N03  Fs2  v080
+ BYTE   W03
+ BYTE   Ds2
+ BYTE   W03
+ BYTE   Fs2
+ BYTE   W03
+ BYTE   Ds2
+ BYTE   W03
+ BYTE   Fs2
+ BYTE   W03
+ BYTE   Ds2
+ BYTE   W03
+ BYTE   Fs2
+ BYTE   W03
+ BYTE   Ds2
+ BYTE   W03
+ BYTE   Fs2
+ BYTE   W03
+ BYTE   Ds2
+ BYTE   W03
+ BYTE   Fs2  v092
+ BYTE   W03
+ BYTE   Ds2
+ BYTE   W03
+ BYTE   Fs2
+ BYTE   W03
+ BYTE   Ds2
+ BYTE   W03
+ BYTE   Fs2
+ BYTE   W03
+ BYTE   Ds2
+ BYTE   W03
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_0157541A
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_0157541A
+// 016   ----------------------------------------
+ BYTE   N24  Fs2  v100
+ BYTE   W96
+// 017   ----------------------------------------
+Label_FE5InSearchOfVictory5_01575460:
+ BYTE   N24  Fs2  v100
+ BYTE   W48
+ BYTE   N12  Ds2
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   Fs2
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   PEND 
+// 018   ----------------------------------------
+Label_FE5InSearchOfVictory5_0157546E:
+ BYTE   N24  Fs2  v100
+ BYTE   W84
+ BYTE   N12
+ BYTE   W12
+ BYTE   PEND 
+// 019   ----------------------------------------
+Label_FE5InSearchOfVictory5_01575475:
+ BYTE   N24  Fs2  v100
+ BYTE   W72
+ BYTE   Ds2
+ BYTE   W24
+ BYTE   PEND 
+// 020   ----------------------------------------
+Label_FE5InSearchOfVictory5_0157547C:
+ BYTE   N24  Fs2  v100
+ BYTE   W84
+ BYTE   N12  Ds2
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_015753CC
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575366
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575366
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575366
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_0157537E
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575366
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575390
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_0157539E
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_015753AA
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_015753B8
+// 021   ----------------------------------------
+ BYTE   N24  Ds2  v100
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_015753C3
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_015753CC
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575366
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575357
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575357
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575357
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575357
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575357
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575357
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575402
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575410
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_0157541A
+// 022   ----------------------------------------
+ BYTE   N24  Fs2  v100
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575426
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_0157541A
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_0157541A
+// 023   ----------------------------------------
+ BYTE   N24  Fs2  v100
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575460
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_0157546E
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_01575475
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_0157547C
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory5_015753CC
+// 024   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_FE5InSearchOfVictory5_01575366
+ BYTE   FINE
+
+//**************** Track 7 (Midi-Chn.6) ****************//
+
+FE5InSearchOfVictory_007:
+// 000   ----------------------------------------
+ BYTE   KEYSH   FE5InSearchOfVictory_key+0
+ BYTE   VOICE   47
+ BYTE   VOL   56*FE5InSearchOfVictory_mvl/mxv
+ BYTE   N24  Fs1  v100
+ BYTE   W36
+ BYTE   N24
+ BYTE   W24
+ BYTE   Ds1
+ BYTE   W24
+ BYTE   N06  Fs1
+ BYTE   W06
+ BYTE   Ds1
+ BYTE   W06
+// 001   ----------------------------------------
+Label_FE5InSearchOfVictory6_0157553F:
+ BYTE   N24  Fs1  v100
+ BYTE   W36
+ BYTE   N24
+ BYTE   W36
+ BYTE   N12  Ds1
+ BYTE   W12
+ BYTE   N06  Fs1
+ BYTE   W06
+ BYTE   Ds1
+ BYTE   W06
+ BYTE   PEND 
+// 002   ----------------------------------------
+Label_FE5InSearchOfVictory6_0157554E:
+ BYTE   N24  Fs1  v100
+ BYTE   W36
+ BYTE   N24
+ BYTE   W24
+ BYTE   Ds1
+ BYTE   W24
+ BYTE   N06  Fs1
+ BYTE   W06
+ BYTE   Ds1
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157554E
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157554E
+// 003   ----------------------------------------
+Label_FE5InSearchOfVictory6_01575566:
+ BYTE   N24  Fs1  v100
+ BYTE   W36
+ BYTE   N24
+ BYTE   W24
+ BYTE   N12
+ BYTE   W12
+ BYTE   Ds1
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157554E
+// 004   ----------------------------------------
+Label_FE5InSearchOfVictory6_01575578:
+ BYTE   N24  Fs1  v100
+ BYTE   W36
+ BYTE   N24
+ BYTE   W24
+ BYTE   Ds1
+ BYTE   W24
+ BYTE   N06  Fs1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   PEND 
+// 005   ----------------------------------------
+Label_FE5InSearchOfVictory6_01575586:
+ BYTE   N24  Ds1  v100
+ BYTE   W36
+ BYTE   N24
+ BYTE   W36
+ BYTE   N12  Fs1
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   PEND 
+// 006   ----------------------------------------
+Label_FE5InSearchOfVictory6_01575592:
+ BYTE   N24  Ds1  v100
+ BYTE   W36
+ BYTE   N24
+ BYTE   W24
+ BYTE   N12  Fs1
+ BYTE   W12
+ BYTE   Ds1
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   PEND 
+// 007   ----------------------------------------
+Label_FE5InSearchOfVictory6_015755A0:
+ BYTE   N24  Ds1  v100
+ BYTE   W84
+ BYTE   N12  Fn1
+ BYTE   W12
+ BYTE   PEND 
+// 008   ----------------------------------------
+ BYTE   N24  Ds1
+ BYTE   W96
+// 009   ----------------------------------------
+Label_FE5InSearchOfVictory6_015755AB:
+ BYTE   N24  Ds1  v100
+ BYTE   W72
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   PEND 
+// 010   ----------------------------------------
+Label_FE5InSearchOfVictory6_015755B4:
+ BYTE   N12  Fs1  v100
+ BYTE   W12
+ BYTE   Ds1
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Ds1
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Ds1
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Ds1
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157554E
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157553F
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157553F
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157553F
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157553F
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157553F
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157553F
+// 011   ----------------------------------------
+Label_FE5InSearchOfVictory6_015755EA:
+ BYTE   N12  Fs1  v100
+ BYTE   W12
+ BYTE   N24  Ds1
+ BYTE   W24
+ BYTE   Fs1
+ BYTE   W24
+ BYTE   Ds1
+ BYTE   W24
+ BYTE   N12
+ BYTE   W12
+ BYTE   PEND 
+// 012   ----------------------------------------
+Label_FE5InSearchOfVictory6_015755F8:
+ BYTE   N24  Fs1  v100
+ BYTE   W84
+ BYTE   N06  Ds1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   PEND 
+// 013   ----------------------------------------
+Label_FE5InSearchOfVictory6_01575602:
+ BYTE   N24  Fs1  v100
+ BYTE   W84
+ BYTE   N06
+ BYTE   W06
+ BYTE   Ds1
+ BYTE   W06
+ BYTE   PEND 
+// 014   ----------------------------------------
+ BYTE   N24  Fs1
+ BYTE   W96
+// 015   ----------------------------------------
+Label_FE5InSearchOfVictory6_0157560E:
+ BYTE   N24  Fs1  v100
+ BYTE   W24
+ BYTE   N12
+ BYTE   W12
+ BYTE   Ds1
+ BYTE   W12
+ BYTE   N03  Fs1  v080
+ BYTE   W03
+ BYTE   Ds1
+ BYTE   W03
+ BYTE   Fs1
+ BYTE   W03
+ BYTE   Ds1
+ BYTE   W03
+ BYTE   Fs1
+ BYTE   W03
+ BYTE   Ds1
+ BYTE   W03
+ BYTE   Fs1
+ BYTE   W03
+ BYTE   Ds1
+ BYTE   W03
+ BYTE   Fs1
+ BYTE   W03
+ BYTE   Ds1
+ BYTE   W03
+ BYTE   Fs1  v092
+ BYTE   W03
+ BYTE   Ds1
+ BYTE   W03
+ BYTE   Fs1
+ BYTE   W03
+ BYTE   Ds1
+ BYTE   W03
+ BYTE   Fs1
+ BYTE   W03
+ BYTE   Ds1
+ BYTE   W03
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_01575602
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_01575602
+// 016   ----------------------------------------
+ BYTE   N24  Fs1  v100
+ BYTE   W96
+// 017   ----------------------------------------
+Label_FE5InSearchOfVictory6_01575648:
+ BYTE   N24  Fs1  v100
+ BYTE   W48
+ BYTE   N12  Ds1
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Ds1
+ BYTE   W12
+ BYTE   PEND 
+// 018   ----------------------------------------
+Label_FE5InSearchOfVictory6_01575656:
+ BYTE   N24  Fs1  v100
+ BYTE   W84
+ BYTE   N12
+ BYTE   W12
+ BYTE   PEND 
+// 019   ----------------------------------------
+Label_FE5InSearchOfVictory6_0157565D:
+ BYTE   N24  Fs1  v100
+ BYTE   W72
+ BYTE   Ds1
+ BYTE   W24
+ BYTE   PEND 
+// 020   ----------------------------------------
+Label_FE5InSearchOfVictory6_01575664:
+ BYTE   N24  Fs1  v100
+ BYTE   W84
+ BYTE   N12  Ds1
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_015755B4
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157554E
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157554E
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157554E
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_01575566
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157554E
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_01575578
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_01575586
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_01575592
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_015755A0
+// 021   ----------------------------------------
+ BYTE   N24  Ds1  v100
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_015755AB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_015755B4
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157554E
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157553F
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157553F
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157553F
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157553F
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157553F
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157553F
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_015755EA
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_015755F8
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_01575602
+// 022   ----------------------------------------
+ BYTE   N24  Fs1  v100
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157560E
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_01575602
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_01575602
+// 023   ----------------------------------------
+ BYTE   N24  Fs1  v100
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_01575648
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_01575656
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_0157565D
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_01575664
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory6_015755B4
+// 024   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_FE5InSearchOfVictory6_0157554E
+ BYTE   FINE
+
+//**************** Track 8 (Midi-Chn.7) ****************//
+
+FE5InSearchOfVictory_008:
+// 000   ----------------------------------------
+ BYTE   KEYSH   FE5InSearchOfVictory_key+0
+ BYTE   VOICE   60
+ BYTE   VOL   64*FE5InSearchOfVictory_mvl/mxv
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+Label_FE5InSearchOfVictory7_0157571C:
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   W96
+// 008   ----------------------------------------
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   W96
+// 010   ----------------------------------------
+ BYTE   W96
+// 011   ----------------------------------------
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   W96
+// 013   ----------------------------------------
+ BYTE   W96
+// 014   ----------------------------------------
+ BYTE   W96
+// 015   ----------------------------------------
+ BYTE   W96
+// 016   ----------------------------------------
+ BYTE   W96
+// 017   ----------------------------------------
+ BYTE   W96
+// 018   ----------------------------------------
+ BYTE   W96
+// 019   ----------------------------------------
+ BYTE   W96
+// 020   ----------------------------------------
+ BYTE   W96
+// 021   ----------------------------------------
+ BYTE   W96
+// 022   ----------------------------------------
+ BYTE   W96
+// 023   ----------------------------------------
+ BYTE   W96
+// 024   ----------------------------------------
+ BYTE   W96
+// 025   ----------------------------------------
+ BYTE   W96
+// 026   ----------------------------------------
+Label_FE5InSearchOfVictory7_01575734:
+ BYTE   W36
+ BYTE   N06  Gs3  v100
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N48
+ BYTE   W48
+ BYTE   PEND 
+// 027   ----------------------------------------
+Label_FE5InSearchOfVictory7_0157573E:
+ BYTE   N24  Gn3  v100
+ BYTE   W24
+ BYTE   Fn3
+ BYTE   W24
+ BYTE   Ds3
+ BYTE   W24
+ BYTE   N12  Dn3
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   PEND 
+// 028   ----------------------------------------
+Label_FE5InSearchOfVictory7_0157574C:
+ BYTE   N48  Fn3  v100
+ BYTE   W48
+ BYTE   N12
+ BYTE   W24
+ BYTE   N12
+ BYTE   W24
+ BYTE   PEND 
+// 029   ----------------------------------------
+Label_FE5InSearchOfVictory7_01575755:
+ BYTE   N48  Ds3  v100
+ BYTE   W48
+ BYTE   N36  Dn3
+ BYTE   W48
+ BYTE   PEND 
+// 030   ----------------------------------------
+Label_FE5InSearchOfVictory7_0157575D:
+ BYTE   N48  Gs3  v100
+ BYTE   W48
+ BYTE   N24  Gn3
+ BYTE   W24
+ BYTE   Fn3
+ BYTE   W24
+ BYTE   PEND 
+// 031   ----------------------------------------
+Label_FE5InSearchOfVictory7_01575767:
+ BYTE   N72  Ds3  v100
+ BYTE   W84
+ BYTE   N12
+ BYTE   W12
+ BYTE   PEND 
+// 032   ----------------------------------------
+ BYTE   N72  Fn3
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory7_01575755
+// 033   ----------------------------------------
+ BYTE   W96
+// 034   ----------------------------------------
+ BYTE   W96
+// 035   ----------------------------------------
+ BYTE   W96
+// 036   ----------------------------------------
+ BYTE   W96
+// 037   ----------------------------------------
+ BYTE   W96
+// 038   ----------------------------------------
+ BYTE   W96
+// 039   ----------------------------------------
+ BYTE   W96
+// 040   ----------------------------------------
+ BYTE   W96
+// 041   ----------------------------------------
+ BYTE   W96
+// 042   ----------------------------------------
+ BYTE   W96
+// 043   ----------------------------------------
+ BYTE   W96
+// 044   ----------------------------------------
+ BYTE   W96
+// 045   ----------------------------------------
+ BYTE   W96
+// 046   ----------------------------------------
+ BYTE   W96
+// 047   ----------------------------------------
+ BYTE   W96
+// 048   ----------------------------------------
+ BYTE   W96
+// 049   ----------------------------------------
+ BYTE   W96
+// 050   ----------------------------------------
+ BYTE   W96
+// 051   ----------------------------------------
+ BYTE   W96
+// 052   ----------------------------------------
+ BYTE   W96
+// 053   ----------------------------------------
+ BYTE   W96
+// 054   ----------------------------------------
+ BYTE   W96
+// 055   ----------------------------------------
+ BYTE   W96
+// 056   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory7_01575734
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory7_0157573E
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory7_0157574C
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory7_01575755
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory7_0157575D
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory7_01575767
+// 057   ----------------------------------------
+ BYTE   N72  Fn3  v100
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory7_01575755
+// 058   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_FE5InSearchOfVictory7_0157571C
+ BYTE   FINE
+
+//**************** Track 9 (Midi-Chn.8) ****************//
+
+FE5InSearchOfVictory_009:
+// 000   ----------------------------------------
+ BYTE   KEYSH   FE5InSearchOfVictory_key+0
+ BYTE   VOICE   0
+ BYTE   VOL   44*FE5InSearchOfVictory_mvl/mxv
+ BYTE   N06  Dn1  v080
+ BYTE   N06  En1  v100
+ BYTE   W36
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v092
+ BYTE   W12
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v092
+ BYTE   W12
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v092
+ BYTE   W36
+// 001   ----------------------------------------
+Label_FE5InSearchOfVictory8_015757DB:
+ BYTE   N06  Dn1  v080
+ BYTE   N06  En1  v100
+ BYTE   W36
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v092
+ BYTE   W12
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v092
+ BYTE   W12
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v092
+ BYTE   W36
+ BYTE   PEND 
+// 002   ----------------------------------------
+Label_FE5InSearchOfVictory8_015757F5:
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+// 003   ----------------------------------------
+Label_FE5InSearchOfVictory8_01575804:
+ BYTE   N06  Dn1  v080
+ BYTE   N06  En1  v100
+ BYTE   W36
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v092
+ BYTE   W12
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v092
+ BYTE   W12
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v092
+ BYTE   W24
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v100
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_01575804
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_01575804
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_01575804
+// 004   ----------------------------------------
+Label_FE5InSearchOfVictory8_0157587E:
+ BYTE   N06  Dn1  v080
+ BYTE   N06  En1  v100
+ BYTE   W12
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v100
+ BYTE   W12
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v100
+ BYTE   W24
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v092
+ BYTE   W12
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v092
+ BYTE   W12
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v100
+ BYTE   W24
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_01575804
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+// 005   ----------------------------------------
+Label_FE5InSearchOfVictory8_015758AE:
+ BYTE   N06  Dn1  v080
+ BYTE   N06  En1  v100
+ BYTE   W36
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v092
+ BYTE   W06
+ BYTE   Dn1  v040
+ BYTE   N06  En1  v060
+ BYTE   W06
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v092
+ BYTE   W12
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v092
+ BYTE   W36
+ BYTE   PEND 
+// 006   ----------------------------------------
+Label_FE5InSearchOfVictory8_015758CE:
+ BYTE   N06  Dn1  v080
+ BYTE   N06  En1  v100
+ BYTE   W12
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v092
+ BYTE   W12
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v092
+ BYTE   W12
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v100
+ BYTE   W24
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v092
+ BYTE   W12
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v092
+ BYTE   W12
+ BYTE   Dn1  v080
+ BYTE   N06  En1  v092
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015758CE
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015758CE
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015758CE
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015758CE
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_01575804
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_01575804
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_01575804
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_01575804
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_0157587E
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_01575804
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015758AE
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015758CE
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015758CE
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015758CE
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015758CE
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015758CE
+ BYTE   PATT
+  POIN2 Label_FE5InSearchOfVictory8_015757DB
+// 007   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_FE5InSearchOfVictory8_015757F5
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+songFE5InSearchOfVictory:
+	BYTE	9	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	FE5InSearchOfVictory_pri	// Priority
+	BYTE	FE5InSearchOfVictory_rev	// Reverb.
+    
+	POIN2	FE5InSearchOfVictory_grp
+    
+	POIN2	FE5InSearchOfVictory_001
+	POIN2	FE5InSearchOfVictory_002
+	POIN2	FE5InSearchOfVictory_003
+	POIN2	FE5InSearchOfVictory_004
+	POIN2	FE5InSearchOfVictory_005
+	POIN2	FE5InSearchOfVictory_006
+	POIN2	FE5InSearchOfVictory_007
+	POIN2	FE5InSearchOfVictory_008
+	POIN2	FE5InSearchOfVictory_009
+
+	

@@ -291,3 +291,77 @@ SongTable(Metropolis,songMetropolis)
 
 SongTable(Legends_of_Avenir,songLegendsOfAvenir)
 #include "LegendsOfAvenir.event"
+
+
+SongTable(FE5_Advance,songFE5Advance)
+#include "FE5Advance.event"
+
+SongTable(FE5_Adversity,songFE5Adversity)
+#include "FE5Adversity.event"
+
+SongTable(FE5_Destiny,songFE5Destiny)
+#include "FE5Destiny.event"
+
+SongTable(FE5_Field,songFE5Field)
+#include "FE5Field.event"
+
+SongTable(FE5_In_Search_of_Victory,songFE5InSearchOfVictory)
+#include "FE5InSearchOfVictory.event"
+
+SongTable(FE5_Loptr_B,songFE5LoptrB)
+#include "FE5LoptrB.event"
+
+SongTable(FE5_Map_A,songFE5MapA)
+#include "FE5MapA.event"
+
+SongTable(FE5_Searching_the_Enemy,songFE5SearchingTheEnemy)
+#include "FE5SearchingTheEnemy.event"
+
+SongTable(FE5_Victory,songFE5Victory)
+#include "FE5Victory.event"
+
+SongTable(FE5_Victory_Minor,songFE5VictoryMinor)
+#include "FE5VictoryMinor.event"
+
+
+SongTable(Victory_March,songVictoryMarch)
+#include "VictoryMarch.event"
+
+SongTable(Battle_One,songBattleOne)
+#include "BattleOne.event"
+
+SongTable(Courage_and_Pride_from_the_Heart,songCourageAndPrideFromTheHeart)
+#include "CourageAndPrideFromTheHeart.event"
+
+SongTable(Cutting_Edge_of_Notion,songCuttingEdgeOfNotion)
+#include "CuttingEdgeOfNotion.event"
+
+SongTable(Hand_Combat,songHandCombat)
+#include "HandCombat.event"
+
+SongTable(Justice,songJustice)
+#include "Justice.event"
+
+SongTable(Team_Making,songTeamMaking)
+#include "TeamMaking.event"
+
+SongTable(Dark_Clouds_Gather,songDarkCloudsGather)
+#include "DarkCloudsGather.event"
+
+SongTable(Wrath_Strike,songWrathStrike)
+#include "WrathStrike.event"
+
+SongTable(Blindly_Charging,songBlindlyCharging)
+#include "BlindlyCharging.event"
+
+SongTable(Darker,songDarker)
+#include "Darker.event"
+
+SongTable(Evil_Approaches,songEvilApproaches)
+#include "EvilApproaches.event"
+
+SongTable(Judgral_Calls,songJudgralCalls)
+#include "JudgralCalls.event"
+
+SongTable(Roar_of_Dominion,songRoarOfDominion)
+#include "RoarOfDominion.event"
