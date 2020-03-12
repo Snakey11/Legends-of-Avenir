@@ -307,6 +307,7 @@
 #define BossVal 0x8D
 #define Clint 0x8E
 #define Blaine 0x8F
+#define BossHelmer 0x90
 //LabelEnd
 
 //Label Portrait Defenitions
