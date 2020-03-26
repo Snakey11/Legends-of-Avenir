@@ -3,7 +3,7 @@
 
 setlocal enabledelayedexpansion
 
-rem portraitformatter.exe: Calls portrait.exe for all .png files in folder & subfolders
+rem portraitformatter.exe: Calls portraitformatter.exe for all .png files in folder & subfolders
 rem does not call portraitformatter for files where the existing .dmp file is newer than the .png file
 
 set FILE_MATCH=*.png
