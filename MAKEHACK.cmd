@@ -18,7 +18,7 @@ echo ---------------------------
 echo Assembling ROM. Please wait...
 echo ---------------------------
 
-Core A FE8 "-output:%~dp0Avenir.gba" "-input:%~dp0Ultrafile.event" "--nocash-sym"
+ColorzCore A FE8 "-output:%~dp0Avenir.gba" "-input:%~dp0Ultrafile.event" "--nocash-sym"
 
 cd "%~dp0sym"
 java -jar %~dp0sym\SymCombo.jar "%~dp0Avenir.sym" "Stan.sym"
