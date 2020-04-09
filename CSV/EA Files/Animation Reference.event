@@ -212,9 +212,9 @@ UnarmedAnim(MaligKnightMagic)
 WORD 0x0 0x0
 
 MarksmanAnim:
-SwordAnim(MarksmanSword)
-BowAnim(MarksmanBow)
-UnarmedAnim(MarksmanUnarmed)
+SwordAnim(MarksmanMSword)
+BowAnim(MarksmanMBow)
+UnarmedAnim(MarksmanMUnarmed)
 WORD 0x0 0x0
 
 MasterKnightAnim:
@@ -272,6 +272,12 @@ PhantomAnim:
 AxeAnim(PhantomAxe)
 HandAxeAnim(PhantomHandAxe)
 UnarmedAnim(PhantomUnarmed)
+WORD 0x0 0x0
+
+PirateAnim:
+AxeAnim(PirateAxe)
+HandAxeAnim(PirateHandAxe)
+UnarmedAnim(PirateUnarmed)
 WORD 0x0 0x0
 
 SentinelAnim:
