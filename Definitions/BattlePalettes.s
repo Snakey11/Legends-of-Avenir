@@ -54,7 +54,7 @@ MercenaryMMyrmidonPaletteID
 MercenaryMFighterPaletteID
 MercenaryMPiratePaletteID
 MercenaryMBrigandPaletteID
-ercenaryMChampionPaletteID
+MercenaryMChampionPaletteID
 MercenaryMTruebladePaletteID
 MercenaryMWarlockPaletteID
 MercenaryMMountainierPaletteID

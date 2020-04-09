@@ -1,6 +1,25 @@
 
 //Label Item defenitions
 #undef ToxinLance
+#define Dragonspear DragonSpear
+#define Artemis Artimes
+#define RuneSword Runesword
+#define BraveSpear BraveLance
+#define Bolganone Bolagnone
+#define Speedwing Speedwings
+#define DevilSpear DevilLance
+#define SwordSlayer Swordslayer
+#define LanceSlayer Lanceslayer
+#define AxeSlayer Axeslayer
+#define ArmorSlayer Armorslayer
+#define HoplonGuard HoplonShield
+#define IronSpear IronLance
+#define SteelSpear SteelLance
+#define SilverSpear SilverLance
+#define Naglfal Naglfar
+#define DragonShield Dragonshield
+/*
+#undef ToxinLance
 #define Spears Lances
 #define IronSpear IronLance
 #define SteelSpear SteelLance
@@ -68,10 +87,34 @@
 #define ToxinAxe 0xE1
 #define ToxinBow 0xE2
 #define SpiritDust 0xE3
-#define DoorKey_5 0xE4
+#define DoorKey_5 0xE4*/
 //LabelEnd
 
 //Label Class defenitions
+#define Phantom GhostFighter
+#define Spellsword SpellswordM
+#define BattleSage BattleSageM
+#define DreadFighter DreadFighterM
+#define Trueblade TruebladeM
+#define Hector HectorClass
+#define KnightM2 Knight2
+#define KnightF2 Knight2
+#define WyvernRiderM2 WyvernRider2
+#define WyvernRiderF2 WyvernRider2
+#define Baselius Basileus
+//#define Magus MagusM
+//#define Hunter Marksman
+#define Champion ChampionM
+#define BlackFalcoknight SeraphKnight
+#define Combatant BattleSageF
+#define Falcoknight FalcoKnight
+#define Maurader MountedBrigand
+#define Marksman MarksmanM
+#define HunterM Marksman
+#define HunterF BowKnight
+#define Magus MagusM
+#define Trueerblade Truerblade
+/*
 #define Falcoknight FalcoKnight
 #define Phantom 0x51
 #define Patriarch 0x52
@@ -165,10 +208,15 @@
 #define SpellswordM 0xA7
 #define Spellsword SpellswordM
 #define SpellswordF 0xA8
-#define ChampionF 0xA9
+#define ChampionF 0xA9*/
 //LabelEnd
 
 //Label Character definitions
+#define Uzkalis BossUzkalis
+#define GuardianSpirit Narrator
+#define BossGhost GhostBoss
+#define Haedrician Haedrican
+/*
 #define PlayerMMonk 0x1
 #define PlayerMShaman 0x2 
 #define PlayerMMage 0x3
@@ -307,7 +355,7 @@
 #define BossVal 0x8D
 #define Clint 0x8E
 #define Blaine 0x8F
-#define BossHelmer 0x90
+#define BossHelmer 0x90*/
 //LabelEnd
 
 //Label Portrait Defenitions
@@ -456,6 +504,8 @@
 //LabelEnd
 
 //Label Chapter Defenitions
+#define OutsideKilthelCutscene OutsideTempleCutscene
+/*
 #define PrologueChapter 0x0
 #define Mage1 0x1
 #define MageEscape2 0x2
@@ -538,7 +588,7 @@
 #define AltianDungeonCutscene 0x63
 #define HaedricCityCutscene 0x64
 #define PortSelsingCutscene 0x65
-#define KendrickShipCutscene 0x66
+#define KendrickShipCutscene 0x66*/
 //LabelEnd
 
 //Label Palette Definitions
@@ -907,6 +957,38 @@
 #define Medium 0x01
 #define Small 0x00
 
+#define CavalierFSprite CavalierSprite
+#define PaladinFSprite PaladinSprite
+#define KnightFSprite KnightSprite
+#define GeneralFSprite GeneralSprite
+#define RangerFSprite RangerSprite
+#define WyvernKnightFSprite WyvernKnightSprite
+#define ShamanFSprite ShamanSprite
+#define DruidFSprite DruidSprite
+#define SummonerFSprite SummonerSprite
+#define GreatKnightFSprite GreatKnightSprite
+#define DarkKnightFSprite DarkKnightSprite
+#define WyvernGeneralSprite WyvernLordSprite
+#define SeraphKnightSprite FalcoknightSprite
+#define JacketHeroSprite HeroSprite
+#define GaidenSageSprite SageSprite
+#define SpearHeroSprite HeroSprite
+#define XeximSprite AssassinSprite
+#define GrandPaladinSprite PaladinSprite
+#define HolySageSprite SageSprite
+#define WilSniperSprite SniperSprite
+#define LostSoulSprite Civilian3Sprite
+#define LostSoulFSprite Civilian4Sprite
+#define ArmoredWyvernLordSprite WyvernLordSprite
+#define EmperorSprite TruebladeSprite
+#define MurielSprite SageFSprite
+#define ImpalerFSprite ImpalerSprite
+#define BowKnightSprite RangerSprite
+#define HighPriestSprite PatriarchSprite
+#define StrategistSprite BattleSageSprite
+#define ChampionFSprite ChampionSprite
+#define GladiatorSprite ChampionSprite
+/*
 #define PirateSprite 0x34
 #define EmperorSprite 0x62
 
@@ -941,7 +1023,7 @@
 #define DreadFighterFSprite 0x85
 #define GoldKnightSprite 0x86
 #define SpellswordMSprite 0x87
-#define SpellswordFSprite 0x88
+#define SpellswordFSprite 0x88*/
 //LabelEnd
 
 //Label Battle Animations
@@ -957,6 +1039,7 @@
 #define DarkAnim(Animation) "BYTE Dark 0x01 ; SHORT Animation"
 #define UnarmedAnim(Animation) "BYTE Item 0x01 ; SHORT Animation"
 #define SpecialAnim(Animation,Weapon) "BYTE Weapon 0x00 ; SHORT Animation"
+#define Spears Lances
 /*
 #define FighterAxe 0x19
 #define FighterHandAxe 0x1A
@@ -1627,6 +1710,8 @@
 //LabelEnd
 #define EndUnit UNIT // Necessary for folding
 #define EndA2 ENDA
+
+#include "Definitions/Definitions.event"
 
 /*
 #define LoadingMercenary(Index,UnitPointer)

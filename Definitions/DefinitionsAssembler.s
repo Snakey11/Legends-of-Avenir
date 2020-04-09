@@ -1,6 +1,12 @@
 
+.include BattleAnimations.s
+.include BattlePalettes.s
+.include Chapters.s
+.include Characters.s
+.include Classes.s
+.include EventPointers.s
+.include Items.s
+.include Music.s
 .include Portraits.s
 .include Spells.s
-.include BattlePalettes.s
-.include EventPointers.s
-.include BattleAnimations.s
+.include StandingSprites.s
