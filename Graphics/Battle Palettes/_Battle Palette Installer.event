@@ -2,15 +2,15 @@
 //#define PaletteTable 0xEF8004
 ALIGN 4
 PaletteTable:
-ORG CURRENTOFFSET + ( 0xFF *0x10 ) // Allocate 0xFF entries for the PaletteTable.
+FILL 0xFF *0x10 // Allocate 0xFF entries for the PaletteTable.
 
 ALIGN 4
 CharPaletteTable:
-ORG CURRENTOFFSET + ( 0xFF * 0x07 ) // Allocate 0xFF entries for the CharPaletteTable.
+FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharPaletteTable.
 
 ALIGN 4
 CharClassTable:
-ORG CURRENTOFFSET + ( 0xFF * 0x07 ) // Allocate 0xFF entries for the CharClassTable.
+FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 
 #define BattleSpriteTable 0xC00008
 
