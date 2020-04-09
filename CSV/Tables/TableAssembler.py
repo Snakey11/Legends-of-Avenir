@@ -149,14 +149,16 @@ try:
         
         # Now why don't we read the data from the CSV?
         names = [] # List of names indexed by what collumn they're in.
-        data = [] # List of lists containing the raw data from the CSV.
+        data = [] # List of tupples with 0 being a list containing the raw data from the CSV and 1 being the line number.
         with open(csv,'r') as file: # This should be guranteed to exist, so no error handling is necessary?
             for lineNumber, line in enumerate(file,1):
                 if lineNumber == 1:
                     names = removeEmptyItems(line.strip().split(',')) # First fill in the names of the collumns.
                 elif not any(s.strip() for s in line.split(',')): continue # Check if this row is empty. If so, ignore it.
                 else: # This is a line that we want to go through. Record its data.
-                    data.append(removeEmptyItems(line.strip().split(',')))
+                    l = removeEmptyItems(line.strip().split(','))
+                    l[0] = l[0].strip().split()[0]
+                    data.append((l,lineNumber))
         # Data is now full, and names contains our relevant info from the first row.
         
         # Before we proceed, let's make sure that the top left cell contains good data.
@@ -166,18 +168,24 @@ try:
         except ValueError:
             # Make sure that they're using INLINE (label) (optional max entry value). Last parameter is for allocating table space with the explicit indexing.
             if len(names[0].split()) < 2 or names[0].split()[0] != inline:
-                raise MissingDataError(csv,0,0,extra='This cell must contain an offset to write to or INLINE (label) (optional max entry value) to include.')
+                raise MissingDataError(csv,0,0,extra='This cell must contain an offset to write to or INLINE (label) (optional max entry value) (optional index subtraction) to include.')
             try:
                 int(names[0].split()[2],0) # See if we can convert the optional parameter to a number.
             except IndexError:
                 pass # Out of bounds. They didn't specify one which is okay.
             except ValueError: # lol ValueError except within a ValueError except.
                 raise BadCSVDataError(csv,0,0,extra='Declaration of maximum entries for explicit indexing must be a number.')
+            try:
+                int(names[0].split()[3],0) # See if we can convert the subtractor to a number.
+            except IndexError:
+                pass
+            except ValueError:
+                raise BadCSVDataError(csv,0,0,extra='Declaration of universal subtractor for explicit indexing must be a number.')
         
         # Before we proceed, let's make sure all elements of data are the same length. If not, then there will be problems.
-        length = getRealRowLength(data[0])
-        for i, e in enumerate(data[1:],3):
-            if length != getRealRowLength(e): raise WrongDataCountError(csv,i)
+        length = getRealRowLength(data[0][0])
+        for e in data[1:]:
+            if length != getRealRowLength(e[0]): raise WrongDataCountError(csv,e[1])
         
         # Our next step is to get a string that we will write for each line.
         output = [] # List of strings ready to write to the output file.
@@ -186,8 +194,10 @@ try:
             output.append('ALIGN 4')
             output.append(names[0].split()[1]+':')
             # Also, let's check if we need to write a blank table with a PUSH/POP for the special explicit indexing.
-            if len(names[0].split()) == 3:
-                output.append('BYTE ' + size*int(names[0].split()[2],0)*'0 ') # Write 0 bytes for the number of entries * size.                
+            if len(names[0].split()) > 2:
+                # output.append('BYTE ' + size*int(names[0].split()[2],0)*'0 ') # Write 0 bytes for the number of entries * size.
+                # jk this has been replaced by a superior command in colorzcore: FILL <amount> [byte value]. Default value is 0.
+                output.append(f'FILL {size*int(names[0].split()[2],0)}')
                 output.append('PUSH')
         
         else:
@@ -196,21 +206,25 @@ try:
         
         for e in data:
             str = ''
-            if len(names[0].split()) == 3: # They want the special indexing! Start with 'ORG TableStart + Definition*size ; '.
-                str = str + f'ORG {names[0].split()[1]} + {e[0]} * {size} ; '
+            first = names[0].split()
+            if len(first) > 2: # They want the special indexing!
+                if len(first) > 3: # They also want the universal subtractor (useful for item usability/effect).
+                    str = str + f'ORG {first[1]} + ({e[0][0]} - {first[3]}) * {size} ; '
+                else: # Start with 'ORG TableStart + Definition*size ; '.
+                    str = str + f'ORG {first[1]} + {e[0][0]} * {size} ; '
             
             # Now to append each data entry.
             currLoc = 0
-            for i, collumn in enumerate(e):
+            for i, collumn in enumerate(e[0]):
                 if i == 0: continue # Skip the first collumn.
                 
                 if names[i] == unknown: # Unknown data. Write all as bytes.
                     nextLoc = 0
-                    if i < len(e)-1:
+                    if i < len(e[0])-1:
                         nextLoc = findEntry(nmmEntries,names[i+1]).location
                     else: # The unknown data is at the last collumn.
                         nextLoc = size
-                    unk = '' # Formatted list of bytes to write.
+                    unk = changeType(1,'') # Formatted list of bytes to write.
                     unkData = collumn[2:] # Remove the 0x.
                     if len(unkData) % 2: unkData = '0' + unkData
                     while len(unkData)/2 < nextLoc - currLoc: unkData = '00' + unkData
@@ -239,10 +253,11 @@ try:
         outputFile.close()
     # Now that we've assembled all of our CSVs, we need to generate the desired master EA installer.
     
-    for i, e in enumerate(csvs):
-        csvs[i] = f'#include "{e}"\n'
+    final = ['#include "Table Definitions.txt"\n']
+    for e in csvs:
+        final.append(f'#include "{e[:-3]}event"\n')
     masterOutput = open(args.output,'w')
-    masterOutput.writelines(csvs)
+    masterOutput.writelines(final)
     masterOutput.close()
 except Error as e:
     print(e)
