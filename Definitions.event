@@ -1,4 +1,8 @@
 
+#define FILL "ORG CURRENTOFFSET + "
+
+#define ChapterDataTable NewChapterDataTable
+
 //Label Item defenitions
 #undef ToxinLance
 #define Dragonspear DragonSpear
