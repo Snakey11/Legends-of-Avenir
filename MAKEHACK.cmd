@@ -12,7 +12,7 @@ if exist "Avenir.sav" (
 	copy "Avenir.sav" "../Tools/No$GBADebugger/BATTERY/Avenir.SAV"
 )
 
-cd "%~dp0EA Avenir"
+cd "%~dp0EA"
 
 echo ---------------------------
 echo Assembling ROM. Please wait...
