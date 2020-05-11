@@ -1,149 +1,132 @@
-INLINE ClassSkillTable,Skill
-0x00 Separator/Nothing,0x0
-Ephraim Lord,ShoveID
-Eirika Lord,ShoveID
-Ephraim Master Lord,CantoID
-Eirika Master Lord,CantoID
-Socialknight,CantoID
-Socialknight (F),CantoID
+INLINE ClassSkillTable 0xFF,Skill
+Cavalier,CantoID
+Cavalier_F,CantoID
 Paladin,CantoID
-Paladin (F),CantoID
-Armour Knight,ShoveID
-Armour Knight (F),ShoveID
+Paladin_F,CantoID
+Knight,ShoveID
+Knight_F,ShoveID
 General,ShoveID
-General (F),ShoveID
+General_F,ShoveID
 Thief,CunningID
-Mamkute,0x0
+0x0E Manakete,0x0
 Mercenary,0x0
-Mercenary (F),ShoveID
+Mercenary_F,ShoveID
 Hero,ShoveID
-Hero (F),ShoveID
-Swordfighter,0x0
-Swordfighter (F),0x0
+Hero_F,ShoveID
+Myrmidon,0x0
+Myrmidon_F,0x0
 Swordmaster,0x0
-Swordmaster (F),0x0
+Swordmaster_F,0x0
 Assassin,CunningID
-Assassin (F),CunningID
+Assassin_F,CunningID
 Archer,0x0
-Archer (F),0x0
+Archer_F,0x0
 Sniper,0x0
-Sniper (F),0x0
-Forrest Knight,CantoID
-Forrest Knight (F),CantoID
-Dragon Knight,CantoID
-Dragon Knight (F),CantoID
-Dragon Master,CantoID
-Dragon Master (F),CantoID
-Wyvern Knight,CantoID
-Wyvern Knight (F),CantoID
+Sniper_F,0x0
+Ranger,CantoID
+Ranger_F,CantoID
+WyvernRider,CantoID
+WyvernRider_F,CantoID
+WyvernLord,CantoID
+WyvernLord_F,CantoID
+WyvernKnight,CantoID
+WyvernKnight_F,CantoID
 Mage,0x0
-Mage (F),0x0
+Mage_F,0x0
 Sage,0x0
-Sage (F),0x0
-Mage Knight,CantoID
-Mage Knight (F),CantoID
+Sage_F,0x0
+MageKnight,CantoID
+MageKnight_F,CantoID
 Bishop,0x0
-Bishop (F),0x0
+Bishop_F,0x0
 Shaman,0x0
-Shaman (F),0x0
+Shaman_F,0x0
 Druid,0x0
-Druid (F),0x0
+Druid_F,0x0
 Summoner,SummonID
-Summoner (F),SummonID
+Summoner_F,SummonID
 Rogue,LockTouchID
-Gorgon Egg,0x0
-Great Knight,CantoID
-Great Knight (F),CantoID
-Trainee Soldier (2),0x0
-Trainee Fighter (3),0x0
-Trainee Mage (3),0x0
-Trainee Soldier (3),0x0
-Mamkute,0x0
-Mamkute (F),0x0
-Trainee Fighter (1),0x0
-Trainee Mage (1),0x0
+GorgonEgg,0x0
+GreatKnight,CantoID
+GreatKnight_F,CantoID
 Fighter,ShoveID
 Warrior,ShoveID
-Mountain Thief,ShoveID
+Brigand,ShoveID
 Pirate,ShoveID
 Berserker,ShoveID
 Monk,0x0
 Priest,0x0
 Bard,0x0
-Trainee Soldier (1),0x0
-Pegasus Knight,CantoID
-Falcon Knight,CantoID
-Sister,0x0
+PegasusKnight,CantoID
+Falcoknight,CantoID
+Cleric,0x0
 Troubadour,CantoID
 Valkyrie,CantoID
 Dancer,DanceID
 Soldier,ShoveID
 Necromancer,SummonID
 Fleet,0x0
-Ghost Fighter,0x0
+Phantom,0x0
 Patriarch,0x0
 Matriarch,0x0
-Dark Knight M,CantoID
-Dark Knight F,CantoID
+DarkKnightM,CantoID
+DarkKnightF,CantoID
 Magus,0x0
-Magus F,0x0
-Master Knight_F,CantoID
-Commander,ShoveID
-Impaler,ShoveID
-Wyvern General,CantoID
-Hunter,0x0
-Master Knight,CantoID
-Champion,ShoveID
-Shadow,LethalityID
-Trueblade,0x0
+MagusF,0x0
+MasterKnightF,CantoID
+Baron,ShoveID
+ImpalerM,ShoveID
+WyvernGeneral,CantoID
+MarksmanM,0x0
+MasterKnightM,CantoID
+ChampionM,ShoveID
+TruebladeF,LethalityID
+TruebladeM,0x0
 MountedBrigand,CantoID
-BUGGED,0x0
-Mountainier,ShoveID
-Black Falcoknight,CantoID
-Dragon Zombie,0x0
-Demon King,SummonID
-Archer on Ballista,0x0
-Archer on Iron Ballista,0x0
-Archer on Killer Ballista,0x0
-Ballista,0x0
-Iron Ballista,0x0
-Killer Ballista,0x0
-Civilian,0x0
-Civilian (F),0x0
-Civilian,0x0
-Civilian (F),0x0
-Civilian,0x0
-Civilian (F),0x0
-Mage2,0x0
+Gladiator,ShoveID
+SeraphKnight,CantoID
+0x67 Archer on Ballista,0x0
+0x68 Archer on Iron Ballista,0x0
+0x69 Archer on Killer Ballista,0x0
+0x6A Ballista,0x0
+0x6B Iron Ballista,0x0
+0x6C Killer Ballista,0x0
+0x6D Civilian,0x0
+0x6E Civilian (F),0x0
+0x6F Civilian,0x0
+0x70 Civilian (F),0x0
+0x70 Civilian,0x0
+0x71 Civilian (F),0x0
+MageM2,0x0
 MageF2,0x0
-Shaman2,0x0
+ShamanM2,0x0
 ShamanF2,0x0
-Monk2,0x0
+MonkM2,0x0
 MonkF2,0x0
-Cavalier2,CantoID
+CavalierM2,CantoID
 CavalierF2,CantoID
 Knight2,ShoveID
-Soldier2,ShoveID
+SoldierM2,ShoveID
 WyvernRider2,CantoID
-Archer2,0x0
+ArcherM2,0x0
 ArcherF2,0x0
-Mercenary2,ShoveID
+MercenaryM2,ShoveID
 MercenaryF2,ShoveID
 Fighter2,ShoveID
 Brigand2,ShoveID
 Pirate2,ShoveID
-Myrmidon2,0x0
+MyrmidonM2,0x0
 MyrmidonF2,0x0
-Pegasus Knight2,CantoID
+PegasusKnight2,CantoID
 Halberdier,ShoveID
 Sentinel,ShoveID
-Jacket Hero,ShoveID
-Gladiator,ShoveID
-Hector,ShoveID
+JacketHero,ShoveID
+Basileus,ShoveID
+HectorClass,ShoveID
 Trueerblade,0x0
-Gaiden Sage,0x0
-Izuk,0x0
-Nomad,CantoID
+GaidenSage,0x0
+IzukClass,0x0
+BattleSageF,CantoID
 NarratorClass,0x0
 Warlock,ShoveID
 SpearHero,ShoveID
@@ -151,105 +134,21 @@ XeximClass,CunningID
 GrandPaladin,CantoID
 HolySage,0x0
 WilSniper,0x0
-Battle Sage,ShoveID
-Civilian,0x0
-Civilian (F),0x0
+BattleSageM,ShoveID
+LostSoulM,0x0
+LostSoulF,0x0
 ArmoredWyvernLord,CantoID
 EdgySwordmaster,0x0
-Emperor,0x0
+EmperorClass,0x0
 MurielSage,0x0
-Impaler F,ShoveID
+ImpalerF,ShoveID
 SoldierF2,ShoveID
-Hunter F,0x0
-High Priest,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
+BowKnight,CantoID
+HighPriest,0x0
+DreadFighterM,0x0
+DreadFighterF,0x0
+MaligKnight,CantoID
+Strategist,ShoveID
+SpellswordM,0x0
+SpellswordF,0x0
+ChampionF,ShoveID
