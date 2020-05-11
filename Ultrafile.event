@@ -128,8 +128,8 @@
 		ALIGN 16
 		//Maps
 		#define TMX2EA
-		#include "Map Data/FE8 Tilesets/New Tilesets/Tileset Installer.event"
-		#include "Map Data/Master Map Installer.event"	
+		#include "Maps/FE8 Tilesets/New Tilesets/Tileset Installer.event"
+		#include "Maps/Master Map Installer.event"	
 		MESSAGE Map data ends at CURRENTOFFSET
 		
 		ALIGN 16	
