@@ -18,46 +18,6 @@ class DataEntry:
         self.location = location
         self.size = size
 
-class Error(Exception):
-    def __init__(self,message):
-        if args.clean:
-            try:
-                os.remove(args.output)
-            except FileNotFoundError:
-                pass
-        super().__init__(message)
-
-class NoFileError(Error):
-    """Raised when an included file does not exist"""
-    def __init__(self,file,missingFile,extra=''):
-        super().__init__(f'Error: File {missingFile} not found.\n{extra}')
-
-class NoNMMEntryError(Error):
-    """Raised when trying to refer to an NMM entry that doesn't exist"""
-    def __init__(self,csv,collumn,name,extra=''):
-        super().__init__(f'Error in {csv} at collumn {collumn}: No NMM entry {name} found.\n{extra}')
-
-class WrongDataCountError(Error):
-    """Raised when all row data counts don't match"""
-    def __init__(self,csv,row,extra=''):
-        super().__init__(f'Error in {csv} at row {row}: Inconsistent data count compared to previous rows.\n{extra}')
-
-class MissingDataError(Error):
-    """Raised when essential data is missing"""
-    def __init__(self,csv,row,collumn,extra=''):
-        super().__init__(f'Error in {csv} at row {row}, collumn {collumn}: Missing data.\n{extra}')
-
-class BadNMMDataError(Error):
-    """Raised when reading an NMM, and a value error is raised"""
-    def __init__(self,nmm,line,extra=''):
-        super().__init__(f'Error in {nmm} at line {line}: Problem reading data.\n{extra}')
-
-class BadCSVDataError(Error):
-    """Raised when a single CSV cell is bad."""
-    def __init__(self,csv,row,collumn,extra=''):
-        super().__init__(f'Error in {csv} at row {row}, collumn {collumn}: Bad data.\n{extra}')
-
-
 def removeEmptyItems(list):
     """Return a list that's the passed in list without empty items"""
     ret = []
@@ -99,8 +59,7 @@ def getTypeName(type):
     elif type == 4: return 'WORD'
     else: return None
 
-def changeType(newType,currStr):
-    global currType
+def changeType(newType,currType,currStr):
     if currType != newType:
         currStr = currStr + f'; {getTypeName(newType)} '
         currType = newType
@@ -109,12 +68,11 @@ def changeType(newType,currStr):
 
 parser = argparse.ArgumentParser()
 parser.add_argument('output',help='Filepath for desired output master EA script.')
-parser.add_argument('-c','--clean',help='Delete output file/produce no output with an error.',action='store_true')
 parser.add_argument('-d','--date_check',help='Only assemble files if the .csv is newer than the .event.',action='store_true')
 parser.add_argument('-v','--verbose',help='Print lines assembled in each file.',action='store_true')
 args = parser.parse_args()
 
-try:
+if __name__ == '__main__':
     for (dirpath, dirnames, filenames) in walk(os.getcwd()):
         for f in filenames:
             if f.endswith('.csv'): csvs.append(dirpath[len(os.getcwd())+1:]+'\\'+f)
@@ -122,11 +80,11 @@ try:
 
     for csv in toAssemble(csvs): # Filter out CSVs we don't want to assemble.
         size = 0 # Size of one entry.
-        nmmEntries = []
+        entryList = [] # List of tuples: (lineNumber,line). Line number is necessary for error reporting in an NMM error.
+        nmmEntries = [] # List of NMM entry objects. Will be referred to later.
         try:
             with open(csv[:-3]+'nmm','r') as nmmFile:
                 c = 0
-                entryList = [] # List of tuples: (lineNumber,line). Line number is necessary for error reporting in an NMM error.
                 for nmmNumber, nmmLine in enumerate(nmmFile,1):
                     stripped = nmmLine.strip()
                     if stripped != '' and nmmLine[0] != '#': # Ignore whitespace and comments.
@@ -137,14 +95,14 @@ try:
                             c += 1
                         else: # If we're here, we should be handling headers now.
                             entryList.append((nmmNumber,stripped))
-                
-                for i in range(0,len(entryList),5):
-                    try:
-                        nmmEntries.append(DataEntry(entryList[i][1],int(entryList[i+1][1],0),int(entryList[i+2][1],0)))
-                    except ValueError:
-                        raise BadNMMDataError(csv[:-3]+'nmm',entryList[i][0],extra='Failure to handle entry offset or size.')
         except FileNotFoundError:
-            raise NoFileError(csv,csv[:-3]+'nmm')
+            exit(f'Error: File {csv[:-3]}nmm not found.')
+        # entryList is now populated.
+        for i in range(0,len(entryList),5):
+            try:
+                nmmEntries.append(DataEntry(entryList[i][1],int(entryList[i+1][1],0),int(entryList[i+2][1],0)))
+            except ValueError:
+                exit(f'Error in {csv[:-3]}nmm at line {entryList[i][0]}: Problem reading data.\nFailure to handle entry offset or size.')
         # nmmEntries is a list of entry objects.
         
         # Now why don't we read the data from the CSV?
@@ -162,30 +120,32 @@ try:
         # Data is now full, and names contains our relevant info from the first row.
         
         # Before we proceed, let's make sure that the top left cell contains good data.
-        if names[0].strip() == '': raise MissingDataError(csv,0,0,extra='This cell must contain an offset to write to or INLINE (label) to include inline.')
+        if names[0].strip() == '':
+            exit(f'Error in {csv} at row 0, collumn 0: Missing data.\nThis cell must contain an offset to write to or INLINE (label) to include inline.')
         try: # Now let's see if they're inputting a valid address.
             int(names[0],0) # If this goes without error, we're all good!
         except ValueError:
             # Make sure that they're using INLINE (label) (optional max entry value). Last parameter is for allocating table space with the explicit indexing.
             if len(names[0].split()) < 2 or names[0].split()[0] != inline:
-                raise MissingDataError(csv,0,0,extra='This cell must contain an offset to write to or INLINE (label) (optional max entry value) (optional index subtraction) to include.')
+                exit(f'Error in {csv} at row 0, collumn 0: Missing data.\nThis cell must contain an offset to write to or INLINE (label) (optional max entry value) (optional index subtraction) to include.')
             try:
                 int(names[0].split()[2],0) # See if we can convert the optional parameter to a number.
             except IndexError:
                 pass # Out of bounds. They didn't specify one which is okay.
             except ValueError: # lol ValueError except within a ValueError except.
-                raise BadCSVDataError(csv,0,0,extra='Declaration of maximum entries for explicit indexing must be a number.')
+                exit(f'Error in {csv} at row 0, collumn 0: Bad data.\nDeclaration of maximum entries for explicit indexing must be a number.')
             try:
                 int(names[0].split()[3],0) # See if we can convert the subtractor to a number.
             except IndexError:
                 pass
             except ValueError:
-                raise BadCSVDataError(csv,0,0,extra='Declaration of universal subtractor for explicit indexing must be a number.')
+                exit(f'Error in {csv} at row 0, collumn 0: Bad data.\nDeclaration of universal subtractor for explicit indexing must be a number.')
         
         # Before we proceed, let's make sure all elements of data are the same length. If not, then there will be problems.
         length = getRealRowLength(data[0][0])
         for e in data[1:]:
-            if length != getRealRowLength(e[0]): raise WrongDataCountError(csv,e[1])
+            if length != getRealRowLength(e[0]):
+                exit(f'Error in {csv} at row {e[1]}: Inconsistent data count compared to previous rows.')
         
         # Our next step is to get a string that we will write for each line.
         output = [] # List of strings ready to write to the output file.
@@ -208,13 +168,18 @@ try:
             str = ''
             first = names[0].split()
             if len(first) > 2: # They want the special indexing!
-                if len(first) > 3: # They also want the universal subtractor (useful for item usability/effect).
+                if len(first) > 3: # They also want the universal subtractor (useful for item usability/effect/etc).
+                    # Something irritating I've noticed is what happens if a definition turns out to be negative here.
+                        # This WILL cause problems for... any kind of table I can think of.
+                        # Let's add an ASSERT for each definition created in this way so that EA throws an error if any index turns out to be negative.
+                    str = str + f'ASSERT {e[0][0]} - {first[3]} ; '
                     str = str + f'ORG {first[1]} + ({e[0][0]} - {first[3]}) * {size} ; '
                 else: # Start with 'ORG TableStart + Definition*size ; '.
                     str = str + f'ORG {first[1]} + {e[0][0]} * {size} ; '
             
             # Now to append each data entry.
             currLoc = 0
+            currType = 0
             for i, collumn in enumerate(e[0]):
                 if i == 0: continue # Skip the first collumn.
                 
@@ -224,7 +189,8 @@ try:
                         nextLoc = findEntry(nmmEntries,names[i+1]).location
                     else: # The unknown data is at the last collumn.
                         nextLoc = size
-                    unk = changeType(1,'') # Formatted list of bytes to write.
+                    unk = changeType(1,currType,'') # Formatted list of bytes to write.
+                    currType = 1
                     unkData = collumn[2:] # Remove the 0x.
                     if len(unkData) % 2: unkData = '0' + unkData
                     while len(unkData)/2 < nextLoc - currLoc: unkData = '00' + unkData
@@ -237,7 +203,9 @@ try:
                     thisEntry = findEntry(nmmEntries,names[i])
                     if not thisEntry: # Uh oh. No entry for this!
                         raise NoNMMEntryError(csv,i,names[i])
-                    str = changeType(thisEntry.size,str)
+                        exit(f'Error in {csv} at collumn {i}: No NMM entry {names[i]} found.')
+                    str = changeType(thisEntry.size,currType,str)
+                    currType = thisEntry.size
                     # Now to write the data itself now that the data type is ensured to be correct.
                     str = str + f'{collumn} '
                     currLoc += currType # Increment the current location.
@@ -259,6 +227,3 @@ try:
     masterOutput = open(args.output,'w')
     masterOutput.writelines(final)
     masterOutput.close()
-except Error as e:
-    print(e)
-    exit()
