@@ -10,6 +10,8 @@
 	ALIGN 4
 	#include "EventParameters.lyn.event"
 	
+	#include "EventParameterHooks.lyn.event" // Making functions that don't normally use this use this.
+	
 	#define EventParameter(key,function) "WORD key ; POIN function|1"
 	
 	ALIGN 4
