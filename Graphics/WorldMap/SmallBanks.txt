@@ -1,0 +1,54 @@
+
+Notes for what palette banks are being used for what parts of the world map:
+
+Each image that cooresponds to each bank is a 240x160 image with all tiles that don't use that bank erased.
+This is so that we can requantize for that single bank, then combine each image back into one image.
+Ranges of tiles used are inclusive.
+
+Bank 1: Outer detailed (deep) ocean as well as rocks eastern (and between Cesaria and Shizon) rocks. Some continential borders could be included if there aren't any extra colors.
+		Many border tiles could be included in this, but for simplicity, we're only going to include border tiles with the fancy water.
+	Tiles: 0-7 14 15 17-35 53-64 86-94 118-124 149-154 180-184 210-214 240-244 270-274 299-304 329-336 358-372 388-394 399-405
+			417-422 430-436 446-452 461-467 476-482 492-498 505-512 522-528 535-543 553-559 564-578 584-591 593-599
+
+Bank 2: All of Shizon and its immediate coasts except for 4 fancy grass tiles and the 5 tree tiles.
+	Tiles: 395-398 423-425 428 429 453 456 457 459 460 483 485-488 490 491 513-518 521 522 544-552 579-583
+
+Bank 3: All of Shizon not included in bank 2 as well as almost all of Haedric aside from the immediate coasts, extremely brown areas near the south, and the castle.
+		Also includes non-border/non-peak/non-coast/non-castle areas of Altia: i.e. the trees.
+	Tiles: 72 73 80-82 97 98 102 109-114 128 129 140-146 172 173 177 203 264-268 294-297 324-326 426 427 454 455 458 484 489 519 520
+
+Bank 4: Most of Haedric not included in bank 3 except for the Castle. Includes the coasts and a couple of the mountains leading into Altia.
+	Tiles: 48-52 77-79 83-85 115-117 147 148 174-176 178 179 202 208 209 233 238 239 269 298 323 327 328 354-357 385-387 416
+
+Bank 5: All of the coastlines of Cesaria and Arcanae, the Cesaria-Arcanae border, some of the easternmost Cesaria-Draterus border, and the Arcanae-Bacrun/Arcanae-Haedric border.
+	Tiles: 185 186 215 216 245 246 255 263 275 276 286-289 291-293 305-308 319-322 337-345 348 349 353 373-378 383 384 406-408 415 437 438 445 468 475 499 504 529 530 534 560-563 592
+
+Bank 6: All coasts and borders of Altia. Includes anything particularly rocky on the Cesarian border as well as up to where bank 4 ends. Excludes trees and the castle.
+	Tiles: 8-13 16 36-47 65-68 74-77 95 96 103 104 125-127 130-133 155-160
+
+Bank 7: All of Draterus including the temple, the westernmost border with Cesaria, the border with Draterus, the Altia border not included in bank 6, as well as (most of?) Bacrun.
+	Tiles: 105-108 133-139 163-171 193-201 224-232 256-262 290
+
+Bank 8: Just the Altian and Haedrician castles.
+	Tiles: 69-71 99-101 204-207 234-237
+
+Bank 9: Cesarian castle, the Arcanian tower, as well as remaining grasslands of Arcanae without trees (except for a couple tree bottoms near a coast).
+	Tiles: 222 223 251-254 281-284 311-314 351 352 379 381 382 411 412 414 441 442 444 469 471 472 474 500 531 533
+
+Bank 10: For technical reasons, this is intentionally omitted.
+	Tiles:
+
+Bank 11: This is the "real" bank 10. Remaining Cesarian countryside as well as bits of Arcanae with trees.
+	Tiles: 161 162 187-192 217-221 247-250 277-280 285 309 310 315-318 346 347 350 380 409 410 413 439 440 443 470 473 501-503 532
+
+
+Miscellaneous notes from Snek:
+I've trimmed off the very top of the Altian castle for the sake of keeping colors down in bank 6. The castle and the rest of Altia go in different banks,
+	so I'd prefer to keep the Altian castle contained within its own 3x2 space where it is if that's fine.
+	I've also taken the very far rightmost collumn of pixels and made them use the snow color. Clean these up if you'd like, but please do respect the color limitations.
+I've also trimmed off a small amount of the Cesarian castle on the right and left sides for the same reason as Altia.
+
+A note for Snek:
+	The function that appears to have something associated with loading of the glowy regions is 0x080C2750.
+		Not only is this immensely useful for when we want to change up these palettes, we can move the palette bank consumed by this away from our world map palettes!
+		It also already seems to reload the palette each time we load a new glowy region anyway.
