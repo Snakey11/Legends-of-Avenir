@@ -1,6 +1,4 @@
 
-#define FILL "ORG CURRENTOFFSET + "
-
 #define ChapterDataTable NewChapterDataTable
 
 //Label Item defenitions
