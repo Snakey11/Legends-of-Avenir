@@ -282,7 +282,7 @@ WORD 0x0 0x0
 
 SentinelAnim:
 SwordAnim(SentinelSword)
-SpearAnim(SentinelSpear)
+SpearAnim(SentinelLance)
 AxeAnim(SentinelAxe)
 HandAxeAnim(SentinelHandAxe)
 UnarmedAnim(SentinelUnarmed)
