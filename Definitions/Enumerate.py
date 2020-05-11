@@ -14,6 +14,7 @@ Usage:
             A single value will just avoid that one.
             Two values will avoid the entire range of values between them as well as those values inclusive.
             Avoids only apply to the immediate file in which they are declared for definitions following them.
+        @ or // Denote the rest of the line as a comment.
 """
 
 defaultExtra = 'Use --help for formatting help.'
@@ -89,6 +90,10 @@ def ext(file,parent,parentLine=0):
     
     for lineNumber, line in enumerate(file,1):
         line = line.strip()
+        if ( line.find('//') != -1 ):
+            line = line[:line.find('//')]
+        if ( line.find('@') != -1 ):
+            line = line[:line.find('@')]
         splitted = line.split() # This is a list representing the string split up by whitespace.
         
         if ( len(splitted) == 0 ):
