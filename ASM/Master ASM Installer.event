@@ -60,6 +60,9 @@ ALIGN 4
 #include "Display All Weapon Level Ups/Promotion Ranks Fix Installer.event"
 
 ALIGN 4
+#include "DoorsAndChests/DoorsAndChests.event"
+
+ALIGN 4
 #include "EnemyControl/Enemy Control.event"
 
 //ALIGN 4
