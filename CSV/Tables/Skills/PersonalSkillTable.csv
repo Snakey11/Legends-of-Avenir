@@ -1,7 +1,6 @@
-INLINE PersonalSkillTable,Skill
-None,0x0
+INLINE PersonalSkillTable 0xFF,Skill
 PlayerMMonk,0x0
-PlyaerMShaman,0x0
+PlayerMShaman,0x0
 PlayerMMage,0x0
 PlayerFMonk,0x0
 PlayerFShaman,0x0
@@ -13,7 +12,7 @@ PlayerMWyvernRider,0x0
 PlayerFCavalier,0x0
 PlayerFKnight,0x0
 PlayerFSoldier,0x0
-PlayerFWyvernKnight,0x0
+PlayerFWyvernRider,0x0
 PlayerMMercenary,0x0
 PlayerMFighter,0x0
 PlayerMBrigand,0x0
@@ -67,7 +66,7 @@ Adeline,0x0
 Remus,SpurSpdID
 Henning,0x0
 Gerwick,IntimidateID
-MilitiaMan,0x0
+Militiaman,0x0
 Robert,0x0
 RobertPirate,0x0
 GhostBoss,0x0
@@ -98,7 +97,7 @@ Hunter,0x0
 Daniel,0x0
 Wanderer,0x0
 MageMAvatar,0x0
-MageFavatar,0x0
+MageFAvatar,0x0
 MercenaryMAvatar,0x0
 MercenaryFAvatar,0x0
 MilitaryMAvatar,0x0
@@ -110,7 +109,7 @@ Arveldir,0x0
 ValSummon,0x0
 Weston,0x0
 GerwickBandit,0x0
-WestonBansit,0x0
+WestonBandit,0x0
 KendrickFriend,0x0
 Sylvaine,0x0
 Sam,0x0
@@ -127,7 +126,7 @@ BossConnor,0x0
 Halleck,BaneID
 BossEfil,0x0
 BossChristina,0x0
-BossForret,0x0
+BossForrest,0x0
 GenericBandit,0x0
 Pascal,0x0
 XeximClone,0x0
@@ -135,5 +134,5 @@ BossVal,0x0
 Clint,Perfectionist
 Blaine,0x0
 BossHelmer,ForesightID
-Wall,0x0
-Snag,0x0
+0xFE Wall,0x0
+0xFF Snag,0x0
