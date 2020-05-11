@@ -223,6 +223,9 @@ ALIGN 4
 ALIGN 4
 #include "Walking Sounds Fix/FE8-Walking Sounds EA.event"
 
+ALIGN 4
+#include "WorldMapPalettes/WorldMapPalettes.lyn.event"
+
 #ifdef __DEBUG__
 	ALIGN 4
 	#include "SkillSystem_FE8/Engine Hacks/Debug.event"
@@ -279,7 +282,10 @@ BYTE 0x17
 ORG $A39768
 EVBIT_MODIFY 0x1
 SKIPWN
-ENDA
+//ORG $A39768
+//EVBIT_MODIFY 0x1
+//SKIPWN
+//ENDA
 
 ORG $CC20C 	// Skip health and safety screen
 BYTE 0x0 0x0
