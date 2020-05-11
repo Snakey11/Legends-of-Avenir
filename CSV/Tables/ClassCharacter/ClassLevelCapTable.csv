@@ -1,4 +1,4 @@
-INLINE Class_Level_Cap_Table,Level Cap
+INLINE Class_Level_Cap_Table 0xFF,Level Cap
 Cavalier,20
 Cavalier_F,20
 Paladin,20
@@ -151,3 +151,4 @@ MaligKnight,20
 Strategist,20
 SpellswordM,20
 SpellswordF,20
+ChampionF,20
