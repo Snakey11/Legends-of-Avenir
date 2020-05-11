@@ -1,4 +1,5 @@
 
+ShortAxe 0x2C @ This replaces hatchet. Necessary for the special throwing axe animation reference.
 IronShortbow 0xBC
 IronLongbow
 ArmsScroll
@@ -43,4 +44,3 @@ ToxinBow
 SpiritDust
 DoorKey_5
 Tempest
-ShortAxe

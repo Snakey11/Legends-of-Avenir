@@ -112,6 +112,7 @@ ShizonWaterShrineMap
 KendrickShipMap
 RipBlaineMap
 PrisonBreakMap
+ClintManorMap
 
 ArcanaeCapitalChanges
 BanditPassChanges
@@ -151,6 +152,7 @@ XyliaStairTempleChanges
 ShizonLandingChanges
 PortSelsingChanges
 PrisonBreakChanges
+ClintManorChanges
 
 OutdoorSnowyObjectSet
 OutdoorSnowyPalette

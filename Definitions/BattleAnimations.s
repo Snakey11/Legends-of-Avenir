@@ -90,8 +90,10 @@ NecromancerMagic
 NecromancerStaff
 PatriarchMagic
 PatriarchStaff
-SentinelSpear
+SentinelSword
 SentinelLance
+SentinelAxe
+SentinelHandAxe
 SentinelUnarmed
 TruebladeMSword
 TruebladeSword
@@ -125,9 +127,6 @@ HolySageStaff
 WilSniperBow
 WilSniperUnarmed
 BattleSageMagic
-SentinelSword
-SentinelAxe
-SentinelHandAxe
 HectorLance
 CommanderSword
 ArmoredWyvernLordSword
