@@ -136,5 +136,10 @@ UnspecifiedBattleConvo(XeximClone,MilitaryAcceptRetreatHelp7,0x18,Military7Accep
 SpecifiedBattleConvo(Zaheva,BossVal,MilitaryAcceptHold4,0x13,Military4AcceptHoldZahevaValBattleText)
 UnspecifiedBattleConvo(BossVal,MilitaryAcceptHold4,0x14,Military4AcceptHoldValBattleText)
 UnspecifiedBattleConvo(BossHelmer,MilitaryAcceptHold5,0x15,Military5AcceptHoldHelmerBattleText)
+UnspecifiedBattleConvo(Arcanian,MilitaryAcceptHold6,0x10,0x00)
+SpecifiedBattleConvo(Zaheva,Clint,MilitaryAcceptHold6,0x15,Military6AcceptHoldZahevaClintBattleText)
+SpecifiedBattleConvo(Adeline,Clint,MilitaryAcceptHold6,0x16,Military6AcceptHoldAdelineClintBattleText)
+UnspecifiedBattleConvo(Clint,MilitaryAcceptHold6,0x14,Military6AcceptHoldClintBattleText)
+
 
 BYTE 0xFF 0xFF 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Terminator

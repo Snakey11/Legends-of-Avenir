@@ -226,6 +226,7 @@ DeathQuote(Derek,MilitaryAcceptRetreatHelp7,0x12,0x00)
 DeathQuote(Blaine,MilitaryAcceptHold4,0x00,Military4AcceptHoldBlaineDeathText)
 DeathQuote(BossVal,MilitaryAcceptHold4,0x02,Military4AcceptHoldValDeathText)
 DeathQuote(BossHelmer,MilitaryAcceptHold5,0x02,Military5AcceptHoldHelmerDeathText)
+DeathQuote(Clint,MilitaryAcceptHold6,0x02,Military6AcceptHoldClintDeathText)
 
 // Nonspecific death quotes come after.
 DeathQuote(Vicar,AllChapters,0x00,VicarDeathText)
