@@ -290,46 +290,43 @@ UNIT
 
 Arcanians:
 UNIT Sean Sentinel Sean Level(3,Enemy,True) [12,16] 0x00 0x00 0x01 REDA15R15 [IronBlade,ShortAxe] GuardAI
-UNIT Arcanian Soldier Sean Level(8,Enemy,True) [4,16] 0x00 0x00 0x01 REDA2R14 [Javelin,DoorKey] AttackInRangeAI
-//UNIT Arcanian Fighter Sean Level(6,Enemy,True) [5,16] 0x00 0x00 0x01 REDA5R15 [IronAxe] AttackInRangeAI
-UNIT Arcanian Fighter Sean Level(8,Enemy,True) [5,17] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
-UNIT Arcanian Mage Sean Level(7,Enemy,True) [6,16] 0x00 0x00 0x01 REDA6R14 [Wind] NoAI
-UNIT Arcanian Cavalier Sean Level(8,Enemy,True) [11,16] 0x00 0x00 0x01 REDA11R15 [SteelLance,SlimSword] AttackInRangeAI
-UNIT Arcanian Cavalier Sean Level(9,Enemy,True) [12,16] 0x00 0x00 0x01 REDA12R14 [Zanbato] AttackInRangeAI
-UNIT Arcanian Cavalier Sean Level(8,Enemy,True) [17,12] 0x00 0x00 0x01 REDA15R12 [IronLance] AttackInRangeAI
-UNIT Arcanian Cavalier Sean Level(8,Enemy,True) [17,12] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
-UNIT Arcanian Knight Sean Level(9,Enemy,True) [17,3] 0x00 0x00 0x01 REDA14R3 [ShortSpear] GuardAI
-UNIT Arcanian Spellsword Sean Level(9,Enemy,True) [17,3] 0x00 0x00 0x01 REDA15R2 [IronSword,Fire] NoAI
-UNIT Arcanian Mercenary Sean Level(8,Enemy,True) [17,4] 0x00 0x00 0x01 REDA15R4 [PoisonSword] NoAI
-UNIT Arcanian Mage Sean Level(6,Enemy,True) [17,8] 0x00 0x00 0x01 REDA16R8 [Elfire] ChaseOnceApproachedAI
-UNIT Arcanian Pirate Sean Level(6,Enemy,True) [10,19] 0x00 0x00 0x00 0x00 [ShortAxe] NoAI
-UNIT Arcanian Cavalier Sean Level(6,Enemy,True) [3,21] 0x00 0x00 0x00 0x00 [DevilLance] NoAI
-UNIT Arcanian Myrmidon Sean Level(6,Enemy,True) [12,17] 0x00 0x00 0x00 0x00 [KillingEdge] AttackInRangeAI
-UNIT Arcanian Soldier Sean Level(6,Enemy,True) [12,19] 0x00 0x00 0x00 0x00 [HeavySpear] NoAI
-UNIT Arcanian Archer Sean Level(6,Enemy,True) [19,11] 0x00 0x00 0x00 0x00 [PoisonBow] AttackInRangeAI
+UNIT Arcanian Soldier Sean Level(10,Enemy,True) [4,16] 0x00 0x00 0x01 REDA2R14 [Javelin,DoorKey] AttackInRangeAI
+UNIT Arcanian Fighter Sean Level(8,Enemy,True) [5,16] 0x00 0x00 0x01 REDA5R15 [IronAxe] AttackInRangeAI
+UNIT Arcanian Fighter Sean Level(10,Enemy,True) [5,17] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
+UNIT Arcanian Mage Sean Level(9,Enemy,True) [6,16] 0x00 0x00 0x01 REDA6R14 [Wind] NoAI
+UNIT Arcanian Cavalier Sean Level(10,Enemy,True) [11,16] 0x00 0x00 0x01 REDA11R15 [SteelLance,SlimSword] AttackInRangeAI
+UNIT Arcanian Cavalier Sean Level(11,Enemy,True) [12,16] 0x00 0x00 0x01 REDA12R14 [Zanbato] AttackInRangeAI
+UNIT Arcanian Cavalier Sean Level(10,Enemy,True) [17,12] 0x00 0x00 0x01 REDA15R12 [IronLance] AttackInRangeAI
+UNIT Arcanian Cavalier Sean Level(10,Enemy,True) [17,12] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
+UNIT Arcanian Knight Sean Level(11,Enemy,True) [17,3] 0x00 0x00 0x01 REDA14R3 [ShortSpear] GuardAI
+UNIT Arcanian Spellsword Sean Level(11,Enemy,True) [17,3] 0x00 0x00 0x01 REDA15R2 [IronSword,Fire] NoAI
+UNIT Arcanian Mercenary Sean Level(10,Enemy,True) [17,4] 0x00 0x00 0x01 REDA15R4 [PoisonSword] NoAI
+UNIT Arcanian Mage Sean Level(8,Enemy,True) [17,8] 0x00 0x00 0x01 REDA16R8 [Elfire] ChaseOnceApproachedAI
+UNIT Arcanian Pirate Sean Level(8,Enemy,True) [10,19] 0x00 0x00 0x00 0x00 [ShortAxe] NoAI
+UNIT Arcanian Cavalier Sean Level(8,Enemy,True) [3,21] 0x00 0x00 0x00 0x00 [DevilLance] NoAI
+UNIT Arcanian Myrmidon Sean Level(9,Enemy,True) [12,17] 0x00 0x00 0x00 0x00 [KillingEdge] AttackInRangeAI
+UNIT Arcanian Soldier Sean Level(8,Enemy,True) [12,19] 0x00 0x00 0x00 0x00 [HeavySpear] NoAI
+UNIT Arcanian Archer Sean Level(10,Enemy,True) [19,11] 0x00 0x00 0x00 0x00 [PoisonBow] AttackInRangeAI
 UNIT
 
 Turn2Units:
-UNIT Arcanian Mercenary Sean Level(8,Enemy,True) [5,23] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
-UNIT Arcanian Soldier Sean Level(7,Enemy,True) [7,23] 0x00 0x00 0x00 0x00 [IronLance] NoAI
-UNIT Arcanian Mercenary Sean Level(7,Enemy,True) [20,7] Drop 0x00 0x00 0x00 [IronSword] NoAI
-UNIT Arcanian Fighter Sean Level(9,Enemy,True) [20,4] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
-UNIT Arcanian Spellsword Sean Level(8,Enemy,True) [9,23] 0x00 0x00 0x00 0x00 [DevilSword,Flux] NoAI
-UNIT Arcanian Cavalier Sean Level(6,Enemy,True) [20,19] 0x00 0x00 0x00 0x00 [Javelin] NoAI
-UNIT Arcanian Cavalier Sean Level(7,Enemy,True) [20,17] 0x00 0x00 0x00 0x00 [SteelBlade,IronLance] NoAI
+UNIT Arcanian Mercenary Sean Level(10,Enemy,True) [5,23] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT Arcanian Mercenary Sean Level(9,Enemy,True) [20,7] Drop 0x00 0x00 0x00 [IronSword] NoAI
+UNIT Arcanian Fighter Sean Level(11,Enemy,True) [20,4] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
+UNIT Arcanian Spellsword Sean Level(10,Enemy,True) [9,23] 0x00 0x00 0x00 0x00 [DevilSword,Flux] NoAI
+UNIT Arcanian Cavalier Sean Level(8,Enemy,True) [20,19] 0x00 0x00 0x00 0x00 [Javelin] NoAI
 UNIT
 
 AdelineRemus:
 UNIT Adeline Archer_F 0x00 Level(8,Ally,True) [0,5] 0x00 0x00 0x01 REDA5R4 [SteelLongbow,IronBow,Vulnerary] NoAI
-UNIT Remus Soldier 0x00 Level(9,Ally,True) [0,4] 0x00 0x00 0x01 REDA5R5 [SteelLance,Vulnerary] NoAI
+UNIT Remus Soldier 0x00 Level(9,Ally,True) [0,4] 0x00 0x00 0x01 REDA5R5 [IronLance,Vulnerary] NoAI
 UNIT
 
 Turn5Units:
-UNIT Arcanian Cavalier Sean Level(8,Enemy,True) [0,22] Drop 0x00 0x00 0x00 [Dragonspear] NoAI
-UNIT Arcanian Knight Sean Level(12,Enemy,True) [6,23] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
-UNIT Arcanian Shaman Sean Level(9,Enemy,True) [7,23] 0x00 0x00 0x00 0x00 [Flux] NoAI
-UNIT Arcanian Myrmidon Sean Level(11,Enemy,True) [8,23] 0x00 0x00 0x00 0x00 [IronSword] NoAI
-UNIT Arcanian Cavalier Sean Level(9,Enemy,True) [12,23] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Arcanian Cavalier Sean Level(10,Enemy,True) [0,22] Drop 0x00 0x00 0x00 [Dragonspear] NoAI
+UNIT Arcanian Knight Sean Level(13,Enemy,True) [6,23] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT Arcanian Myrmidon Sean Level(13,Enemy,True) [8,23] 0x00 0x00 0x00 0x00 [IronSword] NoAI
+UNIT Arcanian Cavalier Sean Level(11,Enemy,True) [12,23] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
 UNIT
 
 LoadLooter:
@@ -337,24 +334,24 @@ UNIT Looter Thief Looter Level(6,Enemy,True) [9,0] Drop 0x00 0x00 0x00 [SlimSwor
 UNIT
 
 LoopUnits1:
-UNIT Arcanian Cavalier Sean Level(9,Enemy,True) [20,4] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
-UNIT Arcanian Mage Sean Level(9,Enemy,True) [20,6] 0x00 0x00 0x00 0x00 [Aqua] NoAI
-UNIT Arcanian Spellsword Sean Level(10,Enemy,True) [6,23] 0x00 0x00 0x00 0x00 [SteelSword,Thunder] NoAI
-UNIT Arcanian Soldier Sean Level(10,Enemy,True) [0,22] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Arcanian Cavalier Sean Level(11,Enemy,True) [20,4] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT Arcanian Mage Sean Level(11,Enemy,True) [20,6] 0x00 0x00 0x00 0x00 [Aqua] NoAI
+UNIT Arcanian Spellsword Sean Level(12,Enemy,True) [6,23] 0x00 0x00 0x00 0x00 [SteelSword,Thunder] NoAI
+UNIT Arcanian Soldier Sean Level(12,Enemy,True) [0,22] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
 UNIT
 
 Turn9Units:
-UNIT Arcanian Monk Sean Level(9,Enemy,True) [4,23] 0x00 0x00 0x00 0x00 [Lightning] NoAI
-UNIT Arcanian Knight Sean Level(9,Enemy,True) [8,23] 0x00 0x00 0x00 0x00 [HeavySpear] NoAI
-UNIT Arcanian Fighter Sean Level(9,Enemy,True) [9,23] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
-UNIT Arcanian Fighter Sean Level(10,Enemy,True) [10,23] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT Arcanian Monk Sean Level(11,Enemy,True) [4,23] 0x00 0x00 0x00 0x00 [Lightning] NoAI
+UNIT Arcanian Knight Sean Level(11,Enemy,True) [8,23] 0x00 0x00 0x00 0x00 [IronLance] NoAI
+UNIT Arcanian Fighter Sean Level(11,Enemy,True) [9,23] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
+UNIT Arcanian Fighter Sean Level(12,Enemy,True) [10,23] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
 UNIT
 
 LoopUnits2:
 UNIT Arcanian Paladin Sean Level(2,Enemy,True) [20,16] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
-UNIT Arcanian Cavalier Sean Level(9,Enemy,True) [11,23] 0x00 0x00 0x00 0x00 [PoisonLance] NoAI
-UNIT Arcanian Cavalier Sean Level(10,Enemy,True) [20,10] 0x00 0x00 0x00 0x00 [IronBlade] NoAI
-UNIT Arcanian Pirate Sean Level(9,Enemy,True) [6,23] 0x00 0x00 0x00 0x00 [Hammer] NoAI
+UNIT Arcanian Cavalier Sean Level(11,Enemy,True) [11,23] 0x00 0x00 0x00 0x00 [PoisonLance] NoAI
+UNIT Arcanian Cavalier Sean Level(12,Enemy,True) [20,10] 0x00 0x00 0x00 0x00 [IronBlade] NoAI
+UNIT Arcanian Pirate Sean Level(11,Enemy,True) [6,23] 0x00 0x00 0x00 0x00 [DragonAxe] NoAI
 UNIT
 
 LoadCougar:

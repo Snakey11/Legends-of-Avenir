@@ -17,6 +17,11 @@ POIN BeginningScene EndingScene
 
 //Label TurnBasedEvents
 TurnBasedEvents:
+TurnEventPlayer(0x00,Turn2,2)
+TurnEventPlayer(0x00,Turn4,4)
+TurnEventPlayer(0x00,Turn5,5)
+TurnEventPlayer(0x00,Turn8,8)
+InfiniteTurnEventPlayer(0x18,SpawnRoomUnits,0)
 END_MAIN
 
 //Label CharacterBasedEvents
@@ -26,10 +31,22 @@ END_MAIN
 
 //Label LocationBasedEvents
 LocationBasedEvents:
+DOOR 0x11 [8,4] 0x12
+DOOR 0x12 [14,4] 0x12
+Chest(Halberd,9,1)
+Chest(SpiritDust,13,1)
+Chest(SilverSword,15,1)
+Chest(Elixir,8,2)
+Chest(Tomahawk,14,2)
 END_MAIN
 
 //Label MiscBasedEvents
 MiscBasedEvents:
+AFEV 0x19 FirstArcanianDied 0x10
+AFEV 0x13 OpenRoom 0x11
+AFEV 0x13 OpenRoom 0x12
+AREA 0x17 Approaching [1,0] [6,11]
+DefeatBoss(EndingScene)
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -40,15 +57,196 @@ ALIGN 4
 
 //Label Units
 Units:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [12,19] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Jasper 0x00 0x00 Level(1,Ally,True) [13,18] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [14,19] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [15,18] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Adeline 0x00 0x00 Level(1,Ally,True) [16,19] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Remus 0x00 0x00 Level(1,Ally,True) [17,18] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Cougar 0x00 0x00 Level(1,Ally,True) [18,19] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Lux 0x00 0x00 Level(1,Ally,True) [19,18] 0x00 0x00 0x00 0x00 [0] NoAI
 EndUnit
 
 //Label BeginingScene
 BeginningScene:
-ENDA
+COUNTER_SET 0x0 0x0 // Counter used to spawn units some turns after opening the room.
+LOAD1 0x1 Meanies
+LOAD1 0x1 Meanies2
+ENUN
+SetBackground(0x0E)
+MUSC Divine_Providence
+Text(Military6AcceptHoldStartChapterText)
+MUSC Shihna
+SetBackground(0x1C)
+Text(Military6AcceptHoldPlanningText)
+MUSC Twisted_Shadows_B
+SetBackground(0x17)
+Text(Military6AcceptHoldCellarText)
+GotoPrepScreen
 
 //Label EndingScene
 EndingScene:
+MUSC Into_the_Shadow_of_Victory
+FADI 0x5
+CLEA 0x0
+CLEE 0x0
+SetBackground(0x0E)
+Text(Military6AcceptHoldEndingText)
+MoveToChapter(MilitaryAcceptHold7)
+ENDA
+
+//Label Turn events
+Turn2:
+LOAD1 0x1 Turn2Units
+ENUN
+NoFade
+EndA2
+
+Turn4:
+LOAD1 0x1 Turn4Units
+ENUN
+NoFade
+EndA2
+
+Turn5:
+LOAD1 0x1 Turn5Units
+ENUN
+NoFade
+EndA2
+
+Turn8:
+LOAD1 0x1 Turn8Units
+ENUN
+NoFade
+EndA2
+
+SpawnRoomUnits:
+CHECK_EVENTID 0x13
+BEQ 0x0 0x0 0xC
+	// The room has been opened, but the reinforcements haven't spawned yet.
+	COUNTER_CHECK 0x0
+	SVAL 0x1 0x2
+	BLT 0x1 0xC 0x2
+		LOAD1 0x1 RoomUnits
+		ENUN
+		GOTO 0x2
+	LABEL 0x1
+		// We're not ready to spawn the reinforcements, but increment the counter.
+		COUNTER_INC 0x1
+LABEL 0x0
+	ENUF 0x18
+LABEL 0x2
+NoFade
+ENDA
+
+//Label Misc events
+OpenRoom:
+TILECHANGE 0 // Open the large room.
+NoFade
+EndA2
+
+FirstArcanianDied:
+MUSI
+CAM1 Clint 
+STAL 0x10
+FlashCursor(Clint,60)
+STAL 0x10
+Text(Military6AcceptHoldFirstArcanianText)
+MUNO
+NoFade
+EndA2
+
+Approaching:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x0 0x0 0xC
+	MUSI
+	CAM1 Clint
+	STAL 0x10
+	FlashCursor(Clint,60)
+	STAL 0x10
+	Text(Military6AcceptHoldApproachingText)
+	MUNO
+	GOTO 0x1
+LABEL 0x0
+	ENUF 0x17
+LABEL 0x1
+NoFade
 ENDA
 
 	/*UNIT DATA*/
 
+//Label Meanies
+Meanies:
+UNIT Clint DreadFighter Clint Level(8,Enemy,True) [3,1] Drop 0x00 0x00 0x00 [SilverSword,Dulam,Runesword] GuardAI
+UNIT Arcanian General Clint Level(4,Enemy,True) [8,21] 0x00 0x00 0x00 0x00 [Spear] AttackIfCloseAI
+UNIT Arcanian Knight Clint Level(19,Enemy,True) [7,20] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
+UNIT Arcanian Knight Clint Level(20,Enemy,True) [9,20] 0x00 0x00 0x00 0x00 [Dragonspear] AttackInRangeAI
+UNIT Arcanian Mercenary Clint Level(17,Enemy,True) [8,19] 0x00 0x00 0x00 0x00 [Zanbato] AttackInRangeAI
+UNIT Arcanian Hero Clint Level(3,Enemy,True) [8,13] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT Arcanian Mercenary Clint Level(18,Enemy,True) [7,14] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT Arcanian Mercenary Clint Level(17,Enemy,True) [9,12] 0x00 0x00 0x00 0x00 [Armorslayer] NoAI
+UNIT Arcanian Mage Clint Level(19,Enemy,True) [12,14] 0x00 0x00 0x00 0x00 [Elaqua] NoAI
+UNIT Arcanian Soldier Clint Level(18,Enemy,True) [14,13] 0x00 0x00 0x00 0x00 [Javelin] NoAI
+UNIT Arcanian Fighter Clint Level(20,Enemy,True) [16,12] 0x00 0x00 0x00 0x00 [Halberd] AttackInRangeAI
+UNIT Arcanian General Clint Level(5,Enemy,True) [19,12] 0x00 0x00 0x00 0x00 [ShortSpear,Hammer] GuardAI
+UNIT Arcanian Shaman Clint Level(17,Enemy,True) [19,9] 0x00 0x00 0x00 0x00 [Nosferatu,Dulam] AttackInRangeAI
+UNIT Arcanian Archer Clint Level(16,Enemy,True) [15,8] 0x00 0x00 0x00 0x00 [SteelBow] AttackInRangeAI
+UNIT Arcanian Sniper Clint Level(5,Enemy,True) [13,9] Drop 0x00 0x00 0x00 [SilverShortbow] AttackIfCloseAI
+UNIT Arcanian Halberdier Clint Level(4,Enemy,True) [15,6] 0x00 0x00 0x00 0x00 [ToxinLance] AttackInRangeAI
+UNIT Arcanian Cavalier Clint Level(18,Enemy,True) [9,6] 0x00 0x00 0x00 0x00 [IronBlade] AttackInRangeAI
+UNIT Arcanian GreatKnight Clint Level(5,Enemy,True) [8,5] Drop 0x00 0x00 0x00 [SteelLance,Wyrmslayer,DoorKey] ChaseOnceApproachedAI
+UNIT Arcanian Sage Clint Level(4,Enemy,True) [11,7] 0x00 0x00 0x00 0x00 [Arcwind] AttackInRangeAI
+UNIT Arcanian Knight Clint Level(20,Enemy,True) [11,7] 0x00 0x00 0x00 0x00 [HandAxe] ChaseOnceApproachedAI
+UNIT
+
+Meanies2:
+UNIT Arcanian Paladin Clint Level(3,Enemy,True) [3,5] 0x00 0x00 0x00 0x00 [LightBrand] NoAI
+UNIT Arcanian Cavalier Clint Level(17,Enemy,True) [2,6] 0x00 0x00 0x00 0x00 [ShortSpear] ChaseOnceApproachedAI
+UNIT Arcanian Cavalier Clint Level(17,Enemy,True) [4,6] 0x00 0x00 0x00 0x00 [SteelSword,Horseslayer] ChaseOnceApproachedAI
+UNIT Arcanian Cavalier Clint Level(18,Enemy,True) [3,7] 0x00 0x00 0x00 0x00 [Lancereaver] ChaseOnceApproachedAI
+UNIT Arcanian General Clint Level(16,Enemy,True) [2,11] 0x00 0x00 0x00 0x00 [Tomahawk] GuardAI
+UNIT Arcanian Monk Clint Level(19,Enemy,True) [3,12] 0x00 0x00 0x00 0x00 [Shine] ChaseOnceApproachedAI
+UNIT Arcanian Archer Clint Level(18,Enemy,True) [4,13] 0x00 0x00 0x00 0x00 [IronLongbow] AttackIfCloseAI
+UNIT Arcanian Warrior Clint Level(5,Enemy,True) [2,15] 0x00 0x00 0x00 0x00 [Swordslayer] AttackInRangeAI
+UNIT Arcanian Knight Clint Level(17,Enemy,True) [3,19] 0x00 0x00 0x00 0x00 [Axereaver] AttackInRangeAI
+UNIT Arcanian Sentinel Clint Level(5,Enemy,True) [4,18] 0x00 0x00 0x00 0x00 [Horseslayer,ShortAxe] GuardAI
+UNIT Arcanian Mage Clint Level(19,Enemy,True) [2,18] 0x00 0x00 0x00 0x00 [Arcthunder] AttackIfCloseAI
+UNIT Arcanian Halberdier Clint Level(6,Enemy,True) [2,2] 0x00 0x00 0x00 0x00 [BraveLance] ChaseOnceApproachedAI
+UNIT Arcanian Halberdier Clint Level(5,Enemy,True) [4,2] 0x00 0x00 0x00 0x00 [SilverLance] ChaseOnceApproachedAI
+UNIT Arcanian BattleSage Clint Level(5,Enemy,True) [3,3] 0x00 0x00 0x00 0x00 [KillingEdge,Elthunder] ChaseOnceApproachedAI
+UNIT Arcanian DreadFighter Clint Level(6,Enemy,True) [11,2] Drop 0x00 0x00 0x00 [SteelSword,Nosferatu,ChestKey_5] NoAI
+UNIT Arcanian Fighter Clint Level(18,Enemy,True) [14,1] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
+UNIT Arcanian Archer Clint Level(17,Enemy,True) [10,1] Drop 0x00 0x00 0x00 [SteelBow,DoorKey] AttackInRangeAI
+UNIT Arcanian Halberdier Clint Level(3,Enemy,True) [17,1] 0x00 0x00 0x00 0x00 [HeavySpear] NoAI
+UNIT Arcanian Myrmidon Clint Level(19,Enemy,True) [18,3] 0x00 0x00 0x00 0x00 [ToxinSword] AttackIfCloseAI
+UNIT Arcanian Mage Clint Level(20,Enemy,True) [7,3] 0x00 0x00 0x00 0x00 [Elwind] NoAI
+UNIT
+
+Turn2Units:
+UNIT Arcanian WyvernRider Clint Level(15,Enemy,True) [0,5] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Arcanian WyvernLord Clint Level(4,Enemy,True) [0,7] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI
+UNIT Arcanian WyvernRider Clint Level(16,Enemy,True) [0,9] 0x00 0x00 0x00 0x00 [Javelin] NoAI
+UNIT
+
+Turn4Units:
+UNIT Looter Thief Looter Level(11,Enemy,True) [5,13] 0x00 0x00 0x00 0x00 [IronSword] LootingThiefAI
+UNIT
+
+Turn5Units:
+UNIT Arcanian Soldier Clint Level(16,Enemy,True) [7,21] 0x00 0x00 0x00 0x00 [Javelin] NoAI
+UNIT Arcanian Halberdier Clint Level(6,Enemy,True) [9,21] 0x00 0x00 0x00 0x00 [KillerLance] NoAI
+UNIT Arcanian Hero Clint Level(4,Enemy,True) [0,7] 0x00 0x00 0x00 0x00 [LightBrand] NoAI
+UNIT Arcanian Mercenary Clint Level(18,Enemy,True) [0,9] 0x00 0x00 0x00 0x00 [IronSword] NoAI
+UNIT
+
+Turn8Units:
+UNIT Arcanian Cavalier Clint Level(19,Enemy,True) [7,21] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT Arcanian GreatKnight Clint Level(6,Enemy,True) [8,21] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI
+UNIT Arcanian Cavalier Clint Level(19,Enemy,True) [9,21] 0x00 0x00 0x00 0x00 [HeavySpear] NoAI
+UNIT
+
+RoomUnits:
+UNIT Arcanian Sentinel Clint Level(6,Enemy,True) [19,1] 0x00 0x00 0x00 0x00 [SteelBlade,Dragonspear] NoAI
+UNIT Arcanian Shaman Clint Level(18,Enemy,True) [19,2] 0x00 0x00 0x00 0x00 [Slime] NoAI
+UNIT Arcanian Mercenary Clint Level(20,Enemy,True) [19,3] 0x00 0x00 0x00 0x00 [ToxinSword] NoAI
+EndUnit

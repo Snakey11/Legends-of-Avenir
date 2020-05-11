@@ -21,9 +21,9 @@ InfiniteTurnEventPlayer(0x12,CheckToLoadCavs,1)
 TurnEventPlayer(0x00,Turn1,1)
 TurnEventPlayer(0x00,Turn2,2)
 TurnEventPlayer(0x00,TurnPegasi,3,9)
-TurnEventPlayer(0x00,Turn4,4)
-TurnEventPlayer(0x00,Turn6,6)
-TurnEventPlayer(0x00,Turn8,8)
+TurnEventPlayer(0x00,Turn5,5)
+TurnEventPlayer(0x00,Turn7,7)
+TurnEventPlayer(0x00,Turn9,9)
 END_MAIN
 
 //Label CharacterBasedEvents
@@ -267,25 +267,25 @@ CamOFF
 NoFade
 EndA2
 
-Turn4:
+Turn5:
 CamON
-LOAD1 0x1 Turn4Units
+LOAD1 0x1 Turn5Units
 ENUN
 CamOFF
 NoFade
 EndA2
 
-Turn6:
+Turn7:
 CamON
-LOAD1 0x1 Turn6Units
+LOAD1 0x1 Turn7Units
 ENUN
 CamOFF
 NoFade
 EndA2
 
-Turn8:
+Turn9:
 CamON
-LOAD1 0x1 Turn8Units
+LOAD1 0x1 Turn9Units
 CamOFF
 NoFade
 ENDA
@@ -371,10 +371,11 @@ StartingCesarians:
 UNIT Blaine Halberdier Blaine Level(8,NPC,True) [5,4] 0x00 0x00 0x00 0x00 [SilverLance] NoAI
 UNIT Cesarian Knight Blaine Level(19,NPC,True) [3,3] 0x00 0x00 0x00 0x00 [ShortSpear] GuardAI
 UNIT Cesarian Knight Blaine Level(17,NPC,True) [4,2] 0x00 0x00 0x00 0x00 [KillerAxe] GuardAI
-UNIT Cesarian Soldier Blaine Level(16,NPC,True) [2,3] 0x00 0x00 0x00 0x00 [SteelLance] AttackIfCloseAI
-UNIT Cesarian Bishop Blaine Level(3,NPC,True) [2,1] 0x00 0x00 0x00 0x00 [Shine,Mend] HealAlliesAI
-UNIT Cesarian Cavalier Blaine Level(15,NPC,True) [1,2] 0x00 0x00 0x00 0x00 [SteelBlade] AttackIfCloseAI
-UNIT Cesarian Soldier Blaine Level(16,NPC,True) [2,5] 0x00 0x00 0x00 0x00 [ToxinLance] GuardAI
+UNIT Cesarian Soldier Blaine Level(19,NPC,True) [2,3] 0x00 0x00 0x00 0x00 [IronLance] AttackIfCloseAI
+UNIT Cesarian Sage Blaine Level(4,NPC,True) [2,1] 0x00 0x00 0x00 0x00 [Shine,Mend] HealAlliesAI
+UNIT Cesarian Cavalier Blaine Level(17,NPC,True) [1,2] 0x00 0x00 0x00 0x00 [SteelSword,Javelin] AttackIfCloseAI
+UNIT Cesarian Soldier Blaine Level(18,NPC,True) [2,5] 0x00 0x00 0x00 0x00 [Dragonspear] AttackIfCloseAI
+UNIT Cesarian Spellsword Blaine Level(20,NPC,True) [2,4] 0x00 0x00 0x00 0x00 [LightBrand] AttackIfCloseAI
 UNIT
 
 TriggerCavs:
@@ -396,7 +397,7 @@ LoadPegasus:
 UNIT Arcanian PegasusKnight BossVal Level(17,Enemy,True) [12,1] 0x00 0x00 0x00 0x00 [IronLance] NoAI
 UNIT
 
-Turn4Units:
+Turn5Units:
 UNIT Arcanian Mercenary BossVal Level(18,Enemy,True) [0,1] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
 UNIT Arcanian Mercenary BossVal Level(16,Enemy,True) [1,0] 0x00 0x00 0x00 0x00 [Zanbato] NoAI
 UNIT Arcanian Shaman BossVal Level(14,Enemy,True) [0,11] 0x00 0x00 0x00 0x00 [Worm] NoAI
@@ -404,14 +405,14 @@ UNIT Arcanian Cavalier BossVal Level(17,Enemy,True) [3,16] 0x00 0x00 0x00 0x00 [
 UNIT Arcanian MageKnight BossVal Level(3,Enemy,True) [20,12] 0x00 0x00 0x00 0x00 [Elwind] NoAI
 UNIT
 
-Turn6Units:
+Turn7Units:
 UNIT Arcanian Cavalier BossVal Level(17,Enemy,True) [20,2] 0x00 0x00 0x00 0x00 [ToxinLance] NoAI
 UNIT Arcanian WyvernRider BossVal Level(16,Enemy,True) [20,6] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
 UNIT Arcanian Fighter BossVal Level(14,Enemy,True) [20,11] 0x00 0x00 0x00 0x00 [Hammer] NoAI
 UNIT Arcanian Spellsword BossVal Level(16,Enemy,True) [10,17] 0x00 0x00 0x00 0x00 [IronSword,Flux] NoAI
 UNIT
 
-Turn8Units:
+Turn9Units:
 UNIT Arcanian DreadFighter BossVal Level(3,Enemy,True) [12,17] 0x00 0x00 0x00 0x00 [KillingEdge,Luna] NoAI
 UNIT Arcanian Mercenary BossVal Level(15,Enemy,True) [20,14] 0x00 0x00 0x00 0x00 [IronBlade] NoAI
 UNIT Arcanian Cavalier BossVal Level(14,Enemy,True) [14,0] 0x00 0x00 0x00 0x00 [IronLance,SteelSword] NoAI
