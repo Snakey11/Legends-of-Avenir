@@ -9,6 +9,8 @@ Snek has an entirely new build scheme for definitions and CSVs
 "Lost Souls" in the prologue are no longer children, finally
 Darting blow has been reduced to +2 attack speed
 Lux and Zaheva have been buffed
+Military 2 Militia no longer ends on enemy phase turn 6. Now ends on player phase turn 7
+Jurgen's weapon ranks have been changed
 
 Hotfixes before v1.10
 Fixed a bug in the ending of Military Accept Retreat Leave where character death quotes would play during battles
