@@ -50,7 +50,7 @@ struct CharacterEvent // This definition is really only relevant to Support Rewo
 {
 	u16 identifier;
 	u16 level;
-	union CharacterEventUnion
+	union
 	{
 		const void* event;
 		u16 text;

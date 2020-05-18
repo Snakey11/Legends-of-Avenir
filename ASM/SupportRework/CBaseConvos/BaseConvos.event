@@ -11,7 +11,7 @@
 		#include "PrepScreen/PrepScreen.event" // Required to make the prep screen usability work.
 		
 		ALIGN 4
-		BaseConvoSelectConvoTextLink:
+		gBaseConvoSelectConvoText:
 		SHORT BaseConvoSelectConvoText
 		
 		// Default events called by the "Support" menu command.
