@@ -96,12 +96,6 @@ ALIGN 4
 ALIGN 4
 #include "Menus/Menu Commands.event"
 
-/*ALIGN 4
-#inctext lyn "ModularEXP/ModularEXP.elf" "ModularEXP/Hooks.elf"
-#define ModularEXPEntry(Character,Chapter,EventID,Multiplier,Divisor) "BYTE Character Chapter EventID Multiplier Divisor 0x00 0x00 0x00"
-ModularEXPChapterTable:
-ModularEXPEntry(0,0,0,0,0)*/
-
 ALIGN 4
 #include "MiscMusics/MiscMusics.lyn.event"
 gVictoryMusic:
@@ -114,6 +108,29 @@ PUSH
 ORG $160AE
 SHORT 0x46C0
 POP
+
+// Completely rewrite ComputeExpFromBattle and GetBattleUnitStaffExp.
+#include "ModularerEXP/ModularerEXP.lyn.event"
+#define StaffEXPEntry(Item,T1EXP,T2EXP) "BYTE Item T1EXP T1EXP 0"
+StaffEXPList:
+StaffEXPEntry(Heal,20,10)
+StaffEXPEntry(Mend,25,15)
+StaffEXPEntry(Recover,30,20)
+StaffEXPEntry(Physic,35,20)
+StaffEXPEntry(Fortify,35,20)
+StaffEXPEntry(Restore,30,15)
+StaffEXPEntry(Silence,45,30)
+StaffEXPEntry(Sleep,45,30)
+StaffEXPEntry(Berserk,45,30)
+StaffEXPEntry(Warp,40,25)
+StaffEXPEntry(Rescue,40,25)
+StaffEXPEntry(Torch,20,10)
+StaffEXPEntry(Hammerne,45,35)
+StaffEXPEntry(Unlock,25,10)
+StaffEXPEntry(Barrier,20,10)
+StaffEXPEntry(0,0,0)
+
+
 
 ALIGN 4
 #include "ModularMinimugBox/MMB Installer Default.event"
