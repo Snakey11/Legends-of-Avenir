@@ -7,6 +7,7 @@ typedef struct TerrainUse TerrainUse;
 struct TerrainUse
 {
 	u8 terrainID, itemID;
+	int (*usability)(Unit* unit);
 };
 
 extern TerrainUse gTerrainUses[];
@@ -17,9 +18,15 @@ int GetOpenTerrainItemSlot(Unit* unit, int terrainID) // Autohook to 0x08018A9C.
 	{
 		if ( terrainID == gTerrainUses[i].terrainID )
 		{
+			if ( gTerrainUses[i].usability && !gTerrainUses[i].usability(unit) ) { continue; }
 			int slot = GetUnitItemSlot(unit,gTerrainUses[i].itemID);
 			if ( slot != -1 ) { return slot; }
 		}
 	}
 	return -1;
+}
+
+int DoorsAndChestsIsThief(Unit* unit)
+{
+	return UNIT_CATTRIBUTES(unit) & CA_LOCKPICK ? 1 : 0;
 }
