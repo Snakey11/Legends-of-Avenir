@@ -7,7 +7,7 @@
     .short 0xF800
 .endm
 
-.equ GetUnitStructFromEventParameter, 0x0800BC51
+.equ GetUnitStructFromEventParameter, 0x0800BC50
 
 .global CHAREventFix
 .type CHAREventFix, %function
