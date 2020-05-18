@@ -140,6 +140,8 @@ UnspecifiedBattleConvo(Arcanian,MilitaryAcceptHold6,0x10,0x00)
 SpecifiedBattleConvo(Zaheva,Clint,MilitaryAcceptHold6,0x15,Military6AcceptHoldZahevaClintBattleText)
 SpecifiedBattleConvo(Adeline,Clint,MilitaryAcceptHold6,0x16,Military6AcceptHoldAdelineClintBattleText)
 UnspecifiedBattleConvo(Clint,MilitaryAcceptHold6,0x14,Military6AcceptHoldClintBattleText)
+UnspecifiedBattleConvo(BossUzkalis,MilitaryAcceptHold7,0x12,Military7AcceptHoldUzkalisBattleText)
+UnspecifiedBattleConvo(Xavus,MilitaryAcceptHold7,0x13,Military7AcceptHoldXavusBattleText)
 
 
 BYTE 0xFF 0xFF 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Terminator

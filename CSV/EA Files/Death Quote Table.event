@@ -157,6 +157,28 @@ DeathQuote(PlayerFSoldier,MilitaryAcceptRetreatHelp7,0x10,0x0)
 DeathQuote(PlayerFArcher,MilitaryAcceptRetreatHelp7,0x10,0x0)
 DeathQuote(PlayerFWyvernRider,MilitaryAcceptRetreatHelp7,0x10,0x0)
 
+DeathQuote(PlayerMCavalier,MilitaryAcceptHold7,0x17,Military7AcceptHoldGoodEndingPlayerDeathText) // Military Accept Hold Good Ending
+DeathQuote(PlayerMKnight,MilitaryAcceptHold7,0x17,Military7AcceptHoldGoodEndingPlayerDeathText)
+DeathQuote(PlayerMSoldier,MilitaryAcceptHold7,0x17,Military7AcceptHoldGoodEndingPlayerDeathText)
+DeathQuote(PlayerMArcher,MilitaryAcceptHold7,0x17,Military7AcceptHoldGoodEndingPlayerDeathText)
+DeathQuote(PlayerMWyvernRider,MilitaryAcceptHold7,0x17,Military7AcceptHoldGoodEndingPlayerDeathText)
+DeathQuote(PlayerFCavalier,MilitaryAcceptHold7,0x17,Military7AcceptHoldGoodEndingPlayerDeathText)
+DeathQuote(PlayerFKnight,MilitaryAcceptHold7,0x17,Military7AcceptHoldGoodEndingPlayerDeathText)
+DeathQuote(PlayerFSoldier,MilitaryAcceptHold7,0x17,Military7AcceptHoldGoodEndingPlayerDeathText)
+DeathQuote(PlayerFArcher,MilitaryAcceptHold7,0x17,Military7AcceptHoldGoodEndingPlayerDeathText)
+DeathQuote(PlayerFWyvernRider,MilitaryAcceptHold7,0x17,Military7AcceptHoldGoodEndingPlayerDeathText)
+
+DeathQuote(PlayerMCavalier,MilitaryAcceptHold7,0x18,Military7AcceptHoldBadEndingPlayerDeathText) // Military Accept Hold Bad Ending
+DeathQuote(PlayerMKnight,MilitaryAcceptHold7,0x18,Military7AcceptHoldBadEndingPlayerDeathText)
+DeathQuote(PlayerMSoldier,MilitaryAcceptHold7,0x18,Military7AcceptHoldBadEndingPlayerDeathText)
+DeathQuote(PlayerMArcher,MilitaryAcceptHold7,0x18,Military7AcceptHoldBadEndingPlayerDeathText)
+DeathQuote(PlayerMWyvernRider,MilitaryAcceptHold7,0x18,Military7AcceptHoldBadEndingPlayerDeathText)
+DeathQuote(PlayerFCavalier,MilitaryAcceptHold7,0x18,Military7AcceptHoldBadEndingPlayerDeathText)
+DeathQuote(PlayerFKnight,MilitaryAcceptHold7,0x18,Military7AcceptHoldBadEndingPlayerDeathText)
+DeathQuote(PlayerFSoldier,MilitaryAcceptHold7,0x18,Military7AcceptHoldBadEndingPlayerDeathText)
+DeathQuote(PlayerFArcher,MilitaryAcceptHold7,0x18,Military7AcceptHoldBadEndingPlayerDeathText)
+DeathQuote(PlayerFWyvernRider,MilitaryAcceptHold7,0x18,Military7AcceptHoldBadEndingPlayerDeathText)
+
 // Specific death quotes need to come first.
 DeathQuote(Henning,Mercenary1,0x02,Merc1HenningDeathText)
 DeathQuote(Gerwick,MercenaryMilitia2,0x2,Merc2MilitiaGerwickDeathText)
@@ -227,6 +249,9 @@ DeathQuote(Blaine,MilitaryAcceptHold4,0x00,Military4AcceptHoldBlaineDeathText)
 DeathQuote(BossVal,MilitaryAcceptHold4,0x02,Military4AcceptHoldValDeathText)
 DeathQuote(BossHelmer,MilitaryAcceptHold5,0x02,Military5AcceptHoldHelmerDeathText)
 DeathQuote(Clint,MilitaryAcceptHold6,0x02,Military6AcceptHoldClintDeathText)
+DeathQuote(Arcanian,MilitaryAcceptHold7,0x10,0x00)
+DeathQuote(BossUzkalis,MilitaryAcceptHold7,0x14,Military7AcceptHoldUzkalisDeathText)
+DeathQuote(Xavus,MilitaryAcceptHold7,0x15,Military7AcceptHoldXavusDeathText)
 
 // Nonspecific death quotes come after.
 DeathQuote(Vicar,AllChapters,0x00,VicarDeathText)
@@ -257,7 +282,7 @@ DeathQuote(Christina,AllChapters,0x00,ChristinaDeathText)
 DeathQuote(Clara,AllChapters,0x00,ClaraDeathText)
 DeathQuote(Sylvaine,AllChapters,0x00,SylvaineDeathText)
 DeathQuote(Zaheva,AllChapters,0x00,ZahevaDeathText)
-DeathQuote(Yvette,AllChapters,0x00,YvetteDeathText) // TREAT 0xA0 AS DISABLE DEATH QUOTES FOR ENDINGS.
+DeathQuote(Yvette,AllChapters,0x00,YvetteDeathText)
 DeathQuote(Adeline,AllChapters,0x00,AdelineDeathText)
 DeathQuote(Remus,AllChapters,0x00,RemusDeathText)
 DeathQuote(Rex,AllChapters,0x00,RexDeathText)

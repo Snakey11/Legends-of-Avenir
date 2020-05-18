@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="23" height="21" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="1800B91A" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/1800B91A.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="23" height="21">
+  <properties>
+   <property name="Anims" value="_18Anims"/>
+   <property name="ChapterID" value="MilitaryAcceptHold7"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="ArcanaeCapitalChanges"/>
+   <property name="MapID" value="ArcanaeCapitalMap"/>
+   <property name="ObjectType" value="0x18"/>
+   <property name="PaletteID" value="0x19"/>
+   <property name="TileConfig" value="0x1A"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJydlTtLA0EQx/eBoH6LpFLBD5EuHIKfQbBIIwqSD+CjsLQRbRXxQRoVfKRXA1bhTDC24gUCKRIQ1M4Zdpabm2yOYPFndnb3fpmdmd3UtFI1pgWj1BAUk+ZNdn1V7C9bpR5Bn7Dvwzi/Y519NaOKmeTarnasBMZdYh0opYrGWfR/iB2bsJoifq9p0JJNVQEdAfOOhP4tzdfEGWeJMQB9gWZAh7Cvap3F9TXrfrtJ4xmmiGkL1rdNavs6Gyf697DvAVS3zkfeBmkR5zEXxsXP2ccwd2JSm+hsLtB/o/q8MzZnILtinOXzWN+EScPcE3zfAD1r539TfX5z2HvExpz36Awt0QcFwUZ/3bj6VM14dgPWOmDbxMY5PP8py3HJZnNSIva+ybJ5LevEbAfYvHYr1vWH70H0l8FuCraspefy83i2rKHvQRxfg65ANzk5CbGLFHufsXswvhyjlwnYPlct1sdDygWy58zovfLvTYhdZj3ocyXjHhAb45M9hLrQ7jtZy1B/y7hjxvY9xPsI35MoUMtQf/uzJmPYobcqCuQk1N/+HdE2m+//1pKz/TtSsGm+k0AN82o5Tv494fdxyqT/JX7d264ZvZeeJX15H3G8A/Gd6ex/AJesZWSzvSfZXOfaaZJz5+kPuT8o2A==
+  </data>
+ </layer>
+ <layer name="Chest2" width="23" height="21" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="0"/>
+   <property name="Y" value="13"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjILBD5gG2gGjYBTQEAAADUwAAw==
+  </data>
+ </layer>
+ <layer name="Chest1" width="23" height="21" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="0"/>
+   <property name="Y" value="11"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjCTANNAOGAWjYBRgAAAOvAAD
+  </data>
+ </layer>
+</map>

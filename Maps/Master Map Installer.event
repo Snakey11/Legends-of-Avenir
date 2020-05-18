@@ -1,6 +1,7 @@
 #include "Aegris.event"
 #include "Altian Castle.event"
 #include "Altian Dungeon.event"
+#include "Arcanae Capital.event"
 #include "Artifact Door.event"
 #include "Assassin Test.event"
 #include "Bacrun Castle.event"
