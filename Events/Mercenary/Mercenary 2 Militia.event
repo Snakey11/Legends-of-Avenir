@@ -17,7 +17,7 @@ POIN BeginningScene EndingScene
 
 //Label Turn events
 TurnBasedEvents:
-TurnEventEnemy(0x0,EndingScene,6)
+TurnEventPlayer(0x0,EndingScene,7)
 END_MAIN
 
 //Label Character events
