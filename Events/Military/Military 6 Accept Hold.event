@@ -27,6 +27,7 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
+SupportConvo(ASupport,0xFF,Derek,Military6AcceptHoldTactDerekSupportText)
 END_MAIN
 
 //Label LocationBasedEvents
@@ -90,6 +91,16 @@ MUSC Into_the_Shadow_of_Victory
 FADI 0x5
 CLEA 0x0
 CLEE 0x0
+LOAD1 0x1 LoadJurgen
+ENUN
+CLEA 0x0
+ENUT 0x80
+CHECK_EVENTID 0x15
+BEQ 0x0 0x0 0xC
+	CHECK_EVENTID 0x16
+	BEQ 0x0 0x0 0xC
+		ENUF 0x80 // If both Adeline and Zaheva fought Clint, enable their base conversation in the next chapter.
+LABEL 0x0
 SetBackground(0x0E)
 Text(Military6AcceptHoldEndingText)
 MoveToChapter(MilitaryAcceptHold7)
@@ -250,3 +261,8 @@ UNIT Arcanian Sentinel Clint Level(6,Enemy,True) [19,1] 0x00 0x00 0x00 0x00 [Ste
 UNIT Arcanian Shaman Clint Level(18,Enemy,True) [19,2] 0x00 0x00 0x00 0x00 [Slime] NoAI
 UNIT Arcanian Mercenary Clint Level(20,Enemy,True) [19,3] 0x00 0x00 0x00 0x00 [ToxinSword] NoAI
 EndUnit
+
+//Label Cutscene units
+LoadJurgen:
+UNIT Jurgen SpearHero 0x00 Level(8,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [SilverLance,Tomahawk] NoAI
+UNIT

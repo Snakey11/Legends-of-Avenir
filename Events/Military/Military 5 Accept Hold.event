@@ -32,6 +32,7 @@ END_MAIN
 ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0x19,TTactLux,0x00,Lux)
+SupportConvo(BSupport,Cougar,Lux,Military5AcceptHoldCougarLuxSupportText)
 END_MAIN
 
 //Label LocationBasedEvents
@@ -167,6 +168,7 @@ STAL 0x08
 FlashCursor(Lux,60)
 STAL 0x08
 Text(Military5AcceptHoldLuxJoinsText)
+AddSupport(Cougar,Lux,0)
 NoFade
 EndA2
 
@@ -185,6 +187,7 @@ STAL 0x08
 FlashCursor(Lux,60)
 STAL 0x08
 Text(Military5AcceptHoldLuxJoinsText)
+AddSupport(Cougar,Lux,0)
 NoFade
 EndA2
 

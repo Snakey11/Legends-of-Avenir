@@ -29,6 +29,8 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
+SupportConvo(BSupport,0xFF,Zaheva,Military4AcceptHoldTactZahevaSupportText)
+SupportConvo(BSupport,Adeline,Remus,Military4AcceptHoldAdelineRemusSupportText)
 END_MAIN
 
 //Label LocationBasedEvents

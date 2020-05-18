@@ -25,7 +25,6 @@ ALIGN 32
 CharacterBasedEvents:
 SupportConvo(BSupport,Cougar,Finoc,Military5PassHaedricCougarFinocSupportText)
 SupportConvo(CSupport,Clara,Sekar,Military5PassHaedricClaraSekarSupportText)
-
 END_MAIN
 
 //Label LocationBasedEvents
