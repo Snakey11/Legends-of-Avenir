@@ -157,7 +157,7 @@ CHECK_ENEMIES
 SVAL 0x4 7
 BLE 0x17 0x4 0xC
 	FadeOutMusic
-	CAM1 Jurgen
+	CAM1 BossJurgen
 	Text(Merc6MilitiaKillJurgenLeavesText)
 	EndingScene:
 	FadeOutMusic
@@ -260,16 +260,16 @@ UNIT Kendrick Pirate PlayerMArcher Level(1,Ally,True) [17,6] 0x00 0x00 0x00 0x00
 UNIT
 
 Others:
-UNIT Cesarian GreatKnight Jurgen Level(5,Enemy,True) [6,15] Drop 0x00 0x00 0x00 [SilverAxe] [0]
-UNIT Cesarian GreatKnight Jurgen Level(4,Enemy,True) [4,13] 0x00 0x00 0x00 0x00 [Javelin,SteelSword] [0]
-UNIT Cesarian Mercenary Jurgen Level(11,Enemy,True) [11,10] 0x00 0x00 0x00 0x00 [SteelSword] [0]
-UNIT Cesarian Mercenary Jurgen Level(10,Enemy,True) [5,7] 0x00 0x00 0x00 0x00 [DevilSword] [0]
-UNIT Cesarian Soldier Jurgen Level(13,Enemy,True) [3,2] 0x00 0x00 0x00 0x00 [SteelLance] [0]
-UNIT Cesarian Soldier Jurgen Level(8,Enemy,True) [3,4] 0x00 0x00 0x00 0x00 [Javelin] [0]
-UNIT Cesarian Sage Jurgen Level(4,Enemy,True) [9,14] 0x00 0x00 0x00 0x00 [Arcthunder] AttackInRangeAI
-UNIT Cesarian Paladin Jurgen Level(3,Enemy,True) [16,13] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
-UNIT Cesarian Bishop Jurgen Level(5,Enemy,True) [6,4] 0x00 0x00 0x00 0x00 [Divine,Mend] [0]
-UNIT Cesarian Cavalier Jurgen Level(10,Enemy,True) [8,0] 0x00 0x00 0x00 0x00 [KillingEdge,ShortSpear] AttackInRangeAI
+UNIT Cesarian GreatKnight BossJurgen Level(5,Enemy,True) [6,15] Drop 0x00 0x00 0x00 [SilverAxe] [0]
+UNIT Cesarian GreatKnight BossJurgen Level(4,Enemy,True) [4,13] 0x00 0x00 0x00 0x00 [Javelin,SteelSword] [0]
+UNIT Cesarian Mercenary BossJurgen Level(11,Enemy,True) [11,10] 0x00 0x00 0x00 0x00 [SteelSword] [0]
+UNIT Cesarian Mercenary BossJurgen Level(10,Enemy,True) [5,7] 0x00 0x00 0x00 0x00 [DevilSword] [0]
+UNIT Cesarian Soldier BossJurgen Level(13,Enemy,True) [3,2] 0x00 0x00 0x00 0x00 [SteelLance] [0]
+UNIT Cesarian Soldier BossJurgen Level(8,Enemy,True) [3,4] 0x00 0x00 0x00 0x00 [Javelin] [0]
+UNIT Cesarian Sage BossJurgen Level(4,Enemy,True) [9,14] 0x00 0x00 0x00 0x00 [Arcthunder] AttackInRangeAI
+UNIT Cesarian Paladin BossJurgen Level(3,Enemy,True) [16,13] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT Cesarian Bishop BossJurgen Level(5,Enemy,True) [6,4] 0x00 0x00 0x00 0x00 [Divine,Mend] [0]
+UNIT Cesarian Cavalier BossJurgen Level(10,Enemy,True) [8,0] 0x00 0x00 0x00 0x00 [KillingEdge,ShortSpear] AttackInRangeAI
 UNIT Shizonian Myrmidon Shizonian Level(11,NPC,True) [14,5] 0x00 0x00 0x00 0x00 [KillingEdge] [0]
 UNIT Shizonian Archer Shizonian Level(9,NPC,True) [16,7] 0x00 0x00 0x00 0x00 [SteelLongbow] [0]
 UNIT Shizonian Warrior Shizonian Level(1,NPC,True) [14,7] 0x00 0x00 0x00 0x00 [SteelAxe,SteelBow] [0]
@@ -284,42 +284,42 @@ UNIT Arya Myrmidon_F PlayerMArcher Level(1,Ally,True) [9,0] 0x00 0x00 0x1 REDA21
 UNIT
 
 Wave1Units:
-UNIT Cesarian Soldier Jurgen Level(8,Enemy,True) [8,14] 0x00 0x00 0x1 REDA2 [Javelin] ChaseOnceApproachedAI
-UNIT Cesarian Soldier Jurgen Level(7,Enemy,True) [9,14] 0x00 0x00 0x1 REDA3 [SteelLance] ChaseOnceApproachedAI
-UNIT Cesarian Cavalier Jurgen Level(12,Enemy,True) [0,8] 0x00 0x00 0x00 0x00 [LightBrand] [0]
-UNIT Cesarian Paladin Jurgen Level(6,Enemy,True) [17,13] 0x00 0x00 0x00 0x00 [IronLance,SteelBlade] ChaseOnceApproachedAI
-UNIT Cesarian Hero Jurgen Level(4,Enemy,True) [0,4] 0x00 0x00 0x00 0x00 [Tomahawk] [0]
-UNIT Cesarian Warrior Jurgen Level(3,Enemy,True) [5,15] 0x00 0x00 0x1 REDA5 [DevilAxe,SteelBow] [0]
-UNIT Cesarian Sentinel Jurgen Level(4,Enemy,True) [9,14] 0x00 0x00 0x1 REDA6 [Hammer,Dragonspear] AttackInRangeAI
-UNIT Cesarian Shaman Jurgen Level(12,Enemy,True) [7,15] Drop 0x00 0x00 0x00 [Nosferatu,Eclipse,GuidingRing] ChaseOnceApproachedAI
-UNIT Cesarian Knight Jurgen Level(9,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [DevilAxe] AttackInRangeAI
+UNIT Cesarian Soldier BossJurgen Level(8,Enemy,True) [8,14] 0x00 0x00 0x1 REDA2 [Javelin] ChaseOnceApproachedAI
+UNIT Cesarian Soldier BossJurgen Level(7,Enemy,True) [9,14] 0x00 0x00 0x1 REDA3 [SteelLance] ChaseOnceApproachedAI
+UNIT Cesarian Cavalier BossJurgen Level(12,Enemy,True) [0,8] 0x00 0x00 0x00 0x00 [LightBrand] [0]
+UNIT Cesarian Paladin BossJurgen Level(6,Enemy,True) [17,13] 0x00 0x00 0x00 0x00 [IronLance,SteelBlade] ChaseOnceApproachedAI
+UNIT Cesarian Hero BossJurgen Level(4,Enemy,True) [0,4] 0x00 0x00 0x00 0x00 [Tomahawk] [0]
+UNIT Cesarian Warrior BossJurgen Level(3,Enemy,True) [5,15] 0x00 0x00 0x1 REDA5 [DevilAxe,SteelBow] [0]
+UNIT Cesarian Sentinel BossJurgen Level(4,Enemy,True) [9,14] 0x00 0x00 0x1 REDA6 [Hammer,Dragonspear] AttackInRangeAI
+UNIT Cesarian Shaman BossJurgen Level(12,Enemy,True) [7,15] Drop 0x00 0x00 0x00 [Nosferatu,Eclipse,GuidingRing] ChaseOnceApproachedAI
+UNIT Cesarian Knight BossJurgen Level(9,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [DevilAxe] AttackInRangeAI
 UNIT
 
 Wave2Units:
-UNIT Jurgen SpearHero Jurgen Level(13,Enemy,True) [5,16] Drop 0x00 0x1 REDA1 [SilverLance,HandAxe,AngelicRobe] GuardAI
-UNIT Cesarian Soldier Jurgen Level(12,Enemy,True) [0,8] 0x00 0x00 0x1 REDA7 [IronLance] [0]
-UNIT Cesarian Soldier Jurgen Level(13,Enemy,True) [0,8] 0x00 0x00 0x1 REDA8 [ShortSpear] [0]
-UNIT Cesarian Soldier Jurgen Level(9,Enemy,True) [0,8] 0x00 0x00 0x1 REDA9 [SteelLance] [0]
-UNIT Cesarian Sniper Jurgen Level(4,Enemy,True) [13,16] 0x00 0x00 0x00 0x00 [SteelShortbow] ChaseOnceApproachedAI
-UNIT Cesarian MageKnight Jurgen Level(3,Enemy,True) [11,16] 0x00 0x00 0x00 0x00 [Elwind,Heal] [0]
-UNIT Cesarian Ranger Jurgen Level(4,Enemy,True) [0,4] 0x00 0x00 0x1 REDA10 [SteelBlade,IronBow] [0]
-UNIT Cesarian Mage Jurgen Level(10,Enemy,True) [0,3] 0x00 0x00 0x1 REDA11 [Elaqua] AttackInRangeAI
-UNIT Cesarian Myrmidon Jurgen Level(11,Enemy,True) [9,16] Drop 0x00 0x1 REDA12 [SteelSword] AttackInRangeAI
-UNIT Cesarian PegasusKnight Jurgen Level(10,Enemy,True) [0,15] 0x00 0x00 0x00 0x00 [SlimLance] [0]
-UNIT Cesarian PegasusKnight Jurgen Level(12,Enemy,True) [1,16] 0x00 0x00 0x00 0x00 [IronLance] [0]
+UNIT BossJurgen SpearHero BossJurgen Level(13,Enemy,True) [5,16] Drop 0x00 0x1 REDA1 [SilverLance,HandAxe,AngelicRobe] GuardAI
+UNIT Cesarian Soldier BossJurgen Level(12,Enemy,True) [0,8] 0x00 0x00 0x1 REDA7 [IronLance] [0]
+UNIT Cesarian Soldier BossJurgen Level(13,Enemy,True) [0,8] 0x00 0x00 0x1 REDA8 [ShortSpear] [0]
+UNIT Cesarian Soldier BossJurgen Level(9,Enemy,True) [0,8] 0x00 0x00 0x1 REDA9 [SteelLance] [0]
+UNIT Cesarian Sniper BossJurgen Level(4,Enemy,True) [13,16] 0x00 0x00 0x00 0x00 [SteelShortbow] ChaseOnceApproachedAI
+UNIT Cesarian MageKnight BossJurgen Level(3,Enemy,True) [11,16] 0x00 0x00 0x00 0x00 [Elwind,Heal] [0]
+UNIT Cesarian Ranger BossJurgen Level(4,Enemy,True) [0,4] 0x00 0x00 0x1 REDA10 [SteelBlade,IronBow] [0]
+UNIT Cesarian Mage BossJurgen Level(10,Enemy,True) [0,3] 0x00 0x00 0x1 REDA11 [Elaqua] AttackInRangeAI
+UNIT Cesarian Myrmidon BossJurgen Level(11,Enemy,True) [9,16] Drop 0x00 0x1 REDA12 [SteelSword] AttackInRangeAI
+UNIT Cesarian PegasusKnight BossJurgen Level(10,Enemy,True) [0,15] 0x00 0x00 0x00 0x00 [SlimLance] [0]
+UNIT Cesarian PegasusKnight BossJurgen Level(12,Enemy,True) [1,16] 0x00 0x00 0x00 0x00 [IronLance] [0]
 UNIT
 
 Wave3Units:
-UNIT Cesarian Soldier Jurgen Level(11,Enemy,True) [0,8] 0x00 0x00 0x00 0x00 [KillerLance] [0]
-UNIT Cesarian GreatKnight Jurgen Level(5,Enemy,True) [6,15] 0x00 0x00 0x1 REDA13 [KillingEdge,Javelin] ChaseOnceApproachedAI
-UNIT Cesarian General Jurgen Level(4,Enemy,True) [6,16] 0x00 0x00 0x1 REDA14 [SilverLance,ShortAxe] GuardAI
-UNIT Cesarian WyvernRider Jurgen Level(9,Enemy,True) [1,16] 0x00 0x00 0x00 0x00 [SteelLance] [0]
-UNIT Cesarian WyvernRider Jurgen Level(10,Enemy,True) [0,15] 0x00 0x00 0x00 0x00 [SteelLance] [0]
-UNIT Cesarian Troubadour Jurgen Level(11,Enemy,True) [9,16] 0x00 0x00 0x00 0x00 [Mend] [0]
-UNIT Cesarian Monk Jurgen Level(9,Enemy,True) [0,5] 0x00 0x00 0x00 0x00 [Artimes,Heal] [0]
-UNIT Cesarian Berserker Jurgen Level(3,Enemy,True) [10,16] 0x00 0x00 0x1 REDA15 [SteelAxe] ChaseOnceApproachedAI
-UNIT Cesarian Fighter Jurgen Level(10,Enemy,True) [0,3] 0x00 0x00 0x00 0x00 [ShortAxe] [0]
-UNIT Cesarian Halberdier Jurgen Level(6,Enemy,True) [1,3] 0x00 0x00 0x00 0x00 [BraveLance] [0]
+UNIT Cesarian Soldier BossJurgen Level(11,Enemy,True) [0,8] 0x00 0x00 0x00 0x00 [KillerLance] [0]
+UNIT Cesarian GreatKnight BossJurgen Level(5,Enemy,True) [6,15] 0x00 0x00 0x1 REDA13 [KillingEdge,Javelin] ChaseOnceApproachedAI
+UNIT Cesarian General BossJurgen Level(4,Enemy,True) [6,16] 0x00 0x00 0x1 REDA14 [SilverLance,ShortAxe] GuardAI
+UNIT Cesarian WyvernRider BossJurgen Level(9,Enemy,True) [1,16] 0x00 0x00 0x00 0x00 [SteelLance] [0]
+UNIT Cesarian WyvernRider BossJurgen Level(10,Enemy,True) [0,15] 0x00 0x00 0x00 0x00 [SteelLance] [0]
+UNIT Cesarian Troubadour BossJurgen Level(11,Enemy,True) [9,16] 0x00 0x00 0x00 0x00 [Mend] [0]
+UNIT Cesarian Monk BossJurgen Level(9,Enemy,True) [0,5] 0x00 0x00 0x00 0x00 [Artimes,Heal] [0]
+UNIT Cesarian Berserker BossJurgen Level(3,Enemy,True) [10,16] 0x00 0x00 0x1 REDA15 [SteelAxe] ChaseOnceApproachedAI
+UNIT Cesarian Fighter BossJurgen Level(10,Enemy,True) [0,3] 0x00 0x00 0x00 0x00 [ShortAxe] [0]
+UNIT Cesarian Halberdier BossJurgen Level(6,Enemy,True) [1,3] 0x00 0x00 0x00 0x00 [BraveLance] [0]
 UNIT
 
 LoadXexim:
