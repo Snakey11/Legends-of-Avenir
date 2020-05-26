@@ -82,3 +82,53 @@ blh ProcStart, r2
 pop { r4 - r5 }
 pop { r0 }
 bx r0
+
+.equ Make6C_GMap_RM, 0x080C2420
+.equ CallMapEventEngine, 0x0800D07C
+.equ StartMapEventEngine, 0x0800D0B0
+.equ ProcStartBlocking, 0x08002CE0
+.equ gMemorySlot, 0x030004B8
+.equ BreakProcLoop, 0x08002E94
+.global StartSmallWorldMap
+.type StartSmallWorldMap, %function
+StartSmallWorldMap: @ r0 = parent proc (the event engine).
+push { lr }
+mov r1, r0
+ldr r0, =WorldMapWrapperProc
+blh ProcStartBlocking, r2
+pop { r0 }
+bx r0
+
+.global WorldMapWrapperProcCallEvents
+.type WorldMapWrapperProcCallEvents,%function
+WorldMapWrapperProcCallEvents:
+push { lr } @ I was successfully able to invoke the world map event engine with this! But... some things were a little messed up... text wouldn't load properly, and it would softlock sometimes.
+ldr r0, =WorldMapEventTest
+mov r1, #0x00
+blh StartMapEventEngine, r2 @ CONFIRMED: Some world map events presuppose the existence of gProc_WorldMap! Invoking that proc before starting events seems to fix things.
+pop { r0 }
+bx r0
+
+.global WorldMapWrapperProcAreEventsFinished
+.type WorldMapWrapperProcAreEventsFinished, %function
+WorldMapWrapperProcAreEventsFinished:
+push { lr }
+ldr r1, =gMemorySlot
+ldr r1, [ r1, #0x2C ] @ Memory slot 0xB.
+cmp r1, #0x00
+beq EventsAreNotFinished
+	blh BreakProcLoop, r1
+EventsAreNotFinished:
+pop { r0 }
+bx r0
+
+@ THIS was successful in blocking the event engine and showing the small world map. I don't think we invoked the WM event engine, though.
+/*push { r4, lr } @ Wrapper for Make6C_GMap_RM (0x080C2420). r0 = parent proc (event engine).
+mov r0, #0x00 @ X coord?
+mov r1, #0x00 @ Y coord?
+mov r2, #0x10 @ 0x01 = slow fade? No other values appear to do anything, but 0x10 is passed in as vanilla. Strange. The bitfield this writes to seems to get overwritten.
+mov r3, #0x00 @ Proc to block. Blocks none if null. Passing in the event engine causes it to softlock looping through the proc cycle. todo investigate further.
+blh Make6C_GMap_RM, r4
+pop { r4 }
+pop { r0 }
+bx r0*/
