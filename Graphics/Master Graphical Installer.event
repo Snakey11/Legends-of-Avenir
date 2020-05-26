@@ -41,3 +41,5 @@ SmallWorldMapTSA:
 
 gSmallWorldMapPaletteCount:
 BYTE 11 // How many palette banks the small world map should use. Maximum of 7 in vanilla without rewriting the handler routine.
+
+#include "WorldMap/Glowy/Glowy.event"
