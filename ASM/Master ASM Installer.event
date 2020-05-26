@@ -296,10 +296,10 @@ ORG $591580
 BYTE 0x17
 
 //Skip very begining world map
-//ORG $A39768
-//EVBIT_MODIFY 0x1
-//SKIPWN
-//ENDA
+ORG $A39768
+EVBIT_MODIFY 0x1
+SKIPWN
+ENDA
 
 ORG $CC20C 	// Skip health and safety screen
 BYTE 0x0 0x0
