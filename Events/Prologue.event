@@ -286,6 +286,7 @@ ALIGN 4
 Units:
 UNIT
 
+#define GM_Start 0x080BA2E4
 BeginningScene:
 //ASMC SetName|1
 MUSC PrologueMusic
@@ -298,14 +299,20 @@ ENUF 0x6A
 ENUF 0x6B
 ENUF 0x6C
 EnterStop
+FADU 0x05
+Text(PrologueOpeningNarratorText)
+FADI 0x5
+STAL 0x10
+ASMC StartSmallWorldMap|1
+STAL 0x40
+EndConvo
 LOAD1 0x1 LoadNarrator
 ENUN
+//EndConvo
 //ENUF 0x6E
 //ENUF 0x67
 //ENUF 0x68
 STAL 0x30
-FADU 0x5
-STAL 0x40
 Text(PrologueOpeningNarratorText)
 FADI 0x5
 DISA Narrator
