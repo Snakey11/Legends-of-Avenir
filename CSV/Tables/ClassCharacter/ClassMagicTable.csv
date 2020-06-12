@@ -32,16 +32,16 @@ WyvernLord,0,5,21,0
 WyvernLord_F,0,5,21,0
 WyvernKnight,1,5,24,1
 WyvernKnight_F,1,5,24,1
-Mage,2,30,20,0
-Mage_F,2,30,20,0
+Mage,4,30,20,0
+Mage_F,4,30,20,0
 Sage,7,30,30,3
 Sage_F,7,30,30,3
 MageKnight,5,25,25,2
 MageKnight_F,5,25,25,2
 Bishop,4,25,25,3
 Bishop_F,4,25,25,3
-Shaman,3,30,20,0
-Shaman_F,3,30,20,0
+Shaman,5,30,20,0
+Shaman_F,5,30,20,0
 Druid,6,35,30,3
 Druid_F,6,35,30,3
 Summoner,5,30,27,2
@@ -55,8 +55,8 @@ Warrior,1,10,21,0
 Brigand,2,15,20,0
 Pirate,2,15,20,0
 Berserker,2,15,23,0
-Monk,2,25,20,0
-Priest,2,25,20,0
+Monk,3,25,20,0
+Priest,3,25,20,0
 Bard,0,0,20,0
 PegasusKnight,2,25,20,0
 Falcoknight,4,25,25,3
@@ -98,10 +98,10 @@ SeraphKnight,4,30,24,3
 0x70 Civilian (F),0,0,20,0
 0x70 Civilian,0,0,20,0
 0x71 Civilian (F),0,0,20,0
-MageM2,3,40,20,0
-MageF2,3,40,20,0
-ShamanM2,3,40,20,0
-ShamanF2,3,40,20,0
+MageM2,4,40,20,0
+MageF2,4,40,20,0
+ShamanM2,5,40,20,0
+ShamanF2,5,40,20,0
 MonkM2,3,30,20,0
 MonkF2,3,30,20,0
 CavalierM2,1,10,20,0
