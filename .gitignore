@@ -6,6 +6,8 @@
 *.ups
 *.SNA
 *.nlz
+*.avi
+*.mp4
 UPDATE.cmd
 !EA Avenir/*.exe
 !ParseDefinitions.txt
