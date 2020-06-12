@@ -52,5 +52,5 @@ ExitCHAREventFix2:
 ldr r1, =#0x080838C7
 bx r1
 ExitCHAREventFix3:
-ldr r1, =#0x080838F3
+ldr r1, =#0x080838D7
 bx r1
