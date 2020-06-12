@@ -54,7 +54,7 @@ parser.add_argument('png2dmp',help='Filepath to Png2Dmp.exe.')
 parser.add_argument('compress',help='Filepath to Compress.exe.')
 args = parser.parse_args()
 
-if __name__ == '__main__'
+if __name__ == '__main__':
     files = [] # List of tupples read from the script: (Filepath, palette ID).
     
     for i, line in enumerate(args.input,1):

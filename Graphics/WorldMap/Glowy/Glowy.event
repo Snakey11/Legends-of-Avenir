@@ -10,8 +10,12 @@
 // There are other parameters in OAM (flips, priority, transparency, palette), but I won't need those here.
 // x and y coords are relative and can be negative. Only use these definitions:
 
+ALIGN 4
+GlowyPaletteTable:
+FILL 10*0x04
+
 #define WorldMapGlowyTable $206AF0
-#define GlowyEntry(entry,graphics,AP,xCoord,yCoord) "PUSH ; ORG WorldMapGlowyTable + entry*12 ; POIN graphics AP ; SHORT xCoord yCoord ; POP"
+#define GlowyEntry(entry,graphics,palette,AP,xCoord,yCoord) "PUSH ; ORG WorldMapGlowyTable + entry*12 ; POIN graphics AP ; SHORT xCoord yCoord ; ORG GlowyPaletteTable + entry*4 ; POIN palette ; POP"
 #define OAM(xCoord,yCoord,shape,size,tile) "SHORT ((yCoord)&0xFF)|(shape<<14) ((xCoord)&0x1FF)|(size<<14) tile"
 
 #define Shape_Square 0
@@ -31,18 +35,21 @@
 #define Size_32x64 3
 
 // NOTE: THE GLOWY REGION PALETTE IS HANDLED AT 0x080C278C.
-GlowyEntry(CesariaGlowy,CesariaBorder,CesariaAP,45,38)
-GlowyEntry(ArcanaeGlowy,BacrunBorder,BacrunAP,50,50)
-GlowyEntry(HaedricGlowy,BacrunBorder,BacrunAP,50,50)
-GlowyEntry(AltiaGlowy,BacrunBorder,BacrunAP,50,50)
-GlowyEntry(DraterusGlowy,BacrunBorder,BacrunAP,50,50)
-GlowyEntry(ShizonGlowy,BacrunBorder,BacrunAP,50,50)
-GlowyEntry(BacrunGlowy,BacrunBorder,BacrunAP,50,50)
-GlowyEntry(BacrunGlowy,BacrunBorder,BacrunAP,164,50)
+GlowyEntry(CesariaGlowy,CesariaBorder,CesariaGlowyPalette,CesariaAP,45,38)
+GlowyEntry(ArcanaeGlowy,ArcanaeBorder,ArcanaeGlowyPalette,ArcanaeAP,145,76)
+GlowyEntry(HaedricGlowy,HaedricBorder,HaedricGlowyPalette,HaedricAP,139,10)
+GlowyEntry(AltiaGlowy,AltiaBorder,AltiaGlowyPalette,AltiaAP,43,2)
+GlowyEntry(DraterusGlowy,DraterusBorder,DraterusGlowyPalette,DraterusAP,99,24)
+GlowyEntry(ShizonGlowy,ShizonBorder,ShizonGlowyPalette,ShizonAP,24,112)
+GlowyEntry(BacrunGlowy,BacrunBorder,ShizonGlowyPalette,BacrunAP,164,50)
 
 ALIGN 4
 CesariaBorder:
-#incext png2dmp "CesariaOrdered.png" --lz77
+#incbin "CesariaOrdered.dmp"
+
+ALIGN 4
+CesariaGlowyPalette:
+#incbin "CesariaOrdered_palette.dmp"
 
 ALIGN 4
 CesariaAP:
@@ -51,8 +58,82 @@ CesariaAP:
 }
 
 ALIGN 4
+ArcanaeBorder:
+#incbin "ArcanaeOrdered.dmp"
+
+ALIGN 4
+ArcanaeGlowyPalette:
+#incbin "CesariaOrdered_palette.dmp"
+
+ALIGN 4
+ArcanaeAP:
+{
+#include "ArcanaeAP.event"
+}
+
+ALIGN 4
+HaedricBorder:
+#incbin "HaedricOrdered.dmp"
+
+ALIGN 4
+HaedricGlowyPalette:
+#incbin "HaedricOrdered_palette.dmp"
+
+ALIGN 4
+HaedricAP:
+{
+#include "HaedricAP.event"
+}
+
+ALIGN 4
+AltiaBorder:
+#incbin "AltiaOrdered.dmp"
+
+ALIGN 4
+AltiaGlowyPalette:
+#incbin "AltiaOrdered_palette.dmp"
+
+ALIGN 4
+AltiaAP:
+{
+#include "AltiaAP.event"
+}
+
+ALIGN 4
+DraterusBorder:
+#incbin "DraterusOrdered.dmp"
+
+ALIGN 4
+DraterusGlowyPalette:
+#incbin "DraterusOrdered_palette.dmp"
+
+ALIGN 4
+DraterusAP:
+{
+#include "DraterusAP.event"
+}
+
+ALIGN 4
+ShizonBorder:
+#incbin "ShizonOrdered.dmp"
+
+ALIGN 4
+ShizonGlowyPalette:
+#incbin "ShizonOrdered_palette.dmp"
+
+ALIGN 4
+ShizonAP:
+{
+#include "ShizonAP.event"
+}
+
+ALIGN 4
 BacrunBorder:
-#incext png2dmp "BacrunOrdered.png" --lz77
+#incbin "BacrunOrdered.dmp"
+
+ALIGN 4
+BacrunGlowyPalette:
+#incbin "BacrunOrdered_palette.dmp"
 
 ALIGN 4
 BacrunAP:
