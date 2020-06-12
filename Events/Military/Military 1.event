@@ -280,7 +280,7 @@ EndUnit
 
 //Label ChapterMeanies
 LoadChristinaForrest:
-UNIT BossChristina Cavalier_F BossChristina Level(9,Enemy,True) [6,6] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
+UNIT BossChristina Cavalier_F BossChristina Level(7,Enemy,True) [6,6] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
 UNIT BossForrest Cavalier BossForrest Level(8,Enemy,True) [6,8] 0x00 0x00 0x00 0x00 [SteelSword] GuardAI
 UNIT
 
