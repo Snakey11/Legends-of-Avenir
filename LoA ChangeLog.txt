@@ -1,16 +1,21 @@
 v1.10
-5th and final Military route is a go. Kill Sean after accepting the promotion in chapter 3
+5th and final Military route is a go. Kill Sean after accepting the promotion in chapter 3. Route includes all supports as well
 Tons of new music again! Visit the sound room
 Female archers can use master seals
 Snek has an entirely new build scheme for definitions and CSVs
 	This doesn't affect functionality but will help with organization, readability, and bugfixes
 	Along with this, various build organization things are happening
 	Snek will probably also add notes/a build readme on how the build works since it's becoming more unconventional
-"Lost Souls" in the prologue are no longer children, finally
+"Lost Souls" in the prologue are no longer children... finally
 Darting blow has been reduced to +2 attack speed
 Lux and Zaheva have been buffed
 Military 2 Militia no longer ends on enemy phase turn 6. Now ends on player phase turn 7
 Jurgen's weapon ranks have been changed
+Mages have been given more base magic
+Fixed a bug with Zaheva's battle quote with Gerald in Military 2 Accept
+I think I've sorted out all of the bugs with the base conversations. Instead of hackily setting a bitfield in a prep screen proc, I'm just using event IDs
+	Event IDs are plentiful, should make the system more modular in general, and won't have issues with suspend/resume. Release coming soon
+The EXP calculation routine has been ENTIRELY rewritten from scratch. No class relative power nonsense. We're accepting feedback on how it's turned out!
 
 Hotfixes before v1.10
 Fixed a bug in the ending of Military Accept Retreat Leave where character death quotes would play during battles
