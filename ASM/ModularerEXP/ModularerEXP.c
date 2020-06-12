@@ -28,17 +28,18 @@ static int GetEffectiveLevel(Unit* unit);
 
 int ModularerEXP(BattleUnit* actor, BattleUnit* target) // Autohook to 0x0802C534 (ComputeExpFromBattle). We're going to completely rewrite the EXP calc routines.
 {
-	if ( !CanBattleUnitGainLevels(actor) ) { return 0; } // This name is so weird. This function returns a boolean for whether this unit can gain EXP.
+	if ( !CanBattleUnitGainLevels(actor) ) { return 0; } // This function returns a boolean for whether this unit can gain EXP.
 	
 	// First, let's get the EXP we should get from doing damage.
 	int damage = GetUnit(target->unit.index)->curHP - target->unit.curHP; // HP change of the target.
 	int levelDiff = GetEffectiveLevel(&target->unit) - GetEffectiveLevel(&actor->unit);
-	int EXP = damage * (1 << (levelDiff/4-1));
+	int levelDiffCalc = 2 << (levelDiff/3);
+	int EXP = damage * (levelDiffCalc ? levelDiffCalc : 1); // We don't want to multiply by 0!
 	
 	// Are we killing the other unit? If so, add that formula in.
-	if ( target->unit.state & US_DEAD )
+	if ( !target->unit.curHP )
 	{
-		EXP += (2 << (levelDiff/3+3));
+		EXP += (2 << (levelDiff/3+4));
 		if ( UNIT_CATTRIBUTES(&target->unit) & CA_BOSS ) { EXP += 40; }
 	}
 	
