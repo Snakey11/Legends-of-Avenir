@@ -83,12 +83,68 @@ pop { r4 - r5 }
 pop { r0 }
 bx r0
 
+.equ SetColorEffectsFirstTarget, 0x08001ED0
+.equ SetColorEffectsSecondTarget, 0x08001F0C
+.equ SetColorEffectsParameters, 0x08001EA0
+
+.global GlowyPalettes
+.type GlowyPalettes, %function
+GlowyPalettes: @ Autohook to 0x080C2750. r0 = gProc_GmapRM proc.
+push { r4, r5, lr }
+sub sp, #0x04
+mov r5, r0
+mov r4, #0x00
+str r4, [ sp ]
+mov r0, #0x00
+mov r1, #0x00
+mov r2, #0x00
+mov r3, #0x00
+blh SetColorEffectsFirstTarget, r4
+mov r0, #0x00
+mov r1, #0x01
+mov r2, #0x00
+mov r3, #0x00
+blh SetColorEffectsSecondTarget, r4
+mov r0, #0x00
+mov r1, #0x00
+mov r2, #0x10
+mov r3, #0x00
+blh SetColorEffectsParameters, r4
+mov r4, #0x00
+strh r4, [ r5, #0x30 ]
+ldr r0, =#0x08A3EC48
+blh #0x080034FC, r1
+cmp r0, #0x01
+bgt SkipPalette
+	@ All except this little part has been vanilla (with small optimization).
+	@ Now we need to grab a different palette for each glowy region.
+	ldr r0, =WorldMapWrapperProc
+	blh ProcFind, r1
+	@ r0 = Our event engine proc.
+	ldr r0, [ r0, #0x2C ] @ Pointer to our "world map event engine."
+	ldr r0, [ r0, #0x38 ] @ Pointer to this event instruction (WM_HIGHLIGHT).
+	ldrh r0, [ r0, #0x04 ] @ Glowy index we use (which entry in the glowy table).
+	@ We're going to use a separate table with the same indexing as the vanilla glowy region table.
+	ldr r1, =GlowyPaletteTable @ Indexed table of pointers to uncompressed palettes.
+	lsl r0, r0, #0x02
+	ldr r0, [ r1, r0 ] @ Pointer to palette to use.
+	mov r1, #0xC8
+	lsl r1, r1, #0x02
+	mov r2, #0x20
+	blh CopyToPaletteBuffer, r3
+SkipPalette:
+add sp, #0x04
+pop { r4, r5 }
+pop { r0 }
+bx r0
+
 .equ Make6C_GMap_RM, 0x080C2420
 .equ CallMapEventEngine, 0x0800D07C
 .equ StartMapEventEngine, 0x0800D0B0
 .equ ProcStartBlocking, 0x08002CE0
 .equ gMemorySlot, 0x030004B8
 .equ BreakProcLoop, 0x08002E94
+
 .global StartSmallWorldMap
 .type StartSmallWorldMap, %function
 StartSmallWorldMap: @ r0 = parent proc (the event engine).
@@ -102,10 +158,14 @@ bx r0
 .global WorldMapWrapperProcCallEvents
 .type WorldMapWrapperProcCallEvents,%function
 WorldMapWrapperProcCallEvents:
-push { lr } @ I was successfully able to invoke the world map event engine with this! But... some things were a little messed up... text wouldn't load properly, and it would softlock sometimes.
+push { r4, lr } @ I was successfully able to invoke the world map event engine with this! But... some things were a little messed up... text wouldn't load properly, and it would softlock sometimes.
+mov r4, r0 @ Proc.
 ldr r0, =WorldMapEventTest
 mov r1, #0x00
 blh StartMapEventEngine, r2 @ CONFIRMED: Some world map events presuppose the existence of gProc_WorldMap! Invoking that proc before starting events seems to fix things.
+@ r0 = Event engine proc pointer.
+str r0, [ r4, #0x2C ] @ Store the event engine proc pointer for later.
+pop { r4 }
 pop { r0 }
 bx r0
 
