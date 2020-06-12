@@ -104,7 +104,7 @@
 		PROC_SET_NAME(BaseConvoProcName) // Debug proc name.
 		PROC_SET_DESTRUCTOR(BaseConvoProcDestructor)
 		PROC_LABEL(0)
-			PROC_SLEEP(8)
+			//PROC_SLEEP(8)
 			PROC_CALL_ROUTINE(SetScrollingBackground) // The vanilla support screen is constructed at 0x080A1270.
 				// Apparently this also clears leftover menu graphics from the prep screen.
 			PROC_CALL_ROUTINE(DisplayBottomText)

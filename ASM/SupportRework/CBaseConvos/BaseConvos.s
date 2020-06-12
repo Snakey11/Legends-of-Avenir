@@ -112,27 +112,27 @@ MenuBPress:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, lr}	@
-@ CBaseConvos/BaseConvos.c:168: 	BaseConvoProc* baseProc = (BaseConvoProc*)ProcFind(&BaseConvoProcMenu);
+@ CBaseConvos/BaseConvos.c:167: 	BaseConvoProc* baseProc = (BaseConvoProc*)ProcFind(&BaseConvoProcMenu);
 	ldr	r3, .L7	@ tmp114,
 	ldr	r0, .L7+4	@,
 	bl	.L9		@
 	movs	r4, r0	@ baseProc, tmp122
-@ CBaseConvos/BaseConvos.c:169: 	StartFadeInBlackMedium();
+@ CBaseConvos/BaseConvos.c:168: 	StartFadeInBlackMedium();
 	ldr	r3, .L7+8	@ tmp115,
 	bl	.L9		@
-@ CBaseConvos/BaseConvos.c:170: 	ProcGoto((Proc*)baseProc,1);
+@ CBaseConvos/BaseConvos.c:169: 	ProcGoto((Proc*)baseProc,1);
 	movs	r0, r4	@, baseProc
 	movs	r1, #1	@,
 	ldr	r3, .L7+12	@ tmp116,
 	bl	.L9		@
-@ CBaseConvos/BaseConvos.c:171: 	baseProc->wasBPressed = 1;
+@ CBaseConvos/BaseConvos.c:170: 	baseProc->wasBPressed = 1;
 	movs	r3, #1	@ tmp120,
-	adds	r4, r4, #81	@ tmp119,
-@ CBaseConvos/BaseConvos.c:172: }
+	adds	r4, r4, #42	@ tmp119,
+@ CBaseConvos/BaseConvos.c:171: }
 	@ sp needed	@
-@ CBaseConvos/BaseConvos.c:171: 	baseProc->wasBPressed = 1;
+@ CBaseConvos/BaseConvos.c:170: 	baseProc->wasBPressed = 1;
 	strb	r3, [r4]	@ tmp120, baseProc_3->wasBPressed
-@ CBaseConvos/BaseConvos.c:172: }
+@ CBaseConvos/BaseConvos.c:171: }
 	pop	{r4}
 	pop	{r0}
 	bx	r0
@@ -290,12 +290,12 @@ BaseConvoUsability:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, lr}	@
-@ CBaseConvos/BaseConvos.c:94: 	for ( int i = 0 ; i < 8 ; i++ )
+@ CBaseConvos/BaseConvos.c:93: 	for ( int i = 0 ; i < 8 ; i++ )
 	movs	r4, #0	@ i,
 .L30:
-@ CBaseConvos/BaseConvos.c:96: 		if ( IsConvoViewable(GetEntry(gChapterData.chapterIndex,i)) ) { return 1; }
+@ CBaseConvos/BaseConvos.c:95: 		if ( IsConvoViewable(GetEntry(gChapterData.chapterIndex,i)) ) { return 1; }
 	ldr	r3, .L33	@ tmp119,
-@ CBaseConvos/BaseConvos.c:96: 		if ( IsConvoViewable(GetEntry(gChapterData.chapterIndex,i)) ) { return 1; }
+@ CBaseConvos/BaseConvos.c:95: 		if ( IsConvoViewable(GetEntry(gChapterData.chapterIndex,i)) ) { return 1; }
 	ldrb	r0, [r3, #14]	@ tmp120,
 	lsls	r0, r0, #3	@ tmp121, tmp120,
 	ldr	r3, .L33+4	@ tmp125,
@@ -303,22 +303,22 @@ BaseConvoUsability:
 	lsls	r0, r0, #5	@ tmp123, tmp122,
 	adds	r0, r0, r3	@ tmp124, tmp123, tmp125
 	bl	IsConvoViewable		@
-@ CBaseConvos/BaseConvos.c:96: 		if ( IsConvoViewable(GetEntry(gChapterData.chapterIndex,i)) ) { return 1; }
+@ CBaseConvos/BaseConvos.c:95: 		if ( IsConvoViewable(GetEntry(gChapterData.chapterIndex,i)) ) { return 1; }
 	cmp	r0, #0	@ <retval>,
 	bne	.L31		@,
-@ CBaseConvos/BaseConvos.c:94: 	for ( int i = 0 ; i < 8 ; i++ )
+@ CBaseConvos/BaseConvos.c:93: 	for ( int i = 0 ; i < 8 ; i++ )
 	adds	r4, r4, #1	@ i,
-@ CBaseConvos/BaseConvos.c:94: 	for ( int i = 0 ; i < 8 ; i++ )
+@ CBaseConvos/BaseConvos.c:93: 	for ( int i = 0 ; i < 8 ; i++ )
 	cmp	r4, #8	@ i,
 	bne	.L30		@,
 .L28:
-@ CBaseConvos/BaseConvos.c:99: }
+@ CBaseConvos/BaseConvos.c:98: }
 	@ sp needed	@
 	pop	{r4}
 	pop	{r1}
 	bx	r1
 .L31:
-@ CBaseConvos/BaseConvos.c:96: 		if ( IsConvoViewable(GetEntry(gChapterData.chapterIndex,i)) ) { return 1; }
+@ CBaseConvos/BaseConvos.c:95: 		if ( IsConvoViewable(GetEntry(gChapterData.chapterIndex,i)) ) { return 1; }
 	movs	r0, #1	@ <retval>,
 	b	.L28		@
 .L34:
@@ -339,9 +339,9 @@ BaseConvoMenuUsability:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, lr}	@
-@ CBaseConvos/BaseConvos.c:104: 	return ( IsConvoViewable(GetEntry(gChapterData.chapterIndex,index)) ? 1 : 3);
+@ CBaseConvos/BaseConvos.c:103: 	return ( IsConvoViewable(GetEntry(gChapterData.chapterIndex,index)) ? 1 : 3);
 	ldr	r3, .L38	@ tmp122,
-@ CBaseConvos/BaseConvos.c:104: 	return ( IsConvoViewable(GetEntry(gChapterData.chapterIndex,index)) ? 1 : 3);
+@ CBaseConvos/BaseConvos.c:103: 	return ( IsConvoViewable(GetEntry(gChapterData.chapterIndex,index)) ? 1 : 3);
 	ldrb	r0, [r3, #14]	@ tmp123,
 	lsls	r0, r0, #3	@ tmp124, tmp123,
 	adds	r0, r0, r1	@ tmp125, tmp124, tmp138
@@ -349,13 +349,13 @@ BaseConvoMenuUsability:
 	lsls	r0, r0, #5	@ tmp126, tmp125,
 	adds	r0, r0, r1	@ tmp127, tmp126, tmp128
 	bl	IsConvoViewable		@
-@ CBaseConvos/BaseConvos.c:104: 	return ( IsConvoViewable(GetEntry(gChapterData.chapterIndex,index)) ? 1 : 3);
+@ CBaseConvos/BaseConvos.c:103: 	return ( IsConvoViewable(GetEntry(gChapterData.chapterIndex,index)) ? 1 : 3);
 	movs	r3, #1	@ <retval>,
 	cmp	r0, #0	@ tmp139,
 	bne	.L35		@,
 	adds	r3, r3, #2	@ <retval>,
 .L35:
-@ CBaseConvos/BaseConvos.c:105: }
+@ CBaseConvos/BaseConvos.c:104: }
 	movs	r0, r3	@, <retval>
 	@ sp needed	@
 	pop	{r4}
@@ -379,19 +379,19 @@ BaseConvoMenuEffect:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
-@ CBaseConvos/BaseConvos.c:110: 	((BaseConvoProc*)menu->parent)->viewingEntry = menuCommand->commandDefinitionIndex;
+@ CBaseConvos/BaseConvos.c:109: 	((BaseConvoProc*)menu->parent)->viewingEntry = menuCommand->commandDefinitionIndex;
 	ldr	r3, [r0, #20]	@ menu_4(D)->parent, menu_4(D)->parent
-@ CBaseConvos/BaseConvos.c:110: 	((BaseConvoProc*)menu->parent)->viewingEntry = menuCommand->commandDefinitionIndex;
+@ CBaseConvos/BaseConvos.c:109: 	((BaseConvoProc*)menu->parent)->viewingEntry = menuCommand->commandDefinitionIndex;
 	adds	r1, r1, #60	@ tmp118,
-@ CBaseConvos/BaseConvos.c:110: 	((BaseConvoProc*)menu->parent)->viewingEntry = menuCommand->commandDefinitionIndex;
+@ CBaseConvos/BaseConvos.c:109: 	((BaseConvoProc*)menu->parent)->viewingEntry = menuCommand->commandDefinitionIndex;
 	ldrb	r2, [r1]	@ tmp122,
-	adds	r3, r3, #80	@ tmp121,
-@ CBaseConvos/BaseConvos.c:115: }
+	adds	r3, r3, #41	@ tmp121,
+@ CBaseConvos/BaseConvos.c:114: }
 	movs	r0, #2	@,
 	@ sp needed	@
-@ CBaseConvos/BaseConvos.c:110: 	((BaseConvoProc*)menu->parent)->viewingEntry = menuCommand->commandDefinitionIndex;
+@ CBaseConvos/BaseConvos.c:109: 	((BaseConvoProc*)menu->parent)->viewingEntry = menuCommand->commandDefinitionIndex;
 	strb	r2, [r3]	@ tmp122, MEM[(struct BaseConvoProc *)_1].viewingEntry
-@ CBaseConvos/BaseConvos.c:115: }
+@ CBaseConvos/BaseConvos.c:114: }
 	bx	lr
 	.size	BaseConvoMenuEffect, .-BaseConvoMenuEffect
 	.align	1
@@ -406,28 +406,28 @@ SetScrollingBackground:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r0, r1, r2, r4, r5, lr}	@
-@ CBaseConvos/BaseConvos.c:123: 	SetBeigeBackground((Proc*)proc,0,0x12,2,0);
+@ CBaseConvos/BaseConvos.c:122: 	SetBeigeBackground((Proc*)proc,0,0x12,2,0);
 	movs	r4, #0	@ tmp117,
-@ CBaseConvos/BaseConvos.c:118: {
+@ CBaseConvos/BaseConvos.c:117: {
 	movs	r5, r0	@ proc, tmp120
-@ CBaseConvos/BaseConvos.c:119: 	LoadBgConfig(NULL);
+@ CBaseConvos/BaseConvos.c:118: 	LoadBgConfig(NULL);
 	ldr	r3, .L42	@ tmp112,
 	movs	r0, #0	@,
 	bl	.L9		@
-@ CBaseConvos/BaseConvos.c:120: 	FillBgMap(GetBgMapBuffer(0),0);
+@ CBaseConvos/BaseConvos.c:119: 	FillBgMap(GetBgMapBuffer(0),0);
 	ldr	r3, .L42+4	@ tmp113,
 	movs	r0, #0	@,
 	bl	.L9		@
 	movs	r1, #0	@,
 	ldr	r3, .L42+8	@ tmp114,
 	bl	.L9		@
-@ CBaseConvos/BaseConvos.c:121: 	Text_InitFont(); // Set up text font etc.
+@ CBaseConvos/BaseConvos.c:120: 	Text_InitFont(); // Set up text font etc.
 	ldr	r3, .L42+12	@ tmp115,
 	bl	.L9		@
-@ CBaseConvos/BaseConvos.c:122: 	LoadObjUIGfx(); // Sets up the glove.
+@ CBaseConvos/BaseConvos.c:121: 	LoadObjUIGfx(); // Sets up the glove.
 	ldr	r3, .L42+16	@ tmp116,
 	bl	.L9		@
-@ CBaseConvos/BaseConvos.c:123: 	SetBeigeBackground((Proc*)proc,0,0x12,2,0);
+@ CBaseConvos/BaseConvos.c:122: 	SetBeigeBackground((Proc*)proc,0,0x12,2,0);
 	movs	r1, r4	@, tmp117
 	movs	r0, r5	@, proc
 	str	r4, [sp]	@ tmp117,
@@ -435,14 +435,14 @@ SetScrollingBackground:
 	movs	r3, #2	@,
 	movs	r2, #18	@,
 	bl	.L44		@
-@ CBaseConvos/BaseConvos.c:124: 	SetColorEffectsParameters(3,0,0,0x10);
+@ CBaseConvos/BaseConvos.c:123: 	SetColorEffectsParameters(3,0,0,0x10);
 	movs	r2, r4	@, tmp117
 	movs	r1, r4	@, tmp117
 	movs	r3, #16	@,
 	movs	r0, #3	@,
 	ldr	r4, .L42+24	@ tmp119,
 	bl	.L45		@
-@ CBaseConvos/BaseConvos.c:125: }
+@ CBaseConvos/BaseConvos.c:124: }
 	@ sp needed	@
 	pop	{r0, r1, r2, r4, r5}
 	pop	{r0}
@@ -470,48 +470,48 @@ DisplayBottomText:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, r5, r6, lr}	@
-@ CBaseConvos/BaseConvos.c:129: 	Text_InitClear((TextHandle*)((char*)&TextHandleStruct-8),0x10);
+@ CBaseConvos/BaseConvos.c:128: 	Text_InitClear((TextHandle*)((char*)&TextHandleStruct-8),0x10);
 	ldr	r4, .L47	@ tmp116,
 	ldr	r5, .L47+4	@ tmp117,
 	movs	r0, r4	@, tmp116
 	movs	r1, #16	@,
 	bl	.L44		@
-@ CBaseConvos/BaseConvos.c:130: 	Text_InitClear(&TextHandleStruct,0x09);
+@ CBaseConvos/BaseConvos.c:129: 	Text_InitClear(&TextHandleStruct,0x09);
 	movs	r1, #9	@,
 	ldr	r0, .L47+8	@,
 	bl	.L44		@
-@ CBaseConvos/BaseConvos.c:131: 	Text_Clear((TextHandle*)((char*)&TextHandleStruct-8));
+@ CBaseConvos/BaseConvos.c:130: 	Text_Clear((TextHandle*)((char*)&TextHandleStruct-8));
 	movs	r0, r4	@, tmp116
 	ldr	r3, .L47+12	@ tmp121,
 	bl	.L9		@
-@ CBaseConvos/BaseConvos.c:132: 	char* String = GetStringFromIndex(gBaseConvoSelectConvoText);
+@ CBaseConvos/BaseConvos.c:131: 	char* String = GetStringFromIndex(gBaseConvoSelectConvoText);
 	ldr	r3, .L47+16	@ tmp122,
 	ldrh	r0, [r3]	@ gBaseConvoSelectConvoText, gBaseConvoSelectConvoText
 	ldr	r3, .L47+20	@ tmp124,
 	bl	.L9		@
-@ CBaseConvos/BaseConvos.c:133: 	Text_InsertString((TextHandle*)((char*)&TextHandleStruct-8),Text_GetStringTextCenteredPos(0x80,String),0,String);
+@ CBaseConvos/BaseConvos.c:132: 	Text_InsertString((TextHandle*)((char*)&TextHandleStruct-8),Text_GetStringTextCenteredPos(0x80,String),0,String);
 	ldr	r3, .L47+24	@ tmp125,
-@ CBaseConvos/BaseConvos.c:132: 	char* String = GetStringFromIndex(gBaseConvoSelectConvoText);
+@ CBaseConvos/BaseConvos.c:131: 	char* String = GetStringFromIndex(gBaseConvoSelectConvoText);
 	movs	r5, r0	@ String, tmp131
-@ CBaseConvos/BaseConvos.c:133: 	Text_InsertString((TextHandle*)((char*)&TextHandleStruct-8),Text_GetStringTextCenteredPos(0x80,String),0,String);
+@ CBaseConvos/BaseConvos.c:132: 	Text_InsertString((TextHandle*)((char*)&TextHandleStruct-8),Text_GetStringTextCenteredPos(0x80,String),0,String);
 	movs	r1, r0	@, String
 	movs	r0, #128	@,
 	bl	.L9		@
-@ CBaseConvos/BaseConvos.c:133: 	Text_InsertString((TextHandle*)((char*)&TextHandleStruct-8),Text_GetStringTextCenteredPos(0x80,String),0,String);
+@ CBaseConvos/BaseConvos.c:132: 	Text_InsertString((TextHandle*)((char*)&TextHandleStruct-8),Text_GetStringTextCenteredPos(0x80,String),0,String);
 	movs	r3, r5	@, String
-@ CBaseConvos/BaseConvos.c:133: 	Text_InsertString((TextHandle*)((char*)&TextHandleStruct-8),Text_GetStringTextCenteredPos(0x80,String),0,String);
+@ CBaseConvos/BaseConvos.c:132: 	Text_InsertString((TextHandle*)((char*)&TextHandleStruct-8),Text_GetStringTextCenteredPos(0x80,String),0,String);
 	movs	r1, r0	@ _3, tmp132
-@ CBaseConvos/BaseConvos.c:133: 	Text_InsertString((TextHandle*)((char*)&TextHandleStruct-8),Text_GetStringTextCenteredPos(0x80,String),0,String);
+@ CBaseConvos/BaseConvos.c:132: 	Text_InsertString((TextHandle*)((char*)&TextHandleStruct-8),Text_GetStringTextCenteredPos(0x80,String),0,String);
 	movs	r2, #0	@,
 	movs	r0, r4	@, tmp116
 	ldr	r5, .L47+28	@ tmp127,
 	bl	.L44		@
-@ CBaseConvos/BaseConvos.c:134: 	Text_Display((TextHandle*)((char*)&TextHandleStruct-8),&SomeBgMap);
+@ CBaseConvos/BaseConvos.c:133: 	Text_Display((TextHandle*)((char*)&TextHandleStruct-8),&SomeBgMap);
 	movs	r0, r4	@, tmp116
 	ldr	r1, .L47+32	@,
 	ldr	r3, .L47+36	@ tmp130,
 	bl	.L9		@
-@ CBaseConvos/BaseConvos.c:135: }
+@ CBaseConvos/BaseConvos.c:134: }
 	@ sp needed	@
 	pop	{r4, r5, r6}
 	pop	{r0}
@@ -544,11 +544,11 @@ BuildBaseConvoMenuGeometry:
 	push	{r3, r4, r5, r6, r7, lr}	@
 @ CBaseConvos/Functions.c:14: 	int sum = 0;
 	movs	r5, #0	@ sum,
-@ CBaseConvos/BaseConvos.c:139: {
-	movs	r4, r0	@ proc, tmp165
+@ CBaseConvos/BaseConvos.c:138: {
+	movs	r4, r0	@ proc, tmp166
 @ CBaseConvos/Functions.c:15: 	for ( int i = 0 ; i < 8 ; i++ )
 	movs	r7, r5	@ i, sum
-@ CBaseConvos/BaseConvos.c:141: 	int NumConvos = GetNumViewable(gChapterData.chapterIndex);
+@ CBaseConvos/BaseConvos.c:140: 	int NumConvos = GetNumViewable(gChapterData.chapterIndex);
 	ldr	r3, .L57	@ tmp123,
 	ldrb	r6, [r3, #14]	@ tmp124,
 	ldr	r3, .L57+4	@ tmp126,
@@ -559,74 +559,75 @@ BuildBaseConvoMenuGeometry:
 	movs	r0, r6	@, ivtmp.80
 	bl	IsConvoViewable		@
 @ CBaseConvos/Functions.c:17: 		if ( IsConvoViewable(GetEntry(c,i)) ) { sum++; }
-	subs	r3, r0, #1	@ tmp164, tmp166
-	sbcs	r0, r0, r3	@ tmp163, tmp166, tmp164
+	subs	r3, r0, #1	@ tmp165, tmp167
+	sbcs	r0, r0, r3	@ tmp164, tmp167, tmp165
 @ CBaseConvos/Functions.c:15: 	for ( int i = 0 ; i < 8 ; i++ )
 	adds	r7, r7, #1	@ i,
 @ CBaseConvos/Functions.c:17: 		if ( IsConvoViewable(GetEntry(c,i)) ) { sum++; }
-	adds	r5, r5, r0	@ sum, sum, tmp163
+	adds	r5, r5, r0	@ sum, sum, tmp164
 	adds	r6, r6, #32	@ ivtmp.80,
 @ CBaseConvos/Functions.c:15: 	for ( int i = 0 ; i < 8 ; i++ )
 	cmp	r7, #8	@ i,
 	bne	.L51		@,
-@ CBaseConvos/BaseConvos.c:142: 	baseProc->menuData.geometry.x = 6;
+@ CBaseConvos/BaseConvos.c:141: 	baseProc->menuData.geometry.x = 6;
 	movs	r3, r4	@ tmp129, proc
 	movs	r2, #6	@ tmp130,
-	adds	r3, r3, #44	@ tmp129,
+	adds	r3, r3, #68	@ tmp129,
 	strb	r2, [r3]	@ tmp130, proc_7(D)->menuData.geometry.x
-@ CBaseConvos/BaseConvos.c:149: 		baseProc->menuData.geometry.y = 0;
+@ CBaseConvos/BaseConvos.c:148: 		baseProc->menuData.geometry.y = 0;
 	movs	r3, #0	@ cstore_33,
-@ CBaseConvos/BaseConvos.c:143: 	if ( NumConvos != 8 )
+@ CBaseConvos/BaseConvos.c:142: 	if ( NumConvos != 8 )
 	cmp	r5, #8	@ sum,
 	beq	.L52		@,
-@ CBaseConvos/BaseConvos.c:145: 		baseProc->menuData.geometry.y = 5 - NumConvos / 2;
+@ CBaseConvos/BaseConvos.c:144: 		baseProc->menuData.geometry.y = 5 - NumConvos / 2;
 	lsrs	r3, r5, #31	@ tmp133, sum,
 	adds	r3, r3, r5	@ tmp134, tmp133, sum
 	asrs	r3, r3, #1	@ tmp135, tmp134,
 	rsbs	r3, r3, #0	@ tmp135, tmp135
-@ CBaseConvos/BaseConvos.c:145: 		baseProc->menuData.geometry.y = 5 - NumConvos / 2;
+@ CBaseConvos/BaseConvos.c:144: 		baseProc->menuData.geometry.y = 5 - NumConvos / 2;
 	adds	r3, r3, #5	@ tmp137,
 	lsls	r3, r3, #24	@ cstore_33, tmp137,
 	lsrs	r3, r3, #24	@ cstore_33, cstore_33,
 .L52:
 	movs	r2, r4	@ tmp141, proc
-	adds	r2, r2, #45	@ tmp141,
+	adds	r2, r2, #69	@ tmp141,
 	strb	r3, [r2]	@ cstore_33, proc_7(D)->menuData.geometry.y
-@ CBaseConvos/BaseConvos.c:151: 	baseProc->menuData.geometry.h = 18; // I honestly have no idea why these are swapped now. They didn't use to be this way I swear.
-	movs	r3, #18	@ tmp143,
-	strh	r3, [r4, #46]	@ tmp143, MEM[(unsigned char *)proc_7(D) + 46B]
-@ CBaseConvos/BaseConvos.c:153: 	baseProc->menuData.style = 1;
-	movs	r3, r4	@ tmp147, proc
-	movs	r2, #1	@ tmp148,
-	adds	r3, r3, #48	@ tmp147,
-	strb	r2, [r3]	@ tmp148, proc_7(D)->menuData.style
-@ CBaseConvos/BaseConvos.c:154: 	baseProc->menuData.commandList = &BaseConvoMenuCommands;
-	ldr	r3, .L57+8	@ tmp150,
-	str	r3, [r4, #52]	@ tmp150, proc_7(D)->menuData.commandList
-@ CBaseConvos/BaseConvos.c:155: 	baseProc->menuData.onInit = NULL;
-	movs	r3, #0	@ tmp151,
-@ CBaseConvos/BaseConvos.c:158: 	baseProc->menuData.onBPress = &MenuBPress;
-	ldr	r2, .L57+12	@ tmp154,
-@ CBaseConvos/BaseConvos.c:155: 	baseProc->menuData.onInit = NULL;
-	str	r3, [r4, #60]	@ tmp151, proc_7(D)->menuData.onInit
-@ CBaseConvos/BaseConvos.c:156: 	baseProc->menuData.onEnd = NULL;
-	str	r3, [r4, #56]	@ tmp151, proc_7(D)->menuData.onEnd
-@ CBaseConvos/BaseConvos.c:157: 	baseProc->menuData._u14 = NULL;
-	str	r3, [r4, #64]	@ tmp151, proc_7(D)->menuData._u14
-@ CBaseConvos/BaseConvos.c:159: 	baseProc->menuData.onRPress = NULL;
-	str	r3, [r4, #72]	@ tmp151, proc_7(D)->menuData.onRPress
-@ CBaseConvos/BaseConvos.c:160: 	baseProc->menuData.onHelpBox = NULL;
-	str	r3, [r4, #76]	@ tmp151, proc_7(D)->menuData.onHelpBox
-@ CBaseConvos/BaseConvos.c:158: 	baseProc->menuData.onBPress = &MenuBPress;
-	str	r2, [r4, #68]	@ tmp154, proc_7(D)->menuData.onBPress
-@ CBaseConvos/BaseConvos.c:162: 	baseProc->viewingEntry = 0xFF;
-	adds	r3, r3, #255	@ tmp160,
-	adds	r4, r4, #80	@ tmp159,
-@ CBaseConvos/BaseConvos.c:163: }
+@ CBaseConvos/BaseConvos.c:150: 	baseProc->menuData.geometry.h = 18; // I honestly have no idea why these are swapped now. They didn't use to be this way I swear.
+	movs	r3, r4	@ tmp143, proc
+	movs	r2, #18	@ tmp144,
+	adds	r3, r3, #8	@ tmp143,
+	strh	r2, [r3, #62]	@ tmp144, MEM[(unsigned char *)proc_7(D) + 70B]
+@ CBaseConvos/BaseConvos.c:152: 	baseProc->menuData.style = 1;
+	adds	r3, r3, #64	@ tmp148,
+	subs	r2, r2, #17	@ tmp149,
+	strb	r2, [r3]	@ tmp149, proc_7(D)->menuData.style
+@ CBaseConvos/BaseConvos.c:153: 	baseProc->menuData.commandList = &BaseConvoMenuCommands;
+	ldr	r3, .L57+8	@ tmp151,
+	str	r3, [r4, #76]	@ tmp151, proc_7(D)->menuData.commandList
+@ CBaseConvos/BaseConvos.c:154: 	baseProc->menuData.onInit = NULL;
+	movs	r3, #0	@ tmp152,
+@ CBaseConvos/BaseConvos.c:157: 	baseProc->menuData.onBPress = &MenuBPress;
+	ldr	r2, .L57+12	@ tmp155,
+@ CBaseConvos/BaseConvos.c:154: 	baseProc->menuData.onInit = NULL;
+	str	r3, [r4, #84]	@ tmp152, proc_7(D)->menuData.onInit
+@ CBaseConvos/BaseConvos.c:155: 	baseProc->menuData.onEnd = NULL;
+	str	r3, [r4, #80]	@ tmp152, proc_7(D)->menuData.onEnd
+@ CBaseConvos/BaseConvos.c:156: 	baseProc->menuData._u14 = NULL;
+	str	r3, [r4, #88]	@ tmp152, proc_7(D)->menuData._u14
+@ CBaseConvos/BaseConvos.c:158: 	baseProc->menuData.onRPress = NULL;
+	str	r3, [r4, #96]	@ tmp152, proc_7(D)->menuData.onRPress
+@ CBaseConvos/BaseConvos.c:159: 	baseProc->menuData.onHelpBox = NULL;
+	str	r3, [r4, #100]	@ tmp152, proc_7(D)->menuData.onHelpBox
+@ CBaseConvos/BaseConvos.c:157: 	baseProc->menuData.onBPress = &MenuBPress;
+	str	r2, [r4, #92]	@ tmp155, proc_7(D)->menuData.onBPress
+@ CBaseConvos/BaseConvos.c:161: 	baseProc->viewingEntry = 0xFF;
+	adds	r3, r3, #255	@ tmp161,
+	adds	r4, r4, #41	@ tmp160,
+@ CBaseConvos/BaseConvos.c:162: }
 	@ sp needed	@
-@ CBaseConvos/BaseConvos.c:162: 	baseProc->viewingEntry = 0xFF;
-	strb	r3, [r4]	@ tmp160, proc_7(D)->viewingEntry
-@ CBaseConvos/BaseConvos.c:163: }
+@ CBaseConvos/BaseConvos.c:161: 	baseProc->viewingEntry = 0xFF;
+	strb	r3, [r4]	@ tmp161, proc_7(D)->viewingEntry
+@ CBaseConvos/BaseConvos.c:162: }
 	pop	{r3, r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
@@ -655,7 +656,7 @@ BuildBaseConvoMenuText:
 	movs	r2, #160	@ tmp137,
 @ CBaseConvos/Functions.c:26: 		*(offset + i) = 0;
 	movs	r0, r3	@ tmp135, i
-@ CBaseConvos/BaseConvos.c:179: {
+@ CBaseConvos/BaseConvos.c:178: {
 	push	{r4, r5, r6, lr}	@
 @ CBaseConvos/Functions.c:26: 		*(offset + i) = 0;
 	ldr	r5, .L75	@ tmp134,
@@ -671,31 +672,31 @@ BuildBaseConvoMenuText:
 @ CBaseConvos/Functions.c:24: 	for ( int i = 0 ; i < size ; i++ )
 	cmp	r3, r2	@ i, tmp137
 	bne	.L60		@,
-@ CBaseConvos/BaseConvos.c:181: 	for ( int i = 0 ; i < 8 ; i++ )
+@ CBaseConvos/BaseConvos.c:180: 	for ( int i = 0 ; i < 8 ; i++ )
 	movs	r6, #0	@ i,
 .L66:
-@ CBaseConvos/BaseConvos.c:183: 		BaseConvoEntry* entry = GetEntry(gChapterData.chapterIndex,i);
+@ CBaseConvos/BaseConvos.c:182: 		BaseConvoEntry* entry = GetEntry(gChapterData.chapterIndex,i);
 	ldr	r3, .L75+4	@ tmp138,
 	ldrb	r4, [r3, #14]	@ _1,
-@ CBaseConvos/BaseConvos.c:183: 		BaseConvoEntry* entry = GetEntry(gChapterData.chapterIndex,i);
+@ CBaseConvos/BaseConvos.c:182: 		BaseConvoEntry* entry = GetEntry(gChapterData.chapterIndex,i);
 	lsls	r4, r4, #3	@ tmp139, _1,
 	ldr	r1, .L75+8	@ tmp142,
 	adds	r4, r4, r6	@ tmp140, tmp139, i
 	lsls	r4, r4, #5	@ tmp141, tmp140,
 	adds	r4, r4, r1	@ entry, tmp141, tmp142
-@ CBaseConvos/BaseConvos.c:184: 		if ( entry->title != 0 )
+@ CBaseConvos/BaseConvos.c:183: 		if ( entry->title != 0 )
 	ldrh	r0, [r4, #12]	@ _3, BaseConvoTable
-@ CBaseConvos/BaseConvos.c:187: 			HandleText(GetStringFromIndex(entry->title),&WriteTextTo+40*i,entry);
+@ CBaseConvos/BaseConvos.c:186: 			HandleText(GetStringFromIndex(entry->title),&WriteTextTo+40*i,entry);
 	ldr	r3, .L75+12	@ tmp149,
-@ CBaseConvos/BaseConvos.c:184: 		if ( entry->title != 0 )
+@ CBaseConvos/BaseConvos.c:183: 		if ( entry->title != 0 )
 	cmp	r0, #0	@ _3,
 	bne	.L74		@,
-@ CBaseConvos/BaseConvos.c:189: 		else if ( entry->textGetter != NULL )
+@ CBaseConvos/BaseConvos.c:188: 		else if ( entry->textGetter != NULL )
 	ldr	r3, [r4, #16]	@ _9, MEM[(struct BaseConvoEntry *)&BaseConvoTable][_2][i_48].textGetter
-@ CBaseConvos/BaseConvos.c:189: 		else if ( entry->textGetter != NULL )
+@ CBaseConvos/BaseConvos.c:188: 		else if ( entry->textGetter != NULL )
 	cmp	r3, #0	@ _9,
 	beq	.L64		@,
-@ CBaseConvos/BaseConvos.c:192: 			HandleText(entry->textGetter(entry),&WriteTextTo+40*i,entry);
+@ CBaseConvos/BaseConvos.c:191: 			HandleText(entry->textGetter(entry),&WriteTextTo+40*i,entry);
 	movs	r0, r4	@, entry
 .L74:
 	bl	.L9		@
@@ -711,19 +712,19 @@ BuildBaseConvoMenuText:
 	adds	r1, r1, #30	@ entry,
 	bl	HandleText.isra.0.part.0		@
 .L63:
-@ CBaseConvos/BaseConvos.c:181: 	for ( int i = 0 ; i < 8 ; i++ )
+@ CBaseConvos/BaseConvos.c:180: 	for ( int i = 0 ; i < 8 ; i++ )
 	adds	r6, r6, #1	@ i,
 	adds	r5, r5, #40	@ ivtmp.88,
-@ CBaseConvos/BaseConvos.c:181: 	for ( int i = 0 ; i < 8 ; i++ )
+@ CBaseConvos/BaseConvos.c:180: 	for ( int i = 0 ; i < 8 ; i++ )
 	cmp	r6, #8	@ i,
 	bne	.L66		@,
-@ CBaseConvos/BaseConvos.c:200: }
+@ CBaseConvos/BaseConvos.c:199: }
 	@ sp needed	@
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
 .L64:
-@ CBaseConvos/BaseConvos.c:197: 			*(&WriteTextTo+40*i) = 0;
+@ CBaseConvos/BaseConvos.c:196: 			*(&WriteTextTo+40*i) = 0;
 	strb	r3, [r5]	@ _9, MEM[base: _63, offset: 0B]
 	b	.L63		@
 .L76:
@@ -745,38 +746,38 @@ CallBaseSupportMenu:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-@ CBaseConvos/BaseConvos.c:206: 	disp->enableBg0 = 1;
+@ CBaseConvos/BaseConvos.c:205: 	disp->enableBg0 = 1;
 	movs	r3, #31	@ tmp120,
-@ CBaseConvos/BaseConvos.c:204: {
+@ CBaseConvos/BaseConvos.c:203: {
 	push	{r4, lr}	@
-@ CBaseConvos/BaseConvos.c:204: {
+@ CBaseConvos/BaseConvos.c:203: {
 	movs	r4, r0	@ proc, tmp130
-@ CBaseConvos/BaseConvos.c:206: 	disp->enableBg0 = 1;
+@ CBaseConvos/BaseConvos.c:205: 	disp->enableBg0 = 1;
 	ldr	r1, .L78	@ tmp115,
 	ldrb	r2, [r1, #1]	@ MEM[(struct DispControl *)&gLCDIOBuffer + 1B], MEM[(struct DispControl *)&gLCDIOBuffer + 1B]
 	bics	r2, r3	@ tmp119, tmp120
 	orrs	r3, r2	@ tmp122, tmp119
 	strb	r3, [r1, #1]	@ tmp122, MEM[(struct DispControl *)&gLCDIOBuffer + 1B]
-@ CBaseConvos/BaseConvos.c:211: 	Text_SetFont(NULL);
+@ CBaseConvos/BaseConvos.c:210: 	Text_SetFont(NULL);
 	movs	r0, #0	@,
 	ldr	r3, .L78+4	@ tmp125,
 	bl	.L9		@
-@ CBaseConvos/BaseConvos.c:212: 	Font_LoadForUI();
+@ CBaseConvos/BaseConvos.c:211: 	Font_LoadForUI();
 	ldr	r3, .L78+8	@ tmp126,
 	bl	.L9		@
-@ CBaseConvos/BaseConvos.c:213: 	LoadNewUIGraphics();
+@ CBaseConvos/BaseConvos.c:212: 	LoadNewUIGraphics();
 	ldr	r3, .L78+12	@ tmp127,
 	bl	.L9		@
-@ CBaseConvos/BaseConvos.c:214: 	StartMenuChild(&proc->menuData,(Proc*)proc);
+@ CBaseConvos/BaseConvos.c:213: 	StartMenuChild(&proc->menuData,(Proc*)proc);
 	movs	r0, r4	@ tmp128, proc
-@ CBaseConvos/BaseConvos.c:214: 	StartMenuChild(&proc->menuData,(Proc*)proc);
+@ CBaseConvos/BaseConvos.c:213: 	StartMenuChild(&proc->menuData,(Proc*)proc);
 	movs	r1, r4	@, proc
 	ldr	r3, .L78+16	@ tmp129,
-@ CBaseConvos/BaseConvos.c:214: 	StartMenuChild(&proc->menuData,(Proc*)proc);
-	adds	r0, r0, #44	@ tmp128,
-@ CBaseConvos/BaseConvos.c:214: 	StartMenuChild(&proc->menuData,(Proc*)proc);
+@ CBaseConvos/BaseConvos.c:213: 	StartMenuChild(&proc->menuData,(Proc*)proc);
+	adds	r0, r0, #68	@ tmp128,
+@ CBaseConvos/BaseConvos.c:213: 	StartMenuChild(&proc->menuData,(Proc*)proc);
 	bl	.L9		@
-@ CBaseConvos/BaseConvos.c:215: }
+@ CBaseConvos/BaseConvos.c:214: }
 	@ sp needed	@
 	pop	{r4}
 	pop	{r0}
@@ -802,14 +803,14 @@ EnsureSelection:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
-@ CBaseConvos/BaseConvos.c:219: 	return proc->viewingEntry == 0xFF; // Advance the proc is 0x2 is not 0xFF.
-	adds	r0, r0, #80	@ tmp117,
-@ CBaseConvos/BaseConvos.c:219: 	return proc->viewingEntry == 0xFF; // Advance the proc is 0x2 is not 0xFF.
+@ CBaseConvos/BaseConvos.c:218: 	return proc->viewingEntry == 0xFF; // Advance the proc is 0x2 is not 0xFF.
+	adds	r0, r0, #41	@ tmp117,
+@ CBaseConvos/BaseConvos.c:218: 	return proc->viewingEntry == 0xFF; // Advance the proc is 0x2 is not 0xFF.
 	ldrb	r0, [r0]	@ tmp119,
 	subs	r0, r0, #255	@ tmp121,
 	rsbs	r3, r0, #0	@ tmp122, tmp121
 	adcs	r0, r0, r3	@ tmp120, tmp121, tmp122
-@ CBaseConvos/BaseConvos.c:220: }
+@ CBaseConvos/BaseConvos.c:219: }
 	@ sp needed	@
 	bx	lr
 	.size	EnsureSelection, .-EnsureSelection
@@ -825,11 +826,11 @@ SetUpConvo:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r3, r4, r5, r6, r7, lr}	@
-@ CBaseConvos/BaseConvos.c:238: 	EndBG3Slider();
+@ CBaseConvos/BaseConvos.c:237: 	EndBG3Slider();
 	ldr	r3, .L87	@ tmp140,
-@ CBaseConvos/BaseConvos.c:237: {
+@ CBaseConvos/BaseConvos.c:236: {
 	movs	r4, r0	@ proc, tmp228
-@ CBaseConvos/BaseConvos.c:238: 	EndBG3Slider();
+@ CBaseConvos/BaseConvos.c:237: 	EndBG3Slider();
 	bl	.L9		@
 @ CBaseConvos/Functions.c:24: 	for ( int i = 0 ; i < size ; i++ )
 	movs	r3, #0	@ i,
@@ -850,79 +851,79 @@ SetUpConvo:
 @ CBaseConvos/Functions.c:24: 	for ( int i = 0 ; i < size ; i++ )
 	cmp	r3, r2	@ i, tmp145
 	bne	.L82		@,
-@ CBaseConvos/BaseConvos.c:240: 	BaseConvoEntry* entry = GetEntry(gChapterData.chapterIndex,proc->viewingEntry);
+@ CBaseConvos/BaseConvos.c:239: 	BaseConvoEntry* entry = GetEntry(gChapterData.chapterIndex,proc->viewingEntry);
 	ldr	r3, .L87+8	@ tmp146,
-	adds	r4, r4, #80	@ tmp149,
+	adds	r4, r4, #41	@ tmp149,
 	ldrb	r5, [r3, #14]	@ _2,
 	ldrb	r7, [r4]	@ _4,
-@ CBaseConvos/BaseConvos.c:241: 	gMemorySlot[0x2] = entry->background;
+@ CBaseConvos/BaseConvos.c:240: 	gMemorySlot[0x2] = entry->background;
 	lsls	r5, r5, #3	@ tmp152, _2,
 	ldr	r6, .L87+12	@ tmp151,
 	adds	r3, r5, r7	@ tmp153, tmp152, _4
 	lsls	r3, r3, #5	@ tmp154, tmp153,
 	adds	r3, r6, r3	@ tmp155, tmp151, tmp154
-@ CBaseConvos/BaseConvos.c:241: 	gMemorySlot[0x2] = entry->background;
+@ CBaseConvos/BaseConvos.c:240: 	gMemorySlot[0x2] = entry->background;
 	ldr	r4, .L87+16	@ tmp150,
-@ CBaseConvos/BaseConvos.c:241: 	gMemorySlot[0x2] = entry->background;
+@ CBaseConvos/BaseConvos.c:240: 	gMemorySlot[0x2] = entry->background;
 	ldrb	r2, [r3, #2]	@ tmp157, BaseConvoTable
 	str	r2, [r4, #8]	@ tmp157, gMemorySlot
-@ CBaseConvos/BaseConvos.c:242: 	gMemorySlot[0x3] = entry->textID;
+@ CBaseConvos/BaseConvos.c:241: 	gMemorySlot[0x3] = entry->textID;
 	ldrh	r2, [r3, #20]	@ tmp165, BaseConvoTable
 	str	r2, [r4, #12]	@ tmp165, gMemorySlot
-@ CBaseConvos/BaseConvos.c:243: 	gMemorySlot[0x4] = entry->music;
+@ CBaseConvos/BaseConvos.c:242: 	gMemorySlot[0x4] = entry->music;
 	ldrh	r2, [r3, #14]	@ tmp173, BaseConvoTable
 	str	r2, [r4, #16]	@ tmp173, gMemorySlot
-@ CBaseConvos/BaseConvos.c:244: 	gMemorySlot[0x5] = entry->item;
+@ CBaseConvos/BaseConvos.c:243: 	gMemorySlot[0x5] = entry->item;
 	ldrb	r2, [r3, #22]	@ tmp181, BaseConvoTable
-@ CBaseConvos/BaseConvos.c:245: 	if ( entry->giveTo != 0xFF )
+@ CBaseConvos/BaseConvos.c:244: 	if ( entry->giveTo != 0xFF )
 	ldrb	r3, [r3, #23]	@ _13, BaseConvoTable
-@ CBaseConvos/BaseConvos.c:244: 	gMemorySlot[0x5] = entry->item;
+@ CBaseConvos/BaseConvos.c:243: 	gMemorySlot[0x5] = entry->item;
 	str	r2, [r4, #20]	@ tmp181, gMemorySlot
-@ CBaseConvos/BaseConvos.c:245: 	if ( entry->giveTo != 0xFF )
+@ CBaseConvos/BaseConvos.c:244: 	if ( entry->giveTo != 0xFF )
 	cmp	r3, #255	@ _13,
 	beq	.L83		@,
 .L86:
-@ CBaseConvos/BaseConvos.c:253: 	gMemorySlot[0x7] = (u32)(entry->unit);
+@ CBaseConvos/BaseConvos.c:252: 	gMemorySlot[0x7] = (u32)(entry->unit);
 	adds	r5, r5, r7	@ tmp196, tmp152, _4
 	lsls	r5, r5, #5	@ tmp197, tmp196,
-@ CBaseConvos/BaseConvos.c:251: 		gMemorySlot[0x6] = GetUnit(1)->pCharacterData->number; // 0xFF = give to character in first 
+@ CBaseConvos/BaseConvos.c:250: 		gMemorySlot[0x6] = GetUnit(1)->pCharacterData->number; // 0xFF = give to character in first 
 	str	r3, [r4, #24]	@ tmp192, gMemorySlot
-@ CBaseConvos/BaseConvos.c:253: 	gMemorySlot[0x7] = (u32)(entry->unit);
+@ CBaseConvos/BaseConvos.c:252: 	gMemorySlot[0x7] = (u32)(entry->unit);
 	adds	r3, r6, r5	@ tmp198, tmp151, tmp197
-@ CBaseConvos/BaseConvos.c:253: 	gMemorySlot[0x7] = (u32)(entry->unit);
+@ CBaseConvos/BaseConvos.c:252: 	gMemorySlot[0x7] = (u32)(entry->unit);
 	ldr	r2, [r3, #24]	@ tmp231, MEM[(struct BaseConvoEntry *)&BaseConvoTable][_2][_4].unit
 	str	r2, [r4, #28]	@ tmp231, gMemorySlot
-@ CBaseConvos/BaseConvos.c:254: 	gMemorySlot[0x8] = entry->character1;
+@ CBaseConvos/BaseConvos.c:253: 	gMemorySlot[0x8] = entry->character1;
 	ldrb	r2, [r6, r5]	@ tmp206, BaseConvoTable
-@ CBaseConvos/BaseConvos.c:256: 	gMemorySlot[0xA] = entry->eventID;
+@ CBaseConvos/BaseConvos.c:255: 	gMemorySlot[0xA] = entry->eventID;
 	ldrh	r0, [r3, #28]	@ _25, BaseConvoTable
-@ CBaseConvos/BaseConvos.c:254: 	gMemorySlot[0x8] = entry->character1;
+@ CBaseConvos/BaseConvos.c:253: 	gMemorySlot[0x8] = entry->character1;
 	str	r2, [r4, #32]	@ tmp206, gMemorySlot
-@ CBaseConvos/BaseConvos.c:255: 	gMemorySlot[0x9] = entry->character2;
+@ CBaseConvos/BaseConvos.c:254: 	gMemorySlot[0x9] = entry->character2;
 	ldrb	r2, [r3, #1]	@ tmp214, BaseConvoTable
-@ CBaseConvos/BaseConvos.c:257: 	gMemorySlot[0xB] = 0;
+@ CBaseConvos/BaseConvos.c:256: 	gMemorySlot[0xB] = 0;
 	movs	r3, #0	@ tmp223,
 	str	r3, [r4, #44]	@ tmp223, gMemorySlot
-@ CBaseConvos/BaseConvos.c:259: 	SetEventId(entry->eventID);
+@ CBaseConvos/BaseConvos.c:258: 	SetEventId(entry->eventID);
 	ldr	r3, .L87+20	@ tmp224,
-@ CBaseConvos/BaseConvos.c:255: 	gMemorySlot[0x9] = entry->character2;
+@ CBaseConvos/BaseConvos.c:254: 	gMemorySlot[0x9] = entry->character2;
 	str	r2, [r4, #36]	@ tmp214, gMemorySlot
-@ CBaseConvos/BaseConvos.c:256: 	gMemorySlot[0xA] = entry->eventID;
+@ CBaseConvos/BaseConvos.c:255: 	gMemorySlot[0xA] = entry->eventID;
 	str	r0, [r4, #40]	@ _25, gMemorySlot
-@ CBaseConvos/BaseConvos.c:260: }
+@ CBaseConvos/BaseConvos.c:259: }
 	@ sp needed	@
-@ CBaseConvos/BaseConvos.c:259: 	SetEventId(entry->eventID);
+@ CBaseConvos/BaseConvos.c:258: 	SetEventId(entry->eventID);
 	bl	.L9		@
-@ CBaseConvos/BaseConvos.c:260: }
+@ CBaseConvos/BaseConvos.c:259: }
 	pop	{r3, r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
 .L83:
-@ CBaseConvos/BaseConvos.c:251: 		gMemorySlot[0x6] = GetUnit(1)->pCharacterData->number; // 0xFF = give to character in first 
+@ CBaseConvos/BaseConvos.c:250: 		gMemorySlot[0x6] = GetUnit(1)->pCharacterData->number; // 0xFF = give to character in first 
 	ldr	r3, .L87+24	@ tmp189,
 	movs	r0, #1	@,
 	bl	.L9		@
-@ CBaseConvos/BaseConvos.c:251: 		gMemorySlot[0x6] = GetUnit(1)->pCharacterData->number; // 0xFF = give to character in first 
+@ CBaseConvos/BaseConvos.c:250: 		gMemorySlot[0x6] = GetUnit(1)->pCharacterData->number; // 0xFF = give to character in first 
 	ldr	r3, [r0]	@ _15->pCharacterData, _15->pCharacterData
 	ldrb	r3, [r3, #4]	@ tmp192,
 	b	.L86		@
@@ -949,30 +950,30 @@ CallConversation:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, lr}	@
-@ CBaseConvos/BaseConvos.c:264: 	BaseConvoEntry* entry = GetEntry(gChapterData.chapterIndex,proc->viewingEntry);
+@ CBaseConvos/BaseConvos.c:263: 	BaseConvoEntry* entry = GetEntry(gChapterData.chapterIndex,proc->viewingEntry);
 	ldr	r3, .L92	@ tmp117,
-	adds	r0, r0, #80	@ tmp121,
+	adds	r0, r0, #41	@ tmp121,
 	ldrb	r3, [r3, #14]	@ tmp118,
 	ldrb	r2, [r0]	@ tmp122,
-@ CBaseConvos/BaseConvos.c:265: 	if ( entry->event == NULL )
+@ CBaseConvos/BaseConvos.c:264: 	if ( entry->event == NULL )
 	lsls	r3, r3, #3	@ tmp123, tmp118,
 	adds	r3, r3, r2	@ tmp124, tmp123, tmp122
 	ldr	r2, .L92+4	@ tmp116,
 	lsls	r3, r3, #5	@ tmp125, tmp124,
 	adds	r3, r2, r3	@ tmp126, tmp116, tmp125
 	ldr	r0, [r3, #8]	@ _5, MEM[(struct BaseConvoEntry *)&BaseConvoTable][_2][_4].event
-@ CBaseConvos/BaseConvos.c:267: 		StartMapEventEngine(&CallBaseConvoEvents,2);
+@ CBaseConvos/BaseConvos.c:266: 		StartMapEventEngine(&CallBaseConvoEvents,2);
 	movs	r1, #2	@,
 	ldr	r3, .L92+8	@ tmp131,
-@ CBaseConvos/BaseConvos.c:265: 	if ( entry->event == NULL )
+@ CBaseConvos/BaseConvos.c:264: 	if ( entry->event == NULL )
 	cmp	r0, #0	@ _5,
 	bne	.L90		@,
-@ CBaseConvos/BaseConvos.c:267: 		StartMapEventEngine(&CallBaseConvoEvents,2);
+@ CBaseConvos/BaseConvos.c:266: 		StartMapEventEngine(&CallBaseConvoEvents,2);
 	ldr	r0, .L92+12	@,
 .L90:
-@ CBaseConvos/BaseConvos.c:271: 		StartMapEventEngine(entry->event,2);
+@ CBaseConvos/BaseConvos.c:270: 		StartMapEventEngine(entry->event,2);
 	bl	.L9		@
-@ CBaseConvos/BaseConvos.c:273: }
+@ CBaseConvos/BaseConvos.c:272: }
 	@ sp needed	@
 	pop	{r4}
 	pop	{r0}
@@ -997,26 +998,26 @@ CheckToEnd:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, lr}	@
-@ CBaseConvos/BaseConvos.c:277: 	if ( !proc->wasBPressed )
-	adds	r0, r0, #81	@ tmp117,
-@ CBaseConvos/BaseConvos.c:277: 	if ( !proc->wasBPressed )
+@ CBaseConvos/BaseConvos.c:276: 	if ( !proc->wasBPressed )
+	adds	r0, r0, #42	@ tmp117,
+@ CBaseConvos/BaseConvos.c:276: 	if ( !proc->wasBPressed )
 	ldrb	r3, [r0]	@ tmp118,
 	cmp	r3, #0	@ tmp118,
 	bne	.L95		@,
-@ CBaseConvos/BaseConvos.c:280: 		return !gMemorySlot[0xB]; // Keep the proc running if the event's aren't finished running.
+@ CBaseConvos/BaseConvos.c:279: 		return !gMemorySlot[0xB]; // Keep the proc running if the event's aren't finished running.
 	ldr	r3, .L97	@ tmp119,
-@ CBaseConvos/BaseConvos.c:280: 		return !gMemorySlot[0xB]; // Keep the proc running if the event's aren't finished running.
+@ CBaseConvos/BaseConvos.c:279: 		return !gMemorySlot[0xB]; // Keep the proc running if the event's aren't finished running.
 	ldr	r0, [r3, #44]	@ gMemorySlot, gMemorySlot
 	rsbs	r3, r0, #0	@ tmp123, gMemorySlot
 	adcs	r0, r0, r3	@ <retval>, gMemorySlot, tmp123
 .L94:
-@ CBaseConvos/BaseConvos.c:287: }
+@ CBaseConvos/BaseConvos.c:286: }
 	@ sp needed	@
 	pop	{r4}
 	pop	{r1}
 	bx	r1
 .L95:
-@ CBaseConvos/BaseConvos.c:285: 		return IsFadeActive(); // If the fade is still active, keep the proc running.
+@ CBaseConvos/BaseConvos.c:284: 		return IsFadeActive(); // If the fade is still active, keep the proc running.
 	ldr	r3, .L97+4	@ tmp124,
 	bl	.L9		@
 	b	.L94		@
@@ -1037,22 +1038,22 @@ BaseConvoProcDestructor:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-@ CBaseConvos/BaseConvos.c:291: 	*(char*)(0x0203EFC0) = 0;
+@ CBaseConvos/BaseConvos.c:290: 	*(char*)(0x0203EFC0) = 0;
 	movs	r2, #0	@ tmp112,
 	ldr	r3, .L100	@ tmp111,
-@ CBaseConvos/BaseConvos.c:290: {
+@ CBaseConvos/BaseConvos.c:289: {
 	push	{r4, lr}	@
-@ CBaseConvos/BaseConvos.c:291: 	*(char*)(0x0203EFC0) = 0;
+@ CBaseConvos/BaseConvos.c:290: 	*(char*)(0x0203EFC0) = 0;
 	strb	r2, [r3]	@ tmp112, MEM[(char *)33812416B]
-@ CBaseConvos/BaseConvos.c:293: 	proc->prepThemeThing = 1;
+@ CBaseConvos/BaseConvos.c:292: 	proc->prepThemeThing = 1;
 	movs	r3, r0	@ tmp116, proc
 	adds	r2, r2, #1	@ tmp117,
-	adds	r3, r3, #98	@ tmp116,
+	adds	r3, r3, #66	@ tmp116,
 	strb	r2, [r3]	@ tmp117, proc_3(D)->prepThemeThing
-@ CBaseConvos/BaseConvos.c:294: 	ReturnToPrepScreenTheme((Proc*)proc);
+@ CBaseConvos/BaseConvos.c:293: 	ReturnToPrepScreenTheme((Proc*)proc);
 	ldr	r3, .L100+4	@ tmp119,
 	bl	.L9		@
-@ CBaseConvos/BaseConvos.c:295: }
+@ CBaseConvos/BaseConvos.c:294: }
 	@ sp needed	@
 	pop	{r4}
 	pop	{r0}

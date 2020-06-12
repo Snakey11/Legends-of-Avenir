@@ -30,13 +30,12 @@ struct BaseConvoEntry
 struct BaseConvoProc
 {
 	PROC_HEADER;
-	u8 pad1; // 0x29.
-	u16 pad2; // 0x2A.
-	struct MenuDefinition menuData; // 0x2C.
-	u8 viewingEntry; // 0x30.
-	u8 wasBPressed; // 0x31.
-	u8 unk[0x42 - 0x32];
-	u8 prepThemeThing;
+	u8 viewingEntry; // 0x29.
+	u8 wasBPressed; // 0x2A.
+	u8 free[0x42 - 0x2B]; // 0x2B.
+	u8 prepThemeThing; // 0x42. This needs to be set before exiting?
+	struct MenuDefinition menuData; // 0x44.
+	// Ends at 0x64.
 };
 
 #define GetEntry(c,i) &BaseConvoTable[c][i]
@@ -158,8 +157,10 @@ void BuildBaseConvoMenuGeometry(BaseConvoProc* proc)
 	baseProc->menuData.onBPress = &MenuBPress;
 	baseProc->menuData.onRPress = NULL;
 	baseProc->menuData.onHelpBox = NULL;
-	// While we're here, let's clear the "entry we've selected" byte
+	// While we're here, let's clear the "entry we've selected" byte.
 	baseProc->viewingEntry = 0xFF;
+	// ... and clear wasBPressed byte.
+	baseProc->wasBPressed = 0x00;
 }
 
 // B press handler for the menu.
@@ -230,7 +231,8 @@ int EnsureSelection(BaseConvoProc* proc)
 	0x7 = UNIT pointer to load.
 	0x8 = Character 1.
 	0x9 = Character 2.
-	
+	0xA = Event ID.
+	0xB = RESERVED!
 	0xC = Pointer to this base convo entry.
 */
 void SetUpConvo(BaseConvoProc* proc)
