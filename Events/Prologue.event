@@ -18,36 +18,36 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-CHAR 0x0 TMShaman [MageMAvatar,PlayerMShaman] 0x0
-CHAR 0x0 TMMage [MageMAvatar,PlayerMMage] 0x0
-CHAR 0x0 TMMonkF2 [MageMAvatar,PlayerMMonk] 0x0
-CHAR 0x0 TMMercenary [MercenaryMAvatar,PlayerMMercenary] 0x0
-CHAR 0x0 TMMyrmidon [MercenaryMAvatar,PlayerMMyrmidon] 0x0
-CHAR 0x0 TMFighter [MercenaryMAvatar,PlayerMFighter] 0x0
-CHAR 0x0 TMPirate [MercenaryMAvatar,PlayerMPirate] 0x0
-CHAR 0x0 TMBrigand [MercenaryMAvatar,PlayerMBrigand] 0x0
-CHAR 0x0 TMCavalier [MilitaryMAvatar,PlayerMCavalier] 0x0
-CHAR 0x0 TMKnight [MilitaryMAvatar,PlayerMKnight] 0x0
-CHAR 0x0 TMSoldier [MilitaryMAvatar,PlayerMSoldier] 0x0
-CHAR 0x0 TMArcher [MilitaryMAvatar,PlayerMArcher] 0x0
-CHAR 0x0 TMWyvernRider [MilitaryMAvatar,PlayerMWyvernRider] 0x0
-CHAR 0x0 TFShaman [MageFAvatar,PlayerFShaman] 0x0
-CHAR 0x0 TFMage [MageFAvatar,PlayerFMage] 0x0
-CHAR 0x0 TFMonkF2 [MageFAvatar,PlayerFMonk] 0x0
-CHAR 0x0 TFMercenary [MercenaryFAvatar,PlayerFMercenary] 0x0
-CHAR 0x0 TFMyrmidon [MercenaryFAvatar,PlayerFMyrmidon] 0x0
-CHAR 0x0 TFPegasusKnight [MercenaryFAvatar,PlayerFPegasusKnight] 0x0
-CHAR 0x0 TFCavalier [MilitaryFAvatar,PlayerFCavalier] 0x0
-CHAR 0x0 TFKnight [MilitaryFAvatar,PlayerFKnight] 0x0
-CHAR 0x0 TFSoldier [MilitaryFAvatar,PlayerFSoldier] 0x0
-CHAR 0x0 TFArcher [MilitaryFAvatar,PlayerFArcher] 0x0
-CHAR 0x0 TFWyvernRider [MilitaryFAvatar,PlayerFWyvernRider] 0x0
-CHAR 0x0 Lore [MageMAvatar,Narrator] 0x0
-CHAR 0x0 Lore [MercenaryMAvatar,Narrator] 0x0
-CHAR 0x0 Lore [MilitaryMAvatar,Narrator] 0x0
-CHAR 0x0 Lore [MageFAvatar,Narrator] 0x0
-CHAR 0x0 Lore [MilitaryFAvatar,Narrator] 0x0
-CHAR 0x0 Lore [MercenaryFAvatar,Narrator] 0x0
+CHAR 0x0 TMShaman [0x00,PlayerMShaman] 0x0
+CHAR 0x0 TMMage [0x00,PlayerMMage] 0x0
+CHAR 0x0 TMMonkF2 [0x00,PlayerMMonk] 0x0
+CHAR 0x0 TMMercenary [0x00,PlayerMMercenary] 0x0
+CHAR 0x0 TMMyrmidon [0x00,PlayerMMyrmidon] 0x0
+CHAR 0x0 TMFighter [0x00,PlayerMFighter] 0x0
+CHAR 0x0 TMPirate [0x00,PlayerMPirate] 0x0
+CHAR 0x0 TMBrigand [0x00,PlayerMBrigand] 0x0
+CHAR 0x0 TMCavalier [0x00,PlayerMCavalier] 0x0
+CHAR 0x0 TMKnight [0x00,PlayerMKnight] 0x0
+CHAR 0x0 TMSoldier [0x00,PlayerMSoldier] 0x0
+CHAR 0x0 TMArcher [0x00,PlayerMArcher] 0x0
+CHAR 0x0 TMWyvernRider [0x00,PlayerMWyvernRider] 0x0
+CHAR 0x0 TFShaman [0x00,PlayerFShaman] 0x0
+CHAR 0x0 TFMage [0x00,PlayerFMage] 0x0
+CHAR 0x0 TFMonkF2 [0x00,PlayerFMonk] 0x0
+CHAR 0x0 TFMercenary [0x00,PlayerFMercenary] 0x0
+CHAR 0x0 TFMyrmidon [0x00,PlayerFMyrmidon] 0x0
+CHAR 0x0 TFPegasusKnight [0x00,PlayerFPegasusKnight] 0x0
+CHAR 0x0 TFCavalier [0x00,PlayerFCavalier] 0x0
+CHAR 0x0 TFKnight [0x00,PlayerFKnight] 0x0
+CHAR 0x0 TFSoldier [0x00,PlayerFSoldier] 0x0
+CHAR 0x0 TFArcher [0x00,PlayerFArcher] 0x0
+CHAR 0x0 TFWyvernRider [0x00,PlayerFWyvernRider] 0x0
+CHAR 0x0 Lore [0x00,Narrator] 0x0
+CHAR 0x0 Lore [0x00,Narrator] 0x0
+CHAR 0x0 Lore [0x00,Narrator] 0x0
+CHAR 0x0 Lore [0x00,Narrator] 0x0
+CHAR 0x0 Lore [0x00,Narrator] 0x0
+CHAR 0x0 Lore [0x00,Narrator] 0x0
 CHAR
 END_MAIN
 
@@ -105,84 +105,84 @@ ENDA
 
 TMMage:
 ENUT 0x6A
-DISA MageMAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Mage1)
 ENDA
 
 TMMonkF2:
 ENUT 0x6B
-DISA MageMAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Mage1)
 ENDA
 
 TMMercenary:
 ENUT 0x69
-DISA MercenaryMAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Mercenary1)
 ENDA
 
 TMMyrmidon:
 ENUT 0x6A
-DISA MercenaryMAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Mercenary1)
 ENDA
 
 TMFighter:
 ENUT 0x6B
-DISA MercenaryMAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Mercenary1)
 ENDA
 
 TMPirate:
 ENUT 0x6C
-DISA MercenaryMAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Mercenary1)
 ENDA
 
 TMBrigand:
 ENUT 0x6D
-DISA MercenaryMAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Mercenary1)
 ENDA
 
 TMCavalier:
 ENUT 0x69
-DISA MilitaryMAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Military1)
 ENDA
 
 TMKnight:
 ENUT 0x6A
-DISA MilitaryMAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Military1)
 ENDA
 
 TMSoldier:
 ENUT 0x6B
-DISA MilitaryMAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Military1)
 ENDA
 
 TMArcher:
 ENUT 0x6C
-DISA MilitaryMAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Military1)
 ENDA
 
 TMWyvernRider:
 ENUT 0x6D
-DISA MilitaryMAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Military1)
 ENDA
@@ -190,77 +190,77 @@ ENDA
 
 TFShaman:
 ENUT 0x69
-DISA MageFAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Mage1)
 ENDA
 
 TFMage:
 ENUT 0x6A
-DISA MageFAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Mage1)
 ENDA
 
 TFMonkF2:
 ENUT 0x6B
-DISA MageFAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Mage1)
 ENDA
 
 TFMercenary:
 ENUT 0x69
-DISA MercenaryFAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Mercenary1)
 ENDA
 
 TFMyrmidon:
 ENUT 0x6A
-DISA MercenaryFAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Mercenary1)
 ENDA
 
 TFPegasusKnight:
 ENUT 0x6B
-DISA MercenaryFAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Mercenary1)
 ENDA
 
 TFCavalier:
 ENUT 0x69
-DISA MilitaryFAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Military1)
 ENDA
 
 TFKnight:
 ENUT 0x6A
-DISA MilitaryFAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Military1)
 ENDA
 
 TFSoldier:
 ENUT 0x6B
-DISA MilitaryFAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Military1)
 ENDA
 
 TFArcher:
 ENUT 0x6C
-DISA MilitaryFAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Military1)
 ENDA
 
 TFWyvernRider:
 ENUT 0x6D
-DISA MilitaryFAvatar
+DISA 0x00
 Text(PrologueEndingText) ; ENUF 0x66
 MoveToChapter(Military1)
 ENDA
@@ -286,7 +286,6 @@ ALIGN 4
 Units:
 UNIT
 
-#define GM_Start 0x080BA2E4
 BeginningScene:
 //ASMC SetName|1
 MUSC PrologueMusic
@@ -305,9 +304,9 @@ FADI 0x5
 STAL 0x10
 ASMC StartSmallWorldMap|1
 STAL 0x40
-EndConvo
 LOAD1 0x1 LoadNarrator
 ENUN
+EndConvo
 //EndConvo
 //ENUF 0x6E
 //ENUF 0x67
