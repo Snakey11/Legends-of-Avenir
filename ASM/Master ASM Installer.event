@@ -78,7 +78,7 @@ ALIGN 4
 #include "HPBars/HPBars.event"
 
 ALIGN 4
-#include "HybridClasses/Hybrids.lyn.event"
+#include "HybridClasses/HybridHooks.lyn.event"
 ALIGN 4
 SpellswordList:
 BYTE SpellswordM SpellswordF BattleSage BattleSageF DreadFighterM DreadFighterF MaligKnight 0x00
@@ -129,8 +129,6 @@ StaffEXPEntry(Hammerne,45,35)
 StaffEXPEntry(Unlock,25,10)
 StaffEXPEntry(Barrier,20,10)
 StaffEXPEntry(0,0,0)
-
-
 
 ALIGN 4
 #include "ModularMinimugBox/MMB Installer Default.event"
