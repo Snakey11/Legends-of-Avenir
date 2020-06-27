@@ -16,6 +16,18 @@ Fixed a bug with Zaheva's battle quote with Gerald in Military 2 Accept
 I think I've sorted out all of the bugs with the base conversations. Instead of hackily setting a bitfield in a prep screen proc, I'm just using event IDs
 	Event IDs are plentiful, should make the system more modular in general, and won't have issues with suspend/resume. Release coming soon
 The EXP calculation routine has been ENTIRELY rewritten from scratch. No class relative power nonsense. We're accepting feedback on how it's turned out!
+The spellsword ASM has been completely rewritten from scratch: It should be way more stable and less buggy
+	To clarify on how spellswords work:
+		Any spellsword who is a physical main (T1 spellswords, battle sages, dread fighters, maybe a unique class or two) CANNOT use magic on any phase other than their own.
+		At the end of their phase, these spellswords will automatically re-equip the first usable physical weapon in their inventory
+		If there is not one, then they are considered unarmed
+		Mage Knights (who have sword availability) are not affected by this
+		Finally, T1 spellswords may only use E-rank tomes regardless of their weapon rank. They level with WEXP normally, and this restriction is removed at T2
+Jasper has been nerfed: particularly his strength. Derek's skill has been reduced and his speed a little bit as well
+"Aquatic Ruin" has been made a bit louder
+All Tact promotions now have 3 options: The vanilla promotions for that class as well as a 3rd custom one. In the past, it's just been the one custom class
+Date/time and project name setters have been included for the initial private release debug screen
+My new antihuffman patch has been implemented as well as my modular terrain opener hack
 
 Hotfixes before v1.10
 Fixed a bug in the ending of Military Accept Retreat Leave where character death quotes would play during battles
