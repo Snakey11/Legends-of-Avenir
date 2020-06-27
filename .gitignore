@@ -8,7 +8,9 @@
 *.nlz
 *.avi
 *.mp4
-UPDATE.cmd
+UPDATE.bat
+UPDATEPrivate.bat
+UPDATEPublic.bat
 !EA Avenir/*.exe
 !ParseDefinitions.txt
 !EA Avenr/*txt
