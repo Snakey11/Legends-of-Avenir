@@ -27,6 +27,8 @@ BYTE Wind Elwind Arcwind Tornado Aircalibur WindSword 0x00*/
 WaterList:
 BYTE Aqua Elaqua Arcaqua Fimbulvetr 0x00
 
+#include "Antihuffman/Antihuffman.event"
+
 ALIGN 4
 #include "Arms Scroll/EA Installer.event"
 
