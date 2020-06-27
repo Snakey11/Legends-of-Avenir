@@ -2,7 +2,7 @@
 
 {
 
-SetChapterData(MilitaryAcceptHold7,0x18,0,0x19,0x1A,ArcanaeCapitalMap,Map,_18Anims,0,ArcanaeCapitalChanges)
+SetChapterData(MilitaryAcceptHold7,0x18,0,0xB9,0x1A,ArcanaeCapitalMap,Map,_18Anims,0,ArcanaeCapitalChanges)
 EventPointerTable(ArcanaeCapitalChanges, MapChanges)
 Map:
 #incbin "Arcanae Capital_data.dmp"

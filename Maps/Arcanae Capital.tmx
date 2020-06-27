@@ -11,11 +11,11 @@
    <property name="MapChangesID" value="ArcanaeCapitalChanges"/>
    <property name="MapID" value="ArcanaeCapitalMap"/>
    <property name="ObjectType" value="0x18"/>
-   <property name="PaletteID" value="0x19"/>
+   <property name="PaletteID" value="0xB9"/>
    <property name="TileConfig" value="0x1A"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJydlTtLA0EQx/eBoH6LpFLBD5EuHIKfQbBIIwqSD+CjsLQRbRXxQRoVfKRXA1bhTDC24gUCKRIQ1M4Zdpabm2yOYPFndnb3fpmdmd3UtFI1pgWj1BAUk+ZNdn1V7C9bpR5Bn7Dvwzi/Y519NaOKmeTarnasBMZdYh0opYrGWfR/iB2bsJoifq9p0JJNVQEdAfOOhP4tzdfEGWeJMQB9gWZAh7Cvap3F9TXrfrtJ4xmmiGkL1rdNavs6Gyf697DvAVS3zkfeBmkR5zEXxsXP2ccwd2JSm+hsLtB/o/q8MzZnILtinOXzWN+EScPcE3zfAD1r539TfX5z2HvExpz36Awt0QcFwUZ/3bj6VM14dgPWOmDbxMY5PP8py3HJZnNSIva+ybJ5LevEbAfYvHYr1vWH70H0l8FuCraspefy83i2rKHvQRxfg65ANzk5CbGLFHufsXswvhyjlwnYPlct1sdDygWy58zovfLvTYhdZj3ocyXjHhAb45M9hLrQ7jtZy1B/y7hjxvY9xPsI35MoUMtQf/uzJmPYobcqCuQk1N/+HdE2m+//1pKz/TtSsGm+k0AN82o5Tv494fdxyqT/JX7d264ZvZeeJX15H3G8A/Gd6ex/AJesZWSzvSfZXOfaaZJz5+kPuT8o2A==
+   eJydlTtLA0EQx/eBYPwWSaWCH8IuHIKfQbBIIwqSD+CjsLQRbRXxQRoVfKRXA1bJmWBsxQsELCIIaucMO8vNTfZCsPgzO7N7v+zOzG5qWqka06xR6hMUk2ZMdn5ZrC9bpe5B77DuzTi/a519NsOKmeTctnasBMY9Yu0ppUrGWfR/iB2bsJqgViA+CVqwqSqgA2DekNC/pnhNnHGKmAPQF6gA2od1Vesszq9Y99tNGheYIqYNmN80qf3Q2f2ifwvr7kB163zkrZHmMI65MG7/nH0IsSOT2kSw0X+h+rwyNmcgu2Kc5XGsb8KkIfYA3zdAj9r531Sf3xHsHWJjzvt0hrbog6Jgo79qXH2qJp/dgLku2A6xMYbnP9ZpDuZtNifzxN41WTavZZ2YnQCb99iSdf3hexD9RbDrgi1r6bn8PJ4ta+h7EMeXoAvQ1YichNgl2jvvvT6Mz3P0NAbb56rN+rhFuUD2tBm+V/69CbHLrAd9ruS+B8TG/ckeQp1p952sZai/5b5jxvY9xPsI35MoUMtQf/uzJjns0FsVBXIS6m//jmibzfd/a8nZ/h0p2jTfSaCGo2qZJ/+e8Ps4YdL/Ej/vbc8M30vPkr68jzjegv2d6Ox/AJesZWSzvSfZXKfaaZxzj9IfRNsmVg==
   </data>
  </layer>
  <layer name="Chest2" width="23" height="21" visible="0">

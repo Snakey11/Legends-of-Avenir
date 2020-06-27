@@ -10,12 +10,12 @@ Map:
 MapChanges:
 TileMap(7,13,4,3,1,Door2)
 TileMap(6,7,4,3,2,Door1)
+TileMap(0,6,0,14,4,OpenRoom)
 TileMap(5,14,2,1,1,Chest5)
 TileMap(4,8,2,1,1,Chest4)
 TileMap(3,15,1,1,1,Chest3)
 TileMap(2,13,1,1,1,Chest2)
 TileMap(1,9,1,1,1,Chest1)
-TileMap(0,6,0,14,4,OpenRoom)
 TileMapEnd
 
 Door2:
@@ -24,6 +24,10 @@ ALIGN 4
 
 Door1:
 SHORT $6B4 $C40 $6B0 $0 $C44 $0
+ALIGN 4
+
+OpenRoom:
+SHORT $820 $6A8 $6A8 $6A8 $6A8 $6A8 $6A8 $6A8 $6A8 $6A8 $6A8 $6A8 $6A8 $6A8 $728 $C4C $C48 $184 $C4C $C48 $C48 $184 $C4C $184 $C4C $C48 $C48 $C48 $728 $C40 $184 $C4C $C44 $B3C $C40 $C48 $184 $C4C $C44 $B3C $C40 $C44 $728 $C40 $C44 $C44 $C44 $C3C $D48 $C44 $C48 $C44 $C44 $C3C $D48 $C44
 ALIGN 4
 
 Chest5:
@@ -44,10 +48,6 @@ ALIGN 4
 
 Chest1:
 SHORT $104
-ALIGN 4
-
-OpenRoom:
-SHORT $820 $6A8 $6A8 $6A8 $6A8 $6A8 $6A8 $6A8 $6A8 $6A8 $6A8 $6A8 $6A8 $6A8 $728 $C4C $C48 $184 $C4C $C48 $C48 $184 $C4C $184 $C4C $C48 $C48 $C48 $728 $C40 $184 $C4C $C44 $B3C $C40 $C48 $184 $C4C $C44 $B3C $C40 $C44 $728 $C40 $C44 $C44 $C44 $C3C $D48 $C44 $C48 $C44 $C44 $C3C $D48 $C44
 ALIGN 4
 
 }
