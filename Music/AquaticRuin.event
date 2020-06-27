@@ -4,7 +4,7 @@
 	#define	AquaticRuinZone_grp  voicegroup000
 	#define	AquaticRuinZone_pri  0
 	#define	AquaticRuinZone_rev  0
-	#define	AquaticRuinZone_mvl  100
+	#define	AquaticRuinZone_mvl  120
 	#define	AquaticRuinZone_key  0
 	#define	AquaticRuinZone_tbs  1
 	#define	AquaticRuinZone_exg  0
