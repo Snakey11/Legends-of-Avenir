@@ -262,6 +262,8 @@ ALIGN 4
 	WinButtonUsabilityChapterExceptionList:
 	BYTE PrologueChapter
 	
+	#include "Avenir/DateTime.event"
+	
 #endif // __DEBUG__
 
 PUSH
