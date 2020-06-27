@@ -46,7 +46,7 @@ Door(2,18)
 Door(5,18)
 Chest(Elixir,16,8)
 Chest(KnightCrest,18,8)
-Chest(BraveLance,14,19)
+Chest(SilverLance,14,19)
 Chest(EnergyRing,16,19)
 Chest(Dasher,18,19)
 END_MAIN
@@ -303,7 +303,7 @@ ENDA
 
 //Label Chapter units
 Meanies1:
-UNIT BossHelmer Sentinel BossHelmer Level(4,Enemy,True) [18,1] 0x00 0x00 0x00 0x00 [Spear] GuardAI
+UNIT BossHelmer Sentinel BossHelmer Level(8,Enemy,True) [18,1] 0x00 0x00 0x00 0x00 [Spear] GuardAI
 UNIT Arcanian GreatKnight BossHelmer Level(3,Enemy,True) [18,3] 0x00 0x00 0x00 0x00 [SilverAxe] ChaseOnceApproachedAI
 UNIT Arcanian Halberdier BossHelmer Level(2,Enemy,True) [17,4] 0x00 0x00 0x00 0x00 [ShortSpear] AttackInRangeAI
 UNIT Arcanian Knight BossHelmer Level(15,Enemy,True) [16,3] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
@@ -344,12 +344,12 @@ UNIT Arcanian Myrmidon BossHelmer Level(16,Enemy,True) [4,17] 0x00 0x00 0x00 0x0
 UNIT
 
 Greenies:
-UNIT Cesarian Soldier 0x00 Level(9,NPC,True) [0,10] 0x00 0x00 0x00 0x00 [0] LootingThiefAI // Lol this should just make them want to escape once able.
-UNIT Cesarian Soldier 0x00 Level(10,NPC,True) [0,13] 0x00 0x00 0x00 0x00 [0] LootingThiefAI
-UNIT Cesarian Soldier 0x00 Level(10,NPC,True) [0,19] 0x00 0x00 0x00 0x00 [0] LootingThiefAI
-UNIT Cesarian Soldier 0x00 Level(8,NPC,True) [7,19] 0x00 0x00 0x00 0x00 [0] LootingThiefAI
-UNIT Cesarian Soldier 0x00 Level(9,NPC,True) [9,12] 0x00 0x00 0x00 0x00 [0] LootingThiefAI
-UNIT Cesarian Soldier 0x00 Level(9,NPC,True) [9,10] 0x00 0x00 0x00 0x00 [0] LootingThiefAI
+UNIT Cesarian Soldier 0x00 Level(4,NPC,True) [0,10] 0x00 0x00 0x00 0x00 [0] LootingThiefAI // Lol this should just make them want to escape once able.
+UNIT Cesarian Soldier 0x00 Level(5,NPC,True) [0,13] 0x00 0x00 0x00 0x00 [0] LootingThiefAI
+UNIT Cesarian Soldier 0x00 Level(5,NPC,True) [0,19] 0x00 0x00 0x00 0x00 [0] LootingThiefAI
+UNIT Cesarian Soldier 0x00 Level(2,NPC,True) [7,19] 0x00 0x00 0x00 0x00 [0] LootingThiefAI
+UNIT Cesarian Soldier 0x00 Level(3,NPC,True) [9,12] 0x00 0x00 0x00 0x00 [0] LootingThiefAI
+UNIT Cesarian Soldier 0x00 Level(2,NPC,True) [9,10] 0x00 0x00 0x00 0x00 [0] LootingThiefAI
 UNIT
 
 Turn3Units:
@@ -372,6 +372,8 @@ UNIT Arcanian Soldier BossHelmer Level(15,Enemy,True) [19,11] 0x00 0x00 0x00 0x0
 UNIT Arcanian Soldier BossHelmer Level(16,Enemy,True) [19,12] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
 UNIT Arcanian Halberdier BossHelmer Level(2,Enemy,True) [11,19] 0x00 0x00 0x00 0x00 [Horseslayer] NoAI
 UNIT Arcanian Mercenary BossHelmer Level(14,Enemy,True) [4,19] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT Arcanian Swordmaster BossHelmer Level(1,Enemy,True) [3,0] 0x00 0x00 0x00 0x00 [KillingEdge] NoAI
+UNIT Arcanian Shaman BossHelmer Level(16,Enemy,True) [4,0] 0x00 0x00 0x00 0x00 [Dulam] NoAI
 UNIT
 
 Turn8Units:
@@ -379,12 +381,14 @@ UNIT Arcanian Monk BossHelmer Level(16,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [Li
 UNIT Arcanian General BossHelmer Level(2,Enemy,True) [11,0] Drop 0x00 0x00 0x00 [Armorslayer,SilverLance] NoAI
 UNIT Arcanian Cavalier BossHelmer Level(15,Enemy,True) [3,19] 0x00 0x00 0x00 0x00 [SteelSword,Javelin] NoAI
 UNIT Arcanian Fighter BossHelmer Level(15,Enemy,True) [10,19] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI
+UNIT Arcanian Berserker BossHelmer Level(3,Enemy,True) [3,0] 0x00 0x00 0x00 0x00 [BraveAxe] NoAI
 UNIT
 
 LoopUnits:
 UNIT Arcanian Myrmidon BossHelmer Level(17,Enemy,True) [11,19] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
 UNIT Arcanian Mage BossHelmer Level(16,Enemy,True) [4,19] 0x00 0x00 0x00 0x00 [Elthunder] NoAI
 UNIT Arcanian Sentinel BossHelmer Level(2,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [ShortAxe,SteelLance] NoAI
+UNIT Arcanian Archer BossHelmer Level(19,Enemy,True) [3,0] 0x00 0x00 0x00 0x00 [SteelShortbow] NoAI
 UNIT
 
 LoadCougar1:

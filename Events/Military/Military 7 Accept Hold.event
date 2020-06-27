@@ -103,7 +103,7 @@ BNE 0x0 0x0 0xC
 	MUSC Return_of_the_Demon_King
 	STAL 0x08
 	WarpIn(6,5,LoadNarrator1)
-	STAL 0x10
+	STAL 0x30
 	Text(Military7AcceptHoldGoodEndingHesHereText)
 	STAL 0x08
 	MOVE 0x00 Narrator [6,6]
@@ -132,7 +132,7 @@ LABEL 0x0
 	MUSC Return_of_the_Demon_King
 	STAL 0x08
 	WarpIn(14,11,LoadNarrator2)
-	STAL 0x10
+	STAL 0x30
 	Text(Military7AcceptHoldBadEndingHesHereText)
 	STAL 0x08
 	StartBattle
@@ -220,11 +220,13 @@ STAL 0x10
 MOVE 0x00 Dunlas [13,2]
 STAL 0x08
 WarpOut(11,8)
-STAL 0x18
+STAL 0x30
 CAM1 [21,2]
-STAL 0x08
+STAL 0x20
 WarpIn(21,2,LoadUzkalis)
+STAL 0x10
 MURE 0x05
+STAL 0x20
 NoFade
 EndA2
 
@@ -254,59 +256,59 @@ EndUnit
 
 //Label Chapter units
 Meanies:
-UNIT Xavus Necromancer Xavus Level(13,Enemy,True) [10,7] 0x00 0x00 0x00 0x00 [Fenrir] GuardAI
-UNIT BossUzkalis GaidenSage Xavus Level(12,Enemy,True) [11,8] 0x00 0x00 0x00 0x00 [Thoron] GuardAI
-UNIT Dunlas Halberdier Xavus Level(11,Enemy,True) [9,8] 0x00 0x00 0x00 0x00 [SilverLance] AttackIfCloseAI
-UNIT Arcanian Sage Xavus Level(9,Enemy,True) [9,9] 0x00 0x00 0x00 0x00 [Aura,Physic] AttackInRangeAI
-UNIT Arcanian Halberdier Xavus Level(10,Enemy,True) [10,9] 0x00 0x00 0x00 0x00 [SilverLance] AttackInRangeAI
-UNIT Arcanian Halberdier Xavus Level(8,Enemy,True) [10,10] 0x00 0x00 0x00 0x00 [SilverLance] AttackInRangeAI
-UNIT Arcanian Sniper Xavus Level(9,Enemy,True) [6,9] 0x00 0x00 0x00 0x00 [BraveBow] AttackInRangeAI
-UNIT Arcanian GreatKnight Xavus Level(7,Enemy,True) [5,4] 0x00 0x00 0x00 0x00 [SilverLance] ChaseOnceApproachedAI
-UNIT Arcanian GreatKnight Xavus Level(8,Enemy,True) [5,4] 0x00 0x00 0x00 0x00 [KillingEdge,HeavySpear] ChaseOnceApproachedAI
-UNIT Arcanian Berserker Xavus Level(9,Enemy,True) [6,2] 0x00 0x00 0x00 0x00 [Tomahawk,Swordreaver] AttackIfCloseAI
-UNIT Arcanian BattleSage Xavus Level(10,Enemy,True) [7,1] 0x00 0x00 0x00 0x00 [SilverSword,Elthunder] AttackInRangeAI
-UNIT Arcanian MageKnight Xavus Level(7,Enemy,True) [3,1] 0x00 0x00 0x00 0x00 [Arcfire,Wyrmslayer] AttackInRangeAI
-UNIT Arcanian Paladin Xavus Level(8,Enemy,True) [1,2] 0x00 0x00 0x00 0x00 [BraveSword] ChaseOnceApproachedAI
-UNIT Arcanian General Xavus Level(7,Enemy,True) [11,2] 0x00 0x00 0x00 0x00 [Spear] GuardAI
+UNIT Xavus Necromancer Xavus Level(16,Enemy,True) [10,7] 0x00 0x00 0x00 0x00 [Fenrir] GuardAI
+UNIT BossUzkalis GaidenSage Xavus Level(15,Enemy,True) [11,8] 0x00 0x00 0x00 0x00 [Thoron] GuardAI
+UNIT Dunlas Halberdier Xavus Level(14,Enemy,True) [9,8] 0x00 0x00 0x00 0x00 [Spear] AttackIfCloseAI
+UNIT Arcanian Sage Xavus Level(11,Enemy,True) [9,9] 0x00 0x00 0x00 0x00 [Aura,Physic] AttackInRangeAI
+UNIT Arcanian Halberdier Xavus Level(11,Enemy,True) [10,9] 0x00 0x00 0x00 0x00 [SilverLance] AttackInRangeAI
+UNIT Arcanian Halberdier Xavus Level(12,Enemy,True) [10,10] 0x00 0x00 0x00 0x00 [SilverLance] AttackInRangeAI
+UNIT Arcanian Sniper Xavus Level(10,Enemy,True) [6,9] 0x00 0x00 0x00 0x00 [BraveBow] AttackInRangeAI
+UNIT Arcanian GreatKnight Xavus Level(10,Enemy,True) [5,4] 0x00 0x00 0x00 0x00 [SilverLance] ChaseOnceApproachedAI
+UNIT Arcanian GreatKnight Xavus Level(11,Enemy,True) [5,4] 0x00 0x00 0x00 0x00 [KillingEdge,HeavySpear] ChaseOnceApproachedAI
+UNIT Arcanian Berserker Xavus Level(10,Enemy,True) [6,2] 0x00 0x00 0x00 0x00 [Tomahawk,Swordreaver] AttackIfCloseAI
+UNIT Arcanian BattleSage Xavus Level(11,Enemy,True) [7,1] 0x00 0x00 0x00 0x00 [SilverSword,Elthunder] AttackInRangeAI
+UNIT Arcanian MageKnight Xavus Level(9,Enemy,True) [3,1] 0x00 0x00 0x00 0x00 [Arcfire,Wyrmslayer] AttackInRangeAI
+UNIT Arcanian Paladin Xavus Level(10,Enemy,True) [1,2] 0x00 0x00 0x00 0x00 [BraveSword] ChaseOnceApproachedAI
+UNIT Arcanian General Xavus Level(9,Enemy,True) [11,2] 0x00 0x00 0x00 0x00 [Spear] GuardAI
 UNIT
 
 Meanies2:
-UNIT Arcanian Hero Xavus Level(7,Enemy,True) [18,3] 0x00 0x00 0x00 0x00 [Tomahawk] AttackInRangeAI
-UNIT Arcanian Sniper Xavus Level(7,Enemy,True) [20,4] 0x00 0x00 0x00 0x00 [SilverShortbow] AttackInRangeAI
-UNIT Arcanian Warrior Xavus Level(9,Enemy,True) [22,4] 0x00 0x00 0x00 0x00 [BraveAxe,SteelBow] AttackInRangeAI
-UNIT Arcanian DreadFighter Xavus Level(10,Enemy,True) [21,6] 0x00 0x00 0x00 0x00 [Armorslayer,Worm] AttackInRangeAI
-UNIT Arcanian Assassin Xavus Level(8,Enemy,True) [20,12] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
-UNIT Arcanian Sentinel Xavus Level(9,Enemy,True) [22,11] Drop 0x00 0x00 0x00 [BattleAxe,SteelLance] AttackInRangeAI
-UNIT Arcanian General Xavus Level(7,Enemy,True) [21,14] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] GuardAI
-UNIT Arcanian Bishop Xavus Level(7,Enemy,True) [20,9] 0x00 0x00 0x00 0x00 [Divine,Physic] HealAlliesAI
-UNIT Arcanian Swordmaster Xavus Level(8,Enemy,True) [21,18] 0x00 0x00 0x00 0x00 [Shamshir] NoAI
-UNIT Arcanian Druid Xavus Level(8,Enemy,True) [20,20] 0x00 0x00 0x00 0x00 [Luna,Elthunder] NoAI
-UNIT Arcanian General Xavus Level(10,Enemy,True) [19,19] 0x00 0x00 0x00 0x00 [SteelBlade,Hammer] AttackInRangeAI
-UNIT Arcanian GreatKnight Xavus Level(9,Enemy,True) [16,20] 0x00 0x00 0x00 0x00 [BraveAxe] NoAI
-UNIT Arcanian GreatKnight Xavus Level(8,Enemy,True) [13,20] Drop 0x00 0x00 0x00 [SilverSword] NoAI
-UNIT Arcanian Sage Xavus Level(7,Enemy,True) [15,16] 0x00 0x00 0x00 0x00 [Divine] NoAI
+UNIT Arcanian Hero Xavus Level(9,Enemy,True) [18,3] 0x00 0x00 0x00 0x00 [Tomahawk] AttackInRangeAI
+UNIT Arcanian Sniper Xavus Level(9,Enemy,True) [20,4] 0x00 0x00 0x00 0x00 [SilverShortbow] AttackInRangeAI
+UNIT Arcanian Warrior Xavus Level(11,Enemy,True) [22,4] 0x00 0x00 0x00 0x00 [BraveAxe,SteelBow] AttackInRangeAI
+UNIT Arcanian DreadFighter Xavus Level(12,Enemy,True) [21,6] 0x00 0x00 0x00 0x00 [Armorslayer,Worm] AttackInRangeAI
+UNIT Arcanian Assassin Xavus Level(10,Enemy,True) [20,12] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
+UNIT Arcanian Sentinel Xavus Level(11,Enemy,True) [22,11] Drop 0x00 0x00 0x00 [BattleAxe,SteelLance] AttackInRangeAI
+UNIT Arcanian General Xavus Level(10,Enemy,True) [21,14] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] GuardAI
+UNIT Arcanian Bishop Xavus Level(9,Enemy,True) [20,9] 0x00 0x00 0x00 0x00 [Divine,Physic] HealAlliesAI
+UNIT Arcanian Swordmaster Xavus Level(10,Enemy,True) [21,18] 0x00 0x00 0x00 0x00 [Shamshir] NoAI
+UNIT Arcanian Druid Xavus Level(11,Enemy,True) [20,20] 0x00 0x00 0x00 0x00 [Luna,Elthunder] NoAI
+UNIT Arcanian General Xavus Level(12,Enemy,True) [19,19] 0x00 0x00 0x00 0x00 [SteelBlade,Hammer] AttackInRangeAI
+UNIT Arcanian GreatKnight Xavus Level(10,Enemy,True) [16,20] 0x00 0x00 0x00 0x00 [BraveAxe] NoAI
+UNIT Arcanian GreatKnight Xavus Level(11,Enemy,True) [13,20] Drop 0x00 0x00 0x00 [SilverSword] NoAI
+UNIT Arcanian Sage Xavus Level(9,Enemy,True) [15,16] 0x00 0x00 0x00 0x00 [Divine] NoAI
 UNIT
 
 Meanies3:
-UNIT Arcanian Sage Xavus Level(6,Enemy,True) [14,8] 0x00 0x00 0x00 0x00 [Flare] AttackIfCloseAI
-UNIT Arcanian Hero Xavus Level(9,Enemy,True) [15,6] 0x00 0x00 0x00 0x00 [SteelBlade] AttackInRangeAI
-UNIT Arcanian Berserker Xavus Level(7,Enemy,True) [13,7] 0x00 0x00 0x00 0x00 [SilverAxe] AttackInRangeAI
-UNIT Arcanian Halberdier Xavus Level(10,Enemy,True) [13,8] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
-UNIT Arcanian Ranger Xavus Level(7,Enemy,True) [14,8] 0x00 0x00 0x00 0x00 [SilverSword,KillerBow] AttackInRangeAI
-UNIT Arcanian General Xavus Level(9,Enemy,True) [3,9] Drop 0x00 0x00 0x00 [Spear,ChestKey] GuardAI
-UNIT Arcanian Sniper Xavus Level(8,Enemy,True) [0,12] Drop 0x00 0x00 0x00 [SteelLongbow,ChestKey] AttackInRangeAI
-UNIT Arcanian Sage Xavus Level(7,Enemy,True) [1,9] 0x00 0x00 0x00 0x00 [Bolganone] AttackIfCloseAI
+UNIT Arcanian Sage Xavus Level(10,Enemy,True) [14,8] 0x00 0x00 0x00 0x00 [Flare] AttackIfCloseAI
+UNIT Arcanian Hero Xavus Level(11,Enemy,True) [15,6] 0x00 0x00 0x00 0x00 [SteelBlade] AttackInRangeAI
+UNIT Arcanian Berserker Xavus Level(9,Enemy,True) [13,7] 0x00 0x00 0x00 0x00 [SilverAxe] AttackInRangeAI
+UNIT Arcanian Halberdier Xavus Level(11,Enemy,True) [13,8] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT Arcanian Ranger Xavus Level(9,Enemy,True) [14,8] 0x00 0x00 0x00 0x00 [SilverSword,KillerBow] AttackInRangeAI
+UNIT Arcanian General Xavus Level(10,Enemy,True) [3,9] Drop 0x00 0x00 0x00 [Spear,ChestKey] GuardAI
+UNIT Arcanian Sniper Xavus Level(11,Enemy,True) [0,12] Drop 0x00 0x00 0x00 [SteelLongbow,ChestKey] AttackInRangeAI
+UNIT Arcanian Sage Xavus Level(9,Enemy,True) [1,9] 0x00 0x00 0x00 0x00 [Bolganone] AttackIfCloseAI
 UNIT Arcanian Sentinel Xavus Level(12,Enemy,True) [3,14] 0x00 0x00 0x00 0x00 [SteelBlade,Horseslayer] AttackInRangeAI
 UNIT Arcanian Hero Xavus Level(14,Enemy,True) [4,11] 0x00 0x00 0x00 0x00 [SteelAxe,LightBrand] AttackInRangeAI
-UNIT Arcanian BattleSage Xavus Level(8,Enemy,True) [3,16] 0x00 0x00 0x00 0x00 [IronBlade,Elaqua] ChaseOnceApproachedAI
-UNIT Arcanian Paladin Xavus Level(9,Enemy,True) [0,19] 0x00 0x00 0x00 0x00 [SilverLance] AttackInRangeAI
-UNIT Arcanian Paladin Xavus Level(8,Enemy,True) [0,20] 0x00 0x00 0x00 0x00 [Lanceslayer,Javelin] AttackInRangeAI
-UNIT Arcanian Sentinel Xavus Level(8,Enemy,True) [7,20] 0x00 0x00 0x00 0x00 [Axeslayer,SwordSlayer,Lanceslayer] AttackInRangeAI
-UNIT Arcanian Hero Xavus Level(10,Enemy,True) [9,19] 0x00 0x00 0x00 0x00 [ToxinSword,ShortAxe] NoAI
+UNIT Arcanian BattleSage Xavus Level(11,Enemy,True) [3,16] 0x00 0x00 0x00 0x00 [IronBlade,Elaqua] ChaseOnceApproachedAI
+UNIT Arcanian Paladin Xavus Level(12,Enemy,True) [0,19] 0x00 0x00 0x00 0x00 [SilverLance] AttackInRangeAI
+UNIT Arcanian Paladin Xavus Level(11,Enemy,True) [0,20] 0x00 0x00 0x00 0x00 [Lanceslayer,Javelin] AttackInRangeAI
+UNIT Arcanian Sentinel Xavus Level(12,Enemy,True) [7,20] 0x00 0x00 0x00 0x00 [Axeslayer,SwordSlayer,Lanceslayer] AttackInRangeAI
+UNIT Arcanian Hero Xavus Level(13,Enemy,True) [9,19] 0x00 0x00 0x00 0x00 [ToxinSword,ShortAxe] NoAI
 UNIT
 
 LoadUzkalis:
-UNIT BossUzkalis GaidenSage Xavus Level(9,Enemy,True) [21,2] 0x00 0x00 0x00 0x00 [Thoron] GuardAI
+UNIT BossUzkalis GaidenSage Xavus Level(15,Enemy,True) [21,2] 0x00 0x00 0x00 0x00 [Thoron] GuardAI
 UNIT
 
 Turn4Units:
@@ -315,9 +317,9 @@ UNIT Arcanian MageKnight Xavus Level(11,Enemy,True) [0,1] 0x00 0x00 0x00 0x00 [E
 UNIT
 
 Turn8Units:
-UNIT Arcanian DreadFighter Xavus Level(9,Enemy,True) [1,8] 0x00 0x00 0x00 0x00 [Wyrmslayer,Slime] NoAI
-UNIT Arcanian Swordmaster Xavus Level(8,Enemy,True) [6,0] Drop 0x00 0x00 0x00 [SteelSword,Lanceslayer] NoAI
-UNIT Arcanian Hero Xavus Level(8,Enemy,True) [22,19] 0x00 0x00 0x00 0x00 [SilverBlade] NoAI
+UNIT Arcanian DreadFighter Xavus Level(11,Enemy,True) [1,8] 0x00 0x00 0x00 0x00 [Wyrmslayer,Slime] NoAI
+UNIT Arcanian Swordmaster Xavus Level(12,Enemy,True) [6,0] Drop 0x00 0x00 0x00 [SteelSword,Lanceslayer] NoAI
+UNIT Arcanian Hero Xavus Level(12,Enemy,True) [22,19] 0x00 0x00 0x00 0x00 [SilverBlade] NoAI
 UNIT
 
 Turn12Units:
@@ -328,13 +330,13 @@ UNIT Arcanian Sage Xavus Level(9,Enemy,True) [0,1] 0x00 0x00 0x00 0x00 [Dasher] 
 UNIT
 
 Turn16Units:
-UNIT Arcanian Berserker Xavus Level(7,Enemy,True) [0,1] 0x00 0x00 0x00 0x00 [Swordreaver,ShortAxe] NoAI
-UNIT Arcanian Halberdier Xavus Level(8,Enemy,True) [6,0] 0x00 0x00 0x00 0x00 [ShortSpear] NoAI
-UNIT Arcanian Sage Xavus Level(4,Enemy,True) [22,19] 0x00 0x00 0x00 0x00 [Fire,Tempest] NoAI
+UNIT Arcanian Berserker Xavus Level(8,Enemy,True) [0,1] 0x00 0x00 0x00 0x00 [Swordreaver,ShortAxe] NoAI
+UNIT Arcanian Halberdier Xavus Level(9,Enemy,True) [6,0] 0x00 0x00 0x00 0x00 [ShortSpear] NoAI
+UNIT Arcanian Sage Xavus Level(7,Enemy,True) [22,19] 0x00 0x00 0x00 0x00 [Fire,Tempest] NoAI
 UNIT
 
 ShanleyUnits:
-UNIT Shanley Sage Xavus Level(11,Enemy,True) [0,20] 0x00 0x00 0x00 0x00 [Fimbulvetr,Mend] NoAI
+UNIT Shanley Sage Xavus Level(11,Enemy,True) [0,20] 0x00 0x00 0x01 REDA1R19 [Fimbulvetr,Mend] NoAI
 UNIT Arcanian Sage Xavus Level(10,Enemy,True) [0,20] 0x00 0x00 0x01 REDA2R20 [Tornado] NoAI
 UNIT Arcanian Sage Xavus Level(12,Enemy,True) [0,19] 0x00 0x00 0x01 REDA2R19 [Aura] NoAI
 UNIT Arcanian Hero Xavus Level(9,Enemy,True) [0,20] 0x00 0x00 0x01 REDA3R19 [BraveAxe] NoAI

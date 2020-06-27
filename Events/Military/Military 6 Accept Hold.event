@@ -108,26 +108,34 @@ ENDA
 
 //Label Turn events
 Turn2:
+CamON
 LOAD1 0x1 Turn2Units
 ENUN
+CamOFF
 NoFade
 EndA2
 
 Turn4:
+CamON
 LOAD1 0x1 Turn4Units
 ENUN
+CamOFF
 NoFade
 EndA2
 
 Turn5:
+CamON
 LOAD1 0x1 Turn5Units
 ENUN
+CamOFF
 NoFade
 EndA2
 
 Turn8:
+CamON
 LOAD1 0x1 Turn8Units
 ENUN
+CamOFF
 NoFade
 EndA2
 
@@ -137,9 +145,11 @@ BEQ 0x0 0x0 0xC
 	// The room has been opened, but the reinforcements haven't spawned yet.
 	COUNTER_CHECK 0x0
 	SVAL 0x1 0x2
-	BLT 0x1 0xC 0x2
+	BGE 0x1 0xC 0x1
+		CamON
 		LOAD1 0x1 RoomUnits
 		ENUN
+		CamOFF
 		GOTO 0x2
 	LABEL 0x1
 		// We're not ready to spawn the reinforcements, but increment the counter.
@@ -184,11 +194,28 @@ LABEL 0x1
 NoFade
 ENDA
 
+//Label Escape points
+EscapePointPointerTable(MilitaryAcceptHold6,Military6AcceptHoldEscapePoints)
+
+Military6AcceptHoldEscapePoints:
+EscapePoint(19,6,MoveRight)
+EscapePoint(19,7,MoveRight)
+EscapePoint(19,8,MoveRight)
+EscapePoint(19,9,MoveRight)
+EscapePoint(0,5,MoveLeft)
+EscapePoint(0,6,MoveLeft)
+EscapePoint(0,7,MoveLeft)
+EscapePoint(0,8,MoveLeft)
+EscapePoint(0,9,MoveLeft)
+EscapePoint(5,13,MoveRight)
+EscapePoint(5,14,MoveRight)
+//EndLabel
+
 	/*UNIT DATA*/
 
 //Label Meanies
 Meanies:
-UNIT Clint DreadFighter Clint Level(8,Enemy,True) [3,1] Drop 0x00 0x00 0x00 [SilverSword,Dulam,Runesword] GuardAI
+UNIT Clint DreadFighter Clint Level(8,Enemy,True) [3,1] Drop 0x00 0x00 0x00 [SilverSword,Dulam,WindSword] GuardAI
 UNIT Arcanian General Clint Level(4,Enemy,True) [8,21] 0x00 0x00 0x00 0x00 [Spear] AttackIfCloseAI
 UNIT Arcanian Knight Clint Level(19,Enemy,True) [7,20] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
 UNIT Arcanian Knight Clint Level(20,Enemy,True) [9,20] 0x00 0x00 0x00 0x00 [Dragonspear] AttackInRangeAI
@@ -215,7 +242,7 @@ UNIT Arcanian Paladin Clint Level(3,Enemy,True) [3,5] 0x00 0x00 0x00 0x00 [Light
 UNIT Arcanian Cavalier Clint Level(17,Enemy,True) [2,6] 0x00 0x00 0x00 0x00 [ShortSpear] ChaseOnceApproachedAI
 UNIT Arcanian Cavalier Clint Level(17,Enemy,True) [4,6] 0x00 0x00 0x00 0x00 [SteelSword,Horseslayer] ChaseOnceApproachedAI
 UNIT Arcanian Cavalier Clint Level(18,Enemy,True) [3,7] 0x00 0x00 0x00 0x00 [Lancereaver] ChaseOnceApproachedAI
-UNIT Arcanian General Clint Level(16,Enemy,True) [2,11] 0x00 0x00 0x00 0x00 [Tomahawk] GuardAI
+UNIT Arcanian General Clint Level(8,Enemy,True) [2,11] 0x00 0x00 0x00 0x00 [Tomahawk] GuardAI
 UNIT Arcanian Monk Clint Level(19,Enemy,True) [3,12] 0x00 0x00 0x00 0x00 [Shine] ChaseOnceApproachedAI
 UNIT Arcanian Archer Clint Level(18,Enemy,True) [4,13] 0x00 0x00 0x00 0x00 [IronLongbow] AttackIfCloseAI
 UNIT Arcanian Warrior Clint Level(5,Enemy,True) [2,15] 0x00 0x00 0x00 0x00 [Swordslayer] AttackInRangeAI
@@ -240,7 +267,7 @@ UNIT Arcanian WyvernRider Clint Level(16,Enemy,True) [0,9] 0x00 0x00 0x00 0x00 [
 UNIT
 
 Turn4Units:
-UNIT Looter Thief Looter Level(11,Enemy,True) [5,13] 0x00 0x00 0x00 0x00 [IronSword] LootingThiefAI
+UNIT Looter Thief Looter Level(11,Enemy,True) [5,13] 0x00 0x00 0x00 0x00 [PoisonSword,Lockpick] LootingThiefAI
 UNIT
 
 Turn5Units:

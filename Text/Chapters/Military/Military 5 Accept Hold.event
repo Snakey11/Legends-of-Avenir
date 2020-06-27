@@ -94,7 +94,7 @@ Duke Clint... I failed...[X]
 [MidRight][LoadPlayer]
 They're defeated. The fort is ours![MidLeft][LoadLux]
 Corporal [Tact]?[CloseSpeech][MidRight][MoveRight][FarRight][LoadAdeline]
-[MidRight]That's me. This here is Corporal Adeline. We led this assault.
+[Right]That's me. This here is Corporal Adeline. We led this assault.
 [MidLeft]Very well done. First things first, I am sorry to hear about Vice-Captain Blaine. Captain Jurgen has been notified.
 [FarRight]What's the plan moving forward, then?
 [MidLeft]With the capture of this fort, Blaine's mission has been accomplished. Captain Maximus has secured the northern border with Haedric, so there's no escape for Xavus and Uzkalis.[CloseSpeech][MoveLeft][FarLeft][LoadZaheva]

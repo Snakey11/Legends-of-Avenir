@@ -286,6 +286,7 @@ DeathQuote(Yvette,AllChapters,0x00,YvetteDeathText)
 DeathQuote(Adeline,AllChapters,0x00,AdelineDeathText)
 DeathQuote(Remus,AllChapters,0x00,RemusDeathText)
 DeathQuote(Rex,AllChapters,0x00,RexDeathText)
+DeathQuote(Jurgen,AllChapters,0x00,JurgenDeathText)
 
 DeathQuote(PlayerMMercenary,AllChapters,0x65,PlayerDeathText)
 DeathQuote(PlayerMMyrmidon,AllChapters,0x65,PlayerDeathText)

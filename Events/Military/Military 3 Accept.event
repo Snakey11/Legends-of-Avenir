@@ -289,7 +289,7 @@ UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [8,10] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 Arcanians:
-UNIT Sean Sentinel Sean Level(3,Enemy,True) [12,16] 0x00 0x00 0x01 REDA15R15 [IronBlade,ShortAxe] GuardAI
+UNIT Sean Sentinel Sean Level(3,Enemy,True) [12,16] Drop 0x00 0x01 REDA15R15 [IronBlade,ShortAxe,WhiteGem] GuardAI
 UNIT Arcanian Soldier Sean Level(10,Enemy,True) [4,16] 0x00 0x00 0x01 REDA2R14 [Javelin,DoorKey] AttackInRangeAI
 UNIT Arcanian Fighter Sean Level(8,Enemy,True) [5,16] 0x00 0x00 0x01 REDA5R15 [IronAxe] AttackInRangeAI
 UNIT Arcanian Fighter Sean Level(10,Enemy,True) [5,17] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI

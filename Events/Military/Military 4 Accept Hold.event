@@ -35,6 +35,8 @@ END_MAIN
 
 //Label LocationBasedEvents
 LocationBasedEvents:
+Armory(ArmoryList,1,10)
+Vendor(ShopList,0,11)
 END_MAIN
 
 //Label MiscBasedEvents
@@ -149,6 +151,7 @@ GotoPrepScreen
 EndingScene:
 MUSC Strong_Wind_Sound
 FADI 0x5
+ASMC RefreshAll|1
 REMU Cougar
 CHECK_OTHERS // Count the number of greens still on the map.
 SVAL 0x1 1
@@ -232,7 +235,7 @@ EndA2
 
 Turn1:
 MUSC Aquatic_Ruin
-CAM1 Clint
+CAM1 [20,0]
 STAL 0x08
 FlashCursor(Clint,60)
 STAL 0x10
@@ -291,6 +294,15 @@ LOAD1 0x1 Turn9Units
 CamOFF
 NoFade
 ENDA
+
+//Label Shop events
+ArmoryList:
+SHLI SteelSword Armorslayer SteelLance Javelin IronAxe SteelAxe
+
+ShopList:
+SHLI Thunder Wind Elwind Elaqua Arcfire Flux Dulam Worm Vulnerary Elixir
+ALIGN 4
+//EndLabel
 
 //Label Misc events
 Trigger1:
@@ -371,13 +383,13 @@ UNIT
 
 StartingCesarians:
 UNIT Blaine Halberdier Blaine Level(8,NPC,True) [5,4] 0x00 0x00 0x00 0x00 [SilverLance] NoAI
-UNIT Cesarian Knight Blaine Level(19,NPC,True) [3,3] 0x00 0x00 0x00 0x00 [ShortSpear] GuardAI
-UNIT Cesarian Knight Blaine Level(17,NPC,True) [4,2] 0x00 0x00 0x00 0x00 [KillerAxe] GuardAI
-UNIT Cesarian Soldier Blaine Level(19,NPC,True) [2,3] 0x00 0x00 0x00 0x00 [IronLance] AttackIfCloseAI
+UNIT Cesarian Knight Blaine Level(17,NPC,True) [3,3] 0x00 0x00 0x00 0x00 [ShortSpear] GuardAI
+UNIT Cesarian Knight Blaine Level(16,NPC,True) [4,2] 0x00 0x00 0x00 0x00 [KillerAxe] GuardAI
+UNIT Cesarian Soldier Blaine Level(17,NPC,True) [2,3] 0x00 0x00 0x00 0x00 [IronLance] AttackIfCloseAI
 UNIT Cesarian Sage Blaine Level(4,NPC,True) [2,1] 0x00 0x00 0x00 0x00 [Shine,Mend] HealAlliesAI
-UNIT Cesarian Cavalier Blaine Level(17,NPC,True) [1,2] 0x00 0x00 0x00 0x00 [SteelSword,Javelin] AttackIfCloseAI
-UNIT Cesarian Soldier Blaine Level(18,NPC,True) [2,5] 0x00 0x00 0x00 0x00 [Dragonspear] AttackIfCloseAI
-UNIT Cesarian Spellsword Blaine Level(20,NPC,True) [2,4] 0x00 0x00 0x00 0x00 [LightBrand] AttackIfCloseAI
+UNIT Cesarian Cavalier Blaine Level(16,NPC,True) [1,2] 0x00 0x00 0x00 0x00 [SteelSword,Javelin] AttackIfCloseAI
+UNIT Cesarian Soldier Blaine Level(17,NPC,True) [2,5] 0x00 0x00 0x00 0x00 [Dragonspear] AttackIfCloseAI
+UNIT Cesarian Spellsword Blaine Level(19,NPC,True) [2,4] 0x00 0x00 0x00 0x00 [LightBrand] AttackIfCloseAI
 UNIT
 
 TriggerCavs:
