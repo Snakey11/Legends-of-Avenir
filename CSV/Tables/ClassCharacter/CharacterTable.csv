@@ -7,11 +7,11 @@ PlayerFMonk,TactNameText,PlayerMageDescText,PlayerFMonk,MonkF2,FemaleMageMug,0x0
 PlayerFShaman,TactNameText,PlayerMageDescText,PlayerFShaman,Shaman_F,FemaleMageMug,0x0,DarkAff,0x0,1,5,2,1,3,2,4,2,3,0,0,0,0,0,0,0,Erank,60,10,35,40,30,35,35,0x0,0x0,IsLord,0x0,0x0,0x0,0x0
 PlayerFMage,TactNameText,PlayerMageDescText,PlayerFMage,Mage_F,FemaleMageMug,0x0,ThunderAff,0x0,1,2,1,4,3,1,2,3,2,0,0,0,0,0,Erank,0,0,40,10,45,55,15,25,30,0x0,0x0,IsLord,0x0,0x0,0x0,0x0
 PlayerMCavalier,TactNameText,PlayerMilitaryDescText,PlayerMCavalier,Cavalier,MaleMilitaryMug,0x0,WindAff,0x0,1,8,2,3,2,3,3,5,3,Drank,Crank,0,0,0,0,0,0,70,40,45,40,25,20,40,0x0,0x0,IsLord,0x0,0x0,0x0,0x0
-PlayerMKnight,TactNameText,PlayerMilitaryDescText,PlayerMKnight,Knight,MaleMilitaryMug,0x0,AnimaAff,0x0,1,7,5,2,2,5,1,4,4,0,Crank,0,0,0,0,0,0,85,50,40,30,45,20,50,0x0,0x0,IsLord,0x0,0x0,0x0,0x0
+PlayerMKnight,TactNameText,PlayerMilitaryDescText,PlayerMKnight,Knight,MaleMilitaryMug,0x0,AnimaAff,0x0,1,7,4,2,2,3,1,4,1,0,Crank,0,0,0,0,0,0,85,45,40,30,40,20,50,0x0,0x0,IsLord,0x0,0x0,0x0,0x0
 PlayerMSoldier,TactNameText,PlayerMilitaryDescText,PlayerMSoldier,Soldier,MaleMilitaryMug,0x0,WaterAff,0x0,1,5,4,4,7,5,4,5,1,0,Crank,0,0,0,0,0,0,75,40,45,40,30,25,40,0x0,0x0,IsLord,0x0,0x0,0x0,0x0
 PlayerMWyvernRider,TactNameText,PlayerMilitaryDescText,PlayerMWyvernRider,WyvernRider,MaleMilitaryMug,0x0,WindAff,0x0,1,8,2,3,3,2,2,4,2,0,Crank,0,0,0,0,0,0,70,50,35,35,25,10,50,0x0,0x0,IsLord,0x0,0x0,0x0,0x0
 PlayerFCavalier,TactNameText,PlayerMilitaryDescText,PlayerFCavalier,Cavalier_F,FemaleMilitaryMug,0x0,WindAff,0x0,1,8,2,4,2,3,4,5,3,Drank,Crank,0,0,0,0,0,0,65,35,50,45,25,20,40,0x0,0x0,IsLord,0x0,0x0,0x0,0x0
-PlayerFKnight,TactNameText,PlayerMilitaryDescText,PlayerFKnight,Knight_F,FemaleMilitaryMug,0x0,AnimaAff,0x0,1,9,4,2,2,5,1,4,4,0,Crank,0,0,0,0,0,0,85,45,45,35,45,20,50,0x0,0x0,IsLord,0x0,0x0,0x0,0x0
+PlayerFKnight,TactNameText,PlayerMilitaryDescText,PlayerFKnight,Knight_F,FemaleMilitaryMug,0x0,AnimaAff,0x0,1,7,3,2,2,3,1,4,1,0,Crank,0,0,0,0,0,0,85,40,45,35,40,20,50,0x0,0x0,IsLord,0x0,0x0,0x0,0x0
 PlayerFSoldier,TactNameText,PlayerMilitaryDescText,PlayerFSoldier,Soldier,FemaleMilitaryMug,0x0,WaterAff,0x0,1,5,4,3,8,5,4,5,2,0,Crank,0,0,0,0,0,0,70,35,45,40,25,25,40,0x0,0x0,IsLord,0x0,0x0,0x0,0x0
 PlayerFWyvernRider,TactNameText,PlayerMilitaryDescText,PlayerFWyvernRider,WyvernRider_F,FemaleMilitaryMug,0x0,WindAff,0x0,1,8,2,3,3,2,1,4,2,0,Crank,0,0,0,0,0,0,65,40,35,40,25,10,55,0x0,0x0,IsLord,0x0,0x0,0x0,0x0
 PlayerMMercenary,TactNameText,PlayerMercenaryDescText,PlayerMMercenary,Mercenary,MaleMercMug,0x0,FireAff,0x0,1,5,3,3,2,1,4,3,3,Crank,0,0,0,0,0,0,0,80,40,35,40,25,25,50,0x0,0x0,IsLord,0x0,0x0,0x0,0x0
@@ -34,10 +34,10 @@ Johnathan,JohnathanNameText,JohnathanDescText,Johnathan,WyvernRider,JohnathanMug
 Elanil,ElanilNameText,ElanilDescText,Elanil,Archer_F,ElanilMug,0x0,FireAff,0x0,4,7,5,6,6,3,5,7,2,0,0,0,Brank,0,0,0,0,70,35,50,50,15,30,30,0x0,0x0,0x0,0x0,0x0,0x0,0x0
 Izuk,IzukNameText,IzukDescText,Izuk,Patriarch,IzukMug,0x0,FireAff,0x0,1,0,1,0,0,0,0,16,0,0,0,0,0,0,Srank,0,0,65,15,40,50,20,35,30,0x0,0x0,0x0,0x0,0x0,0x0,0x0
 Maximus,MaximusNameText,MaximusDescText,Maximus,Sage,MaximusMug,0x0,ThunderAff,0x0,1,14,10,10,11,9,9,11,4,Arank,0,0,0,Drank,Brank,0,0,70,35,40,30,25,30,40,0x0,0x0,0x0,0x0,0x0,0x0,0x0
-Jurgen,JurgenNameText,JurgenDescText,Jurgen,JacketHero,JurgenMug,0x0,ThunderAff,0x0,1,21,8,4,5,8,6,5,4,Arank,Srank,Brank,0,0,0,0,0,95,40,50,40,25,20,50,0x0,0x0,0x0,0x0,0x0,0x0,0x0
+Jurgen,JurgenNameText,JurgenDescText,Jurgen,JacketHero,JurgenMug,0x0,ThunderAff,0x0,1,23,10,6,7,10,8,7,4,Arank,Srank,Brank,0,0,0,0,0,95,40,50,40,25,20,50,0x0,0x0,0x0,0x0,0x0,0x0,0x0
 Leon,LeonNameText,LeonDescText,Leon,Gladiator,LeonMug,0x0,FireAff,0x0,1,23,13,8,4,5,4,2,5,0,0,Arank,0,0,0,0,0,110,50,45,35,25,25,25,0x0,0x0,0x0,0x0,0x0,0x0,0x0
 Jasper,JasperNameText,JasperDescText,Jasper,Cavalier,JasperMug,0x0,WaterAff,0x0,5,9,5,5,4,2,2,7,3,Crank,Crank,0,0,0,0,0,0,90,45,40,40,30,20,50,0x0,0x0,0x0,0x0,0x0,0x0,0x0
-Derek,DerekNameText,DerekDescText,Derek,Knight,DerekMug,0x0,AnimaAff,0x0,5,9,7,6,2,6,3,10,2,0,Crank,0,0,0,0,0,0,95,45,45,30,45,20,25,0x0,0x0,0x0,0x0,0x0,0x0,0x0
+Derek,DerekNameText,DerekDescText,Derek,Knight,DerekMug,0x0,AnimaAff,0x0,5,9,7,4,2,6,3,10,2,0,Crank,0,0,0,0,0,0,95,45,35,25,45,20,25,0x0,0x0,0x0,0x0,0x0,0x0,0x0
 Lux,LuxNameText,LuxDescText,Lux,Mage_F,LuxMug,0x0,WindAff,0x0,1,4,4,6,6,5,1,2,5,0,0,0,0,0,Brank,0,0,75,20,45,35,20,25,30,0x0,0x0,0x0,0x0,0x0,0x0,0x0
 Yvette,YvetteNameText,YvetteDescText,Yvette,PegasusKnight,YvetteMug,0x0,WindAff,0x0,4,7,3,5,4,4,5,9,2,0,Drank,0,0,0,0,0,0,80,40,50,50,25,45,15,0x0,0x0,0x0,0x0,0x0,0x0,0x0
 Zalius,ZaliusNameText,ZaliusDescText,Zalius,Swordmaster,ZaliusMug,0x0,ThunderAff,0x0,1,7,7,7,8,2,6,8,0,Arank,0,0,0,0,0,0,0,90,45,45,45,20,35,30,0x0,0x0,IsBoss,0x0,0x0,0x0,0x0
@@ -62,7 +62,7 @@ Finoc,FinocNameText,FinocDescText,Finoc,WyvernRider,FinocMug,0x0,WindAff,0x0,1,8
 Xexim,XeximNameText,XeximDescText,Xexim,Assassin,XeximMug,0x0,WindAff,0x0,1,17,13,17,16,9,10,9,2,Srank,0,0,Arank,0,0,0,0,85,35,55,40,15,30,40,0x0,0x0,0x0,0x0,0x0,0x0,0x0
 Rex,RexNameText,RexDescText,Rex,GrandPaladin,RexMug,0x0,WindAff,0x0,1,8,7,9,7,4,2,10,3,0,0,0,0,0,0,0,0,90,45,40,45,30,30,50,0x0,0x0,IsBoss,0x0,0x0,0x0,0x0
 Sekar,SekarNameText,SekarDescText,Sekar,Fighter,SekarMug,0x0,FireAff,0x0,1,6,3,5,5,3,2,5,3,0,0,Brank,0,0,0,0,0,80,45,55,30,25,15,50,0x0,0x0,0x0,0x0,0x0,0x0,0x0
-Zaheva,ZahevaNameText,ZahevaDescText,Zaheva,Mercenary_F,ZahevaMug,0x0,WindAff,0x0,1,10,4,3,3,5,3,3,2,Crank,0,0,0,0,0,0,0,95,35,40,30,25,35,50,0x0,0x0,0x0,0x0,0x0,0x0,0x0
+Zaheva,ZahevaNameText,ZahevaDescText,Zaheva,Mercenary_F,ZahevaMug,0x0,WindAff,0x0,1,10,6,3,3,5,3,3,2,Crank,0,0,0,0,0,0,0,95,40,40,30,25,35,50,0x0,0x0,0x0,0x0,0x0,0x0,0x0
 Adeline,AdelineNameText,AdelineDescText,Adeline,Archer_F,AdelineMug,0x0,WaterAff,0x0,1,6,4,4,4,2,2,5,4,0,0,0,Crank,0,0,0,0,75,35,45,40,15,20,30,0x0,0x0,0x0,0x0,0x0,0x0,0x0
 Remus,RemusNameText,RemusDescText,Remus,Soldier,RemusMug,0x0,AnimaAff,0x0,1,8,4,4,4,3,1,4,2,0,Crank,0,0,0,0,0,0,90,35,40,40,25,20,25,0x0,0x0,0x0,0x0,0x0,0x0,0x0
 0x42,0x0,0x0,0x42,0x0,0x0,0x0,NoAff,0x0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0x0,0x0,0x0,0x0,0x0,0x0,0x0
