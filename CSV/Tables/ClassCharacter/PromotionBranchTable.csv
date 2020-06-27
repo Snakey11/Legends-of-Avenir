@@ -97,27 +97,27 @@ SeraphKnight,0x0,0x0
 0x70 Civilian (F),0x0,0x0
 0x71 Civilian,0x0,0x0
 0x72 Civilian (F),0x0,0x0
-MageM2,MagusM,0x0
-MageF2,MagusF,0x0
-ShamanM2,DarkKnightM,0x0
-ShamanF2,DarkKnightF,0x0
-MonkM2,Patriarch,0x0
-MonkF2,Matriarch,0x0
-CavalierM2,MasterKnightM,0x0
-CavalierF2,MasterKnightF,0x0
-Knight2,Baron,0x0
-SoldierM2,ImpalerM,0x0
-WyvernRider2,WyvernGeneral,0x0
-ArcherM2,HunterM,0x0
-ArcherF2,HunterF,0x0
-MercenaryM2,Champion,0x0
-MercenaryF2,ChampionF,0x0
-Fighter2,Warlock,0x0
-Brigand2,MountedBrigand,0x0
-Pirate2,Gladiator,0x0
-MyrmidonM2,TruebladeM,0x0
-MyrmidonF2,TruebladeF,0x0
-PegasusKnight2,BlackFalcoknight,0x0
+MageM2,Sage,MageKnight
+MageF2,Sage_F,MageKnight_F
+ShamanM2,Druid,Summoner
+ShamanF2,Druid_F,Summoner_F
+MonkM2,Bishop,Sage
+MonkF2,Bishop_F,Sage_F
+CavalierM2,Paladin,GreatKnight
+CavalierF2,Paladin_F,GreatKnight_F
+Knight2,General,GreatKnight_F
+SoldierM2,Sentinel,Halberdier
+WyvernRider2,WyvernLord,WyvernKnight
+ArcherM2,Sniper,Ranger
+ArcherF2,Sniper_F,Ranger_F
+MercenaryM2,Hero,Ranger
+MercenaryF2,Hero_F,Ranger_F
+Fighter2,Warrior,Hero
+Brigand2,Berserker,Warrior
+Pirate2,Berserker,Warrior
+MyrmidonM2,Swordmaster,Assassin
+MyrmidonF2,Swordmaster_F,Assassin_F
+PegasusKnight2,Falcoknight,WyvernKnight_F
 Halberdier,0x0,0x0
 Sentinel,0x0,0x0
 JacketHero,0x0,0x0
@@ -142,7 +142,7 @@ EdgySwordmaster,0x0,0x0
 EmperorClass,0x0,0x0
 MurielSage,0x0,0x0
 ImpalerF,0x0,0x0
-SoldierF2,ImpalerF,0x0
+SoldierF2,Halberdier,Sentinel
 BowKnight,0x0,0x0
 HighPriest,0x0,0x0
 DreadFighterM,0x0,0x0
