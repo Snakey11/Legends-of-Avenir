@@ -1,0 +1,54 @@
+
+#ifdef _FE8_
+	
+	// I'm going to install animations with a separate instance of EA because they don't change much, and they're added at the start of the ROM. They take up a significant amount of processing time.
+	#include "Tools/Tool Helpers.txt"
+	#include "EAstdlib.event"
+	#include "Extensions/Hack Installation.txt"
+	#include "Definitions.event"
+
+	#define FreeSpace
+	#define Free_Space
+	#define FreeSpaceA $B2A610
+	#define FreeSpaceB $E47200
+	#define FreeSpaceC $EFB2E0
+	
+	#define EndOfROM $FE4000
+	#define EndofROM EndOfROM
+	
+	ORG FreeSpaceA
+	
+	ORG CURRENTOFFSET + 0x08
+	ClassAnimTable:
+	ORG CURRENTOFFSET + 0x20 * 0x200 // Allocate 0x200 entries for the ClassAnimTable.
+	PUSH
+	ORG ClassAnimTable
+	#incbin "CSV/ClassAnimTable.dmp" // Vanilla ClassAnimTable.
+	POP
+	{
+	#include "Graphics/Battle Animations/Battle Animations 2.event" // FULL!
+	}
+	MESSAGE First animation block ends at CURRENTOFFSET
+	ASSERT $C00000 - CURRENTOFFSET
+	
+	ORG FreeSpaceB
+	{
+	#include "Graphics/Battle Animations/Battle Animations 1.event" // FULL!
+	}
+	MESSAGE Second animation block ends at CURRENTOFFSET
+	ASSERT $EE0000 - CURRENTOFFSET
+	
+	ORG FreeSpaceC
+	{
+	#include "Graphics/Battle Animations/Battle Animations 3.event" // FULL!
+	}
+	MESSAGE Third animation block ends at CURRENTOFFSET
+	ASSERT $FE0000 - CURRENTOFFSET
+	
+	ORG EndofROM
+	{
+	#include "Graphics/Battle Animations/Battle Animations 4.event"
+	}
+	MESSAGE Fourth animation block ends at CURRENTOFFSET
+	
+#endif // _FE8_

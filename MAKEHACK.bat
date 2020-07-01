@@ -6,7 +6,7 @@ echo ---------------------------
 
 cd %~dp0
 
-copy Clean.gba "Avenir.gba"
+copy "WithAnimations.gba" "Avenir.gba"
 
 if exist "Avenir.sav" (
 	copy "Avenir.sav" "../Tools/No$GBADebugger/BATTERY/Avenir.SAV"
