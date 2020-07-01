@@ -56,11 +56,7 @@ END_MAIN
 //Label MiscBasedEvents
 MiscBasedEvents:
 CauseGameOverIfLordDies
-#ifndef __PRIVATE__
-#ifndef __PUBLIC__
 DefeatBoss(EndingScene) // This split doesn't exist yet!
-#endif
-#endif
 END_MAIN
 
 //Label TrapData
