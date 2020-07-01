@@ -135,6 +135,8 @@ StaffEXPEntry(0,0,0)
 ALIGN 4
 #include "ModularMinimugBox/MMB Installer Default.event"
 
+#include "MultiTileMarker/MultiTileMarker_Install.event"
+
 ALIGN 4
 #include "NameSelection/SetName.lyn.event"
 KendrickName:
