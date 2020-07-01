@@ -113,7 +113,7 @@ POP
 
 // Completely rewrite ComputeExpFromBattle and GetBattleUnitStaffExp.
 #include "ModularerEXP/ModularerEXP.lyn.event"
-#define StaffEXPEntry(Item,T1EXP,T2EXP) "BYTE Item T1EXP T1EXP 0"
+#define StaffEXPEntry(Item,T1EXP,T2EXP) "BYTE Item T1EXP T2EXP 0"
 StaffEXPList:
 StaffEXPEntry(Heal,20,10)
 StaffEXPEntry(Mend,25,15)
