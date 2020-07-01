@@ -160,15 +160,15 @@ SVAL 0x3 3
 SVAL 0x4 4
 BGT 0x0 0x4 0xC
 	// 4 or more greens are alive.
-	GiveToSupplySilent(BraveLance)
+	GiveToSupplySilent(EnergyRing)
 LABEL 0x0
 BNE 0x1 0x3 0xC
 	// 3 greens are alive.
-	GiveToSupplySilent(SilverSword)
+	GiveToSupplySilent(SpiritDust)
 LABEL 0x1
 BNE 0x2 0x2 0xC
 	// 2 greens are alive.
-	GiveToSupplySilent(SpiritDust)
+	GiveToSupplySilent(SilverAxe)
 LABEL 0x2
 BNE 0x3 0x1 0xC
 	// 1 green is alive.
