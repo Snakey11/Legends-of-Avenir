@@ -158,5 +158,17 @@ Crt[.][X]
 ## CAvdText
 Ddg[.][X]
 
+## Test1Text
+Test[X]
+
+## Test2Text
+Test 2[X]
+
+## Test1DescText
+This is a desc.[X]
+
+## Test2DescText
+This is another desc,[X]
+
 ## FinalTextID
 [X]

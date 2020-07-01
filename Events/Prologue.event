@@ -311,7 +311,7 @@ EndConvo
 //ENUF 0x6E
 //ENUF 0x67
 //ENUF 0x68
-STAL 0x30
+ASMC CallCharacterCreator|1
 Text(PrologueOpeningNarratorText)
 FADI 0x5
 DISA Narrator

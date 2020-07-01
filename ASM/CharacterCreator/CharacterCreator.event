@@ -1,0 +1,57 @@
+
+#ifndef CHARACTER_CREATOR
+	#define CHARACTER_CREATOR
+	
+	#include "CharacterCreator.lyn.event"
+	
+	#define GenericMenuRPress 0x0804F520
+	#define GenericMakeHelpBox 0x0804F458
+	
+	ALIGN 4
+	gCreatorProc:
+	PROC_SET_NAME(gCreatorProcName)
+	PROC_CALL_ROUTINE(SetupCreator)
+	
+	PROC_LABEL(0x00) // Gender menu.
+	PROC_CALL_ROUTINE(CreatorStartNextMenu)
+	PROC_LOOP_ROUTINE(CreatorWaitForMenuToEnd)
+	
+	PROC_END
+	
+	gCreatorProcName:
+	String("CHARACTER_CREATOR") ; BYTE 0x00
+	
+	
+	#define MenuCommand(name,description,color,usability,onDraw,effect,idle,switchIn,switchOut) "WORD 0 ; SHORT name description ; WORD color ; POIN usability onDraw effect idle switchIn switchOut"
+	
+	ALIGN 4
+	gCreatorGenderMenuDefs:
+	BYTE 4 6 8 0 // X, Y, Width, Height.
+	WORD 1 // Style.
+	POIN gCreatorGenderMenuCommands
+	POIN 0 0 0 CreatorRegressMenu GenericMenuRPress|1 GenericMakeHelpBox|1
+	
+	gCreatorGenderMenuCommands:
+	MenuCommand(PrologueMaleMenuText,Test1DescText,NormalText,CreatorReturnTrue,0,CreatorProgressMenu,0,0,0)
+	MenuCommand(PrologueFemaleMenuText,Test2DescText,NormalText,CreatorReturnTrue,0,CreatorProgressMenu,0,0,0)
+	WORD 0 0 0 0 0 0 0 0 0
+	
+	gGenderEventID:
+	SHORT GenderEventID
+	ALIGN 4
+	
+	gCreatorPathMenuDefs:
+	BYTE 4 6 8 0
+	WORD 1
+	POIN gCreatorPathMenuCommands
+	POIN 0 0 0 CreatorRegressMenu GenericMenuRPress|1 GenericMakeHelpBox|1
+	
+	#define PrologueMercenaryMenuText 0x2C6
+	#define PrologueMageMenuText 0x2D1
+	gCreatorPathMenuCommands:
+	MenuCommand(PrologueMercenaryMenuText,Test1DescText,NormalText,CreatorReturnTrue,0,CreatorProgressMenu,0,0,0)
+	MenuCommand(PrologueMilitaryMenuText,Test1DescText,NormalText,CreatorReturnTrue,0,CreatorProgressMenu,0,0,0)
+	MenuCommand(PrologueMageMenuText,Test1DescText,NormalText,CreatorReturnTrue,0,CreatorProgressMenu,0,0,0)
+	WORD 0 0 0 0 0 0 0 0 0
+	
+#endif // CHARACTER_CREATOR

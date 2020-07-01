@@ -52,6 +52,8 @@ ALIGN 4
 ALIGN 4
 //#include "ChangeChapterObjective/Installer.event"
 
+#include "CharacterCreator/CharacterCreator.event"
+
 ALIGN 4
 #include "Class Expansion.event"
 
