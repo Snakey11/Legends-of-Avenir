@@ -286,6 +286,10 @@ ALIGN 4
 Units:
 UNIT
 
+TestChar:
+UNIT PlayerMCavalier CavalierM2 0x00 Level(1,Ally,True) [0,255] 0x00 0x00 0x00 0x00 [IronSword] NoAI
+UNIT
+
 BeginningScene:
 //ASMC SetName|1
 MUSC PrologueMusic
@@ -304,26 +308,29 @@ EnterStop
 //STAL 0x10
 //ASMC StartSmallWorldMap|1
 STAL 0x40
-LOAD1 0x1 LoadNarrator
-ENUN
+//LOAD1 0x1 LoadNarrator
+//ENUN
 EndConvo
 //EndConvo
 //ENUF 0x6E
 //ENUF 0x67
 //ENUF 0x68
+LOAD1 0x1 TestChar
+ENUN
+CLEA 0x0
 ASMC CallCharacterCreator|1
 Text(PrologueOpeningNarratorText)
 FADI 0x5
-DISA Narrator
+//DISA Narrator
 ASMC 0x48281
 LOMA Prologue
-LOAD1 0x1 LoadNarrator
-ENUN
+//LOAD1 0x1 LoadNarrator
+//ENUN
 FADU 0x5
 Text(PrologueWhatGenderText)//Asks for gender
 
 STAL 0x20
-ASMC CallGenderMenu+1
+//ASMC CallGenderMenu+1
 BNE 0x0 0xC 0x0
 	ENUT 0x6E//0x6E triggered = male
 	GOTO 0x1
@@ -333,7 +340,7 @@ LABEL 0x1
 
 Text(PrologueWhatClassText)//Narrator talks about paths
 
-ASMC CallClassMenu+1
+//ASMC CallClassMenu+1
 #ifndef __NO_MAGE__
 BEQ 0x2 0xC 0x0
 	GOTO 0x3
@@ -357,6 +364,9 @@ LABEL 0x6
 	ENUT 0x68//0x68 triggered = military mode
 LABEL 0x7
 #endif
+
+ENUF 0x67
+ENUF 0x68
 
 CHECK_EVENTID 0x68
 BEQ 0x9 0xC 0x0

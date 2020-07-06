@@ -158,6 +158,80 @@ Crt[.][X]
 ## CAvdText
 Ddg[.][X]
 
+## GenderMenuText
+Gender[X]
+
+## RouteMenuText
+Route[X]
+
+## ClassMenuText
+Class[X]
+
+## BaneMenuText
+Bane[X]
+
+## BoonMenuText
+Boon[X]
+
+## MaleMenuText
+Male[X]
+
+## FemaleMenuText
+Female[X]
+
+## MercenaryMenuText
+Mercenary[X]
+
+## MilitaryMenuText
+Military[X]
+
+## MageMenuText
+Mage[X]
+
+## ClassMenuErrorText
+Select a gender and route[NL]
+before choosing a class.[X]
+
+## BaneMenuErrorText
+Select a gender, route, and[NL]
+class before choosing a bane.[X]
+
+## BoonMenuErrorText
+Select a gender, route, and[NL]
+class before choosing a boon.[X]
+
+## HPMenuText
+HP[X]
+
+## StrMenuText
+Strength[X]
+
+## MagMenuText
+Magic[X]
+
+## SklMenuText
+Skill[X]
+
+## SpdMenuText
+Speed[X]
+
+## DefMenuText
+Defense[X]
+
+## ResMenuText
+Resistance[X]
+
+## LukMenuText
+Luck[X]
+
+## BaneMenuItemErrorText
+You've already chosen[NL]
+this stat as a boon![X]
+
+## BoonMenuItemErrorText
+You've already chosen this[NL]
+stat as a bane![X]
+
 ## Test1Text
 Test[X]
 

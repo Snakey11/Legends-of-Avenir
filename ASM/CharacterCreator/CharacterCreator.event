@@ -2,10 +2,34 @@
 #ifndef CHARACTER_CREATOR
 	#define CHARACTER_CREATOR
 	
+	#include "ProcDefinitions.event"
+	
 	#include "CharacterCreator.lyn.event"
 	
 	#define GenericMenuRPress 0x0804F520
 	#define GenericMakeHelpBox 0x0804F458
+	#define gCreatorRAMMenu 0x0203EFB8
+	
+	#define CreatorClassSetup $CCD48
+	#define CreatorClassDisplayLoop $CD014
+	PUSH // For temporarily hijacking the promotion menu drawing functions.
+	ORG $CCD74
+	SHORT 0xE00E
+	ORG $CCDA8
+	SHORT 0x46C0 0x46C0
+	ORG $CCF22
+	SHORT 0xE014
+	ORG $CD1C0
+	SHORT 0x46C0 0x46C0
+	
+	ORG $CC2A0 // Increase battle sprite height.
+	BYTE 0x30
+	ORG $CD148
+	BYTE 0x30
+	
+	ORG $CCDB2 // Increase platform height.
+	BYTE 0x3E
+	POP
 	
 	ALIGN 4
 	gCreatorProc:
@@ -13,45 +37,154 @@
 	PROC_CALL_ROUTINE(SetupCreator)
 	
 	PROC_LABEL(0x00) // Gender menu.
-	PROC_CALL_ROUTINE(CreatorStartNextMenu)
-	PROC_LOOP_ROUTINE(CreatorWaitForMenuToEnd)
+	PROC_CALL_ROUTINE(CreatorStartMenu)
+	PROC_YIELD
 	
 	PROC_END
 	
 	gCreatorProcName:
 	String("CHARACTER_CREATOR") ; BYTE 0x00
 	
+	ALIGN 4
+	gCreatorClassProc:
+	PROC_SET_NAME(gCreatorClassProcName)
+	PROC_CALL_ROUTINE(CreatorClassSetup|1)
+	PROC_CALL_ROUTINE(CreatorClassMoreSetup)
+	PROC_LOOP_ROUTINE(CreatorClassDisplayLoop|1)
+	
+	PROC_END
+	
+	gCreatorClassProcName:
+	String("CREATOR_CLASS_DISPLAY") ; BYTE 0x00
 	
 	#define MenuCommand(name,description,color,usability,onDraw,effect,idle,switchIn,switchOut) "WORD 0 ; SHORT name description ; WORD color ; POIN usability onDraw effect idle switchIn switchOut"
 	
 	ALIGN 4
+	gCreatorMainMenuDefs:
+	BYTE 2 4 6 0
+	WORD 1
+	POIN gCreatorMainMenuCommands
+	POIN 0 0 0 CreatorNoBPress GenericMenuRPress|1 GenericMakeHelpBox|1
+	
+	gCreatorMainMenuCommands: // These are also indexed with their menu definitions in CharacterCreator.c.
+	MenuCommand(GenderMenuText,Test1DescText,NormalText,CreatorMainEntryUsability,0,CreatorMainGotoEntry,0,0,0)
+	MenuCommand(RouteMenuText,Test1DescText,NormalText,CreatorMainEntryUsability,0,CreatorMainGotoEntry,0,0,0)
+	MenuCommand(ClassMenuText,Test1DescText,NormalText,CreatorMainEntryUsability,0,CreatorMainGotoEntry,0,0,0)
+	MenuCommand(BoonMenuText,Test1DescText,NormalText,CreatorMainEntryUsability,0,CreatorMainGotoEntry,0,0,0)
+	MenuCommand(BaneMenuText,Test1DescText,NormalText,CreatorMainEntryUsability,0,CreatorMainGotoEntry,0,0,0)
+	WORD 0 0 0 0 0 0 0 0 0
+	
+	gMainMenuErrorTexts:
+	SHORT 0x00 0x00 ClassMenuErrorText BoonMenuErrorText BaneMenuErrorText
+	
+	ALIGN 4
 	gCreatorGenderMenuDefs:
-	BYTE 4 6 8 0 // X, Y, Width, Height.
+	BYTE 2 6 6 0 // X, Y, Width, Height.
 	WORD 1 // Style.
 	POIN gCreatorGenderMenuCommands
 	POIN 0 0 0 CreatorRegressMenu GenericMenuRPress|1 GenericMakeHelpBox|1
 	
 	gCreatorGenderMenuCommands:
-	MenuCommand(PrologueMaleMenuText,Test1DescText,NormalText,CreatorReturnTrue,0,CreatorProgressMenu,0,0,0)
-	MenuCommand(PrologueFemaleMenuText,Test2DescText,NormalText,CreatorReturnTrue,0,CreatorProgressMenu,0,0,0)
+	MenuCommand(MaleMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
+	MenuCommand(FemaleMenuText,Test2DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
 	WORD 0 0 0 0 0 0 0 0 0
 	
-	gGenderEventID:
-	SHORT GenderEventID
 	ALIGN 4
-	
-	gCreatorPathMenuDefs:
-	BYTE 4 6 8 0
+	gCreatorRouteMenuDefs:
+	BYTE 2 6 8 0
 	WORD 1
-	POIN gCreatorPathMenuCommands
+	POIN gCreatorRouteMenuCommands
 	POIN 0 0 0 CreatorRegressMenu GenericMenuRPress|1 GenericMakeHelpBox|1
 	
-	#define PrologueMercenaryMenuText 0x2C6
-	#define PrologueMageMenuText 0x2D1
-	gCreatorPathMenuCommands:
-	MenuCommand(PrologueMercenaryMenuText,Test1DescText,NormalText,CreatorReturnTrue,0,CreatorProgressMenu,0,0,0)
-	MenuCommand(PrologueMilitaryMenuText,Test1DescText,NormalText,CreatorReturnTrue,0,CreatorProgressMenu,0,0,0)
-	MenuCommand(PrologueMageMenuText,Test1DescText,NormalText,CreatorReturnTrue,0,CreatorProgressMenu,0,0,0)
+	gCreatorRouteMenuCommands:
+	MenuCommand(MercenaryMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
+	MenuCommand(MilitaryMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
+	MenuCommand(MageMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
 	WORD 0 0 0 0 0 0 0 0 0
+	
+	ALIGN 4
+	gCreatorClassMenuDefs:
+	BYTE 2 1 9 0
+	WORD 1
+	WORD gCreatorRAMMenu // We generate this menu in RAM because it depends on what route they chose.]
+	POIN 0 0 0 CreatorRegressMenu GenericMenuRPress|1 GenericMakeHelpBox|1
+	
+	#define CreatorMale 1
+	#define CreatorFemale 2
+	#define CreatorMercenary 1
+	#define CreatorMilitary 2
+	#define CreatorMage 3
+	#define ClassMenuOption(Gender,Route,Character1,Class1,Character2,Class2,Character3,Class3,Character4,Class4,Character5,Class5) "BYTE Gender Route Character1 Class1 Character2 Class2 Character3 Class3 Character4 Class4 Character5 Class5"
+	gClassMenuOptions:
+	ClassMenuOption(CreatorMale,CreatorMercenary,PlayerMMercenary,MercenaryM2,PlayerMMyrmidon,MyrmidonM2,PlayerMFighter,Fighter2,PlayerMPirate,Pirate2,PlayerMBrigand,Brigand2)
+	ClassMenuOption(CreatorFemale,CreatorMercenary,PlayerFMercenary,MercenaryF2,PlayerFMyrmidon,MyrmidonF2,PlayerFPegasusKnight,PegasusKnight2,0,0,0,0)
+	ClassMenuOption(CreatorMale,CreatorMilitary,PlayerMCavalier,CavalierM2,PlayerMKnight,KnightM2,PlayerMSoldier,SoldierM2,PlayerMWyvernRider,WyvernRiderM2,PlayerMArcher,ArcherM2)
+	ClassMenuOption(CreatorFemale,CreatorMilitary,PlayerFCavalier,CavalierF2,PlayerFKnight,KnightF2,PlayerFSoldier,SoldierF2,PlayerFWyvernRider,WyvernRiderF2,PlayerFArcher,ArcherF2)
+	ClassMenuOption(CreatorMale,CreatorMage,PlayerMMage,MageM2,PlayerMMonk,MonkM2,PlayerMShaman,ShamanM2,0,0,0,0)
+	ClassMenuOption(CreatorFemale,CreatorMage,PlayerFMage,MageF2,PlayerFMonk,MonkF2,PlayerFShaman,ShamanF2,0,0,0,0)
+	WORD 0 0 0
+	
+	ALIGN 4
+	gCreatorBaneMenuDefs:
+	gCreatorBoonMenuDefs: /////
+	BYTE 2 1 8 0
+	WORD 1
+	POIN gCreatorBaneMenuCommands
+	POIN 0 0 0 CreatorRegressMenu GenericMenuRPress|1 GenericMakeHelpBox|1
+	
+	gCreatorBaneMenuCommands:
+	gCreatorBoonMenuCommands:
+	MenuCommand(HPMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
+	MenuCommand(StrMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
+	MenuCommand(MagMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
+	MenuCommand(SklMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
+	MenuCommand(SpdMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
+	MenuCommand(DefMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
+	MenuCommand(ResMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
+	MenuCommand(LukMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
+	WORD 0 0 0 0 0 0 0 0 0
+	
+	gBaneMenuItemErrorText:
+	SHORT BaneMenuItemErrorText
+	gBoonMenuItemErrorText:
+	SHORT BoonMenuItemErrorText
+	
+	/*
+	What do we want displayed on each screen?
+	
+	MAIN MENU:
+		Gender chosen - probably normal text.
+		Route chosen - probably normal text.
+		Class chosen - normal text + map sprite.
+		Bane chosen - normal text (including the stat name of the bane and its effect).
+		Boon chosen - same as bane.
+	
+	GENDER MENU:
+		No change from main menu?
+		
+	CLASS MENU:
+		It would be really cool to use the animation display used in promotion screens...
+		Maybe stat display instead... I wonder if we can fit both?
+		Both updated on scrolling through the menu.
+		
+	BANE/BOON MENU:
+		Class stats and bane/boon effect updated on scroll through the menu.
+		
+	"Promotion-style" battle animation display notes:
+		Handled by a PromotionDisplay_MainLoop (0x080CD014). Only parameter is parent proc (0x08B1271C).
+		Invoking its associated proc is probably not an option because it appears to refer heavily to ITS parent and does stuff to actually start the promotion?
+		Function call at 0x080CD14A sets up the battle animation?
+		Function call at 0x080CD160 draws the platform (and the battle animation?)
+		(Array of halfwords) parent+0x2C seems to be a list of class IDs indexed by their position in the menu.
+		This function is looped through by a dedicated proc that handles this. Its current "mode" is parent+0x40 as a byte?
+			0 = Idle (already drawn and waiting).
+			1 = Initial draw. (Also sliding backwards?) Setting this to 1 while it's idle causes it to slide back then out again.
+			2 = Currently sliding in.
+		(Byte) parent+0x41 seems to be which menu item we're in.
+		(Halfword) parent+0x42 is character ID.
+		(Halfword) parent+0x44 is frame count.
+		
+		It shouldn't be too hard to "trick" this function into thinking it's an actual promotion menu.
+	*/
 	
 #endif // CHARACTER_CREATOR
