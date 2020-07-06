@@ -19,7 +19,7 @@ bne EndFalse @ Disable promotion while cantoing
 ldrb r1, [ r0, #0x08 ]
 cmp r1, #15
 blt EndFalse
-@ So the unit is above level 10. Aren't you special.
+@ So the unit is above level 15.
 
 ldr r0, [ r0, #0x04 ]
 mov r1, #41
@@ -28,7 +28,6 @@ mov r1, #0x01
 tst r0, r1
 bne EndFalse
 
-@ So we have a promotable unit... Spooky.
 @ EndTrue:
 mov r0, #0x01
 bx lr
