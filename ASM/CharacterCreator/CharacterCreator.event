@@ -36,9 +36,14 @@
 	PROC_SET_NAME(gCreatorProcName)
 	PROC_CALL_ROUTINE(SetupCreator)
 	
-	PROC_LABEL(0x00) // Gender menu.
+	PROC_LABEL(0x00)
 	PROC_CALL_ROUTINE(CreatorStartMenu)
 	PROC_YIELD
+	
+	PROC_LABEL(0x01) // Jumped to at the end of the class menu to wait for the platform to slide back.
+	PROC_WHILE_ROUTINE(CreatorWaitForSlideOut)
+	PROC_BREAK_ALL_LOOP(gCreatorClassProc)
+	PROC_GOTO(0x00)
 	
 	PROC_END
 	
@@ -49,9 +54,9 @@
 	gCreatorClassProc:
 	PROC_SET_NAME(gCreatorClassProcName)
 	PROC_CALL_ROUTINE(CreatorClassSetup|1)
-	PROC_CALL_ROUTINE(CreatorClassMoreSetup)
 	PROC_LOOP_ROUTINE(CreatorClassDisplayLoop|1)
-	
+	// We're here if we need to terminate the proc.
+	PROC_CALL_ROUTINE(CreatorClassEndProc)
 	PROC_END
 	
 	gCreatorClassProcName:
@@ -124,9 +129,15 @@
 	ClassMenuOption(CreatorFemale,CreatorMage,PlayerFMage,MageF2,PlayerFMonk,MonkF2,PlayerFShaman,ShamanF2,0,0,0,0)
 	WORD 0 0 0
 	
+	gCreatorAppropriateItemArray:
+	BYTE IronSword IronLance IronAxe IronBow Heal Fire Light Flux
+	
+	gCreatorVulnerary:
+	BYTE Vulnerary
+	
 	ALIGN 4
 	gCreatorBaneMenuDefs:
-	gCreatorBoonMenuDefs: /////
+	gCreatorBoonMenuDefs:
 	BYTE 2 1 8 0
 	WORD 1
 	POIN gCreatorBaneMenuCommands

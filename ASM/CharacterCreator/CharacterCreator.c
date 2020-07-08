@@ -5,6 +5,7 @@
 typedef struct ClassMenuSet ClassMenuSet;
 typedef struct CreatorProc CreatorProc;
 typedef struct CreatorClassProc CreatorClassProc;
+typedef struct UnitDefinition UnitDefinition;
 
 #define GenderMenu 0
 #define RouteMenu 1
@@ -37,6 +38,8 @@ struct CreatorProc
 	u8 boon; // Same indicators as bane.
 	u8 bane; // 0 = unselected, 1 = HP, 2 = str, 3 = mag, 4 = skl,  ..., 8 = luk.
 	ClassMenuSet* currSet; // Used in the class submenu usability/effect.
+	Unit* unit; // Unit loaded by the class menu.
+	u8 classFrames; // Frame count when waiting for the class proc to slide back.
 };
 
 struct CreatorClassProc
@@ -48,17 +51,22 @@ struct CreatorClassProc
 	u8 mode; // 0x40.
 	u8 menuItem; // 0x41.
 	u16 charID; // 0x42.
-	u16 frameCount; // 0x44.
 };
 
+struct SomeAISStruct {};
+
+extern UnitDefinition gCreatorUnitBuffer; // 0x2020188. gGenericBuffer.
 extern u16 gBG0MapBuffer[32][32]; // 0x02022CA8. Ew why does FE-CLib-master not do it like this?
 extern MenuCommandDefinition gRAMMenuCommands[]; // 0x0203EFB8.
+extern AnimationInterpreter gSomeAISStruct; // 0x030053A0.
+extern struct SomeAISStruct gSomeAISRelatedStruct; // 0x0201FADC.
 
-extern ProcInstruction gProc_Menu;
-extern ProcInstruction gProc_PromotionDisplay;
 extern void ReloadGameCoreGraphics(void);
-extern void NewPromotion(Proc* proc);
-extern void PromotionDisplay_MainLoop(Proc* proc);
+extern void DeleteSomeAISStuff(AnimationInterpreter* interpreter); // 0x0805AA28.
+extern void DeleteSomeAISProcs(struct SomeAISStruct* obj); // 0x0805AE14.
+extern void EndEkrAnimeDrvProc(void);
+extern void RefreshEntityMaps(void);
+extern void DrawTileGraphics(void);
 
 extern const ProcInstruction gCreatorProc;
 extern const ProcInstruction gCreatorClassProc;
@@ -72,6 +80,8 @@ extern const MenuCommandDefinition gCreatorRouteMenuCommands[];
 extern const MenuDefinition gCreatorClassMenuDefs;
 extern const MenuCommandDefinition gCreatorClassMenuCommands[];
 extern ClassMenuSet gClassMenuOptions[];
+extern const u8 gCreatorAppropriateItemArray[8];
+extern const u8 gCreatorVulnerary;
 extern const MenuDefinition gCreatorBoonMenuDefs;
 extern const MenuCommandDefinition gCreatorBoonMenuCommands[];
 extern const u16 gBoonMenuItemErrorText;
@@ -89,6 +99,7 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc);
 int CreatorRegressMenu(void);
 int CreatorNoBPress(void);
 static ClassMenuSet* GetClassSet(int gender,int route);
+static int GetAppropriateItem(int class);
 
 void CallCharacterCreator(Proc* proc) // Presumably ASMCed. Block the event engine and start running our character creator.
 {
@@ -108,31 +119,37 @@ void SetupCreator(CreatorProc* proc)
 	proc->currSet = NULL;
 }
 
-void CallClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
+void CreatorActivateClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 {
-	ProcStart(&gCreatorClassProc,ProcFind(&gCreatorProc));
+	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
+	// Lets load the unit that corresponds to the currently selected item.
+	CPU_FILL(0,(char*)&gCreatorUnitBuffer-1,sizeof(UnitDefinition),32); // Clear our unit buffer (gGenericBuffer).
+	int index = commandProc->commandDefinitionIndex;
+	gCreatorUnitBuffer.charIndex = creator->currSet->list[index].character;
+	gCreatorUnitBuffer.classIndex = creator->currSet->list[index].class;
+	gCreatorUnitBuffer.autolevel = 1;
+	gCreatorUnitBuffer.allegiance = UA_BLUE;
+	gCreatorUnitBuffer.level = 5;
+	gCreatorUnitBuffer.xPosition = 63;
+	gCreatorUnitBuffer.yPosition = 0;
+	gCreatorUnitBuffer.items[0] = GetAppropriateItem(gCreatorUnitBuffer.classIndex);
+	gCreatorUnitBuffer.items[1] = gCreatorVulnerary;
+	creator->unit = LoadUnit(&gCreatorUnitBuffer);
+	// Now I'd like to draw the unit's stats near the bottom of the screen.
+	Text_DrawNumber(NULL,12);
+	
+	CreatorClassProc* classProc = (CreatorClassProc*)ProcFind(&gCreatorClassProc);
+	classProc->mode = 1;
+	for ( int i = 0 ; i < 5 ; i++ ) { classProc->classes[i] = creator->currSet->list[i].class; }
+	classProc->menuItem = index;
+	classProc->charID = creator->unit->pCharacterData->number;
+	creator->classFrames = 0;
 }
 
-void RetractClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
+void CreatorRetractClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 {
 	CreatorClassProc* classProc = (CreatorClassProc*)ProcFind(&gCreatorClassProc);
 	if ( classProc ) { classProc->mode = 1; }
-}
-
-void CreatorClassMoreSetup(CreatorClassProc* proc)
-{
-	Unit* unit = GetUnit(1);
-	int class = unit->pClassData->number;
-	for ( int i = 0 ; i < 5 ; i++ ) { proc->classes[i] = class; }
-	proc->mode = 1;
-	proc->menuItem = 0;
-	proc->charID = unit->pCharacterData->number;
-}
-
-void CreatorUpdateClassProc(CreatorProc* proc)
-{
-	CreatorClassProc* classCreator = (CreatorClassProc*)ProcFind(&gCreatorClassProc);
-	if ( classCreator ) { classCreator->mode = 2; }
 }
 
 void CreatorStartMenu(CreatorProc* proc)
@@ -177,11 +194,12 @@ void CreatorStartMenu(CreatorProc* proc)
 				gRAMMenuCommands[i].colorId = 0;
 				gRAMMenuCommands[i].isAvailable = CreatorSubmenuUsability;
 				gRAMMenuCommands[i].onEffect = CreatorSubmenuEffect;
-				gRAMMenuCommands[i].onSwitchIn = CallClassDisplay;
-				gRAMMenuCommands[i].onSwitchOut = RetractClassDisplay;
+				gRAMMenuCommands[i].onSwitchIn = CreatorActivateClassDisplay;
+				gRAMMenuCommands[i].onSwitchOut = CreatorRetractClassDisplay;
 				proc->currSet = set;
 			}
 			StartMenuChild(&gCreatorClassMenuDefs,(Proc*)proc);
+			ProcStart(&gCreatorClassProc,(Proc*)proc);
 			break;
 		case BoonMenu: StartMenuChild(&gCreatorBoonMenuDefs,(Proc*)proc); break;
 		case BaneMenu: StartMenuChild(&gCreatorBaneMenuDefs,(Proc*)proc); break;
@@ -254,7 +272,9 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
 				creator->bane = 0;
 				creator->boon = 0;
 				creator->gender = commandProc->commandDefinitionIndex+1;
+				creator->unit = NULL;
 			}
+			ProcGoto((Proc*)creator,0);
 			break;
 		case RouteMenu:
 			if ( creator->route != commandProc->commandDefinitionIndex+1 )
@@ -265,11 +285,16 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
 				creator->bane = 0;
 				creator->boon = 0;
 				creator->route = commandProc->commandDefinitionIndex+1;
+				creator->unit = NULL;
 			}
+			ProcGoto((Proc*)creator,0);
 			break;
 		case ClassMenu:
 			creator->class = creator->currSet->list[commandProc->commandDefinitionIndex].class;
 			creator->character = creator->currSet->list[commandProc->commandDefinitionIndex].character;
+			ProcGoto((Proc*)creator,1);
+			creator->currMenu = MainMenu;
+			return ME_END|ME_PLAY_BEEP;
 			break;
 		case BoonMenu:
 			if ( commandProc->availability == 2 )
@@ -278,6 +303,7 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
 				return ME_PLAY_BOOP;
 			}
 			creator->boon = commandProc->commandDefinitionIndex+1;
+			ProcGoto((Proc*)creator,0);
 			break;
 		case BaneMenu:
 			if ( commandProc->availability == 2 )
@@ -286,24 +312,56 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
 				return ME_PLAY_BOOP;
 			}
 			creator->bane = commandProc->commandDefinitionIndex+1;
+			ProcGoto((Proc*)creator,0);
 			break;
 	}
 	creator->currMenu = MainMenu;
-	ProcGoto((Proc*)creator,0);
 	return ME_END|ME_PLAY_BEEP|ME_CLEAR_GFX;
 }
 
 int CreatorRegressMenu(void)
 {
 	CreatorProc* proc = (CreatorProc*)ProcFind(&gCreatorProc);
-	proc->currMenu = MainMenu; // Return to the main menu.
-	ProcGoto((Proc*)proc,0);
-	return ME_END|ME_PLAY_BEEP|ME_CLEAR_GFX; // Close menu, clear graphics, etc.
+	if ( proc->currMenu == ClassMenu )
+	{
+		ProcGoto((Proc*)proc,1);
+		proc->currMenu = MainMenu; // Return to the main menu.
+		return ME_END|ME_PLAY_BEEP;
+	}
+	else
+	{
+		proc->currMenu = MainMenu; // Return to the main menu.
+		ProcGoto((Proc*)proc,0);
+		return ME_END|ME_PLAY_BEEP|ME_CLEAR_GFX; // Close menu, clear graphics, etc.
+	}
 }
 
 int CreatorNoBPress(void)
 {
 	return ME_PLAY_BOOP; // They're on the main menu. Don't allow a B press!
+}
+
+int CreatorWaitForSlideOut(CreatorProc* proc)
+{
+	if ( proc->classFrames < 12 ) // Wait 12 frames for the platform to slide back before ending the class proc.
+	{
+		proc->classFrames++;
+		return 1;
+	}
+	else { return 0; }
+}
+
+void CreatorClassEndProc(CreatorClassProc* proc)
+{
+	DeleteSomeAISStuff(&gSomeAISStruct);
+	DeleteSomeAISProcs(&gSomeAISRelatedStruct);
+	EndEkrAnimeDrvProc();
+	UnlockGameGraphicsLogic();
+	//ReloadGameCoreGraphics();
+	RefreshEntityMaps();
+	DrawTileGraphics();
+	SMS_UpdateFromGameData();
+	MU_EndAll();
 }
 
 static ClassMenuSet* GetClassSet(int gender,int route)
@@ -316,4 +374,16 @@ static ClassMenuSet* GetClassSet(int gender,int route)
 		}
 	}
 	return NULL; // This should never happen, but return null if no entry is found.
+}
+
+static int GetAppropriateItem(int class) // Return the item ID that this class should use.
+{
+	const ClassData* data = GetClassData(class);
+	int firstRank = 0;
+	for ( int i = 0 ; i < 8 ; i++ )
+	{
+		if ( data->baseRanks[i] ) { firstRank = i; break; }
+	}
+	// firstRank is the first weapon rank that this class can use at base.
+	return gCreatorAppropriateItemArray[firstRank];
 }
