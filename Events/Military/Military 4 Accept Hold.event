@@ -131,6 +131,7 @@ SetBattleNumbers(21,17,10,94,12,6)
 FIG1 Blaine Clint 0x00
 STAL 0x10
 KillUnit(6,4)
+DISA Blaine
 STAL 0x10
 Text(Military4AcceptHoldBlaineDeadText)
 STAL 0x10
