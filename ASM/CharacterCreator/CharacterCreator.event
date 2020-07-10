@@ -45,6 +45,7 @@
 	PROC_BREAK_ALL_LOOP(gCreatorClassProc)
 	PROC_GOTO(0x00)
 	
+	PROC_LABEL(0x02) // Jumped to to end the menu.
 	PROC_END
 	
 	gCreatorProcName:
@@ -77,6 +78,7 @@
 	MenuCommand(ClassMenuText,Test1DescText,NormalText,CreatorMainEntryUsability,0,CreatorMainGotoEntry,0,0,0)
 	MenuCommand(BoonMenuText,Test1DescText,NormalText,CreatorMainEntryUsability,0,CreatorMainGotoEntry,0,0,0)
 	MenuCommand(BaneMenuText,Test1DescText,NormalText,CreatorMainEntryUsability,0,CreatorMainGotoEntry,0,0,0)
+	MenuCommand(DoneMenuText,Test1DescText,GreenText,CreatorMainEntryUsability,0,CreatorEndMenu,0,0,0)
 	WORD 0 0 0 0 0 0 0 0 0
 	
 	gMainMenuErrorTexts:
@@ -159,6 +161,7 @@
 	SHORT BaneMenuItemErrorText
 	gBoonMenuItemErrorText:
 	SHORT BoonMenuItemErrorText
+	
 	
 	/*
 	What do we want displayed on each screen?

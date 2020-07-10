@@ -6,6 +6,7 @@ typedef struct ClassMenuSet ClassMenuSet;
 typedef struct CreatorProc CreatorProc;
 typedef struct CreatorClassProc CreatorClassProc;
 typedef struct UnitDefinition UnitDefinition;
+typedef struct SomeAISStruct SomeAISStruct;
 
 #define GenderMenu 0
 #define RouteMenu 1
@@ -39,7 +40,6 @@ struct CreatorProc
 	u8 bane; // 0 = unselected, 1 = HP, 2 = str, 3 = mag, 4 = skl,  ..., 8 = luk.
 	ClassMenuSet* currSet; // Used in the class submenu usability/effect.
 	Unit* unit; // Unit loaded by the class menu.
-	u8 classFrames; // Frame count when waiting for the class proc to slide back.
 };
 
 struct CreatorClassProc
@@ -57,9 +57,11 @@ struct SomeAISStruct {};
 
 extern UnitDefinition gCreatorUnitBuffer; // 0x2020188. gGenericBuffer.
 extern u16 gBG0MapBuffer[32][32]; // 0x02022CA8. Ew why does FE-CLib-master not do it like this?
+extern u16 gBG2MapBuffer[32][32]; // 0x2023CA8.
 extern MenuCommandDefinition gRAMMenuCommands[]; // 0x0203EFB8.
 extern AnimationInterpreter gSomeAISStruct; // 0x030053A0.
-extern struct SomeAISStruct gSomeAISRelatedStruct; // 0x0201FADC.
+extern SomeAISStruct gSomeAISRelatedStruct; // 0x0201FADC.
+extern AIStruct gAISArray; // 0x2028F78.
 
 extern void ReloadGameCoreGraphics(void);
 extern void DeleteSomeAISStuff(AnimationInterpreter* interpreter); // 0x0805AA28.
@@ -67,7 +69,15 @@ extern void DeleteSomeAISProcs(struct SomeAISStruct* obj); // 0x0805AE14.
 extern void EndEkrAnimeDrvProc(void);
 extern void RefreshEntityMaps(void);
 extern void DrawTileGraphics(void);
+extern void UnsetEventId(u16 eventID);
+extern void SetEventId(u16 eventID);
 
+extern const struct {
+	u8 base;
+	u8 growth;
+	u8 cap;
+	u8 promoBonus;
+} MagClassTable[];
 extern const ProcInstruction gCreatorProc;
 extern const ProcInstruction gCreatorClassProc;
 extern const MenuDefinition gCreatorMainMenuDefs;
@@ -117,6 +127,11 @@ void SetupCreator(CreatorProc* proc)
 	proc->boon = 0;
 	proc->bane = 0;
 	proc->currSet = NULL;
+	
+	UnsetEventId(0x6E); // Gender event ID.
+	
+	UnsetEventId(0x67); // Route event IDs.
+	UnsetEventId(0x68);
 }
 
 void CreatorActivateClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
@@ -134,20 +149,51 @@ void CreatorActivateClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 	gCreatorUnitBuffer.yPosition = 0;
 	gCreatorUnitBuffer.items[0] = GetAppropriateItem(gCreatorUnitBuffer.classIndex);
 	gCreatorUnitBuffer.items[1] = gCreatorVulnerary;
-	creator->unit = LoadUnit(&gCreatorUnitBuffer);
-	// Now I'd like to draw the unit's stats near the bottom of the screen.
-	Text_DrawNumber(NULL,12);
+	Unit* unit = LoadUnit(&gCreatorUnitBuffer);
+	const CharacterData* charData = unit->pCharacterData;
+	creator->unit = unit;
+	
+	// Now I'd like to draw this unit's stats near the bottom of the screen.
+	DrawTextInline(0,&gBG0MapBuffer[15][0],3,0,14,"Base:");
+	DrawTextInline(0,&gBG0MapBuffer[17][0],3,0,14,"Growth:");
+	
+	DrawUiNumber(&gBG0MapBuffer[15][7],3,unit->maxHP);
+	DrawUiNumber(&gBG0MapBuffer[15][10],3,unit->pow);
+	DrawUiNumber(&gBG0MapBuffer[15][13],3,unit->unk3A); // Magic.
+	DrawUiNumber(&gBG0MapBuffer[15][16],3,unit->skl);
+	DrawUiNumber(&gBG0MapBuffer[15][19],3,unit->spd);
+	DrawUiNumber(&gBG0MapBuffer[15][22],3,unit->def);
+	DrawUiNumber(&gBG0MapBuffer[15][25],3,unit->res);
+	DrawUiNumber(&gBG0MapBuffer[15][28],3,charData->baseCon+unit->pClassData->baseCon);
+	
+	DrawUiNumber(&gBG0MapBuffer[17][7],3,charData->growthHP);
+	DrawUiNumber(&gBG0MapBuffer[17][10],3,charData->growthPow);
+	DrawUiNumber(&gBG0MapBuffer[17][13],3,MagClassTable[unit->pClassData->number].growth);
+	DrawUiNumber(&gBG0MapBuffer[17][16],3,charData->growthSkl);
+	DrawUiNumber(&gBG0MapBuffer[17][19],3,charData->growthSpd);
+	DrawUiNumber(&gBG0MapBuffer[17][22],3,charData->growthDef);
+	DrawUiNumber(&gBG0MapBuffer[17][25],3,charData->growthRes);
 	
 	CreatorClassProc* classProc = (CreatorClassProc*)ProcFind(&gCreatorClassProc);
 	classProc->mode = 1;
 	for ( int i = 0 ; i < 5 ; i++ ) { classProc->classes[i] = creator->currSet->list[i].class; }
 	classProc->menuItem = index;
 	classProc->charID = creator->unit->pCharacterData->number;
-	creator->classFrames = 0;
 }
 
 void CreatorRetractClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 {
+	/*CPU_FILL(0,(char*)gBG0MapBuffer-1,32*32,32);
+	EnableBgSyncByMask(0);
+	TextHandle handle = {
+		.xCursor = 0,
+		.tileWidth = 20,
+	};
+	Text_Clear(&handle);
+	CPU_FILL(0,(char*)0x06001000-1,0x3000,32);
+	Menu_Draw(proc);*/
+	//ClearTileRegistry();
+	Text_InitFont();
 	CreatorClassProc* classProc = (CreatorClassProc*)ProcFind(&gCreatorClassProc);
 	if ( classProc ) { classProc->mode = 1; }
 }
@@ -221,6 +267,9 @@ int CreatorMainEntryUsability(const MenuCommandDefinition* command, int index)
 		case BaneMenu: // Only usable if they've chosen a gender, route, and class.
 			if ( proc->gender && proc->route && proc->class ) { return 1; }
 			else { return 2; }
+		case 5: // Pressing "Done." Only usable if all selections are made.
+			if ( proc->gender && proc->route && proc->class && proc->boon && proc->bane ) { return 1; }
+			else { return 3; }
 	}
 	return 3; // If for whatever reason we're out of bounds, make that menu unusable I guess?
 }
@@ -256,6 +305,21 @@ int CreatorSubmenuUsability(const MenuCommandDefinition* command, int index)
 		else { return 2; }
 	}
 	return 1;
+}
+
+int CreatorEndMenu(MenuProc* proc, MenuCommandProc* commandProc)
+{
+	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
+	ProcGoto((Proc*)creator,2); // Jump to end the creator proc.
+	
+	if ( creator->gender == 1 ) { SetEventId(0x6E); } // 0x6E is true if they chose male.
+	if ( creator->route == 2 ) { SetEventId(0x68); } // Military mode.
+	else
+	{
+		if ( creator->route == 3 ) { SetEventId(0x67); } // Mage mode.
+	}
+	
+	return ME_END|ME_PLAY_BEEP|ME_CLEAR_GFX;
 }
 
 int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
@@ -341,14 +405,9 @@ int CreatorNoBPress(void)
 	return ME_PLAY_BOOP; // They're on the main menu. Don't allow a B press!
 }
 
-int CreatorWaitForSlideOut(CreatorProc* proc)
+int CreatorWaitForSlideOut(CreatorProc* proc) // This is a PROC_WHILE_ROUTINE - return 1 if we want to yield.
 {
-	if ( proc->classFrames < 12 ) // Wait 12 frames for the platform to slide back before ending the class proc.
-	{
-		proc->classFrames++;
-		return 1;
-	}
-	else { return 0; }
+	return gAISArray.xPosition != 320;
 }
 
 void CreatorClassEndProc(CreatorClassProc* proc)
