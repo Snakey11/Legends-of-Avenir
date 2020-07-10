@@ -1,4 +1,8 @@
 
+## MageKnightDescText
+Mounted knights proficient in magic.[NL]
+Equip: Swords, Anima, Staves.[X]
+
 ## LostSoulDescText
 A soul without a body who's[NL]
 about to make a major decision.[X]
@@ -17,7 +21,7 @@ of nature. Equip, Anima, Light, Staves.[X]
 
 ## MasterKnightDescText
 Efficient commanders who lead their[NL]
-troops well. Equip, Swords, Lances, Axes.[X]
+troops. Equip, Swords, Lances, Axes.[X]
 
 ## BaronDescText
 Heavily armored fighters weilding a variety[NL]
