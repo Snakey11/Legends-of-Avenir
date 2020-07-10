@@ -136,8 +136,8 @@ GrandPaladin,3,25,25,2
 HolySage,9,55,30,3
 WilSniper,3,20,23,1
 BattleSageM,4,30,26,2
-LostSoulM,1,10,20,0
-LostSoulF,1,10,20,0
+LostSoulM,0,0,20,0
+LostSoulF,0,0,20,0
 ArmoredWyvernLord,2,15,21,1
 EdgySwordmaster,6,35,25,2
 EmperorClass,2,15,22,1

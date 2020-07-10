@@ -102,10 +102,10 @@ Mason,2,15
 Hunter,4,20
 Daniel,3,20
 Wanderer,2,15
-MageMAvatar,1,5
-MageFAvatar,0,5
-MercenaryMAvatar,3,25
-MercenaryFAvatar,2,20
+MageMAvatar,0,0
+MageFAvatar,0,0
+MercenaryMAvatar,0,0
+MercenaryFAvatar,0,0
 MilitaryMAvatar,0,0
 MilitaryFAvatar,0,0
 Kilthel,0,0
