@@ -95,31 +95,8 @@ MUSC The_Devoted
 CAM1 [7,12]
 STAL 0x10
 Text(Military2AcceptFriendsHereText)
-
-	//LOAD1 0x1 TestFriends
-	//ENUN
-
 NoFade
 ENDA
-
-/*
-TestFriends:
-UNIT Finoc Spellsword Gerald Level(1,Ally,True) [5,16] 0x00 0x00 0x00 0x00 [SteelSword,Thunder,Elwind,Flux] NoAI
-UNIT Cougar SpellswordF Gerald Level(1,Ally,True) [6,16] 0x00 0x00 0x00 0x00 [SteelSword,Thunder,Elwind,Flux] NoAI
-UNIT Elanil BattleSage Gerald Level(1,Ally,True) [7,16] 0x00 0x00 0x00 0x00 [SteelSword,Elwind,Thunder,Flux] NoAI
-UNIT Izuk BattleSageF Gerald Level(1,Ally,True) [8,16] 0x00 0x00 0x00 0x00 [SteelSword,Elwind,Thunder,Flux] NoAI
-UNIT Leyos DreadFighter Gerald Level(1,Ally,True) [9,16] 0x00 0x00 0x00 0x00 [SteelSword,Elwind,Thunder,Flux] NoAI
-UNIT Jurgen DreadFighterF Gerald Level(1,Ally,True) [10,16] 0x00 0x00 0x00 0x00 [SteelSword,Elwind,Thunder,Flux] NoAI
-UNIT Maximus Strategist Gerald Level(1,Ally,True) [11,16] 0x00 0x00 0x00 0x00 [SteelSword,Elwind,Thunder,Flux] NoAI
-UNIT Zalius SeraphKnight Gerald Level(1,Ally,True) [11,15] 0x00 0x00 0x00 0x00 [SteelSword,SteelLance,Elfire,Mend] NoAI
-UNIT Emperor WarMonk Gerald Level(1,Ally,True) [10,15] 0x00 0x00 0x00 0x00 [SteelAxe,HandAxe,Mend] NoAI
-UNIT Sylvaine MaligKnight Gerald Level(1,Ally,True) [9,15] 0x00 0x00 0x00 0x00 [SteelAxe,HandAxe,Flux] NoAI
-UNIT Rex MageKnight Gerald Level(1,Ally,True) [8,15] 0x00 0x00 0x00 0x00 [SteelSword,Elfire,Mend] NoAI
-UNIT Muriel MageKnight_F Gerald Level(1,Ally,True) [7,15] 0x00 0x00 0x00 0x00 [SteelSword,Elfire,Mend] NoAI
-UNIT Uzkalis DarkKnight Gerald Level(1,Ally,True) [6,15] 0x00 0x00 0x00 0x00 [SteelSword,Flux,Mend] NoAI
-UNIT Xavus DarkKnightF Gerald Level(1,Ally,True) [5,15] 0x00 0x00 0x00 0x00 [SteelSword,Flux,Mend] NoAI
-UNIT
-*/
 
 //Label EndingScene
 EndingScene:
