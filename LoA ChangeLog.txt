@@ -3,6 +3,14 @@ Dasher screen streching has been fixed
 Mage knight description includes sword utility
 Blaine not actually dying has been fixed
 Helmer's con as a boss has been reduced
+Toxin sword now actually applies poison
+Fixed Wyvern General class description being 3 lines
+Wyvern General and Wyvern Knight names now use narrow font
+Fixed a mistake in Military 4 Accept Hold Adeline Remus support
+Supply has been re-disabled in some early chapters. I don't know how that table got filled with all chapters having it usable...?
+Richter (Miliary 5 Pass Altia boss) has been given more strength
+Assassin promo gains have been buffed
+7 MOVE TROUBADOURS
 
 v1.10 (This was only released to playtesters in the Discord server to catch bugs before v2.0.)
 5th and final Military route is a go. Kill Sean after accepting the promotion in chapter 3. Route includes all supports as well
