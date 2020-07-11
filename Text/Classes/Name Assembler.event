@@ -1,6 +1,9 @@
 ## LostSoulNameText
 Lost Soul[X]
 
+## WyvernKnightNameText
+[_W][_Y][_V][_E][_R][_N][_ShortSpace][_K][_N][_I][_G][_H][_T][X]
+
 ## PatriarchNameText
 Patriarch[X]
 
@@ -23,7 +26,7 @@ Commander[X]
 Impaler[X]
 
 ## WyvernGeneralNameText
-W. General[X]
+[_W][_Y][_V][_E][_R][_N][_ShortSpace][_G][_E][_N][_E][_R][_A][_L][X]
 
 ## MarksmanNameText
 Marksman[X]
