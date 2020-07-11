@@ -109,6 +109,7 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc);
 int CreatorRegressMenu(void);
 int CreatorNoBPress(void);
 static ClassMenuSet* GetClassSet(int gender,int route);
+static Unit* LoadCreatorUnit(CreatorProc* creator, MenuCommandProc* commandProc);
 static int GetAppropriateItem(int class);
 
 void CallCharacterCreator(Proc* proc) // Presumably ASMCed. Block the event engine and start running our character creator.
@@ -139,17 +140,8 @@ void CreatorActivateClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
 	// Lets load the unit that corresponds to the currently selected item.
 	CPU_FILL(0,(char*)&gCreatorUnitBuffer-1,sizeof(UnitDefinition),32); // Clear our unit buffer (gGenericBuffer).
-	int index = commandProc->commandDefinitionIndex;
-	gCreatorUnitBuffer.charIndex = creator->currSet->list[index].character;
-	gCreatorUnitBuffer.classIndex = creator->currSet->list[index].class;
-	gCreatorUnitBuffer.autolevel = 1;
-	gCreatorUnitBuffer.allegiance = UA_BLUE;
-	gCreatorUnitBuffer.level = 5;
-	gCreatorUnitBuffer.xPosition = 63;
-	gCreatorUnitBuffer.yPosition = 0;
-	gCreatorUnitBuffer.items[0] = GetAppropriateItem(gCreatorUnitBuffer.classIndex);
-	gCreatorUnitBuffer.items[1] = gCreatorVulnerary;
-	Unit* unit = LoadUnit(&gCreatorUnitBuffer);
+	
+	Unit* unit = LoadCreatorUnit(creator,commandProc);
 	const CharacterData* charData = unit->pCharacterData;
 	creator->unit = unit;
 	
@@ -177,7 +169,7 @@ void CreatorActivateClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 	CreatorClassProc* classProc = (CreatorClassProc*)ProcFind(&gCreatorClassProc);
 	classProc->mode = 1;
 	for ( int i = 0 ; i < 5 ; i++ ) { classProc->classes[i] = creator->currSet->list[i].class; }
-	classProc->menuItem = index;
+	classProc->menuItem = commandProc->commandDefinitionIndex;
 	classProc->charID = creator->unit->pCharacterData->number;
 }
 
@@ -194,6 +186,7 @@ void CreatorRetractClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 	Menu_Draw(proc);*/
 	//ClearTileRegistry();
 	Text_InitFont();
+	ClearUnit(GetUnit(1));
 	CreatorClassProc* classProc = (CreatorClassProc*)ProcFind(&gCreatorClassProc);
 	if ( classProc ) { classProc->mode = 1; }
 }
@@ -307,21 +300,6 @@ int CreatorSubmenuUsability(const MenuCommandDefinition* command, int index)
 	return 1;
 }
 
-int CreatorEndMenu(MenuProc* proc, MenuCommandProc* commandProc)
-{
-	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
-	ProcGoto((Proc*)creator,2); // Jump to end the creator proc.
-	
-	if ( creator->gender == 1 ) { SetEventId(0x6E); } // 0x6E is true if they chose male.
-	if ( creator->route == 2 ) { SetEventId(0x68); } // Military mode.
-	else
-	{
-		if ( creator->route == 3 ) { SetEventId(0x67); } // Mage mode.
-	}
-	
-	return ME_END|ME_PLAY_BEEP|ME_CLEAR_GFX;
-}
-
 int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
 {
 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
@@ -356,6 +334,7 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
 		case ClassMenu:
 			creator->class = creator->currSet->list[commandProc->commandDefinitionIndex].class;
 			creator->character = creator->currSet->list[commandProc->commandDefinitionIndex].character;
+			creator->unit = LoadCreatorUnit(creator,commandProc);
 			ProcGoto((Proc*)creator,1);
 			creator->currMenu = MainMenu;
 			return ME_END|ME_PLAY_BEEP;
@@ -380,6 +359,21 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
 			break;
 	}
 	creator->currMenu = MainMenu;
+	return ME_END|ME_PLAY_BEEP|ME_CLEAR_GFX;
+}
+
+int CreatorEndMenu(MenuProc* proc, MenuCommandProc* commandProc)
+{
+	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
+	ProcGoto((Proc*)creator,2); // Jump to end the creator proc.
+	
+	if ( creator->gender == 1 ) { SetEventId(0x6E); } // 0x6E is true if they chose male.
+	if ( creator->route == 2 ) { SetEventId(0x68); } // Military mode.
+	else
+	{
+		if ( creator->route == 3 ) { SetEventId(0x67); } // Mage mode.
+	}
+	
 	return ME_END|ME_PLAY_BEEP|ME_CLEAR_GFX;
 }
 
@@ -433,6 +427,21 @@ static ClassMenuSet* GetClassSet(int gender,int route)
 		}
 	}
 	return NULL; // This should never happen, but return null if no entry is found.
+}
+
+static Unit* LoadCreatorUnit(CreatorProc* creator, MenuCommandProc* commandProc)
+{
+	int index = commandProc->commandDefinitionIndex;
+	gCreatorUnitBuffer.charIndex = creator->currSet->list[index].character;
+	gCreatorUnitBuffer.classIndex = creator->currSet->list[index].class;
+	gCreatorUnitBuffer.autolevel = 1;
+	gCreatorUnitBuffer.allegiance = UA_BLUE;
+	gCreatorUnitBuffer.level = 5;
+	gCreatorUnitBuffer.xPosition = 63;
+	gCreatorUnitBuffer.yPosition = 0;
+	gCreatorUnitBuffer.items[0] = GetAppropriateItem(gCreatorUnitBuffer.classIndex);
+	gCreatorUnitBuffer.items[1] = gCreatorVulnerary;
+	return LoadUnit(&gCreatorUnitBuffer);
 }
 
 static int GetAppropriateItem(int class) // Return the item ID that this class should use.
