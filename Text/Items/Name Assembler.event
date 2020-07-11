@@ -72,22 +72,22 @@ Devil Lance[X]
 Devil Bow[X]
 
 ## IronShortbowNameText
-[S_I][S_r][S_o][S_n][S_ShortSpace][S_S][S_h][S_o][S_r][S_t][S_b][S_o][S_w][X]
+[_I][_r][_o][_n][_ShortSpace][_S][_h][_o][_r][_t][_b][_o][_w][X]
 
 ## SteelShortbowNameText
-[S_S][S_t][S_e][S_e][S_l][S_ShortSpace][S_S][S_h][S_o][S_r][S_t][S_b][S_o][S_w][X]
+[_S][_t][_e][_e][_l][_ShortSpace][_S][_h][_o][_r][_t][_b][_o][_w][X]
 
 ## SilverShortbowNameText
-[S_S][S_i][S_l][S_v][S_e][S_r][S_ShortSpace][S_S][S_h][S_o][S_r][S_t][S_b][S_o][S_w][X]
+[_S][_i][_l][_v][_e][_r][_ShortSpace][_S][_h][_o][_r][_t][_b][_o][_w][X]
 
 ## IronLongbowNameText
-[S_I][S_r][S_o][S_n][S_ShortSpace][S_L][S_o][S_n][S_g][S_b][S_o][S_w][X]
+[_I][_r][_o][_n][_ShortSpace][_L][_o][_n][_g][_b][_o][_w][X]
 
 ## SteelLongbowNameText
-[S_S][S_t][S_e][S_e][S_l][S_ShortSpace][S_L][S_o][S_n][S_g][S_b][S_o][S_w][X]
+[_S][_t][_e][_e][_l][_ShortSpace][_L][_o][_n][_g][_b][_o][_w][X]
 
 ## SilverLongbowNameText
-[S_S][S_i][S_l][S_v][S_e][S_r][S_ShortSpace][S_L][S_o][S_n][S_g][S_b][S_o][S_w][X]
+[_S][_i][_l][_v][_e][_r][_ShortSpace][_L][_o][_n][_g][_b][_o][_w][X]
 
 ## LanceslayerNameText
 Lanceslayer[X]
