@@ -1,7 +1,7 @@
 INLINE SupplyUsabilityTable 0xFF,Pointer
 Prologue,NormalSupplyList|IsPointer
 ,
-Military1,NormalSupplyList|IsPointer
+Military1,0
 MilitaryAccept2,NormalSupplyList|IsPointer
 MilitaryAccept3,NormalSupplyList|IsPointer
 MilitaryAcceptHold4,NormalSupplyList|IsPointer
@@ -25,10 +25,10 @@ MilitaryPassAltia5,NormalSupplyList|IsPointer
 MilitaryPassAltia6,NormalSupplyList|IsPointer
 MilitaryPassAltia7,NormalSupplyList|IsPointer
 ,
-Mercenary1,NormalSupplyList|IsPointer
-MercenaryMilitia2,NormalSupplyList|IsPointer
-MercenaryMilitiaWait3,NormalSupplyList|IsPointer
-MercenaryMilitiaWait4,NormalSupplyList|IsPointer
+Mercenary1,0
+MercenaryMilitia2,0
+MercenaryMilitiaWait3,0
+MercenaryMilitiaWait4,0
 MercenaryMilitiaWaitArcanae5,NormalSupplyList|IsPointer
 MercenaryMilitiaWaitArcanae6,NormalSupplyList|IsPointer
 MercenaryMilitiaWaitArcanae7,NormalSupplyList|IsPointer
@@ -40,7 +40,7 @@ MercenaryMilitiaKill4,NormalSupplyList|IsPointer
 MercenaryMilitiaKill5,NormalSupplyList|IsPointer
 MercenaryMilitiaKill6,NormalSupplyList|IsPointer
 MercenaryMilitiaKill7,NormalSupplyList|IsPointer
-MercenaryBandit2,NormalSupplyList|IsPointer
+MercenaryBandit2,0
 MercenaryBandit3,NormalSupplyList|IsPointer
 MercenaryBandit4,NormalSupplyList|IsPointer
 MercenaryBanditBandit5,NormalSupplyList|IsPointer
