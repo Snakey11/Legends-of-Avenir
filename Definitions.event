@@ -103,6 +103,10 @@
 #define KnightF2 Knight2
 #define WyvernRiderM2 WyvernRider2
 #define WyvernRiderF2 WyvernRider2
+#define Fighter2 FighterM2
+#define Pirate2 PirateM2
+#define Brigand2 BrigandM2
+#define PegasusKnight2 PegasusKnightF2
 #define Baselius Basileus
 //#define Magus MagusM
 //#define Hunter Marksman

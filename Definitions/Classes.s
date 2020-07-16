@@ -35,12 +35,12 @@ ArcherM2
 ArcherF2
 MercenaryM2
 MercenaryF2
-Fighter2
-Brigand2
-Pirate2
+FighterM2
+BrigandM2
+PirateM2
 MyrmidonM2
 MyrmidonF2
-PegasusKnight2
+PegasusKnightF2
 Halberdier
 Sentinel
 JacketHero
