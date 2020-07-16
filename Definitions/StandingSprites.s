@@ -1,4 +1,12 @@
 
+ArcherOnBallistaSprite 0x58
+ArcherOnIronBallistaSprite
+ArcherOnKillerBallistaSprite
+BallistaSprite
+IronBallistaSprite
+KillerBallistaSprite
+.avoid 0x58 0x5D
+
 CavalierSprite 0x01
 PaladinSprite
 KnightSprite
@@ -55,12 +63,6 @@ SoldierSprite
 NecromancerSprite
 FleetSprite
 PhantomSprite
-ArcherOnBallistaSprite
-ArcherOnIronBallistaSprite
-ArcherOnKillerBallistaSprite
-BallistaSprite
-IronBallistaSprite
-KillerBallistaSprite
 Civilian1Sprite
 Civilian2Sprite
 Civilian3Sprite
