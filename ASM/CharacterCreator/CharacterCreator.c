@@ -40,6 +40,7 @@ struct CreatorProc
 	u8 bane; // 0 = unselected, 1 = HP, 2 = str, 3 = mag, 4 = skl,  ..., 8 = luk.
 	ClassMenuSet* currSet; // Used in the class submenu usability/effect.
 	Unit* unit; // Unit loaded by the class menu.
+	u8 leavingClassMenu; // Boolean for whether we're exiting the class emnu.
 };
 
 struct CreatorClassProc
@@ -186,7 +187,15 @@ void CreatorRetractClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 	Menu_Draw(proc);*/
 	//ClearTileRegistry();
 	Text_InitFont();
-	ClearUnit(GetUnit(1));
+	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
+	if ( !creator->leavingClassMenu )
+	{
+		ClearUnit(GetUnit(1)); // If we're not leaving the class menu, clear the unit we loaded.
+	}
+	else
+	{
+		creator->leavingClassMenu = 0; // If we are, we may as well unset this.
+	}
 	CreatorClassProc* classProc = (CreatorClassProc*)ProcFind(&gCreatorClassProc);
 	if ( classProc ) { classProc->mode = 1; }
 }
@@ -315,6 +324,7 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
 				creator->boon = 0;
 				creator->gender = commandProc->commandDefinitionIndex+1;
 				creator->unit = NULL;
+				ClearUnit(GetUnit(1));
 			}
 			ProcGoto((Proc*)creator,0);
 			break;
@@ -328,13 +338,14 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
 				creator->boon = 0;
 				creator->route = commandProc->commandDefinitionIndex+1;
 				creator->unit = NULL;
+				ClearUnit(GetUnit(1));
 			}
 			ProcGoto((Proc*)creator,0);
 			break;
 		case ClassMenu:
+			creator->leavingClassMenu = 1; // Set this, so we don't clear this on the switch out routine.
 			creator->class = creator->currSet->list[commandProc->commandDefinitionIndex].class;
 			creator->character = creator->currSet->list[commandProc->commandDefinitionIndex].character;
-			creator->unit = LoadCreatorUnit(creator,commandProc);
 			ProcGoto((Proc*)creator,1);
 			creator->currMenu = MainMenu;
 			return ME_END|ME_PLAY_BEEP;
