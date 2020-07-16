@@ -31,7 +31,7 @@ END_MAIN
 
 MiscBasedEvents:
 AREA 0x13 MendPickup [11,2] [14,3]
-AREA 0x14 AircaliburPickup [9,0] [10,3]
+AREA 0x14 TempestPickup [9,0] [10,3]
 AREA 0x15 TalismanPickup [2,5] [5,6]
 AREA 0x16 SteelLongbowPickup [18,17] [18,18]
 CauseGameOverIfLordDies
@@ -184,8 +184,8 @@ SandPickup(0x13,Mend)
 NoFade
 ENDA
 
-AircaliburPickup:
-SandPickup(0x14,Aircalibur)
+TempestPickup:
+SandPickup(0x14,Tempest)
 NoFade
 ENDA
 
