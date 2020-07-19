@@ -74,20 +74,22 @@ struct CharacterStackAlloc // There's a lot in here I don't understand, but thes
 
 struct BaseConvoEntry  // Copied from Base Convos.
 {
-	u8 character1;
-	u8 character2;
-	u8 background;
-	u8 supportLevel;
-	int (*usability)(const struct BaseConvoEntry* entry); // ASM usability pointer.
-	void* event;
-	u16 title;
-	u16 music;
-	char* (*textGetter)(const struct BaseConvoEntry* entry); // Returns a pointer to the string of text to use.
-	u16 textID;
-	u8 item;
-	u8 giveTo; // Give the item to this person.
-	UnitDefinition* unit;
-	u8 importance;
+	u8 character1; // 0.
+	u8 character2; // 1.
+	u8 background; // 2. 
+	u8 supportLevel; // 3.
+	int (*usability)(const BaseConvoEntry* entry); // 4. ASM usability pointer.
+	void* event; // 8.
+	u16 title; // 12.
+	u16 music; // 14.
+	char* (*textGetter)(const BaseConvoEntry* entry); // 16. Returns a pointer to the string of text to use.
+	u16 textID; // 20.
+	u8 item; // 22.
+	u8 giveTo; // 23. Give the item to this person.
+	UnitDefinition* unit; // 24.
+	u16 eventID; // 28.
+	u8 importance; // 30.
+	u8 exists; // 31.
 };
 
 struct RTextStatName

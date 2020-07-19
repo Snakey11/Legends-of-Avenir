@@ -111,11 +111,13 @@ static int CountSupports(Unit* unit) // Self-explanitory.
 
 static int CanUnitsSupport(Unit* unit, int otherChar, int level) // Level of 0xFF = undefined level.
 {
+	Unit* otherUnit = ToUnit(otherChar);
+	if ( !unit || !otherUnit || (unit->state & US_DEAD) || (otherUnit->state & US_DEAD) ) { return 0; } // Return unusable unless both units exist and are not dead.
 	if ( level == 0xFF ) { level = GetSupportLevel(unit,otherChar)+1; }
 	if ( level == 0 )
 	{
 		// Let's see if they can add a support.
-		return CountSupports(unit) < 5 && CountSupports(ToUnit(otherChar)) < 5 && FindSupport(unit,otherChar) == 0xFF;
+		return CountSupports(unit) < 5 && CountSupports(otherUnit) < 5 && FindSupport(unit,otherChar) == 0xFF;
 	}
 	else
 	{

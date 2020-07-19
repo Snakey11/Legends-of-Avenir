@@ -35,6 +35,7 @@
 		REMA
 		
 		BEQ 0x3 0x0 0x5
+			REMOVEPORTRAITS
 			SADD 0x053 // Move slot 0x5 into 0x3. Item.
 			SADD 0x062 // Move slot 0x6 into 0x2. Character.
 			CHECK_EXISTS 0xFFFD
@@ -102,9 +103,11 @@
 		BaseConvoProcMenu: // This is the proc that is called to build the prep screen support screen.
 		PROC_SLEEP(0) // Buffer
 		PROC_SET_NAME(BaseConvoProcName) // Debug proc name.
+		PROC_CALL_ROUTINE(SetupBaseConvoProc) // Initialize etc.
 		PROC_SET_DESTRUCTOR(BaseConvoProcDestructor)
 		PROC_LABEL(0)
 			//PROC_SLEEP(8)
+			PROC_CALL_ROUTINE(FillBaseMenuUsability) // Fill the usability bitfield for the 8 possible menu options.
 			PROC_CALL_ROUTINE(SetScrollingBackground) // The vanilla support screen is constructed at 0x080A1270.
 				// Apparently this also clears leftover menu graphics from the prep screen.
 			PROC_CALL_ROUTINE(DisplayBottomText)
@@ -117,7 +120,7 @@
 			PROC_WHILE_ROUTINE(EnsureSelection) // Wait for a selection.
 				// If we're here, a selection was made.
 				PROC_CALL_ROUTINE(0x08013CD1) // StartFadeIntoBlack.
-				
+				PROC_LOOP_ROUTINE(0x08014069) // Wait for fade out.
 				PROC_CALL_ROUTINE(SetUpConvo)
 				PROC_CALL_ROUTINE(CallConversation)
 				PROC_LABEL(1) // Jumped to on B press.

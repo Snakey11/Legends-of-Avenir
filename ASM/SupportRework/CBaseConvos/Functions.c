@@ -9,12 +9,13 @@ static int IsConvoViewable(BaseConvoEntry* entry)
 }
 
 // Returns the number of conversations viewable this chapter.
-static int GetNumViewable(int c)
+static int GetNumViewable(BaseConvoProc* proc) // Pretty much we want to count the number of bits in the usability bitfield.
 {
-	int sum = 0;
-	for ( int i = 0 ; i < 8 ; i++ )
+	int sum = 0, usability = proc->usability;
+	while ( usability )
 	{
-		if ( IsConvoViewable(GetEntry(c,i)) ) { sum++; }
+		if ( usability & 1 ) { sum++; }
+		usability >>= 1;
 	}
 	return sum;
 }	
