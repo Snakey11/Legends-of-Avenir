@@ -31,16 +31,16 @@ struct ClassMenuSet
 struct CreatorProc
 {
 	PROC_HEADER
-	u8 currMenu; // ID for where we are in the menu progression.
-	u8 gender; // 0 = unselected, 1 = male, 2 = female.
-	u8 route; // 0 = unselected, 1 = mercenary, 2 = military, 3 = mage.
-	u8 class; // The current class they've selected. 0 = unselected.
-	u8 character; // The character ID associated with this class. 0 = unselected.
-	u8 boon; // Same indicators as bane.
-	u8 bane; // 0 = unselected, 1 = HP, 2 = str, 3 = mag, 4 = skl,  ..., 8 = luk.
-	ClassMenuSet* currSet; // Used in the class submenu usability/effect.
-	Unit* unit; // Unit loaded by the class menu.
-	u8 leavingClassMenu; // Boolean for whether we're exiting the class emnu.
+	u8 currMenu; // 0x29. ID for where we are in the menu progression.
+	u8 gender; // 0x2A. 0 = unselected, 1 = male, 2 = female.
+	u8 route; // 0x2B. 0 = unselected, 1 = mercenary, 2 = military, 3 = mage.
+	u8 class; // 0x2C. The current class they've selected. 0 = unselected.
+	u8 character; // 0x2D. The character ID associated with this class. 0 = unselected.
+	u8 boon; // 0x2E. Same indicators as bane.
+	u8 bane; // 0x2F. 0 = unselected, 1 = HP, 2 = str, 3 = mag, 4 = skl,  ..., 8 = luk.
+	ClassMenuSet* currSet; // 0x30. Used in the class submenu usability/effect.
+	Unit* unit; // 0x34. Unit loaded by the class menu.
+	u8 leavingClassMenu; // 0x38. Boolean for whether we're exiting the class emnu.
 };
 
 struct CreatorClassProc
