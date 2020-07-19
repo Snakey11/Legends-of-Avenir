@@ -11,6 +11,10 @@ Supply has been re-disabled in some early chapters. I don't know how that table 
 Richter (Miliary 5 Pass Altia boss) has been given more strength
 Assassin promo gains have been buffed
 7 MOVE TROUBADOURS
+Fixed ballista sprites being broken
+Cleaned up some early mercenary chapter events
+Fixed the Mercenary 5 Militia Wait Cesaria tempest tome pickup
+Fixed a bug in base conversations with bad handling of units that don't exist/are dead
 
 v1.10 (This was only released to playtesters in the Discord server to catch bugs before v2.0.)
 5th and final Military route is a go. Kill Sean after accepting the promotion in chapter 3. Route includes all supports as well
