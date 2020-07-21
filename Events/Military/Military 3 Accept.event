@@ -121,7 +121,7 @@ GotoPrepScreen
 
 //Label EndingScene
 EndingScene: // The boss was killed.
-MUSC Victorys_Delight
+MUSC FE5_Victory
 FADI 0x5
 #ifdef __DEBUG__
 	CHECK_TURNS

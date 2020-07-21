@@ -91,7 +91,7 @@ ENDA
 
 //Label EndingScene
 EndingScene:
-MUSC Victory
+MUSC Victory_March
 SetBackground(0x1D)
 Text(Military2PassEndingText)
 GiveToSupplySilent(SteelSword)

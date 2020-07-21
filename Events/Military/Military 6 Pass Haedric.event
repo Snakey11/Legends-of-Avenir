@@ -118,10 +118,10 @@ Text(Military6PassHaedricOnWatchText)
 MUSC Snow_Battle
 SetBackground(0x09)
 Text(Military6PassHaedricInnText)
-MUSC A_Tragic_Decision
+MUSC The_Devoted
 SetBackground(0x05)
 Text(Military6PassHaedricOutsideText)
-MUSC Advance
+MUSC Roar_of_Dominion
 EndConvo
 STAL 0x30
 Text(Military6PassHaedricCityText)
@@ -146,15 +146,16 @@ CLEN 0x0
 LOAD1 0x1 LoadMuriel
 ENUN
 CLEA 0x0
-MUSC Into_the_Shadow_of_Victory
+MUSC FE5_Map_A
 SetBackground(0x0C)
+Text(Military6PassHaedricEndingText)
 CHECK_EVENTID 0x10
 BEQ 0x0 0x0 0xC
-	Text(Military6PassHaedricEndingText)
-	GOTO 0x1
+	MUSC Ordon_Village
+	SetBackground(0x10)
+	Text(Military6PassHaedricEndingLeonSekarText)
+	GiveItem(BraveAxe,Sekar)
 LABEL 0x0
-	Text(Military6PassHaedricNotTalkedEndingText)
-LABEL 0x1
 MoveToChapter(MilitaryPassHaedric7)
 ENDA
 
