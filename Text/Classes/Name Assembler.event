@@ -1,8 +1,8 @@
 ## LostSoulNameText
 Lost Soul[X]
 
-## WyvernKnightNameText
-[_W][_Y][_V][_E][_R][_N][_ShortSpace][_K][_N][_I][_G][_H][_T][X]
+## WyvernKnightNameText ^
+Wyvern Knight[X]
 
 ## PatriarchNameText
 Patriarch[X]
@@ -25,8 +25,8 @@ Commander[X]
 ## ImpalerNameText
 Impaler[X]
 
-## WyvernGeneralNameText
-[_W][_Y][_V][_E][_R][_N][_ShortSpace][_G][_E][_N][_E][_R][_A][_L][X]
+## WyvernGeneralNameText ^
+Wyvern General[X]
 
 ## MarksmanNameText
 Marksman[X]
@@ -73,8 +73,8 @@ Battle Sage[X]
 ## SpellswordNameText
 Spellsword[X]
 
-## DreadFighterNameText
-[_D][_r][_e][_a][_d][_ShortSpace][_F][_i][_g][_h][_t][_e][_r][X]
+## DreadFighterNameText ^
+Dread Fighter[X]
 
 ## MaligKnightNameText
 Malig Knight[X]

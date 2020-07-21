@@ -3,6 +3,8 @@
 
 cd "%~dp0/Text"
 
-echo: | ("text-process-classic.exe" "Text Buildfile.event" --parser-exe "ParseFile.exe")
+rem echo: | ("text-process-classic.exe" "Text Buildfile.event" --parser-exe "ParseFile.exe")
+
+py "textprocess-classic-narrow.py" "Text Buildfile.event" --parser-exe "ParseFile.exe"
 
 pause

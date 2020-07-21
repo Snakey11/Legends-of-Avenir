@@ -1,6 +1,12 @@
 
 #ifdef _FE8_
 
+	
+	#ifndef Free_Space
+		#define Free_Space 0xBABD00 //Switch to any unused address
+		ORG Free_Space
+	#endif
+	
 	#include EAstdlib.event
 	#include "Extensions/Hack Installation.txt"
 
@@ -20,6 +26,8 @@
 	#include "SerifUppercase/UppercaseSerif.txt"
 	#include "MenuLowercase/LowercaseMenu.txt"
 	#include "MenuUppercase/UppercaseMenu.txt"	
+		
+		
 		
 #else
 	ERROR "Set EA to FE8 events!"
