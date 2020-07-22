@@ -200,7 +200,7 @@ MOVE 0x00 0x00 [4,3]
 MOVE 0x00 Adeline [4,4]
 STAL 0x10
 FADI 0x5
-MUSC A_Tragic_Desicion
+MUSC A_Tragic_Decision
 CLEA 0x0
 SetBackground(0x18)
 Text(Military4AcceptHoldBlaineDiesText)

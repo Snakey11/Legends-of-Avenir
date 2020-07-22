@@ -53,7 +53,7 @@ Bergentruckung
 Battle_Two
 Battle_against_Demons
 Ordon_Village
-Isaacs_Battle_Theme
+Isaac_Battle
 The_Devoted
 March
 Ascent

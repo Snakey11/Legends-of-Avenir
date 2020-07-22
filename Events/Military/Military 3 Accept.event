@@ -165,7 +165,7 @@ Text(Military3AcceptRetreat1Text)
 FadeOutMusic
 FADI 0x5
 STAL 0x30
-MUSC A_Tragic_Desicion
+MUSC A_Tragic_Decision
 SetBackground(0x19)
 Text(Military3AcceptRetreat2Text)
 GiveToSupplySilent(KillingEdge)

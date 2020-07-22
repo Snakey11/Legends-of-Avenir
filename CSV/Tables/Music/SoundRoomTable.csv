@@ -114,7 +114,7 @@ INLINE SoundRoom,Song ID,Song Length (Only Used for Shuffle Mode),Song Unlock AS
 0x76,Battle_Two,9360,0,BattleTwoText
 0x77,Battle_against_Demons,9360,0,BattleAgainstDemonsText
 0x78,Ordon_Village,9360,0,OrdonVillageText
-0x79,Isaacs_Battle_Theme,9360,0,IsaacsBattleThemeText
+0x79,Isaac_Battle,9360,0,IsaacsBattleThemeText
 0x7A,The_Devoted,9360,0,TheDevotedText
 0x7B,March,9360,0,MarchText
 0x7C,Ascent,9360,0,AscentText

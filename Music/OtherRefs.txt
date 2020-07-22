@@ -1,0 +1,5 @@
+Legends_of_Avenir,Main Theme
+Cavern_of_Splendor,Prep Screen
+Pub_Theme,Support Theme
+We_Can_Handle_Em,Attack Theme
+Like_a_Glint_of_Light,Defense Theme

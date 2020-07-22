@@ -169,7 +169,7 @@ SongTable(Battle_Two,songBattleTwo)
 SongTable(Battle_against_Demons,songBattleAgainstDemons)
 #include "BattleAgainstDemons.event"
 
-SongTable(Isaacs_Battle_Theme,songIsaacsBattleTheme)
+SongTable(Isaac_Battle,songIsaacsBattleTheme)
 #include "IsaacsBattleTheme.event" // Little too loud, and gets out of phase
 
 SongTable(The_Devoted,songTheDevoted)
