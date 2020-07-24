@@ -16,6 +16,14 @@ Cleaned up some early mercenary chapter events
 Fixed the Mercenary 5 Militia Wait Cesaria tempest tome pickup
 Fixed a bug in base conversations/support rework with bad handling of units that don't exist/are dead
 Made various changes to military chapters: music and text updates. Many changes in text to Military Pass Haedric and Military 7 Accept Retreat Leave
+New tool that reports where music is referenced: for development help only
+Now using Bly's version of textprocess-classic that's better with narrow font
+Alphabetized the sound room and removed vanilla entries
+A couple song names use narrow font now
+Tweaked Fodlan Winds
+Fixed having 0 gold in Military 5 Accept Hold
+Fixed an elevation error in the Haedric castle
+Fixed some confusion with Gladiator vs Basileus map sprites
 
 v1.10 (This was only released to playtesters in the Discord server to catch bugs before v2.0.)
 5th and final Military route is a go. Kill Sean after accepting the promotion in chapter 3. Route includes all supports as well
