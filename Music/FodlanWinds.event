@@ -4,7 +4,7 @@
 	#define	FodlanWinds_grp  voicegroup000
 	#define	FodlanWinds_pri  10
 	#define	FodlanWinds_rev  0
-	#define	FodlanWinds_mvl  127
+	#define	FodlanWinds_mvl  150
 	#define	FodlanWinds_key  0
 	#define	FodlanWinds_tbs  1
 	#define	FodlanWinds_exg  0
@@ -1612,9 +1612,7 @@ Label_FodlanWinds1_010660B4:
  BYTE   KEYSH   FodlanWinds_key+0
  BYTE   VOICE   33
  BYTE   VOICE   33
- BYTE   VOL   95*FodlanWinds_mvl/mxv
- BYTE   VOL   95*FodlanWinds_mvl/mxv
- BYTE   VOL   95*FodlanWinds_mvl/mxv
+ BYTE   VOL   60*FodlanWinds_mvl/mxv
  BYTE   PAN   c_v+0
  BYTE   PAN   c_v+0
  BYTE   PAN   c_v+0
@@ -2039,11 +2037,7 @@ Label_FodlanWinds2_010662B8:
  BYTE   KEYSH   FodlanWinds_key+0
  BYTE   VOICE   61
  BYTE   VOICE   61
- BYTE   VOL   43*FodlanWinds_mvl/mxv
- BYTE   VOL   43*FodlanWinds_mvl/mxv
- BYTE   VOL   43*FodlanWinds_mvl/mxv
- BYTE   VOL   43*FodlanWinds_mvl/mxv
- BYTE   VOL   43*FodlanWinds_mvl/mxv
+ BYTE   VOL   20*FodlanWinds_mvl/mxv
  BYTE   PAN   c_v+0
  BYTE   PAN   c_v+0
  BYTE   PAN   c_v+0
@@ -3340,11 +3334,7 @@ Label_FodlanWinds4_01066928:
  BYTE   KEYSH   FodlanWinds_key+0
  BYTE   VOICE   51
  BYTE   VOICE   51
- BYTE   VOL   31*FodlanWinds_mvl/mxv
- BYTE   VOL   31*FodlanWinds_mvl/mxv
- BYTE   VOL   31*FodlanWinds_mvl/mxv
- BYTE   VOL   31*FodlanWinds_mvl/mxv
- BYTE   VOL   31*FodlanWinds_mvl/mxv
+ BYTE   VOL   25*FodlanWinds_mvl/mxv
  BYTE   PAN   c_v+63
  BYTE   PAN   c_v+63
  BYTE   PAN   c_v+63
@@ -4154,11 +4144,7 @@ Label_FodlanWinds5_01066C60:
  BYTE   KEYSH   FodlanWinds_key+0
  BYTE   VOICE   107
  BYTE   VOICE   107
- BYTE   VOL   70*FodlanWinds_mvl/mxv
- BYTE   VOL   70*FodlanWinds_mvl/mxv
- BYTE   VOL   70*FodlanWinds_mvl/mxv
- BYTE   VOL   70*FodlanWinds_mvl/mxv
- BYTE   VOL   70*FodlanWinds_mvl/mxv
+ BYTE   VOL   45*FodlanWinds_mvl/mxv
  BYTE   PAN   c_v-64
  BYTE   PAN   c_v-64
  BYTE   PAN   c_v-64
