@@ -69,7 +69,6 @@ MaligKnightSprite,0x2,0x0,Medium,0x0,MaligKnightSt|IsPointer
 ChampionSprite,0x2,0x0,Small,0x0,ChampionSt|IsPointer
 CommanderSprite,0x2,0x0,Medium,0x0,CommanderSt|IsPointer
 DarkKnightSprite,0x2,0x0,Medium,0x0,DarkKnightSt|IsPointer
-GladiatorSprite,0x2,0x0,Medium,0x0,GladiatorSt|IsPointer
 HalberdierSprite,0x2,0x0,Small,0x0,HalberdierSt|IsPointer
 HectorSprite,0x2,0x0,Medium,0x0,HectorSt|IsPointer
 MarksmanSprite,0x2,0x0,Small,0x0,HunterSt|IsPointer
@@ -95,3 +94,4 @@ DreadFighterFSprite,0x2,0x0,Small,0x0,DreadFighterFSt|IsPointer
 GoldKnightSprite,0x2,0x0,Medium,0x0,GoldKnightSt|IsPointer
 SpellswordSprite,0x2,0x0,Small,0x0,SpellswordMSt|IsPointer
 SpellswordFSprite,0x2,0x0,Small,0x0,SpellswordFSt|IsPointer
+BaseliusSprite,0x2,0x0,Medium,0x0,BaseliusSt|IsPointer

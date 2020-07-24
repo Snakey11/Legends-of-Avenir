@@ -119,7 +119,7 @@ PegasusKnight2,0x81e89d0,0x81e96f0
 Halberdier,HalberdierMv|IsPointer,0x81edbc4
 Sentinel,SentinelMv|IsPointer,0x81edbc4
 JacketHero,0x81cb438,0x81cbd94
-Basileus,0x81e4498,0x81e4ea4
+Basileus,BaseliusMv|IsPointer,BaseliusAnimationData|IsPointer
 HectorClass,HectorMv|IsPointer,HectorAnimationData|IsPointer
 Trueerblade,TruerbladeMv|IsPointer,0x81cd1bc
 GaidenSage,0x81d91e4,0x81d9b58

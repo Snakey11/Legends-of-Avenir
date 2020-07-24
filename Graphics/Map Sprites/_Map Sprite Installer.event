@@ -1,6 +1,15 @@
 
 ALIGN 4
 
+BaseliusSt:
+#incbin "BaseliusSt.dmp"
+ALIGN 4
+
+BaseliusMv:
+#incbin "BaseliusMv.dmp"
+ALIGN 4
+
+
 BattleSageSt:
 #incbin "BattleSageSt.dmp"
 ALIGN 4
@@ -79,14 +88,6 @@ GoldKnightMv:
 #incbin "GoldKnightMv.dmp"
 ALIGN 4
 
-
-GladiatorSt:
-#incbin "GladiatorSt.dmp"
-ALIGN 4
-
-GladiatorMv:
-#incbin "GladiatorMv.dmp"
-ALIGN 4
 
 
 HalberdierSt:
@@ -304,5 +305,5 @@ HectorAnimationData:
 #incbin "Hector Animation Data.dmp"
 
 ALIGN 4
-GladiatorAnimationData:
-#incbin "Gladiator Animation Data.dmp"
+BaseliusAnimationData:
+#incbin "Baselius Animation Data.dmp"
