@@ -43,7 +43,6 @@ Anchoret
 	Military 5 Accept Retreat Leave.event
 	Military 7 Pass Altia.event
 Aquatic_Ruin
-	Military 4 Accept Hold.event
 	Phase theme: MilitaryAcceptHold6
 	Phase theme: MilitaryAcceptHold6
 Ascent
@@ -204,6 +203,7 @@ Chemical_Plant
 	Phase theme: MilitaryPassAltia6
 	Phase theme: MilitaryPassAltia6
 Chinese_Tea
+	Military 4 Accept Hold.event
 	Phase theme: MilitaryAcceptHold4
 	Phase theme: MilitaryAcceptHold4
 	Phase theme: MilitaryPass4
