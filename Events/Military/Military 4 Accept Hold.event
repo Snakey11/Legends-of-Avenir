@@ -235,7 +235,7 @@ NoFade
 EndA2
 
 Turn1:
-MUSC Aquatic_Ruin
+MUSC Chinese_Tea
 CAM1 [20,0]
 STAL 0x08
 FlashCursor(Clint,60)
