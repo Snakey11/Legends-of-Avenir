@@ -30,6 +30,7 @@ Text Definitions.event
 textdump.event
 Animation Assembler/
 Graphics/Battle Palettes/*.dmp
+Graphics/Portraits/*.dmp
 Spells/Spells/**/*.png
 FE8 Template.event
 FE-CLib-master
