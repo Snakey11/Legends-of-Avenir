@@ -4,26 +4,30 @@ setlocal enabledelayedexpansion
 
 echo ---------------------------
 
-cd %~dp0
+set currDir=%~dp0
 
-copy "WithAnimations.gba" "Avenir.gba"
+copy "!currDir!WithAnimations.gba" "!currDir!Avenir.gba"
 
-if exist "Avenir.sav" (
-	copy "Avenir.sav" "../Tools/No$GBADebugger/BATTERY/Avenir.SAV"
+if /I not [%2]==[noSaveCopy] (
+	if exist "!currDir!Avenir.sav" (
+		copy "!currDir!Avenir.sav" "!currDir!../Tools/No$GBADebugger/BATTERY/Avenir.SAV"
+	)
 )
 
-cd "%~dp0EA"
+cd "!currDir!EA"
 
 echo ---------------------------
 echo Assembling ROM. Please wait...
 echo ---------------------------
 
-ColorzCore A FE8 "-output:%~dp0Avenir.gba" "-input:%~dp0Ultrafile.event" "--nocash-sym"
+ColorzCore A FE8 "-output:!currDir!Avenir.gba" "-input:!currDir!Ultrafile.event" "--nocash-sym"
 
-cd "%~dp0sym"
-java -jar %~dp0sym\SymCombo.jar "%~dp0Avenir.sym" "Stan.sym"
+cd "!currDir!sym"
+java -jar "SymCombo.jar" "!currDir!Avenir.sym" "Stan.sym"
 
-cd "%~dp0ups"
-ups diff -b "%~dp0Clean.gba" -m "%~dp0Avenir.gba" -o "%~dp0Legends of Avenir.ups"
+cd "!currDir!ups"
+ups diff -b "!currDir!Clean.gba" -m "!currDir!Avenir.gba" -o "!currDir!Legends of Avenir.ups"
 
-pause
+if /I not [%1]==[noPause] (
+	pause
+)

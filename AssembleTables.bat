@@ -5,4 +5,6 @@ cd %~dp0/CSV/Tables
 
 py TableAssembler.py TableInstaller.event --date_check --verbose
 
-pause
+if /I not [%1]==[noPause] (
+	pause
+)

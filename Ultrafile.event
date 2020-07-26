@@ -95,6 +95,7 @@
 		#include "Events/Master Event Installer.event"
 		MESSAGE Events end at CURRENTOFFSET
 		
+		ALIGN 4
 		WORD 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Prevent NUPS from cutting off the last 6 bytes
 	#endif
 	

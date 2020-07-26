@@ -7,4 +7,6 @@ rem echo: | ("text-process-classic.exe" "Text Buildfile.event" --parser-exe "Par
 
 py "textprocess-classic-narrow.py" "Text Buildfile.event" --parser-exe "ParseFile.exe"
 
-pause
+if /I not [%1]==[noPause] (
+	pause
+)

@@ -28,4 +28,6 @@ for /R "%~dp0" %%F in (%FILE_MATCH%) do (
 )
 
 echo Done!
-pause
+if /I not [%1]==[noPause] (
+	pause
+)

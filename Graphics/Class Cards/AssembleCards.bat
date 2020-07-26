@@ -24,8 +24,11 @@ for /R "%~dp0" %%F in (%FILE_MATCH%) do (
 	echo Assembling "%%~nxF"...
 	cd "%%~dpF"
 	png2dmp "%%~nxF" --lz77
+	png2dmp "%%~nxF" --palette-only > "%%~nF%Palette.dmp"
     )
 )
 
 echo Done!
-pause
+if /I not [%1]==[noPause] (
+	pause
+)
