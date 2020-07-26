@@ -29,7 +29,7 @@ Install Text Data.event
 Text Definitions.event
 textdump.event
 Animation Assembler/
-Battle Palettes/*.dmp
+Graphics/Battle Palettes/*.dmp
 Spells/Spells/**/*.png
 FE8 Template.event
 FE-CLib-master
