@@ -1,37 +1,109 @@
 
-extern void ClearTileMapRect(u16 BGMap[32][32],int yStart,int xStart,int yEnd,int xEnd);
+void CreatorClassDrawUIBox(CreatorClassProc* proc)
+{
+	CPU_COPY(&gCreatorClassUIBoxTSA.tiles,&gBG1MapBuffer[12][0],(gCreatorClassUIBoxTSA.width+1)*(gCreatorClassUIBoxTSA.height+1)*2,16);
+	EnableBgSyncByMask(2);
+}
 
 void CreatorActivateClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 {
+	CPU_FILL(0,(char*)&gBG0MapBuffer[15][7]-1,&gBG0MapBuffer[32][32]-&gBG0MapBuffer[15][7],32);
 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
 	// Let's load the unit that corresponds to the currently selected item.
-	CPU_FILL(0,(char*)&gCreatorUnitBuffer-1,sizeof(UnitDefinition),32); // Clear our unit buffer (gGenericBuffer).
 	
 	Unit* unit = LoadCreatorUnit(creator,commandProc);
 	const CharacterData* charData = unit->pCharacterData;
 	creator->unit = unit;
 	
-	gpCurrentFont->tileNext = creator->currBase;
+	//gpCurrentFont->tileNext = creator->currBase;
 	// Now I'd like to draw this unit's stats near the bottom of the screen.
-	DrawTextInline(0,&gBG0MapBuffer[15][0],3,0,14,"Base:");
-	DrawTextInline(0,&gBG0MapBuffer[17][0],3,0,14,"Growth:");
 	
-	DrawUiNumber(&gBG0MapBuffer[15][7],3,unit->maxHP);
-	DrawUiNumber(&gBG0MapBuffer[15][10],3,unit->pow);
-	DrawUiNumber(&gBG0MapBuffer[15][13],3,unit->unk3A); // Magic.
-	DrawUiNumber(&gBG0MapBuffer[15][16],3,unit->skl);
-	DrawUiNumber(&gBG0MapBuffer[15][19],3,unit->spd);
-	DrawUiNumber(&gBG0MapBuffer[15][22],3,unit->def);
-	DrawUiNumber(&gBG0MapBuffer[15][25],3,unit->res);
-	DrawUiNumber(&gBG0MapBuffer[15][28],3,charData->baseCon+unit->pClassData->baseCon);
+	DrawUiNumber(&gBG0MapBuffer[15][8],TEXT_COLOR_GOLD,unit->maxHP);
+	DrawUiNumber(&gBG0MapBuffer[15][11],TEXT_COLOR_GOLD,unit->pow);
+	DrawUiNumber(&gBG0MapBuffer[15][14],TEXT_COLOR_GOLD,unit->unk3A); // Magic.
+	DrawUiNumber(&gBG0MapBuffer[15][17],TEXT_COLOR_GOLD,unit->skl);
+	DrawUiNumber(&gBG0MapBuffer[15][20],TEXT_COLOR_GOLD,unit->spd);
+	DrawUiNumber(&gBG0MapBuffer[15][23],TEXT_COLOR_GOLD,unit->def);
+	DrawUiNumber(&gBG0MapBuffer[15][26],TEXT_COLOR_GOLD,unit->res);
 	
-	DrawUiNumber(&gBG0MapBuffer[17][7],3,charData->growthHP);
-	DrawUiNumber(&gBG0MapBuffer[17][10],3,charData->growthPow);
-	DrawUiNumber(&gBG0MapBuffer[17][13],3,MagClassTable[unit->pClassData->number].growth);
-	DrawUiNumber(&gBG0MapBuffer[17][16],3,charData->growthSkl);
-	DrawUiNumber(&gBG0MapBuffer[17][19],3,charData->growthSpd);
-	DrawUiNumber(&gBG0MapBuffer[17][22],3,charData->growthDef);
-	DrawUiNumber(&gBG0MapBuffer[17][25],3,charData->growthRes);
+	DrawUiNumber(&gBG0MapBuffer[17][8],TEXT_COLOR_GOLD,charData->growthHP);
+	DrawUiNumber(&gBG0MapBuffer[17][11],TEXT_COLOR_GOLD,charData->growthPow);
+	DrawUiNumber(&gBG0MapBuffer[17][14],TEXT_COLOR_GOLD,MagClassTable[unit->pClassData->number].growth);
+	DrawUiNumber(&gBG0MapBuffer[17][17],TEXT_COLOR_GOLD,charData->growthSkl);
+	DrawUiNumber(&gBG0MapBuffer[17][20],TEXT_COLOR_GOLD,charData->growthSpd);
+	DrawUiNumber(&gBG0MapBuffer[17][23],TEXT_COLOR_GOLD,charData->growthDef);
+	DrawUiNumber(&gBG0MapBuffer[17][26],TEXT_COLOR_GOLD,charData->growthRes);
+	int tile = 0;
+	TextHandle baseHandle =	{
+		.tileIndexOffset = gpCurrentFont->tileNext+tile,
+		.tileWidth = 4
+	};
+	tile += 4;
+	Text_Clear(&baseHandle);
+	Text_SetColorId(&baseHandle,TEXT_COLOR_GOLD);
+	Text_InsertString(&baseHandle,0,TEXT_COLOR_GOLD,"Base");
+	Text_Display(&baseHandle,&gBG0MapBuffer[15][2]);
+	
+	TextHandle growthHandle = {
+		.tileIndexOffset = gpCurrentFont->tileNext+tile,
+		.tileWidth = 4
+	};
+	tile += 4;
+	Text_Clear(&growthHandle);
+	Text_SetColorId(&growthHandle,TEXT_COLOR_GOLD);
+	Text_InsertString(&growthHandle,0,TEXT_COLOR_GOLD,"Growth");
+	Text_Display(&growthHandle,&gBG0MapBuffer[17][2]);
+	
+	TextHandle hpHandle = {
+		.tileIndexOffset = gpCurrentFont->tileNext+tile,
+		.tileWidth = 2
+	};
+	tile += 2;
+	DrawStatNames(hpHandle,"HP",7,13);
+	
+	TextHandle strHandle = {
+		.tileIndexOffset = gpCurrentFont->tileNext+tile,
+		.tileWidth = 3
+	};
+	tile += 3;
+	DrawStatNames(strHandle,"Str",10,13);
+	
+	TextHandle magHandle = {
+		.tileIndexOffset = gpCurrentFont->tileNext+tile,
+		.tileWidth = 3
+	};
+	tile += 3;
+	DrawStatNames(magHandle,"Mag",13,13);
+	
+	TextHandle sklHandle = {
+		.tileIndexOffset = gpCurrentFont->tileNext+tile,
+		.tileWidth = 3
+	};
+	tile += 3;
+	DrawStatNames(sklHandle,"Skl",16,13);
+	
+	TextHandle spdHandle = {
+		.tileIndexOffset = gpCurrentFont->tileNext+tile,
+		.tileWidth = 3
+	};
+	tile += 3;
+	DrawStatNames(spdHandle,"Spd",19,13);
+	
+	TextHandle defHandle = {
+		.tileIndexOffset = gpCurrentFont->tileNext+tile,
+		.tileWidth = 3
+	};
+	tile += 3;
+	DrawStatNames(defHandle,"Def",22,13);
+	
+	TextHandle resHandle = {
+		.tileIndexOffset = gpCurrentFont->tileNext+tile,
+		.tileWidth = 3
+	};
+	tile += 3;
+	DrawStatNames(resHandle,"Res",25,13);
+	
+	EnableBgSyncByMask(1);
 	
 	CreatorClassProc* classProc = (CreatorClassProc*)ProcFind(&gCreatorClassProc);
 	classProc->mode = 1;
@@ -42,17 +114,11 @@ void CreatorActivateClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 
 void CreatorRetractClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 {
-	CPU_FILL(0,(char*)gBG0MapBuffer-1,32*32*2,32);
-	EnableBgSyncByMask(0);
-	CPU_FILL(0,(char*)0x06001000-1,0x3000,32);
-	/*TextHandle handle = {
-		.xCursor = 0,
-		.tileWidth = 20,
-	};
-	Text_Clear(&handle);
-	Menu_Draw(proc);*/
-	//ClearTileRegistry();
-	//Text_InitFont();
+	//CPU_FILL(0,(char*)&gBG0MapBuffer[13][0]-1,(32-13)*32*2,32);
+	//EnableBgSyncByMask(1);
+	//CPU_FILL(0,(char*)0x060063C0-1,0x6006500-0x60063C0,32);
+	//CPU_FILL(0,(char*)gSpecialUiCharAllocationTable-1,0x100,32);
+	//gSpecialUiCharAllocationTable[0] = 0xFF;
 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
 	if ( !creator->leavingClassMenu )
 	{
@@ -73,6 +139,7 @@ int CreatorWaitForSlideOut(CreatorProc* proc) // This is a PROC_WHILE_ROUTINE - 
 
 void CreatorClassEndProc(CreatorClassProc* proc)
 {
+	CPU_FILL(0,(char*)&gBG0MapBuffer[13][0]-1,(32-13)*32*2,32);
 	DeleteSomeAISStuff(&gSomeAISStruct);
 	DeleteSomeAISProcs(&gSomeAISRelatedStruct);
 	EndEkrAnimeDrvProc();
@@ -99,16 +166,19 @@ static ClassMenuSet* GetClassSet(int gender,int route)
 static Unit* LoadCreatorUnit(CreatorProc* creator, MenuCommandProc* commandProc)
 {
 	int index = commandProc->commandDefinitionIndex;
-	gCreatorUnitBuffer.charIndex = creator->currSet->list[index].character;
-	gCreatorUnitBuffer.classIndex = creator->currSet->list[index].class;
-	gCreatorUnitBuffer.autolevel = 1;
-	gCreatorUnitBuffer.allegiance = UA_BLUE;
-	gCreatorUnitBuffer.level = 5;
-	gCreatorUnitBuffer.xPosition = 63;
-	gCreatorUnitBuffer.yPosition = 0;
-	gCreatorUnitBuffer.items[0] = GetAppropriateItem(gCreatorUnitBuffer.classIndex);
-	gCreatorUnitBuffer.items[1] = gCreatorVulnerary;
-	return LoadUnit(&gCreatorUnitBuffer);
+	UnitDefinition definition =
+	{
+		.charIndex = creator->currSet->list[index].character,
+		.classIndex = creator->currSet->list[index].class,
+		.autolevel = 1,
+		.allegiance = UA_BLUE,
+		.level = 5,
+		.xPosition = 63,
+		.yPosition = 0,
+		.items[0] = GetAppropriateItem(creator->currSet->list[index].class),
+		.items[1] = gCreatorVulnerary
+	};
+	return LoadUnit(&definition);
 }
 
 static int GetAppropriateItem(int class) // Return the item ID that this class should use.
@@ -121,4 +191,12 @@ static int GetAppropriateItem(int class) // Return the item ID that this class s
 	}
 	// firstRank is the first weapon rank that this class can use at base.
 	return gCreatorAppropriateItemArray[firstRank];
+}
+
+static void DrawStatNames(TextHandle handle, char* string, int x, int y)
+{
+	Text_Clear(&handle);
+	Text_SetColorId(&handle,TEXT_COLOR_GOLD);
+	Text_AppendStringAscii(&handle,string);
+	Text_Display(&handle,&gBG0MapBuffer[y][x]);
 }

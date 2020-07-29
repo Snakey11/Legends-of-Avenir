@@ -23,12 +23,12 @@
 	SHORT 0x46C0 0x46C0
 	
 	ORG $CC2A0 // Increase battle sprite height.
-	BYTE 0x30
+	BYTE 0x3E
 	ORG $CD148
-	BYTE 0x30
+	BYTE 0x3E
 	
 	ORG $CCDB2 // Increase platform height.
-	BYTE 0x3E
+	BYTE 0x4A
 	POP
 	
 	ALIGN 4
@@ -54,6 +54,7 @@
 	ALIGN 4
 	gCreatorClassProc:
 	PROC_SET_NAME(gCreatorClassProcName)
+	PROC_CALL_ROUTINE(CreatorClassDrawUIBox)
 	PROC_CALL_ROUTINE(CreatorClassSetup|1)
 	PROC_LOOP_ROUTINE(CreatorClassDisplayLoop|1)
 	// We're here if we need to terminate the proc.
@@ -98,7 +99,7 @@
 	
 	ALIGN 4
 	gCreatorRouteMenuDefs:
-	BYTE 2 6 8 0
+	BYTE 2 0 8 0
 	WORD 1
 	POIN gCreatorRouteMenuCommands
 	POIN 0 0 0 CreatorRegressMenu GenericMenuRPress|1 GenericMakeHelpBox|1
@@ -111,7 +112,7 @@
 	
 	ALIGN 4
 	gCreatorClassMenuDefs:
-	BYTE 2 1 9 0
+	BYTE 2 0 9 0
 	WORD 1
 	WORD gCreatorRAMMenu // We generate this menu in RAM because it depends on what route they chose.]
 	POIN 0 0 0 CreatorRegressMenu GenericMenuRPress|1 GenericMakeHelpBox|1
@@ -130,6 +131,9 @@
 	ClassMenuOption(CreatorMale,CreatorMage,PlayerMMage,MageM2,PlayerMMonk,MonkM2,PlayerMShaman,ShamanM2,0,0,0,0)
 	ClassMenuOption(CreatorFemale,CreatorMage,PlayerFMage,MageF2,PlayerFMonk,MonkF2,PlayerFShaman,ShamanF2,0,0,0,0)
 	WORD 0 0 0
+	
+	gCreatorClassUIBoxTSA:
+	#incbin "ClassBlueBox.dmp"
 	
 	gCreatorAppropriateItemArray:
 	BYTE IronSword IronLance IronAxe IronBow Heal Fire Light Flux

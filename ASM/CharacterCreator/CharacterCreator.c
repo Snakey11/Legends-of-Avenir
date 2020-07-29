@@ -6,6 +6,7 @@ typedef struct ClassMenuSet ClassMenuSet;
 typedef struct CreatorProc CreatorProc;
 typedef struct CreatorClassProc CreatorClassProc;
 typedef struct UnitDefinition UnitDefinition;
+typedef struct TSA TSA;
 typedef struct SomeAISStruct SomeAISStruct;
 
 #define GenderMenu 0
@@ -55,15 +56,28 @@ struct CreatorClassProc
 	u16 charID; // 0x42.
 };
 
+struct TSA
+{
+	u8 width, height;
+	struct
+	{
+		u16 tileID : 10;
+		u16 horizontalFlip : 1;
+		u16 verticalFlip : 1;
+		u16 paletteID : 4;
+	} tiles[];
+};
+
 struct SomeAISStruct {};
 
-extern UnitDefinition gCreatorUnitBuffer; // 0x2020188. gGenericBuffer.
 extern u16 gBG0MapBuffer[32][32]; // 0x02022CA8. Ew why does FE-CLib-master not do it like this?
-extern u16 gBG2MapBuffer[32][32]; // 0x2023CA8.
+extern u16 gBG1MapBuffer[32][32]; // 0x020234A8.
+extern u16 gBG2MapBuffer[32][32]; // 0x02023CA8.
 extern MenuCommandDefinition gRAMMenuCommands[]; // 0x0203EFB8.
 extern AnimationInterpreter gSomeAISStruct; // 0x030053A0.
 extern SomeAISStruct gSomeAISRelatedStruct; // 0x0201FADC.
 extern AIStruct gAISArray; // 0x2028F78.
+extern u8 gSpecialUiCharAllocationTable[]; // 02028E78.
 
 extern void ReloadGameCoreGraphics(void);
 extern void DeleteSomeAISStuff(AnimationInterpreter* interpreter); // 0x0805AA28.
@@ -92,6 +106,7 @@ extern const MenuCommandDefinition gCreatorRouteMenuCommands[];
 extern const MenuDefinition gCreatorClassMenuDefs;
 extern const MenuCommandDefinition gCreatorClassMenuCommands[];
 extern ClassMenuSet gClassMenuOptions[];
+extern const TSA gCreatorClassUIBoxTSA;
 extern const u8 gCreatorAppropriateItemArray[8];
 extern const u8 gCreatorVulnerary;
 extern const MenuDefinition gCreatorBoonMenuDefs;
@@ -111,6 +126,7 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc);
 int CreatorRegressMenu(void);
 int CreatorNoBPress(void);
 
+void CreatorClassDrawUIBox(CreatorClassProc* proc);
 void CreatorActivateClassDisplay(MenuProc* proc, MenuCommandProc* commandProc);
 void CreatorRetractClassDisplay(MenuProc* proc, MenuCommandProc* commandProc);
 int CreatorWaitForSlideOut(CreatorProc* proc);
@@ -118,6 +134,7 @@ void CreatorClassEndProc(CreatorClassProc* proc);
 static ClassMenuSet* GetClassSet(int gender,int route);
 static Unit* LoadCreatorUnit(CreatorProc* creator, MenuCommandProc* commandProc);
 static int GetAppropriateItem(int class);
+static void DrawStatNames(TextHandle handle, char* string, int x, int y);
 
 #include "ClassDisplay.c"
 
