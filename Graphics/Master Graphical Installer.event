@@ -29,7 +29,7 @@ NewStatScreenPal:
 
 ALIGN 4
 SmallWorldMap:
-#incext compress "WorldMap/SmallWMGraphics.dmp"
+#incbin "WorldMap/SmallWMGraphics.dmp"
 
 ALIGN 4
 SmallWorldMapPalette:
@@ -37,7 +37,7 @@ SmallWorldMapPalette:
 
 ALIGN 4
 SmallWorldMapTSA:
-#incext compress "WorldMap/SmallWMTSA.dmp"
+#incbin "WorldMap/SmallWMTSA.dmp"
 
 gSmallWorldMapPaletteCount:
 BYTE 11 // How many palette banks the small world map should use. Maximum of 7 in vanilla without rewriting the handler routine.

@@ -39,7 +39,7 @@ class Tile:
 def isTileBlank(tile):
     """Is this bytestr passed in all zero?"""
     for b in tile:
-        if not b: return False
+        if b: return False
     return True
 
 
@@ -71,14 +71,15 @@ if __name__ == '__main__':
     # Now let's read the Png2Dmp graphics output, grab graphics data for each tile.
     tiles = [None]*30*20 # Generate a list of 600 empty tiles.
     
-    for e in files:
+    for j,e in enumerate(files):
         subprocess.run([args.png2dmp,e[0],'-o','temp'],stdout=subprocess.PIPE) # Call png2dmp with this file. Outputs to 'temp'.
+        # We can't compress the file right now because we need to gather TSA data from it.
         with open('temp','rb') as t: # This method will allow us to read in tile-size chunks.
             callable = lambda: t.read(4*8)
             sentinel = bytes()
             for i, chunk in enumerate(iter(callable,sentinel)):
                 # chunk is a tile. We need to check if the tile data we're grabbing in blank.
-                if isTileBlank(chunk):
+                if not isTileBlank(chunk):
                     # The tile we're writing is not blank. Let's ensure that there isn't already a tile here.
                     if tiles[i]:
                         exit(f'Error in formatting tiles: {tiles[i].file} and {e[0]} overlap at tile ID {i}.')
@@ -127,6 +128,9 @@ if __name__ == '__main__':
             f.write(e.data)
         f.write(tiles[0].data)
         f.write(bytes([0]*4*8*29))
+    compressedGraphics = subprocess.run([args.compress,args.graphics_output],capture_output=True).stdout
+    with open(args.graphics_output,'wb') as f:
+        f.write(compressedGraphics)
     
     with open(args.palette_output,'wb') as f:
         for e in palettes:
@@ -137,4 +141,8 @@ if __name__ == '__main__':
     
     with open(args.tsa_output,'wb') as f:
         f.write(bytearray(TSA))
+    compressedTSA = subprocess.run([args.compress,args.tsa_output],capture_output=True).stdout
+    with open(args.tsa_output,'wb') as f:
+        f.write(compressedTSA)
+    
     os.remove('temp')
