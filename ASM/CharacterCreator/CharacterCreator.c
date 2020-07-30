@@ -33,14 +33,13 @@ struct CreatorProc
 	u8 currMenu; // 0x29. ID for where we are in the menu progression.
 	u8 gender; // 0x2A. 0 = unselected, 1 = male, 2 = female.
 	u8 route; // 0x2B. 0 = unselected, 1 = mercenary, 2 = military, 3 = mage.
-	u8 class; // 0x2C. The current class they've selected. 0 = unselected.
-	u8 character; // 0x2D. The character ID associated with this class. 0 = unselected.
-	u8 boon; // 0x2E. Same indicators as bane.
-	u8 bane; // 0x2F. 0 = unselected, 1 = HP, 2 = str, 3 = mag, 4 = skl,  ..., 8 = luk.
-	ClassMenuSet* currSet; // 0x30. Used in the class submenu usability/effect.
-	Unit* unit; // 0x34. Unit loaded by the class menu.
-	u8 leavingClassMenu; // 0x38. Boolean for whether we're exiting the class emnu.
-	u8 lastIndex; // 0x39. Before going to a submenu, save the index we were at in the main menu.
+	Unit* mainUnit; // 0x2C. Unit we're keeping in place. Intended to be kept in unit slot 1.
+	Unit* tempUnit; // 0x30. Temporary unit used for display in the class menu. Intended to be kept in unit slot 2.
+	ClassMenuSet* currSet; // 0x34. Used in the class submenu usability/effect.
+	u8 boon; // 0x35. Same indicators as bane.
+	u8 bane; // 0x36. 0 = unselected, 1 = HP, 2 = str, 3 = mag, 4 = skl,  ..., 8 = luk.
+	u8 leavingClassMenu; // 0x37. Boolean for whether we're exiting the class emnu.
+	u8 lastIndex; // 0x38. Before going to a submenu, save the index we were at in the main menu.
 };
 
 struct CreatorClassProc
@@ -150,11 +149,12 @@ void SetupCreator(CreatorProc* proc)
 	proc->currMenu = MainMenu; // Initialize the proc parameters.
 	proc->gender = 0;
 	proc->route = 0;
-	proc->class = 0;
-	proc->character = 0;
+	proc->mainUnit = NULL;
+	proc->tempUnit = NULL;
+	proc->currSet = NULL;
 	proc->boon = 0;
 	proc->bane = 0;
-	proc->currSet = NULL;
+	proc->leavingClassMenu = 0;
 	proc->lastIndex = 0;
 	
 	UnsetEventId(0x6E); // Gender event ID.
@@ -177,9 +177,9 @@ void CreatorStartMenu(CreatorProc* proc)
 			{
 				DrawTextInline(0,&gBG0MapBuffer[7][9],3,0,26,GetStringFromIndex(gCreatorRouteMenuCommands[proc->route-1].nameId));
 			}
-			if ( proc->class )
+			if ( proc->mainUnit )
 			{
-				DrawTextInline(0,&gBG0MapBuffer[9][9],3,0,26,GetStringFromIndex(GetClassData(proc->class)->nameTextId));
+				DrawTextInline(0,&gBG0MapBuffer[9][9],3,0,26,GetStringFromIndex(proc->mainUnit->pClassData->nameTextId));
 			}
 			if ( proc->boon )
 			{
@@ -230,10 +230,10 @@ int CreatorMainEntryUsability(const MenuCommandDefinition* command, int index)
 			else { return 2; }
 		case BoonMenu:
 		case BaneMenu: // Only usable if they've chosen a gender, route, and class.
-			if ( proc->gender && proc->route && proc->class ) { return 1; }
+			if ( proc->gender && proc->route && proc->mainUnit ) { return 1; }
 			else { return 2; }
 		case 5: // Pressing "Done." Only usable if all selections are made.
-			if ( proc->gender && proc->route && proc->class && proc->boon && proc->bane ) { return 1; }
+			if ( proc->gender && proc->route && proc->mainUnit && proc->boon && proc->bane ) { return 1; }
 			else { return 3; }
 	}
 	return 3; // If for whatever reason we're out of bounds, make that menu unusable I guess?
@@ -282,12 +282,10 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
 			if ( creator->gender != commandProc->commandDefinitionIndex+1 )
 			{
 				// If they choose a new gender, clear whatever class, bane, and boon they chose.
-				creator->class = 0;
-				creator->character = 0;
 				creator->bane = 0;
 				creator->boon = 0;
 				creator->gender = commandProc->commandDefinitionIndex+1;
-				creator->unit = NULL;
+				creator->mainUnit = NULL;
 				ClearUnit(GetUnit(1));
 			}
 			ProcGoto((Proc*)creator,0);
@@ -296,20 +294,19 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
 			if ( creator->route != commandProc->commandDefinitionIndex+1 )
 			{
 				// Same for if they change their route.
-				creator->class = 0;
-				creator->character = 0;
 				creator->bane = 0;
 				creator->boon = 0;
 				creator->route = commandProc->commandDefinitionIndex+1;
-				creator->unit = NULL;
+				creator->mainUnit = NULL;
 				ClearUnit(GetUnit(1));
 			}
 			ProcGoto((Proc*)creator,0);
 			break;
 		case ClassMenu:
 			creator->leavingClassMenu = 1; // Set this, so we don't clear this on the switch out routine.
-			creator->class = creator->currSet->list[commandProc->commandDefinitionIndex].class;
-			creator->character = creator->currSet->list[commandProc->commandDefinitionIndex].character;
+			creator->mainUnit = GetUnit(1);
+			CopyUnit(creator->tempUnit,creator->mainUnit);
+			ClearUnit(creator->tempUnit);
 			ProcGoto((Proc*)creator,1);
 			creator->currMenu = MainMenu;
 			return ME_END|ME_PLAY_BEEP;

@@ -13,7 +13,7 @@ void CreatorActivateClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 	
 	Unit* unit = LoadCreatorUnit(creator,commandProc);
 	const CharacterData* charData = unit->pCharacterData;
-	creator->unit = unit;
+	creator->tempUnit = unit;
 	
 	int iconX = 12;
 	for ( int i = 0 ; i < 8 ; i++ )
@@ -128,7 +128,7 @@ void CreatorActivateClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 	classProc->mode = 1;
 	for ( int i = 0 ; i < 5 ; i++ ) { classProc->classes[i] = creator->currSet->list[i].class; }
 	classProc->menuItem = commandProc->commandDefinitionIndex;
-	classProc->charID = creator->unit->pCharacterData->number;
+	classProc->charID = creator->tempUnit->pCharacterData->number;
 }
 
 void CreatorRetractClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
@@ -136,14 +136,7 @@ void CreatorRetractClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 	BgMapFillRect(&gBG0MapBuffer[1][12],30-12,2,0);
 	ClearIcons();
 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
-	if ( !creator->leavingClassMenu )
-	{
-		ClearUnit(GetUnit(1)); // If we're not leaving the class menu, clear the unit we loaded.
-	}
-	else
-	{
-		creator->leavingClassMenu = 0; // If we are, we may as well unset this.
-	}
+	ClearUnit(creator->tempUnit); // If we're not leaving the class menu, clear the unit we loaded.
 	CreatorClassProc* classProc = (CreatorClassProc*)ProcFind(&gCreatorClassProc);
 	if ( classProc ) { classProc->mode = 1; }
 }
@@ -194,7 +187,17 @@ static Unit* LoadCreatorUnit(CreatorProc* creator, MenuCommandProc* commandProc)
 		.items[0] = GetAppropriateItem(creator->currSet->list[index].class),
 		.items[1] = gCreatorVulnerary
 	};
-	return LoadUnit(&definition);
+	// Friendly reminder that we want to keep this unit in unit slot 2!
+	Unit* newUnit = LoadUnit(&definition);
+	if ( newUnit->index != 2 )
+	{
+		// We've loaded into a different index than we want. Copy this unit into unit slot 2.
+		Unit* dest = GetUnit(2);
+		CopyUnit(newUnit,dest);
+		ClearUnit(newUnit);
+		newUnit = dest;
+	}
+	return newUnit;
 }
 
 static int GetAppropriateItem(int class) // Return the item ID that this class should use.
