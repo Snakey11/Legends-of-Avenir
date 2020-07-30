@@ -15,7 +15,26 @@ void CreatorActivateClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 	const CharacterData* charData = unit->pCharacterData;
 	creator->unit = unit;
 	
-	//gpCurrentFont->tileNext = creator->currBase;
+	int iconX = 12;
+	for ( int i = 0 ; i < 8 ; i++ )
+	{
+		if ( unit->ranks[i] )
+		{
+			DrawIcon(&gBG0MapBuffer[1][iconX],0x70+i,0x5000);
+			iconX += 2;
+		}
+	}
+	
+	gSkillGetterCurrUnit = NULL;
+	u8* skillList = SkillGetter(unit);
+	iconX = 20;
+	int c = 0;
+	while ( skillList[c] )
+	{
+		DrawSkillIcon(&gBG0MapBuffer[1][iconX],skillList[c],0x4000);
+		c++;
+		iconX += 2;
+	}
 	// Now I'd like to draw this unit's stats near the bottom of the screen.
 	
 	DrawUiNumber(&gBG0MapBuffer[15][8],TEXT_COLOR_GOLD,unit->maxHP);
@@ -114,11 +133,8 @@ void CreatorActivateClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 
 void CreatorRetractClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 {
-	//CPU_FILL(0,(char*)&gBG0MapBuffer[13][0]-1,(32-13)*32*2,32);
-	//EnableBgSyncByMask(1);
-	//CPU_FILL(0,(char*)0x060063C0-1,0x6006500-0x60063C0,32);
-	//CPU_FILL(0,(char*)gSpecialUiCharAllocationTable-1,0x100,32);
-	//gSpecialUiCharAllocationTable[0] = 0xFF;
+	BgMapFillRect(&gBG0MapBuffer[1][12],30-12,2,0);
+	ClearIcons();
 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
 	if ( !creator->leavingClassMenu )
 	{

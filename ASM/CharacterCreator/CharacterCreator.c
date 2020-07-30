@@ -16,8 +16,6 @@ typedef struct SomeAISStruct SomeAISStruct;
 #define BaneMenu 4
 #define MainMenu 5
 
-#define BGLoc(BGOffset, x, y) ((int)BGOffset + 0x2 * x + 0x40 * y) // Thanks, Kirb.
-
 struct ClassMenuSet
 {
 	u8 gender;
@@ -42,7 +40,7 @@ struct CreatorProc
 	ClassMenuSet* currSet; // 0x30. Used in the class submenu usability/effect.
 	Unit* unit; // 0x34. Unit loaded by the class menu.
 	u8 leavingClassMenu; // 0x38. Boolean for whether we're exiting the class emnu.
-	u16 currBase; // 0x3A. Used for not overwriting menu text when clearing other text.
+	u8 lastIndex; // 0x39. Before going to a submenu, save the index we were at in the main menu.
 };
 
 struct CreatorClassProc
@@ -78,6 +76,7 @@ extern AnimationInterpreter gSomeAISStruct; // 0x030053A0.
 extern SomeAISStruct gSomeAISRelatedStruct; // 0x0201FADC.
 extern AIStruct gAISArray; // 0x2028F78.
 extern u8 gSpecialUiCharAllocationTable[]; // 02028E78.
+extern Unit* gSkillGetterCurrUnit; // 0x02026BB0.
 
 extern void ReloadGameCoreGraphics(void);
 extern void DeleteSomeAISStuff(AnimationInterpreter* interpreter); // 0x0805AA28.
@@ -87,6 +86,8 @@ extern void RefreshEntityMaps(void);
 extern void DrawTileGraphics(void);
 extern void UnsetEventId(u16 eventID);
 extern void SetEventId(u16 eventID);
+extern u8*(*SkillGetter)(Unit* unit);
+#define DrawSkillIcon(map,id,oam2base) DrawIcon(map,id|0x100,oam2base)
 
 extern const struct {
 	u8 base;
@@ -154,6 +155,7 @@ void SetupCreator(CreatorProc* proc)
 	proc->boon = 0;
 	proc->bane = 0;
 	proc->currSet = NULL;
+	proc->lastIndex = 0;
 	
 	UnsetEventId(0x6E); // Gender event ID.
 	
@@ -187,7 +189,8 @@ void CreatorStartMenu(CreatorProc* proc)
 			{
 				DrawTextInline(0,&gBG0MapBuffer[13][9],3,0,26,GetStringFromIndex(gCreatorBaneMenuCommands[proc->bane-1].nameId));
 			}
-			StartMenuChild(&gCreatorMainMenuDefs,(Proc*)proc); break;
+			MenuProc* menu = StartMenuChild(&gCreatorMainMenuDefs,(Proc*)proc);
+			menu->commandIndex = proc->lastIndex; break;
 		case GenderMenu:
 			StartMenuChild(&gCreatorGenderMenuDefs,(Proc*)proc); break;
 		case RouteMenu: StartMenuChild(&gCreatorRouteMenuDefs,(Proc*)proc); break;
@@ -199,7 +202,6 @@ void CreatorStartMenu(CreatorProc* proc)
 			{
 				// Now to build this MenuCommandDefinition.
 				gRAMMenuCommands[i].nameId = GetClassData(set->list[i].class)->nameTextId;
-				gRAMMenuCommands[i].helpId = gRAMMenuCommands[i].nameId;
 				gRAMMenuCommands[i].colorId = 0;
 				gRAMMenuCommands[i].isAvailable = CreatorSubmenuUsability;
 				gRAMMenuCommands[i].onEffect = CreatorSubmenuEffect;
@@ -209,7 +211,6 @@ void CreatorStartMenu(CreatorProc* proc)
 			}
 			StartMenuChild(&gCreatorClassMenuDefs,(Proc*)proc);
 			ProcStart(&gCreatorClassProc,(Proc*)proc);
-			proc->currBase = gpCurrentFont->tileBase;
 			break;
 		case BoonMenu: StartMenuChild(&gCreatorBoonMenuDefs,(Proc*)proc); break;
 		case BaneMenu: StartMenuChild(&gCreatorBaneMenuDefs,(Proc*)proc); break;
@@ -249,6 +250,7 @@ int CreatorMainGotoEntry(MenuProc* proc, MenuCommandProc* commandProc)
 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
 	// We'll want to go to the proc label that matches the menu ID we chose.
 	creator->currMenu = commandProc->commandDefinitionIndex;
+	creator->lastIndex = commandProc->commandDefinitionIndex;
 	ProcGoto((Proc*)creator,0);
 	return ME_END|ME_PLAY_BEEP|ME_CLEAR_GFX;
 }

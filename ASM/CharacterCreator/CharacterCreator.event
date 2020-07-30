@@ -23,9 +23,9 @@
 	SHORT 0x46C0 0x46C0
 	
 	ORG $CC2A0 // Increase battle sprite height.
-	BYTE 0x3E
+	BYTE 0x3C
 	ORG $CD148
-	BYTE 0x3E
+	BYTE 0x3C
 	
 	ORG $CCDB2 // Increase platform height.
 	BYTE 0x4A
@@ -99,7 +99,7 @@
 	
 	ALIGN 4
 	gCreatorRouteMenuDefs:
-	BYTE 2 0 8 0
+	BYTE 2 6 8 0
 	WORD 1
 	POIN gCreatorRouteMenuCommands
 	POIN 0 0 0 CreatorRegressMenu GenericMenuRPress|1 GenericMakeHelpBox|1
@@ -115,7 +115,7 @@
 	BYTE 2 0 9 0
 	WORD 1
 	WORD gCreatorRAMMenu // We generate this menu in RAM because it depends on what route they chose.]
-	POIN 0 0 0 CreatorRegressMenu GenericMenuRPress|1 GenericMakeHelpBox|1
+	POIN 0 0 0 CreatorRegressMenu 0 0
 	
 	#define CreatorMale 1
 	#define CreatorFemale 2
@@ -131,6 +131,9 @@
 	ClassMenuOption(CreatorMale,CreatorMage,PlayerMMage,MageM2,PlayerMMonk,MonkM2,PlayerMShaman,ShamanM2,0,0,0,0)
 	ClassMenuOption(CreatorFemale,CreatorMage,PlayerFMage,MageF2,PlayerFMonk,MonkF2,PlayerFShaman,ShamanF2,0,0,0,0)
 	WORD 0 0 0
+	
+	SkillGetter:
+	POIN Skill_Getter+1
 	
 	gCreatorClassUIBoxTSA:
 	#incbin "ClassBlueBox.dmp"

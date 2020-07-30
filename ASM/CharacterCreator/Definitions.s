@@ -17,6 +17,8 @@ SET_DATA TileOrigin, 0x02003C94
 
 SET_DATA gSpecialUiCharAllocationTable, 0x02028E78
 
+SET_DATA gSkillGetterCurrUnit, 0x02026BB0
+
 
 SET_FUNC RefreshEntityMaps, (0x801A1F4+1)
 
