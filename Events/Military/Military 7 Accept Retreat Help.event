@@ -140,6 +140,10 @@ LABEL 0x0
 	// Many houses were raided.
 	ENUF 0x11 // Disable Rex's and Derek's death quotes.
 	ENUF 0x12
+	SVAL 0x1 Rex
+	ASMC MakeNotDeadASM|1
+	SVAL 0x1 Derek
+	ASMC MakeNotDeadASM|1
 	CAM1 [5,5]
 	LOAD3 0x1 PlayerLoading3
 	LOAD2 0x1 BadEndingFriends
