@@ -5,31 +5,37 @@
 	#include "ProcDefinitions.event"
 	
 	#include "CharacterCreator.lyn.event"
+	#include "CreatorClassSetup.lyn.event"
+	#include "CreatorClassDisplayLoop.lyn.event"
+	gCreatorBattleSpriteHeight:
+	BYTE 0x3C
+	gCreatorPlatformHeight:
+	BYTE 0x4A
 	
 	#define GenericMenuRPress 0x0804F520
 	#define GenericMakeHelpBox 0x0804F458
 	#define gCreatorRAMMenu 0x0203EFB8
 	
-	#define CreatorClassSetup $CCD48
-	#define CreatorClassDisplayLoop $CD014
+	/*//#define CreatorClassSetup $CCD48
+	//#define CreatorClassDisplayLoop $CD014
 	PUSH // For temporarily hijacking the promotion menu drawing functions.
 	ORG $CCD74
-	SHORT 0xE00E
+	//SHORT 0xE00E
 	ORG $CCDA8
-	SHORT 0x46C0 0x46C0
+	//SHORT 0x46C0 0x46C0
 	ORG $CCF22
-	SHORT 0xE014
+	//SHORT 0xE014
 	ORG $CD1C0
-	SHORT 0x46C0 0x46C0
+	//SHORT 0x46C0 0x46C0
 	
 	ORG $CC2A0 // Increase battle sprite height.
-	BYTE 0x3C
+	//BYTE 0x3C
 	ORG $CD148
-	BYTE 0x3C
+	//BYTE 0x3C
 	
 	ORG $CCDB2 // Increase platform height.
-	BYTE 0x4A
-	POP
+	//BYTE 0x4A
+	POP*/
 	
 	ALIGN 4
 	gCreatorProc:
