@@ -27,6 +27,8 @@ NewStatScreenPal:
 #incext Png2Dmp "StatScreen.png" --palette-only
 
 
+#include "TitleScreen/TitleScreen.event"
+
 ALIGN 4
 SmallWorldMap:
 #incbin "WorldMap/SmallWMGraphics.dmp"
