@@ -9,12 +9,31 @@ typedef struct UnitDefinition UnitDefinition;
 typedef struct TSA TSA;
 typedef struct SomeAISStruct SomeAISStruct;
 
-#define GenderMenu 0
-#define RouteMenu 1
-#define ClassMenu 2
-#define BoonMenu 3
-#define BaneMenu 4
-#define MainMenu 5
+enum
+{
+GenderMenu = 0, // Menu defs.
+RouteMenu = 1,
+ClassMenu = 2,
+BoonMenu = 3,
+BaneMenu = 4,
+MainMenu = 5,
+
+Male = 1, // Gender defs.
+Female = 2,
+
+Mercenary = 1, // Route defs.
+Military = 2,
+Mage = 3,
+
+HP = 1, // Boon/bane defs.
+Str = 2,
+Mag = 3,
+Skl = 4,
+Spd = 5,
+Def = 6,
+Res = 7,
+Luk = 8,
+};
 
 struct ClassMenuSet
 {
@@ -88,7 +107,8 @@ extern void SetEventId(u16 eventID);
 extern u8*(*SkillGetter)(Unit* unit);
 #define DrawSkillIcon(map,id,oam2base) DrawIcon(map,id|0x100,oam2base)
 
-extern const struct {
+extern const struct
+{
 	u8 base;
 	u8 growth;
 	u8 cap;
@@ -97,24 +117,23 @@ extern const struct {
 extern const ProcInstruction gCreatorProc;
 extern const ProcInstruction gCreatorClassProc;
 extern const MenuDefinition gCreatorMainMenuDefs;
-extern const MenuCommandDefinition gCreatorMainMenuCommands[];
 extern const u16 gMainMenuErrorTexts[];
 extern const MenuDefinition gCreatorGenderMenuDefs;
-extern const MenuCommandDefinition gCreatorGenderMenuCommands[];
 extern const MenuDefinition gCreatorRouteMenuDefs;
-extern const MenuCommandDefinition gCreatorRouteMenuCommands[];
 extern const MenuDefinition gCreatorClassMenuDefs;
-extern const MenuCommandDefinition gCreatorClassMenuCommands[];
 extern ClassMenuSet gClassMenuOptions[];
 extern const TSA gCreatorClassUIBoxTSA;
 extern const u8 gCreatorAppropriateItemArray[8];
 extern const u8 gCreatorVulnerary;
-extern const MenuDefinition gCreatorBoonMenuDefs;
-extern const MenuCommandDefinition gCreatorBoonMenuCommands[];
+extern const MenuDefinition gCreatorBoonBaneMenuDefs;
 extern const u16 gBoonMenuItemErrorText;
-extern const MenuDefinition gCreatorBaneMenuDefs;
-extern const MenuCommandDefinition gCreatorBaneMenuCommands[];
+extern const struct
+{
+	u8 base, growth;
+} gCreatorBoonBaneEffects[];
 extern const u16 gBaneMenuItemErrorText;
+
+#define TEXT_COLOR_GREY TEXT_COLOR_GRAY
 
 void CallCharacterCreator(Proc* proc);
 void SetupCreator(CreatorProc* proc);
@@ -125,6 +144,10 @@ int CreatorSubmenuUsability(const MenuCommandDefinition* command, int index);
 int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc);
 int CreatorRegressMenu(void);
 int CreatorNoBPress(void);
+
+static void CreatorBoonBaneDraw(CreatorProc* creator);
+void CreatorBoonBaneSwitchIn(MenuProc* proc, MenuCommandProc* commandProc);
+static void FillNumString(char* string, int num);
 
 void CreatorClassDrawUIBox(CreatorClassProc* proc);
 void CreatorActivateClassDisplay(MenuProc* proc, MenuCommandProc* commandProc);
@@ -137,6 +160,7 @@ static int GetAppropriateItem(int class);
 static void DrawStatNames(TextHandle handle, char* string, int x, int y);
 
 #include "ClassDisplay.c"
+#include "BoonBane.c"
 
 void CallCharacterCreator(Proc* proc) // Presumably ASMCed. Block the event engine and start running our character creator.
 {
@@ -166,16 +190,17 @@ void SetupCreator(CreatorProc* proc)
 void CreatorStartMenu(CreatorProc* proc)
 {
 	ReloadGameCoreGraphics();
+	MenuProc* newMenu = NULL;
 	switch ( proc->currMenu )
 	{
 		case MainMenu:
 			if ( proc->gender )
 			{
-				DrawTextInline(0,&gBG0MapBuffer[5][9],3,0,26,GetStringFromIndex(gCreatorGenderMenuCommands[proc->gender-1].nameId));
+				DrawTextInline(0,&gBG0MapBuffer[5][9],3,0,26,GetStringFromIndex(gCreatorGenderMenuDefs.commandList[proc->gender-1].nameId));
 			}
 			if ( proc->route )
 			{
-				DrawTextInline(0,&gBG0MapBuffer[7][9],3,0,26,GetStringFromIndex(gCreatorRouteMenuCommands[proc->route-1].nameId));
+				DrawTextInline(0,&gBG0MapBuffer[7][9],3,0,26,GetStringFromIndex(gCreatorRouteMenuDefs.commandList[proc->route-1].nameId));
 			}
 			if ( proc->mainUnit )
 			{
@@ -183,20 +208,21 @@ void CreatorStartMenu(CreatorProc* proc)
 			}
 			if ( proc->boon )
 			{
-				DrawTextInline(0,&gBG0MapBuffer[11][9],3,0,26,GetStringFromIndex(gCreatorBoonMenuCommands[proc->boon-1].nameId));
+				DrawTextInline(0,&gBG0MapBuffer[11][9],3,0,26,GetStringFromIndex(gCreatorBoonBaneMenuDefs.commandList[proc->boon-1].nameId));
 			}
 			if ( proc->bane )
 			{
-				DrawTextInline(0,&gBG0MapBuffer[13][9],3,0,26,GetStringFromIndex(gCreatorBaneMenuCommands[proc->bane-1].nameId));
+				DrawTextInline(0,&gBG0MapBuffer[13][9],3,0,26,GetStringFromIndex(gCreatorBoonBaneMenuDefs.commandList[proc->bane-1].nameId));
 			}
-			MenuProc* menu = StartMenuChild(&gCreatorMainMenuDefs,(Proc*)proc);
-			menu->commandIndex = proc->lastIndex; break;
-		case GenderMenu:
-			StartMenuChild(&gCreatorGenderMenuDefs,(Proc*)proc); break;
+			newMenu = StartMenuChild(&gCreatorMainMenuDefs,(Proc*)proc);
+			newMenu->commandIndex = proc->lastIndex;
+			break;
+		case GenderMenu: StartMenuChild(&gCreatorGenderMenuDefs,(Proc*)proc); break;
 		case RouteMenu: StartMenuChild(&gCreatorRouteMenuDefs,(Proc*)proc); break;
 		case ClassMenu:
 			// We need to build our class menu in RAM depending on what gender and route they chose.
 			CPU_FILL(0,(char*)gRAMMenuCommands-1,6*9*4,32); // Clear our RAM buffer.
+			// We don't do this on the stack because it's sorta kinda a lot, and we have a ROM pointer to the commands.
 			ClassMenuSet* set = GetClassSet(proc->gender,proc->route);
 			for ( int i = 0 ; set->list[i].character && i < 5 ; i++ )
 			{
@@ -212,8 +238,11 @@ void CreatorStartMenu(CreatorProc* proc)
 			StartMenuChild(&gCreatorClassMenuDefs,(Proc*)proc);
 			ProcStart(&gCreatorClassProc,(Proc*)proc);
 			break;
-		case BoonMenu: StartMenuChild(&gCreatorBoonMenuDefs,(Proc*)proc); break;
-		case BaneMenu: StartMenuChild(&gCreatorBaneMenuDefs,(Proc*)proc); break;
+		case BoonMenu:
+		case BaneMenu:
+			StartMenuChild(&gCreatorBoonBaneMenuDefs,(Proc*)proc);
+			CreatorBoonBaneDraw(proc);
+			break;
 	}
 }
 
@@ -262,13 +291,15 @@ int CreatorSubmenuUsability(const MenuCommandDefinition* command, int index)
 	if ( ( proc->currMenu == BaneMenu || proc->currMenu == BoonMenu ) && index == 2 && proc->route != 3 ) { return 3; }
 	if ( proc->currMenu == BoonMenu )
 	{
-		if ( proc->bane != index+1 ) { return 1; }
-		else { return 2; }
+		if ( proc->bane == index+1 ) { return 2; }
+		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
+		else { return 1; }
 	}
 	if ( proc->currMenu == BaneMenu )
 	{
-		if ( proc->boon != index+1 ) { return 1; }
-		else { return 2; }
+		if ( proc->boon == index+1 ) { return 2; }
+		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
+		else { return 1; }
 	}
 	return 1;
 }

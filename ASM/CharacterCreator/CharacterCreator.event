@@ -120,7 +120,7 @@
 	gCreatorClassMenuDefs:
 	BYTE 2 0 9 0
 	WORD 1
-	WORD gCreatorRAMMenu // We generate this menu in RAM because it depends on what route they chose.]
+	WORD gCreatorRAMMenu // We generate this menu in RAM because it depends on what route they chose.
 	POIN 0 0 0 CreatorRegressMenu 0 0
 	
 	#define CreatorMale 1
@@ -151,24 +151,33 @@
 	BYTE Vulnerary
 	
 	ALIGN 4
-	gCreatorBaneMenuDefs:
-	gCreatorBoonMenuDefs:
-	BYTE 2 1 8 0
+	gCreatorBoonBaneMenuDefs:
+	BYTE 2 3 8 0
 	WORD 1
-	POIN gCreatorBaneMenuCommands
+	POIN gCreatorBoonBaneMenuCommands
 	POIN 0 0 0 CreatorRegressMenu GenericMenuRPress|1 GenericMakeHelpBox|1
 	
-	gCreatorBaneMenuCommands:
-	gCreatorBoonMenuCommands:
-	MenuCommand(HPMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
-	MenuCommand(StrMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
-	MenuCommand(MagMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
-	MenuCommand(SklMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
-	MenuCommand(SpdMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
-	MenuCommand(DefMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
-	MenuCommand(ResMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
-	MenuCommand(LukMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
+	gCreatorBoonBaneMenuCommands:
+	MenuCommand(HPMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,CreatorBoonBaneSwitchIn,0)
+	MenuCommand(StrMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,CreatorBoonBaneSwitchIn,0)
+	MenuCommand(MagMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,CreatorBoonBaneSwitchIn,0)
+	MenuCommand(SklMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,CreatorBoonBaneSwitchIn,0)
+	MenuCommand(SpdMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,CreatorBoonBaneSwitchIn,0)
+	MenuCommand(DefMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,CreatorBoonBaneSwitchIn,0)
+	MenuCommand(ResMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,CreatorBoonBaneSwitchIn,0)
+	MenuCommand(LukMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,CreatorBoonBaneSwitchIn,0)
 	WORD 0 0 0 0 0 0 0 0 0
+	
+	gCreatorBoonBaneEffects:
+	// BYTE (base effect) (growth effect).
+	BYTE 5 20 // HP.
+	BYTE 2 10 // Str.
+	BYTE 2 10 // Mag.
+	BYTE 3 15 // Skl.
+	BYTE 2 10 // Spd.
+	BYTE 2 10 // Def.
+	BYTE 2 15 // Res.
+	BYTE 5 25 // Luk.
 	
 	gBaneMenuItemErrorText:
 	SHORT BaneMenuItemErrorText
@@ -194,8 +203,17 @@
 		Maybe stat display instead... I wonder if we can fit both?
 		Both updated on scrolling through the menu.
 		
-	BANE/BOON MENU:
-		Class stats and bane/boon effect updated on scroll through the menu.
+	BOON/BANE MENU:
+		Show all base stats growths and the current boon/bane buffs/debuffs.
+		STATS	Base	Growth
+		HP		5		20
+		Str		2		10
+		Mag		2		10
+		Skl		3		15
+		Spd		2		10
+		Def		3		10
+		Res		3		15
+		Luk		5		25
 		
 	"Promotion-style" battle animation display notes:
 		Handled by a PromotionDisplay_MainLoop (0x080CD014). Only parameter is parent proc (0x08B1271C).
