@@ -31,6 +31,7 @@ Forrest's mug has been updated! -- Credit Star
 Finoc has a new mug! -- Credit Atey (Sponsored by Bartz)
 Izuk's mug has been updated! -- Credit Vlak
 Baret has a new mug! -- Credit Atey (Sponsored by Bartz)
+For the next releases until we begin balancing hard mode all difficulties will force-set to normal mode as you begin the prologue
 
 v1.10 (This was only released to playtesters in the Discord server to catch bugs before v2.0.)
 5th and final Military route is a go. Kill Sean after accepting the promotion in chapter 3. Route includes all supports as well
