@@ -14,7 +14,6 @@ ALIGN 4
 ALIGN 4
 #include "Always Display Ranged Animation/Ranged Animation by Table Installer.event"
 
-ALIGN 4
 #include "AnimaEffectiveness/AnimaEffectiveness.lyn.event"
 /*ALIGN 4
 #inctext lyn "AnimaTriangle/NewAnimaTriangle.elf" "AnimaTriangle/Definitions.elf"
@@ -32,10 +31,8 @@ BYTE Aqua Elaqua Arcaqua Fimbulvetr 0x00
 ALIGN 4
 #include "Arms Scroll/EA Installer.event"
 
-ALIGN 4
 #include "AutoNewline/Installer.event"
 
-ALIGN 4
 #include "AutoPromote/AutoPromote.lyn.event"
 
 AutoPromoteTestEvents:
@@ -43,27 +40,22 @@ ASMC PromotionTime|1
 NoFade
 ENDA
 
-ALIGN 4
 #include "BowDebuff/BowDebuff.lyn.event"
 
 ALIGN 4
 #include "Chapter Names/fe8_chnames.event"
 
-ALIGN 4
 //#include "ChangeChapterObjective/Installer.event"
 
 #include "CharacterCreator/CharacterCreator.event"
 
-ALIGN 4
 #include "Class Expansion.event"
 
-ALIGN 4
 #include "CopyUnit/Installer.event"
 
 ALIGN 4
 #include "Display All Weapon Level Ups/Promotion Ranks Fix Installer.event"
 
-ALIGN 4
 #include "DoorsAndChests/DoorsAndChests.event"
 
 ALIGN 4
@@ -72,16 +64,12 @@ ALIGN 4
 //ALIGN 4
 //#include "Escape-Arrive/Escape Installer.event"
 
-ALIGN 4
 #include "EventParameters/EventParameters.event"
 
-ALIGN 4
 #include "GiveToSupply/GiveToSupply.lyn.event"
 
-ALIGN 4
 #include "HPBars/HPBars.event"
 
-ALIGN 4
 #include "HybridClasses/HybridHooks.lyn.event"
 ALIGN 4
 SpellswordList:
@@ -91,16 +79,10 @@ ALIGN 4
 SpellswordERankList:
 BYTE SpellswordM SpellswordF 0x00
 
-//ALIGN 4
-//#inctext lyn "LevelUP/LevelUP.elf" "LevelUp/Definitions.elf"
-
-ALIGN 4
 #include "MakeNotDead/MakeNotDead.lyn.event"
 
-ALIGN 4
 #include "Menus/Menu Commands.event"
 
-ALIGN 4
 #include "MiscMusics/MiscMusics.lyn.event"
 gVictoryMusic:
 SHORT The_First_Campaign
@@ -134,24 +116,20 @@ StaffEXPEntry(Unlock,25,10)
 StaffEXPEntry(Barrier,20,10)
 StaffEXPEntry(0,0,0)
 
-ALIGN 4
 #include "ModularMinimugBox/MMB Installer Default.event"
 
 #include "MultiTileMarker/MultiTileMarker_Install.event"
 
-ALIGN 4
 #include "NameSelection/SetName.lyn.event"
 KendrickName:
 String(Kendrick)
 BYTE 0x00
 
-ALIGN 4
 #include "NarrowFont/Narrowfont installer.event"
 
 ALIGN 4
 #include "New CHAI/New CHAI.event"
 
-ALIGN 4
 #include "Nice.event"
 
 ALIGN 4
@@ -188,18 +166,15 @@ BYTE 0x6E True  0x67 True  0x00 0x00
 FemaleMageList:
 BYTE 0x6E False  0x67 True  0x00 0x00
 */
-ALIGN 4
+
 #include "PoisonRework/PoisonRework.lyn.event"
 
-ALIGN 4
 #include "PrepForBattle/PrepForBattle.lyn.event"
 
-ALIGN 4
 #include "PrepForEnd/PrepForEnd.lyn.event"
 PrepForEndItemList:
 BYTE SteelSword SteelLance SteelAxe SteelShortbow 0x00 Elwind Divine Worm
 
-ALIGN 4
 #include "PrepScreen/PrepScreen.event"
 /*
 ALIGN 4
@@ -208,16 +183,14 @@ ALIGN 4
 ALIGN 4
 #include "RefreshAll/RefreshAll.lyn.event"
 
-ALIGN 4
 #include "RemoveBallistae/RemoveBallistae.lyn.event"
 
-ALIGN 4
 #include "ScriptedBattles/ScriptedBattles.event"
 
-ALIGN 4
+#include "SetDifficulty/SetDifficulty.lyn.event"
+
 #include "SetEXP/SetEXP.lyn.event"
 
-ALIGN 4
 #include "SetUnitState/SetUnitState.lyn.event"
 
 ALIGN 4
@@ -226,16 +199,8 @@ ALIGN 4
 //ALIGN 4
 //#include "SummonStuff/Summon.event"
 
-ALIGN 4
 #include "ModularSupply/ModularSupply.event"
 
-//ALIGN 4
-//#include "SupportRework/CBaseConvos/SupportRework/SupportRework.event"
-
-//ALIGN 4
-//#include "SupportRework/CBaseConvos/BaseConvos.event"
-
-ALIGN 4
 #include "SupportRework/SupportRework.event"
 
 ALIGN 4
@@ -253,16 +218,15 @@ ALIGN 4
 	ALIGN 4
 	#include "SkillSystem_FE8/Engine Hacks/Debug.event"
 	
-	ALIGN 4
 	#inctext lyn "SkillSystem_FE8/Engine Hacks/WinAddition.elf"
-	ALIGN 4
+	
 	#inctext lyn "SkillSystem_FE8/Engine Hacks/winbuttonusability.elf"
 	ALIGN 4
 	WinButtonUsabilityCharacterList:
 	BYTE PlayerMMage PlayerMMonk PlayerMShaman PlayerFMage PlayerFMonk PlayerFShaman
 	BYTE PlayerMCavalier PlayerMKnight PlayerMSoldier PlayerMWyvernRider PlayerMArcher PlayerFCavalier PlayerFKnight PlayerFSoldier PlayerFWyvernRider PlayerFArcher
 	BYTE PlayerMMercenary PlayerMMyrmidon PlayerMFighter PlayerMPirate PlayerMBrigand PlayerFMercenary PlayerFMyrmidon PlayerFPegasusKnight
-	ALIGN 4
+	
 	WinButtonUsabilityChapterExceptionList:
 	BYTE PrologueChapter
 	

@@ -288,6 +288,7 @@ UNIT
 
 BeginningScene:
 //ASMC SetName|1
+ASMC SetDifficulty|1 // For now, force difficulty to Normal.
 MUSC PrologueMusic
 ENUT 0x66 // Disable objective window
 ENUF 0x69
