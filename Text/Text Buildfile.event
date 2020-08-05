@@ -191,6 +191,29 @@ Military[X]
 ## MageMenuText
 Mage[X]
 
+## CreatorMercenaryRouteText
+Be a wandering mercenary[NL]
+in the neutral warrior[NL]
+state of Haedric. Play[NL]
+as a Mercenary, Myrmidon,[NL]
+Fighter, Pirate, Brigand,[NL]
+or Pegasus Knight.[X]
+
+## CreatorMilitaryRouteText
+Be a soldier in the[NL]
+imperial Cesarian Army[NL]
+and fight against New[NL]
+Arcanae. Play as a[NL]
+Cavalier, Knight, Soldier,[NL]
+Wyvern Rider, or Archer.[X]
+
+## CreatorMageRouteText
+Be a scholar serving in[NL]
+scholarly Arcanae,[NL]
+embroiled in a bloody[NL]
+civil war. Play as a[NL]
+mage, monk, or shaman.[X]
+
 ## ClassMenuErrorText
 Select a gender and route[NL]
 before choosing a class.[X]

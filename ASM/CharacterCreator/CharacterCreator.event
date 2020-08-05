@@ -111,10 +111,17 @@
 	POIN 0 0 0 CreatorRegressMenu GenericMenuRPress|1 GenericMakeHelpBox|1
 	
 	gCreatorRouteMenuCommands:
-	MenuCommand(MercenaryMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
-	MenuCommand(MilitaryMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
-	MenuCommand(MageMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,0,0)
+	MenuCommand(MercenaryMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,CreatorRouteSwitchIn,0)
+	MenuCommand(MilitaryMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,CreatorRouteSwitchIn,0)
+	MenuCommand(MageMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,CreatorRouteSwitchIn,0)
 	WORD 0 0 0 0 0 0 0 0 0
+	
+	gCreatorRouteUIBoxTSA:
+	#incbin "RouteBlueBox.dmp"
+	
+	ALIGN 4
+	gCreatorRouteDisplayTexts:
+	SHORT CreatorMercenaryRouteText CreatorMilitaryRouteText CreatorMageRouteText
 	
 	ALIGN 4
 	gCreatorClassMenuDefs:
@@ -168,6 +175,10 @@
 	MenuCommand(LukMenuText,Test1DescText,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,CreatorBoonBaneSwitchIn,0)
 	WORD 0 0 0 0 0 0 0 0 0
 	
+	gCreatorBoonBaneBoxTSA:
+	#incbin "BoonBaneBlueBox.dmp"
+	
+	ALIGN 4
 	gCreatorBoonBaneEffects:
 	// BYTE (base effect) (growth effect).
 	BYTE 5 20 // HP.
@@ -184,7 +195,6 @@
 	gBoonMenuItemErrorText:
 	SHORT BoonMenuItemErrorText
 	
-	
 	/*
 	What do we want displayed on each screen?
 	
@@ -194,9 +204,13 @@
 		Class chosen - normal text + map sprite.
 		Bane chosen - normal text (including the stat name of the bane and its effect).
 		Boon chosen - same as bane.
-	
+		Also large text to the side for what each submenu is about.
+		
 	GENDER MENU:
-		No change from main menu?
+		???
+		
+	ROUTE MENU:
+		Large text information on each route.
 		
 	CLASS MENU:
 		It would be really cool to use the animation display used in promotion screens...

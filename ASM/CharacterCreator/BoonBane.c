@@ -1,12 +1,14 @@
 
-static void CreatorBoonBaneDraw(CreatorProc* creator)
+static void CreatorBoonBaneDraw(CreatorProc* proc)
 {
-	Unit* unit = creator->mainUnit;
+	Unit* unit = proc->mainUnit;
 	const CharacterData* charData = unit->pCharacterData;
 	
-	// First, draw the unit's constant base stats and growths.
+	ApplyBGBox(gBG1MapBuffer,&gCreatorBoonBaneBoxTSA,10,1);
+	
+	// Draw the unit's constant base stats and growths.
 	DrawUiNumber(&gBG0MapBuffer[4][13],TEXT_COLOR_GOLD,unit->maxHP);
-	if ( creator->route != Mage )
+	if ( proc->route != Mage )
 	{
 		DrawUiNumber(&gBG0MapBuffer[6][13],TEXT_COLOR_GOLD,unit->pow);
 	}
@@ -21,7 +23,7 @@ static void CreatorBoonBaneDraw(CreatorProc* creator)
 	DrawUiNumber(&gBG0MapBuffer[16][13],TEXT_COLOR_GOLD,unit->lck);
 	
 	DrawUiNumber(&gBG0MapBuffer[4][21],TEXT_COLOR_GOLD,charData->growthHP);
-	if ( creator->route != Mage )
+	if ( proc->route != Mage )
 	{
 		DrawUiNumber(&gBG0MapBuffer[6][21],TEXT_COLOR_GOLD,charData->growthPow);
 	}
@@ -35,15 +37,39 @@ static void CreatorBoonBaneDraw(CreatorProc* creator)
 	DrawUiNumber(&gBG0MapBuffer[14][21],TEXT_COLOR_GOLD,charData->growthRes);
 	DrawUiNumber(&gBG0MapBuffer[16][21],TEXT_COLOR_GOLD,charData->growthLck);
 	
+	int tile = 0;
+	TextHandle baseHandle =	{
+		.tileIndexOffset = gpCurrentFont->tileNext+tile,
+		.tileWidth = 4
+	};
+	tile += 4;
+	Text_Clear(&baseHandle);
+	Text_SetColorId(&baseHandle,TEXT_COLOR_GOLD);
+	Text_InsertString(&baseHandle,0,TEXT_COLOR_GOLD,"Base");
+	Text_Display(&baseHandle,&gBG0MapBuffer[2][13]);
+	
+	TextHandle growthHandle = {
+		.tileIndexOffset = gpCurrentFont->tileNext+tile,
+		.tileWidth = 4
+	};
+	tile += 4;
+	Text_Clear(&growthHandle);
+	Text_SetColorId(&growthHandle,TEXT_COLOR_GOLD);
+	Text_InsertString(&growthHandle,0,TEXT_COLOR_GOLD,"Growth");
+	Text_Display(&growthHandle,&gBG0MapBuffer[2][21]);
+	
+	proc->boonBaneTileLast = tile; // Store the tile we left off at for our switch in routine.
+	
 	EnableBgSyncByMask(1);
+	EnableBgSyncByMask(2);
 }
 
 void CreatorBoonBaneSwitchIn(MenuProc* proc, MenuCommandProc* commandProc)
 {
-	BgMapFillRect(&gBG0MapBuffer[4][15],4,20-4,0);
-	BgMapFillRect(&gBG0MapBuffer[4][23],4,20-4,0);
+	BgMapFillRect(&gBG0MapBuffer[4][14],4,20-4,0);
+	BgMapFillRect(&gBG0MapBuffer[4][22],4,20-4,0);
 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
-	int tile = 0;
+	int tile = creator->boonBaneTileLast;
 	char eff[4]; // Effect string we're going to pass in to the drawing routines.
 	int color = 0;
 	if ( creator->currMenu == BoonMenu ) { eff[0] = '+'; color = TEXT_COLOR_GREEN; } else { eff[0] = '-'; color = TEXT_COLOR_GREY; }
@@ -96,8 +122,10 @@ void CreatorBoonBaneSwitchIn(MenuProc* proc, MenuCommandProc* commandProc)
 	if ( offset != -1 && offset != commandProc->commandDefinitionIndex )
 	{
 		// If they've selected a bane/boon (and we're not on its index), let's display that too.
-		if ( offset >= Mag ) { offset -= 1; } // We're either not displaying strength or magic. Decrement the location we'll draw to to account for that.
 		base = gCreatorBoonBaneEffects[offset].base;
+		growth = gCreatorBoonBaneEffects[offset].growth;
+		if ( offset+1 >= Mag ) { offset -= 1; } // We're either not displaying strength or magic. Decrement the location we'll draw to to account for that.
+		
 		FillNumString(&eff[1],base);
 		
 		TextHandle otherBaseHandle = {
@@ -109,7 +137,6 @@ void CreatorBoonBaneSwitchIn(MenuProc* proc, MenuCommandProc* commandProc)
 		Text_InsertString(&otherBaseHandle,0,color,eff);
 		Text_Display(&otherBaseHandle,&gBG0MapBuffer[4+offset*2][15]);
 		
-		growth = gCreatorBoonBaneEffects[offset].growth;
 		FillNumString(&eff[1],growth);
 		
 		TextHandle otherGrowthHandle = {
@@ -127,7 +154,7 @@ void CreatorBoonBaneSwitchIn(MenuProc* proc, MenuCommandProc* commandProc)
 
 static void FillNumString(char* string, int num)
 {
-	int i = 0;
+	int i = 0; // I don't know why I solved this problem generically even though I'm using a max of 2 numbers... Maybe I was bored.
 	do
 	{
 		string[i] = Mod(num,10) + '0';

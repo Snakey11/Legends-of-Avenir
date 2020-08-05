@@ -7,6 +7,7 @@ typedef struct CreatorProc CreatorProc;
 typedef struct CreatorClassProc CreatorClassProc;
 typedef struct UnitDefinition UnitDefinition;
 typedef struct TSA TSA;
+typedef struct Tile Tile;
 typedef struct SomeAISStruct SomeAISStruct;
 
 enum
@@ -33,6 +34,8 @@ Spd = 5,
 Def = 6,
 Res = 7,
 Luk = 8,
+
+NL = 1 // Text control code for new line.
 };
 
 struct ClassMenuSet
@@ -55,10 +58,12 @@ struct CreatorProc
 	Unit* mainUnit; // 0x2C. Unit we're keeping in place. Intended to be kept in unit slot 1.
 	Unit* tempUnit; // 0x30. Temporary unit used for display in the class menu. Intended to be kept in unit slot 2.
 	ClassMenuSet* currSet; // 0x34. Used in the class submenu usability/effect.
-	u8 boon; // 0x35. Same indicators as bane.
-	u8 bane; // 0x36. 0 = unselected, 1 = HP, 2 = str, 3 = mag, 4 = skl,  ..., 8 = luk.
-	u8 leavingClassMenu; // 0x37. Boolean for whether we're exiting the class emnu.
-	u8 lastIndex; // 0x38. Before going to a submenu, save the index we were at in the main menu.
+	u8 lastClassIndex; // 0x35. Last selected index in the class menu.
+	u8 boon; // 0x36. Same indicators as bane.
+	u8 bane; // 0x37. 0 = unselected, 1 = HP, 2 = str, 3 = mag, 4 = skl,  ..., 8 = luk.
+	u8 leavingClassMenu; // 0x38. Boolean for whether we're exiting the class emnu.
+	u8 lastIndex; // 0x39. Before going to a submenu, save the index we were at in the main menu.
+	u8 boonBaneTileLast; // 0x3A. Used internally for the boon/bane submenu drawing routines.
 };
 
 struct CreatorClassProc
@@ -72,16 +77,18 @@ struct CreatorClassProc
 	u16 charID; // 0x42.
 };
 
+struct Tile
+{
+	u16 tileID : 10;
+	u16 horizontalFlip : 1;
+	u16 verticalFlip : 1;
+	u16 paletteID : 4;
+};
+
 struct TSA
 {
 	u8 width, height;
-	struct
-	{
-		u16 tileID : 10;
-		u16 horizontalFlip : 1;
-		u16 verticalFlip : 1;
-		u16 paletteID : 4;
-	} tiles[];
+	Tile tiles[];
 };
 
 struct SomeAISStruct {};
@@ -114,23 +121,32 @@ extern const struct
 	u8 cap;
 	u8 promoBonus;
 } MagClassTable[];
+
 extern const ProcInstruction gCreatorProc;
 extern const ProcInstruction gCreatorClassProc;
+
 extern const MenuDefinition gCreatorMainMenuDefs;
 extern const u16 gMainMenuErrorTexts[];
+
 extern const MenuDefinition gCreatorGenderMenuDefs;
+
 extern const MenuDefinition gCreatorRouteMenuDefs;
+extern TSA gCreatorRouteUIBoxTSA;
+extern const u16 gCreatorRouteDisplayTexts[];
+
 extern const MenuDefinition gCreatorClassMenuDefs;
 extern ClassMenuSet gClassMenuOptions[];
-extern const TSA gCreatorClassUIBoxTSA;
+extern TSA gCreatorClassUIBoxTSA;
 extern const u8 gCreatorAppropriateItemArray[8];
 extern const u8 gCreatorVulnerary;
+
 extern const MenuDefinition gCreatorBoonBaneMenuDefs;
-extern const u16 gBoonMenuItemErrorText;
+extern TSA gCreatorBoonBaneBoxTSA;
 extern const struct
 {
 	u8 base, growth;
 } gCreatorBoonBaneEffects[];
+extern const u16 gBoonMenuItemErrorText;
 extern const u16 gBaneMenuItemErrorText;
 
 #define TEXT_COLOR_GREY TEXT_COLOR_GRAY
@@ -144,10 +160,13 @@ int CreatorSubmenuUsability(const MenuCommandDefinition* command, int index);
 int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc);
 int CreatorRegressMenu(void);
 int CreatorNoBPress(void);
+static void ApplyBGBox(u16 map[32][32], TSA* tsa, int x, int y);
+static void DrawStatNames(TextHandle handle, char* string, int x, int y);
+static int GetNumLines(char* string);
+static void DrawMultiline(TextHandle* handles, char* string, int lines, int max);
 
-static void CreatorBoonBaneDraw(CreatorProc* creator);
-void CreatorBoonBaneSwitchIn(MenuProc* proc, MenuCommandProc* commandProc);
-static void FillNumString(char* string, int num);
+static void CreatorRouteDraw(CreatorProc* proc);
+void CreatorRouteSwitchIn(MenuProc* proc, MenuCommandProc* commandProc);
 
 void CreatorClassDrawUIBox(CreatorClassProc* proc);
 void CreatorActivateClassDisplay(MenuProc* proc, MenuCommandProc* commandProc);
@@ -157,8 +176,12 @@ void CreatorClassEndProc(CreatorClassProc* proc);
 static ClassMenuSet* GetClassSet(int gender,int route);
 static Unit* LoadCreatorUnit(CreatorProc* creator, MenuCommandProc* commandProc);
 static int GetAppropriateItem(int class);
-static void DrawStatNames(TextHandle handle, char* string, int x, int y);
 
+static void CreatorBoonBaneDraw(CreatorProc* proc);
+void CreatorBoonBaneSwitchIn(MenuProc* proc, MenuCommandProc* commandProc);
+static void FillNumString(char* string, int num);
+
+#include "RouteDisplay.c"
 #include "ClassDisplay.c"
 #include "BoonBane.c"
 
@@ -217,8 +240,15 @@ void CreatorStartMenu(CreatorProc* proc)
 			newMenu = StartMenuChild(&gCreatorMainMenuDefs,(Proc*)proc);
 			newMenu->commandIndex = proc->lastIndex;
 			break;
-		case GenderMenu: StartMenuChild(&gCreatorGenderMenuDefs,(Proc*)proc); break;
-		case RouteMenu: StartMenuChild(&gCreatorRouteMenuDefs,(Proc*)proc); break;
+		case GenderMenu:
+			newMenu = StartMenuChild(&gCreatorGenderMenuDefs,(Proc*)proc);
+			if ( proc->gender) { newMenu->commandIndex = proc->gender-1; }
+			break;
+		case RouteMenu:
+			newMenu = StartMenuChild(&gCreatorRouteMenuDefs,(Proc*)proc);
+			CreatorRouteDraw(proc);
+			if ( proc->route ) { newMenu->commandIndex = proc->route-1; }
+			break;
 		case ClassMenu:
 			// We need to build our class menu in RAM depending on what gender and route they chose.
 			CPU_FILL(0,(char*)gRAMMenuCommands-1,6*9*4,32); // Clear our RAM buffer.
@@ -235,13 +265,22 @@ void CreatorStartMenu(CreatorProc* proc)
 				gRAMMenuCommands[i].onSwitchOut = CreatorRetractClassDisplay;
 				proc->currSet = set;
 			}
-			StartMenuChild(&gCreatorClassMenuDefs,(Proc*)proc);
+			newMenu = StartMenuChild(&gCreatorClassMenuDefs,(Proc*)proc);
+			newMenu->commandIndex = proc->lastClassIndex;
 			ProcStart(&gCreatorClassProc,(Proc*)proc);
 			break;
 		case BoonMenu:
-		case BaneMenu:
-			StartMenuChild(&gCreatorBoonBaneMenuDefs,(Proc*)proc);
+		case BaneMenu:	
+			newMenu = StartMenuChild(&gCreatorBoonBaneMenuDefs,(Proc*)proc);
 			CreatorBoonBaneDraw(proc);
+			if ( proc->currMenu == BoonMenu )
+			{
+				if ( proc->boon ) { newMenu->commandIndex = ( proc->boon < Mag ? proc->boon-1 : proc->boon-2 ); }
+			}
+			else // if ( proc->currMenu == BaneMenu )
+			{
+				if ( proc->bane ) { newMenu->commandIndex = ( proc->bane < Mag ? proc->bane-1 : proc->bane-2 ); }
+			}
 			break;
 	}
 }
@@ -313,10 +352,11 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
 			if ( creator->gender != commandProc->commandDefinitionIndex+1 )
 			{
 				// If they choose a new gender, clear whatever class, bane, and boon they chose.
-				creator->bane = 0;
-				creator->boon = 0;
 				creator->gender = commandProc->commandDefinitionIndex+1;
 				creator->mainUnit = NULL;
+				creator->lastClassIndex = 0;
+				creator->bane = 0;
+				creator->boon = 0;
 				ClearUnit(GetUnit(1));
 			}
 			ProcGoto((Proc*)creator,0);
@@ -325,10 +365,11 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
 			if ( creator->route != commandProc->commandDefinitionIndex+1 )
 			{
 				// Same for if they change their route.
-				creator->bane = 0;
-				creator->boon = 0;
 				creator->route = commandProc->commandDefinitionIndex+1;
 				creator->mainUnit = NULL;
+				creator->lastClassIndex = 0;
+				creator->bane = 0;
+				creator->boon = 0;
 				ClearUnit(GetUnit(1));
 			}
 			ProcGoto((Proc*)creator,0);
@@ -339,9 +380,9 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
 			CopyUnit(creator->tempUnit,creator->mainUnit);
 			ClearUnit(creator->tempUnit);
 			ProcGoto((Proc*)creator,1);
+			creator->lastClassIndex = commandProc->commandDefinitionIndex;
 			creator->currMenu = MainMenu;
 			return ME_END|ME_PLAY_BEEP;
-			break;
 		case BoonMenu:
 			if ( commandProc->availability == 2 )
 			{
@@ -400,4 +441,53 @@ int CreatorRegressMenu(void)
 int CreatorNoBPress(void)
 {
 	return ME_PLAY_BOOP; // They're on the main menu. Don't allow a B press!
+}
+
+static void DrawStatNames(TextHandle handle, char* string, int x, int y)
+{
+	Text_Clear(&handle);
+	Text_SetColorId(&handle,TEXT_COLOR_GOLD);
+	Text_AppendStringAscii(&handle,string);
+	Text_Display(&handle,&gBG0MapBuffer[y][x]);
+}
+
+static void ApplyBGBox(u16 map[32][32], TSA* tsa, int x, int y)
+{
+	for ( int i = 0 ; i < tsa->height+1 ; i++ )
+	{
+		for ( int j = 0 ; j < tsa->width+1 ; j++ )
+		{
+			map[i+y][j+x] = ((u16*)(tsa->tiles))[i*(tsa->width+1)+j];
+		}
+	}
+}
+
+static int GetNumLines(char* string) // Basically count the number of NL codes.
+{
+	int sum = 1;
+	for ( int i = 0 ; string[i] ; i++ )
+	{
+		if ( string[i] == NL ) { sum++; }
+	}
+	return sum;
+}
+
+static void DrawMultiline(TextHandle* handles, char* string, int lines, int max) // There's a TextHandle for every line we need to pass in.
+{
+	// We're going to copy each line of the string to gGenericBuffer then draw the string from there.
+	int j = 0;
+	for ( int i = 0 ; i < lines ; i++ )
+	{
+		int k = 0;
+		for ( ; string[j] && string[j] != NL ; k++ )
+		{
+			gGenericBuffer[k] = string[j];
+			j++;
+		}
+		gGenericBuffer[k] = 0;
+		Text_InsertString(handles,0,handles->colorId,(char*)gGenericBuffer);
+		//Text_DrawString(handles,(char*)gGenericBuffer);
+		handles++;
+		j++;
+	}
 }

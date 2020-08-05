@@ -1,7 +1,7 @@
 
 void CreatorClassDrawUIBox(CreatorClassProc* proc)
 {
-	CPU_COPY(&gCreatorClassUIBoxTSA.tiles,&gBG1MapBuffer[12][0],(gCreatorClassUIBoxTSA.width+1)*(gCreatorClassUIBoxTSA.height+1)*2,16);
+	ApplyBGBox(gBG1MapBuffer,&gCreatorClassUIBoxTSA,0,12);
 	EnableBgSyncByMask(2);
 }
 
@@ -153,7 +153,6 @@ void CreatorClassEndProc(CreatorClassProc* proc)
 	DeleteSomeAISProcs(&gSomeAISRelatedStruct);
 	EndEkrAnimeDrvProc();
 	UnlockGameGraphicsLogic();
-	//ReloadGameCoreGraphics();
 	RefreshEntityMaps();
 	DrawTileGraphics();
 	SMS_UpdateFromGameData();
@@ -210,12 +209,4 @@ static int GetAppropriateItem(int class) // Return the item ID that this class s
 	}
 	// firstRank is the first weapon rank that this class can use at base.
 	return gCreatorAppropriateItemArray[firstRank];
-}
-
-static void DrawStatNames(TextHandle handle, char* string, int x, int y)
-{
-	Text_Clear(&handle);
-	Text_SetColorId(&handle,TEXT_COLOR_GOLD);
-	Text_AppendStringAscii(&handle,string);
-	Text_Display(&handle,&gBG0MapBuffer[y][x]);
 }
