@@ -310,11 +310,16 @@ EndConvo
 //ENUF 0x67
 //ENUF 0x68
 CLEA 0x0
+FADI 0x05
+STAL 0x10
+ASMC 0x48281 // Name selector.
+STAL 0x10
+CLEAN
+STAL 0x10
 ASMC CallCharacterCreator|1
 Text(PrologueOpeningNarratorText)
 FADI 0x5
 //DISA Narrator
-ASMC 0x48281
 LOMA Prologue
 //LOAD1 0x1 LoadNarrator
 //ENUN
