@@ -28,6 +28,18 @@ MilitaryFAvatarPortrait:
 #incbin "FemaleMilitaryAvatar_palette.dmp"
 #incbin "FemaleMilitaryAvatar_minimug.dmp"
 
+MageMAvatarPortrait:
+#incbin "MaleMageAvatar_mug.dmp"
+#incbin "MaleMageAvatar_frames.dmp"
+#incbin "MaleMageAvatar_palette.dmp"
+#incbin "MaleMageAvatar_minimug.dmp"
+
+MageFAvatarPortrait:
+#incbin "FemaleMageAvatar_mug.dmp"
+#incbin "FemaleMageAvatar_frames.dmp"
+#incbin "FemaleMageAvatar_palette.dmp"
+#incbin "FemaleMageAvatar_minimug.dmp"
+
 AdlezPortrait:
 #incbin "Adlez_mug.dmp"
 #incbin "Adlez_frames.dmp"
@@ -334,6 +346,8 @@ setMugEntry(MaleMercMug,MercMAvatarPortrait,3,5,3,3)
 setMugEntry(FemaleMercMug,MercFAvatarPortrait,3,5,3,3)
 setMugEntry(MaleMilitaryMug,MilitaryMAvatarPortrait,3,5,3,3)
 setMugEntry(FemaleMilitaryMug,MilitaryFAvatarPortrait,3,6,3,4)
+setMugEntry(MaleMageMug,MageMAvatarPortrait,3,5,3,3)
+setMugEntry(FemaleMageMug,MageFAvatarPortrait,3,6,3,4)
 setMugEntry(AdlezMug,AdlezPortrait,2,5,2,3)
 setMugEntry(ArcMug,ArcPortrait,2,4,2,2)
 setMugEntry(ArveldirMug,ArveldirPortrait,2,5,3,3)
