@@ -159,7 +159,7 @@ Crt[.][X]
 Ddg[.][X]
 
 ## GenderMenuText
-Gender[X]
+Form[X]
 
 ## RouteMenuText
 Route[X]
@@ -172,6 +172,9 @@ Bane[X]
 
 ## BoonMenuText
 Boon[X]
+
+## RandomMenuText
+Random[X]
 
 ## DoneMenuText
 Done[X]
@@ -191,28 +194,37 @@ Military[X]
 ## MageMenuText
 Mage[X]
 
+## CreatorGenderText
+Your form can affect your[NL]
+appearance, your stats,[NL]
+and what classes may be[NL]
+available. It will not affect[NL]
+supports, endings, or[NL]
+interactions in the story.[X]
+
 ## CreatorMercenaryRouteText
-Be a wandering mercenary[NL]
-in the neutral warrior[NL]
-state of Haedric. Play[NL]
-as a Mercenary, Myrmidon,[NL]
-Fighter, Pirate, Brigand,[NL]
-or Pegasus Knight.[X]
+Become a wandering[NL]
+mercenary in the neutral[NL]
+warrior state of Haedric.[NL]
+Play as a Mercenary,[NL]
+Myrmidon, Fighter, Pirate,[NL]
+Brigand, or Pegasus Knight.[X]
 
 ## CreatorMilitaryRouteText
-Be a soldier in the[NL]
-imperial Cesarian Army[NL]
-and fight against New[NL]
-Arcanae. Play as a[NL]
+Become a cadet in the[NL]
+Cesarian Army about to[NL]
+join the fight against[NL]
+New Arcanae. Play as a[NL]
 Cavalier, Knight, Soldier,[NL]
 Wyvern Rider, or Archer.[X]
 
 ## CreatorMageRouteText
-Be a scholar serving in[NL]
-scholarly Arcanae,[NL]
-embroiled in a bloody[NL]
-civil war. Play as a[NL]
-mage, monk, or shaman.[X]
+Become a scholar in[NL]
+Arcanae about to[NL]
+unearth something that[NL]
+could change the outcome[NL]
+of the war. Play as a[NL]
+Mage, Monk, or Shaman.[X]
 
 ## ClassMenuErrorText
 Select a gender and route[NL]
@@ -258,17 +270,37 @@ this stat as a boon![X]
 You've already chosen this[NL]
 stat as a bane![X]
 
-## Test1Text
-Test[X]
+## PegasusKnightNameNotNarrowText
+Pegasus Kn.[X]
 
-## Test2Text
-Test 2[X]
+## WyvernRiderNameNotNarrowText
+W. Rider[X]
 
-## Test1DescText
-This is a desc.[X]
+## RandomDescText
+Randomize your character![X]
 
-## Test2DescText
-This is another desc,[X]
+## FormDescText
+Choose the form your[NL]
+character will take.[X]
+
+## RouteDescText
+Choose the set of chapters you[NL]
+will progress through. This affects[NL]
+what classes are available to you.[X]
+
+## ClassDescText
+Choose the class you will play as.[X]
+
+## BoonDescText
+Choose a stat bonus[NL]
+for your character.[X]
+
+## BaneDescText
+Choose a stat debuff[NL]
+for your character.[X]
+
+## DoneDescText
+Finalize your character![X]
 
 ## FinalTextID
 [X]
