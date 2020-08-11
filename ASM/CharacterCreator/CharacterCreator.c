@@ -12,12 +12,14 @@ typedef struct SomeAISStruct SomeAISStruct;
 
 enum
 {
-GenderMenu = 0, // Menu defs.
-RouteMenu = 1,
-ClassMenu = 2,
-BoonMenu = 3,
-BaneMenu = 4,
-MainMenu = 5,
+RandomEntry = 0,
+GenderMenu = 1, // Menu defs.
+RouteMenu = 2,
+ClassMenu = 3,
+BoonMenu = 4,
+BaneMenu = 5,
+DoneEntry = 6,
+MainMenu = 7,
 
 Male = 1, // Gender defs.
 Female = 2,
@@ -35,18 +37,11 @@ Def = 6,
 Res = 7,
 Luk = 8,
 
-NL = 1 // Text control code for new line.
-};
+NL = 1, // Text control code for new line.
 
-struct ClassMenuSet
-{
-	u8 gender;
-	u8 route;
-	struct
-	{
-		u8 character;
-		u8 class;
-	} list[5];
+TextBGLeft = 122|(1<<12), // For generating the UI tiles behind text.
+TextBG = 123|(1<<12),
+TextBGRight = 124|(1<<12)
 };
 
 struct CreatorProc
@@ -64,6 +59,7 @@ struct CreatorProc
 	u8 leavingClassMenu; // 0x38. Boolean for whether we're exiting the class emnu.
 	u8 lastIndex; // 0x39. Before going to a submenu, save the index we were at in the main menu.
 	u8 boonBaneTileLast; // 0x3A. Used internally for the boon/bane submenu drawing routines.
+	u8 isPressDisabled; // 0x3B. Boolean for whether A/B press is disabled. (Used to disable a press during a randomization).
 };
 
 struct CreatorClassProc
@@ -91,6 +87,17 @@ struct TSA
 	Tile tiles[];
 };
 
+struct ClassMenuSet
+{
+	u8 gender;
+	u8 route;
+	struct
+	{
+		u8 character;
+		u8 class;
+	} list[5];
+};
+
 struct SomeAISStruct {};
 
 extern u16 gBG0MapBuffer[32][32]; // 0x02022CA8. Ew why does FE-CLib-master not do it like this?
@@ -111,6 +118,7 @@ extern void RefreshEntityMaps(void);
 extern void DrawTileGraphics(void);
 extern void UnsetEventId(u16 eventID);
 extern void SetEventId(u16 eventID);
+extern void SetBeigeBackground(Proc* proc, int arg2, int arg3, int arg4, int arg5); // 0x08086CE8.
 extern u8*(*SkillGetter)(Unit* unit);
 #define DrawSkillIcon(map,id,oam2base) DrawIcon(map,id|0x100,oam2base)
 
@@ -126,9 +134,20 @@ extern const ProcInstruction gCreatorProc;
 extern const ProcInstruction gCreatorClassProc;
 
 extern const MenuDefinition gCreatorMainMenuDefs;
+extern TSA gCreatorMainNameUIBoxTSA, gCreatorMainUIBoxTSA, gCreatorMainPortraitUIBoxTSA, gCreatorMainBoonBaneUIBoxTSA, gCreatorMainNumberHighlightUIBoxTSA;
 extern const u16 gMainMenuErrorTexts[];
+extern const struct
+{
+	u8 gender, route;
+	u16 mug;
+} gAvatarPortraitLookup[];
+extern const struct
+{
+	u16 normal, replacement;
+} gCreatorTextReplacementLookup[];
 
 extern const MenuDefinition gCreatorGenderMenuDefs;
+extern const u16 gCreatorGenderText;
 
 extern const MenuDefinition gCreatorRouteMenuDefs;
 extern TSA gCreatorRouteUIBoxTSA;
@@ -151,36 +170,54 @@ extern const u16 gBaneMenuItemErrorText;
 
 #define TEXT_COLOR_GREY TEXT_COLOR_GRAY
 
+// Functions in CharacterCreator.c.
 void CallCharacterCreator(Proc* proc);
 void SetupCreator(CreatorProc* proc);
 void CreatorStartMenu(CreatorProc* proc);
-int CreatorMainEntryUsability(const MenuCommandDefinition* command, int index);
-int CreatorMainGotoEntry(MenuProc* proc, MenuCommandProc* commandProc);
 int CreatorSubmenuUsability(const MenuCommandDefinition* command, int index);
 int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc);
 int CreatorRegressMenu(void);
 int CreatorNoBPress(void);
+void CreatorEnablePresses(CreatorProc* proc);
+void CreatorDoNothing(CreatorProc* proc);
 static void ApplyBGBox(u16 map[32][32], TSA* tsa, int x, int y);
 static void DrawStatNames(TextHandle handle, char* string, int x, int y);
 static int GetNumLines(char* string);
-static void DrawMultiline(TextHandle* handles, char* string, int lines, int max);
+static void DrawMultiline(TextHandle* handles, char* string, int lines);
+static int GetReplacedText(int text);
 
+// Functions in MainMenu.c.
+int CreatorMainEntryUsability(const MenuCommandDefinition* command, int index);
+int CreatorMainGotoEntry(MenuProc* proc, MenuCommandProc* commandProc);
+int CreatorGoToRandomize(MenuProc* proc, MenuCommandProc* commandProc);
+void CreatorRandomizeChoices(CreatorProc* creator);
+static void DrawMainMenu(CreatorProc* proc);
+static int GetMainMenuPortrait(int gender, int route);
+
+// Functions in Gender.c
+static void CreatorGenderDraw(CreatorProc* proc);
+
+// Functions in RouteDisplay.c.
 static void CreatorRouteDraw(CreatorProc* proc);
 void CreatorRouteSwitchIn(MenuProc* proc, MenuCommandProc* commandProc);
 
+// Functions in ClassDisplay.c.
 void CreatorClassDrawUIBox(CreatorClassProc* proc);
 void CreatorActivateClassDisplay(MenuProc* proc, MenuCommandProc* commandProc);
 void CreatorRetractClassDisplay(MenuProc* proc, MenuCommandProc* commandProc);
 int CreatorWaitForSlideOut(CreatorProc* proc);
 void CreatorClassEndProc(CreatorClassProc* proc);
 static ClassMenuSet* GetClassSet(int gender,int route);
-static Unit* LoadCreatorUnit(CreatorProc* creator, MenuCommandProc* commandProc);
+static Unit* LoadCreatorUnit(CreatorProc* creator, int index);
 static int GetAppropriateItem(int class);
 
+// Functions in BoonBane.c.
 static void CreatorBoonBaneDraw(CreatorProc* proc);
 void CreatorBoonBaneSwitchIn(MenuProc* proc, MenuCommandProc* commandProc);
 static void FillNumString(char* string, int num);
 
+#include "MainMenu.c"
+#include "Gender.c"
 #include "RouteDisplay.c"
 #include "ClassDisplay.c"
 #include "BoonBane.c"
@@ -190,6 +227,10 @@ void CallCharacterCreator(Proc* proc) // Presumably ASMCed. Block the event engi
 	ProcStartBlocking(&gCreatorProc,proc); // Start our proc and block the event engine.
 }
 
+extern const u8 SmallWorldMap[];
+extern const u16 SmallWorldMapPalette[];
+extern const u8 gSmallWorldMapPaletteCount;
+extern const u8 SmallWorldMapTSA[];
 
 void SetupCreator(CreatorProc* proc)
 {
@@ -203,6 +244,41 @@ void SetupCreator(CreatorProc* proc)
 	proc->bane = 0;
 	proc->leavingClassMenu = 0;
 	proc->lastIndex = 0;
+	proc->isPressDisabled = 0;
+	
+	/*LoadBgConfig(NULL);
+	Text_InitFont(); // Set up text font etc.
+	//LoadObjUIGfx(); // Sets up the glove.
+	SetBeigeBackground((Proc*)proc,0,0x12,2,0);
+	SetColorEffectsParameters(3,0,0,0x10);*/
+	
+	// Draw the 240x160 world map as the background.
+	Decompress(SmallWorldMap,(void*)0x6008000);
+	CopyToPaletteBuffer(SmallWorldMapPalette,0x20*6,(gSmallWorldMapPaletteCount-2)*32);
+	CopyToPaletteBuffer(SmallWorldMapPalette+(gSmallWorldMapPaletteCount-1)*16,0x20*15,32);
+	Decompress(SmallWorldMapTSA,gGenericBuffer);
+	TSA* tsaBuffer = (TSA*)gGenericBuffer;
+	for ( int i = 0 ; i < tsaBuffer->height+1 ; i++ )
+	{
+		for ( int j = 0 ; j < tsaBuffer->width+1 ; j++ )
+		{
+			if ( tsaBuffer->tiles[i*(tsaBuffer->width+1)+j].paletteID == 16-6 )
+			{
+				tsaBuffer->tiles[i*(tsaBuffer->width+1)+j].paletteID--;
+			}
+		}
+	}
+	BgMap_ApplyTsa(gBg3MapBuffer,gGenericBuffer,6<<12);
+	SetBgTileDataOffset(2,0x8000);
+	EnableBgSyncByMask(8);
+	
+	// We want to burn a number of RNs relating to what name they chose... Maybe something like the (Sum of the characters/8+Number of characters) times?
+	int sum = 0;
+	int count = 0;
+	for ( int i = 0 ; i < 0x0B ; i++ ) { sum += gChapterData.playerName[i]; }
+	while ( gChapterData.playerName[count] ) { count++; }
+	sum /= 8;
+	for ( int i = 0 ; i < sum+count ; i++ ) { RandNext(); }
 	
 	UnsetEventId(0x6E); // Gender event ID.
 	
@@ -212,40 +288,24 @@ void SetupCreator(CreatorProc* proc)
 
 void CreatorStartMenu(CreatorProc* proc)
 {
-	ReloadGameCoreGraphics();
+	Text_InitFont();
+	FillBgMap(gBg0MapBuffer,0);
+	FillBgMap(gBg1MapBuffer,0);
 	MenuProc* newMenu = NULL;
 	switch ( proc->currMenu )
 	{
 		case MainMenu:
-			if ( proc->gender )
-			{
-				DrawTextInline(0,&gBG0MapBuffer[5][9],3,0,26,GetStringFromIndex(gCreatorGenderMenuDefs.commandList[proc->gender-1].nameId));
-			}
-			if ( proc->route )
-			{
-				DrawTextInline(0,&gBG0MapBuffer[7][9],3,0,26,GetStringFromIndex(gCreatorRouteMenuDefs.commandList[proc->route-1].nameId));
-			}
-			if ( proc->mainUnit )
-			{
-				DrawTextInline(0,&gBG0MapBuffer[9][9],3,0,26,GetStringFromIndex(proc->mainUnit->pClassData->nameTextId));
-			}
-			if ( proc->boon )
-			{
-				DrawTextInline(0,&gBG0MapBuffer[11][9],3,0,26,GetStringFromIndex(gCreatorBoonBaneMenuDefs.commandList[proc->boon-1].nameId));
-			}
-			if ( proc->bane )
-			{
-				DrawTextInline(0,&gBG0MapBuffer[13][9],3,0,26,GetStringFromIndex(gCreatorBoonBaneMenuDefs.commandList[proc->bane-1].nameId));
-			}
-			newMenu = StartMenuChild(&gCreatorMainMenuDefs,(Proc*)proc);
+			newMenu = StartMenu(&gCreatorMainMenuDefs);
+			DrawMainMenu(proc);
 			newMenu->commandIndex = proc->lastIndex;
 			break;
 		case GenderMenu:
-			newMenu = StartMenuChild(&gCreatorGenderMenuDefs,(Proc*)proc);
+			newMenu = StartMenu(&gCreatorGenderMenuDefs);
+			CreatorGenderDraw(proc);
 			if ( proc->gender) { newMenu->commandIndex = proc->gender-1; }
 			break;
 		case RouteMenu:
-			newMenu = StartMenuChild(&gCreatorRouteMenuDefs,(Proc*)proc);
+			newMenu = StartMenu(&gCreatorRouteMenuDefs);
 			CreatorRouteDraw(proc);
 			if ( proc->route ) { newMenu->commandIndex = proc->route-1; }
 			break;
@@ -257,7 +317,7 @@ void CreatorStartMenu(CreatorProc* proc)
 			for ( int i = 0 ; set->list[i].character && i < 5 ; i++ )
 			{
 				// Now to build this MenuCommandDefinition.
-				gRAMMenuCommands[i].nameId = GetClassData(set->list[i].class)->nameTextId;
+				gRAMMenuCommands[i].nameId = GetReplacedText(GetClassData(set->list[i].class)->nameTextId);
 				gRAMMenuCommands[i].colorId = 0;
 				gRAMMenuCommands[i].isAvailable = CreatorSubmenuUsability;
 				gRAMMenuCommands[i].onEffect = CreatorSubmenuEffect;
@@ -265,13 +325,13 @@ void CreatorStartMenu(CreatorProc* proc)
 				gRAMMenuCommands[i].onSwitchOut = CreatorRetractClassDisplay;
 				proc->currSet = set;
 			}
-			newMenu = StartMenuChild(&gCreatorClassMenuDefs,(Proc*)proc);
+			newMenu = StartMenu(&gCreatorClassMenuDefs);
 			newMenu->commandIndex = proc->lastClassIndex;
 			ProcStart(&gCreatorClassProc,(Proc*)proc);
 			break;
 		case BoonMenu:
 		case BaneMenu:	
-			newMenu = StartMenuChild(&gCreatorBoonBaneMenuDefs,(Proc*)proc);
+			newMenu = StartMenu(&gCreatorBoonBaneMenuDefs);
 			CreatorBoonBaneDraw(proc);
 			if ( proc->currMenu == BoonMenu )
 			{
@@ -283,44 +343,6 @@ void CreatorStartMenu(CreatorProc* proc)
 			}
 			break;
 	}
-}
-
-int CreatorMainEntryUsability(const MenuCommandDefinition* command, int index)
-{
-	CreatorProc* proc = (CreatorProc*)ProcFind(&gCreatorProc);
-	switch (index)
-	{
-		case GenderMenu:
-		case RouteMenu:
-			return 1; // Make the gender and route menus always usable.
-		case ClassMenu: // Only usable if they've chosen a gender and route.
-			if ( proc->gender && proc->route ) { return 1; }
-			else { return 2; }
-		case BoonMenu:
-		case BaneMenu: // Only usable if they've chosen a gender, route, and class.
-			if ( proc->gender && proc->route && proc->mainUnit ) { return 1; }
-			else { return 2; }
-		case 5: // Pressing "Done." Only usable if all selections are made.
-			if ( proc->gender && proc->route && proc->mainUnit && proc->boon && proc->bane ) { return 1; }
-			else { return 3; }
-	}
-	return 3; // If for whatever reason we're out of bounds, make that menu unusable I guess?
-}
-
-int CreatorMainGotoEntry(MenuProc* proc, MenuCommandProc* commandProc)
-{
-	// First, we need to try to generate error R-text.
-	if ( commandProc->availability == 2 )
-	{
-		MenuCallHelpBox(proc,gMainMenuErrorTexts[commandProc->commandDefinitionIndex]);
-		return ME_PLAY_BOOP;
-	}
-	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
-	// We'll want to go to the proc label that matches the menu ID we chose.
-	creator->currMenu = commandProc->commandDefinitionIndex;
-	creator->lastIndex = commandProc->commandDefinitionIndex;
-	ProcGoto((Proc*)creator,0);
-	return ME_END|ME_PLAY_BEEP|ME_CLEAR_GFX;
 }
 
 int CreatorSubmenuUsability(const MenuCommandDefinition* command, int index)
@@ -346,6 +368,7 @@ int CreatorSubmenuUsability(const MenuCommandDefinition* command, int index)
 int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
 {
 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
+	if ( creator->isPressDisabled ) { return 0; } // Do nothing if presses are disabled.
 	switch (creator->currMenu)
 	{
 		case GenderMenu: // Store the gender they selected, and return to the main menu.
@@ -409,7 +432,8 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
 int CreatorEndMenu(MenuProc* proc, MenuCommandProc* commandProc)
 {
 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
-	ProcGoto((Proc*)creator,2); // Jump to end the creator proc.
+	if ( creator->isPressDisabled ) { return 0; }
+	ProcGoto((Proc*)creator,3); // Jump to end the creator proc.
 	
 	if ( creator->gender == 1 ) { SetEventId(0x6E); } // 0x6E is true if they chose male.
 	if ( creator->route == 2 ) { SetEventId(0x68); } // Military mode.
@@ -424,6 +448,7 @@ int CreatorEndMenu(MenuProc* proc, MenuCommandProc* commandProc)
 int CreatorRegressMenu(void)
 {
 	CreatorProc* proc = (CreatorProc*)ProcFind(&gCreatorProc);
+	if ( proc->isPressDisabled ) { return 0; }
 	if ( proc->currMenu == ClassMenu )
 	{
 		ProcGoto((Proc*)proc,1);
@@ -441,6 +466,16 @@ int CreatorRegressMenu(void)
 int CreatorNoBPress(void)
 {
 	return ME_PLAY_BOOP; // They're on the main menu. Don't allow a B press!
+}
+
+void CreatorEnablePresses(CreatorProc* proc)
+{
+	proc->isPressDisabled = 0;
+}
+
+void CreatorDoNothing(CreatorProc* proc)
+{
+	return; // Lol literally do nothing. Wait for the menu to use ProcGoto on our creator proc to break this proc loop.
 }
 
 static void DrawStatNames(TextHandle handle, char* string, int x, int y)
@@ -472,7 +507,7 @@ static int GetNumLines(char* string) // Basically count the number of NL codes.
 	return sum;
 }
 
-static void DrawMultiline(TextHandle* handles, char* string, int lines, int max) // There's a TextHandle for every line we need to pass in.
+static void DrawMultiline(TextHandle* handles, char* string, int lines) // There's a TextHandle for every line we need to pass in.
 {
 	// We're going to copy each line of the string to gGenericBuffer then draw the string from there.
 	int j = 0;
@@ -490,4 +525,13 @@ static void DrawMultiline(TextHandle* handles, char* string, int lines, int max)
 		handles++;
 		j++;
 	}
+}
+
+static int GetReplacedText(int text)
+{
+	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
+	{
+		if ( gCreatorTextReplacementLookup[i].normal == text ) { return gCreatorTextReplacementLookup[i].replacement; }
+	}
+	return text;
 }

@@ -22,8 +22,8 @@ CreatorClassSetup:
     /* 080CCD5A (T) */  mov     r1,r0
     /* 080CCD5C (T) */  add     r1,#0x29
     /* 080CCD5E (T) */  mov     r4,#0x0
-    /* 080CCD60 (T) */  mov     r0,#0x2
-    /* 080CCD62 (T) */  strb    r0,[r1]
+    @/* 080CCD60 (T) */  mov     r0,#0x2
+    @/* 080CCD62 (T) */  strb    r0,[r1]
     /* 080CCD64 (T) */  ldr     r0,[sp,#0x4]
     /* 080CCD66 (T) */  add     r0,#0x38
     /* 080CCD68 (T) */  ldrb    r0,[r0]

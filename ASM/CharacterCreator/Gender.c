@@ -1,15 +1,9 @@
 
-static void CreatorRouteDraw(CreatorProc* proc)
+static void CreatorGenderDraw(CreatorProc* proc)
 {
 	ApplyBGBox(gBG1MapBuffer,&gCreatorRouteUIBoxTSA,10,1);
-	EnableBgSyncByMask(2);
-}
-
-void CreatorRouteSwitchIn(MenuProc* proc, MenuCommandProc* commandProc)
-{
-	BgMapFillRect(&gBG0MapBuffer[3][13],20,18,0);
 	
-	char* string = GetStringFromIndex(gCreatorRouteDisplayTexts[proc->commandIndex]);
+	char* string = GetStringFromIndex(gCreatorGenderText);
 	int lines = GetNumLines(string);
 	int tile = 0;
 	TextHandle handles[lines];
@@ -31,5 +25,7 @@ void CreatorRouteSwitchIn(MenuProc* proc, MenuCommandProc* commandProc)
 	{
 		Text_Display(&handles[i],&gBG0MapBuffer[3+2*i][13]);
 	}
+	
 	EnableBgSyncByMask(1);
+	EnableBgSyncByMask(2);
 }

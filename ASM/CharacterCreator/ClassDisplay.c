@@ -11,7 +11,15 @@ void CreatorActivateClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
 	// Let's load the unit that corresponds to the currently selected item.
 	
-	Unit* unit = LoadCreatorUnit(creator,commandProc);
+	Unit* unit = LoadCreatorUnit(creator,commandProc->commandDefinitionIndex);
+	if ( unit->index != 2 )
+	{
+		// We've loaded into a different index than we want. Copy this unit into unit slot 2.
+		Unit* dest = GetUnit(2);
+		CopyUnit(unit,dest);
+		ClearUnit(unit);
+		unit = dest;
+	}
 	const CharacterData* charData = unit->pCharacterData;
 	creator->tempUnit = unit;
 	
@@ -136,7 +144,7 @@ void CreatorRetractClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 	BgMapFillRect(&gBG0MapBuffer[1][12],30-12,2,0);
 	ClearIcons();
 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
-	ClearUnit(creator->tempUnit); // If we're not leaving the class menu, clear the unit we loaded.
+	ClearUnit(creator->tempUnit);
 	CreatorClassProc* classProc = (CreatorClassProc*)ProcFind(&gCreatorClassProc);
 	if ( classProc ) { classProc->mode = 1; }
 }
@@ -153,8 +161,8 @@ void CreatorClassEndProc(CreatorClassProc* proc)
 	DeleteSomeAISProcs(&gSomeAISRelatedStruct);
 	EndEkrAnimeDrvProc();
 	UnlockGameGraphicsLogic();
-	RefreshEntityMaps();
-	DrawTileGraphics();
+	//RefreshEntityMaps();
+	//DrawTileGraphics();
 	SMS_UpdateFromGameData();
 	MU_EndAll();
 }
@@ -171,9 +179,8 @@ static ClassMenuSet* GetClassSet(int gender,int route)
 	return NULL; // This should never happen, but return null if no entry is found.
 }
 
-static Unit* LoadCreatorUnit(CreatorProc* creator, MenuCommandProc* commandProc)
+static Unit* LoadCreatorUnit(CreatorProc* creator, int index)
 {
-	int index = commandProc->commandDefinitionIndex;
 	UnitDefinition definition =
 	{
 		.charIndex = creator->currSet->list[index].character,
@@ -188,14 +195,6 @@ static Unit* LoadCreatorUnit(CreatorProc* creator, MenuCommandProc* commandProc)
 	};
 	// Friendly reminder that we want to keep this unit in unit slot 2!
 	Unit* newUnit = LoadUnit(&definition);
-	if ( newUnit->index != 2 )
-	{
-		// We've loaded into a different index than we want. Copy this unit into unit slot 2.
-		Unit* dest = GetUnit(2);
-		CopyUnit(newUnit,dest);
-		ClearUnit(newUnit);
-		newUnit = dest;
-	}
 	return newUnit;
 }
 

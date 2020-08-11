@@ -35,5 +35,5 @@ CFLAGS := $(ARCH) $(LDLIBS) -Wall -O1 -mtune=arm7tdmi -fomit-frame-pointer -ffas
 	$(AS) $(ARCH) $< -o $@
 	
 # Tiled tmx to DMP
-%.dmp: %.tmx *.tmx
+%.dmp: %.tmx %.tmx
 	python tmx2tsa.py $< $@

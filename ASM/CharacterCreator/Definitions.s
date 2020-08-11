@@ -29,3 +29,5 @@ SET_FUNC DeleteSomeAISStuff, (0x0805AA28+1)
 SET_FUNC DeleteSomeAISProcs, (0x0805AE14+1)
 
 SET_FUNC GetUnitEquippedItem, (0x08016B28+1)
+
+SET_FUNC SetBeigeBackground, (0x08086CE8+1)
