@@ -113,6 +113,7 @@ static int CanUnitsSupport(Unit* unit, int otherChar, int level) // Level of 0xF
 {
 	Unit* otherUnit = ToUnit(otherChar);
 	if ( !unit || !otherUnit || (unit->state & US_DEAD) || (otherUnit->state & US_DEAD) ) { return 0; } // Return unusable unless both units exist and are not dead.
+	if ( (unit->index&0xC0) != UA_BLUE || (otherUnit->index&0xC0) != UA_BLUE ) { return 0; }
 	if ( level == 0xFF ) { level = GetSupportLevel(unit,otherChar)+1; }
 	if ( level == 0 )
 	{

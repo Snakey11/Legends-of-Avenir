@@ -148,23 +148,23 @@ ToCharID:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, lr}	@
-@ MemoryManagement.c:151: 	if ( unit == GetUnit(1) ) { return 0xFF; }
+@ MemoryManagement.c:152: 	if ( unit == GetUnit(1) ) { return 0xFF; }
 	ldr	r3, .L13	@ tmp115,
-@ MemoryManagement.c:150: {
+@ MemoryManagement.c:151: {
 	movs	r4, r0	@ unit, tmp118
-@ MemoryManagement.c:151: 	if ( unit == GetUnit(1) ) { return 0xFF; }
+@ MemoryManagement.c:152: 	if ( unit == GetUnit(1) ) { return 0xFF; }
 	movs	r0, #1	@,
 	bl	.L15		@
-@ MemoryManagement.c:151: 	if ( unit == GetUnit(1) ) { return 0xFF; }
+@ MemoryManagement.c:152: 	if ( unit == GetUnit(1) ) { return 0xFF; }
 	movs	r3, #255	@ <retval>,
-@ MemoryManagement.c:151: 	if ( unit == GetUnit(1) ) { return 0xFF; }
+@ MemoryManagement.c:152: 	if ( unit == GetUnit(1) ) { return 0xFF; }
 	cmp	r4, r0	@ unit, tmp119
 	beq	.L10		@,
-@ MemoryManagement.c:152: 	else { return unit->pCharacterData->number; }
+@ MemoryManagement.c:153: 	else { return unit->pCharacterData->number; }
 	ldr	r3, [r4]	@ unit_7(D)->pCharacterData, unit_7(D)->pCharacterData
 	ldrb	r3, [r3, #4]	@ <retval>,
 .L10:
-@ MemoryManagement.c:153: }
+@ MemoryManagement.c:154: }
 	movs	r0, r3	@, <retval>
 	@ sp needed	@
 	pop	{r4}
@@ -445,22 +445,22 @@ ToUnit:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, lr}	@
-@ MemoryManagement.c:145: 	if ( charID == 0xFF) { return GetUnit(1); }
+@ MemoryManagement.c:146: 	if ( charID == 0xFF) { return GetUnit(1); }
 	cmp	r0, #255	@ charID,
 	bne	.L52		@,
-@ MemoryManagement.c:145: 	if ( charID == 0xFF) { return GetUnit(1); }
+@ MemoryManagement.c:146: 	if ( charID == 0xFF) { return GetUnit(1); }
 	ldr	r3, .L55	@ tmp113,
 	subs	r0, r0, #254	@,
 .L54:
-@ MemoryManagement.c:146: 	else { return GetUnitByCharId(charID); }
+@ MemoryManagement.c:147: 	else { return GetUnitByCharId(charID); }
 	bl	.L15		@
-@ MemoryManagement.c:147: }
+@ MemoryManagement.c:148: }
 	@ sp needed	@
 	pop	{r4}
 	pop	{r1}
 	bx	r1
 .L52:
-@ MemoryManagement.c:146: 	else { return GetUnitByCharId(charID); }
+@ MemoryManagement.c:147: 	else { return GetUnitByCharId(charID); }
 	lsls	r0, r0, #24	@ tmp114, charID,
 	ldr	r3, .L55+4	@ tmp116,
 	lsrs	r0, r0, #24	@ tmp114, tmp114,
@@ -479,105 +479,134 @@ ToUnit:
 	.type	CanUnitsSupport, %function
 CanUnitsSupport:
 	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
+	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
-	push	{r3, r4, r5, r6, r7, lr}	@
+	push	{r0, r1, r2, r4, r5, r6, r7, lr}	@
 @ MemoryManagement.c:113: {
-	movs	r5, r0	@ unit, tmp147
+	movs	r5, r0	@ unit, tmp156
 @ MemoryManagement.c:114: 	Unit* otherUnit = ToUnit(otherChar);
 	movs	r0, r1	@, otherChar
 @ MemoryManagement.c:113: {
-	movs	r7, r1	@ otherChar, tmp148
-	movs	r4, r2	@ level, tmp149
+	movs	r7, r1	@ otherChar, tmp157
+	str	r2, [sp, #4]	@ tmp158, %sfp
 @ MemoryManagement.c:114: 	Unit* otherUnit = ToUnit(otherChar);
 	bl	ToUnit		@
-	movs	r6, r0	@ otherUnit, tmp150
+@ MemoryManagement.c:115: 	if ( !unit || !otherUnit || (unit->state & US_DEAD) || (otherUnit->state & US_DEAD) ) { return 0; } // Return unusable unless both units exist and are not dead.
+	movs	r4, r5	@ <retval>, unit
+@ MemoryManagement.c:114: 	Unit* otherUnit = ToUnit(otherChar);
+	movs	r6, r0	@ otherUnit, tmp159
 @ MemoryManagement.c:115: 	if ( !unit || !otherUnit || (unit->state & US_DEAD) || (otherUnit->state & US_DEAD) ) { return 0; } // Return unusable unless both units exist and are not dead.
 	cmp	r5, #0	@ unit,
-	beq	.L66		@,
+	beq	.L57		@,
 @ MemoryManagement.c:115: 	if ( !unit || !otherUnit || (unit->state & US_DEAD) || (otherUnit->state & US_DEAD) ) { return 0; } // Return unusable unless both units exist and are not dead.
-	cmp	r0, #0	@ otherUnit,
-	beq	.L66		@,
+	subs	r4, r0, #0	@ <retval>, otherUnit,
 @ MemoryManagement.c:115: 	if ( !unit || !otherUnit || (unit->state & US_DEAD) || (otherUnit->state & US_DEAD) ) { return 0; } // Return unusable unless both units exist and are not dead.
-	movs	r3, #4	@ tmp131,
-	ldr	r2, [r5, #12]	@ unit_21(D)->state, unit_21(D)->state
+	beq	.L57		@,
 @ MemoryManagement.c:115: 	if ( !unit || !otherUnit || (unit->state & US_DEAD) || (otherUnit->state & US_DEAD) ) { return 0; } // Return unusable unless both units exist and are not dead.
-	tst	r2, r3	@ unit_21(D)->state, tmp131
-	bne	.L66		@,
+	ldr	r2, [r5, #12]	@ unit_27(D)->state, unit_27(D)->state
+	movs	r3, #4	@ tmp136,
+	movs	r0, r2	@ tmp134, unit_27(D)->state
 @ MemoryManagement.c:115: 	if ( !unit || !otherUnit || (unit->state & US_DEAD) || (otherUnit->state & US_DEAD) ) { return 0; } // Return unusable unless both units exist and are not dead.
-	ldr	r2, [r0, #12]	@ tmp157, otherUnit_20->state
-	tst	r2, r3	@ tmp157, tmp131
-	bne	.L66		@,
-@ MemoryManagement.c:116: 	if ( level == 0xFF ) { level = GetSupportLevel(unit,otherChar)+1; }
-	cmp	r4, #255	@ level,
+	movs	r4, #0	@ <retval>,
+@ MemoryManagement.c:115: 	if ( !unit || !otherUnit || (unit->state & US_DEAD) || (otherUnit->state & US_DEAD) ) { return 0; } // Return unusable unless both units exist and are not dead.
+	ands	r0, r3	@ tmp134, tmp136
+@ MemoryManagement.c:115: 	if ( !unit || !otherUnit || (unit->state & US_DEAD) || (otherUnit->state & US_DEAD) ) { return 0; } // Return unusable unless both units exist and are not dead.
+	tst	r2, r3	@ unit_27(D)->state, tmp136
+	bne	.L57		@,
+@ MemoryManagement.c:115: 	if ( !unit || !otherUnit || (unit->state & US_DEAD) || (otherUnit->state & US_DEAD) ) { return 0; } // Return unusable unless both units exist and are not dead.
+	ldr	r2, [r6, #12]	@ otherUnit_26->state, otherUnit_26->state
+@ MemoryManagement.c:115: 	if ( !unit || !otherUnit || (unit->state & US_DEAD) || (otherUnit->state & US_DEAD) ) { return 0; } // Return unusable unless both units exist and are not dead.
+	movs	r4, r0	@ <retval>, tmp134
+@ MemoryManagement.c:115: 	if ( !unit || !otherUnit || (unit->state & US_DEAD) || (otherUnit->state & US_DEAD) ) { return 0; } // Return unusable unless both units exist and are not dead.
+	tst	r2, r3	@ otherUnit_26->state, tmp136
+	bne	.L57		@,
+@ MemoryManagement.c:116: 	if ( (unit->index&0xC0) != UA_BLUE || (otherUnit->index&0xC0) != UA_BLUE ) { return 0; }
+	movs	r2, #11	@ tmp140,
+	ldrsb	r2, [r5, r2]	@ tmp140,
+@ MemoryManagement.c:116: 	if ( (unit->index&0xC0) != UA_BLUE || (otherUnit->index&0xC0) != UA_BLUE ) { return 0; }
+	movs	r4, r2	@ <retval>, tmp140
+	adds	r3, r3, #188	@ tmp141,
+	ands	r4, r3	@ <retval>, tmp141
+@ MemoryManagement.c:116: 	if ( (unit->index&0xC0) != UA_BLUE || (otherUnit->index&0xC0) != UA_BLUE ) { return 0; }
+	tst	r2, r3	@ tmp140, tmp141
+	bne	.L68		@,
+@ MemoryManagement.c:116: 	if ( (unit->index&0xC0) != UA_BLUE || (otherUnit->index&0xC0) != UA_BLUE ) { return 0; }
+	movs	r2, #11	@ tmp142,
+	ldrsb	r2, [r6, r2]	@ tmp142,
+@ MemoryManagement.c:116: 	if ( (unit->index&0xC0) != UA_BLUE || (otherUnit->index&0xC0) != UA_BLUE ) { return 0; }
+	tst	r2, r3	@ tmp142, tmp141
+	bne	.L57		@,
+	ldr	r4, [sp, #4]	@ <retval>, %sfp
+@ MemoryManagement.c:117: 	if ( level == 0xFF ) { level = GetSupportLevel(unit,otherChar)+1; }
+	cmp	r4, #255	@ <retval>,
 	bne	.L59		@,
-@ MemoryManagement.c:116: 	if ( level == 0xFF ) { level = GetSupportLevel(unit,otherChar)+1; }
+@ MemoryManagement.c:117: 	if ( level == 0xFF ) { level = GetSupportLevel(unit,otherChar)+1; }
 	movs	r1, r7	@, otherChar
 	movs	r0, r5	@, unit
 	bl	GetSupportLevel		@
-@ MemoryManagement.c:116: 	if ( level == 0xFF ) { level = GetSupportLevel(unit,otherChar)+1; }
-	adds	r4, r0, #1	@ level, tmp151,
+@ MemoryManagement.c:117: 	if ( level == 0xFF ) { level = GetSupportLevel(unit,otherChar)+1; }
+	adds	r4, r0, #1	@ <retval>, tmp160,
 .L59:
-@ MemoryManagement.c:117: 	if ( level == 0 )
-	cmp	r4, #0	@ level,
+@ MemoryManagement.c:118: 	if ( level == 0 )
+	cmp	r4, #0	@ <retval>,
 	bne	.L60		@,
-@ MemoryManagement.c:120: 		return CountSupports(unit) < 5 && CountSupports(otherUnit) < 5 && FindSupport(unit,otherChar) == 0xFF;
+@ MemoryManagement.c:121: 		return CountSupports(unit) < 5 && CountSupports(otherUnit) < 5 && FindSupport(unit,otherChar) == 0xFF;
 	movs	r0, r5	@, unit
 	bl	CountSupports		@
-@ MemoryManagement.c:120: 		return CountSupports(unit) < 5 && CountSupports(otherUnit) < 5 && FindSupport(unit,otherChar) == 0xFF;
-	cmp	r0, #4	@ tmp152,
-	bgt	.L58		@,
-@ MemoryManagement.c:120: 		return CountSupports(unit) < 5 && CountSupports(otherUnit) < 5 && FindSupport(unit,otherChar) == 0xFF;
+@ MemoryManagement.c:121: 		return CountSupports(unit) < 5 && CountSupports(otherUnit) < 5 && FindSupport(unit,otherChar) == 0xFF;
+	cmp	r0, #4	@ tmp161,
+	bgt	.L57		@,
+@ MemoryManagement.c:121: 		return CountSupports(unit) < 5 && CountSupports(otherUnit) < 5 && FindSupport(unit,otherChar) == 0xFF;
 	movs	r0, r6	@, otherUnit
 	bl	CountSupports		@
-@ MemoryManagement.c:120: 		return CountSupports(unit) < 5 && CountSupports(otherUnit) < 5 && FindSupport(unit,otherChar) == 0xFF;
-	cmp	r0, #4	@ tmp153,
-	bgt	.L58		@,
-@ MemoryManagement.c:120: 		return CountSupports(unit) < 5 && CountSupports(otherUnit) < 5 && FindSupport(unit,otherChar) == 0xFF;
+@ MemoryManagement.c:121: 		return CountSupports(unit) < 5 && CountSupports(otherUnit) < 5 && FindSupport(unit,otherChar) == 0xFF;
+	cmp	r0, #4	@ tmp162,
+	bgt	.L57		@,
+@ MemoryManagement.c:121: 		return CountSupports(unit) < 5 && CountSupports(otherUnit) < 5 && FindSupport(unit,otherChar) == 0xFF;
 	movs	r1, r7	@, otherChar
 	movs	r0, r5	@, unit
 	bl	FindSupport		@
-@ MemoryManagement.c:120: 		return CountSupports(unit) < 5 && CountSupports(otherUnit) < 5 && FindSupport(unit,otherChar) == 0xFF;
-	subs	r0, r0, #255	@ tmp137,
+@ MemoryManagement.c:121: 		return CountSupports(unit) < 5 && CountSupports(otherUnit) < 5 && FindSupport(unit,otherChar) == 0xFF;
+	subs	r0, r0, #255	@ tmp146,
 @ MemoryManagement.c:115: 	if ( !unit || !otherUnit || (unit->state & US_DEAD) || (otherUnit->state & US_DEAD) ) { return 0; } // Return unusable unless both units exist and are not dead.
-	rsbs	r4, r0, #0	@ level, tmp137
-	adcs	r4, r4, r0	@ level, tmp137
-.L58:
-@ MemoryManagement.c:127: }
-	movs	r0, r4	@, level
+	rsbs	r4, r0, #0	@ <retval>, tmp146
+	adcs	r4, r4, r0	@ <retval>, tmp146
+.L57:
+@ MemoryManagement.c:128: }
+	movs	r0, r4	@, <retval>
 	@ sp needed	@
-	pop	{r3, r4, r5, r6, r7}
+	pop	{r1, r2, r3, r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
 .L60:
-@ MemoryManagement.c:125: 		return level > 0 && level <= MaxSupportLevel && GetSupportLevel(unit,otherChar) == level-1;
-	cmp	r4, #0	@ level,
-	ble	.L66		@,
-@ MemoryManagement.c:125: 		return level > 0 && level <= MaxSupportLevel && GetSupportLevel(unit,otherChar) == level-1;
-	ldr	r3, .L67	@ tmp139,
+@ MemoryManagement.c:126: 		return level > 0 && level <= MaxSupportLevel && GetSupportLevel(unit,otherChar) == level-1;
+	cmp	r4, #0	@ <retval>,
+	ble	.L68		@,
+@ MemoryManagement.c:126: 		return level > 0 && level <= MaxSupportLevel && GetSupportLevel(unit,otherChar) == level-1;
+	ldr	r3, .L69	@ tmp148,
 	ldrb	r3, [r3]	@ MaxSupportLevel, MaxSupportLevel
-@ MemoryManagement.c:125: 		return level > 0 && level <= MaxSupportLevel && GetSupportLevel(unit,otherChar) == level-1;
-	cmp	r3, r4	@ MaxSupportLevel, level
-	blt	.L66		@,
-@ MemoryManagement.c:125: 		return level > 0 && level <= MaxSupportLevel && GetSupportLevel(unit,otherChar) == level-1;
+@ MemoryManagement.c:126: 		return level > 0 && level <= MaxSupportLevel && GetSupportLevel(unit,otherChar) == level-1;
+	cmp	r3, r4	@ MaxSupportLevel, <retval>
+	blt	.L68		@,
+@ MemoryManagement.c:126: 		return level > 0 && level <= MaxSupportLevel && GetSupportLevel(unit,otherChar) == level-1;
 	movs	r1, r7	@, otherChar
 	movs	r0, r5	@, unit
 	bl	GetSupportLevel		@
-@ MemoryManagement.c:125: 		return level > 0 && level <= MaxSupportLevel && GetSupportLevel(unit,otherChar) == level-1;
-	subs	r4, r4, #1	@ tmp141,
-@ MemoryManagement.c:125: 		return level > 0 && level <= MaxSupportLevel && GetSupportLevel(unit,otherChar) == level-1;
-	subs	r4, r4, r0	@ tmp144, tmp141, tmp155
+@ MemoryManagement.c:126: 		return level > 0 && level <= MaxSupportLevel && GetSupportLevel(unit,otherChar) == level-1;
+	subs	r4, r4, #1	@ tmp150,
+@ MemoryManagement.c:126: 		return level > 0 && level <= MaxSupportLevel && GetSupportLevel(unit,otherChar) == level-1;
+	subs	r4, r4, r0	@ tmp153, tmp150, tmp164
 @ MemoryManagement.c:115: 	if ( !unit || !otherUnit || (unit->state & US_DEAD) || (otherUnit->state & US_DEAD) ) { return 0; } // Return unusable unless both units exist and are not dead.
-	rsbs	r0, r4, #0	@ tmp145, tmp144
-	adcs	r4, r4, r0	@ level, tmp144, tmp145
-	b	.L58		@
-.L66:
-@ MemoryManagement.c:115: 	if ( !unit || !otherUnit || (unit->state & US_DEAD) || (otherUnit->state & US_DEAD) ) { return 0; } // Return unusable unless both units exist and are not dead.
-	movs	r4, #0	@ level,
-	b	.L58		@
+	rsbs	r0, r4, #0	@ tmp154, tmp153
+	adcs	r4, r4, r0	@ <retval>, tmp153, tmp154
+	b	.L57		@
 .L68:
+@ MemoryManagement.c:115: 	if ( !unit || !otherUnit || (unit->state & US_DEAD) || (otherUnit->state & US_DEAD) ) { return 0; } // Return unusable unless both units exist and are not dead.
+	movs	r4, #0	@ <retval>,
+	b	.L57		@
+.L70:
 	.align	2
-.L67:
+.L69:
 	.word	MaxSupportLevel
 	.size	CanUnitsSupport, .-CanUnitsSupport
 	.align	1
@@ -608,53 +637,53 @@ FindValidConvo:
 	ldr	r3, [r0, #12]	@ _1->state, _1->state
 @ UnitMenu.c:90: 	if ( ToUnit(char2)->state & US_RESCUED ) { return NULL; } // No convos with rescued unis!
 	lsls	r3, r3, #26	@ tmp145, _1->state,
-	bpl	.L70		@,
-.L77:
+	bpl	.L72		@,
+.L79:
 @ UnitMenu.c:90: 	if ( ToUnit(char2)->state & US_RESCUED ) { return NULL; } // No convos with rescued unis!
 	movs	r4, #0	@ event,
-.L71:
+.L73:
 @ UnitMenu.c:101: }
 	movs	r0, r4	@, event
 	@ sp needed	@
 	pop	{r3, r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.L76:
+.L78:
 @ UnitMenu.c:93: 		if ( event->usability != CHARSupportConvoUsability ) { continue; } // This isn't a support convo.	
-	ldr	r3, .L81	@ tmp132,
+	ldr	r3, .L83	@ tmp132,
 	ldr	r2, [r4, #12]	@ tmp146, MEM[base: event_16, offset: 12B]
 	cmp	r2, r3	@ tmp146, tmp132
-	beq	.L72		@,
-.L75:
+	beq	.L74		@,
+.L77:
 @ UnitMenu.c:91: 	for ( ; event->identifier != 0 ; event++ )
 	adds	r4, r4, #16	@ event,
-.L70:
+.L72:
 @ UnitMenu.c:91: 	for ( ; event->identifier != 0 ; event++ )
 	ldrh	r3, [r4]	@ MEM[base: event_16, offset: 0B], MEM[base: event_16, offset: 0B]
 	cmp	r3, #0	@ MEM[base: event_16, offset: 0B],
-	bne	.L76		@,
-	b	.L77		@
-.L72:
+	bne	.L78		@,
+	b	.L79		@
+.L74:
 @ UnitMenu.c:94: 		if ( ( char1 != event->char1 || char2 != event->char2 ) && ( char2 != event->char1 || char1 != event->char2 ) ) { continue; } // The characters don't match this character event.
 	ldrb	r3, [r4, #8]	@ _6, MEM[base: event_16, offset: 8B]
 @ UnitMenu.c:94: 		if ( ( char1 != event->char1 || char2 != event->char2 ) && ( char2 != event->char1 || char1 != event->char2 ) ) { continue; } // The characters don't match this character event.
 	cmp	r3, r6	@ _6, char1
-	bne	.L73		@,
+	bne	.L75		@,
 @ UnitMenu.c:94: 		if ( ( char1 != event->char1 || char2 != event->char2 ) && ( char2 != event->char1 || char1 != event->char2 ) ) { continue; } // The characters don't match this character event.
 	ldrb	r2, [r4, #9]	@ MEM[base: event_16, offset: 9B], MEM[base: event_16, offset: 9B]
 @ UnitMenu.c:94: 		if ( ( char1 != event->char1 || char2 != event->char2 ) && ( char2 != event->char1 || char1 != event->char2 ) ) { continue; } // The characters don't match this character event.
 	cmp	r2, r5	@ MEM[base: event_16, offset: 9B], target
-	beq	.L74		@,
-.L73:
+	beq	.L76		@,
+.L75:
 @ UnitMenu.c:94: 		if ( ( char1 != event->char1 || char2 != event->char2 ) && ( char2 != event->char1 || char1 != event->char2 ) ) { continue; } // The characters don't match this character event.
 	cmp	r3, r5	@ _6, target
-	bne	.L75		@,
+	bne	.L77		@,
 @ UnitMenu.c:94: 		if ( ( char1 != event->char1 || char2 != event->char2 ) && ( char2 != event->char1 || char1 != event->char2 ) ) { continue; } // The characters don't match this character event.
 	ldrb	r3, [r4, #9]	@ MEM[base: event_16, offset: 9B], MEM[base: event_16, offset: 9B]
 @ UnitMenu.c:94: 		if ( ( char1 != event->char1 || char2 != event->char2 ) && ( char2 != event->char1 || char1 != event->char2 ) ) { continue; } // The characters don't match this character event.
 	cmp	r3, r6	@ MEM[base: event_16, offset: 9B], char1
-	bne	.L75		@,
-.L74:
+	bne	.L77		@,
+.L76:
 @ UnitMenu.c:95: 		if ( CanUnitsSupport(active,target,event->level) )
 	movs	r1, r5	@, target
 	movs	r0, r7	@, active
@@ -662,11 +691,11 @@ FindValidConvo:
 	bl	CanUnitsSupport		@
 @ UnitMenu.c:95: 		if ( CanUnitsSupport(active,target,event->level) )
 	cmp	r0, #0	@ tmp144,
-	beq	.L75		@,
-	b	.L71		@
-.L82:
+	beq	.L77		@,
+	b	.L73		@
+.L84:
 	.align	2
-.L81:
+.L83:
 	.word	CHARSupportConvoUsability
 	.size	FindValidConvo, .-FindValidConvo
 	.align	1
@@ -687,7 +716,7 @@ AddSupport:
 	bl	FindSupport		@
 @ MemoryManagement.c:22: 	if ( FindSupport(unit,supporting) != 0xFF ) { return 0; } // They already have a support!
 	cmp	r0, #255	@ tmp157,
-	bne	.L84		@,
+	bne	.L86		@,
 @ MemoryManagement.c:23: 	int thisCharID = ToCharID(unit);
 	movs	r0, r4	@, unit
 	bl	ToCharID		@
@@ -701,19 +730,19 @@ AddSupport:
 	bl	CountSupports		@
 @ MemoryManagement.c:25: 	if ( CountSupports(unit) == 5 || CountSupports(otherUnit) == 5 ) { return 0; } // At least one of the characters has full supports.
 	cmp	r0, #5	@ tmp160,
-	beq	.L84		@,
+	beq	.L86		@,
 @ MemoryManagement.c:25: 	if ( CountSupports(unit) == 5 || CountSupports(otherUnit) == 5 ) { return 0; } // At least one of the characters has full supports.
 	movs	r0, r5	@, otherUnit
 	bl	CountSupports		@
 @ MemoryManagement.c:25: 	if ( CountSupports(unit) == 5 || CountSupports(otherUnit) == 5 ) { return 0; } // At least one of the characters has full supports.
 	cmp	r0, #5	@ tmp161,
-	beq	.L84		@,
+	beq	.L86		@,
 	movs	r0, #52	@ tmp137,
 	movs	r1, r4	@ ivtmp.138, unit
 	rsbs	r0, r0, #0	@ tmp137, tmp137
 	adds	r1, r1, #52	@ ivtmp.138,
 	subs	r0, r0, r4	@ tmp136, tmp137, unit
-.L85:
+.L87:
 	adds	r3, r0, r1	@ _47, tmp136, ivtmp.138
 	adds	r1, r1, #1	@ ivtmp.138,
 @ MemoryManagement.c:28: 		if ( unit->supports[i] == 0 )
@@ -721,7 +750,7 @@ AddSupport:
 @ MemoryManagement.c:28: 		if ( unit->supports[i] == 0 )
 	ldrb	r2, [r2]	@ MEM[base: _48, offset: 4294967295B], MEM[base: _48, offset: 4294967295B]
 	cmp	r2, #0	@ MEM[base: _48, offset: 4294967295B],
-	bne	.L85		@,
+	bne	.L87		@,
 @ MemoryManagement.c:30: 			unit->supports[i] = supporting;
 	adds	r3, r4, r3	@ tmp140, unit, _47
 	adds	r3, r3, #52	@ tmp143,
@@ -737,7 +766,7 @@ AddSupport:
 	rsbs	r0, r0, #0	@ tmp146, tmp146
 	adds	r1, r1, #52	@ ivtmp.130,
 	subs	r0, r0, r5	@ tmp145, tmp146, otherUnit
-.L86:
+.L88:
 	adds	r3, r0, r1	@ _37, tmp145, ivtmp.130
 	adds	r1, r1, #1	@ ivtmp.130,
 @ MemoryManagement.c:37: 		if ( otherUnit->supports[i] == 0 )
@@ -745,7 +774,7 @@ AddSupport:
 @ MemoryManagement.c:37: 		if ( otherUnit->supports[i] == 0 )
 	ldrb	r2, [r2]	@ MEM[base: _38, offset: 4294967295B], MEM[base: _38, offset: 4294967295B]
 	cmp	r2, #0	@ MEM[base: _38, offset: 4294967295B],
-	bne	.L86		@,
+	bne	.L88		@,
 @ MemoryManagement.c:39: 			otherUnit->supports[i] = thisCharID;
 	adds	r3, r5, r3	@ tmp149, otherUnit, _37
 	adds	r3, r3, #52	@ tmp152,
@@ -756,16 +785,16 @@ AddSupport:
 	strb	r7, [r3]	@ thisCharID, otherUnit_10->supports
 @ MemoryManagement.c:40: 			return SetSupport(otherUnit,thisCharID,0);
 	bl	SetSupport		@
-.L83:
+.L85:
 @ MemoryManagement.c:43: }
 	@ sp needed	@
 	pop	{r3, r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.L84:
+.L86:
 @ MemoryManagement.c:22: 	if ( FindSupport(unit,supporting) != 0xFF ) { return 0; } // They already have a support!
 	movs	r0, #0	@ <retval>,
-	b	.L83		@
+	b	.L85		@
 	.size	AddSupport, .-AddSupport
 	.align	1
 	.syntax unified
@@ -789,7 +818,7 @@ SetSupport:
 	movs	r0, r7	@, supporting
 	bl	ToUnit		@
 @ MemoryManagement.c:49: 	if ( level < 0 || level > MaxSupportLevel ) { return 0; } // Ensure the level passed in is within the valid range.
-	ldr	r3, .L104	@ tmp150,
+	ldr	r3, .L106	@ tmp150,
 @ MemoryManagement.c:49: 	if ( level < 0 || level > MaxSupportLevel ) { return 0; } // Ensure the level passed in is within the valid range.
 	ldr	r2, [sp]	@ level, %sfp
 	ldrb	r3, [r3]	@ MaxSupportLevel, MaxSupportLevel
@@ -797,17 +826,17 @@ SetSupport:
 	movs	r6, r0	@ otherUnit, tmp191
 @ MemoryManagement.c:49: 	if ( level < 0 || level > MaxSupportLevel ) { return 0; } // Ensure the level passed in is within the valid range.
 	cmp	r3, r2	@ MaxSupportLevel, level
-	bcs	.L97		@,
-.L100:
+	bcs	.L99		@,
+.L102:
 @ MemoryManagement.c:49: 	if ( level < 0 || level > MaxSupportLevel ) { return 0; } // Ensure the level passed in is within the valid range.
 	movs	r0, #0	@ <retval>,
-.L96:
+.L98:
 @ MemoryManagement.c:65: }
 	@ sp needed	@
 	pop	{r1, r2, r3, r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.L97:
+.L99:
 @ MemoryManagement.c:50: 	int loc1 = FindSupport(unit,supporting);
 	movs	r1, r7	@, supporting
 	movs	r0, r4	@, unit
@@ -815,20 +844,20 @@ SetSupport:
 	movs	r5, r0	@ loc1, tmp192
 @ MemoryManagement.c:51: 	if ( loc1 == 0xFF )
 	cmp	r0, #255	@ loc1,
-	bne	.L99		@,
+	bne	.L101		@,
 @ MemoryManagement.c:54: 		if ( !AddSupport(unit,supporting) ) { return 0; } // Adding a support failed.
 	movs	r1, r7	@, supporting
 	movs	r0, r4	@, unit
 	bl	AddSupport		@
 @ MemoryManagement.c:54: 		if ( !AddSupport(unit,supporting) ) { return 0; } // Adding a support failed.
 	cmp	r0, #0	@ tmp193,
-	beq	.L100		@,
+	beq	.L102		@,
 @ MemoryManagement.c:55: 		loc1 = FindSupport(unit,supporting);
 	movs	r1, r7	@, supporting
 	movs	r0, r4	@, unit
 	bl	FindSupport		@
 	movs	r5, r0	@ loc1, tmp194
-.L99:
+.L101:
 @ MemoryManagement.c:57: 	int loc2 = FindSupport(otherUnit,thisCharID);
 	ldr	r1, [sp, #4]	@, %sfp
 	movs	r0, r6	@, otherUnit
@@ -873,10 +902,10 @@ SetSupport:
 @ MemoryManagement.c:63: 	otherUnit->supportLevels |= level << (loc2*3);
 	strh	r2, [r6, #50]	@ tmp184, otherUnit_42->supportLevels
 @ MemoryManagement.c:64: 	return 1;
-	b	.L96		@
-.L105:
+	b	.L98		@
+.L107:
 	.align	2
-.L104:
+.L106:
 	.word	MaxSupportLevel
 	.size	SetSupport, .-SetSupport
 	.align	1
@@ -900,24 +929,24 @@ CHARSupportConvoUsability:
 	ldr	r3, [r0, #12]	@ _3->state, _3->state
 @ UnitMenu.c:22: 	if ( ToUnit(alloc->currCharID)->state & US_CANTOING ) { return 0; } // Let's not if this unit is cantoing.
 	lsls	r3, r3, #25	@ tmp140, _3->state,
-	bpl	.L107		@,
-.L109:
+	bpl	.L109		@,
+.L111:
 @ UnitMenu.c:22: 	if ( ToUnit(alloc->currCharID)->state & US_CANTOING ) { return 0; } // Let's not if this unit is cantoing.
 	movs	r0, #0	@ <retval>,
-.L106:
+.L108:
 @ UnitMenu.c:35: }
 	@ sp needed	@
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-.L107:
+.L109:
 @ UnitMenu.c:24: 	if ( ProcFind(&Proc_TI) == NULL ) { return 0; } // Has to do with the movement squares.	
-	ldr	r0, .L116	@,
-	ldr	r3, .L116+4	@ tmp130,
+	ldr	r0, .L118	@,
+	ldr	r3, .L118+4	@ tmp130,
 	bl	.L15		@
 @ UnitMenu.c:24: 	if ( ProcFind(&Proc_TI) == NULL ) { return 0; } // Has to do with the movement squares.	
 	cmp	r0, #0	@ tmp136,
-	beq	.L109		@,
+	beq	.L111		@,
 @ UnitMenu.c:26: 	if ( FindValidConvo(alloc->event,ToUnit(alloc->currCharID),ToCharID(alloc->otherUnit)) != NULL )
 	ldrb	r0, [r4, #26]	@ tmp131,
 	ldr	r6, [r4]	@ _15, alloc_9(D)->event
@@ -931,7 +960,7 @@ CHARSupportConvoUsability:
 	bl	FindValidConvo		@
 @ UnitMenu.c:26: 	if ( FindValidConvo(alloc->event,ToUnit(alloc->currCharID),ToCharID(alloc->otherUnit)) != NULL )
 	cmp	r0, #0	@ tmp139,
-	beq	.L109		@,
+	beq	.L111		@,
 @ UnitMenu.c:28: 		alloc->returnThing = 1; // This is a weird thing that I seem to need to do.
 	movs	r3, #1	@ tmp132,
 @ UnitMenu.c:29: 		return 2; // Valid convo found!
@@ -939,10 +968,10 @@ CHARSupportConvoUsability:
 @ UnitMenu.c:28: 		alloc->returnThing = 1; // This is a weird thing that I seem to need to do.
 	str	r3, [r4, #4]	@ tmp132, alloc_9(D)->returnThing
 @ UnitMenu.c:29: 		return 2; // Valid convo found!
-	b	.L106		@
-.L117:
+	b	.L108		@
+.L119:
 	.align	2
-.L116:
+.L118:
 	.word	Proc_TI
 	.word	ProcFind
 	.size	CHARSupportConvoUsability, .-CHARSupportConvoUsability
@@ -959,9 +988,9 @@ CallAddSupport:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, r5, r6, lr}	@
 @ EventCalls.c:4: 	if ( gMemorySlot[4] >= 0 && gMemorySlot[4] <= MaxSupportLevel && FindSupport(ToUnit(gMemorySlot[1]),gMemorySlot[2]) == 0xFF ) // Ensure valid level before trying to add the support.
-	ldr	r3, .L128	@ tmp137,
+	ldr	r3, .L130	@ tmp137,
 @ EventCalls.c:4: 	if ( gMemorySlot[4] >= 0 && gMemorySlot[4] <= MaxSupportLevel && FindSupport(ToUnit(gMemorySlot[1]),gMemorySlot[2]) == 0xFF ) // Ensure valid level before trying to add the support.
-	ldr	r4, .L128+4	@ tmp136,
+	ldr	r4, .L130+4	@ tmp136,
 @ EventCalls.c:4: 	if ( gMemorySlot[4] >= 0 && gMemorySlot[4] <= MaxSupportLevel && FindSupport(ToUnit(gMemorySlot[1]),gMemorySlot[2]) == 0xFF ) // Ensure valid level before trying to add the support.
 	ldrb	r3, [r3]	@ MaxSupportLevel, MaxSupportLevel
 @ EventCalls.c:4: 	if ( gMemorySlot[4] >= 0 && gMemorySlot[4] <= MaxSupportLevel && FindSupport(ToUnit(gMemorySlot[1]),gMemorySlot[2]) == 0xFF ) // Ensure valid level before trying to add the support.
@@ -970,7 +999,7 @@ CallAddSupport:
 	movs	r5, r0	@ parent, tmp150
 @ EventCalls.c:4: 	if ( gMemorySlot[4] >= 0 && gMemorySlot[4] <= MaxSupportLevel && FindSupport(ToUnit(gMemorySlot[1]),gMemorySlot[2]) == 0xFF ) // Ensure valid level before trying to add the support.
 	cmp	r2, r3	@ tmp156, MaxSupportLevel
-	bhi	.L118		@,
+	bhi	.L120		@,
 @ EventCalls.c:4: 	if ( gMemorySlot[4] >= 0 && gMemorySlot[4] <= MaxSupportLevel && FindSupport(ToUnit(gMemorySlot[1]),gMemorySlot[2]) == 0xFF ) // Ensure valid level before trying to add the support.
 	ldr	r0, [r4, #4]	@, gMemorySlot
 	bl	ToUnit		@
@@ -978,7 +1007,7 @@ CallAddSupport:
 	bl	FindSupport		@
 @ EventCalls.c:4: 	if ( gMemorySlot[4] >= 0 && gMemorySlot[4] <= MaxSupportLevel && FindSupport(ToUnit(gMemorySlot[1]),gMemorySlot[2]) == 0xFF ) // Ensure valid level before trying to add the support.
 	cmp	r0, #255	@ tmp152,
-	bne	.L118		@,
+	bne	.L120		@,
 @ EventCalls.c:6: 		if ( AddSupport(ToUnit(gMemorySlot[1]),gMemorySlot[2]) )
 	ldr	r0, [r4, #4]	@, gMemorySlot
 	bl	ToUnit		@
@@ -986,7 +1015,7 @@ CallAddSupport:
 	bl	AddSupport		@
 @ EventCalls.c:6: 		if ( AddSupport(ToUnit(gMemorySlot[1]),gMemorySlot[2]) )
 	cmp	r0, #0	@ tmp154,
-	beq	.L118		@,
+	beq	.L120		@,
 @ EventCalls.c:8: 			SetSupport(ToUnit(gMemorySlot[1]),gMemorySlot[2],gMemorySlot[3]); // This is guranteed to work because AddSupport was successful, so the support exists, and the level is valid.
 	ldr	r0, [r4, #4]	@, gMemorySlot
 	bl	ToUnit		@
@@ -996,20 +1025,20 @@ CallAddSupport:
 @ EventCalls.c:10: 			if ( gMemorySlot[4] )
 	ldr	r3, [r4, #16]	@ tmp158, gMemorySlot
 	cmp	r3, #0	@ tmp158,
-	beq	.L118		@,
+	beq	.L120		@,
 @ EventCalls.c:13: 				SupportPopup(parent,gMemorySlot[3]);
 	movs	r0, r5	@, parent
 	ldr	r1, [r4, #12]	@, gMemorySlot
 	bl	SupportPopup		@
-.L118:
+.L120:
 @ EventCalls.c:17: }
 	@ sp needed	@
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L129:
+.L131:
 	.align	2
-.L128:
+.L130:
 	.word	MaxSupportLevel
 	.word	gMemorySlot
 	.size	CallAddSupport, .-CallAddSupport
@@ -1026,7 +1055,7 @@ CallSetSupport:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, r5, r6, lr}	@
 @ EventCalls.c:21: 	if ( SetSupport(ToUnit(gMemorySlot[1]),gMemorySlot[2],gMemorySlot[3]) )
-	ldr	r4, .L138	@ tmp122,
+	ldr	r4, .L140	@ tmp122,
 @ EventCalls.c:20: {
 	movs	r5, r0	@ parent, tmp128
 @ EventCalls.c:21: 	if ( SetSupport(ToUnit(gMemorySlot[1]),gMemorySlot[2],gMemorySlot[3]) )
@@ -1037,24 +1066,24 @@ CallSetSupport:
 	bl	SetSupport		@
 @ EventCalls.c:21: 	if ( SetSupport(ToUnit(gMemorySlot[1]),gMemorySlot[2],gMemorySlot[3]) )
 	cmp	r0, #0	@ tmp130,
-	beq	.L130		@,
+	beq	.L132		@,
 @ EventCalls.c:24: 		if ( gMemorySlot[4] ) { SupportPopup(parent,gMemorySlot[3]); }
 	ldr	r3, [r4, #16]	@ tmp131, gMemorySlot
 	cmp	r3, #0	@ tmp131,
-	beq	.L130		@,
+	beq	.L132		@,
 @ EventCalls.c:24: 		if ( gMemorySlot[4] ) { SupportPopup(parent,gMemorySlot[3]); }
 	movs	r0, r5	@, parent
 	ldr	r1, [r4, #12]	@, gMemorySlot
 	bl	SupportPopup		@
-.L130:
+.L132:
 @ EventCalls.c:26: }
 	@ sp needed	@
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L139:
+.L141:
 	.align	2
-.L138:
+.L140:
 	.word	gMemorySlot
 	.size	CallSetSupport, .-CallSetSupport
 	.align	1
@@ -1070,7 +1099,7 @@ CallIncreaseSupport:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, r5, r6, r7, lr}	@
 @ EventCalls.c:30: 	if ( IncreaseSupport(ToUnit(gMemorySlot[1]),gMemorySlot[2]) )
-	ldr	r5, .L155	@ tmp132,
+	ldr	r5, .L157	@ tmp132,
 @ EventCalls.c:29: {
 	sub	sp, sp, #20	@,,
 @ EventCalls.c:29: {
@@ -1096,20 +1125,20 @@ CallIncreaseSupport:
 	bl	FindSupport		@
 @ MemoryManagement.c:71: 	if ( FindSupport(unit,supporting) != 0xFF )
 	cmp	r0, #255	@ tmp145,
-	beq	.L141		@,
+	beq	.L143		@,
 @ MemoryManagement.c:74: 		int level = GetSupportLevel(supportingUnit,thisChar)+1;
 	ldr	r1, [sp, #8]	@, %sfp
 	ldr	r0, [sp, #4]	@, %sfp
 	bl	GetSupportLevel		@
 @ MemoryManagement.c:75: 		if ( level < 0 || level > MaxSupportLevel ) { return 0; } // Check the second first to ensure no valid changes are made to the first.
 	adds	r7, r0, #1	@ level, tmp146,
-	bmi	.L140		@,
+	bmi	.L142		@,
 @ MemoryManagement.c:75: 		if ( level < 0 || level > MaxSupportLevel ) { return 0; } // Check the second first to ensure no valid changes are made to the first.
-	ldr	r3, .L155+4	@ tmp134,
+	ldr	r3, .L157+4	@ tmp134,
 	ldrb	r3, [r3]	@ MaxSupportLevel, MaxSupportLevel
 @ MemoryManagement.c:75: 		if ( level < 0 || level > MaxSupportLevel ) { return 0; } // Check the second first to ensure no valid changes are made to the first.
 	cmp	r7, r3	@ level, MaxSupportLevel
-	bgt	.L140		@,
+	bgt	.L142		@,
 @ MemoryManagement.c:76: 		if ( !SetSupport(unit,supporting,level) ) { return 0; }; // Immediately exit false if the first failed.
 	movs	r2, r7	@, level
 	movs	r1, r6	@, _5
@@ -1117,17 +1146,17 @@ CallIncreaseSupport:
 	bl	SetSupport		@
 @ MemoryManagement.c:76: 		if ( !SetSupport(unit,supporting,level) ) { return 0; }; // Immediately exit false if the first failed.
 	cmp	r0, #0	@ tmp147,
-	beq	.L140		@,
+	beq	.L142		@,
 @ MemoryManagement.c:77: 		SetSupport(supportingUnit,thisChar,level);
 	movs	r2, r7	@, level
 	ldr	r1, [sp, #8]	@, %sfp
 	ldr	r0, [sp, #4]	@, %sfp
 	bl	SetSupport		@
-.L145:
+.L147:
 @ EventCalls.c:33: 		if ( gMemorySlot[3] ) { SupportPopup(parent,GetSupportLevel(ToUnit(gMemorySlot[1]),gMemorySlot[2])); }
 	ldr	r3, [r5, #12]	@ tmp152, gMemorySlot
 	cmp	r3, #0	@ tmp152,
-	beq	.L140		@,
+	beq	.L142		@,
 @ EventCalls.c:33: 		if ( gMemorySlot[3] ) { SupportPopup(parent,GetSupportLevel(ToUnit(gMemorySlot[1]),gMemorySlot[2])); }
 	ldr	r0, [r5, #4]	@, gMemorySlot
 	bl	ToUnit		@
@@ -1137,25 +1166,25 @@ CallIncreaseSupport:
 	ldr	r0, [sp, #12]	@, %sfp
 	bl	SupportPopup		@
 @ EventCalls.c:35: }
-	b	.L140		@
-.L141:
+	b	.L142		@
+.L143:
 @ MemoryManagement.c:83: 		return AddSupport(unit,supporting); // This already checks for if each has max supports.
 	movs	r1, r6	@, _5
 	movs	r0, r4	@, _3
 	bl	AddSupport		@
 @ EventCalls.c:30: 	if ( IncreaseSupport(ToUnit(gMemorySlot[1]),gMemorySlot[2]) )
 	cmp	r0, #0	@ tmp148,
-	bne	.L145		@,
-.L140:
+	bne	.L147		@,
+.L142:
 @ EventCalls.c:35: }
 	add	sp, sp, #20	@,,
 	@ sp needed	@
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L156:
+.L158:
 	.align	2
-.L155:
+.L157:
 	.word	gMemorySlot
 	.word	MaxSupportLevel
 	.size	CallIncreaseSupport, .-CallIncreaseSupport
@@ -1172,7 +1201,7 @@ CallClearSupport:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r3, r4, r5, r6, r7, lr}	@
 @ EventCalls.c:39: 	ClearSupport(ToUnit(gMemorySlot[1]),gMemorySlot[2]);
-	ldr	r5, .L165	@ tmp136,
+	ldr	r5, .L167	@ tmp136,
 @ EventCalls.c:39: 	ClearSupport(ToUnit(gMemorySlot[1]),gMemorySlot[2]);
 	ldr	r0, [r5, #4]	@, gMemorySlot
 	bl	ToUnit		@
@@ -1195,14 +1224,14 @@ CallClearSupport:
 	movs	r5, r0	@ loc1, tmp177
 @ MemoryManagement.c:93: 	if ( loc1 == 0xFF || loc2 == 0xFF ) { return 0; } // It should be sufficient to check only one character for support not found but eh may as well be thourough.
 	cmp	r0, #255	@ loc1,
-	beq	.L157		@,
+	beq	.L159		@,
 @ MemoryManagement.c:92: 	int loc2 = FindSupport(supportingUnit,thisChar);
 	movs	r1, r7	@, thisChar
 	movs	r0, r6	@, supportingUnit
 	bl	FindSupport		@
 @ MemoryManagement.c:93: 	if ( loc1 == 0xFF || loc2 == 0xFF ) { return 0; } // It should be sufficient to check only one character for support not found but eh may as well be thourough.
 	cmp	r0, #255	@ loc2,
-	beq	.L157		@,
+	beq	.L159		@,
 @ MemoryManagement.c:94: 	unit->supports[loc1] = 0; // Clear the characters.
 	movs	r2, #0	@ tmp142,
 	adds	r3, r4, r5	@ tmp138, _3, loc1
@@ -1234,15 +1263,15 @@ CallClearSupport:
 	ldrh	r2, [r6, #50]	@ tmp170,
 	bics	r2, r3	@ tmp171, tmp164
 	strh	r2, [r6, #50]	@ tmp171, supportingUnit_9->supportLevels
-.L157:
+.L159:
 @ EventCalls.c:40: }
 	@ sp needed	@
 	pop	{r3, r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L166:
+.L168:
 	.align	2
-.L165:
+.L167:
 	.word	gMemorySlot
 	.size	CallClearSupport, .-CallClearSupport
 	.align	1
@@ -1258,7 +1287,7 @@ CallGetSupportLevel:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, lr}	@
 @ EventCalls.c:44: 	gMemorySlot[1] = GetSupportLevel(ToUnit(gMemorySlot[1]),gMemorySlot[2]);
-	ldr	r4, .L168	@ tmp118,
+	ldr	r4, .L170	@ tmp118,
 @ EventCalls.c:44: 	gMemorySlot[1] = GetSupportLevel(ToUnit(gMemorySlot[1]),gMemorySlot[2]);
 	ldr	r0, [r4, #4]	@, gMemorySlot
 	bl	ToUnit		@
@@ -1272,9 +1301,9 @@ CallGetSupportLevel:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L169:
+.L171:
 	.align	2
-.L168:
+.L170:
 	.word	gMemorySlot
 	.size	CallGetSupportLevel, .-CallGetSupportLevel
 	.align	1
@@ -1292,7 +1321,7 @@ SupportConvoUsability:
 @ UnitMenu.c:7: 	int x = ActiveUnit->xPos;
 	movs	r2, #16	@ x,
 @ UnitMenu.c:7: 	int x = ActiveUnit->xPos;
-	ldr	r7, .L178	@ tmp139,
+	ldr	r7, .L180	@ tmp139,
 	ldr	r3, [r7]	@ ActiveUnit.7_1, ActiveUnit
 @ UnitMenu.c:7: 	int x = ActiveUnit->xPos;
 	ldrsb	r2, [r3, r2]	@ x,* x
@@ -1308,17 +1337,17 @@ SupportConvoUsability:
 	ands	r4, r3	@ tmp140, tmp142
 @ UnitMenu.c:9: 	if ( ActiveUnit->state & US_CANTOING ) { return 3; } // Immediately return false if this unit is cantoing.
 	tst	r2, r3	@ ActiveUnit.7_1->state, tmp142
-	bne	.L171		@,
-.L173:
+	bne	.L173		@,
+.L175:
 @ UnitMenu.c:12: 		int allegianceByte = gMapUnit[y+yAdj[i]][x+xAdj[i]];
-	ldr	r2, .L178+4	@ tmp143,
+	ldr	r2, .L180+4	@ tmp143,
 @ UnitMenu.c:12: 		int allegianceByte = gMapUnit[y+yAdj[i]][x+xAdj[i]];
 	ldr	r1, [sp, #4]	@ y, %sfp
 @ UnitMenu.c:12: 		int allegianceByte = gMapUnit[y+yAdj[i]][x+xAdj[i]];
 	ldrsb	r3, [r4, r2]	@ MEM[symbol: yAdj, index: _57, offset: 0B], MEM[symbol: yAdj, index: _57, offset: 0B]
 @ UnitMenu.c:12: 		int allegianceByte = gMapUnit[y+yAdj[i]][x+xAdj[i]];
 	adds	r3, r3, r1	@ tmp145, MEM[symbol: yAdj, index: _57, offset: 0B], y
-	ldr	r1, .L178+8	@ tmp147,
+	ldr	r1, .L180+8	@ tmp147,
 	ldr	r1, [r1]	@ gMapUnit, gMapUnit
 	lsls	r3, r3, #2	@ tmp148, tmp145,
 @ UnitMenu.c:12: 		int allegianceByte = gMapUnit[y+yAdj[i]][x+xAdj[i]];
@@ -1334,27 +1363,27 @@ SupportConvoUsability:
 	ldrb	r6, [r3, r2]	@ _19, *_18
 @ UnitMenu.c:13: 		if ( allegianceByte == 0 ) { continue; } // If there isn't a character here, reiterate.
 	cmp	r6, #0	@ _19,
-	bne	.L172		@,
-.L175:
+	bne	.L174		@,
+.L177:
 @ UnitMenu.c:10: 	for ( int i = 0 ; i < 4 ; i++ )
 	adds	r4, r4, #1	@ i,
 @ UnitMenu.c:10: 	for ( int i = 0 ; i < 4 ; i++ )
 	cmp	r4, #4	@ i,
-	bne	.L173		@,
-.L171:
+	bne	.L175		@,
+.L173:
 @ UnitMenu.c:9: 	if ( ActiveUnit->state & US_CANTOING ) { return 3; } // Immediately return false if this unit is cantoing.
 	movs	r0, #3	@ <retval>,
-.L170:
+.L172:
 @ UnitMenu.c:17: }
 	@ sp needed	@
 	pop	{r1, r2, r3, r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.L172:
+.L174:
 @ UnitMenu.c:14: 		if ( FindValidConvo(GetCharacterEvents(),GetUnit(allegianceByte),ToCharID(ActiveUnit)) ) { return 1; }
 	bl	GetCharacterEvents		@
 @ UnitMenu.c:14: 		if ( FindValidConvo(GetCharacterEvents(),GetUnit(allegianceByte),ToCharID(ActiveUnit)) ) { return 1; }
-	ldr	r3, .L178+12	@ tmp154,
+	ldr	r3, .L180+12	@ tmp154,
 @ UnitMenu.c:14: 		if ( FindValidConvo(GetCharacterEvents(),GetUnit(allegianceByte),ToCharID(ActiveUnit)) ) { return 1; }
 	movs	r5, r0	@ _20, tmp158
 @ UnitMenu.c:14: 		if ( FindValidConvo(GetCharacterEvents(),GetUnit(allegianceByte),ToCharID(ActiveUnit)) ) { return 1; }
@@ -1370,13 +1399,13 @@ SupportConvoUsability:
 	bl	FindValidConvo		@
 @ UnitMenu.c:14: 		if ( FindValidConvo(GetCharacterEvents(),GetUnit(allegianceByte),ToCharID(ActiveUnit)) ) { return 1; }
 	cmp	r0, #0	@ tmp161,
-	beq	.L175		@,
+	beq	.L177		@,
 @ UnitMenu.c:14: 		if ( FindValidConvo(GetCharacterEvents(),GetUnit(allegianceByte),ToCharID(ActiveUnit)) ) { return 1; }
 	movs	r0, #1	@ <retval>,
-	b	.L170		@
-.L179:
+	b	.L172		@
+.L181:
 	.align	2
-.L178:
+.L180:
 	.word	ActiveUnit
 	.word	.LANCHOR0
 	.word	gMapUnit
@@ -1412,13 +1441,13 @@ BuildSupportTargetList:
 @ UnitMenu.c:42: 	InitTargets(x,y);
 	movs	r1, r7	@, y
 	movs	r0, r3	@, x
-	ldr	r3, .L189	@ tmp139,
+	ldr	r3, .L191	@ tmp139,
 	bl	.L15		@
 @ UnitMenu.c:43: 	for ( int i = 0 ; i < 4 ; i++ )
 	movs	r4, #0	@ i,
-.L184:
+.L186:
 @ UnitMenu.c:45: 		int allegianceByte = gMapUnit[y+yAdj[i]][x+xAdj[i]];
-	ldr	r3, .L189+4	@ tmp140,
+	ldr	r3, .L191+4	@ tmp140,
 	ldrsb	r2, [r4, r3]	@ MEM[symbol: yAdj, index: _58, offset: 0B], MEM[symbol: yAdj, index: _58, offset: 0B]
 @ UnitMenu.c:45: 		int allegianceByte = gMapUnit[y+yAdj[i]][x+xAdj[i]];
 	adds	r3, r3, #4	@ tmp143,
@@ -1432,7 +1461,7 @@ BuildSupportTargetList:
 	adds	r3, r3, r2	@ _13, MEM[symbol: xAdj, index: _58, offset: 0B], x
 	str	r3, [sp, #8]	@ _13, %sfp
 @ UnitMenu.c:45: 		int allegianceByte = gMapUnit[y+yAdj[i]][x+xAdj[i]];
-	ldr	r3, .L189+8	@ tmp146,
+	ldr	r3, .L191+8	@ tmp146,
 	ldr	r2, [sp, #4]	@ _6, %sfp
 	ldr	r3, [r3]	@ gMapUnit, gMapUnit
 	lsls	r2, r2, #2	@ tmp147, _6,
@@ -1442,11 +1471,11 @@ BuildSupportTargetList:
 	ldrb	r5, [r3, r2]	@ _16, *_15
 @ UnitMenu.c:46: 		if ( allegianceByte == 0 ) { continue; } // If there isn't a character here, reiterate.
 	cmp	r5, #0	@ _16,
-	beq	.L182		@,
+	beq	.L184		@,
 @ UnitMenu.c:48: 		CharacterEvent* event = FindValidConvo(GetCharacterEvents(),GetUnit(allegianceByte),ToCharID(active));
 	bl	GetCharacterEvents		@
 @ UnitMenu.c:48: 		CharacterEvent* event = FindValidConvo(GetCharacterEvents(),GetUnit(allegianceByte),ToCharID(active));
-	ldr	r3, .L189+12	@ tmp171,
+	ldr	r3, .L191+12	@ tmp171,
 @ UnitMenu.c:48: 		CharacterEvent* event = FindValidConvo(GetCharacterEvents(),GetUnit(allegianceByte),ToCharID(active));
 	str	r0, [sp, #16]	@ tmp160, %sfp
 @ UnitMenu.c:48: 		CharacterEvent* event = FindValidConvo(GetCharacterEvents(),GetUnit(allegianceByte),ToCharID(active));
@@ -1462,10 +1491,10 @@ BuildSupportTargetList:
 	bl	FindValidConvo		@
 @ UnitMenu.c:49: 		if ( event != NULL )
 	cmp	r0, #0	@ tmp163,
-	beq	.L182		@,
+	beq	.L184		@,
 @ UnitMenu.c:52: 			AddTarget(x+xAdj[i],y+yAdj[i],GetUnit(allegianceByte)->index & 0x3F,0); // & 0x3F for clearing the allegiance. Why isn't that a bitfield in FE-CLib?
 	movs	r0, r5	@, _16
-	ldr	r3, .L189+12	@ tmp173,
+	ldr	r3, .L191+12	@ tmp173,
 	bl	.L15		@
 @ UnitMenu.c:52: 			AddTarget(x+xAdj[i],y+yAdj[i],GetUnit(allegianceByte)->index & 0x3F,0); // & 0x3F for clearing the allegiance. Why isn't that a bitfield in FE-CLib?
 	movs	r3, #63	@ tmp175,
@@ -1474,23 +1503,23 @@ BuildSupportTargetList:
 	ands	r2, r3	@ tmp155, tmp175
 	ldr	r0, [sp, #8]	@, %sfp
 	movs	r3, #0	@,
-	ldr	r5, .L189+16	@ tmp157,
-	bl	.L191		@
-.L182:
+	ldr	r5, .L191+16	@ tmp157,
+	bl	.L193		@
+.L184:
 @ UnitMenu.c:43: 	for ( int i = 0 ; i < 4 ; i++ )
 	adds	r4, r4, #1	@ i,
 @ UnitMenu.c:43: 	for ( int i = 0 ; i < 4 ; i++ )
 	cmp	r4, #4	@ i,
-	bne	.L184		@,
+	bne	.L186		@,
 @ UnitMenu.c:56: }
 	add	sp, sp, #28	@,,
 	@ sp needed	@
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L190:
+.L192:
 	.align	2
-.L189:
+.L191:
 	.word	InitTargets
 	.word	.LANCHOR0
 	.word	gMapUnit
@@ -1511,15 +1540,15 @@ SupportSelected:
 	push	{r4, r5, r6, lr}	@
 @ UnitMenu.c:62: 	CharacterEvent* event = FindValidConvo(GetCharacterEvents(),ActiveUnit,ToCharID(GetUnit(gActionData.targetIndex)));
 	bl	GetCharacterEvents		@
-	ldr	r3, .L196	@ tmp127,
+	ldr	r3, .L198	@ tmp127,
 @ UnitMenu.c:62: 	CharacterEvent* event = FindValidConvo(GetCharacterEvents(),ActiveUnit,ToCharID(GetUnit(gActionData.targetIndex)));
-	ldr	r4, .L196+4	@ tmp128,
+	ldr	r4, .L198+4	@ tmp128,
 @ UnitMenu.c:62: 	CharacterEvent* event = FindValidConvo(GetCharacterEvents(),ActiveUnit,ToCharID(GetUnit(gActionData.targetIndex)));
 	movs	r5, r0	@ _1, tmp148
 	ldr	r6, [r3]	@ ActiveUnit.16_2, ActiveUnit
 @ UnitMenu.c:62: 	CharacterEvent* event = FindValidConvo(GetCharacterEvents(),ActiveUnit,ToCharID(GetUnit(gActionData.targetIndex)));
 	ldrb	r0, [r4, #13]	@ tmp129,
-	ldr	r3, .L196+8	@ tmp130,
+	ldr	r3, .L198+8	@ tmp130,
 	bl	.L15		@
 @ UnitMenu.c:62: 	CharacterEvent* event = FindValidConvo(GetCharacterEvents(),ActiveUnit,ToCharID(GetUnit(gActionData.targetIndex)));
 	bl	ToCharID		@
@@ -1532,16 +1561,16 @@ SupportSelected:
 	ldr	r0, [r0, #4]	@ _6, event_21->eventOrText.event
 @ UnitMenu.c:63: 	if ( (u32)event->eventOrText.event & 0xFFFF0000 )
 	lsrs	r2, r0, #16	@ tmp132, _6,
-	ldr	r5, .L196+12	@ tmp147,
+	ldr	r5, .L198+12	@ tmp147,
 	lsls	r1, r2, #16	@ tmp131, tmp132,
 @ UnitMenu.c:63: 	if ( (u32)event->eventOrText.event & 0xFFFF0000 )
 	cmp	r2, #0	@ tmp132,
-	beq	.L193		@,
+	beq	.L195		@,
 @ UnitMenu.c:66: 		StartMapEventEngine(event->eventOrText.event,0);
 	movs	r1, #0	@,
-.L195:
+.L197:
 @ UnitMenu.c:74: 		StartMapEventEngine(&SupportConvoEvents,0);
-	bl	.L191		@
+	bl	.L193		@
 @ UnitMenu.c:76: 	gActionData.unitActionType = 0x0E;
 	movs	r3, #14	@ tmp143,
 @ UnitMenu.c:78: }
@@ -1553,11 +1582,11 @@ SupportSelected:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-.L193:
+.L195:
 @ UnitMenu.c:71: 		gMemorySlot[2] = event->eventOrText.text;
 	ldrh	r0, [r3, #4]	@ tmp135,
 @ UnitMenu.c:71: 		gMemorySlot[2] = event->eventOrText.text;
-	ldr	r2, .L196+16	@ tmp134,
+	ldr	r2, .L198+16	@ tmp134,
 @ UnitMenu.c:71: 		gMemorySlot[2] = event->eventOrText.text;
 	str	r0, [r2, #8]	@ tmp135, gMemorySlot
 @ UnitMenu.c:72: 		gMemorySlot[1] = event->char1;
@@ -1566,13 +1595,13 @@ SupportSelected:
 @ UnitMenu.c:73: 		gMemorySlot[3] = event->char2;
 	ldrb	r3, [r3, #9]	@ tmp139,
 @ UnitMenu.c:74: 		StartMapEventEngine(&SupportConvoEvents,0);
-	ldr	r0, .L196+20	@,
+	ldr	r0, .L198+20	@,
 @ UnitMenu.c:73: 		gMemorySlot[3] = event->char2;
 	str	r3, [r2, #12]	@ tmp139, gMemorySlot
-	b	.L195		@
-.L197:
+	b	.L197		@
+.L199:
 	.align	2
-.L196:
+.L198:
 	.word	ActiveUnit
 	.word	gActionData
 	.word	GetUnit
@@ -1677,9 +1706,9 @@ CreateNewHelpBubbleProc:
 	movs	r6, r0	@ idk1, tmp140
 	movs	r5, r1	@ idk2, tmp141
 @ StatScreen.c:129: 	RTextProc* newProc = (RTextProc*)ProcStart(&HelpTextProcCode,(Proc*)3); // idk what's up with the second parameter.
-	ldr	r3, .L201	@ tmp118,
+	ldr	r3, .L203	@ tmp118,
 	movs	r1, #3	@,
-	ldr	r0, .L201+4	@,
+	ldr	r0, .L203+4	@,
 	bl	.L15		@
 @ StatScreen.c:132: 	newProc->char1 = proc->char1;
 	movs	r3, r4	@ tmp121, proc
@@ -1715,9 +1744,9 @@ CreateNewHelpBubbleProc:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L202:
+.L204:
 	.align	2
-.L201:
+.L203:
 	.word	ProcStart
 	.word	HelpTextProcCode
 	.size	CreateNewHelpBubbleProc, .-CreateNewHelpBubbleProc
@@ -1793,39 +1822,39 @@ DrawRTextStatLabels:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, r5, r6, lr}	@
 @ StatScreen.c:182: 		Text_InsertString(&SomeTextHandle,RTextLabels[i],8,SupportRTextStatNames[i].name);
-	ldr	r5, .L205	@ tmp113,
-	ldr	r4, .L205+4	@ tmp114,
+	ldr	r5, .L207	@ tmp113,
+	ldr	r4, .L207+4	@ tmp114,
 	movs	r0, r5	@, tmp113
 	movs	r2, #8	@,
 	movs	r1, #0	@,
-	ldr	r3, .L205+8	@,
+	ldr	r3, .L207+8	@,
 	bl	.L50		@
 	movs	r0, r5	@, tmp113
 	movs	r2, #8	@,
 	movs	r1, #44	@,
-	ldr	r3, .L205+12	@,
+	ldr	r3, .L207+12	@,
 	bl	.L50		@
 	movs	r0, r5	@, tmp113
 	movs	r2, #8	@,
 	movs	r1, #88	@,
-	ldr	r3, .L205+16	@,
+	ldr	r3, .L207+16	@,
 	bl	.L50		@
 @ StatScreen.c:186: 		Text_InsertString(&SomeTextHandle+1,RTextLabels[i],8,SupportRTextStatNames[i+3].name);
-	ldr	r5, .L205+20	@ tmp122,
+	ldr	r5, .L207+20	@ tmp122,
 	movs	r2, #8	@,
 	movs	r0, r5	@, tmp122
 	movs	r1, #0	@,
-	ldr	r3, .L205+24	@,
+	ldr	r3, .L207+24	@,
 	bl	.L50		@
 	movs	r0, r5	@, tmp122
 	movs	r2, #8	@,
 	movs	r1, #44	@,
-	ldr	r3, .L205+28	@,
+	ldr	r3, .L207+28	@,
 	bl	.L50		@
 	movs	r0, r5	@, tmp122
 	movs	r2, #8	@,
 	movs	r1, #88	@,
-	ldr	r3, .L205+32	@,
+	ldr	r3, .L207+32	@,
 	bl	.L50		@
 @ StatScreen.c:189: }
 	@ sp needed	@
@@ -1833,9 +1862,9 @@ DrawRTextStatLabels:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-.L206:
+.L208:
 	.align	2
-.L205:
+.L207:
 	.word	SomeTextHandle
 	.word	Text_InsertString
 	.word	SupportRTextStatNames
@@ -1927,8 +1956,8 @@ DrawRTextStatValues:
 	bl	GetBonusByCharacter		@
 @ StatScreen.c:227: 		Text_InsertNumberOr2Dashes(&SomeTextHandle,RTextStats[i],7,bonuses.vals[i]);
 	mov	r3, sp	@ tmp163,
-	ldr	r5, .L209	@ tmp137,
-	ldr	r4, .L209+4	@ tmp138,
+	ldr	r5, .L211	@ tmp137,
+	ldr	r4, .L211+4	@ tmp138,
 	movs	r0, r5	@, tmp137
 	movs	r2, #7	@,
 	movs	r1, #32	@,
@@ -1948,7 +1977,7 @@ DrawRTextStatValues:
 	bl	.L50		@
 @ StatScreen.c:231: 		Text_InsertNumberOr2Dashes(&SomeTextHandle+1,RTextStats[i],7,bonuses.vals[i+3]);
 	mov	r3, sp	@ tmp166,
-	ldr	r5, .L209+8	@ tmp149,
+	ldr	r5, .L211+8	@ tmp149,
 	movs	r2, #7	@,
 	movs	r0, r5	@, tmp149
 	movs	r1, #32	@,
@@ -1971,9 +2000,9 @@ DrawRTextStatValues:
 	pop	{r0, r1, r2, r4, r5}
 	pop	{r0}
 	bx	r0
-.L210:
+.L212:
 	.align	2
-.L209:
+.L211:
 	.word	SomeTextHandle
 	.word	Text_InsertNumberOr2Dashes
 	.word	SomeTextHandle+8
@@ -2029,43 +2058,43 @@ SupportScreenRTextGetter:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 @ StatScreen.c:259: 	Unit* current = gStatScreen.curr;
-	ldr	r3, .L225	@ tmp125,
+	ldr	r3, .L227	@ tmp125,
 @ StatScreen.c:258: {
 	push	{r4, r5, r6, lr}	@
 @ StatScreen.c:259: 	Unit* current = gStatScreen.curr;
 	ldr	r6, [r3, #12]	@ current, gStatScreen.curr
-@ MemoryManagement.c:133: 		if ( unit->supports[i] )
+@ MemoryManagement.c:134: 		if ( unit->supports[i] )
 	movs	r2, r6	@ tmp127, current
 @ StatScreen.c:258: {
 	movs	r5, r0	@ proc, tmp146
-@ MemoryManagement.c:131: 	for ( int i = 0 ; i < 5 ; i++ )
+@ MemoryManagement.c:132: 	for ( int i = 0 ; i < 5 ; i++ )
 	movs	r4, #0	@ i,
 @ StatScreen.c:260: 	int loc = GetNthValidSupport(current,*(proc->rTextData+0x12));
 	ldr	r3, [r0, #44]	@ tmp149, proc_14(D)->rTextData
 	ldrb	r3, [r3, #18]	@ n, MEM[(char *)_1 + 18B]
-@ MemoryManagement.c:133: 		if ( unit->supports[i] )
+@ MemoryManagement.c:134: 		if ( unit->supports[i] )
 	adds	r2, r2, #52	@ tmp127,
-.L215:
-@ MemoryManagement.c:133: 		if ( unit->supports[i] )
+.L217:
+@ MemoryManagement.c:134: 		if ( unit->supports[i] )
 	ldrb	r1, [r2, r4]	@ MEM[base: _39, index: _21, offset: 0B], MEM[base: _39, index: _21, offset: 0B]
 	cmp	r1, #0	@ MEM[base: _39, index: _21, offset: 0B],
-	beq	.L213		@,
-@ MemoryManagement.c:135: 			if ( !n ) { return i; }
+	beq	.L215		@,
+@ MemoryManagement.c:136: 			if ( !n ) { return i; }
 	cmp	r3, #0	@ n,
-	beq	.L214		@,
-@ MemoryManagement.c:136: 			n--;
+	beq	.L216		@,
+@ MemoryManagement.c:137: 			n--;
 	subs	r3, r3, #1	@ n,
-.L213:
-@ MemoryManagement.c:131: 	for ( int i = 0 ; i < 5 ; i++ )
+.L215:
+@ MemoryManagement.c:132: 	for ( int i = 0 ; i < 5 ; i++ )
 	adds	r4, r4, #1	@ i,
-@ MemoryManagement.c:131: 	for ( int i = 0 ; i < 5 ; i++ )
+@ MemoryManagement.c:132: 	for ( int i = 0 ; i < 5 ; i++ )
 	cmp	r4, #5	@ i,
-	bne	.L215		@,
-@ MemoryManagement.c:139: 	return 0xFF; // nth valid support doesn't exist.
+	bne	.L217		@,
+@ MemoryManagement.c:140: 	return 0xFF; // nth valid support doesn't exist.
 	adds	r4, r4, #250	@ i,
-.L214:
+.L216:
 @ StatScreen.c:262: 	proc->textID = 0x046B; // Store text ID for RText.
-	ldr	r3, .L225+4	@ tmp129,
+	ldr	r3, .L227+4	@ tmp129,
 @ StatScreen.c:263: 	proc->char1 = ToCharID(current); // Store the characters and support level.
 	movs	r0, r6	@, current
 @ StatScreen.c:262: 	proc->textID = 0x046B; // Store text ID for RText.
@@ -2081,12 +2110,12 @@ SupportScreenRTextGetter:
 	strb	r0, [r3]	@ tmp147, proc_14(D)->char1
 @ StatScreen.c:264: 	if ( loc != 0xFF )
 	cmp	r4, #255	@ i,
-	beq	.L216		@,
+	beq	.L218		@,
 @ StatScreen.c:266: 		proc->char2 = current->supports[loc]; // This is getting which index this is from the ROM RText data, representing the nth valid support.
 	adds	r4, r6, r4	@ tmp134, current, i
 	adds	r4, r4, #52	@ tmp137,
 	ldrb	r1, [r4]	@ cstore_23, *current_13
-.L216:
+.L218:
 	movs	r3, r5	@ tmp140, proc
 	adds	r3, r3, #42	@ tmp140,
 @ StatScreen.c:272: 	proc->level = GetSupportLevel(current,proc->char2);
@@ -2101,9 +2130,9 @@ SupportScreenRTextGetter:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L226:
+.L228:
 	.align	2
-.L225:
+.L227:
 	.word	gStatScreen
 	.word	-195477
 	.size	SupportScreenRTextGetter, .-SupportScreenRTextGetter
@@ -2119,7 +2148,7 @@ SupportScreenRTextLooper:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 @ StatScreen.c:277: 	Unit* current = gStatScreen.curr;
-	ldr	r3, .L241	@ tmp123,
+	ldr	r3, .L243	@ tmp123,
 @ StatScreen.c:276: {
 	push	{r4, r5, r6, lr}	@
 @ StatScreen.c:277: 	Unit* current = gStatScreen.curr;
@@ -2131,55 +2160,55 @@ SupportScreenRTextLooper:
 	bl	CountSupports		@
 @ StatScreen.c:278: 	if ( !CountSupports(current) ) { RTextLeft(proc); }
 	cmp	r0, #0	@ tmp133,
-	bne	.L228		@,
+	bne	.L230		@,
 @ StatScreen.c:278: 	if ( !CountSupports(current) ) { RTextLeft(proc); }
 	movs	r0, r4	@, proc
-	ldr	r3, .L241+4	@ tmp124,
-.L240:
+	ldr	r3, .L243+4	@ tmp124,
+.L242:
 @ StatScreen.c:285: 			if ( GetNthValidSupport(current,*(proc->rTextData+0x12)) == 0xFF ) { RTextDown(proc) ; return; }
 	bl	.L15		@
-.L227:
+.L229:
 @ StatScreen.c:294: }
 	@ sp needed	@
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L228:
+.L230:
 @ StatScreen.c:282: 		if ( proc->direction == 0x80 )
 	movs	r3, r4	@ tmp127, proc
 	adds	r3, r3, #80	@ tmp127,
 @ StatScreen.c:282: 		if ( proc->direction == 0x80 )
 	ldrh	r3, [r3]	@ tmp128,
 	cmp	r3, #128	@ tmp128,
-	bne	.L227		@,
+	bne	.L229		@,
 @ StatScreen.c:285: 			if ( GetNthValidSupport(current,*(proc->rTextData+0x12)) == 0xFF ) { RTextDown(proc) ; return; }
 	ldr	r3, [r4, #44]	@ tmp135, proc_10(D)->rTextData
 	ldrb	r2, [r3, #18]	@ n, MEM[(char *)_3 + 18B]
 	movs	r3, r5	@ ivtmp.208, current
 	adds	r5, r5, #57	@ _22,
 	adds	r3, r3, #52	@ ivtmp.208,
-.L231:
-@ MemoryManagement.c:133: 		if ( unit->supports[i] )
+.L233:
+@ MemoryManagement.c:134: 		if ( unit->supports[i] )
 	ldrb	r1, [r3]	@ MEM[base: _18, offset: 0B], MEM[base: _18, offset: 0B]
 	cmp	r1, #0	@ MEM[base: _18, offset: 0B],
-	beq	.L230		@,
-@ MemoryManagement.c:135: 			if ( !n ) { return i; }
+	beq	.L232		@,
+@ MemoryManagement.c:136: 			if ( !n ) { return i; }
 	cmp	r2, #0	@ n,
-	beq	.L227		@,
-@ MemoryManagement.c:136: 			n--;
+	beq	.L229		@,
+@ MemoryManagement.c:137: 			n--;
 	subs	r2, r2, #1	@ n,
-.L230:
+.L232:
 	adds	r3, r3, #1	@ ivtmp.208,
-@ MemoryManagement.c:131: 	for ( int i = 0 ; i < 5 ; i++ )
+@ MemoryManagement.c:132: 	for ( int i = 0 ; i < 5 ; i++ )
 	cmp	r3, r5	@ ivtmp.208, _22
-	bne	.L231		@,
+	bne	.L233		@,
 @ StatScreen.c:285: 			if ( GetNthValidSupport(current,*(proc->rTextData+0x12)) == 0xFF ) { RTextDown(proc) ; return; }
 	movs	r0, r4	@, proc
-	ldr	r3, .L241+8	@ tmp131,
-	b	.L240		@
-.L242:
+	ldr	r3, .L243+8	@ tmp131,
+	b	.L242		@
+.L244:
 	.align	2
-.L241:
+.L243:
 	.word	gStatScreen
 	.word	RTextLeft
 	.word	RTextDown
@@ -2202,12 +2231,12 @@ SupportBaseConvoUsability:
 	ldrb	r5, [r4, #3]	@ tmp123,
 	ldrb	r0, [r0]	@ _24, *entry_17(D)
 	cmp	r5, #255	@ tmp123,
-	beq	.L244		@,
+	beq	.L246		@,
 @ Base.c:6: 		return CanUnitsSupport(ToUnit(entry->character1),entry->character2,entry->supportLevel);
 	bl	ToUnit		@
 	ldrb	r2, [r4, #3]	@ tmp124,
 	ldrb	r1, [r4, #1]	@ tmp125,
-.L246:
+.L248:
 @ Base.c:10: 		return CanUnitsSupport(ToUnit(entry->character1),entry->character2,0xFF); // Let's say support level of 0xFF in the base convo table means undefined level.
 	bl	CanUnitsSupport		@
 @ Base.c:12: }
@@ -2215,12 +2244,12 @@ SupportBaseConvoUsability:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-.L244:
+.L246:
 @ Base.c:10: 		return CanUnitsSupport(ToUnit(entry->character1),entry->character2,0xFF); // Let's say support level of 0xFF in the base convo table means undefined level.
 	bl	ToUnit		@
 	movs	r2, r5	@, tmp123
 	ldrb	r1, [r4, #1]	@ tmp126,
-	b	.L246		@
+	b	.L248		@
 	.size	SupportBaseConvoUsability, .-SupportBaseConvoUsability
 	.section	.rodata.str1.1,"aMS",%progbits,1
 .LC59:
@@ -2254,13 +2283,13 @@ SupportBaseConvoMenuTextGetter:
 @ Base.c:18: 	int name2 = ToUnit(entry->character2)->pCharacterData->nameTextId;
 	ldr	r3, [r0]	@ _8->pCharacterData, _8->pCharacterData
 @ Base.c:20: 	int offset = CopyString(GetStringFromIndex(name1),(char*)gGenericBuffer);
-	ldr	r6, .L248	@ tmp141,
+	ldr	r6, .L250	@ tmp141,
 	movs	r0, r5	@, name1
 @ Base.c:18: 	int name2 = ToUnit(entry->character2)->pCharacterData->nameTextId;
 	ldrh	r7, [r3]	@ name2, *_9
 @ Base.c:20: 	int offset = CopyString(GetStringFromIndex(name1),(char*)gGenericBuffer);
-	bl	.L250		@
-	ldr	r5, .L248+4	@ tmp142,
+	bl	.L252		@
+	ldr	r5, .L250+4	@ tmp142,
 	movs	r1, r5	@, tmp142
 	bl	CopyString		@
 @ Base.c:21: 	offset += CopyString(" and ",(char*)gGenericBuffer+offset); // Yes yes yes I'm so happy this appears to work!
@@ -2268,13 +2297,13 @@ SupportBaseConvoMenuTextGetter:
 @ Base.c:20: 	int offset = CopyString(GetStringFromIndex(name1),(char*)gGenericBuffer);
 	movs	r4, r0	@ offset, tmp159
 @ Base.c:21: 	offset += CopyString(" and ",(char*)gGenericBuffer+offset); // Yes yes yes I'm so happy this appears to work!
-	ldr	r0, .L248+8	@,
+	ldr	r0, .L250+8	@,
 	bl	CopyString		@
 @ Base.c:21: 	offset += CopyString(" and ",(char*)gGenericBuffer+offset); // Yes yes yes I'm so happy this appears to work!
 	adds	r4, r4, r0	@ offset, offset, tmp160
 @ Base.c:22: 	offset += CopyString(GetStringFromIndex(name2),(char*)gGenericBuffer+offset);
 	movs	r0, r7	@, name2
-	bl	.L250		@
+	bl	.L252		@
 	adds	r1, r4, r5	@ tmp147, offset, tmp142
 	bl	CopyString		@
 @ Base.c:23: 	*((char*)gGenericBuffer + offset) = 0;
@@ -2290,9 +2319,9 @@ SupportBaseConvoMenuTextGetter:
 	pop	{r3, r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.L249:
+.L251:
 	.align	2
-.L248:
+.L250:
 	.word	GetStringFromIndex
 	.word	gGenericBuffer
 	.word	.LC59
@@ -2310,7 +2339,7 @@ SetUpBaseSupportConvo:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
 @ Base.c:43: 	BaseConvoEntry* entry = (BaseConvoEntry*)gMemorySlot[0xC];
-	ldr	r3, .L252	@ tmp117,
+	ldr	r3, .L254	@ tmp117,
 @ Base.c:43: 	BaseConvoEntry* entry = (BaseConvoEntry*)gMemorySlot[0xC];
 	ldr	r2, [r3, #48]	@ entry, gMemorySlot
 @ Base.c:44: 	gMemorySlot[8] = entry->character1;
@@ -2324,9 +2353,9 @@ SetUpBaseSupportConvo:
 	str	r2, [r3, #36]	@ tmp121, gMemorySlot
 @ Base.c:46: }
 	bx	lr
-.L253:
+.L255:
 	.align	2
-.L252:
+.L254:
 	.word	gMemorySlot
 	.size	SetUpBaseSupportConvo, .-SetUpBaseSupportConvo
 	.align	1
@@ -2359,10 +2388,10 @@ MasterSupportCalculation:
 	movs	r4, r1	@ bonuses, tmp162
 @ MasterCalculations.c:211: 	if ( unit->index >> 6 ) { return; } // For high unit index, i.e. non-blue unit, exit.
 	asrs	r3, r0, #6	@ tmp151, _1,
-	bne	.L254		@,
+	bne	.L256		@,
 @ MasterCalculations.c:212: 	unit = GetUnit(unit->index); // We need to do this because this parameter can also be a BattleUnit* type which doesn't play nicely with my ToCharID function.
 	lsls	r0, r0, #24	@ tmp153, _1,
-	ldr	r3, .L266	@ tmp155,
+	ldr	r3, .L268	@ tmp155,
 	lsrs	r0, r0, #24	@ tmp153, tmp153,
 	bl	.L15		@
 	movs	r3, r0	@ _55, unit
@@ -2371,23 +2400,23 @@ MasterSupportCalculation:
 	adds	r3, r3, #57	@ _55,
 	str	r3, [sp, #4]	@ _55, %sfp
 	adds	r6, r6, #52	@ ivtmp.223,
-.L261:
+.L263:
 @ MasterCalculations.c:215: 		int supportingChar = unit->supports[i];
 	ldrb	r7, [r6]	@ supportingChar, MEM[base: _8, offset: 0B]
 @ MasterCalculations.c:216: 		if ( supportingChar )
 	cmp	r7, #0	@ supportingChar,
-	beq	.L257		@,
+	beq	.L259		@,
 @ MasterCalculations.c:219: 			Unit* supportingUnit = ToUnit(supportingChar);
 	movs	r0, r7	@, supportingChar
 	bl	ToUnit		@
 @ MasterCalculations.c:220: 			if ( !supportingUnit ) { continue; } // Continue if unit does not exist.
 	cmp	r0, #0	@ supportingUnit,
-	beq	.L257		@,
+	beq	.L259		@,
 @ MasterCalculations.c:221: 			if ( supportingUnit->state & (US_DEAD|US_NOT_DEPLOYED) ) { continue; } // Continue if dead or not deployed.
 	movs	r2, #12	@ tmp168,
 	ldr	r3, [r0, #12]	@ tmp167, supportingUnit_20->state
 	tst	r3, r2	@ tmp167, tmp168
-	bne	.L257		@,
+	bne	.L259		@,
 @ MasterCalculations.c:280: 	return abs(unit1->xPos - unit2->xPos) + abs(unit1->yPos - unit2->yPos);
 	movs	r3, #16	@ _27,
 @ MasterCalculations.c:280: 	return abs(unit1->xPos - unit2->xPos) + abs(unit1->yPos - unit2->yPos);
@@ -2399,10 +2428,10 @@ MasterSupportCalculation:
 @ MasterCalculations.c:280: 	return abs(unit1->xPos - unit2->xPos) + abs(unit1->yPos - unit2->yPos);
 	subs	r2, r3, r1	@ _30, _27, _29
 @ MasterCalculations.c:284: 	if ( i < 0 ) { return i*-1; }
-	bpl	.L259		@,
+	bpl	.L261		@,
 @ MasterCalculations.c:284: 	if ( i < 0 ) { return i*-1; }
 	subs	r2, r1, r3	@ _30, _29, _27
-.L259:
+.L261:
 @ MasterCalculations.c:280: 	return abs(unit1->xPos - unit2->xPos) + abs(unit1->yPos - unit2->yPos);
 	movs	r1, #17	@ _33,
 @ MasterCalculations.c:280: 	return abs(unit1->xPos - unit2->xPos) + abs(unit1->yPos - unit2->yPos);
@@ -2415,35 +2444,35 @@ MasterSupportCalculation:
 @ MasterCalculations.c:280: 	return abs(unit1->xPos - unit2->xPos) + abs(unit1->yPos - unit2->yPos);
 	subs	r3, r1, r0	@ _36, _33, _35
 @ MasterCalculations.c:284: 	if ( i < 0 ) { return i*-1; }
-	bpl	.L260		@,
+	bpl	.L262		@,
 @ MasterCalculations.c:284: 	if ( i < 0 ) { return i*-1; }
 	subs	r3, r0, r1	@ _36, _35, _33
-.L260:
+.L262:
 @ MasterCalculations.c:280: 	return abs(unit1->xPos - unit2->xPos) + abs(unit1->yPos - unit2->yPos);
 	adds	r3, r3, r2	@ tmp159, _36, _30
 @ MasterCalculations.c:222: 			if ( GetCharacterDistance(unit,supportingUnit) <= 3 )
 	cmp	r3, #3	@ tmp159,
-	bgt	.L257		@,
+	bgt	.L259		@,
 @ MasterCalculations.c:224: 				GetBonusByCharacter(bonuses,unit,supportingChar);
 	movs	r2, r7	@, supportingChar
 	movs	r1, r5	@, unit
 	movs	r0, r4	@, bonuses
 	bl	GetBonusByCharacter		@
-.L257:
+.L259:
 @ MasterCalculations.c:213: 	for ( int i = 0 ; i < 5 ; i++ )
 	ldr	r3, [sp, #4]	@ _55, %sfp
 	adds	r6, r6, #1	@ ivtmp.223,
 	cmp	r3, r6	@ _55, ivtmp.223
-	bne	.L261		@,
-.L254:
+	bne	.L263		@,
+.L256:
 @ MasterCalculations.c:228: }
 	@ sp needed	@
 	pop	{r0, r1, r2, r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L267:
+.L269:
 	.align	2
-.L266:
+.L268:
 	.word	GetUnit
 	.size	MasterSupportCalculation, .-MasterSupportCalculation
 	.align	1
@@ -2458,7 +2487,7 @@ DrawSupports:
 	@ args = 0, pretend = 0, frame = 24
 	@ frame_needed = 0, uses_anonymous_args = 0
 @ StatScreen.c:8: 	Unit* current = gStatScreen.curr;
-	ldr	r3, .L277	@ tmp172,
+	ldr	r3, .L279	@ tmp172,
 @ StatScreen.c:7: {
 	push	{r4, r5, r6, r7, lr}	@
 @ StatScreen.c:8: 	Unit* current = gStatScreen.curr;
@@ -2473,14 +2502,14 @@ DrawSupports:
 	movs	r5, r4	@ ivtmp.249, current
 	str	r3, [sp, #8]	@ y, %sfp
 @ StatScreen.c:9: 	TextHandle* textBase = &TileBufferBase;
-	ldr	r7, .L277+4	@ textBase,
+	ldr	r7, .L279+4	@ textBase,
 	adds	r5, r5, #52	@ ivtmp.249,
-.L270:
+.L272:
 @ StatScreen.c:15: 		if ( current->supports[i] )
 	ldrb	r0, [r5]	@ _1, MEM[base: _116, offset: 0B]
 @ StatScreen.c:15: 		if ( current->supports[i] )
 	cmp	r0, #0	@ _1,
-	beq	.L269		@,
+	beq	.L271		@,
 @ StatScreen.c:18: 			(textBase+1)->tileIndexOffset = textBase->tileIndexOffset+8;
 	ldrh	r3, [r7]	@ *textBase_37, *textBase_37
 	adds	r3, r3, #8	@ tmp175,
@@ -2499,11 +2528,11 @@ DrawSupports:
 	ldr	r3, [r0]	@ _7->pCharacterData, _7->pCharacterData
 @ StatScreen.c:20: 			DrawTextInline(textBase,&Tile_Origin[y][x],0,4,8,GetStringFromIndex(ToUnit(current->supports[i])->pCharacterData->nameTextId)); // Draw the name of the supporting character.
 	ldrh	r0, [r3]	@ *_8, *_8
-	ldr	r3, .L277+8	@ tmp181,
+	ldr	r3, .L279+8	@ tmp181,
 	bl	.L15		@
 @ StatScreen.c:20: 			DrawTextInline(textBase,&Tile_Origin[y][x],0,4,8,GetStringFromIndex(ToUnit(current->supports[i])->pCharacterData->nameTextId)); // Draw the name of the supporting character.
 	ldr	r1, [sp, #12]	@ tmp182, %sfp
-	ldr	r3, .L277+12	@ tmp351,
+	ldr	r3, .L279+12	@ tmp351,
 	adds	r1, r1, #26	@ tmp182,
 	adds	r1, r1, r3	@ tmp183, tmp182, tmp351
 	movs	r3, r6	@ tmp307, tmp303
@@ -2511,9 +2540,9 @@ DrawSupports:
 	str	r0, [sp, #4]	@ tmp296,
 	str	r6, [sp]	@ tmp307,
 	movs	r0, r7	@, textBase
-	ldr	r6, .L277+16	@ tmp308,
+	ldr	r6, .L279+16	@ tmp308,
 	subs	r3, r3, #4	@,
-	bl	.L250		@
+	bl	.L252		@
 @ StatScreen.c:24: 			(textBase+1)->tileIndexOffset = textBase->tileIndexOffset+2;
 	movs	r3, r7	@ _13, textBase
 	adds	r3, r3, #16	@ _13,
@@ -2537,10 +2566,10 @@ DrawSupports:
 	lsls	r0, r0, r6	@ tmp199, tmp297,
 @ StatScreen.c:26: 			DrawTextInline(textBase,&Tile_Origin[y][x],0,0,2,SupportLevelNameTable[GetSupportLevel(current,current->supports[i])]); // Draw the support level.
 	ldr	r1, [sp, #12]	@ _97, %sfp
-	ldr	r3, .L277+12	@ tmp350,
+	ldr	r3, .L279+12	@ tmp350,
 	adds	r1, r1, #44	@ _97,
 	adds	r1, r1, r3	@ tmp195, tmp194, tmp350
-	ldr	r3, .L277+20	@ tmp198,
+	ldr	r3, .L279+20	@ tmp198,
 	ldr	r2, [r0, r3]	@ tmp314, SupportLevelNameTable
 	movs	r3, #0	@,
 	adds	r7, r7, #8	@ tmp197,
@@ -2548,25 +2577,25 @@ DrawSupports:
 	str	r2, [sp, #4]	@ tmp314,
 	str	r6, [sp]	@ tmp315,
 	movs	r2, r3	@,
-	ldr	r6, .L277+16	@ tmp316,
-	bl	.L250		@
+	ldr	r6, .L279+16	@ tmp316,
+	bl	.L252		@
 @ StatScreen.c:28: 			y += 2;
 	ldr	r3, [sp, #8]	@ y, %sfp
 	adds	r3, r3, #2	@ y,
 	str	r3, [sp, #8]	@ y, %sfp
 @ StatScreen.c:27: 			textBase++;
 	ldr	r7, [sp, #16]	@ textBase, %sfp
-.L269:
+.L271:
 @ StatScreen.c:13: 	for ( int i = 0 ; i < 5 ; i++ )
 	ldr	r3, [sp, #20]	@ _128, %sfp
 	adds	r5, r5, #1	@ ivtmp.249,
 	cmp	r5, r3	@ ivtmp.249, _128
-	bne	.L270		@,
+	bne	.L272		@,
 @ StatScreen.c:34: 	BgMap_ApplyTsa(&Bg2_Origin[y][x],&SupportStatScreenBlueBox,0x3040);
 	movs	r2, #193	@,
-	ldr	r1, .L277+24	@,
-	ldr	r0, .L277+28	@,
-	ldr	r3, .L277+32	@ tmp206,
+	ldr	r1, .L279+24	@,
+	ldr	r0, .L279+28	@,
+	ldr	r3, .L279+32	@ tmp206,
 	lsls	r2, r2, #6	@,,
 	bl	.L15		@
 @ StatScreen.c:38: 	(textBase+1)->tileIndexOffset = textBase->tileIndexOffset+14;
@@ -2579,7 +2608,7 @@ DrawSupports:
 @ StatScreen.c:41: 	textBase++;
 	movs	r6, r7	@ textBase, textBase
 @ StatScreen.c:40: 	DrawTextInline(textBase,&Tile_Origin[y][x],3,3,14,&TotalCurrentSupportBonusesText);
-	ldr	r2, .L277+36	@ tmp214,
+	ldr	r2, .L279+36	@ tmp214,
 @ StatScreen.c:39: 	textBase->tileWidth = 14;
 	strb	r3, [r7, #4]	@ tmp211, textBase_38->tileWidth
 @ StatScreen.c:40: 	DrawTextInline(textBase,&Tile_Origin[y][x],3,3,14,&TotalCurrentSupportBonusesText);
@@ -2587,10 +2616,10 @@ DrawSupports:
 	subs	r3, r3, #11	@,
 	movs	r0, r7	@, textBase
 	str	r2, [sp, #4]	@ tmp214,
-	ldr	r1, .L277+40	@,
+	ldr	r1, .L279+40	@,
 	movs	r2, r3	@,
-	ldr	r5, .L277+16	@ tmp216,
-	bl	.L191		@
+	ldr	r5, .L279+16	@ tmp216,
+	bl	.L193		@
 @ StatScreen.c:44: 	MasterSupportCalculation(current,&bonuses);
 	add	r5, sp, #24	@ tmp217,,
 	movs	r0, r4	@, current
@@ -2600,16 +2629,16 @@ DrawSupports:
 	str	r6, [sp, #8]	@ textBase, %sfp
 @ StatScreen.c:44: 	MasterSupportCalculation(current,&bonuses);
 	bl	MasterSupportCalculation		@
-	ldr	r3, .L277+44	@ ivtmp.239,
+	ldr	r3, .L279+44	@ ivtmp.239,
 	str	r3, [sp, #12]	@ ivtmp.239, %sfp
-	ldr	r3, .L277+48	@ ivtmp.241,
+	ldr	r3, .L279+48	@ ivtmp.241,
 	str	r3, [sp, #16]	@ ivtmp.241, %sfp
 	movs	r3, r7	@ _34, textBase
 @ StatScreen.c:50: 		textBase->tileWidth = 3;
 	movs	r4, #3	@ tmp222,
 	adds	r3, r3, #32	@ _34,
 	str	r3, [sp, #20]	@ _34, %sfp
-.L271:
+.L273:
 @ StatScreen.c:49: 		(textBase+1)->tileIndexOffset = textBase->tileIndexOffset+3;
 	ldr	r3, [sp, #8]	@ textBase, %sfp
 	ldrh	r3, [r3]	@ MEM[base: textBase_68, offset: 0B], MEM[base: textBase_68, offset: 0B]
@@ -2630,8 +2659,8 @@ DrawSupports:
 	str	r4, [sp]	@ tmp222,
 	movs	r3, #0	@,
 	ldr	r0, [sp, #8]	@, %sfp
-	ldr	r6, .L277+16	@ tmp327,
-	bl	.L250		@
+	ldr	r6, .L279+16	@ tmp327,
+	bl	.L252		@
 @ StatScreen.c:52: 		textBase++;
 	ldr	r3, [sp, #8]	@ textBase, %sfp
 	adds	r3, r3, #8	@ textBase,
@@ -2646,7 +2675,7 @@ DrawSupports:
 	ldr	r2, [sp, #8]	@ textBase, %sfp
 	ldr	r3, [sp, #20]	@ _34, %sfp
 	cmp	r3, r2	@ _34, textBase
-	bne	.L271		@,
+	bne	.L273		@,
 @ StatScreen.c:59: 		(textBase+1)->tileIndexOffset = textBase->tileIndexOffset+3;
 	ldrh	r3, [r7, #32]	@ MEM[(struct TextHandle *)textBase_38 + 32B], MEM[(struct TextHandle *)textBase_38 + 32B]
 	adds	r3, r3, #3	@ tmp228,
@@ -2656,15 +2685,15 @@ DrawSupports:
 	adds	r3, r7, #5	@ tmp231, textBase,
 	strb	r4, [r3, #31]	@ tmp222, MEM[(struct TextHandle *)textBase_38 + 32B].tileWidth
 @ StatScreen.c:61: 		DrawTextInline(textBase,&Tile_Origin[y][x],3,0,3,SupportRTextStatNames[i+3].name);
-	ldr	r3, .L277+52	@ tmp236,
+	ldr	r3, .L279+52	@ tmp236,
 	str	r4, [sp]	@ tmp222,
 	str	r3, [sp, #4]	@ tmp236,
 	ldr	r0, [sp, #20]	@, %sfp
 	movs	r3, #0	@,
 	movs	r2, #3	@,
-	ldr	r1, .L277+56	@,
-	ldr	r6, .L277+16	@ tmp334,
-	bl	.L250		@
+	ldr	r1, .L279+56	@,
+	ldr	r6, .L279+16	@ tmp334,
+	bl	.L252		@
 @ StatScreen.c:60: 		textBase->tileWidth = 3;
 	movs	r0, r7	@ tmp245, textBase
 @ StatScreen.c:59: 		(textBase+1)->tileIndexOffset = textBase->tileIndexOffset+3;
@@ -2673,7 +2702,7 @@ DrawSupports:
 @ StatScreen.c:59: 		(textBase+1)->tileIndexOffset = textBase->tileIndexOffset+3;
 	strh	r3, [r7, #48]	@ tmp241, MEM[(struct TextHandle *)textBase_38 + 48B].tileIndexOffset
 @ StatScreen.c:61: 		DrawTextInline(textBase,&Tile_Origin[y][x],3,0,3,SupportRTextStatNames[i+3].name);
-	ldr	r3, .L277+60	@ tmp250,
+	ldr	r3, .L279+60	@ tmp250,
 @ StatScreen.c:60: 		textBase->tileWidth = 3;
 	adds	r0, r0, #40	@ tmp245,
 	strb	r4, [r0, #4]	@ tmp222, MEM[(struct TextHandle *)textBase_38 + 40B].tileWidth
@@ -2682,9 +2711,9 @@ DrawSupports:
 	str	r3, [sp, #4]	@ tmp250,
 	str	r4, [sp]	@ tmp222,
 	movs	r3, #0	@,
-	ldr	r1, .L277+64	@,
-	ldr	r6, .L277+16	@ tmp337,
-	bl	.L250		@
+	ldr	r1, .L279+64	@,
+	ldr	r6, .L279+16	@ tmp337,
+	bl	.L252		@
 @ StatScreen.c:60: 		textBase->tileWidth = 3;
 	movs	r0, r7	@ textBase, textBase
 @ StatScreen.c:59: 		(textBase+1)->tileIndexOffset = textBase->tileIndexOffset+3;
@@ -2693,7 +2722,7 @@ DrawSupports:
 @ StatScreen.c:59: 		(textBase+1)->tileIndexOffset = textBase->tileIndexOffset+3;
 	strh	r3, [r7, #56]	@ tmp255, MEM[(struct TextHandle *)textBase_38 + 56B].tileIndexOffset
 @ StatScreen.c:61: 		DrawTextInline(textBase,&Tile_Origin[y][x],3,0,3,SupportRTextStatNames[i+3].name);
-	ldr	r3, .L277+68	@ tmp264,
+	ldr	r3, .L279+68	@ tmp264,
 @ StatScreen.c:60: 		textBase->tileWidth = 3;
 	adds	r0, r0, #48	@ textBase,
 	strb	r4, [r0, #4]	@ tmp222, MEM[(struct TextHandle *)textBase_38 + 48B].tileWidth
@@ -2702,35 +2731,35 @@ DrawSupports:
 	str	r3, [sp, #4]	@ tmp264,
 	str	r4, [sp]	@ tmp222,
 	movs	r3, #0	@,
-	ldr	r1, .L277+72	@,
-	ldr	r4, .L277+16	@ tmp340,
+	ldr	r1, .L279+72	@,
+	ldr	r4, .L279+16	@ tmp340,
 	bl	.L50		@
 @ StatScreen.c:69: 		DrawUiNumberOrDoubleDashes(&Tile_Origin[y][x],2,bonuses.vals[i]);
-	ldr	r4, .L277+76	@ tmp270,
+	ldr	r4, .L279+76	@ tmp270,
 	ldrb	r2, [r5]	@ bonuses, bonuses
 	movs	r1, #2	@,
-	ldr	r0, .L277+80	@,
+	ldr	r0, .L279+80	@,
 	bl	.L50		@
 	ldrb	r2, [r5, #1]	@ tmp272,
 	movs	r1, #2	@,
-	ldr	r0, .L277+84	@,
+	ldr	r0, .L279+84	@,
 	bl	.L50		@
 	ldrb	r2, [r5, #2]	@ tmp276,
 	movs	r1, #2	@,
-	ldr	r0, .L277+88	@,
+	ldr	r0, .L279+88	@,
 	bl	.L50		@
 @ StatScreen.c:76: 		DrawUiNumberOrDoubleDashes(&Tile_Origin[y][x],2,bonuses.vals[i+3]);
 	ldrb	r2, [r5, #3]	@ tmp280,
 	movs	r1, #2	@,
-	ldr	r0, .L277+92	@,
+	ldr	r0, .L279+92	@,
 	bl	.L50		@
 	ldrb	r2, [r5, #4]	@ tmp284,
 	movs	r1, #2	@,
-	ldr	r0, .L277+96	@,
+	ldr	r0, .L279+96	@,
 	bl	.L50		@
 	movs	r1, #2	@,
 	ldrb	r2, [r5, #5]	@ tmp288,
-	ldr	r0, .L277+100	@,
+	ldr	r0, .L279+100	@,
 	bl	.L50		@
 @ StatScreen.c:79: }
 	add	sp, sp, #36	@,,
@@ -2738,9 +2767,9 @@ DrawSupports:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L278:
+.L280:
 	.align	2
-.L277:
+.L279:
 	.word	gStatScreen
 	.word	TileBufferBase
 	.word	GetStringFromIndex
@@ -2824,7 +2853,7 @@ xAdj:
 	bx	r3
 .L50:
 	bx	r4
-.L191:
+.L193:
 	bx	r5
-.L250:
+.L252:
 	bx	r6
