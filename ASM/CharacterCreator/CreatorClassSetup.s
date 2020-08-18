@@ -109,18 +109,19 @@ CreatorClassSetup:
     /* 080CCE1E (T) */  ldr     r1,[sp,#0x8]
     /* 080CCE20 (T) */  lsl     r4,r1,#0x1
     /* 080CCE22 (T) */  add     r4,r8
-    /* 080CCE24 (T) */  ldr     r2,=#0x92E543E
-    /* 080CCE26 (T) */  add     r4,r4,r2
-    /* 080CCE28 (T) */  ldrb    r0,[r4]
-    /* 080CCE2A (T) */  strh    r0,[r6]
-    /* 080CCE2C (T) */  ldrb    r1,[r4]
+    @/* 080CCE24 (T) */  ldr     r2,=#0x92E543E
+    @/* 080CCE26 (T) */  add     r4,r4,r2
+    @/* 080CCE28 (T) */  ldrb    r0,[r4]
+    @/* 080CCE2A (T) */  strh    r0,[r6]
+    @/* 080CCE2C (T) */  ldrb    r1,[r4]
+						ldrb	r1,[r6]
     /* 080CCE2E (T) */  mov     r0,r7
     /* 080CCE30 (T) */  mov     r2,r9
     /* 080CCE32 (T) */  str     r3,[sp,#0x1C]
-    /* 080CCE34 (T) */  blh     GetClassAnimationIdForWeapon, r3
+    @/* 080CCE34 (T) */  blh     GetClassAnimationIdForWeapon, r3
     /* 080CCE38 (T) */  ldr     r1,[sp,#0x18]
     /* 080CCE3A (T) */  add     r1,r8
-    /* 080CCE3C (T) */  strb    r0,[r1]
+    @/* 080CCE3C (T) */  strb    r0,[r1]
     /* 080CCE3E (T) */  ldrb    r0,[r4]
     /* 080CCE40 (T) */  blh     GetClassData, r1
     /* 080CCE44 (T) */  ldrh    r0,[r0,#0x2]
@@ -165,7 +166,7 @@ CreatorClassSetup:
     /* 080CCE96 (T) */  nop
     /* 080CCE98 (T) */  nop
 	_0x80CCE9A:
-    /* 080CCE9A (T) */  strh    r0,[r5,#0x30]
+    @/* 080CCE9A (T) */  strh    r0,[r5,#0x30]
     /* 080CCE9C (T) */  mov     r1,r0
     /* 080CCE9E (T) */  mov     r0,r5
     /* 080CCEA0 (T) */  add     r0,#0x36
@@ -229,8 +230,8 @@ CreatorClassSetup:
     /* 080CCF14 (T) */  mov     r0,#0x1
     /* 080CCF16 (T) */  ldr     r2,[sp,#0xC]
     /* 080CCF18 (T) */  strb    r0,[r2]
-    /* 080CCF1A (T) */  ldr     r0,[sp,#0x10]
-    /* 080CCF1C (T) */  strb    r1,[r0]
+    @/* 080CCF1A (T) */  ldr     r0,[sp,#0x10]
+    @/* 080CCF1C (T) */  strb    r1,[r0]
     
     /* 080CCF4E (T) */  add     sp,#0x20
     /* 080CCF50 (T) */  pop     {r3-r5}

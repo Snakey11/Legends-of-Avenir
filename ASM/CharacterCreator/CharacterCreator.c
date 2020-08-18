@@ -41,7 +41,11 @@ NL = 1, // Text control code for new line.
 
 TextBGLeft = 122|(1<<12), // For generating the UI tiles behind text.
 TextBG = 123|(1<<12),
-TextBGRight = 124|(1<<12)
+TextBGRight = 124|(1<<12),
+
+GrassPlatform = 0x00, // For drawing platforms.
+RoadPlatform = 0x02,
+SandPlatform = 0x09
 };
 
 struct CreatorProc
@@ -60,6 +64,7 @@ struct CreatorProc
 	u8 lastIndex; // 0x39. Before going to a submenu, save the index we were at in the main menu.
 	u8 boonBaneTileLast; // 0x3A. Used internally for the boon/bane submenu drawing routines.
 	u8 isPressDisabled; // 0x3B. Boolean for whether A/B press is disabled. (Used to disable a press during a randomization).
+	u8 cycle; // 0x3C. Cycles on each idle for the creator on a menu. Used for randomization. Cycles between 0 and 15 correlating to how many RNs to burn before randomizing.
 };
 
 struct CreatorClassProc
@@ -71,6 +76,8 @@ struct CreatorClassProc
 	u8 mode; // 0x40.
 	u8 menuItem; // 0x41.
 	u16 charID; // 0x42.
+	u8 unk3[0x50 - 0x44]; // 0x44.
+	u8 platformType; // 0x50.
 };
 
 struct Tile
@@ -118,9 +125,12 @@ extern void RefreshEntityMaps(void);
 extern void DrawTileGraphics(void);
 extern void UnsetEventId(u16 eventID);
 extern void SetEventId(u16 eventID);
-extern void SetBeigeBackground(Proc* proc, int arg2, int arg3, int arg4, int arg5); // 0x08086CE8.
 extern u8*(*SkillGetter)(Unit* unit);
 #define DrawSkillIcon(map,id,oam2base) DrawIcon(map,id|0x100,oam2base)
+extern void StartMovingPlatform(int always0x9, int always0x118, int height); // 0x080CD408.
+extern void SetupMovingPlatform(int always0x0, int alwaysNeg1, int always0x1F6, int always0x58, int always0x6); // 0x080CD47C.
+extern void DrawMapSprite(int depth, int x, int y, Unit* unit); // 0x08027B60. Thanks, Kirb.
+extern void SMS_SyncIndirect(void); // 0x08026F94.
 
 extern const struct
 {
@@ -133,8 +143,10 @@ extern const struct
 extern const ProcInstruction gCreatorProc;
 extern const ProcInstruction gCreatorClassProc;
 
+extern u8 gCreatorBattleSpriteHeight, gCreatorPlatformHeight;
 extern const MenuDefinition gCreatorMainMenuDefs;
-extern TSA gCreatorMainNameUIBoxTSA, gCreatorMainUIBoxTSA, gCreatorMainPortraitUIBoxTSA, gCreatorMainBoonBaneUIBoxTSA, gCreatorMainNumberHighlightUIBoxTSA;
+extern TSA gCreatorMainNameUIBoxTSA, gCreatorMainNameSpriteUIBoxTSA;
+extern TSA gCreatorMainUIBoxTSA, gCreatorMainPortraitUIBoxTSA, gCreatorMainBoonBaneUIBoxTSA, gCreatorMainNumberHighlightUIBoxTSA;
 extern const u16 gMainMenuErrorTexts[];
 extern const struct
 {
@@ -179,7 +191,7 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc);
 int CreatorRegressMenu(void);
 int CreatorNoBPress(void);
 void CreatorEnablePresses(CreatorProc* proc);
-void CreatorDoNothing(CreatorProc* proc);
+void CreatorIdle(CreatorProc* proc);
 static void ApplyBGBox(u16 map[32][32], TSA* tsa, int x, int y);
 static void DrawStatNames(TextHandle handle, char* string, int x, int y);
 static int GetNumLines(char* string);
@@ -190,6 +202,7 @@ static int GetReplacedText(int text);
 int CreatorMainEntryUsability(const MenuCommandDefinition* command, int index);
 int CreatorMainGotoEntry(MenuProc* proc, MenuCommandProc* commandProc);
 int CreatorGoToRandomize(MenuProc* proc, MenuCommandProc* commandProc);
+int CreatorMainIdle(MenuProc* proc, MenuCommandProc* commandProc);
 void CreatorRandomizeChoices(CreatorProc* creator);
 static void DrawMainMenu(CreatorProc* proc);
 static int GetMainMenuPortrait(int gender, int route);
@@ -203,6 +216,7 @@ void CreatorRouteSwitchIn(MenuProc* proc, MenuCommandProc* commandProc);
 
 // Functions in ClassDisplay.c.
 void CreatorClassDrawUIBox(CreatorClassProc* proc);
+void CreatorClassStartPlatform(CreatorClassProc* proc);
 void CreatorActivateClassDisplay(MenuProc* proc, MenuCommandProc* commandProc);
 void CreatorRetractClassDisplay(MenuProc* proc, MenuCommandProc* commandProc);
 int CreatorWaitForSlideOut(CreatorProc* proc);
@@ -215,6 +229,7 @@ static int GetAppropriateItem(int class);
 static void CreatorBoonBaneDraw(CreatorProc* proc);
 void CreatorBoonBaneSwitchIn(MenuProc* proc, MenuCommandProc* commandProc);
 static void FillNumString(char* string, int num);
+static void ApplyBoonBane(CreatorProc* proc);
 
 #include "MainMenu.c"
 #include "Gender.c"
@@ -244,6 +259,7 @@ void SetupCreator(CreatorProc* proc)
 	proc->bane = 0;
 	proc->leavingClassMenu = 0;
 	proc->lastIndex = 0;
+	proc->lastClassIndex = 0;
 	proc->isPressDisabled = 0;
 	
 	/*LoadBgConfig(NULL);
@@ -272,14 +288,6 @@ void SetupCreator(CreatorProc* proc)
 	SetBgTileDataOffset(2,0x8000);
 	EnableBgSyncByMask(8);
 	
-	// We want to burn a number of RNs relating to what name they chose... Maybe something like the (Sum of the characters/8+Number of characters) times?
-	int sum = 0;
-	int count = 0;
-	for ( int i = 0 ; i < 0x0B ; i++ ) { sum += gChapterData.playerName[i]; }
-	while ( gChapterData.playerName[count] ) { count++; }
-	sum /= 8;
-	for ( int i = 0 ; i < sum+count ; i++ ) { RandNext(); }
-	
 	UnsetEventId(0x6E); // Gender event ID.
 	
 	UnsetEventId(0x67); // Route event IDs.
@@ -291,6 +299,7 @@ void CreatorStartMenu(CreatorProc* proc)
 	Text_InitFont();
 	FillBgMap(gBg0MapBuffer,0);
 	FillBgMap(gBg1MapBuffer,0);
+	FillBgMap(gBg2MapBuffer,0);
 	MenuProc* newMenu = NULL;
 	switch ( proc->currMenu )
 	{
@@ -325,9 +334,11 @@ void CreatorStartMenu(CreatorProc* proc)
 				gRAMMenuCommands[i].onSwitchOut = CreatorRetractClassDisplay;
 				proc->currSet = set;
 			}
+			proc->isPressDisabled = 0;
+			//newMenu = StartMenuChild(&gCreatorClassMenuDefs,(Proc*)proc);
 			newMenu = StartMenu(&gCreatorClassMenuDefs);
 			newMenu->commandIndex = proc->lastClassIndex;
-			ProcStart(&gCreatorClassProc,(Proc*)proc);
+			//ProcStart(&gCreatorClassProc,(Proc*)proc);
 			break;
 		case BoonMenu:
 		case BaneMenu:	
@@ -343,6 +354,7 @@ void CreatorStartMenu(CreatorProc* proc)
 			}
 			break;
 	}
+	EnableBgSyncByMask(1|2|4);
 }
 
 int CreatorSubmenuUsability(const MenuCommandDefinition* command, int index)
@@ -401,7 +413,7 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
 			creator->leavingClassMenu = 1; // Set this, so we don't clear this on the switch out routine.
 			creator->mainUnit = GetUnit(1);
 			CopyUnit(creator->tempUnit,creator->mainUnit);
-			ClearUnit(creator->tempUnit);
+			if ( creator->tempUnit ) { ClearUnit(creator->tempUnit); creator->tempUnit = NULL; }
 			ProcGoto((Proc*)creator,1);
 			creator->lastClassIndex = commandProc->commandDefinitionIndex;
 			creator->currMenu = MainMenu;
@@ -433,6 +445,12 @@ int CreatorEndMenu(MenuProc* proc, MenuCommandProc* commandProc)
 {
 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
 	if ( creator->isPressDisabled ) { return 0; }
+	EndFaceById(0);
+	FillBgMap(gBg0MapBuffer,0);
+	FillBgMap(gBg1MapBuffer,0);
+	FillBgMap(gBg2MapBuffer,0);
+	EnableBgSyncByMask(1|2|4);
+	ApplyBoonBane(creator);
 	ProcGoto((Proc*)creator,3); // Jump to end the creator proc.
 	
 	if ( creator->gender == 1 ) { SetEventId(0x6E); } // 0x6E is true if they chose male.
@@ -473,9 +491,11 @@ void CreatorEnablePresses(CreatorProc* proc)
 	proc->isPressDisabled = 0;
 }
 
-void CreatorDoNothing(CreatorProc* proc)
+void CreatorIdle(CreatorProc* proc)
 {
-	return; // Lol literally do nothing. Wait for the menu to use ProcGoto on our creator proc to break this proc loop.
+	// Burn some RNs!
+	if ( proc->cycle < 15 ) { proc->cycle++; }
+	else { proc->cycle = 0; RandNext(); }
 }
 
 static void DrawStatNames(TextHandle handle, char* string, int x, int y)

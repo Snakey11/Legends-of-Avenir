@@ -45,7 +45,19 @@ int CreatorGoToRandomize(MenuProc* proc, MenuCommandProc* commandProc)
 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
 	if ( creator->isPressDisabled ) { return 0; }
 	ProcGoto((Proc*)creator,2);
-	return ME_END|ME_PLAY_BEEP;
+	return ME_PLAY_BEEP; // We clear this menu straight from the creator proc.
+}
+
+int CreatorMainIdle(MenuProc* proc, MenuCommandProc* commandProc)
+{
+	// Draw map sprite stuff?
+	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
+	if ( creator->mainUnit )
+	{
+		SMS_SyncIndirect();
+		DrawMapSprite(0,133,12,creator->mainUnit);
+	}
+	return 0;
 }
 
 void CreatorRandomizeChoices(CreatorProc* creator)
@@ -54,17 +66,18 @@ void CreatorRandomizeChoices(CreatorProc* creator)
 	creator->isPressDisabled = 1;
 	
 	// Clear out stuff that we need to from whatever old settings they may have had.
-	//BgMapFillRect(&gBG0MapBuffer[0][8],20,20,0);
 	BgMapFillRect(&gBG0MapBuffer[0][0],32,32,0);
 	EndFaceById(0);
 	if ( creator->mainUnit ) { ClearUnit(creator->mainUnit); } // I don't think we need to clear creator->tempUnit since that shouldn't be possible to have filled now.
+	
+	// Burn a number of RNs equal to the cycle value of the creator proc.
+	for ( int i = 0 ; i < creator->cycle ; i++ ) { RandNext(); }
 	
 	creator->gender = NextRN_N(2)+1; // Randomize gender and route.
 	creator->route = NextRN_N(3)+1;
 	creator->currSet = GetClassSet(creator->gender,creator->route); // We need this to load a unit.
 	int numClasses = 0;
-	while ( creator->currSet->list[numClasses].character ) { numClasses++; } // This should equal the number of classes this set has.
-	if ( numClasses > 5 ) { numClasses = 5; }
+	while ( creator->currSet->list[numClasses].character && numClasses < 5 ) { numClasses++; } // This should equal the number of classes this set has.
 	int classIndex = NextRN_N(numClasses); // NOT class ID! Index with this class set!
 	creator->lastClassIndex = classIndex;
 	creator->mainUnit = LoadCreatorUnit(creator,classIndex); // Randomized class based on random gender and route.
@@ -83,7 +96,9 @@ void CreatorRandomizeChoices(CreatorProc* creator)
 
 static void DrawMainMenu(CreatorProc* proc)
 {
-	ApplyBGBox(gBG1MapBuffer,&gCreatorMainNameUIBoxTSA,9,1);
+	SetBgTileDataOffset(2,0); // Set BG2 to use tile offset 0 ("Tiles 1").
+	if ( proc->mainUnit ) { ApplyBGBox(gBG2MapBuffer,&gCreatorMainNameSpriteUIBoxTSA,8,1); } // Draw a different box for whether they have a map sprite to show.
+	else { ApplyBGBox(gBG1MapBuffer,&gCreatorMainNameUIBoxTSA,8,1); }
 	if ( proc->gender || proc->route ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainUIBoxTSA,8,5); } // Box for what selections have been made. (Only necessary to check gender/route.)
 	if ( proc->gender && proc->route ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainPortraitUIBoxTSA,18,9); } // Small row of tiles under the portrait.
 	if ( proc->boon || proc->bane ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainBoonBaneUIBoxTSA,18,10); } // Box for information on boon/bane.
@@ -93,12 +108,12 @@ static void DrawMainMenu(CreatorProc* proc)
 	// First, let's draw the player's name.
 	TextHandle nameHandle =	{
 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-			.tileWidth = 6
+			.tileWidth = 7
 	};
-	tile += 6;
+	tile += 7;
 	Text_Clear(&nameHandle);
-	Text_InsertString(&nameHandle,Text_GetStringTextCenteredPos(6*8,gChapterData.playerName),TEXT_COLOR_GOLD,gChapterData.playerName);
-	Text_Display(&nameHandle,&gBG0MapBuffer[2][10]);
+	Text_InsertString(&nameHandle,Text_GetStringTextCenteredPos(8*7,gChapterData.playerName),TEXT_COLOR_GOLD,gChapterData.playerName);
+	Text_Display(&nameHandle,&gBG0MapBuffer[2][9]);
 	
 	if ( proc->gender )
 	{
@@ -234,10 +249,10 @@ static void DrawMainMenu(CreatorProc* proc)
 		Text_Display(&growthHandle,&gBG0MapBuffer[10][24]);
 	}
 	
+	// Draw the character's face if we've gotten that far.
 	if ( proc->gender && proc->route) { StartFace(0,GetMainMenuPortrait(proc->gender,proc->route),8*23+2,-4,0x102); }
 	
-	EnableBgSyncByMask(1);
-	EnableBgSyncByMask(2);
+	EnableBgSyncByMask(1|2|4);
 }
 
 static int GetMainMenuPortrait(int gender, int route) // Get the portrait we should use on the main menu based on the gender and route they've chosen.

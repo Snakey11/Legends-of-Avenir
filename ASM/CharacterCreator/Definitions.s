@@ -30,4 +30,8 @@ SET_FUNC DeleteSomeAISProcs, (0x0805AE14+1)
 
 SET_FUNC GetUnitEquippedItem, (0x08016B28+1)
 
-SET_FUNC SetBeigeBackground, (0x08086CE8+1)
+SET_FUNC StartMovingPlatform, (0x080CD408+1)
+
+SET_FUNC SetupMovingPlatform, (0x080CD47C+1)
+
+SET_FUNC DrawMapSprite, (0x08027B60+1)

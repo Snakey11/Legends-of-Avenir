@@ -170,3 +170,36 @@ static void FillNumString(char* string, int num)
 		string[i-j-1] = temp;
 	}
 }
+
+static void ApplyBoonBane(CreatorProc* proc) // Apply the boon and bane stat effects.
+{
+	// Applying the base effect is simple: just edit the unit's current stats.
+	int boonBase = gCreatorBoonBaneEffects[proc->boon].base;
+	int baneBase = gCreatorBoonBaneEffects[proc->bane].base;
+	Unit* unit = proc->mainUnit;
+	switch ( proc->boon )
+	{
+		case HP: unit->maxHP += boonBase; break;
+		case Str: unit->pow += boonBase; break;
+		case Mag: unit->unk3A += boonBase; break;
+		case Skl: unit->skl += boonBase; break;
+		case Spd: unit->spd += boonBase; break;
+		case Def: unit->def += boonBase; break;
+		case Res: unit->res += boonBase; break;
+		case Luk: unit->lck += boonBase; break;
+	}
+	switch ( proc->bane )
+	{
+		case HP: unit->maxHP -= baneBase; break;
+		case Str: unit->pow -= baneBase; break;
+		case Mag: unit->unk3A -= baneBase; break;
+		case Skl: unit->skl -= baneBase; break;
+		case Spd: unit->spd -= baneBase; break;
+		case Def: unit->def -= baneBase; break;
+		case Res: unit->res -= baneBase; break;
+		case Luk: unit->lck -= baneBase; break;
+	}
+	
+	int boonGrowth = gCreatorBoonBaneEffects[proc->boon].growth;
+	int baneBase = gCreatorBoonBaneEffects[proc->bane].growth;
+}

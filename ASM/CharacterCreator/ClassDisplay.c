@@ -5,6 +5,20 @@ void CreatorClassDrawUIBox(CreatorClassProc* proc)
 	EnableBgSyncByMask(2);
 }
 
+void CreatorClassStartPlatform(CreatorClassProc* proc) // At this point, CreatorActivateClassDisplay has been called.
+{
+	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
+	if ( creator->route == Mercenary ) { proc->platformType = GrassPlatform; }
+	else if ( creator->route == Military ) { proc->platformType = RoadPlatform; }
+	else if ( creator->route == Mage ) { proc->platformType = SandPlatform; }
+	proc->mode = 1;
+	for ( int i = 0 ; i < 5 ; i++ ) { proc->classes[i] = creator->currSet->list[i].class; }
+	proc->menuItem = creator->lastClassIndex;
+	proc->charID = creator->tempUnit->pCharacterData->number;
+	SetupMovingPlatform(0,-1,0x1F6,0x58,6);
+	StartMovingPlatform(proc->platformType,0x118,gCreatorPlatformHeight);
+}
+
 void CreatorActivateClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 {
 	CPU_FILL(0,(char*)&gBG0MapBuffer[15][7]-1,&gBG0MapBuffer[32][32]-&gBG0MapBuffer[15][7],32);
@@ -133,10 +147,15 @@ void CreatorActivateClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 	EnableBgSyncByMask(1);
 	
 	CreatorClassProc* classProc = (CreatorClassProc*)ProcFind(&gCreatorClassProc);
-	classProc->mode = 1;
-	for ( int i = 0 ; i < 5 ; i++ ) { classProc->classes[i] = creator->currSet->list[i].class; }
-	classProc->menuItem = commandProc->commandDefinitionIndex;
-	classProc->charID = creator->tempUnit->pCharacterData->number;
+	if ( !classProc ) { ProcStart(&gCreatorClassProc,(Proc*)creator); } // If the creator class proc doesn't exist yet, make one.
+	else
+	{
+		// Otherwise, update relevant fields.
+		classProc->mode = 1;
+		for ( int i = 0 ; i < 5 ; i++ ) { classProc->classes[i] = creator->currSet->list[i].class; }
+		classProc->menuItem = commandProc->commandDefinitionIndex;
+		classProc->charID = creator->tempUnit->pCharacterData->number;
+	}
 }
 
 void CreatorRetractClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
@@ -144,7 +163,7 @@ void CreatorRetractClassDisplay(MenuProc* proc, MenuCommandProc* commandProc)
 	BgMapFillRect(&gBG0MapBuffer[1][12],30-12,2,0);
 	ClearIcons();
 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
-	ClearUnit(creator->tempUnit);
+	if ( creator->tempUnit ) { ClearUnit(creator->tempUnit); creator->tempUnit = NULL; }
 	CreatorClassProc* classProc = (CreatorClassProc*)ProcFind(&gCreatorClassProc);
 	if ( classProc ) { classProc->mode = 1; }
 }
@@ -188,8 +207,8 @@ static Unit* LoadCreatorUnit(CreatorProc* creator, int index)
 		.autolevel = 1,
 		.allegiance = UA_BLUE,
 		.level = 5,
-		.xPosition = 63,
-		.yPosition = 0,
+		.xPosition = 10,
+		.yPosition = 8,
 		.items[0] = GetAppropriateItem(creator->currSet->list[index].class),
 		.items[1] = gCreatorVulnerary
 	};
