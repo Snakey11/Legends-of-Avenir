@@ -246,9 +246,9 @@ ORG $96B4C
 SHORT 0xE003 // Eliminate "Ex.map" in prep screens
 
 ORG $44800 //Enabling name selection
-BYTE 0x9 //max name length
+BYTE 0x8 //max name length
 ORG $482BA
-BYTE 0x9 //max cursor position
+BYTE 0x8 //max cursor position
 
 //Allow Visit from any tile
 ORG $23072

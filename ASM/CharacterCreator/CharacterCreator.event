@@ -227,6 +227,7 @@
 	ALIGN 4
 	gCreatorBoonBaneEffects:
 	// BYTE (base effect) (growth effect).
+	BYTE 0 0 // 0 index is blank.
 	BYTE 5 20 // HP.
 	BYTE 2 10 // Str.
 	BYTE 2 10 // Mag.

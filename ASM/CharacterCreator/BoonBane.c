@@ -75,7 +75,7 @@ void CreatorBoonBaneSwitchIn(MenuProc* proc, MenuCommandProc* commandProc)
 	if ( creator->currMenu == BoonMenu ) { eff[0] = '+'; color = TEXT_COLOR_GREEN; } else { eff[0] = '-'; color = TEXT_COLOR_GREY; }
 	
 	// We want to draw the current bane effect. First let's draw the base effect.
-	int base = gCreatorBoonBaneEffects[commandProc->commandDefinitionIndex].base;
+	int base = gCreatorBoonBaneEffects[commandProc->commandDefinitionIndex+1].base;
 	FillNumString(&eff[1],base);
 	
 	TextHandle mainBaseHandle =	{
@@ -88,7 +88,7 @@ void CreatorBoonBaneSwitchIn(MenuProc* proc, MenuCommandProc* commandProc)
 	Text_Display(&mainBaseHandle,&gBG0MapBuffer[4+proc->commandIndex*2][15]);
 	
 	// Now let's draw the growth.
-	int growth = gCreatorBoonBaneEffects[commandProc->commandDefinitionIndex].growth;
+	int growth = gCreatorBoonBaneEffects[commandProc->commandDefinitionIndex+1].growth;
 	FillNumString(&eff[1],growth);
 	
 	TextHandle mainGrowthHandle = {
@@ -122,8 +122,8 @@ void CreatorBoonBaneSwitchIn(MenuProc* proc, MenuCommandProc* commandProc)
 	if ( offset != -1 && offset != commandProc->commandDefinitionIndex )
 	{
 		// If they've selected a bane/boon (and we're not on its index), let's display that too.
-		base = gCreatorBoonBaneEffects[offset].base;
-		growth = gCreatorBoonBaneEffects[offset].growth;
+		base = gCreatorBoonBaneEffects[offset+1].base;
+		growth = gCreatorBoonBaneEffects[offset+1].growth;
 		if ( offset+1 >= Mag ) { offset -= 1; } // We're either not displaying strength or magic. Decrement the location we'll draw to to account for that.
 		
 		FillNumString(&eff[1],base);
@@ -171,7 +171,8 @@ static void FillNumString(char* string, int num)
 	}
 }
 
-static void ApplyBoonBane(CreatorProc* proc) // Apply the boon and bane stat effects.
+ // Apply the boon and bane stat effects.
+static void ApplyBoonBane(CreatorProc* proc)
 {
 	// Applying the base effect is simple: just edit the unit's current stats.
 	int boonBase = gCreatorBoonBaneEffects[proc->boon].base;
@@ -190,16 +191,36 @@ static void ApplyBoonBane(CreatorProc* proc) // Apply the boon and bane stat eff
 	}
 	switch ( proc->bane )
 	{
-		case HP: unit->maxHP -= baneBase; break;
-		case Str: unit->pow -= baneBase; break;
-		case Mag: unit->unk3A -= baneBase; break;
-		case Skl: unit->skl -= baneBase; break;
-		case Spd: unit->spd -= baneBase; break;
-		case Def: unit->def -= baneBase; break;
-		case Res: unit->res -= baneBase; break;
-		case Luk: unit->lck -= baneBase; break;
+		case HP: unit->maxHP = ( unit->maxHP > baneBase ? unit->maxHP - baneBase : 1 ); break;
+		case Str: unit->pow = ( unit->pow >= baneBase ? unit->pow - baneBase : 0 ); break;
+		case Mag: unit->unk3A = ( unit->unk3A >= baneBase ? unit->unk3A - baneBase : 0 ); break;
+		case Skl: unit->skl = ( unit->skl >= baneBase ? unit->skl - baneBase : 0 ); break;
+		case Spd: unit->spd = ( unit->spd >= baneBase ? unit->spd - baneBase : 0 ); break;
+		case Def: unit->def = ( unit->def >= baneBase ? unit->def - baneBase : 0 ); break;
+		case Res: unit->res = ( unit->res >= baneBase ? unit->res - baneBase : 0 ); break;
+		case Luk: unit->lck = ( unit->lck >= baneBase ? unit->lck - baneBase : 0 ); break;
 	}
+	UnitCheckStatCaps(unit); // Ensures no overflow but not underflow!
 	
-	int boonGrowth = gCreatorBoonBaneEffects[proc->boon].growth;
-	int baneBase = gCreatorBoonBaneEffects[proc->bane].growth;
+	gChapterData.boonGrowthID = proc->boon; // Store the boon and bane IDs for later. Clipped off a bit of Tact name for this.
+	gChapterData.baneGrowthID = proc->bane;
+}
+
+int CreatorApplyBoonBaneGrowth(CharacterData** character, int growth, int growthID)
+{
+	int stat = GrowthIDToBoonBane(growthID);
+	int boon = gChapterData.boonGrowthID;
+	int bane = gChapterData.baneGrowthID;
+	if ( stat == boon ) { return growth + gCreatorBoonBaneEffects[boon].growth; }
+	if ( stat == bane ) { return growth - gCreatorBoonBaneEffects[bane].growth; }
+	return growth;
+}
+
+static int GrowthIDToBoonBane(int growthID)
+{
+	for ( int i = 0 ; gCreatorGrowthIDLookup[i].growthID ; i++ )
+	{
+		if ( gCreatorGrowthIDLookup[i].growthID == growthID ) { return gCreatorGrowthIDLookup[i].stat; }
+	}
+	return 0;
 }

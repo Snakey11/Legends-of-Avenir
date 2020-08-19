@@ -179,7 +179,7 @@ void CreatorClassEndProc(CreatorClassProc* proc)
 	DeleteSomeAISStuff(&gSomeAISStruct);
 	DeleteSomeAISProcs(&gSomeAISRelatedStruct);
 	EndEkrAnimeDrvProc();
-	UnlockGameGraphicsLogic();
+	//UnlockGameGraphicsLogic();
 	//RefreshEntityMaps();
 	//DrawTileGraphics();
 	SMS_UpdateFromGameData();
@@ -207,8 +207,8 @@ static Unit* LoadCreatorUnit(CreatorProc* creator, int index)
 		.autolevel = 1,
 		.allegiance = UA_BLUE,
 		.level = 5,
-		.xPosition = 10,
-		.yPosition = 8,
+		.xPosition = 63,
+		.yPosition = 0,
 		.items[0] = GetAppropriateItem(creator->currSet->list[index].class),
 		.items[1] = gCreatorVulnerary
 	};

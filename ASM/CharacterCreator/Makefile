@@ -17,11 +17,11 @@ ARCH   := -mcpu=arm7tdmi -mthumb -mthumb-interwork
 CFLAGS := $(ARCH) $(LDLIBS) -Wall -O1 -mtune=arm7tdmi -fomit-frame-pointer -ffast-math -ffreestanding -mlong-calls
 
 # C to ASM rule
-%.s: %.c *.c
+%.s: %.c *.c Header.h
 	$(CC) $(CFLAGS) -S $< -o $@ -fverbose-asm
 
 # C to OBJ rule
-%.o: %.c *.c
+%.o: %.c *.c Header.h
 	$(CC) $(CFLAGS) -c $< -o $@
 	
 # OBJ to EVENT rule

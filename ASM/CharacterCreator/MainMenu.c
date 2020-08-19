@@ -167,8 +167,8 @@ static void DrawMainMenu(CreatorProc* proc)
 		// If we have a boon, let's draw its stats!
 		char eff[4];
 		eff[0] = '+';
-		int base = gCreatorBoonBaneEffects[proc->boon-1].base;
-		int growth = gCreatorBoonBaneEffects[proc->boon-1].growth;
+		int base = gCreatorBoonBaneEffects[proc->boon].base;
+		int growth = gCreatorBoonBaneEffects[proc->boon].growth;
 		
 		FillNumString(&eff[1],base);
 		TextHandle baseHandle =	{
@@ -205,8 +205,8 @@ static void DrawMainMenu(CreatorProc* proc)
 		
 		char eff[4];
 		eff[0] = '-';
-		int base = gCreatorBoonBaneEffects[proc->bane-1].base;
-		int growth = gCreatorBoonBaneEffects[proc->bane-1].growth;
+		int base = gCreatorBoonBaneEffects[proc->bane].base;
+		int growth = gCreatorBoonBaneEffects[proc->bane].growth;
 		
 		FillNumString(&eff[1],base);
 		TextHandle baseHandle =	{

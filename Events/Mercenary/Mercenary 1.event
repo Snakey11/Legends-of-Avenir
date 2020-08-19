@@ -148,7 +148,7 @@ UNIT Xena 0x6F 0x00 Level(1,NPC,True) [8,10] 0x00 0x00 0x00 0x00 [0] [0]
 UNIT
 
 SwordBandits:
-UNIT Henning Mercenary Henning Level(3,Enemy,True) [9,11] 0x00 0x00 0x00 0x00 [SteelSword] GuardTileAI
+UNIT Henning Mercenary Henning Level(3,Enemy,True) [9,11] 0x00 0x00 0x00 0x00 [SteelSword] GuardAI
 UNIT GerwickBandit Myrmidon Henning Level(2,Enemy,True) [2,7] 0x00 0x00 0x00 0x00 [IronSword] AttackInRangeAI
 UNIT GerwickBandit Mercenary Henning Level(1,Enemy,True) [7,10] 0x00 0x00 0x00 0x00 [IronSword] [0] 
 UNIT GerwickBandit PegasusKnight Henning Level(1,Enemy,True) [13,2] 0x00 0x00 0x00 0x00 [Javelin] [0] 
