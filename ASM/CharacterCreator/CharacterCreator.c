@@ -77,6 +77,7 @@ void CreatorStartMenu(CreatorProc* proc)
 	FillBgMap(gBg0MapBuffer,0);
 	FillBgMap(gBg1MapBuffer,0);
 	FillBgMap(gBg2MapBuffer,0);
+	((CreatorSpriteProc*)ProcFind(&gCreatorSpriteProc))->isActive = 0; // Disable our map sprite in case it was set.
 	MenuProc* newMenu = NULL;
 	switch ( proc->currMenu )
 	{

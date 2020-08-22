@@ -48,18 +48,6 @@ int CreatorGoToRandomize(MenuProc* proc, MenuCommandProc* commandProc)
 	return ME_PLAY_BEEP; // We clear this menu straight from the creator proc.
 }
 
-int CreatorMainIdle(MenuProc* proc, MenuCommandProc* commandProc)
-{
-	// Draw map sprite stuff?
-	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
-	if ( creator->mainUnit )
-	{
-		SMS_SyncIndirect();
-		DrawMapSprite(0,133,12,creator->mainUnit);
-	}
-	return 0;
-}
-
 void CreatorRandomizeChoices(CreatorProc* creator)
 {
 	// First, disable button presses because this requires a fade.
@@ -94,10 +82,29 @@ void CreatorRandomizeChoices(CreatorProc* creator)
 	creator->lastIndex = RandomEntry; // When we start the new menu, jump to the random button.
 }
 
+void CreatorSpriteSetup(CreatorSpriteProc* proc)
+{
+	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
+	proc->isActive = 0;
+	proc->x = 133;
+	proc->y = 12;
+	proc->unit = &creator->mainUnit; // Point to our creator proc's main unit pointer.
+}
+
+void CreatorSpriteIdle(CreatorSpriteProc* proc)
+{
+	if ( proc->isActive && *proc->unit )
+	{
+		SMS_SyncIndirect();
+		DrawMapSprite(0,proc->x,proc->y,*proc->unit);
+	}
+}
+
 static void DrawMainMenu(CreatorProc* proc)
 {
 	SetBgTileDataOffset(2,0); // Set BG2 to use tile offset 0 ("Tiles 1").
 	gLCDIOBuffer.bgControl[1].priority = 1;
+	((CreatorSpriteProc*)ProcFind(&gCreatorSpriteProc))->isActive = 1; // Enable our map sprite proc. If creator->unit is NULL, it won't draw.
 	if ( proc->mainUnit ) { ApplyBGBox(gBG2MapBuffer,&gCreatorMainNameSpriteUIBoxTSA,8,1); } // Draw a different box for whether they have a map sprite to show.
 	else { ApplyBGBox(gBG1MapBuffer,&gCreatorMainNameUIBoxTSA,8,1); }
 	if ( proc->gender || proc->route ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainUIBoxTSA,8,5); } // Box for what selections have been made. (Only necessary to check gender/route.)

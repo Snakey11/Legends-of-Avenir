@@ -66,48 +66,48 @@ ApplyBGBox:
 	lsls	r3, r3, #5	@ tmp138, tmp152,
 	adds	r3, r3, r2	@ tmp139, tmp138, tmp151
 	lsls	r3, r3, #1	@ tmp140, tmp139,
-	adds	r0, r0, r3	@ ivtmp.123, tmp149, tmp140
-@ CharacterCreator.c:295: 	for ( int i = 0 ; i < tsa->height+1 ; i++ )
+	adds	r0, r0, r3	@ ivtmp.124, tmp149, tmp140
+@ CharacterCreator.c:296: 	for ( int i = 0 ; i < tsa->height+1 ; i++ )
 	movs	r5, #0	@ i,
 	b	.L2		@
 .L6:
-@ CharacterCreator.c:295: 	for ( int i = 0 ; i < tsa->height+1 ; i++ )
+@ CharacterCreator.c:296: 	for ( int i = 0 ; i < tsa->height+1 ; i++ )
 	adds	r5, r5, #1	@ i,
-	adds	r0, r0, #64	@ ivtmp.123,
-@ CharacterCreator.c:295: 	for ( int i = 0 ; i < tsa->height+1 ; i++ )
+	adds	r0, r0, #64	@ ivtmp.124,
+@ CharacterCreator.c:296: 	for ( int i = 0 ; i < tsa->height+1 ; i++ )
 	ldrb	r3, [r1, #1]	@ tmp148,
-@ CharacterCreator.c:295: 	for ( int i = 0 ; i < tsa->height+1 ; i++ )
+@ CharacterCreator.c:296: 	for ( int i = 0 ; i < tsa->height+1 ; i++ )
 	cmp	r3, r5	@ tmp148, i
 	blt	.L1		@,
 .L2:
-@ CharacterCreator.c:297: 		for ( int j = 0 ; j < tsa->width+1 ; j++ )
+@ CharacterCreator.c:298: 		for ( int j = 0 ; j < tsa->width+1 ; j++ )
 	ldrb	r3, [r1]	@ _15, *tsa_23(D)
-	movs	r4, r0	@ ivtmp.119, ivtmp.123
-@ CharacterCreator.c:297: 		for ( int j = 0 ; j < tsa->width+1 ; j++ )
+	movs	r4, r0	@ ivtmp.120, ivtmp.124
+@ CharacterCreator.c:298: 		for ( int j = 0 ; j < tsa->width+1 ; j++ )
 	movs	r2, #0	@ j,
 .L3:
-@ CharacterCreator.c:299: 			map[i+y][j+x] = ((u16*)(tsa->tiles))[i*(tsa->width+1)+j];
+@ CharacterCreator.c:300: 			map[i+y][j+x] = ((u16*)(tsa->tiles))[i*(tsa->width+1)+j];
 	adds	r3, r3, #1	@ tmp141,
-@ CharacterCreator.c:299: 			map[i+y][j+x] = ((u16*)(tsa->tiles))[i*(tsa->width+1)+j];
+@ CharacterCreator.c:300: 			map[i+y][j+x] = ((u16*)(tsa->tiles))[i*(tsa->width+1)+j];
 	muls	r3, r5	@ tmp142, i
-@ CharacterCreator.c:299: 			map[i+y][j+x] = ((u16*)(tsa->tiles))[i*(tsa->width+1)+j];
+@ CharacterCreator.c:300: 			map[i+y][j+x] = ((u16*)(tsa->tiles))[i*(tsa->width+1)+j];
 	adds	r3, r3, r2	@ tmp143, tmp142, j
 	lsls	r3, r3, #1	@ tmp144, tmp143,
 	adds	r3, r1, r3	@ tmp145, tsa, tmp144
 	ldrh	r3, [r3, #2]	@ _13, *_7
-@ CharacterCreator.c:299: 			map[i+y][j+x] = ((u16*)(tsa->tiles))[i*(tsa->width+1)+j];
+@ CharacterCreator.c:300: 			map[i+y][j+x] = ((u16*)(tsa->tiles))[i*(tsa->width+1)+j];
 	strh	r3, [r4]	@ _13, MEM[base: _18, offset: 0B]
-@ CharacterCreator.c:297: 		for ( int j = 0 ; j < tsa->width+1 ; j++ )
+@ CharacterCreator.c:298: 		for ( int j = 0 ; j < tsa->width+1 ; j++ )
 	adds	r2, r2, #1	@ j,
-@ CharacterCreator.c:297: 		for ( int j = 0 ; j < tsa->width+1 ; j++ )
+@ CharacterCreator.c:298: 		for ( int j = 0 ; j < tsa->width+1 ; j++ )
 	ldrb	r3, [r1]	@ _15, *tsa_23(D)
-	adds	r4, r4, #2	@ ivtmp.119,
-@ CharacterCreator.c:297: 		for ( int j = 0 ; j < tsa->width+1 ; j++ )
+	adds	r4, r4, #2	@ ivtmp.120,
+@ CharacterCreator.c:298: 		for ( int j = 0 ; j < tsa->width+1 ; j++ )
 	cmp	r3, r2	@ _15, j
 	bge	.L3		@,
 	b	.L6		@
 .L1:
-@ CharacterCreator.c:302: }
+@ CharacterCreator.c:303: }
 	@ sp needed	@
 	pop	{r4, r5}
 	pop	{r0}
@@ -126,69 +126,69 @@ CreatorSubmenuUsability:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, lr}	@
 	movs	r4, r1	@ index, tmp177
-@ CharacterCreator.c:139: 	CreatorProc* proc = (CreatorProc*)ProcFind(&gCreatorProc);
+@ CharacterCreator.c:140: 	CreatorProc* proc = (CreatorProc*)ProcFind(&gCreatorProc);
 	ldr	r0, .L28	@,
 	ldr	r3, .L28+4	@ tmp131,
 	bl	.L30		@
 	movs	r2, r0	@ proc, tmp178
-@ CharacterCreator.c:141: 	if ( ( proc->currMenu == BaneMenu || proc->currMenu == BoonMenu ) && index == 2 && proc->route != 3 ) { return 3; }
+@ CharacterCreator.c:142: 	if ( ( proc->currMenu == BaneMenu || proc->currMenu == BoonMenu ) && index == 2 && proc->route != 3 ) { return 3; }
 	movs	r3, #41	@ tmp132,
 	ldrb	r1, [r0, r3]	@ _1,
-@ CharacterCreator.c:141: 	if ( ( proc->currMenu == BaneMenu || proc->currMenu == BoonMenu ) && index == 2 && proc->route != 3 ) { return 3; }
+@ CharacterCreator.c:142: 	if ( ( proc->currMenu == BaneMenu || proc->currMenu == BoonMenu ) && index == 2 && proc->route != 3 ) { return 3; }
 	subs	r3, r1, #4	@ tmp133, _1,
-@ CharacterCreator.c:141: 	if ( ( proc->currMenu == BaneMenu || proc->currMenu == BoonMenu ) && index == 2 && proc->route != 3 ) { return 3; }
+@ CharacterCreator.c:142: 	if ( ( proc->currMenu == BaneMenu || proc->currMenu == BoonMenu ) && index == 2 && proc->route != 3 ) { return 3; }
 	lsls	r3, r3, #24	@ tmp138, tmp133,
 	lsrs	r3, r3, #24	@ tmp139, tmp138,
-@ CharacterCreator.c:141: 	if ( ( proc->currMenu == BaneMenu || proc->currMenu == BoonMenu ) && index == 2 && proc->route != 3 ) { return 3; }
+@ CharacterCreator.c:142: 	if ( ( proc->currMenu == BaneMenu || proc->currMenu == BoonMenu ) && index == 2 && proc->route != 3 ) { return 3; }
 	cmp	r3, #1	@ tmp139,
 	bhi	.L8		@,
 	cmp	r4, #2	@ index,
 	beq	.L23		@,
 .L8:
-@ CharacterCreator.c:142: 	if ( proc->currMenu == BoonMenu )
+@ CharacterCreator.c:143: 	if ( proc->currMenu == BoonMenu )
 	cmp	r1, #4	@ _1,
 	beq	.L24		@,
-@ CharacterCreator.c:154: 	return 1;
+@ CharacterCreator.c:155: 	return 1;
 	movs	r0, #1	@ <retval>,
-@ CharacterCreator.c:148: 	if ( proc->currMenu == BaneMenu )
+@ CharacterCreator.c:149: 	if ( proc->currMenu == BaneMenu )
 	cmp	r1, #5	@ _1,
 	beq	.L25		@,
 .L7:
-@ CharacterCreator.c:155: }
+@ CharacterCreator.c:156: }
 	@ sp needed	@
 	pop	{r4}
 	pop	{r1}
 	bx	r1
 .L23:
-@ CharacterCreator.c:141: 	if ( ( proc->currMenu == BaneMenu || proc->currMenu == BoonMenu ) && index == 2 && proc->route != 3 ) { return 3; }
+@ CharacterCreator.c:142: 	if ( ( proc->currMenu == BaneMenu || proc->currMenu == BoonMenu ) && index == 2 && proc->route != 3 ) { return 3; }
 	movs	r3, #43	@ tmp150,
-@ CharacterCreator.c:141: 	if ( ( proc->currMenu == BaneMenu || proc->currMenu == BoonMenu ) && index == 2 && proc->route != 3 ) { return 3; }
+@ CharacterCreator.c:142: 	if ( ( proc->currMenu == BaneMenu || proc->currMenu == BoonMenu ) && index == 2 && proc->route != 3 ) { return 3; }
 	ldrb	r3, [r0, r3]	@ tmp151,
 	cmp	r3, #3	@ tmp151,
 	beq	.L8		@,
-@ CharacterCreator.c:141: 	if ( ( proc->currMenu == BaneMenu || proc->currMenu == BoonMenu ) && index == 2 && proc->route != 3 ) { return 3; }
+@ CharacterCreator.c:142: 	if ( ( proc->currMenu == BaneMenu || proc->currMenu == BoonMenu ) && index == 2 && proc->route != 3 ) { return 3; }
 	movs	r0, #3	@ <retval>,
 	b	.L7		@
 .L24:
-@ CharacterCreator.c:144: 		if ( proc->bane == index+1 ) { return 2; }
+@ CharacterCreator.c:145: 		if ( proc->bane == index+1 ) { return 2; }
 	movs	r3, #58	@ tmp152,
 	ldrb	r1, [r2, r3]	@ tmp153,
-@ CharacterCreator.c:144: 		if ( proc->bane == index+1 ) { return 2; }
+@ CharacterCreator.c:145: 		if ( proc->bane == index+1 ) { return 2; }
 	adds	r3, r4, #1	@ tmp154, index,
-@ CharacterCreator.c:144: 		if ( proc->bane == index+1 ) { return 2; }
+@ CharacterCreator.c:145: 		if ( proc->bane == index+1 ) { return 2; }
 	cmp	r1, r3	@ tmp153, tmp154
 	beq	.L14		@,
-@ CharacterCreator.c:145: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
+@ CharacterCreator.c:146: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
 	cmp	r4, #1	@ index,
 	beq	.L26		@,
-@ CharacterCreator.c:145: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
+@ CharacterCreator.c:146: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
 	cmp	r4, #2	@ index,
 	bne	.L16		@,
-@ CharacterCreator.c:145: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
+@ CharacterCreator.c:146: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
 	movs	r3, #43	@ tmp157,
-@ CharacterCreator.c:145: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
+@ CharacterCreator.c:146: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
 	ldrb	r0, [r2, r3]	@ tmp158,
-@ CharacterCreator.c:145: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
+@ CharacterCreator.c:146: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
 	subs	r0, r0, #3	@ tmp168,
 	rsbs	r3, r0, #0	@ tmp169, tmp168
 	adcs	r0, r0, r3	@ tmp167, tmp168, tmp169
@@ -198,35 +198,35 @@ CreatorSubmenuUsability:
 	adds	r0, r0, #3	@ <retval>,
 	b	.L7		@
 .L26:
-@ CharacterCreator.c:145: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
+@ CharacterCreator.c:146: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
 	movs	r3, #43	@ tmp155,
-@ CharacterCreator.c:145: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
+@ CharacterCreator.c:146: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
 	ldrb	r3, [r2, r3]	@ tmp156,
 	cmp	r3, #3	@ tmp156,
 	beq	.L15		@,
-@ CharacterCreator.c:146: 		else { return 1; }
+@ CharacterCreator.c:147: 		else { return 1; }
 	movs	r0, r4	@ <retval>, index
 	b	.L7		@
 .L25:
-@ CharacterCreator.c:150: 		if ( proc->boon == index+1 ) { return 2; }
+@ CharacterCreator.c:151: 		if ( proc->boon == index+1 ) { return 2; }
 	movs	r3, #57	@ tmp159,
 	ldrb	r1, [r2, r3]	@ tmp160,
-@ CharacterCreator.c:150: 		if ( proc->boon == index+1 ) { return 2; }
+@ CharacterCreator.c:151: 		if ( proc->boon == index+1 ) { return 2; }
 	adds	r3, r4, #1	@ tmp161, index,
-@ CharacterCreator.c:150: 		if ( proc->boon == index+1 ) { return 2; }
+@ CharacterCreator.c:151: 		if ( proc->boon == index+1 ) { return 2; }
 	cmp	r1, r3	@ tmp160, tmp161
 	beq	.L19		@,
-@ CharacterCreator.c:151: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
+@ CharacterCreator.c:152: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
 	cmp	r4, #1	@ index,
 	beq	.L27		@,
-@ CharacterCreator.c:151: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
+@ CharacterCreator.c:152: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
 	cmp	r4, #2	@ index,
 	bne	.L21		@,
-@ CharacterCreator.c:151: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
+@ CharacterCreator.c:152: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
 	movs	r3, #43	@ tmp164,
-@ CharacterCreator.c:151: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
+@ CharacterCreator.c:152: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
 	ldrb	r0, [r2, r3]	@ tmp165,
-@ CharacterCreator.c:151: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
+@ CharacterCreator.c:152: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
 	subs	r0, r0, #3	@ tmp173,
 	rsbs	r3, r0, #0	@ tmp174, tmp173
 	adcs	r0, r0, r3	@ tmp172, tmp173, tmp174
@@ -236,37 +236,37 @@ CreatorSubmenuUsability:
 	adds	r0, r0, #3	@ <retval>,
 	b	.L7		@
 .L27:
-@ CharacterCreator.c:151: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
+@ CharacterCreator.c:152: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
 	movs	r3, #43	@ tmp162,
-@ CharacterCreator.c:151: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
+@ CharacterCreator.c:152: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
 	ldrb	r3, [r2, r3]	@ tmp163,
 	cmp	r3, #3	@ tmp163,
 	beq	.L20		@,
-@ CharacterCreator.c:152: 		else { return 1; }
+@ CharacterCreator.c:153: 		else { return 1; }
 	movs	r0, r4	@ <retval>, index
 	b	.L7		@
 .L14:
-@ CharacterCreator.c:144: 		if ( proc->bane == index+1 ) { return 2; }
+@ CharacterCreator.c:145: 		if ( proc->bane == index+1 ) { return 2; }
 	movs	r0, #2	@ <retval>,
 	b	.L7		@
 .L15:
-@ CharacterCreator.c:145: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
+@ CharacterCreator.c:146: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
 	movs	r0, #3	@ <retval>,
 	b	.L7		@
 .L16:
-@ CharacterCreator.c:146: 		else { return 1; }
+@ CharacterCreator.c:147: 		else { return 1; }
 	movs	r0, #1	@ <retval>,
 	b	.L7		@
 .L19:
-@ CharacterCreator.c:150: 		if ( proc->boon == index+1 ) { return 2; }
+@ CharacterCreator.c:151: 		if ( proc->boon == index+1 ) { return 2; }
 	movs	r0, #2	@ <retval>,
 	b	.L7		@
 .L20:
-@ CharacterCreator.c:151: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
+@ CharacterCreator.c:152: 		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
 	movs	r0, #3	@ <retval>,
 	b	.L7		@
 .L21:
-@ CharacterCreator.c:152: 		else { return 1; }
+@ CharacterCreator.c:153: 		else { return 1; }
 	movs	r0, #1	@ <retval>,
 	b	.L7		@
 .L29:
@@ -384,16 +384,16 @@ DrawMultiline:
 	movs	r6, r0	@ handles, tmp140
 	mov	r8, r1	@ string, tmp141
 	str	r2, [sp, #4]	@ lines, %sfp
-@ CharacterCreator.c:318: 	for ( int i = 0 ; i < lines ; i++ )
+@ CharacterCreator.c:319: 	for ( int i = 0 ; i < lines ; i++ )
 	movs	r7, #0	@ i,
-@ CharacterCreator.c:317: 	int j = 0;
+@ CharacterCreator.c:318: 	int j = 0;
 	movs	r4, #0	@ j,
-@ CharacterCreator.c:318: 	for ( int i = 0 ; i < lines ; i++ )
+@ CharacterCreator.c:319: 	for ( int i = 0 ; i < lines ; i++ )
 	cmp	r2, #0	@ lines,
 	ble	.L37		@,
-@ CharacterCreator.c:323: 			gGenericBuffer[k] = string[j];
+@ CharacterCreator.c:324: 			gGenericBuffer[k] = string[j];
 	ldr	r5, .L48	@ tmp139,
-@ CharacterCreator.c:326: 		gGenericBuffer[k] = 0;
+@ CharacterCreator.c:327: 		gGenericBuffer[k] = 0;
 	mov	r10, r5	@ tmp131, tmp131
 	movs	r3, #0	@ tmp132,
 	mov	r9, r3	@ tmp132, tmp132
@@ -402,55 +402,55 @@ DrawMultiline:
 .L47:
 	ldr	r7, [sp]	@ i, %sfp
 .L40:
-@ CharacterCreator.c:323: 			gGenericBuffer[k] = string[j];
+@ CharacterCreator.c:324: 			gGenericBuffer[k] = string[j];
 	strb	r2, [r5, r3]	@ _3, MEM[symbol: gGenericBuffer, index: _10, offset: 0B]
 	adds	r4, r1, r3	@ j, tmp128, k
-@ CharacterCreator.c:321: 		for ( ; string[j] && string[j] != NL ; k++ )
+@ CharacterCreator.c:322: 		for ( ; string[j] && string[j] != NL ; k++ )
 	adds	r3, r3, #1	@ k,
-@ CharacterCreator.c:321: 		for ( ; string[j] && string[j] != NL ; k++ )
+@ CharacterCreator.c:322: 		for ( ; string[j] && string[j] != NL ; k++ )
 	ldrb	r2, [r0, r3]	@ _3, MEM[base: _33, index: _30, offset: 0B]
-@ CharacterCreator.c:321: 		for ( ; string[j] && string[j] != NL ; k++ )
+@ CharacterCreator.c:322: 		for ( ; string[j] && string[j] != NL ; k++ )
 	cmp	r2, #1	@ _3,
 	bhi	.L40		@,
 	str	r7, [sp]	@ i, %sfp
 .L41:
-@ CharacterCreator.c:326: 		gGenericBuffer[k] = 0;
+@ CharacterCreator.c:327: 		gGenericBuffer[k] = 0;
 	mov	r2, r10	@ tmp131, tmp131
 	mov	r1, r9	@ tmp132, tmp132
 	strb	r1, [r2, r3]	@ tmp132, gGenericBuffer
-@ CharacterCreator.c:327: 		Text_InsertString(handles,0,handles->colorId,(char*)gGenericBuffer);
+@ CharacterCreator.c:328: 		Text_InsertString(handles,0,handles->colorId,(char*)gGenericBuffer);
 	ldrb	r2, [r6, #3]	@ MEM[base: handles_36, offset: 3B], MEM[base: handles_36, offset: 3B]
 	mov	r3, r10	@, tmp131
 	movs	r0, r6	@, handles
 	ldr	r7, .L48+4	@ tmp136,
 	bl	.L50		@
-@ CharacterCreator.c:329: 		handles++;
+@ CharacterCreator.c:330: 		handles++;
 	adds	r6, r6, #8	@ handles,
-@ CharacterCreator.c:330: 		j++;
+@ CharacterCreator.c:331: 		j++;
 	adds	r4, r4, #1	@ j,
-@ CharacterCreator.c:318: 	for ( int i = 0 ; i < lines ; i++ )
+@ CharacterCreator.c:319: 	for ( int i = 0 ; i < lines ; i++ )
 	ldr	r2, [sp]	@ i, %sfp
 	adds	r2, r2, #1	@ i,
 	str	r2, [sp]	@ i, %sfp
-@ CharacterCreator.c:318: 	for ( int i = 0 ; i < lines ; i++ )
+@ CharacterCreator.c:319: 	for ( int i = 0 ; i < lines ; i++ )
 	ldr	r3, [sp, #4]	@ lines, %sfp
 	cmp	r3, r2	@ lines, i
 	beq	.L37		@,
 .L38:
-@ CharacterCreator.c:321: 		for ( ; string[j] && string[j] != NL ; k++ )
+@ CharacterCreator.c:322: 		for ( ; string[j] && string[j] != NL ; k++ )
 	movs	r1, r4	@ j.13_32, j
 	mov	r3, r8	@ string, string
 	adds	r0, r3, r4	@ _33, string, j
 	ldrb	r2, [r3, r4]	@ _3, *_33
-@ CharacterCreator.c:320: 		int k = 0;
+@ CharacterCreator.c:321: 		int k = 0;
 	movs	r3, #0	@ k,
 	adds	r1, r1, #1	@ tmp128,
-@ CharacterCreator.c:321: 		for ( ; string[j] && string[j] != NL ; k++ )
+@ CharacterCreator.c:322: 		for ( ; string[j] && string[j] != NL ; k++ )
 	cmp	r2, #1	@ _3,
 	bhi	.L47		@,
 	b	.L41		@
 .L37:
-@ CharacterCreator.c:332: }
+@ CharacterCreator.c:333: }
 	add	sp, sp, #12	@,,
 	@ sp needed	@
 	pop	{r2, r3, r4, r5}
@@ -481,20 +481,20 @@ CreatorSubmenuEffect:
 	push	{r4, r5, r6, lr}	@
 	movs	r6, r0	@ proc, tmp238
 	movs	r5, r1	@ commandProc, tmp239
-@ CharacterCreator.c:159: 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
+@ CharacterCreator.c:160: 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
 	ldr	r0, .L70	@,
 	ldr	r3, .L70+4	@ tmp143,
 	bl	.L30		@
 	movs	r4, r0	@ creator, tmp240
-@ CharacterCreator.c:160: 	if ( creator->isPressDisabled ) { return 0; } // Do nothing if presses are disabled.
+@ CharacterCreator.c:161: 	if ( creator->isPressDisabled ) { return 0; } // Do nothing if presses are disabled.
 	movs	r3, #62	@ tmp144,
-@ CharacterCreator.c:160: 	if ( creator->isPressDisabled ) { return 0; } // Do nothing if presses are disabled.
+@ CharacterCreator.c:161: 	if ( creator->isPressDisabled ) { return 0; } // Do nothing if presses are disabled.
 	ldrb	r3, [r0, r3]	@ tmp145,
 	cmp	r3, #0	@ tmp145,
 	beq	.LCB389	@
 	b	.L65	@long jump	@
 .LCB389:
-@ CharacterCreator.c:161: 	switch (creator->currMenu)
+@ CharacterCreator.c:162: 	switch (creator->currMenu)
 	adds	r3, r3, #41	@ tmp146,
 	ldrb	r2, [r0, r3]	@ tmp149,
 	cmp	r2, #5	@ tmp149,
@@ -514,55 +514,55 @@ CreatorSubmenuEffect:
 	.word	.L54
 	.text
 .L59:
-@ CharacterCreator.c:164: 			if ( creator->gender != commandProc->commandDefinitionIndex+1 )
+@ CharacterCreator.c:165: 			if ( creator->gender != commandProc->commandDefinitionIndex+1 )
 	movs	r3, #60	@ tmp155,
 	ldrb	r3, [r5, r3]	@ _5,
-@ CharacterCreator.c:164: 			if ( creator->gender != commandProc->commandDefinitionIndex+1 )
+@ CharacterCreator.c:165: 			if ( creator->gender != commandProc->commandDefinitionIndex+1 )
 	movs	r2, #42	@ tmp156,
 	ldrb	r1, [r0, r2]	@ tmp157,
-@ CharacterCreator.c:164: 			if ( creator->gender != commandProc->commandDefinitionIndex+1 )
+@ CharacterCreator.c:165: 			if ( creator->gender != commandProc->commandDefinitionIndex+1 )
 	adds	r2, r3, #1	@ tmp158, _5,
-@ CharacterCreator.c:164: 			if ( creator->gender != commandProc->commandDefinitionIndex+1 )
+@ CharacterCreator.c:165: 			if ( creator->gender != commandProc->commandDefinitionIndex+1 )
 	cmp	r1, r2	@ tmp157, tmp158
 	bne	.L66		@,
 .L60:
-@ CharacterCreator.c:174: 			ProcGoto((Proc*)creator,0);
+@ CharacterCreator.c:175: 			ProcGoto((Proc*)creator,0);
 	movs	r1, #0	@,
 	movs	r0, r4	@, creator
 	ldr	r3, .L70+12	@ tmp174,
 	bl	.L30		@
 .L53:
-@ CharacterCreator.c:217: 	creator->currMenu = MainMenu;
+@ CharacterCreator.c:218: 	creator->currMenu = MainMenu;
 	movs	r3, #41	@ tmp234,
 	movs	r2, #7	@ tmp235,
 	strb	r2, [r4, r3]	@ tmp235, creator_37->currMenu
-@ CharacterCreator.c:218: 	return ME_END|ME_PLAY_BEEP|ME_CLEAR_GFX;
+@ CharacterCreator.c:219: 	return ME_END|ME_PLAY_BEEP|ME_CLEAR_GFX;
 	movs	r0, #22	@ <retval>,
 .L51:
-@ CharacterCreator.c:219: }
+@ CharacterCreator.c:220: }
 	@ sp needed	@
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
 .L66:
-@ CharacterCreator.c:167: 				creator->gender = commandProc->commandDefinitionIndex+1;
+@ CharacterCreator.c:168: 				creator->gender = commandProc->commandDefinitionIndex+1;
 	movs	r3, r2	@ tmp159, tmp158
-@ CharacterCreator.c:167: 				creator->gender = commandProc->commandDefinitionIndex+1;
+@ CharacterCreator.c:168: 				creator->gender = commandProc->commandDefinitionIndex+1;
 	movs	r2, #42	@ tmp160,
 	strb	r3, [r0, r2]	@ tmp159, creator_37->gender
-@ CharacterCreator.c:168: 				creator->mainUnit = NULL;
+@ CharacterCreator.c:169: 				creator->mainUnit = NULL;
 	movs	r3, #0	@ tmp162,
 	str	r3, [r0, #44]	@ tmp162, creator_37->mainUnit
-@ CharacterCreator.c:169: 				creator->lastClassIndex = 0;
+@ CharacterCreator.c:170: 				creator->lastClassIndex = 0;
 	adds	r2, r2, #14	@ tmp163,
 	strb	r3, [r0, r2]	@ tmp162, creator_37->lastClassIndex
-@ CharacterCreator.c:170: 				creator->bane = 0;
+@ CharacterCreator.c:171: 				creator->bane = 0;
 	adds	r2, r2, #2	@ tmp166,
 	strb	r3, [r0, r2]	@ tmp162, creator_37->bane
-@ CharacterCreator.c:171: 				creator->boon = 0;
+@ CharacterCreator.c:172: 				creator->boon = 0;
 	subs	r2, r2, #1	@ tmp169,
 	strb	r3, [r0, r2]	@ tmp162, creator_37->boon
-@ CharacterCreator.c:172: 				ClearUnit(GetUnit(1));
+@ CharacterCreator.c:173: 				ClearUnit(GetUnit(1));
 	movs	r0, #1	@,
 	ldr	r3, .L70+16	@ tmp172,
 	bl	.L30		@
@@ -570,44 +570,44 @@ CreatorSubmenuEffect:
 	bl	.L30		@
 	b	.L60		@
 .L58:
-@ CharacterCreator.c:177: 			if ( creator->route != commandProc->commandDefinitionIndex+1 )
+@ CharacterCreator.c:178: 			if ( creator->route != commandProc->commandDefinitionIndex+1 )
 	movs	r3, #60	@ tmp175,
 	ldrb	r3, [r5, r3]	@ _12,
-@ CharacterCreator.c:177: 			if ( creator->route != commandProc->commandDefinitionIndex+1 )
+@ CharacterCreator.c:178: 			if ( creator->route != commandProc->commandDefinitionIndex+1 )
 	movs	r2, #43	@ tmp176,
 	ldrb	r1, [r0, r2]	@ tmp177,
-@ CharacterCreator.c:177: 			if ( creator->route != commandProc->commandDefinitionIndex+1 )
+@ CharacterCreator.c:178: 			if ( creator->route != commandProc->commandDefinitionIndex+1 )
 	adds	r2, r3, #1	@ tmp178, _12,
-@ CharacterCreator.c:177: 			if ( creator->route != commandProc->commandDefinitionIndex+1 )
+@ CharacterCreator.c:178: 			if ( creator->route != commandProc->commandDefinitionIndex+1 )
 	cmp	r1, r2	@ tmp177, tmp178
 	bne	.L67		@,
 .L61:
-@ CharacterCreator.c:187: 			ProcGoto((Proc*)creator,0);
+@ CharacterCreator.c:188: 			ProcGoto((Proc*)creator,0);
 	movs	r1, #0	@,
 	movs	r0, r4	@, creator
 	ldr	r3, .L70+12	@ tmp194,
 	bl	.L30		@
-@ CharacterCreator.c:188: 			break;
+@ CharacterCreator.c:189: 			break;
 	b	.L53		@
 .L67:
-@ CharacterCreator.c:180: 				creator->route = commandProc->commandDefinitionIndex+1;
+@ CharacterCreator.c:181: 				creator->route = commandProc->commandDefinitionIndex+1;
 	movs	r3, r2	@ tmp179, tmp178
-@ CharacterCreator.c:180: 				creator->route = commandProc->commandDefinitionIndex+1;
+@ CharacterCreator.c:181: 				creator->route = commandProc->commandDefinitionIndex+1;
 	movs	r2, #43	@ tmp180,
 	strb	r3, [r0, r2]	@ tmp179, creator_37->route
-@ CharacterCreator.c:181: 				creator->mainUnit = NULL;
+@ CharacterCreator.c:182: 				creator->mainUnit = NULL;
 	movs	r3, #0	@ tmp182,
 	str	r3, [r0, #44]	@ tmp182, creator_37->mainUnit
-@ CharacterCreator.c:182: 				creator->lastClassIndex = 0;
+@ CharacterCreator.c:183: 				creator->lastClassIndex = 0;
 	adds	r2, r2, #13	@ tmp183,
 	strb	r3, [r0, r2]	@ tmp182, creator_37->lastClassIndex
-@ CharacterCreator.c:183: 				creator->bane = 0;
+@ CharacterCreator.c:184: 				creator->bane = 0;
 	adds	r2, r2, #2	@ tmp186,
 	strb	r3, [r0, r2]	@ tmp182, creator_37->bane
-@ CharacterCreator.c:184: 				creator->boon = 0;
+@ CharacterCreator.c:185: 				creator->boon = 0;
 	subs	r2, r2, #1	@ tmp189,
 	strb	r3, [r0, r2]	@ tmp182, creator_37->boon
-@ CharacterCreator.c:185: 				ClearUnit(GetUnit(1));
+@ CharacterCreator.c:186: 				ClearUnit(GetUnit(1));
 	movs	r0, #1	@,
 	ldr	r3, .L70+16	@ tmp192,
 	bl	.L30		@
@@ -615,115 +615,115 @@ CreatorSubmenuEffect:
 	bl	.L30		@
 	b	.L61		@
 .L57:
-@ CharacterCreator.c:190: 			creator->leavingClassMenu = 1; // Set this, so we don't clear this on the switch out routine.
+@ CharacterCreator.c:191: 			creator->leavingClassMenu = 1; // Set this, so we don't clear this on the switch out routine.
 	movs	r3, #59	@ tmp195,
 	movs	r2, #1	@ tmp196,
 	strb	r2, [r0, r3]	@ tmp196, creator_37->leavingClassMenu
-@ CharacterCreator.c:191: 			creator->mainUnit = GetUnit(1);
+@ CharacterCreator.c:192: 			creator->mainUnit = GetUnit(1);
 	movs	r0, #1	@,
 	ldr	r3, .L70+16	@ tmp198,
 	bl	.L30		@
 	movs	r1, r0	@ _17, tmp243
-@ CharacterCreator.c:191: 			creator->mainUnit = GetUnit(1);
+@ CharacterCreator.c:192: 			creator->mainUnit = GetUnit(1);
 	str	r0, [r4, #44]	@ _17, creator_37->mainUnit
-@ CharacterCreator.c:192: 			CopyUnit(creator->tempUnit,creator->mainUnit);
+@ CharacterCreator.c:193: 			CopyUnit(creator->tempUnit,creator->mainUnit);
 	ldr	r0, [r4, #48]	@, creator_37->tempUnit
 	ldr	r3, .L70+24	@ tmp200,
 	bl	.L30		@
-@ CharacterCreator.c:193: 			if ( creator->tempUnit ) { ClearUnit(creator->tempUnit); creator->tempUnit = NULL; }
+@ CharacterCreator.c:194: 			if ( creator->tempUnit ) { ClearUnit(creator->tempUnit); creator->tempUnit = NULL; }
 	ldr	r0, [r4, #48]	@ _19, creator_37->tempUnit
-@ CharacterCreator.c:193: 			if ( creator->tempUnit ) { ClearUnit(creator->tempUnit); creator->tempUnit = NULL; }
+@ CharacterCreator.c:194: 			if ( creator->tempUnit ) { ClearUnit(creator->tempUnit); creator->tempUnit = NULL; }
 	cmp	r0, #0	@ _19,
 	beq	.L62		@,
-@ CharacterCreator.c:193: 			if ( creator->tempUnit ) { ClearUnit(creator->tempUnit); creator->tempUnit = NULL; }
+@ CharacterCreator.c:194: 			if ( creator->tempUnit ) { ClearUnit(creator->tempUnit); creator->tempUnit = NULL; }
 	ldr	r3, .L70+20	@ tmp201,
 	bl	.L30		@
-@ CharacterCreator.c:193: 			if ( creator->tempUnit ) { ClearUnit(creator->tempUnit); creator->tempUnit = NULL; }
+@ CharacterCreator.c:194: 			if ( creator->tempUnit ) { ClearUnit(creator->tempUnit); creator->tempUnit = NULL; }
 	movs	r3, #0	@ tmp202,
 	str	r3, [r4, #48]	@ tmp202, creator_37->tempUnit
 .L62:
-@ CharacterCreator.c:194: 			ProcGoto((Proc*)creator,1);
+@ CharacterCreator.c:195: 			ProcGoto((Proc*)creator,1);
 	movs	r1, #1	@,
 	movs	r0, r4	@, creator
 	ldr	r3, .L70+12	@ tmp203,
 	bl	.L30		@
-@ CharacterCreator.c:195: 			creator->lastClassIndex = commandProc->commandDefinitionIndex;
+@ CharacterCreator.c:196: 			creator->lastClassIndex = commandProc->commandDefinitionIndex;
 	movs	r3, #60	@ tmp204,
 	ldrb	r2, [r5, r3]	@ _20,
-@ CharacterCreator.c:195: 			creator->lastClassIndex = commandProc->commandDefinitionIndex;
+@ CharacterCreator.c:196: 			creator->lastClassIndex = commandProc->commandDefinitionIndex;
 	subs	r3, r3, #4	@ tmp205,
 	strb	r2, [r4, r3]	@ _20, creator_37->lastClassIndex
-@ CharacterCreator.c:196: 			creator->currMenu = MainMenu;
+@ CharacterCreator.c:197: 			creator->currMenu = MainMenu;
 	subs	r3, r3, #15	@ tmp207,
 	movs	r2, #7	@ tmp208,
 	strb	r2, [r4, r3]	@ tmp208, creator_37->currMenu
-@ CharacterCreator.c:197: 			return ME_END|ME_PLAY_BEEP;
+@ CharacterCreator.c:198: 			return ME_END|ME_PLAY_BEEP;
 	movs	r0, #6	@ <retval>,
 	b	.L51		@
 .L56:
-@ CharacterCreator.c:199: 			if ( commandProc->availability == 2 )
+@ CharacterCreator.c:200: 			if ( commandProc->availability == 2 )
 	movs	r3, #61	@ tmp210,
-@ CharacterCreator.c:199: 			if ( commandProc->availability == 2 )
+@ CharacterCreator.c:200: 			if ( commandProc->availability == 2 )
 	ldrb	r3, [r5, r3]	@ tmp211,
 	cmp	r3, #2	@ tmp211,
 	beq	.L68		@,
-@ CharacterCreator.c:204: 			creator->boon = commandProc->commandDefinitionIndex+1;
+@ CharacterCreator.c:205: 			creator->boon = commandProc->commandDefinitionIndex+1;
 	movs	r3, #60	@ tmp215,
-@ CharacterCreator.c:204: 			creator->boon = commandProc->commandDefinitionIndex+1;
+@ CharacterCreator.c:205: 			creator->boon = commandProc->commandDefinitionIndex+1;
 	ldrb	r3, [r5, r3]	@ tmp217,
 	adds	r3, r3, #1	@ tmp218,
-@ CharacterCreator.c:204: 			creator->boon = commandProc->commandDefinitionIndex+1;
+@ CharacterCreator.c:205: 			creator->boon = commandProc->commandDefinitionIndex+1;
 	movs	r2, #57	@ tmp219,
 	strb	r3, [r0, r2]	@ tmp218, creator_37->boon
-@ CharacterCreator.c:205: 			ProcGoto((Proc*)creator,0);
+@ CharacterCreator.c:206: 			ProcGoto((Proc*)creator,0);
 	movs	r1, #0	@,
 	ldr	r3, .L70+12	@ tmp221,
 	bl	.L30		@
-@ CharacterCreator.c:206: 			break;
+@ CharacterCreator.c:207: 			break;
 	b	.L53		@
 .L68:
-@ CharacterCreator.c:201: 				MenuCallHelpBox(proc,gBoonMenuItemErrorText);
+@ CharacterCreator.c:202: 				MenuCallHelpBox(proc,gBoonMenuItemErrorText);
 	ldr	r3, .L70+28	@ tmp212,
 	ldrh	r1, [r3]	@ gBoonMenuItemErrorText, gBoonMenuItemErrorText
 	movs	r0, r6	@, proc
 	ldr	r3, .L70+32	@ tmp214,
 	bl	.L30		@
-@ CharacterCreator.c:202: 				return ME_PLAY_BOOP;
+@ CharacterCreator.c:203: 				return ME_PLAY_BOOP;
 	movs	r0, #8	@ <retval>,
 	b	.L51		@
 .L54:
-@ CharacterCreator.c:208: 			if ( commandProc->availability == 2 )
+@ CharacterCreator.c:209: 			if ( commandProc->availability == 2 )
 	movs	r3, #61	@ tmp222,
-@ CharacterCreator.c:208: 			if ( commandProc->availability == 2 )
+@ CharacterCreator.c:209: 			if ( commandProc->availability == 2 )
 	ldrb	r3, [r5, r3]	@ tmp223,
 	cmp	r3, #2	@ tmp223,
 	beq	.L69		@,
-@ CharacterCreator.c:213: 			creator->bane = commandProc->commandDefinitionIndex+1;
+@ CharacterCreator.c:214: 			creator->bane = commandProc->commandDefinitionIndex+1;
 	movs	r3, #60	@ tmp227,
-@ CharacterCreator.c:213: 			creator->bane = commandProc->commandDefinitionIndex+1;
+@ CharacterCreator.c:214: 			creator->bane = commandProc->commandDefinitionIndex+1;
 	ldrb	r3, [r5, r3]	@ tmp229,
 	adds	r3, r3, #1	@ tmp230,
-@ CharacterCreator.c:213: 			creator->bane = commandProc->commandDefinitionIndex+1;
+@ CharacterCreator.c:214: 			creator->bane = commandProc->commandDefinitionIndex+1;
 	movs	r2, #58	@ tmp231,
 	strb	r3, [r0, r2]	@ tmp230, creator_37->bane
-@ CharacterCreator.c:214: 			ProcGoto((Proc*)creator,0);
+@ CharacterCreator.c:215: 			ProcGoto((Proc*)creator,0);
 	movs	r1, #0	@,
 	ldr	r3, .L70+12	@ tmp233,
 	bl	.L30		@
-@ CharacterCreator.c:215: 			break;
+@ CharacterCreator.c:216: 			break;
 	b	.L53		@
 .L69:
-@ CharacterCreator.c:210: 				MenuCallHelpBox(proc,gBaneMenuItemErrorText);
+@ CharacterCreator.c:211: 				MenuCallHelpBox(proc,gBaneMenuItemErrorText);
 	ldr	r3, .L70+36	@ tmp224,
 	ldrh	r1, [r3]	@ gBaneMenuItemErrorText, gBaneMenuItemErrorText
 	movs	r0, r6	@, proc
 	ldr	r3, .L70+32	@ tmp226,
 	bl	.L30		@
-@ CharacterCreator.c:211: 				return ME_PLAY_BOOP;
+@ CharacterCreator.c:212: 				return ME_PLAY_BOOP;
 	movs	r0, #8	@ <retval>,
 	b	.L51		@
 .L65:
-@ CharacterCreator.c:160: 	if ( creator->isPressDisabled ) { return 0; } // Do nothing if presses are disabled.
+@ CharacterCreator.c:161: 	if ( creator->isPressDisabled ) { return 0; } // Do nothing if presses are disabled.
 	movs	r0, #0	@ <retval>,
 	b	.L51		@
 .L71:
@@ -756,21 +756,21 @@ DrawStatNames:
 	str	r1, [sp, #4]	@, handle
 	movs	r5, r2	@ string, tmp133
 	movs	r4, r3	@ x, tmp134
-@ CharacterCreator.c:287: 	Text_Clear(&handle);
+@ CharacterCreator.c:288: 	Text_Clear(&handle);
 	mov	r0, sp	@,
 	ldr	r3, .L73	@ tmp121,
 	bl	.L30		@
-@ CharacterCreator.c:288: 	Text_SetColorId(&handle,TEXT_COLOR_GOLD);
+@ CharacterCreator.c:289: 	Text_SetColorId(&handle,TEXT_COLOR_GOLD);
 	movs	r1, #3	@,
 	mov	r0, sp	@,
 	ldr	r3, .L73+4	@ tmp123,
 	bl	.L30		@
-@ CharacterCreator.c:289: 	Text_AppendStringAscii(&handle,string);
+@ CharacterCreator.c:290: 	Text_AppendStringAscii(&handle,string);
 	movs	r1, r5	@, string
 	mov	r0, sp	@,
 	ldr	r3, .L73+8	@ tmp125,
 	bl	.L30		@
-@ CharacterCreator.c:290: 	Text_Display(&handle,&gBG0MapBuffer[y][x]);
+@ CharacterCreator.c:291: 	Text_Display(&handle,&gBG0MapBuffer[y][x]);
 	ldr	r3, [sp, #24]	@ tmp135, y
 	lsls	r1, r3, #5	@ tmp126, tmp135,
 	adds	r1, r1, r4	@ tmp127, tmp126, x
@@ -780,7 +780,7 @@ DrawStatNames:
 	mov	r0, sp	@,
 	ldr	r3, .L73+16	@ tmp132,
 	bl	.L30		@
-@ CharacterCreator.c:291: }
+@ CharacterCreator.c:292: }
 	add	sp, sp, #12	@,,
 	@ sp needed	@
 	pop	{r4, r5}
@@ -874,8 +874,8 @@ CreatorActivateClassDisplay:
 	mov	r10, r3	@ charData, charData
 @ ClassDisplay.c:38: 	creator->tempUnit = unit;
 	str	r7, [r5, #48]	@ unit, creator_95->tempUnit
-	movs	r4, r7	@ ivtmp.179, unit
-	adds	r4, r4, #40	@ ivtmp.179,
+	movs	r4, r7	@ ivtmp.180, unit
+	adds	r4, r4, #40	@ ivtmp.180,
 	movs	r6, r7	@ _221, unit
 	adds	r6, r6, #48	@ _221,
 @ ClassDisplay.c:40: 	int iconX = 12;
@@ -911,7 +911,7 @@ CreatorActivateClassDisplay:
 @ ClassDisplay.c:45: 			DrawIcon(&gBG0MapBuffer[1][iconX],0x70+i,0x5000);
 	movs	r2, #160	@ tmp509,
 	mov	r3, r9	@ tmp499, tmp499
-	adds	r1, r3, r4	@ tmp229, tmp499, ivtmp.179
+	adds	r1, r3, r4	@ tmp229, tmp499, ivtmp.180
 	movs	r0, r5	@ tmp230, iconX
 	adds	r0, r0, #32	@ tmp230,
 	lsls	r0, r0, #1	@ tmp231, tmp230,
@@ -924,9 +924,9 @@ CreatorActivateClassDisplay:
 @ ClassDisplay.c:46: 			iconX += 2;
 	adds	r5, r5, #2	@ iconX,
 .L77:
-	adds	r4, r4, #1	@ ivtmp.179,
+	adds	r4, r4, #1	@ ivtmp.180,
 @ ClassDisplay.c:41: 	for ( int i = 0 ; i < 8 ; i++ )
-	cmp	r4, r6	@ ivtmp.179, _221
+	cmp	r4, r6	@ ivtmp.180, _221
 	beq	.L88		@,
 .L78:
 @ ClassDisplay.c:43: 		if ( unit->ranks[i] )
@@ -963,8 +963,8 @@ CreatorActivateClassDisplay:
 @ ClassDisplay.c:54: 	while ( skillList[c] )
 	cmp	r1, #0	@ _13,
 	beq	.L79		@,
-	ldr	r6, .L93+8	@ ivtmp.169,
-	adds	r4, r0, #1	@ ivtmp.171, skillList,
+	ldr	r6, .L93+8	@ ivtmp.170,
+	adds	r4, r0, #1	@ ivtmp.172, skillList,
 @ ClassDisplay.c:56: 		DrawSkillIcon(&gBG0MapBuffer[1][iconX],skillList[c],0x4000);
 	movs	r3, #128	@ tmp239,
 	lsls	r3, r3, #7	@ tmp239, tmp239,
@@ -978,12 +978,12 @@ CreatorActivateClassDisplay:
 	mov	r3, r9	@ tmp241, tmp241
 	orrs	r1, r3	@ tmp240, tmp241
 	mov	r2, fp	@, tmp239
-	movs	r0, r6	@, ivtmp.169
+	movs	r0, r6	@, ivtmp.170
 	bl	.L95		@
 @ ClassDisplay.c:54: 	while ( skillList[c] )
 	ldrb	r1, [r4]	@ _13, MEM[base: _214, offset: 0B]
-	adds	r6, r6, #4	@ ivtmp.169,
-	adds	r4, r4, #1	@ ivtmp.171,
+	adds	r6, r6, #4	@ ivtmp.170,
+	adds	r4, r4, #1	@ ivtmp.172,
 @ ClassDisplay.c:54: 	while ( skillList[c] )
 	cmp	r1, #0	@ _13,
 	bne	.L80		@,
@@ -1370,8 +1370,8 @@ CreatorActivateClassDisplay:
 	movs	r3, #64	@ tmp481,
 	movs	r2, #1	@ tmp482,
 	strb	r2, [r0, r3]	@ tmp482, classProc_166->mode
-	movs	r1, r0	@ ivtmp.161, classProc
-	adds	r1, r1, #44	@ ivtmp.161,
+	movs	r1, r0	@ ivtmp.162, classProc
+	adds	r1, r1, #44	@ ivtmp.162,
 @ ClassDisplay.c:155: 		for ( int i = 0 ; i < 5 ; i++ ) { classProc->classes[i] = creator->currSet->list[i].class; }
 	movs	r3, #0	@ i,
 .L83:
@@ -1384,7 +1384,7 @@ CreatorActivateClassDisplay:
 	strh	r2, [r1]	@ tmp488, MEM[base: _196, offset: 0B]
 @ ClassDisplay.c:155: 		for ( int i = 0 ; i < 5 ; i++ ) { classProc->classes[i] = creator->currSet->list[i].class; }
 	adds	r3, r3, #1	@ i,
-	adds	r1, r1, #2	@ ivtmp.161,
+	adds	r1, r1, #2	@ ivtmp.162,
 @ ClassDisplay.c:155: 		for ( int i = 0 ; i < 5 ; i++ ) { classProc->classes[i] = creator->currSet->list[i].class; }
 	cmp	r3, #5	@ i,
 	bne	.L83		@,
@@ -1572,7 +1572,7 @@ FillNumString:
 	cmp	r6, #1	@ i,
 	ble	.L106		@,
 	ldr	r3, [sp, #4]	@ i, %sfp
-	adds	r5, r7, r3	@ ivtmp.188, string, i
+	adds	r5, r7, r3	@ ivtmp.189, string, i
 .L109:
 @ BoonBane.c:168: 		char temp = string[j];
 	ldrb	r2, [r7, r4]	@ temp, MEM[base: string_24(D), index: _38, offset: 0B]
@@ -1584,7 +1584,7 @@ FillNumString:
 	strb	r2, [r5]	@ temp, MEM[base: _41, offset: 0B]
 @ BoonBane.c:166: 	for ( int j = 0 ; j < i/2 && i > 1 ; j++ )
 	adds	r4, r4, #1	@ num,
-	subs	r5, r5, #1	@ ivtmp.188,
+	subs	r5, r5, #1	@ ivtmp.189,
 @ BoonBane.c:166: 	for ( int j = 0 ; j < i/2 && i > 1 ; j++ )
 	cmp	r4, r0	@ num, _39
 	blt	.L109		@,
@@ -1879,52 +1879,6 @@ CreatorGoToRandomize:
 	.word	ProcGoto
 	.size	CreatorGoToRandomize, .-CreatorGoToRandomize
 	.align	1
-	.global	CreatorMainIdle
-	.syntax unified
-	.code	16
-	.thumb_func
-	.fpu softvfp
-	.type	CreatorMainIdle, %function
-CreatorMainIdle:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 0
-	@ frame_needed = 0, uses_anonymous_args = 0
-	push	{r4, lr}	@
-@ MainMenu.c:54: 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
-	ldr	r0, .L152	@,
-	ldr	r3, .L152+4	@ tmp117,
-	bl	.L30		@
-	movs	r4, r0	@ creator, tmp123
-@ MainMenu.c:55: 	if ( creator->mainUnit )
-	ldr	r3, [r0, #44]	@ tmp124, creator_6->mainUnit
-	cmp	r3, #0	@ tmp124,
-	beq	.L151		@,
-@ MainMenu.c:57: 		SMS_SyncIndirect();
-	ldr	r3, .L152+8	@ tmp119,
-	bl	.L30		@
-@ MainMenu.c:58: 		DrawMapSprite(0,133,12,creator->mainUnit);
-	ldr	r3, [r4, #44]	@ creator_6->mainUnit, creator_6->mainUnit
-	movs	r2, #12	@,
-	movs	r1, #133	@,
-	movs	r0, #0	@,
-	ldr	r4, .L152+12	@ tmp121,
-	bl	.L105		@
-.L151:
-@ MainMenu.c:61: }
-	movs	r0, #0	@,
-	@ sp needed	@
-	pop	{r4}
-	pop	{r1}
-	bx	r1
-.L153:
-	.align	2
-.L152:
-	.word	gCreatorProc
-	.word	ProcFind
-	.word	SMS_SyncIndirect
-	.word	DrawMapSprite
-	.size	CreatorMainIdle, .-CreatorMainIdle
-	.align	1
 	.global	CreatorRandomizeChoices
 	.syntax unified
 	.code	16
@@ -1937,246 +1891,246 @@ CreatorRandomizeChoices:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r3, r4, r5, r6, r7, lr}	@
 	movs	r4, r0	@ creator, tmp265
-@ MainMenu.c:66: 	creator->isPressDisabled = 1;
+@ MainMenu.c:54: 	creator->isPressDisabled = 1;
 	movs	r3, #62	@ tmp159,
 	movs	r2, #1	@ tmp160,
 	strb	r2, [r0, r3]	@ tmp160, creator_43(D)->isPressDisabled
-@ MainMenu.c:69: 	BgMapFillRect(&gBG0MapBuffer[0][0],32,32,0);
+@ MainMenu.c:57: 	BgMapFillRect(&gBG0MapBuffer[0][0],32,32,0);
 	movs	r3, #0	@,
 	adds	r2, r2, #31	@,
 	movs	r1, #32	@,
-	ldr	r0, .L178	@,
-	ldr	r5, .L178+4	@ tmp163,
+	ldr	r0, .L174	@,
+	ldr	r5, .L174+4	@ tmp163,
 	bl	.L115		@
-@ MainMenu.c:70: 	EndFaceById(0);
+@ MainMenu.c:58: 	EndFaceById(0);
 	movs	r0, #0	@,
-	ldr	r3, .L178+8	@ tmp164,
+	ldr	r3, .L174+8	@ tmp164,
 	bl	.L30		@
-@ MainMenu.c:71: 	if ( creator->mainUnit ) { ClearUnit(creator->mainUnit); } // I don't think we need to clear creator->tempUnit since that shouldn't be possible to have filled now.
+@ MainMenu.c:59: 	if ( creator->mainUnit ) { ClearUnit(creator->mainUnit); } // I don't think we need to clear creator->tempUnit since that shouldn't be possible to have filled now.
 	ldr	r0, [r4, #44]	@ _1, creator_43(D)->mainUnit
-@ MainMenu.c:71: 	if ( creator->mainUnit ) { ClearUnit(creator->mainUnit); } // I don't think we need to clear creator->tempUnit since that shouldn't be possible to have filled now.
+@ MainMenu.c:59: 	if ( creator->mainUnit ) { ClearUnit(creator->mainUnit); } // I don't think we need to clear creator->tempUnit since that shouldn't be possible to have filled now.
 	cmp	r0, #0	@ _1,
-	beq	.L155		@,
-@ MainMenu.c:71: 	if ( creator->mainUnit ) { ClearUnit(creator->mainUnit); } // I don't think we need to clear creator->tempUnit since that shouldn't be possible to have filled now.
-	ldr	r3, .L178+12	@ tmp165,
+	beq	.L151		@,
+@ MainMenu.c:59: 	if ( creator->mainUnit ) { ClearUnit(creator->mainUnit); } // I don't think we need to clear creator->tempUnit since that shouldn't be possible to have filled now.
+	ldr	r3, .L174+12	@ tmp165,
 	bl	.L30		@
-.L155:
-@ MainMenu.c:74: 	for ( int i = 0 ; i < creator->cycle ; i++ ) { RandNext(); }
+.L151:
+@ MainMenu.c:62: 	for ( int i = 0 ; i < creator->cycle ; i++ ) { RandNext(); }
 	movs	r3, #63	@ tmp166,
-@ MainMenu.c:74: 	for ( int i = 0 ; i < creator->cycle ; i++ ) { RandNext(); }
+@ MainMenu.c:62: 	for ( int i = 0 ; i < creator->cycle ; i++ ) { RandNext(); }
 	ldrb	r3, [r4, r3]	@ tmp167,
 	cmp	r3, #0	@ tmp167,
-	beq	.L156		@,
-@ MainMenu.c:74: 	for ( int i = 0 ; i < creator->cycle ; i++ ) { RandNext(); }
+	beq	.L152		@,
+@ MainMenu.c:62: 	for ( int i = 0 ; i < creator->cycle ; i++ ) { RandNext(); }
 	movs	r5, #0	@ i,
-@ MainMenu.c:74: 	for ( int i = 0 ; i < creator->cycle ; i++ ) { RandNext(); }
-	ldr	r7, .L178+16	@ tmp168,
-@ MainMenu.c:74: 	for ( int i = 0 ; i < creator->cycle ; i++ ) { RandNext(); }
+@ MainMenu.c:62: 	for ( int i = 0 ; i < creator->cycle ; i++ ) { RandNext(); }
+	ldr	r7, .L174+16	@ tmp168,
+@ MainMenu.c:62: 	for ( int i = 0 ; i < creator->cycle ; i++ ) { RandNext(); }
 	movs	r6, #63	@ tmp169,
-.L157:
-@ MainMenu.c:74: 	for ( int i = 0 ; i < creator->cycle ; i++ ) { RandNext(); }
+.L153:
+@ MainMenu.c:62: 	for ( int i = 0 ; i < creator->cycle ; i++ ) { RandNext(); }
 	bl	.L50		@
-@ MainMenu.c:74: 	for ( int i = 0 ; i < creator->cycle ; i++ ) { RandNext(); }
+@ MainMenu.c:62: 	for ( int i = 0 ; i < creator->cycle ; i++ ) { RandNext(); }
 	adds	r5, r5, #1	@ i,
-@ MainMenu.c:74: 	for ( int i = 0 ; i < creator->cycle ; i++ ) { RandNext(); }
+@ MainMenu.c:62: 	for ( int i = 0 ; i < creator->cycle ; i++ ) { RandNext(); }
 	ldrb	r3, [r4, r6]	@ tmp170,
-@ MainMenu.c:74: 	for ( int i = 0 ; i < creator->cycle ; i++ ) { RandNext(); }
+@ MainMenu.c:62: 	for ( int i = 0 ; i < creator->cycle ; i++ ) { RandNext(); }
 	cmp	r3, r5	@ tmp170, i
-	bgt	.L157		@,
-.L156:
-@ MainMenu.c:76: 	creator->gender = NextRN_N(2)+1; // Randomize gender and route.
+	bgt	.L153		@,
+.L152:
+@ MainMenu.c:64: 	creator->gender = NextRN_N(2)+1; // Randomize gender and route.
 	movs	r0, #2	@,
-	ldr	r6, .L178+20	@ tmp171,
+	ldr	r6, .L174+20	@ tmp171,
 	bl	.L96		@
-@ MainMenu.c:76: 	creator->gender = NextRN_N(2)+1; // Randomize gender and route.
+@ MainMenu.c:64: 	creator->gender = NextRN_N(2)+1; // Randomize gender and route.
 	adds	r0, r0, #1	@ tmp173,
-@ MainMenu.c:76: 	creator->gender = NextRN_N(2)+1; // Randomize gender and route.
+@ MainMenu.c:64: 	creator->gender = NextRN_N(2)+1; // Randomize gender and route.
 	movs	r5, #42	@ tmp174,
 	strb	r0, [r4, r5]	@ tmp173, creator_43(D)->gender
-@ MainMenu.c:77: 	creator->route = NextRN_N(3)+1;
+@ MainMenu.c:65: 	creator->route = NextRN_N(3)+1;
 	movs	r0, #3	@,
 	bl	.L96		@
-@ MainMenu.c:77: 	creator->route = NextRN_N(3)+1;
+@ MainMenu.c:65: 	creator->route = NextRN_N(3)+1;
 	adds	r0, r0, #1	@ tmp178,
 	lsls	r0, r0, #24	@ tmp179, tmp178,
 	lsrs	r0, r0, #24	@ _10, tmp179,
-@ MainMenu.c:77: 	creator->route = NextRN_N(3)+1;
+@ MainMenu.c:65: 	creator->route = NextRN_N(3)+1;
 	movs	r3, #43	@ tmp180,
 	strb	r0, [r4, r3]	@ _10, creator_43(D)->route
-@ MainMenu.c:78: 	creator->currSet = GetClassSet(creator->gender,creator->route); // We need this to load a unit.
+@ MainMenu.c:66: 	creator->currSet = GetClassSet(creator->gender,creator->route); // We need this to load a unit.
 	ldrb	r5, [r4, r5]	@ _11,
-	ldr	r3, .L178+24	@ ivtmp.211,
+	ldr	r3, .L174+24	@ ivtmp.211,
 @ ClassDisplay.c:191: 	for ( int i = 0 ; i < 6 ; i++ )
 	movs	r2, #0	@ i,
-	b	.L160		@
-.L158:
+	b	.L156		@
+.L154:
 @ ClassDisplay.c:191: 	for ( int i = 0 ; i < 6 ; i++ )
 	adds	r2, r2, #1	@ i,
 	adds	r3, r3, #12	@ ivtmp.211,
 @ ClassDisplay.c:191: 	for ( int i = 0 ; i < 6 ; i++ )
 	cmp	r2, #6	@ i,
-	beq	.L173		@,
-.L160:
+	beq	.L169		@,
+.L156:
 @ ClassDisplay.c:193: 		if ( gClassMenuOptions[i].gender == gender && gClassMenuOptions[i].route == route )
 	ldrb	r1, [r3]	@ MEM[base: _34, offset: 0B], MEM[base: _34, offset: 0B]
 	cmp	r1, r5	@ MEM[base: _34, offset: 0B], _11
-	bne	.L158		@,
+	bne	.L154		@,
 @ ClassDisplay.c:193: 		if ( gClassMenuOptions[i].gender == gender && gClassMenuOptions[i].route == route )
 	ldrb	r1, [r3, #1]	@ MEM[base: _34, offset: 1B], MEM[base: _34, offset: 1B]
 	cmp	r1, r0	@ MEM[base: _34, offset: 1B], _10
-	bne	.L158		@,
+	bne	.L154		@,
 @ ClassDisplay.c:195: 			return &gClassMenuOptions[i];
 	lsls	r3, r2, #1	@ tmp186, i,
 	adds	r3, r3, r2	@ tmp187, tmp186, i
 	lsls	r3, r3, #2	@ tmp188, tmp187,
-	ldr	r2, .L178+24	@ tmp189,
+	ldr	r2, .L174+24	@ tmp189,
 	adds	r3, r3, r2	@ _76, tmp188, tmp189
-	b	.L159		@
-.L173:
+	b	.L155		@
+.L169:
 @ ClassDisplay.c:198: 	return NULL; // This should never happen, but return null if no entry is found.
 	movs	r3, #0	@ _76,
-.L159:
-@ MainMenu.c:78: 	creator->currSet = GetClassSet(creator->gender,creator->route); // We need this to load a unit.
+.L155:
+@ MainMenu.c:66: 	creator->currSet = GetClassSet(creator->gender,creator->route); // We need this to load a unit.
 	str	r3, [r4, #52]	@ _76, creator_43(D)->currSet
-@ MainMenu.c:80: 	while ( creator->currSet->list[numClasses].character && numClasses < 5 ) { numClasses++; } // This should equal the number of classes this set has.
+@ MainMenu.c:68: 	while ( creator->currSet->list[numClasses].character && numClasses < 5 ) { numClasses++; } // This should equal the number of classes this set has.
 	ldrb	r2, [r3, #2]	@ tmp190,
 	cmp	r2, #0	@ tmp190,
-	beq	.L168		@,
+	beq	.L164		@,
 	adds	r3, r3, #4	@ ivtmp.203,
-@ MainMenu.c:79: 	int numClasses = 0;
+@ MainMenu.c:67: 	int numClasses = 0;
 	movs	r0, #0	@ numClasses,
-@ MainMenu.c:80: 	while ( creator->currSet->list[numClasses].character && numClasses < 5 ) { numClasses++; } // This should equal the number of classes this set has.
+@ MainMenu.c:68: 	while ( creator->currSet->list[numClasses].character && numClasses < 5 ) { numClasses++; } // This should equal the number of classes this set has.
 	movs	r6, #4	@ tmp197,
 	movs	r5, #0	@ tmp199,
-.L162:
-@ MainMenu.c:80: 	while ( creator->currSet->list[numClasses].character && numClasses < 5 ) { numClasses++; } // This should equal the number of classes this set has.
+.L158:
+@ MainMenu.c:68: 	while ( creator->currSet->list[numClasses].character && numClasses < 5 ) { numClasses++; } // This should equal the number of classes this set has.
 	adds	r0, r0, #1	@ numClasses,
-@ MainMenu.c:80: 	while ( creator->currSet->list[numClasses].character && numClasses < 5 ) { numClasses++; } // This should equal the number of classes this set has.
+@ MainMenu.c:68: 	while ( creator->currSet->list[numClasses].character && numClasses < 5 ) { numClasses++; } // This should equal the number of classes this set has.
 	ldrb	r2, [r3]	@ MEM[base: _71, offset: 0B], MEM[base: _71, offset: 0B]
 	subs	r1, r2, #1	@ tmp194, MEM[base: _71, offset: 0B]
 	sbcs	r2, r2, r1	@ tmp193, MEM[base: _71, offset: 0B], tmp194
-@ MainMenu.c:80: 	while ( creator->currSet->list[numClasses].character && numClasses < 5 ) { numClasses++; } // This should equal the number of classes this set has.
+@ MainMenu.c:68: 	while ( creator->currSet->list[numClasses].character && numClasses < 5 ) { numClasses++; } // This should equal the number of classes this set has.
 	lsrs	r1, r0, #31	@ tmp198, numClasses,
 	cmp	r6, r0	@ tmp197, numClasses
 	adcs	r1, r1, r5	@ tmp196, tmp198, tmp199
 	adds	r3, r3, #2	@ ivtmp.203,
 	tst	r1, r2	@ tmp196, tmp193
-	bne	.L162		@,
-.L161:
-@ MainMenu.c:81: 	int classIndex = NextRN_N(numClasses); // NOT class ID! Index with this class set!
-	ldr	r5, .L178+20	@ tmp203,
+	bne	.L158		@,
+.L157:
+@ MainMenu.c:69: 	int classIndex = NextRN_N(numClasses); // NOT class ID! Index with this class set!
+	ldr	r5, .L174+20	@ tmp203,
 	bl	.L115		@
 	movs	r1, r0	@ classIndex, tmp268
-@ MainMenu.c:82: 	creator->lastClassIndex = classIndex;
+@ MainMenu.c:70: 	creator->lastClassIndex = classIndex;
 	movs	r3, #56	@ tmp204,
 	strb	r0, [r4, r3]	@ classIndex, creator_43(D)->lastClassIndex
-@ MainMenu.c:83: 	creator->mainUnit = LoadCreatorUnit(creator,classIndex); // Randomized class based on random gender and route.
+@ MainMenu.c:71: 	creator->mainUnit = LoadCreatorUnit(creator,classIndex); // Randomized class based on random gender and route.
 	movs	r0, r4	@, creator
 	bl	LoadCreatorUnit		@
-@ MainMenu.c:83: 	creator->mainUnit = LoadCreatorUnit(creator,classIndex); // Randomized class based on random gender and route.
+@ MainMenu.c:71: 	creator->mainUnit = LoadCreatorUnit(creator,classIndex); // Randomized class based on random gender and route.
 	str	r0, [r4, #44]	@ tmp269, creator_43(D)->mainUnit
-@ MainMenu.c:84: 	creator->boon = NextRN_N(7)+1; // 7 max instead of 8 intentionally because of the next few lines.
+@ MainMenu.c:72: 	creator->boon = NextRN_N(7)+1; // 7 max instead of 8 intentionally because of the next few lines.
 	movs	r0, #7	@,
 	bl	.L115		@
-@ MainMenu.c:84: 	creator->boon = NextRN_N(7)+1; // 7 max instead of 8 intentionally because of the next few lines.
+@ MainMenu.c:72: 	creator->boon = NextRN_N(7)+1; // 7 max instead of 8 intentionally because of the next few lines.
 	adds	r0, r0, #1	@ tmp208,
 	lsls	r0, r0, #24	@ tmp209, tmp208,
 	lsrs	r0, r0, #24	@ _20, tmp209,
-@ MainMenu.c:84: 	creator->boon = NextRN_N(7)+1; // 7 max instead of 8 intentionally because of the next few lines.
+@ MainMenu.c:72: 	creator->boon = NextRN_N(7)+1; // 7 max instead of 8 intentionally because of the next few lines.
 	movs	r3, #57	@ tmp210,
 	strb	r0, [r4, r3]	@ _20, creator_43(D)->boon
-@ MainMenu.c:85: 	if ( creator->route != Mage && creator->boon == Mag ) { creator->boon++; } // If we're not a mage and rolled a magic boon, increment. This works because there are 8 total stats, but we maxed at 7 for the roll.
+@ MainMenu.c:73: 	if ( creator->route != Mage && creator->boon == Mag ) { creator->boon++; } // If we're not a mage and rolled a magic boon, increment. This works because there are 8 total stats, but we maxed at 7 for the roll.
 	subs	r3, r3, #14	@ tmp212,
 	ldrb	r3, [r4, r3]	@ _21,
-@ MainMenu.c:85: 	if ( creator->route != Mage && creator->boon == Mag ) { creator->boon++; } // If we're not a mage and rolled a magic boon, increment. This works because there are 8 total stats, but we maxed at 7 for the roll.
+@ MainMenu.c:73: 	if ( creator->route != Mage && creator->boon == Mag ) { creator->boon++; } // If we're not a mage and rolled a magic boon, increment. This works because there are 8 total stats, but we maxed at 7 for the roll.
 	cmp	r0, #3	@ _20,
-	bne	.L163		@,
+	bne	.L159		@,
 	cmp	r3, #3	@ _21,
-	bne	.L174		@,
-.L163:
-@ MainMenu.c:86: 	if ( creator->route == Mage && creator->boon == Str ) { creator->boon++; } // If we're a mage and rolled a strength boon, increment.
+	bne	.L170		@,
+.L159:
+@ MainMenu.c:74: 	if ( creator->route == Mage && creator->boon == Str ) { creator->boon++; } // If we're a mage and rolled a strength boon, increment.
 	cmp	r3, #3	@ _21,
-	beq	.L175		@,
-.L164:
-@ MainMenu.c:89: 		creator->bane = NextRN_N(7)+1;
-	ldr	r7, .L178+20	@ tmp231,
-@ MainMenu.c:89: 		creator->bane = NextRN_N(7)+1;
+	beq	.L171		@,
+.L160:
+@ MainMenu.c:77: 		creator->bane = NextRN_N(7)+1;
+	ldr	r7, .L174+20	@ tmp231,
+@ MainMenu.c:77: 		creator->bane = NextRN_N(7)+1;
 	movs	r5, #58	@ tmp235,
-@ MainMenu.c:90: 		if ( creator->route != Mage && creator->bane == Mag ) { creator->bane++; } // Again, account for non-mages rolling magic and mages rolling strength.
+@ MainMenu.c:78: 		if ( creator->route != Mage && creator->bane == Mag ) { creator->bane++; } // Again, account for non-mages rolling magic and mages rolling strength.
 	movs	r6, #43	@ tmp237,
-	b	.L167		@
-.L168:
-@ MainMenu.c:79: 	int numClasses = 0;
+	b	.L163		@
+.L164:
+@ MainMenu.c:67: 	int numClasses = 0;
 	movs	r0, #0	@ numClasses,
-	b	.L161		@
-.L174:
-@ MainMenu.c:85: 	if ( creator->route != Mage && creator->boon == Mag ) { creator->boon++; } // If we're not a mage and rolled a magic boon, increment. This works because there are 8 total stats, but we maxed at 7 for the roll.
+	b	.L157		@
+.L170:
+@ MainMenu.c:73: 	if ( creator->route != Mage && creator->boon == Mag ) { creator->boon++; } // If we're not a mage and rolled a magic boon, increment. This works because there are 8 total stats, but we maxed at 7 for the roll.
 	movs	r3, #57	@ tmp225,
 	movs	r2, #4	@ tmp226,
 	strb	r2, [r4, r3]	@ tmp226, creator_43(D)->boon
-	b	.L164		@
-.L175:
-@ MainMenu.c:86: 	if ( creator->route == Mage && creator->boon == Str ) { creator->boon++; } // If we're a mage and rolled a strength boon, increment.
+	b	.L160		@
+.L171:
+@ MainMenu.c:74: 	if ( creator->route == Mage && creator->boon == Str ) { creator->boon++; } // If we're a mage and rolled a strength boon, increment.
 	cmp	r0, #2	@ _20,
-	bne	.L164		@,
-@ MainMenu.c:86: 	if ( creator->route == Mage && creator->boon == Str ) { creator->boon++; } // If we're a mage and rolled a strength boon, increment.
+	bne	.L160		@,
+@ MainMenu.c:74: 	if ( creator->route == Mage && creator->boon == Str ) { creator->boon++; } // If we're a mage and rolled a strength boon, increment.
 	adds	r3, r3, #54	@ tmp228,
 	movs	r2, #3	@ tmp229,
 	strb	r2, [r4, r3]	@ tmp229, creator_43(D)->boon
-	b	.L164		@
-.L165:
-@ MainMenu.c:91: 		if ( creator->route == Mage && creator->bane == Str ) { creator->bane++; }
+	b	.L160		@
+.L161:
+@ MainMenu.c:79: 		if ( creator->route == Mage && creator->bane == Str ) { creator->bane++; }
 	cmp	r3, #3	@ _28,
-	beq	.L176		@,
-.L166:
-@ MainMenu.c:92: 	} while ( creator->boon == creator->bane ); // Within a do/while to prevent randomly generating the same boon and bane.
+	beq	.L172		@,
+.L162:
+@ MainMenu.c:80: 	} while ( creator->boon == creator->bane ); // Within a do/while to prevent randomly generating the same boon and bane.
 	movs	r3, #57	@ tmp256,
-@ MainMenu.c:92: 	} while ( creator->boon == creator->bane ); // Within a do/while to prevent randomly generating the same boon and bane.
+@ MainMenu.c:80: 	} while ( creator->boon == creator->bane ); // Within a do/while to prevent randomly generating the same boon and bane.
 	ldrb	r2, [r4, r3]	@ tmp258,
 	ldrb	r3, [r4, r5]	@ tmp259,
 	cmp	r2, r3	@ tmp258, tmp259
-	bne	.L177		@,
-.L167:
-@ MainMenu.c:89: 		creator->bane = NextRN_N(7)+1;
+	bne	.L173		@,
+.L163:
+@ MainMenu.c:77: 		creator->bane = NextRN_N(7)+1;
 	movs	r0, #7	@,
 	bl	.L50		@
-@ MainMenu.c:89: 		creator->bane = NextRN_N(7)+1;
+@ MainMenu.c:77: 		creator->bane = NextRN_N(7)+1;
 	adds	r0, r0, #1	@ tmp233,
 	lsls	r0, r0, #24	@ tmp234, tmp233,
 	lsrs	r0, r0, #24	@ _27, tmp234,
-@ MainMenu.c:89: 		creator->bane = NextRN_N(7)+1;
+@ MainMenu.c:77: 		creator->bane = NextRN_N(7)+1;
 	strb	r0, [r4, r5]	@ _27, creator_43(D)->bane
-@ MainMenu.c:90: 		if ( creator->route != Mage && creator->bane == Mag ) { creator->bane++; } // Again, account for non-mages rolling magic and mages rolling strength.
+@ MainMenu.c:78: 		if ( creator->route != Mage && creator->bane == Mag ) { creator->bane++; } // Again, account for non-mages rolling magic and mages rolling strength.
 	ldrb	r3, [r4, r6]	@ _28,
-@ MainMenu.c:90: 		if ( creator->route != Mage && creator->bane == Mag ) { creator->bane++; } // Again, account for non-mages rolling magic and mages rolling strength.
+@ MainMenu.c:78: 		if ( creator->route != Mage && creator->bane == Mag ) { creator->bane++; } // Again, account for non-mages rolling magic and mages rolling strength.
 	cmp	r0, #3	@ _27,
-	bne	.L165		@,
+	bne	.L161		@,
 	cmp	r3, #3	@ _28,
-	beq	.L165		@,
-@ MainMenu.c:90: 		if ( creator->route != Mage && creator->bane == Mag ) { creator->bane++; } // Again, account for non-mages rolling magic and mages rolling strength.
+	beq	.L161		@,
+@ MainMenu.c:78: 		if ( creator->route != Mage && creator->bane == Mag ) { creator->bane++; } // Again, account for non-mages rolling magic and mages rolling strength.
 	movs	r3, #4	@ tmp251,
 	strb	r3, [r4, r5]	@ tmp251, creator_43(D)->bane
-	b	.L166		@
-.L176:
-@ MainMenu.c:91: 		if ( creator->route == Mage && creator->bane == Str ) { creator->bane++; }
+	b	.L162		@
+.L172:
+@ MainMenu.c:79: 		if ( creator->route == Mage && creator->bane == Str ) { creator->bane++; }
 	cmp	r0, #2	@ _27,
-	bne	.L166		@,
-@ MainMenu.c:91: 		if ( creator->route == Mage && creator->bane == Str ) { creator->bane++; }
+	bne	.L162		@,
+@ MainMenu.c:79: 		if ( creator->route == Mage && creator->bane == Str ) { creator->bane++; }
 	strb	r3, [r4, r5]	@ tmp254, creator_43(D)->bane
-	b	.L166		@
-.L177:
-@ MainMenu.c:94: 	creator->lastIndex = RandomEntry; // When we start the new menu, jump to the random button.
+	b	.L162		@
+.L173:
+@ MainMenu.c:82: 	creator->lastIndex = RandomEntry; // When we start the new menu, jump to the random button.
 	movs	r3, #60	@ tmp260,
 	movs	r2, #0	@ tmp261,
 	strb	r2, [r4, r3]	@ tmp261, creator_43(D)->lastIndex
-@ MainMenu.c:95: }
+@ MainMenu.c:83: }
 	@ sp needed	@
 	pop	{r3, r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L179:
+.L175:
 	.align	2
-.L178:
+.L174:
 	.word	gBG0MapBuffer
 	.word	BgMapFillRect
 	.word	EndFaceById
@@ -2185,6 +2139,104 @@ CreatorRandomizeChoices:
 	.word	NextRN_N
 	.word	gClassMenuOptions
 	.size	CreatorRandomizeChoices, .-CreatorRandomizeChoices
+	.align	1
+	.global	CreatorSpriteSetup
+	.syntax unified
+	.code	16
+	.thumb_func
+	.fpu softvfp
+	.type	CreatorSpriteSetup, %function
+CreatorSpriteSetup:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	push	{r4, lr}	@
+	movs	r4, r0	@ proc, tmp125
+@ MainMenu.c:87: 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
+	ldr	r0, .L177	@,
+	ldr	r3, .L177+4	@ tmp114,
+	bl	.L30		@
+@ MainMenu.c:88: 	proc->isActive = 0;
+	movs	r3, #41	@ tmp115,
+	movs	r2, #0	@ tmp116,
+	strb	r2, [r4, r3]	@ tmp116, proc_5(D)->isActive
+@ MainMenu.c:89: 	proc->x = 133;
+	adds	r3, r3, #1	@ tmp118,
+	adds	r2, r2, #133	@ tmp119,
+	strb	r2, [r4, r3]	@ tmp119, proc_5(D)->x
+@ MainMenu.c:90: 	proc->y = 12;
+	adds	r3, r3, #1	@ tmp121,
+	subs	r2, r2, #121	@ tmp122,
+	strb	r2, [r4, r3]	@ tmp122, proc_5(D)->y
+@ MainMenu.c:91: 	proc->unit = &creator->mainUnit; // Point to our creator proc's main unit pointer.
+	adds	r0, r0, #44	@ tmp124,
+@ MainMenu.c:91: 	proc->unit = &creator->mainUnit; // Point to our creator proc's main unit pointer.
+	str	r0, [r4, #44]	@ tmp124, proc_5(D)->unit
+@ MainMenu.c:92: }
+	@ sp needed	@
+	pop	{r4}
+	pop	{r0}
+	bx	r0
+.L178:
+	.align	2
+.L177:
+	.word	gCreatorProc
+	.word	ProcFind
+	.size	CreatorSpriteSetup, .-CreatorSpriteSetup
+	.align	1
+	.global	CreatorSpriteIdle
+	.syntax unified
+	.code	16
+	.thumb_func
+	.fpu softvfp
+	.type	CreatorSpriteIdle, %function
+CreatorSpriteIdle:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	push	{r4, lr}	@
+	movs	r4, r0	@ proc, tmp132
+@ MainMenu.c:96: 	if ( proc->isActive && *proc->unit )
+	movs	r3, #41	@ tmp120,
+@ MainMenu.c:96: 	if ( proc->isActive && *proc->unit )
+	ldrb	r3, [r0, r3]	@ tmp121,
+	cmp	r3, #0	@ tmp121,
+	beq	.L179		@,
+@ MainMenu.c:96: 	if ( proc->isActive && *proc->unit )
+	ldr	r3, [r0, #44]	@ proc_12(D)->unit, proc_12(D)->unit
+@ MainMenu.c:96: 	if ( proc->isActive && *proc->unit )
+	ldr	r3, [r3]	@ *_2, *_2
+	cmp	r3, #0	@ *_2,
+	beq	.L179		@,
+@ MainMenu.c:98: 		SMS_SyncIndirect();
+	ldr	r3, .L181	@ tmp124,
+	bl	.L30		@
+@ MainMenu.c:99: 		DrawMapSprite(0,proc->x,proc->y,*proc->unit);
+	ldr	r3, [r4, #44]	@ proc_12(D)->unit, proc_12(D)->unit
+	ldr	r3, [r3]	@ *_8, *_8
+@ MainMenu.c:99: 		DrawMapSprite(0,proc->x,proc->y,*proc->unit);
+	movs	r2, #43	@ tmp127,
+@ MainMenu.c:99: 		DrawMapSprite(0,proc->x,proc->y,*proc->unit);
+	ldrb	r2, [r4, r2]	@ tmp128,
+@ MainMenu.c:99: 		DrawMapSprite(0,proc->x,proc->y,*proc->unit);
+	movs	r1, #42	@ tmp129,
+@ MainMenu.c:99: 		DrawMapSprite(0,proc->x,proc->y,*proc->unit);
+	ldrb	r1, [r4, r1]	@ tmp130,
+	movs	r0, #0	@,
+	ldr	r4, .L181+4	@ tmp131,
+	bl	.L105		@
+.L179:
+@ MainMenu.c:101: }
+	@ sp needed	@
+	pop	{r4}
+	pop	{r0}
+	bx	r0
+.L182:
+	.align	2
+.L181:
+	.word	SMS_SyncIndirect
+	.word	DrawMapSprite
+	.size	CreatorSpriteIdle, .-CreatorSpriteIdle
 	.align	1
 	.global	CreatorRouteSwitchIn
 	.syntax unified
@@ -2209,8 +2261,8 @@ CreatorRouteSwitchIn:
 	movs	r3, #0	@,
 	movs	r2, #18	@,
 	movs	r1, #20	@,
-	ldr	r0, .L196	@,
-	ldr	r5, .L196+4	@ tmp139,
+	ldr	r0, .L199	@,
+	ldr	r5, .L199+4	@ tmp139,
 	bl	.L115		@
 @ RouteDisplay.c:12: 	char* string = GetStringFromIndex(gCreatorRouteDisplayTexts[proc->commandIndex]);
 	movs	r3, #97	@ tmp141,
@@ -2218,33 +2270,33 @@ CreatorRouteSwitchIn:
 @ RouteDisplay.c:12: 	char* string = GetStringFromIndex(gCreatorRouteDisplayTexts[proc->commandIndex]);
 	lsls	r3, r3, #1	@ tmp143, tmp142,
 @ RouteDisplay.c:12: 	char* string = GetStringFromIndex(gCreatorRouteDisplayTexts[proc->commandIndex]);
-	ldr	r2, .L196+8	@ tmp140,
+	ldr	r2, .L199+8	@ tmp140,
 	ldrh	r0, [r3, r2]	@ tmp144, gCreatorRouteDisplayTexts
-	ldr	r3, .L196+12	@ tmp145,
+	ldr	r3, .L199+12	@ tmp145,
 	bl	.L30		@
 	movs	r2, r0	@ string, tmp182
 	str	r0, [r7]	@ string, %sfp
-@ CharacterCreator.c:307: 	for ( int i = 0 ; string[i] ; i++ )
+@ CharacterCreator.c:308: 	for ( int i = 0 ; string[i] ; i++ )
 	ldrb	r3, [r0]	@ _46, *string_26
-@ CharacterCreator.c:307: 	for ( int i = 0 ; string[i] ; i++ )
+@ CharacterCreator.c:308: 	for ( int i = 0 ; string[i] ; i++ )
 	cmp	r3, #0	@ _46,
-	beq	.L189		@,
-	adds	r2, r2, #1	@ ivtmp.236,
-@ CharacterCreator.c:306: 	int sum = 1;
+	beq	.L192		@,
+	adds	r2, r2, #1	@ ivtmp.238,
+@ CharacterCreator.c:307: 	int sum = 1;
 	movs	r6, #1	@ sum,
-.L183:
-@ CharacterCreator.c:309: 		if ( string[i] == NL ) { sum++; }
+.L186:
+@ CharacterCreator.c:310: 		if ( string[i] == NL ) { sum++; }
 	subs	r3, r3, #1	@ tmp179,
 	rsbs	r1, r3, #0	@ tmp180, tmp179
 	adcs	r3, r3, r1	@ tmp178, tmp179, tmp180
 	adds	r6, r6, r3	@ sum, sum, tmp178
-	adds	r2, r2, #1	@ ivtmp.236,
-@ CharacterCreator.c:307: 	for ( int i = 0 ; string[i] ; i++ )
-	subs	r3, r2, #1	@ tmp146, ivtmp.236,
+	adds	r2, r2, #1	@ ivtmp.238,
+@ CharacterCreator.c:308: 	for ( int i = 0 ; string[i] ; i++ )
+	subs	r3, r2, #1	@ tmp146, ivtmp.238,
 	ldrb	r3, [r3]	@ _46, MEM[base: _91, offset: 4294967295B]
-@ CharacterCreator.c:307: 	for ( int i = 0 ; string[i] ; i++ )
+@ CharacterCreator.c:308: 	for ( int i = 0 ; string[i] ; i++ )
 	cmp	r3, #0	@ _46,
-	bne	.L183		@,
+	bne	.L186		@,
 @ RouteDisplay.c:15: 	TextHandle handles[lines];
 	lsls	r3, r6, #3	@ tmp150, sum,
 	mov	r2, sp	@ tmp186,
@@ -2253,20 +2305,20 @@ CreatorRouteSwitchIn:
 	str	r3, [r7, #4]	@ tmp187, %sfp
 @ RouteDisplay.c:16: 	for ( int i = 0 ; i < lines ; i++ )
 	cmp	r6, #0	@ sum,
-	ble	.L195		@,
-.L181:
+	ble	.L198		@,
+.L184:
 	ldr	r4, [r7, #4]	@ handles.6, %sfp
-	mov	r8, r4	@ ivtmp.222, ivtmp.222
+	mov	r8, r4	@ ivtmp.224, ivtmp.224
 @ RouteDisplay.c:15: 	TextHandle handles[lines];
 	movs	r3, #0	@ tile,
 	mov	r10, r3	@ tile, tile
 	mov	r9, r3	@ i, i
 @ RouteDisplay.c:18: 		handles[i].tileIndexOffset = gpCurrentFont->tileNext+tile;
-	ldr	r3, .L196+16	@ tmp156,
+	ldr	r3, .L199+16	@ tmp156,
 	mov	fp, r3	@ tmp156, tmp156
 @ RouteDisplay.c:19: 		handles[i].xCursor = 0;
 	movs	r5, #0	@ tmp162,
-.L185:
+.L188:
 @ RouteDisplay.c:18: 		handles[i].tileIndexOffset = gpCurrentFont->tileNext+tile;
 	mov	r3, fp	@ tmp156, tmp156
 	ldr	r3, [r3]	@ tmp192, gpCurrentFont
@@ -2291,45 +2343,45 @@ CreatorRouteSwitchIn:
 	mov	ip, r3	@ tmp194, tmp194
 	add	r10, r10, ip	@ tile, tmp194
 @ RouteDisplay.c:26: 		Text_Clear(&handles[i]);
-	movs	r0, r4	@, ivtmp.231
-	ldr	r3, .L196+20	@ tmp196,
+	movs	r0, r4	@, ivtmp.233
+	ldr	r3, .L199+20	@ tmp196,
 	bl	.L30		@
 @ RouteDisplay.c:16: 	for ( int i = 0 ; i < lines ; i++ )
 	movs	r3, #1	@ tmp198,
 	mov	ip, r3	@ tmp198, tmp198
 	add	r9, r9, ip	@ i, tmp198
-	adds	r4, r4, #8	@ ivtmp.231,
+	adds	r4, r4, #8	@ ivtmp.233,
 @ RouteDisplay.c:16: 	for ( int i = 0 ; i < lines ; i++ )
 	cmp	r9, r6	@ i, sum
-	blt	.L185		@,
+	blt	.L188		@,
 @ RouteDisplay.c:28: 	DrawMultiline(handles,string,lines);
 	movs	r2, r6	@, sum
 	ldr	r1, [r7]	@, %sfp
 	ldr	r0, [r7, #4]	@, %sfp
 	bl	DrawMultiline		@
-	ldr	r5, .L196	@ ivtmp.223,
+	ldr	r5, .L199	@ ivtmp.225,
 	movs	r4, #0	@ i,
 @ RouteDisplay.c:32: 		Text_Display(&handles[i],&gBG0MapBuffer[3+2*i][13]);
-	ldr	r3, .L196+24	@ tmp175,
+	ldr	r3, .L199+24	@ tmp175,
 	mov	r9, r3	@ tmp175, tmp175
-.L187:
+.L190:
 @ RouteDisplay.c:32: 		Text_Display(&handles[i],&gBG0MapBuffer[3+2*i][13]);
-	movs	r1, r5	@, ivtmp.223
-	mov	r0, r8	@, ivtmp.222
+	movs	r1, r5	@, ivtmp.225
+	mov	r0, r8	@, ivtmp.224
 	bl	.L114		@
 @ RouteDisplay.c:30: 	for ( int i = 0 ; i < lines ; i++ )
 	adds	r4, r4, #1	@ i,
 	movs	r3, #8	@ tmp200,
 	mov	ip, r3	@ tmp200, tmp200
-	add	r8, r8, ip	@ ivtmp.222, tmp200
-	adds	r5, r5, #128	@ ivtmp.223,
+	add	r8, r8, ip	@ ivtmp.224, tmp200
+	adds	r5, r5, #128	@ ivtmp.225,
 @ RouteDisplay.c:30: 	for ( int i = 0 ; i < lines ; i++ )
 	cmp	r4, r6	@ i, sum
-	blt	.L187		@,
-.L188:
+	blt	.L190		@,
+.L191:
 @ RouteDisplay.c:34: 	EnableBgSyncByMask(1);
 	movs	r0, #1	@,
-	ldr	r3, .L196+28	@ tmp176,
+	ldr	r3, .L199+28	@ tmp176,
 	bl	.L30		@
 @ RouteDisplay.c:35: }
 	mov	sp, r7	@,
@@ -2343,24 +2395,24 @@ CreatorRouteSwitchIn:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L189:
-@ CharacterCreator.c:306: 	int sum = 1;
+.L192:
+@ CharacterCreator.c:307: 	int sum = 1;
 	movs	r6, #1	@ sum,
 @ RouteDisplay.c:15: 	TextHandle handles[lines];
 	movs	r3, #8	@ tmp207,
 	adds	r3, r7, r3	@ tmp206,, tmp207
 	str	r3, [r7, #4]	@ tmp206, %sfp
-	b	.L181		@
-.L195:
+	b	.L184		@
+.L198:
 @ RouteDisplay.c:28: 	DrawMultiline(handles,string,lines);
 	movs	r2, r6	@, sum
 	ldr	r1, [r7]	@, %sfp
 	ldr	r0, [r7, #4]	@, %sfp
 	bl	DrawMultiline		@
-	b	.L188		@
-.L197:
+	b	.L191		@
+.L200:
 	.align	2
-.L196:
+.L199:
 	.word	gBG0MapBuffer+218
 	.word	BgMapFillRect
 	.word	gCreatorRouteDisplayTexts
@@ -2385,21 +2437,21 @@ CreatorClassDrawUIBox:
 @ ClassDisplay.c:4: 	ApplyBGBox(gBG1MapBuffer,&gCreatorClassUIBoxTSA,0,12);
 	movs	r3, #12	@,
 	movs	r2, #0	@,
-	ldr	r1, .L199	@,
-	ldr	r0, .L199+4	@,
+	ldr	r1, .L202	@,
+	ldr	r0, .L202+4	@,
 	bl	ApplyBGBox		@
 @ ClassDisplay.c:5: 	EnableBgSyncByMask(2);
 	movs	r0, #2	@,
-	ldr	r3, .L199+8	@ tmp113,
+	ldr	r3, .L202+8	@ tmp113,
 	bl	.L30		@
 @ ClassDisplay.c:6: }
 	@ sp needed	@
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L200:
+.L203:
 	.align	2
-.L199:
+.L202:
 	.word	gCreatorClassUIBoxTSA
 	.word	gBG1MapBuffer
 	.word	EnableBgSyncByMask
@@ -2419,41 +2471,41 @@ CreatorClassStartPlatform:
 	sub	sp, sp, #12	@,,
 	movs	r4, r0	@ proc, tmp169
 @ ClassDisplay.c:10: 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
-	ldr	r0, .L209	@,
-	ldr	r3, .L209+4	@ tmp130,
+	ldr	r0, .L212	@,
+	ldr	r3, .L212+4	@ tmp130,
 	bl	.L30		@
 @ ClassDisplay.c:11: 	if ( creator->route == Mercenary ) { proc->platformType = GrassPlatform; }
 	movs	r3, #43	@ tmp131,
 	ldrb	r3, [r0, r3]	@ _1,
 @ ClassDisplay.c:11: 	if ( creator->route == Mercenary ) { proc->platformType = GrassPlatform; }
 	cmp	r3, #1	@ _1,
-	beq	.L207		@,
+	beq	.L210		@,
 @ ClassDisplay.c:12: 	else if ( creator->route == Military ) { proc->platformType = RoadPlatform; }
 	cmp	r3, #2	@ _1,
-	beq	.L208		@,
+	beq	.L211		@,
 @ ClassDisplay.c:13: 	else if ( creator->route == Mage ) { proc->platformType = SandPlatform; }
 	cmp	r3, #3	@ _1,
-	bne	.L203		@,
+	bne	.L206		@,
 @ ClassDisplay.c:13: 	else if ( creator->route == Mage ) { proc->platformType = SandPlatform; }
 	adds	r3, r3, #77	@ tmp138,
 	movs	r2, #9	@ tmp139,
 	strb	r2, [r4, r3]	@ tmp139, proc_20(D)->platformType
-	b	.L203		@
-.L207:
+	b	.L206		@
+.L210:
 @ ClassDisplay.c:11: 	if ( creator->route == Mercenary ) { proc->platformType = GrassPlatform; }
 	adds	r3, r3, #79	@ tmp132,
 	movs	r2, #0	@ tmp133,
 	strb	r2, [r4, r3]	@ tmp133, proc_20(D)->platformType
-.L203:
+.L206:
 @ ClassDisplay.c:14: 	proc->mode = 1;
 	movs	r3, #64	@ tmp141,
 	movs	r2, #1	@ tmp142,
 	strb	r2, [r4, r3]	@ tmp142, proc_20(D)->mode
-	movs	r1, r4	@ ivtmp.246, proc
-	adds	r1, r1, #44	@ ivtmp.246,
+	movs	r1, r4	@ ivtmp.248, proc
+	adds	r1, r1, #44	@ ivtmp.248,
 @ ClassDisplay.c:15: 	for ( int i = 0 ; i < 5 ; i++ ) { proc->classes[i] = creator->currSet->list[i].class; }
 	movs	r3, #0	@ i,
-.L205:
+.L208:
 @ ClassDisplay.c:15: 	for ( int i = 0 ; i < 5 ; i++ ) { proc->classes[i] = creator->currSet->list[i].class; }
 	lsls	r2, r3, #1	@ tmp145, i,
 	ldr	r5, [r0, #52]	@ tmp176, creator_19->currSet
@@ -2463,10 +2515,10 @@ CreatorClassStartPlatform:
 	strh	r2, [r1]	@ tmp148, MEM[base: _37, offset: 0B]
 @ ClassDisplay.c:15: 	for ( int i = 0 ; i < 5 ; i++ ) { proc->classes[i] = creator->currSet->list[i].class; }
 	adds	r3, r3, #1	@ i,
-	adds	r1, r1, #2	@ ivtmp.246,
+	adds	r1, r1, #2	@ ivtmp.248,
 @ ClassDisplay.c:15: 	for ( int i = 0 ; i < 5 ; i++ ) { proc->classes[i] = creator->currSet->list[i].class; }
 	cmp	r3, #5	@ i,
-	bne	.L205		@,
+	bne	.L208		@,
 @ ClassDisplay.c:16: 	proc->menuItem = creator->lastClassIndex;
 	adds	r3, r3, #51	@ tmp150,
 	ldrb	r2, [r0, r3]	@ _5,
@@ -2490,10 +2542,10 @@ CreatorClassStartPlatform:
 	lsls	r2, r2, #1	@, tmp172,
 	rsbs	r1, r1, #0	@, tmp173
 	movs	r0, #0	@,
-	ldr	r5, .L209+8	@ tmp161,
+	ldr	r5, .L212+8	@ tmp161,
 	bl	.L115		@
 @ ClassDisplay.c:19: 	StartMovingPlatform(proc->platformType,0x118,gCreatorPlatformHeight);
-	ldr	r3, .L209+12	@ tmp162,
+	ldr	r3, .L212+12	@ tmp162,
 	ldrb	r2, [r3]	@ gCreatorPlatformHeight, gCreatorPlatformHeight
 	movs	r1, #140	@ tmp174,
 @ ClassDisplay.c:19: 	StartMovingPlatform(proc->platformType,0x118,gCreatorPlatformHeight);
@@ -2501,7 +2553,7 @@ CreatorClassStartPlatform:
 @ ClassDisplay.c:19: 	StartMovingPlatform(proc->platformType,0x118,gCreatorPlatformHeight);
 	ldrb	r0, [r4, r3]	@ tmp166,
 	lsls	r1, r1, #1	@, tmp174,
-	ldr	r3, .L209+16	@ tmp167,
+	ldr	r3, .L212+16	@ tmp167,
 	bl	.L30		@
 @ ClassDisplay.c:20: }
 	add	sp, sp, #12	@,,
@@ -2509,15 +2561,15 @@ CreatorClassStartPlatform:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L208:
+.L211:
 @ ClassDisplay.c:12: 	else if ( creator->route == Military ) { proc->platformType = RoadPlatform; }
 	adds	r3, r3, #78	@ tmp135,
 	movs	r2, #2	@ tmp136,
 	strb	r2, [r4, r3]	@ tmp136, proc_20(D)->platformType
-	b	.L203		@
-.L210:
+	b	.L206		@
+.L213:
 	.align	2
-.L209:
+.L212:
 	.word	gCreatorProc
 	.word	ProcFind
 	.word	SetupMovingPlatform
@@ -2537,7 +2589,7 @@ CreatorWaitForSlideOut:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
 @ ClassDisplay.c:173: 	return gAISArray.xPosition != 320;
-	ldr	r3, .L212	@ tmp115,
+	ldr	r3, .L215	@ tmp115,
 @ ClassDisplay.c:173: 	return gAISArray.xPosition != 320;
 	movs	r0, #2	@ tmp117,
 	ldrsh	r0, [r3, r0]	@ tmp117, tmp115, tmp117
@@ -2548,9 +2600,9 @@ CreatorWaitForSlideOut:
 @ ClassDisplay.c:174: }
 	@ sp needed	@
 	bx	lr
-.L213:
+.L216:
 	.align	2
-.L212:
+.L215:
 	.word	gAISArray
 	.size	CreatorWaitForSlideOut, .-CreatorWaitForSlideOut
 	.align	1
@@ -2569,36 +2621,36 @@ CreatorClassEndProc:
 @ ClassDisplay.c:178: 	CPU_FILL(0,(char*)&gBG0MapBuffer[13][0]-1,(32-13)*32*2,32);
 	movs	r3, #0	@ tmp111,
 	str	r3, [sp, #4]	@ tmp111, tmp
-	ldr	r2, .L215	@,
-	ldr	r1, .L215+4	@,
+	ldr	r2, .L218	@,
+	ldr	r1, .L218+4	@,
 	add	r0, sp, #4	@,,
-	ldr	r3, .L215+8	@ tmp115,
+	ldr	r3, .L218+8	@ tmp115,
 	bl	.L30		@
 @ ClassDisplay.c:179: 	DeleteSomeAISStuff(&gSomeAISStruct);
-	ldr	r0, .L215+12	@,
-	ldr	r3, .L215+16	@ tmp117,
+	ldr	r0, .L218+12	@,
+	ldr	r3, .L218+16	@ tmp117,
 	bl	.L30		@
 @ ClassDisplay.c:180: 	DeleteSomeAISProcs(&gSomeAISRelatedStruct);
-	ldr	r0, .L215+20	@,
-	ldr	r3, .L215+24	@ tmp119,
+	ldr	r0, .L218+20	@,
+	ldr	r3, .L218+24	@ tmp119,
 	bl	.L30		@
 @ ClassDisplay.c:181: 	EndEkrAnimeDrvProc();
-	ldr	r3, .L215+28	@ tmp120,
+	ldr	r3, .L218+28	@ tmp120,
 	bl	.L30		@
 @ ClassDisplay.c:185: 	SMS_UpdateFromGameData();
-	ldr	r3, .L215+32	@ tmp121,
+	ldr	r3, .L218+32	@ tmp121,
 	bl	.L30		@
 @ ClassDisplay.c:186: 	MU_EndAll();
-	ldr	r3, .L215+36	@ tmp122,
+	ldr	r3, .L218+36	@ tmp122,
 	bl	.L30		@
 @ ClassDisplay.c:187: }
 	add	sp, sp, #12	@,,
 	@ sp needed	@
 	pop	{r0}
 	bx	r0
-.L216:
+.L219:
 	.align	2
-.L215:
+.L218:
 	.word	83886384
 	.word	gBG0MapBuffer+831
 	.word	CpuSet
@@ -2631,12 +2683,12 @@ CreatorBoonBaneSwitchIn:
 	str	r0, [sp, #12]	@ tmp362, %sfp
 	str	r1, [sp, #4]	@ tmp363, %sfp
 @ BoonBane.c:69: 	BgMapFillRect(&gBG0MapBuffer[4][14],4,20-4,0);
-	ldr	r4, .L225	@ tmp185,
+	ldr	r4, .L228	@ tmp185,
 	movs	r3, #0	@,
 	movs	r2, #16	@,
 	movs	r1, #4	@,
 	movs	r0, r4	@, tmp185
-	ldr	r5, .L225+4	@ tmp186,
+	ldr	r5, .L228+4	@ tmp186,
 	bl	.L115		@
 @ BoonBane.c:70: 	BgMapFillRect(&gBG0MapBuffer[4][22],4,20-4,0);
 	movs	r0, r4	@ tmp185, tmp185
@@ -2646,8 +2698,8 @@ CreatorBoonBaneSwitchIn:
 	movs	r1, #4	@,
 	bl	.L115		@
 @ BoonBane.c:71: 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
-	ldr	r0, .L225+8	@,
-	ldr	r3, .L225+12	@ tmp190,
+	ldr	r0, .L228+8	@,
+	ldr	r3, .L228+12	@ tmp190,
 	bl	.L30		@
 	movs	r4, r0	@ creator, tmp364
 @ BoonBane.c:72: 	int tile = creator->boonBaneTileLast;
@@ -2659,19 +2711,19 @@ CreatorBoonBaneSwitchIn:
 @ BoonBane.c:75: 	if ( creator->currMenu == BoonMenu ) { eff[0] = '+'; color = TEXT_COLOR_GREEN; } else { eff[0] = '-'; color = TEXT_COLOR_GREY; }
 	ldrb	r3, [r0, r3]	@ tmp193,
 	cmp	r3, #4	@ tmp193,
-	bne	.LCB2254	@
-	b	.L223	@long jump	@
-.LCB2254:
+	bne	.LCB2288	@
+	b	.L226	@long jump	@
+.LCB2288:
 @ BoonBane.c:75: 	if ( creator->currMenu == BoonMenu ) { eff[0] = '+'; color = TEXT_COLOR_GREEN; } else { eff[0] = '-'; color = TEXT_COLOR_GREY; }
 	movs	r3, #45	@ cstore_114,
 @ BoonBane.c:75: 	if ( creator->currMenu == BoonMenu ) { eff[0] = '+'; color = TEXT_COLOR_GREEN; } else { eff[0] = '-'; color = TEXT_COLOR_GREY; }
 	movs	r2, #1	@ color,
 	str	r2, [sp, #8]	@ color, %sfp
-.L218:
+.L221:
 	add	r6, sp, #52	@ tmp194,,
 	strb	r3, [r6]	@ cstore_114, eff
 @ BoonBane.c:78: 	int base = gCreatorBoonBaneEffects[commandProc->commandDefinitionIndex+1].base;
-	ldr	r5, .L225+16	@ tmp196,
+	ldr	r5, .L228+16	@ tmp196,
 @ BoonBane.c:78: 	int base = gCreatorBoonBaneEffects[commandProc->commandDefinitionIndex+1].base;
 	ldr	r3, [sp, #4]	@ commandProc, %sfp
 	movs	r2, #60	@ tmp374,
@@ -2691,10 +2743,10 @@ CreatorBoonBaneSwitchIn:
 	movs	r2, #8	@,
 	movs	r1, #0	@,
 	add	r0, sp, #44	@ tmp377,,
-	ldr	r7, .L225+20	@ tmp378,
+	ldr	r7, .L228+20	@ tmp378,
 	bl	.L50		@
 @ BoonBane.c:82: 		.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	ldr	r0, .L225+24	@ tmp212,
+	ldr	r0, .L228+24	@ tmp212,
 	mov	r10, r0	@ tmp212, tmp212
 @ BoonBane.c:82: 		.tileIndexOffset = gpCurrentFont->tileNext+tile,
 	ldr	r0, [r0]	@ tmp381, gpCurrentFont
@@ -2710,7 +2762,7 @@ CreatorBoonBaneSwitchIn:
 @ BoonBane.c:86: 	Text_Clear(&mainBaseHandle);
 	add	r7, sp, #44	@ tmp390,,
 	movs	r0, r7	@, tmp390
-	ldr	r7, .L225+28	@ tmp391,
+	ldr	r7, .L228+28	@ tmp391,
 	bl	.L50		@
 @ BoonBane.c:87: 	Text_InsertString(&mainBaseHandle,0,color,eff);
 	movs	r3, r6	@, tmp194
@@ -2718,7 +2770,7 @@ CreatorBoonBaneSwitchIn:
 	movs	r1, #0	@,
 	add	r7, sp, #44	@ tmp393,,
 	movs	r0, r7	@, tmp393
-	ldr	r7, .L225+32	@ tmp225,
+	ldr	r7, .L228+32	@ tmp225,
 	mov	r9, r7	@ tmp225, tmp225
 	bl	.L50		@
 @ BoonBane.c:88: 	Text_Display(&mainBaseHandle,&gBG0MapBuffer[4+proc->commandIndex*2][15]);
@@ -2729,11 +2781,11 @@ CreatorBoonBaneSwitchIn:
 	lsls	r1, r1, #7	@ tmp230, tmp227,
 	adds	r1, r1, #31	@ tmp231,
 	adds	r1, r1, #255	@ tmp231,
-	ldr	r7, .L225+36	@ tmp233,
+	ldr	r7, .L228+36	@ tmp233,
 	mov	r8, r7	@ tmp233, tmp233
 	add	r1, r1, r8	@ tmp232, tmp233
 	add	r0, sp, #44	@ tmp398,,
-	ldr	r7, .L225+40	@ tmp235,
+	ldr	r7, .L228+40	@ tmp235,
 	bl	.L50		@
 @ BoonBane.c:91: 	int growth = gCreatorBoonBaneEffects[commandProc->commandDefinitionIndex+1].growth;
 	ldr	r3, [sp, #4]	@ commandProc, %sfp
@@ -2757,7 +2809,7 @@ CreatorBoonBaneSwitchIn:
 	movs	r1, #0	@,
 	add	r5, sp, #36	@ tmp403,,
 	movs	r0, r5	@, tmp403
-	ldr	r5, .L225+20	@ tmp404,
+	ldr	r5, .L228+20	@ tmp404,
 	bl	.L115		@
 @ BoonBane.c:95: 		.tileIndexOffset = gpCurrentFont->tileNext+tile,
 	mov	r5, r10	@ tmp212, tmp212
@@ -2775,7 +2827,7 @@ CreatorBoonBaneSwitchIn:
 	strb	r0, [r5, #24]	@ tmp410, mainGrowthHandle.tileWidth
 @ BoonBane.c:99: 	Text_Clear(&mainGrowthHandle);
 	add	r0, sp, #36	@ tmp412,,
-	ldr	r5, .L225+28	@ tmp413,
+	ldr	r5, .L228+28	@ tmp413,
 	bl	.L115		@
 @ BoonBane.c:100: 	Text_InsertString(&mainGrowthHandle,0,color,eff);
 	movs	r3, r6	@, tmp194
@@ -2799,15 +2851,15 @@ CreatorBoonBaneSwitchIn:
 @ BoonBane.c:104: 	if ( creator->currMenu == BoonMenu )
 	ldrb	r3, [r4, r3]	@ tmp280,
 	cmp	r3, #4	@ tmp280,
-	bne	.LCB2386	@
-	b	.L224	@long jump	@
-.LCB2386:
+	bne	.LCB2420	@
+	b	.L227	@long jump	@
+.LCB2420:
 @ BoonBane.c:115: 		if ( creator->boon )
 	movs	r3, #57	@ tmp285,
 	ldrb	r4, [r4, r3]	@ _32,
 @ BoonBane.c:115: 		if ( creator->boon )
 	cmp	r4, #0	@ _32,
-	beq	.L220		@,
+	beq	.L223		@,
 @ BoonBane.c:117: 			eff[0] = '+';
 	add	r3, sp, #52	@ tmp286,,
 	movs	r2, #43	@ tmp287,
@@ -2816,18 +2868,18 @@ CreatorBoonBaneSwitchIn:
 	subs	r4, r4, #1	@ offset,
 @ BoonBane.c:119: 			color = TEXT_COLOR_GREEN;
 	movs	r5, #4	@ color,
-.L221:
+.L224:
 @ BoonBane.c:122: 	if ( offset != -1 && offset != commandProc->commandDefinitionIndex )
 	movs	r3, #60	@ tmp289,
 	ldr	r2, [sp, #4]	@ commandProc, %sfp
 	ldrb	r3, [r2, r3]	@ tmp290,
 @ BoonBane.c:122: 	if ( offset != -1 && offset != commandProc->commandDefinitionIndex )
 	cmp	r3, r4	@ tmp290, offset
-	beq	.L220		@,
+	beq	.L223		@,
 @ BoonBane.c:125: 		base = gCreatorBoonBaneEffects[offset+1].base;
 	adds	r2, r4, #1	@ _36, offset,
 @ BoonBane.c:125: 		base = gCreatorBoonBaneEffects[offset+1].base;
-	ldr	r0, .L225+16	@ tmp291,
+	ldr	r0, .L228+16	@ tmp291,
 	lsls	r3, r2, #1	@ tmp292, _36,
 @ BoonBane.c:125: 		base = gCreatorBoonBaneEffects[offset+1].base;
 	ldrb	r1, [r3, r0]	@ base, gCreatorBoonBaneEffects
@@ -2838,10 +2890,10 @@ CreatorBoonBaneSwitchIn:
 	str	r3, [sp, #4]	@ growth, %sfp
 @ BoonBane.c:127: 		if ( offset+1 >= Mag ) { offset -= 1; } // We're either not displaying strength or magic. Decrement the location we'll draw to to account for that.
 	cmp	r4, #1	@ offset,
-	ble	.L222		@,
+	ble	.L225		@,
 @ BoonBane.c:127: 		if ( offset+1 >= Mag ) { offset -= 1; } // We're either not displaying strength or magic. Decrement the location we'll draw to to account for that.
 	subs	r4, r4, #1	@ offset,
-.L222:
+.L225:
 @ BoonBane.c:129: 		FillNumString(&eff[1],base);
 	movs	r3, #37	@ tmp421,
 	add	r2, sp, #16	@ tmp466,,
@@ -2853,11 +2905,11 @@ CreatorBoonBaneSwitchIn:
 	movs	r2, #8	@,
 	movs	r1, #0	@,
 	add	r0, sp, #20	@ tmp423,,
-	ldr	r3, .L225+20	@ tmp302,
+	ldr	r3, .L228+20	@ tmp302,
 	mov	r10, r3	@ tmp302, tmp302
 	bl	.L30		@
 @ BoonBane.c:132: 		.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	ldr	r3, .L225+24	@ tmp307,
+	ldr	r3, .L228+24	@ tmp307,
 	mov	r9, r3	@ tmp307, tmp307
 @ BoonBane.c:98: 	tile += 4;
 	mov	r2, fp	@ tile, _1
@@ -2873,7 +2925,7 @@ CreatorBoonBaneSwitchIn:
 	strb	r3, [r2, #8]	@ tmp431, otherBaseHandle.tileWidth
 @ BoonBane.c:136: 		Text_Clear(&otherBaseHandle);
 	add	r0, sp, #20	@ tmp433,,
-	ldr	r2, .L225+28	@ tmp318,
+	ldr	r2, .L228+28	@ tmp318,
 	mov	r8, r2	@ tmp318, tmp318
 	bl	.L97		@
 @ BoonBane.c:137: 		Text_InsertString(&otherBaseHandle,0,color,eff);
@@ -2882,7 +2934,7 @@ CreatorBoonBaneSwitchIn:
 	movs	r2, r5	@, color
 	movs	r1, #0	@,
 	add	r0, sp, #20	@ tmp436,,
-	ldr	r6, .L225+32	@ tmp437,
+	ldr	r6, .L228+32	@ tmp437,
 	bl	.L96		@
 @ BoonBane.c:138: 		Text_Display(&otherBaseHandle,&gBG0MapBuffer[4+offset*2][15]);
 	adds	r4, r4, #2	@ tmp322,
@@ -2890,10 +2942,10 @@ CreatorBoonBaneSwitchIn:
 @ BoonBane.c:138: 		Text_Display(&otherBaseHandle,&gBG0MapBuffer[4+offset*2][15]);
 	movs	r1, r4	@ tmp324, _120
 	adds	r1, r1, #30	@ tmp324,
-	ldr	r7, .L225+36	@ tmp326,
+	ldr	r7, .L228+36	@ tmp326,
 	adds	r1, r1, r7	@ tmp325, tmp324, tmp326
 	add	r0, sp, #20	@ tmp440,,
-	ldr	r6, .L225+40	@ tmp328,
+	ldr	r6, .L228+40	@ tmp328,
 	bl	.L96		@
 @ BoonBane.c:140: 		FillNumString(&eff[1],growth);
 	ldr	r1, [sp, #4]	@, %sfp
@@ -2930,7 +2982,7 @@ CreatorBoonBaneSwitchIn:
 	movs	r2, r5	@, color
 	movs	r1, #0	@,
 	add	r0, sp, #28	@ tmp452,,
-	ldr	r5, .L225+32	@ tmp453,
+	ldr	r5, .L228+32	@ tmp453,
 	bl	.L115		@
 @ BoonBane.c:149: 		Text_Display(&otherGrowthHandle,&gBG0MapBuffer[4+offset*2][23]);
 	movs	r1, r4	@ _120, _120
@@ -2938,10 +2990,10 @@ CreatorBoonBaneSwitchIn:
 	adds	r1, r1, r7	@ tmp355, tmp354, tmp326
 	add	r0, sp, #28	@ tmp456,,
 	bl	.L96		@
-.L220:
+.L223:
 @ BoonBane.c:152: 	EnableBgSyncByMask(1);
 	movs	r0, #1	@,
-	ldr	r3, .L225+44	@ tmp359,
+	ldr	r3, .L228+44	@ tmp359,
 	bl	.L30		@
 @ BoonBane.c:153: }
 	add	sp, sp, #60	@,,
@@ -2954,20 +3006,20 @@ CreatorBoonBaneSwitchIn:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L223:
+.L226:
 @ BoonBane.c:75: 	if ( creator->currMenu == BoonMenu ) { eff[0] = '+'; color = TEXT_COLOR_GREEN; } else { eff[0] = '-'; color = TEXT_COLOR_GREY; }
 	movs	r3, #43	@ cstore_114,
 @ BoonBane.c:75: 	if ( creator->currMenu == BoonMenu ) { eff[0] = '+'; color = TEXT_COLOR_GREEN; } else { eff[0] = '-'; color = TEXT_COLOR_GREY; }
 	movs	r2, #4	@ color,
 	str	r2, [sp, #8]	@ color, %sfp
-	b	.L218		@
-.L224:
+	b	.L221		@
+.L227:
 @ BoonBane.c:106: 		if ( creator->bane )
 	adds	r3, r3, #54	@ tmp281,
 	ldrb	r4, [r4, r3]	@ _30,
 @ BoonBane.c:106: 		if ( creator->bane )
 	cmp	r4, #0	@ _30,
-	beq	.L220		@,
+	beq	.L223		@,
 @ BoonBane.c:108: 			eff[0] = '-';
 	add	r3, sp, #52	@ tmp282,,
 	movs	r2, #45	@ tmp283,
@@ -2976,10 +3028,10 @@ CreatorBoonBaneSwitchIn:
 	subs	r4, r4, #1	@ offset,
 @ BoonBane.c:110: 			color = TEXT_COLOR_GREY;
 	movs	r5, #1	@ color,
-	b	.L221		@
-.L226:
+	b	.L224		@
+.L229:
 	.align	2
-.L225:
+.L228:
 	.word	gBG0MapBuffer+284
 	.word	BgMapFillRect
 	.word	gCreatorProc
@@ -3006,37 +3058,37 @@ CreatorApplyBoonBaneGrowth:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, lr}	@
 	movs	r0, r1	@ growth, tmp164
-	ldr	r3, .L237	@ tmp129,
-	adds	r3, r3, #2	@ ivtmp.256,
+	ldr	r3, .L240	@ tmp129,
+	adds	r3, r3, #2	@ ivtmp.258,
 @ BoonBane.c:221: 	for ( int i = 0 ; gCreatorGrowthIDLookup[i].growthID ; i++ )
 	movs	r1, #0	@ i,
 @ BoonBane.c:221: 	for ( int i = 0 ; gCreatorGrowthIDLookup[i].growthID ; i++ )
 	movs	r4, #10	@ _16,
-.L230:
+.L233:
 @ BoonBane.c:223: 		if ( gCreatorGrowthIDLookup[i].growthID == growthID ) { return gCreatorGrowthIDLookup[i].stat; }
 	cmp	r2, r4	@ growthID, _16
-	beq	.L234		@,
+	beq	.L237		@,
 @ BoonBane.c:221: 	for ( int i = 0 ; gCreatorGrowthIDLookup[i].growthID ; i++ )
 	adds	r1, r1, #1	@ i,
-	adds	r3, r3, #2	@ ivtmp.256,
+	adds	r3, r3, #2	@ ivtmp.258,
 @ BoonBane.c:221: 	for ( int i = 0 ; gCreatorGrowthIDLookup[i].growthID ; i++ )
-	subs	r4, r3, #2	@ tmp134, ivtmp.256,
+	subs	r4, r3, #2	@ tmp134, ivtmp.258,
 	ldrb	r4, [r4]	@ _16, MEM[base: _28, offset: 4294967294B]
 @ BoonBane.c:221: 	for ( int i = 0 ; gCreatorGrowthIDLookup[i].growthID ; i++ )
 	cmp	r4, #0	@ _16,
-	bne	.L230		@,
+	bne	.L233		@,
 @ BoonBane.c:225: 	return 0;
 	movs	r1, #0	@ _20,
-	b	.L229		@
-.L234:
+	b	.L232		@
+.L237:
 @ BoonBane.c:223: 		if ( gCreatorGrowthIDLookup[i].growthID == growthID ) { return gCreatorGrowthIDLookup[i].stat; }
 	lsls	r1, r1, #1	@ tmp131, i,
-	ldr	r3, .L237	@ tmp130,
+	ldr	r3, .L240	@ tmp130,
 	adds	r1, r3, r1	@ tmp132, tmp130, tmp131
 	ldrb	r1, [r1, #1]	@ _20, gCreatorGrowthIDLookup
-.L229:
+.L232:
 @ BoonBane.c:212: 	int boon = gChapterData.boonGrowthID;
-	ldr	r2, .L237+4	@ tmp135,
+	ldr	r2, .L240+4	@ tmp135,
 	movs	r3, #42	@ tmp138,
 	ldrb	r3, [r2, r3]	@ gChapterData, gChapterData
 	lsls	r2, r3, #28	@ tmp142, gChapterData,
@@ -3046,37 +3098,37 @@ CreatorApplyBoonBaneGrowth:
 	lsrs	r3, r3, #4	@ bane, gChapterData,
 @ BoonBane.c:214: 	if ( stat == boon ) { return growth + gCreatorBoonBaneEffects[boon].growth; }
 	cmp	r2, r1	@ boon, _20
-	beq	.L235		@,
+	beq	.L238		@,
 @ BoonBane.c:215: 	if ( stat == bane ) { return growth - gCreatorBoonBaneEffects[bane].growth; }
 	cmp	r3, r1	@ bane, _20
-	beq	.L236		@,
-.L232:
+	beq	.L239		@,
+.L235:
 @ BoonBane.c:217: }
 	@ sp needed	@
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-.L235:
+.L238:
 @ BoonBane.c:214: 	if ( stat == boon ) { return growth + gCreatorBoonBaneEffects[boon].growth; }
 	lsls	r2, r2, #1	@ tmp154, boon,
-	ldr	r3, .L237+8	@ tmp153,
+	ldr	r3, .L240+8	@ tmp153,
 	adds	r2, r3, r2	@ tmp155, tmp153, tmp154
 	ldrb	r3, [r2, #1]	@ tmp157, gCreatorBoonBaneEffects
 @ BoonBane.c:214: 	if ( stat == boon ) { return growth + gCreatorBoonBaneEffects[boon].growth; }
 	adds	r0, r0, r3	@ growth, growth, tmp157
-	b	.L232		@
-.L236:
+	b	.L235		@
+.L239:
 @ BoonBane.c:215: 	if ( stat == bane ) { return growth - gCreatorBoonBaneEffects[bane].growth; }
 	lsls	r3, r3, #1	@ tmp159, bane,
-	ldr	r2, .L237+8	@ tmp158,
+	ldr	r2, .L240+8	@ tmp158,
 	adds	r3, r2, r3	@ tmp160, tmp158, tmp159
 	ldrb	r3, [r3, #1]	@ tmp162, gCreatorBoonBaneEffects
 @ BoonBane.c:215: 	if ( stat == bane ) { return growth - gCreatorBoonBaneEffects[bane].growth; }
 	subs	r0, r0, r3	@ growth, growth, tmp162
-	b	.L232		@
-.L238:
+	b	.L235		@
+.L241:
 	.align	2
-.L237:
+.L240:
 	.word	.LANCHOR0
 	.word	gChapterData
 	.word	gCreatorBoonBaneEffects
@@ -3095,17 +3147,17 @@ CallCharacterCreator:
 	push	{r4, lr}	@
 	movs	r1, r0	@ proc, tmp113
 @ CharacterCreator.c:15: 	ProcStartBlocking(&gCreatorProc,proc); // Start our proc and block the event engine.
-	ldr	r0, .L240	@,
-	ldr	r3, .L240+4	@ tmp112,
+	ldr	r0, .L243	@,
+	ldr	r3, .L243+4	@ tmp112,
 	bl	.L30		@
 @ CharacterCreator.c:16: }
 	@ sp needed	@
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L241:
+.L244:
 	.align	2
-.L240:
+.L243:
 	.word	gCreatorProc
 	.word	ProcStartBlocking
 	.size	CallCharacterCreator, .-CallCharacterCreator
@@ -3163,25 +3215,25 @@ SetupCreator:
 	adds	r2, r2, #6	@ tmp158,
 	strb	r3, [r0, r2]	@ tmp135, proc_25(D)->isPressDisabled
 @ CharacterCreator.c:37: 	LockGameLogic();
-	ldr	r3, .L249	@ tmp161,
+	ldr	r3, .L252	@ tmp161,
 	bl	.L30		@
 @ CharacterCreator.c:46: 	Decompress(SmallWorldMap,(void*)0x6008000);
-	ldr	r1, .L249+4	@,
-	ldr	r0, .L249+8	@,
-	ldr	r5, .L249+12	@ tmp164,
+	ldr	r1, .L252+4	@,
+	ldr	r0, .L252+8	@,
+	ldr	r5, .L252+12	@ tmp164,
 	bl	.L115		@
 @ CharacterCreator.c:47: 	CopyToPaletteBuffer(SmallWorldMapPalette,0x20*6,(gSmallWorldMapPaletteCount-2)*32);
-	ldr	r3, .L249+16	@ tmp165,
+	ldr	r3, .L252+16	@ tmp165,
 	ldrb	r4, [r3]	@ gSmallWorldMapPaletteCount, gSmallWorldMapPaletteCount
 	subs	r4, r4, #2	@ tmp167,
 @ CharacterCreator.c:47: 	CopyToPaletteBuffer(SmallWorldMapPalette,0x20*6,(gSmallWorldMapPaletteCount-2)*32);
 	lsls	r4, r4, #5	@ _5, tmp167,
 @ CharacterCreator.c:47: 	CopyToPaletteBuffer(SmallWorldMapPalette,0x20*6,(gSmallWorldMapPaletteCount-2)*32);
-	ldr	r7, .L249+20	@ tmp168,
+	ldr	r7, .L252+20	@ tmp168,
 	movs	r2, r4	@, _5
 	movs	r1, #192	@,
 	movs	r0, r7	@, tmp168
-	ldr	r6, .L249+24	@ tmp169,
+	ldr	r6, .L252+24	@ tmp169,
 	bl	.L96		@
 @ CharacterCreator.c:48: 	CopyToPaletteBuffer(SmallWorldMapPalette+(gSmallWorldMapPaletteCount-1)*16,0x20*15,32);
 	movs	r1, #240	@ tmp227,
@@ -3194,9 +3246,9 @@ SetupCreator:
 	lsls	r1, r1, #1	@, tmp227,
 	bl	.L96		@
 @ CharacterCreator.c:49: 	Decompress(SmallWorldMapTSA,gGenericBuffer);
-	ldr	r4, .L249+28	@ tmp175,
+	ldr	r4, .L252+28	@ tmp175,
 	movs	r1, r4	@, tmp175
-	ldr	r0, .L249+32	@,
+	ldr	r0, .L252+32	@,
 	bl	.L115		@
 @ CharacterCreator.c:51: 	for ( int i = 0 ; i < tsaBuffer->height+1 ; i++ )
 	ldrb	r3, [r4, #1]	@ _57,
@@ -3205,27 +3257,27 @@ SetupCreator:
 	ldrb	r4, [r4]	@ _61, gGenericBuffer
 	adds	r3, r4, #1	@ _66, _61,
 	str	r3, [sp, #4]	@ _66, %sfp
-	movs	r0, #0	@ ivtmp.268,
+	movs	r0, #0	@ ivtmp.270,
 @ CharacterCreator.c:51: 	for ( int i = 0 ; i < tsaBuffer->height+1 ; i++ )
 	movs	r3, #0	@ i,
 	mov	fp, r3	@ i, i
 @ CharacterCreator.c:55: 			if ( tsaBuffer->tiles[i*(tsaBuffer->width+1)+j].paletteID == 16-6 )
-	ldr	r5, .L249+28	@ tmp180,
+	ldr	r5, .L252+28	@ tmp180,
 @ CharacterCreator.c:57: 				tsaBuffer->tiles[i*(tsaBuffer->width+1)+j].paletteID--;
 	mov	r8, r5	@ tmp218, tmp218
 	movs	r3, #15	@ tmp219,
 	mov	ip, r3	@ tmp219, tmp219
 	movs	r7, #112	@ tmp220,
 	rsbs	r7, r7, #0	@ tmp220, tmp220
-	b	.L243		@
-.L244:
+	b	.L246		@
+.L247:
 @ CharacterCreator.c:53: 		for ( int j = 0 ; j < tsaBuffer->width+1 ; j++ )
 	adds	r3, r3, #1	@ j,
 @ CharacterCreator.c:53: 		for ( int j = 0 ; j < tsaBuffer->width+1 ; j++ )
 	cmp	r3, r4	@ j, _61
-	bgt	.L248		@,
-.L245:
-	adds	r2, r3, r0	@ _16, j, ivtmp.268
+	bgt	.L251		@,
+.L248:
+	adds	r2, r3, r0	@ _16, j, ivtmp.270
 @ CharacterCreator.c:55: 			if ( tsaBuffer->tiles[i*(tsaBuffer->width+1)+j].paletteID == 16-6 )
 	lsls	r1, r2, #1	@ tmp181, _16,
 	adds	r1, r5, r1	@ tmp184, tmp180, tmp181
@@ -3233,7 +3285,7 @@ SetupCreator:
 @ CharacterCreator.c:55: 			if ( tsaBuffer->tiles[i*(tsaBuffer->width+1)+j].paletteID == 16-6 )
 	lsrs	r1, r1, #4	@ tmp189, tmp186,
 	cmp	r1, #10	@ tmp189,
-	bne	.L244		@,
+	bne	.L247		@,
 @ CharacterCreator.c:57: 				tsaBuffer->tiles[i*(tsaBuffer->width+1)+j].paletteID--;
 	lsls	r2, r2, #1	@ tmp192, _16,
 	add	r2, r2, r8	@ tmp193, tmp218
@@ -3242,50 +3294,50 @@ SetupCreator:
 	ands	r1, r6	@ tmp200, tmp219
 	orrs	r1, r7	@ tmp203, tmp220
 	strb	r1, [r2, #3]	@ tmp203,
-	b	.L244		@
-.L248:
+	b	.L247		@
+.L251:
 @ CharacterCreator.c:51: 	for ( int i = 0 ; i < tsaBuffer->height+1 ; i++ )
 	movs	r3, #1	@ tmp235,
 	mov	r9, r3	@ tmp235, tmp235
 	add	fp, fp, r9	@ i, tmp235
 	ldr	r3, [sp, #4]	@ _66, %sfp
 	mov	r9, r3	@ _66, _66
-	add	r0, r0, r9	@ ivtmp.268, _66
+	add	r0, r0, r9	@ ivtmp.270, _66
 @ CharacterCreator.c:51: 	for ( int i = 0 ; i < tsaBuffer->height+1 ; i++ )
 	cmp	fp, r10	@ i, _57
-	bgt	.L246		@,
-.L243:
+	bgt	.L249		@,
+.L246:
 @ CharacterCreator.c:53: 		for ( int j = 0 ; j < tsaBuffer->width+1 ; j++ )
 	movs	r3, #0	@ j,
-	b	.L245		@
-.L246:
+	b	.L248		@
+.L249:
 @ CharacterCreator.c:61: 	BgMap_ApplyTsa(gBg3MapBuffer,gGenericBuffer,6<<12);
 	movs	r2, #192	@ tmp225,
 	lsls	r2, r2, #7	@, tmp225,
-	ldr	r1, .L249+28	@,
-	ldr	r0, .L249+36	@,
-	ldr	r3, .L249+40	@ tmp209,
+	ldr	r1, .L252+28	@,
+	ldr	r0, .L252+36	@,
+	ldr	r3, .L252+40	@ tmp209,
 	bl	.L30		@
 @ CharacterCreator.c:62: 	SetBgTileDataOffset(2,0x8000);
 	movs	r1, #128	@ tmp226,
 	lsls	r1, r1, #8	@, tmp226,
 	movs	r0, #2	@,
-	ldr	r3, .L249+44	@ tmp211,
+	ldr	r3, .L252+44	@ tmp211,
 	bl	.L30		@
 @ CharacterCreator.c:64: 	LoadIconPalettes(4);
 	movs	r0, #4	@,
-	ldr	r3, .L249+48	@ tmp212,
+	ldr	r3, .L252+48	@ tmp212,
 	bl	.L30		@
 @ CharacterCreator.c:65: 	EnableBgSyncByMask(8);
 	movs	r0, #8	@,
-	ldr	r3, .L249+52	@ tmp213,
+	ldr	r3, .L252+52	@ tmp213,
 	bl	.L30		@
 @ CharacterCreator.c:66: 	EnablePaletteSync();
-	ldr	r3, .L249+56	@ tmp214,
+	ldr	r3, .L252+56	@ tmp214,
 	bl	.L30		@
 @ CharacterCreator.c:68: 	UnsetEventId(0x6E); // Gender event ID.
 	movs	r0, #110	@,
-	ldr	r4, .L249+60	@ tmp215,
+	ldr	r4, .L252+60	@ tmp215,
 	bl	.L105		@
 @ CharacterCreator.c:70: 	UnsetEventId(0x67); // Route event IDs.
 	movs	r0, #103	@,
@@ -3304,9 +3356,9 @@ SetupCreator:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L250:
+.L253:
 	.align	2
-.L249:
+.L252:
 	.word	LockGameLogic
 	.word	100696064
 	.word	SmallWorldMap
@@ -3343,492 +3395,506 @@ CreatorStartMenu:
 	push	{r5, r6, r7, lr}	@
 	sub	sp, sp, #84	@,,
 	add	r7, sp, #8	@,,
-	mov	fp, r0	@ proc, tmp1075
+	mov	fp, r0	@ proc, tmp1087
 @ CharacterCreator.c:76: 	Text_InitFont();
-	ldr	r3, .L331	@ tmp367,
+	ldr	r3, .L334	@ tmp369,
 	bl	.L30		@
 @ CharacterCreator.c:77: 	FillBgMap(gBg0MapBuffer,0);
 	movs	r1, #0	@,
-	ldr	r0, .L331+4	@,
-	ldr	r4, .L331+8	@ tmp369,
+	ldr	r0, .L334+4	@,
+	ldr	r4, .L334+8	@ tmp371,
 	bl	.L105		@
 @ CharacterCreator.c:78: 	FillBgMap(gBg1MapBuffer,0);
 	movs	r1, #0	@,
-	ldr	r0, .L331+12	@,
+	ldr	r0, .L334+12	@,
 	bl	.L105		@
 @ CharacterCreator.c:79: 	FillBgMap(gBg2MapBuffer,0);
 	movs	r1, #0	@,
-	ldr	r0, .L331+16	@,
+	ldr	r0, .L334+16	@,
 	bl	.L105		@
-@ CharacterCreator.c:81: 	switch ( proc->currMenu )
-	movs	r3, #41	@ tmp374,
+@ CharacterCreator.c:80: 	((CreatorSpriteProc*)ProcFind(&gCreatorSpriteProc))->isActive = 0; // Disable our map sprite in case it was set.
+	ldr	r0, .L334+20	@,
+	ldr	r3, .L334+24	@ tmp377,
+	bl	.L30		@
+@ CharacterCreator.c:80: 	((CreatorSpriteProc*)ProcFind(&gCreatorSpriteProc))->isActive = 0; // Disable our map sprite in case it was set.
+	movs	r3, #41	@ tmp378,
+	movs	r2, #0	@ tmp379,
+	strb	r2, [r0, r3]	@ tmp379, MEM[(struct CreatorSpriteProc *)_1].isActive
 	mov	r2, fp	@ proc, proc
-	ldrb	r2, [r2, r3]	@ tmp377,
-	cmp	r2, #7	@ tmp377,
-	bls	.LCB2870	@
-	b	.L252	@long jump	@
-.LCB2870:
+	ldrb	r2, [r2, r3]	@ tmp384,
+	cmp	r2, #7	@ tmp384,
+	bls	.LCB2909	@
+	b	.L255	@long jump	@
+.LCB2909:
 	mov	r2, fp	@ proc, proc
-	ldrb	r3, [r2, r3]	@ tmp378,
-	lsls	r3, r3, #2	@ tmp379, tmp378,
-	ldr	r2, .L331+20	@ tmp381,
-	ldr	r3, [r2, r3]	@ tmp382,
-	mov	pc, r3	@ tmp382
+	ldrb	r3, [r2, r3]	@ tmp385,
+	lsls	r3, r3, #2	@ tmp386, tmp385,
+	ldr	r2, .L334+28	@ tmp388,
+	ldr	r3, [r2, r3]	@ tmp389,
+	mov	pc, r3	@ tmp389
 	.section	.rodata
 	.align	2
-.L254:
-	.word	.L252
+.L257:
+	.word	.L255
+	.word	.L261
+	.word	.L260
+	.word	.L259
 	.word	.L258
-	.word	.L257
+	.word	.L258
+	.word	.L255
 	.word	.L256
-	.word	.L255
-	.word	.L255
-	.word	.L252
-	.word	.L253
 	.text
-.L253:
-@ CharacterCreator.c:84: 			newMenu = StartMenu(&gCreatorMainMenuDefs);
-	ldr	r0, .L331+24	@,
-	ldr	r3, .L331+28	@ tmp384,
+.L256:
+@ CharacterCreator.c:85: 			newMenu = StartMenu(&gCreatorMainMenuDefs);
+	ldr	r0, .L334+32	@,
+	ldr	r3, .L334+36	@ tmp391,
 	bl	.L30		@
-	str	r0, [r7, #20]	@ tmp1076, %sfp
-@ MainMenu.c:99: 	SetBgTileDataOffset(2,0); // Set BG2 to use tile offset 0 ("Tiles 1").
+	str	r0, [r7, #20]	@ tmp1089, %sfp
+@ MainMenu.c:105: 	SetBgTileDataOffset(2,0); // Set BG2 to use tile offset 0 ("Tiles 1").
 	movs	r1, #0	@,
 	movs	r0, #2	@,
-	ldr	r3, .L331+32	@ tmp385,
+	ldr	r3, .L334+40	@ tmp392,
 	bl	.L30		@
-@ MainMenu.c:100: 	gLCDIOBuffer.bgControl[1].priority = 1;
-	ldr	r2, .L331+36	@ tmp386,
+@ MainMenu.c:106: 	gLCDIOBuffer.bgControl[1].priority = 1;
+	ldr	r2, .L334+44	@ tmp393,
 	ldrb	r3, [r2, #16]	@ gLCDIOBuffer.bgControl[1].priority, gLCDIOBuffer.bgControl[1].priority
-	movs	r1, #3	@ tmp392,
-	bics	r3, r1	@ tmp391, tmp392
-	movs	r1, #1	@ tmp394,
-	orrs	r3, r1	@ tmp396, tmp394
-	strb	r3, [r2, #16]	@ tmp396, gLCDIOBuffer.bgControl[1].priority
-@ MainMenu.c:101: 	if ( proc->mainUnit ) { ApplyBGBox(gBG2MapBuffer,&gCreatorMainNameSpriteUIBoxTSA,8,1); } // Draw a different box for whether they have a map sprite to show.
+	movs	r1, #3	@ tmp399,
+	bics	r3, r1	@ tmp398, tmp399
+	movs	r1, #1	@ tmp401,
+	orrs	r3, r1	@ tmp403, tmp401
+	strb	r3, [r2, #16]	@ tmp403, gLCDIOBuffer.bgControl[1].priority
+@ MainMenu.c:107: 	((CreatorSpriteProc*)ProcFind(&gCreatorSpriteProc))->isActive = 1; // Enable our map sprite proc. If creator->unit is NULL, it won't draw.
+	ldr	r0, .L334+20	@,
+	ldr	r3, .L334+24	@ tmp406,
+	bl	.L30		@
+@ MainMenu.c:107: 	((CreatorSpriteProc*)ProcFind(&gCreatorSpriteProc))->isActive = 1; // Enable our map sprite proc. If creator->unit is NULL, it won't draw.
+	movs	r2, #1	@ tmp402,
+	movs	r3, #41	@ tmp407,
+	strb	r2, [r0, r3]	@ tmp402, MEM[(struct CreatorSpriteProc *)_74].isActive
+@ MainMenu.c:108: 	if ( proc->mainUnit ) { ApplyBGBox(gBG2MapBuffer,&gCreatorMainNameSpriteUIBoxTSA,8,1); } // Draw a different box for whether they have a map sprite to show.
 	mov	r3, fp	@ proc, proc
-	ldr	r3, [r3, #44]	@ tmp1137, proc_32(D)->mainUnit
-	cmp	r3, #0	@ tmp1137,
-	beq	.L259		@,
-@ MainMenu.c:101: 	if ( proc->mainUnit ) { ApplyBGBox(gBG2MapBuffer,&gCreatorMainNameSpriteUIBoxTSA,8,1); } // Draw a different box for whether they have a map sprite to show.
-	movs	r3, #1	@,
-	movs	r2, #8	@,
-	ldr	r1, .L331+40	@,
-	ldr	r0, .L331+44	@,
-	bl	ApplyBGBox		@
-.L260:
-@ MainMenu.c:103: 	if ( proc->gender || proc->route ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainUIBoxTSA,8,5); } // Box for what selections have been made. (Only necessary to check gender/route.)
-	mov	r3, fp	@ proc, proc
-	ldrh	r3, [r3, #42]	@ MEM[(void *)proc_32(D)], MEM[(void *)proc_32(D)]
-	cmp	r3, #0	@ MEM[(void *)proc_32(D)],
-	bne	.L317		@,
-.L261:
-@ MainMenu.c:104: 	if ( proc->gender && proc->route ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainPortraitUIBoxTSA,18,9); } // Small row of tiles under the portrait.
-	movs	r3, #42	@ tmp406,
-@ MainMenu.c:104: 	if ( proc->gender && proc->route ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainPortraitUIBoxTSA,18,9); } // Small row of tiles under the portrait.
-	mov	r2, fp	@ proc, proc
-	ldrb	r3, [r2, r3]	@ tmp407,
-	cmp	r3, #0	@ tmp407,
+	ldr	r3, [r3, #44]	@ tmp1151, proc_35(D)->mainUnit
+	cmp	r3, #0	@ tmp1151,
 	beq	.L262		@,
-@ MainMenu.c:104: 	if ( proc->gender && proc->route ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainPortraitUIBoxTSA,18,9); } // Small row of tiles under the portrait.
-	movs	r3, #43	@ tmp408,
-@ MainMenu.c:104: 	if ( proc->gender && proc->route ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainPortraitUIBoxTSA,18,9); } // Small row of tiles under the portrait.
-	ldrb	r3, [r2, r3]	@ tmp409,
-	cmp	r3, #0	@ tmp409,
-	bne	.L318		@,
-.L262:
-@ MainMenu.c:105: 	if ( proc->boon || proc->bane ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainBoonBaneUIBoxTSA,18,10); } // Box for information on boon/bane.
-	ldr	r3, .L331+48	@ tmp414,
-@ MainMenu.c:105: 	if ( proc->boon || proc->bane ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainBoonBaneUIBoxTSA,18,10); } // Box for information on boon/bane.
-	mov	r2, fp	@ proc, proc
-	ldr	r2, [r2, #56]	@ tmp1142, MEM[(void *)proc_32(D)]
-	tst	r2, r3	@ tmp1142, tmp414
-	bne	.L319		@,
+@ MainMenu.c:108: 	if ( proc->mainUnit ) { ApplyBGBox(gBG2MapBuffer,&gCreatorMainNameSpriteUIBoxTSA,8,1); } // Draw a different box for whether they have a map sprite to show.
+	movs	r3, #1	@,
+	adds	r2, r2, #7	@,
+	ldr	r1, .L334+48	@,
+	ldr	r0, .L334+52	@,
+	bl	ApplyBGBox		@
 .L263:
-@ MainMenu.c:110: 	TextHandle nameHandle =	{
-	movs	r2, #8	@,
-	movs	r1, #0	@,
-	movs	r4, #8	@ tmp1144,
-	movs	r6, #24	@ tmp1466,
-	adds	r3, r7, r6	@ tmp1465,, tmp1466
-	adds	r0, r3, r4	@ tmp1143, tmp1465, tmp1144
-	ldr	r3, .L331+52	@ tmp420,
-	bl	.L30		@
-@ MainMenu.c:111: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	ldr	r3, .L331+56	@ tmp425,
-	ldr	r3, [r3]	@ gpCurrentFont, gpCurrentFont
-@ MainMenu.c:110: 	TextHandle nameHandle =	{
-	ldrh	r3, [r3, #18]	@ tmp426,
-	strh	r3, [r7, #32]	@ tmp426, nameHandle.tileIndexOffset
-	movs	r3, #7	@ tmp429,
-	movs	r2, #36	@ tmp1503,
-	adds	r2, r7, r2	@ tmp1502,, tmp1503
-	strb	r3, [r2]	@ tmp429, nameHandle.tileWidth
-@ MainMenu.c:115: 	Text_Clear(&nameHandle);
-	movs	r5, r4	@ tmp1146, tmp1146
-	adds	r3, r7, r6	@ tmp1463,, tmp1464
-	adds	r0, r3, r4	@ tmp1145, tmp1463, tmp1146
-	ldr	r3, .L331+60	@ tmp432,
-	bl	.L30		@
-@ MainMenu.c:116: 	Text_InsertString(&nameHandle,Text_GetStringTextCenteredPos(8*7,gChapterData.playerName),TEXT_COLOR_GOLD,gChapterData.playerName);
-	ldr	r4, .L331+64	@ tmp433,
-	movs	r1, r4	@, tmp433
-	movs	r0, #56	@,
-	ldr	r3, .L331+68	@ tmp434,
-	bl	.L30		@
-	movs	r1, r0	@ _79, tmp1077
-@ MainMenu.c:116: 	Text_InsertString(&nameHandle,Text_GetStringTextCenteredPos(8*7,gChapterData.playerName),TEXT_COLOR_GOLD,gChapterData.playerName);
-	movs	r3, r4	@, tmp433
-	movs	r2, #3	@,
-	adds	r0, r7, r6	@ tmp1461,, tmp1462
-	adds	r0, r0, r5	@ tmp1147, tmp1461, tmp1148
-	ldr	r4, .L331+72	@ tmp437,
-	bl	.L105		@
-@ MainMenu.c:117: 	Text_Display(&nameHandle,&gBG0MapBuffer[2][9]);
-	ldr	r1, .L331+76	@,
-	adds	r3, r7, r6	@ tmp1459,, tmp1460
-	adds	r0, r3, r5	@ tmp1149, tmp1459, tmp1150
-	ldr	r3, .L331+80	@ tmp440,
-	bl	.L30		@
-@ MainMenu.c:119: 	if ( proc->gender )
-	movs	r3, #42	@ tmp441,
-	mov	r2, fp	@ proc, proc
-	ldrb	r3, [r2, r3]	@ _81,
-@ MainMenu.c:114: 	tile += 7;
-	movs	r2, #7	@ tile,
-	str	r2, [r7]	@ tile, %sfp
-@ MainMenu.c:119: 	if ( proc->gender )
-	cmp	r3, #0	@ _81,
+@ MainMenu.c:110: 	if ( proc->gender || proc->route ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainUIBoxTSA,8,5); } // Box for what selections have been made. (Only necessary to check gender/route.)
+	mov	r3, fp	@ proc, proc
+	ldrh	r3, [r3, #42]	@ MEM[(void *)proc_35(D)], MEM[(void *)proc_35(D)]
+	cmp	r3, #0	@ MEM[(void *)proc_35(D)],
 	bne	.L320		@,
 .L264:
-@ MainMenu.c:131: 	if ( proc->route )
-	movs	r3, #43	@ tmp476,
+@ MainMenu.c:111: 	if ( proc->gender && proc->route ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainPortraitUIBoxTSA,18,9); } // Small row of tiles under the portrait.
+	movs	r3, #42	@ tmp418,
+@ MainMenu.c:111: 	if ( proc->gender && proc->route ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainPortraitUIBoxTSA,18,9); } // Small row of tiles under the portrait.
 	mov	r2, fp	@ proc, proc
-	ldrb	r3, [r2, r3]	@ _95,
-@ MainMenu.c:131: 	if ( proc->route )
-	cmp	r3, #0	@ _95,
+	ldrb	r3, [r2, r3]	@ tmp419,
+	cmp	r3, #0	@ tmp419,
+	beq	.L265		@,
+@ MainMenu.c:111: 	if ( proc->gender && proc->route ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainPortraitUIBoxTSA,18,9); } // Small row of tiles under the portrait.
+	movs	r3, #43	@ tmp420,
+@ MainMenu.c:111: 	if ( proc->gender && proc->route ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainPortraitUIBoxTSA,18,9); } // Small row of tiles under the portrait.
+	ldrb	r3, [r2, r3]	@ tmp421,
+	cmp	r3, #0	@ tmp421,
 	bne	.L321		@,
 .L265:
-@ MainMenu.c:143: 	if ( proc->mainUnit )
+@ MainMenu.c:112: 	if ( proc->boon || proc->bane ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainBoonBaneUIBoxTSA,18,10); } // Box for information on boon/bane.
+	ldr	r3, .L334+56	@ tmp426,
+@ MainMenu.c:112: 	if ( proc->boon || proc->bane ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainBoonBaneUIBoxTSA,18,10); } // Box for information on boon/bane.
+	mov	r2, fp	@ proc, proc
+	ldr	r2, [r2, #56]	@ tmp1156, MEM[(void *)proc_35(D)]
+	tst	r2, r3	@ tmp1156, tmp426
+	bne	.L322		@,
+.L266:
+@ MainMenu.c:117: 	TextHandle nameHandle =	{
+	movs	r2, #8	@,
+	movs	r1, #0	@,
+	movs	r4, #8	@ tmp1158,
+	movs	r6, #24	@ tmp1480,
+	adds	r3, r7, r6	@ tmp1479,, tmp1480
+	adds	r0, r3, r4	@ tmp1157, tmp1479, tmp1158
+	ldr	r3, .L334+60	@ tmp432,
+	bl	.L30		@
+@ MainMenu.c:118: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	ldr	r3, .L334+64	@ tmp437,
+	ldr	r3, [r3]	@ gpCurrentFont, gpCurrentFont
+@ MainMenu.c:117: 	TextHandle nameHandle =	{
+	ldrh	r3, [r3, #18]	@ tmp438,
+	strh	r3, [r7, #32]	@ tmp438, nameHandle.tileIndexOffset
+	movs	r3, #7	@ tmp441,
+	movs	r2, #36	@ tmp1517,
+	adds	r2, r7, r2	@ tmp1516,, tmp1517
+	strb	r3, [r2]	@ tmp441, nameHandle.tileWidth
+@ MainMenu.c:122: 	Text_Clear(&nameHandle);
+	movs	r5, r4	@ tmp1160, tmp1160
+	adds	r3, r7, r6	@ tmp1477,, tmp1478
+	adds	r0, r3, r4	@ tmp1159, tmp1477, tmp1160
+	ldr	r3, .L334+68	@ tmp444,
+	bl	.L30		@
+@ MainMenu.c:123: 	Text_InsertString(&nameHandle,Text_GetStringTextCenteredPos(8*7,gChapterData.playerName),TEXT_COLOR_GOLD,gChapterData.playerName);
+	ldr	r4, .L334+72	@ tmp445,
+	movs	r1, r4	@, tmp445
+	movs	r0, #56	@,
+	ldr	r3, .L334+76	@ tmp446,
+	bl	.L30		@
+	movs	r1, r0	@ _83, tmp1091
+@ MainMenu.c:123: 	Text_InsertString(&nameHandle,Text_GetStringTextCenteredPos(8*7,gChapterData.playerName),TEXT_COLOR_GOLD,gChapterData.playerName);
+	movs	r3, r4	@, tmp445
+	movs	r2, #3	@,
+	adds	r0, r7, r6	@ tmp1475,, tmp1476
+	adds	r0, r0, r5	@ tmp1161, tmp1475, tmp1162
+	ldr	r4, .L334+80	@ tmp449,
+	bl	.L105		@
+@ MainMenu.c:124: 	Text_Display(&nameHandle,&gBG0MapBuffer[2][9]);
+	ldr	r1, .L334+84	@,
+	adds	r3, r7, r6	@ tmp1473,, tmp1474
+	adds	r0, r3, r5	@ tmp1163, tmp1473, tmp1164
+	ldr	r3, .L334+88	@ tmp452,
+	bl	.L30		@
+@ MainMenu.c:126: 	if ( proc->gender )
+	movs	r3, #42	@ tmp453,
+	mov	r2, fp	@ proc, proc
+	ldrb	r3, [r2, r3]	@ _85,
+@ MainMenu.c:121: 	tile += 7;
+	movs	r2, #7	@ tile,
+	str	r2, [r7]	@ tile, %sfp
+@ MainMenu.c:126: 	if ( proc->gender )
+	cmp	r3, #0	@ _85,
+	bne	.L323		@,
+.L267:
+@ MainMenu.c:138: 	if ( proc->route )
+	movs	r3, #43	@ tmp488,
+	mov	r2, fp	@ proc, proc
+	ldrb	r3, [r2, r3]	@ _99,
+@ MainMenu.c:138: 	if ( proc->route )
+	cmp	r3, #0	@ _99,
+	bne	.L324		@,
+.L268:
+@ MainMenu.c:150: 	if ( proc->mainUnit )
 	mov	r3, fp	@ proc, proc
-	ldr	r3, [r3, #44]	@ _112, proc_32(D)->mainUnit
-@ MainMenu.c:143: 	if ( proc->mainUnit )
-	cmp	r3, #0	@ _112,
-	bne	.LCB2996	@
-	b	.L266	@long jump	@
-.LCB2996:
-@ MainMenu.c:145: 		char* string = GetStringFromIndex(GetReplacedText(proc->mainUnit->pClassData->nameTextId));
-	ldr	r3, [r3, #4]	@ _112->pClassData, _112->pClassData
-@ MainMenu.c:145: 		char* string = GetStringFromIndex(GetReplacedText(proc->mainUnit->pClassData->nameTextId));
-	ldrh	r0, [r3]	@ _115, *_113
-@ CharacterCreator.c:336: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
-	ldr	r3, .L331+84	@ tmp513,
-	ldrh	r3, [r3]	@ _209, gCreatorTextReplacementLookup
-@ CharacterCreator.c:336: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
-	cmp	r3, #0	@ _209,
-	bne	.LCB3002	@
-	b	.L267	@long jump	@
-.LCB3002:
-	ldr	r2, .L331+88	@ ivtmp.322,
-@ CharacterCreator.c:336: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
+	ldr	r3, [r3, #44]	@ _116, proc_35(D)->mainUnit
+@ MainMenu.c:150: 	if ( proc->mainUnit )
+	cmp	r3, #0	@ _116,
+	bne	.LCB3042	@
+	b	.L269	@long jump	@
+.LCB3042:
+@ MainMenu.c:152: 		char* string = GetStringFromIndex(GetReplacedText(proc->mainUnit->pClassData->nameTextId));
+	ldr	r3, [r3, #4]	@ _116->pClassData, _116->pClassData
+@ MainMenu.c:152: 		char* string = GetStringFromIndex(GetReplacedText(proc->mainUnit->pClassData->nameTextId));
+	ldrh	r0, [r3]	@ _119, *_117
+@ CharacterCreator.c:337: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
+	ldr	r3, .L334+92	@ tmp525,
+	ldrh	r3, [r3]	@ _213, gCreatorTextReplacementLookup
+@ CharacterCreator.c:337: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
+	cmp	r3, #0	@ _213,
+	bne	.LCB3048	@
+	b	.L270	@long jump	@
+.LCB3048:
+	ldr	r2, .L334+96	@ ivtmp.324,
+@ CharacterCreator.c:337: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
 	movs	r1, #0	@ i,
 	ldr	r4, [r7]	@ tile, %sfp
-.L269:
-@ CharacterCreator.c:338: 		if ( gCreatorTextReplacementLookup[i].normal == text ) { return gCreatorTextReplacementLookup[i].replacement; }
-	cmp	r0, r3	@ _115, _209
-	bne	.LCB3009	@
-	b	.L322	@long jump	@
-.LCB3009:
-@ CharacterCreator.c:336: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
+.L272:
+@ CharacterCreator.c:339: 		if ( gCreatorTextReplacementLookup[i].normal == text ) { return gCreatorTextReplacementLookup[i].replacement; }
+	cmp	r0, r3	@ _119, _213
+	bne	.LCB3055	@
+	b	.L325	@long jump	@
+.LCB3055:
+@ CharacterCreator.c:337: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
 	adds	r1, r1, #1	@ i,
-	adds	r2, r2, #4	@ ivtmp.322,
-@ CharacterCreator.c:336: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
-	subs	r3, r2, #4	@ tmp518, ivtmp.322,
-	ldrh	r3, [r3]	@ _209, MEM[base: _574, offset: 4294967292B]
-@ CharacterCreator.c:336: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
-	cmp	r3, #0	@ _209,
-	bne	.L269		@,
+	adds	r2, r2, #4	@ ivtmp.324,
+@ CharacterCreator.c:337: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
+	subs	r3, r2, #4	@ tmp530, ivtmp.324,
+	ldrh	r3, [r3]	@ _213, MEM[base: _580, offset: 4294967292B]
+@ CharacterCreator.c:337: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
+	cmp	r3, #0	@ _213,
+	bne	.L272		@,
 	str	r4, [r7]	@ tile, %sfp
-	b	.L267		@
-.L259:
-@ MainMenu.c:102: 	else { ApplyBGBox(gBG1MapBuffer,&gCreatorMainNameUIBoxTSA,8,1); }
+	b	.L270		@
+.L262:
+@ MainMenu.c:109: 	else { ApplyBGBox(gBG1MapBuffer,&gCreatorMainNameUIBoxTSA,8,1); }
 	movs	r3, #1	@,
 	movs	r2, #8	@,
-	ldr	r1, .L331+92	@,
-	ldr	r0, .L331+96	@,
-	bl	ApplyBGBox		@
-	b	.L260		@
-.L317:
-@ MainMenu.c:103: 	if ( proc->gender || proc->route ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainUIBoxTSA,8,5); } // Box for what selections have been made. (Only necessary to check gender/route.)
-	movs	r3, #5	@,
-	movs	r2, #8	@,
-	ldr	r1, .L331+100	@,
-	ldr	r0, .L331+96	@,
-	bl	ApplyBGBox		@
-	b	.L261		@
-.L318:
-@ MainMenu.c:104: 	if ( proc->gender && proc->route ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainPortraitUIBoxTSA,18,9); } // Small row of tiles under the portrait.
-	movs	r3, #9	@,
-	movs	r2, #18	@,
-	ldr	r1, .L331+104	@,
-	ldr	r0, .L331+96	@,
-	bl	ApplyBGBox		@
-	b	.L262		@
-.L319:
-@ MainMenu.c:105: 	if ( proc->boon || proc->bane ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainBoonBaneUIBoxTSA,18,10); } // Box for information on boon/bane.
-	movs	r3, #10	@,
-	movs	r2, #18	@,
-	ldr	r1, .L331+108	@,
-	ldr	r0, .L331+96	@,
+	ldr	r1, .L334+100	@,
+	ldr	r0, .L334+104	@,
 	bl	ApplyBGBox		@
 	b	.L263		@
 .L320:
-@ MainMenu.c:121: 		char* string = GetStringFromIndex(gCreatorGenderMenuDefs.commandList[proc->gender-1].nameId);
-	ldr	r2, .L331+112	@ tmp442,
-@ MainMenu.c:121: 		char* string = GetStringFromIndex(gCreatorGenderMenuDefs.commandList[proc->gender-1].nameId);
-	ldr	r2, [r2, #8]	@ gCreatorGenderMenuDefs.commandList, gCreatorGenderMenuDefs.commandList
-	lsls	r1, r3, #3	@ tmp445, _81,
-	adds	r3, r1, r3	@ tmp446, tmp445, _81
-	lsls	r3, r3, #2	@ tmp447, tmp446,
-	adds	r3, r2, r3	@ tmp448, gCreatorGenderMenuDefs.commandList, tmp447
-	subs	r3, r3, #36	@ tmp449,
-@ MainMenu.c:121: 		char* string = GetStringFromIndex(gCreatorGenderMenuDefs.commandList[proc->gender-1].nameId);
-	ldrh	r0, [r3, #4]	@ tmp450,
-	ldr	r3, .L331+116	@ tmp451,
-	bl	.L30		@
-	movs	r5, r0	@ string, tmp1078
-@ MainMenu.c:122: 		TextHandle handle =	{
-	movs	r3, #32	@ tmp1152,
-	movs	r2, #24	@ tmp1500,
-	adds	r2, r7, r2	@ tmp1499,, tmp1500
-	adds	r4, r2, r3	@ tmp452, tmp1499, tmp1152
+@ MainMenu.c:110: 	if ( proc->gender || proc->route ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainUIBoxTSA,8,5); } // Box for what selections have been made. (Only necessary to check gender/route.)
+	movs	r3, #5	@,
 	movs	r2, #8	@,
-	movs	r1, #0	@,
-	movs	r0, r4	@, tmp452
-	ldr	r3, .L331+52	@ tmp455,
-	bl	.L30		@
-@ MainMenu.c:123: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	ldr	r3, .L331+56	@ tmp460,
-	ldr	r3, [r3]	@ gpCurrentFont, gpCurrentFont
-@ MainMenu.c:123: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	ldrh	r3, [r3, #18]	@ tmp462,
-	adds	r3, r3, #7	@ tmp463,
-@ MainMenu.c:122: 		TextHandle handle =	{
-	strh	r3, [r4]	@ tmp463, handle.tileIndexOffset
-	movs	r3, #6	@ tmp466,
-	strb	r3, [r4, #4]	@ tmp466, handle.tileWidth
-@ MainMenu.c:127: 		Text_Clear(&handle);
-	movs	r0, r4	@, tmp452
-	ldr	r3, .L331+60	@ tmp469,
-	bl	.L30		@
-@ MainMenu.c:128: 		Text_InsertString(&handle,Text_GetStringTextCenteredPos(8*8,string),TEXT_COLOR_GOLD,string);
-	movs	r1, r5	@, string
-	movs	r0, #64	@,
-	ldr	r3, .L331+68	@ tmp470,
-	bl	.L30		@
-	movs	r1, r0	@ _93, tmp1079
-@ MainMenu.c:128: 		Text_InsertString(&handle,Text_GetStringTextCenteredPos(8*8,string),TEXT_COLOR_GOLD,string);
-	movs	r3, r5	@, string
-	movs	r2, #3	@,
-	movs	r0, r4	@, tmp452
-	ldr	r5, .L331+72	@ tmp472,
-	bl	.L115		@
-@ MainMenu.c:129: 		Text_Display(&handle,&gBG0MapBuffer[6][9]);
-	ldr	r1, .L331+120	@,
-	movs	r0, r4	@, tmp452
-	ldr	r3, .L331+80	@ tmp475,
-	bl	.L30		@
-@ MainMenu.c:126: 		tile += 6;
-	movs	r3, #13	@ tile,
-	str	r3, [r7]	@ tile, %sfp
+	ldr	r1, .L334+108	@,
+	ldr	r0, .L334+104	@,
+	bl	ApplyBGBox		@
 	b	.L264		@
 .L321:
-@ MainMenu.c:133: 		char* string = GetStringFromIndex(gCreatorRouteMenuDefs.commandList[proc->route-1].nameId);
-	ldr	r2, .L331+124	@ tmp477,
-@ MainMenu.c:133: 		char* string = GetStringFromIndex(gCreatorRouteMenuDefs.commandList[proc->route-1].nameId);
-	ldr	r2, [r2, #8]	@ gCreatorRouteMenuDefs.commandList, gCreatorRouteMenuDefs.commandList
-	lsls	r1, r3, #3	@ tmp480, _95,
-	adds	r3, r1, r3	@ tmp481, tmp480, _95
-	lsls	r3, r3, #2	@ tmp482, tmp481,
-	adds	r3, r2, r3	@ tmp483, gCreatorRouteMenuDefs.commandList, tmp482
-	subs	r3, r3, #36	@ tmp484,
-@ MainMenu.c:133: 		char* string = GetStringFromIndex(gCreatorRouteMenuDefs.commandList[proc->route-1].nameId);
-	ldrh	r0, [r3, #4]	@ tmp485,
-	ldr	r3, .L331+116	@ tmp486,
-	bl	.L30		@
-	movs	r6, r0	@ string, tmp1080
-@ MainMenu.c:134: 		TextHandle handle =	{
-	movs	r3, #32	@ tmp1154,
-	movs	r2, #24	@ tmp1498,
-	adds	r2, r7, r2	@ tmp1497,, tmp1498
-	adds	r5, r2, r3	@ tmp487, tmp1497, tmp1154
-	movs	r2, #8	@,
-	movs	r1, #0	@,
-	movs	r0, r5	@, tmp487
-	ldr	r3, .L331+52	@ tmp490,
-	bl	.L30		@
-@ MainMenu.c:135: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	ldr	r3, .L331+56	@ tmp495,
-	ldr	r3, [r3]	@ gpCurrentFont, gpCurrentFont
-@ MainMenu.c:135: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	ldrh	r3, [r3, #18]	@ tmp497,
-	ldr	r2, [r7]	@ tile, %sfp
-	mov	ip, r2	@ tile, tile
-	add	r3, r3, ip	@ tmp499, tile
-@ MainMenu.c:134: 		TextHandle handle =	{
-	strh	r3, [r5]	@ tmp499, handle.tileIndexOffset
-	movs	r3, #8	@ tmp489,
-	strb	r3, [r5, #4]	@ tmp489, handle.tileWidth
-@ MainMenu.c:138: 		tile += 8;
-	movs	r3, r2	@ tile, tile
-	adds	r3, r3, #8	@ tile,
-	str	r3, [r7]	@ tile, %sfp
-@ MainMenu.c:139: 		Text_Clear(&handle);
-	movs	r0, r5	@, tmp487
-	ldr	r3, .L331+60	@ tmp505,
-	bl	.L30		@
-@ MainMenu.c:140: 		Text_InsertString(&handle,Text_GetStringTextCenteredPos(8*8,string),TEXT_COLOR_GOLD,string);
-	movs	r1, r6	@, string
-	movs	r0, #64	@,
-	ldr	r3, .L331+68	@ tmp506,
-	bl	.L30		@
-	movs	r1, r0	@ _110, tmp1081
-@ MainMenu.c:140: 		Text_InsertString(&handle,Text_GetStringTextCenteredPos(8*8,string),TEXT_COLOR_GOLD,string);
-	movs	r3, r6	@, string
-	movs	r2, #3	@,
-	movs	r0, r5	@, tmp487
-	ldr	r6, .L331+72	@ tmp508,
-	bl	.L96		@
-@ MainMenu.c:141: 		Text_Display(&handle,&gBG0MapBuffer[8][9]);
-	ldr	r1, .L331+128	@,
-	movs	r0, r5	@, tmp487
-	ldr	r3, .L331+80	@ tmp511,
-	bl	.L30		@
+@ MainMenu.c:111: 	if ( proc->gender && proc->route ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainPortraitUIBoxTSA,18,9); } // Small row of tiles under the portrait.
+	movs	r3, #9	@,
+	movs	r2, #18	@,
+	ldr	r1, .L334+112	@,
+	ldr	r0, .L334+104	@,
+	bl	ApplyBGBox		@
 	b	.L265		@
 .L322:
-	str	r4, [r7]	@ tile, %sfp
-@ CharacterCreator.c:338: 		if ( gCreatorTextReplacementLookup[i].normal == text ) { return gCreatorTextReplacementLookup[i].replacement; }
-	lsls	r1, r1, #2	@ tmp515, i,
-	ldr	r3, .L331+84	@ tmp514,
-	adds	r1, r3, r1	@ tmp516, tmp514, tmp515
-	ldrh	r0, [r1, #2]	@ _115, gCreatorTextReplacementLookup
-.L267:
-@ MainMenu.c:145: 		char* string = GetStringFromIndex(GetReplacedText(proc->mainUnit->pClassData->nameTextId));
-	ldr	r3, .L331+116	@ tmp519,
+@ MainMenu.c:112: 	if ( proc->boon || proc->bane ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainBoonBaneUIBoxTSA,18,10); } // Box for information on boon/bane.
+	movs	r3, #10	@,
+	movs	r2, #18	@,
+	ldr	r1, .L334+116	@,
+	ldr	r0, .L334+104	@,
+	bl	ApplyBGBox		@
+	b	.L266		@
+.L323:
+@ MainMenu.c:128: 		char* string = GetStringFromIndex(gCreatorGenderMenuDefs.commandList[proc->gender-1].nameId);
+	ldr	r2, .L334+120	@ tmp454,
+@ MainMenu.c:128: 		char* string = GetStringFromIndex(gCreatorGenderMenuDefs.commandList[proc->gender-1].nameId);
+	ldr	r2, [r2, #8]	@ gCreatorGenderMenuDefs.commandList, gCreatorGenderMenuDefs.commandList
+	lsls	r1, r3, #3	@ tmp457, _85,
+	adds	r3, r1, r3	@ tmp458, tmp457, _85
+	lsls	r3, r3, #2	@ tmp459, tmp458,
+	adds	r3, r2, r3	@ tmp460, gCreatorGenderMenuDefs.commandList, tmp459
+	subs	r3, r3, #36	@ tmp461,
+@ MainMenu.c:128: 		char* string = GetStringFromIndex(gCreatorGenderMenuDefs.commandList[proc->gender-1].nameId);
+	ldrh	r0, [r3, #4]	@ tmp462,
+	ldr	r3, .L334+124	@ tmp463,
 	bl	.L30		@
-	movs	r6, r0	@ string, tmp1082
-@ MainMenu.c:146: 		TextHandle handle =	{
-	movs	r3, #32	@ tmp1156,
-	movs	r2, #24	@ tmp1496,
-	adds	r2, r7, r2	@ tmp1495,, tmp1496
-	adds	r5, r2, r3	@ tmp520, tmp1495, tmp1156
+	movs	r5, r0	@ string, tmp1092
+@ MainMenu.c:129: 		TextHandle handle =	{
+	movs	r3, #32	@ tmp1166,
+	movs	r2, #24	@ tmp1514,
+	adds	r2, r7, r2	@ tmp1513,, tmp1514
+	adds	r4, r2, r3	@ tmp464, tmp1513, tmp1166
 	movs	r2, #8	@,
 	movs	r1, #0	@,
-	movs	r0, r5	@, tmp520
-	ldr	r3, .L331+52	@ tmp523,
+	movs	r0, r4	@, tmp464
+	ldr	r3, .L334+60	@ tmp467,
 	bl	.L30		@
-@ MainMenu.c:147: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	ldr	r3, .L331+56	@ tmp528,
+@ MainMenu.c:130: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	ldr	r3, .L334+64	@ tmp472,
 	ldr	r3, [r3]	@ gpCurrentFont, gpCurrentFont
-@ MainMenu.c:147: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	ldrh	r3, [r3, #18]	@ tmp530,
+@ MainMenu.c:130: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	ldrh	r3, [r3, #18]	@ tmp474,
+	adds	r3, r3, #7	@ tmp475,
+@ MainMenu.c:129: 		TextHandle handle =	{
+	strh	r3, [r4]	@ tmp475, handle.tileIndexOffset
+	movs	r3, #6	@ tmp478,
+	strb	r3, [r4, #4]	@ tmp478, handle.tileWidth
+@ MainMenu.c:134: 		Text_Clear(&handle);
+	movs	r0, r4	@, tmp464
+	ldr	r3, .L334+68	@ tmp481,
+	bl	.L30		@
+@ MainMenu.c:135: 		Text_InsertString(&handle,Text_GetStringTextCenteredPos(8*8,string),TEXT_COLOR_GOLD,string);
+	movs	r1, r5	@, string
+	movs	r0, #64	@,
+	ldr	r3, .L334+76	@ tmp482,
+	bl	.L30		@
+	movs	r1, r0	@ _97, tmp1093
+@ MainMenu.c:135: 		Text_InsertString(&handle,Text_GetStringTextCenteredPos(8*8,string),TEXT_COLOR_GOLD,string);
+	movs	r3, r5	@, string
+	movs	r2, #3	@,
+	movs	r0, r4	@, tmp464
+	ldr	r5, .L334+80	@ tmp484,
+	bl	.L115		@
+@ MainMenu.c:136: 		Text_Display(&handle,&gBG0MapBuffer[6][9]);
+	ldr	r1, .L334+128	@,
+	movs	r0, r4	@, tmp464
+	ldr	r3, .L334+88	@ tmp487,
+	bl	.L30		@
+@ MainMenu.c:133: 		tile += 6;
+	movs	r3, #13	@ tile,
+	str	r3, [r7]	@ tile, %sfp
+	b	.L267		@
+.L324:
+@ MainMenu.c:140: 		char* string = GetStringFromIndex(gCreatorRouteMenuDefs.commandList[proc->route-1].nameId);
+	ldr	r2, .L334+132	@ tmp489,
+@ MainMenu.c:140: 		char* string = GetStringFromIndex(gCreatorRouteMenuDefs.commandList[proc->route-1].nameId);
+	ldr	r2, [r2, #8]	@ gCreatorRouteMenuDefs.commandList, gCreatorRouteMenuDefs.commandList
+	lsls	r1, r3, #3	@ tmp492, _99,
+	adds	r3, r1, r3	@ tmp493, tmp492, _99
+	lsls	r3, r3, #2	@ tmp494, tmp493,
+	adds	r3, r2, r3	@ tmp495, gCreatorRouteMenuDefs.commandList, tmp494
+	subs	r3, r3, #36	@ tmp496,
+@ MainMenu.c:140: 		char* string = GetStringFromIndex(gCreatorRouteMenuDefs.commandList[proc->route-1].nameId);
+	ldrh	r0, [r3, #4]	@ tmp497,
+	ldr	r3, .L334+124	@ tmp498,
+	bl	.L30		@
+	movs	r6, r0	@ string, tmp1094
+@ MainMenu.c:141: 		TextHandle handle =	{
+	movs	r3, #32	@ tmp1168,
+	movs	r2, #24	@ tmp1512,
+	adds	r2, r7, r2	@ tmp1511,, tmp1512
+	adds	r5, r2, r3	@ tmp499, tmp1511, tmp1168
+	movs	r2, #8	@,
+	movs	r1, #0	@,
+	movs	r0, r5	@, tmp499
+	ldr	r3, .L334+60	@ tmp502,
+	bl	.L30		@
+@ MainMenu.c:142: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	ldr	r3, .L334+64	@ tmp507,
+	ldr	r3, [r3]	@ gpCurrentFont, gpCurrentFont
+@ MainMenu.c:142: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	ldrh	r3, [r3, #18]	@ tmp509,
 	ldr	r2, [r7]	@ tile, %sfp
 	mov	ip, r2	@ tile, tile
-	add	r3, r3, ip	@ tmp532, tile
-@ MainMenu.c:146: 		TextHandle handle =	{
-	strh	r3, [r5]	@ tmp532, handle.tileIndexOffset
-	movs	r3, #8	@ tmp522,
-	strb	r3, [r5, #4]	@ tmp522, handle.tileWidth
-@ MainMenu.c:150: 		tile += 8;
+	add	r3, r3, ip	@ tmp511, tile
+@ MainMenu.c:141: 		TextHandle handle =	{
+	strh	r3, [r5]	@ tmp511, handle.tileIndexOffset
+	movs	r3, #8	@ tmp501,
+	strb	r3, [r5, #4]	@ tmp501, handle.tileWidth
+@ MainMenu.c:145: 		tile += 8;
 	movs	r3, r2	@ tile, tile
 	adds	r3, r3, #8	@ tile,
 	str	r3, [r7]	@ tile, %sfp
-@ MainMenu.c:151: 		Text_Clear(&handle);
-	movs	r0, r5	@, tmp520
-	ldr	r3, .L331+60	@ tmp538,
+@ MainMenu.c:146: 		Text_Clear(&handle);
+	movs	r0, r5	@, tmp499
+	ldr	r3, .L334+68	@ tmp517,
 	bl	.L30		@
-@ MainMenu.c:152: 		Text_InsertString(&handle,Text_GetStringTextCenteredPos(8*8,string),TEXT_COLOR_GOLD,string);
+@ MainMenu.c:147: 		Text_InsertString(&handle,Text_GetStringTextCenteredPos(8*8,string),TEXT_COLOR_GOLD,string);
 	movs	r1, r6	@, string
 	movs	r0, #64	@,
-	ldr	r3, .L331+68	@ tmp539,
+	ldr	r3, .L334+76	@ tmp518,
 	bl	.L30		@
-	movs	r1, r0	@ _124, tmp1083
-@ MainMenu.c:152: 		Text_InsertString(&handle,Text_GetStringTextCenteredPos(8*8,string),TEXT_COLOR_GOLD,string);
+	movs	r1, r0	@ _114, tmp1095
+@ MainMenu.c:147: 		Text_InsertString(&handle,Text_GetStringTextCenteredPos(8*8,string),TEXT_COLOR_GOLD,string);
 	movs	r3, r6	@, string
 	movs	r2, #3	@,
-	movs	r0, r5	@, tmp520
-	ldr	r6, .L331+72	@ tmp541,
+	movs	r0, r5	@, tmp499
+	ldr	r6, .L334+80	@ tmp520,
 	bl	.L96		@
-@ MainMenu.c:153: 		Text_Display(&handle,&gBG0MapBuffer[10][9]);
-	ldr	r1, .L331+132	@,
-	movs	r0, r5	@, tmp520
-	ldr	r3, .L331+80	@ tmp544,
+@ MainMenu.c:148: 		Text_Display(&handle,&gBG0MapBuffer[8][9]);
+	ldr	r1, .L334+136	@,
+	movs	r0, r5	@, tmp499
+	ldr	r3, .L334+88	@ tmp523,
 	bl	.L30		@
-.L266:
-@ MainMenu.c:155: 	if ( proc->boon )
-	movs	r3, #57	@ tmp545,
-	mov	r2, fp	@ proc, proc
-	ldrb	r3, [r2, r3]	@ _126,
-@ MainMenu.c:155: 	if ( proc->boon )
-	cmp	r3, #0	@ _126,
-	beq	.LCB3214	@
-	b	.L323	@long jump	@
-.LCB3214:
+	b	.L268		@
+.L325:
+	str	r4, [r7]	@ tile, %sfp
+@ CharacterCreator.c:339: 		if ( gCreatorTextReplacementLookup[i].normal == text ) { return gCreatorTextReplacementLookup[i].replacement; }
+	lsls	r1, r1, #2	@ tmp527, i,
+	ldr	r3, .L334+92	@ tmp526,
+	adds	r1, r3, r1	@ tmp528, tmp526, tmp527
+	ldrh	r0, [r1, #2]	@ _119, gCreatorTextReplacementLookup
 .L270:
-@ MainMenu.c:194: 	if ( proc->bane )
-	movs	r3, #58	@ tmp650,
+@ MainMenu.c:152: 		char* string = GetStringFromIndex(GetReplacedText(proc->mainUnit->pClassData->nameTextId));
+	ldr	r3, .L334+124	@ tmp531,
+	bl	.L30		@
+	movs	r6, r0	@ string, tmp1096
+@ MainMenu.c:153: 		TextHandle handle =	{
+	movs	r3, #32	@ tmp1170,
+	movs	r2, #24	@ tmp1510,
+	adds	r2, r7, r2	@ tmp1509,, tmp1510
+	adds	r5, r2, r3	@ tmp532, tmp1509, tmp1170
+	movs	r2, #8	@,
+	movs	r1, #0	@,
+	movs	r0, r5	@, tmp532
+	ldr	r3, .L334+60	@ tmp535,
+	bl	.L30		@
+@ MainMenu.c:154: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	ldr	r3, .L334+64	@ tmp540,
+	ldr	r3, [r3]	@ gpCurrentFont, gpCurrentFont
+@ MainMenu.c:154: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	ldrh	r3, [r3, #18]	@ tmp542,
+	ldr	r2, [r7]	@ tile, %sfp
+	mov	ip, r2	@ tile, tile
+	add	r3, r3, ip	@ tmp544, tile
+@ MainMenu.c:153: 		TextHandle handle =	{
+	strh	r3, [r5]	@ tmp544, handle.tileIndexOffset
+	movs	r3, #8	@ tmp534,
+	strb	r3, [r5, #4]	@ tmp534, handle.tileWidth
+@ MainMenu.c:157: 		tile += 8;
+	movs	r3, r2	@ tile, tile
+	adds	r3, r3, #8	@ tile,
+	str	r3, [r7]	@ tile, %sfp
+@ MainMenu.c:158: 		Text_Clear(&handle);
+	movs	r0, r5	@, tmp532
+	ldr	r3, .L334+68	@ tmp550,
+	bl	.L30		@
+@ MainMenu.c:159: 		Text_InsertString(&handle,Text_GetStringTextCenteredPos(8*8,string),TEXT_COLOR_GOLD,string);
+	movs	r1, r6	@, string
+	movs	r0, #64	@,
+	ldr	r3, .L334+76	@ tmp551,
+	bl	.L30		@
+	movs	r1, r0	@ _128, tmp1097
+@ MainMenu.c:159: 		Text_InsertString(&handle,Text_GetStringTextCenteredPos(8*8,string),TEXT_COLOR_GOLD,string);
+	movs	r3, r6	@, string
+	movs	r2, #3	@,
+	movs	r0, r5	@, tmp532
+	ldr	r6, .L334+80	@ tmp553,
+	bl	.L96		@
+@ MainMenu.c:160: 		Text_Display(&handle,&gBG0MapBuffer[10][9]);
+	ldr	r1, .L334+140	@,
+	movs	r0, r5	@, tmp532
+	ldr	r3, .L334+88	@ tmp556,
+	bl	.L30		@
+.L269:
+@ MainMenu.c:162: 	if ( proc->boon )
+	movs	r3, #57	@ tmp557,
 	mov	r2, fp	@ proc, proc
-	ldrb	r3, [r2, r3]	@ _159,
-@ MainMenu.c:194: 	if ( proc->bane )
-	cmp	r3, #0	@ _159,
-	beq	.LCB3220	@
-	b	.L324	@long jump	@
-.LCB3220:
-.L271:
-@ MainMenu.c:232: 	if ( proc->boon || proc->bane )
-	ldr	r3, .L331+48	@ tmp757,
-@ MainMenu.c:232: 	if ( proc->boon || proc->bane )
-	mov	r2, fp	@ proc, proc
-	ldr	r2, [r2, #56]	@ tmp1248, MEM[(void *)proc_32(D)]
-	tst	r2, r3	@ tmp1248, tmp757
-	beq	.LCB3228	@
-	b	.L325	@long jump	@
-.LCB3228:
-.L272:
-@ MainMenu.c:254: 	if ( proc->gender && proc->route) { StartFace(0,GetMainMenuPortrait(proc->gender,proc->route),8*23+2,-4,0x102); }
-	movs	r3, #42	@ tmp809,
-	mov	r2, fp	@ proc, proc
-	ldrb	r0, [r2, r3]	@ _204,
-@ MainMenu.c:254: 	if ( proc->gender && proc->route) { StartFace(0,GetMainMenuPortrait(proc->gender,proc->route),8*23+2,-4,0x102); }
-	cmp	r0, #0	@ _204,
-	beq	.L273		@,
-@ MainMenu.c:254: 	if ( proc->gender && proc->route) { StartFace(0,GetMainMenuPortrait(proc->gender,proc->route),8*23+2,-4,0x102); }
-	adds	r3, r3, #1	@ tmp810,
-	ldrb	r4, [r2, r3]	@ _205,
-@ MainMenu.c:254: 	if ( proc->gender && proc->route) { StartFace(0,GetMainMenuPortrait(proc->gender,proc->route),8*23+2,-4,0x102); }
-	cmp	r4, #0	@ _205,
-	beq	.LCB3238	@
+	ldrb	r3, [r2, r3]	@ _130,
+@ MainMenu.c:162: 	if ( proc->boon )
+	cmp	r3, #0	@ _130,
+	beq	.LCB3260	@
 	b	.L326	@long jump	@
-.LCB3238:
+.LCB3260:
 .L273:
-@ MainMenu.c:256: 	EnableBgSyncByMask(1|2|4);
-	movs	r0, #7	@,
-	ldr	r3, .L331+136	@ tmp817,
-	bl	.L30		@
-@ CharacterCreator.c:86: 			newMenu->commandIndex = proc->lastIndex;
-	movs	r3, #60	@ tmp818,
+@ MainMenu.c:201: 	if ( proc->bane )
+	movs	r3, #58	@ tmp662,
 	mov	r2, fp	@ proc, proc
-	ldrb	r2, [r2, r3]	@ _2,
-@ CharacterCreator.c:86: 			newMenu->commandIndex = proc->lastIndex;
-	adds	r3, r3, #37	@ tmp819,
-	ldr	r1, [r7, #20]	@ newMenu, %sfp
-	strb	r2, [r1, r3]	@ _2, newMenu_34->commandIndex
-.L252:
-@ CharacterCreator.c:134: 	EnableBgSyncByMask(1|2|4);
+	ldrb	r3, [r2, r3]	@ _163,
+@ MainMenu.c:201: 	if ( proc->bane )
+	cmp	r3, #0	@ _163,
+	beq	.LCB3266	@
+	b	.L327	@long jump	@
+.LCB3266:
+.L274:
+@ MainMenu.c:239: 	if ( proc->boon || proc->bane )
+	ldr	r3, .L334+56	@ tmp769,
+@ MainMenu.c:239: 	if ( proc->boon || proc->bane )
+	mov	r2, fp	@ proc, proc
+	ldr	r2, [r2, #56]	@ tmp1262, MEM[(void *)proc_35(D)]
+	tst	r2, r3	@ tmp1262, tmp769
+	beq	.LCB3274	@
+	b	.L328	@long jump	@
+.LCB3274:
+.L275:
+@ MainMenu.c:261: 	if ( proc->gender && proc->route) { StartFace(0,GetMainMenuPortrait(proc->gender,proc->route),8*23+2,-4,0x102); }
+	movs	r3, #42	@ tmp821,
+	mov	r2, fp	@ proc, proc
+	ldrb	r0, [r2, r3]	@ _208,
+@ MainMenu.c:261: 	if ( proc->gender && proc->route) { StartFace(0,GetMainMenuPortrait(proc->gender,proc->route),8*23+2,-4,0x102); }
+	cmp	r0, #0	@ _208,
+	beq	.L276		@,
+@ MainMenu.c:261: 	if ( proc->gender && proc->route) { StartFace(0,GetMainMenuPortrait(proc->gender,proc->route),8*23+2,-4,0x102); }
+	adds	r3, r3, #1	@ tmp822,
+	ldrb	r4, [r2, r3]	@ _209,
+@ MainMenu.c:261: 	if ( proc->gender && proc->route) { StartFace(0,GetMainMenuPortrait(proc->gender,proc->route),8*23+2,-4,0x102); }
+	cmp	r4, #0	@ _209,
+	beq	.LCB3284	@
+	b	.L329	@long jump	@
+.LCB3284:
+.L276:
+@ MainMenu.c:263: 	EnableBgSyncByMask(1|2|4);
 	movs	r0, #7	@,
-	ldr	r3, .L331+136	@ tmp1065,
+	ldr	r3, .L334+144	@ tmp829,
 	bl	.L30		@
-@ CharacterCreator.c:135: }
+@ CharacterCreator.c:87: 			newMenu->commandIndex = proc->lastIndex;
+	movs	r3, #60	@ tmp830,
+	mov	r2, fp	@ proc, proc
+	ldrb	r2, [r2, r3]	@ _3,
+@ CharacterCreator.c:87: 			newMenu->commandIndex = proc->lastIndex;
+	adds	r3, r3, #37	@ tmp831,
+	ldr	r1, [r7, #20]	@ newMenu, %sfp
+	strb	r2, [r1, r3]	@ _3, newMenu_37->commandIndex
+.L255:
+@ CharacterCreator.c:135: 	EnableBgSyncByMask(1|2|4);
+	movs	r0, #7	@,
+	ldr	r3, .L334+144	@ tmp1077,
+	bl	.L30		@
+@ CharacterCreator.c:136: }
 	mov	sp, r7	@,
 	add	sp, sp, #76	@,,
 	@ sp needed	@
@@ -3840,15 +3906,17 @@ CreatorStartMenu:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L332:
+.L335:
 	.align	2
-.L331:
+.L334:
 	.word	Text_InitFont
 	.word	gBg0MapBuffer
 	.word	FillBgMap
 	.word	gBg1MapBuffer
 	.word	gBg2MapBuffer
-	.word	.L254
+	.word	gCreatorSpriteProc
+	.word	ProcFind
+	.word	.L257
 	.word	gCreatorMainMenuDefs
 	.word	StartMenu
 	.word	SetBgTileDataOffset
@@ -3878,515 +3946,515 @@ CreatorStartMenu:
 	.word	gBG0MapBuffer+530
 	.word	gBG0MapBuffer+658
 	.word	EnableBgSyncByMask
-.L323:
-@ MainMenu.c:157: 		char* string = GetStringFromIndex(gCreatorBoonBaneMenuDefs.commandList[proc->boon-1].nameId);
-	ldr	r2, .L333	@ tmp546,
-@ MainMenu.c:157: 		char* string = GetStringFromIndex(gCreatorBoonBaneMenuDefs.commandList[proc->boon-1].nameId);
+.L326:
+@ MainMenu.c:164: 		char* string = GetStringFromIndex(gCreatorBoonBaneMenuDefs.commandList[proc->boon-1].nameId);
+	ldr	r2, .L336	@ tmp558,
+@ MainMenu.c:164: 		char* string = GetStringFromIndex(gCreatorBoonBaneMenuDefs.commandList[proc->boon-1].nameId);
 	ldr	r2, [r2, #8]	@ gCreatorBoonBaneMenuDefs.commandList, gCreatorBoonBaneMenuDefs.commandList
-	lsls	r1, r3, #3	@ tmp549, _126,
-	adds	r3, r1, r3	@ tmp550, tmp549, _126
-	lsls	r3, r3, #2	@ tmp551, tmp550,
-	adds	r3, r2, r3	@ tmp552, gCreatorBoonBaneMenuDefs.commandList, tmp551
-	subs	r3, r3, #36	@ tmp553,
-@ MainMenu.c:157: 		char* string = GetStringFromIndex(gCreatorBoonBaneMenuDefs.commandList[proc->boon-1].nameId);
-	ldrh	r0, [r3, #4]	@ tmp554,
-	ldr	r3, .L333+4	@ tmp555,
+	lsls	r1, r3, #3	@ tmp561, _130,
+	adds	r3, r1, r3	@ tmp562, tmp561, _130
+	lsls	r3, r3, #2	@ tmp563, tmp562,
+	adds	r3, r2, r3	@ tmp564, gCreatorBoonBaneMenuDefs.commandList, tmp563
+	subs	r3, r3, #36	@ tmp565,
+@ MainMenu.c:164: 		char* string = GetStringFromIndex(gCreatorBoonBaneMenuDefs.commandList[proc->boon-1].nameId);
+	ldrh	r0, [r3, #4]	@ tmp566,
+	ldr	r3, .L336+4	@ tmp567,
 	bl	.L30		@
-	movs	r5, r0	@ string, tmp1084
-@ MainMenu.c:158: 		ApplyBGBox(gBG1MapBuffer,&gCreatorMainNumberHighlightUIBoxTSA,19,13); // For the base and growth numbers.	
+	movs	r5, r0	@ string, tmp1098
+@ MainMenu.c:165: 		ApplyBGBox(gBG1MapBuffer,&gCreatorMainNumberHighlightUIBoxTSA,19,13); // For the base and growth numbers.	
 	movs	r3, #13	@,
 	movs	r2, #19	@,
-	ldr	r1, .L333+8	@,
-	ldr	r0, .L333+12	@,
+	ldr	r1, .L336+8	@,
+	ldr	r0, .L336+12	@,
 	bl	ApplyBGBox		@
-@ MainMenu.c:159: 		TextHandle handle =	{
+@ MainMenu.c:166: 		TextHandle handle =	{
 	movs	r2, #8	@,
 	movs	r1, #0	@,
-	movs	r6, #16	@ tmp1159,
-	movs	r0, #24	@ tmp1458,
-	movs	r4, r0	@ tmp1458, tmp1458
-	adds	r3, r7, r0	@ tmp1457,, tmp1458
-	adds	r0, r3, r6	@ tmp1158, tmp1457, tmp1159
-	ldr	r3, .L333+16	@ tmp561,
-	mov	r10, r3	@ tmp561, tmp561
+	movs	r6, #16	@ tmp1173,
+	movs	r0, #24	@ tmp1472,
+	movs	r4, r0	@ tmp1472, tmp1472
+	adds	r3, r7, r0	@ tmp1471,, tmp1472
+	adds	r0, r3, r6	@ tmp1172, tmp1471, tmp1173
+	ldr	r3, .L336+16	@ tmp573,
+	mov	r10, r3	@ tmp573, tmp573
 	bl	.L30		@
-@ MainMenu.c:160: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	ldr	r3, .L333+20	@ tmp566,
-	mov	r9, r3	@ tmp566, tmp566
-@ MainMenu.c:160: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	ldr	r3, [r3]	@ tmp1162, gpCurrentFont
-	ldrh	r3, [r3, #18]	@ tmp568,
+@ MainMenu.c:167: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	ldr	r3, .L336+20	@ tmp578,
+	mov	r9, r3	@ tmp578, tmp578
+@ MainMenu.c:167: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	ldr	r3, [r3]	@ tmp1176, gpCurrentFont
+	ldrh	r3, [r3, #18]	@ tmp580,
 	ldr	r2, [r7]	@ tile, %sfp
 	mov	ip, r2	@ tile, tile
-	add	r3, r3, ip	@ tmp570, tile
-@ MainMenu.c:159: 		TextHandle handle =	{
-	strh	r3, [r7, #40]	@ tmp570, handle.tileIndexOffset
-	movs	r3, #8	@ tmp560,
-	movs	r2, #44	@ tmp1494,
-	adds	r2, r7, r2	@ tmp1493,, tmp1494
-	strb	r3, [r2]	@ tmp560, handle.tileWidth
-@ MainMenu.c:164: 		Text_Clear(&handle);
-	adds	r3, r7, r4	@ tmp1455,, tmp1456
-	adds	r0, r3, r6	@ tmp1164, tmp1455, tmp1165
-	ldr	r3, .L333+24	@ tmp576,
-	mov	r8, r3	@ tmp576, tmp576
+	add	r3, r3, ip	@ tmp582, tile
+@ MainMenu.c:166: 		TextHandle handle =	{
+	strh	r3, [r7, #40]	@ tmp582, handle.tileIndexOffset
+	movs	r3, #8	@ tmp572,
+	movs	r2, #44	@ tmp1508,
+	adds	r2, r7, r2	@ tmp1507,, tmp1508
+	strb	r3, [r2]	@ tmp572, handle.tileWidth
+@ MainMenu.c:171: 		Text_Clear(&handle);
+	adds	r3, r7, r4	@ tmp1469,, tmp1470
+	adds	r0, r3, r6	@ tmp1178, tmp1469, tmp1179
+	ldr	r3, .L336+24	@ tmp588,
+	mov	r8, r3	@ tmp588, tmp588
 	bl	.L30		@
-@ MainMenu.c:165: 		Text_InsertString(&handle,Text_GetStringTextCenteredPos(8*8,string),TEXT_COLOR_GOLD,string);
+@ MainMenu.c:172: 		Text_InsertString(&handle,Text_GetStringTextCenteredPos(8*8,string),TEXT_COLOR_GOLD,string);
 	movs	r1, r5	@, string
 	movs	r0, #64	@,
-	ldr	r3, .L333+28	@ tmp577,
+	ldr	r3, .L336+28	@ tmp589,
 	bl	.L30		@
-	movs	r1, r0	@ _141, tmp1085
-@ MainMenu.c:165: 		Text_InsertString(&handle,Text_GetStringTextCenteredPos(8*8,string),TEXT_COLOR_GOLD,string);
+	movs	r1, r0	@ _145, tmp1099
+@ MainMenu.c:172: 		Text_InsertString(&handle,Text_GetStringTextCenteredPos(8*8,string),TEXT_COLOR_GOLD,string);
 	movs	r3, r5	@, string
 	movs	r2, #3	@,
-	movs	r5, r6	@ tmp1168, tmp1168
-	adds	r4, r7, r4	@ tmp1453,, tmp1454
-	adds	r0, r4, r6	@ tmp1167, tmp1453, tmp1168
-	ldr	r6, .L333+32	@ tmp579,
+	movs	r5, r6	@ tmp1182, tmp1182
+	adds	r4, r7, r4	@ tmp1467,, tmp1468
+	adds	r0, r4, r6	@ tmp1181, tmp1467, tmp1182
+	ldr	r6, .L336+32	@ tmp591,
 	bl	.L96		@
-@ MainMenu.c:166: 		Text_Display(&handle,&gBG0MapBuffer[12][9]);
-	ldr	r1, .L333+36	@,
-	movs	r0, #24	@ tmp1452,
-	movs	r4, r0	@ tmp1452, tmp1452
-	adds	r3, r7, r0	@ tmp1451,, tmp1452
-	adds	r0, r3, r5	@ tmp1169, tmp1451, tmp1170
-	ldr	r3, .L333+40	@ tmp1171,
+@ MainMenu.c:173: 		Text_Display(&handle,&gBG0MapBuffer[12][9]);
+	ldr	r1, .L336+36	@,
+	movs	r0, #24	@ tmp1466,
+	movs	r4, r0	@ tmp1466, tmp1466
+	adds	r3, r7, r0	@ tmp1465,, tmp1466
+	adds	r0, r3, r5	@ tmp1183, tmp1465, tmp1184
+	ldr	r3, .L336+40	@ tmp1185,
 	bl	.L30		@
-@ MainMenu.c:170: 		eff[0] = '+';
-	movs	r3, #43	@ tmp584,
-	strb	r3, [r7, #28]	@ tmp584, eff
-@ MainMenu.c:171: 		int base = gCreatorBoonBaneEffects[proc->boon].base;
-	adds	r3, r3, #14	@ tmp586,
+@ MainMenu.c:177: 		eff[0] = '+';
+	movs	r3, #43	@ tmp596,
+	strb	r3, [r7, #28]	@ tmp596, eff
+@ MainMenu.c:178: 		int base = gCreatorBoonBaneEffects[proc->boon].base;
+	adds	r3, r3, #14	@ tmp598,
 	mov	r2, fp	@ proc, proc
-	ldrb	r3, [r2, r3]	@ _144,
-@ MainMenu.c:172: 		int growth = gCreatorBoonBaneEffects[proc->boon].growth;
-	ldr	r2, .L333+44	@ tmp587,
-	lsls	r3, r3, #1	@ tmp588, _144,
-	adds	r1, r2, r3	@ tmp589, tmp587, tmp588
-@ MainMenu.c:172: 		int growth = gCreatorBoonBaneEffects[proc->boon].growth;
+	ldrb	r3, [r2, r3]	@ _148,
+@ MainMenu.c:179: 		int growth = gCreatorBoonBaneEffects[proc->boon].growth;
+	ldr	r2, .L336+44	@ tmp599,
+	lsls	r3, r3, #1	@ tmp600, _148,
+	adds	r1, r2, r3	@ tmp601, tmp599, tmp600
+@ MainMenu.c:179: 		int growth = gCreatorBoonBaneEffects[proc->boon].growth;
 	ldrb	r5, [r1, #1]	@ growth, gCreatorBoonBaneEffects
-@ MainMenu.c:171: 		int base = gCreatorBoonBaneEffects[proc->boon].base;
+@ MainMenu.c:178: 		int base = gCreatorBoonBaneEffects[proc->boon].base;
 	ldrb	r1, [r3, r2]	@ base, gCreatorBoonBaneEffects
-@ MainMenu.c:174: 		FillNumString(&eff[1],base);
-	movs	r3, #29	@ tmp1450,
-	adds	r0, r7, r3	@ tmp1174,, tmp1450
+@ MainMenu.c:181: 		FillNumString(&eff[1],base);
+	movs	r3, #29	@ tmp1464,
+	adds	r0, r7, r3	@ tmp1188,, tmp1464
 	bl	FillNumString		@
-@ MainMenu.c:175: 		TextHandle baseHandle =	{
+@ MainMenu.c:182: 		TextHandle baseHandle =	{
 	movs	r2, #8	@,
 	movs	r1, #0	@,
-	movs	r3, #24	@ tmp1176,
-	adds	r4, r7, r4	@ tmp1448,, tmp1449
-	adds	r0, r4, r3	@ tmp1175, tmp1448, tmp1176
+	movs	r3, #24	@ tmp1190,
+	adds	r4, r7, r4	@ tmp1462,, tmp1463
+	adds	r0, r4, r3	@ tmp1189, tmp1462, tmp1190
 	bl	.L99		@
-@ MainMenu.c:163: 		tile += 8;
+@ MainMenu.c:170: 		tile += 8;
 	ldr	r2, [r7]	@ tile, %sfp
 	adds	r2, r2, #8	@ tile,
-@ MainMenu.c:176: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	mov	r1, r9	@ tmp566, tmp566
-	ldr	r1, [r1]	@ tmp1178, gpCurrentFont
-	ldrh	r3, [r1, #18]	@ tmp607,
-	adds	r3, r3, r2	@ tmp609, tmp607, tile
-@ MainMenu.c:175: 		TextHandle baseHandle =	{
-	strh	r3, [r7, #48]	@ tmp609, baseHandle.tileIndexOffset
-	movs	r2, #4	@ tmp1181,
-	movs	r4, #52	@ tmp1491,
-	adds	r4, r7, r4	@ tmp1490,, tmp1491
-	strb	r2, [r4]	@ tmp1180, baseHandle.tileWidth
-@ MainMenu.c:180: 		Text_Clear(&baseHandle);
-	movs	r3, #24	@ tmp1183,
-	adds	r2, r2, #20	@ tmp1447,
-	adds	r1, r7, r2	@ tmp1446,, tmp1447
-	adds	r1, r1, r3	@ tmp1182, tmp1446, tmp1183
-	movs	r0, r1	@, tmp1182
+@ MainMenu.c:183: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	mov	r1, r9	@ tmp578, tmp578
+	ldr	r1, [r1]	@ tmp1192, gpCurrentFont
+	ldrh	r3, [r1, #18]	@ tmp619,
+	adds	r3, r3, r2	@ tmp621, tmp619, tile
+@ MainMenu.c:182: 		TextHandle baseHandle =	{
+	strh	r3, [r7, #48]	@ tmp621, baseHandle.tileIndexOffset
+	movs	r2, #4	@ tmp1195,
+	movs	r4, #52	@ tmp1505,
+	adds	r4, r7, r4	@ tmp1504,, tmp1505
+	strb	r2, [r4]	@ tmp1194, baseHandle.tileWidth
+@ MainMenu.c:187: 		Text_Clear(&baseHandle);
+	movs	r3, #24	@ tmp1197,
+	adds	r2, r2, #20	@ tmp1461,
+	adds	r1, r7, r2	@ tmp1460,, tmp1461
+	adds	r1, r1, r3	@ tmp1196, tmp1460, tmp1197
+	movs	r0, r1	@, tmp1196
 	bl	.L95		@
-@ MainMenu.c:181: 		Text_InsertString(&baseHandle,0,TEXT_COLOR_GREEN,eff);
-	movs	r3, #28	@ tmp1445,
-	adds	r1, r7, r3	@ tmp1184,, tmp1445
-	movs	r3, r1	@, tmp1184
+@ MainMenu.c:188: 		Text_InsertString(&baseHandle,0,TEXT_COLOR_GREEN,eff);
+	movs	r3, #28	@ tmp1459,
+	adds	r1, r7, r3	@ tmp1198,, tmp1459
+	movs	r3, r1	@, tmp1198
 	movs	r2, #4	@,
 	movs	r1, #0	@,
-	movs	r0, #24	@ tmp1186,
-	movs	r4, #24	@ tmp1442,
-	mov	ip, r4	@ tmp1442, tmp1442
-	add	ip, ip, r7	@ tmp1442,
-	add	r0, r0, ip	@ tmp1185, tmp1442
+	movs	r0, #24	@ tmp1200,
+	movs	r4, #24	@ tmp1456,
+	mov	ip, r4	@ tmp1456, tmp1456
+	add	ip, ip, r7	@ tmp1456,
+	add	r0, r0, ip	@ tmp1199, tmp1456
 	bl	.L96		@
-@ MainMenu.c:182: 		Text_Display(&baseHandle,&gBG0MapBuffer[12][20]);
-	ldr	r1, .L333+36	@ tmp619,
-	adds	r1, r1, #22	@ tmp619,
-	movs	r0, #24	@ tmp1189,
-	mov	ip, r4	@ tmp1439, tmp1439
-	add	ip, ip, r7	@ tmp1439,
-	add	r0, r0, ip	@ tmp1188, tmp1439
-	ldr	r3, .L333+40	@ tmp1190,
+@ MainMenu.c:189: 		Text_Display(&baseHandle,&gBG0MapBuffer[12][20]);
+	ldr	r1, .L336+36	@ tmp631,
+	adds	r1, r1, #22	@ tmp631,
+	movs	r0, #24	@ tmp1203,
+	mov	ip, r4	@ tmp1453, tmp1453
+	add	ip, ip, r7	@ tmp1453,
+	add	r0, r0, ip	@ tmp1202, tmp1453
+	ldr	r3, .L336+40	@ tmp1204,
 	bl	.L30		@
-@ MainMenu.c:184: 		FillNumString(&eff[1],growth);
+@ MainMenu.c:191: 		FillNumString(&eff[1],growth);
 	movs	r1, r5	@, growth
-	movs	r0, #29	@ tmp1438,
-	adds	r0, r7, r0	@ tmp1192,, tmp1438
+	movs	r0, #29	@ tmp1452,
+	adds	r0, r7, r0	@ tmp1206,, tmp1452
 	bl	FillNumString		@
-@ MainMenu.c:185: 		TextHandle growthHandle =	{
-	movs	r3, #32	@ tmp1193,
-	movs	r2, #24	@ tmp1488,
-	adds	r2, r7, r2	@ tmp1487,, tmp1488
-	adds	r5, r2, r3	@ tmp624, tmp1487, tmp1193
+@ MainMenu.c:192: 		TextHandle growthHandle =	{
+	movs	r3, #32	@ tmp1207,
+	movs	r2, #24	@ tmp1502,
+	adds	r2, r7, r2	@ tmp1501,, tmp1502
+	adds	r5, r2, r3	@ tmp636, tmp1501, tmp1207
 	movs	r2, #8	@,
 	movs	r1, #0	@,
-	movs	r0, r5	@, tmp624
+	movs	r0, r5	@, tmp636
 	bl	.L99		@
-@ MainMenu.c:186: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	mov	r3, r9	@ tmp566, tmp566
+@ MainMenu.c:193: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	mov	r3, r9	@ tmp578, tmp578
 	ldr	r3, [r3]	@ gpCurrentFont, gpCurrentFont
-@ MainMenu.c:179: 		tile += 4;
+@ MainMenu.c:186: 		tile += 4;
 	ldr	r1, [r7]	@ tile, %sfp
 	adds	r1, r1, #12	@ tile,
-@ MainMenu.c:186: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	ldrh	r3, [r3, #18]	@ tmp635,
-	adds	r3, r3, r1	@ tmp637, tmp635, tile
-@ MainMenu.c:185: 		TextHandle growthHandle =	{
-	strh	r3, [r5]	@ tmp637, growthHandle.tileIndexOffset
-	movs	r2, #4	@ tmp1197,
-	strb	r2, [r5, #4]	@ tmp1196, growthHandle.tileWidth
-@ MainMenu.c:189: 		tile += 4;
+@ MainMenu.c:193: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	ldrh	r3, [r3, #18]	@ tmp647,
+	adds	r3, r3, r1	@ tmp649, tmp647, tile
+@ MainMenu.c:192: 		TextHandle growthHandle =	{
+	strh	r3, [r5]	@ tmp649, growthHandle.tileIndexOffset
+	movs	r2, #4	@ tmp1211,
+	strb	r2, [r5, #4]	@ tmp1210, growthHandle.tileWidth
+@ MainMenu.c:196: 		tile += 4;
 	ldr	r3, [r7]	@ tile, %sfp
 	adds	r3, r3, #16	@ tile,
 	str	r3, [r7]	@ tile, %sfp
-@ MainMenu.c:190: 		Text_Clear(&growthHandle);
-	movs	r0, r5	@, tmp624
+@ MainMenu.c:197: 		Text_Clear(&growthHandle);
+	movs	r0, r5	@, tmp636
 	bl	.L95		@
-@ MainMenu.c:191: 		Text_InsertString(&growthHandle,0,TEXT_COLOR_GREEN,eff);
-	movs	r3, #28	@ tmp1437,
-	adds	r3, r7, r3	@ tmp1198,, tmp1437
+@ MainMenu.c:198: 		Text_InsertString(&growthHandle,0,TEXT_COLOR_GREEN,eff);
+	movs	r3, #28	@ tmp1451,
+	adds	r3, r7, r3	@ tmp1212,, tmp1451
 	movs	r2, #4	@,
 	movs	r1, #0	@,
-	movs	r0, r5	@, tmp624
+	movs	r0, r5	@, tmp636
 	bl	.L96		@
-@ MainMenu.c:192: 		Text_Display(&growthHandle,&gBG0MapBuffer[12][25]);
-	ldr	r1, .L333+36	@ tmp647,
-	adds	r1, r1, #32	@ tmp647,
-	movs	r0, r5	@, tmp624
-	ldr	r3, .L333+40	@ tmp1200,
+@ MainMenu.c:199: 		Text_Display(&growthHandle,&gBG0MapBuffer[12][25]);
+	ldr	r1, .L336+36	@ tmp659,
+	adds	r1, r1, #32	@ tmp659,
+	movs	r0, r5	@, tmp636
+	ldr	r3, .L336+40	@ tmp1214,
 	bl	.L30		@
-	b	.L270		@
-.L324:
-@ MainMenu.c:196: 		char* string = GetStringFromIndex(gCreatorBoonBaneMenuDefs.commandList[proc->bane-1].nameId);
-	ldr	r2, .L333	@ tmp651,
-@ MainMenu.c:196: 		char* string = GetStringFromIndex(gCreatorBoonBaneMenuDefs.commandList[proc->bane-1].nameId);
+	b	.L273		@
+.L327:
+@ MainMenu.c:203: 		char* string = GetStringFromIndex(gCreatorBoonBaneMenuDefs.commandList[proc->bane-1].nameId);
+	ldr	r2, .L336	@ tmp663,
+@ MainMenu.c:203: 		char* string = GetStringFromIndex(gCreatorBoonBaneMenuDefs.commandList[proc->bane-1].nameId);
 	ldr	r2, [r2, #8]	@ gCreatorBoonBaneMenuDefs.commandList, gCreatorBoonBaneMenuDefs.commandList
-	lsls	r1, r3, #3	@ tmp654, _159,
-	adds	r3, r1, r3	@ tmp655, tmp654, _159
-	lsls	r3, r3, #2	@ tmp656, tmp655,
-	adds	r3, r2, r3	@ tmp657, gCreatorBoonBaneMenuDefs.commandList, tmp656
-	subs	r3, r3, #36	@ tmp658,
-@ MainMenu.c:196: 		char* string = GetStringFromIndex(gCreatorBoonBaneMenuDefs.commandList[proc->bane-1].nameId);
-	ldrh	r0, [r3, #4]	@ tmp659,
-	ldr	r3, .L333+4	@ tmp660,
+	lsls	r1, r3, #3	@ tmp666, _163,
+	adds	r3, r1, r3	@ tmp667, tmp666, _163
+	lsls	r3, r3, #2	@ tmp668, tmp667,
+	adds	r3, r2, r3	@ tmp669, gCreatorBoonBaneMenuDefs.commandList, tmp668
+	subs	r3, r3, #36	@ tmp670,
+@ MainMenu.c:203: 		char* string = GetStringFromIndex(gCreatorBoonBaneMenuDefs.commandList[proc->bane-1].nameId);
+	ldrh	r0, [r3, #4]	@ tmp671,
+	ldr	r3, .L336+4	@ tmp672,
 	bl	.L30		@
-	movs	r5, r0	@ string, tmp1086
-@ MainMenu.c:197: 		ApplyBGBox(gBG1MapBuffer,&gCreatorMainNumberHighlightUIBoxTSA,19,15); // For the base and growth numbers.
+	movs	r5, r0	@ string, tmp1100
+@ MainMenu.c:204: 		ApplyBGBox(gBG1MapBuffer,&gCreatorMainNumberHighlightUIBoxTSA,19,15); // For the base and growth numbers.
 	movs	r3, #15	@,
 	movs	r2, #19	@,
-	ldr	r1, .L333+8	@,
-	ldr	r0, .L333+12	@,
+	ldr	r1, .L336+8	@,
+	ldr	r0, .L336+12	@,
 	bl	ApplyBGBox		@
-@ MainMenu.c:198: 		TextHandle handle =	{
+@ MainMenu.c:205: 		TextHandle handle =	{
 	movs	r2, #8	@,
 	movs	r1, #0	@,
-	movs	r6, #16	@ tmp1204,
-	movs	r0, #24	@ tmp1436,
-	movs	r4, r0	@ tmp1436, tmp1436
-	adds	r3, r7, r0	@ tmp1435,, tmp1436
-	adds	r0, r3, r6	@ tmp1203, tmp1435, tmp1204
-	ldr	r3, .L333+16	@ tmp666,
-	mov	r10, r3	@ tmp666, tmp666
+	movs	r6, #16	@ tmp1218,
+	movs	r0, #24	@ tmp1450,
+	movs	r4, r0	@ tmp1450, tmp1450
+	adds	r3, r7, r0	@ tmp1449,, tmp1450
+	adds	r0, r3, r6	@ tmp1217, tmp1449, tmp1218
+	ldr	r3, .L336+16	@ tmp678,
+	mov	r10, r3	@ tmp678, tmp678
 	bl	.L30		@
-@ MainMenu.c:199: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	ldr	r3, .L333+20	@ tmp671,
-	mov	r9, r3	@ tmp671, tmp671
-@ MainMenu.c:199: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	ldr	r3, [r3]	@ tmp1207, gpCurrentFont
-	ldrh	r3, [r3, #18]	@ tmp673,
+@ MainMenu.c:206: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	ldr	r3, .L336+20	@ tmp683,
+	mov	r9, r3	@ tmp683, tmp683
+@ MainMenu.c:206: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	ldr	r3, [r3]	@ tmp1221, gpCurrentFont
+	ldrh	r3, [r3, #18]	@ tmp685,
 	ldr	r2, [r7]	@ tile, %sfp
 	mov	ip, r2	@ tile, tile
-	add	r3, r3, ip	@ tmp675, tile
-@ MainMenu.c:198: 		TextHandle handle =	{
-	strh	r3, [r7, #40]	@ tmp675, handle.tileIndexOffset
-	movs	r3, #8	@ tmp665,
-	movs	r2, #44	@ tmp1486,
-	adds	r2, r7, r2	@ tmp1485,, tmp1486
-	strb	r3, [r2]	@ tmp665, handle.tileWidth
-@ MainMenu.c:203: 		Text_Clear(&handle);
-	adds	r3, r7, r4	@ tmp1433,, tmp1434
-	adds	r0, r3, r6	@ tmp1209, tmp1433, tmp1210
-	ldr	r3, .L333+24	@ tmp681,
-	mov	r8, r3	@ tmp681, tmp681
+	add	r3, r3, ip	@ tmp687, tile
+@ MainMenu.c:205: 		TextHandle handle =	{
+	strh	r3, [r7, #40]	@ tmp687, handle.tileIndexOffset
+	movs	r3, #8	@ tmp677,
+	movs	r2, #44	@ tmp1500,
+	adds	r2, r7, r2	@ tmp1499,, tmp1500
+	strb	r3, [r2]	@ tmp677, handle.tileWidth
+@ MainMenu.c:210: 		Text_Clear(&handle);
+	adds	r3, r7, r4	@ tmp1447,, tmp1448
+	adds	r0, r3, r6	@ tmp1223, tmp1447, tmp1224
+	ldr	r3, .L336+24	@ tmp693,
+	mov	r8, r3	@ tmp693, tmp693
 	bl	.L30		@
-@ MainMenu.c:204: 		Text_InsertString(&handle,Text_GetStringTextCenteredPos(8*8,string),TEXT_COLOR_GOLD,string);
+@ MainMenu.c:211: 		Text_InsertString(&handle,Text_GetStringTextCenteredPos(8*8,string),TEXT_COLOR_GOLD,string);
 	movs	r1, r5	@, string
 	movs	r0, #64	@,
-	ldr	r3, .L333+28	@ tmp682,
+	ldr	r3, .L336+28	@ tmp694,
 	bl	.L30		@
-	movs	r1, r0	@ _174, tmp1087
-@ MainMenu.c:204: 		Text_InsertString(&handle,Text_GetStringTextCenteredPos(8*8,string),TEXT_COLOR_GOLD,string);
+	movs	r1, r0	@ _178, tmp1101
+@ MainMenu.c:211: 		Text_InsertString(&handle,Text_GetStringTextCenteredPos(8*8,string),TEXT_COLOR_GOLD,string);
 	movs	r3, r5	@, string
 	movs	r2, #3	@,
-	movs	r5, r6	@ tmp1213, tmp1213
-	adds	r4, r7, r4	@ tmp1431,, tmp1432
-	adds	r0, r4, r6	@ tmp1212, tmp1431, tmp1213
-	ldr	r6, .L333+32	@ tmp684,
+	movs	r5, r6	@ tmp1227, tmp1227
+	adds	r4, r7, r4	@ tmp1445,, tmp1446
+	adds	r0, r4, r6	@ tmp1226, tmp1445, tmp1227
+	ldr	r6, .L336+32	@ tmp696,
 	bl	.L96		@
-@ MainMenu.c:205: 		Text_Display(&handle,&gBG0MapBuffer[14][9]);
-	ldr	r1, .L333+48	@,
-	movs	r0, #24	@ tmp1430,
-	movs	r4, r0	@ tmp1430, tmp1430
-	adds	r3, r7, r0	@ tmp1429,, tmp1430
-	adds	r0, r3, r5	@ tmp1214, tmp1429, tmp1215
-	ldr	r3, .L333+40	@ tmp1216,
+@ MainMenu.c:212: 		Text_Display(&handle,&gBG0MapBuffer[14][9]);
+	ldr	r1, .L336+48	@,
+	movs	r0, #24	@ tmp1444,
+	movs	r4, r0	@ tmp1444, tmp1444
+	adds	r3, r7, r0	@ tmp1443,, tmp1444
+	adds	r0, r3, r5	@ tmp1228, tmp1443, tmp1229
+	ldr	r3, .L336+40	@ tmp1230,
 	bl	.L30		@
-@ MainMenu.c:208: 		eff[0] = '-';
-	movs	r3, #45	@ tmp689,
-	strb	r3, [r7, #28]	@ tmp689, eff
-@ MainMenu.c:209: 		int base = gCreatorBoonBaneEffects[proc->bane].base;
-	adds	r3, r3, #13	@ tmp691,
+@ MainMenu.c:215: 		eff[0] = '-';
+	movs	r3, #45	@ tmp701,
+	strb	r3, [r7, #28]	@ tmp701, eff
+@ MainMenu.c:216: 		int base = gCreatorBoonBaneEffects[proc->bane].base;
+	adds	r3, r3, #13	@ tmp703,
 	mov	r2, fp	@ proc, proc
-	ldrb	r3, [r2, r3]	@ _177,
-@ MainMenu.c:210: 		int growth = gCreatorBoonBaneEffects[proc->bane].growth;
-	ldr	r2, .L333+44	@ tmp692,
-	lsls	r3, r3, #1	@ tmp693, _177,
-	adds	r1, r2, r3	@ tmp694, tmp692, tmp693
-@ MainMenu.c:210: 		int growth = gCreatorBoonBaneEffects[proc->bane].growth;
+	ldrb	r3, [r2, r3]	@ _181,
+@ MainMenu.c:217: 		int growth = gCreatorBoonBaneEffects[proc->bane].growth;
+	ldr	r2, .L336+44	@ tmp704,
+	lsls	r3, r3, #1	@ tmp705, _181,
+	adds	r1, r2, r3	@ tmp706, tmp704, tmp705
+@ MainMenu.c:217: 		int growth = gCreatorBoonBaneEffects[proc->bane].growth;
 	ldrb	r5, [r1, #1]	@ growth, gCreatorBoonBaneEffects
-@ MainMenu.c:209: 		int base = gCreatorBoonBaneEffects[proc->bane].base;
+@ MainMenu.c:216: 		int base = gCreatorBoonBaneEffects[proc->bane].base;
 	ldrb	r1, [r3, r2]	@ base, gCreatorBoonBaneEffects
-@ MainMenu.c:212: 		FillNumString(&eff[1],base);
-	movs	r3, #29	@ tmp1428,
-	adds	r0, r7, r3	@ tmp1219,, tmp1428
+@ MainMenu.c:219: 		FillNumString(&eff[1],base);
+	movs	r3, #29	@ tmp1442,
+	adds	r0, r7, r3	@ tmp1233,, tmp1442
 	bl	FillNumString		@
-@ MainMenu.c:213: 		TextHandle baseHandle =	{
+@ MainMenu.c:220: 		TextHandle baseHandle =	{
 	movs	r2, #8	@,
 	movs	r1, #0	@,
-	movs	r3, #24	@ tmp1221,
-	adds	r4, r7, r4	@ tmp1426,, tmp1427
-	adds	r0, r4, r3	@ tmp1220, tmp1426, tmp1221
+	movs	r3, #24	@ tmp1235,
+	adds	r4, r7, r4	@ tmp1440,, tmp1441
+	adds	r0, r4, r3	@ tmp1234, tmp1440, tmp1235
 	bl	.L99		@
-@ MainMenu.c:202: 		tile += 8;
+@ MainMenu.c:209: 		tile += 8;
 	ldr	r2, [r7]	@ tile, %sfp
 	adds	r2, r2, #8	@ tile,
-@ MainMenu.c:214: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	mov	r1, r9	@ tmp671, tmp671
-	ldr	r1, [r1]	@ tmp1223, gpCurrentFont
-	ldrh	r3, [r1, #18]	@ tmp712,
-	adds	r3, r3, r2	@ tmp714, tmp712, tile
-@ MainMenu.c:213: 		TextHandle baseHandle =	{
-	strh	r3, [r7, #48]	@ tmp714, baseHandle.tileIndexOffset
-	movs	r2, #4	@ tmp1226,
-	movs	r4, #52	@ tmp1483,
-	adds	r4, r7, r4	@ tmp1482,, tmp1483
-	strb	r2, [r4]	@ tmp1225, baseHandle.tileWidth
-@ MainMenu.c:218: 		Text_Clear(&baseHandle);
-	movs	r3, #24	@ tmp1228,
-	adds	r2, r2, #20	@ tmp1425,
-	adds	r1, r7, r2	@ tmp1424,, tmp1425
-	adds	r1, r1, r3	@ tmp1227, tmp1424, tmp1228
-	movs	r0, r1	@, tmp1227
+@ MainMenu.c:221: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	mov	r1, r9	@ tmp683, tmp683
+	ldr	r1, [r1]	@ tmp1237, gpCurrentFont
+	ldrh	r3, [r1, #18]	@ tmp724,
+	adds	r3, r3, r2	@ tmp726, tmp724, tile
+@ MainMenu.c:220: 		TextHandle baseHandle =	{
+	strh	r3, [r7, #48]	@ tmp726, baseHandle.tileIndexOffset
+	movs	r2, #4	@ tmp1240,
+	movs	r4, #52	@ tmp1497,
+	adds	r4, r7, r4	@ tmp1496,, tmp1497
+	strb	r2, [r4]	@ tmp1239, baseHandle.tileWidth
+@ MainMenu.c:225: 		Text_Clear(&baseHandle);
+	movs	r3, #24	@ tmp1242,
+	adds	r2, r2, #20	@ tmp1439,
+	adds	r1, r7, r2	@ tmp1438,, tmp1439
+	adds	r1, r1, r3	@ tmp1241, tmp1438, tmp1242
+	movs	r0, r1	@, tmp1241
 	bl	.L95		@
-@ MainMenu.c:219: 		Text_InsertString(&baseHandle,0,TEXT_COLOR_GREY,eff);
-	movs	r3, #28	@ tmp1423,
-	adds	r1, r7, r3	@ tmp1229,, tmp1423
-	movs	r3, r1	@, tmp1229
+@ MainMenu.c:226: 		Text_InsertString(&baseHandle,0,TEXT_COLOR_GREY,eff);
+	movs	r3, #28	@ tmp1437,
+	adds	r1, r7, r3	@ tmp1243,, tmp1437
+	movs	r3, r1	@, tmp1243
 	movs	r2, #1	@,
 	movs	r1, #0	@,
-	movs	r0, #24	@ tmp1231,
-	movs	r4, #24	@ tmp1420,
-	mov	ip, r4	@ tmp1420, tmp1420
-	add	ip, ip, r7	@ tmp1420,
-	add	r0, r0, ip	@ tmp1230, tmp1420
+	movs	r0, #24	@ tmp1245,
+	movs	r4, #24	@ tmp1434,
+	mov	ip, r4	@ tmp1434, tmp1434
+	add	ip, ip, r7	@ tmp1434,
+	add	r0, r0, ip	@ tmp1244, tmp1434
 	bl	.L96		@
-@ MainMenu.c:220: 		Text_Display(&baseHandle,&gBG0MapBuffer[14][20]);
-	ldr	r1, .L333+48	@ tmp724,
-	adds	r1, r1, #22	@ tmp724,
-	movs	r0, #24	@ tmp1234,
-	movs	r2, #24	@ tmp1417,
-	mov	ip, r2	@ tmp1417, tmp1417
-	add	ip, ip, r7	@ tmp1417,
-	add	r0, r0, ip	@ tmp1233, tmp1417
-	ldr	r3, .L333+40	@ tmp1235,
+@ MainMenu.c:227: 		Text_Display(&baseHandle,&gBG0MapBuffer[14][20]);
+	ldr	r1, .L336+48	@ tmp736,
+	adds	r1, r1, #22	@ tmp736,
+	movs	r0, #24	@ tmp1248,
+	movs	r2, #24	@ tmp1431,
+	mov	ip, r2	@ tmp1431, tmp1431
+	add	ip, ip, r7	@ tmp1431,
+	add	r0, r0, ip	@ tmp1247, tmp1431
+	ldr	r3, .L336+40	@ tmp1249,
 	bl	.L30		@
-@ MainMenu.c:222: 		FillNumString(&eff[1],growth);
+@ MainMenu.c:229: 		FillNumString(&eff[1],growth);
 	movs	r1, r5	@, growth
-	movs	r0, #29	@ tmp1416,
-	adds	r0, r7, r0	@ tmp1237,, tmp1416
+	movs	r0, #29	@ tmp1430,
+	adds	r0, r7, r0	@ tmp1251,, tmp1430
 	bl	FillNumString		@
-@ MainMenu.c:223: 		TextHandle growthHandle = {
-	movs	r3, #32	@ tmp1238,
-	movs	r2, #24	@ tmp1480,
-	adds	r2, r7, r2	@ tmp1479,, tmp1480
-	adds	r5, r2, r3	@ tmp729, tmp1479, tmp1238
+@ MainMenu.c:230: 		TextHandle growthHandle = {
+	movs	r3, #32	@ tmp1252,
+	movs	r2, #24	@ tmp1494,
+	adds	r2, r7, r2	@ tmp1493,, tmp1494
+	adds	r5, r2, r3	@ tmp741, tmp1493, tmp1252
 	movs	r2, #8	@,
 	movs	r1, #0	@,
-	movs	r0, r5	@, tmp729
+	movs	r0, r5	@, tmp741
 	bl	.L99		@
-@ MainMenu.c:224: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	mov	r3, r9	@ tmp671, tmp671
+@ MainMenu.c:231: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	mov	r3, r9	@ tmp683, tmp683
 	ldr	r3, [r3]	@ gpCurrentFont, gpCurrentFont
-@ MainMenu.c:217: 		tile += 4;
+@ MainMenu.c:224: 		tile += 4;
 	ldr	r1, [r7]	@ tile, %sfp
 	adds	r1, r1, #12	@ tile,
-@ MainMenu.c:224: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	ldrh	r3, [r3, #18]	@ tmp740,
-	adds	r3, r3, r1	@ tmp742, tmp740, tile
-@ MainMenu.c:223: 		TextHandle growthHandle = {
-	strh	r3, [r5]	@ tmp742, growthHandle.tileIndexOffset
-	movs	r2, #4	@ tmp1242,
-	strb	r2, [r5, #4]	@ tmp1241, growthHandle.tileWidth
-@ MainMenu.c:227: 		tile += 4;
+@ MainMenu.c:231: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	ldrh	r3, [r3, #18]	@ tmp752,
+	adds	r3, r3, r1	@ tmp754, tmp752, tile
+@ MainMenu.c:230: 		TextHandle growthHandle = {
+	strh	r3, [r5]	@ tmp754, growthHandle.tileIndexOffset
+	movs	r2, #4	@ tmp1256,
+	strb	r2, [r5, #4]	@ tmp1255, growthHandle.tileWidth
+@ MainMenu.c:234: 		tile += 4;
 	ldr	r3, [r7]	@ tile, %sfp
 	adds	r3, r3, #16	@ tile,
 	str	r3, [r7]	@ tile, %sfp
-@ MainMenu.c:228: 		Text_Clear(&growthHandle);
-	movs	r0, r5	@, tmp729
+@ MainMenu.c:235: 		Text_Clear(&growthHandle);
+	movs	r0, r5	@, tmp741
 	bl	.L95		@
-@ MainMenu.c:229: 		Text_InsertString(&growthHandle,0,TEXT_COLOR_GREY,eff);
-	movs	r3, #28	@ tmp1415,
-	adds	r3, r7, r3	@ tmp1243,, tmp1415
+@ MainMenu.c:236: 		Text_InsertString(&growthHandle,0,TEXT_COLOR_GREY,eff);
+	movs	r3, #28	@ tmp1429,
+	adds	r3, r7, r3	@ tmp1257,, tmp1429
 	movs	r2, #1	@,
 	movs	r1, #0	@,
-	movs	r0, r5	@, tmp729
+	movs	r0, r5	@, tmp741
 	bl	.L96		@
-@ MainMenu.c:230: 		Text_Display(&growthHandle,&gBG0MapBuffer[14][25]);
-	ldr	r1, .L333+48	@ tmp752,
-	adds	r1, r1, #32	@ tmp752,
-	movs	r0, r5	@, tmp729
-	ldr	r3, .L333+40	@ tmp1245,
+@ MainMenu.c:237: 		Text_Display(&growthHandle,&gBG0MapBuffer[14][25]);
+	ldr	r1, .L336+48	@ tmp764,
+	adds	r1, r1, #32	@ tmp764,
+	movs	r0, r5	@, tmp741
+	ldr	r3, .L336+40	@ tmp1259,
 	bl	.L30		@
-	b	.L271		@
-.L325:
-@ MainMenu.c:234: 		TextHandle baseHandle =	{
+	b	.L274		@
+.L328:
+@ MainMenu.c:241: 		TextHandle baseHandle =	{
 	movs	r2, #8	@,
 	movs	r1, #0	@,
-	movs	r5, #24	@ tmp1250,
-	movs	r6, #24	@ tmp1414,
-	adds	r3, r7, r6	@ tmp1413,, tmp1414
-	adds	r0, r3, r5	@ tmp1249, tmp1413, tmp1250
-	ldr	r3, .L333+16	@ tmp761,
-	mov	r10, r3	@ tmp761, tmp761
+	movs	r5, #24	@ tmp1264,
+	movs	r6, #24	@ tmp1428,
+	adds	r3, r7, r6	@ tmp1427,, tmp1428
+	adds	r0, r3, r5	@ tmp1263, tmp1427, tmp1264
+	ldr	r3, .L336+16	@ tmp773,
+	mov	r10, r3	@ tmp773, tmp773
 	bl	.L30		@
-@ MainMenu.c:235: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	ldr	r3, .L333+20	@ tmp766,
-	mov	r9, r3	@ tmp766, tmp766
-@ MainMenu.c:235: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	ldr	r3, [r3]	@ tmp1253, gpCurrentFont
-	ldrh	r3, [r3, #18]	@ tmp768,
+@ MainMenu.c:242: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	ldr	r3, .L336+20	@ tmp778,
+	mov	r9, r3	@ tmp778, tmp778
+@ MainMenu.c:242: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	ldr	r3, [r3]	@ tmp1267, gpCurrentFont
+	ldrh	r3, [r3, #18]	@ tmp780,
 	ldr	r2, [r7]	@ tile, %sfp
 	mov	ip, r2	@ tile, tile
-	add	r3, r3, ip	@ tmp770, tile
-@ MainMenu.c:234: 		TextHandle baseHandle =	{
-	strh	r3, [r7, #48]	@ tmp770, baseHandle.tileIndexOffset
-	movs	r3, #4	@ tmp1256,
-	adds	r2, r3, #0	@ tmp1255, tmp1256
-	adds	r3, r3, #48	@ tmp1478,
-	adds	r3, r7, r3	@ tmp1477,, tmp1478
-	strb	r2, [r3]	@ tmp1255, baseHandle.tileWidth
-@ MainMenu.c:239: 		Text_Clear(&baseHandle);
-	adds	r3, r7, r6	@ tmp1411,, tmp1412
-	adds	r0, r3, r5	@ tmp1257, tmp1411, tmp1258
-	ldr	r2, .L333+24	@ tmp776,
-	mov	r8, r2	@ tmp776, tmp776
+	add	r3, r3, ip	@ tmp782, tile
+@ MainMenu.c:241: 		TextHandle baseHandle =	{
+	strh	r3, [r7, #48]	@ tmp782, baseHandle.tileIndexOffset
+	movs	r3, #4	@ tmp1270,
+	adds	r2, r3, #0	@ tmp1269, tmp1270
+	adds	r3, r3, #48	@ tmp1492,
+	adds	r3, r7, r3	@ tmp1491,, tmp1492
+	strb	r2, [r3]	@ tmp1269, baseHandle.tileWidth
+@ MainMenu.c:246: 		Text_Clear(&baseHandle);
+	adds	r3, r7, r6	@ tmp1425,, tmp1426
+	adds	r0, r3, r5	@ tmp1271, tmp1425, tmp1272
+	ldr	r2, .L336+24	@ tmp788,
+	mov	r8, r2	@ tmp788, tmp788
 	bl	.L97		@
-@ MainMenu.c:240: 		Text_InsertString(&baseHandle,0,TEXT_COLOR_GOLD,"Base");
-	ldr	r3, .L333+52	@,
+@ MainMenu.c:247: 		Text_InsertString(&baseHandle,0,TEXT_COLOR_GOLD,"Base");
+	ldr	r3, .L336+52	@,
 	movs	r2, #3	@,
 	movs	r1, #0	@,
-	movs	r4, r6	@ tmp1410, tmp1410
-	adds	r0, r7, r6	@ tmp1409,, tmp1410
-	adds	r0, r0, r5	@ tmp1260, tmp1409, tmp1261
-	ldr	r6, .L333+32	@ tmp779,
+	movs	r4, r6	@ tmp1424, tmp1424
+	adds	r0, r7, r6	@ tmp1423,, tmp1424
+	adds	r0, r0, r5	@ tmp1274, tmp1423, tmp1275
+	ldr	r6, .L336+32	@ tmp791,
 	bl	.L96		@
-@ MainMenu.c:241: 		Text_Display(&baseHandle,&gBG0MapBuffer[10][19]);
-	ldr	r1, .L333+56	@,
-	adds	r2, r7, r4	@ tmp1407,, tmp1408
-	adds	r0, r2, r5	@ tmp1262, tmp1407, tmp1263
-	ldr	r2, .L333+40	@ tmp1264,
+@ MainMenu.c:248: 		Text_Display(&baseHandle,&gBG0MapBuffer[10][19]);
+	ldr	r1, .L336+56	@,
+	adds	r2, r7, r4	@ tmp1421,, tmp1422
+	adds	r0, r2, r5	@ tmp1276, tmp1421, tmp1277
+	ldr	r2, .L336+40	@ tmp1278,
 	bl	.L97		@
-@ MainMenu.c:243: 		TextHandle growthHandle =	{
-	movs	r2, #32	@ tmp1266,
-	adds	r3, r7, r4	@ tmp1474,, tmp1475
-	adds	r5, r3, r2	@ tmp783, tmp1474, tmp1266
+@ MainMenu.c:250: 		TextHandle growthHandle =	{
+	movs	r2, #32	@ tmp1280,
+	adds	r3, r7, r4	@ tmp1488,, tmp1489
+	adds	r5, r3, r2	@ tmp795, tmp1488, tmp1280
 	subs	r2, r2, #24	@,
 	movs	r1, #0	@,
-	movs	r0, r5	@, tmp783
+	movs	r0, r5	@, tmp795
 	bl	.L99		@
-@ MainMenu.c:244: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	mov	r2, r9	@ tmp766, tmp766
+@ MainMenu.c:251: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	mov	r2, r9	@ tmp778, tmp778
 	ldr	r3, [r2]	@ gpCurrentFont, gpCurrentFont
-@ MainMenu.c:238: 		tile += 4;
+@ MainMenu.c:245: 		tile += 4;
 	ldr	r4, [r7]	@ tile, %sfp
 	adds	r4, r4, #4	@ tile,
-@ MainMenu.c:244: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	ldrh	r3, [r3, #18]	@ tmp794,
-	adds	r4, r3, r4	@ tmp796, tmp794, tile
-@ MainMenu.c:243: 		TextHandle growthHandle =	{
-	strh	r4, [r5]	@ tmp796, growthHandle.tileIndexOffset
-	movs	r3, #4	@ tmp1269,
-	strb	r3, [r5, #4]	@ tmp1268, growthHandle.tileWidth
-@ MainMenu.c:248: 		Text_Clear(&growthHandle);
-	movs	r0, r5	@, tmp783
+@ MainMenu.c:251: 			.tileIndexOffset = gpCurrentFont->tileNext+tile,
+	ldrh	r3, [r3, #18]	@ tmp806,
+	adds	r4, r3, r4	@ tmp808, tmp806, tile
+@ MainMenu.c:250: 		TextHandle growthHandle =	{
+	strh	r4, [r5]	@ tmp808, growthHandle.tileIndexOffset
+	movs	r3, #4	@ tmp1283,
+	strb	r3, [r5, #4]	@ tmp1282, growthHandle.tileWidth
+@ MainMenu.c:255: 		Text_Clear(&growthHandle);
+	movs	r0, r5	@, tmp795
 	bl	.L95		@
-@ MainMenu.c:249: 		Text_InsertString(&growthHandle,0,TEXT_COLOR_GOLD,"Growth");
-	ldr	r3, .L333+60	@,
+@ MainMenu.c:256: 		Text_InsertString(&growthHandle,0,TEXT_COLOR_GOLD,"Growth");
+	ldr	r3, .L336+60	@,
 	movs	r2, #3	@,
 	movs	r1, #0	@,
-	movs	r0, r5	@, tmp783
+	movs	r0, r5	@, tmp795
 	bl	.L96		@
-@ MainMenu.c:250: 		Text_Display(&growthHandle,&gBG0MapBuffer[10][24]);
-	ldr	r1, .L333+56	@ tmp806,
-	adds	r1, r1, #10	@ tmp806,
-	movs	r0, r5	@, tmp783
-	ldr	r3, .L333+40	@ tmp1271,
+@ MainMenu.c:257: 		Text_Display(&growthHandle,&gBG0MapBuffer[10][24]);
+	ldr	r1, .L336+56	@ tmp818,
+	adds	r1, r1, #10	@ tmp818,
+	movs	r0, r5	@, tmp795
+	ldr	r3, .L336+40	@ tmp1285,
 	bl	.L30		@
-	b	.L272		@
-.L326:
-@ MainMenu.c:261: 	for ( int i = 0 ; gAvatarPortraitLookup[i].mug ; i++ )
-	ldr	r3, .L333+64	@ tmp811,
-	ldrh	r1, [r3, #2]	@ _221,
-@ MainMenu.c:261: 	for ( int i = 0 ; gAvatarPortraitLookup[i].mug ; i++ )
-	cmp	r1, #0	@ _221,
-	bne	.L276		@,
-@ MainMenu.c:265: 	return 0;
-	movs	r1, #0	@ _222,
-	b	.L274		@
-.L275:
-	adds	r3, r3, #4	@ ivtmp.319,
-@ MainMenu.c:261: 	for ( int i = 0 ; gAvatarPortraitLookup[i].mug ; i++ )
-	ldrh	r1, [r3, #2]	@ _221, MEM[base: _569, offset: 2B]
-@ MainMenu.c:261: 	for ( int i = 0 ; gAvatarPortraitLookup[i].mug ; i++ )
-	cmp	r1, #0	@ _221,
-	beq	.L274		@,
-.L276:
-@ MainMenu.c:263: 		if ( gAvatarPortraitLookup[i].gender == gender && gAvatarPortraitLookup[i].route == route ) { return gAvatarPortraitLookup[i].mug; }
-	ldrb	r2, [r3]	@ MEM[base: _567, offset: 0B], MEM[base: _567, offset: 0B]
-	cmp	r2, r0	@ MEM[base: _567, offset: 0B], _204
-	bne	.L275		@,
-@ MainMenu.c:263: 		if ( gAvatarPortraitLookup[i].gender == gender && gAvatarPortraitLookup[i].route == route ) { return gAvatarPortraitLookup[i].mug; }
-	ldrb	r2, [r3, #1]	@ MEM[base: _567, offset: 1B], MEM[base: _567, offset: 1B]
-	cmp	r2, r4	@ MEM[base: _567, offset: 1B], _205
-	bne	.L275		@,
-.L274:
-@ MainMenu.c:254: 	if ( proc->gender && proc->route) { StartFace(0,GetMainMenuPortrait(proc->gender,proc->route),8*23+2,-4,0x102); }
-	movs	r3, #4	@ tmp1096,
-	movs	r2, #129	@ tmp815,
-	lsls	r2, r2, #1	@ tmp815, tmp815,
-	str	r2, [sp]	@ tmp815,
-	rsbs	r3, r3, #0	@, tmp1096
+	b	.L275		@
+.L329:
+@ MainMenu.c:268: 	for ( int i = 0 ; gAvatarPortraitLookup[i].mug ; i++ )
+	ldr	r3, .L336+64	@ tmp823,
+	ldrh	r1, [r3, #2]	@ _225,
+@ MainMenu.c:268: 	for ( int i = 0 ; gAvatarPortraitLookup[i].mug ; i++ )
+	cmp	r1, #0	@ _225,
+	bne	.L279		@,
+@ MainMenu.c:272: 	return 0;
+	movs	r1, #0	@ _226,
+	b	.L277		@
+.L278:
+	adds	r3, r3, #4	@ ivtmp.321,
+@ MainMenu.c:268: 	for ( int i = 0 ; gAvatarPortraitLookup[i].mug ; i++ )
+	ldrh	r1, [r3, #2]	@ _225, MEM[base: _575, offset: 2B]
+@ MainMenu.c:268: 	for ( int i = 0 ; gAvatarPortraitLookup[i].mug ; i++ )
+	cmp	r1, #0	@ _225,
+	beq	.L277		@,
+.L279:
+@ MainMenu.c:270: 		if ( gAvatarPortraitLookup[i].gender == gender && gAvatarPortraitLookup[i].route == route ) { return gAvatarPortraitLookup[i].mug; }
+	ldrb	r2, [r3]	@ MEM[base: _573, offset: 0B], MEM[base: _573, offset: 0B]
+	cmp	r2, r0	@ MEM[base: _573, offset: 0B], _208
+	bne	.L278		@,
+@ MainMenu.c:270: 		if ( gAvatarPortraitLookup[i].gender == gender && gAvatarPortraitLookup[i].route == route ) { return gAvatarPortraitLookup[i].mug; }
+	ldrb	r2, [r3, #1]	@ MEM[base: _573, offset: 1B], MEM[base: _573, offset: 1B]
+	cmp	r2, r4	@ MEM[base: _573, offset: 1B], _209
+	bne	.L278		@,
+.L277:
+@ MainMenu.c:261: 	if ( proc->gender && proc->route) { StartFace(0,GetMainMenuPortrait(proc->gender,proc->route),8*23+2,-4,0x102); }
+	movs	r3, #4	@ tmp1110,
+	movs	r2, #129	@ tmp827,
+	lsls	r2, r2, #1	@ tmp827, tmp827,
+	str	r2, [sp]	@ tmp827,
+	rsbs	r3, r3, #0	@, tmp1110
 	subs	r2, r2, #72	@,
 	movs	r0, #0	@,
-	ldr	r4, .L333+68	@ tmp816,
+	ldr	r4, .L336+68	@ tmp828,
 	bl	.L105		@
-	b	.L273		@
-.L334:
+	b	.L276		@
+.L337:
 	.align	2
-.L333:
+.L336:
 	.word	gCreatorBoonBaneMenuDefs
 	.word	GetStringFromIndex
 	.word	gCreatorMainNumberHighlightUIBoxTSA
@@ -4405,373 +4473,373 @@ CreatorStartMenu:
 	.word	.LC61
 	.word	gAvatarPortraitLookup
 	.word	StartFace
-.L258:
-@ CharacterCreator.c:89: 			newMenu = StartMenu(&gCreatorGenderMenuDefs);
-	ldr	r0, .L335	@,
-	ldr	r3, .L335+4	@ tmp822,
+.L261:
+@ CharacterCreator.c:90: 			newMenu = StartMenu(&gCreatorGenderMenuDefs);
+	ldr	r0, .L338	@,
+	ldr	r3, .L338+4	@ tmp834,
 	bl	.L30		@
-	str	r0, [r7, #4]	@ tmp1088, %sfp
+	str	r0, [r7, #4]	@ tmp1102, %sfp
 @ Gender.c:3: {
-	mov	r3, sp	@ tmp1277,
-	str	r3, [r7, #16]	@ tmp1277, %sfp
+	mov	r3, sp	@ tmp1291,
+	str	r3, [r7, #16]	@ tmp1291, %sfp
 @ Gender.c:4: 	ApplyBGBox(gBG1MapBuffer,&gCreatorRouteUIBoxTSA,10,1);
 	movs	r3, #1	@,
 	movs	r2, #10	@,
-	ldr	r1, .L335+8	@,
-	ldr	r0, .L335+12	@,
+	ldr	r1, .L338+8	@,
+	ldr	r0, .L338+12	@,
 	bl	ApplyBGBox		@
 @ Gender.c:6: 	char* string = GetStringFromIndex(gCreatorGenderText);
-	ldr	r3, .L335+16	@ tmp826,
+	ldr	r3, .L338+16	@ tmp838,
 	ldrh	r0, [r3]	@ gCreatorGenderText, gCreatorGenderText
-	ldr	r3, .L335+20	@ tmp828,
+	ldr	r3, .L338+20	@ tmp840,
 	bl	.L30		@
-	movs	r2, r0	@ string, tmp1089
+	movs	r2, r0	@ string, tmp1103
 	str	r0, [r7, #12]	@ string, %sfp
-@ CharacterCreator.c:307: 	for ( int i = 0 ; string[i] ; i++ )
-	ldrb	r3, [r0]	@ _248, *string_228
-@ CharacterCreator.c:307: 	for ( int i = 0 ; string[i] ; i++ )
-	cmp	r3, #0	@ _248,
-	beq	.L305		@,
-	adds	r2, r2, #1	@ ivtmp.294,
-@ CharacterCreator.c:306: 	int sum = 1;
+@ CharacterCreator.c:308: 	for ( int i = 0 ; string[i] ; i++ )
+	ldrb	r3, [r0]	@ _252, *string_232
+@ CharacterCreator.c:308: 	for ( int i = 0 ; string[i] ; i++ )
+	cmp	r3, #0	@ _252,
+	beq	.L308		@,
+	adds	r2, r2, #1	@ ivtmp.296,
+@ CharacterCreator.c:307: 	int sum = 1;
 	movs	r6, #1	@ sum,
-.L279:
-@ CharacterCreator.c:309: 		if ( string[i] == NL ) { sum++; }
-	subs	r3, r3, #1	@ tmp1068,
-	rsbs	r1, r3, #0	@ tmp1069, tmp1068
-	adcs	r3, r3, r1	@ tmp1067, tmp1068, tmp1069
-	adds	r6, r6, r3	@ sum, sum, tmp1067
-	adds	r2, r2, #1	@ ivtmp.294,
-@ CharacterCreator.c:307: 	for ( int i = 0 ; string[i] ; i++ )
-	subs	r3, r2, #1	@ tmp829, ivtmp.294,
-	ldrb	r3, [r3]	@ _248, MEM[base: _538, offset: 4294967295B]
-@ CharacterCreator.c:307: 	for ( int i = 0 ; string[i] ; i++ )
-	cmp	r3, #0	@ _248,
-	bne	.L279		@,
+.L282:
+@ CharacterCreator.c:310: 		if ( string[i] == NL ) { sum++; }
+	subs	r3, r3, #1	@ tmp1080,
+	rsbs	r1, r3, #0	@ tmp1081, tmp1080
+	adcs	r3, r3, r1	@ tmp1079, tmp1080, tmp1081
+	adds	r6, r6, r3	@ sum, sum, tmp1079
+	adds	r2, r2, #1	@ ivtmp.296,
+@ CharacterCreator.c:308: 	for ( int i = 0 ; string[i] ; i++ )
+	subs	r3, r2, #1	@ tmp841, ivtmp.296,
+	ldrb	r3, [r3]	@ _252, MEM[base: _544, offset: 4294967295B]
+@ CharacterCreator.c:308: 	for ( int i = 0 ; string[i] ; i++ )
+	cmp	r3, #0	@ _252,
+	bne	.L282		@,
 @ Gender.c:9: 	TextHandle handles[lines];
-	lsls	r3, r6, #3	@ tmp833, sum,
-	mov	r2, sp	@ tmp1281,
-	subs	r3, r2, r3	@ tmp1280, tmp1281, tmp833
-	mov	sp, r3	@, tmp1280
+	lsls	r3, r6, #3	@ tmp845, sum,
+	mov	r2, sp	@ tmp1295,
+	subs	r3, r2, r3	@ tmp1294, tmp1295, tmp845
+	mov	sp, r3	@, tmp1294
 	add	r3, sp, #8	@ handles.57,,
 	str	r3, [r7, #20]	@ handles.57, %sfp
 @ Gender.c:10: 	for ( int i = 0 ; i < lines ; i++ )
 	cmp	r6, #0	@ sum,
-	bgt	.LCB3900	@
-	b	.L327	@long jump	@
-.LCB3900:
-.L277:
+	bgt	.LCB3948	@
+	b	.L330	@long jump	@
+.LCB3948:
+.L280:
 	ldr	r4, [r7, #20]	@ handles.57, %sfp
 	str	r4, [r7, #8]	@ handles.57, %sfp
 @ Gender.c:9: 	TextHandle handles[lines];
 	movs	r3, #0	@ i,
 	mov	r9, r3	@ i, i
 @ Gender.c:12: 		handles[i].tileIndexOffset = gpCurrentFont->tileNext+tile;
-	ldr	r3, .L335+24	@ tmp839,
-	mov	r10, r3	@ tmp839, tmp839
+	ldr	r3, .L338+24	@ tmp851,
+	mov	r10, r3	@ tmp851, tmp851
 @ Gender.c:13: 		handles[i].xCursor = 0;
-	movs	r5, #0	@ tmp845,
+	movs	r5, #0	@ tmp857,
 @ Gender.c:20: 		Text_Clear(&handles[i]);
 	movs	r3, r6	@ sum, sum
 	mov	r6, r9	@ tile, tile
 	mov	r8, r3	@ sum, sum
-.L281:
+.L284:
 @ Gender.c:12: 		handles[i].tileIndexOffset = gpCurrentFont->tileNext+tile;
-	mov	r3, r10	@ tmp839, tmp839
-	ldr	r3, [r3]	@ tmp1291, gpCurrentFont
-	ldrh	r3, [r3, #18]	@ tmp841,
-	adds	r3, r3, r6	@ tmp843, tmp841, tile
+	mov	r3, r10	@ tmp851, tmp851
+	ldr	r3, [r3]	@ tmp1305, gpCurrentFont
+	ldrh	r3, [r3, #18]	@ tmp853,
+	adds	r3, r3, r6	@ tmp855, tmp853, tile
 @ Gender.c:12: 		handles[i].tileIndexOffset = gpCurrentFont->tileNext+tile;
-	strh	r3, [r4]	@ tmp843, MEM[base: _260, offset: 0B]
+	strh	r3, [r4]	@ tmp855, MEM[base: _264, offset: 0B]
 @ Gender.c:13: 		handles[i].xCursor = 0;
-	strb	r5, [r4, #2]	@ tmp845, MEM[base: _260, offset: 2B]
+	strb	r5, [r4, #2]	@ tmp857, MEM[base: _264, offset: 2B]
 @ Gender.c:14: 		handles[i].colorId = TEXT_COLOR_NORMAL;
-	strb	r5, [r4, #3]	@ tmp845, MEM[base: _260, offset: 3B]
+	strb	r5, [r4, #3]	@ tmp857, MEM[base: _264, offset: 3B]
 @ Gender.c:15: 		handles[i].tileWidth = 20;
-	movs	r3, #20	@ tmp849,
-	strb	r3, [r4, #4]	@ tmp849, MEM[base: _260, offset: 4B]
+	movs	r3, #20	@ tmp861,
+	strb	r3, [r4, #4]	@ tmp861, MEM[base: _264, offset: 4B]
 @ Gender.c:16: 		handles[i].useDoubleBuffer = 0;
-	strb	r5, [r4, #5]	@ tmp845, MEM[base: _260, offset: 5B]
+	strb	r5, [r4, #5]	@ tmp857, MEM[base: _264, offset: 5B]
 @ Gender.c:17: 		handles[i].currentBufferId = 0;
-	strb	r5, [r4, #6]	@ tmp845, MEM[base: _260, offset: 6B]
+	strb	r5, [r4, #6]	@ tmp857, MEM[base: _264, offset: 6B]
 @ Gender.c:18: 		handles[i].unk07 = 0;
-	strb	r5, [r4, #7]	@ tmp845, MEM[base: _260, offset: 7B]
+	strb	r5, [r4, #7]	@ tmp857, MEM[base: _264, offset: 7B]
 @ Gender.c:19: 		tile += 20;
 	adds	r6, r6, #20	@ tile,
 @ Gender.c:20: 		Text_Clear(&handles[i]);
-	movs	r0, r4	@, ivtmp.289
-	ldr	r3, .L335+28	@ tmp1293,
+	movs	r0, r4	@, ivtmp.291
+	ldr	r3, .L338+28	@ tmp1307,
 	bl	.L30		@
 @ Gender.c:10: 	for ( int i = 0 ; i < lines ; i++ )
-	movs	r3, #1	@ tmp1295,
-	mov	ip, r3	@ tmp1295, tmp1295
-	add	r9, r9, ip	@ i, tmp1295
-	adds	r4, r4, #8	@ ivtmp.289,
+	movs	r3, #1	@ tmp1309,
+	mov	ip, r3	@ tmp1309, tmp1309
+	add	r9, r9, ip	@ i, tmp1309
+	adds	r4, r4, #8	@ ivtmp.291,
 @ Gender.c:10: 	for ( int i = 0 ; i < lines ; i++ )
 	cmp	r8, r9	@ sum, i
-	bgt	.L281		@,
+	bgt	.L284		@,
 	mov	r6, r8	@ sum, sum
 @ Gender.c:22: 	DrawMultiline(handles,string,lines);
 	mov	r2, r8	@, sum
 	ldr	r1, [r7, #12]	@, %sfp
 	ldr	r0, [r7, #20]	@, %sfp
 	bl	DrawMultiline		@
-	ldr	r5, .L335+32	@ ivtmp.281,
+	ldr	r5, .L338+32	@ ivtmp.283,
 	movs	r4, #0	@ i,
 @ Gender.c:26: 		Text_Display(&handles[i],&gBG0MapBuffer[3+2*i][13]);
-	ldr	r3, .L335+36	@ tmp858,
-	mov	r8, r3	@ tmp858, tmp858
+	ldr	r3, .L338+36	@ tmp870,
+	mov	r8, r3	@ tmp870, tmp870
 	mov	r9, r6	@ sum, sum
 	movs	r6, r4	@ i, i
-	ldr	r4, [r7, #8]	@ ivtmp.280, %sfp
-.L283:
-	movs	r1, r5	@, ivtmp.281
-	movs	r0, r4	@, ivtmp.280
+	ldr	r4, [r7, #8]	@ ivtmp.282, %sfp
+.L286:
+	movs	r1, r5	@, ivtmp.283
+	movs	r0, r4	@, ivtmp.282
 	bl	.L95		@
 @ Gender.c:24: 	for ( int i = 0 ; i < lines ; i++ )
 	adds	r6, r6, #1	@ i,
-	adds	r4, r4, #8	@ ivtmp.280,
-	adds	r5, r5, #128	@ ivtmp.281,
+	adds	r4, r4, #8	@ ivtmp.282,
+	adds	r5, r5, #128	@ ivtmp.283,
 @ Gender.c:24: 	for ( int i = 0 ; i < lines ; i++ )
 	cmp	r9, r6	@ sum, i
-	bgt	.L283		@,
-.L302:
+	bgt	.L286		@,
+.L305:
 @ Gender.c:29: 	EnableBgSyncByMask(1);
 	movs	r0, #1	@,
-	ldr	r4, .L335+40	@ tmp859,
+	ldr	r4, .L338+40	@ tmp871,
 	bl	.L105		@
 @ Gender.c:30: 	EnableBgSyncByMask(2);
 	movs	r0, #2	@,
 	bl	.L105		@
-	ldr	r3, [r7, #16]	@ tmp1297, %sfp
-	mov	sp, r3	@, tmp1297
-@ CharacterCreator.c:91: 			if ( proc->gender) { newMenu->commandIndex = proc->gender-1; }
-	movs	r3, #42	@ tmp861,
+	ldr	r3, [r7, #16]	@ tmp1311, %sfp
+	mov	sp, r3	@, tmp1311
+@ CharacterCreator.c:92: 			if ( proc->gender) { newMenu->commandIndex = proc->gender-1; }
+	movs	r3, #42	@ tmp873,
 	mov	r2, fp	@ proc, proc
-	ldrb	r3, [r2, r3]	@ _3,
-@ CharacterCreator.c:91: 			if ( proc->gender) { newMenu->commandIndex = proc->gender-1; }
-	cmp	r3, #0	@ _3,
-	bne	.LCB3975	@
-	b	.L252	@long jump	@
-.LCB3975:
-@ CharacterCreator.c:91: 			if ( proc->gender) { newMenu->commandIndex = proc->gender-1; }
-	subs	r3, r3, #1	@ tmp862,
-@ CharacterCreator.c:91: 			if ( proc->gender) { newMenu->commandIndex = proc->gender-1; }
-	movs	r2, #97	@ tmp863,
+	ldrb	r3, [r2, r3]	@ _4,
+@ CharacterCreator.c:92: 			if ( proc->gender) { newMenu->commandIndex = proc->gender-1; }
+	cmp	r3, #0	@ _4,
+	bne	.LCB4023	@
+	b	.L255	@long jump	@
+.LCB4023:
+@ CharacterCreator.c:92: 			if ( proc->gender) { newMenu->commandIndex = proc->gender-1; }
+	subs	r3, r3, #1	@ tmp874,
+@ CharacterCreator.c:92: 			if ( proc->gender) { newMenu->commandIndex = proc->gender-1; }
+	movs	r2, #97	@ tmp875,
 	ldr	r1, [r7, #4]	@ newMenu, %sfp
-	strb	r3, [r1, r2]	@ tmp862, newMenu_67->commandIndex
-	b	.L252		@
-.L305:
-@ CharacterCreator.c:306: 	int sum = 1;
+	strb	r3, [r1, r2]	@ tmp874, newMenu_70->commandIndex
+	b	.L255		@
+.L308:
+@ CharacterCreator.c:307: 	int sum = 1;
 	movs	r6, #1	@ sum,
 @ Gender.c:9: 	TextHandle handles[lines];
 	movs	r3, #40	@ handles.57,
 	mov	ip, r3	@ handles.57, handles.57
-	subs	r3, r3, #16	@ tmp1504,
-	mov	r8, r3	@ tmp1504, tmp1504
-	add	r8, r8, r7	@ tmp1504,
-	add	ip, ip, r8	@ handles.57, tmp1504
+	subs	r3, r3, #16	@ tmp1518,
+	mov	r8, r3	@ tmp1518, tmp1518
+	add	r8, r8, r7	@ tmp1518,
+	add	ip, ip, r8	@ handles.57, tmp1518
 	mov	r3, ip	@ handles.57, handles.57
 	str	r3, [r7, #20]	@ handles.57, %sfp
-	b	.L277		@
-.L257:
-@ CharacterCreator.c:94: 			newMenu = StartMenu(&gCreatorRouteMenuDefs);
-	ldr	r0, .L335+44	@,
-	ldr	r3, .L335+4	@ tmp866,
+	b	.L280		@
+.L260:
+@ CharacterCreator.c:95: 			newMenu = StartMenu(&gCreatorRouteMenuDefs);
+	ldr	r0, .L338+44	@,
+	ldr	r3, .L338+4	@ tmp878,
 	bl	.L30		@
-	movs	r4, r0	@ newMenu, tmp1090
+	movs	r4, r0	@ newMenu, tmp1104
 @ RouteDisplay.c:4: 	ApplyBGBox(gBG1MapBuffer,&gCreatorRouteUIBoxTSA,10,1);
 	movs	r3, #1	@,
 	movs	r2, #10	@,
-	ldr	r1, .L335+8	@,
-	ldr	r0, .L335+12	@,
+	ldr	r1, .L338+8	@,
+	ldr	r0, .L338+12	@,
 	bl	ApplyBGBox		@
 @ RouteDisplay.c:5: 	EnableBgSyncByMask(2);
 	movs	r0, #2	@,
-	ldr	r3, .L335+40	@ tmp869,
+	ldr	r3, .L338+40	@ tmp881,
 	bl	.L30		@
-@ CharacterCreator.c:96: 			if ( proc->route ) { newMenu->commandIndex = proc->route-1; }
-	movs	r3, #43	@ tmp870,
+@ CharacterCreator.c:97: 			if ( proc->route ) { newMenu->commandIndex = proc->route-1; }
+	movs	r3, #43	@ tmp882,
 	mov	r2, fp	@ proc, proc
-	ldrb	r3, [r2, r3]	@ _5,
-@ CharacterCreator.c:96: 			if ( proc->route ) { newMenu->commandIndex = proc->route-1; }
-	cmp	r3, #0	@ _5,
-	bne	.LCB4013	@
-	b	.L252	@long jump	@
-.LCB4013:
-@ CharacterCreator.c:96: 			if ( proc->route ) { newMenu->commandIndex = proc->route-1; }
-	subs	r3, r3, #1	@ tmp871,
-@ CharacterCreator.c:96: 			if ( proc->route ) { newMenu->commandIndex = proc->route-1; }
-	movs	r2, #97	@ tmp872,
-	strb	r3, [r4, r2]	@ tmp871, newMenu_63->commandIndex
-	b	.L252		@
-.L256:
-@ CharacterCreator.c:100: 			CPU_FILL(0,(char*)gRAMMenuCommands-1,6*9*4,32); // Clear our RAM buffer.
-	movs	r3, #0	@ tmp874,
-	str	r3, [r7, #56]	@ tmp874, tmp
-	ldr	r2, .L335+48	@,
-	ldr	r1, .L335+52	@,
-	adds	r3, r3, #32	@ tmp1301,
-	movs	r0, #24	@ tmp1473,
-	adds	r0, r7, r0	@ tmp1472,, tmp1473
-	adds	r0, r0, r3	@, tmp1472, tmp1301
-	ldr	r3, .L335+56	@ tmp878,
+	ldrb	r3, [r2, r3]	@ _6,
+@ CharacterCreator.c:97: 			if ( proc->route ) { newMenu->commandIndex = proc->route-1; }
+	cmp	r3, #0	@ _6,
+	bne	.LCB4061	@
+	b	.L255	@long jump	@
+.LCB4061:
+@ CharacterCreator.c:97: 			if ( proc->route ) { newMenu->commandIndex = proc->route-1; }
+	subs	r3, r3, #1	@ tmp883,
+@ CharacterCreator.c:97: 			if ( proc->route ) { newMenu->commandIndex = proc->route-1; }
+	movs	r2, #97	@ tmp884,
+	strb	r3, [r4, r2]	@ tmp883, newMenu_66->commandIndex
+	b	.L255		@
+.L259:
+@ CharacterCreator.c:101: 			CPU_FILL(0,(char*)gRAMMenuCommands-1,6*9*4,32); // Clear our RAM buffer.
+	movs	r3, #0	@ tmp886,
+	str	r3, [r7, #56]	@ tmp886, tmp
+	ldr	r2, .L338+48	@,
+	ldr	r1, .L338+52	@,
+	adds	r3, r3, #32	@ tmp1315,
+	movs	r0, #24	@ tmp1487,
+	adds	r0, r7, r0	@ tmp1486,, tmp1487
+	adds	r0, r0, r3	@, tmp1486, tmp1315
+	ldr	r3, .L338+56	@ tmp890,
 	bl	.L30		@
-@ CharacterCreator.c:102: 			ClassMenuSet* set = GetClassSet(proc->gender,proc->route);
-	movs	r3, #42	@ tmp879,
+@ CharacterCreator.c:103: 			ClassMenuSet* set = GetClassSet(proc->gender,proc->route);
+	movs	r3, #42	@ tmp891,
 	mov	r2, fp	@ proc, proc
-	ldrb	r0, [r2, r3]	@ _7,
-@ CharacterCreator.c:102: 			ClassMenuSet* set = GetClassSet(proc->gender,proc->route);
-	adds	r3, r3, #1	@ tmp880,
-	ldrb	r4, [r2, r3]	@ _9,
-	ldr	r3, .L335+60	@ ivtmp.314,
+	ldrb	r0, [r2, r3]	@ _8,
+@ CharacterCreator.c:103: 			ClassMenuSet* set = GetClassSet(proc->gender,proc->route);
+	adds	r3, r3, #1	@ tmp892,
+	ldrb	r4, [r2, r3]	@ _10,
+	ldr	r3, .L338+60	@ ivtmp.316,
 @ ClassDisplay.c:191: 	for ( int i = 0 ; i < 6 ; i++ )
 	movs	r2, #0	@ i,
-	b	.L286		@
-.L284:
+	b	.L289		@
+.L287:
 @ ClassDisplay.c:191: 	for ( int i = 0 ; i < 6 ; i++ )
 	adds	r2, r2, #1	@ i,
-	adds	r3, r3, #12	@ ivtmp.314,
+	adds	r3, r3, #12	@ ivtmp.316,
 @ ClassDisplay.c:191: 	for ( int i = 0 ; i < 6 ; i++ )
 	cmp	r2, #6	@ i,
-	beq	.L328		@,
-.L286:
+	beq	.L331		@,
+.L289:
 @ ClassDisplay.c:193: 		if ( gClassMenuOptions[i].gender == gender && gClassMenuOptions[i].route == route )
-	ldrb	r1, [r3]	@ MEM[base: _562, offset: 0B], MEM[base: _562, offset: 0B]
-	cmp	r1, r0	@ MEM[base: _562, offset: 0B], _7
-	bne	.L284		@,
+	ldrb	r1, [r3]	@ MEM[base: _568, offset: 0B], MEM[base: _568, offset: 0B]
+	cmp	r1, r0	@ MEM[base: _568, offset: 0B], _8
+	bne	.L287		@,
 @ ClassDisplay.c:193: 		if ( gClassMenuOptions[i].gender == gender && gClassMenuOptions[i].route == route )
-	ldrb	r1, [r3, #1]	@ MEM[base: _562, offset: 1B], MEM[base: _562, offset: 1B]
-	cmp	r1, r4	@ MEM[base: _562, offset: 1B], _9
-	bne	.L284		@,
+	ldrb	r1, [r3, #1]	@ MEM[base: _568, offset: 1B], MEM[base: _568, offset: 1B]
+	cmp	r1, r4	@ MEM[base: _568, offset: 1B], _10
+	bne	.L287		@,
 @ ClassDisplay.c:195: 			return &gClassMenuOptions[i];
-	lsls	r3, r2, #1	@ tmp884, i,
-	adds	r2, r3, r2	@ tmp885, tmp884, i
-	lsls	r2, r2, #2	@ tmp886, tmp885,
-	ldr	r3, .L335+60	@ tmp887,
-	mov	r9, r2	@ tmp886, tmp886
-	add	r9, r9, r3	@ tmp886, tmp887
-	b	.L285		@
-.L328:
-@ ClassDisplay.c:198: 	return NULL; // This should never happen, but return null if no entry is found.
-	movs	r3, #0	@ _261,
-	mov	r9, r3	@ _261, _261
-.L285:
-@ CharacterCreator.c:103: 			for ( int i = 0 ; set->list[i].character && i < 5 ; i++ )
-	mov	r3, r9	@ _261, _261
-	ldrb	r3, [r3, #2]	@ tmp888,
-	cmp	r3, #0	@ tmp888,
-	beq	.L287		@,
-	mov	r3, r9	@ _261, _261
-	adds	r5, r3, #3	@ ivtmp.303, _261,
-	ldr	r4, .L335+64	@ ivtmp.306,
-@ CharacterCreator.c:103: 			for ( int i = 0 ; set->list[i].character && i < 5 ; i++ )
-	movs	r6, #0	@ i,
-@ CharacterCreator.c:106: 				gRAMMenuCommands[i].nameId = GetReplacedText(GetClassData(set->list[i].class)->nameTextId);
-	ldr	r3, .L335+68	@ tmp890,
-	mov	r8, r3	@ tmp890, tmp890
-@ CharacterCreator.c:336: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
-	ldr	r3, .L335+72	@ tmp891,
-	mov	r10, r3	@ tmp891, tmp891
-	b	.L291		@
-.L329:
-@ CharacterCreator.c:338: 		if ( gCreatorTextReplacementLookup[i].normal == text ) { return gCreatorTextReplacementLookup[i].replacement; }
-	lsls	r2, r2, #2	@ tmp893, i,
-	ldr	r3, .L335+72	@ tmp1311,
-	mov	ip, r3	@ tmp1311, tmp1311
-	add	r2, r2, ip	@ tmp894, tmp1311
-	ldrh	r0, [r2, #2]	@ _14, gCreatorTextReplacementLookup
-.L288:
-@ CharacterCreator.c:106: 				gRAMMenuCommands[i].nameId = GetReplacedText(GetClassData(set->list[i].class)->nameTextId);
-	strh	r0, [r4, #4]	@ _14, MEM[base: _553, offset: 4B]
-@ CharacterCreator.c:107: 				gRAMMenuCommands[i].colorId = 0;
-	movs	r3, #0	@ tmp898,
-	strb	r3, [r4, #8]	@ tmp898, MEM[base: _553, offset: 8B]
-@ CharacterCreator.c:108: 				gRAMMenuCommands[i].isAvailable = CreatorSubmenuUsability;
-	ldr	r3, .L335+76	@ tmp900,
-	str	r3, [r4, #12]	@ tmp900, MEM[base: _553, offset: 12B]
-@ CharacterCreator.c:109: 				gRAMMenuCommands[i].onEffect = CreatorSubmenuEffect;
-	ldr	r3, .L335+80	@ tmp901,
-	str	r3, [r4, #20]	@ tmp901, MEM[base: _553, offset: 20B]
-@ CharacterCreator.c:110: 				gRAMMenuCommands[i].onSwitchIn = CreatorActivateClassDisplay;
-	ldr	r3, .L335+84	@ tmp902,
-	str	r3, [r4, #28]	@ tmp902, MEM[base: _553, offset: 28B]
-@ CharacterCreator.c:111: 				gRAMMenuCommands[i].onSwitchOut = CreatorRetractClassDisplay;
-	ldr	r3, .L335+88	@ tmp903,
-	str	r3, [r4, #32]	@ tmp903, MEM[base: _553, offset: 32B]
-@ CharacterCreator.c:112: 				proc->currSet = set;
-	mov	r3, fp	@ proc, proc
-	mov	r2, r9	@ _261, _261
-	str	r2, [r3, #52]	@ _261, proc_32(D)->currSet
-@ CharacterCreator.c:103: 			for ( int i = 0 ; set->list[i].character && i < 5 ; i++ )
-	adds	r6, r6, #1	@ i,
-	adds	r5, r5, #2	@ ivtmp.303,
-	adds	r4, r4, #36	@ ivtmp.306,
-@ CharacterCreator.c:103: 			for ( int i = 0 ; set->list[i].character && i < 5 ; i++ )
-	ldr	r3, [r7, #20]	@ _551, %sfp
-	ldrb	r3, [r3, #1]	@ MEM[base: _551, offset: 1B], MEM[base: _551, offset: 1B]
-@ CharacterCreator.c:103: 			for ( int i = 0 ; set->list[i].character && i < 5 ; i++ )
-	cmp	r3, #0	@ MEM[base: _551, offset: 1B],
-	beq	.L287		@,
-	lsrs	r3, r6, #31	@ tmp913, i,
-	movs	r2, #4	@ tmp912,
-	movs	r1, #0	@ tmp914,
-	cmp	r2, r6	@ tmp912, i
-	adcs	r3, r3, r1	@ tmp911, tmp913, tmp914
-	lsls	r3, r3, #24	@ tmp916, tmp911,
-	beq	.L287		@,
-.L291:
-	str	r5, [r7, #20]	@ ivtmp.303, %sfp
-@ CharacterCreator.c:106: 				gRAMMenuCommands[i].nameId = GetReplacedText(GetClassData(set->list[i].class)->nameTextId);
-	ldrb	r0, [r5]	@ MEM[base: _551, offset: 0B], MEM[base: _551, offset: 0B]
-	bl	.L95		@
-@ CharacterCreator.c:106: 				gRAMMenuCommands[i].nameId = GetReplacedText(GetClassData(set->list[i].class)->nameTextId);
-	ldrh	r0, [r0]	@ _14, *_12
-@ CharacterCreator.c:336: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
-	mov	r3, r10	@ tmp891, tmp891
-	ldrh	r3, [r3]	@ _264, gCreatorTextReplacementLookup
-@ CharacterCreator.c:336: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
-	cmp	r3, #0	@ _264,
-	beq	.L288		@,
-	ldr	r1, .L335+92	@ ivtmp.298,
-@ CharacterCreator.c:336: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
-	movs	r2, #0	@ i,
-.L290:
-@ CharacterCreator.c:338: 		if ( gCreatorTextReplacementLookup[i].normal == text ) { return gCreatorTextReplacementLookup[i].replacement; }
-	cmp	r0, r3	@ _14, _264
-	beq	.L329		@,
-@ CharacterCreator.c:336: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
-	adds	r2, r2, #1	@ i,
-	adds	r1, r1, #4	@ ivtmp.298,
-@ CharacterCreator.c:336: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
-	subs	r3, r1, #4	@ tmp896, ivtmp.298,
-	ldrh	r3, [r3]	@ _264, MEM[base: _543, offset: 4294967292B]
-@ CharacterCreator.c:336: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
-	cmp	r3, #0	@ _264,
-	bne	.L290		@,
+	lsls	r3, r2, #1	@ tmp896, i,
+	adds	r2, r3, r2	@ tmp897, tmp896, i
+	lsls	r2, r2, #2	@ tmp898, tmp897,
+	ldr	r3, .L338+60	@ tmp899,
+	mov	r9, r2	@ tmp898, tmp898
+	add	r9, r9, r3	@ tmp898, tmp899
 	b	.L288		@
-.L287:
-@ CharacterCreator.c:114: 			proc->isPressDisabled = 0;
-	movs	r3, #62	@ tmp917,
-	movs	r2, #0	@ tmp918,
+.L331:
+@ ClassDisplay.c:198: 	return NULL; // This should never happen, but return null if no entry is found.
+	movs	r3, #0	@ _265,
+	mov	r9, r3	@ _265, _265
+.L288:
+@ CharacterCreator.c:104: 			for ( int i = 0 ; set->list[i].character && i < 5 ; i++ )
+	mov	r3, r9	@ _265, _265
+	ldrb	r3, [r3, #2]	@ tmp900,
+	cmp	r3, #0	@ tmp900,
+	beq	.L290		@,
+	mov	r3, r9	@ _265, _265
+	adds	r5, r3, #3	@ ivtmp.305, _265,
+	ldr	r4, .L338+64	@ ivtmp.308,
+@ CharacterCreator.c:104: 			for ( int i = 0 ; set->list[i].character && i < 5 ; i++ )
+	movs	r6, #0	@ i,
+@ CharacterCreator.c:107: 				gRAMMenuCommands[i].nameId = GetReplacedText(GetClassData(set->list[i].class)->nameTextId);
+	ldr	r3, .L338+68	@ tmp902,
+	mov	r8, r3	@ tmp902, tmp902
+@ CharacterCreator.c:337: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
+	ldr	r3, .L338+72	@ tmp903,
+	mov	r10, r3	@ tmp903, tmp903
+	b	.L294		@
+.L332:
+@ CharacterCreator.c:339: 		if ( gCreatorTextReplacementLookup[i].normal == text ) { return gCreatorTextReplacementLookup[i].replacement; }
+	lsls	r2, r2, #2	@ tmp905, i,
+	ldr	r3, .L338+72	@ tmp1325,
+	mov	ip, r3	@ tmp1325, tmp1325
+	add	r2, r2, ip	@ tmp906, tmp1325
+	ldrh	r0, [r2, #2]	@ _15, gCreatorTextReplacementLookup
+.L291:
+@ CharacterCreator.c:107: 				gRAMMenuCommands[i].nameId = GetReplacedText(GetClassData(set->list[i].class)->nameTextId);
+	strh	r0, [r4, #4]	@ _15, MEM[base: _559, offset: 4B]
+@ CharacterCreator.c:108: 				gRAMMenuCommands[i].colorId = 0;
+	movs	r3, #0	@ tmp910,
+	strb	r3, [r4, #8]	@ tmp910, MEM[base: _559, offset: 8B]
+@ CharacterCreator.c:109: 				gRAMMenuCommands[i].isAvailable = CreatorSubmenuUsability;
+	ldr	r3, .L338+76	@ tmp912,
+	str	r3, [r4, #12]	@ tmp912, MEM[base: _559, offset: 12B]
+@ CharacterCreator.c:110: 				gRAMMenuCommands[i].onEffect = CreatorSubmenuEffect;
+	ldr	r3, .L338+80	@ tmp913,
+	str	r3, [r4, #20]	@ tmp913, MEM[base: _559, offset: 20B]
+@ CharacterCreator.c:111: 				gRAMMenuCommands[i].onSwitchIn = CreatorActivateClassDisplay;
+	ldr	r3, .L338+84	@ tmp914,
+	str	r3, [r4, #28]	@ tmp914, MEM[base: _559, offset: 28B]
+@ CharacterCreator.c:112: 				gRAMMenuCommands[i].onSwitchOut = CreatorRetractClassDisplay;
+	ldr	r3, .L338+88	@ tmp915,
+	str	r3, [r4, #32]	@ tmp915, MEM[base: _559, offset: 32B]
+@ CharacterCreator.c:113: 				proc->currSet = set;
+	mov	r3, fp	@ proc, proc
+	mov	r2, r9	@ _265, _265
+	str	r2, [r3, #52]	@ _265, proc_35(D)->currSet
+@ CharacterCreator.c:104: 			for ( int i = 0 ; set->list[i].character && i < 5 ; i++ )
+	adds	r6, r6, #1	@ i,
+	adds	r5, r5, #2	@ ivtmp.305,
+	adds	r4, r4, #36	@ ivtmp.308,
+@ CharacterCreator.c:104: 			for ( int i = 0 ; set->list[i].character && i < 5 ; i++ )
+	ldr	r3, [r7, #20]	@ _557, %sfp
+	ldrb	r3, [r3, #1]	@ MEM[base: _557, offset: 1B], MEM[base: _557, offset: 1B]
+@ CharacterCreator.c:104: 			for ( int i = 0 ; set->list[i].character && i < 5 ; i++ )
+	cmp	r3, #0	@ MEM[base: _557, offset: 1B],
+	beq	.L290		@,
+	lsrs	r3, r6, #31	@ tmp925, i,
+	movs	r2, #4	@ tmp924,
+	movs	r1, #0	@ tmp926,
+	cmp	r2, r6	@ tmp924, i
+	adcs	r3, r3, r1	@ tmp923, tmp925, tmp926
+	lsls	r3, r3, #24	@ tmp928, tmp923,
+	beq	.L290		@,
+.L294:
+	str	r5, [r7, #20]	@ ivtmp.305, %sfp
+@ CharacterCreator.c:107: 				gRAMMenuCommands[i].nameId = GetReplacedText(GetClassData(set->list[i].class)->nameTextId);
+	ldrb	r0, [r5]	@ MEM[base: _557, offset: 0B], MEM[base: _557, offset: 0B]
+	bl	.L95		@
+@ CharacterCreator.c:107: 				gRAMMenuCommands[i].nameId = GetReplacedText(GetClassData(set->list[i].class)->nameTextId);
+	ldrh	r0, [r0]	@ _15, *_13
+@ CharacterCreator.c:337: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
+	mov	r3, r10	@ tmp903, tmp903
+	ldrh	r3, [r3]	@ _268, gCreatorTextReplacementLookup
+@ CharacterCreator.c:337: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
+	cmp	r3, #0	@ _268,
+	beq	.L291		@,
+	ldr	r1, .L338+92	@ ivtmp.300,
+@ CharacterCreator.c:337: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
+	movs	r2, #0	@ i,
+.L293:
+@ CharacterCreator.c:339: 		if ( gCreatorTextReplacementLookup[i].normal == text ) { return gCreatorTextReplacementLookup[i].replacement; }
+	cmp	r0, r3	@ _15, _268
+	beq	.L332		@,
+@ CharacterCreator.c:337: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
+	adds	r2, r2, #1	@ i,
+	adds	r1, r1, #4	@ ivtmp.300,
+@ CharacterCreator.c:337: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
+	subs	r3, r1, #4	@ tmp908, ivtmp.300,
+	ldrh	r3, [r3]	@ _268, MEM[base: _549, offset: 4294967292B]
+@ CharacterCreator.c:337: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
+	cmp	r3, #0	@ _268,
+	bne	.L293		@,
+	b	.L291		@
+.L290:
+@ CharacterCreator.c:115: 			proc->isPressDisabled = 0;
+	movs	r3, #62	@ tmp929,
+	movs	r2, #0	@ tmp930,
 	mov	r1, fp	@ proc, proc
-	strb	r2, [r1, r3]	@ tmp918, proc_32(D)->isPressDisabled
-@ CharacterCreator.c:116: 			newMenu = StartMenu(&gCreatorClassMenuDefs);
-	ldr	r0, .L335+96	@,
-	ldr	r3, .L335+4	@ tmp921,
+	strb	r2, [r1, r3]	@ tmp930, proc_35(D)->isPressDisabled
+@ CharacterCreator.c:117: 			newMenu = StartMenu(&gCreatorClassMenuDefs);
+	ldr	r0, .L338+96	@,
+	ldr	r3, .L338+4	@ tmp933,
 	bl	.L30		@
-@ CharacterCreator.c:117: 			newMenu->commandIndex = proc->lastClassIndex;
-	movs	r3, #56	@ tmp922,
+@ CharacterCreator.c:118: 			newMenu->commandIndex = proc->lastClassIndex;
+	movs	r3, #56	@ tmp934,
 	mov	r2, fp	@ proc, proc
-	ldrb	r2, [r2, r3]	@ _18,
-@ CharacterCreator.c:117: 			newMenu->commandIndex = proc->lastClassIndex;
-	adds	r3, r3, #41	@ tmp923,
-	strb	r2, [r0, r3]	@ _18, newMenu_60->commandIndex
-@ CharacterCreator.c:119: 			break;
-	b	.L252		@
-.L336:
+	ldrb	r2, [r2, r3]	@ _19,
+@ CharacterCreator.c:118: 			newMenu->commandIndex = proc->lastClassIndex;
+	adds	r3, r3, #41	@ tmp935,
+	strb	r2, [r0, r3]	@ _19, newMenu_63->commandIndex
+@ CharacterCreator.c:120: 			break;
+	b	.L255		@
+.L339:
 	.align	2
-.L335:
+.L338:
 	.word	gCreatorGenderMenuDefs
 	.word	StartMenu
 	.word	gCreatorRouteUIBoxTSA
@@ -4797,345 +4865,345 @@ CreatorStartMenu:
 	.word	CreatorRetractClassDisplay
 	.word	gCreatorTextReplacementLookup+4
 	.word	gCreatorClassMenuDefs
-.L255:
-@ CharacterCreator.c:122: 			newMenu = StartMenu(&gCreatorBoonBaneMenuDefs);
-	ldr	r0, .L337	@,
-	ldr	r3, .L337+4	@ tmp926,
+.L258:
+@ CharacterCreator.c:123: 			newMenu = StartMenu(&gCreatorBoonBaneMenuDefs);
+	ldr	r0, .L340	@,
+	ldr	r3, .L340+4	@ tmp938,
 	bl	.L30		@
-	str	r0, [r7, #20]	@ tmp1093, %sfp
+	str	r0, [r7, #20]	@ tmp1107, %sfp
 @ BoonBane.c:4: 	Unit* unit = proc->mainUnit;
 	mov	r3, fp	@ proc, proc
-	ldr	r6, [r3, #44]	@ unit, proc_32(D)->mainUnit
+	ldr	r6, [r3, #44]	@ unit, proc_35(D)->mainUnit
 @ BoonBane.c:5: 	const CharacterData* charData = unit->pCharacterData;
-	ldr	r5, [r6]	@ charData, unit_271->pCharacterData
+	ldr	r5, [r6]	@ charData, unit_275->pCharacterData
 @ BoonBane.c:7: 	ApplyBGBox(gBG1MapBuffer,&gCreatorBoonBaneBoxTSA,10,1);
 	movs	r3, #1	@,
 	movs	r2, #10	@,
-	ldr	r1, .L337+8	@,
-	ldr	r0, .L337+12	@,
+	ldr	r1, .L340+8	@,
+	ldr	r0, .L340+12	@,
 	bl	ApplyBGBox		@
 @ BoonBane.c:10: 	DrawUiNumber(&gBG0MapBuffer[4][13],TEXT_COLOR_GOLD,unit->maxHP);
-	movs	r2, #18	@ tmp929,
-	ldrsb	r2, [r6, r2]	@ tmp929,
+	movs	r2, #18	@ tmp941,
+	ldrsb	r2, [r6, r2]	@ tmp941,
 	movs	r1, #3	@,
-	ldr	r0, .L337+16	@,
-	ldr	r3, .L337+20	@ tmp931,
+	ldr	r0, .L340+16	@,
+	ldr	r3, .L340+20	@ tmp943,
 	bl	.L30		@
 @ BoonBane.c:11: 	if ( proc->route != Mage )
-	movs	r3, #43	@ tmp932,
+	movs	r3, #43	@ tmp944,
 @ BoonBane.c:11: 	if ( proc->route != Mage )
 	mov	r2, fp	@ proc, proc
-	ldrb	r3, [r2, r3]	@ tmp933,
-	cmp	r3, #3	@ tmp933,
-	bne	.LCB4218	@
-	b	.L293	@long jump	@
-.LCB4218:
+	ldrb	r3, [r2, r3]	@ tmp945,
+	cmp	r3, #3	@ tmp945,
+	bne	.LCB4266	@
+	b	.L296	@long jump	@
+.LCB4266:
 @ BoonBane.c:13: 		DrawUiNumber(&gBG0MapBuffer[6][13],TEXT_COLOR_GOLD,unit->pow);
-	movs	r2, #20	@ tmp934,
-	ldrsb	r2, [r6, r2]	@ tmp934,
+	movs	r2, #20	@ tmp946,
+	ldrsb	r2, [r6, r2]	@ tmp946,
 	movs	r1, #3	@,
-	ldr	r0, .L337+24	@,
-	ldr	r3, .L337+20	@ tmp936,
+	ldr	r0, .L340+24	@,
+	ldr	r3, .L340+20	@ tmp948,
 	bl	.L30		@
-.L294:
+.L297:
 @ BoonBane.c:19: 	DrawUiNumber(&gBG0MapBuffer[8][13],TEXT_COLOR_GOLD,unit->skl);
-	movs	r2, #21	@ tmp941,
-	ldrsb	r2, [r6, r2]	@ tmp941,
-	ldr	r4, .L337+28	@ tmp942,
+	movs	r2, #21	@ tmp953,
+	ldrsb	r2, [r6, r2]	@ tmp953,
+	ldr	r4, .L340+28	@ tmp954,
 	movs	r1, #3	@,
-	movs	r0, r4	@, tmp942
-	ldr	r3, .L337+20	@ tmp943,
-	mov	r9, r3	@ tmp943, tmp943
+	movs	r0, r4	@, tmp954
+	ldr	r3, .L340+20	@ tmp955,
+	mov	r9, r3	@ tmp955, tmp955
 	bl	.L30		@
 @ BoonBane.c:20: 	DrawUiNumber(&gBG0MapBuffer[10][13],TEXT_COLOR_GOLD,unit->spd);
-	movs	r2, #22	@ tmp944,
-	ldrsb	r2, [r6, r2]	@ tmp944,
-	movs	r0, r4	@ tmp945, tmp942
-	adds	r0, r0, #128	@ tmp945,
+	movs	r2, #22	@ tmp956,
+	ldrsb	r2, [r6, r2]	@ tmp956,
+	movs	r0, r4	@ tmp957, tmp954
+	adds	r0, r0, #128	@ tmp957,
 	movs	r1, #3	@,
 	bl	.L114		@
 @ BoonBane.c:21: 	DrawUiNumber(&gBG0MapBuffer[12][13],TEXT_COLOR_GOLD,unit->def);
-	movs	r2, #23	@ tmp947,
-	ldrsb	r2, [r6, r2]	@ tmp947,
-	adds	r0, r4, #1	@ tmp948, tmp942,
-	adds	r0, r0, #255	@ tmp948,
+	movs	r2, #23	@ tmp959,
+	ldrsb	r2, [r6, r2]	@ tmp959,
+	adds	r0, r4, #1	@ tmp960, tmp954,
+	adds	r0, r0, #255	@ tmp960,
 	movs	r1, #3	@,
 	bl	.L114		@
 @ BoonBane.c:22: 	DrawUiNumber(&gBG0MapBuffer[14][13],TEXT_COLOR_GOLD,unit->res);
-	movs	r2, #24	@ tmp950,
-	ldrsb	r2, [r6, r2]	@ tmp950,
-	movs	r0, r4	@ tmp951, tmp942
-	adds	r0, r0, #129	@ tmp951,
-	adds	r0, r0, #255	@ tmp951,
+	movs	r2, #24	@ tmp962,
+	ldrsb	r2, [r6, r2]	@ tmp962,
+	movs	r0, r4	@ tmp963, tmp954
+	adds	r0, r0, #129	@ tmp963,
+	adds	r0, r0, #255	@ tmp963,
 	movs	r1, #3	@,
 	bl	.L114		@
 @ BoonBane.c:23: 	DrawUiNumber(&gBG0MapBuffer[16][13],TEXT_COLOR_GOLD,unit->lck);
-	movs	r2, #25	@ tmp953,
-	ldrsb	r2, [r6, r2]	@ tmp953,
-	movs	r3, #128	@ tmp1323,
-	lsls	r3, r3, #2	@ tmp1323, tmp1323,
-	adds	r0, r4, r3	@ tmp954, tmp942, tmp1323
+	movs	r2, #25	@ tmp965,
+	ldrsb	r2, [r6, r2]	@ tmp965,
+	movs	r3, #128	@ tmp1337,
+	lsls	r3, r3, #2	@ tmp1337, tmp1337,
+	adds	r0, r4, r3	@ tmp966, tmp954, tmp1337
 	movs	r1, #3	@,
 	bl	.L114		@
 @ BoonBane.c:25: 	DrawUiNumber(&gBG0MapBuffer[4][21],TEXT_COLOR_GOLD,charData->growthHP);
-	ldrb	r2, [r5, #28]	@ tmp956,
-	movs	r0, r4	@ tmp942, tmp942
-	subs	r0, r0, #240	@ tmp942,
+	ldrb	r2, [r5, #28]	@ tmp968,
+	movs	r0, r4	@ tmp954, tmp954
+	subs	r0, r0, #240	@ tmp954,
 	movs	r1, #3	@,
 	bl	.L114		@
 @ BoonBane.c:26: 	if ( proc->route != Mage )
-	movs	r3, #43	@ tmp959,
+	movs	r3, #43	@ tmp971,
 @ BoonBane.c:26: 	if ( proc->route != Mage )
 	mov	r2, fp	@ proc, proc
-	ldrb	r3, [r2, r3]	@ tmp960,
-	cmp	r3, #3	@ tmp960,
-	bne	.LCB4270	@
-	b	.L295	@long jump	@
-.LCB4270:
+	ldrb	r3, [r2, r3]	@ tmp972,
+	cmp	r3, #3	@ tmp972,
+	bne	.LCB4318	@
+	b	.L298	@long jump	@
+.LCB4318:
 @ BoonBane.c:28: 		DrawUiNumber(&gBG0MapBuffer[6][21],TEXT_COLOR_GOLD,charData->growthPow);
-	ldrb	r2, [r5, #29]	@ tmp961,
+	ldrb	r2, [r5, #29]	@ tmp973,
 	movs	r1, #3	@,
-	ldr	r0, .L337+32	@,
-	ldr	r3, .L337+20	@ tmp963,
+	ldr	r0, .L340+32	@,
+	ldr	r3, .L340+20	@ tmp975,
 	bl	.L30		@
-.L296:
+.L299:
 @ BoonBane.c:34: 	DrawUiNumber(&gBG0MapBuffer[8][21],TEXT_COLOR_GOLD,charData->growthSkl);
-	ldrb	r2, [r5, #30]	@ tmp972,
-	ldr	r4, .L337+36	@ tmp973,
+	ldrb	r2, [r5, #30]	@ tmp984,
+	ldr	r4, .L340+36	@ tmp985,
 	movs	r1, #3	@,
-	movs	r0, r4	@, tmp973
-	ldr	r6, .L337+20	@ tmp974,
+	movs	r0, r4	@, tmp985
+	ldr	r6, .L340+20	@ tmp986,
 	bl	.L96		@
 @ BoonBane.c:35: 	DrawUiNumber(&gBG0MapBuffer[10][21],TEXT_COLOR_GOLD,charData->growthSpd);
-	ldrb	r2, [r5, #31]	@ tmp975,
-	movs	r0, r4	@ tmp976, tmp973
-	adds	r0, r0, #128	@ tmp976,
+	ldrb	r2, [r5, #31]	@ tmp987,
+	movs	r0, r4	@ tmp988, tmp985
+	adds	r0, r0, #128	@ tmp988,
 	movs	r1, #3	@,
 	bl	.L96		@
 @ BoonBane.c:36: 	DrawUiNumber(&gBG0MapBuffer[12][21],TEXT_COLOR_GOLD,charData->growthDef);
-	movs	r3, #32	@ tmp978,
+	movs	r3, #32	@ tmp990,
 @ BoonBane.c:36: 	DrawUiNumber(&gBG0MapBuffer[12][21],TEXT_COLOR_GOLD,charData->growthDef);
-	ldrb	r2, [r5, r3]	@ tmp979,
-	adds	r0, r4, #1	@ tmp980, tmp973,
-	adds	r0, r0, #255	@ tmp980,
+	ldrb	r2, [r5, r3]	@ tmp991,
+	adds	r0, r4, #1	@ tmp992, tmp985,
+	adds	r0, r0, #255	@ tmp992,
 	movs	r1, #3	@,
 	bl	.L96		@
 @ BoonBane.c:37: 	DrawUiNumber(&gBG0MapBuffer[14][21],TEXT_COLOR_GOLD,charData->growthRes);
-	movs	r3, #33	@ tmp982,
+	movs	r3, #33	@ tmp994,
 @ BoonBane.c:37: 	DrawUiNumber(&gBG0MapBuffer[14][21],TEXT_COLOR_GOLD,charData->growthRes);
-	ldrb	r2, [r5, r3]	@ tmp983,
-	movs	r0, r4	@ tmp984, tmp973
-	adds	r0, r0, #129	@ tmp984,
-	adds	r0, r0, #255	@ tmp984,
+	ldrb	r2, [r5, r3]	@ tmp995,
+	movs	r0, r4	@ tmp996, tmp985
+	adds	r0, r0, #129	@ tmp996,
+	adds	r0, r0, #255	@ tmp996,
 	movs	r1, #3	@,
 	bl	.L96		@
 @ BoonBane.c:38: 	DrawUiNumber(&gBG0MapBuffer[16][21],TEXT_COLOR_GOLD,charData->growthLck);
-	movs	r3, #34	@ tmp986,
+	movs	r3, #34	@ tmp998,
 @ BoonBane.c:38: 	DrawUiNumber(&gBG0MapBuffer[16][21],TEXT_COLOR_GOLD,charData->growthLck);
-	ldrb	r2, [r5, r3]	@ tmp987,
-	adds	r3, r3, #223	@ tmp1328,
-	adds	r3, r3, #255	@ tmp1328,
-	adds	r0, r4, r3	@ tmp988, tmp973, tmp1328
+	ldrb	r2, [r5, r3]	@ tmp999,
+	adds	r3, r3, #223	@ tmp1342,
+	adds	r3, r3, #255	@ tmp1342,
+	adds	r0, r4, r3	@ tmp1000, tmp985, tmp1342
 	movs	r1, #3	@,
 	bl	.L96		@
 @ BoonBane.c:41: 	TextHandle baseHandle =	{
 	movs	r2, #8	@,
 	movs	r1, #0	@,
-	movs	r5, #24	@ tmp1330,
-	movs	r6, #24	@ tmp1406,
-	adds	r3, r7, r6	@ tmp1405,, tmp1406
-	adds	r0, r3, r5	@ tmp1329, tmp1405, tmp1330
-	ldr	r3, .L337+40	@ tmp993,
-	mov	r10, r3	@ tmp993, tmp993
+	movs	r5, #24	@ tmp1344,
+	movs	r6, #24	@ tmp1420,
+	adds	r3, r7, r6	@ tmp1419,, tmp1420
+	adds	r0, r3, r5	@ tmp1343, tmp1419, tmp1344
+	ldr	r3, .L340+40	@ tmp1005,
+	mov	r10, r3	@ tmp1005, tmp1005
 	bl	.L30		@
 @ BoonBane.c:42: 		.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	ldr	r3, .L337+44	@ tmp998,
-	mov	r9, r3	@ tmp998, tmp998
+	ldr	r3, .L340+44	@ tmp1010,
+	mov	r9, r3	@ tmp1010, tmp1010
 @ BoonBane.c:41: 	TextHandle baseHandle =	{
-	ldr	r3, [r3]	@ tmp1333, gpCurrentFont
-	ldrh	r3, [r3, #18]	@ tmp999,
-	strh	r3, [r7, #48]	@ tmp999, baseHandle.tileIndexOffset
-	movs	r3, #4	@ tmp1336,
-	adds	r2, r3, #0	@ tmp1335, tmp1336
-	adds	r3, r3, #48	@ tmp1471,
-	adds	r3, r7, r3	@ tmp1470,, tmp1471
-	strb	r2, [r3]	@ tmp1335, baseHandle.tileWidth
+	ldr	r3, [r3]	@ tmp1347, gpCurrentFont
+	ldrh	r3, [r3, #18]	@ tmp1011,
+	strh	r3, [r7, #48]	@ tmp1011, baseHandle.tileIndexOffset
+	movs	r3, #4	@ tmp1350,
+	adds	r2, r3, #0	@ tmp1349, tmp1350
+	adds	r3, r3, #48	@ tmp1485,
+	adds	r3, r7, r3	@ tmp1484,, tmp1485
+	strb	r2, [r3]	@ tmp1349, baseHandle.tileWidth
 @ BoonBane.c:46: 	Text_Clear(&baseHandle);
-	adds	r3, r7, r6	@ tmp1403,, tmp1404
-	adds	r0, r3, r5	@ tmp1337, tmp1403, tmp1338
-	ldr	r2, .L337+48	@ tmp1339,
+	adds	r3, r7, r6	@ tmp1417,, tmp1418
+	adds	r0, r3, r5	@ tmp1351, tmp1417, tmp1352
+	ldr	r2, .L340+48	@ tmp1353,
 	bl	.L97		@
 @ BoonBane.c:47: 	Text_SetColorId(&baseHandle,TEXT_COLOR_GOLD);
 	movs	r1, #3	@,
-	adds	r3, r7, r6	@ tmp1401,, tmp1402
-	adds	r0, r3, r5	@ tmp1341, tmp1401, tmp1342
-	ldr	r2, .L337+52	@ tmp1343,
+	adds	r3, r7, r6	@ tmp1415,, tmp1416
+	adds	r0, r3, r5	@ tmp1355, tmp1415, tmp1356
+	ldr	r2, .L340+52	@ tmp1357,
 	bl	.L97		@
 @ BoonBane.c:48: 	Text_InsertString(&baseHandle,0,TEXT_COLOR_GOLD,"Base");
-	ldr	r3, .L337+56	@,
+	ldr	r3, .L340+56	@,
 	movs	r2, #3	@,
 	movs	r1, #0	@,
-	adds	r0, r7, r6	@ tmp1399,, tmp1400
-	adds	r0, r0, r5	@ tmp1345, tmp1399, tmp1346
-	ldr	r6, .L337+60	@ tmp1010,
-	mov	r8, r6	@ tmp1010, tmp1010
+	adds	r0, r7, r6	@ tmp1413,, tmp1414
+	adds	r0, r0, r5	@ tmp1359, tmp1413, tmp1360
+	ldr	r6, .L340+60	@ tmp1022,
+	mov	r8, r6	@ tmp1022, tmp1022
 	bl	.L96		@
 @ BoonBane.c:49: 	Text_Display(&baseHandle,&gBG0MapBuffer[2][13]);
-	movs	r1, r4	@ tmp1011, tmp973
-	subs	r1, r1, #145	@ tmp1011,
-	subs	r1, r1, #255	@ tmp1011,
-	movs	r6, #24	@ tmp1398,
-	adds	r3, r7, r6	@ tmp1397,, tmp1398
-	adds	r0, r3, r5	@ tmp1349, tmp1397, tmp1350
-	ldr	r5, .L337+64	@ tmp1013,
+	movs	r1, r4	@ tmp1023, tmp985
+	subs	r1, r1, #145	@ tmp1023,
+	subs	r1, r1, #255	@ tmp1023,
+	movs	r6, #24	@ tmp1412,
+	adds	r3, r7, r6	@ tmp1411,, tmp1412
+	adds	r0, r3, r5	@ tmp1363, tmp1411, tmp1364
+	ldr	r5, .L340+64	@ tmp1025,
 	bl	.L115		@
 @ BoonBane.c:51: 	TextHandle growthHandle = {
-	movs	r2, #32	@ tmp1351,
-	adds	r3, r7, r6	@ tmp1467,, tmp1468
-	adds	r6, r3, r2	@ tmp1014, tmp1467, tmp1351
+	movs	r2, #32	@ tmp1365,
+	adds	r3, r7, r6	@ tmp1481,, tmp1482
+	adds	r6, r3, r2	@ tmp1026, tmp1481, tmp1365
 	subs	r2, r2, #24	@,
 	movs	r1, #0	@,
-	movs	r0, r6	@, tmp1014
+	movs	r0, r6	@, tmp1026
 	bl	.L99		@
 @ BoonBane.c:52: 		.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	mov	r2, r9	@ tmp998, tmp998
+	mov	r2, r9	@ tmp1010, tmp1010
 	ldr	r3, [r2]	@ gpCurrentFont, gpCurrentFont
 @ BoonBane.c:52: 		.tileIndexOffset = gpCurrentFont->tileNext+tile,
-	ldrh	r3, [r3, #18]	@ tmp1024,
-	adds	r3, r3, #4	@ tmp1025,
+	ldrh	r3, [r3, #18]	@ tmp1036,
+	adds	r3, r3, #4	@ tmp1037,
 @ BoonBane.c:51: 	TextHandle growthHandle = {
-	strh	r3, [r6]	@ tmp1025, growthHandle.tileIndexOffset
-	movs	r3, #4	@ tmp1354,
-	strb	r3, [r6, #4]	@ tmp1353, growthHandle.tileWidth
+	strh	r3, [r6]	@ tmp1037, growthHandle.tileIndexOffset
+	movs	r3, #4	@ tmp1368,
+	strb	r3, [r6, #4]	@ tmp1367, growthHandle.tileWidth
 @ BoonBane.c:56: 	Text_Clear(&growthHandle);
-	movs	r0, r6	@, tmp1014
-	ldr	r3, .L337+48	@ tmp1355,
+	movs	r0, r6	@, tmp1026
+	ldr	r3, .L340+48	@ tmp1369,
 	bl	.L30		@
 @ BoonBane.c:57: 	Text_SetColorId(&growthHandle,TEXT_COLOR_GOLD);
 	movs	r1, #3	@,
-	movs	r0, r6	@, tmp1014
-	ldr	r3, .L337+52	@ tmp1357,
+	movs	r0, r6	@, tmp1026
+	ldr	r3, .L340+52	@ tmp1371,
 	bl	.L30		@
 @ BoonBane.c:58: 	Text_InsertString(&growthHandle,0,TEXT_COLOR_GOLD,"Growth");
-	ldr	r3, .L337+68	@,
+	ldr	r3, .L340+68	@,
 	movs	r2, #3	@,
 	movs	r1, #0	@,
-	movs	r0, r6	@, tmp1014
+	movs	r0, r6	@, tmp1026
 	bl	.L95		@
 @ BoonBane.c:59: 	Text_Display(&growthHandle,&gBG0MapBuffer[2][21]);
-	movs	r1, r4	@ tmp973, tmp973
-	subs	r1, r1, #129	@ tmp973,
-	subs	r1, r1, #255	@ tmp973,
-	movs	r0, r6	@, tmp1014
+	movs	r1, r4	@ tmp985, tmp985
+	subs	r1, r1, #129	@ tmp985,
+	subs	r1, r1, #255	@ tmp985,
+	movs	r0, r6	@, tmp1026
 	bl	.L115		@
 @ BoonBane.c:61: 	proc->boonBaneTileLast = tile; // Store the tile we left off at for our switch in routine.
-	movs	r2, #8	@ tmp992,
-	movs	r3, #61	@ tmp1040,
+	movs	r2, #8	@ tmp1004,
+	movs	r3, #61	@ tmp1052,
 	mov	r1, fp	@ proc, proc
-	strb	r2, [r1, r3]	@ tmp992, proc_32(D)->boonBaneTileLast
+	strb	r2, [r1, r3]	@ tmp1004, proc_35(D)->boonBaneTileLast
 @ BoonBane.c:63: 	EnableBgSyncByMask(1);
 	movs	r0, #1	@,
-	ldr	r4, .L337+72	@ tmp1043,
+	ldr	r4, .L340+72	@ tmp1055,
 	bl	.L105		@
 @ BoonBane.c:64: 	EnableBgSyncByMask(2);
 	movs	r0, #2	@,
 	bl	.L105		@
-@ CharacterCreator.c:124: 			if ( proc->currMenu == BoonMenu )
-	movs	r3, #41	@ tmp1045,
-@ CharacterCreator.c:124: 			if ( proc->currMenu == BoonMenu )
+@ CharacterCreator.c:125: 			if ( proc->currMenu == BoonMenu )
+	movs	r3, #41	@ tmp1057,
+@ CharacterCreator.c:125: 			if ( proc->currMenu == BoonMenu )
 	mov	r2, fp	@ proc, proc
-	ldrb	r3, [r2, r3]	@ tmp1046,
-	cmp	r3, #4	@ tmp1046,
-	beq	.L330		@,
-@ CharacterCreator.c:130: 				if ( proc->bane ) { newMenu->commandIndex = ( proc->bane < Mag ? proc->bane-1 : proc->bane-2 ); }
-	movs	r3, #58	@ tmp1056,
-	ldrb	r3, [r2, r3]	@ _21,
-@ CharacterCreator.c:130: 				if ( proc->bane ) { newMenu->commandIndex = ( proc->bane < Mag ? proc->bane-1 : proc->bane-2 ); }
-	cmp	r3, #0	@ _21,
-	bne	.LCB4420	@
-	bl	.L252	@far jump	@
-.LCB4420:
-@ CharacterCreator.c:130: 				if ( proc->bane ) { newMenu->commandIndex = ( proc->bane < Mag ? proc->bane-1 : proc->bane-2 ); }
-	cmp	r3, #2	@ _21,
-	bhi	.L300		@,
-@ CharacterCreator.c:130: 				if ( proc->bane ) { newMenu->commandIndex = ( proc->bane < Mag ? proc->bane-1 : proc->bane-2 ); }
-	subs	r3, r3, #1	@ tmp1059,
-	lsls	r3, r3, #24	@ tmp1060, tmp1059,
-	lsrs	r3, r3, #24	@ iftmp.38_24, tmp1060,
-.L301:
-@ CharacterCreator.c:130: 				if ( proc->bane ) { newMenu->commandIndex = ( proc->bane < Mag ? proc->bane-1 : proc->bane-2 ); }
-	movs	r2, #97	@ tmp1063,
+	ldrb	r3, [r2, r3]	@ tmp1058,
+	cmp	r3, #4	@ tmp1058,
+	beq	.L333		@,
+@ CharacterCreator.c:131: 				if ( proc->bane ) { newMenu->commandIndex = ( proc->bane < Mag ? proc->bane-1 : proc->bane-2 ); }
+	movs	r3, #58	@ tmp1068,
+	ldrb	r3, [r2, r3]	@ _22,
+@ CharacterCreator.c:131: 				if ( proc->bane ) { newMenu->commandIndex = ( proc->bane < Mag ? proc->bane-1 : proc->bane-2 ); }
+	cmp	r3, #0	@ _22,
+	bne	.LCB4468	@
+	bl	.L255	@far jump	@
+.LCB4468:
+@ CharacterCreator.c:131: 				if ( proc->bane ) { newMenu->commandIndex = ( proc->bane < Mag ? proc->bane-1 : proc->bane-2 ); }
+	cmp	r3, #2	@ _22,
+	bhi	.L303		@,
+@ CharacterCreator.c:131: 				if ( proc->bane ) { newMenu->commandIndex = ( proc->bane < Mag ? proc->bane-1 : proc->bane-2 ); }
+	subs	r3, r3, #1	@ tmp1071,
+	lsls	r3, r3, #24	@ tmp1072, tmp1071,
+	lsrs	r3, r3, #24	@ iftmp.38_25, tmp1072,
+.L304:
+@ CharacterCreator.c:131: 				if ( proc->bane ) { newMenu->commandIndex = ( proc->bane < Mag ? proc->bane-1 : proc->bane-2 ); }
+	movs	r2, #97	@ tmp1075,
 	ldr	r1, [r7, #20]	@ newMenu, %sfp
-	strb	r3, [r1, r2]	@ iftmp.38_24, newMenu_38->commandIndex
-	bl	.L252	@ far jump	@
-.L293:
+	strb	r3, [r1, r2]	@ iftmp.38_25, newMenu_41->commandIndex
+	bl	.L255	@ far jump	@
+.L296:
 @ BoonBane.c:17: 		DrawUiNumber(&gBG0MapBuffer[6][13],TEXT_COLOR_GOLD,unit->unk3A); // Magic.
-	movs	r3, #58	@ tmp937,
+	movs	r3, #58	@ tmp949,
 @ BoonBane.c:17: 		DrawUiNumber(&gBG0MapBuffer[6][13],TEXT_COLOR_GOLD,unit->unk3A); // Magic.
-	ldrb	r2, [r6, r3]	@ tmp938,
+	ldrb	r2, [r6, r3]	@ tmp950,
 	movs	r1, #3	@,
-	ldr	r0, .L337+24	@,
-	ldr	r3, .L337+20	@ tmp940,
+	ldr	r0, .L340+24	@,
+	ldr	r3, .L340+20	@ tmp952,
 	bl	.L30		@
-	b	.L294		@
-.L295:
-@ BoonBane.c:32: 		DrawUiNumber(&gBG0MapBuffer[6][21],TEXT_COLOR_GOLD,MagClassTable[charData->number].growth); // Magic.
-	ldrb	r2, [r5, #4]	@ tmp965,
-@ BoonBane.c:32: 		DrawUiNumber(&gBG0MapBuffer[6][21],TEXT_COLOR_GOLD,MagClassTable[charData->number].growth); // Magic.
-	lsls	r2, r2, #2	@ tmp966, tmp965,
-	ldr	r3, .L337+76	@ tmp964,
-	adds	r3, r3, r2	@ tmp967, tmp964, tmp966
-@ BoonBane.c:32: 		DrawUiNumber(&gBG0MapBuffer[6][21],TEXT_COLOR_GOLD,MagClassTable[charData->number].growth); // Magic.
-	ldrb	r2, [r3, #1]	@ tmp969, MagClassTable
-	movs	r1, #3	@,
-	ldr	r0, .L337+32	@,
-	ldr	r3, .L337+20	@ tmp971,
-	bl	.L30		@
-	b	.L296		@
-.L330:
-@ CharacterCreator.c:126: 				if ( proc->boon ) { newMenu->commandIndex = ( proc->boon < Mag ? proc->boon-1 : proc->boon-2 ); }
-	adds	r3, r3, #53	@ tmp1047,
-	ldrb	r3, [r2, r3]	@ _20,
-@ CharacterCreator.c:126: 				if ( proc->boon ) { newMenu->commandIndex = ( proc->boon < Mag ? proc->boon-1 : proc->boon-2 ); }
-	cmp	r3, #0	@ _20,
-	bne	.LCB4461	@
-	bl	.L252	@far jump	@
-.LCB4461:
-@ CharacterCreator.c:126: 				if ( proc->boon ) { newMenu->commandIndex = ( proc->boon < Mag ? proc->boon-1 : proc->boon-2 ); }
-	cmp	r3, #2	@ _20,
-	bhi	.L298		@,
-@ CharacterCreator.c:126: 				if ( proc->boon ) { newMenu->commandIndex = ( proc->boon < Mag ? proc->boon-1 : proc->boon-2 ); }
-	subs	r3, r3, #1	@ tmp1050,
-	lsls	r3, r3, #24	@ tmp1051, tmp1050,
-	lsrs	r3, r3, #24	@ iftmp.37_23, tmp1051,
-.L299:
-@ CharacterCreator.c:126: 				if ( proc->boon ) { newMenu->commandIndex = ( proc->boon < Mag ? proc->boon-1 : proc->boon-2 ); }
-	movs	r2, #97	@ tmp1054,
-	ldr	r1, [r7, #20]	@ newMenu, %sfp
-	strb	r3, [r1, r2]	@ iftmp.37_23, newMenu_38->commandIndex
-	bl	.L252	@ far jump	@
+	b	.L297		@
 .L298:
-@ CharacterCreator.c:126: 				if ( proc->boon ) { newMenu->commandIndex = ( proc->boon < Mag ? proc->boon-1 : proc->boon-2 ); }
-	subs	r3, r3, #2	@ tmp1052,
-	lsls	r3, r3, #24	@ tmp1053, tmp1052,
-	lsrs	r3, r3, #24	@ iftmp.37_23, tmp1053,
+@ BoonBane.c:32: 		DrawUiNumber(&gBG0MapBuffer[6][21],TEXT_COLOR_GOLD,MagClassTable[charData->number].growth); // Magic.
+	ldrb	r2, [r5, #4]	@ tmp977,
+@ BoonBane.c:32: 		DrawUiNumber(&gBG0MapBuffer[6][21],TEXT_COLOR_GOLD,MagClassTable[charData->number].growth); // Magic.
+	lsls	r2, r2, #2	@ tmp978, tmp977,
+	ldr	r3, .L340+76	@ tmp976,
+	adds	r3, r3, r2	@ tmp979, tmp976, tmp978
+@ BoonBane.c:32: 		DrawUiNumber(&gBG0MapBuffer[6][21],TEXT_COLOR_GOLD,MagClassTable[charData->number].growth); // Magic.
+	ldrb	r2, [r3, #1]	@ tmp981, MagClassTable
+	movs	r1, #3	@,
+	ldr	r0, .L340+32	@,
+	ldr	r3, .L340+20	@ tmp983,
+	bl	.L30		@
 	b	.L299		@
-.L300:
-@ CharacterCreator.c:130: 				if ( proc->bane ) { newMenu->commandIndex = ( proc->bane < Mag ? proc->bane-1 : proc->bane-2 ); }
-	subs	r3, r3, #2	@ tmp1061,
-	lsls	r3, r3, #24	@ tmp1062, tmp1061,
-	lsrs	r3, r3, #24	@ iftmp.38_24, tmp1062,
-	b	.L301		@
-.L327:
+.L333:
+@ CharacterCreator.c:127: 				if ( proc->boon ) { newMenu->commandIndex = ( proc->boon < Mag ? proc->boon-1 : proc->boon-2 ); }
+	adds	r3, r3, #53	@ tmp1059,
+	ldrb	r3, [r2, r3]	@ _21,
+@ CharacterCreator.c:127: 				if ( proc->boon ) { newMenu->commandIndex = ( proc->boon < Mag ? proc->boon-1 : proc->boon-2 ); }
+	cmp	r3, #0	@ _21,
+	bne	.LCB4509	@
+	bl	.L255	@far jump	@
+.LCB4509:
+@ CharacterCreator.c:127: 				if ( proc->boon ) { newMenu->commandIndex = ( proc->boon < Mag ? proc->boon-1 : proc->boon-2 ); }
+	cmp	r3, #2	@ _21,
+	bhi	.L301		@,
+@ CharacterCreator.c:127: 				if ( proc->boon ) { newMenu->commandIndex = ( proc->boon < Mag ? proc->boon-1 : proc->boon-2 ); }
+	subs	r3, r3, #1	@ tmp1062,
+	lsls	r3, r3, #24	@ tmp1063, tmp1062,
+	lsrs	r3, r3, #24	@ iftmp.37_24, tmp1063,
+.L302:
+@ CharacterCreator.c:127: 				if ( proc->boon ) { newMenu->commandIndex = ( proc->boon < Mag ? proc->boon-1 : proc->boon-2 ); }
+	movs	r2, #97	@ tmp1066,
+	ldr	r1, [r7, #20]	@ newMenu, %sfp
+	strb	r3, [r1, r2]	@ iftmp.37_24, newMenu_41->commandIndex
+	bl	.L255	@ far jump	@
+.L301:
+@ CharacterCreator.c:127: 				if ( proc->boon ) { newMenu->commandIndex = ( proc->boon < Mag ? proc->boon-1 : proc->boon-2 ); }
+	subs	r3, r3, #2	@ tmp1064,
+	lsls	r3, r3, #24	@ tmp1065, tmp1064,
+	lsrs	r3, r3, #24	@ iftmp.37_24, tmp1065,
+	b	.L302		@
+.L303:
+@ CharacterCreator.c:131: 				if ( proc->bane ) { newMenu->commandIndex = ( proc->bane < Mag ? proc->bane-1 : proc->bane-2 ); }
+	subs	r3, r3, #2	@ tmp1073,
+	lsls	r3, r3, #24	@ tmp1074, tmp1073,
+	lsrs	r3, r3, #24	@ iftmp.38_25, tmp1074,
+	b	.L304		@
+.L330:
 @ Gender.c:22: 	DrawMultiline(handles,string,lines);
 	movs	r2, r6	@, sum
 	ldr	r1, [r7, #12]	@, %sfp
 	ldr	r0, [r7, #20]	@, %sfp
 	bl	DrawMultiline		@
-	b	.L302		@
-.L338:
+	b	.L305		@
+.L341:
 	.align	2
-.L337:
+.L340:
 	.word	gCreatorBoonBaneMenuDefs
 	.word	StartMenu
 	.word	gCreatorBoonBaneBoxTSA
@@ -5169,31 +5237,31 @@ CreatorEndMenu:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r3, r4, r5, r6, r7, lr}	@
-@ CharacterCreator.c:224: 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
-	ldr	r0, .L383	@,
-	ldr	r3, .L383+4	@ tmp197,
+@ CharacterCreator.c:225: 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
+	ldr	r0, .L386	@,
+	ldr	r3, .L386+4	@ tmp197,
 	bl	.L30		@
 	movs	r4, r0	@ creator, tmp334
-@ CharacterCreator.c:225: 	if ( creator->isPressDisabled ) { return 0; }
+@ CharacterCreator.c:226: 	if ( creator->isPressDisabled ) { return 0; }
 	movs	r3, #62	@ tmp198,
 	ldrb	r2, [r0, r3]	@ _1,
-@ CharacterCreator.c:225: 	if ( creator->isPressDisabled ) { return 0; }
+@ CharacterCreator.c:226: 	if ( creator->isPressDisabled ) { return 0; }
 	movs	r0, #0	@ <retval>,
-@ CharacterCreator.c:225: 	if ( creator->isPressDisabled ) { return 0; }
+@ CharacterCreator.c:226: 	if ( creator->isPressDisabled ) { return 0; }
 	cmp	r2, #0	@ _1,
-	beq	.L380		@,
-.L339:
-@ CharacterCreator.c:237: }
+	beq	.L383		@,
+.L342:
+@ CharacterCreator.c:238: }
 	@ sp needed	@
 	pop	{r3, r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.L380:
+.L383:
 @ BoonBane.c:178: 	int boonBase = gCreatorBoonBaneEffects[proc->boon].base;
 	subs	r3, r3, #5	@ tmp199,
 	ldrb	r3, [r4, r3]	@ _15,
 @ BoonBane.c:178: 	int boonBase = gCreatorBoonBaneEffects[proc->boon].base;
-	ldr	r0, .L383+8	@ tmp200,
+	ldr	r0, .L386+8	@ tmp200,
 	lsls	r1, r3, #1	@ tmp201, _15,
 	ldrb	r5, [r1, r0]	@ _17, gCreatorBoonBaneEffects
 @ BoonBane.c:179: 	int baneBase = gCreatorBoonBaneEffects[proc->bane].base;
@@ -5207,123 +5275,123 @@ CreatorEndMenu:
 @ BoonBane.c:180: 	Unit* unit = proc->mainUnit;
 	ldr	r0, [r4, #44]	@ unit, creator_9->mainUnit
 	cmp	r3, #8	@ _15,
-	bhi	.L341		@,
+	bhi	.L344		@,
 	lsls	r3, r3, #2	@ tmp208, _15,
-	ldr	r7, .L383+12	@ tmp210,
+	ldr	r7, .L386+12	@ tmp210,
 	ldr	r3, [r7, r3]	@ tmp211,
 	mov	pc, r3	@ tmp211
 	.section	.rodata
 	.align	2
-.L343:
-	.word	.L341
+.L346:
+	.word	.L344
+	.word	.L353
+	.word	.L352
+	.word	.L351
 	.word	.L350
 	.word	.L349
 	.word	.L348
 	.word	.L347
-	.word	.L346
 	.word	.L345
-	.word	.L344
-	.word	.L342
 	.text
-.L350:
+.L353:
 @ BoonBane.c:183: 		case HP: unit->maxHP += boonBase; break;
 	ldrb	r3, [r0, #18]	@ tmp213,
 	adds	r5, r5, r3	@ tmp214, _17, tmp213
 	strb	r5, [r0, #18]	@ tmp214, unit_22->maxHP
-.L341:
+.L344:
 @ BoonBane.c:192: 	switch ( proc->bane )
 	movs	r3, #58	@ tmp246,
 	ldrb	r5, [r4, r3]	@ tmp249,
 	cmp	r5, #8	@ tmp249,
-	bhi	.L351		@,
+	bhi	.L354		@,
 	lsls	r3, r5, #2	@ tmp251, tmp250,
-	ldr	r5, .L383+16	@ tmp253,
+	ldr	r5, .L386+16	@ tmp253,
 	ldr	r3, [r5, r3]	@ tmp254,
 	mov	pc, r3	@ tmp254
 	.section	.rodata
 	.align	2
-.L353:
-	.word	.L351
+.L356:
+	.word	.L354
+	.word	.L363
+	.word	.L362
+	.word	.L361
 	.word	.L360
 	.word	.L359
 	.word	.L358
 	.word	.L357
-	.word	.L356
 	.word	.L355
-	.word	.L354
-	.word	.L352
 	.text
-.L349:
+.L352:
 @ BoonBane.c:184: 		case Str: unit->pow += boonBase; break;
 	ldrb	r3, [r0, #20]	@ tmp217,
 	adds	r5, r5, r3	@ tmp218, _17, tmp217
 	strb	r5, [r0, #20]	@ tmp218, unit_22->pow
 @ BoonBane.c:184: 		case Str: unit->pow += boonBase; break;
-	b	.L341		@
-.L348:
+	b	.L344		@
+.L351:
 @ BoonBane.c:185: 		case Mag: unit->unk3A += boonBase; break;
 	movs	r7, #58	@ tmp220,
 	ldrb	r3, [r0, r7]	@ tmp222,
 	adds	r5, r5, r3	@ tmp223, _17, tmp222
 	strb	r5, [r0, r7]	@ tmp223, unit_22->unk3A
 @ BoonBane.c:185: 		case Mag: unit->unk3A += boonBase; break;
-	b	.L341		@
-.L347:
+	b	.L344		@
+.L350:
 @ BoonBane.c:186: 		case Skl: unit->skl += boonBase; break;
 	ldrb	r3, [r0, #21]	@ tmp227,
 	adds	r5, r5, r3	@ tmp228, _17, tmp227
 	strb	r5, [r0, #21]	@ tmp228, unit_22->skl
 @ BoonBane.c:186: 		case Skl: unit->skl += boonBase; break;
-	b	.L341		@
-.L346:
+	b	.L344		@
+.L349:
 @ BoonBane.c:187: 		case Spd: unit->spd += boonBase; break;
 	ldrb	r3, [r0, #22]	@ tmp231,
 	adds	r5, r5, r3	@ tmp232, _17, tmp231
 	strb	r5, [r0, #22]	@ tmp232, unit_22->spd
 @ BoonBane.c:187: 		case Spd: unit->spd += boonBase; break;
-	b	.L341		@
-.L345:
+	b	.L344		@
+.L348:
 @ BoonBane.c:188: 		case Def: unit->def += boonBase; break;
 	ldrb	r3, [r0, #23]	@ tmp235,
 	adds	r5, r5, r3	@ tmp236, _17, tmp235
 	strb	r5, [r0, #23]	@ tmp236, unit_22->def
 @ BoonBane.c:188: 		case Def: unit->def += boonBase; break;
-	b	.L341		@
-.L344:
+	b	.L344		@
+.L347:
 @ BoonBane.c:189: 		case Res: unit->res += boonBase; break;
 	ldrb	r3, [r0, #24]	@ tmp239,
 	adds	r5, r5, r3	@ tmp240, _17, tmp239
 	strb	r5, [r0, #24]	@ tmp240, unit_22->res
 @ BoonBane.c:189: 		case Res: unit->res += boonBase; break;
-	b	.L341		@
-.L342:
+	b	.L344		@
+.L345:
 @ BoonBane.c:190: 		case Luk: unit->lck += boonBase; break;
 	ldrb	r3, [r0, #25]	@ tmp243,
 	adds	r5, r5, r3	@ tmp244, _17, tmp243
 	strb	r5, [r0, #25]	@ tmp244, unit_22->lck
 @ BoonBane.c:190: 		case Luk: unit->lck += boonBase; break;
-	b	.L341		@
-.L360:
+	b	.L344		@
+.L363:
 @ BoonBane.c:194: 		case HP: unit->maxHP = ( unit->maxHP > baneBase ? unit->maxHP - baneBase : 1 ); break;
 	movs	r2, #18	@ _54,
 	ldrsb	r2, [r0, r2]	@ _54,* _54
 @ BoonBane.c:194: 		case HP: unit->maxHP = ( unit->maxHP > baneBase ? unit->maxHP - baneBase : 1 ); break;
 	movs	r3, #1	@ iftmp.65_58,
 	cmp	r6, r2	@ baneBase, _54
-	bge	.L361		@,
+	bge	.L364		@,
 @ BoonBane.c:194: 		case HP: unit->maxHP = ( unit->maxHP > baneBase ? unit->maxHP - baneBase : 1 ); break;
 	subs	r3, r2, r1	@ tmp256, _54, _20
 @ BoonBane.c:194: 		case HP: unit->maxHP = ( unit->maxHP > baneBase ? unit->maxHP - baneBase : 1 ); break;
 	lsls	r3, r3, #24	@ tmp257, tmp256,
 	asrs	r3, r3, #24	@ iftmp.65_58, tmp257,
-.L361:
+.L364:
 	strb	r3, [r0, #18]	@ iftmp.65_58, unit_22->maxHP
-.L351:
+.L354:
 @ BoonBane.c:203: 	UnitCheckStatCaps(unit); // Ensures no overflow but not underflow!
-	ldr	r3, .L383+20	@ tmp288,
+	ldr	r3, .L386+20	@ tmp288,
 	bl	.L30		@
 @ BoonBane.c:205: 	gChapterData.boonGrowthID = proc->boon; // Store the boon and bane IDs for later. Clipped off a bit of Tact name for this.
-	ldr	r1, .L383+24	@ tmp289,
+	ldr	r1, .L386+24	@ tmp289,
 	movs	r5, #42	@ tmp291,
 	movs	r3, #57	@ tmp290,
 	ldrb	r0, [r4, r3]	@ tmp297,
@@ -5343,173 +5411,173 @@ CreatorEndMenu:
 	ands	r3, r0	@ tmp320, gChapterData.baneGrowthID
 	orrs	r3, r2	@ tmp324, tmp315
 	strb	r3, [r1, r5]	@ tmp324, gChapterData.baneGrowthID
-@ CharacterCreator.c:227: 	ProcGoto((Proc*)creator,3); // Jump to end the creator proc.
+@ CharacterCreator.c:228: 	ProcGoto((Proc*)creator,3); // Jump to end the creator proc.
 	movs	r1, #3	@,
 	movs	r0, r4	@, creator
-	ldr	r3, .L383+28	@ tmp326,
+	ldr	r3, .L386+28	@ tmp326,
 	bl	.L30		@
-@ CharacterCreator.c:229: 	if ( creator->gender == 1 ) { SetEventId(0x6E); } // 0x6E is true if they chose male.
+@ CharacterCreator.c:230: 	if ( creator->gender == 1 ) { SetEventId(0x6E); } // 0x6E is true if they chose male.
 	ldrb	r3, [r4, r5]	@ tmp328,
 	cmp	r3, #1	@ tmp328,
-	beq	.L381		@,
-.L369:
-@ CharacterCreator.c:230: 	if ( creator->route == 2 ) { SetEventId(0x68); } // Military mode.
+	beq	.L384		@,
+.L372:
+@ CharacterCreator.c:231: 	if ( creator->route == 2 ) { SetEventId(0x68); } // Military mode.
 	movs	r3, #43	@ tmp330,
 	ldrb	r3, [r4, r3]	@ _3,
-@ CharacterCreator.c:230: 	if ( creator->route == 2 ) { SetEventId(0x68); } // Military mode.
+@ CharacterCreator.c:231: 	if ( creator->route == 2 ) { SetEventId(0x68); } // Military mode.
 	cmp	r3, #2	@ _3,
-	beq	.L382		@,
-@ CharacterCreator.c:236: 	return ME_END|ME_PLAY_BEEP;
+	beq	.L385		@,
+@ CharacterCreator.c:237: 	return ME_END|ME_PLAY_BEEP;
 	movs	r0, #6	@ <retval>,
-@ CharacterCreator.c:233: 		if ( creator->route == 3 ) { SetEventId(0x67); } // Mage mode.
+@ CharacterCreator.c:234: 		if ( creator->route == 3 ) { SetEventId(0x67); } // Mage mode.
 	cmp	r3, #3	@ _3,
-	bne	.L339		@,
-@ CharacterCreator.c:233: 		if ( creator->route == 3 ) { SetEventId(0x67); } // Mage mode.
+	bne	.L342		@,
+@ CharacterCreator.c:234: 		if ( creator->route == 3 ) { SetEventId(0x67); } // Mage mode.
 	adds	r0, r0, #97	@,
-	ldr	r3, .L383+32	@ tmp332,
+	ldr	r3, .L386+32	@ tmp332,
 	bl	.L30		@
-@ CharacterCreator.c:236: 	return ME_END|ME_PLAY_BEEP;
+@ CharacterCreator.c:237: 	return ME_END|ME_PLAY_BEEP;
 	movs	r0, #6	@ <retval>,
-	b	.L339		@
-.L359:
+	b	.L342		@
+.L362:
 @ BoonBane.c:195: 		case Str: unit->pow = ( unit->pow >= baneBase ? unit->pow - baneBase : 0 ); break;
 	movs	r2, #20	@ _60,
 	ldrsb	r2, [r0, r2]	@ _60,* _60
 @ BoonBane.c:195: 		case Str: unit->pow = ( unit->pow >= baneBase ? unit->pow - baneBase : 0 ); break;
 	movs	r3, #0	@ iftmp.66_64,
 	cmp	r6, r2	@ baneBase, _60
-	bgt	.L362		@,
+	bgt	.L365		@,
 @ BoonBane.c:195: 		case Str: unit->pow = ( unit->pow >= baneBase ? unit->pow - baneBase : 0 ); break;
 	subs	r3, r2, r1	@ tmp260, _60, _20
 @ BoonBane.c:195: 		case Str: unit->pow = ( unit->pow >= baneBase ? unit->pow - baneBase : 0 ); break;
 	lsls	r3, r3, #24	@ tmp261, tmp260,
 	asrs	r3, r3, #24	@ iftmp.66_64, tmp261,
-.L362:
+.L365:
 	strb	r3, [r0, #20]	@ iftmp.66_64, unit_22->pow
 @ BoonBane.c:195: 		case Str: unit->pow = ( unit->pow >= baneBase ? unit->pow - baneBase : 0 ); break;
-	b	.L351		@
-.L358:
+	b	.L354		@
+.L361:
 @ BoonBane.c:196: 		case Mag: unit->unk3A = ( unit->unk3A >= baneBase ? unit->unk3A - baneBase : 0 ); break;
 	movs	r3, #58	@ tmp263,
 	ldrb	r3, [r0, r3]	@ _66,
 @ BoonBane.c:196: 		case Mag: unit->unk3A = ( unit->unk3A >= baneBase ? unit->unk3A - baneBase : 0 ); break;
 	cmp	r1, r3	@ _20, _66
-	bhi	.L363		@,
+	bhi	.L366		@,
 	subs	r2, r3, r1	@ tmp264, _66, _20
 	lsls	r2, r2, #24	@ tmp265, tmp264,
 	lsrs	r2, r2, #24	@ _1, tmp265,
-.L363:
+.L366:
 	movs	r3, #58	@ tmp266,
 	strb	r2, [r0, r3]	@ _1, unit_22->unk3A
 @ BoonBane.c:196: 		case Mag: unit->unk3A = ( unit->unk3A >= baneBase ? unit->unk3A - baneBase : 0 ); break;
-	b	.L351		@
-.L357:
+	b	.L354		@
+.L360:
 @ BoonBane.c:197: 		case Skl: unit->skl = ( unit->skl >= baneBase ? unit->skl - baneBase : 0 ); break;
 	movs	r2, #21	@ _69,
 	ldrsb	r2, [r0, r2]	@ _69,* _69
 @ BoonBane.c:197: 		case Skl: unit->skl = ( unit->skl >= baneBase ? unit->skl - baneBase : 0 ); break;
 	movs	r3, #0	@ iftmp.68_73,
 	cmp	r6, r2	@ baneBase, _69
-	bgt	.L364		@,
+	bgt	.L367		@,
 @ BoonBane.c:197: 		case Skl: unit->skl = ( unit->skl >= baneBase ? unit->skl - baneBase : 0 ); break;
 	subs	r3, r2, r1	@ tmp269, _69, _20
 @ BoonBane.c:197: 		case Skl: unit->skl = ( unit->skl >= baneBase ? unit->skl - baneBase : 0 ); break;
 	lsls	r3, r3, #24	@ tmp270, tmp269,
 	asrs	r3, r3, #24	@ iftmp.68_73, tmp270,
-.L364:
+.L367:
 	strb	r3, [r0, #21]	@ iftmp.68_73, unit_22->skl
 @ BoonBane.c:197: 		case Skl: unit->skl = ( unit->skl >= baneBase ? unit->skl - baneBase : 0 ); break;
-	b	.L351		@
-.L356:
+	b	.L354		@
+.L359:
 @ BoonBane.c:198: 		case Spd: unit->spd = ( unit->spd >= baneBase ? unit->spd - baneBase : 0 ); break;
 	movs	r2, #22	@ _75,
 	ldrsb	r2, [r0, r2]	@ _75,* _75
 @ BoonBane.c:198: 		case Spd: unit->spd = ( unit->spd >= baneBase ? unit->spd - baneBase : 0 ); break;
 	movs	r3, #0	@ iftmp.69_79,
 	cmp	r6, r2	@ baneBase, _75
-	bgt	.L365		@,
+	bgt	.L368		@,
 @ BoonBane.c:198: 		case Spd: unit->spd = ( unit->spd >= baneBase ? unit->spd - baneBase : 0 ); break;
 	subs	r3, r2, r1	@ tmp273, _75, _20
 @ BoonBane.c:198: 		case Spd: unit->spd = ( unit->spd >= baneBase ? unit->spd - baneBase : 0 ); break;
 	lsls	r3, r3, #24	@ tmp274, tmp273,
 	asrs	r3, r3, #24	@ iftmp.69_79, tmp274,
-.L365:
+.L368:
 	strb	r3, [r0, #22]	@ iftmp.69_79, unit_22->spd
 @ BoonBane.c:198: 		case Spd: unit->spd = ( unit->spd >= baneBase ? unit->spd - baneBase : 0 ); break;
-	b	.L351		@
-.L355:
+	b	.L354		@
+.L358:
 @ BoonBane.c:199: 		case Def: unit->def = ( unit->def >= baneBase ? unit->def - baneBase : 0 ); break;
 	movs	r2, #23	@ _81,
 	ldrsb	r2, [r0, r2]	@ _81,* _81
 @ BoonBane.c:199: 		case Def: unit->def = ( unit->def >= baneBase ? unit->def - baneBase : 0 ); break;
 	movs	r3, #0	@ iftmp.70_85,
 	cmp	r6, r2	@ baneBase, _81
-	bgt	.L366		@,
+	bgt	.L369		@,
 @ BoonBane.c:199: 		case Def: unit->def = ( unit->def >= baneBase ? unit->def - baneBase : 0 ); break;
 	subs	r3, r2, r1	@ tmp277, _81, _20
 @ BoonBane.c:199: 		case Def: unit->def = ( unit->def >= baneBase ? unit->def - baneBase : 0 ); break;
 	lsls	r3, r3, #24	@ tmp278, tmp277,
 	asrs	r3, r3, #24	@ iftmp.70_85, tmp278,
-.L366:
+.L369:
 	strb	r3, [r0, #23]	@ iftmp.70_85, unit_22->def
 @ BoonBane.c:199: 		case Def: unit->def = ( unit->def >= baneBase ? unit->def - baneBase : 0 ); break;
-	b	.L351		@
-.L354:
+	b	.L354		@
+.L357:
 @ BoonBane.c:200: 		case Res: unit->res = ( unit->res >= baneBase ? unit->res - baneBase : 0 ); break;
 	movs	r2, #24	@ _87,
 	ldrsb	r2, [r0, r2]	@ _87,* _87
 @ BoonBane.c:200: 		case Res: unit->res = ( unit->res >= baneBase ? unit->res - baneBase : 0 ); break;
 	movs	r3, #0	@ iftmp.71_91,
 	cmp	r6, r2	@ baneBase, _87
-	bgt	.L367		@,
+	bgt	.L370		@,
 @ BoonBane.c:200: 		case Res: unit->res = ( unit->res >= baneBase ? unit->res - baneBase : 0 ); break;
 	subs	r3, r2, r1	@ tmp281, _87, _20
 @ BoonBane.c:200: 		case Res: unit->res = ( unit->res >= baneBase ? unit->res - baneBase : 0 ); break;
 	lsls	r3, r3, #24	@ tmp282, tmp281,
 	asrs	r3, r3, #24	@ iftmp.71_91, tmp282,
-.L367:
+.L370:
 	strb	r3, [r0, #24]	@ iftmp.71_91, unit_22->res
 @ BoonBane.c:200: 		case Res: unit->res = ( unit->res >= baneBase ? unit->res - baneBase : 0 ); break;
-	b	.L351		@
-.L352:
+	b	.L354		@
+.L355:
 @ BoonBane.c:201: 		case Luk: unit->lck = ( unit->lck >= baneBase ? unit->lck - baneBase : 0 ); break;
 	movs	r2, #25	@ _93,
 	ldrsb	r2, [r0, r2]	@ _93,* _93
 @ BoonBane.c:201: 		case Luk: unit->lck = ( unit->lck >= baneBase ? unit->lck - baneBase : 0 ); break;
 	movs	r3, #0	@ iftmp.72_97,
 	cmp	r6, r2	@ baneBase, _93
-	bgt	.L368		@,
+	bgt	.L371		@,
 @ BoonBane.c:201: 		case Luk: unit->lck = ( unit->lck >= baneBase ? unit->lck - baneBase : 0 ); break;
 	subs	r3, r2, r1	@ tmp285, _93, _20
 @ BoonBane.c:201: 		case Luk: unit->lck = ( unit->lck >= baneBase ? unit->lck - baneBase : 0 ); break;
 	lsls	r3, r3, #24	@ tmp286, tmp285,
 	asrs	r3, r3, #24	@ iftmp.72_97, tmp286,
-.L368:
+.L371:
 	strb	r3, [r0, #25]	@ iftmp.72_97, unit_22->lck
 @ BoonBane.c:201: 		case Luk: unit->lck = ( unit->lck >= baneBase ? unit->lck - baneBase : 0 ); break;
-	b	.L351		@
-.L381:
-@ CharacterCreator.c:229: 	if ( creator->gender == 1 ) { SetEventId(0x6E); } // 0x6E is true if they chose male.
-	movs	r0, #110	@,
-	ldr	r3, .L383+32	@ tmp329,
-	bl	.L30		@
-	b	.L369		@
-.L382:
-@ CharacterCreator.c:230: 	if ( creator->route == 2 ) { SetEventId(0x68); } // Military mode.
-	movs	r0, #104	@,
-	ldr	r3, .L383+32	@ tmp331,
-	bl	.L30		@
-@ CharacterCreator.c:236: 	return ME_END|ME_PLAY_BEEP;
-	movs	r0, #6	@ <retval>,
-	b	.L339		@
+	b	.L354		@
 .L384:
+@ CharacterCreator.c:230: 	if ( creator->gender == 1 ) { SetEventId(0x6E); } // 0x6E is true if they chose male.
+	movs	r0, #110	@,
+	ldr	r3, .L386+32	@ tmp329,
+	bl	.L30		@
+	b	.L372		@
+.L385:
+@ CharacterCreator.c:231: 	if ( creator->route == 2 ) { SetEventId(0x68); } // Military mode.
+	movs	r0, #104	@,
+	ldr	r3, .L386+32	@ tmp331,
+	bl	.L30		@
+@ CharacterCreator.c:237: 	return ME_END|ME_PLAY_BEEP;
+	movs	r0, #6	@ <retval>,
+	b	.L342		@
+.L387:
 	.align	2
-.L383:
+.L386:
 	.word	gCreatorProc
 	.word	ProcFind
 	.word	gCreatorBoonBaneEffects
-	.word	.L343
-	.word	.L353
+	.word	.L346
+	.word	.L356
 	.word	UnitCheckStatCaps
 	.word	gChapterData
 	.word	ProcGoto
@@ -5527,38 +5595,38 @@ CreatorTerminate:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, lr}	@
-@ CharacterCreator.c:242: 	EndFaceById(0);
+@ CharacterCreator.c:243: 	EndFaceById(0);
 	movs	r0, #0	@,
-	ldr	r3, .L386	@ tmp111,
+	ldr	r3, .L389	@ tmp111,
 	bl	.L30		@
-@ CharacterCreator.c:243: 	FillBgMap(gBg0MapBuffer,0);
+@ CharacterCreator.c:244: 	FillBgMap(gBg0MapBuffer,0);
 	movs	r1, #0	@,
-	ldr	r0, .L386+4	@,
-	ldr	r4, .L386+8	@ tmp113,
+	ldr	r0, .L389+4	@,
+	ldr	r4, .L389+8	@ tmp113,
 	bl	.L105		@
-@ CharacterCreator.c:244: 	FillBgMap(gBg1MapBuffer,0);
+@ CharacterCreator.c:245: 	FillBgMap(gBg1MapBuffer,0);
 	movs	r1, #0	@,
-	ldr	r0, .L386+12	@,
+	ldr	r0, .L389+12	@,
 	bl	.L105		@
-@ CharacterCreator.c:245: 	FillBgMap(gBg2MapBuffer,0);
+@ CharacterCreator.c:246: 	FillBgMap(gBg2MapBuffer,0);
 	movs	r1, #0	@,
-	ldr	r0, .L386+16	@,
+	ldr	r0, .L389+16	@,
 	bl	.L105		@
-@ CharacterCreator.c:246: 	EnableBgSyncByMask(1|2|4);
+@ CharacterCreator.c:247: 	EnableBgSyncByMask(1|2|4);
 	movs	r0, #7	@,
-	ldr	r3, .L386+20	@ tmp118,
+	ldr	r3, .L389+20	@ tmp118,
 	bl	.L30		@
-@ CharacterCreator.c:247: 	UnlockGameLogic();
-	ldr	r3, .L386+24	@ tmp119,
+@ CharacterCreator.c:248: 	UnlockGameLogic();
+	ldr	r3, .L389+24	@ tmp119,
 	bl	.L30		@
-@ CharacterCreator.c:248: }
+@ CharacterCreator.c:249: }
 	@ sp needed	@
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L387:
+.L390:
 	.align	2
-.L386:
+.L389:
 	.word	EndFaceById
 	.word	gBg0MapBuffer
 	.word	FillBgMap
@@ -5579,58 +5647,58 @@ CreatorRegressMenu:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, lr}	@
-@ CharacterCreator.c:252: 	CreatorProc* proc = (CreatorProc*)ProcFind(&gCreatorProc);
-	ldr	r0, .L393	@,
-	ldr	r3, .L393+4	@ tmp115,
+@ CharacterCreator.c:253: 	CreatorProc* proc = (CreatorProc*)ProcFind(&gCreatorProc);
+	ldr	r0, .L396	@,
+	ldr	r3, .L396+4	@ tmp115,
 	bl	.L30		@
 	movs	r4, r0	@ proc, tmp129
-@ CharacterCreator.c:253: 	if ( proc->isPressDisabled ) { return 0; }
+@ CharacterCreator.c:254: 	if ( proc->isPressDisabled ) { return 0; }
 	movs	r3, #62	@ tmp116,
-@ CharacterCreator.c:253: 	if ( proc->isPressDisabled ) { return 0; }
+@ CharacterCreator.c:254: 	if ( proc->isPressDisabled ) { return 0; }
 	ldrb	r3, [r0, r3]	@ tmp117,
 	cmp	r3, #0	@ tmp117,
-	bne	.L391		@,
-@ CharacterCreator.c:254: 	if ( proc->currMenu == ClassMenu )
+	bne	.L394		@,
+@ CharacterCreator.c:255: 	if ( proc->currMenu == ClassMenu )
 	adds	r3, r3, #41	@ tmp118,
-@ CharacterCreator.c:254: 	if ( proc->currMenu == ClassMenu )
+@ CharacterCreator.c:255: 	if ( proc->currMenu == ClassMenu )
 	ldrb	r3, [r0, r3]	@ tmp119,
 	cmp	r3, #3	@ tmp119,
-	beq	.L392		@,
-@ CharacterCreator.c:262: 		proc->currMenu = MainMenu; // Return to the main menu.
+	beq	.L395		@,
+@ CharacterCreator.c:263: 		proc->currMenu = MainMenu; // Return to the main menu.
 	movs	r3, #41	@ tmp124,
 	movs	r2, #7	@ tmp125,
 	strb	r2, [r0, r3]	@ tmp125, proc_7->currMenu
-@ CharacterCreator.c:263: 		ProcGoto((Proc*)proc,0);
+@ CharacterCreator.c:264: 		ProcGoto((Proc*)proc,0);
 	movs	r1, #0	@,
-	ldr	r3, .L393+8	@ tmp127,
+	ldr	r3, .L396+8	@ tmp127,
 	bl	.L30		@
-@ CharacterCreator.c:264: 		return ME_END|ME_PLAY_BEEP|ME_CLEAR_GFX; // Close menu, clear graphics, etc.
+@ CharacterCreator.c:265: 		return ME_END|ME_PLAY_BEEP|ME_CLEAR_GFX; // Close menu, clear graphics, etc.
 	movs	r0, #22	@ <retval>,
-.L388:
-@ CharacterCreator.c:266: }
+.L391:
+@ CharacterCreator.c:267: }
 	@ sp needed	@
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-.L392:
-@ CharacterCreator.c:256: 		ProcGoto((Proc*)proc,1);
+.L395:
+@ CharacterCreator.c:257: 		ProcGoto((Proc*)proc,1);
 	movs	r1, #1	@,
-	ldr	r3, .L393+8	@ tmp120,
+	ldr	r3, .L396+8	@ tmp120,
 	bl	.L30		@
-@ CharacterCreator.c:257: 		proc->currMenu = MainMenu; // Return to the main menu.
+@ CharacterCreator.c:258: 		proc->currMenu = MainMenu; // Return to the main menu.
 	movs	r3, #41	@ tmp121,
 	movs	r2, #7	@ tmp122,
 	strb	r2, [r4, r3]	@ tmp122, proc_7->currMenu
-@ CharacterCreator.c:258: 		return ME_END|ME_PLAY_BEEP;
+@ CharacterCreator.c:259: 		return ME_END|ME_PLAY_BEEP;
 	movs	r0, #6	@ <retval>,
-	b	.L388		@
-.L391:
-@ CharacterCreator.c:253: 	if ( proc->isPressDisabled ) { return 0; }
-	movs	r0, #0	@ <retval>,
-	b	.L388		@
+	b	.L391		@
 .L394:
+@ CharacterCreator.c:254: 	if ( proc->isPressDisabled ) { return 0; }
+	movs	r0, #0	@ <retval>,
+	b	.L391		@
+.L397:
 	.align	2
-.L393:
+.L396:
 	.word	gCreatorProc
 	.word	ProcFind
 	.word	ProcGoto
@@ -5647,7 +5715,7 @@ CreatorNoBPress:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
-@ CharacterCreator.c:271: }
+@ CharacterCreator.c:272: }
 	movs	r0, #8	@,
 	@ sp needed	@
 	bx	lr
@@ -5664,11 +5732,11 @@ CreatorEnablePresses:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
-@ CharacterCreator.c:275: 	proc->isPressDisabled = 0;
+@ CharacterCreator.c:276: 	proc->isPressDisabled = 0;
 	movs	r3, #62	@ tmp111,
 	movs	r2, #0	@ tmp112,
 	strb	r2, [r0, r3]	@ tmp112, proc_2(D)->isPressDisabled
-@ CharacterCreator.c:276: }
+@ CharacterCreator.c:277: }
 	@ sp needed	@
 	bx	lr
 	.size	CreatorEnablePresses, .-CreatorEnablePresses
@@ -5684,35 +5752,35 @@ CreatorIdle:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, lr}	@
-@ CharacterCreator.c:281: 	if ( proc->cycle < 15 ) { proc->cycle++; }
+@ CharacterCreator.c:282: 	if ( proc->cycle < 15 ) { proc->cycle++; }
 	movs	r3, #63	@ tmp113,
 	ldrb	r3, [r0, r3]	@ _1,
-@ CharacterCreator.c:281: 	if ( proc->cycle < 15 ) { proc->cycle++; }
+@ CharacterCreator.c:282: 	if ( proc->cycle < 15 ) { proc->cycle++; }
 	cmp	r3, #14	@ _1,
-	bhi	.L398		@,
-@ CharacterCreator.c:281: 	if ( proc->cycle < 15 ) { proc->cycle++; }
+	bhi	.L401		@,
+@ CharacterCreator.c:282: 	if ( proc->cycle < 15 ) { proc->cycle++; }
 	adds	r3, r3, #1	@ tmp116,
 	movs	r2, #63	@ tmp117,
 	strb	r3, [r0, r2]	@ tmp116, proc_5(D)->cycle
-.L397:
-@ CharacterCreator.c:283: }
+.L400:
+@ CharacterCreator.c:284: }
 	@ sp needed	@
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L398:
-@ CharacterCreator.c:282: 	else { proc->cycle = 0; RandNext(); }
+.L401:
+@ CharacterCreator.c:283: 	else { proc->cycle = 0; RandNext(); }
 	movs	r3, #63	@ tmp119,
 	movs	r2, #0	@ tmp120,
 	strb	r2, [r0, r3]	@ tmp120, proc_5(D)->cycle
-@ CharacterCreator.c:282: 	else { proc->cycle = 0; RandNext(); }
-	ldr	r3, .L400	@ tmp122,
+@ CharacterCreator.c:283: 	else { proc->cycle = 0; RandNext(); }
+	ldr	r3, .L403	@ tmp122,
 	bl	.L30		@
-@ CharacterCreator.c:283: }
-	b	.L397		@
-.L401:
+@ CharacterCreator.c:284: }
+	b	.L400		@
+.L404:
 	.align	2
-.L400:
+.L403:
 	.word	RandNext
 	.size	CreatorIdle, .-CreatorIdle
 	.global	gCreatorGrowthIDLookup

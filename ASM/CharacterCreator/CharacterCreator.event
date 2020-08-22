@@ -27,7 +27,7 @@
 	#define MenuProc 0x5B64D0
 	
 	ALIGN 4
-	gCreatorProc:
+	gCreatorProc: // Main character creator proc.
 	PROC_YIELD;
 	PROC_SET_NAME(gCreatorProcName)
 	
@@ -35,8 +35,9 @@
 	PROC_LOOP_ROUTINE(0x08014069) // Wait for fade.
 	PROC_SLEEP(10)
 	PROC_CALL_ROUTINE(SetupCreator)
-	
+	PROC_NEW_CHILD(gCreatorSpriteProc)
 	PROC_CALL_ROUTINE(0x08013D8D) // Fade out from black.
+	
 	PROC_LABEL(0x00)
 	PROC_CALL_ROUTINE(CreatorStartMenu)
 	PROC_SLEEP(10)
@@ -69,7 +70,7 @@
 	String("CHARACTER_CREATOR") ; BYTE 0x00
 	
 	ALIGN 4
-	gCreatorClassProc:
+	gCreatorClassProc: // Used by the class selection menu to manage the sliding platform/
 	PROC_SET_NAME(gCreatorClassProcName)
 	PROC_CALL_ROUTINE(CreatorClassDrawUIBox)
 	//PROC_CALL_ROUTINE(CreatorClassSetup|1)
@@ -82,6 +83,17 @@
 	gCreatorClassProcName:
 	String("CREATOR_CLASS_DISPLAY") ; BYTE 0x00
 	
+	ALIGN 4
+	gCreatorSpriteProc: // Draw the map sprite on the main menu.
+	PROC_SET_NAME(gCreatorSpriteProcName)
+	PROC_CALL_ROUTINE(CreatorSpriteSetup)
+	PROC_LOOP_ROUTINE(CreatorSpriteIdle)
+	PROC_END
+	
+	gCreatorSpriteProcName:
+	String("CREATOR_SPRITE_UPDATE") ; BYTE 0x00
+	
+	
 	#define MenuCommand(name,description,color,usability,onDraw,effect,idle,switchIn,switchOut) "WORD 0 ; SHORT name description ; WORD color ; POIN usability onDraw effect idle switchIn switchOut"
 	
 	ALIGN 4
@@ -92,13 +104,13 @@
 	POIN 0 0 0 CreatorNoBPress GenericMenuRPress|1 GenericMakeHelpBox|1
 	
 	gCreatorMainMenuCommands: // These are also indexed with their menu definitions in CharacterCreator.c.
-	MenuCommand(RandomMenuText,RandomDescText,NormalText,CreatorMainEntryUsability,0,CreatorGoToRandomize,CreatorMainIdle,0,0)
-	MenuCommand(GenderMenuText,FormDescText,NormalText,CreatorMainEntryUsability,0,CreatorMainGotoEntry,CreatorMainIdle,0,0)
-	MenuCommand(RouteMenuText,RouteDescText,NormalText,CreatorMainEntryUsability,0,CreatorMainGotoEntry,CreatorMainIdle,0,0)
-	MenuCommand(ClassMenuText,ClassDescText,NormalText,CreatorMainEntryUsability,0,CreatorMainGotoEntry,CreatorMainIdle,0,0)
-	MenuCommand(BoonMenuText,BoonDescText,NormalText,CreatorMainEntryUsability,0,CreatorMainGotoEntry,CreatorMainIdle,0,0)
-	MenuCommand(BaneMenuText,BaneDescText,NormalText,CreatorMainEntryUsability,0,CreatorMainGotoEntry,CreatorMainIdle,0,0)
-	MenuCommand(DoneMenuText,DoneDescText,GreenText,CreatorMainEntryUsability,0,CreatorEndMenu,CreatorMainIdle,0,0)
+	MenuCommand(RandomMenuText,RandomDescText,NormalText,CreatorMainEntryUsability,0,CreatorGoToRandomize,0,0,0)
+	MenuCommand(GenderMenuText,FormDescText,NormalText,CreatorMainEntryUsability,0,CreatorMainGotoEntry,0,0,0)
+	MenuCommand(RouteMenuText,RouteDescText,NormalText,CreatorMainEntryUsability,0,CreatorMainGotoEntry,0,0,0)
+	MenuCommand(ClassMenuText,ClassDescText,NormalText,CreatorMainEntryUsability,0,CreatorMainGotoEntry,0,0,0)
+	MenuCommand(BoonMenuText,BoonDescText,NormalText,CreatorMainEntryUsability,0,CreatorMainGotoEntry,0,0,0)
+	MenuCommand(BaneMenuText,BaneDescText,NormalText,CreatorMainEntryUsability,0,CreatorMainGotoEntry,0,0,0)
+	MenuCommand(DoneMenuText,DoneDescText,GreenText,CreatorMainEntryUsability,0,CreatorEndMenu,0,0,0)
 	WORD 0 0 0 0 0 0 0 0 0
 	
 	gCreatorMainNameUIBoxTSA:

@@ -2,6 +2,7 @@
 typedef struct ClassMenuSet ClassMenuSet;
 typedef struct CreatorProc CreatorProc;
 typedef struct CreatorClassProc CreatorClassProc;
+typedef struct CreatorSpriteProc CreatorSpriteProc;
 typedef struct UnitDefinition UnitDefinition;
 typedef struct TSA TSA;
 typedef struct Tile Tile;
@@ -86,6 +87,15 @@ struct CreatorClassProc
 	u8 platformType; // 0x50.
 };
 
+struct CreatorSpriteProc
+{
+	PROC_HEADER
+	u8 isActive; // 0x29.
+	u8 x; // 0x2A.
+	u8 y; // 0x2B.
+	Unit** unit; // 0x2C.
+};
+
 struct Tile
 {
 	u16 tileID : 10;
@@ -146,8 +156,7 @@ extern const struct
 	u8 promoBonus;
 } MagClassTable[];
 
-extern const ProcInstruction gCreatorProc;
-extern const ProcInstruction gCreatorClassProc;
+extern const ProcInstruction gCreatorProc, gCreatorClassProc, gCreatorSpriteProc;
 
 extern u8 gCreatorBattleSpriteHeight, gCreatorPlatformHeight;
 extern const MenuDefinition gCreatorMainMenuDefs;
@@ -223,8 +232,9 @@ static int GetReplacedText(int text);
 int CreatorMainEntryUsability(const MenuCommandDefinition* command, int index);
 int CreatorMainGotoEntry(MenuProc* proc, MenuCommandProc* commandProc);
 int CreatorGoToRandomize(MenuProc* proc, MenuCommandProc* commandProc);
-int CreatorMainIdle(MenuProc* proc, MenuCommandProc* commandProc);
 void CreatorRandomizeChoices(CreatorProc* creator);
+void CreatorSpriteSetup(CreatorSpriteProc* proc);
+void CreatorSpriteIdle(CreatorSpriteProc* proc);
 static void DrawMainMenu(CreatorProc* proc);
 static int GetMainMenuPortrait(int gender, int route);
 
