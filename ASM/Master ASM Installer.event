@@ -66,6 +66,8 @@ ALIGN 4
 
 #include "EventParameters/EventParameters.event"
 
+#include "GetMode/GetMode.lyn.event"
+
 #include "GiveToSupply/GiveToSupply.lyn.event"
 
 #include "HPBars/HPBars.event"
