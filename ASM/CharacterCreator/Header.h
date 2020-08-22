@@ -207,6 +207,8 @@ void SetupCreator(CreatorProc* proc);
 void CreatorStartMenu(CreatorProc* proc);
 int CreatorSubmenuUsability(const MenuCommandDefinition* command, int index);
 int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc);
+int CreatorEndMenu(MenuProc* proc, MenuCommandProc* commandProc);
+void CreatorTerminate(CreatorProc* proc);
 int CreatorRegressMenu(void);
 int CreatorNoBPress(void);
 void CreatorEnablePresses(CreatorProc* proc);

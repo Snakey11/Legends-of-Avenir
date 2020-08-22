@@ -14,33 +14,51 @@
 .equ CopyToPaletteBuffer, 0x08000DB8
 .equ gGenericBuffer, 0x02020188
 .equ gBg1MapBuffer, 0x020234A8
+.equ gBg3MapBuffer, 0x020244A8
 .equ BgMap_ApplyTsa, 0x080D74A0
 .equ EnableBgSyncByMask, 0x08001FAC
 .equ gProc_GmapRMUpdate, 0x08A3EAF0
 .equ ProcStart, 0x08002C7C
+.equ gMemorySlot, 0x030004B8
+.equ SetBgTileDataOffset, 0x08000FDC
+.equ GetBgControlBuffer, 0x8000F44
 
 .global LoadSmallWorldMap
 .type LoadSmallWorldMap, %function
 LoadSmallWorldMap: @ Autohook to 0x080C1FE0. r0 = parent proc? We're rewriting the function that seems to load the small world map.
 @ We'd like to allow for a specified number of palettes to load.
+@ We should be able to ASMC this function if we just want to load the graphics. Let's say memory slot 0x1 is a boolean for whether we want to start a world map proc.
 push { r4, r5, lr }
 mov r5, r0
 ldr r0, =gProc_WorldMap
 blh ProcFind, r1
-ldr r0, [ r0, #0x44 ]
-ldr r1, [ r0, #0x4C ]
-add r1, r1, #0x31
-ldrb r2, [ r1 ]
-mov r0, #0xFB
-and r0, r0, r2
-strb r0, [ r1 ]
-mov r0, #0x01
+cmp r0, #0x00
+beq Skip
+	ldr r0, [ r0, #0x44 ]
+	ldr r1, [ r0, #0x4C ]
+	add r1, r1, #0x31
+	ldrb r2, [ r1 ]
+	mov r0, #0xFB
+	and r0, r0, r2
+	strb r0, [ r1 ]
+Skip:
+mov r0, #0x03
 mov r1, #0x00
 mov r2, #0x00
 blh SetBgPosition, r3
+mov r0, #0x03
+ldr r1, =#0x8000
+blh SetBgTileDataOffset, r3 @ Set BG2 to use the correct tiles.
+mov r0, #0x03
+blh GetBgControlBuffer, r1 @ Returns the pointer to BG2's control buffer.
+ldr r1, [ r0 ]
+lsr r1, r1, #0x02 @ Clear the old priority.
+lsl r1, r1, #0x02
+mov r2, #0x03 @ New priority.
+orr r1, r1, r2
+str r1, [ r0 ]
 ldr r0, =SmallWorldMap
-mov r1, #0xC0
-lsl r1, r1, #0x13
+ldr r1, =0x06008000
 blh Decompress, r2
 @ Everything above this is vanilla. Here's where some magic happens.
 ldr r0, =SmallWorldMapPalette @ Palette to load.
@@ -69,16 +87,21 @@ ldr r0, =SmallWorldMapTSA
 ldr r4, =gGenericBuffer
 mov r1, r4
 blh Decompress, r2
-ldr r0, =gBg1MapBuffer
+ldr r0, =gBg3MapBuffer
 mov r2, #0xA0
 lsl r2, r2, #0x07
 mov r1, r4
 blh BgMap_ApplyTsa, r3
-mov r0, #0x02
+mov r0, #0x08
 blh EnableBgSyncByMask, r1
-ldr r0, =gProc_GmapRMUpdate
-mov r1, r5
-blh ProcStart, r2
+ldr r0, =gMemorySlot
+ldr r0, [ r0, #0x04 ]
+cmp r0, #0x00
+beq LoadSmallWMNoProc
+	ldr r0, =gProc_GmapRMUpdate
+	mov r1, r5
+	blh ProcStart, r2
+LoadSmallWMNoProc:
 pop { r4 - r5 }
 pop { r0 }
 bx r0
@@ -147,7 +170,7 @@ bx r0
 
 .global StartSmallWorldMap
 .type StartSmallWorldMap, %function
-StartSmallWorldMap: @ r0 = parent proc (the event engine).
+StartSmallWorldMap: @ r0 = parent proc (the event engine). This is presumably ASMCed. Memory slot 0x2 is a pointer to events to run.
 push { lr }
 mov r1, r0
 ldr r0, =WorldMapWrapperProc
@@ -159,8 +182,10 @@ bx r0
 .type WorldMapWrapperProcCallEvents,%function
 WorldMapWrapperProcCallEvents:
 push { r4, lr } @ I was successfully able to invoke the world map event engine with this! But... some things were a little messed up... text wouldn't load properly, and it would softlock sometimes.
+@ Let memory slot 0x2 be a pointer to events we want to run.
 mov r4, r0 @ Proc.
-ldr r0, =WorldMapEventTest
+ldr r0, =gMemorySlot
+ldr r0, [ r0, #0x08 ]
 mov r1, #0x00
 blh StartMapEventEngine, r2 @ CONFIRMED: Some world map events presuppose the existence of gProc_WorldMap! Invoking that proc before starting events seems to fix things.
 @ r0 = Event engine proc pointer.

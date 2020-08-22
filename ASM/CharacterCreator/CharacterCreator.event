@@ -31,15 +31,12 @@
 	PROC_YIELD;
 	PROC_SET_NAME(gCreatorProcName)
 	
-	PROC_CALL_ROUTINE(0x08013CD1) // StartFadeIntoBlack.
+	PROC_CALL_ROUTINE(0x08013D69) // StartFadeIntoBlack.
 	PROC_LOOP_ROUTINE(0x08014069) // Wait for fade.
 	PROC_SLEEP(10)
 	PROC_CALL_ROUTINE(SetupCreator)
-	PROC_SLEEP(10)
-	PROC_CALL_ROUTINE(0x08013D8D) // Fade out from black.
-	PROC_LOOP_ROUTINE(0x08014069) // Wait for fade.
 	
-	PROC_SLEEP(20)
+	PROC_CALL_ROUTINE(0x08013D8D) // Fade out from black.
 	PROC_LABEL(0x00)
 	PROC_CALL_ROUTINE(CreatorStartMenu)
 	PROC_SLEEP(10)
@@ -54,7 +51,7 @@
 	PROC_GOTO(0x00)
 	
 	PROC_LABEL(0x02) // Jumped to on random press to fade, redraw stuff, then fade back. Button pressing is already disabled.
-	PROC_CALL_ROUTINE(0x08013CD1) // StartFadeIntoBlack.
+	PROC_CALL_ROUTINE(0x08013D69) // StartFadeIntoBlack.
 	PROC_LOOP_ROUTINE(0x08014069) // Wait for fade.
 	PROC_END_ALL(MenuProc) // End the menu.
 	// Starting a new menu already clears BGs and such so eh.
@@ -63,6 +60,9 @@
 	PROC_GOTO(0x00)
 	
 	PROC_LABEL(0x03) // Jumped to to end the menu.
+	PROC_CALL_ROUTINE(0x08013D69) // StartFadeIntoBlack.
+	PROC_LOOP_ROUTINE(0x08014069) // Wait for fade.
+	PROC_CALL_ROUTINE(CreatorTerminate)
 	PROC_END
 	
 	gCreatorProcName:

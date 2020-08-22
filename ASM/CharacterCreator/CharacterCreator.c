@@ -60,7 +60,10 @@ void SetupCreator(CreatorProc* proc)
 	}
 	BgMap_ApplyTsa(gBg3MapBuffer,gGenericBuffer,6<<12);
 	SetBgTileDataOffset(2,0x8000);
+	
+	LoadIconPalettes(4);
 	EnableBgSyncByMask(8);
+	EnablePaletteSync();
 	
 	UnsetEventId(0x6E); // Gender event ID.
 	
@@ -215,16 +218,11 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
 	return ME_END|ME_PLAY_BEEP|ME_CLEAR_GFX;
 }
 
+// This is a menu option that jumps to end the menu.
 int CreatorEndMenu(MenuProc* proc, MenuCommandProc* commandProc)
 {
 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
 	if ( creator->isPressDisabled ) { return 0; }
-	EndFaceById(0);
-	FillBgMap(gBg0MapBuffer,0);
-	FillBgMap(gBg1MapBuffer,0);
-	FillBgMap(gBg2MapBuffer,0);
-	EnableBgSyncByMask(1|2|4);
-	UnlockGameLogic();
 	ApplyBoonBane(creator);
 	ProcGoto((Proc*)creator,3); // Jump to end the creator proc.
 	
@@ -235,7 +233,18 @@ int CreatorEndMenu(MenuProc* proc, MenuCommandProc* commandProc)
 		if ( creator->route == 3 ) { SetEventId(0x67); } // Mage mode.
 	}
 	
-	return ME_END|ME_PLAY_BEEP|ME_CLEAR_GFX;
+	return ME_END|ME_PLAY_BEEP;
+}
+
+// This is called right before ending the creator proc.
+void CreatorTerminate(CreatorProc* proc)
+{
+	EndFaceById(0);
+	FillBgMap(gBg0MapBuffer,0);
+	FillBgMap(gBg1MapBuffer,0);
+	FillBgMap(gBg2MapBuffer,0);
+	EnableBgSyncByMask(1|2|4);
+	UnlockGameLogic();
 }
 
 int CreatorRegressMenu(void)

@@ -13,11 +13,20 @@ PROC_NEW_CHILD(0x08A3E624) // Start gProc_GMapMuEntry.
 PROC_CALL_ROUTINE(0x080B8681) // Start gProc_8A3D700. Seems to be closely tied to displaying faces in WM text?
 PROC_CALL_ROUTINE(WorldMapWrapperProcCallEvents) 
 PROC_LOOP_ROUTINE(WorldMapWrapperProcAreEventsFinished)
+PROC_END_ALL(0x08A3D748) // End gProc_WorldMap
 PROC_END
 WorldMapWrapperProcName:
 String("WorldMapWrapper") ; BYTE 0
 // +0x2C is the pointer to our new event engine proc.
 
+PUSH
+ORG $C2358
+SHORT 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0
+ORG $C2368 // Prevent world map proc things from clearing BG2.
+SHORT 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0
+POP
+
+/*
 ALIGN 4
 WorldMapEventTest:
 EVBIT_MODIFY 0x1
@@ -245,3 +254,4 @@ REMSPRITE 0x5
 REMSPRITE 0x6
 SVAL 0xB 1
 ENDA
+*/

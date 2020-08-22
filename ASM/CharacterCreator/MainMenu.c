@@ -97,6 +97,7 @@ void CreatorRandomizeChoices(CreatorProc* creator)
 static void DrawMainMenu(CreatorProc* proc)
 {
 	SetBgTileDataOffset(2,0); // Set BG2 to use tile offset 0 ("Tiles 1").
+	gLCDIOBuffer.bgControl[1].priority = 1;
 	if ( proc->mainUnit ) { ApplyBGBox(gBG2MapBuffer,&gCreatorMainNameSpriteUIBoxTSA,8,1); } // Draw a different box for whether they have a map sprite to show.
 	else { ApplyBGBox(gBG1MapBuffer,&gCreatorMainNameUIBoxTSA,8,1); }
 	if ( proc->gender || proc->route ) { ApplyBGBox(gBG1MapBuffer,&gCreatorMainUIBoxTSA,8,5); } // Box for what selections have been made. (Only necessary to check gender/route.)
