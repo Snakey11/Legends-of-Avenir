@@ -93,6 +93,15 @@
 	gCreatorSpriteProcName:
 	String("CREATOR_SPRITE_UPDATE") ; BYTE 0x00
 	
+	ALIGN 4
+	gTimerProc: // Used to burn a random number of RNs. Let's count the number of frames that pass!
+	PROC_SET_NAME(gTimerProcName)
+	PROC_CALL_ROUTINE(TimerSetup)
+	PROC_LOOP_ROUTINE(TimerIncrement)
+	PROC_END
+	
+	gTimerProcName:
+	String("TIMER"); BYTE 0x00;
 	
 	#define MenuCommand(name,description,color,usability,onDraw,effect,idle,switchIn,switchOut) "WORD 0 ; SHORT name description ; WORD color ; POIN usability onDraw effect idle switchIn switchOut"
 	

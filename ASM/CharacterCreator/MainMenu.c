@@ -44,8 +44,9 @@ int CreatorGoToRandomize(MenuProc* proc, MenuCommandProc* commandProc)
 {
 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
 	if ( creator->isPressDisabled ) { return 0; }
+	creator->isPressDisabled = 1;
 	ProcGoto((Proc*)creator,2);
-	return ME_PLAY_BEEP; // We clear this menu straight from the creator proc.
+	return ME_END|ME_PLAY_BEEP; // We clear this menu straight from the creator proc.
 }
 
 void CreatorRandomizeChoices(CreatorProc* creator)

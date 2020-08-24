@@ -45,6 +45,7 @@ EndUnit
 //Label BeginingScene
 BeginningScene:
 //ASMC SetName|1
+ASMC NewTimer|1
 ASMC SetDifficulty|1 // For now, force difficulty to Normal.
 MUSC PrologueMusic
 ENUF 0x69
@@ -65,6 +66,8 @@ STAL 0x10
 CLEAN
 SVAL 0x1 False
 ASMC LoadSmallWorldMap|1
+ASMC BurnRNs|1
+ASMC EndTimer|1
 RANDOMNUMBER 7 // Randomly show some text!
 SVAL 0x1 0x1
 SVAL 0x2 0x2

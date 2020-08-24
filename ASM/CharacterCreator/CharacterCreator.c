@@ -283,6 +283,34 @@ void CreatorIdle(CreatorProc* proc)
 	else { proc->cycle = 0; RandNext(); }
 }
 
+// We use these timer functions to burn a random number of RNs for our random text.
+void NewTimer(Proc* proc)
+{
+	ProcStart(&gTimerProc,proc);
+}
+
+void TimerSetup(TimerProc* proc)
+{
+	proc->count = 0;
+}
+
+void TimerIncrement(TimerProc* proc)
+{
+	proc->count++;
+}
+
+void EndTimer(void)
+{
+	BreakProcLoop(ProcFind(&gTimerProc));
+}
+
+void BurnRNs(void)
+{
+	TimerProc* timer = (TimerProc*)ProcFind(&gTimerProc);
+	int count = timer->count;
+	for ( int i = 0 ; i < count/32 ; i++ ) { RandNext(); }
+}
+
 static void DrawStatNames(TextHandle handle, char* string, int x, int y)
 {
 	Text_Clear(&handle);

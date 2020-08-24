@@ -3,6 +3,7 @@ typedef struct ClassMenuSet ClassMenuSet;
 typedef struct CreatorProc CreatorProc;
 typedef struct CreatorClassProc CreatorClassProc;
 typedef struct CreatorSpriteProc CreatorSpriteProc;
+typedef struct TimerProc TimerProc;
 typedef struct UnitDefinition UnitDefinition;
 typedef struct TSA TSA;
 typedef struct Tile Tile;
@@ -96,6 +97,12 @@ struct CreatorSpriteProc
 	Unit** unit; // 0x2C.
 };
 
+struct TimerProc
+{
+	PROC_HEADER
+	u16 count; // 0x2A.
+};
+
 struct Tile
 {
 	u16 tileID : 10;
@@ -156,7 +163,7 @@ extern const struct
 	u8 promoBonus;
 } MagClassTable[];
 
-extern const ProcInstruction gCreatorProc, gCreatorClassProc, gCreatorSpriteProc;
+extern const ProcInstruction gCreatorProc, gCreatorClassProc, gCreatorSpriteProc, gTimerProc;
 
 extern u8 gCreatorBattleSpriteHeight, gCreatorPlatformHeight;
 extern const MenuDefinition gCreatorMainMenuDefs;
@@ -222,6 +229,11 @@ int CreatorRegressMenu(void);
 int CreatorNoBPress(void);
 void CreatorEnablePresses(CreatorProc* proc);
 void CreatorIdle(CreatorProc* proc);
+void NewTimer(Proc* proc);
+void TimerSetup(TimerProc* proc);
+void TimerIncrement(TimerProc* proc);
+void EndTimer(void);
+void BurnRNs(void);
 static void ApplyBGBox(u16 map[32][32], TSA* tsa, int x, int y);
 static void DrawStatNames(TextHandle handle, char* string, int x, int y);
 static int GetNumLines(char* string);

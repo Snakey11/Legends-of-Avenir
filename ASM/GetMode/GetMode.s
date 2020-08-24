@@ -23,7 +23,7 @@ bne ReturnMode
 	blh CheckEventID, r1 @ 0x67 unset is mage, 0x68 set is mercenary.
 	mov r1, #0x01 @ Mercenary.
 	cmp r0, #0x00
-	bne ReturnMode
+	beq ReturnMode
 		mov r1, #0x03 @ Mage.
 ReturnMode:
 mov r0, r1
