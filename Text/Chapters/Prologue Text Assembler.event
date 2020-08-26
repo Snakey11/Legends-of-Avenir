@@ -53,29 +53,34 @@ Now that that's taken care of, it's time to decide what exactly you may want to 
 It is time. Let us prepare you for the realm of Avenir...[X]
 
 ## PrologueWMMainText
-The continent of Avenir. Four main countries[NL]
-dot the main landmass of the continent. The[A][NL]
-Empire of Cesaria; the country of magic,[NL]
-Arcanae; the warrior country of Haedric;[A][NL]
+The continent of Avenir.[.....] Four main countries[NL]
+dot the main landmass of the continent.[A][0x02][NL]
+[Events]
+The Empire of Cesaria;[A][0x02][NL]
+[Events]
+the country of magic, Arcanae;[A][0x02][NL]
+[Events]
+the warrior country of Haedric;[A][0x02][NL]
+[Events]
 and the avian realm of Altia.[A][X]
 
 ## PrologueWMMercenaryText
-As a mercenary, you will begin your journey[NL]
-in Haedric. The warriors of Haedric pride[A][NL]
+As a mercenary, [Events][....]you will begin your journey[NL]
+in Haedric.[Events][......] The warriors of Haedric pride[A][NL]
 themselves on personal strength, and their[NL]
-leader, the Basileus, is renowned as the[A][NL]
+leader,[Events][....] the Basileus, is renowned as the[A][NL]
 strongest warrior in all of Avenir...[A][X]
 
 ## PrologueWMMilitaryText
-As a member of the military, you will begin[NL]
-your journey in Cesaria. They boast the[A][NL]
-largest military on the continent, led by[NL]
-their Captains and General. Every Cesarian[A][NL]
-is fiercely loyal to their Emperor.[A][X]
+As a member of the military, [Events][....]you will begin[NL]
+your journey in Cesaria.[Events][......] They boast the[A][NL]
+largest military on the continent,[Events][.] led by[NL]
+their Captains and General.[Events][....] Every Cesarian[A][0x02][NL][Events]
+is fiercely loyal to their Emperor.[Events][......][A][X]
 
 ## PrologueWMMageText
-As a magic scholar, you will begin your journey[NL]
-in Arcanae. They have found themselves locked[A][NL]
+As a magic scholar, [Events][....]you will begin your journey[NL]
+in Arcanae.[Events][.....] They have found themselves locked[A][NL]
 in a civil war between two halves of their[NL]
 Grand Magi, but like most Arcanians, you[A][NL]
 only truly seek knowledge of the world.[A][X]

@@ -36,7 +36,7 @@ FILL 10*0x04
 
 // NOTE: THE GLOWY REGION PALETTE IS HANDLED AT 0x080C278C.
 GlowyEntry(CesariaGlowy,CesariaBorder,CesariaGlowyPalette,CesariaAP,45,38)
-GlowyEntry(ArcanaeGlowy,ArcanaeBorder,ArcanaeGlowyPalette,ArcanaeAP,145,76)
+GlowyEntry(ArcanaeGlowy,ArcanaeBorder,ArcanaeGlowyPalette,ArcanaeAP,144,77)
 GlowyEntry(HaedricGlowy,HaedricBorder,HaedricGlowyPalette,HaedricAP,139,10)
 GlowyEntry(AltiaGlowy,AltiaBorder,AltiaGlowyPalette,AltiaAP,43,2)
 GlowyEntry(DraterusGlowy,DraterusBorder,DraterusGlowyPalette,DraterusAP,99,24)
@@ -63,7 +63,7 @@ ArcanaeBorder:
 
 ALIGN 4
 ArcanaeGlowyPalette:
-#incbin "CesariaOrdered_palette.dmp"
+#incbin "ArcanaeOrdered_palette.dmp"
 
 ALIGN 4
 ArcanaeAP:

@@ -14,21 +14,24 @@
 .equ CopyToPaletteBuffer, 0x08000DB8
 .equ gGenericBuffer, 0x02020188
 .equ gBg1MapBuffer, 0x020234A8
+.equ gBg2MapBuffer, 0x02023CA8
 .equ gBg3MapBuffer, 0x020244A8
 .equ BgMap_ApplyTsa, 0x080D74A0
 .equ EnableBgSyncByMask, 0x08001FAC
+.equ EnableBgSyncByIndex, 0x08001FBD
 .equ gProc_GmapRMUpdate, 0x08A3EAF0
 .equ ProcStart, 0x08002C7C
 .equ gMemorySlot, 0x030004B8
 .equ SetBgTileDataOffset, 0x08000FDC
 .equ GetBgControlBuffer, 0x8000F44
+.equ SetBgPosition, 0x0800148D
 
 .global LoadSmallWorldMap
 .type LoadSmallWorldMap, %function
 LoadSmallWorldMap: @ Autohook to 0x080C1FE0. r0 = parent proc? We're rewriting the function that seems to load the small world map.
 @ We'd like to allow for a specified number of palettes to load.
 @ We should be able to ASMC this function if we just want to load the graphics. Let's say memory slot 0x1 is a boolean for whether we want to start a world map proc.
-push { r4, r5, lr }
+push { r5 - r7, lr }
 mov r5, r0
 ldr r0, =gProc_WorldMap
 blh ProcFind, r1
@@ -42,25 +45,37 @@ beq Skip
 	and r0, r0, r2
 	strb r0, [ r1 ]
 Skip:
-mov r0, #0x03
+ldr r0, =gMemorySlot
+ldr r0, [ r0, #0x04 ] @ Boolean for whether we're showing events.
+@ If we want to show events, let's load the map on BG2. Events need it on BG2!
+@ Otherwise, it's more convenient to load on BG3.
+cmp r0, #0x00
+beq UseBG3
+	mov r6, #0x02
+	ldr r7, =gBg2MapBuffer
+	b SetBGParameters
+UseBG3:
+	mov r6, #0x03
+	ldr r7, =gBg3MapBuffer
+SetBGParameters:
+mov r0, r6
 mov r1, #0x00
 mov r2, #0x00
 blh SetBgPosition, r3
-mov r0, #0x03
+mov r0, r6
 ldr r1, =#0x8000
-blh SetBgTileDataOffset, r3 @ Set BG2 to use the correct tiles.
-mov r0, #0x03
+blh SetBgTileDataOffset, r3 @ Set to use the correct tiles.
+mov r0, r6
 blh GetBgControlBuffer, r1 @ Returns the pointer to BG2's control buffer.
 ldr r1, [ r0 ]
-lsr r1, r1, #0x02 @ Clear the old priority.
-lsl r1, r1, #0x02
-mov r2, #0x03 @ New priority.
-orr r1, r1, r2
-str r1, [ r0 ]
+@lsr r1, r1, #0x02 @ Clear the old priority.
+@lsl r1, r1, #0x02
+@mov r2, #0x03 @ New priority.
+@orr r1, r1, r2
+@str r1, [ r0 ]
 ldr r0, =SmallWorldMap
 ldr r1, =0x06008000
 blh Decompress, r2
-@ Everything above this is vanilla. Here's where some magic happens.
 ldr r0, =SmallWorldMapPalette @ Palette to load.
 mov r1, #0xA0 @ Offset to write to.
 ldr r2, =gSmallWorldMapPaletteCount
@@ -84,16 +99,15 @@ blt NoHighPalette
 	
 NoHighPalette:*/
 ldr r0, =SmallWorldMapTSA
-ldr r4, =gGenericBuffer
-mov r1, r4
+ldr r1, =gGenericBuffer
 blh Decompress, r2
-ldr r0, =gBg3MapBuffer
+mov r0, r7
 mov r2, #0xA0
 lsl r2, r2, #0x07
-mov r1, r4
+ldr r1, =gGenericBuffer
 blh BgMap_ApplyTsa, r3
-mov r0, #0x08
-blh EnableBgSyncByMask, r1
+mov r0, r6
+blh EnableBgSyncByIndex, r1
 ldr r0, =gMemorySlot
 ldr r0, [ r0, #0x04 ]
 cmp r0, #0x00
@@ -102,7 +116,7 @@ beq LoadSmallWMNoProc
 	mov r1, r5
 	blh ProcStart, r2
 LoadSmallWMNoProc:
-pop { r4 - r5 }
+pop { r5 - r7 }
 pop { r0 }
 bx r0
 
@@ -124,8 +138,8 @@ mov r2, #0x00
 mov r3, #0x00
 blh SetColorEffectsFirstTarget, r4
 mov r0, #0x00
-mov r1, #0x01
-mov r2, #0x00
+mov r1, #0x00
+mov r2, #0x01
 mov r3, #0x00
 blh SetColorEffectsSecondTarget, r4
 mov r0, #0x00
@@ -133,7 +147,6 @@ mov r1, #0x00
 mov r2, #0x10
 mov r3, #0x00
 blh SetColorEffectsParameters, r4
-mov r4, #0x00
 strh r4, [ r5, #0x30 ]
 ldr r0, =#0x08A3EC48
 blh #0x080034FC, r1
@@ -143,7 +156,7 @@ bgt SkipPalette
 	@ Now we need to grab a different palette for each glowy region.
 	ldr r0, =WorldMapWrapperProc
 	blh ProcFind, r1
-	@ r0 = Our event engine proc.
+	@ r0 = Our wrapper proc.
 	ldr r0, [ r0, #0x2C ] @ Pointer to our "world map event engine."
 	ldr r0, [ r0, #0x38 ] @ Pointer to this event instruction (WM_HIGHLIGHT).
 	ldrh r0, [ r0, #0x04 ] @ Glowy index we use (which entry in the glowy table).
@@ -204,6 +217,17 @@ cmp r1, #0x00
 beq EventsAreNotFinished
 	blh BreakProcLoop, r1
 EventsAreNotFinished:
+pop { r0 }
+bx r0
+
+.global WorldMapResetBg2Offset
+.type WorldMapResetBg2Offset, %function
+WorldMapResetBg2Offset: @ Called at the end of our proc. Reset BG2's offset (since it was probably changed by moving the camera, and nothing resets it???).
+push { lr }
+mov r0, #0x02
+mov r1, #0x00
+mov r2, #0x00
+blh SetBgPosition, r3
 pop { r0 }
 bx r0
 

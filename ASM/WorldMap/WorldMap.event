@@ -8,12 +8,15 @@ ALIGN 4
 WorldMapWrapperProc:
 PROC_YIELD // Buffer.
 PROC_SET_NAME(WorldMapWrapperProcName)
+PROC_CALL_ROUTINE(0x80311A9)
 PROC_CALL_ROUTINE(0x080BA2E5) // Start gProc_WorldMap.
 PROC_NEW_CHILD(0x08A3E624) // Start gProc_GMapMuEntry.
 PROC_CALL_ROUTINE(0x080B8681) // Start gProc_8A3D700. Seems to be closely tied to displaying faces in WM text?
 PROC_CALL_ROUTINE(WorldMapWrapperProcCallEvents) 
 PROC_LOOP_ROUTINE(WorldMapWrapperProcAreEventsFinished)
-PROC_END_ALL(0x08A3D748) // End gProc_WorldMap
+PROC_END_ALL(0x08A3D748) // End gProc_WorldMap.
+PROC_END_ALL(0x08A3EAF0) // End gProc_GmapRMUpdate.
+PROC_CALL_ROUTINE(WorldMapResetBg2Offset)
 PROC_END
 WorldMapWrapperProcName:
 String("WorldMapWrapper") ; BYTE 0
@@ -22,8 +25,14 @@ String("WorldMapWrapper") ; BYTE 0
 PUSH
 ORG $C2358
 SHORT 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0
-ORG $C2368 // Prevent world map proc things from clearing BG2.
-SHORT 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0
+ORG $C2368 // Prevent world map proc things from clearing BG2 and setting the portrait to blend with BG2 (use BG1 instead).
+SHORT 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0
+
+ORG $C1E34 // Have the world map camera updater update BG2 instead of BG1.
+BYTE 0x02
+
+ORG $C25D2
+SHORT 0x2100 0x2201 
 POP
 
 /*

@@ -24,8 +24,8 @@ frame_0:
 	
 frame_1:
 	SHORT 2
-	OAM(50,15,Shape_Horizontal,Size_32x16,22)
-	OAM(92,15,Shape_Square,Size_16x16,26)	
+	OAM(10,18,Shape_Horizontal,Size_32x16,22)
+	OAM(42,18,Shape_Square,Size_16x16,26)	
 
 anim_0:
 	SHORT 4 0

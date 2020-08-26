@@ -63,7 +63,12 @@ void CreatorRandomizeChoices(CreatorProc* creator)
 	for ( int i = 0 ; i < creator->cycle ; i++ ) { RandNext(); }
 	
 	creator->gender = NextRN_N(2)+1; // Randomize gender and route.
-	creator->route = NextRN_N(3)+1;
+	int newRoute = 0;
+	do
+	{
+		newRoute = NextRN_N(3)+1; // Disallow randomizing to the same route.
+	} while ( creator->route == newRoute );
+	creator->route = newRoute;
 	creator->currSet = GetClassSet(creator->gender,creator->route); // We need this to load a unit.
 	int numClasses = 0;
 	while ( creator->currSet->list[numClasses].character && numClasses < 5 ) { numClasses++; } // This should equal the number of classes this set has.
