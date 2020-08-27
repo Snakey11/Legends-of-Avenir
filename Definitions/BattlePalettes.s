@@ -14,6 +14,9 @@ BaretSentinelPaletteID
 ConnorMercenaryPaletteID
 ConnorHeroPaletteID
 ConnorRangerPaletteID
+CougarWyvernRiderPaletteID
+CougarWyvernLordPaletteID
+CougarWyvernKnightPaletteID
 DerekKnightPaletteID
 DerekGeneralPaletteID
 DerekGreatKnightPaletteID
@@ -27,6 +30,7 @@ FinocWyvernLordPaletteID
 HelmerSoldierPaletteID
 HelmerHalberdierPaletteID
 HelmerSentinelPaletteID
+IzukPatriarchPaletteID
 JasperCavalierPaletteID
 JasperGreatKnightPaletteID
 JasperPaladinPaletteID
@@ -40,7 +44,7 @@ LukeSagePaletteID
 LuxMagePaletteID
 LuxSagePaletteID
 LuxMageKnightPaletteID
-MaximusSagePaletteID
+MaximusStrategistPaletteID
 UzkalisGaidenSagePaletteID
 ValShamanPaletteID
 ValDruidPaletteID
@@ -90,7 +94,9 @@ ClaraTroubadourPaletteID
 ClaraMageKnightPaletteID
 ClaraValkyriePaletteID
 SylvaineWyvernLordPaletteID
+ShanleyMagePaletteID
 ShanleySagePaletteID
+ShanleyMageKnightPaletteID
 XavusNecromancerPaletteID
 DunlasHalberdierPaletteID
 SamMyrmidonPaletteID
@@ -127,9 +133,9 @@ RemusHalberdierPaletteID
 AdelineArcherPaletteID
 AdelineSniperPaletteID
 AdelineRangerPaletteID
-ZahevaMercenaryPaletteID
-ZahevaHeroPaletteID
-ZahevaRangerPaletteID
+ZahevaSpellswordPaletteID
+ZahevaBattleSagePaletteID
+ZahevaDreadFighterPaletteID
 YvettePegasusKnightPaletteID
 YvetteFalcoknightPaletteID
 YvetteWyvernKnightPaletteID
