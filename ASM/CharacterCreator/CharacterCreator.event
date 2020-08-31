@@ -1,6 +1,6 @@
 
 #ifndef CHARACTER_CREATOR
-	#define CHARACTER_CREATOR // Legends of Avenir Character Creator by Snek.
+	#define CHARACTER_CREATOR // Legends of Avenir Character Creator by Snek. Not free to use or edit, but free to reference!
 	// Shoutouts to Kirb since I referenced the Ternon house selection a bit, and thanks to everyone who offered me advice as I developed this!
 	
 	#include "ProcDefinitions.event"
@@ -28,7 +28,7 @@
 	
 	ALIGN 4
 	gCreatorProc: // Main character creator proc.
-	PROC_YIELD;
+	PROC_YIELD
 	PROC_SET_NAME(gCreatorProcName)
 	
 	PROC_CALL_ROUTINE(0x08013D69) // StartFadeIntoBlack.
@@ -70,7 +70,7 @@
 	String("CHARACTER_CREATOR") ; BYTE 0x00
 	
 	ALIGN 4
-	gCreatorClassProc: // Used by the class selection menu to manage the sliding platform/
+	gCreatorClassProc: // Used by the class selection menu to manage the sliding platform.
 	PROC_SET_NAME(gCreatorClassProcName)
 	PROC_CALL_ROUTINE(CreatorClassDrawUIBox)
 	//PROC_CALL_ROUTINE(CreatorClassSetup|1)
