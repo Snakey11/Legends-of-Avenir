@@ -40,6 +40,9 @@ Tools/Py/
 Tools/FE-CLib/
 ASM/SkillSystem_FE8
 avenir.png
+Avenir-*.png
+Avenir.gif
+*.ss*
 Text/ParseDefinitions.txt
 Definitions/Definitions.event
 Graphics/WorldMap/*.dmp
