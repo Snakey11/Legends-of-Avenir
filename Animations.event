@@ -17,6 +17,8 @@
 	#define EndOfROM $FE4000
 	#define EndofROM EndOfROM
 	
+	#define EndOfAnimations $1280000
+	
 	ORG FreeSpaceA
 	
 	ORG CURRENTOFFSET + 0x08
@@ -51,6 +53,6 @@
 	#include "Graphics/Battle Animations/Battle Animations 4.event"
 	}
 	MESSAGE Fourth animation block ends at CURRENTOFFSET
-	ASSERT $124A9E0 - CURRENTOFFSET // Yell at me if I add animations without updating offsets.
+	ASSERT EndOfAnimations - CURRENTOFFSET // Yell at me if I add animations without updating offsets.
 	
 #endif // _FE8_
