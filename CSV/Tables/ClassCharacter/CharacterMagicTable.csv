@@ -102,12 +102,6 @@ Mason,2,15
 Hunter,4,20
 Daniel,3,20
 Wanderer,2,15
-MageMAvatar,0,0
-MageFAvatar,0,0
-MercenaryMAvatar,0,0
-MercenaryFAvatar,0,0
-MilitaryMAvatar,0,0
-MilitaryFAvatar,0,0
 Kilthel,0,0
 Xylia,0,0
 Servius,0,0
@@ -145,6 +139,12 @@ Clint,6,40
 Blaine,1,5
 BossHelmer,5,25
 BossJurgen,3,20
+,,
+,,
+,,
+,,
+,,
+,,
 ,,
 0xFE Wall,0,0
 0xFF Snag,0,0

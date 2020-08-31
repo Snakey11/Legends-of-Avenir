@@ -97,12 +97,6 @@ Mason
 Hunter
 Daniel
 Wanderer
-MageMAvatar
-MageFAvatar
-MercenaryMAvatar
-MercenaryFAvatar
-MilitaryMAvatar
-MilitaryFAvatar
 Kilthel
 Xylia
 Servius

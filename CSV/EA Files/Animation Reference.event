@@ -80,7 +80,7 @@ WORD 0x0 0x0
 
 EdgySwordmasterAnim:
 SwordAnim(EdgySwordmasterSword)
-UnarmedAnim(EdgySwordmasterUnarmed)
+//UnarmedAnim(EdgySwordmasterUnarmed)
 WORD 0x0 0x0
 
 EmperorAnim:
@@ -294,6 +294,16 @@ SpearAnim(SeraphKnightSpear)
 StaffAnim(SeraphKnightStaff)
 AnimaAnim(SeraphKnightMagic)
 UnarmedAnim(SeraphKnightMagic)
+WORD 0x0 0x0
+
+ShamanMAnim:
+DarkAnim(ShamanMagic)
+UnarmedAnim(ShamanMagic)
+WORD 0x0 0x0
+
+ShamanFAnim:
+DarkAnim(ShamanFMagic)
+UnarmedAnim(ShamanFMagic)
 WORD 0x0 0x0
 
 SpellswordMAnim:

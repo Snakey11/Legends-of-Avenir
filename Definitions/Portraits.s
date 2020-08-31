@@ -68,3 +68,5 @@ MaligKnightCard
 AssassinCard
 HalberdierCard
 SentinelCard
+SpellswordMCard
+SpellswordFCard

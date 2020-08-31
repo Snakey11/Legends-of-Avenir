@@ -39,6 +39,8 @@ MageKnightMMagic 0x71
 MageKnightMStaff 0x72
 MageKnightFMagic 0x73
 MageKnightFStaff 0x74
+ShamanMagic 0x75
+ShamanFMagic 0x76
 MonkMagic 0x7D
 MonkStaff 0x7F
 MonkFStaff 0x80
