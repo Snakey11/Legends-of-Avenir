@@ -16,7 +16,7 @@
 	#define EndofROM EndOfROM
 	
 	#define ClassAnimTable $B2A618 // This is never going to change as well.
-	#define EndOfAnimations $124A9E0 // I could automate this but eh. I need to update this whenever I change battle animations.
+	#define EndOfAnimations $1280000 // This should give me plenty of space. The animation event file errors if it passes this.
 	
 	#define BLRange $1C2270
 	#define FreeSpaceBLRange BLRange
