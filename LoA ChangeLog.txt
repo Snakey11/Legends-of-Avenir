@@ -33,6 +33,17 @@ Izuk's mug has been updated! -- Credit Vlak
 Baret has a new mug! -- Credit Atey (Sponsored by Bartz)
 For the next releases until we begin balancing hard mode all difficulties will force-set to normal mode as you begin the prologue
 Fixed being able to support with enemy units (namely Arya)
+Various palettes have been added/updated
+Spellswords have class cards! -- Credit SqrtOfPi (Sponsored by Bartz)
+Holy hell prologue stuff:
+	Tact max name length is now 8 characters.
+	New CHARACTER CREATOR custom menu wizardry! Interactive menu system has you select a gender, route, class, boon, and bane
+	Boons and banes affect base loading stats and growths. Effects for each stat are displayed
+	Lots of world map things - namely invoking a world map "cutscene" within an event as well as a hack or two to expand palettes available for the world map
+	Speaking of, fully custom 240x160 world map thanks to Gabriel Rosswell!
+	After finishing the character creator, a world map cutscene plays out with custom glowy regions indication nation borders as well
+Female mercenary animation/palette has been fixed
+Class display debug hack has been implemented
 
 v1.10 (This was only released to playtesters in the Discord server to catch bugs before v2.0.)
 5th and final Military route is a go. Kill Sean after accepting the promotion in chapter 3. Route includes all supports as well
