@@ -208,11 +208,14 @@ static void ApplyBoonBane(CreatorProc* proc)
 
 int CreatorApplyBoonBaneGrowth(CharacterData** character, int growth, int growthID)
 {
-	int stat = GrowthIDToBoonBane(growthID);
-	int boon = gChapterData.boonGrowthID;
-	int bane = gChapterData.baneGrowthID;
-	if ( stat == boon ) { return growth + gCreatorBoonBaneEffects[boon].growth; }
-	if ( stat == bane ) { return growth - gCreatorBoonBaneEffects[bane].growth; }
+	if ( (*character)->number == GetUnit(1)->pCharacterData->number ) // Only apply to the leader (who should ALWAYS be in the first character struct!)
+	{
+		int stat = GrowthIDToBoonBane(growthID);
+		int boon = gChapterData.boonGrowthID;
+		int bane = gChapterData.baneGrowthID;
+		if ( stat == boon ) { return growth + gCreatorBoonBaneEffects[boon].growth; }
+		if ( stat == bane ) { return growth - gCreatorBoonBaneEffects[bane].growth; }
+	}
 	return growth;
 }
 
