@@ -114,6 +114,7 @@ SVAL 0x1 True
 SVAL 0x2 PrologueWorldMapEvents|IsPointer
 ASMC StartSmallWorldMap|1
 
+CLEAN
 ASMC GetMode|1
 SVAL 0x1 0x1
 SVAL 0x2 0x2
@@ -281,7 +282,6 @@ TEXTEND
 FADI 0x3
 STAL 0x10
 WM_REMOVETEXT
-CLEAN
 SVAL 0xB 0x1
 NoFade
 ENDA

@@ -3072,79 +3072,95 @@ CreatorApplyBoonBaneGrowth:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	push	{r4, lr}	@
-	movs	r0, r1	@ growth, tmp164
-	ldr	r3, .L242	@ tmp129,
-	adds	r3, r3, #2	@ ivtmp.263,
-@ BoonBane.c:221: 	for ( int i = 0 ; gCreatorGrowthIDLookup[i].growthID ; i++ )
-	movs	r1, #0	@ i,
-@ BoonBane.c:221: 	for ( int i = 0 ; gCreatorGrowthIDLookup[i].growthID ; i++ )
-	movs	r4, #10	@ _16,
-.L235:
-@ BoonBane.c:223: 		if ( gCreatorGrowthIDLookup[i].growthID == growthID ) { return gCreatorGrowthIDLookup[i].stat; }
-	cmp	r2, r4	@ growthID, _16
+	push	{r4, r5, r6, lr}	@
+	movs	r4, r1	@ growth, tmp174
+	movs	r5, r2	@ growthID, tmp175
+@ BoonBane.c:211: 	if ( (*character)->number == GetUnit(1)->pCharacterData->number ) // Only apply to the leader (who should ALWAYS be in the first character struct!)
+	ldr	r3, [r0]	@ *character_14(D), *character_14(D)
+	ldrb	r6, [r3, #4]	@ _2,
+@ BoonBane.c:211: 	if ( (*character)->number == GetUnit(1)->pCharacterData->number ) // Only apply to the leader (who should ALWAYS be in the first character struct!)
+	movs	r0, #1	@,
+	ldr	r3, .L242	@ tmp135,
+	bl	.L30		@
+@ BoonBane.c:211: 	if ( (*character)->number == GetUnit(1)->pCharacterData->number ) // Only apply to the leader (who should ALWAYS be in the first character struct!)
+	ldr	r3, [r0]	@ _3->pCharacterData, _3->pCharacterData
+@ BoonBane.c:211: 	if ( (*character)->number == GetUnit(1)->pCharacterData->number ) // Only apply to the leader (who should ALWAYS be in the first character struct!)
+	ldrb	r3, [r3, #4]	@ tmp137,
+	cmp	r3, r6	@ tmp137, _2
 	beq	.L239		@,
-@ BoonBane.c:221: 	for ( int i = 0 ; gCreatorGrowthIDLookup[i].growthID ; i++ )
-	adds	r1, r1, #1	@ i,
-	adds	r3, r3, #2	@ ivtmp.263,
-@ BoonBane.c:221: 	for ( int i = 0 ; gCreatorGrowthIDLookup[i].growthID ; i++ )
-	subs	r4, r3, #2	@ tmp134, ivtmp.263,
-	ldrb	r4, [r4]	@ _16, MEM[base: _28, offset: 4294967294B]
-@ BoonBane.c:221: 	for ( int i = 0 ; gCreatorGrowthIDLookup[i].growthID ; i++ )
-	cmp	r4, #0	@ _16,
-	bne	.L235		@,
-@ BoonBane.c:225: 	return 0;
-	movs	r1, #0	@ _20,
-	b	.L234		@
-.L239:
-@ BoonBane.c:223: 		if ( gCreatorGrowthIDLookup[i].growthID == growthID ) { return gCreatorGrowthIDLookup[i].stat; }
-	lsls	r1, r1, #1	@ tmp131, i,
-	ldr	r3, .L242	@ tmp130,
-	adds	r1, r3, r1	@ tmp132, tmp130, tmp131
-	ldrb	r1, [r1, #1]	@ _20, gCreatorGrowthIDLookup
-.L234:
-@ BoonBane.c:212: 	int boon = gChapterData.boonGrowthID;
-	ldr	r2, .L242+4	@ tmp135,
-	movs	r3, #42	@ tmp138,
-	ldrb	r3, [r2, r3]	@ gChapterData, gChapterData
-	lsls	r2, r3, #28	@ tmp142, gChapterData,
-@ BoonBane.c:212: 	int boon = gChapterData.boonGrowthID;
-	lsrs	r2, r2, #28	@ boon, tmp142,
-@ BoonBane.c:213: 	int bane = gChapterData.baneGrowthID;
-	lsrs	r3, r3, #4	@ bane, gChapterData,
-@ BoonBane.c:214: 	if ( stat == boon ) { return growth + gCreatorBoonBaneEffects[boon].growth; }
-	cmp	r2, r1	@ boon, _20
-	beq	.L240		@,
-@ BoonBane.c:215: 	if ( stat == bane ) { return growth - gCreatorBoonBaneEffects[bane].growth; }
-	cmp	r3, r1	@ bane, _20
-	beq	.L241		@,
-.L237:
-@ BoonBane.c:217: }
+.L233:
+@ BoonBane.c:220: }
+	movs	r0, r4	@, growth
 	@ sp needed	@
-	pop	{r4}
+	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
+.L239:
+	ldr	r3, .L242+4	@ tmp138,
+	adds	r3, r3, #2	@ ivtmp.263,
+@ BoonBane.c:224: 	for ( int i = 0 ; gCreatorGrowthIDLookup[i].growthID ; i++ )
+	movs	r1, #0	@ i,
+@ BoonBane.c:224: 	for ( int i = 0 ; gCreatorGrowthIDLookup[i].growthID ; i++ )
+	movs	r2, #10	@ _23,
+.L236:
+@ BoonBane.c:226: 		if ( gCreatorGrowthIDLookup[i].growthID == growthID ) { return gCreatorGrowthIDLookup[i].stat; }
+	cmp	r5, r2	@ growthID, _23
+	beq	.L240		@,
+@ BoonBane.c:224: 	for ( int i = 0 ; gCreatorGrowthIDLookup[i].growthID ; i++ )
+	adds	r1, r1, #1	@ i,
+	adds	r3, r3, #2	@ ivtmp.263,
+@ BoonBane.c:224: 	for ( int i = 0 ; gCreatorGrowthIDLookup[i].growthID ; i++ )
+	subs	r2, r3, #2	@ tmp143, ivtmp.263,
+	ldrb	r2, [r2]	@ _23, MEM[base: _35, offset: 4294967294B]
+@ BoonBane.c:224: 	for ( int i = 0 ; gCreatorGrowthIDLookup[i].growthID ; i++ )
+	cmp	r2, #0	@ _23,
+	bne	.L236		@,
+@ BoonBane.c:228: 	return 0;
+	movs	r1, #0	@ _27,
+	b	.L235		@
 .L240:
-@ BoonBane.c:214: 	if ( stat == boon ) { return growth + gCreatorBoonBaneEffects[boon].growth; }
-	lsls	r2, r2, #1	@ tmp154, boon,
-	ldr	r3, .L242+8	@ tmp153,
-	adds	r2, r3, r2	@ tmp155, tmp153, tmp154
-	ldrb	r3, [r2, #1]	@ tmp157, gCreatorBoonBaneEffects
-@ BoonBane.c:214: 	if ( stat == boon ) { return growth + gCreatorBoonBaneEffects[boon].growth; }
-	adds	r0, r0, r3	@ growth, growth, tmp157
-	b	.L237		@
+@ BoonBane.c:226: 		if ( gCreatorGrowthIDLookup[i].growthID == growthID ) { return gCreatorGrowthIDLookup[i].stat; }
+	lsls	r1, r1, #1	@ tmp140, i,
+	ldr	r3, .L242+4	@ tmp139,
+	adds	r1, r3, r1	@ tmp141, tmp139, tmp140
+	ldrb	r1, [r1, #1]	@ _27, gCreatorGrowthIDLookup
+.L235:
+@ BoonBane.c:214: 		int boon = gChapterData.boonGrowthID;
+	ldr	r2, .L242+8	@ tmp144,
+	movs	r3, #42	@ tmp147,
+	ldrb	r3, [r2, r3]	@ gChapterData, gChapterData
+	lsls	r2, r3, #28	@ tmp151, gChapterData,
+@ BoonBane.c:214: 		int boon = gChapterData.boonGrowthID;
+	lsrs	r2, r2, #28	@ boon, tmp151,
+@ BoonBane.c:215: 		int bane = gChapterData.baneGrowthID;
+	lsrs	r3, r3, #4	@ bane, gChapterData,
+@ BoonBane.c:216: 		if ( stat == boon ) { return growth + gCreatorBoonBaneEffects[boon].growth; }
+	cmp	r2, r1	@ boon, _27
+	beq	.L241		@,
+@ BoonBane.c:217: 		if ( stat == bane ) { return growth - gCreatorBoonBaneEffects[bane].growth; }
+	cmp	r3, r1	@ bane, _27
+	bne	.L233		@,
+@ BoonBane.c:217: 		if ( stat == bane ) { return growth - gCreatorBoonBaneEffects[bane].growth; }
+	lsls	r3, r3, #1	@ tmp168, bane,
+	ldr	r2, .L242+12	@ tmp167,
+	adds	r3, r2, r3	@ tmp169, tmp167, tmp168
+	ldrb	r3, [r3, #1]	@ tmp171, gCreatorBoonBaneEffects
+@ BoonBane.c:217: 		if ( stat == bane ) { return growth - gCreatorBoonBaneEffects[bane].growth; }
+	subs	r4, r4, r3	@ growth, growth, tmp171
+	b	.L233		@
 .L241:
-@ BoonBane.c:215: 	if ( stat == bane ) { return growth - gCreatorBoonBaneEffects[bane].growth; }
-	lsls	r3, r3, #1	@ tmp159, bane,
-	ldr	r2, .L242+8	@ tmp158,
-	adds	r3, r2, r3	@ tmp160, tmp158, tmp159
-	ldrb	r3, [r3, #1]	@ tmp162, gCreatorBoonBaneEffects
-@ BoonBane.c:215: 	if ( stat == bane ) { return growth - gCreatorBoonBaneEffects[bane].growth; }
-	subs	r0, r0, r3	@ growth, growth, tmp162
-	b	.L237		@
+@ BoonBane.c:216: 		if ( stat == boon ) { return growth + gCreatorBoonBaneEffects[boon].growth; }
+	lsls	r2, r2, #1	@ tmp163, boon,
+	ldr	r3, .L242+12	@ tmp162,
+	adds	r2, r3, r2	@ tmp164, tmp162, tmp163
+	ldrb	r3, [r2, #1]	@ tmp166, gCreatorBoonBaneEffects
+@ BoonBane.c:216: 		if ( stat == boon ) { return growth + gCreatorBoonBaneEffects[boon].growth; }
+	adds	r4, r4, r3	@ growth, growth, tmp166
+	b	.L233		@
 .L243:
 	.align	2
 .L242:
+	.word	GetUnit
 	.word	.LANCHOR0
 	.word	gChapterData
 	.word	gCreatorBoonBaneEffects
@@ -3439,9 +3455,9 @@ CreatorStartMenu:
 	mov	r2, fp	@ proc, proc
 	ldrb	r2, [r2, r3]	@ tmp384,
 	cmp	r2, #7	@ tmp384,
-	bls	.LCB2920	@
+	bls	.LCB2935	@
 	b	.L257	@long jump	@
-.LCB2920:
+.LCB2935:
 	mov	r2, fp	@ proc, proc
 	ldrb	r3, [r2, r3]	@ tmp385,
 	lsls	r3, r3, #2	@ tmp386, tmp385,
@@ -3596,9 +3612,9 @@ CreatorStartMenu:
 	ldr	r3, [r3, #44]	@ _116, proc_35(D)->mainUnit
 @ MainMenu.c:156: 	if ( proc->mainUnit )
 	cmp	r3, #0	@ _116,
-	bne	.LCB3053	@
+	bne	.LCB3068	@
 	b	.L271	@long jump	@
-.LCB3053:
+.LCB3068:
 @ MainMenu.c:158: 		char* string = GetStringFromIndex(GetReplacedText(proc->mainUnit->pClassData->nameTextId));
 	ldr	r3, [r3, #4]	@ _116->pClassData, _116->pClassData
 @ MainMenu.c:158: 		char* string = GetStringFromIndex(GetReplacedText(proc->mainUnit->pClassData->nameTextId));
@@ -3608,9 +3624,9 @@ CreatorStartMenu:
 	ldrh	r3, [r3]	@ _213, gCreatorTextReplacementLookup
 @ CharacterCreator.c:365: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
 	cmp	r3, #0	@ _213,
-	bne	.LCB3059	@
+	bne	.LCB3074	@
 	b	.L272	@long jump	@
-.LCB3059:
+.LCB3074:
 	ldr	r2, .L336+96	@ ivtmp.329,
 @ CharacterCreator.c:365: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
 	movs	r1, #0	@ i,
@@ -3618,9 +3634,9 @@ CreatorStartMenu:
 .L274:
 @ CharacterCreator.c:367: 		if ( gCreatorTextReplacementLookup[i].normal == text ) { return gCreatorTextReplacementLookup[i].replacement; }
 	cmp	r0, r3	@ _119, _213
-	bne	.LCB3066	@
+	bne	.LCB3081	@
 	b	.L327	@long jump	@
-.LCB3066:
+.LCB3081:
 @ CharacterCreator.c:365: 	for ( int i = 0 ; gCreatorTextReplacementLookup[i].normal ; i++ )
 	adds	r1, r1, #1	@ i,
 	adds	r2, r2, #4	@ ivtmp.329,
@@ -3853,9 +3869,9 @@ CreatorStartMenu:
 	ldrb	r3, [r2, r3]	@ _130,
 @ MainMenu.c:168: 	if ( proc->boon )
 	cmp	r3, #0	@ _130,
-	beq	.LCB3271	@
+	beq	.LCB3286	@
 	b	.L328	@long jump	@
-.LCB3271:
+.LCB3286:
 .L275:
 @ MainMenu.c:207: 	if ( proc->bane )
 	movs	r3, #58	@ tmp662,
@@ -3863,9 +3879,9 @@ CreatorStartMenu:
 	ldrb	r3, [r2, r3]	@ _163,
 @ MainMenu.c:207: 	if ( proc->bane )
 	cmp	r3, #0	@ _163,
-	beq	.LCB3277	@
+	beq	.LCB3292	@
 	b	.L329	@long jump	@
-.LCB3277:
+.LCB3292:
 .L276:
 @ MainMenu.c:245: 	if ( proc->boon || proc->bane )
 	ldr	r3, .L336+56	@ tmp769,
@@ -3873,9 +3889,9 @@ CreatorStartMenu:
 	mov	r2, fp	@ proc, proc
 	ldr	r2, [r2, #56]	@ tmp1262, MEM[(void *)proc_35(D)]
 	tst	r2, r3	@ tmp1262, tmp769
-	beq	.LCB3285	@
+	beq	.LCB3300	@
 	b	.L330	@long jump	@
-.LCB3285:
+.LCB3300:
 .L277:
 @ MainMenu.c:267: 	if ( proc->gender && proc->route) { StartFace(0,GetMainMenuPortrait(proc->gender,proc->route),8*23+2,-4,0x102); }
 	movs	r3, #42	@ tmp821,
@@ -3889,9 +3905,9 @@ CreatorStartMenu:
 	ldrb	r4, [r2, r3]	@ _209,
 @ MainMenu.c:267: 	if ( proc->gender && proc->route) { StartFace(0,GetMainMenuPortrait(proc->gender,proc->route),8*23+2,-4,0x102); }
 	cmp	r4, #0	@ _209,
-	beq	.LCB3295	@
+	beq	.LCB3310	@
 	b	.L331	@long jump	@
-.LCB3295:
+.LCB3310:
 .L278:
 @ MainMenu.c:269: 	EnableBgSyncByMask(1|2|4);
 	movs	r0, #7	@,
@@ -4541,9 +4557,9 @@ CreatorStartMenu:
 	str	r3, [r7, #20]	@ handles.57, %sfp
 @ Gender.c:10: 	for ( int i = 0 ; i < lines ; i++ )
 	cmp	r6, #0	@ sum,
-	bgt	.LCB3959	@
+	bgt	.LCB3974	@
 	b	.L332	@long jump	@
-.LCB3959:
+.LCB3974:
 .L282:
 	ldr	r4, [r7, #20]	@ handles.57, %sfp
 	str	r4, [r7, #8]	@ handles.57, %sfp
@@ -4635,9 +4651,9 @@ CreatorStartMenu:
 	ldrb	r3, [r2, r3]	@ _4,
 @ CharacterCreator.c:92: 			if ( proc->gender) { newMenu->commandIndex = proc->gender-1; }
 	cmp	r3, #0	@ _4,
-	bne	.LCB4034	@
+	bne	.LCB4049	@
 	b	.L257	@long jump	@
-.LCB4034:
+.LCB4049:
 @ CharacterCreator.c:92: 			if ( proc->gender) { newMenu->commandIndex = proc->gender-1; }
 	subs	r3, r3, #1	@ tmp874,
 @ CharacterCreator.c:92: 			if ( proc->gender) { newMenu->commandIndex = proc->gender-1; }
@@ -4680,9 +4696,9 @@ CreatorStartMenu:
 	ldrb	r3, [r2, r3]	@ _6,
 @ CharacterCreator.c:97: 			if ( proc->route ) { newMenu->commandIndex = proc->route-1; }
 	cmp	r3, #0	@ _6,
-	bne	.LCB4072	@
+	bne	.LCB4087	@
 	b	.L257	@long jump	@
-.LCB4072:
+.LCB4087:
 @ CharacterCreator.c:97: 			if ( proc->route ) { newMenu->commandIndex = proc->route-1; }
 	subs	r3, r3, #1	@ tmp883,
 @ CharacterCreator.c:97: 			if ( proc->route ) { newMenu->commandIndex = proc->route-1; }
@@ -4911,9 +4927,9 @@ CreatorStartMenu:
 	mov	r2, fp	@ proc, proc
 	ldrb	r3, [r2, r3]	@ tmp945,
 	cmp	r3, #3	@ tmp945,
-	bne	.LCB4277	@
+	bne	.LCB4292	@
 	b	.L298	@long jump	@
-.LCB4277:
+.LCB4292:
 @ BoonBane.c:13: 		DrawUiNumber(&gBG0MapBuffer[6][13],TEXT_COLOR_GOLD,unit->pow);
 	movs	r2, #20	@ tmp946,
 	ldrsb	r2, [r6, r2]	@ tmp946,
@@ -4973,9 +4989,9 @@ CreatorStartMenu:
 	mov	r2, fp	@ proc, proc
 	ldrb	r3, [r2, r3]	@ tmp972,
 	cmp	r3, #3	@ tmp972,
-	bne	.LCB4329	@
+	bne	.LCB4344	@
 	b	.L300	@long jump	@
-.LCB4329:
+.LCB4344:
 @ BoonBane.c:28: 		DrawUiNumber(&gBG0MapBuffer[6][21],TEXT_COLOR_GOLD,charData->growthPow);
 	ldrb	r2, [r5, #29]	@ tmp973,
 	movs	r1, #3	@,
@@ -5136,9 +5152,9 @@ CreatorStartMenu:
 	ldrb	r3, [r2, r3]	@ _22,
 @ CharacterCreator.c:131: 				if ( proc->bane ) { newMenu->commandIndex = ( proc->bane < Mag ? proc->bane-1 : proc->bane-2 ); }
 	cmp	r3, #0	@ _22,
-	bne	.LCB4479	@
+	bne	.LCB4494	@
 	bl	.L257	@far jump	@
-.LCB4479:
+.LCB4494:
 @ CharacterCreator.c:131: 				if ( proc->bane ) { newMenu->commandIndex = ( proc->bane < Mag ? proc->bane-1 : proc->bane-2 ); }
 	cmp	r3, #2	@ _22,
 	bhi	.L305		@,
@@ -5182,9 +5198,9 @@ CreatorStartMenu:
 	ldrb	r3, [r2, r3]	@ _21,
 @ CharacterCreator.c:127: 				if ( proc->boon ) { newMenu->commandIndex = ( proc->boon < Mag ? proc->boon-1 : proc->boon-2 ); }
 	cmp	r3, #0	@ _21,
-	bne	.LCB4520	@
+	bne	.LCB4535	@
 	bl	.L257	@far jump	@
-.LCB4520:
+.LCB4535:
 @ CharacterCreator.c:127: 				if ( proc->boon ) { newMenu->commandIndex = ( proc->boon < Mag ? proc->boon-1 : proc->boon-2 ); }
 	cmp	r3, #2	@ _21,
 	bhi	.L303		@,

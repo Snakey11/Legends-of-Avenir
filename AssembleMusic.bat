@@ -6,8 +6,6 @@ setlocal enabledelayedexpansion
 rem s2ea.exe: Calls s2ea.exe for all .s files in folder & subfolders
 rem does not call s2ea for files where the existing .event file is newer than the .s file
 
-cd "%~dp0Music"
-
 set FILE_MATCH=*.s
 set s2ea=s2ea.exe
 

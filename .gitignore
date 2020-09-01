@@ -31,6 +31,10 @@ textdump.event
 Animation Assembler/
 Graphics/Battle Palettes/*.dmp
 Graphics/Portraits/*.dmp
+Graphics/Map Sprites/*.dmp
+Graphics/Class Cards/*.dmp
+Music/*.event
+!Music/_Master Music Installer.event
 Spells/Spells/**/*.png
 FE8 Template.event
 FE-CLib-master
