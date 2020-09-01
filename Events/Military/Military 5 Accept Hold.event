@@ -1,0 +1,419 @@
+﻿
+EventPointerTable(Military5AcceptHoldEvents,ThisChapter)
+
+//Label ThisChapter
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN EndMainPointer EndMainPointer EndMainPointer
+POIN EndMainPointer
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+//LabelEnd
+
+//Label TurnBasedEvents
+TurnBasedEvents:
+InfiniteTurnEventPlayer(0x10,SpawnFriends1,1)
+InfiniteTurnEventPlayer(0x11,SpawnFriends2,1)
+TurnEventEnemy(0x00,Turn1,1)
+TurnEventPlayer(0x00,Turn2,2)
+TurnEventPlayer(0x00,Turn3,3)
+TurnEventPlayer(0x00,Turn4,4)
+TurnEventPlayer(0x00,Turn6,6)
+TurnEventPlayer(0x00,Turn8,8)
+TurnEventPlayer(0x00,Turn11,11,15)
+END_MAIN
+
+//Label CharacterBasedEvents
+ALIGN 32
+CharacterBasedEvents:
+CharacterEventBothWays(0x19,TTactLux,0x00,Lux)
+SupportConvo(BSupport,Cougar,Lux,Military5AcceptHoldCougarLuxSupportText)
+END_MAIN
+
+//Label LocationBasedEvents
+LocationBasedEvents:
+Door(2,9)
+Door(7,9)
+Door(17,10)
+Door(2,12)
+Door(7,12)
+Door(2,18)
+Door(5,18)
+Chest(Elixir,16,8)
+Chest(KnightCrest,18,8)
+Chest(SilverLance,14,19)
+Chest(EnergyRing,16,19)
+Chest(Dasher,18,19)
+END_MAIN
+
+//Label MiscBasedEvents
+MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
+AREA 0x12 CheckToSpawnFriends1 [0,0] [10,10]
+AREA 0x13 CheckToSpawnFriends2 [0,11] [9,16]
+AREA 0x14 GreenEscape [19,11] [19,12]
+END_MAIN
+
+//Label TrapData
+TrapData:
+ENDTRAP
+ALIGN 4
+
+//Label Units
+Units:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [19,11] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Jasper 0x00 0x00 Level(1,Ally,True) [18,12] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [17,11] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [16,12] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Adeline 0x00 0x00 Level(1,Ally,True) [18,14] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Remus 0x00 0x00 Level(1,Ally,True) [19,15] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
+
+//Label BeginingScene
+BeginningScene:
+ENUT 0x10 // Used in conditionally spawning Cougar and Lux somewhere on the map based on progression.
+ENUT 0x11
+COUNTER_SET 0x0 0x0 // Used to count the number of greens who escaped.
+
+LOAD1 0x1 Meanies1
+LOAD1 0x1 Meanies2
+LOAD1 0x1 Meanies3
+LOAD1 0x1 Greenies
+ENUN
+
+MUSC A_Tragic_Decision
+SetBackground(0x21)
+Text(Military5AcceptHoldBeginningText)
+MUSC Advance
+SetBackground(0x18)
+Text(Military5AcceptHoldGetMovingText)
+MUSC Bloodpool
+SetBackground(0x25)
+Text(Military5AcceptHoldAtFortText)
+GotoPrepScreen
+
+//Label EndingScene
+EndingScene:
+MUSC Dry_Trail
+FADI 0x5
+#ifdef __DEBUG__
+	CHECK_EVENTID 0x12
+	BNE 0x0 0x0 0xC
+	CHECK_EVENTID 0x13
+	BNE 0x0 0x0 0xC
+		LOAD1 0x1 LoadCougar1
+		ENUN
+		LOAD1 0x1 LoadLux1
+		ENUN
+	LABEL 0x0
+#endif
+COUNTER_CHECK 0x0
+SVAL 0x1 1
+SVAL 0x2 2
+SVAL 0x3 3
+SVAL 0x4 4
+SVAL 0x5 5
+BGT 0x0 0x5 0xC
+	GiveToSupplySilent(BraveLance)
+LABEL 0x0
+BNE 0x1 0x4 0xC
+	GiveToSupplySilent(AngelicRobe)
+LABEL 0x1
+BNE 0x2 0x3 0xC
+	GiveToSupplySilent(SilverSword)
+LABEL 0x2
+BNE 0x3 0x2 0xC
+	GiveToSupplySilent(Talisman)
+LABEL 0x3
+BNE 0x4 0x1 0xC
+	GiveToSupplySilent(KillerLance)
+LABEL 0x4
+GiveToSupplySilent(KillingEdge)
+GiveToSupplySilent(SilverLance)
+GiveToSupplySilent(Elixir)
+CLEA 0x0
+CLEE 0x0
+CLEN 0x0
+SetBackground(0x27)
+Text(Military5AcceptHoldEndingText)
+MoveToChapter(MilitaryAcceptHold6)
+ENDA
+
+//Label Escape points
+NPCEscapePointPointerTable(MilitaryAcceptHold5,Military5AcceptHoldEscapePoints)
+
+Military5AcceptHoldEscapePoints:
+EscapePoint(19,11,MoveRight)
+EscapePoint(19,12,MoveRight)
+EscapePointEnd
+
+GreenEscape:
+CHECK_ALLEGIANCE 0xFFFF
+SVAL 0x1 0x1 // Green allegiance.
+BNE 0x0 0x1 0xC
+	COUNTER_INC 0x0 // Increment the counter to represent how many greens escaped.
+LABEL 0x0
+ENUF 0x14
+NoFade
+ENDA
+
+//Label Cougar/Lux spawn
+SpawnFriends1:
+MUSC FE5_Adversity
+CAM1 [1,6]
+STAL 0x10
+REVEAL Cougar
+SVAL 0x1 0x1
+SET_STATE Cougar
+LOAD2 0x1 LoadCougar1
+ENUN
+LOAD1 0x1 LoadLux1
+ENUN
+STAL 0x08
+FlashCursor(Lux,60)
+STAL 0x08
+Text(Military5AcceptHoldLuxJoinsText)
+AddSupport(Cougar,Lux,0)
+NoFade
+EndA2
+
+SpawnFriends2:
+MUSC FE5_Adversity
+CAM1 [3,17]
+STAL 0x10
+REVEAL Cougar
+SVAL 0x1 0x1
+SET_STATE Cougar
+LOAD2 0x1 LoadCougar2
+ENUN
+LOAD1 0x1 LoadLux2
+ENUN
+STAL 0x08
+FlashCursor(Lux,60)
+STAL 0x08
+Text(Military5AcceptHoldLuxJoinsText)
+AddSupport(Cougar,Lux,0)
+NoFade
+EndA2
+
+CheckToSpawnFriends1:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x0 0x0 0xC
+	ENUF 0x10 // Allow the first turn event to play.
+	ENUT 0x13 // Disallow the other AREA.
+	GOTO 0x1
+LABEL 0x0
+	ENUF 0x12 // If this unit is not an ally, then unset the event ID.
+LABEL 0x1
+NoFade
+EndA2
+
+CheckToSpawnFriends2:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x0 0x0 0xC
+	ENUF 0x11 // Allow the second turn event to play.
+	ENUT 0x12 // Disallow the other AREA.
+	GOTO 0x1
+LABEL 0x0
+	ENUF 0x13
+LABEL 0x1
+NoFade
+ENDA
+
+//Label Turn events
+Turn1:
+MUSC Hollow_Bastion
+STAL 0x10
+CAM1 [18,1]
+STAL 0x18
+FlashCursor(BossHelmer,60)
+STAL 0x10
+Text(Military5AcceptHoldTurn1Text)
+NoFade
+EndA2
+
+Turn2:
+MUSC FE5_Adversity
+CAM1 [9,11]
+STAL 0x18
+FlashCursor(9,12,60)
+STAL 0x10
+Text(Military5AcceptHoldCesariansYellText)
+STAL 0x08
+CAM1 [19,11]
+STAL 0x10
+CUMO [19,11]
+CUMO [19,12]
+STAL 0x60
+CURE
+STAL 0x10
+NoFade
+EndA2
+
+Turn3:
+CamON
+LOAD1 0x1 Turn3Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn4:
+CamON
+LOAD1 0x1 Turn4Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn6:
+CamON
+LOAD1 0x1 Turn6Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn8:
+CamON
+LOAD1 0x1 Turn8Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn11:
+Every2Turns(0x00,0x01,0x16,ReinforcementLoop)
+NoFade
+EndA2
+
+ReinforcementLoop:
+CamON
+LOAD1 0x1 LoopUnits
+ENUN
+CamOFF
+NoFade
+ENDA
+
+//Label Character events
+TTactLux:
+MUSI
+STAL 0x10
+Text(Military5AcceptHoldTTactLuxText)
+MUNO
+NoFade
+ENDA
+
+	/*UNIT DATA*/
+
+//Label Chapter units
+Meanies1:
+UNIT BossHelmer Sentinel BossHelmer Level(8,Enemy,True) [18,1] 0x00 0x00 0x00 0x00 [Spear] GuardAI
+UNIT Arcanian GreatKnight BossHelmer Level(3,Enemy,True) [18,3] 0x00 0x00 0x00 0x00 [SilverAxe] ChaseOnceApproachedAI
+UNIT Arcanian Halberdier BossHelmer Level(2,Enemy,True) [17,4] 0x00 0x00 0x00 0x00 [ShortSpear] AttackInRangeAI
+UNIT Arcanian Knight BossHelmer Level(15,Enemy,True) [16,3] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT Arcanian Knight BossHelmer Level(16,Enemy,True) [17,2] 0x00 0x00 0x00 0x00 [HeavySpear] AttackInRangeAI
+UNIT Arcanian Sage BossHelmer Level(3,Enemy,True) [13,1] 0x00 0x00 0x00 0x00 [Elwind] AttackInRangeAI
+UNIT Arcanian Cavalier BossHelmer Level(15,Enemy,True) [14,2] 0x00 0x00 0x00 0x00 [SteelSword,Dragonspear] ChaseOnceApproachedAI
+UNIT Arcanian Cavalier BossHelmer Level(16,Enemy,True) [14,0] Drop 0x00 0x00 0x00 [Zanbato] ChaseOnceApproachedAI
+UNIT Arcanian Mage BossHelmer Level(15,Enemy,True) [9,0] 0x00 0x00 0x00 0x00 [Fire] AttackInRangeAI
+UNIT Arcanian Fighter BossHelmer Level(17,Enemy,True) [10,2] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
+UNIT Arcanian Soldier BossHelmer Level(13,Enemy,True) [6,0] 0x00 0x00 0x00 0x00 [Javelin] NoAI
+UNIT Arcanian Hero BossHelmer Level(3,Enemy,True) [3,0] 0x00 0x00 0x00 0x00 [BattleAxe] AttackInRangeAI
+UNIT Arcanian Hero BossHelmer Level(4,Enemy,True) [4,0] 0x00 0x00 0x00 0x00 [SteelBlade] AttackInRangeAI
+UNIT Arcanian Spellsword BossHelmer Level(17,Enemy,True) [0,1] 0x00 0x00 0x00 0x00 [SlimSword,Wind] ChaseOnceApproachedAI
+UNIT
+
+Meanies2:
+UNIT Arcanian Archer BossHelmer Level(15,Enemy,True) [17,8] Drop 0x00 0x00 0x00 [SteelBow,ChestKey_5] NoAI
+UNIT Arcanian Soldier BossHelmer Level(16,Enemy,True) [13,13] Drop 0x00 0x00 0x00 [IronLance,DoorKey] NoAI
+UNIT Arcanian Knight BossHelmer Level(15,Enemy,True) [13,11] 0x00 0x00 0x00 0x00 [Hammer] NoAI
+UNIT Arcanian Fighter BossHelmer Level(13,Enemy,True) [12,9] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
+UNIT Arcanian General BossHelmer Level(4,Enemy,True) [11,17] 0x00 0x00 0x00 0x00 [Javelin,BraveSword] GuardAI
+UNIT Arcanian Cavalier BossHelmer Level(15,Enemy,True) [13,19] 0x00 0x00 0x00 0x00 [Lancereaver] AttackInRangeAI
+UNIT Arcanian Mercenary BossHelmer Level(16,Enemy,True) [16,18] Drop 0x00 0x00 0x00 [SteelSword,DoorKey_5] NoAI
+UNIT Arcanian Monk BossHelmer Level(14,Enemy,True) [11,15] Drop 0x00 0x00 0x00 [Divine,Mend] NoAI
+UNIT Arcanian Archer BossHelmer Level(17,Enemy,True) [12,16] 0x00 0x00 0x00 0x00 [IronShortbow] NoAI
+UNIT Arcanian Sage BossHelmer Level(2,Enemy,True) [5,12] 0x00 0x00 0x00 0x00 [Shine] AttackInRangeAI
+UNIT
+
+Meanies3:
+UNIT Arcanian Knight BossHelmer Level(17,Enemy,True) [6,13] 0x00 0x00 0x00 0x00 [DevilLance] AttackInRangeAI
+UNIT Arcanian Pirate BossHelmer Level(18,Enemy,True) [3,11] 0x00 0x00 0x00 0x00 [IronAxe] ChaseOnceApproachedAI
+UNIT Arcanian Soldier BossHelmer Level(16,Enemy,True) [3,14] 0x00 0x00 0x00 0x00 [Javelin] NoAI
+UNIT Arcanian Cavalier BossHelmer Level(14,Enemy,True) [5,8] 0x00 0x00 0x00 0x00 [IronLance] NoAI
+UNIT Arcanian Knight BossHelmer Level(15,Enemy,True) [7,6] 0x00 0x00 0x00 0x00 [HandAxe] AttackInRangeAI
+UNIT Arcanian Hero BossHelmer Level(1,Enemy,True) [8,7] 0x00 0x00 0x00 0x00 [KillingEdge] AttackInRangeAI
+UNIT Arcanian Shaman BossHelmer Level(14,Enemy,True) [11,6] 0x00 0x00 0x00 0x00 [Slime] NoAI
+UNIT Arcanian Myrmidon BossHelmer Level(16,Enemy,True) [4,17] 0x00 0x00 0x00 0x00 [IronSword] ChaseOnceApproachedAI
+UNIT
+
+Greenies:
+UNIT Cesarian Soldier 0x00 Level(4,NPC,True) [0,10] 0x00 0x00 0x00 0x00 [0] LootingThiefAI // Lol this should just make them want to escape once able.
+UNIT Cesarian Soldier 0x00 Level(5,NPC,True) [0,13] 0x00 0x00 0x00 0x00 [0] LootingThiefAI
+UNIT Cesarian Soldier 0x00 Level(5,NPC,True) [0,19] 0x00 0x00 0x00 0x00 [0] LootingThiefAI
+UNIT Cesarian Soldier 0x00 Level(2,NPC,True) [7,19] 0x00 0x00 0x00 0x00 [0] LootingThiefAI
+UNIT Cesarian Soldier 0x00 Level(3,NPC,True) [9,12] 0x00 0x00 0x00 0x00 [0] LootingThiefAI
+UNIT Cesarian Soldier 0x00 Level(2,NPC,True) [9,10] 0x00 0x00 0x00 0x00 [0] LootingThiefAI
+UNIT
+
+Turn3Units:
+UNIT Arcanian Cavalier BossHelmer Level(14,Enemy,True) [11,0] Drop 0x00 0x00 0x00 [IronLance,DoorKey] NoAI
+UNIT Arcanian Cavalier BossHelmer Level(16,Enemy,True) [12,0] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT Arcanian Archer BossHelmer Level(15,Enemy,True) [3,19] 0x00 0x00 0x00 0x00 [PoisonBow] NoAI
+UNIT Arcanian Swordmaster BossHelmer Level(3,Enemy,True) [3,19] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT
+
+Turn4Units:
+UNIT Arcanian Warrior BossHelmer Level(2,Enemy,True) [10,19] 0x00 0x00 0x00 0x00 [SteelAxe,IronBow] NoAI
+UNIT Arcanian Fighter BossHelmer Level(17,Enemy,True) [11,19] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
+UNIT Arcanian Spellsword BossHelmer Level(15,Enemy,True) [19,14] 0x00 0x00 0x00 0x00 [IronBlade,Thunder] NoAI
+UNIT Arcanian Knight BossHelmer Level(18,Enemy,True) [19,12] 0x00 0x00 0x00 0x00 [SteelLance,Hammer] NoAI
+UNIT
+
+Turn6Units:
+UNIT Arcanian Hero BossHelmer Level(2,Enemy,True) [10,0] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI
+UNIT Arcanian Soldier BossHelmer Level(15,Enemy,True) [19,11] 0x00 0x00 0x00 0x00 [ShortSpear] NoAI
+UNIT Arcanian Soldier BossHelmer Level(16,Enemy,True) [19,12] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Arcanian Halberdier BossHelmer Level(2,Enemy,True) [11,19] 0x00 0x00 0x00 0x00 [Horseslayer] NoAI
+UNIT Arcanian Mercenary BossHelmer Level(14,Enemy,True) [4,19] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT Arcanian Swordmaster BossHelmer Level(1,Enemy,True) [3,0] 0x00 0x00 0x00 0x00 [KillingEdge] NoAI
+UNIT Arcanian Shaman BossHelmer Level(16,Enemy,True) [4,0] 0x00 0x00 0x00 0x00 [Dulam] NoAI
+UNIT
+
+Turn8Units:
+UNIT Arcanian Monk BossHelmer Level(16,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [Lightning,Physic] NoAI
+UNIT Arcanian General BossHelmer Level(2,Enemy,True) [11,0] Drop 0x00 0x00 0x00 [Armorslayer,SilverLance] NoAI
+UNIT Arcanian Cavalier BossHelmer Level(15,Enemy,True) [3,19] 0x00 0x00 0x00 0x00 [SteelSword,Javelin] NoAI
+UNIT Arcanian Fighter BossHelmer Level(15,Enemy,True) [10,19] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI
+UNIT Arcanian Berserker BossHelmer Level(3,Enemy,True) [3,0] 0x00 0x00 0x00 0x00 [BraveAxe] NoAI
+UNIT
+
+LoopUnits:
+UNIT Arcanian Myrmidon BossHelmer Level(17,Enemy,True) [11,19] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT Arcanian Mage BossHelmer Level(16,Enemy,True) [4,19] 0x00 0x00 0x00 0x00 [Elthunder] NoAI
+UNIT Arcanian Sentinel BossHelmer Level(2,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [ShortAxe,SteelLance] NoAI
+UNIT Arcanian Archer BossHelmer Level(19,Enemy,True) [3,0] 0x00 0x00 0x00 0x00 [SteelShortbow] NoAI
+UNIT
+
+LoadCougar1:
+UNIT Cougar 0x00 0x00 Level(1,Ally,True) [0,6] 0x00 0x00 0x01 REDA3R6 [0] NoAI
+UNIT
+
+LoadLux1:
+UNIT Lux Mage_F 0x00 Level(13,Ally,True) [3,6] 0x00 0x00 0x01 REDA1R6 [Fire,Elthunder,Vulnerary] NoAI
+UNIT
+
+LoadCougar2:
+UNIT Cougar 0x00 0x00 Level(1,Ally,True) [0,16] 0x00 0x00 0x01 REDA3R16 [0] NoAI
+UNIT
+
+LoadLux2:
+UNIT Lux Mage_F 0x00 Level(13,Ally,True) [3,16] 0x00 0x00 0x01 REDA1R16 [Thunder,Elfire,Vulnerary] NoAI
+EndUnit

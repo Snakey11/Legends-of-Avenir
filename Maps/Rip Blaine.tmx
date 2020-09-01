@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="21" height="18" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="01003803" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/01003803.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="21" height="18">
+  <properties>
+   <property name="Anims" value="_01Anims"/>
+   <property name="ChapterID" value="MilitaryAcceptHold4"/>
+   <property name="Main" value=""/>
+   <property name="MapID" value="RipBlaineMap"/>
+   <property name="ObjectType" value="0x01"/>
+   <property name="PaletteID" value="0x38"/>
+   <property name="TileConfig" value="0x03"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxdlM9L1UEQwHf3XSItIwgiIigPBkm/oOwHdRHR9PXjFSV1r/QQZGEeJA+9nnhIA/0PzJ7PQ0V0N4qQLImsHp3zYIFppu8P6DPMfNnv6/BhZndnZmdnZ7fZOVeXca4Z+RK5FpwbQ372zr2DWsbjyDz8gYuMH0AR+wmnfsJ8iOM8DKbWJO4rOIjNHDHakL+RX7yuP2WtjD6HXoNsgfcurkmsu5aj6EVbGyZODfNLyBxcgj1Bc/xOjFlsPsAN9EY4I+fxMTfJqZjaZxh53hhxcb/VoPoBfEdhr8WTtX2my/ov7I4g+8xXYk9BA5TgeVIr2IDPkFf//V59c5l4rp9wARZY287cffjmtca3oMti9eBzB7ZCncSx+cR3DUrof23cgJzyWs8d2NXDSRf3lruV+xpLcvEx3iaYZbwMh9FXvY7b7T7Xg8ZdR9+Jz3HLWcaDFlfyzFpMua/NQfssILus1yaD9p3sN2q5JHc2AE2mf8X2TYg9l/Sh5JX0Wa3l3BpiL1eC3n1yR1KHfquB5FrxmresP0rlKjE7LK9G2B10j26LV0j10zGYtlyTe/uB3Vn0czZe8dW9m4WSvbND6C2Z+IZOwGsoW1yp7Tg2i9a7Pfh8Sr2Nx6yNWNwlexMTViexl9oNWLyy9Zf0WZ/VU2ylnzb6+A5EvoA2F22kZr3Io9ZLV4xO2CY2xLsKp+ByUJt620fyyNt+N6ERhuztXTP/itVqPsRayJ33Qj90wjJzW7zONYXYd8mfJLFvp/6jXKquC0FzXHTxT5O85B/qsN59ErSf5W3fs/ct8ZN/rsD6Q5hBb7UzZFP7CR+d/kcr1rcFO8+u/+50xlX/c3LWZ8hJaHfV/9J1+ztk/DboeWX+dOpep+19/wPjnbZp
+  </data>
+ </layer>
+</map>

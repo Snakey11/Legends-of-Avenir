@@ -1,0 +1,154 @@
+INLINE ClassSkillTable 0xFF,Skill
+Cavalier,CantoID
+Cavalier_F,CantoID
+Paladin,CantoID
+Paladin_F,CantoID
+Knight,ShoveID
+Knight_F,ShoveID
+General,ShoveID
+General_F,ShoveID
+Thief,CunningID
+0x0E Manakete,0x0
+Mercenary,0x0
+Mercenary_F,ShoveID
+Hero,ShoveID
+Hero_F,ShoveID
+Myrmidon,0x0
+Myrmidon_F,0x0
+Swordmaster,0x0
+Swordmaster_F,0x0
+Assassin,CunningID
+Assassin_F,CunningID
+Archer,0x0
+Archer_F,0x0
+Sniper,0x0
+Sniper_F,0x0
+Ranger,CantoID
+Ranger_F,CantoID
+WyvernRider,CantoID
+WyvernRider_F,CantoID
+WyvernLord,CantoID
+WyvernLord_F,CantoID
+WyvernKnight,CantoID
+WyvernKnight_F,CantoID
+Mage,0x0
+Mage_F,0x0
+Sage,0x0
+Sage_F,0x0
+MageKnight,CantoID
+MageKnight_F,CantoID
+Bishop,0x0
+Bishop_F,0x0
+Shaman,0x0
+Shaman_F,0x0
+Druid,0x0
+Druid_F,0x0
+Summoner,SummonID
+Summoner_F,SummonID
+Rogue,LockTouchID
+GorgonEgg,0x0
+GreatKnight,CantoID
+GreatKnight_F,CantoID
+Fighter,ShoveID
+Warrior,ShoveID
+Brigand,ShoveID
+Pirate,ShoveID
+Berserker,ShoveID
+Monk,0x0
+Priest,0x0
+Bard,0x0
+PegasusKnight,CantoID
+Falcoknight,CantoID
+Cleric,0x0
+Troubadour,CantoID
+Valkyrie,CantoID
+Dancer,DanceID
+Soldier,ShoveID
+Necromancer,SummonID
+Fleet,0x0
+Phantom,0x0
+Patriarch,0x0
+Matriarch,0x0
+DarkKnightM,CantoID
+DarkKnightF,CantoID
+Magus,0x0
+MagusF,0x0
+MasterKnightF,CantoID
+Baron,ShoveID
+ImpalerM,ShoveID
+WyvernGeneral,CantoID
+MarksmanM,0x0
+MasterKnightM,CantoID
+ChampionM,ShoveID
+TruebladeF,LethalityID
+TruebladeM,0x0
+MountedBrigand,CantoID
+Gladiator,ShoveID
+SeraphKnight,CantoID
+0x67 Archer on Ballista,0x0
+0x68 Archer on Iron Ballista,0x0
+0x69 Archer on Killer Ballista,0x0
+0x6A Ballista,0x0
+0x6B Iron Ballista,0x0
+0x6C Killer Ballista,0x0
+0x6D Civilian,0x0
+0x6E Civilian (F),0x0
+0x6F Civilian,0x0
+0x70 Civilian (F),0x0
+0x70 Civilian,0x0
+0x71 Civilian (F),0x0
+MageM2,0x0
+MageF2,0x0
+ShamanM2,0x0
+ShamanF2,0x0
+MonkM2,0x0
+MonkF2,0x0
+CavalierM2,CantoID
+CavalierF2,CantoID
+Knight2,ShoveID
+SoldierM2,ShoveID
+WyvernRider2,CantoID
+ArcherM2,0x0
+ArcherF2,0x0
+MercenaryM2,ShoveID
+MercenaryF2,ShoveID
+Fighter2,ShoveID
+Brigand2,ShoveID
+Pirate2,ShoveID
+MyrmidonM2,0x0
+MyrmidonF2,0x0
+PegasusKnight2,CantoID
+Halberdier,ShoveID
+Sentinel,ShoveID
+JacketHero,ShoveID
+Basileus,ShoveID
+HectorClass,ShoveID
+Trueerblade,0x0
+GaidenSage,0x0
+IzukClass,0x0
+BattleSageF,0x0
+NarratorClass,0x0
+Warlock,ShoveID
+SpearHero,ShoveID
+XeximClass,CunningID
+GrandPaladin,CantoID
+HolySage,0x0
+WilSniper,0x0
+BattleSageM,ShoveID
+LostSoulM,0x0
+LostSoulF,0x0
+ArmoredWyvernLord,CantoID
+EdgySwordmaster,0x0
+EmperorClass,0x0
+MurielSage,0x0
+ImpalerF,ShoveID
+SoldierF2,ShoveID
+BowKnight,CantoID
+HighPriest,0x0
+DreadFighterM,0x0
+DreadFighterF,0x0
+MaligKnight,CantoID
+Strategist,ShoveID
+SpellswordM,0x0
+SpellswordF,0x0
+ChampionF,ShoveID

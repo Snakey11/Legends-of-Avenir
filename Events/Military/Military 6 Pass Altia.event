@@ -65,7 +65,7 @@ LOAD3 0x1 PlayerLoading1
 LOAD2 0x1 Friends
 LOAD1 0x1 Meanies
 ENUN
-MUSC Solve_the_Riddle
+MUSC FE5_Loptr_B
 SetBackground(0x0E)
 Text(Military6PassAltiaXavusText)
 MUSC The_Devoted
@@ -87,7 +87,7 @@ CLEA 0x0
 CLEE 0x0
 LOAD1 0x1 LoadSylvaine
 ENUN
-MUSC Into_the_Shadow_of_Victory
+MUSC FE5_Victory_Minor
 SetBackground(0x1D)
 Text(Military6PassAltiaEndingText)
 MoveToChapter(MilitaryPassAltia7)

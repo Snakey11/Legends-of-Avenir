@@ -74,7 +74,7 @@ LOAD1 0x1 Meanies1
 LOAD1 0x1 Meanies2
 LOAD1 0x1 Meanies3
 ENUN
-MUSC Solve_the_Riddle
+MUSC FE5_Loptr_B
 SetBackground(0x0E)
 Text(Military7PassAltiaBeginningXavusText)
 MUSC Shihna

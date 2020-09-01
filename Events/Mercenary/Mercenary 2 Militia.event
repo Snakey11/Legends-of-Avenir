@@ -17,7 +17,7 @@ POIN BeginningScene EndingScene
 
 //Label Turn events
 TurnBasedEvents:
-TurnEventEnemy(0x0,EndingScene,6)
+TurnEventPlayer(0x0,EndingScene,7)
 END_MAIN
 
 //Label Character events
@@ -27,10 +27,10 @@ END_MAIN
 
 //Label Location events
 LocationBasedEvents:
-LOCA 0x10 Home1 [12,9] 0x10 // Luke
-LOCA 0x11 Home2 [11,8] 0x10 // Item house
-LOCA 0x0 Home3 [13,6] 0x10 // Tavern ; Text w/ innkeeper
-LOCA 0x0 Home4 [14,7] 0x10 // Text only house
+LOCA 0x10 Home1 [12,9] 0x10 // Luke.
+LOCA 0x11 Home2 [11,8] 0x10 // Item house.
+LOCA 0x0 Home3 [13,6] 0x10 // Tavern, text w/ innkeeper.
+LOCA 0x0 Home4 [14,7] 0x10 // Text only house.
 Armory(ShopData,12,7)
 END_MAIN
 
@@ -57,7 +57,7 @@ UNIT
 //Label Beginning scene
 BeginningScene:
 MUSC Advance
-LOAD3 0x1 PlayerLoading1 //FMercenaryStart, FMyrmidonStart, FPegasusKnightStart, MMercenaryStart, MMyrmidonStart, MFighterStart, MPirateStart, MBRigandStart.
+LOAD3 0x1 PlayerLoading1
 ENUN
 
 FADU 0x5
@@ -69,6 +69,7 @@ CLEA 0x0
 STAL 0x20
 FADI 0x5
 LOAD1 0x1 Bandits
+ENUN
 SetBackground(0x9)
 TEXTSHOW Merc2MilitiaInnText
 TEXTEND
@@ -77,21 +78,21 @@ TEXTCONT
 TEXTEND
 EndConvo
 STAL 0x20
-LOAD3 0x1 PlayerLoading2 //FMercenaryStart, FMyrmidonStart, FPegasusKnightStart, MMercenaryStart, MMyrmidonStart, MFighterStart, MPirateStart, MBRigandStart.
-CHECK_EVENTID 0x6E
-BEQ 0x0 0x0 0xC
-	// If male
-	CHECK_EVENTID 0x69 // Myrmidon
-	BNE 0x0 0x0 0xC
-	CHECK_EVENTID 0x6A // Mercenary
-	BNE 0x0 0x0 0xC
-		LOAD1 0x1 SwordArc
-		ENUN
-		GOTO 0x1
+
+LOAD3 0x1 PlayerLoading2
+CHECK_CLASS 0x00 // Get Tact's class ID.
+SVAL 0x1 FighterM2 // We want to load SwordArc if Tact's class is either fighter, pirate, or brigand.
+BEQ 0x0 0x1 0xC
+SVAL 0x1 PirateM2
+BEQ 0x0 0x1 0xC
+SVAL 0x1 BrigandM2
+BEQ 0x0 0x1 0xC
+	LOAD1 0x1 ArcStuff // Otherwise, load axe Arc.
+	GOTO 0x1
 LABEL 0x0
-	LOAD1 0x1 ArcStuff // Axe Arc
-	ENUN
+	LOAD1 0x1 SwordArc
 LABEL 0x1
+
 ENUN
 Text(Merc2MilitiaOutsideText)
 NoFade

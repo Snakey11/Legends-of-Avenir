@@ -1,0 +1,142 @@
+
+/*
+00  | short | Number of entries
+		02+ | Entries as follow:
+			00 | short | base OAM0 data (y coord, various flags, shape)
+			02 | short | base OAM1 data (x coord, flips, size)
+			04 | short | base OAM2 data (tile index, priority, palette index)
+*/
+
+// There are other parameters in OAM (flips, priority, transparency, palette), but I won't need those here.
+// x and y coords are relative and can be negative. Only use these definitions:
+
+ALIGN 4
+GlowyPaletteTable:
+FILL 10*0x04
+
+#define WorldMapGlowyTable $206AF0
+#define GlowyEntry(entry,graphics,palette,AP,xCoord,yCoord) "PUSH ; ORG WorldMapGlowyTable + entry*12 ; POIN graphics AP ; SHORT xCoord yCoord ; ORG GlowyPaletteTable + entry*4 ; POIN palette ; POP"
+#define OAM(xCoord,yCoord,shape,size,tile) "SHORT ((yCoord)&0xFF)|(shape<<14) ((xCoord)&0x1FF)|(size<<14) tile"
+
+#define Shape_Square 0
+#define Shape_Horizontal 1
+#define Shape_Vertical 2
+#define Size_8x8 0
+#define Size_16x16 1
+#define Size_32x32 2
+#define Size_64x64 3
+#define Size_16x8 0
+#define Size_32x8 1
+#define Size_32x16 2
+#define Size_64x32 3
+#define Size_8x16 0
+#define Size_8x32 1
+#define Size_16x32 2
+#define Size_32x64 3
+
+// NOTE: THE GLOWY REGION PALETTE IS HANDLED AT 0x080C278C.
+GlowyEntry(CesariaGlowy,CesariaBorder,CesariaGlowyPalette,CesariaAP,45,38)
+GlowyEntry(ArcanaeGlowy,ArcanaeBorder,ArcanaeGlowyPalette,ArcanaeAP,144,77)
+GlowyEntry(HaedricGlowy,HaedricBorder,HaedricGlowyPalette,HaedricAP,139,10)
+GlowyEntry(AltiaGlowy,AltiaBorder,AltiaGlowyPalette,AltiaAP,43,2)
+GlowyEntry(DraterusGlowy,DraterusBorder,DraterusGlowyPalette,DraterusAP,99,24)
+GlowyEntry(ShizonGlowy,ShizonBorder,ShizonGlowyPalette,ShizonAP,24,112)
+GlowyEntry(BacrunGlowy,BacrunBorder,ShizonGlowyPalette,BacrunAP,164,50)
+
+ALIGN 4
+CesariaBorder:
+#incbin "CesariaOrdered.dmp"
+
+ALIGN 4
+CesariaGlowyPalette:
+#incbin "CesariaOrdered_palette.dmp"
+
+ALIGN 4
+CesariaAP:
+{
+#include "CesariaAP.event"
+}
+
+ALIGN 4
+ArcanaeBorder:
+#incbin "ArcanaeOrdered.dmp"
+
+ALIGN 4
+ArcanaeGlowyPalette:
+#incbin "ArcanaeOrdered_palette.dmp"
+
+ALIGN 4
+ArcanaeAP:
+{
+#include "ArcanaeAP.event"
+}
+
+ALIGN 4
+HaedricBorder:
+#incbin "HaedricOrdered.dmp"
+
+ALIGN 4
+HaedricGlowyPalette:
+#incbin "HaedricOrdered_palette.dmp"
+
+ALIGN 4
+HaedricAP:
+{
+#include "HaedricAP.event"
+}
+
+ALIGN 4
+AltiaBorder:
+#incbin "AltiaOrdered.dmp"
+
+ALIGN 4
+AltiaGlowyPalette:
+#incbin "AltiaOrdered_palette.dmp"
+
+ALIGN 4
+AltiaAP:
+{
+#include "AltiaAP.event"
+}
+
+ALIGN 4
+DraterusBorder:
+#incbin "DraterusOrdered.dmp"
+
+ALIGN 4
+DraterusGlowyPalette:
+#incbin "DraterusOrdered_palette.dmp"
+
+ALIGN 4
+DraterusAP:
+{
+#include "DraterusAP.event"
+}
+
+ALIGN 4
+ShizonBorder:
+#incbin "ShizonOrdered.dmp"
+
+ALIGN 4
+ShizonGlowyPalette:
+#incbin "ShizonOrdered_palette.dmp"
+
+ALIGN 4
+ShizonAP:
+{
+#include "ShizonAP.event"
+}
+
+ALIGN 4
+BacrunBorder:
+#incbin "BacrunOrdered.dmp"
+
+ALIGN 4
+BacrunGlowyPalette:
+#incbin "BacrunOrdered_palette.dmp"
+
+ALIGN 4
+BacrunAP:
+{
+#include "BacrunAP.event"
+}

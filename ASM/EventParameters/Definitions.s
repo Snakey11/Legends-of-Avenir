@@ -8,3 +8,5 @@ SET_FUNC GetPlayerLeaderUnitId, (0x08033258+1)
 
 
 SET_FUNC EventParameters, (0x0800BC50+1)
+
+SET_FUNC CHAREventFix, (0x080838AC+1)

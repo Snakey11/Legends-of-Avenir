@@ -170,6 +170,11 @@ It seems she has come... Ha. I suppose this is it for me. Okay, Guardians! Do wh
 [FarRight][LoadAdeline]...[ClearFace]
 [FarLeft][LoadEfil]I can see there is still hesitancy in you. But it matters not. You stand before me as an enemy![X]
 
+## Military7AcceptRetreatLeaveXyliaDeathText
+[FarLeft][LoadXylia]
+This... this is unprecidented...[NL][CloseEyes]
+May as well let them finish the job...[A][X]
+
 ## Military7AcceptRetreatLeaveXyliaAliveText
 [ConversationText]
 [Right][LoadPlayer][FarRight][LoadAdeline][MidLeft][LoadXylia]
@@ -237,51 +242,56 @@ Well, this is unexpected...
 [MidRight]I won't let that happen.
 [MidLeft]Try me.[X]
 
-## Military7AcceptRetreatLeaveGoodEndingPlayerDeathText
+## Military7AcceptRetreatLeaveBadEndingPlayerDeathText
 [BattleText]
 [FarRight][LoadPlayer]No... Not when I'm so... close...[X]
 
-## Military7AcceptRetreatLeaveDeadEndingText
+## Military7AcceptRetreatLeaveGoodEndingText
 [ConversationText]
-[MidRight][LoadAdeline][MidLeft][LoadPlayer]
-He's gone... But... Xylia...
-[MidRight][Tact]... You fool.
-[MidLeft]Spare me, Adeline. I know what you're going to say.
-[MidRight]You're a madman. You're a madman, and a traitor, and it falls to us to put you down.
-[MidLeft]Adeline, I believed this was for the best-
-[MidRight]Damn you. Damn you to oblivion![CloseSpeech][MidLeft][MoveFarLeft]
-[Left][LoadDerek][Tact]![X]
+[MidLeft][LoadEfil]
+Wait! Stop!
+[MidRight][LoadXylia]I've waited too long for this opportunity... I'll avenge my friends![CloseSpeech][MoveFarRight]
+[Right][LoadPlayer]Xylia, wait!
+[FarRight]You dare stand in my way, [Tact]?
+[Right]I want Efil to explain himself. Why he's secluded himself here. The full story and justification.
+[FarRight]... Fine.
+[MidLeft]When Kilthel was defeated, I wanted to believe that the rest of humanity would stabilize easily... I felt it was more likely everyone would be able to get along immediately after defeating a mutual foe like Kilthel. Either way, I would have disappeared at some point. If they weren't able to create peace without me now, then they wouldn't have been able to down the line. No human lives forever.
+[Right]You wanted to restore the natural order of things, and felt that your presence and mediation upset that...
+[MidLeft]That's a good way to put it.
+[FarRight]But the least he could have done is ensured the stage was set! But instead, what happened? A new war broke out, and he couldn't be bothered to do anything about it!
+[MidLeft]Sometimes, it's not that easy. This time, I had friends on both sides of the conflict. I couldn't afford to take a side.
+[FarRight]Pathetic...
+[Right]... When given the choice between the two... I think Efil is in the right. Xylia is on a mission for personal revenge, and I think letting the war run it's natural course will be the healthiest thing for the future of Avenir.
+[MidLeft][Tact]...
+[FarRight][MoveFarRight]I can't let him survive! But you'll die first, [Tact]!
+[MidLeft]No![A][MoveMidLeft][X]
 
-## Military7AcceptRetreatLeaveDeadDerekDeadText
+## Military7AcceptRetreatLeaveGoodEndingXyliaDeadText
 [ConversationText]
-[MidLeft][LoadAdeline][MidRight][LoadPlayer]
-Derek!
-[MidLeft]Dammit...
-[MidRight]You bastard. I'll kill you for this!
-[MidLeft]Not if I kill you first.[X]
+[MidLeft][LoadEfil][MidRight][LoadXylia]
+Kitlhel... I can finally... Join you...[ClearFace][......][FarRight][LoadPlayer]
+[MidLeft]I am sorry that she lured you down this path, friends. But now I can see that my absence has brought nothing but ruin... I am sorry for my passiveness...
+[FarRight]It's okay. But we need to return to the fight. Rex is dead, so I can't imagine Cesaria will be able to continue holding out...[X]
 
-## Military7AcceptRetreatLeaveDeadNarratorHereText
+## Military7AcceptRetreatLeaveGoodEndingGSHereText
 [ConversationText]
-[MidLeft][LoadAdeline][MidRight][LoadNarrator]
-Woah there, hey now!
-[MidLeft]Who are you?
-[MidRight]...[....] Your voice is irritating.[X]
+[FarLeft][LoadPlayer][MidRight][LoadNarrator][Left][LoadEfil]
+You!
+[FarLeft]What the-[MoveFarLeft] who is this?
+[MidRight]Well, now, this is unexpected. Indeed, very unexpected.
+[Left]The Guardian Spirit... Why are you here?
+[MidRight]Oh I'm not here for you, Efil. I'm here for that one.
+[Left][Tact]? Why?
+[MidRight]Maybe they can explain that. Can't you, lost soul?
+[FarLeft]What!?
+[Left]Lost soul... You didn't-!
+[MidRight]Oh, I did. But you know the rules. Unfortunately, I can't let [Tact] here influence too many events of the world, or else things will go south for me. So I'm here to kill them and turn time back to before he was ever created.
+[Left]Dammit all...
+[FarLeft]Efil?
+[Left]... I can't save you, [Tact]. I'm so sorry...
+[MidRight]Well, now that that's dealt with... Let's have ourselves an enjoyable duel, eh, [Tact]?[X]
 
-## Military7AcceptRetreatLeaveDeadAdelineDeadText
-[ConversationText]
-[MidRight][LoadNarrator][MidLeft][LoadPlayer]
-Thank you...?
-[MidRight]No, no, no, you misunderstand. I just needed her out of the way. You're not surviving much longer anyway.
-[MidLeft]Then you're my enemy!
-[MidRight]Well, yes, and no. I'm responsible for your existence, so in a way, I'm your closest ally. But yeah, I'm about to murder you, so that would make me your enemy.
-[MidLeft]None of this confusing nonsense. If you stand in my way, then I'll cut my way through you!
-[MidRight]Your funeral.[X]
-
-## Military7AcceptRetreatLeaveBadEndingPlayerDeathText
+## Military7AcceptRetreatLeaveGoodEndingPlayerDeathText
 [BattleText]
-[FarRight][LoadPlayer]Dammit... I was so close...[X]
-
-## Military7AcceptRetreatLeaveXyliaDeathText
-[FarLeft][LoadXylia]
-This... this is unprecidented...[NL][CloseEyes]
-May as well let them finish the job...[A][X]
+[FarRight][LoadPlayer]
+Was it... all for nothing...? Dammit all...[X]

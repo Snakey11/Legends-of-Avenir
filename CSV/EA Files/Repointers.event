@@ -318,7 +318,7 @@ ORG $59D24
 POIN PaletteTable + 4
 ORG $5A7AC
 POIN PaletteTable + 4
-ORG $5A929
+ORG $5A928
 POIN PaletteTable + 4
 
 ORG $57394

@@ -1,0 +1,154 @@
+INLINE ClassLevelUpSkillTable 0xFF,Skill Pointer
+Cavalier,CavalierSkillList|IsPointer
+Cavalier_F,CavalierSkillList|IsPointer
+Paladin,PaladinSkillList|IsPointer
+Paladin_F,PaladinSkillList|IsPointer
+Knight,KnightSkillList|IsPointer
+Knight_F,KnightSkillList|IsPointer
+General,GeneralSkillList|IsPointer
+General_F,GeneralSkillList|IsPointer
+Thief,ThiefSkillList|IsPointer
+0x0E Manakete,0x0
+Mercenary,MercenarySkillList|IsPointer
+Mercenary_F,MercenarySkillList|IsPointer
+Hero,HeroSkillList|IsPointer
+Hero_F,HeroSkillList|IsPointer
+Myrmidon,MyrmidonSkillList|IsPointer
+Myrmidon_F,MyrmidonSkillList|IsPointer
+Swordmaster,SwordmasterSkillList|IsPointer
+Swordmaster_F,SwordmasterSkillList|IsPointer
+Assassin,AssassinSkillList|IsPointer
+Assassin_F,AssassinSkillList|IsPointer
+Archer,ArcherSkillList|IsPointer
+Archer_F,ArcherSkillList|IsPointer
+Sniper,SniperSkillList|IsPointer
+Sniper_F,SniperSkillList|IsPointer
+Ranger,RangerSkillList|IsPointer
+Ranger_F,RangerSkillList|IsPointer
+WyvernRider,WyvernRiderSkillList|IsPointer
+WyvernRider_F,WyvernRiderSkillList|IsPointer
+WyvernLord,WyvernLordSkillList|IsPointer
+WyvernLord_F,WyvernLordSkillList|IsPointer
+WyvernKnight,WyvernKnightSkillList|IsPointer
+WyvernKnight_F,WyvernKnightSkillList|IsPointer
+Mage,MageSkillList|IsPointer
+Mage_F,MageSkillList|IsPointer
+Sage,SageSkillList|IsPointer
+Sage_F,SageSkillList|IsPointer
+MageKnight,MageKnightSkillList|IsPointer
+MageKnight_F,MageKnightSkillList|IsPointer
+Bishop,BishopSkillList|IsPointer
+Bishop_F,BishopSkillList|IsPointer
+Shaman,ShamanSkillList|IsPointer
+Shaman_F,ShamanSkillList|IsPointer
+Druid,DruidSkillList|IsPointer
+Druid_F,DruidSkillList|IsPointer
+Summoner,SummonerSkillList|IsPointer
+Summoner_F,SummonerSkillList|IsPointer
+Rogue,RogueSkillList|IsPointer
+GorgonEgg,0x0
+GreatKnight,GreatKnightSkillList|IsPointer
+GreatKnight_F,GreatKnightSkillList|IsPointer
+Fighter,FighterSkillList|IsPointer
+Warrior,WarriorSkillList|IsPointer
+Brigand,BrigandSkillList|IsPointer
+Pirate,PirateSkillList|IsPointer
+Berserker,BerserkerSkillList|IsPointer
+Monk,MonkSkillList|IsPointer
+Priest,PriestSkillList|IsPointer
+Bard,0x0
+PegasusKnight,PegKnightSkillList|IsPointer
+Falcoknight,FalcoknightSkillList|IsPointer
+Cleric,ClericSkillList|IsPointer
+Troubadour,TroubadourSkillList|IsPointer
+Valkyrie,ValkyrieSkillList|IsPointer
+Dancer,DancerSkillList|IsPointer
+Soldier,SoldierSkillList|IsPointer
+Necromancer,NecromancerSkillList|IsPointer
+Fleet,FleetSkillList|IsPointer
+Phantom,PhantomSkillList|IsPointer
+Patriarch,PatriarchMatriarchSkillList|IsPointer
+Matriarch,PatriarchMatriarchSkillList|IsPointer
+DarkKnightM,DarkKnightSkillList|IsPointer
+DarkKnightF,DarkKnightSkillList|IsPointer
+Magus,MagusSkillList|IsPointer
+MagusF,MagusSkillList|IsPointer
+MasterKnightF,MasterKnightSkillList|IsPointer
+Baron,CommanderSkillList|IsPointer
+ImpalerM,ImpalerSkillList|IsPointer
+WyvernGeneral,WyvernGeneralSkillList|IsPointer
+MarksmanM,HunterSkillList|IsPointer
+MasterKnightM,MasterKnightSkillList|IsPointer
+ChampionM,ChampionSkillList|IsPointer
+TruebladeF,ShadowSkillList|IsPointer
+TruebladeM,TruebladeSkillList|IsPointer
+MountedBrigand,MountedBrigandSkillList|IsPointer
+Gladiator,MountainierSkillList|IsPointer
+SeraphKnight,BlackFalcoknightSkillList|IsPointer
+0x67 Archer on Ballista,0x0
+0x68 Archer on Iron Ballista,0x0
+0x69 Archer on Killer Ballista,0x0
+0x6A Ballista,0x0
+0x6B Iron Ballista,0x0
+0x6C Killer Ballista,0x0
+0x6D Civilian,0x0
+0x6E Civilian (F),0x0
+0x6F Civilian,0x0
+0x70 Civilian (F),0x0
+0x70 Civilian,0x0
+0x71 Civilian (F),0x0
+MageM2,MageSkillList|IsPointer
+MageF2,MageSkillList|IsPointer
+ShamanM2,ShamanSkillList|IsPointer
+ShamanF2,ShamanSkillList|IsPointer
+MonkM2,MonkSkillList|IsPointer
+MonkF2,MonkSkillList|IsPointer
+CavalierM2,CavalierSkillList|IsPointer
+CavalierF2,CavalierSkillList|IsPointer
+Knight2,KnightSkillList|IsPointer
+SoldierM2,SoldierSkillList|IsPointer
+WyvernRider2,WyvernRiderSkillList|IsPointer
+ArcherM2,ArcherSkillList|IsPointer
+ArcherF2,ArcherSkillList|IsPointer
+MercenaryM2,MercenarySkillList|IsPointer
+MercenaryF2,MercenarySkillList|IsPointer
+Fighter2,FighterSkillList|IsPointer
+Brigand2,BrigandSkillList|IsPointer
+Pirate2,PirateSkillList|IsPointer
+MyrmidonM2,MyrmidonSkillList|IsPointer
+MyrmidonF2,MyrmidonSkillList|IsPointer
+PegasusKnight2,PegKnightSkillList|IsPointer
+Halberdier,HalberdierSkillList|IsPointer
+Sentinel,SentinelSkillList|IsPointer
+JacketHero,JacketHeroSkillList|IsPointer
+Basileus,GladiatorSkillList|IsPointer
+HectorClass,HectorSkillList|IsPointer
+Trueerblade,TruerbladeSkillList|IsPointer
+GaidenSage,SageSkillList|IsPointer
+IzukClass,IzukSkillList|IsPointer
+BattleSageF,BattleSageSkillList|IsPointer
+NarratorClass,HectorSkillList|IsPointer
+Warlock,WarlockSkillList|IsPointer
+SpearHero,HeroSkillList|IsPointer
+XeximClass,AssassinSkillList|IsPointer
+GrandPaladin,PaladinSkillList|IsPointer
+HolySage,SageSkillList|IsPointer
+WilSniper,SniperSkillList|IsPointer
+BattleSageM,BattleSageSkillList|IsPointer
+LostSoulM,0x0
+LostSoulF,0x0
+ArmoredWyvernLord,WyvernLordSkillList|IsPointer
+EdgySwordmaster,SwordmasterSkillList|IsPointer
+EmperorClass,EmperorClassSkillList|IsPointer
+MurielSage,SageSkillList|IsPointer
+ImpalerF,ImpalerSkillList|IsPointer
+SoldierF2,SoldierSkillList|IsPointer
+BowKnight,SoldierSkillList|IsPointer
+HighPriest,PatriarchMatriarchSkillList|IsPointer
+DreadFighterM,DreadFighterSkillList|IsPointer
+DreadFighterF,DreadFighterSkillList|IsPointer
+MaligKnight,MaligKnightSkillList|IsPointer
+Strategist,BattleSageSkillList|IsPointer
+SpellswordM,SpellswordSkillList|IsPointer
+SpellswordF,SpellswordSkillList|IsPointer
+ChampionF,ChampionSkillList|IsPointer

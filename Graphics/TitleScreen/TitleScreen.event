@@ -1,0 +1,13 @@
+
+#include "titlebackgroundinstaller.event"
+
+ALIGN 4
+TitleScroll:
+#incext png2dmp "Scroll.png"
+
+PUSH
+ORG $c5830
+//POIN TitleScroll
+ORG $aac5ac
+//#incext png2dmp "Title.png" --lz77
+POP

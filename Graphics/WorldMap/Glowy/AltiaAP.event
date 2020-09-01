@@ -1,0 +1,37 @@
+
+ap_data:
+	SHORT (frame_list - ap_data) (anim_list - ap_data) // Relative offsets.
+
+frame_list:
+	SHORT (frame_0 - frame_list)
+	SHORT (frame_1 - frame_list)
+
+anim_list:
+	SHORT (anim_0 - anim_list)
+	SHORT (anim_1 - anim_list)
+
+frame_0:
+	SHORT 9 // # of entries.
+	OAM(1,0,Shape_Horizontal,Size_64x32,0)
+	OAM(2,29,Shape_Horizontal,Size_32x16,8)
+	OAM(34,29,Shape_Horizontal,Size_32x16,12)
+	OAM(2,45,Shape_Horizontal,Size_32x8,72)
+	OAM(34,45,Shape_Square,Size_8x8,76)
+	OAM(65,5,Shape_Horizontal,Size_32x16,16)
+	OAM(65,21,Shape_Horizontal,Size_32x8,80)
+	OAM(97,5,Shape_Horizontal,Size_16x8,20)
+	OAM(97,13,Shape_Vertical,Size_8x16,52)
+	
+frame_1:
+	SHORT 2
+	OAM(10,18,Shape_Horizontal,Size_32x16,22)
+	OAM(42,18,Shape_Square,Size_16x16,26)	
+
+anim_0:
+	SHORT 4 0
+	SHORT 0 (-1)
+
+anim_1:
+	SHORT 4 1
+	SHORT 0 (-1)
+	

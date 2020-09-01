@@ -1,0 +1,89 @@
+
+#ifndef CLASS_DISPLAY_DEBUG
+	#define CLASS_DISPLAY_DEBUG
+	
+	// Debug character/class display viewer by Snek. Free to use and edit (with credit).
+	
+	#define CHECK_TRIPLE_PROMOTIONS // If commented out, this hack will not refer to TriplePromotionList in the triple promotion hack.
+	// MaxClassID is an optional definition, defined as the first invalid character ID.
+	
+	#include "ProcDefinitions.event"
+	
+	// Debug hack that adds an option to the leader's unit menu to enter a screen and view characters' animations and palettes.
+	#include "ClassDisplay.lyn.event"
+	#include "PlatformDisplayLoop.lyn.event"
+	
+	ALIGN 4
+	gClassDisplayProc:
+	PROC_SET_NAME(gClassDisplayProcName)
+	PROC_YIELD
+	PROC_SLEEP(20)
+	PROC_CALL_ROUTINE(0x08013D69) // StartFadeIntoBlack.
+	PROC_LOOP_ROUTINE(0x08014069) // Wait for fade.
+	PROC_SLEEP(10)
+	PROC_CALL_ROUTINE(0x080790A5) // MU_EndAll
+	PROC_CALL_ROUTINE(0x080311A9) // ReloadGameCoreGraphics.
+	PROC_CALL_ROUTINE(0x08015361) // Lock game logic.
+	PROC_CALL_ROUTINE(0x08030185) // Lock game graphics logic.
+	PROC_SLEEP(10)
+	PROC_CALL_ROUTINE(ClassDisplaySetup) // Start the platform proc and initialize parameters to this proc.
+	PROC_SLEEP(10)
+	PROC_CALL_ROUTINE(0x08013D8D) // Fade out from black.
+	PROC_LOOP_ROUTINE(0x08014069) // Wait for fade.
+	PROC_LABEL(0) // Main loop.
+	PROC_CALL_ROUTINE(ClassDisplayFillClasses)
+		PROC_CALL_ROUTINE(ClassDisplayLoadNewUnit) // Also clears any old unit.
+		PROC_CALL_ROUTINE(ClassDisplayUpdatePlatform)
+		PROC_CALL_ROUTINE(ClassDisplayDrawThings) // Draw usable icons, the current icon, the class name, and the character name.
+		PROC_WHILE_ROUTINE(ClassDisplayWaitForSlideIn)
+		PROC_LOOP_ROUTINE(ClassDisplayWaitForButtonPress)
+	PROC_CALL_ROUTINE(0x08013D69) // StartFadeIntoBlack.
+	PROC_LOOP_ROUTINE(0x08014069) // Wait for fade.
+	PROC_SLEEP(10)
+	PROC_CALL_ROUTINE(ClassDisplayEndProc)
+	PROC_SLEEP(10)
+	PROC_CALL_ROUTINE(0x08015371) // Unlock game logic.
+	PROC_CALL_ROUTINE(0x080301B9) // Unlock game graphics logic.
+	PROC_CALL_ROUTINE(0x080311A9) // ReloadGameCoreGraphics.
+	PROC_CALL_ROUTINE(0x08013D8D) // Fade out from black.
+	PROC_LOOP_ROUTINE(0x08014069) // Wait for fade.
+	PROC_SLEEP(20)
+	PROC_END
+	
+	gClassDisplayProcName:
+	String("DEBUG_CLASS_DISPLAY") ; BYTE 0x0
+	
+	ALIGN 4
+	gClassPlatformProc:
+	PROC_SET_NAME(gClassPlatformProcName)
+	PROC_SET_DESTRUCTOR(ClassEndPlatform)
+	PROC_YIELD
+	PROC_LOOP_ROUTINE(ClassPlatformDisplayLoop|1)
+	PROC_END
+	
+	gClassPlatformProcName:
+	String("DEBUG_CLASS_PLATFORM") ; BYTE 0x0
+	
+	ALIGN 4
+	gpTriplePromotionList:
+	#ifdef CHECK_TRIPLE_PROMOTIONS
+		POIN TriplePromotionList
+	#else
+		POIN 0
+	#endif // CHECK_TRIPLE_PROMOTIONS
+	
+	gClassDisplayAppropriateWeapons:
+	BYTE IronSword IronLance IronAxe IronBow Heal Fire Lightning Flux HandAxe 0
+	
+	gClassDisplayMaxClassID:
+	#ifdef MaxClassID
+		BYTE MaxClassID-1
+	#else
+		BYTE 0
+	#endif
+	
+	ALIGN 4
+	gClassDisplayBlueBox:
+	#incbin "TSA.dmp"
+	
+#endif // CLASS_DISPLAY_DEBUG

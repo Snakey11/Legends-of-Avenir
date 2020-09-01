@@ -48,6 +48,15 @@ MaligKnightPortrait:
 MaligKnightPortraitPalette:
 #incbin "MaligKnightPalette.dmp"
 
+SpellswordMPortrait:
+#incbin "SpellswordM.dmp"
+SpellswordMPortraitPalette:
+#incbin "SpellswordMPalette.dmp"
+SpellswordFPortrait:
+#incbin "SpellswordF.dmp"
+SpellswordFPortraitPalette:
+#incbin "SpellswordFPalette.dmp"
+
 setCardEntry(SentinelCard,SentinelPortrait,SentinelPortraitPalette)
 setCardEntry(HalberdierCard,HalberdierPortrait,HalberdierPortraitPalette)
 setCardEntry(AssassinCard,AssassinPortrait,AssassinPortraitPalette)
@@ -58,3 +67,5 @@ setCardEntry(BattleSageFCard,BattleSageFPortrait,BattleSageFPortraitPalette)
 setCardEntry(DreadFighterMCard,DreadFighterMPortrait,DreadFighterMPortraitPalette)
 setCardEntry(DreadFighterFCard,DreadFighterFPortrait,DreadFighterFPortraitPalette)
 setCardEntry(MaligKnightCard,MaligKnightPortrait,MaligKnightPortraitPalette)
+setCardEntry(SpellswordMCard,SpellswordMPortrait,SpellswordMPortraitPalette)
+setCardEntry(SpellswordFCard,SpellswordFPortrait,SpellswordFPortraitPalette)

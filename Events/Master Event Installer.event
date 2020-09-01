@@ -1,4 +1,6 @@
 
+ALIGN 4
+
 #include "REDAs.event"
 {
 #include "Prologue.event"
@@ -135,6 +137,18 @@
 	}
 	{
 	#include "Military/Military 7 Accept Retreat Help.event"
+	}
+	{
+	#include "Military/Military 4 Accept Hold.event"
+	}
+	{
+	#include "Military/Military 5 Accept Hold.event"
+	}
+	{
+	#include "Military/Military 6 Accept Hold.event"
+	}
+	{
+	#include "Military/Military 7 Accept Hold.event"
 	}
 	#include "Military/Narrator Fight.event"
 #endif

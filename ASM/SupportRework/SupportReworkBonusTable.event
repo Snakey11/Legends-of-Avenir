@@ -106,6 +106,10 @@
 		support(CSupport,1,1,0,0,0,5)
 		support(BSupport,2,1,5,0,0,5)
 		support(ASupport,2,1,5,5,5,5)
+	entry(Cougar,Lux)
+		support(CSupport,0,2,0,0,5,0)
+		support(BSupport,0,2,0,5,5,5)
+		support(ASupport,1,2,0,5,10,5)
 	entry(0,0) // Terminator
 	}
 

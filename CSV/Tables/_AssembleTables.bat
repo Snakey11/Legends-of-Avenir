@@ -22,7 +22,7 @@ rem PATH_LENGTH now has the length of the string, %~dp0, i.e. the path to the cu
 del "!TABLE_INSTALLER!"
 echo #include "Table Definitions.txt">"!TABLE_INSTALLER!"
 
-for /R %%F in (%FILE_MATCH%) do (
+for /R "%~dp0" %%F in (%FILE_MATCH%) do (
     set SHOULD_COMPILE=0
 	
 	rem Get the path of the associated event file

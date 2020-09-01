@@ -1,0 +1,30 @@
+
+// First, the header. Thanks, Stan for your AP ripping tool!
+ap_data:
+	SHORT (frame_list - ap_data) (anim_list - ap_data) // Relative offsets.
+
+frame_list:
+	SHORT (frame_0 - frame_list)
+	SHORT (frame_1 - frame_list)
+
+anim_list:
+	SHORT (anim_0 - anim_list)
+	SHORT (anim_1 - anim_list)
+
+
+frame_0: // Glowing body.
+	SHORT 1 // # of entries.
+	OAM(0,0,Shape_Square,Size_32x32,0)
+
+frame_1: // Name that swings in.
+	SHORT 2 // # of entries.
+	OAM(-32,-18,Shape_Horizontal,Size_32x16,37)
+	OAM(0,-18,Shape_Horizontal,Size_32x16,41)
+
+anim_0:
+	SHORT 4 0
+	SHORT 0 (-1)
+
+anim_1:
+	SHORT 4 1
+	SHORT 0 (-1)

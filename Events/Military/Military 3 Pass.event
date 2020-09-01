@@ -56,7 +56,7 @@ LOAD3 0x1 PlayerLoading1
 LOAD2 0x1 LoadJasperDerek
 LOAD1 0x1 LoadSylvaine
 ENUN
-MUSC Dry_Trail
+MUSC FE5_In_Search_of_Victory
 FADU 0x5
 STAL 0x40
 FADI 0x5
@@ -101,7 +101,7 @@ FADI 0x5
 CLEA 0x0
 LOAD1 0x1 NewDudes
 CLEE 0x0
-MUSC Victory
+MUSC FE5_Victory
 SetBackground(0x1D)
 Text(Military3PassEndingText)
 GiveGold(5000)

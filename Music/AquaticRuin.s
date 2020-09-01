@@ -3,7 +3,7 @@
 	.equ	AquaticRuinZone_grp, voicegroup000
 	.equ	AquaticRuinZone_pri, 0
 	.equ	AquaticRuinZone_rev, 0
-	.equ	AquaticRuinZone_mvl, 100
+	.equ	AquaticRuinZone_mvl, 120
 	.equ	AquaticRuinZone_key, 0
 	.equ	AquaticRuinZone_tbs, 1
 	.equ	AquaticRuinZone_exg, 0

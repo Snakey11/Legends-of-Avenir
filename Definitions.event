@@ -1,5 +1,26 @@
 
+#define ChapterDataTable NewChapterDataTable
+
 //Label Item defenitions
+#undef ToxinLance
+#define Dragonspear DragonSpear
+#define Artemis Artimes
+#define RuneSword Runesword
+#define BraveSpear BraveLance
+#define Bolganone Bolagnone
+#define Speedwing Speedwings
+#define DevilSpear DevilLance
+#define SwordSlayer Swordslayer
+#define LanceSlayer Lanceslayer
+#define AxeSlayer Axeslayer
+#define ArmorSlayer Armorslayer
+#define HoplonGuard HoplonShield
+#define IronSpear IronLance
+#define SteelSpear SteelLance
+#define SilverSpear SilverLance
+#define Naglfal Naglfar
+#define DragonShield Dragonshield
+/*
 #undef ToxinLance
 #define Spears Lances
 #define IronSpear IronLance
@@ -68,9 +89,38 @@
 #define ToxinAxe 0xE1
 #define ToxinBow 0xE2
 #define SpiritDust 0xE3
+#define DoorKey_5 0xE4*/
 //LabelEnd
 
 //Label Class defenitions
+#define Phantom GhostFighter
+#define Spellsword SpellswordM
+#define BattleSage BattleSageM
+#define DreadFighter DreadFighterM
+#define Trueblade TruebladeM
+#define Hector HectorClass
+#define KnightM2 Knight2
+#define KnightF2 Knight2
+#define WyvernRiderM2 WyvernRider2
+#define WyvernRiderF2 WyvernRider2
+#define Fighter2 FighterM2
+#define Pirate2 PirateM2
+#define Brigand2 BrigandM2
+#define PegasusKnight2 PegasusKnightF2
+#define Baselius Basileus
+//#define Magus MagusM
+//#define Hunter Marksman
+#define Champion ChampionM
+#define BlackFalcoknight SeraphKnight
+#define Combatant BattleSageF
+#define Falcoknight FalcoKnight
+#define Maurader MountedBrigand
+#define Marksman MarksmanM
+#define HunterM Marksman
+#define HunterF BowKnight
+#define Magus MagusM
+#define Trueerblade Truerblade
+/*
 #define Falcoknight FalcoKnight
 #define Phantom 0x51
 #define Patriarch 0x52
@@ -164,10 +214,15 @@
 #define SpellswordM 0xA7
 #define Spellsword SpellswordM
 #define SpellswordF 0xA8
-#define ChampionF 0xA9
+#define ChampionF 0xA9*/
 //LabelEnd
 
 //Label Character definitions
+#define Uzkalis BossUzkalis
+#define GuardianSpirit Narrator
+#define BossGhost GhostBoss
+#define Haedrician Haedrican
+/*
 #define PlayerMMonk 0x1
 #define PlayerMShaman 0x2 
 #define PlayerMMage 0x3
@@ -303,6 +358,10 @@
 #define GenericBandit 0x8A
 #define Pascal 0x8B
 #define XeximClone 0x8C
+#define BossVal 0x8D
+#define Clint 0x8E
+#define Blaine 0x8F
+#define BossHelmer 0x90*/
 //LabelEnd
 
 //Label Portrait Defenitions
@@ -310,7 +369,7 @@
 
 #define KnightCard 0x76
 #define PirateCard 0x8C
-
+/*
 #define MaleMageMug 0xAE
 #define FemaleMageMug 0xAF
 #define MaleMercMug 0xB0
@@ -378,7 +437,8 @@
 #define HenningMug 0xEF
 #define IzukMug 0xF0
 #define WilliamMug 0xF1
-
+#define ClintMug 0xF2
+*/
 #define MerchantMug 0x31 // Breguet
 #define GerwickMug 0x32 // Bone
 #define InkeeperMug 0x29 // Knoll
@@ -408,6 +468,8 @@
 //LabelEnd
 
 //Label Spell Definitions
+#define ArtemisAnim ArtimesAnim
+/*
 #define HandAxeAnim 0x01
 #define ArrowAnim 0x02
 #define AquaAnim 0x48
@@ -438,7 +500,7 @@
 #define ArcaquaAnim 0x60
 #define HailAnim 0x61
 #define TempestAnim 0x62
-
+*/
 #define WhiteFlash 0x0
 #define DarkFlash 0x1
 #define RedFlash 0x2
@@ -448,6 +510,8 @@
 //LabelEnd
 
 //Label Chapter Defenitions
+#define OutsideKilthelCutscene OutsideTempleCutscene
+/*
 #define PrologueChapter 0x0
 #define Mage1 0x1
 #define MageEscape2 0x2
@@ -530,10 +594,11 @@
 #define AltianDungeonCutscene 0x63
 #define HaedricCityCutscene 0x64
 #define PortSelsingCutscene 0x65
-#define KendrickShipCutscene 0x66
+#define KendrickShipCutscene 0x66*/
 //LabelEnd
 
 //Label Palette Definitions
+/*
 #define AdlezBrigandPaletteID 0x01
 #define AdlezBerserkerPaletteID 0x02
 #define AdlezWarriorPaletteID 0x03
@@ -668,12 +733,14 @@
 #define YvettePegasusKnightPaletteID 0x84
 #define YvetteFalcoknightPaletteID 0x85
 #define YvetteWyvernKnightPaletteID 0x86
+*/
 //LabelEnd
 
 //Label Maps, Map Changes, Events, and Tilesets
 #define EnterMap(ID) "PUSH;ORG EventPointerListOffset+(ID*4);POIN Map;POP"
 #define EnterChanges(ID) "PUSH;ORG EventPointerListOffset+(ID*4);POIN MapChanges;POP"
-
+#define FE6WaterAnimation FE6WaterAnimations
+/*
 #define ArcanaeCapitalMap 0x04
 #define ArcanaeOutpostMap 0x06
 #define AssassinTestMap 0x07
@@ -754,6 +821,8 @@
 #define ShizonLanding3Map 0xDB
 #define ShizonWaterShrineMap 0xDD
 #define KendrickShipMap 0xDE
+#define RipBlaineMap 0xE4
+#define PrisonBreakMap 0xE5
 
 //Map Changes
 
@@ -794,6 +863,7 @@
 #define XyliaStairTempleChanges 0xD3
 #define ShizonLandingChanges 0xDC
 #define PortSelsingChanges 0xDF
+#define PrisonBreakChanges 0xE6
 
 // Tilesets
 #define OutdoorSnowyObjectSet 0xB5
@@ -852,6 +922,11 @@
 #define Military5AcceptRetreatHelpEvents 0xD6
 #define Military6AcceptRetreatHelpEvents 0xD7
 #define Military7AcceptRetreatHelpEvents 0xD8
+#define Military4AcceptHoldEvents 0xE0
+#define Military5AcceptHoldEvents 0xE1
+#define Military6AcceptHoldEvents 0xE2
+#define Military7AcceptHoldEvents 0xE3
+*/
 // Good until 0xEB
 //LabelEnd
 
@@ -888,6 +963,38 @@
 #define Medium 0x01
 #define Small 0x00
 
+#define CavalierFSprite CavalierSprite
+#define PaladinFSprite PaladinSprite
+#define KnightFSprite KnightSprite
+#define GeneralFSprite GeneralSprite
+#define RangerFSprite RangerSprite
+#define WyvernKnightFSprite WyvernKnightSprite
+#define ShamanFSprite ShamanSprite
+#define DruidFSprite DruidSprite
+#define SummonerFSprite SummonerSprite
+#define GreatKnightFSprite GreatKnightSprite
+#define DarkKnightFSprite DarkKnightSprite
+#define WyvernGeneralSprite WyvernLordSprite
+#define SeraphKnightSprite FalcoknightSprite
+#define JacketHeroSprite HeroSprite
+#define GaidenSageSprite SageSprite
+#define SpearHeroSprite HeroSprite
+#define XeximSprite AssassinSprite
+#define GrandPaladinSprite PaladinSprite
+#define HolySageSprite SageSprite
+#define WilSniperSprite SniperSprite
+#define LostSoulSprite Civilian3Sprite
+#define LostSoulFSprite Civilian4Sprite
+#define ArmoredWyvernLordSprite WyvernLordSprite
+#define EmperorSprite TruebladeSprite
+#define MurielSprite SageFSprite
+#define ImpalerFSprite ImpalerSprite
+#define BowKnightSprite RangerSprite
+#define HighPriestSprite PatriarchSprite
+#define StrategistSprite BattleSageSprite
+#define ChampionFSprite ChampionSprite
+#define GladiatorSprite ChampionSprite
+/*
 #define PirateSprite 0x34
 #define EmperorSprite 0x62
 
@@ -922,7 +1029,7 @@
 #define DreadFighterFSprite 0x85
 #define GoldKnightSprite 0x86
 #define SpellswordMSprite 0x87
-#define SpellswordFSprite 0x88
+#define SpellswordFSprite 0x88*/
 //LabelEnd
 
 //Label Battle Animations
@@ -938,6 +1045,8 @@
 #define DarkAnim(Animation) "BYTE Dark 0x01 ; SHORT Animation"
 #define UnarmedAnim(Animation) "BYTE Item 0x01 ; SHORT Animation"
 #define SpecialAnim(Animation,Weapon) "BYTE Weapon 0x00 ; SHORT Animation"
+#define Spears Lances
+/*
 #define FighterAxe 0x19
 #define FighterHandAxe 0x1A
 #define FighterUnarmed 0x1B
@@ -1134,10 +1243,23 @@
 #define GladiatorAxe 0x13A
 #define GladiatorHandAxe 0x13B
 #define GladiatorUnarmed 0x13C
-#define RangerFLance 0x13D
+#define RangerFLance 0x13D*/
 //LabelEnd
 
 //Label Music Definitions
+#define Wind_Sound 0x47
+#define Wind_Sound_with_Birds 0x48
+#define Lava_Sound 0x49
+#define Night_Sound 0x4A
+#define Water_Sound 0x4B
+#define Birds_Sound 0x4C
+#define Swoosh_Sound 0x4D
+#define Strong_Wind_Sound 0x4E
+#define Strong_Wind_Sound_Stopping 0x4F
+#define Blizzard_Sound 0x50
+#define Soft_Birds_Sound 0x52
+#define River_Sound 0x53
+/*
 #define Legends_of_Avenir 0x0043 // Overwrite the main theme
 #define Encounter_with_Renegades 0x0400
 #define Dry_Trail 0x0401
@@ -1232,6 +1354,30 @@
 #define Chemical_Plant 0x457
 #define Metropolis 0x458
 #define Marble_Corridor 0x459
+#define FE5_Advance 0x45A
+#define FE5_Adversity 0x45B
+#define FE5_Destiny 0x460
+#define FE5_Field 0x461
+#define FE5_In_Search_of_Victory 0x462
+#define FE5_Loptr_B 0x465
+#define FE5_Map_A 0x466
+#define FE5_Searching_the_Enemy 0x469
+#define FE5_Victory 0x46B
+#define FE5_Victory_Minor 0x46C
+#define Victory_March 0x46D
+#define Battle_One 0x46E
+#define Courage_and_Pride_from_the_Heart 0x46F
+#define Cutting_Edge_of_Notion 0x470
+#define Hand_Combat 0x471
+#define Justice 0x472
+#define Team_Making 0x473
+#define Dark_Clouds_Gather 0x474
+#define Wrath_Strike 0x475
+#define Blindly_Charging 0x476
+#define Darker 0x477
+#define Evil_Approaches 0x478
+#define Judgral_Calls 0x47AC
+#define Roar_of_Dominion 0x47D*/
 //LabelEnd
 
 //Label Skill Definitions
@@ -1431,7 +1577,7 @@
 #define BarricadeID 187 //General
 #define BarricadePlusID 188 //Commander
 #define PointBlankID 189 //DONE
-#define PerfectionistID 190 //DONE
+#define PerfectionistID 190 //DONE					Clint	
 #define PuissanceID 191 //DONE
 #define BattleVeteranID 192 //DONE
 #define HolyAuraID 193 //DONE
@@ -1463,6 +1609,8 @@
 //LabelEnd
 
 //Label Misc.
+#define GenderEventID 0x6E
+
 #define SetChapterData(ChapterID,ObjectType1,ObjectType2,PaletteID,TileConfig,MapID,MapPointer,Anims1,Anims2,MapChanges) "PUSH; ORG ChapterDataTable+(ChapterID*148)+4; BYTE ObjectType1 ObjectType2 PaletteID TileConfig MapID Anims1 Anims2 MapChanges; EventPointerTable(MapID,MapPointer); POP"
 
 #define StatBonus(HPB,StrB,MagB,SklB,SpdB,DefB,ResB,LckB,MovB,ConB) "BYTE HPB StrB SklB SpdB DefB ResB LckB MovB ConB MagB 0x0 0x0"
@@ -1502,6 +1650,8 @@
 
 #define EnterStop "EVBIT_T 0x4"
 
+#define AttackIfCloseAI [0x0C,0x03,0x00,0x00]
+
 //#define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
 
 #define KillUnit(X,Y) "SVAL 0xB Coords(X,Y) ; SET_SOMETHING 0xFFFE ; DISA_IF 0xFFFE"
@@ -1514,6 +1664,7 @@
 
 #define WarpIn(X,Y,UnitPointer) "SVAL 0xB Coords(X,Y) ; WARP_IN ; LOAD1 0x1 UnitPointer ; ENUN"
 #define WarpOut(X,Y,Character) "SVAL 0xB Coords(X,Y) ; WARP_OUT ; DISA Character"
+#define WarpOut(X,Y) "SVAL 0xB Coords(X,Y) ; WARP_OUT ; DISA 0xFFFE"
 
 #define FadeOutMusic "MUSCMID 0x7FFF"
 
@@ -1563,6 +1714,8 @@
 //LabelEnd
 #define EndUnit UNIT // Necessary for folding
 #define EndA2 ENDA
+
+#include "Definitions/Definitions.event"
 
 /*
 #define LoadingMercenary(Index,UnitPointer)

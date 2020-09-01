@@ -2,15 +2,15 @@
 //#define PaletteTable 0xEF8004
 ALIGN 4
 PaletteTable:
-ORG CURRENTOFFSET + ( 0xFF *0x10 ) // Allocate 0xFF entries for the PaletteTable.
+FILL 0xFF *0x10 // Allocate 0xFF entries for the PaletteTable.
 
 ALIGN 4
 CharPaletteTable:
-ORG CURRENTOFFSET + ( 0xFF * 0x07 ) // Allocate 0xFF entries for the CharPaletteTable.
+FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharPaletteTable.
 
 ALIGN 4
 CharClassTable:
-ORG CURRENTOFFSET + ( 0xFF * 0x07 ) // Allocate 0xFF entries for the CharClassTable.
+FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 
 #define BattleSpriteTable 0xC00008
 
@@ -49,6 +49,9 @@ setPalette(ClaraValkyriePaletteID,ClaraValkyriePalette)
 setPalette(ConnorMercenaryPaletteID,ConnorMercenaryPalette)
 setPalette(ConnorHeroPaletteID,ConnorHeroPalette)
 setPalette(ConnorRangerPaletteID,ConnorRangerPalette)
+setPalette(CougarWyvernRiderPaletteID,CougarWyvernRiderPalette)
+setPalette(CougarWyvernLordPaletteID,CougarWyvernLordPalette)
+setPalette(CougarWyvernKnightPaletteID,CougarWyvernKnightPalette)
 setPalette(DanielSwordmasterPaletteID,DanielSwordmasterPalette)
 setPalette(DerekKnightPaletteID,DerekKnightPalette)
 setPalette(DerekGeneralPaletteID,DerekGeneralPalette)
@@ -73,6 +76,7 @@ setPalette(HelmerSoldierPaletteID,HelmerSoldierPalette)
 setPalette(HelmerHalberdierPaletteID,HelmerHalberdierPalette)
 setPalette(HelmerSentinelPaletteID,HelmerSentinelPalette)
 setPalette(HenningFighterPaletteID,HenningFighterPalette)
+setPalette(IzukPatriarchPaletteID,IzukPatriarchPalette)
 setPalette(JasperCavalierPaletteID,JasperCavalierPalette)
 setPalette(JasperGreatKnightPaletteID,JasperGreatKnightPalette)
 setPalette(JasperPaladinPaletteID,JasperPaladinPalette)
@@ -92,7 +96,7 @@ setPalette(AdelineArcherPaletteID,AdelineArcherPalette)
 setPalette(AdelineSniperPaletteID,AdelineSniperPalette)
 setPalette(AdelineRangerPaletteID,AdelineRangerPalette)
 setPalette(MasonRangerPaletteID,MasonRangerPalette)
-setPalette(MaximusSagePaletteID,MaximusSagePalette)
+setPalette(MaximusStrategistPaletteID,MaximusStrategistPalette)
 setPalette(PatMageKnightPaletteID,PatMageKnightPalette)
 setPalette(RemusSoldierPaletteID,RemusSoldierPalette)
 setPalette(RemusSentinelPaletteID,RemusSentinelPalette)
@@ -104,7 +108,9 @@ setPalette(SamMyrmidonPaletteID,SamMyrmidonPalette)
 setPalette(SekarFighterPaletteID,SekarFighterPalette)
 setPalette(SekarHeroPaletteID,SekarHeroPalette)
 setPalette(SekarWarriorPaletteID,SekarWarriorPalette)
+setPalette(ShanleyMagePaletteID,ShanleyMagePalette)
 setPalette(ShanleySagePaletteID,ShanleySagePalette)
+setPalette(ShanleyMageKnightPaletteID,ShanleyMageKnightPalette)
 setPalette(SylvaineWyvernLordPaletteID,SylvaineWyvernLordPalette)
 setPalette(UzkalisGaidenSagePaletteID,UzkalisGaidenSagePalette)
 setPalette(ValShamanPaletteID,ValShamanPalette)
@@ -119,9 +125,9 @@ setPalette(XavusNecromancerPaletteID,XavusNecromancerPalette)
 setPalette(YvettePegasusKnightPaletteID,YvettePegasusKnightPalette)
 setPalette(YvetteFalcoknightPaletteID,YvetteFalcoknightPalette)
 setPalette(YvetteWyvernKnightPaletteID,YvetteWyvernKnightPalette)
-setPalette(ZahevaMercenaryPaletteID,ZahevaMercenaryPalette)
-setPalette(ZahevaHeroPaletteID,ZahevaHeroPalette)
-setPalette(ZahevaRangerPaletteID,ZahevaRangerPalette)
+setPalette(ZahevaSpellswordPaletteID,ZahevaSpellswordPalette)
+setPalette(ZahevaBattleSagePaletteID,ZahevaBattleSagePalette)
+setPalette(ZahevaDreadFighterPaletteID,ZahevaDreadFighterPalette)
 setPalette(ZaliusSwordmasterPaletteID,ZaliusSwordmasterPalette)
 
 setPalette(MercenaryMMercenaryPaletteID,MercenaryMMercenaryPalette)
@@ -174,6 +180,7 @@ SetPaletteFull(BossConnor,ConnorMercenaryPaletteID,Mercenary,ConnorHeroPaletteID
 SetPaletteFull(Christina,ChristinaCavalierPaletteID,Cavalier_F,ChristinaGreatKnightPaletteID,GreatKnight_F,ChristinaPaladinPaletteID,Paladin_F)
 SetPaletteFull(BossChristina,ChristinaCavalierPaletteID,Cavalier_F,ChristinaGreatKnightPaletteID,GreatKnight_F,ChristinaPaladinPaletteID,Paladin_F)
 SetPaletteFull(Clara,ClaraTroubadourPaletteID,Troubadour,ClaraMageKnightPaletteID,MageKnight_F,ClaraValkyriePaletteID,Valkyrie)
+SetPaletteFull(Cougar,CougarWyvernRiderPaletteID,WyvernRider,CougarWyvernLordPaletteID,WyvernLord,CougarWyvernKnightPaletteID,WyvernKnight)
 SetPaletteFull(Daniel,0x00,0x00,DanielSwordmasterPaletteID,Swordmaster,0x00,0x00)
 SetPaletteFull(Derek,DerekKnightPaletteID,Knight,DerekGeneralPaletteID,General,DerekGreatKnightPaletteID,GreatKnight)
 SetPaletteFull(Dunlas,0x00,0x00,DunlasHalberdierPalette,Halberdier,0x00,0x00)
@@ -191,6 +198,7 @@ SetPaletteFull(Narrator,0x00,0x00,GuardianSpiritHarbingerPaletteID,NarratorClass
 SetPaletteFull(Harken,0x00,0x00,HarkenHeroPaletteID,Hero,0x00,0x00)
 SetPaletteFull(Helmer,HelmerSoldierPaletteID,Soldier,HelmerHalberdierPaletteID,Halberdier,HelmerSentinelPaletteID,Sentinel)
 SetPaletteFull(Henning,HenningFighterPaletteID,Fighter,0x00,0x00,0x00,0x00)
+SetPaletteFull(Izuk,0x00, 0x00,IzukPatriarchPaletteID,Patriarch,0x00,0x00)
 SetPaletteFull(Jasper,JasperCavalierPaletteID,Cavalier,JasperGreatKnightPaletteID,GreatKnight,JasperPaladinPaletteID,Paladin)
 SetPaletteFull(Jurgen,0x00,0x00,JurgenHeroPaletteID,SpearHero,0x00,0x00)
 SetPaletteFull(Kendrick,KendrickPiratePaletteID,Pirate,KendrickBerserkerPaletteID,Berserker,KendrickWarriorPaletteID,Warrior)
@@ -201,14 +209,14 @@ SetPaletteFull(Lux,LuxMagePaletteID,Mage_F,LuxMageKnightPaletteID,MageKnight_F,L
 SetPaletteFull(Pat,0x00,0x00,PatMageKnightPaletteID,MageKnight,0x00,0x00)
 SetPaletteFull(Adeline,AdelineArcherPaletteID,Archer_F,AdelineRangerPaletteID,Ranger_F,AdelineSniperPaletteID,Sniper_F)
 SetPaletteFull(Mason,0x00,0x00,MasonRangerPaletteID,Ranger,0x00,0x00)
-SetPaletteFull(Maximus,0x00,0x00,MaximusSagePaletteID,Sage,0x00,0x00)
+SetPaletteFull(Maximus,0x00,0x00,MaximusStrategistPaletteID,Strategist,0x00,0x00)
 SetPaletteFull(Remus,RemusSoldierPaletteID,Soldier,RemusHalberdierPaletteID,Halberdier,RemusSentinelPaletteID,Sentinel)
 SetPaletteFull(Rex,0x00,0x00,RexPaladinPaletteID,GrandPaladin,0x00,0x00)
 SetPaletteFull(Robert,0x00,0x00,RobertBerserkerPaletteID,Berserker,0x00,0x00)
 SetPaletteFull(Richter,0x00,0x00,RichterHeroPaletteID,Hero,0x00,0x00)
 SetPaletteFull(Sam,SamMyrmidonPaletteID,Myrmidon,0x00,0x00,0x00,0x00)
 SetPaletteFull(Sekar,SekarFighterPaletteID,Fighter,SekarHeroPaletteID,Hero,SekarWarriorPaletteID,Warrior)
-SetPaletteFull(Shanley,0x00,0x00,ShanleySagePaletteID,Sage,0x00,0x00)
+SetPaletteFull(Shanley,ShanleyMagePaletteID,Mage,ShanleySagePaletteID,Sage,ShanleyMageKnightPaletteID,MageKnight)
 SetPaletteFull(Sylvaine,0x00,0x00,SylvaineWyvernLordPaletteID,ArmoredWyvernLord,0x00,0x00)
 SetPaletteFull(Uzkalis,0x00,0x00,UzkalisGaidenSagePaletteID,GaidenSage,0x00,0x00)
 SetPaletteFull(Val,ValShamanPaletteID,Shaman_F,ValDruidPaletteID,Druid_F,ValSummonerPaletteID,Summoner)
@@ -217,7 +225,7 @@ SetPaletteFull(Walter,WalterArcherPaletteID,Archer,WalterRangerPaletteID,Ranger,
 SetPaletteFull(Weston,WestonMercenaryPaletteID,Mercenary,0x00,0x00,0x00,0x00)
 SetPaletteFull(Xavus,0x00,0x00,XavusNecromancerPaletteID,Necromancer,0x00,0x00)
 SetPaletteFull(Yvette,YvettePegasusKnightPaletteID,PegasusKnight,YvetteFalcoknightPaletteID,Falcoknight,YvetteWyvernKnightPaletteID,WyvernKnight_F)
-SetPaletteFull(Zaheva,ZahevaMercenaryPaletteID,Mercenary_F,ZahevaHeroPaletteID,Hero_F,ZahevaRangerPaletteID,Ranger_F)
+SetPaletteFull(Zaheva,ZahevaSpellswordPaletteID,SpellswordF,ZahevaBattleSagePaletteID,BattleSageF,ZahevaDreadFighterPaletteID,DreadFighterF)
 SetPaletteFull(Zalius,0x00,0x00,ZaliusSwordmasterPaletteID,Swordmaster,0x00,0x00)
 
 SetPaletteFull(PlayerMMercenary,MercenaryMMercenaryPaletteID,MercenaryM2,MercenaryMChampionPaletteID,Champion,0x00,0x00)
@@ -470,6 +478,18 @@ ConnorRangerPalette:
 #incbin "Connor Ranger.dmp"
 
 ALIGN 4
+CougarWyvernRiderPalette:
+#incbin "Cougar Wyvern Rider.dmp"
+
+ALIGN 4
+CougarWyvernLordPalette:
+#incbin "Cougar Wyvern Lord.dmp"
+
+ALIGN 4
+CougarWyvernKnightPalette:
+#incbin "Cougar Wyvern Knight.dmp"
+
+ALIGN 4
 DanielSwordmasterPalette:
 #incbin "Daniel Swordmaster.dmp"
 
@@ -566,6 +586,10 @@ HenningFighterPalette:
 #incbin "Henning Fighter.dmp"
 
 ALIGN 4
+IzukPatriarchPalette:
+#incbin "Izuk Patriarch.dmp"
+
+ALIGN 4
 JasperCavalierPalette:
 #incbin "Jasper Cavalier.dmp"
 
@@ -642,8 +666,8 @@ MasonRangerPalette:
 #incbin "Mason Ranger.dmp"
 
 ALIGN 4
-MaximusSagePalette:
-#incbin "Maximus Sage.dmp"
+MaximusStrategistPalette:
+#incbin "Maximus Strategist.dmp"
 
 ALIGN 4
 PatMageKnightPalette:
@@ -690,8 +714,16 @@ SekarWarriorPalette:
 #incbin "Sekar Warrior.dmp"
 
 ALIGN 4
+ShanleyMagePalette:
+#incbin "Shanley Mage.dmp"
+
+ALIGN 4
 ShanleySagePalette:
 #incbin "Shanley Sage.dmp"
+
+ALIGN 4
+ShanleyMageKnightPalette:
+#incbin "Shanley Mage Knight.dmp"
 
 ALIGN 4
 SylvaineWyvernLordPalette:
@@ -750,16 +782,16 @@ YvetteWyvernKnightPalette:
 #incbin "Yvette Wyvern Knight.dmp"
 
 ALIGN 4
-ZahevaMercenaryPalette:
-#incbin "Zaheva Mercenary.dmp"
+ZahevaSpellswordPalette:
+#incbin "Zaheva Spellsword.dmp"
 
 ALIGN 4
-ZahevaHeroPalette:
-#incbin "Zaheva Hero.dmp"
+ZahevaBattleSagePalette:
+//#incbin "Zaheva Battle Sage.dmp"
 
 ALIGN 4
-ZahevaRangerPalette:
-#incbin "Zaheva Ranger.dmp"
+ZahevaDreadFighterPalette:
+//#incbin "Zaheva Dread Fighter.dmp"
 
 ALIGN 4
 ZaliusSwordmasterPalette:

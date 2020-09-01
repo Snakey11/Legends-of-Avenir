@@ -1,0 +1,198 @@
+
+.avoid 0xC2 0xC9
+
+FighterAxe 0x19
+FighterHandAxe 0x1A
+FighterUnarmed 0x1B
+RangerFSword 0x31
+RangerFBow 0x32
+RangerFUnarmed 0x33
+SeraphKnightSword 0x68
+SeraphKnightSpear 0x69
+SeraphKnightMagic 0x02
+SeraphKnightStaff 0x03
+ChampionMSword 0x05
+ChampionMAxe 0x06
+ChampionMHandAxe 0x07
+ChampionMUnarmed 0x08
+CommanderLance 0x09
+CommanderUnarmed 0x0A
+CavalierSword 0x34
+CavalierLance 0x35
+CavalierUnarmed 0x36
+CavalierFSword 0x37
+CavalierFLance 0x38
+CavalierFUnarmed 0x39
+PaladinSword 0x3A
+PaladinLance 0x3B
+PaladinUnarmed 0x3C
+KnightLance 0x40
+KnightUnarmed 0x41
+GreatKnightSword 0x4E
+GreatKnightLance 0x4F
+GreatKnightAxe 0x50
+GreatKnightHandAxe 0x51
+GreatKnightUnarmed 0x52
+WyvernKnightLance 0x62
+WyvernKnightUnarmed 0x63
+MageKnightMMagic 0x71
+MageKnightMStaff 0x72
+MageKnightFMagic 0x73
+MageKnightFStaff 0x74
+ShamanMagic 0x75
+ShamanFMagic 0x76
+MonkMagic 0x7D
+MonkStaff 0x7F
+MonkFStaff 0x80
+ValkyrieMagic 0x87
+ValkyrieStaff 0x88
+AssassinSword 0x8B
+AssassinUnarmed 0x8C
+DarkKnightMagic 0x92
+DarkKnightStaff 0x93
+GaidenSageMagic 0x96
+GaidenSageStaff 0x97
+SoldierLance 0x98
+SoldierUnarmed 0x99
+PirateAxe 0x9A
+PirateHandAxe 0x9B
+PirateUnarmed 0x9C
+BasileusAxe 0xA0
+BasileusHandAxe
+BasileusUnarmed
+HalberdierSpear
+HalberdierUnarmed
+HectorSword
+HectorAxe
+HectorHandAxe
+HectorUnarmed
+MarksmanMBow
+MarksmanMUnarmed
+ImpalerMLance
+ImpalerMUnarmed
+IzukMagic
+JacketHeroSword
+JacketHeroAxe
+JacketHeroHandAxe
+JacketHeroUnarmed
+MagusMMagic
+MagusMStaff
+MagusFMagic
+MagusFStaff
+MasterKnightAxe
+MasterKnightHandAxe
+MatriarchMagic
+MatriarchStaff
+MonkFMagic
+MountedBrigandAxe
+MountedBrigandHandAxe
+MountedBrigandBow
+MountedBrigandUnarmed
+NecromancerMagic
+NecromancerStaff
+PatriarchMagic
+PatriarchStaff
+SentinelSword
+SentinelLance
+SentinelAxe
+SentinelHandAxe
+SentinelUnarmed
+TruebladeMSword
+TruebladeSword
+TruebladeMUnarmed
+TruebladeUnarmed
+TruebladeFSword
+TruebladeFUnarmed
+TruerbladeSword
+TruerbladeUnarmed
+WarlockAxe
+WarlockHandAxe
+WarlockUnarmed
+WyvernGeneralAxe
+WyvernGeneralHandAxe
+WyvernGeneralUnarmed
+GrandPaladinSword
+GrandPaladinLance
+GrandPaladinAxe
+GrandPaladinHandAxe
+GrandPaladinUnarmed
+SpearHeroSpear
+XeximSword
+XeximBow
+XeximUnarmed
+HarbingerSword
+HarbingerAxe
+HarbingerHandAxe
+HarbingerUnarmed
+HolySageMagic
+HolySageStaff
+WilSniperBow
+WilSniperUnarmed
+BattleSageMagic
+HectorLance
+CommanderSword
+ArmoredWyvernLordSword
+ArmoredWyvernLordLance
+ArmoredWyvernLordAxe
+ArmoredWyvernLordHandAxe
+ArmoredWyvernLordBow
+ArmoredWyvernLordUnarmed
+EdgySwordmasterSword
+EdgySwordmasterUnarmed
+EmperorSword
+EmperorUnarmed
+PhantomAxe
+PhantomHandAxe
+PhantomUnarmed
+KnightAxe
+KnightHandAxe
+MurielSageMagic
+ImpalerFLance
+ImpalerFUnarmed
+MasterKnightSword
+CommanderAxe
+CommanderHandAxe
+MarksmanMSword
+WyvernGeneralLance
+MasterKnightLance
+MasterKnightUnarmed
+WarlockStaff
+BattleSageSword
+MercenaryFSword
+MercenaryFUnarmed
+HeroFSword
+HeroFAxe
+HeroFHandAxe
+HeroFUnarmed
+BattleSageFSword
+BattleSageFMagic
+BattleSageFStaff
+HarbingerMagic
+DarkKnightSword
+DreadFighterMSword
+DreadFighterMMagic
+DreadFighterMUnarmed
+DreadFighterFSword
+DreadFighterFMagic
+DreadFighterFUnarmed
+MageKnightMSword
+MageKnightFSword
+MaligKnightAxe
+MaligKnightHandAxe
+MaligKnightMagic
+MaximusBattleSageSword
+MaximusBattleSageUnarmed
+SpellswordMSword
+SpellswordMUnarmed
+SpellswordFSword
+SpellswordFUnarmed
+ChampionFSword
+ChampionFAxe
+ChampionFHandAxe
+ChampionFUnarmed
+TruebladeFBow
+GladiatorSword
+GladiatorAxe
+GladiatorHandAxe
+GladiatorUnarmed
+RangerFLance

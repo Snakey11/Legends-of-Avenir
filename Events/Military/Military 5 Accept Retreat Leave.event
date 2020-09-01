@@ -73,7 +73,7 @@ MUSC Derris_Kharlan_Appear
 SetBackground(0x28)
 Text(Military5AcceptRetreatLeaveXyliaText)
 FADI 0x02
-MUSC Kavoc
+MUSC Indignation
 SetBackground(0x12)
 Text(Military5AcceptRetreatLeaveAwakeText)
 MUSC Stage_One
@@ -97,7 +97,7 @@ GotoPrepScreen
 
 //Label EndingScene
 EndingScene:
-MUSC Victory
+MUSC FE5_Victory_Minor
 CLEA 0x0
 CLEE 0x0
 SetBackground(0x30)
