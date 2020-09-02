@@ -218,8 +218,20 @@
 	gCreatorClassUIBoxTSA:
 	#incbin "ClassBlueBox.dmp"
 	
-	gCreatorAppropriateItemArray:
+	gCreatorAppropriateItemArray: // Used to give weapons to units for the platform.
 	BYTE IronSword IronLance IronAxe IronBow Heal Fire Light Flux
+	
+	ALIGN 4
+	gCreatorRealInventoryList: // BYTE CharacterID Item1 Item2 Item3 Item4 Item5. Special list of different weapons to give aside from (Appropriate item) and (Vulnerary).
+	BYTE PlayerMCavalier SteelSword IronLance Vulnerary 0 0
+	BYTE PlayerFCavalier SteelSword IronLance Vulnerary 0 0
+	BYTE PlayerMKnight IronLance IronAxe Vulnerary 0 0
+	BYTE PlayerFKnight IronLance IronAxe Vulnerary 0 0
+	BYTE PlayerMMonk Lightning Heal Vulnerary 0 0
+	BYTE PlayerFMonk Lightning Heal Vulnerary 0 0
+	BYTE PlayerMSpellsword IronSword Fire Vulnerary 0 0
+	BYTE PlayerFSpellsword IronSword Fire Vulnerary 0 0
+	SHORT 0 0 0
 	
 	gCreatorVulnerary:
 	BYTE Vulnerary

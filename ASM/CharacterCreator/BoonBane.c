@@ -29,7 +29,7 @@ static void CreatorBoonBaneDraw(CreatorProc* proc)
 	}
 	else
 	{
-		DrawUiNumber(&gBG0MapBuffer[6][21],TEXT_COLOR_GOLD,MagClassTable[charData->number].growth); // Magic.
+		DrawUiNumber(&gBG0MapBuffer[6][21],TEXT_COLOR_GOLD,MagCharTable[charData->number].growth); // Magic.
 	}
 	DrawUiNumber(&gBG0MapBuffer[8][21],TEXT_COLOR_GOLD,charData->growthSkl);
 	DrawUiNumber(&gBG0MapBuffer[10][21],TEXT_COLOR_GOLD,charData->growthSpd);

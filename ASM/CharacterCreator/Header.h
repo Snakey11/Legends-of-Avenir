@@ -159,9 +159,7 @@ extern const struct
 {
 	u8 base;
 	u8 growth;
-	u8 cap;
-	u8 promoBonus;
-} MagClassTable[];
+} MagCharTable[];
 
 extern const ProcInstruction gCreatorProc, gCreatorClassProc, gCreatorSpriteProc, gTimerProc;
 
@@ -191,6 +189,11 @@ extern const MenuDefinition gCreatorClassMenuDefs;
 extern ClassMenuSet gClassMenuOptions[];
 extern TSA gCreatorClassUIBoxTSA;
 extern const u8 gCreatorAppropriateItemArray[8];
+extern const struct
+{
+	u8 characterID;
+	u8 items[5];
+} gCreatorRealInventoryList[];
 extern const u8 gCreatorVulnerary;
 
 extern const MenuDefinition gCreatorBoonBaneMenuDefs;

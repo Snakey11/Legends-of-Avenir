@@ -224,7 +224,20 @@ int CreatorEndMenu(MenuProc* proc, MenuCommandProc* commandProc)
 {
 	CreatorProc* creator = (CreatorProc*)ProcFind(&gCreatorProc);
 	if ( creator->isPressDisabled ) { return 0; }
-	ApplyBoonBane(creator);
+	ApplyBoonBane(creator); // First, apply the boon/bane effects to our allocation in the chapter data struct.
+	// Next, let's see if there's a different inventory we need to set for this character.
+	for ( int i = 0 ; gCreatorRealInventoryList[i].characterID ; i++ )
+	{
+		Unit* unit = creator->mainUnit;
+		if ( gCreatorRealInventoryList[i].characterID == unit->pCharacterData->number )
+		{
+			for ( int j = 0 ; j < 5 ; j++ )
+			{
+				int itemID = gCreatorRealInventoryList[i].items[j];
+				unit->items[j] = ( itemID ? MakeNewItem(itemID) : 0 );
+			}
+		}
+	}
 	ProcGoto((Proc*)creator,3); // Jump to end the creator proc.
 	
 	if ( creator->gender == 1 ) { SetEventId(0x6E); } // 0x6E is true if they chose male.
