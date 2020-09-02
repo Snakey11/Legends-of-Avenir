@@ -55,6 +55,8 @@ MilitaryAcceptRetreatHelp6Grow2
 MilitaryAcceptRetreatHelp6Grow3
 
 Mage1
+MageSearch2
+MageLeave2
 
 ShizonShrineCutscene
 LeavingShizonCutscene

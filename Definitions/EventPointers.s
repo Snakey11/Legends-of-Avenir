@@ -70,6 +70,7 @@ PrologueMap
 RiveryMap
 RuinMap
 SkirmishMap
+SmallRuinMap
 TrainingFortressMap
 UndergroundRuinMap
 UndergroundMap
@@ -153,7 +154,11 @@ ShizonLandingChanges
 PortSelsingChanges
 PrisonBreakChanges
 ClintManorChanges
+SmallRuinChanges
 
+DesertTempleObjectSet
+DesertTemplePalette
+DesertTempleTileConfig
 OutdoorSnowyObjectSet
 OutdoorSnowyPalette
 OutdoorSnowyTileConfig
@@ -211,3 +216,5 @@ Military4AcceptHoldEvents
 Military5AcceptHoldEvents
 Military6AcceptHoldEvents
 Military7AcceptHoldEvents
+
+Mage1Events

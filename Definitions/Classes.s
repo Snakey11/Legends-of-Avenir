@@ -75,4 +75,3 @@ Strategist
 SpellswordM
 SpellswordF
 ChampionF
-MaxClassID

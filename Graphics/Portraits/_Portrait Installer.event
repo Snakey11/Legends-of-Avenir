@@ -190,6 +190,12 @@ KilthelPortrait:
 #incbin "Kilthel_palette.dmp"
 #incbin "Kilthel_minimug.dmp"
 
+LakshmiPortrait:
+#incbin "Lakshmi_mug.dmp"
+#incbin "Lakshmi_frames.dmp"
+#incbin "Lakshmi_palette.dmp"
+#incbin "Lakshmi_minimug.dmp"
+
 LeonPortrait:
 #incbin "Leon_mug.dmp"
 #incbin "Leon_frames.dmp"
@@ -310,6 +316,12 @@ XavusPortrait:
 #incbin "Xavus_palette.dmp"
 #incbin "Xavus_minimug.dmp"
 
+XenaPortrait:
+#incbin "Xena_mug.dmp"
+#incbin "Xena_frames.dmp"
+#incbin "Xena_palette.dmp"
+#incbin "Xena_minimug.dmp"
+
 XeximPortrait:
 #incbin "Xexim_mug.dmp"
 #incbin "Xexim_frames.dmp"
@@ -373,6 +385,7 @@ setMugEntry(JasperMug,JasperPortrait,3,5,3,3)
 setMugEntry(JurgenMug,JurgenPortrait,2,6,3,3)
 setMugEntry(KendrickMug,KendrickPortrait,3,4,3,2)
 setMugEntry(KilthelMug,KilthelPortrait,3,5,3,3)
+setMugEntry(LakshmiMug,LakshmiPortrait,3,6,3,4)
 setMugEntry(LeonMug,LeonPortrait,2,4,2,2)
 setMugEntry(LeyosMug,LeyosPortrait,3,5,3,3)
 setMugEntry(LukeMug,LukePortrait,3,5,3,3)
@@ -393,6 +406,7 @@ setMugEntry(WalterMug,WalterPortrait,3,5,3,3)
 setMugEntry(WestonMug,WestonPortrait,3,5,3,3)
 setMugEntry(WilliamMug,WilliamPortrait,3,5,3,3)
 setMugEntry(XavusMug,XavusPortrait,2,5,3,3)
+setMugEntry(XenaMug,XenaPortrait,3,6,3,4)
 setMugEntry(XeximMug,XeximPortrait,2,5,3,3)
 setMugEntry(XyliaMug,XyliaPortrait,3,6,3,4)
 setMugEntry(YvetteMug,YvettePortrait,3,5,3,3)

@@ -143,5 +143,12 @@ UnspecifiedBattleConvo(Clint,MilitaryAcceptHold6,0x14,Military6AcceptHoldClintBa
 UnspecifiedBattleConvo(BossUzkalis,MilitaryAcceptHold7,0x12,Military7AcceptHoldUzkalisBattleText)
 UnspecifiedBattleConvo(Xavus,MilitaryAcceptHold7,0x13,Military7AcceptHoldXavusBattleText)
 
+SpecifiedBattleConvo(Xena,Lakshmi,Mage1,0x10,Mage1XenaLakshmiBattleText)
+SpecifiedBattleConvo(PlayerMMage,Lakshmi,Mage1,0x11,Mage1TactLakshmiBattleText)
+SpecifiedBattleConvo(PlayerMMonk,Lakshmi,Mage1,0x11,Mage1TactLakshmiBattleText)
+SpecifiedBattleConvo(PlayerMShaman,Lakshmi,Mage1,0x11,Mage1TactLakshmiBattleText)
+SpecifiedBattleConvo(PlayerFMage,Lakshmi,Mage1,0x11,Mage1TactLakshmiBattleText)
+SpecifiedBattleConvo(PlayerFMonk,Lakshmi,Mage1,0x11,Mage1TactLakshmiBattleText)
+SpecifiedBattleConvo(PlayerFShaman,Lakshmi,Mage1,0x11,Mage1TactLakshmiBattleText)
 
 BYTE 0xFF 0xFF 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Terminator

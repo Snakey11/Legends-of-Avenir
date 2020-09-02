@@ -141,3 +141,4 @@
 [LoadIzuk] = [LoadFace][0xE7][0x1]
 [LoadWilliam] = [LoadFace][0xE8][0x1]
 [LoadClint] = [LoadFace][0xE9][0x1]
+[LoadLakshmi] = [LoadFace][0xEA][0x1]

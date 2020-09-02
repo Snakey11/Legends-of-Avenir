@@ -15,13 +15,10 @@ seeking his role in the war.[X]
 A young mage of Arcanae[NL]
 seeking new knowledge.[X]
 
-## PrologueAvatarDescText
-A lost soul with[NL]
-boundless potential.[X]
-
 ## XenaDescText
-A wise and kindhearted Arcanian instructor[NL]
-assigned to search for artifacts.[X]
+A wise and kindhearted[NL]
+Arcanian instructor assigned[NL]
+to search for artifacts.[X]
 
 ## VicarDescText
 A harsh mercenary from Haedric who acts[NL]
@@ -377,3 +374,7 @@ a distaste for Cesarians.[X]
 ## BlaineDescText
 The loyal yet harsh Vice-Captain[NL]
 of the Lion Brigade.[X]
+
+## LakshmiDescText
+A servant to Uzkalis[NL]
+hunting for artifacts.[X]

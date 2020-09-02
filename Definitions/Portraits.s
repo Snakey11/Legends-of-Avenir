@@ -59,6 +59,7 @@ HenningMug
 IzukMug
 WilliamMug
 ClintMug
+LakshmiMug
 
 BattleSageMCard
 BattleSageFCard

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="15" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="Desert Bastion" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/New Tilesets/Desert Bastion.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="16" height="15">
+  <properties>
+   <property name="Anims" value="DesertTempleAnims"/>
+   <property name="ChapterID" value="Mage1"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="SmallRuinChanges"/>
+   <property name="MapID" value="SmallRuinMap"/>
+   <property name="ObjectType" value="DesertTempleObjectSet"/>
+   <property name="PaletteID" value="DesertTemplePalette"/>
+   <property name="TileConfig" value="DesertTempleTileConfig"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJylkbFKA0EQhscNWFv4BEJQUKLkFUIqwWJjaSPG2iewTSEhhjyEpAgisU6RCGIhFloJah+Txj6C33BzuLdEWLD4+Gfm5p+d3fMrIj0YS6YehqZ5vOdELksiB/BMfIZ2oQJV8nX369U56nkJar3A8wS70IFj/c63Bhxaf4g3faX31mV76Bzd5drO90Gvsgb7MJViXeMh/ptgThUuojtvwQ5swwdsRrv4aM5Msh71VWBCfgot03rgDd/4y+7b0nel3oSaobVyIlcwholxZ7Up8z8TuF/i19oJNBP4r/+NHUYRWjtK9Gt/H313xfgcbSegngV8u2Ks/nkpmzeweFke756T+x/gMeiP87/+62p0zoYU85wfMh+E5A==
+  </data>
+ </layer>
+ <layer name="OpenChest" width="16" height="15">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="10"/>
+   <property name="Y" value="14"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDHbAhEMcAAPwAAM=
+  </data>
+ </layer>
+</map>

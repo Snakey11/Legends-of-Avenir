@@ -2,9 +2,11 @@
 PlayerMMonk 0x01
 PlayerMShaman
 PlayerMMage
+PlayerMSpellsword
 PlayerFMonk
 PlayerFShaman
 PlayerFMage
+PlayerFSpellsword
 PlayerMCavalier
 PlayerMKnight
 PlayerMSoldier
@@ -130,3 +132,5 @@ Clint
 Blaine
 BossHelmer
 BossJurgen
+Lakshmi
+LastCharacterID

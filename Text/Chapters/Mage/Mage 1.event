@@ -1,0 +1,129 @@
+
+## Mage1StartingText
+[ConversationText]
+[MidRight][LoadPlayer][MidLeft][LoadXena]
+[Tact], are you listening to me?
+[MidRight]Huh? Of course I am, Teacher.
+[MidLeft]Are you sure? Care to explain the main origin of the magic we cast now?
+[MidRight]Uh... Ancient Artifacts. The Vathrylians learned from the enchantments on ancient staves how to harness Vene to control Light Magic. From there, they began to learn how to create other forms of magic.
+[MidLeft]Huh... Surprising. What about how we created the aqua magic, here in Arcanae?
+[MidRight]I'm... not clear on that one.
+[MidLeft]Naturally. Napping during a lesson isn't gonna help you figure it out.
+[MidRight]I wasn't nap- whatever. I'm sorry, Teacher.
+[MidLeft]It's alright. Maybe we need to get you out of that desk...
+[MidRight]What do you mean?
+[MidLeft]... What do you say we do some field work, [Tact]?
+[MidRight]Huh?
+[MidLeft]I recently received a tip from Lord Mistlain about a ruin in Draterus that's been largely untouched. Could find an artifact or two, no?
+[MidRight]But... Isn't that dangerous with the Wanderers?
+[MidLeft]Sure. But I'm an experienced mage, and you've learned a lot in your time under me. I think we could handle it.
+[MidRight]... Alrighty, then. I'm interested to see exactly what it is Arcanian researchers do in the field.
+[MidLeft]Don't let me down, [Tact].[X]
+
+## Mage1IntoDesertText
+[ConversationText]
+[MidRight][LoadXena][MidLeft][LoadPlayer]
+I knew the desert was hot, but I never expected this...
+[MidRight]That's right. You've never left the borders of Arcanae before, have you?
+[MidLeft]I've never even left the capital city.
+[MidRight]This is a good experience for you, then. It does no good to always be cooped up in a room reading books.
+[MidLeft]Aren't we scholars and researchers though?
+[MidRight]Yes, but you can only learn so much from books. Real experience teaches you true history.
+[MidLeft]I suppose that makes sense. So where is the ruin we're investigating?
+[MidRight]We're close to it now. But this is strange...
+[MidLeft]What?
+[MidRight]It looks as though others have been here.[....] Recently. 
+[MidLeft]We'd better hurry, then!
+[MidRight]Be careful. Wanderers wouldn't be so careless about their tracks.
+[MidLeft]So... who are they?
+[MidRight]I'm not sure. We're close to the ruin, let's get there and investigate.[CloseSpeech]
+[Events][.......]
+[MidRight]Arcanians.
+[MidLeft]Friends?
+[MidRight]... No.[X]
+
+## Mage1TalkLakshmiText
+[ConversationText]
+[Right][LoadXena][FarRight][LoadPlayer][FarLeft][LoadLakshmi]
+Xena. Didn't expect to see you here.
+[Right]Lakshmi... Still trying to curry favor with Uzkalis?[CloseSpeech]
+[FarLeft][MoveMidLeft]Still see it that way? You certainly haven't changed...
+[FarRight]Teacher, who is this?
+[Right]This is Lakshmi. She was one of my students for a period of time, but I believed her to be ambitious for the wrong reasons.
+[MidLeft]I won't be bound by my class. I intend to be more than just another Arcanian researcher. You're no different in your ambitions.
+[Right]No. That isn't the Arcanian way. I research for the sake of knowledge and nothing else. Why are you here?
+[MidLeft]I heard there was potential for a rare Vathrylian artifact here. I presume you heard the same thing.
+[Right]Correct.
+[MidLeft]Well, that's unfortunate. I was hoping to get this artifact without any bloodshed...
+[Right]Lakshmi...
+[FarRight][MoveFarRight]Teacher![CloseSpeech]
+[Events]
+[Right]You brought an entire detachment of forces? Damn...
+[MidRight]We can handle them.
+[FarLeft]If you leave now, I won't pursue you. I owe that much to our former friendship.
+[Right]... No. I won't let that artifact fall into your hands.
+[MidLeft]Very well, then. You leave me no choice. Alright, soldiers! We're dealing with these two before we descend into the ruin![ClearFace]
+[Events]
+[FarRight]We can handle them, Teacher!
+[Right]Be careful, [Tact]! They have the same training you do![X]
+
+## Mage1XenaLakshmiBattleText
+[BattleText]
+[FarRight][LoadXena]
+You've strayed so far from the path...[ClearFace]
+[FarLeft][LoadLakshmi]
+What do you even begin to understand about me? About what I come from?[ClearFace]
+[FarRight][LoadXena]
+Lakshmi?[ClearFace]
+[FarLeft][LoadLakshmi]
+Nevermind. This ends here![X]
+
+## Mage1TactLakshmiBattleText
+[BattleText]
+[FarRight][LoadPlayer]
+Master Xena said your name was Lakshmi?[ClearFace]
+[FarLeft][LoadLakshmi]
+I take it you're her most recent pupil?[ClearFace]
+[FarRight][LoadPlayer]
+I am.[ClearFace]
+[FarLeft][LoadLakshmi]
+You'll get nowhere under her. You'll see.[ClearFace]
+[FarRight][LoadPlayer]
+I'm not going to listen to someone who simply licks the boots of the Grand Magi.[ClearFace]
+[FarLeft][LoadLakshmi]
+A shame... You had potential. Die here, now.[X]
+
+## Mage1LakshmiDeathText
+[BattleText]
+[FarLeft][LoadLakshmi]
+One day... You'll see...[CloseEyes] I was right...[X]
+
+## Mage1FinishChapterText
+[ConversationText]
+[MidRight][LoadXena][MidLeft][LoadPlayer]
+We did it... But Lakshmi...
+[MidRight]... She isn't dead.
+[MidLeft]What?
+[MidRight]She's unconscious. We did a number on her, not to mention she exhausted a lot of energy...
+[MidLeft]What do we do with her?
+[MidRight]We'll turn her over to Lord Mistlain when we return... I don't have the heart to kill her.
+[MidLeft]Are we still planning on investigating the ruin?
+[MidRight]I'm not sure... I don't want to drag Lakshmi along with us through there, and given that it was more well-known than I thought... Who knows if we'd even find anything?
+[MidLeft]Not to mention we're both worn-out from this battle...
+[MidRight]That's also correct. Hm... What do you think, [Tact]?[X]
+
+## Mage1InvestigateText
+Investigate the ruin.[X]
+
+## Mage1ReturnText
+Return to Arcanae.[X]
+
+## Mage1GoToInvestigateText
+[ConversationText]
+[MidLeft][LoadPlayer][MidRight][LoadXena]
+You sure? Well, let's do it then. Give me a moment to restrain Lakshmi and we can head inside.[X]
+
+## Mage1GoToReturnText
+[MidLeft][LoadPlayer][MidRight][LoadXena]
+Yeah, I think you're right. Let's return to Mistlain and update him on Uzkalis's movements and turn over Lakshmi.[X]
+

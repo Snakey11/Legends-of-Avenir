@@ -153,7 +153,9 @@ ALIGN 4
 	#include "Military/Narrator Fight.event"
 #endif
 #ifndef __NO_MAGE__
-	
+	{
+	#include "Mage/Mage 1.event"
+	}
 #endif
 
 #include "Sassy.event"

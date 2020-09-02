@@ -1,11 +1,11 @@
 INLINE MagCharTable 0xFF,Base Magic,Magic Growth
 0x00 None,0,0
-PlayerMMonk,3,35
-PlayerMShaman,3,45
-PlayerMMage,3,50
-PlayerFMonk,3,35
-PlayerFShaman,3,45
-PlayerFMage,3,50
+PlayerMMonk,3,40
+PlayerMShaman,4,45
+PlayerMMage,4,45
+PlayerFMonk,3,40
+PlayerFShaman,4,45
+PlayerFMage,4,45
 PlayerMCavalier,1,10
 PlayerMKnight,0,5
 PlayerMSoldier,1,10
@@ -22,7 +22,7 @@ PlayerMMyrmidon,1,20
 PlayerFMercenary,1,15
 PlayerFMyrmidon,1,20
 PlayerFPegasusKnight,2,25
-Xena,4,40
+Xena,9,40
 Vicar,1,10
 Walter,2,20
 Baret,0,5
@@ -139,7 +139,7 @@ Clint,6,40
 Blaine,1,5
 BossHelmer,5,25
 BossJurgen,3,20
-,,
+Lakshmi,4,45
 ,,
 ,,
 ,,

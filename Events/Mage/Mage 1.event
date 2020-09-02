@@ -1,0 +1,135 @@
+﻿
+EventPointerTable(Mage1Events,ThisChapter)
+
+//Label ThisChapter
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN EndMainPointer EndMainPointer EndMainPointer
+POIN EndMainPointer
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+//LabelEnd
+
+//Label TurnBasedEvents
+TurnBasedEvents:
+END_MAIN
+
+//Label CharacterBasedEvents
+ALIGN 32
+CharacterBasedEvents:
+END_MAIN
+
+//Label LocationBasedEvents
+LocationBasedEvents:
+Chest(Vulnerary,10,14)
+END_MAIN
+
+//Label MiscBasedEvents
+MiscBasedEvents:
+DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+END_MAIN
+
+//Label TrapData
+TrapData:
+ENDTRAP
+ALIGN 4
+
+//Label Units
+Units:
+EndUnit
+
+//Label BeginingScene
+BeginningScene:
+CAM1 [11,4]
+LOAD1 0x1 LoadXena
+LOAD3 0x1 PlayerLoading1
+ENUN
+MUSC Old_Familiar_Scent
+SetBackground(0x10)
+Text(Mage1StartingText)
+MUSC Kakariko_Village
+SetBackground(0x30)
+TEXTSTART
+TEXTSHOW Mage1IntoDesertText
+TEXTEND
+MUSC Darker
+TEXTCONT
+TEXTEND
+REMA
+EndConvo
+LOAD1 0x1 LoadLakshmi
+ENUN
+STAL 0x30
+FlashCursor(Lakshmi,60)
+STAL 0x10
+TEXTSTART
+TEXTSHOW Mage1TalkLakshmiText
+TEXTEND
+LOAD1 0x1 Meanies
+ENUN
+TEXTCONT
+TEXTEND
+STAL 0x08
+MOVE 0x0 Lakshmi [14,13]
+STAL 0x30
+TEXTCONT
+TEXTEND
+REMA
+STAL 0x20
+NoFade
+ENDA
+
+//Label EndingScene
+EndingScene:
+FADI 0x5
+CLEA 0x0
+CLEE 0x0
+MUSC Victory_March
+SetBackground(0x33)
+Text(Mage1FinishChapterText)
+STAL 0x60
+ASMC CallMage1Menu|1
+STAL 0x20
+BNE 0x0 0x0 0xC
+	Text(Mage1GoToInvestigateText)
+	MoveToChapter(MageSearch2)
+	GOTO 0x1
+LABEL 0x0
+	Text(Mage1GoToReturnText)
+	MoveToChapter(MageLeave2)
+LABEL 0x1
+NoFade
+ENDA
+
+	/*UNIT DATA*/
+
+//Label PlayerLoading
+PlayerLoading1:
+UNIT PlayerMMage 0x00 0x00 Level(1,Ally,True) [12,3] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
+
+//Label ChapterUnits
+LoadXena:
+UNIT Xena DreadFighterF 0x00 Level(3,Ally,True) [13,4] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT
+
+LoadLakshmi:
+UNIT Lakshmi Shaman_F 0x00 Level(6,Enemy,True) [1,5] 0x00 0x00 0x01 REDA10R4 [Worm] AttackInRangeAI
+UNIT
+
+Meanies:
+UNIT Arcanian Mage Lakshmi Level(4,Enemy,True) [4,0] 0x00 0x00 0x01 REDA7R2 [Fire] AttackInRangeAI
+UNIT Arcanian Mercenary Lakshmi Level(5,Enemy,True) [0,4] 0x00 0x00 0x01 REDA0R5 [IronSword] AttackInRangeAI
+UNIT Arcanian Soldier Lakshmi Level(3,Enemy,True) [2,0] 0x00 0x00 0x00 0x00 [IronLance] ChaseOnceApproachedAI
+UNIT Arcanian Shaman Lakshmi Level(4,Enemy,True) [1,14] Drop 0x00 0x01 REDA1R7 [Flux] ChaseOnceApproachedAI
+UNIT Arcanian Fighter Lakshmi Level(5,Enemy,True) [3,14] 0x00 0x00 0x01 REDA3R8 [IronAxe] NoAI
+UNIT Arcanian Monk Lakshmi Level(4,Enemy,True) [5,13] Drop 0x00 0x00 0x00 [Exordium,ChestKey] AttackInRangeAI
+UNIT Arcanian Soldier Lakshmi Level(6,Enemy,True) [10,12] 0x00 0x00 0x00 0x00 [IronLance] ChaseOnceApproachedAI
+UNIT Arcanian Soldier Lakshmi Level(5,Enemy,True) [9,14] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
+EndUnit
