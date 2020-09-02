@@ -1,6 +1,23 @@
 
 ALIGN 4
-OutdoorSnowyTilesetObjects: // lz77 compressed
+DesertTempleTilesetObjects: // lz77 compressed.
+#incbin "Compressed Desert Temple.dmp"
+
+ALIGN 4
+DesertTempleTilesetPalette:
+#incbin "Desert Temple Palette.dmp"
+
+ALIGN 4
+DesertTempleTilesetTileConfig:
+#incext compress "Desert Temple.mapchip_config"
+
+EventPointerTable(DesertTempleObjectSet,DesertTempleTilesetObjects)
+EventPointerTable(DesertTemplePalette,DesertTempleTilesetPalette)
+EventPointerTable(DesertTempleTileConfig,DesertTempleTilesetTileConfig)
+
+
+ALIGN 4
+OutdoorSnowyTilesetObjects: // lz77 compressed.
 #incbin "Compressed Outdoor Snowy.dmp"
 
 ALIGN 4
@@ -17,7 +34,7 @@ EventPointerTable(OutdoorSnowyTileConfig,OutdoorSnowyTilesetTileConfig)
 
 
 ALIGN 4
-IndoorSnowyTilesetObjects: // lz77 compressed
+IndoorSnowyTilesetObjects: // lz77 compressed.
 #incbin "Compressed Indoor Snowy.dmp"
 
 ALIGN 4
