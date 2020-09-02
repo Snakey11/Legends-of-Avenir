@@ -60,7 +60,7 @@ struct SomeAISStruct {};
 
 extern ProcInstruction gClassDisplayProc, gClassPlatformProc;
 extern TSA gClassDisplayBlueBox;
-extern u8 gClassDisplayMaxClassID;
+extern u8 gClassDisplayMaxID;
 extern struct
 {
 	u8 promos[2];
@@ -299,7 +299,7 @@ void ClassDisplayWaitForButtonPress(ClassDisplayProc* proc)
 		{
 			proc->platform->charID++;
 			charData = GetCharacterData(proc->platform->charID);
-			if ( proc->platform->charID-1 == gClassDisplayMaxClassID )
+			if ( proc->platform->charID-1 == gClassDisplayMaxID )
 			{
 				if ( charData->nameTextId && charData->defaultClass ) { proc->platform->charID--; break; }
 				else { proc->platform->charID = oldCharID; return; }

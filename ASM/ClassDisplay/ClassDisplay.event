@@ -5,7 +5,7 @@
 	// Debug character/class display viewer by Snek. Free to use and edit (with credit).
 	
 	#define CHECK_TRIPLE_PROMOTIONS // If commented out, this hack will not refer to TriplePromotionList in the triple promotion hack.
-	// MaxClassID is an optional definition, defined as the first invalid character ID.
+	// MaxCharacterID is an optional definition, defined as the first invalid character ID.
 	
 	#include "ProcDefinitions.event"
 	
@@ -75,9 +75,9 @@
 	gClassDisplayAppropriateWeapons:
 	BYTE IronSword IronLance IronAxe IronBow Heal Fire Lightning Flux HandAxe 0
 	
-	gClassDisplayMaxClassID:
-	#ifdef MaxClassID
-		BYTE MaxClassID-1
+	gClassDisplayMaxID:
+	#ifdef MaxCharacterID
+		BYTE MaxCharacterID-1
 	#else
 		BYTE 0
 	#endif
