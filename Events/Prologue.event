@@ -47,7 +47,7 @@ BeginningScene:
 //ASMC SetName|1
 ASMC NewTimer|1
 ASMC SetDifficulty|1 // For now, force difficulty to Normal.
-MUSC PrologueMusic
+MUSC Aquatic_Dystopia
 ENUF 0x69
 ENUF 0x6A
 ENUF 0x6B
