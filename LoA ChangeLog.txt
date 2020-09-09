@@ -44,6 +44,15 @@ Holy hell prologue stuff:
 	After finishing the character creator, a world map cutscene plays out with custom glowy regions indication nation borders as well
 Female mercenary animation/palette has been fixed
 Class display debug hack has been implemented
+Slight change to how walking sounds are handled
+Xena has a new mug! -- Credit Vlak
+Added a Tact spellsword class (which wasn't previously planned) for the mage routes and an appropriate custom promotion
+Spellswords (as well as their promotions) now take extra damage from aqua magic
+Roger has a new mug! -- Credit RandomWizard
+Shanley has a new mug! -- Credit Vlak
+Lakshmi has a new mug! -- Credit RandomWizard
+Gerwick has a new mug! -- Credit RandomWizard
+Robert has a new mug! -- Credit RandomWizard
 
 v1.10 (This was only released to playtesters in the Discord server to catch bugs before v2.0.)
 5th and final Military route is a go. Kill Sean after accepting the promotion in chapter 3. Route includes all supports as well
