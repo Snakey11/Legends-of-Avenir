@@ -93,7 +93,7 @@ SHORT The_First_Campaign
 gSupportMusic:
 SHORT Pub_Theme
 gPrepScreenMusic:
-SHORT Cavern_of_Splendor
+SHORT 0 Life_of_a_Mercenary Life_in_the_Military Cavern_of_Splendor // Indexed by mode.
 PUSH
 ORG $160AE
 SHORT 0x46C0
@@ -137,7 +137,8 @@ ALIGN 4
 #include "Nice.event"
 
 ALIGN 4
-#include "PC_and_Generic_Music_FE8.event" // Basically boss music
+//#include "PC_and_Generic_Music_FE8.event" // Basically boss music
+#include "PersonalMusic/PersonalMusic.event"
 
 /*
 ALIGN 4

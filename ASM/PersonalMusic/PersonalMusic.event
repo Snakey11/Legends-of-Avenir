@@ -1,0 +1,85 @@
+//Converted from PC_and_Generic_Music_FE8.ups using CUPS
+
+// I think the original is by Cam? Edits by Snek.
+
+PUSH
+ORG 0x726d7
+BYTE 0x88 0x0 0xf0 0x12 0xf9 0x6 0x1c
+ORG 0x726df
+BYTE 0x0 0x0 0x0
+ORG 0x728d1
+BYTE 0xb4
+/*ORG 0x728d6
+BYTE 0x9 0x48 0x0 0x24 0x05 0x1c 0x52 0x00 0x50 0x5b 0xa0 0x42 0x09 0xd1 0x38 0x1c 0x00 0x68 0x02 0x79 0x52 0x00 0x50 0x5b 0xa0 0x42 0x02 0xd1 0x01 0x24 0x64 0x42 0x20 0x1c 0x30 0xbc 0x70 0x47
+POIN PersonalMusicTable*/
+ORG 0x72900
+BYTE 0x00 0xb5 0x1 0x49 0x8 0x47 0x0 0x0 
+POIN PersonalMusic|1
+//This part is covered by the Character Music Editor NMM
+POP
+
+PersonalMusic: // This name is deceptive! This handles "generic" music.
+BYTE 0xe 0xb4 0x6 0x49 0x8a 0x7b 0x12 0x6 0x12 0x16 0x92 0x0 0x4 0x4b 0x1 0x28 0x0 0xd1 0x92 0x1c 0xd0 0x5a 0xe 0xbc 0x0 0xbd 0x0 0x0 0xf0 0xbc 0x2 0x2
+POIN GenericMusicTable
+
+#include "NewPersonalMusic.lyn.event"
+
+#define CharacterMusic(Character,Chapter,Song) "BYTE Character Chapter ; SHORT Song"
+ALIGN 4
+PersonalMusicTable: // I've changed this from a character-indexed table to a list with character and chapter conditions.
+CharacterMusic(Henning,Mercenary1,Thrash_Em)
+CharacterMusic(Gerwick,MercenaryMilitia2,Thrash_Em)
+CharacterMusic(Weston,MercenaryMilitiaKill3,Thrash_Em)
+CharacterMusic(Robert,MercenaryMilitiaKill4,Thrash_Em)
+CharacterMusic(BossGhost,MercenaryMilitiaKill5,Show_Em_Whats_What)
+CharacterMusic(BossJurgen,MercenaryMilitiaKill6,Show_Em_Whats_What)
+CharacterMusic(BossRex,MercenaryMilitiaKill7,Show_Em_Whats_What)
+CharacterMusic(BossConnor,MercenaryMilitiaWait3,Thrash_Em)
+CharacterMusic(BossAdlez,MercenaryMilitiaWait4,Thrash_Em)
+CharacterMusic(William,MercenaryMilitiaWaitArcanae5,Show_Em_Whats_What)
+CharacterMusic(BossRex,MercenaryMilitiaWaitArcanae6,Show_Em_Whats_What)
+CharacterMusic(BossZalius,MercenaryMilitiaWaitArcanae6,Show_Em_Whats_What)
+CharacterMusic(BossMaximus,MercenaryMilitiaWaitArcanae7,Show_Em_Whats_What)
+CharacterMusic(BossLeyos,MercenaryMilitiaWaitArcanae7,Show_Em_Whats_What)
+CharacterMusic(Emperor,MercenaryMilitiaWaitArcanae7,Show_Em_Whats_What)
+CharacterMusic(Grant,MercenaryMilitiaWaitCesaria5,Show_Em_Whats_What)
+CharacterMusic(Pat,MercenaryMilitiaWaitCesaria6,Show_Em_Whats_What)
+CharacterMusic(BossUzkalis,MercenaryMilitiaWaitCesaria7,Show_Em_Whats_What)
+CharacterMusic(BossArc,MercenaryBandit2,Thrash_Em)
+CharacterMusic(Roger,MercenaryBandit3,Thrash_Em)
+CharacterMusic(Mayor,MercenaryBandit4,Thrash_Em)
+CharacterMusic(Tyrone,MercenaryBandit4,Thrash_Em)
+CharacterMusic(BossLeon,MercenaryBanditBandit5,Show_Em_Whats_What)
+CharacterMusic(Harken,MercenaryBanditBandit6,Show_Em_Whats_What)
+CharacterMusic(BossRex,MercenaryBanditBandit7,Show_Em_Whats_What)
+CharacterMusic(BossXavus,MercenaryBanditBandit7,Show_Em_Whats_What)
+CharacterMusic(Mason,MercenaryBanditDisband5,Show_Em_Whats_What)
+CharacterMusic(BossXylia,MercenaryBanditDisband7,Show_Em_Whats_What)
+
+CharacterMusic(BossChristina,Military1,I_Dont_Think_We_Can_Take_Em)
+CharacterMusic(BossForrest,Military1,I_Dont_Think_We_Can_Take_Em)
+CharacterMusic(Sam,MilitaryPass2,I_Dont_Think_We_Can_Take_Em)
+CharacterMusic(BossConnor,MilitaryPass3,I_Dont_Think_We_Can_Take_Em)
+CharacterMusic(BossAdlez,MilitaryPass3,I_Dont_Think_We_Can_Take_Em)
+CharacterMusic(Dunlas,MilitaryPass4,I_Dont_Think_We_Can_Take_Em)
+CharacterMusic(Richter,MilitaryPassAltia5,Make_Em_Pay)
+CharacterMusic(BossXavus,MilitaryPassAltia7,Make_Em_Pay)
+CharacterMusic(BossShanley,MilitaryPassHaedric5,Make_Em_Pay)
+CharacterMusic(Dunlas,MilitaryPassHaedric6,Make_Em_Pay)
+CharacterMusic(BossUzkalis,MilitaryPassHaedric7,Make_Em_Pay)
+CharacterMusic(Gerald,MilitaryAccept2,I_Dont_Think_We_Can_Take_Em)
+CharacterMusic(Sam,MilitaryAccept3,I_Dont_Think_We_Can_Take_Em)
+CharacterMusic(BossArya,MilitaryAcceptRetreat4,I_Dont_Think_We_Can_Take_Em)
+CharacterMusic(Halleck,MilitaryAcceptRetreatLeave5,Make_Em_Pay)
+CharacterMusic(BossEfil,MilitaryAcceptRetreatLeave7,Make_Em_Pay)
+CharacterMusic(BossShanley,MilitaryAcceptRetreatHelp5,Make_Em_Pay)
+CharacterMusic(Pascal,MilitaryAcceptRetreatHelp6,Make_Em_Pay)
+CharacterMusic(XeximClone,MilitaryAcceptRetreatHelp7,Make_Em_Pay)
+CharacterMusic(BossVal,MilitaryAcceptHold4,I_Dont_Think_We_Can_Take_Em)
+CharacterMusic(BossHelmer,MilitaryAcceptHold5,Make_Em_Pay)
+CharacterMusic(Clint,MilitaryAcceptHold6,Make_Em_Pay)
+CharacterMusic(BossUzkalis,MilitaryAcceptHold7,Make_Em_Pay)
+CharacterMusic(BossXavus,MilitaryAcceptHold7,Make_Em_Pay)
+
+CharacterMusic(Lakshmi,Mage1,End_Em) // 5-7: Annihilate_Em.
+WORD 0

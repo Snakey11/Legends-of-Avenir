@@ -51,8 +51,15 @@ PrepScreenMusicChange: @ Autohook to 0x080A1954. Prep screen music when returnin
 lsl r2, r2, #0x01
 mov r0, #0x00
 str r0, [ sp ]
-ldr r0, =gPrepScreenMusic
+
+push { r2 }
+blh GetMode, r0
+lsl r0, r0, #0x01
+ldr r1, =gPrepScreenMusic
+add r0, r0, r1
 ldrh r0, [ r0 ]
+pop { r2 }
+
 mov r1, r2
 ldr r3, =#0x080029E8
 mov lr, r3
@@ -67,8 +74,15 @@ PrepScreenMusicChange2: @ Autohook to 0x080341B8.
 mov r2, #0x80
 lsl r2, r2, #0x01
 str r1, [ sp ]
-ldr r0, =gPrepScreenMusic
+
+push { r2 }
+blh GetMode, r0
+lsl r0, r0, #0x01
+ldr r1, =gPrepScreenMusic
+add r0, r0, r1
 ldrh r0, [ r0 ]
+pop { r2 }
+
 mov r1, r2
 ldr r3, =#0x080029E8
 mov lr, r3
