@@ -312,9 +312,11 @@ DeathQuote(PlayerFArcher,AllChapters,0x65,PlayerDeathText)
 DeathQuote(PlayerMMonk,AllChapters,0x65,PlayerDeathText)
 DeathQuote(PlayerMMage,AllChapters,0x65,PlayerDeathText)
 DeathQuote(PlayerMShaman,AllChapters,0x65,PlayerDeathText)
+DeathQuote(PlayerMSpellsword,AllChapters,0x65,PlayerDeathText)
 DeathQuote(PlayerFMonk,AllChapters,0x65,PlayerDeathText)
 DeathQuote(PlayerFMage,AllChapters,0x65,PlayerDeathText)
 DeathQuote(PlayerFShaman,AllChapters,0x65,PlayerDeathText)
+DeathQuote(PlayerFSpellsword,AllChapters,0x65,PlayerDeathText)
 
 DeathQuote(0xFFFF,0,0,0)//Terminator
 
