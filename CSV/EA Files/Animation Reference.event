@@ -80,6 +80,7 @@ WORD 0x0 0x0
 
 EdgySwordmasterAnim:
 SwordAnim(EdgySwordmasterSword)
+UnarmedAnim(EdgySwordmasterSword)
 //UnarmedAnim(EdgySwordmasterUnarmed)
 WORD 0x0 0x0
 
