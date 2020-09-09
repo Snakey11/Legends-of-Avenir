@@ -29,7 +29,7 @@ Walter,0x0
 Baret,PoisonStrikeID
 Val,0x0
 Helmer,ForesightID
-Xavus,HexID
+BossXavus,HexID
 Dunlas,0x0
 Johnathan,0x0
 Elanil,DartingStanceID
@@ -76,7 +76,6 @@ TankGhost,0x0
 FastGhost,0x0
 MageGhost,0x0
 StrongGhost,0x0
-Aaron,0x0
 Cesarian,0x0
 Shizonian,0x0
 Narrator,0x0
@@ -132,11 +131,6 @@ Blaine,0x0
 BossHelmer,ForesightID
 BossJurgen,HeavyStrikesID
 Lakshmi,0
-,
-,
-,
-,
-,
 ,
 0xFE Wall,0x0
 0xFF Snag,0x0

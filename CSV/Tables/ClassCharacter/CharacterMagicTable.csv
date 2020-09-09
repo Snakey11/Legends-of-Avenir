@@ -30,7 +30,7 @@ Walter,2,20
 Baret,0,5
 Val,5,45
 Helmer,3,25
-Xavus,7,50
+BossXavus,7,50
 Dunlas,4,30
 Johnathan,0,5
 Elanil,2,15
@@ -67,11 +67,6 @@ Sekar,1,5
 Zaheva,4,30
 Adeline,1,10
 Remus,0,5
-0x42,0,0
-0x43,0,0
-0x44,0,0
-0x45,0,0
-0x46,0,0
 Henning,0,0
 Gerwick,0,5
 Militiaman,1,10
@@ -82,7 +77,6 @@ TankGhost,0,0
 FastGhost,0,0
 MageGhost,2,30
 StrongGhost,0,0
-Aaron,0,0
 Cesarian,2,10
 Shizonian,2,15
 Narrator,2,20
@@ -142,8 +136,6 @@ Blaine,1,5
 BossHelmer,5,25
 BossJurgen,3,20
 Lakshmi,4,45
-,,
-,,
 ,,
 ,,
 ,,

@@ -29,7 +29,7 @@ Walter,0
 Baret,0
 Val,0
 Helmer,0
-Xavus,0
+BossXavus,0
 Dunlas,0
 Johnathan,0
 Elanil,0
@@ -66,11 +66,6 @@ Sekar,0
 Zaheva,0
 Adeline,0
 Remus,0
-0x42,0
-0x43,0
-0x44,0
-0x45,0
-0x46,0
 Henning,0
 Gerwick,0
 Militiaman,0
@@ -81,7 +76,6 @@ TankGhost,0
 FastGhost,0
 MageGhost,0
 StrongGhost,0
-Aaron,0
 Cesarian,0
 Shizonian,0
 Narrator,0
@@ -137,6 +131,10 @@ Blaine,0
 BossHelmer,0
 BossJurgen,0
 Lakshmi,0
+,
+,
+,
+,
 ,
 ,
 ,

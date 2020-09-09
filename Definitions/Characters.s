@@ -29,7 +29,7 @@ Walter
 Baret
 Val
 Helmer
-Xavus
+BossXavus
 Dunlas
 Johnathan
 Elanil
@@ -77,7 +77,6 @@ TankGhost
 FastGhost
 MageGhost
 StrongGhost
-Aaron
 Cesarian
 Shizonian
 Narrator
@@ -133,4 +132,4 @@ Blaine
 BossHelmer
 BossJurgen
 Lakshmi
-LastCharacterID
+MaxCharacterID

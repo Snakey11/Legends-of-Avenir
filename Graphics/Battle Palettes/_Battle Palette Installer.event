@@ -223,7 +223,7 @@ SetPaletteFull(Val,ValShamanPaletteID,Shaman_F,ValDruidPaletteID,Druid_F,ValSumm
 SetPaletteFull(Vicar,0x00,0x00,VicarWarriorPaletteID,Warrior,0x00,0x00)
 SetPaletteFull(Walter,WalterArcherPaletteID,Archer,WalterRangerPaletteID,Ranger,WalterSniperPaletteID,Sniper)
 SetPaletteFull(Weston,WestonMercenaryPaletteID,Mercenary,0x00,0x00,0x00,0x00)
-SetPaletteFull(Xavus,0x00,0x00,XavusNecromancerPaletteID,Necromancer,0x00,0x00)
+SetPaletteFull(BossXavus,0x00,0x00,XavusNecromancerPaletteID,Necromancer,0x00,0x00)
 SetPaletteFull(Yvette,YvettePegasusKnightPaletteID,PegasusKnight,YvetteFalcoknightPaletteID,Falcoknight,YvetteWyvernKnightPaletteID,WyvernKnight_F)
 SetPaletteFull(Zaheva,ZahevaSpellswordPaletteID,SpellswordF,ZahevaBattleSagePaletteID,BattleSageF,ZahevaDreadFighterPaletteID,DreadFighterF)
 SetPaletteFull(Zalius,0x00,0x00,ZaliusSwordmasterPaletteID,Swordmaster,0x00,0x00)
