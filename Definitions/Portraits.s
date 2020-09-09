@@ -60,6 +60,10 @@ IzukMug
 WilliamMug
 ClintMug
 LakshmiMug
+RobertMug
+GerwickMug
+ShanleyMug
+RogerMug
 
 BattleSageMCard
 BattleSageFCard
