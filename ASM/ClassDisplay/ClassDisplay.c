@@ -297,13 +297,14 @@ void ClassDisplayWaitForButtonPress(ClassDisplayProc* proc)
 		int oldCharID = proc->platform->charID;
 		do
 		{
-			proc->platform->charID++;
-			charData = GetCharacterData(proc->platform->charID);
-			if ( proc->platform->charID-1 == gClassDisplayMaxID )
+			if ( proc->platform->charID == gClassDisplayMaxID )
 			{
-				if ( charData->nameTextId && charData->defaultClass ) { proc->platform->charID--; break; }
+				charData = GetCharacterData(proc->platform->charID);
+				if ( charData->nameTextId && charData->defaultClass ) { return; }
 				else { proc->platform->charID = oldCharID; return; }
 			}
+			proc->platform->charID++;
+			charData = GetCharacterData(proc->platform->charID);
 		} while ( !charData->nameTextId || !charData->defaultClass ); // Skip over characters that don't seem to exist and don't have default classes.
 		proc->currWeaponIndex = 0;
 		proc->platform->index = 0;

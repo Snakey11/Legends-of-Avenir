@@ -79,7 +79,7 @@
 	#ifdef MaxCharacterID
 		BYTE MaxCharacterID-1
 	#else
-		BYTE 0
+		BYTE 0xFF
 	#endif
 	
 	ALIGN 4
