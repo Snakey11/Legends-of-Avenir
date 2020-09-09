@@ -142,3 +142,7 @@
 [LoadWilliam] = [LoadFace][0xE8][0x1]
 [LoadClint] = [LoadFace][0xE9][0x1]
 [LoadLakshmi] = [LoadFace][0xEA][0x1]
+[LoadRobert] = [LoadFace][0xEB][0x1]
+[LoadGerwick] = [LoadFace][0xEC][0x1]
+[LoadShanley] = [LoadFace][0xED][0x1]
+[LoadRoger] = [LoadFace][0xEE][0x1]

@@ -222,6 +222,14 @@
 #define GuardianSpirit Narrator
 #define BossGhost GhostBoss
 #define Haedrician Haedrican
+#define Hawken Harken
+#define BossRex Rex
+#define BossZalius Zalius
+#define BossMaximus Maximus
+#define BossLeyos Leyos
+#define BossLeon Leon
+#define BossXylia Xylia
+#define BossShanley Shanley
 /*
 #define PlayerMMonk 0x1
 #define PlayerMShaman 0x2 
@@ -440,16 +448,12 @@
 #define ClintMug 0xF2
 */
 #define MerchantMug 0x31 // Breguet
-#define GerwickMug 0x32 // Bone
 #define InkeeperMug 0x29 // Knoll
 #define MilitiaManMug 0x0E // Garcia
 #define EscortMug 0x4B // Glen
 #define OfficialMug 0x20 // Saleh
-#define RobertMug 0x34 // Saar
-#define AaronMug 0x1B // Gerik
 #define GrantMug 0x3A // Pablo
 #define PatMug 0x16 // Forde
-#define RogerMug 0x43 // Caellach
 #define TyroneMug 0x39 // Binks
 #define MayorMug 0x45 // Orson
 #define HarkenMug 0x4D // Unused rando
@@ -460,7 +464,6 @@
 #define MageMug 0x10 // Lute
 #define BanditMug 0x4C // Bandit
 #define GuildsmanMug 0x51 // Fado
-#define ShanleyMug 0x46 // Lyon
 #define GeraldMug 0x29 // Knoll
 #define SeanMug 0x34 // Saar
 #define HalleckMug 0x20 // Saleh
