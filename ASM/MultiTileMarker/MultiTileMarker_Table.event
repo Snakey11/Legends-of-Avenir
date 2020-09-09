@@ -1,12 +1,11 @@
-#define csvmacro000(arg000,arg001,arg002,arg003,arg004,arg005) "BYTE arg000 arg001 arg002 arg003; SHORT arg004 arg005; "
 
 #define MultiTile(chapter,xCoord,yCoord,eventID) "BYTE chapter xCoord yCoord 0x00 ; SHORT eventID 0x00"
 
 MultiTileMarker_Table:
-MultiTile(MercenaryMilitiaKill7,17,22,0x16)
-MultiTile(MercenaryMilitiaKill7,18,22,0x16)
-MultiTile(MercenaryMilitiaKill7,19,22,0x16)
-MultiTile(MercenaryMilitiaKill7,20,22,0x16)
+MultiTile(MercenaryMilitiaKill7,17,22,0x27)
+MultiTile(MercenaryMilitiaKill7,18,22,0x27)
+MultiTile(MercenaryMilitiaKill7,19,22,0x27)
+MultiTile(MercenaryMilitiaKill7,20,22,0x27)
 
 MultiTile(MilitaryAccept3,0,4,0x00)
 MultiTile(MilitaryAccept3,0,5,0x00)
