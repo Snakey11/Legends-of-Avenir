@@ -53,10 +53,15 @@ Shanley has a new mug! -- Credit Vlak
 Lakshmi has a new mug! -- Credit RandomWizard
 Gerwick has a new mug! -- Credit RandomWizard
 Robert has a new mug! -- Credit RandomWizard
+A quick ASM routine used internally to get the current "mode" (Mercenary, military, or mage) is being used
 A_Reliable_Chair is a confirmed massochist and has made ALL of our battle themes (really quickly too wow). Thank you so much, Chair! Visit the sound room to check them out!
+	These have been inserted and referenced plus two new prep screen themes, armory and shop themes, a new title theme, a healing theme, a promotion theme, and a few others
+	A bit of ASM to accomadate different prep themes for different "modes" has been made
 MultitileMarker in Mercenary 7 Militia Kill has been fixed
 Maximus's and Pat's inventories have been fixed
 Fixed some crashes associated with cutscene maps loading bad event data
+Made walking sounds work a lot better and fixed some
+Fixed the class display hack not reading the maximum character ID correctly
 
 v1.10 (This was only released to playtesters in the Discord server to catch bugs before v2.0.)
 5th and final Military route is a go. Kill Sean after accepting the promotion in chapter 3. Route includes all supports as well
