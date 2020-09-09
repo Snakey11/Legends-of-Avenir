@@ -6,6 +6,8 @@ PlayerMMage,0x0
 PlayerFMonk,0x0
 PlayerFShaman,0x0
 PlayerFMage,0x0
+PlayerMSpellsword,0x0
+PlayerFSpellsword,0x0
 PlayerMCavalier,Military3AcceptTactEscapeText
 PlayerMKnight,Military3AcceptTactEscapeText
 PlayerMSoldier,Military3AcceptTactEscapeText

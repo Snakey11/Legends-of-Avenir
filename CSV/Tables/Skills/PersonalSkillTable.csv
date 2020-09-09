@@ -5,6 +5,8 @@ PlayerMMage,0x0
 PlayerFMonk,0x0
 PlayerFShaman,0x0
 PlayerFMage,0x0
+PlayerMSpellsword,0x0
+PlayerFSpellsword,0x0
 PlayerMCavalier,0x0
 PlayerMKnight,0x0
 PlayerMSoldier,0x0

@@ -103,6 +103,8 @@ ShamanM2,Druid,Summoner
 ShamanF2,Druid_F,Summoner_F
 MonkM2,Bishop,Sage
 MonkF2,Bishop_F,Sage_F
+SpellswordM2,BattleSageM,DreadFighterM
+SpellswordF2,BattleSageF,DreadFighterF
 CavalierM2,Paladin,GreatKnight
 CavalierF2,Paladin_F,GreatKnight_F
 Knight2,General,GreatKnight_F
@@ -152,3 +154,5 @@ Strategist,0x0,0x0
 SpellswordM,BattleSageM,DreadFighterM
 SpellswordF,BattleSageF,DreadFighterF
 ChampionF,0x0,0x0
+ShadeKnightM,0x0,0x0
+ShadeKnightF,0x0,0x0

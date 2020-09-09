@@ -26,11 +26,13 @@ BYTE ArcherF2 HunterF
 
 BYTE MageM2 MagusM
 BYTE MonkM2 Patriarch
-BYTE ShamanM2 DarkKnightM
+BYTE ShamanM2 ShadeKnightM
+BYTE SpellswordM2 DarkKnightM
 
 BYTE MageF2 MagusF
 BYTE MonkF2 Matriarch
-BYTE ShamanF2 DarkKnightF
+BYTE ShamanF2 ShadeKnightF
+BYTE SpellswordF2 DarkKnightF
 
 BYTE 0 // Terminator.
 

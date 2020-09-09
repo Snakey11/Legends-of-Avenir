@@ -208,8 +208,8 @@
 	ClassMenuOption(CreatorFemale,CreatorMercenary,PlayerFMercenary,MercenaryF2,PlayerFMyrmidon,MyrmidonF2,PlayerFPegasusKnight,PegasusKnight2,0,0,0,0)
 	ClassMenuOption(CreatorMale,CreatorMilitary,PlayerMCavalier,CavalierM2,PlayerMKnight,KnightM2,PlayerMSoldier,SoldierM2,PlayerMWyvernRider,WyvernRiderM2,PlayerMArcher,ArcherM2)
 	ClassMenuOption(CreatorFemale,CreatorMilitary,PlayerFCavalier,CavalierF2,PlayerFKnight,KnightF2,PlayerFSoldier,SoldierF2,PlayerFWyvernRider,WyvernRiderF2,PlayerFArcher,ArcherF2)
-	ClassMenuOption(CreatorMale,CreatorMage,PlayerMMage,MageM2,PlayerMMonk,MonkM2,PlayerMShaman,ShamanM2,0,0,0,0)
-	ClassMenuOption(CreatorFemale,CreatorMage,PlayerFMage,MageF2,PlayerFMonk,MonkF2,PlayerFShaman,ShamanF2,0,0,0,0)
+	ClassMenuOption(CreatorMale,CreatorMage,PlayerMMage,MageM2,PlayerMMonk,MonkM2,PlayerMShaman,ShamanM2,PlayerMSpellsword,SpellswordM2,0,0)
+	ClassMenuOption(CreatorFemale,CreatorMage,PlayerFMage,MageF2,PlayerFMonk,MonkF2,PlayerFShaman,ShamanF2,PlayerFSpellsword,SpellswordF2,0,0)
 	WORD 0 0 0
 	
 	SkillGetter:

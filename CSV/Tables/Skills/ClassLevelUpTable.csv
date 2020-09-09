@@ -103,6 +103,8 @@ ShamanM2,ShamanSkillList|IsPointer
 ShamanF2,ShamanSkillList|IsPointer
 MonkM2,MonkSkillList|IsPointer
 MonkF2,MonkSkillList|IsPointer
+SpellswordM2,SpellswordSkillList|IsPointer
+SpellswordF2,SpellswordSkillList|IsPointer
 CavalierM2,CavalierSkillList|IsPointer
 CavalierF2,CavalierSkillList|IsPointer
 Knight2,KnightSkillList|IsPointer
@@ -152,3 +154,5 @@ Strategist,BattleSageSkillList|IsPointer
 SpellswordM,SpellswordSkillList|IsPointer
 SpellswordF,SpellswordSkillList|IsPointer
 ChampionF,ChampionSkillList|IsPointer
+ShadeKnightM,ShadeKnightSkillList|IsPointer
+ShadeKnightF,ShadeKnightSkillList|IsPointer

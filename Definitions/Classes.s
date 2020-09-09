@@ -26,6 +26,8 @@ ShamanM2
 ShamanF2
 MonkM2
 MonkF2
+SpellswordM2
+SpellswordF2
 CavalierM2
 CavalierF2
 Knight2
@@ -75,3 +77,5 @@ Strategist
 SpellswordM
 SpellswordF
 ChampionF
+ShadeKnightM
+ShadeKnightF

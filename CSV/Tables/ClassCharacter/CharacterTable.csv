@@ -6,6 +6,8 @@ PlayerMMage,TactNameText,PlayerMageDescText,PlayerMMage,MageM2,MaleMageMug,0x0,F
 PlayerFMonk,TactNameText,PlayerMageDescText,PlayerFMonk,MonkF2,FemaleMageMug,0x0,LightAff,0x0,1,3,0,5,4,0,4,3,2,0,0,0,0,0,0,Crank,0,60,5,50,45,10,65,65,0x0,0x0,IsLord,0x0,0x0,0x0,0x0
 PlayerFShaman,TactNameText,PlayerMageDescText,PlayerFShaman,ShamanF2,FemaleMageMug,0x0,DarkAff,0x0,1,5,2,3,3,2,4,3,2,0,0,0,0,0,0,0,Crank,65,10,40,35,20,45,35,0x0,0x0,IsLord,0x0,0x0,0x0,0x0
 PlayerFMage,TactNameText,PlayerMageDescText,PlayerFMage,MageF2,FemaleMageMug,0x0,ThunderAff,0x0,1,2,0,4,3,1,3,3,1,0,0,0,0,0,Crank,0,0,50,10,45,40,10,25,45,0x0,0x0,IsLord,0x0,0x0,0x0,0x0
+PlayerMSpellsword,TactNameText,PlayerMageDescText,PlayerMSpellsword,SpellswordM2,MaleMageMug,0x0,WindAff,0x0,1,7,3,2,3,3,2,4,3,Crank,0,0,0,0,Erank,0,Erank,85,35,40,40,25,20,45,0x0,0x0,IsLord,0x0,0x0,0x0,0x0
+PlayerFSpellsword,TactNameText,PlayerMageDescText,PlayerFSpellsword,SpellswordF2,FemaleMageMug,0x0,WindAff,0x0,1,6,2,3,3,2,3,4,2,Crank,0,0,0,0,Erank,0,Erank,80,35,45,40,20,30,45,0x0,0x0,IsLord,0x0,0x0,0x0,0x0
 PlayerMCavalier,TactNameText,PlayerMilitaryDescText,PlayerMCavalier,CavalierM2,MaleMilitaryMug,0x0,WindAff,0x0,1,8,2,3,2,3,3,5,3,Drank,Crank,0,0,0,0,0,0,70,40,45,40,25,20,40,0x0,0x0,IsLord,0x0,0x0,0x0,0x0
 PlayerMKnight,TactNameText,PlayerMilitaryDescText,PlayerMKnight,KnightM2,MaleMilitaryMug,0x0,AnimaAff,0x0,1,7,4,2,2,3,1,4,1,0,Crank,0,0,0,0,0,0,85,45,40,30,40,20,50,0x0,0x0,IsLord,0x0,0x0,0x0,0x0
 PlayerMSoldier,TactNameText,PlayerMilitaryDescText,PlayerMSoldier,SoldierM2,MaleMilitaryMug,0x0,WaterAff,0x0,1,5,4,4,7,5,4,5,1,0,Crank,0,0,0,0,0,0,75,40,45,40,30,25,40,0x0,0x0,IsLord,0x0,0x0,0x0,0x0

@@ -6,6 +6,8 @@ PlayerMMage,4,45
 PlayerFMonk,3,40
 PlayerFShaman,4,45
 PlayerFMage,4,45
+PlayerMSpellsword,2,30
+PlayerFSpellsword,2,30
 PlayerMCavalier,1,10
 PlayerMKnight,0,5
 PlayerMSoldier,1,10

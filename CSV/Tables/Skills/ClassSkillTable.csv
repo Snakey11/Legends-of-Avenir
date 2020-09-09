@@ -103,6 +103,8 @@ ShamanM2,0x0
 ShamanF2,0x0
 MonkM2,0x0
 MonkF2,0x0
+SpellswordM2,0x0
+SpellswordF2,0x0
 CavalierM2,CantoID
 CavalierF2,CantoID
 Knight2,ShoveID
@@ -152,3 +154,5 @@ Strategist,ShoveID
 SpellswordM,0x0
 SpellswordF,0x0
 ChampionF,ShoveID
+ShadeKnightM,CantoID
+ShadeKnightF,CantoID

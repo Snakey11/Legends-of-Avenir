@@ -118,6 +118,8 @@ WalkingSound(ShamanM2,FootSound)
 WalkingSound(ShamanF2,FootSound)
 WalkingSound(MonkM2,FootSound)
 WalkingSound(MonkF2,FootSound)
+WalkingSound(SpellswordM2,FootSound)
+WalkingSound(SpellswordF,FootSound)
 WalkingSound(CavalierM2,HorseSound)
 WalkingSound(CavalierF2,HorseSound)
 WalkingSound(Knight2,ArmorSound)
@@ -164,6 +166,8 @@ WalkingSound(Strategist,FootSound)
 WalkingSound(SpellswordM,FootSound)
 WalkingSound(SpellswordF,FootSound)
 WalkingSound(ChampionF,FootSound)
+WalkingSound(ShadeKnightM,HorseSound)
+WalkingSound(ShadeKnightF,HorseSound)
 	
 POP
 	

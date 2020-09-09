@@ -59,7 +59,7 @@ WORD 0x0 0x0
 
 DarkKnightAnim:
 SwordAnim(DarkKnightSword)
-StaffAnim(DarkKnightStaff)
+AnimaAnim(DarkKnightMagic) // See note on dread fighter.
 DarkAnim(DarkKnightMagic)
 UnarmedAnim(DarkKnightMagic)
 WORD 0x0 0x0
@@ -294,6 +294,18 @@ SpearAnim(SeraphKnightSpear)
 StaffAnim(SeraphKnightStaff)
 AnimaAnim(SeraphKnightMagic)
 UnarmedAnim(SeraphKnightMagic)
+WORD 0x0 0x0
+
+ShadeKnightMAnim:
+DarkAnim(ShadeKnightMMagic)
+StaffAnim(ShadeKnightMStaff)
+UnarmedAnim(ShadeKnightMMagic)
+WORD 0x0 0x0
+
+ShadeKnightFAnim:
+DarkAnim(ShadeKnightFMagic)
+StaffAnim(ShadeKnightFStaff)
+UnarmedAnim(ShadeKnightFMagic)
 WORD 0x0 0x0
 
 ShamanMAnim:

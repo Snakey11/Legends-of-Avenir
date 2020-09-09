@@ -104,6 +104,8 @@ ShamanM2,4,45,20,0
 ShamanF2,4,45,20,0
 MonkM2,3,35,20,0
 MonkF2,3,35,20,0
+SpellswordM2,2,30,20,0
+SpellswordF2,2,30,20,0
 CavalierM2,1,10,20,0
 CavalierF2,1,10,20,0
 Knight2,0,5,20,0
@@ -153,3 +155,5 @@ Strategist,6,30,26,2
 SpellswordM,1,30,20,0
 SpellswordF,1,30,20,0
 ChampionF,2,15,22,1
+ShadeKnightM,0,30,27,2
+ShadeKnightF,0,30,27,2

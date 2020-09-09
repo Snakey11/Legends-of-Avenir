@@ -996,6 +996,7 @@
 #define StrategistSprite BattleSageSprite
 #define ChampionFSprite ChampionSprite
 #define GladiatorSprite ChampionSprite
+#define SpellswordMSprite SpellswordSprite
 /*
 #define PirateSprite 0x34
 #define EmperorSprite 0x62

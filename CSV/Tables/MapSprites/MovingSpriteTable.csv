@@ -101,6 +101,8 @@ ShamanM2,0x81dd0a4,0x81dd888
 ShamanF2,0x81dd0a4,0x81dd888
 MonkM2,0x81e6f4c,0x81e7638
 MonkF2,MonkFSt,0x81e7638
+SpellswordM2,SpellswordMMv|IsPointer,0x81cd1bc
+SpellswordF2,SpellswordFMv|IsPointer,0x81cdb58
 CavalierM2,0x81c5fe4,0x81c692c
 CavalierF2,0x81c5fe4,0x81c692c
 Knight2,KnightMv|IsPointer,0x81c7e74
@@ -150,3 +152,5 @@ Strategist,BattleSageFMv|IsPointer,0x81d9b58
 SpellswordM,SpellswordMMv|IsPointer,0x81cd1bc
 SpellswordF,SpellswordFMv|IsPointer,0x81cdb58
 ChampionF,0x81cbef4,0x81cbd94
+ShadeKnightM,DarkKnightMv|IsPointer,0x81f1080
+ShadeKnightF,DarkKnightMv|IsPointer,0x81f1a54

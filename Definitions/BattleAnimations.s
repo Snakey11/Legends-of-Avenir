@@ -196,3 +196,7 @@ GladiatorAxe
 GladiatorHandAxe
 GladiatorUnarmed
 RangerFLance
+ShadeKnightMMagic
+ShadeKnightMStaff
+ShadeKnightFMagic
+ShadeKnightFStaff

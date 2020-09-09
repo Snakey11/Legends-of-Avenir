@@ -239,3 +239,13 @@
 {
 #include "Ranger F Lance.event"
 }
+{
+#include "Shade Knight M Magic.event"
+
+#include "Shade Knight M Staff.event"
+}
+{
+#include "Shade Knight F Magic.event"
+
+#include "Shade Knight F Staff.event"
+}
