@@ -53,6 +53,10 @@ Shanley has a new mug! -- Credit Vlak
 Lakshmi has a new mug! -- Credit RandomWizard
 Gerwick has a new mug! -- Credit RandomWizard
 Robert has a new mug! -- Credit RandomWizard
+A_Reliable_Chair is a confirmed massochist and has made ALL of our battle themes (really quickly too wow). Thank you so much, Chair! Visit the sound room to check them out!
+MultitileMarker in Mercenary 7 Militia Kill has been fixed
+Maximus's and Pat's inventories have been fixed
+Fixed some crashes associated with cutscene maps loading bad event data
 
 v1.10 (This was only released to playtesters in the Discord server to catch bugs before v2.0.)
 5th and final Military route is a go. Kill Sean after accepting the promotion in chapter 3. Route includes all supports as well
