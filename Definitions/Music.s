@@ -1,4 +1,9 @@
-Legends_of_Avenir 0x0043
+Avenir_Healing 0x0021 // Healing.
+Avenir_Healing2 0x0022 // To replace "Curing" as well.
+Promotions_of_Avenir 0x0023 // Promotion theme.
+Vendors_of_Avenir 0x0035 // Shop theme.
+Armories_of_Avenir 0x0036 // Armory theme.
+Legends_of_Avenir 0x0043 // Title theme.
 Encounter_with_Renegades 0x0400
 Dry_Trail
 Last_Battle_Decision
@@ -113,3 +118,30 @@ Darker
 Evil_Approaches
 Judgral_Calls
 Roar_of_Dominion
+
+Annihilate_Em
+Aquatic_Dystopia
+Cataclysm
+Crossroads
+Drop_Em
+End_Em
+Fields_of_Avenir
+I_Dont_Think_We_Can_Take_Em
+Knock_Em_Around
+Life_in_the_Military
+Life_of_a_Mercenary
+Light_Em_Up
+Make_Em_Pay
+Show_Em_Whats_What
+Sock_It_to_Em
+Take_Em_Down
+Thrash_Em
+We_Stand
+We_Strive
+We_Will_Endure
+We_Will_Hold_the_Line
+We_Will_Overcome
+We_Will_Persevere
+We_Wont_Give_In
+Winds_across_the_Plains_of_Avenir
+
