@@ -40,6 +40,12 @@ MageFAvatarPortrait:
 #incbin "FemaleMageAvatar_palette.dmp"
 #incbin "FemaleMageAvatar_minimug.dmp"
 
+AdelinePortrait:
+#incbin "Adeline_mug.dmp"
+#incbin "Adeline_frames.dmp"
+#incbin "Adeline_palette.dmp"
+#incbin "Adeline_minimug.dmp"
+
 AdlezPortrait:
 #incbin "Adlez_mug.dmp"
 #incbin "Adlez_frames.dmp"
@@ -148,6 +154,12 @@ ForrestPortrait:
 #incbin "Forrest_palette.dmp"
 #incbin "Forrest_minimug.dmp"
 
+GerwickPortrait:
+#incbin "Gerwick_mug.dmp"
+#incbin "Gerwick_frames.dmp"
+#incbin "Gerwick_palette.dmp"
+#incbin "Gerwick_minimug.dmp"
+
 HelmerPortrait:
 #incbin "Helmer_mug.dmp"
 #incbin "Helmer_frames.dmp"
@@ -220,12 +232,6 @@ LuxPortrait:
 #incbin "Lux_palette.dmp"
 #incbin "Lux_minimug.dmp"
 
-AdelinePortrait:
-#incbin "Adeline_mug.dmp"
-#incbin "Adeline_frames.dmp"
-#incbin "Adeline_palette.dmp"
-#incbin "Adeline_minimug.dmp"
-
 MaximusPortrait:
 #incbin "Maximus_mug.dmp"
 #incbin "Maximus_frames.dmp"
@@ -256,6 +262,18 @@ RexPortrait:
 #incbin "Rex_palette.dmp"
 #incbin "Rex_minimug.dmp"
 
+RobertPortrait:
+#incbin "Robert_mug.dmp"
+#incbin "Robert_frames.dmp"
+#incbin "Robert_palette.dmp"
+#incbin "Robert_minimug.dmp"
+
+RogerPortrait:
+#incbin "Roger_mug.dmp"
+#incbin "Roger_frames.dmp"
+#incbin "Roger_palette.dmp"
+#incbin "Roger_minimug.dmp"
+
 SekarPortrait:
 #incbin "Sekar_mug.dmp"
 #incbin "Sekar_frames.dmp"
@@ -267,6 +285,12 @@ ServiusPortrait:
 #incbin "Servius_frames.dmp"
 #incbin "Servius_palette.dmp"
 #incbin "Servius_minimug.dmp"
+
+ShanleyPortrait:
+#incbin "Shanley_mug.dmp"
+#incbin "Shanley_frames.dmp"
+#incbin "Shanley_palette.dmp"
+#incbin "Shanley_minimug.dmp"
 
 SylvainePortrait:
 #incbin "Sylvaine_mug.dmp"
@@ -360,6 +384,7 @@ setMugEntry(MaleMilitaryMug,MilitaryMAvatarPortrait,3,5,3,3)
 setMugEntry(FemaleMilitaryMug,MilitaryFAvatarPortrait,3,6,3,4)
 setMugEntry(MaleMageMug,MageMAvatarPortrait,3,5,3,3)
 setMugEntry(FemaleMageMug,MageFAvatarPortrait,3,6,3,4)
+setMugEntry(AdelineMug,AdelinePortrait,2,5,3,3)
 setMugEntry(AdlezMug,AdlezPortrait,2,5,2,3)
 setMugEntry(ArcMug,ArcPortrait,2,4,2,2)
 setMugEntry(ArveldirMug,ArveldirPortrait,2,5,3,3)
@@ -378,6 +403,7 @@ setMugEntry(ElanilMug,ElanilPortrait,4,5,4,3)
 setMugEntry(EmperorMug,EmperorPortrait,3,5,3,3)
 setMugEntry(FinocMug,FinocPortrait,3,5,3,3)
 setMugEntry(ForrestMug,ForrestPortrait,3,5,3,3)
+setMugEntry(GerwickMug,GerwickPortrait,2,5,2,3)
 setMugEntry(HelmerMug,HelmerPortrait,3,5,3,3)
 setMugEntry(HenningMug,HenningPortrait,3,5,3,3)
 setMugEntry(IzukMug,IzukPortrait,3,5,3,3)
@@ -385,19 +411,21 @@ setMugEntry(JasperMug,JasperPortrait,3,5,3,3)
 setMugEntry(JurgenMug,JurgenPortrait,2,6,3,3)
 setMugEntry(KendrickMug,KendrickPortrait,3,4,3,2)
 setMugEntry(KilthelMug,KilthelPortrait,3,5,3,3)
-setMugEntry(LakshmiMug,LakshmiPortrait,3,6,3,4)
+setMugEntry(LakshmiMug,LakshmiPortrait,3,5,3,3)
 setMugEntry(LeonMug,LeonPortrait,2,4,2,2)
 setMugEntry(LeyosMug,LeyosPortrait,3,5,3,3)
 setMugEntry(LukeMug,LukePortrait,3,5,3,3)
 setMugEntry(LuxMug,LuxPortrait,2,6,3,4)
-setMugEntry(AdelineMug,AdelinePortrait,2,5,3,3)
 setMugEntry(MaximusMug,MaximusPortrait,2,5,2,3)
 setMugEntry(MurielMug,MurielPortrait,3,6,3,4)
 setMugEntry(NarratorMug,NarratorPortrait,3,5,3,3)
 setMugEntry(RemusMug,RemusPortrait,2,5,3,3)
 setMugEntry(RexMug,RexPortrait,2,5,2,3)
+setMugEntry(RobertMug,RobertPortrait,3,5,2,3)
+setMugEntry(RogerMug,RogerPortrait,3,5,3,3)
 setMugEntry(SekarMug,SekarPortrait,3,5,3,3)
 setMugEntry(ServiusMug,ServiusPortrait,3,5,3,3)
+setMugEntry(ShanleyMug,ShanleyPortrait,3,6,2,4)
 setMugEntry(SylvaineMug,SylvainePortrait,3,5,3,3)
 setMugEntry(UzkalisMug,UzkalisPortrait,2,6,2,3)
 setMugEntry(ValMug,ValPortrait,3,5,3,3)
