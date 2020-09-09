@@ -192,7 +192,7 @@ UNIT Cesarian WyvernLord Maximus Level(4,NPC,True) [1,9] 0x00 0x00 0x1 REDA1R9 [
 UNIT
 
 ChapterMeanies:
-UNIT Pat MageKnight Pat Level(7,Enemy,True) [3,4] Drop 0x00 0x00 0x00 [Arcfire,Aircalibur,MasterSeal] GuardAI
+UNIT Pat MageKnight Pat Level(7,Enemy,True) [3,4] Drop 0x00 0x00 0x00 [Arcfire,Tempest,MasterSeal] GuardAI
 UNIT Arcanian Cavalier Pat Level(11,Enemy,True) [4,8] 0x00 0x00 0x00 0x00 [DevilSpear] AttackInRangeAI
 UNIT Arcanian Cavalier Pat Level(12,Enemy,True) [5,7] 0x00 0x00 0x00 0x00 [DragonSpear] AttackInRangeAI
 UNIT Arcanian Sniper Pat Level(4,Enemy,True) [9,4] Drop 0x00 0x00 0x00 [KillerBow] AttackInRangeAI
