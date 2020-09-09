@@ -1,430 +1,661 @@
-
 	.include "MPlayDef.s"
 
-	.equ	LegendsOfAvenir_grp, voicegroup000
-	.equ	LegendsOfAvenir_pri, 0
-	.equ	LegendsOfAvenir_rev, 0
-	.equ	LegendsOfAvenir_mvl, 150
-	.equ	LegendsOfAvenir_key, 0
-	.equ	LegendsOfAvenir_tbs, 1
-	.equ	LegendsOfAvenir_exg, 0
-	.equ	LegendsOfAvenir_cmp, 1
+	.equ	songLegendsOfAvenir_grp, voicegroup000
+	.equ	songLegendsOfAvenir_pri, 0
+	.equ	songLegendsOfAvenir_rev, 0
+	.equ	songLegendsOfAvenir_mvl, 127
+	.equ	songLegendsOfAvenir_key, 0
+	.equ	songLegendsOfAvenir_tbs, 1
+	.equ	songLegendsOfAvenir_exg, 0
+	.equ	songLegendsOfAvenir_cmp, 1
 
 	.section .rodata
-	.global	LegendsOfAvenir
+	.global	songLegendsOfAvenir
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-LegendsOfAvenir_001:
+songLegendsOfAvenir_001:
 @ 000   ----------------------------------------
- .byte   VOL , 60*LegendsOfAvenir_mvl/mxv
- .byte   KEYSH , LegendsOfAvenir_key+0
-Label_LegendsOfAvenir_0_0146E320:
- .byte   TEMPO , 120*LegendsOfAvenir_tbs/2
- .byte   VOICE , 46
- .byte   MODT 0
- .byte   CnM2
- .byte   LFOS 0
- .byte   Gs1
- .byte   N12 ,Fn3 ,v060
- .byte   W12
- .byte   Gn3
- .byte   W12
- .byte   An3
- .byte   W12
- .byte   Cn4
- .byte   W12
- .byte   Dn4
- .byte   W12
- .byte   Fn4
- .byte   W12
-Label_LegendsOfAvenir_0_0146E336:
- .byte   N12 ,Dn3 ,v060
- .byte   W12
- .byte   Fn3
- .byte   W12
+ .byte   VOL , 80*songLegendsOfAvenir_mvl/mxv
+ .byte   KEYSH , songLegendsOfAvenir_key+0
+Label_0_0145A684:
+ .byte   TEMPO , 90*songLegendsOfAvenir_tbs/2
+ .byte   VOICE , 61
+ .byte   W96
 @ 001   ----------------------------------------
- .byte   Gn3
- .byte   W12
- .byte   An3
- .byte   W12
- .byte   Cn4
- .byte   W12
- .byte   Dn4
- .byte   W12
- .byte   PEND 
-Label_LegendsOfAvenir_0_0146E345:
- .byte   N12 ,Fn4 ,v060
- .byte   W12
- .byte   Dn4
- .byte   W12
- .byte   Cn4
- .byte   W12
- .byte   An3
- .byte   W12
+ .byte   W96
 @ 002   ----------------------------------------
- .byte   Gn3
- .byte   W12
- .byte   Fn3
- .byte   W12
- .byte   PEND 
- .byte   PATT
-  .word Label_LegendsOfAvenir_0_0146E336
+ .byte   W96
 @ 003   ----------------------------------------
-Label_LegendsOfAvenir_0_0146E359:
- .byte   N12 ,Fn3 ,v060
- .byte   W12
- .byte   Gn3
- .byte   W12
- .byte   An3
- .byte   W12
- .byte   Cn4
- .byte   W12
- .byte   Dn4
- .byte   W12
- .byte   Fn4
- .byte   W12
- .byte   PEND 
- .byte   PATT
-  .word Label_LegendsOfAvenir_0_0146E336
- .byte   PATT
-  .word Label_LegendsOfAvenir_0_0146E345
- .byte   PATT
-  .word Label_LegendsOfAvenir_0_0146E336
- .byte   PATT
-  .word Label_LegendsOfAvenir_0_0146E359
- .byte   PATT
-  .word Label_LegendsOfAvenir_0_0146E336
- .byte   PATT
-  .word Label_LegendsOfAvenir_0_0146E345
- .byte   PATT
-  .word Label_LegendsOfAvenir_0_0146E336
- .byte   PATT
-  .word Label_LegendsOfAvenir_0_0146E359
- .byte   PATT
-  .word Label_LegendsOfAvenir_0_0146E336
- .byte   PATT
-  .word Label_LegendsOfAvenir_0_0146E345
- .byte   PATT
-  .word Label_LegendsOfAvenir_0_0146E336
- .byte   PATT
-  .word Label_LegendsOfAvenir_0_0146E359
- .byte   PATT
-  .word Label_LegendsOfAvenir_0_0146E336
- .byte   PATT
-  .word Label_LegendsOfAvenir_0_0146E345
- .byte   PATT
-  .word Label_LegendsOfAvenir_0_0146E336
- .byte   PATT
-  .word Label_LegendsOfAvenir_0_0146E359
- .byte   PATT
-  .word Label_LegendsOfAvenir_0_0146E336
- .byte   PATT
-  .word Label_LegendsOfAvenir_0_0146E345
- .byte   PATT
-  .word Label_LegendsOfAvenir_0_0146E336
+ .byte   W96
 @ 004   ----------------------------------------
+ .byte   W96
+@ 005   ----------------------------------------
+ .byte   W96
+@ 006   ----------------------------------------
+ .byte   W96
+@ 007   ----------------------------------------
+ .byte   W96
+@ 008   ----------------------------------------
+ .byte   W96
+@ 009   ----------------------------------------
+ .byte   W96
+@ 010   ----------------------------------------
+ .byte   W96
+@ 011   ----------------------------------------
+Label_0_0145A693:
+ .byte   N48 ,As3 ,v048
+ .byte   W48
+ .byte   Bn3
+ .byte   W48
+ .byte   PEND 
+@ 012   ----------------------------------------
+ .byte   N96 ,Ds4
+ .byte   W96
+@ 013   ----------------------------------------
+ .byte   N12 ,En4
+ .byte   W24
+ .byte   Bn3
+ .byte   W12
+ .byte   N36 ,As3
+ .byte   W36
+ .byte   N12 ,Fs3
+ .byte   W24
+@ 014   ----------------------------------------
+ .byte   N96 ,Gs3
+ .byte   W96
+@ 015   ----------------------------------------
+ .byte   PATT
+  .word Label_0_0145A693
+@ 016   ----------------------------------------
+ .byte   N96 ,Fs3 ,v048
+ .byte   W96
+@ 017   ----------------------------------------
+ .byte   N12 ,En4
+ .byte   W12
+ .byte   Ds4
+ .byte   W24
+ .byte   N36 ,As3
+ .byte   W36
+ .byte   N12 ,Fs3
+ .byte   W24
+@ 018   ----------------------------------------
+ .byte   N48 ,En3
+ .byte   W48
+ .byte   N24 ,As3
+ .byte   W24
+ .byte   Bn3
+ .byte   W24
+@ 019   ----------------------------------------
+ .byte   N48 ,As3
+ .byte   W48
+ .byte   N24 ,Ds4
+ .byte   W24
+ .byte   En4
+ .byte   W24
+@ 020   ----------------------------------------
+ .byte   N96 ,Ds4
+ .byte   W96
+@ 021   ----------------------------------------
+ .byte   Gs3
+ .byte   W96
+@ 022   ----------------------------------------
  .byte   GOTO
-  .word Label_LegendsOfAvenir_0_0146E320
+  .word Label_0_0145A684
  .byte   FINE
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-LegendsOfAvenir_002:
+songLegendsOfAvenir_002:
 @ 000   ----------------------------------------
- .byte   VOL , 60*LegendsOfAvenir_mvl/mxv
- .byte   KEYSH , LegendsOfAvenir_key+0
-Label_LegendsOfAvenir_1_0146E3D4:
- .byte   VOICE , 61
- .byte   MODT 0
- .byte   CnM2
- .byte   LFOS 0
- .byte   Gs1
- .byte   N72 ,Fn2 ,v088
- .byte   W72
-Label_LegendsOfAvenir_1_0146E3DE:
- .byte   N12 ,Dn2 ,v088
- .byte   W12
- .byte   Fn2
- .byte   W12
+ .byte   VOL , 80*songLegendsOfAvenir_mvl/mxv
+ .byte   KEYSH , songLegendsOfAvenir_key+0
+Label_1_0145A304:
+ .byte   VOICE , 71
+ .byte   N48 ,As3 ,v048
+ .byte   W48
+ .byte   Bn3
+ .byte   W48
 @ 001   ----------------------------------------
- .byte   N48 ,Gn2
- .byte   W48
- .byte   PEND 
- .byte   N12 ,Dn3
- .byte   W12
- .byte   Cn3
- .byte   W12
- .byte   N48 ,An2
- .byte   W48
+ .byte   N96 ,Ds4
+ .byte   W96
 @ 002   ----------------------------------------
-Label_LegendsOfAvenir_1_0146E3F0:
- .byte   N12 ,Dn2 ,v088
- .byte   W12
- .byte   Fn2
- .byte   W12
- .byte   Gn2
- .byte   W12
- .byte   An2
- .byte   W12
- .byte   N24 ,Gn2
+ .byte   N12 ,En4
  .byte   W24
- .byte   PEND 
-Label_LegendsOfAvenir_1_0146E3FE:
- .byte   N12 ,Fn2 ,v088
+ .byte   Bn3
  .byte   W12
- .byte   Gn2
- .byte   W12
+ .byte   N36 ,As3
+ .byte   W36
+ .byte   N12 ,Fs3
+ .byte   W24
 @ 003   ----------------------------------------
- .byte   An2
- .byte   W12
- .byte   N36 ,Cn3
- .byte   W36
- .byte   PEND 
-Label_LegendsOfAvenir_1_0146E40A:
- .byte   N12 ,Dn2 ,v088
- .byte   W12
- .byte   Fn2
- .byte   W12
- .byte   Gn2
- .byte   W12
- .byte   Cn3
- .byte   W12
+ .byte   N96 ,Gs3
+ .byte   W96
 @ 004   ----------------------------------------
- .byte   N24 ,An2
- .byte   W24
- .byte   PEND 
- .byte   N12 ,Fn3
- .byte   W12
- .byte   Dn3
- .byte   W12
- .byte   Cn3
- .byte   W12
- .byte   An2
- .byte   W12
- .byte   Gn2
- .byte   W12
- .byte   Fn2
- .byte   W12
-@ 005   ----------------------------------------
- .byte   Dn2
- .byte   W12
- .byte   Fn2
- .byte   W12
- .byte   N24 ,Gn2
- .byte   W24
- .byte   An2
- .byte   W24
- .byte   PATT
-  .word Label_LegendsOfAvenir_1_0146E3FE
- .byte   PATT
-  .word Label_LegendsOfAvenir_1_0146E40A
-@ 006   ----------------------------------------
- .byte   N36 ,Fn3 ,v088
- .byte   W36
- .byte   Cn3
- .byte   W36
- .byte   N72 ,An2
- .byte   W72
-@ 007   ----------------------------------------
- .byte   Fn2
- .byte   W72
- .byte   PATT
-  .word Label_LegendsOfAvenir_1_0146E3DE
-@ 008   ----------------------------------------
- .byte   N12 ,Cn3 ,v088
- .byte   W12
- .byte   Dn3
- .byte   W12
- .byte   N48 ,Cn3
+ .byte   N48 ,As3
  .byte   W48
- .byte   PATT
-  .word Label_LegendsOfAvenir_1_0146E3F0
- .byte   PATT
-  .word Label_LegendsOfAvenir_1_0146E3FE
+ .byte   Bn3
+ .byte   W48
+@ 005   ----------------------------------------
+ .byte   N96 ,Fs3
+ .byte   W96
+@ 006   ----------------------------------------
+ .byte   N12 ,En4
+ .byte   W12
+ .byte   Ds4
+ .byte   W24
+ .byte   N36 ,As3
+ .byte   W36
+ .byte   N12 ,Fs3
+ .byte   W24
+@ 007   ----------------------------------------
+ .byte   N48 ,En3
+ .byte   W48
+ .byte   N24 ,As3
+ .byte   W24
+ .byte   Bn3
+ .byte   W24
+@ 008   ----------------------------------------
+ .byte   N48 ,As3
+ .byte   W48
+ .byte   N24 ,Ds4
+ .byte   W24
+ .byte   En4
+ .byte   W24
 @ 009   ----------------------------------------
- .byte   N12 ,Dn2 ,v088
- .byte   W12
- .byte   Fn2
- .byte   W12
- .byte   Gn2
- .byte   W12
- .byte   Dn3
- .byte   W12
- .byte   N24 ,Cn3
- .byte   W24
- .byte   N12 ,An2
- .byte   W12
- .byte   Dn3
- .byte   W12
+ .byte   N96 ,Ds4
+ .byte   W96
 @ 010   ----------------------------------------
- .byte   N24 ,Fn3
- .byte   W24
- .byte   Dn3
- .byte   W24
- .byte   N12 ,Gn2
- .byte   W12
- .byte   Fn2
- .byte   W12
- .byte   Gn2
- .byte   W12
- .byte   Cn3
- .byte   W12
+ .byte   Gs3
+ .byte   W96
 @ 011   ----------------------------------------
- .byte   N24 ,An2
- .byte   W24
- .byte   N12 ,Fn2
- .byte   W12
- .byte   Gn2
- .byte   W12
- .byte   An2
- .byte   W12
- .byte   N24 ,Gn2
- .byte   W24
- .byte   N12 ,Fn2
- .byte   W12
+ .byte   W96
 @ 012   ----------------------------------------
- .byte   N24 ,Dn2
- .byte   W24
- .byte   N12 ,Gn2
- .byte   W12
- .byte   Cn3
- .byte   W12
- .byte   N24 ,An2
- .byte   W24
- .byte   N12 ,Fn3
- .byte   W12
- .byte   N24 ,Dn3
- .byte   W24
+ .byte   W96
 @ 013   ----------------------------------------
- .byte   N12 ,An2
- .byte   W12
- .byte   N24 ,Cn3
- .byte   W24
- .byte   N72 ,An2
- .byte   W72
+ .byte   W96
 @ 014   ----------------------------------------
+ .byte   W96
+@ 015   ----------------------------------------
+ .byte   W96
+@ 016   ----------------------------------------
+ .byte   W96
+@ 017   ----------------------------------------
+ .byte   W96
+@ 018   ----------------------------------------
+ .byte   W96
+@ 019   ----------------------------------------
+ .byte   W96
+@ 020   ----------------------------------------
+ .byte   W96
+@ 021   ----------------------------------------
+ .byte   W96
+@ 022   ----------------------------------------
  .byte   GOTO
-  .word Label_LegendsOfAvenir_1_0146E3D4
+  .word Label_1_0145A304
  .byte   FINE
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-LegendsOfAvenir_003:
+songLegendsOfAvenir_003:
 @ 000   ----------------------------------------
- .byte   VOL , 60*LegendsOfAvenir_mvl/mxv
- .byte   KEYSH , LegendsOfAvenir_key+0
-Label_LegendsOfAvenir_2_0146E4B0:
- .byte   VOICE , 49
- .byte   MODT 0
- .byte   CnM2
- .byte   LFOS 0
- .byte   Gs1
- .byte   N72 ,Fn2 ,v028
- .byte   W72
- .byte   Fn2 ,v036
- .byte   W72
+ .byte   VOL , 80*songLegendsOfAvenir_mvl/mxv
+ .byte   KEYSH , songLegendsOfAvenir_key+0
+Label_2_0145A6F4:
+ .byte   VOICE , 68
+ .byte   N48 ,As3 ,v064
+ .byte   W48
+ .byte   Bn3
+ .byte   W48
 @ 001   ----------------------------------------
- .byte   Fn2 ,v048
- .byte   W72
- .byte   Fn2 ,v060
- .byte   W72
+ .byte   N96 ,Ds4
+ .byte   W96
 @ 002   ----------------------------------------
-Label_LegendsOfAvenir_2_0146E4C3:
- .byte   N72 ,Fn2 ,v048
- .byte   N72 ,An2
- .byte   N72 ,Cn3
- .byte   W72
- .byte   PEND 
-Label_LegendsOfAvenir_2_0146E4CC:
- .byte   N72 ,An2 ,v048
- .byte   N72 ,Dn3
- .byte   N72 ,Fn3
- .byte   W72
+Label_2_0145A6FF:
+ .byte   N12 ,En4 ,v064
+ .byte   W24
+ .byte   Bn3
+ .byte   W12
+ .byte   N36 ,As3
+ .byte   W36
+ .byte   N12 ,Fs3
+ .byte   W24
  .byte   PEND 
 @ 003   ----------------------------------------
-Label_LegendsOfAvenir_2_0146E4D5:
- .byte   TIE ,An2 ,v048
- .byte   TIE ,Cn3
- .byte   TIE ,En3
- .byte   W72
- .byte   PEND 
- .byte   W72
+ .byte   N96 ,Gs3
+ .byte   W96
 @ 004   ----------------------------------------
- .byte   EOT
- .byte   An2 ,v060
- .byte   En3
- .byte   PATT
-  .word Label_LegendsOfAvenir_2_0146E4C3
- .byte   PATT
-  .word Label_LegendsOfAvenir_2_0146E4CC
-@ 005   ----------------------------------------
-Label_LegendsOfAvenir_2_0146E4ED:
- .byte   TIE ,An2 ,v048
- .byte   TIE ,Cn3
- .byte   TIE ,Gn3
- .byte   W72
+Label_2_0145A70F:
+ .byte   N48 ,As3 ,v064
+ .byte   W48
+ .byte   Bn3
+ .byte   W48
  .byte   PEND 
- .byte   W72
+@ 005   ----------------------------------------
+ .byte   N96 ,Fs3
+ .byte   W96
 @ 006   ----------------------------------------
- .byte   EOT
- .byte   An2 ,v060
- .byte   Gn3
- .byte   PATT
-  .word Label_LegendsOfAvenir_2_0146E4C3
+Label_2_0145A719:
+ .byte   N12 ,En4 ,v064
+ .byte   W12
+ .byte   Ds4
+ .byte   W24
+ .byte   N36 ,As3
+ .byte   W36
+ .byte   N12 ,Fs3
+ .byte   W24
+ .byte   PEND 
 @ 007   ----------------------------------------
- .byte   N72 ,Fn2 ,v048
- .byte   N72 ,An2
- .byte   N72 ,Dn3
- .byte   W72
- .byte   PATT
-  .word Label_LegendsOfAvenir_2_0146E4D5
+Label_2_0145A726:
+ .byte   N48 ,En3 ,v064
+ .byte   W48
+ .byte   N24 ,As3
+ .byte   W24
+ .byte   Bn3
+ .byte   W24
+ .byte   PEND 
 @ 008   ----------------------------------------
- .byte   W72
- .byte   EOT
- .byte   An2 ,v060
- .byte   En3
- .byte   PATT
-  .word Label_LegendsOfAvenir_2_0146E4C3
- .byte   PATT
-  .word Label_LegendsOfAvenir_2_0146E4CC
- .byte   PATT
-  .word Label_LegendsOfAvenir_2_0146E4D5
+Label_2_0145A730:
+ .byte   N48 ,As3 ,v064
+ .byte   W48
+ .byte   N24 ,Ds4
+ .byte   W24
+ .byte   En4
+ .byte   W24
+ .byte   PEND 
 @ 009   ----------------------------------------
- .byte   W72
- .byte   EOT
- .byte   An2 ,v060
- .byte   En3
- .byte   PATT
-  .word Label_LegendsOfAvenir_2_0146E4C3
- .byte   PATT
-  .word Label_LegendsOfAvenir_2_0146E4CC
- .byte   PATT
-  .word Label_LegendsOfAvenir_2_0146E4ED
+ .byte   N96 ,Ds4
+ .byte   W96
 @ 010   ----------------------------------------
- .byte   W72
- .byte   EOT
- .byte   An2 ,v060
- .byte   Gn3
+ .byte   Gs3
+ .byte   W96
+@ 011   ----------------------------------------
+ .byte   PATT
+  .word Label_2_0145A70F
+@ 012   ----------------------------------------
+ .byte   N96 ,Ds4 ,v064
+ .byte   W96
+@ 013   ----------------------------------------
+ .byte   PATT
+  .word Label_2_0145A6FF
+@ 014   ----------------------------------------
+ .byte   N96 ,Gs3 ,v064
+ .byte   W96
+@ 015   ----------------------------------------
+ .byte   PATT
+  .word Label_2_0145A70F
+@ 016   ----------------------------------------
+ .byte   N96 ,Fs3 ,v064
+ .byte   W96
+@ 017   ----------------------------------------
+ .byte   PATT
+  .word Label_2_0145A719
+@ 018   ----------------------------------------
+ .byte   PATT
+  .word Label_2_0145A726
+@ 019   ----------------------------------------
+ .byte   PATT
+  .word Label_2_0145A730
+@ 020   ----------------------------------------
+ .byte   N96 ,Ds4 ,v064
+ .byte   W96
+@ 021   ----------------------------------------
+ .byte   Gs3
+ .byte   W96
+@ 022   ----------------------------------------
  .byte   GOTO
-  .word Label_LegendsOfAvenir_2_0146E4B0
+  .word Label_2_0145A6F4
+ .byte   FINE
+
+@**************** Track 4 (Midi-Chn.3) ****************@
+
+songLegendsOfAvenir_004:
+@ 000   ----------------------------------------
+ .byte   VOL , 80*songLegendsOfAvenir_mvl/mxv
+ .byte   KEYSH , songLegendsOfAvenir_key+0
+Label_3_0145A380:
+ .byte   VOICE , 51
+ .byte   N96 ,En1 ,v064
+ .byte   W96
+@ 001   ----------------------------------------
+ .byte   Cs1
+ .byte   W96
+@ 002   ----------------------------------------
+ .byte   Ds1
+ .byte   W96
+@ 003   ----------------------------------------
+ .byte   En1
+ .byte   W96
+@ 004   ----------------------------------------
+ .byte   N96
+ .byte   W96
+@ 005   ----------------------------------------
+ .byte   Cs1
+ .byte   W96
+@ 006   ----------------------------------------
+ .byte   Ds1
+ .byte   W96
+@ 007   ----------------------------------------
+ .byte   En1
+ .byte   W96
+@ 008   ----------------------------------------
+ .byte   N96
+ .byte   W96
+@ 009   ----------------------------------------
+ .byte   Fs1
+ .byte   W96
+@ 010   ----------------------------------------
+ .byte   En1
+ .byte   W96
+@ 011   ----------------------------------------
+ .byte   N96
+ .byte   W96
+@ 012   ----------------------------------------
+ .byte   Cs1
+ .byte   W96
+@ 013   ----------------------------------------
+ .byte   Ds1
+ .byte   W96
+@ 014   ----------------------------------------
+ .byte   En1
+ .byte   W96
+@ 015   ----------------------------------------
+ .byte   N96
+ .byte   W96
+@ 016   ----------------------------------------
+ .byte   Cs1
+ .byte   W96
+@ 017   ----------------------------------------
+ .byte   Ds1
+ .byte   W96
+@ 018   ----------------------------------------
+ .byte   En1
+ .byte   W96
+@ 019   ----------------------------------------
+ .byte   N96
+ .byte   W96
+@ 020   ----------------------------------------
+ .byte   Fs1
+ .byte   W96
+@ 021   ----------------------------------------
+ .byte   En1
+ .byte   W96
+@ 022   ----------------------------------------
+ .byte   GOTO
+  .word Label_3_0145A380
+ .byte   FINE
+
+@**************** Track 5 (Midi-Chn.4) ****************@
+
+songLegendsOfAvenir_005:
+@ 000   ----------------------------------------
+ .byte   VOL , 80*songLegendsOfAvenir_mvl/mxv
+ .byte   KEYSH , songLegendsOfAvenir_key+0
+Label_4_0145EB88:
+ .byte   VOICE , 48
+ .byte   N96 ,En2 ,v040
+ .byte   N96 ,Gs2
+ .byte   N96 ,Bn2
+ .byte   W96
+@ 001   ----------------------------------------
+Label_4_0145EB92:
+ .byte   N96 ,Cs2 ,v040
+ .byte   N96 ,En2
+ .byte   N96 ,Gs2
+ .byte   W96
+ .byte   PEND 
+@ 002   ----------------------------------------
+Label_4_0145EB9B:
+ .byte   N96 ,Ds2 ,v040
+ .byte   N96 ,Fs2
+ .byte   N96 ,As2
+ .byte   W96
+ .byte   PEND 
+@ 003   ----------------------------------------
+Label_4_0145EBA4:
+ .byte   N96 ,En2 ,v040
+ .byte   N96 ,Gs2
+ .byte   N96 ,Bn2
+ .byte   W96
+ .byte   PEND 
+@ 004   ----------------------------------------
+ .byte   PATT
+  .word Label_4_0145EBA4
+@ 005   ----------------------------------------
+ .byte   PATT
+  .word Label_4_0145EB92
+@ 006   ----------------------------------------
+ .byte   PATT
+  .word Label_4_0145EB9B
+@ 007   ----------------------------------------
+ .byte   PATT
+  .word Label_4_0145EBA4
+@ 008   ----------------------------------------
+ .byte   N96 ,En2 ,v040
+ .byte   N96 ,As2
+ .byte   N96 ,Cs3
+ .byte   W96
+@ 009   ----------------------------------------
+ .byte   Fs2
+ .byte   N96 ,Bn2
+ .byte   N96 ,Ds3
+ .byte   W96
+@ 010   ----------------------------------------
+ .byte   PATT
+  .word Label_4_0145EBA4
+@ 011   ----------------------------------------
+ .byte   W96
+@ 012   ----------------------------------------
+ .byte   W96
+@ 013   ----------------------------------------
+ .byte   W96
+@ 014   ----------------------------------------
+ .byte   W96
+@ 015   ----------------------------------------
+ .byte   W96
+@ 016   ----------------------------------------
+ .byte   W96
+@ 017   ----------------------------------------
+ .byte   W96
+@ 018   ----------------------------------------
+ .byte   W96
+@ 019   ----------------------------------------
+ .byte   W96
+@ 020   ----------------------------------------
+ .byte   W96
+@ 021   ----------------------------------------
+ .byte   W96
+@ 022   ----------------------------------------
+ .byte   GOTO
+  .word Label_4_0145EB88
+ .byte   FINE
+
+@**************** Track 6 (Midi-Chn.5) ****************@
+
+songLegendsOfAvenir_006:
+@ 000   ----------------------------------------
+ .byte   VOL , 80*songLegendsOfAvenir_mvl/mxv
+ .byte   KEYSH , songLegendsOfAvenir_key+0
+Label_5_0145EBEC:
+ .byte   VOICE , 48
+ .byte   W96
+@ 001   ----------------------------------------
+ .byte   W96
+@ 002   ----------------------------------------
+ .byte   W96
+@ 003   ----------------------------------------
+ .byte   W96
+@ 004   ----------------------------------------
+ .byte   W96
+@ 005   ----------------------------------------
+ .byte   W96
+@ 006   ----------------------------------------
+ .byte   W96
+@ 007   ----------------------------------------
+ .byte   W96
+@ 008   ----------------------------------------
+ .byte   W96
+@ 009   ----------------------------------------
+ .byte   W96
+@ 010   ----------------------------------------
+ .byte   W96
+@ 011   ----------------------------------------
+Label_5_0145EBF9:
+ .byte   N96 ,En2 ,v040
+ .byte   N96 ,Gs2
+ .byte   N96 ,Bn2
+ .byte   W96
+ .byte   PEND 
+@ 012   ----------------------------------------
+Label_5_0145EC02:
+ .byte   N96 ,Cs2 ,v040
+ .byte   N96 ,En2
+ .byte   N96 ,Gs2
+ .byte   W96
+ .byte   PEND 
+@ 013   ----------------------------------------
+Label_5_0145EC0B:
+ .byte   N96 ,Ds2 ,v040
+ .byte   N96 ,Fs2
+ .byte   N96 ,As2
+ .byte   W96
+ .byte   PEND 
+@ 014   ----------------------------------------
+ .byte   PATT
+  .word Label_5_0145EBF9
+@ 015   ----------------------------------------
+ .byte   PATT
+  .word Label_5_0145EBF9
+@ 016   ----------------------------------------
+ .byte   PATT
+  .word Label_5_0145EC02
+@ 017   ----------------------------------------
+ .byte   PATT
+  .word Label_5_0145EC0B
+@ 018   ----------------------------------------
+ .byte   PATT
+  .word Label_5_0145EBF9
+@ 019   ----------------------------------------
+ .byte   N96 ,En2 ,v040
+ .byte   N96 ,As2
+ .byte   N96 ,Cs3
+ .byte   W96
+@ 020   ----------------------------------------
+ .byte   Fs2
+ .byte   N96 ,Bn2
+ .byte   N96 ,Ds3
+ .byte   W96
+@ 021   ----------------------------------------
+ .byte   PATT
+  .word Label_5_0145EBF9
+@ 022   ----------------------------------------
+ .byte   GOTO
+  .word Label_5_0145EBEC
+ .byte   FINE
+
+@**************** Track 7 (Midi-Chn.6) ****************@
+
+songLegendsOfAvenir_007:
+@ 000   ----------------------------------------
+ .byte   VOL , 80*songLegendsOfAvenir_mvl/mxv
+ .byte   KEYSH , songLegendsOfAvenir_key+0
+Label_6_0145EC4C:
+ .byte   VOICE , 124
+ .byte   N12 ,Dn1 ,v052
+ .byte   W12
+ .byte   N12
+ .byte   W84
+@ 001   ----------------------------------------
+Label_6_0145EC54:
+ .byte   N12 ,Dn1 ,v052
+ .byte   W12
+ .byte   N12
+ .byte   W84
+ .byte   PEND 
+@ 002   ----------------------------------------
+ .byte   PATT
+  .word Label_6_0145EC54
+@ 003   ----------------------------------------
+ .byte   PATT
+  .word Label_6_0145EC54
+@ 004   ----------------------------------------
+ .byte   PATT
+  .word Label_6_0145EC54
+@ 005   ----------------------------------------
+ .byte   PATT
+  .word Label_6_0145EC54
+@ 006   ----------------------------------------
+ .byte   PATT
+  .word Label_6_0145EC54
+@ 007   ----------------------------------------
+ .byte   PATT
+  .word Label_6_0145EC54
+@ 008   ----------------------------------------
+ .byte   PATT
+  .word Label_6_0145EC54
+@ 009   ----------------------------------------
+ .byte   PATT
+  .word Label_6_0145EC54
+@ 010   ----------------------------------------
+ .byte   PATT
+  .word Label_6_0145EC54
+@ 011   ----------------------------------------
+ .byte   PATT
+  .word Label_6_0145EC54
+@ 012   ----------------------------------------
+ .byte   PATT
+  .word Label_6_0145EC54
+@ 013   ----------------------------------------
+ .byte   PATT
+  .word Label_6_0145EC54
+@ 014   ----------------------------------------
+ .byte   PATT
+  .word Label_6_0145EC54
+@ 015   ----------------------------------------
+ .byte   PATT
+  .word Label_6_0145EC54
+@ 016   ----------------------------------------
+ .byte   PATT
+  .word Label_6_0145EC54
+@ 017   ----------------------------------------
+ .byte   PATT
+  .word Label_6_0145EC54
+@ 018   ----------------------------------------
+ .byte   PATT
+  .word Label_6_0145EC54
+@ 019   ----------------------------------------
+ .byte   PATT
+  .word Label_6_0145EC54
+@ 020   ----------------------------------------
+ .byte   PATT
+  .word Label_6_0145EC54
+@ 021   ----------------------------------------
+ .byte   PATT
+  .word Label_6_0145EC54
+@ 022   ----------------------------------------
+ .byte   GOTO
+  .word Label_6_0145EC4C
  .byte   FINE
 
 @******************************************************@
 	.align	2
 
 songLegendsOfAvenir:
-	.byte	3	@ NumTrks
+	.byte	7	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	LegendsOfAvenir_pri	@ Priority
-	.byte	LegendsOfAvenir_rev	@ Reverb.
+	.byte	songLegendsOfAvenir_pri	@ Priority
+	.byte	songLegendsOfAvenir_rev	@ Reverb.
     
-	.word	LegendsOfAvenir_grp
+	.word	songLegendsOfAvenir_grp
     
-	.word	LegendsOfAvenir_001
-	.word	LegendsOfAvenir_002
-	.word	LegendsOfAvenir_003
+	.word	songLegendsOfAvenir_001
+	.word	songLegendsOfAvenir_002
+	.word	songLegendsOfAvenir_003
+	.word	songLegendsOfAvenir_004
+	.word	songLegendsOfAvenir_005
+	.word	songLegendsOfAvenir_006
+	.word	songLegendsOfAvenir_007
 
 	.end

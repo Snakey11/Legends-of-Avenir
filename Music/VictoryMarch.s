@@ -1,28 +1,28 @@
 	.include "MPlayDef.s"
 
-	.equ	VictoryMarch_grp, voicegroup000
-	.equ	VictoryMarch_pri, 0
-	.equ	VictoryMarch_rev, 0
-	.equ	VictoryMarch_mvl, 127
-	.equ	VictoryMarch_key, 0
-	.equ	VictoryMarch_tbs, 1
-	.equ	VictoryMarch_exg, 0
-	.equ	VictoryMarch_cmp, 1
+	.equ	songVictoryMarch_grp, voicegroup000
+	.equ	songVictoryMarch_pri, 0
+	.equ	songVictoryMarch_rev, 0
+	.equ	songVictoryMarch_mvl, 127
+	.equ	songVictoryMarch_key, 0
+	.equ	songVictoryMarch_tbs, 1
+	.equ	songVictoryMarch_exg, 0
+	.equ	songVictoryMarch_cmp, 1
 
 	.section .rodata
-	.global	VictoryMarch
+	.global	songVictoryMarch
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-VictoryMarch_001:
+songVictoryMarch_001:
 @ 000   ----------------------------------------
- .byte   KEYSH , VictoryMarch_key+0
-Label_VictoryMarch0_011A3ADA:
- .byte   TEMPO , 148*VictoryMarch_tbs/2
+ .byte   KEYSH , songVictoryMarch_key+0
+Label_0_011A3ADA:
+ .byte   TEMPO , 148*songVictoryMarch_tbs/2
  .byte   VOICE , 56
- .byte   VOL , 127*VictoryMarch_mvl/mxv
+ .byte   VOL , 127*songVictoryMarch_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N11 ,Fn3 ,v080
  .byte   W24
@@ -33,7 +33,7 @@ Label_VictoryMarch0_011A3ADA:
  .byte   An3
  .byte   W24
 @ 001   ----------------------------------------
-Label_VictoryMarch0_011A3AED:
+Label_0_011A3AED:
  .byte   N68 ,Gn3 ,v080
  .byte   W72
  .byte   N11 ,An3
@@ -42,7 +42,7 @@ Label_VictoryMarch0_011A3AED:
  .byte   W12
  .byte   PEND 
 @ 002   ----------------------------------------
-Label_VictoryMarch0_011A3AF7:
+Label_0_011A3AF7:
  .byte   N11 ,An3 ,v080
  .byte   W24
  .byte   N23 ,Fn3
@@ -55,7 +55,7 @@ Label_VictoryMarch0_011A3AF7:
  .byte   W12
  .byte   PEND 
 @ 003   ----------------------------------------
-Label_VictoryMarch0_011A3B06:
+Label_0_011A3B06:
  .byte   N68 ,Cn4 ,v080
  .byte   W72
  .byte   N11 ,As3
@@ -64,7 +64,7 @@ Label_VictoryMarch0_011A3B06:
  .byte   W12
  .byte   PEND 
 @ 004   ----------------------------------------
-Label_VictoryMarch0_011A3B10:
+Label_0_011A3B10:
  .byte   N11 ,As3 ,v080
  .byte   W24
  .byte   N23 ,Gn3
@@ -77,7 +77,7 @@ Label_VictoryMarch0_011A3B10:
  .byte   W12
  .byte   PEND 
 @ 005   ----------------------------------------
-Label_VictoryMarch0_011A3B1F:
+Label_0_011A3B1F:
  .byte   N11 ,An3 ,v080
  .byte   W24
  .byte   N23 ,Fn3
@@ -90,7 +90,7 @@ Label_VictoryMarch0_011A3B1F:
  .byte   W12
  .byte   PEND 
 @ 006   ----------------------------------------
-Label_VictoryMarch0_011A3B2E:
+Label_0_011A3B2E:
  .byte   N11 ,Gn3 ,v080
  .byte   W24
  .byte   N23 ,En3
@@ -106,7 +106,7 @@ Label_VictoryMarch0_011A3B2E:
  .byte   N92 ,Gn3
  .byte   W96
 @ 008   ----------------------------------------
-Label_VictoryMarch0_011A3B40:
+Label_0_011A3B40:
  .byte   N11 ,Fn3 ,v080
  .byte   W24
  .byte   N23 ,Cn3
@@ -117,11 +117,11 @@ Label_VictoryMarch0_011A3B40:
  .byte   W24
  .byte   PEND 
  .byte   PATT
-  .word Label_VictoryMarch0_011A3AED
+  .word Label_0_011A3AED
  .byte   PATT
-  .word Label_VictoryMarch0_011A3AF7
+  .word Label_0_011A3AF7
 @ 009   ----------------------------------------
-Label_VictoryMarch0_011A3B56:
+Label_0_011A3B56:
  .byte   N68 ,Ds3 ,v080
  .byte   W72
  .byte   N11 ,Dn3
@@ -130,7 +130,7 @@ Label_VictoryMarch0_011A3B56:
  .byte   W12
  .byte   PEND 
 @ 010   ----------------------------------------
-Label_VictoryMarch0_011A3B60:
+Label_0_011A3B60:
  .byte   N11 ,Dn3 ,v080
  .byte   W24
  .byte   N23 ,Fn3
@@ -162,32 +162,32 @@ Label_VictoryMarch0_011A3B60:
  .byte   N92 ,Gn3
  .byte   W96
  .byte   PATT
-  .word Label_VictoryMarch0_011A3B40
+  .word Label_0_011A3B40
  .byte   PATT
-  .word Label_VictoryMarch0_011A3AED
+  .word Label_0_011A3AED
  .byte   PATT
-  .word Label_VictoryMarch0_011A3AF7
+  .word Label_0_011A3AF7
  .byte   PATT
-  .word Label_VictoryMarch0_011A3B06
+  .word Label_0_011A3B06
  .byte   PATT
-  .word Label_VictoryMarch0_011A3B10
+  .word Label_0_011A3B10
  .byte   PATT
-  .word Label_VictoryMarch0_011A3B1F
+  .word Label_0_011A3B1F
  .byte   PATT
-  .word Label_VictoryMarch0_011A3B2E
+  .word Label_0_011A3B2E
 @ 014   ----------------------------------------
  .byte   N92 ,Gn3 ,v080
  .byte   W96
  .byte   PATT
-  .word Label_VictoryMarch0_011A3B40
+  .word Label_0_011A3B40
  .byte   PATT
-  .word Label_VictoryMarch0_011A3AED
+  .word Label_0_011A3AED
  .byte   PATT
-  .word Label_VictoryMarch0_011A3AF7
+  .word Label_0_011A3AF7
  .byte   PATT
-  .word Label_VictoryMarch0_011A3B56
+  .word Label_0_011A3B56
  .byte   PATT
-  .word Label_VictoryMarch0_011A3B60
+  .word Label_0_011A3B60
 @ 015   ----------------------------------------
  .byte   N11 ,Cn4 ,v080
  .byte   W24
@@ -205,17 +205,17 @@ Label_VictoryMarch0_011A3B60:
  .byte   W96
 @ 018   ----------------------------------------
  .byte   GOTO
-  .word Label_VictoryMarch0_011A3ADA
+  .word Label_0_011A3ADA
  .byte   FINE
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-VictoryMarch_002:
+songVictoryMarch_002:
 @ 000   ----------------------------------------
- .byte   KEYSH , VictoryMarch_key+0
-Label_VictoryMarch1_011A3BDE:
+ .byte   KEYSH , songVictoryMarch_key+0
+Label_1_011A3BDE:
  .byte   VOICE , 73
- .byte   VOL , 70*VictoryMarch_mvl/mxv
+ .byte   VOL , 102*songVictoryMarch_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @ 001   ----------------------------------------
@@ -310,17 +310,17 @@ Label_VictoryMarch1_011A3BDE:
  .byte   W96
 @ 032   ----------------------------------------
  .byte   GOTO
-  .word Label_VictoryMarch1_011A3BDE
+  .word Label_1_011A3BDE
  .byte   FINE
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-VictoryMarch_003:
+songVictoryMarch_003:
 @ 000   ----------------------------------------
- .byte   KEYSH , VictoryMarch_key+0
-Label_VictoryMarch2_011A3C32:
+ .byte   KEYSH , songVictoryMarch_key+0
+Label_2_011A3C32:
  .byte   VOICE , 57
- .byte   VOL , 70*VictoryMarch_mvl/mxv
+ .byte   VOL , 102*songVictoryMarch_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @ 001   ----------------------------------------
@@ -356,43 +356,43 @@ Label_VictoryMarch2_011A3C32:
  .byte   Cn2
  .byte   W96
 @ 016   ----------------------------------------
-Label_VictoryMarch2_011A3C4C:
+Label_2_011A3C4C:
  .byte   N80 ,Fn2 ,v080
  .byte   W84
  .byte   N11
  .byte   W12
  .byte   PEND 
  .byte   PATT
-  .word Label_VictoryMarch2_011A3C4C
+  .word Label_2_011A3C4C
  .byte   PATT
-  .word Label_VictoryMarch2_011A3C4C
+  .word Label_2_011A3C4C
  .byte   PATT
-  .word Label_VictoryMarch2_011A3C4C
+  .word Label_2_011A3C4C
  .byte   PATT
-  .word Label_VictoryMarch2_011A3C4C
+  .word Label_2_011A3C4C
  .byte   PATT
-  .word Label_VictoryMarch2_011A3C4C
+  .word Label_2_011A3C4C
  .byte   PATT
-  .word Label_VictoryMarch2_011A3C4C
+  .word Label_2_011A3C4C
 @ 017   ----------------------------------------
  .byte   N80 ,As2 ,v080
  .byte   W84
  .byte   N11 ,An2
  .byte   W12
  .byte   PATT
-  .word Label_VictoryMarch2_011A3C4C
+  .word Label_2_011A3C4C
  .byte   PATT
-  .word Label_VictoryMarch2_011A3C4C
+  .word Label_2_011A3C4C
  .byte   PATT
-  .word Label_VictoryMarch2_011A3C4C
+  .word Label_2_011A3C4C
  .byte   PATT
-  .word Label_VictoryMarch2_011A3C4C
+  .word Label_2_011A3C4C
  .byte   PATT
-  .word Label_VictoryMarch2_011A3C4C
+  .word Label_2_011A3C4C
  .byte   PATT
-  .word Label_VictoryMarch2_011A3C4C
+  .word Label_2_011A3C4C
  .byte   PATT
-  .word Label_VictoryMarch2_011A3C4C
+  .word Label_2_011A3C4C
 @ 018   ----------------------------------------
  .byte   N44 ,An2 ,v080
  .byte   W48
@@ -400,17 +400,17 @@ Label_VictoryMarch2_011A3C4C:
  .byte   W48
 @ 019   ----------------------------------------
  .byte   GOTO
-  .word Label_VictoryMarch2_011A3C32
+  .word Label_2_011A3C32
  .byte   FINE
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-VictoryMarch_004:
+songVictoryMarch_004:
 @ 000   ----------------------------------------
- .byte   KEYSH , VictoryMarch_key+0
-Label_VictoryMarch3_011A3CAA:
+ .byte   KEYSH , songVictoryMarch_key+0
+Label_3_011A3CAA:
  .byte   VOICE , 60
- .byte   VOL , 82*VictoryMarch_mvl/mxv
+ .byte   VOL , 82*songVictoryMarch_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N11 ,Cn3 ,v080
  .byte   W24
@@ -496,7 +496,7 @@ Label_VictoryMarch3_011A3CAA:
  .byte   Gn2
  .byte   W96
 @ 016   ----------------------------------------
-Label_VictoryMarch3_011A3D0E:
+Label_3_011A3D0E:
  .byte   W48
  .byte   N11 ,Fn3 ,v080
  .byte   W24
@@ -504,7 +504,7 @@ Label_VictoryMarch3_011A3D0E:
  .byte   W24
  .byte   PEND 
 @ 017   ----------------------------------------
-Label_VictoryMarch3_011A3D17:
+Label_3_011A3D17:
  .byte   N23 ,Fn3 ,v080
  .byte   W24
  .byte   An3
@@ -573,9 +573,9 @@ Label_VictoryMarch3_011A3D17:
  .byte   N44 ,Gn3
  .byte   W48
  .byte   PATT
-  .word Label_VictoryMarch3_011A3D0E
+  .word Label_3_011A3D0E
  .byte   PATT
-  .word Label_VictoryMarch3_011A3D17
+  .word Label_3_011A3D17
 @ 024   ----------------------------------------
  .byte   W24
  .byte   N11 ,An3 ,v080
@@ -617,17 +617,17 @@ Label_VictoryMarch3_011A3D17:
  .byte   W48
 @ 030   ----------------------------------------
  .byte   GOTO
-  .word Label_VictoryMarch3_011A3CAA
+  .word Label_3_011A3CAA
  .byte   FINE
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-VictoryMarch_005:
+songVictoryMarch_005:
 @ 000   ----------------------------------------
- .byte   KEYSH , VictoryMarch_key+0
-Label_VictoryMarch4_011A3D9E:
+ .byte   KEYSH , songVictoryMarch_key+0
+Label_4_011A3D9E:
  .byte   VOICE , 58
- .byte   VOL , 127*VictoryMarch_mvl/mxv
+ .byte   VOL , 127*songVictoryMarch_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N23 ,Fn2 ,v080
  .byte   W24
@@ -641,7 +641,7 @@ Label_VictoryMarch4_011A3D9E:
  .byte   N92 ,Cn2
  .byte   W96
 @ 002   ----------------------------------------
-Label_VictoryMarch4_011A3DB1:
+Label_4_011A3DB1:
  .byte   N23 ,Fn2 ,v080
  .byte   W24
  .byte   Gn2
@@ -693,7 +693,7 @@ Label_VictoryMarch4_011A3DB1:
  .byte   N92 ,Cn2
  .byte   W96
  .byte   PATT
-  .word Label_VictoryMarch4_011A3DB1
+  .word Label_4_011A3DB1
 @ 010   ----------------------------------------
  .byte   N92 ,Cn2 ,v080
  .byte   W96
@@ -756,17 +756,17 @@ Label_VictoryMarch4_011A3DB1:
  .byte   W96
 @ 031   ----------------------------------------
  .byte   GOTO
-  .word Label_VictoryMarch4_011A3D9E
+  .word Label_4_011A3D9E
  .byte   FINE
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-VictoryMarch_006:
+songVictoryMarch_006:
 @ 000   ----------------------------------------
- .byte   KEYSH , VictoryMarch_key+0
-Label_VictoryMarch5_011A3E22:
+ .byte   KEYSH , songVictoryMarch_key+0
+Label_5_011A3E22:
  .byte   VOICE , 127
- .byte   VOL , 42*VictoryMarch_mvl/mxv
+ .byte   VOL , 42*songVictoryMarch_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N23 ,Cn1 ,v080
  .byte   W48
@@ -775,7 +775,7 @@ Label_VictoryMarch5_011A3E22:
  .byte   Bn2
  .byte   W24
 @ 001   ----------------------------------------
-Label_VictoryMarch5_011A3E30:
+Label_5_011A3E30:
  .byte   N23 ,Cn1 ,v080
  .byte   W48
  .byte   N23
@@ -784,68 +784,68 @@ Label_VictoryMarch5_011A3E30:
  .byte   W24
  .byte   PEND 
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
  .byte   PATT
-  .word Label_VictoryMarch5_011A3E30
+  .word Label_5_011A3E30
 @ 002   ----------------------------------------
  .byte   GOTO
-  .word Label_VictoryMarch5_011A3E22
+  .word Label_5_011A3E22
  .byte   FINE
 
 @******************************************************@
@@ -854,16 +854,16 @@ Label_VictoryMarch5_011A3E30:
 songVictoryMarch:
 	.byte	6	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	VictoryMarch_pri	@ Priority
-	.byte	VictoryMarch_rev	@ Reverb.
+	.byte	songVictoryMarch_pri	@ Priority
+	.byte	songVictoryMarch_rev	@ Reverb.
     
-	.word	VictoryMarch_grp
+	.word	songVictoryMarch_grp
     
-	.word	VictoryMarch_001
-	.word	VictoryMarch_002
-	.word	VictoryMarch_003
-	.word	VictoryMarch_004
-	.word	VictoryMarch_005
-	.word	VictoryMarch_006
+	.word	songVictoryMarch_001
+	.word	songVictoryMarch_002
+	.word	songVictoryMarch_003
+	.word	songVictoryMarch_004
+	.word	songVictoryMarch_005
+	.word	songVictoryMarch_006
 
 	.end

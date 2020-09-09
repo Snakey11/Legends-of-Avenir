@@ -83,6 +83,8 @@ Binding_Vow
 	Mercenary 6 Bandit Disband.event
 	Mercenary 6 Militia Wait Arcanae.event
 	Mercenary 7 Militia Wait Cesaria.event
+	Phase theme: Mage1
+	Phase theme: Mage1
 	Phase theme: Military1
 	Phase theme: Military1
 	Phase theme: MilitaryAccept2
@@ -227,6 +229,8 @@ Confront_the_Past
 Courage_and_Pride_from_the_Heart
 	Phase theme: MilitaryPassHaedric7
 	Phase theme: MilitaryPassHaedric7
+Darker
+	Mage 1.event
 Derris_Kharlan_Appear
 	Mercenary 7 Bandit Disband.event
 	Military 3 Accept.event
@@ -258,6 +262,8 @@ Dry_Trail
 	Military 5 Accept Retreat Help.event
 Earthbound
 	Military 5 Accept Retreat Help.event
+	Phase theme: Mage1
+	Phase theme: Mage1
 	Phase theme: MilitaryAcceptRetreatHelp5
 	Phase theme: MilitaryAcceptRetreatHelp5
 	Phase theme: MilitaryAcceptRetreatHelp6
@@ -269,6 +275,8 @@ Emergency
 	Military 7 Accept Hold.event
 	Military 7 Pass Altia.event
 Encounter_with_Renegades
+	Phase theme: Mage1
+	Phase theme: Mage1
 	Phase theme: MilitaryAccept2
 	Phase theme: MilitaryAccept2
 	Phase theme: MilitaryAccept3
@@ -448,6 +456,7 @@ Judgral_Calls
 	Phase theme: MilitaryPassHaedric6
 	Phase theme: MilitaryPassHaedric6
 Kakariko_Village
+	Mage 1.event
 	Military 5 Accept Retreat Leave.event
 	Military 6 Accept Retreat Leave.event
 Kratos
@@ -490,6 +499,8 @@ March
 	Military 5 Accept Retreat Leave.event
 Mars_Lighthouse
 	Military 6 Pass Haedric.event
+Old_Familiar_Scent
+	Mage 1.event
 Ordon_Village
 	Military 2 Pass.event
 	Military 4 Accept Hold.event
@@ -784,6 +795,7 @@ Victory
 	Military 7 Pass Altia.event
 	Military 7 Pass Haedric.event
 Victory_March
+	Mage 1.event
 	Military 2 Pass.event
 	Military 4 Pass.event
 We_Can_Handle_Em
@@ -817,7 +829,6 @@ Zelos
 
 
 List of custom music never referenced:
-Old_Familiar_Scent
 Burning_Fighting_Spirit
 Town_of_Winds_and_Ruins
 Fatalize
@@ -859,7 +870,35 @@ Justice
 Team_Making
 Dark_Clouds_Gather
 Blindly_Charging
-Darker
+Annihilate_Em
+Aquatic_Dystopia
+Armories_of_Avenir
+Avenir_Healing
+Cataclysm
+Crossroads
+Drop_Em
+End_Em
+Fields_of_Avenir
+I_Dont_Think_We_Can_Take_Em
+Knock_Em_Around
+Life_in_the_Military
+Life_of_a_Mercenary
+Light_Em_Up
+Make_Em_Pay
+Promotions_of_Avenir
+Show_Em_Whats_What
+Sock_It_to_Em
+Take_Em_Down
+Thrash_Em
+Vendors_of_Avenir
+We_Stand
+We_Strive
+We_Will_Endure
+We_Will_Hold_the_Line
+We_Will_Overcome
+We_Will_Persevere
+We_Wont_Give_In
+Winds_across_the_Plains_of_Avenir
 
 
 List of vanilla music being used:
@@ -913,6 +952,8 @@ Binding_Vow
 	Mercenary 6 Bandit Disband.event
 	Mercenary 6 Militia Wait Arcanae.event
 	Mercenary 7 Militia Wait Cesaria.event
+	Phase theme: Mage1
+	Phase theme: Mage1
 	Phase theme: Military1
 	Phase theme: Military1
 	Phase theme: MilitaryAccept2

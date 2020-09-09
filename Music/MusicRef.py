@@ -99,7 +99,7 @@ if __name__ == '__main__':
         # MUSIC_REFS should have battle themes now.
     
     # Now we want to add references listed in the other ref document (for stuff like major game themes).
-    for line in open(os.getcwd()+'/'+args.other_refs):
+    for line in open(args.other_refs):
         # Format is just: "Song_Def,Place"
         entries = line.split(',')
         addToRefList(entries[0],entries[1],MUSIC_REFS)
@@ -113,7 +113,7 @@ if __name__ == '__main__':
         for line in o:
             if line.startswith('.'): continue
             entries = line.split()
-            if entries[0].strip() != '': NOT_REFERENCED.append(entries[0].strip())
+            if entries and entries[0].strip() != '': NOT_REFERENCED.append(entries[0].strip())
         for e in MUSIC_REFS:
             try:
                 NOT_REFERENCED.remove(e.song) # We've successfully removed this song from the list.

@@ -22,6 +22,9 @@ Dark Knight[X]
 ## MagusNameText
 Magus[X]
 
+## SorcererNameText
+Sorcerer[X]
+
 ## MasterKnightNameText
 Gold Knight[X]
 
@@ -108,3 +111,6 @@ Gladiator[X]
 
 ## BowKnightNameText
 Bow Knight[X]
+
+## ShadeKnightNameText
+Shade Knight[X]

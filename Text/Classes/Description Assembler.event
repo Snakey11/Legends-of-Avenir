@@ -11,9 +11,13 @@ about to make a major decision.[X]
 Truly devout and highly-ranking[NL]
 monks. Equip: Anima, Light, Staves.[X]
 
-## DarkKnightDescText
+## ShadeKnightDescText
 Powerful, mounted mages who study[NL]
 ancient magics. Equip: Dark, Staves.[X]
+
+## DarkKnightDescText
+Unique, mounted mages proficient in blade[NL]
+and ancient magic. Equip: Swords, Dark.[X]
 
 ## MagusDescText
 Advanced sages who master the magics[NL]
