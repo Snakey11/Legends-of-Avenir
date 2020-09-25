@@ -62,6 +62,8 @@ Maximus's and Pat's inventories have been fixed
 Fixed some crashes associated with cutscene maps loading bad event data
 Made walking sounds work a lot better and fixed some
 Fixed the class display hack not reading the maximum character ID correctly
+Fixed female monk map sprites
+Not anything that'll appear in-game, but Snek has shifted CSV management (again)
 
 v1.10 (This was only released to playtesters in the Discord server to catch bugs before v2.0.)
 5th and final Military route is a go. Kill Sean after accepting the promotion in chapter 3. Route includes all supports as well
