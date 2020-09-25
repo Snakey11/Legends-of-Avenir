@@ -37,6 +37,9 @@ setPalette(ArcWarriorPaletteID,ArcWarriorPalette)
 setPalette(AryaMyrmidonPaletteID,AryaMyrmidonPalette)
 setPalette(AryaAssassinPaletteID,AryaAssassinPalette)
 setPalette(AryaSwordmasterPaletteID,AryaSwordmasterPalette)
+setPalette(AjaxShamanPaletteID,AjaxShamanPalette)
+setPalette(AjaxDruidPaletteID,AjaxDruidPalette)
+setPalette(AjaxSummonerPaletteID,AjaxSummonerPalette)
 setPalette(BaretSoldierPaletteID,BaretSoldierPalette)
 setPalette(BaretHalberdierPaletteID,BaretHalberdierPalette)
 setPalette(BaretSentinelPaletteID,BaretSentinelPalette)
@@ -173,6 +176,7 @@ SetPaletteFull(Adlez,AdlezBrigandPaletteID,Brigand,AdlezBerserkerPaletteID,Berse
 SetPaletteFull(Arc,ArcFighterPaletteID,Fighter,ArcHeroPaletteID,Hero,ArcWarriorPaletteID,Warrior)
 SetPaletteFull(BossArc,ArcFighterPaletteID,Fighter,ArcHeroPaletteID,Hero,ArcWarriorPaletteID,Warrior)
 SetPaletteFull(Arya,AryaMyrmidonPaletteID,Myrmidon_F,AryaAssassinPaletteID,Assassin_F,AryaSwordmasterPaletteID,Swordmaster_F)
+SetPaletteFull(Ajax,AjaxShamanPaletteID,Shaman,AjaxDruidPaletteID,Druid,AjaxSummonerPaletteID,Summoner)
 SetPaletteFull(BossArya,AryaMyrmidonPaletteID,Myrmidon_F,AryaAssassinPaletteID,Assassin_F,AryaSwordmasterPaletteID,Swordmaster_F)
 SetPaletteFull(Baret,BaretSoldierPaletteID,Soldier,BaretHalberdierPaletteID,Halberdier,BaretSentinelPaletteID,Sentinel)
 SetPaletteFull(Connor,ConnorMercenaryPaletteID,Mercenary,ConnorHeroPaletteID,Hero,ConnorRangerPaletteID,Ranger)
@@ -428,6 +432,18 @@ AryaAssassinPalette:
 ALIGN 4
 AryaSwordmasterPalette:
 #incbin "Arya Swordmaster.dmp"
+
+ALIGN 4
+AjaxShamanPalette:
+#incbin "Ajax Shaman.dmp"
+
+ALIGN 4
+AjaxDruidPalette:
+#incbin "Ajax Druid.dmp"
+
+ALIGN 4
+AjaxSummonerPalette:
+#incbin "Ajax Summoner.dmp"
 
 ALIGN 4
 BaretSoldierPalette:
