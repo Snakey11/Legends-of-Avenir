@@ -30,7 +30,7 @@ for /R "%~dp0Music" %%F in (%FILE_MATCH%) do (
 if /I not [%2]==[noRefs] (
 	
 	cd "%~dp0Music"
-	py "MusicRef.py" "../Events" "../CSV/Tables/ChapterData/ChapterDataTable.csv" "../CSV/Tables/Music/CharacterMusicTable.csv" "OtherRefs.txt" "../Definitions/Music.s" "MusicRefs.txt"
+	py "MusicRef.py" "../Events" "../CSV/Tables/ChapterData/ChapterDataTable.csv" "../ASM/PersonalMusic/PersonalMusic.event" "../CSV/Tables/Music/ChapterMusicTable.csv" "OtherRefs.txt" "../Definitions/Music.s" "MusicRefs.txt"
 	
 	copy "MusicRefs.txt" "../../../../Google Drive/MusicRefs.txt"
 )
