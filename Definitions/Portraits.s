@@ -64,6 +64,7 @@ RobertMug
 GerwickMug
 ShanleyMug
 RogerMug
+AjaxMug
 
 BattleSageMCard
 BattleSageFCard

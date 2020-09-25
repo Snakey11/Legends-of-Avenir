@@ -8,6 +8,9 @@ ArcWarriorPaletteID
 AryaMyrmidonPaletteID
 AryaAssassinPaletteID
 AryaSwordmasterPaletteID
+AjaxShamanPaletteID
+AjaxDruidPaletteID
+AjaxSummonerPaletteID
 BaretSoldierPaletteID
 BaretHalberdierPaletteID
 BaretSentinelPaletteID

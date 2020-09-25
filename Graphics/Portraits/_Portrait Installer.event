@@ -70,6 +70,12 @@ AryaPortrait:
 #incbin "Arya_palette.dmp"
 #incbin "Arya_minimug.dmp"
 
+AjaxPortrait:
+#incbin "Ajax_mug.dmp"
+#incbin "Ajax_frames.dmp"
+#incbin "Ajax_palette.dmp"
+#incbin "Ajax_minimug.dmp"
+
 BaretPortrait:
 #incbin "Baret_mug.dmp"
 #incbin "Baret_frames.dmp"
@@ -389,6 +395,7 @@ setMugEntry(AdlezMug,AdlezPortrait,2,5,2,3)
 setMugEntry(ArcMug,ArcPortrait,2,4,2,2)
 setMugEntry(ArveldirMug,ArveldirPortrait,2,5,3,3)
 setMugEntry(AryaMug,AryaPortrait,2,6,3,4)
+setMugEntry(AjaxMug,AjaxPortrait,3,5,3,3)
 setMugEntry(BaretMug,BaretPortrait,3,5,3,3)
 setMugEntry(BlaineMug,BlainePortrait,3,4,3,2)
 setMugEntry(ChristinaMug,ChristinaPortrait,2,5,3,3)
