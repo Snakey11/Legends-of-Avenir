@@ -129,7 +129,7 @@ CriticalHit(1,60)
 EndAttack
 SetBattleNumbers(21,17,10,94,12,6)
 FIG1 Blaine Clint 0x00
-STAL 0x10
+ENUN
 KillUnit(6,4)
 DISA Blaine
 STAL 0x10
@@ -142,7 +142,7 @@ DISA Helmer
 TEXTSTART
 TEXTSHOW Military4AcceptHoldRecruitCougarText
 TEXTEND
-MUSC With_Us
+MUSC A_Formidable_Friend_Joins_in_the_Fray
 TEXTCONT
 TEXTEND
 REMA

@@ -269,7 +269,7 @@ NoFade
 EndA2
 
 Turn3:
-MUSS With_Us
+MUSS A_Formidable_Friend_Joins_in_the_Fray
 CAM1 [11,15]
 LOAD1 0x1 LoadYvette
 ENUN

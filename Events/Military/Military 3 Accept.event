@@ -198,7 +198,7 @@ NoFade
 EndA2
 
 AdelineRemusHere:
-MUSC With_Us
+MUSC A_Formidable_Friend_Joins_in_the_Fray
 CAM1 [7,5]
 LOAD1 0x1 AdelineRemus
 ENUN
