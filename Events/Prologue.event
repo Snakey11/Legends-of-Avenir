@@ -109,12 +109,16 @@ TEXTEND
 TEXTSHOW2 PrologueAlmostCreatorText
 TEXTEND
 REMA
+
+MUSC Avatars_of_Avenir
 ASMC CallCharacterCreator|1 // This fades in and out on its own.
+
+EVBIT_T 0x8 // Tell the event engine we're faded in.
+
 SVAL 0x1 True
 SVAL 0x2 PrologueWorldMapEvents|IsPointer
 ASMC StartSmallWorldMap|1
 
-CLEAN
 ASMC GetMode|1
 SVAL 0x1 0x1
 SVAL 0x2 0x2
@@ -145,6 +149,7 @@ STAL 32
 WM_SHOWDRAWNMAP 0x0 0x0 0x0 0x10 0x0
 STAL 2 // This STAL is necessary, or else palettes get borked.
 WM_FADEOUT 0x0 0x0 0x0
+MUSC Aquatic_Dystopia
 
 EVBIT_MODIFY 0x0
 STAL 0x40
