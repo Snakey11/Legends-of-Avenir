@@ -1,4 +1,4 @@
-INLINE SoundRoom,Song ID,Song Length (Only Used for Shuffle Mode),Song Unlock ASM Condition (Unused in FE8),Song Name Text ID
+,Song ID,Song Length (Only Used for Shuffle Mode),Song Unlock ASM Condition (Unused in FE8),Song Name Text ID
 0,A_Formidable_Foe_Stands_in_the_Way,9360,0,AFormidableFoeStandsInTheWayText
 0,A_Hero_Falls,9360,0,AHeroFallsText
 0,A_Tragic_Decision,9360,0,ATragicDecisionText
@@ -137,4 +137,6 @@ INLINE SoundRoom,Song ID,Song Length (Only Used for Shuffle Mode),Song Unlock AS
 0,We_Will_Persevere,9360,0,WeWillPersevereText
 0,We_Wont_Give_In,9360,0,WeWontGiveInText
 0,Winds_across_the_Plains_of_Avenir,9360,0,WindsAcrossThePlainsOfAvenirText
+0,A_Formidable_Friend_Joins_in_the_Fray,9360,0,AFormidableFriendJoinsInTheFrayText
+0,Avatars_of_Avenir,9360,0,AvatarsOfAvenirText
 0,0xFFFFFFFF,0x0,0x0,0x0

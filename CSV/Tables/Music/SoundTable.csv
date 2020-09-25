@@ -1,4 +1,4 @@
-INLINE MusicTable,Track Table Pointer,Priority
+,Track Table Pointer,Priority
 0x0000 Nothing,0x82263b0,0x0
 0x0001 The Valiant,0x8546288,0x0
 0x0002 Main Theme,0x8547a74,0x0

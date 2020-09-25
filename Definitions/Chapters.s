@@ -57,6 +57,7 @@ MilitaryAcceptRetreatHelp6Grow3
 Mage1
 MageSearch2
 MageLeave2
+MageLeave3
 
 ShizonShrineCutscene
 LeavingShizonCutscene
@@ -75,3 +76,4 @@ AltianDungeonCutscene
 HaedricCityCutscene
 PortSelsingCutscene
 KendrickShipCutscene
+MistlainThroneCutscene

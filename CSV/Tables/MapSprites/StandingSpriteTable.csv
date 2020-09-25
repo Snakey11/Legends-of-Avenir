@@ -1,4 +1,4 @@
-INLINE StandingMapSpriteTable 0xFF,Unknown,##UNKNOWN##,Size,##UNKNOWN##,Poiner to graphics
+,Unknown,##UNKNOWN##,Size,##UNKNOWN##,Poiner to graphics
 CavalierSprite,0x2,0x0,0x1,0x0,0x81b7ecc
 PaladinSprite,0x2,0x0,0x1,0x0,0x81b8088
 KnightSprite,0x2,0x0,Medium,0x0,KnightSt|IsPointer

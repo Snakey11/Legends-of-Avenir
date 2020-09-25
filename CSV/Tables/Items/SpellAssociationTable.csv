@@ -1,4 +1,4 @@
-INLINE SpellAssociationTable,Weapon,No. of Chars to Display (1 or 2),Ranged Animation to Use,Ranged Animation Enabled,##UNKNOWN##,Alternate Pointer,Return to original position (map),Facing position (map),Enemy's flashing colour (map),##UNKNOWN##
+,Weapon,No. of Chars to Display (1 or 2),Ranged Animation to Use,Ranged Animation Enabled,##UNKNOWN##,Alternate Pointer,Return to original position (map),Facing position (map),Enemy's flashing colour (map),##UNKNOWN##
 0x0,0x1,2,0xff,0xff,0x0,0x0,0x1,0x0,0x0,0x0
 0x1,0x5,2,0xff,0xff,0x0,0x0,0x1,0x0,0x0,0x0
 0x2,0x3,2,0xff,0xff,0x0,0x0,0x1,0x0,0x0,0x0

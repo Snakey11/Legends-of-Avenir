@@ -3,7 +3,9 @@
 
 cd %~dp0/CSV/Tables
 
-py TableAssembler.py TableInstaller.event --date_check --verbose
+rem py TableAssembler.py TableInstaller.event --date_check --verbose
+
+py TableManager.py TableOptions.s TableInstaller.event --error_on_missing
 
 if /I not [%1]==[noPause] (
 	pause
