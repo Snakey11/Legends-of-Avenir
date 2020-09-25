@@ -124,6 +124,7 @@ Return to Arcanae.[X]
 You sure? Well, let's do it then. Give me a moment to restrain Lakshmi and we can head inside.[X]
 
 ## Mage1GoToReturnText
+[ConversationText]
 [MidLeft][LoadPlayer][MidRight][LoadXena]
 Yeah, I think you're right. Let's return to Mistlain and update him on Uzkalis's movements and turn over Lakshmi.[X]
 
