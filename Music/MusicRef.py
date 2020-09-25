@@ -10,7 +10,8 @@ PHASE_NAMES = {'Player Phase music','Enemy Phase music','NPC Phase music','Playe
 parser = argparse.ArgumentParser()
 parser.add_argument('event_path',help='Filepath to directory for scanning for events.')
 parser.add_argument('chapter_data_table',help='Filepath to Chapter Data Table CSV.')
-parser.add_argument('character_music_table',help='Filepath to Character Music Table CSV.')
+parser.add_argument('character_music',help='Filepath to PersonalMusic.event.') # Used to be the character music table, but I changed this to an event installer.
+parser.add_argument('battle_music',help='Filepath to Chapter Music Table CSV (for battle themes).')
 parser.add_argument('other_refs',help='Filepath to other music reference declaration document.')
 parser.add_argument('music_defs',help='Filepath to music definition S file.')
 parser.add_argument('output',help='Filepath to output file.')
@@ -90,13 +91,27 @@ if __name__ == '__main__':
                     if chapter != '' and not entries[j].startswith('0'): addToRefList(entries[j],'Phase theme: '+chapter,MUSIC_REFS)
         # MUSIC_REFS should have phase themes now.
     
-    with open(os.getcwd()+'/'+args.character_music_table) as o:
-        for i,line in enumerate(o):
+    with open(os.getcwd()+'/'+args.character_music) as o:
+        for line in o:
+            line = line.split('//')[0]
+            if not line.startswith('CharacterMusic('): continue
             entries = line.split(',')
-            character = entries[0]
-            if i != 0 and character != '' and not entries[1].startswith('0'):
-                addToRefList(entries[1],'Battle theme: '+entries[0],MUSIC_REFS)
-        # MUSIC_REFS should have battle themes now.
+            character = entries[0][len('CharacterMusic('):]
+            chapter = entries[1]
+            song = entries[2][:-2]
+            addToRefList(song,f'Battle theme at {chapter} for {character}',MUSIC_REFS)
+        # MUSIC_REFS should have character battle themes now.
+    
+    with open(os.getcwd()+'/'+args.battle_music) as o:
+        for i,line in enumerate(o):
+            if i == 0: continue
+            splitted = line.split(',')
+            chapter = splitted[0]
+            attack = splitted[1]
+            defense = splitted[2]
+            if chapter:
+                if attack: addToRefList(attack,f'Attack theme at {chapter}',MUSIC_REFS)
+                if defense: addToRefList(defense,f'Defense theme at {chapter}',MUSIC_REFS)
     
     # Now we want to add references listed in the other ref document (for stuff like major game themes).
     for line in open(args.other_refs):
