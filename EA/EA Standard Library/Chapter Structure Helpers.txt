@@ -12,7 +12,7 @@
 #endif
 
 #ifdef _FE8_
-#define EventPointerListOffset 0x8B363C
+//#define EventPointerListOffset 0x8B363C
 #define EventPointerTable(id,offset) "PUSH; ORG EventPointerListOffset+(4*id); POIN offset; POP"
 #define SkirmishEvents(offset) "PUSH; ORG 0x1540C; POIN offset; POP"
 #endif
