@@ -244,6 +244,12 @@ MaximusPortrait:
 #incbin "Maximus_palette.dmp"
 #incbin "Maximus_minimug.dmp"
 
+MistlainPortrait:
+#incbin "Mistlain_mug.dmp"
+#incbin "Mistlain_frames.dmp"
+#incbin "Mistlain_palette.dmp"
+#incbin "Mistlain_minimug.dmp"
+
 MurielPortrait:
 #incbin "Muriel_mug.dmp"
 #incbin "Muriel_frames.dmp"
@@ -424,6 +430,7 @@ setMugEntry(LeyosMug,LeyosPortrait,3,5,3,3)
 setMugEntry(LukeMug,LukePortrait,3,5,3,3)
 setMugEntry(LuxMug,LuxPortrait,2,6,3,4)
 setMugEntry(MaximusMug,MaximusPortrait,2,5,2,3)
+setMugEntry(MistlainMug,MistlainPortrait,4,5,4,3)
 setMugEntry(MurielMug,MurielPortrait,3,6,3,4)
 setMugEntry(NarratorMug,NarratorPortrait,3,5,3,3)
 setMugEntry(RemusMug,RemusPortrait,2,5,3,3)
