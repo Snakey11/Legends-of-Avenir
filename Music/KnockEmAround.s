@@ -3,7 +3,7 @@
 	.equ	songKnockEmAround_grp, voicegroup000
 	.equ	songKnockEmAround_pri, 0
 	.equ	songKnockEmAround_rev, 0
-	.equ	songKnockEmAround_mvl, 127
+	.equ	songKnockEmAround_mvl, 150
 	.equ	songKnockEmAround_key, 0
 	.equ	songKnockEmAround_tbs, 1
 	.equ	songKnockEmAround_exg, 0

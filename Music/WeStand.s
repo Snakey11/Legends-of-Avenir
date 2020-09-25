@@ -3,7 +3,7 @@
 	.equ	songWeStand_grp, voicegroup000
 	.equ	songWeStand_pri, 0
 	.equ	songWeStand_rev, 0
-	.equ	songWeStand_mvl, 127
+	.equ	songWeStand_mvl, 150
 	.equ	songWeStand_key, 0
 	.equ	songWeStand_tbs, 1
 	.equ	songWeStand_exg, 0

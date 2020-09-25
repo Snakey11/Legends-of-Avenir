@@ -734,3 +734,13 @@ SongTable(We_Wont_Give_In,songWeWontGiveIn)
 SongTable(Winds_across_the_Plains_of_Avenir,songWindsAcrossThePlainsOfAvenir)
 #include "WindsAcrossThePlainsOfAvenir.event"
 }
+
+{
+SongTable(A_Formidable_Friend_Joins_in_the_Fray,songAFormidableFriendJoinsInTheFray)
+#include "AFormidableFriendJoinsInTheFray.event"
+}
+
+{
+SongTable(Avatars_of_Avenir,songAvatarsOfAvenir)
+#include "AvatarsOfAvenir.event"
+}
