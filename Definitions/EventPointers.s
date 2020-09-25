@@ -29,6 +29,7 @@
 .avoid 0xCE
 .avoid 0xE6
 .avoid 0xEA
+.avoid 0xED
 
 ArcanaeCapitalMap 0x04
 ArcanaeOutpostMap
@@ -114,6 +115,8 @@ KendrickShipMap
 RipBlaineMap
 PrisonBreakMap
 ClintManorMap
+MistlainThroneCutsceneMap
+ArcanaeEscapeMap
 
 ArcanaeCapitalChanges
 BanditPassChanges
@@ -155,6 +158,7 @@ PortSelsingChanges
 PrisonBreakChanges
 ClintManorChanges
 SmallRuinChanges
+ArcanaeEscapeChanges
 
 DesertTempleObjectSet
 DesertTemplePalette
@@ -218,3 +222,5 @@ Military6AcceptHoldEvents
 Military7AcceptHoldEvents
 
 Mage1Events
+Mage2SearchEvents
+Mage2LeaveEvents

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="15" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="3C00CE3E" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/3C00CE3E.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="16" height="15">
+  <properties>
+   <property name="Anims" value="_3CAnims"/>
+   <property name="ChapterID" value="MageLeave2"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="ArcanaeEscapeChanges"/>
+   <property name="MapID" value="ArcanaeEscapeMap"/>
+   <property name="ObjectType" value="0x3C"/>
+   <property name="PaletteID" value="0xCE"/>
+   <property name="TileConfig" value="0x3E"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJylUrsKwjAUTVMXHYTWfoSPwckG+x/+gB/Qz3LxB5wFdejSURwFcQg4180bmounlxQEh0OSm5z7OCdNpFTTgzfhSljFSuUeRux3dD/VSi16UHl+rbt5+PyMWkziMJi/JGygLp/3dP8gJLRPA7DQv4F8vD8QboQT4SJwhvl57gry/cu3P/DHup1x4Gd9QT6nfUHrWniCHrl6WUDP3GuPviCPz0fQdqu6+jk++zD0fTqMIOfd8x03C+iPvmSiR44nPp4G9OdeLfSJns+gL4e5/ua2UL/UrQdO8xLeOG0LsXLNIvCvjXhT667/RsTxX4c8kPcy/gEsUWMf
+  </data>
+ </layer>
+ <layer name="BottomChest" width="16" height="15" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="3"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="10"/>
+   <property name="Y" value="9"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4D2wGmgHTBMAQBccABD
+  </data>
+ </layer>
+ <layer name="TopChest" width="16" height="15" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="2"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="11"/>
+   <property name="Y" value="8"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4A44DTQDhgFGAAAa+gAQw==
+  </data>
+ </layer>
+ <layer name="LeftDoor" width="16" height="15" visible="0">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="2"/>
+   <property name="X" value="8"/>
+   <property name="Y" value="7"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFwxm8ZmRgYKRAvzAzA4MQM/n6T1No/yjADwAfqQHm
+  </data>
+ </layer>
+ <layer name="TopDoor" width="16" height="15" visible="0">
+  <properties>
+   <property name="Height" value="2"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="9"/>
+   <property name="Y" value="6"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFgx1oMTEwCDIzMGgykaefEYiFmCH0KBheAAAOOQCD
+  </data>
+ </layer>
+</map>

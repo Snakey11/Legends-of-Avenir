@@ -156,6 +156,9 @@ ALIGN 4
 	{
 	#include "Mage/Mage 1.event"
 	}
+	{
+	#include "Mage/Mage 2 Leave.event"
+	}
 #endif
 
 #include "Sassy.event"
