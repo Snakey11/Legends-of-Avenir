@@ -5,6 +5,8 @@
 
 #include "Chapter Objectives.event"
 
+#include "Escapes.event"
+
 
 #include "Death Quotes.event"
 
@@ -109,3 +111,5 @@
 
 
 #include "Mage/Mage 1.event"
+
+#include "Mage/Mage 2 Leave.event"
