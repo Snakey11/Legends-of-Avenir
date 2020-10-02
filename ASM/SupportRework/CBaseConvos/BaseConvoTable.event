@@ -42,6 +42,11 @@
 			text(Military6AcceptHoldAdelineRemusSupportText)
 			baseSupport(Adeline,Remus,ASupport)
 			eventID(0x07)
+		Entry
+			bg(0x2A)
+			text(Military6AcceptHoldTactDerekSupportText)
+			baseSupport(0xFF,Derek,ASupport)
+			eventID(0x08)
 	Chapter(MilitaryAcceptHold7)
 		Entry
 			bg(0x0D)
