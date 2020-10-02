@@ -355,6 +355,7 @@ SwordAnim(0x0D)
 SpearAnim(SpearHeroSpear)
 AxeAnim(0x0E)
 HandAxeAnim(0x0F)
+UnarmedAnim(0x10)
 WORD 0x0 0x0
 
 TruerbladeAnim:
