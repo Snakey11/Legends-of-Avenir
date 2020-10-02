@@ -172,6 +172,13 @@ STAL 0x40
 MOVE 0x0 Elanil [16,6]
 ENUN
 Text(Merc6MilitiaWaitArcanaeEndingText)
+FADI 0x5
+CLEA 0x0
+CLEE 0x0
+CLEN 0x0
+LOAD1 0x1 LoadUzkalisAlly
+ENUN
+CLEA 0x0
 SetBackground(0x0D)
 Text(Merc6MilitiaWaitArcanaeFinocElanilEndingText)
 MoveToChapter(MercenaryMilitiaWaitArcanae7)
@@ -368,4 +375,8 @@ Turn13LoopUnits:
 UNIT Cesarian Cavalier Rex Level(16,Enemy,True) [4,0] 0x00 0x00 0x00 0x00 [Axereaver] NoAI
 UNIT Cesarian Paladin Rex Level(3,Enemy,True) [25,24] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI
 UNIT Cesarian Cavalier Rex Level(15,Enemy,True) [24,0] 0x00 0x00 0x00 0x00 [ShortSpear] NoAI
+UNIT
+
+LoadUzkalisAlly:
+UNIT Uzkalis GaidenSage Uzkalis Level(10,Ally,True) [21,12] 0x00 0x00 0x00 0x00 [Thoron,Arcwind] [0]
 UNIT

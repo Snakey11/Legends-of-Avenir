@@ -80,7 +80,7 @@ STAL 0x20
 Text(Merc7MilitiaWaitArcanaeUzkalisHereText)
 SVAL 0xB Coords(7,4)
 WARP_OUT
-DISA Uzkalis
+DISA BossUzkalis
 STAL 0x20
 Text(Merc7MilitiaWaitArcanaeUzkalisGoneText)
 FADI 0x5
@@ -103,8 +103,8 @@ WarpIn(8,2,LoadUzkalisCamp)
 ENUN
 STAL 0x10
 FADI 0x5
-CLEA Finoc
-CLEN Uzkalis
+CLEA 0x0
+CLEN 0x0
 SVAL 0xB Coords(7,5)
 LOMA OutsideTempleCutscene
 LOAD2 0x1 OutsideTempleAllies
@@ -129,7 +129,6 @@ CAM1 [14,11]
 STAL 0x10
 LOAD3 0x1 PlayerLoading3
 LOAD2 0x1 LoadTempleAllies
-LOAD1 0x1 LoadUzkalisAlly
 ENUN
 REVEAL Finoc
 DISA Maximus
@@ -318,11 +317,11 @@ UNIT Helmer Soldier Helmer Level(11,Ally,True) [9,6] 0x00 0x00 0x00 0x00 [0] [0]
 UNIT
 
 LoadUzkalisTemple:
-UNIT Uzkalis GaidenSage Uzkalis Level(11,NPC,True) [7,4] 0x00 0x00 0x00 0x00 [SteelLance,KnightCrest] [0]
+UNIT BossUzkalis GaidenSage Uzkalis Level(11,NPC,True) [7,4] 0x00 0x00 0x00 0x00 [SteelLance,KnightCrest] [0]
 UNIT
 
 LoadUzkalisCamp:
-UNIT Uzkalis GaidenSage Uzkalis Level(11,NPC,True) [8,2] 0x00 0x00 0x00 0x00 [0] [0]
+UNIT BossUzkalis GaidenSage Uzkalis Level(11,NPC,True) [8,2] 0x00 0x00 0x00 0x00 [0] [0]
 UNIT
 
 OutsideTempleAllies:
@@ -381,9 +380,6 @@ UNIT Elanil Monk Luke Level(1,Ally,True) [21,9] 0x00 0x00 0x00 0x00 [BraveLance,
 UNIT Finoc Monk Luke Level(1,Ally,True) [21,8] 0x00 0x00 0x1 REDA20R8 [BraveLance,HandAxe] [0]
 UNIT Val Shaman_F Val Level(9,Ally,True) [21,12] 0x00 0x00 0x00 0x00 [Worm,Nosferatu] [0]
 UNIT Helmer Soldier Helmer Level(11,Ally,True) [21,13] 0x00 0x00 0x00 0x00 [SteelLance,KnightCrest] [0]
-UNIT
-
-LoadUzkalisAlly:
 UNIT Uzkalis GaidenSage Uzkalis Level(10,Ally,True) [21,12] 0x00 0x00 0x00 0x00 [Thoron,Arcwind] [0]
 UNIT
 
