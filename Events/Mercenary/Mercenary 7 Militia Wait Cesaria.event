@@ -358,7 +358,7 @@ UNIT Derek Brigand2 PlayerMArcher Level(1,Ally,True) [12,10] 0x00 0x00 0x00 0x00
 UNIT
 
 LoadNarrator:
-UNIT Narrator NarratorClass Narrator Level(1,NPC,True) [11,11] 0x00 0x00 0x00 0x00 [SilverBlade] [0] 
+UNIT Narrator NarratorClass Narrator Level(1,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [SilverBlade] [0] 
 UNIT
 
 Turn3Units:
