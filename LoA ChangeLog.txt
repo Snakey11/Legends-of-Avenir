@@ -64,6 +64,28 @@ Made walking sounds work a lot better and fixed some
 Fixed the class display hack not reading the maximum character ID correctly
 Fixed female monk map sprites
 Not anything that'll appear in-game, but Snek has shifted CSV management (again)
+"Bergentruckung" has been changed to "Asgore"
+Fixed a text bug in Vicar and Arc's battle quote in Mercenary 2 Bandit
+Fixed the TEXTCONT2 bug in the start of Mercenary 3 Bandit
+Fixed the GS loading as an NPC at the end of Mercenary 7 Militia Wait Cesaria
+Fixed Uzkalis not being loaded properly as an ally in Mercenary 7 Militia Wait Arcanae
+Fixed Remus's soldier palette being wrong
+Changed help text on the prep screen so it doesn't reference a world map
+Fixed a small mistake in Elanil/Finoc B Support in a Military Pass route
+Fixed military Tact's description being gendered
+Fixed tile errors in the map for Military Pass 3
+Connor has been given a lancereaver in Military Pass 3
+I think F Tact myrm promo had 2 lethality skills, so that's been fixed
+Fixed mounted brigand movement costs
+Roger (Boss of Mercenary 3 Bandit) now moves and has been buffed
+Fixed my music reference script to play nicely with the CSV changes
+Fixed Mercenary 6 Militia Kill seeming to end prematurely
+Fixed a mistake with the dread fighter M unarmed animation not writing correctly
+Went through all palettes and removed all ugly bug palettes. Palettes that don't exist yet will just be generic palettes
+Also caught numerous other palette mistakes and fixed them
+Seraph Knight (Merc F peg knight custom promo) no longer has sword access and have had their promo boosts nerfed
+Fixed Jurgen not having an unarmed animation
+
 
 v1.10 (This was only released to playtesters in the Discord server to catch bugs before v2.0.)
 5th and final Military route is a go. Kill Sean after accepting the promotion in chapter 3. Route includes all supports as well
