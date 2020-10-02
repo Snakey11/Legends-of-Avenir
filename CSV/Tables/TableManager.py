@@ -38,8 +38,7 @@ BEING ABLE TO KEEP DATA FROM DIFFERENT "TABLES" IN-GAME IN THE SAME CSV.
                     MAX_ENTRIES 0xFF
                 
     We can read all of these CSV data and sort them using field names. At this point... should we have no unknown data?
-        To handle unknown data, why don't we force naming each field but allow n-long strings of bytes?
-    We'll be pretty versatile with black rows and columns, but we'll error on data apparently being missing.
+    We'll be pretty versatile with blank rows and columns.
     I see no reason to have any data in the top left cell.
 """
 
