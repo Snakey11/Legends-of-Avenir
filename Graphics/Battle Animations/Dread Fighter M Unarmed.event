@@ -1,7 +1,7 @@
 ///////Animation Install.event///////
     
 PUSH
-AnimTableEntry(0x0) //CHANGE THIS TO THE SLOT YOU ARE REPLACING
+AnimTableEntry(DreadFighterMUnarmed) //CHANGE THIS TO THE SLOT YOU ARE REPLACING
 WORD 0 0 0 //empty name field, who cares
 POIN Anim_drem_ua1_sectiondata
 POIN Anim_drem_ua1_framedata
