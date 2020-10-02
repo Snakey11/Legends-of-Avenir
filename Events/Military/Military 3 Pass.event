@@ -173,7 +173,7 @@ UNIT
 
 ChapterMeanies:
 UNIT BossAdlez Brigand BossAdlez Level(11,Enemy,True) [2,17] 0x00 0x00 0x00 0x00 [KillerAxe,ShortAxe] GuardAI
-UNIT BossConnor Mercenary BossAdlez Level(10,Enemy,True) [1,13] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
+UNIT BossConnor Mercenary BossAdlez Level(10,Enemy,True) [1,13] 0x00 0x00 0x00 0x00 [SteelSword,Lancereaver] AttackInRangeAI
 UNIT GerwickBandit Myrmidon BossAdlez Level(10,Enemy,True) [8,6] 0x00 0x00 0x00 0x00 [SlimSword] NoAI
 UNIT GerwickBandit Mercenary BossAdlez Level(12,Enemy,True) [7,7] 0x00 0x00 0x00 0x00 [Wyrmslayer] NoAI
 UNIT GerwickBandit Pirate BossAdlez Level(11,Enemy,True) [5,4] 0x00 0x00 0x00 0x00 [HandAxe] GuardAI
