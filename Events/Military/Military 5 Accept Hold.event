@@ -21,8 +21,6 @@ InfiniteTurnEventPlayer(0x10,SpawnFriends1,1)
 InfiniteTurnEventPlayer(0x11,SpawnFriends2,1)
 TurnEventEnemy(0x00,Turn1,1)
 TurnEventPlayer(0x00,Turn2,2)
-TurnEventPlayer(0x00,Turn3,3)
-TurnEventPlayer(0x00,Turn4,4)
 TurnEventPlayer(0x00,Turn6,6)
 TurnEventPlayer(0x00,Turn8,8)
 TurnEventPlayer(0x00,Turn11,11,15)
@@ -256,22 +254,6 @@ STAL 0x10
 NoFade
 EndA2
 
-Turn3:
-CamON
-LOAD1 0x1 Turn3Units
-ENUN
-CamOFF
-NoFade
-EndA2
-
-Turn4:
-CamON
-LOAD1 0x1 Turn4Units
-ENUN
-CamOFF
-NoFade
-EndA2
-
 Turn6:
 CamON
 LOAD1 0x1 Turn6Units
@@ -332,7 +314,7 @@ UNIT
 
 Meanies2:
 UNIT Arcanian Archer BossHelmer Level(15,Enemy,True) [17,8] Drop 0x00 0x00 0x00 [SteelBow,ChestKey_5] NoAI
-UNIT Arcanian Soldier BossHelmer Level(16,Enemy,True) [13,13] Drop 0x00 0x00 0x00 [IronLance,DoorKey] NoAI
+UNIT Arcanian Soldier BossHelmer Level(16,Enemy,True) [13,13] 0x00 0x00 0x00 0x00 [IronLance] NoAI
 UNIT Arcanian Knight BossHelmer Level(15,Enemy,True) [13,11] 0x00 0x00 0x00 0x00 [Hammer] NoAI
 UNIT Arcanian Fighter BossHelmer Level(13,Enemy,True) [12,9] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
 UNIT Arcanian General BossHelmer Level(4,Enemy,True) [11,17] 0x00 0x00 0x00 0x00 [Javelin,BraveSword] GuardAI
@@ -361,20 +343,6 @@ UNIT Cesarian Soldier 0x00 Level(5,NPC,True) [0,19] 0x00 0x00 0x00 0x00 [0] Loot
 UNIT Cesarian Soldier 0x00 Level(2,NPC,True) [7,19] 0x00 0x00 0x00 0x00 [0] LootingThiefAI
 UNIT Cesarian Soldier 0x00 Level(3,NPC,True) [9,12] 0x00 0x00 0x00 0x00 [0] LootingThiefAI
 UNIT Cesarian Soldier 0x00 Level(2,NPC,True) [9,10] 0x00 0x00 0x00 0x00 [0] LootingThiefAI
-UNIT
-
-Turn3Units:
-UNIT Arcanian Cavalier BossHelmer Level(14,Enemy,True) [11,0] Drop 0x00 0x00 0x00 [IronLance,DoorKey] NoAI
-UNIT Arcanian Cavalier BossHelmer Level(16,Enemy,True) [12,0] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
-UNIT Arcanian Archer BossHelmer Level(15,Enemy,True) [3,19] 0x00 0x00 0x00 0x00 [PoisonBow] NoAI
-UNIT Arcanian Swordmaster BossHelmer Level(3,Enemy,True) [3,19] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
-UNIT
-
-Turn4Units:
-UNIT Arcanian Warrior BossHelmer Level(2,Enemy,True) [10,19] 0x00 0x00 0x00 0x00 [SteelAxe,IronBow] NoAI
-UNIT Arcanian Fighter BossHelmer Level(17,Enemy,True) [11,19] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
-UNIT Arcanian Spellsword BossHelmer Level(15,Enemy,True) [19,14] 0x00 0x00 0x00 0x00 [IronBlade,Thunder] NoAI
-UNIT Arcanian Knight BossHelmer Level(18,Enemy,True) [19,12] 0x00 0x00 0x00 0x00 [SteelLance,Hammer] NoAI
 UNIT
 
 Turn6Units:

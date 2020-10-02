@@ -15,7 +15,7 @@
    <property name="TileConfig" value="0x1A"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJylkz9OQkEQxvftq7QwyBHstLIhCAcw7wJWHEB64x0oVU5gTSNwAkk0JjRcQWJhYkLjBZzJzuTNG76FEItfZpn53uz8WdplCO1/MIwhPJJ9IsbiW5Hv1OmQD8VGdJ6SnRFz8bWI39j8BvlQ7Jq4ofMDcU9MikRl7qyMP8ex0U/pfEfMiFdiEdMc3kj3XqSz+nN2WTTn8SL1fpFdxzQHzcfnz5hiCNafZHrolYlboivwuV/WMQTXh2q38+iYnPvgfKiHK3Ofz3cUt3egmkq+PQtNq/EPkG9R1Pf5O4eSuye/1Wr8W7T8VleiXbs7bL6Rqf0Z7GUj2kthUG7vcGPy5Xam/Rzabw7fr43t6hfta2LiSzC/c6e/iLWG7Y+rn/FaOz/0jrsm3gf9eu0h2J7Uore66x3bGdieBmK1Nrtf3SvaA+ofYfe7b68M/786wP4B0HiaDQ==
+   eJydUztOw0AQ9e5WUCCRI9BBRWMZ5wAoF6DakiLpEXegBHKMNCScIJFAltwEboCVAgkJIXEBZrUz8vhlo1gUTzOeeTt/D1yWvdssG/xTTggPpD8SpmxbE94S3D72O5JzkgvCs4u2H7L92u38feyX9H1F8p5wS5iZFiOVdwQ+xCH5jznHnHBDWBCWhBXh2sVZvBD31UQ92MSPsjbdWTxxvRtGY+MsJF7QP5R/A9xd9ZeuxZhQMII+dF2/xiRR89J255ETz6uYXkltL9zu+i84X5gHxjuw2zsQzpjfnWQxhsic31am1SXmyrT5dE5dZ8n8kr8l3ydz13yvQW9UzR7ine65p2/mnjPC+yOb5kj9qX1JP1Wilz794p6wX81pwIbxcF8z5a8T88MZndmWE+QX1B+AXD2/1B175R8metZcvF3UC4DuSSTe6r471jPQPUndUlulbkH2inVgPyXU7hX0fhu4szqx+/B/5Qn5B0BEsrU=
   </data>
  </layer>
  <layer name="Chest 5" width="20" height="20" visible="0">
@@ -100,18 +100,6 @@
   </properties>
   <data encoding="base64" compression="zlib">
    eJxjYBgFo2AU0BtoMTEwMFLRPEtmBgZzZuqZd5qRuu4bBcMTAABf9AFx
-  </data>
- </layer>
- <layer name="Chest Room" width="20" height="20" visible="0">
-  <properties>
-   <property name="Height" value="2"/>
-   <property name="ID" value="4"/>
-   <property name="Width" value="3"/>
-   <property name="X" value="16"/>
-   <property name="Y" value="10"/>
-  </properties>
-  <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AU0AqsY2RgMGVmYNBkoo55QOMYzJgh9CgYBQMNAK4wAU4=
   </data>
  </layer>
  <layer name="Cell 2" width="20" height="20" visible="0">
