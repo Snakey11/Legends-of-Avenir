@@ -96,7 +96,7 @@ ChristinaPaladinPaletteID
 ClaraTroubadourPaletteID
 ClaraMageKnightPaletteID
 ClaraValkyriePaletteID
-SylvaineWyvernLordPaletteID
+SylvaineMaligKnightPaletteID
 ShanleyMagePaletteID
 ShanleySagePaletteID
 ShanleyMageKnightPaletteID
@@ -142,3 +142,4 @@ ZahevaDreadFighterPaletteID
 YvettePegasusKnightPaletteID
 YvetteFalcoknightPaletteID
 YvetteWyvernKnightPaletteID
+WilliamGeneralPaletteID
