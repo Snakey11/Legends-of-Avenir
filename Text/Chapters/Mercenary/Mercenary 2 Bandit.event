@@ -10,30 +10,30 @@ have to trust you?[A]
 [FarRight]Your buddies attacked me back there.[NL]
 If anyone here has cause to not trust[A][NL]
 someone, I shouldn't be trusting[NL]
-you, but here I am.[A][Left][LoadBaret][X]
+you, but here I am.[A][Left][LoadBaret][CloseSpeech][X]
 
 ## Merc2BanditTactMeetsOthersHimText
 [FarLeft]He has a point there, Vicar. We might as[NL]
 well bring him along. Maybe[A][NL]
-Adlez will have some use for him.[A][X]
+Adlez will have some use for him.[A][CloseSpeech][X]
 
 ## Merc2BanditTactMeetsOthersHerText
 [FarLeft]She has a point there, Vicar. We might as[NL]
 well bring her along. Maybe[A][NL]
-Adlez will have some use for her.[A][X]
+Adlez will have some use for her.[A][CloseSpeech][X]
 
 ## Merc2BanditTactMeetsOthersPart2Text
 [Right]Perhaps... What do you think, Baret?[A]
 [Left]We've been just us for ages. I see no[NL]
-reason to add another member to our group.[A][X]
+reason to add another member to our group.[A][CloseSpeech][X]
 
 ## Merc2BanditTactMeetsOthersHeText
 [FarLeft]Lighten up, brother. He's pretty skilled,[NL]
-and Danaan's militia are no pushovers.[A][X]
+and Danaan's militia are no pushovers.[A][CloseSpeech][X]
 
 ## Merc2BanditTactMeetsOthersSheText
 [FarLeft]Lighten up, brother. She's pretty skilled,[NL]
-and Danaan's militia are no pushovers.[A][X]
+and Danaan's militia are no pushovers.[A][CloseSpeech][X]
 
 ## Merc2BanditTactMeetsOthersPart3Text
 [Right]I'll make the call. What's your name?[A]
@@ -164,8 +164,9 @@ no choice but to cut you down![A][X]
 ## Merc2BanditArcVicarBattleText
 [FarLeft][LoadArc]You... I recognize your[NL]
 face. What is your name?[A][ClearFace]
-[FarRight][LoadVicar]You have me confused with someone[NL]
-else. I'm just a mercenary.[A][ClearFace]
+[FarRight][LoadVicar]You have me confused[NL]
+with someone else. I'm just[A][NL]
+a mercenary.[A][ClearFace]
 [FarLeft][LoadArc]No... You served under Warlord[NL]
 Tyrone. But then you disappeared.[A][NL]
 Why do you turn on your countrymen?[A][ClearFace]
