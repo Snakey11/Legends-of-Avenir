@@ -80,6 +80,15 @@ EdgySwordmasterMv:
 ALIGN 4
 
 
+ExecutionerSt:
+#incbin "ExecutionerSt.dmp"
+ALIGN 4
+
+ExecutionerMv:
+#incbin "ExecutionerMv.dmp"
+ALIGN 4
+
+
 GoldKnightSt:
 #incbin "GoldKnightSt.dmp"
 ALIGN 4

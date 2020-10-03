@@ -17,7 +17,7 @@
 	#define EndOfROM $FE4000
 	#define EndofROM EndOfROM
 	
-	#define EndOfAnimations $1280000
+	#define EndOfAnimations $1300000
 	
 	ORG FreeSpaceA
 	

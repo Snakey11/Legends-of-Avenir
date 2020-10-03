@@ -77,7 +77,7 @@ ALIGN 4
 #include "HybridClasses/HybridHooks.lyn.event"
 ALIGN 4
 SpellswordList:
-BYTE SpellswordM SpellswordF SpellswordM2 SpellswordF2 BattleSage BattleSageF DreadFighterM DreadFighterF MaligKnight 0x00
+BYTE SpellswordM SpellswordF SpellswordM2 SpellswordF2 BattleSage BattleSageF DreadFighterM DreadFighterF MaligKnight Executioner 0x00
 
 ALIGN 4
 SpellswordERankList:

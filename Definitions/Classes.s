@@ -15,8 +15,7 @@ WyvernGeneral
 MarksmanM
 MasterKnightM
 ChampionM
-TruebladeF
-TruebladeM
+Trueblade
 MountedBrigand
 Gladiator
 SeraphKnight
@@ -79,3 +78,5 @@ SpellswordF
 ChampionF
 ShadeKnightM
 ShadeKnightF
+Executioner
+SentinelF

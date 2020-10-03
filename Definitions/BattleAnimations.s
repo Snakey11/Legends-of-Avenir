@@ -97,12 +97,8 @@ SentinelLance
 SentinelAxe
 SentinelHandAxe
 SentinelUnarmed
-TruebladeMSword
 TruebladeSword
-TruebladeMUnarmed
 TruebladeUnarmed
-TruebladeFSword
-TruebladeFUnarmed
 TruerbladeSword
 TruerbladeUnarmed
 WarlockAxe
@@ -200,3 +196,11 @@ ShadeKnightMMagic
 ShadeKnightMStaff
 ShadeKnightFMagic
 ShadeKnightFStaff
+ExecutionerSword
+ExecutionerMagic
+ExecutionerUnarmed
+SentinelFSword
+SentinelFLance
+SentinelFAxe
+SentinelFHandAxe
+SentinelFUnarmed

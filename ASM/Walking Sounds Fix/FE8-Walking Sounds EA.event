@@ -107,8 +107,7 @@ WalkingSound(WyvernGeneral,WyvernSound)
 WalkingSound(HunterM,FootSound)
 WalkingSound(MasterKnightM,HorseSound)
 WalkingSound(Champion,FootSound)
-WalkingSound(TruebladeF,FootSound)
-WalkingSound(TruebladeM,FootSound)
+WalkingSound(Trueblade,FootSound)
 WalkingSound(MountedBrigand,HorseSound)
 WalkingSound(Gladiator,FootSound)
 WalkingSound(BlackFalcoknight,PegasusSound)
@@ -168,6 +167,8 @@ WalkingSound(SpellswordF,FootSound)
 WalkingSound(ChampionF,FootSound)
 WalkingSound(ShadeKnightM,HorseSound)
 WalkingSound(ShadeKnightF,HorseSound)
-	
+WalkingSound(Executioner,FootSound)
+WalkingSound(SentinelF,ArmorSound)
+
 POP
 	

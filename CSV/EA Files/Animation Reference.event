@@ -89,6 +89,12 @@ SwordAnim(EmperorSword)
 UnarmedAnim(EmperorUnarmed)
 WORD 0x0 0x0
 
+ExecutionerAnim:
+SwordAnim(ExecutionerSword)
+DarkAnim(ExecutionerMagic)
+UnarmedAnim(ExecutionerUnarmed)
+WORD 0x0 0x0
+
 GaidenSageAnim:
 StaffAnim(GaidenSageStaff)
 AnimaAnim(GaidenSageMagic)
@@ -289,6 +295,14 @@ HandAxeAnim(SentinelHandAxe)
 UnarmedAnim(SentinelUnarmed)
 WORD 0x0 0x0
 
+SentinelFAnim:
+SwordAnim(SentinelFSword)
+SpearAnim(SentinelFLance)
+AxeAnim(SentinelFAxe)
+HandAxeAnim(SentinelFHandAxe)
+UnarmedAnim(SentinelFUnarmed)
+WORD 0x0 0x0
+
 SeraphKnightAnim:
 SwordAnim(SeraphKnightSword)
 SpearAnim(SeraphKnightSpear)
@@ -339,15 +353,9 @@ AnimaAnim(MaximusBattleSageSword)
 UnarmedAnim(MaximusBattleSageUnarmed)
 WORD 0x0 0x0
 
-TruebladeMAnim:
-SwordAnim(TruebladeMSword)
-UnarmedAnim(TruebladeMUnarmed)
-WORD 0x0 0x0
-
-TruebladeFAnim:
-SwordAnim(TruebladeFSword)
-BowAnim(TruebladeFBow)
-UnarmedAnim(TruebladeFUnarmed)
+TruebladeAnim:
+SwordAnim(TruebladeSword)
+UnarmedAnim(TruebladeUnarmed)
 WORD 0x0 0x0
 
 SpearHeroAnim:

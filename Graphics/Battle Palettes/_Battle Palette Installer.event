@@ -140,15 +140,15 @@ setPalette(MercenaryMFighterPaletteID,MercenaryMFighterPalette)
 setPalette(MercenaryMPiratePaletteID,MercenaryMPiratePalette)
 setPalette(MercenaryMBrigandPaletteID,MercenaryMBrigandPalette)
 setPalette(MercenaryMChampionPaletteID,MercenaryMChampionPalette)
-setPalette(MercenaryMTruebladePaletteID,MercenaryMTruebladePalette)
+setPalette(MercenaryMExecutionerPaletteID,MercenaryMExecutionerPalette)
 setPalette(MercenaryMWarlockPaletteID,MercenaryMWarlockPalette)
-setPalette(MercenaryMMountainierPaletteID,MercenaryMMountainierPalette)
+setPalette(MercenaryMGladiatorPaletteID,MercenaryMGladiatorPalette)
 setPalette(MercenaryMMauraderPaletteID,MercenaryMMauraderPalette)
 setPalette(MercenaryFMercenaryPaletteID,MercenaryFMercenaryPalette)
 setPalette(MercenaryFMyrmidonPaletteID,MercenaryFMyrmidonPalette)
 setPalette(MercenaryFPegasusKnightPaletteID,MercenaryFPegasusKnightPalette)
 setPalette(MercenaryFCombatantPaletteID,MercenaryFCombatantPalette)
-setPalette(MercenaryFShadowPaletteID,MercenaryFShadowPalette)
+setPalette(MercenaryFExecutionerPaletteID,MercenaryFExecutionerPalette)
 setPalette(MercenaryFSeraphKnightPaletteID,MercenaryFSeraphKnightPalette)
 
 setPalette(MilitaryMCavalierPaletteID,MilitaryMCavalierPalette)
@@ -240,12 +240,12 @@ SetPaletteFull(Zaheva,ZahevaSpellswordPaletteID,SpellswordF,ZahevaBattleSagePale
 SetPaletteFull(Zalius,0x00,0x00,ZaliusSwordmasterPaletteID,Swordmaster,0x00,0x00)
 
 SetPaletteFull(PlayerMMercenary,MercenaryMMercenaryPaletteID,MercenaryM2,MercenaryMChampionPaletteID,/*Champion*/0,0x00,0x00)
-SetPaletteFull(PlayerMMyrmidon,MercenaryMMyrmidonPaletteID,MyrmidonM2,MercenaryMTruebladePaletteID,/*Trueblade*/0,0x00,0x00)
+SetPaletteFull(PlayerMMyrmidon,MercenaryMMyrmidonPaletteID,MyrmidonM2,MercenaryMExecutionerPaletteID,/*Executioner*/0,0x00,0x00)
 SetPaletteFull(PlayerMFighter,MercenaryMFighterPaletteID,Fighter2,MercenaryMWarlockPaletteID,Warlock,0x00,0x00)
-SetPaletteFull(PlayerMPirate,MercenaryMPiratePaletteID,Pirate2,MercenaryMMountainierPaletteID,Gladiator,0x00,0x00)
+SetPaletteFull(PlayerMPirate,MercenaryMPiratePaletteID,Pirate2,MercenaryMGladiatorPaletteID,/*Gladiator*/0,0x00,0x00)
 SetPaletteFull(PlayerMBrigand,MercenaryMBrigandPaletteID,Brigand2,MercenaryMMauraderPaletteID,Maurader,0x00,0x00)
 SetPaletteFull(PlayerFMercenary,MercenaryFMercenaryPaletteID,MercenaryF2,MercenaryFCombatantPaletteID,/*Combatant*/,0x00,0x00)
-SetPaletteFull(PlayerFMyrmidon,MercenaryFMyrmidonPaletteID,MyrmidonF2,MercenaryFShadowPaletteID,/*TruebladeF*/0,0x00,0x00)
+SetPaletteFull(PlayerFMyrmidon,MercenaryFMyrmidonPaletteID,MyrmidonF2,MercenaryFExecutionerPaletteID,/*Executioner*/0,0x00,0x00)
 SetPaletteFull(PlayerFPegasusKnight,MercenaryFPegasusKnightPaletteID,PegasusKnight2,MercenaryFSeraphKnightPaletteID,SeraphKnight,0x00,0x00)
 SetPaletteFull(PlayerMCavalier,MilitaryMCavalierPaletteID,CavalierM2,MilitaryMMasterKnightPaletteID,/*MasterKnightM*/0,0x00,0x00)
 SetPaletteFull(PlayerMKnight,MilitaryMKnightPaletteID,Knight2,MilitaryMCommanderPaletteID,/*Baron*/0,0x00,0x00)
@@ -283,16 +283,16 @@ MercenaryMChampionPalette:
 #incbin "Mercenary M Champion.dmp"
 
 ALIGN 4
-MercenaryMTruebladePalette:
-#incbin "Mercenary M Trueblade.dmp"
+MercenaryMExecutionerPalette:
+//#incbin "Mercenary M Executioner.dmp"
 
 ALIGN 4
 MercenaryMWarlockPalette:
 #incbin "Mercenary M Warlock.dmp"
 
 ALIGN 4
-MercenaryMMountainierPalette:
-#incbin "Mercenary M Mountainier.dmp"
+MercenaryMGladiatorPalette:
+//#incbin "Mercenary M Gladiator.dmp"
 
 ALIGN 4
 MercenaryMMauraderPalette:
@@ -315,8 +315,8 @@ MercenaryFCombatantPalette:
 #incbin "Mercenary F Combatant.dmp"
 
 ALIGN 4
-MercenaryFShadowPalette:
-#incbin "Mercenary F Shadow.dmp"
+MercenaryFExecutionerPalette:
+//#incbin "Mercenary F Executioner.dmp"
 
 ALIGN 4
 MercenaryFSeraphKnightPalette:

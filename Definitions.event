@@ -97,7 +97,6 @@
 #define Spellsword SpellswordM
 #define BattleSage BattleSageM
 #define DreadFighter DreadFighterM
-#define Trueblade TruebladeM
 #define Hector HectorClass
 #define KnightM2 Knight2
 #define KnightF2 Knight2

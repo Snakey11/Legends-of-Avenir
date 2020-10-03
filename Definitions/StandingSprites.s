@@ -97,3 +97,4 @@ DreadFighterFSprite
 GoldKnightSprite
 SpellswordSprite
 SpellswordFSprite
+ExecutionerSprite

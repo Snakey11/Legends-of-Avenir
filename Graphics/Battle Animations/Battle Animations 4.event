@@ -249,3 +249,21 @@
 
 #include "Shade Knight F Staff.event"
 }
+{
+#include "Executioner Sword.event"
+
+#include "Executioner Magic.event"
+
+#include "Executioner Unarmed.event"
+}
+{
+#include "Sentinel F Sword.event"
+
+#include "Sentinel F Lance.event"
+
+#include "Sentinel F Axe.event"
+
+#include "Sentinel F Hand Axe.event"
+
+#include "Sentinel F Unarmed.event"
+}
