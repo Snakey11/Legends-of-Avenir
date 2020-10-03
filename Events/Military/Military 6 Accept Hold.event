@@ -18,7 +18,6 @@ POIN BeginningScene EndingScene
 //Label TurnBasedEvents
 TurnBasedEvents:
 TurnEventPlayer(0x00,Turn2,2)
-TurnEventPlayer(0x00,Turn4,4)
 TurnEventPlayer(0x00,Turn5,5)
 TurnEventPlayer(0x00,Turn8,8)
 InfiniteTurnEventPlayer(0x18,SpawnRoomUnits,0)
@@ -115,14 +114,6 @@ CamOFF
 NoFade
 EndA2
 
-Turn4:
-CamON
-LOAD1 0x1 Turn4Units
-ENUN
-CamOFF
-NoFade
-EndA2
-
 Turn5:
 CamON
 LOAD1 0x1 Turn5Units
@@ -194,23 +185,6 @@ LABEL 0x1
 NoFade
 ENDA
 
-//Label Escape points
-EscapePointPointerTable(MilitaryAcceptHold6,Military6AcceptHoldEscapePoints)
-
-Military6AcceptHoldEscapePoints:
-EscapePoint(19,6,MoveRight)
-EscapePoint(19,7,MoveRight)
-EscapePoint(19,8,MoveRight)
-EscapePoint(19,9,MoveRight)
-EscapePoint(0,5,MoveLeft)
-EscapePoint(0,6,MoveLeft)
-EscapePoint(0,7,MoveLeft)
-EscapePoint(0,8,MoveLeft)
-EscapePoint(0,9,MoveLeft)
-EscapePoint(5,13,MoveRight)
-EscapePoint(5,14,MoveRight)
-//EndLabel
-
 	/*UNIT DATA*/
 
 //Label Meanies
@@ -264,10 +238,6 @@ Turn2Units:
 UNIT Arcanian WyvernRider Clint Level(15,Enemy,True) [0,5] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
 UNIT Arcanian WyvernLord Clint Level(4,Enemy,True) [0,7] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI
 UNIT Arcanian WyvernRider Clint Level(16,Enemy,True) [0,9] 0x00 0x00 0x00 0x00 [Javelin] NoAI
-UNIT
-
-Turn4Units:
-UNIT Looter Thief Looter Level(11,Enemy,True) [5,13] 0x00 0x00 0x00 0x00 [PoisonSword,Lockpick] LootingThiefAI
 UNIT
 
 Turn5Units:

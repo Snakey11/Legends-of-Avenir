@@ -91,7 +91,7 @@ CLEA 0x0
 CLEE 0x0
 CHECK_EVENTID 0x19
 BNE 0x0 0x0 0xC
-	// Good ending
+	// Good ending.
 	ENUF 0x17 // Enable Tact's special death quote.
 	CAM1 [6,6]
 	LOAD3 0x1 PlayerLoading1
@@ -117,7 +117,7 @@ BNE 0x0 0x0 0xC
 	MilitaryNarratorFight(6,7)
 	GOTO 0x1
 LABEL 0x0
-	// Bad ending
+	// Bad ending.
 	ENUF 0x18 // Enable Tact's special death quote.
 	CAM1 [15,10]
 	LOAD3 0x1 PlayerLoading2

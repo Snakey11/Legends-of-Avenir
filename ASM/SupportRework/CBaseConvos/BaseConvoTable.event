@@ -62,8 +62,7 @@
 			characters(Adeline,Zaheva)
 			textGetter(SupportBaseConvoMenuTextGetter|1)
 			event(Military7AcceptHoldAdelineZahevaConvo)
-			//eventID(0x80)
-			eventID(0x00)
+			eventID(0x09)
 	Chapter(MilitaryAcceptRetreatLeave5)
 		Entry
 			bg(0x30)
