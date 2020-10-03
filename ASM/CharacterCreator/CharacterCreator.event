@@ -185,7 +185,9 @@
 	gCreatorRouteMenuCommands:
 	MenuCommand(MercenaryMenuText,0x00,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,CreatorRouteSwitchIn,0)
 	MenuCommand(MilitaryMenuText,0x00,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,CreatorRouteSwitchIn,0)
-	MenuCommand(MageMenuText,0x00,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,CreatorRouteSwitchIn,0)
+	#ifndef __NO_MAGE__
+		MenuCommand(MageMenuText,0x00,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,CreatorRouteSwitchIn,0)
+	#endif
 	WORD 0 0 0 0 0 0 0 0 0
 	
 	gCreatorRouteUIBoxTSA:
