@@ -466,7 +466,6 @@
 #define GeraldMug 0x29 // Knoll
 #define SeanMug 0x34 // Saar
 #define HalleckMug 0x20 // Saleh
-#define PascalMug 0x1B // Gerik
 //LabelEnd
 
 //Label Spell Definitions

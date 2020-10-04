@@ -262,6 +262,12 @@ NarratorPortrait:
 #incbin "Narrator_palette.dmp"
 #incbin "Narrator_minimug.dmp"
 
+PascalPortrait:
+#incbin "Pascal_mug.dmp"
+#incbin "Pascal_frames.dmp"
+#incbin "Pascal_palette.dmp"
+#incbin "Pascal_minimug.dmp"
+
 RemusPortrait:
 #incbin "Remus_mug.dmp"
 #incbin "Remus_frames.dmp"
@@ -433,6 +439,7 @@ setMugEntry(MaximusMug,MaximusPortrait,2,5,2,3)
 setMugEntry(MistlainMug,MistlainPortrait,4,5,4,3)
 setMugEntry(MurielMug,MurielPortrait,3,6,3,4)
 setMugEntry(NarratorMug,NarratorPortrait,3,5,3,3)
+setMugEntry(PascalMug,PascalPortrait,3,6,3,3)
 setMugEntry(RemusMug,RemusPortrait,2,5,3,3)
 setMugEntry(RexMug,RexPortrait,2,5,2,3)
 setMugEntry(RobertMug,RobertPortrait,3,5,2,3)

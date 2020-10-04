@@ -27,7 +27,6 @@
 [LoadMage] = [LoadFace][0x10][0x01]
 [LoadPat] = [LoadFace][0x16][0x01]
 [LoadAaron] = [LoadFace][0x1B][0x01]
-[LoadPascal] = [LoadFace][0x1B][0x01]
 [LoadOfficial] = [LoadFace][0x20][0x01]
 [LoadHalleck] = [LoadFace][0x20][0x01]
 [LoadRichter] = [LoadFace][0x23][0x01]
