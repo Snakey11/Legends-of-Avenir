@@ -96,7 +96,7 @@ EnterStop
 MUSC Victory
 Text(Merc1PreMenuText)//Convo : Bandits flee
 STAL 0x10
-ASMC CallMerc1Menu+1
+ASMC CallMerc1Menu|1
 MUSC Advance
 BNE 0xA 0xC 0x0
 	Text(Merc1HelpDanaanText)//Text if helping Danaan
