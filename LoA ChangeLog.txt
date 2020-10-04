@@ -85,7 +85,12 @@ Went through all palettes and removed all ugly bug palettes. Palettes that don't
 Also caught numerous other palette mistakes and fixed them
 Seraph Knight (Merc F peg knight custom promo) no longer has sword access and have had their promo boosts nerfed
 Fixed Jurgen not having an unarmed animation
-
+Changed Myrmidon Tact promos to the Executioner
+Female sentinel is available with Soldier Tact
+Implemented Gamma's AI optimization
+Fixed Servius's animation breaking
+Fixed Efil not always having Killing Machine
+Pascal has a new mug! -- Credit RandomWizard
 
 v1.10 (This was only released to playtesters in the Discord server to catch bugs before v2.0.)
 5th and final Military route is a go. Kill Sean after accepting the promotion in chapter 3. Route includes all supports as well
