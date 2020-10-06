@@ -91,6 +91,8 @@ Implemented Gamma's AI optimization
 Fixed Servius's animation breaking
 Fixed Efil not always having Killing Machine
 Pascal has a new mug! -- Credit RandomWizard
+Switched to the correct knight Tact promotion animation (baron with cape)
+Fixed a turn one phase theme switch in Military 6 Accept Retreat Help
 
 v1.10 (This was only released to playtesters in the Discord server to catch bugs before v2.0.)
 5th and final Military route is a go. Kill Sean after accepting the promotion in chapter 3. Route includes all supports as well
