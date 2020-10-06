@@ -369,7 +369,7 @@ MilitaryMMasterKnightPalette:
 
 ALIGN 4
 MilitaryMCommanderPalette:
-#incbin "Military M Commander.dmp"
+//#incbin "Military M Commander.dmp"
 
 ALIGN 4
 MilitaryMImpalerPalette:
