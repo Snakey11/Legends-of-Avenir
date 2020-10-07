@@ -26,7 +26,7 @@ Fixed an elevation error in the Haedric castle
 Fixed some confusion with Gladiator vs Basileus map sprites
 Fixed a potential softlock in the ending of Military 7 Accept Retreat Help
 Christina's mug has been updated! -- Credit Levin and Star
-Arya has a new mug! -- Credit Arya
+Arya has a new mug! -- Credit Levin
 Forrest's mug has been updated! -- Credit Star
 Finoc has a new mug! -- Credit Atey (Sponsored by Bartz)
 Izuk's mug has been updated! -- Credit Vlak
@@ -93,6 +93,9 @@ Fixed Efil not always having Killing Machine
 Pascal has a new mug! -- Credit RandomWizard
 Switched to the correct knight Tact promotion animation (baron with cape)
 Fixed a turn one phase theme switch in Military 6 Accept Retreat Help
+Spellswords now have custom map sprites -- Credit SqrtOfPi (Sponsored by Bartz)
+Robert has been buffed
+Cougar has a new mug! -- Credit Atey (Sponsored by Bartz)
 
 v1.10 (This was only released to playtesters in the Discord server to catch bugs before v2.0.)
 5th and final Military route is a go. Kill Sean after accepting the promotion in chapter 3. Route includes all supports as well
