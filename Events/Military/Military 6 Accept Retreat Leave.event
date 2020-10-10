@@ -27,16 +27,7 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
-CHAR 0x00 EndingScene [PlayerMCavalier,Xylia] 0x00
-CHAR 0x00 EndingScene [PlayerMKnight,Xylia] 0x00
-CHAR 0x00 EndingScene [PlayerMSoldier,Xylia] 0x00
-CHAR 0x00 EndingScene [PlayerMArcher,Xylia] 0x00
-CHAR 0x00 EndingScene [PlayerMWyvernRider,Xylia] 0x00
-CHAR 0x00 EndingScene [PlayerFCavalier,Xylia] 0x00
-CHAR 0x00 EndingScene [PlayerFKnight,Xylia] 0x00
-CHAR 0x00 EndingScene [PlayerFSoldier,Xylia] 0x00
-CHAR 0x00 EndingScene [PlayerFArcher,Xylia] 0x00
-CHAR 0x00 EndingScene [PlayerFWyvernRider,Xylia] 0x00
+CHAR 0x00 EndingScene [0x00,Xylia] 0x00
 SupportConvo(ASupport,0xFF,Derek,Military6AcceptRetreatLeaveTactDerekSupportText)
 SupportConvo(ASupport,0xFF,Jasper,Military6AcceptRetreatLeaveTactJasperSupportText)
 END_MAIN

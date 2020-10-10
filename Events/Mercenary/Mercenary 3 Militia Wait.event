@@ -23,22 +23,8 @@ CHAR 0x10 ArcRecruit Arc Elanil 0x0
 CHAR 0x10 ArcRecruit Arc Finoc 0x0
 CHAR 0x10 LukeRecruit Luke Elanil 0x0
 CHAR 0x10 LukeRecruit Luke Finoc 0x0
-CHAR 0x10 AvatarRecruit PlayerMMercenary Elanil 0x0
-CHAR 0x10 AvatarRecruit PlayerMMyrmidon Elanil 0x0
-CHAR 0x10 AvatarRecruit PlayerMFighter Elanil 0x0
-CHAR 0x10 AvatarRecruit PlayerMPirate Elanil 0x0
-CHAR 0x10 AvatarRecruit PlayerMBrigand Elanil 0x0
-CHAR 0x10 AvatarRecruit PlayerFMercenary Elanil 0x0
-CHAR 0x10 AvatarRecruit PlayerFMyrmidon Elanil 0x0
-CHAR 0x10 AvatarRecruit PlayerFPegasusKnight Elanil 0x0
-CHAR 0x10 AvatarRecruit PlayerMMercenary Finoc 0x0
-CHAR 0x10 AvatarRecruit PlayerMMyrmidon Finoc 0x0
-CHAR 0x10 AvatarRecruit PlayerMFighter Finoc 0x0
-CHAR 0x10 AvatarRecruit PlayerMPirate Finoc 0x0
-CHAR 0x10 AvatarRecruit PlayerMBrigand Finoc 0x0
-CHAR 0x10 AvatarRecruit PlayerFMercenary Finoc 0x0
-CHAR 0x10 AvatarRecruit PlayerFMyrmidon Finoc 0x0
-CHAR 0x10 AvatarRecruit PlayerFPegasusKnight Finoc 0x0
+CHAR 0x10 AvatarRecruit 0x00 Elanil 0x0
+CHAR 0x10 AvatarRecruit 0x00 Finoc 0x0
 SupportConvo(CSupport,Arc,0xFF,Support1Text)
 END_MAIN
 

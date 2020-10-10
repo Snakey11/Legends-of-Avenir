@@ -29,16 +29,7 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0x10,TTactYvette,PlayerMCavalier,Yvette)
-CharacterEventBothWays(0x10,TTactYvette,PlayerMSoldier,Yvette)
-CharacterEventBothWays(0x10,TTactYvette,PlayerMKnight,Yvette)
-CharacterEventBothWays(0x10,TTactYvette,PlayerMWyvernRider,Yvette)
-CharacterEventBothWays(0x10,TTactYvette,PlayerMArcher,Yvette)
-CharacterEventBothWays(0x10,TTactYvette,PlayerFCavalier,Yvette)
-CharacterEventBothWays(0x10,TTactYvette,PlayerFSoldier,Yvette)
-CharacterEventBothWays(0x10,TTactYvette,PlayerFKnight,Yvette)
-CharacterEventBothWays(0x10,TTactYvette,PlayerFWyvernRider,Yvette)
-CharacterEventBothWays(0x10,TTactYvette,PlayerFArcher,Yvette)
+CharacterEventBothWays(0x10,TTactYvette,0x00,Yvette)
 SupportConvo(BSupport,Adeline,Remus,Military4AcceptRetreatAdelineRemusSupportText)
 SupportConvo(BSupport,0xFF,Zaheva,Military4AcceptRetreatTactZahevaSupportText)
 END_MAIN

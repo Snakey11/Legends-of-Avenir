@@ -23,14 +23,7 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
-CHAR 0x00 EndingScene [PlayerMMercenary,Leon] 0x00 
-CHAR 0x00 EndingScene [PlayerMMyrmidon,Leon] 0x00 
-CHAR 0x00 EndingScene [PlayerMFighter,Leon] 0x00 
-CHAR 0x00 EndingScene [PlayerMPirate,Leon] 0x00 
-CHAR 0x00 EndingScene [PlayerMBrigand,Leon] 0x00 
-CHAR 0x00 EndingScene [PlayerFMercenary,Leon] 0x00 
-CHAR 0x00 EndingScene [PlayerFMyrmidon,Leon] 0x00 
-CHAR 0x00 EndingScene [PlayerFPegasusKnight,Leon] 0x00 
+CHAR 0x00 EndingScene [0x00,Leon] 0x00 
 END_MAIN
 
 //Label LocationBasedEvents

@@ -24,14 +24,7 @@ ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 CharacterBasedEvents:
 CHAR 0x10 ArcArya [Arc,Arya] 0x0
 CHAR 0x10 LukeArya [Luke,Arya] 0x0
-CHAR 0x10 PlayerArya [PlayerMMercenary,Arya] 0x0
-CHAR 0x10 PlayerArya [PlayerMMyrmidon,Arya] 0x0
-CHAR 0x10 PlayerArya [PlayerMFighter,Arya] 0x0
-CHAR 0x10 PlayerArya [PlayerMPirate,Arya] 0x0
-CHAR 0x10 PlayerArya [PlayerMBrigand,Arya] 0x0
-CHAR 0x10 PlayerArya [PlayerFMercenary,Arya] 0x0
-CHAR 0x10 PlayerArya [PlayerFMyrmidon,Arya] 0x0
-CHAR 0x10 PlayerArya [PlayerFPegasusKnight,Arya] 0x0
+CHAR 0x10 PlayerArya [0x00,Arya] 0x0
 SupportConvo(CSupport,0xFF,Arya,Support1Text)
 SupportConvo(CSupport,0xFF,Arc,Support1Text)
 END_MAIN
