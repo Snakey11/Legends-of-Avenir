@@ -67,7 +67,7 @@ void CreatorRandomizeChoices(CreatorProc* creator)
 	do
 	{
 		newRoute = NextRN_N(3)+1; // Disallow randomizing to the same route.
-	} while ( creator->route == newRoute );
+	} while ( creator->route == newRoute || !CreatorShouldRouteBeAvailable[newRoute-1] );
 	creator->route = newRoute;
 	creator->currSet = GetClassSet(creator->gender,creator->route); // We need this to load a unit.
 	int numClasses = 0;

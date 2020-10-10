@@ -161,6 +161,8 @@ extern const struct
 	u8 growth;
 } MagCharTable[];
 
+extern const u8 CreatorShouldRouteBeAvailable[3];
+
 extern const ProcInstruction gCreatorProc, gCreatorClassProc, gCreatorSpriteProc, gTimerProc;
 
 extern u8 gCreatorBattleSpriteHeight, gCreatorPlatformHeight;

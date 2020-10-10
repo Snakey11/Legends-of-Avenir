@@ -26,6 +26,23 @@
 	#define gCreatorRAMMenu 0x0203EFB8
 	#define MenuProc 0x5B64D0
 	
+	CreatorShouldRouteBeAvailable:
+	#ifndef __NO_MERCENARY__
+		BYTE 1
+	#else
+		BYTE 0
+	#endif 
+	#ifndef __NO_MILITARY__
+		BYTE 1
+	#else
+		BYTE 0
+	#endif 
+	#ifndef __NO_MAGE__
+		BYTE 1
+	#else
+		BYTE 0
+	#endif 
+	
 	ALIGN 4
 	gCreatorProc: // Main character creator proc.
 	PROC_YIELD
@@ -185,9 +202,7 @@
 	gCreatorRouteMenuCommands:
 	MenuCommand(MercenaryMenuText,0x00,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,CreatorRouteSwitchIn,0)
 	MenuCommand(MilitaryMenuText,0x00,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,CreatorRouteSwitchIn,0)
-	#ifndef __NO_MAGE__
-		MenuCommand(MageMenuText,0x00,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,CreatorRouteSwitchIn,0)
-	#endif
+	MenuCommand(MageMenuText,0x00,NormalText,CreatorSubmenuUsability,0,CreatorSubmenuEffect,0,CreatorRouteSwitchIn,0)
 	WORD 0 0 0 0 0 0 0 0 0
 	
 	gCreatorRouteUIBoxTSA:

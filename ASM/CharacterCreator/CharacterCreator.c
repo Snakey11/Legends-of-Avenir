@@ -138,6 +138,7 @@ void CreatorStartMenu(CreatorProc* proc)
 int CreatorSubmenuUsability(const MenuCommandDefinition* command, int index)
 {
 	CreatorProc* proc = (CreatorProc*)ProcFind(&gCreatorProc);
+	if ( proc->currMenu == RouteMenu && !CreatorShouldRouteBeAvailable[index] ) { return 3; }
 	// Don't allow a magic bane/boon unless we're a magic class.
 	if ( ( proc->currMenu == BaneMenu || proc->currMenu == BoonMenu ) && index == 2 && proc->route != 3 ) { return 3; }
 	if ( proc->currMenu == BoonMenu )
