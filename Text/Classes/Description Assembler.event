@@ -1,4 +1,8 @@
 
+## MageKnightDescText
+Mounted knights proficient in magic.[NL]
+Equip: Swords, Anima, Staves.[X]
+
 ## LostSoulDescText
 A soul without a body who's[NL]
 about to make a major decision.[X]
@@ -7,9 +11,13 @@ about to make a major decision.[X]
 Truly devout and highly-ranking[NL]
 monks. Equip: Anima, Light, Staves.[X]
 
-## DarkKnightDescText
+## ShadeKnightDescText
 Powerful, mounted mages who study[NL]
 ancient magics. Equip: Dark, Staves.[X]
+
+## DarkKnightDescText
+Unique, mounted mages proficient in blade[NL]
+and ancient magic. Equip: Swords, Dark.[X]
 
 ## MagusDescText
 Advanced sages who master the magics[NL]
@@ -17,7 +25,7 @@ of nature. Equip, Anima, Light, Staves.[X]
 
 ## MasterKnightDescText
 Efficient commanders who lead their[NL]
-troops well. Equip, Swords, Lances, Axes.[X]
+troops. Equip, Swords, Lances, Axes.[X]
 
 ## BaronDescText
 Heavily armored fighters weilding a variety[NL]
@@ -28,14 +36,12 @@ Experienced footsoldiers who[NL]
 strike effectively. Equip: Lances.[X]
 
 ## WyvernGeneralDescText
-Talented wyvern riders[NL]
-who have mastered their[NL]
-art. Equip: Lances, Axes.[X]
+Talented wyvern riders who have mastered[NL]
+their art. Equip: Lances, Axes.[X]
 
 ## SeraphKnightDescText
-Pegasus knights excelling in[NL]
-combat and magic. Equip: Swords,[NL]
-Lances, Anima, Staves.[X]
+Fliers excelling in combat and magic.[NL]
+Equip: Swords, Lances, Anima, Staves.[X]
 
 ## MarksmanDescText
 Skilled sharpshooters known[NL]
@@ -55,7 +61,7 @@ with deadly accuracy. Equip: Swords.[X]
 
 ## WarlockDescText
 Strong fighters who crave[NL]
-bloodshed. Equip: Axes.[X]
+bloodshed. Equip: Axes, Staves.[X]
 
 ## MountainierDescText
 Adaptable fighters that can traverse[NL]
@@ -156,3 +162,7 @@ fighters. Equip: Swords, Axes.[X]
 ## BowKnightDescText
 Versatile, mounted archers trained with many[NL]
 weapons. Equip: Swords, Lances, Bows.[X]
+
+## ExecutionerDescText
+Skilled, light, and deadly[NL]
+fighters. Equip: Swords, Dark.[X]

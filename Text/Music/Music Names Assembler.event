@@ -135,7 +135,7 @@ Boss Theme[X]
 Bloody Tears[X]
 
 ## BergentruckungText
-Bergentruckung[X]
+Asgore[X]
 
 ## BattleTwoText
 Battle Two[X]
@@ -186,7 +186,7 @@ Earthbound[X]
 Chinese Tea[X]
 
 ## ZeldaTwighlightShopText
-Zelda Twighlight Shop[X]
+Zelda Twilight Shop[X]
 
 ## UNOwenWasHerText
 U.N. Owen Was Her[X]
@@ -209,7 +209,7 @@ Inanimate Dream[X]
 ## WithUsText
 With Us[X]
 
-## AFormidableFoeStandsInTheWayText
+## AFormidableFoeStandsInTheWayText ^
 A Formidable Foe Stands in the Way[X]
 
 ## AHeroFallsText
@@ -265,3 +265,169 @@ Legends of Avenir[X]
 
 ## MarbleCorridorText
 Marble Corridor[X]
+
+## FE5AdvanceText
+FE5: Advance[X]
+
+## FE5AdversityText
+FE5: Adversity[X]
+
+## FE5DestinyText
+FE5: Destiny[X]
+
+## FE5FieldText
+FE5: Field[X]
+
+## FE5InSearchOfVictoryText
+FE5: In Search of Victory[X]
+
+## FE5LoptrBText
+FE5: Loptr B[X]
+
+## FE5MapAText
+FE5: Map A[X]
+
+## FE5SearchingTheEnemyText
+FE5: Searching the Enemy[X]
+
+## FE5VictoryText
+FE5: Victory[X]
+
+## FE5VictoryMinorText
+FE5: Victory Minor[X]
+
+## VictoryMarchText
+Victory March[X]
+
+## BattleOneText
+Battle One[X]
+
+## CourageAndPrideFromTheHeartText ^
+Courage and Pride from the Heart[X]
+
+## CuttingEdgeOfNotionText
+Cutting Edge of Notion[X]
+
+## HandCombatText
+Hand Combat[X]
+
+## JusticeText
+Justice[X]
+
+## TeamMakingText
+Team Making[X]
+
+## DarkCloudsGatherText
+Dark Clouds Gather[X]
+
+## WrathStrikeText
+Wrath Strike[X]
+
+## BlindlyChargingText
+Blindly Charging[X]
+
+## DarkerText
+Darker[X]
+
+## EvilApproachesText
+Evil Approaches[X]
+
+## JudgralCallsText
+Judgral Calls[X]
+
+## RoarOfDominionText
+Roar of Dominion[X]
+
+
+## AnnihilateEmText
+Annihilate 'Em![X]
+
+## AquaticDystopiaText
+Aquatic Dystopia[X]
+
+## ArmoriesOfAvenirText
+Armories of Avenir[X]
+
+## AvenirHealingText
+Avenir Healing[X]
+
+## CataclysmText
+Cataclysm[X]
+
+## CrossroadsText
+Crossroads[X]
+
+## DropEmText
+Drop 'Em![X]
+
+## EndEmText
+End 'Em![X]
+
+## FieldsOfAvenirText
+Fields of Avenir[X]
+
+## IDontThinkWeCanTakeEmText ^
+I Don't Think We Can Take 'Em![X]
+
+## KnockEmAroundText
+Knock 'Em Around![X]
+
+## LifeInTheMilitaryText
+Life in the Military[X]
+
+## LifeOfAMercenaryText
+Life of a Mercenary[X]
+
+## LightEmUpText
+Light 'Em Up![X]
+
+## MakeEmPayText
+Make 'Em Pay![X]
+
+## PromotionsOfAvenirText
+Promotions of Avenir[X]
+
+## ShowEmWhatsWhatText
+Show 'Em What's What![X]
+
+## SockItToEmText
+Sock It to 'Em![X]
+
+## TakeEmDownText
+Take 'Em Down![X]
+
+## ThrashEmText
+Thrash 'Em![X]
+
+## VendorsOfAvenirText
+Vendors of Avenir[X]
+
+## WeStandText
+We Stand[X]
+
+## WeStriveText
+We Strive[X]
+
+## WeWillEndureText
+We Will Endure[X]
+
+## WeWillHoldTheLineText
+We Will Hold the Line[X]
+
+## WeWillOvercomeText
+We Will Overcome[X]
+
+## WeWillPersevereText
+We Will Persevere[X]
+
+## WeWontGiveInText
+We Won't Give In[X]
+
+## WindsAcrossThePlainsOfAvenirText ^
+Winds across the Plains of Avenir[X]
+
+## AFormidableFriendJoinsInTheFrayText ^
+A Formidable Friend Joins in the Fray[X]
+
+## AvatarsOfAvenirText
+Avatars of Avenir[X]

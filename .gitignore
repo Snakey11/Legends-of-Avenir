@@ -5,10 +5,14 @@
 *.wav
 *.ups
 *.SNA
-UPDATE.cmd
-!EA Avenir/*.exe
+*.nlz
+*.avi
+*.mp4
+*.lnk
+UPDATE.bat
+UPDATEPrivate.bat
+UPDATEPublic.bat
 !ParseDefinitions.txt
-!EA Avenr/*txt
 !Table Definitions.txt
 CSV/Nightmare/
 CSV/Tables/*.event
@@ -16,12 +20,8 @@ CSV/Tables/**/*.event
 CG List.png
 Animation Assembler/
 CSA Creator/
-Later Maps/
-Map Data/*.event
-Map Data/*dmp
-Map Data/Pictures
-TEST/
-BROKE.txt
+Maps/*.event
+Maps/*dmp
 _textentries/
 .TextEntries/
 devkitPro/
@@ -29,14 +29,24 @@ Install Text Data.event
 Text Definitions.event
 textdump.event
 Animation Assembler/
-Battle Palettes/*.png
+Graphics/Battle Palettes/*.dmp
+Graphics/Portraits/*.dmp
+Graphics/Map Sprites/*.dmp
+Graphics/Class Cards/*.dmp
+Music/*.event
+!Music/_Master Music Installer.event
 Spells/Spells/**/*.png
 FE8 Template.event
-Testing.event
 FE-CLib-master
-*.lnk
 desktop.ini
 Legends of Avenir.png
 Tools/Py/
 Tools/FE-CLib/
 ASM/SkillSystem_FE8
+avenir.png
+Avenir-*.png
+Avenir.gif
+*.ss*
+Text/ParseDefinitions.txt
+Definitions/Definitions.event
+Graphics/WorldMap/*.dmp

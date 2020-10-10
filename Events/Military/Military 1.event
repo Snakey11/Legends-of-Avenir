@@ -58,61 +58,7 @@ Text(Military1BeginningText)
 FadeOutMusic
 EndConvo
 STAL 0x30
-CHECK_EVENTID 0x6E
-BEQ 0x0 0x0 0xC
-	CHECK_EVENTID 0x69
-	BEQ 0x2 0x0 0xC
-		LOAD1 0x1 MaleCavalier
-		GOTO 0x1
-	LABEL 0x2
-	CHECK_EVENTID 0x6A
-	BEQ 0x3 0x0 0xC
-		LOAD1 0x1 MaleKnight
-		GOTO 0x1
-	LABEL 0x3
-	CHECK_EVENTID 0x6B
-	BEQ 0x4 0x0 0xC
-		LOAD1 0x1 MaleSoldier
-		GOTO 0x1
-	LABEL 0x4
-	CHECK_EVENTID 0x6C
-	BEQ 0x5 0x0 0xC
-		LOAD1 0x1 MaleArcher
-		GOTO 0x1
-	LABEL 0x5
-	CHECK_EVENTID 0x6D
-	BEQ 0x6 0x0 0xC
-		LOAD1 0x1 MaleWyvernRider
-		GOTO 0x1
-	LABEL 0x6
-	GOTO 0x1
-LABEL 0x0
-	CHECK_EVENTID 0x69
-	BEQ 0x7 0x0 0xC
-		LOAD1 0x1 FemaleCavalier
-		GOTO 0x1
-	LABEL 0x7
-	CHECK_EVENTID 0x6A
-	BEQ 0x8 0x0 0xC
-		LOAD1 0x1 FemaleKnight
-		GOTO 0x1
-	LABEL 0x8
-	CHECK_EVENTID 0x6B
-	BEQ 0x9 0x0 0xC
-		LOAD1 0x1 FemaleSoldier
-		GOTO 0x1
-	LABEL 0x9
-	CHECK_EVENTID 0x6C
-	BEQ 0xA 0x0 0xC
-		LOAD1 0x1 FemaleArcher
-		GOTO 0x1
-	LABEL 0xA
-	CHECK_EVENTID 0x6D
-	BEQ 0xB 0x0 0xC
-		LOAD1 0x1 FemaleWyvernRider
-		GOTO 0x1
-	LABEL 0xB
-LABEL 0x1
+LOAD3 0x1 PlayerLoading1
 LOAD1 0x1 LoadDerekJasper
 ENUN
 STAL 0x30
@@ -145,13 +91,13 @@ ENDA
 EndingScene:
 EnterStop
 FADI 0x5
-MUSC Nekonin
+MUSC FE5_Victory
 CLEA 0x0
 CLEE 0x0
 CLEN 0x0
 ASMC RefreshAll|1
 CAM1 [7,7]
-LOAD3 0x1 PlayerLoading1
+LOAD3 0x1 PlayerLoading2
 LOAD2 0x1 EndingFriends
 LOAD1 0x1 EndingMeanies
 ENUN
@@ -229,38 +175,11 @@ ENDA
 	/*UNIT DATA*/
 
 //Label PlayerLoading
-MaleCavalier:
-UNIT PlayerMCavalier CavalierM2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [IronSword,SteelLance,Vulnerary] NoAI
-UNIT
-MaleKnight:
-UNIT PlayerMKnight Knight2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [SteelLance,Vulnerary] NoAI
-UNIT
-MaleSoldier:
-UNIT PlayerMSoldier SoldierM2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [IronLance,Javelin,Vulnerary] NoAI
-UNIT
-MaleArcher:
-UNIT PlayerMArcher ArcherM2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [SteelBow,Vulnerary] NoAI
-UNIT
-MaleWyvernRider:
-UNIT PlayerMWyvernRider WyvernRider2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [SteelLance,Vulnerary] NoAI
-UNIT
-FemaleCavalier:
-UNIT PlayerFCavalier CavalierF2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [IronSword,SteelLance,Vulnerary] NoAI
-UNIT
-FemaleKnight:
-UNIT PlayerFKnight Knight2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [SteelLance,Vulnerary] NoAI
-UNIT
-FemaleSoldier:
-UNIT PlayerFSoldier SoldierF2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [Javelin,SteelLance,Vulnerary] NoAI
-UNIT
-FemaleArcher:
-UNIT PlayerFArcher ArcherF2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [SteelBow,Vulnerary] NoAI
-UNIT
-FemaleWyvernRider:
-UNIT PlayerFWyvernRider WyvernRider2 0x00 Level(5,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [SteelLance,Vulnerary] NoAI
+PlayerLoading1:
+UNIT PlayerMCavalier 0x00 0x00 Level(1,Ally,True) [0,10] 0x00 0x00 0x01 REDA3R7 [0] NoAI
 UNIT
 
-PlayerLoading1:
+PlayerLoading2:
 UNIT PlayerMCavalier 0x00 0x00 Level(5,Ally,True) [6,7] 0x00 0x00 0x00 0x00 [0] NoAI
 EndUnit
 
@@ -280,7 +199,7 @@ EndUnit
 
 //Label ChapterMeanies
 LoadChristinaForrest:
-UNIT BossChristina Cavalier_F BossChristina Level(9,Enemy,True) [6,6] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
+UNIT BossChristina Cavalier_F BossChristina Level(7,Enemy,True) [6,6] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
 UNIT BossForrest Cavalier BossForrest Level(8,Enemy,True) [6,8] 0x00 0x00 0x00 0x00 [SteelSword] GuardAI
 UNIT
 

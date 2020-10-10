@@ -1,3 +1,143 @@
+v2.0
+Dasher screen streching has been fixed
+Mage knight description includes sword utility
+Blaine not actually dying has been fixed
+Helmer's con as a boss has been reduced
+Toxin sword now actually applies poison
+Fixed Wyvern General class description being 3 lines
+Wyvern General and Wyvern Knight names now use narrow font
+Fixed a mistake in Military 4 Accept Hold Adeline Remus support
+Supply has been re-disabled in some early chapters. I don't know how that table got filled with all chapters having it usable...?
+Richter (Miliary 5 Pass Altia boss) has been given more strength
+Assassin promo gains have been buffed
+7 MOVE TROUBADOURS
+Fixed ballista sprites being broken
+Cleaned up some early mercenary chapter events
+Fixed the Mercenary 5 Militia Wait Cesaria tempest tome pickup
+Fixed a bug in base conversations/support rework with bad handling of units that don't exist/are dead
+Made various changes to military chapters: music and text updates. Many changes in text to Military Pass Haedric and Military 7 Accept Retreat Leave
+New tool that reports where music is referenced: for development help only
+Now using Bly's version of textprocess-classic that's better with narrow font
+Alphabetized the sound room and removed vanilla entries
+A couple song names use narrow font now
+Tweaked Fodlan Winds
+Fixed having 0 gold in Military 5 Accept Hold
+Fixed an elevation error in the Haedric castle
+Fixed some confusion with Gladiator vs Basileus map sprites
+Fixed a potential softlock in the ending of Military 7 Accept Retreat Help
+Christina's mug has been updated! -- Credit Levin and Star
+Arya has a new mug! -- Credit Levin
+Forrest's mug has been updated! -- Credit Star
+Finoc has a new mug! -- Credit Atey (Sponsored by Bartz)
+Izuk's mug has been updated! -- Credit Vlak
+Baret has a new mug! -- Credit Atey (Sponsored by Bartz)
+For the next releases until we begin balancing hard mode all difficulties will force-set to normal mode as you begin the prologue
+Fixed being able to support with enemy units (namely Arya)
+Various palettes have been added/updated
+Spellswords have class cards! -- Credit SqrtOfPi (Sponsored by Bartz)
+Holy hell prologue stuff:
+	Tact max name length is now 8 characters.
+	New CHARACTER CREATOR custom menu wizardry! Interactive menu system has you select a gender, route, class, boon, and bane
+	Boons and banes affect base loading stats and growths. Effects for each stat are displayed
+	Lots of world map things - namely invoking a world map "cutscene" within an event as well as a hack or two to expand palettes available for the world map
+	Speaking of, fully custom 240x160 world map thanks to Gabriel Rosswell!
+	After finishing the character creator, a world map cutscene plays out with custom glowy regions indication nation borders as well
+Female mercenary animation/palette has been fixed
+Class display debug hack has been implemented
+Slight change to how walking sounds are handled
+Xena has a new mug! -- Credit Vlak
+Added a Tact spellsword class (which wasn't previously planned) for the mage routes and an appropriate custom promotion
+Spellswords (as well as their promotions) now take extra damage from aqua magic
+Roger has a new mug! -- Credit RandomWizard
+Shanley has a new mug! -- Credit Vlak
+Lakshmi has a new mug! -- Credit RandomWizard
+Gerwick has a new mug! -- Credit RandomWizard
+Robert has a new mug! -- Credit RandomWizard
+A quick ASM routine used internally to get the current "mode" (Mercenary, military, or mage) is being used
+A_Reliable_Chair is a confirmed massochist and has made ALL of our battle themes (really quickly too wow). Thank you so much, Chair! Visit the sound room to check them out!
+	These have been inserted and referenced plus two new prep screen themes, armory and shop themes, a new title theme, a healing theme, a promotion theme, and a few others
+	A bit of ASM to accomadate different prep themes for different "modes" has been made
+MultitileMarker in Mercenary 7 Militia Kill has been fixed
+Maximus's and Pat's inventories have been fixed
+Fixed some crashes associated with cutscene maps loading bad event data
+Made walking sounds work a lot better and fixed some
+Fixed the class display hack not reading the maximum character ID correctly
+Fixed female monk map sprites
+Not anything that'll appear in-game, but Snek has shifted CSV management (again)
+"Bergentruckung" has been changed to "Asgore"
+Fixed a text bug in Vicar and Arc's battle quote in Mercenary 2 Bandit
+Fixed the TEXTCONT2 bug in the start of Mercenary 3 Bandit
+Fixed the GS loading as an NPC at the end of Mercenary 7 Militia Wait Cesaria
+Fixed Uzkalis not being loaded properly as an ally in Mercenary 7 Militia Wait Arcanae
+Fixed Remus's soldier palette being wrong
+Changed help text on the prep screen so it doesn't reference a world map
+Fixed a small mistake in Elanil/Finoc B Support in a Military Pass route
+Fixed military Tact's description being gendered
+Fixed tile errors in the map for Military Pass 3
+Connor has been given a lancereaver in Military Pass 3
+I think F Tact myrm promo had 2 lethality skills, so that's been fixed
+Fixed mounted brigand movement costs
+Roger (Boss of Mercenary 3 Bandit) now moves and has been buffed
+Fixed my music reference script to play nicely with the CSV changes
+Fixed Mercenary 6 Militia Kill seeming to end prematurely
+Fixed a mistake with the dread fighter M unarmed animation not writing correctly
+Went through all palettes and removed all ugly bug palettes. Palettes that don't exist yet will just be generic palettes
+Also caught numerous other palette mistakes and fixed them
+Seraph Knight (Merc F peg knight custom promo) no longer has sword access and have had their promo boosts nerfed
+Fixed Jurgen not having an unarmed animation
+Changed Myrmidon Tact promos to the Executioner
+Female sentinel is available with Soldier Tact
+Implemented Gamma's AI optimization
+Fixed Servius's animation breaking
+Fixed Efil not always having Killing Machine
+Pascal has a new mug! -- Credit RandomWizard
+Switched to the correct knight Tact promotion animation (baron with cape)
+Fixed a turn one phase theme switch in Military 6 Accept Retreat Help
+Spellswords now have custom map sprites -- Credit SqrtOfPi (Sponsored by Bartz)
+Robert has been buffed
+Cougar has a new mug! -- Credit Atey (Sponsored by Bartz)
+Fixed iron longbow and iron shortbow crash (again)
+Fixed allowing randomizing into a mage class when it shouldn't be allowed
+Fixed devil bow not being effective against fliers
+Fixed male mercenaries not having shove
+Fixed Leon loading as the wrong class more often than not
+Fixed Seraph Knight's name being too long
+Fixed Warlock's description not reading that it uses staves
+Fixed Mercenary 1's units not loading properly for pegasus knight Tact
+Removed Arc's personal skill
+Fixed lag on maps with lots of talk convos
+
+v1.10 (This was only released to playtesters in the Discord server to catch bugs before v2.0.)
+5th and final Military route is a go. Kill Sean after accepting the promotion in chapter 3. Route includes all supports as well
+Tons of new music again! Visit the sound room
+Female archers can use master seals
+Snek has an entirely new build scheme for definitions and CSVs
+	This doesn't affect functionality but will help with organization, readability, and bugfixes
+	Along with this, various build organization things are happening
+	Snek will probably also add notes/a build readme on how the build works since it's becoming more unconventional
+"Lost Souls" in the prologue are no longer children... finally
+Darting blow has been reduced to +2 attack speed
+Lux and Zaheva have been buffed
+Military 2 Militia no longer ends on enemy phase turn 6. Now ends on player phase turn 7
+Jurgen's weapon ranks have been changed
+Mages have been given more base magic
+Fixed a bug with Zaheva's battle quote with Gerald in Military 2 Accept
+I think I've sorted out all of the bugs with the base conversations. Instead of hackily setting a bitfield in a prep screen proc, I'm just using event IDs
+	Event IDs are plentiful, should make the system more modular in general, and won't have issues with suspend/resume. Release coming soon
+The EXP calculation routine has been ENTIRELY rewritten from scratch. No class relative power nonsense. We're accepting feedback on how it's turned out!
+The spellsword ASM has been completely rewritten from scratch: It should be way more stable and less buggy
+	To clarify on how spellswords work:
+		Any spellsword who is a physical main (T1 spellswords, battle sages, dread fighters, maybe a unique class or two) CANNOT use magic on any phase other than their own.
+		At the end of their phase, these spellswords will automatically re-equip the first usable physical weapon in their inventory
+		If there is not one, then they are considered unarmed
+		Mage Knights (who have sword availability) are not affected by this
+		Finally, T1 spellswords may only use E-rank tomes regardless of their weapon rank. They level with WEXP normally, and this restriction is removed at T2
+Jasper has been nerfed: particularly his strength. Derek's skill has been reduced and his speed a little bit as well
+"Aquatic Ruin" has been made a bit louder
+All Tact promotions now have 3 options: The vanilla promotions for that class as well as a 3rd custom one. In the past, it's just been the one custom class
+Date/time and project name setters have been included for the initial private release debug screen
+My new antihuffman patch has been implemented as well as my modular terrain opener hack
+
 Hotfixes before v1.10
 Fixed a bug in the ending of Military Accept Retreat Leave where character death quotes would play during battles
 Fixed Mercenary Militia Kill 4 crashing at the start (with a new cutscene map)

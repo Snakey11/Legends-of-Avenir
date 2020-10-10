@@ -1,6 +1,15 @@
 ## LostSoulNameText
 Lost Soul[X]
 
+## WyvernRiderNameText ^
+Wyven Rider[X]
+
+## WyvernKnightNameText ^
+Wyvern Knight[X]
+
+## PegasusKnightNameText ^
+Pegasus Knight[X]
+
 ## PatriarchNameText
 Patriarch[X]
 
@@ -13,6 +22,9 @@ Dark Knight[X]
 ## MagusNameText
 Magus[X]
 
+## SorcererNameText
+Sorcerer[X]
+
 ## MasterKnightNameText
 Gold Knight[X]
 
@@ -22,8 +34,8 @@ Commander[X]
 ## ImpalerNameText
 Impaler[X]
 
-## WyvernGeneralNameText
-W. General[X]
+## WyvernGeneralNameText ^
+Wyvern General[X]
 
 ## MarksmanNameText
 Marksman[X]
@@ -43,7 +55,7 @@ Warlock[X]
 ## MountainierNameText
 Mountainier[X]
 
-## SeraphKnightNameText
+## SeraphKnightNameText ^
 Seraph Knight[X]
 
 ## HalberdierNameText
@@ -70,8 +82,8 @@ Battle Sage[X]
 ## SpellswordNameText
 Spellsword[X]
 
-## DreadFighterNameText
-[S_D][S_r][S_e][S_a][S_d][S_ShortSpace][S_F][S_i][S_g][S_h][S_t][S_e][S_r][X]
+## DreadFighterNameText ^
+Dread Fighter[X]
 
 ## MaligKnightNameText
 Malig Knight[X]
@@ -99,3 +111,9 @@ Gladiator[X]
 
 ## BowKnightNameText
 Bow Knight[X]
+
+## ShadeKnightNameText
+Shade Knight[X]
+
+## ExecutionerNameText
+Executioner[X]

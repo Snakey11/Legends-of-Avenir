@@ -40,9 +40,11 @@ SHORT 3; BYTE 15 0x86; POIN Ground_Dasher_objimg_0; WORD 180 180; POIN Ground_Da
 SHORT 3; BYTE 16 0x86; POIN Ground_Dasher_objimg_0; WORD 192 192; POIN Ground_Dasher_bgImage_4 Ground_Dasher_objPalette Ground_Dasher_bgPalette_4 Ground_Dasher_TSA_4
 WORD 0x85011d48
 SHORT 3; BYTE 17 0x86; POIN Ground_Dasher_objimg_0; WORD 204 204; POIN Ground_Dasher_bgImage_5 Ground_Dasher_objPalette Ground_Dasher_bgPalette_5 Ground_Dasher_TSA_5
+WORD 0x85000053
 WORD 0x8500001a
 WORD 0x8500001f
 WORD 0x80000100
+WORD 0x85000153
 SHORT 6; BYTE 18 0x86; POIN Ground_Dasher_objimg_0; WORD 216 216; POIN Ground_Dasher_bgImage_1 Ground_Dasher_objPalette Ground_Dasher_bgPalette_1 Ground_Dasher_TSA_1
 WORD 0x85000053
 WORD 0x80000000

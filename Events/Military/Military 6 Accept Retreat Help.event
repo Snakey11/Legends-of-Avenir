@@ -138,7 +138,7 @@ ENDA
 
 //Label Turn events
 Turn1:
-MUSC Fighting_of_the_Spirit
+MUSC Earthbound
 CAM1 [0,7]
 STAL 0x20
 Text(Military6AcceptRetreatHelpTurnOneText)

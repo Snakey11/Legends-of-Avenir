@@ -174,7 +174,7 @@ Pat[X]
 Bandit[X]
 
 ## RogerNameText
-Ralph[X]
+Roger[X]
 
 ## HaedricanNameText
 Haedrican[X]
@@ -256,3 +256,15 @@ Halleck[X]
 
 ## PascalNameText
 Pascal[X]
+
+## ClintNameText
+Clint[X]
+
+## BlaineNameText
+Blaine[X]
+
+## LakshmiNameText
+Lakshmi[X]
+
+## AjaxNameText
+Ajax[X]

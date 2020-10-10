@@ -1,12 +1,5 @@
 
 {
-#include "Trueblade F Sword.event"
-
-#include "Trueblade F Bow.event"
-
-#include "Trueblade F Unarmed.event"
-}
-{
 #include "Truerblade Sword.event"
 
 #include "Truerblade Unarmed.event"

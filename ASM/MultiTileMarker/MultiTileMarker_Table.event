@@ -1,0 +1,24 @@
+
+#define MultiTile(chapter,xCoord,yCoord,eventID) "BYTE chapter xCoord yCoord 0x00 ; SHORT eventID 0x00"
+
+MultiTileMarker_Table:
+MultiTile(MercenaryMilitiaKill7,17,22,0x27)
+MultiTile(MercenaryMilitiaKill7,18,22,0x27)
+MultiTile(MercenaryMilitiaKill7,19,22,0x27)
+MultiTile(MercenaryMilitiaKill7,20,22,0x27)
+
+MultiTile(MilitaryAccept3,0,4,0x00)
+MultiTile(MilitaryAccept3,0,5,0x00)
+MultiTile(MilitaryAccept3,0,6,0x00)
+MultiTile(MilitaryAccept3,14,0,0x00)
+MultiTile(MilitaryAccept3,15,0,0x00)
+MultiTile(MilitaryAccept3,16,0,0x00)
+MultiTile(MilitaryAccept3,0,14,0x00)
+MultiTile(MilitaryAccept3,0,15,0x00)
+MultiTile(MilitaryAccept3,0,16,0x00)
+
+MultiTile(MageLeave2,15,6,0x00)
+MultiTile(MageLeave2,15,7,0x00)
+MultiTile(MageLeave2,15,8,0x00)
+
+BYTE 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF

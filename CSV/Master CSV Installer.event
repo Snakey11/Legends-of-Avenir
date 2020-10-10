@@ -3,7 +3,7 @@ ALIGN 4
 #include "EA Files/Effectiveness.event"
 
 ALIGN 16
-#include "Tables/Table Installer.event"
+#include "Tables/TableInstaller.event"
 
 ALIGN 4
 #include "EA Files/Animation Reference.event"
@@ -24,10 +24,15 @@ ALIGN 4
 
 ALIGN 4
 AIOptionsTable: // Whether AI should use door keys, lockpicks, etc. Set within event files with macros.
-ORG ( CURRENTOFFSET + 4 * 0xFF ) // Allocate space for 0xFF chapters.
+FILL 4 * 0xFF // Allocate space for 0xFF chapters.
 
 #include "EA Files/Repointers.event"
 
 ALIGN 4
 WeaponDebuffTable:
 defWeaponDebuffs(0,0,0,0,0,0,0) //0x0: let 0-index entry be no debuffs.
+
+ALIGN 4
+EventPointerListOffset:
+#incbin "EventPointerTable.dmp"
+FILL 4*0x20 // Fill missing entries beyond 0xFF. This is a band-aid until we get the event pointer split.

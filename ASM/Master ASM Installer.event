@@ -14,7 +14,6 @@ ALIGN 4
 ALIGN 4
 #include "Always Display Ranged Animation/Ranged Animation by Table Installer.event"
 
-ALIGN 4
 #include "AnimaEffectiveness/AnimaEffectiveness.lyn.event"
 /*ALIGN 4
 #inctext lyn "AnimaTriangle/NewAnimaTriangle.elf" "AnimaTriangle/Definitions.elf"
@@ -27,13 +26,13 @@ BYTE Wind Elwind Arcwind Tornado Aircalibur WindSword 0x00*/
 WaterList:
 BYTE Aqua Elaqua Arcaqua Fimbulvetr 0x00
 
+#include "Antihuffman/Antihuffman.event"
+
 ALIGN 4
 #include "Arms Scroll/EA Installer.event"
 
-ALIGN 4
 #include "AutoNewline/Installer.event"
 
-ALIGN 4
 #include "AutoPromote/AutoPromote.lyn.event"
 
 AutoPromoteTestEvents:
@@ -41,23 +40,25 @@ ASMC PromotionTime|1
 NoFade
 ENDA
 
-ALIGN 4
 #include "BowDebuff/BowDebuff.lyn.event"
 
 ALIGN 4
 #include "Chapter Names/fe8_chnames.event"
 
-ALIGN 4
 //#include "ChangeChapterObjective/Installer.event"
 
-ALIGN 4
+#include "CharacterCreator/CharacterCreator.event"
+
+#include "ClassDisplay/ClassDisplay.event"
+
 #include "Class Expansion.event"
 
-ALIGN 4
 #include "CopyUnit/Installer.event"
 
 ALIGN 4
 #include "Display All Weapon Level Ups/Promotion Ranks Fix Installer.event"
+
+#include "DoorsAndChests/DoorsAndChests.event"
 
 ALIGN 4
 #include "EnemyControl/Enemy Control.event"
@@ -65,73 +66,81 @@ ALIGN 4
 //ALIGN 4
 //#include "Escape-Arrive/Escape Installer.event"
 
-ALIGN 4
 #include "EventParameters/EventParameters.event"
 
-ALIGN 4
+#include "FillAIRangeMap/FillAIDangerMap.event"
+
+#include "GetMode/GetMode.lyn.event"
+
 #include "GiveToSupply/GiveToSupply.lyn.event"
 
-ALIGN 4
 #include "HPBars/HPBars.event"
 
-ALIGN 4
-#include "HybridClasses/Hybrids.lyn.event"
+#include "HybridClasses/HybridHooks.lyn.event"
 ALIGN 4
 SpellswordList:
-BYTE SpellswordM SpellswordF BattleSage BattleSageF DreadFighterM DreadFighterF MaligKnight 0x00
+BYTE SpellswordM SpellswordF SpellswordM2 SpellswordF2 BattleSage BattleSageF DreadFighterM DreadFighterF MaligKnight Executioner 0x00
 
 ALIGN 4
 SpellswordERankList:
 BYTE SpellswordM SpellswordF 0x00
 
-//ALIGN 4
-//#inctext lyn "LevelUP/LevelUP.elf" "LevelUp/Definitions.elf"
-
-ALIGN 4
 #include "MakeNotDead/MakeNotDead.lyn.event"
 
-ALIGN 4
 #include "Menus/Menu Commands.event"
 
-/*ALIGN 4
-#inctext lyn "ModularEXP/ModularEXP.elf" "ModularEXP/Hooks.elf"
-#define ModularEXPEntry(Character,Chapter,EventID,Multiplier,Divisor) "BYTE Character Chapter EventID Multiplier Divisor 0x00 0x00 0x00"
-ModularEXPChapterTable:
-ModularEXPEntry(0,0,0,0,0)*/
-
-ALIGN 4
 #include "MiscMusics/MiscMusics.lyn.event"
 gVictoryMusic:
 SHORT The_First_Campaign
 gSupportMusic:
 SHORT Pub_Theme
 gPrepScreenMusic:
-SHORT Cavern_of_Splendor
+SHORT 0 Life_of_a_Mercenary Life_in_the_Military Cavern_of_Splendor // Indexed by mode.
 PUSH
 ORG $160AE
 SHORT 0x46C0
 POP
 
-ALIGN 4
+// Completely rewrite ComputeExpFromBattle and GetBattleUnitStaffExp.
+#include "ModularerEXP/ModularerEXP.lyn.event"
+#define StaffEXPEntry(Item,T1EXP,T2EXP) "BYTE Item T1EXP T2EXP 0"
+StaffEXPList:
+StaffEXPEntry(Heal,20,10)
+StaffEXPEntry(Mend,25,15)
+StaffEXPEntry(Recover,30,20)
+StaffEXPEntry(Physic,35,20)
+StaffEXPEntry(Fortify,35,20)
+StaffEXPEntry(Restore,30,15)
+StaffEXPEntry(Silence,45,30)
+StaffEXPEntry(Sleep,45,30)
+StaffEXPEntry(Berserk,45,30)
+StaffEXPEntry(Warp,40,25)
+StaffEXPEntry(Rescue,40,25)
+StaffEXPEntry(Torch,20,10)
+StaffEXPEntry(Hammerne,45,35)
+StaffEXPEntry(Unlock,25,10)
+StaffEXPEntry(Barrier,20,10)
+StaffEXPEntry(0,0,0)
+
 #include "ModularMinimugBox/MMB Installer Default.event"
 
-ALIGN 4
+#include "MultiTileMarker/MultiTileMarker_Install.event"
+
 #include "NameSelection/SetName.lyn.event"
 KendrickName:
 String(Kendrick)
 BYTE 0x00
 
-ALIGN 4
 #include "NarrowFont/Narrowfont installer.event"
 
 ALIGN 4
 #include "New CHAI/New CHAI.event"
 
-ALIGN 4
 #include "Nice.event"
 
 ALIGN 4
-#include "PC_and_Generic_Music_FE8.event" // Basically boss music
+//#include "PC_and_Generic_Music_FE8.event" // Basically boss music
+#include "PersonalMusic/PersonalMusic.event"
 
 /*
 ALIGN 4
@@ -164,18 +173,15 @@ BYTE 0x6E True  0x67 True  0x00 0x00
 FemaleMageList:
 BYTE 0x6E False  0x67 True  0x00 0x00
 */
-ALIGN 4
+
 #include "PoisonRework/PoisonRework.lyn.event"
 
-ALIGN 4
 #include "PrepForBattle/PrepForBattle.lyn.event"
 
-ALIGN 4
 #include "PrepForEnd/PrepForEnd.lyn.event"
 PrepForEndItemList:
 BYTE SteelSword SteelLance SteelAxe SteelShortbow 0x00 Elwind Divine Worm
 
-ALIGN 4
 #include "PrepScreen/PrepScreen.event"
 /*
 ALIGN 4
@@ -184,16 +190,14 @@ ALIGN 4
 ALIGN 4
 #include "RefreshAll/RefreshAll.lyn.event"
 
-ALIGN 4
 #include "RemoveBallistae/RemoveBallistae.lyn.event"
 
-ALIGN 4
 #include "ScriptedBattles/ScriptedBattles.event"
 
-ALIGN 4
+#include "SetDifficulty/SetDifficulty.lyn.event"
+
 #include "SetEXP/SetEXP.lyn.event"
 
-ALIGN 4
 #include "SetUnitState/SetUnitState.lyn.event"
 
 ALIGN 4
@@ -202,40 +206,38 @@ ALIGN 4
 //ALIGN 4
 //#include "SummonStuff/Summon.event"
 
-ALIGN 4
 #include "ModularSupply/ModularSupply.event"
 
-//ALIGN 4
-//#include "SupportRework/CBaseConvos/SupportRework/SupportRework.event"
-
-//ALIGN 4
-//#include "SupportRework/CBaseConvos/BaseConvos.event"
-
-ALIGN 4
 #include "SupportRework/SupportRework.event"
 
 ALIGN 4
 #include "ToggleFixedGrowths/ToggleFixedGrowths.event"
 
+#include "TriplePromotion/triple_promotions.event"
+
 ALIGN 4
 #include "Walking Sounds Fix/FE8-Walking Sounds EA.event"
+
+#include "WorldMap/WorldMap.event"
+
 
 #ifdef __DEBUG__
 	ALIGN 4
 	#include "SkillSystem_FE8/Engine Hacks/Debug.event"
 	
-	ALIGN 4
 	#inctext lyn "SkillSystem_FE8/Engine Hacks/WinAddition.elf"
-	ALIGN 4
+	
 	#inctext lyn "SkillSystem_FE8/Engine Hacks/winbuttonusability.elf"
 	ALIGN 4
 	WinButtonUsabilityCharacterList:
 	BYTE PlayerMMage PlayerMMonk PlayerMShaman PlayerFMage PlayerFMonk PlayerFShaman
 	BYTE PlayerMCavalier PlayerMKnight PlayerMSoldier PlayerMWyvernRider PlayerMArcher PlayerFCavalier PlayerFKnight PlayerFSoldier PlayerFWyvernRider PlayerFArcher
 	BYTE PlayerMMercenary PlayerMMyrmidon PlayerMFighter PlayerMPirate PlayerMBrigand PlayerFMercenary PlayerFMyrmidon PlayerFPegasusKnight
-	ALIGN 4
+	
 	WinButtonUsabilityChapterExceptionList:
 	BYTE PrologueChapter
+	
+	#include "Avenir/DateTime.event"
 	
 #endif // __DEBUG__
 
@@ -251,9 +253,9 @@ ORG $96B4C
 SHORT 0xE003 // Eliminate "Ex.map" in prep screens
 
 ORG $44800 //Enabling name selection
-BYTE 0x9 //max name length
+BYTE 0x8 //max name length
 ORG $482BA
-BYTE 0x9 //max cursor position
+BYTE 0x8 //max cursor position
 
 //Allow Visit from any tile
 ORG $23072
@@ -359,6 +361,14 @@ ORG $3053C
 BYTE 0x1C
 ORG $30B31
 BYTE 0xAC
+
+ORG $24DEC // Remove 5x 0 gold hardcoding.
+SHORT 0x46C0 0x46C0 0x46C0 0x46C0
+
+/*ORG 0x229A8 // Thracia trading.
+SHORT 0x1C00
+ORG 0x22A10
+SHORT 0x1C00*/
 
 /*
 ORG 0x33750 // Allow repositioning of forced units

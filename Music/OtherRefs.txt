@@ -1,0 +1,9 @@
+Legends_of_Avenir,Main Theme
+Life_of_a_Mercenary,Mercenary prep theme
+Life_in_the_Military,Military prep theme
+Cavern_of_Splendor,Mage prep theme
+Pub_Theme,Support Theme
+Avenir_Healing,Healing
+Promotions_of_Avenir,Promotions
+Armories_of_Avenir,Armories
+Vendors_of_Avenir,Vendors

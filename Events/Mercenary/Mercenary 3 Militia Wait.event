@@ -23,22 +23,8 @@ CHAR 0x10 ArcRecruit Arc Elanil 0x0
 CHAR 0x10 ArcRecruit Arc Finoc 0x0
 CHAR 0x10 LukeRecruit Luke Elanil 0x0
 CHAR 0x10 LukeRecruit Luke Finoc 0x0
-CHAR 0x10 AvatarRecruit PlayerMMercenary Elanil 0x0
-CHAR 0x10 AvatarRecruit PlayerMMyrmidon Elanil 0x0
-CHAR 0x10 AvatarRecruit PlayerMFighter Elanil 0x0
-CHAR 0x10 AvatarRecruit PlayerMPirate Elanil 0x0
-CHAR 0x10 AvatarRecruit PlayerMBrigand Elanil 0x0
-CHAR 0x10 AvatarRecruit PlayerFMercenary Elanil 0x0
-CHAR 0x10 AvatarRecruit PlayerFMyrmidon Elanil 0x0
-CHAR 0x10 AvatarRecruit PlayerFPegasusKnight Elanil 0x0
-CHAR 0x10 AvatarRecruit PlayerMMercenary Finoc 0x0
-CHAR 0x10 AvatarRecruit PlayerMMyrmidon Finoc 0x0
-CHAR 0x10 AvatarRecruit PlayerMFighter Finoc 0x0
-CHAR 0x10 AvatarRecruit PlayerMPirate Finoc 0x0
-CHAR 0x10 AvatarRecruit PlayerMBrigand Finoc 0x0
-CHAR 0x10 AvatarRecruit PlayerFMercenary Finoc 0x0
-CHAR 0x10 AvatarRecruit PlayerFMyrmidon Finoc 0x0
-CHAR 0x10 AvatarRecruit PlayerFPegasusKnight Finoc 0x0
+CHAR 0x10 AvatarRecruit 0x00 Elanil 0x0
+CHAR 0x10 AvatarRecruit 0x00 Finoc 0x0
 SupportConvo(CSupport,Arc,0xFF,Support1Text)
 END_MAIN
 
@@ -91,14 +77,16 @@ KillUnit(2,4)
 FADI 0x5
 CLEE Adlez
 LOAD1 0x1 ConnorStuff
+LOAD1 0x1 ConnorStuff2
 ENUN
 SetBackground(0x26)
 Text(Merc3MilitiaWaitAdlezConnorText)
 EndConvo
 MOVE 0x0 BossConnor [2,2]
 CAM1 [7,8]
-LOAD3 0x1 PlayerLoading1
 LOAD2 0x1 ArcLuke
+LOAD3 0x1 PlayerLoading1
+ENUN
 Text(Merc3MilitiaWaitTheyreHereText)
 NoFade
 ENDA
@@ -126,7 +114,7 @@ FADU 0x5
 STAL 0x60
 FADI 0x5
 CLEA Finoc
-LOAD3 0x1 PlayerLoading3
+LOAD3 0x1 PlayerLoading2
 SetBackground(0x26)
 CHECK_EVENTID 0x10
 BEQ 0x19 0x0 0xC
@@ -207,6 +195,9 @@ UNIT GerwickBandit Brigand BossConnor Level(6,Enemy,True) [8,3] 0x00 0x00 0x00 0
 UNIT GerwickBandit Brigand BossConnor Level(5,Enemy,True) [14,2] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
 UNIT GerwickBandit Myrmidon BossConnor Level(6,Enemy,True) [16,5] 0x00 0x00 0x00 0x00 [IronSword] GuardAI
 UNIT GerwickBandit Soldier BossConnor Level(4,Enemy,True) [1,4] 0x00 0x00 0x00 0x00 [IronLance] NoAI
+UNIT
+
+ConnorStuff2:
 UNIT GerwickBandit Soldier BossConnor Level(3,Enemy,True) [3,4] 0x00 0x00 0x00 0x00 [Javelin] NoAI
 UNIT GerwickBandit Mage BossConnor Level(5,Enemy,True) [17,7] 0x00 0x00 0x00 0x00 [Thunder] AttackInRangeAI
 UNIT GerwickBandit Soldier BossConnor Level(4,Enemy,True) [16,11] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
@@ -224,10 +215,6 @@ UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [0,12] 0x00 0x00 0x1 REDA3R12 [
 UNIT
 
 PlayerLoading2:
-UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT
-
-PlayerLoading3:
 UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
 UNIT
 

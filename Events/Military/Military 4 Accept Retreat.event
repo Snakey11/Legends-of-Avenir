@@ -29,16 +29,7 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0x10,TTactYvette,PlayerMCavalier,Yvette)
-CharacterEventBothWays(0x10,TTactYvette,PlayerMSoldier,Yvette)
-CharacterEventBothWays(0x10,TTactYvette,PlayerMKnight,Yvette)
-CharacterEventBothWays(0x10,TTactYvette,PlayerMWyvernRider,Yvette)
-CharacterEventBothWays(0x10,TTactYvette,PlayerMArcher,Yvette)
-CharacterEventBothWays(0x10,TTactYvette,PlayerFCavalier,Yvette)
-CharacterEventBothWays(0x10,TTactYvette,PlayerFSoldier,Yvette)
-CharacterEventBothWays(0x10,TTactYvette,PlayerFKnight,Yvette)
-CharacterEventBothWays(0x10,TTactYvette,PlayerFWyvernRider,Yvette)
-CharacterEventBothWays(0x10,TTactYvette,PlayerFArcher,Yvette)
+CharacterEventBothWays(0x10,TTactYvette,0x00,Yvette)
 SupportConvo(BSupport,Adeline,Remus,Military4AcceptRetreatAdelineRemusSupportText)
 SupportConvo(BSupport,0xFF,Zaheva,Military4AcceptRetreatTactZahevaSupportText)
 END_MAIN
@@ -269,7 +260,7 @@ NoFade
 EndA2
 
 Turn3:
-MUSS With_Us
+MUSS A_Formidable_Friend_Joins_in_the_Fray
 CAM1 [11,15]
 LOAD1 0x1 LoadYvette
 ENUN
@@ -382,7 +373,7 @@ UNIT Remus 0x00 0x00 Level(1,Ally,True) [13,16] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 CesarianFriends:
-UNIT Leyos HectorClass Leyos Level(8,NPC,True) [15,17] 0x00 0x00 0x00 0x00 [SilverAxe,Spear] [0x0C,0x03,0x00,0x00] // AttackInRangeAI except with half range.
+UNIT Leyos HectorClass Leyos Level(8,NPC,True) [15,17] 0x00 0x00 0x00 0x00 [SilverAxe,Spear] AttackIfCloseAI
 UNIT Cesarian Knight Leyos Level(8,NPC,True) [11,19] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
 UNIT Cesarian Knight Leyos Level(8,NPC,True) [16,16] 0x00 0x00 0x00 0x00 [KillerLance] AttackInRangeAI
 UNIT

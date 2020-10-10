@@ -1,47 +1,24 @@
 
-static int IsEntryBlank(const struct BaseConvoEntry* entry);
-static int GetNumViewable(int c);
-static int HasConversationBeenViewed(int index);
-static void ClearRam(char* offset, int size);
-static void HandleText(char* origin, char* dest, BaseConvoEntry* entry);
-static int GetStringLength(char* string);
-
-// Returns a boolean for whether this entry is blank or not.
-static int IsEntryBlank(const struct BaseConvoEntry* entry)
+// Returns a boolean for whether this entry is viewable.
+static int IsConvoViewable(BaseConvoEntry* entry)
 {
-	for ( int i = 0 ; i < sizeof(*entry) ; i++ )
-	{
-		if ( *(((char*)entry)+i) != 0 ) { return 0; }
-	}
-	return 1;
+	if ( !entry->exists ) { return 0;}
+	if ( CheckEventId(entry->eventID) ) { return 0; }
+	if ( !entry->usability ) { return 1; }
+	else { return entry->usability(entry); }
 }
 
 // Returns the number of conversations viewable this chapter.
-static int GetNumViewable(int c)
+static int GetNumViewable(BaseConvoProc* proc) // Pretty much we want to count the number of bits in the usability bitfield.
 {
-	int Sum = 0;
-	for ( int i = 0 ; i < 8 ; i++ )
+	int sum = 0, usability = proc->usability;
+	while ( usability )
 	{
-		if ( !IsEntryBlank(&BaseConvoTable[c][i]) )
-		{
-			if ( !HasConversationBeenViewed(i) )
-			{
-				if ( BaseConvoTable[c][i].usability != NULL )
-				{
-					if ( BaseConvoTable[c][i].usability(&BaseConvoTable[c][i]) ) { Sum++; }
-				}
-				else { Sum++; }
-			}
-		}
+		if ( usability & 1 ) { sum++; }
+		usability >>= 1;
 	}
-	return Sum;
+	return sum;
 }	
-
-static int HasConversationBeenViewed(int index)
-{
-	Proc* sallycursor = ProcFind(&SALLYCURSOR);
-	return ( *(((char*)sallycursor)+0x4C) >> index) & 1;
-}
 
 static void ClearRam(char* offset, int size)
 {
@@ -89,9 +66,6 @@ static void HandleText(char* origin, char* dest, BaseConvoEntry* entry) // Handl
 static int GetStringLength(char* string)
 {
 	int l = 0;
-	while ( *(string+l) != 0 )
-	{
-		l++;
-	}
+	for ( ; *(string+l) ; l++ ) {}
 	return l;
 }

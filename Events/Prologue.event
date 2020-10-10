@@ -1,475 +1,292 @@
 
 EventPointerTable(PrologueEvent,ThisChapter)
 
+//Label ThisChapter
 ThisChapter:
 POIN TurnBasedEvents
 POIN CharacterBasedEvents
 POIN LocationBasedEvents
 POIN MiscBasedEvents
-POIN Dunno Dunno Dunno
-POIN Tutorial
+POIN EndMainPointer EndMainPointer EndMainPointer
+POIN EndMainPointer
 POIN TrapData TrapData
-POIN Units Units	
+POIN Units Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
+//LabelEnd
 
+//Label TurnBasedEvents
 TurnBasedEvents:
 END_MAIN
-ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
+//Label CharacterBasedEvents
+ALIGN 32
 CharacterBasedEvents:
-CHAR 0x0 TMShaman [MageMAvatar,PlayerMShaman] 0x0
-CHAR 0x0 TMMage [MageMAvatar,PlayerMMage] 0x0
-CHAR 0x0 TMMonkF2 [MageMAvatar,PlayerMMonk] 0x0
-CHAR 0x0 TMMercenary [MercenaryMAvatar,PlayerMMercenary] 0x0
-CHAR 0x0 TMMyrmidon [MercenaryMAvatar,PlayerMMyrmidon] 0x0
-CHAR 0x0 TMFighter [MercenaryMAvatar,PlayerMFighter] 0x0
-CHAR 0x0 TMPirate [MercenaryMAvatar,PlayerMPirate] 0x0
-CHAR 0x0 TMBrigand [MercenaryMAvatar,PlayerMBrigand] 0x0
-CHAR 0x0 TMCavalier [MilitaryMAvatar,PlayerMCavalier] 0x0
-CHAR 0x0 TMKnight [MilitaryMAvatar,PlayerMKnight] 0x0
-CHAR 0x0 TMSoldier [MilitaryMAvatar,PlayerMSoldier] 0x0
-CHAR 0x0 TMArcher [MilitaryMAvatar,PlayerMArcher] 0x0
-CHAR 0x0 TMWyvernRider [MilitaryMAvatar,PlayerMWyvernRider] 0x0
-CHAR 0x0 TFShaman [MageFAvatar,PlayerFShaman] 0x0
-CHAR 0x0 TFMage [MageFAvatar,PlayerFMage] 0x0
-CHAR 0x0 TFMonkF2 [MageFAvatar,PlayerFMonk] 0x0
-CHAR 0x0 TFMercenary [MercenaryFAvatar,PlayerFMercenary] 0x0
-CHAR 0x0 TFMyrmidon [MercenaryFAvatar,PlayerFMyrmidon] 0x0
-CHAR 0x0 TFPegasusKnight [MercenaryFAvatar,PlayerFPegasusKnight] 0x0
-CHAR 0x0 TFCavalier [MilitaryFAvatar,PlayerFCavalier] 0x0
-CHAR 0x0 TFKnight [MilitaryFAvatar,PlayerFKnight] 0x0
-CHAR 0x0 TFSoldier [MilitaryFAvatar,PlayerFSoldier] 0x0
-CHAR 0x0 TFArcher [MilitaryFAvatar,PlayerFArcher] 0x0
-CHAR 0x0 TFWyvernRider [MilitaryFAvatar,PlayerFWyvernRider] 0x0
-CHAR 0x0 Lore [MageMAvatar,Narrator] 0x0
-CHAR 0x0 Lore [MercenaryMAvatar,Narrator] 0x0
-CHAR 0x0 Lore [MilitaryMAvatar,Narrator] 0x0
-CHAR 0x0 Lore [MageFAvatar,Narrator] 0x0
-CHAR 0x0 Lore [MilitaryFAvatar,Narrator] 0x0
-CHAR 0x0 Lore [MercenaryFAvatar,Narrator] 0x0
-CHAR
 END_MAIN
 
+//Label LocationBasedEvents
+LocationBasedEvents:
+END_MAIN
 
-Lore:
-EVBIT_T 0x4
+//Label MiscBasedEvents
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+//Label TrapData
+TrapData:
+ENDTRAP
+ALIGN 4
+
+//Label Units
+Units:
+EndUnit
+
+//Label BeginingScene
+BeginningScene:
+//ASMC SetName|1
+ASMC NewTimer|1
+ASMC SetDifficulty|1 // For now, force difficulty to Normal.
+MUSC Aquatic_Dystopia
+ENUF 0x69
+ENUF 0x6A
+ENUF 0x6B
+ENUF 0x6C
+SVAL 0x1 False // This indicates that we DON'T want to do things associated with our world map proc.
+ASMC LoadSmallWorldMap|1
+FADU 0x5
+STAL 0x20
+Text(PrologueStartingText)
+STAL 0x10
+EnterStop
+FADI 0x5
+STAL 0x10
+ASMC 0x48281 // Name selector.
+STAL 0x10
+CLEAN
+SVAL 0x1 False
+ASMC LoadSmallWorldMap|1
+FADU 0x5
+STAL 0x10
+ASMC BurnRNs|1
+ASMC EndTimer|1
+RANDOMNUMBER 6 // Randomly show some text!
 SVAL 0x1 0x1
 SVAL 0x2 0x2
 SVAL 0x3 0x3
 SVAL 0x4 0x4
 SVAL 0x5 0x5
 SVAL 0x6 0x6
-Text(PrologueAskNarratorText)
-ASMC CallLoreMenu+1
-BNE 0xC 0xC 0x0
-	Text(PrologueCesariaText)//Text #1
-	GOTO 0x13
-LABEL 0xC
-BNE 0xD 0xC 0x1
-	Text(PrologueArcanaeText)//Text #2
-	GOTO 0x13
-LABEL 0xD
-BNE 0xE 0xC 0x2
-	Text(PrologueHaedricText)//Text #3
-	GOTO 0x13
-LABEL 0xE
-BNE 0xF 0xC 0x3
-	Text(PrologueAltiaText)//Text #3
-	GOTO 0x13
-LABEL 0xF
-BNE 0x10 0xC 0x4
-	Text(PrologueVathrylText)//Text #4
-	GOTO 0x13
-LABEL 0x10
-BNE 0x11 0xC 0x5
-	Text(PrologueWhoAreYouText)//Text #5
-	GOTO 0x13
-LABEL 0x11
-BNE 0x12 0xC 0x6
-	Text(PrologueWhoAmIText)//Text #6
-	GOTO 0x13
-LABEL 0x12
-	Text(PrologueNeverMindText)//Text #7
-LABEL 0x13
-NoFade
-ENDA
-
-
-TMShaman:
-ENUT 0x69
-DISA MageMAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Mage1)
-ENDA
-
-TMMage:
-ENUT 0x6A
-DISA MageMAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Mage1)
-ENDA
-
-TMMonkF2:
-ENUT 0x6B
-DISA MageMAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Mage1)
-ENDA
-
-TMMercenary:
-ENUT 0x69
-DISA MercenaryMAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Mercenary1)
-ENDA
-
-TMMyrmidon:
-ENUT 0x6A
-DISA MercenaryMAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Mercenary1)
-ENDA
-
-TMFighter:
-ENUT 0x6B
-DISA MercenaryMAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Mercenary1)
-ENDA
-
-TMPirate:
-ENUT 0x6C
-DISA MercenaryMAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Mercenary1)
-ENDA
-
-TMBrigand:
-ENUT 0x6D
-DISA MercenaryMAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Mercenary1)
-ENDA
-
-TMCavalier:
-ENUT 0x69
-DISA MilitaryMAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Military1)
-ENDA
-
-TMKnight:
-ENUT 0x6A
-DISA MilitaryMAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Military1)
-ENDA
-
-TMSoldier:
-ENUT 0x6B
-DISA MilitaryMAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Military1)
-ENDA
-
-TMArcher:
-ENUT 0x6C
-DISA MilitaryMAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Military1)
-ENDA
-
-TMWyvernRider:
-ENUT 0x6D
-DISA MilitaryMAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Military1)
-ENDA
-
-
-TFShaman:
-ENUT 0x69
-DISA MageFAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Mage1)
-ENDA
-
-TFMage:
-ENUT 0x6A
-DISA MageFAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Mage1)
-ENDA
-
-TFMonkF2:
-ENUT 0x6B
-DISA MageFAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Mage1)
-ENDA
-
-TFMercenary:
-ENUT 0x69
-DISA MercenaryFAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Mercenary1)
-ENDA
-
-TFMyrmidon:
-ENUT 0x6A
-DISA MercenaryFAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Mercenary1)
-ENDA
-
-TFPegasusKnight:
-ENUT 0x6B
-DISA MercenaryFAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Mercenary1)
-ENDA
-
-TFCavalier:
-ENUT 0x69
-DISA MilitaryFAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Military1)
-ENDA
-
-TFKnight:
-ENUT 0x6A
-DISA MilitaryFAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Military1)
-ENDA
-
-TFSoldier:
-ENUT 0x6B
-DISA MilitaryFAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Military1)
-ENDA
-
-TFArcher:
-ENUT 0x6C
-DISA MilitaryFAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Military1)
-ENDA
-
-TFWyvernRider:
-ENUT 0x6D
-DISA MilitaryFAvatar
-Text(PrologueEndingText) ; ENUF 0x66
-MoveToChapter(Military1)
-ENDA
-
-
-LocationBasedEvents:
-END_MAIN
-
-MiscBasedEvents:
-END_MAIN
-
-Dunno:
-END_MAIN
-
-Tutorial:
-END_MAIN
-
-TrapData:
-ENDTRAP
-
-ALIGN 4
-
-Units:
-UNIT
-
-BeginningScene:
-//ASMC SetName|1
-MUSC PrologueMusic
-ENUT 0x66 // Disable objective window
-ENUF 0x6E
-ENUF 0x67
-ENUF 0x68
-ENUF 0x69
-ENUF 0x6A
-ENUF 0x6B
-ENUF 0x6C
-EnterStop
-LOAD1 0x1 LoadNarrator
-ENUN
-//ENUF 0x6E
-//ENUF 0x67
-//ENUF 0x68
-STAL 0x30
-FADU 0x5
-STAL 0x40
-Text(PrologueOpeningNarratorText)
-FADI 0x5
-DISA Narrator
-ASMC 0x48281
-LOMA Prologue
-LOAD1 0x1 LoadNarrator
-ENUN
-FADU 0x5
-Text(PrologueWhatGenderText)//Asks for gender
-
-STAL 0x20
-ASMC CallGenderMenu+1
-BNE 0x0 0xC 0x0
-	ENUT 0x6E//0x6E triggered = male
-	GOTO 0x1
+TEXTSTART
+BNE 0x0 0x0 0xC
+	TEXTSHOW PrologueNameText1
+	GOTO 0x6
 LABEL 0x0
-	ENUF 0x6E//0x6E untriggered = female
+BNE 0x1 0x1 0xC
+	TEXTSHOW PrologueNameText2
+	GOTO 0x6
 LABEL 0x1
-
-Text(PrologueWhatClassText)//Narrator talks about paths
-
-ASMC CallClassMenu+1
-#ifndef __NO_MAGE__
-BEQ 0x2 0xC 0x0
-	GOTO 0x3
+BNE 0x2 0x2 0xC
+	TEXTSHOW PrologueNameText3
+	GOTO 0x6
 LABEL 0x2
-	ENUT 0x67//0x67 triggered = mage mode
+BNE 0x3 0x3 0xC
+	TEXTSHOW PrologueNameText4
+	GOTO 0x6
 LABEL 0x3
-#endif
-#ifndef __NO_MERCENARY__
-SVAL 0x1 0x1
-BEQ 0x4 0xC 0x1
-	GOTO 0x5
+BNE 0x4 0x4 0xC
+	TEXTSHOW PrologueNameText5
+	GOTO 0x6
 LABEL 0x4
-	ENUF 0x67//0x67 untriggered = mercenary mode
+BNE 0x5 0x5 0xC
+	TEXTSHOW PrologueNameText6
+	GOTO 0x6
 LABEL 0x5
-#endif
-#ifndef __NO_MILITARY__
-SVAL 0x1 0x2
-BEQ 0x6 0xC 0x1
-	GOTO 0x7
+BNE 0x6 0x6 0xC
+	TEXTSHOW PrologueNameText7
 LABEL 0x6
-	ENUT 0x68//0x68 triggered = military mode
-LABEL 0x7
-#endif
+TEXTEND
+TEXTSHOW2 PrologueAlmostCreatorText
+TEXTEND
+REMA
 
-CHECK_EVENTID 0x68
-BEQ 0x9 0xC 0x0
-	CHECK_EVENTID 0x6E
-	BEQ 0xC 0xC 0x0
-		STAL 0x20
-		FAWI 0x10
-		LOAD1 0x1 MMilitarySelections
-		ENUN
-		STAL 0x10
-		FAWU 0x02
-		GOTO 0xB
-	LABEL 0xC
-		STAL 0x20
-		FAWI 0x10
-		LOAD1 0x1 FMilitarySelections
-		ENUN
-		STAL 0x10
-		FAWU 0x01
-		GOTO 0xB
+MUSC Avatars_of_Avenir
+ASMC CallCharacterCreator|1 // This fades in and out on its own.
+
+EVBIT_T 0x8 // Tell the event engine we're faded in.
+
+SVAL 0x1 True
+SVAL 0x2 PrologueWorldMapEvents|IsPointer
+ASMC StartSmallWorldMap|1
+
+ASMC GetMode|1
+SVAL 0x1 0x1
+SVAL 0x2 0x2
+SVAL 0x3 0x3
+BNE 0x7 0x1 0xC
+	MoveToChapter(Mercenary1)
+	GOTO 0x9
+LABEL 0x7
+BNE 0x8 0x2 0xC
+	MoveToChapter(Military1)
+	GOTO 0x9
+LABEL 0x8
+BNE 0x9 0x3 0xC
+	MoveToChapter(Mage1)
 LABEL 0x9
-CHECK_EVENTID 0x67
-BEQ 0xA 0xC 0x0
-	CHECK_EVENTID 0x6E
-	BEQ 0xD 0xC 0x0
-		STAL 0x20
-		FAWI 0x10
-		LOAD1 0x1 MMageSelections
-		ENUN
-		STAL 0x10
-		FAWU 0x01
-		GOTO 0xB
-	LABEL 0xD
-		STAL 0x20
-		FAWI 0x10
-		LOAD1 0x1 FMageSelections
-		ENUN
-		STAL 0x10
-		FAWU 0x01
-		GOTO 0xB
-LABEL 0xA
-	CHECK_EVENTID 0x6E
-	BEQ 0xE 0xC 0x0
-		STAL 0x20
-		FAWI 0x10
-		LOAD1 0x1 MMercenarySelections
-		ENUN
-		STAL 0x10
-		FAWU 0x01
-		GOTO 0xB
-	LABEL 0xE
-		STAL 0x20
-		FAWI 0x10
-		LOAD1 0x1 FMercenarySelections
-		ENUN
-		STAL 0x10
-		FAWU 0x10
-LABEL 0xB
-STAL 0x40
-Text(PrologueEndOpeningText)//Narrator sets you free
-CUMO [7,6]
 NoFade
 ENDA
 
+//Label EndingScene
 EndingScene:
 ENDA
 
-	/*UNIT DATA*/
+//Label WorldMapEvents
+PrologueWorldMapEvents:
+EVBIT_MODIFY 0x1
+_0xC220
+STAL 32
+WM_SHOWDRAWNMAP 0x0 0x0 0x0 0x10 0x0
+STAL 2 // This STAL is necessary, or else palettes get borked.
+WM_FADEOUT 0x0 0x0 0x0
+MUSC Aquatic_Dystopia
 
-LoadNarrator:
-UNIT Narrator NarratorClass Narrator Level(15,NPC,False) [7,1] 0x00 0x00 0x00 0x00 [SilverSword] [0]
-UNIT
+EVBIT_MODIFY 0x0
+STAL 0x40
+Text(ProloguePrepForMapText)
+STAL 0x10
+WM_TEXTDECORATE
+EVBIT_MODIFY 0x0
+STAL 60
+WM_SHOWTEXTWINDOW 0x0 0x28 0x1
+WM_WAITFORTEXT
+WM_TEXTSTART
+WM_TEXT PrologueWMMainText
+TEXTEND
+STAL 0x10
+WM_MOVECAM2 0x0 0x0 0x00 0x0 0x10 0x3C 0x0 // WM_MOVECAM2 Value1 *Starting X* *Starting Y* *Ending X* *Ending Y* Speed Delay 
+STAL 90
+WM_HIGHLIGHT 0x0 CesariaGlowy 0x0
+TEXTCONT
+TEXTEND
+STAL 0x08
+WM_HIGHLIGHTCLEAR1 0x0 CesariaGlowy 0x0
+WM_HIGHLIGHTCLEAR2 0x0 CesariaGlowy 0x0
+STAL 0x10
+WM_MOVECAM2 0x0 0x0 0x10 0x0 0x30 0x3C 0x0 
+STAL 90
+WM_HIGHLIGHT 0x0 ArcanaeGlowy 0x0
+STAL 0x10
+TEXTCONT
+TEXTEND
+STAL 0x08
+WM_HIGHLIGHTCLEAR1 0x0 ArcanaeGlowy 0x0
+WM_HIGHLIGHTCLEAR2 0x0 ArcanaeGlowy 0x0
+STAL 0x10
+WM_MOVECAM2 0x0 0x0 0x30 0x0 (-0x02) 0x3C 0x0
+STAL 90
+WM_HIGHLIGHT 0x0 HaedricGlowy 0x0
+STAL 0x10
+TEXTCONT
+TEXTEND
+STAL 0x08
+WM_HIGHLIGHTCLEAR1 0x0 HaedricGlowy 0x0
+WM_HIGHLIGHTCLEAR2 0x0 HaedricGlowy 0x0
+STAL 0x10
+WM_MOVECAM2 0x0 0x0 (-0x02) 0x0 (-0x0C) 0x3C 0x0
+STAL 90
+WM_HIGHLIGHT 0x0 AltiaGlowy 0x0
+STAL 0x10
+TEXTCONT
+TEXTEND
+STAL 0x08
+WM_HIGHLIGHTCLEAR1 0x0 AltiaGlowy 0x0
+WM_HIGHLIGHTCLEAR2 0x0 AltiaGlowy 0x0
+STAL 0x10
 
+ASMC GetMode|1
+WM_TEXTSTART
+SVAL 0x1 0x1
+SVAL 0x2 0x2
+SVAL 0x3 0x3
+BNE 0x7 0x1 0xC
+	WM_TEXT PrologueWMMercenaryText
+	TEXTEND
+	WM_MOVECAM2 0x0 0x0 (-0x0C) 0x0 (-0x02) 0x3C 0x0
+	STAL 0x08
+	TEXTCONT
+	TEXTEND
+	WM_HIGHLIGHT 0x0 HaedricGlowy 0x0
+	STAL 0x08
+	TEXTCONT
+	TEXTEND
+	WM_SHOWPORTRAIT LeonMug 1332
+	STAL 6 26
+	TEXTCONT
+	TEXTEND
+	STAL 30
+	WM_HIGHLIGHTCLEAR1 0x0 HaedricGlowy 0x0
+	WM_HIGHLIGHTCLEAR2 0x0 HaedricGlowy 0x0
+	WM_CLEARPORTRAIT 0x0 0x100 0x0
+	STAL 0x20
+	GOTO 0x9
+LABEL 0x7
+BNE 0x8 0x2 0xC
+	WM_TEXT PrologueWMMilitaryText
+	TEXTEND
+	WM_MOVECAM2 0x0 0x0 (-0x0C) 0x0 0x10 0x3C 0x0
+	STAL 0x08
+	TEXTCONT
+	TEXTEND
+	WM_HIGHLIGHT 0x0 CesariaGlowy 0x0
+	STAL 0x08
+	TEXTCONT
+	TEXTEND
+	STAL 10
+	WM_HIGHLIGHTCLEAR1 0x0 CesariaGlowy 0x0
+	WM_HIGHLIGHTCLEAR2 0x0 CesariaGlowy 0x0
+	TEXTCONT
+	TEXTEND
+	WM_SHOWPORTRAIT RexMug 0x1B0 // The top byte of this is a bitfield! Bit 0 is direction to slide in from. Bit 2 is direction for facing. idk what bit 3 and 4 do.
+	STAL 6 26
+	TEXTCONT
+	TEXTEND
+	WM_CLEARPORTRAIT 0x0 0x100 0x0
+	STAL 32
+	TEXTCONT
+	TEXTEND
+	WM_SHOWPORTRAIT EmperorMug 0x1B0
+	STAL 6 26
+	TEXTCONT
+	TEXTEND
+	STAL 30
+	WM_CLEARPORTRAIT 0x0 0x100 0x0
+	STAL 0x20
+	GOTO 0x9
+LABEL 0x8
+BNE 0x9 0x3 0xC
+	WM_TEXT PrologueWMMageText
+	TEXTEND
+	WM_MOVECAM2 0x0 0x0 (-0x0C) 0x0 0x30 0x3C 0x0
+	STAL 0x08
+	TEXTCONT
+	TEXTEND
+	WM_HIGHLIGHT 0x0 ArcanaeGlowy 0x0
+	STAL 0x08
+	TEXTCONT
+	TEXTEND
+	STAL 30
+	WM_HIGHLIGHTCLEAR1 0x0 ArcanaeGlowy 0x0
+	WM_HIGHLIGHTCLEAR2 0x0 ArcanaeGlowy 0x0
+LABEL 0x9
+STAL 0x20
 
-MMageSelections:
-UNIT MageMAvatar LostSoulM PlayerMArcher Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] [0] 
-UNIT PlayerMShaman ShamanM2 Narrator Level(5,NPC,True) [7,3] 0x00 0x00 0x00 0x00 [Flux] NoAI
-UNIT PlayerMMage MageM2 Narrator Level(5,NPC,True) [5,5] 0x00 0x00 0x00 0x00 [Aqua] NoAI
-UNIT PlayerMMonk MonkF2 Narrator Level(5,NPC,True) [9,5] 0x00 0x00 0x00 0x00 [Lightning] NoAI
-UNIT
-
-MMercenarySelections:
-UNIT MercenaryMAvatar LostSoulM PlayerMArcher Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] [0]
-UNIT PlayerMMercenary MercenaryM2 Narrator Level(5,NPC,True) [7,3] 0x00 0x00 0x00 0x00 [IronSword] NoAI
-UNIT PlayerMMyrmidon MyrmidonM2 Narrator Level(5,NPC,True) [6,4] 0x00 0x00 0x00 0x00 [IronSword] NoAI
-UNIT PlayerMFighter Fighter2 Narrator Level(5,NPC,True) [5,5] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
-UNIT PlayerMPirate Pirate2 Narrator Level(5,NPC,True) [8,4] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
-UNIT PlayerMBrigand Brigand2 Narrator Level(5,NPC,True) [9,5] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
-UNIT
-
-MMilitarySelections:
-UNIT MilitaryMAvatar LostSoulM PlayerMArcher Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] [0] 
-UNIT PlayerMCavalier CavalierM2 Narrator Level(5,NPC,True) [7,3] 0x00 0x00 0x00 0x00 [IronLance] NoAI
-UNIT PlayerMKnight KnightM2 Narrator Level(5,NPC,True) [6,4] 0x00 0x00 0x00 0x00 [IronLance] NoAI
-UNIT PlayerMSoldier SoldierM2 Narrator Level(5,NPC,True) [5,5] 0x00 0x00 0x00 0x00 [IronLance] NoAI
-UNIT PlayerMArcher ArcherM2 Narrator Level(5,NPC,True) [8,4] 0x00 0x00 0x00 0x00 [IronBow] NoAI
-UNIT PlayerMWyvernRider WyvernRiderM2 Narrator Level(5,NPC,True) [9,5] 0x00 0x00 0x00 0x00 [IronLance] NoAI
-UNIT
-
-
-FMageSelections:
-UNIT MageFAvatar LostSoulF PlayerMArcher Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] [0] 
-UNIT PlayerFShaman ShamanF2 Narrator Level(5,NPC,True) [7,3] 0x00 0x00 0x00 0x00 [Flux] NoAI
-UNIT PlayerFMage MageF2 Narrator Level(5,NPC,True) [5,5] 0x00 0x00 0x00 0x00 [Aqua] NoAI
-UNIT PlayerFMonk MonkF2 Narrator Level(5,NPC,True) [9,5] 0x00 0x00 0x00 0x00 [Lightning] NoAI
-UNIT
-
-FMercenarySelections:
-UNIT MercenaryFAvatar LostSoulF PlayerMArcher Level(5,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] [0]
-UNIT PlayerFMercenary MercenaryF2 Narrator Level(5,NPC,True) [7,3] 0x00 0x00 0x00 0x00 [IronSword] NoAI
-UNIT PlayerFMyrmidon MyrmidonF2 Narrator Level(5,NPC,True) [5,5] 0x00 0x00 0x00 0x00 [IronSword] GuardAI
-UNIT PlayerFPegasusKnight PegasusKnight2 Narrator Level(5,NPC,True) [9,5] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
-UNIT
-
-FMilitarySelections:
-UNIT MilitaryFAvatar LostSoulF PlayerMArcher Level(1,Ally,True) [7,6] 0x00 0x00 0x00 0x00 [0] [0] 
-UNIT PlayerFCavalier CavalierF2 Narrator Level(5,NPC,True) [7,3] 0x00 0x00 0x00 0x00 [IronLance] NoAI
-UNIT PlayerFKnight KnightF2 Narrator Level(5,NPC,True) [6,4] 0x00 0x00 0x00 0x00 [IronLance] NoAI
-UNIT PlayerFSoldier SoldierF2 Narrator Level(5,NPC,True) [5,5] 0x00 0x00 0x00 0x00 [IronLance] NoAI
-UNIT PlayerFArcher ArcherF2 Narrator Level(5,NPC,True) [8,4] 0x00 0x00 0x00 0x00 [IronBow] NoAI
-UNIT PlayerFWyvernRider WyvernRiderF2 Narrator Level(5,NPC,True) [9,5] 0x00 0x00 0x00 0x00 [IronLance] NoAI
-UNIT
+WM_TEXTSTART
+WM_TEXT PrologueWMEndingText
+TEXTEND
+FADI 0x3
+STAL 0x10
+WM_REMOVETEXT
+SVAL 0xB 0x1
+NoFade
+ENDA

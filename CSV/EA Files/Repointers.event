@@ -318,7 +318,7 @@ ORG $59D24
 POIN PaletteTable + 4
 ORG $5A7AC
 POIN PaletteTable + 4
-ORG $5A929
+ORG $5A928
 POIN PaletteTable + 4
 
 ORG $57394
@@ -373,6 +373,23 @@ POIN GuidingRingList
 ORG $293C0
 POIN MasterSealList
 ORG 0x29408
-POIN OceanSealList|IsPointer
+POIN OceanSealList
+
+ORG $19900
+POIN EventPointerListOffset
+ORG $19968
+POIN EventPointerListOffset
+ORG $1999C
+POIN EventPointerListOffset
+ORG $30134
+POIN EventPointerListOffset
+ORG $30C78
+POIN EventPointerListOffset
+ORG $34680
+POIN EventPointerListOffset
+ORG $346AC
+POIN EventPointerListOffset
+ORG $346DC
+POIN EventPointerListOffset
 
 POP

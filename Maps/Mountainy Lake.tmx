@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="18" height="20" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="01004C03" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/01004C03.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="18" height="20">
+  <properties>
+   <property name="Anims" value="_01Anims"/>
+   <property name="ChapterID" value="MilitaryPass3"/>
+   <property name="Main" value=""/>
+   <property name="MapID" value="MountainyLakeMap"/>
+   <property name="ObjectType" value="0x01"/>
+   <property name="PaletteID" value="0x4C"/>
+   <property name="TileConfig" value="0x03"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxtk09LlFEUxu99X6JGMEvQst0UaUa6EIyEdi7mJStMSD+AAxOmhc7GjYK8K3cyfQUhCpJy6BukjpSLjPkI6sr/uPc53Ofwnhlb/Dh37j3nuc85751K7Ny/yLlzUOG6ijjsAkWQgmveuTHQ7cO+7M0irwwmXaiTemE9zjS0PqXeMVg1v4UfrCsznhsPmrcDaqAtDvUb4BkYBE/BENikVrXJg70rB/+3fObtOaiTDh/iEM9WWfMKJNS5Dc12cIB1Bfm7iHtgEVwQ1VsA8/QuM1oG74wX9XbMfqwX60c1f4ICNYqc/xznplripfM/GpYu8JH1qZn/J/PNVO+eu1pv56T1bXH2LWXuv2VWyLvps7O7RuOiyVtq7tXYivNtxAEfqHGOk5x3vUmvbs5TRnm3j0A/fYh2L9Y3wB/29xaMgwnz3d4gd4z5f1149/oeUr6NQ3pr8eEuPStS9455N/q9JW8J+VW88Za4seeH/I/tmjv0v9MDRqlXJCfI/SKzibKeD7AejRr1C6wVSuA6eQ2OUN8aBZ1D0M76+6AAtrF3xt6/gTVqyCzn6Os7e/rlQ/4aOPWZvx2QQGsqyrSG2V+BGlNg2vSU0MPjqNHfCNY5kI+CV52R9vTBBf9PwFfkv0Dc90ErMWvZnwafZd4+m5l4WaE38SI5D3hfQh/WUwnxJdhi3yXuqx+dr+j0gRlqvY9CPz2IvdTTvDxnLzqXvnWnyg==
+  </data>
+ </layer>
+</map>

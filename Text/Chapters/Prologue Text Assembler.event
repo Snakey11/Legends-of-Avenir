@@ -1,289 +1,234 @@
 
-## PrologueMaleMenuText
+## PrologueStartingText
+[ConversationText]
+[Right][LoadNarrator]
+Well, well, well. Who do we have here in my realm? A lost soul... looking for another chance at life, eh?
+[FarFarLeft]Who... are you?
+[Right]A silly question to ask, given that you won't remember... But I'll indulge you. I am the Guardian Spirit, overseer of Avenir and guide of lost souls. That is all, nothing more. For now, what is your name?[X]
+
+## PrologueNameText1
+[ConversationText]
+[Right][LoadNarrator]
+An interesting choice...[X]
+
+## PrologueNameText2
+[ConversationText]
+[Right][LoadNarrator]
+Your mother really didn't think too highly of you, eh?[X]
+
+## PrologueNameText3
+[ConversationText]
+[Right][LoadNarrator]
+You sure?[....] Eh, too bad, you already made your choice.[X]
+
+## PrologueNameText4
+[ConversationText]
+[Right][LoadNarrator]
+Ha! [.][MoveRight][....]Have fun teaching people how to pronounce that one...[X]
+
+## PrologueNameText5
+[ConversationText]
+[Right][LoadNarrator]
+Very well done! You chose a name![X]
+
+## PrologueNameText6
+[ConversationText]
+[Right][LoadNarrator]
+A good, solid choice.[X]
+
+## PrologueNameText7
+[ConversationText]
+[Right][LoadNarrator]
+Good, good.[X]
+
+## PrologueAlmostCreatorText
+[ConversationText]
+[CloseSpeech]
+[Right]
+Now that that's taken care of, it's time to decide what exactly you may want to be when you enter the realm of Avenir. Do you wish to be a strong mercenary of Haedric, yearning for wealth? A soldier in the Empire of Cesaria's military? Or a fledgling mage in the wise country of Arcanae? Be certain in your choice.[X]
+
+## ProloguePrepForMapText
+[ConversationText]
+[Right][LoadNarrator]
+It is time. Let us prepare you for the realm of Avenir...[X]
+
+## PrologueWMMainText
+The continent of Avenir.[.....] Four main countries[NL]
+dot the main landmass of the continent.[A][0x02][NL]
+[Events]
+The Empire of Cesaria;[A][0x02][NL]
+[Events]
+the country of magic, Arcanae;[A][0x02][NL]
+[Events]
+the warrior country of Haedric;[A][0x02][NL]
+[Events]
+and the avian realm of Altia.[A][X]
+
+## PrologueWMMercenaryText
+As a mercenary, [Events][....]you will begin your journey[NL]
+in Haedric.[Events][......] The warriors of Haedric pride[A][NL]
+themselves on personal strength, and their[NL]
+leader,[Events][....] the Basileus, is renowned as the[A][NL]
+strongest warrior in all of Avenir...[A][X]
+
+## PrologueWMMilitaryText
+As a member of the military, [Events][....]you will begin[NL]
+your journey in Cesaria.[Events][......] They boast the[A][NL]
+largest military on the continent,[Events][.] led by[NL]
+their Captains and General.[Events][....] Every Cesarian[A][0x02][NL][Events]
+is fiercely loyal to their Emperor.[Events][......][A][X]
+
+## PrologueWMMageText
+As a magic scholar, [Events][....]you will begin your journey[NL]
+in Arcanae.[Events][.....] They have found themselves locked[A][NL]
+in a civil war between two halves of their[NL]
+Grand Magi, but like most Arcanians, you[A][NL]
+only truly seek knowledge of the world.[A][X]
+
+## PrologueWMEndingText
+I wish you luck, [Tact].[....] Make your mark[NL]
+on Avenir.[....] I will be watching...[A][X]
+
+## GenderMenuText
+Form[X]
+
+## RouteMenuText
+Route[X]
+
+## ClassMenuText
+Class[X]
+
+## BaneMenuText
+Bane[X]
+
+## BoonMenuText
+Boon[X]
+
+## RandomMenuText
+Random[X]
+
+## DoneMenuText
+Done[X]
+
+## MaleMenuText
 Male[X]
 
-## PrologueFemaleMenuText
+## FemaleMenuText
 Female[X]
 
-## PrologueMilitaryMenuText
+## MercenaryMenuText
+Mercenary[X]
+
+## MilitaryMenuText
 Military[X]
 
-## PrologueCesariaMenuText
-Tell me more about Cesaria.[X]
+## MageMenuText
+Mage[X]
 
-## PrologueArcanaeMenuText
-Tell me more about Arcanae.[X]
+## CreatorGenderText
+Your form can affect your[NL]
+appearance, your stats,[NL]
+and what classes may be[NL]
+available. It will not affect[NL]
+supports, endings, or[NL]
+interactions in the story.[X]
 
-## PrologueHaedricMenuText
-Tell me more about Haedric[X]
+## CreatorMercenaryRouteText
+Become a wandering[NL]
+mercenary in the neutral[NL]
+warrior state of Haedric.[NL]
+Play as a Mercenary,[NL]
+Myrmidon, Fighter, Pirate,[NL]
+Brigand, or Pegasus Knight.[X]
 
-## PrologueAltiaMenuText
-Tell me more about Altia.[X]
+## CreatorMilitaryRouteText
+Become a cadet in the[NL]
+Cesarian Army about to[NL]
+join the fight against[NL]
+New Arcanae. Play as a[NL]
+Cavalier, Knight, Soldier,[NL]
+Wyvern Rider, or Archer.[X]
 
-## PrologueVathrylMenuText
-What happened to Vathryl?[X]
+## CreatorMageRouteText
+Become a scholar in[NL]
+Arcanae about to[NL]
+unearth something that[NL]
+could change the outcome[NL]
+of the war. Play as a[NL]
+Mage, Monk, or Shaman.[X]
 
-## PrologueWhoAreYouMenuText
-Who really are you?[X]
+## ClassMenuErrorText
+Select a gender and route[NL]
+before choosing a class.[X]
 
-## PrologueWhoAmIMenuText
-Who really am I?[X]
+## BaneMenuErrorText
+Select a gender, route, and[NL]
+class before choosing a bane.[X]
 
-## PrologueNeverMindMenuText
-Never mind.[X]
+## BoonMenuErrorText
+Select a gender, route, and[NL]
+class before choosing a boon.[X]
 
-## PrologueAskNarratorText
-[MidLeft][LoadNarrator]Yes?[A][X]
+## HPMenuText
+HP[X]
 
-## PrologueCesariaText
-[MidLeft][LoadNarrator]Cesaria is ruled by the Emperor in tandem[NL]
-with their General of the military.[A][NL]
-Advising the General are the Captains of[NL]
-the multiple brigades in their military.[A][NL]
-They're the youngest country on the map,[.][NL]
-but their quick expansion and great[A][NL]
-military might in their younger days allowed[NL]
-them to quickly conquer the lands they[A][NL]
-now hold.[.....] They don't expand as much anymore.[....][NL]
-They greatly disagree with the ideals of[A][NL]
-Arcanae where knowledge is power,[.] and[NL]
-scientific advancement is more crucial[A][NL]
-than anything.[......] Cesaria's survival greatly[NL]
-depends on the cooperation of the Emperor[A][NL]
-and General,[.] but since the General is[NL]
-appointed by the Emperor, that hasn't[A][NL]
-been a problem in the past.[A][X]
+## StrMenuText
+Strength[X]
 
-## PrologueArcanaeText
-[MidLeft][LoadNarrator]Arcanae is the center of all magic in Avenir.[....][NL]
-The capital is separated into five[A][NL]
-districts,[.] each ruled by one of the Grand Magi.[.....][NL]
-Their primary concern is always research[A][NL]
-and advancement,[.] and each of the Grand Magi[NL]
-draws the line of what is necessary and[A][NL]
-what isn't necessary in a different place.[.....][NL]
-Additionally,[.] each one of them has[A][NL]
-their own small army.[.....] Arcanae almost functions[NL]
-as five independent states,[.] united by[A][NL]
-their mutual knowledge and power. [.....]Anything[NL]
-affecting all five states has to be voted[A][NL]
-on and discussed by the Five Grand Magi.[.....][NL]
-Of course,[.] each one specializes[A][NL]
-in a different form of magic. Mistlain[NL]
-studies Fire,[.] Xavus studies Dark,[A][NL]
-Alexis studies Light,[.] Muriel studies Wind,[NL]
-and Uzkalis studies Thunder.[......] Each[A][NL]
-also has a secret skill they learn in exchange[NL]
-for their dedication to their position[A][NL]
-as Magus.[A][X]
+## MagMenuText
+Magic[X]
 
-## PrologueHaedricText
-[MidLeft][LoadNarrator]Haedric is ruled by their Basileus,[.] an old[NL]
-term whose origin was long forgotten.[A][NL]
-The Basileus is the greatest warrior in the[NL]
-land who hosts a tournament to choose[A][NL]
-his successor.[......] Haedric lacks an[NL]
-organized military or political system,[A][NL]
-but rather allows individual towns and[NL]
-city-states to run themselves as they[A][NL]
-see fit,[.] simply to avoid infighting.[.....][NL]
-The few laws are upheld by the warlords[A][NL]
-and clans who serve the Basileus loyally.[.....][NL]
-There are also many mercenary[A][NL]
-guilds and bandit groups scattered[NL]
-throughout the forested country.[A][NL]
-They underwent major reform about 50 years[NL]
-ago when the elves were chased out by[A][NL]
-Arcanae,[.] and a new Basileus was chosen.[A][X]
+## SklMenuText
+Skill[X]
 
+## SpdMenuText
+Speed[X]
 
-## PrologueAltiaText
-[MidLeft][LoadNarrator]Not much is known about Altia.[....][NL]
-Their Anguis is said to know[A][NL]
-the language of wyverns and pegasi,[....][NL]
-and their culture is heavily[A][NL]
-circulated around those two beasts.[......][NL]
-Additionally,[.] the freezing temperatures[A][NL]
-of the northern peaks gives them an almost[NL]
-religious dedication to fire magic.[A][NL]
-Their High Priest is actually said to be a[NL]
-fire mage rivaling the power of Mistlain[A][NL]
-of Arcanae. [......]Their military consists of units[NL]
-trained in mounted air combat,[A][NL]
-as well as archers and fire mages.[.....] They[NL]
-are fairly separated from the rest of[A][NL]
-the world and mostly choose to keep their[NL]
-economy self-sufficient to avoid being[A][NL]
-dragged into conflicts between the other[NL]
-three nations.[.......][A][X]
+## DefMenuText
+Defense[X]
 
-## PrologueVathrylText
-[MidLeft][LoadNarrator]Vathryl was...[.......] unique to put it mildly.[.....][NL]
-It was named for it's inhabitants,[A][NL]
-the Vathrylians,[.] who developed as elves[NL]
-and humans coexisted and had offspring.[A][NL]
-The Vathrylians had a unique aptitude[NL]
-for magic and created their own[A][NL]
-empire that dominated the others.[.....][NL]
-At the time,[.] Haedric was an elven[A][NL]
-nation, Arcanae was much smaller,[NL]
-Cesaria didn't exist,[....] and[A][NL]
-Altia was the land of the humans.[NL]
-However,[.] Vathrylians were driven[A][NL]
-by greed for knowledge.[....] At one point,[NL]
-the Grand Master of Vathryl along with[A][NL]
-the Five Commanders attempted to combine the[NL]
-two energies of the world,[.] Inge[A][NL]
-and Vene,[.] to create true immortality[NL]
-for themselves. [....]They discovered,[.] however,[A][NL]
-that it had awful effects on the land.[NL]
-As the empire was struck by blight and[A][NL]
-drought,[.] it slowly transformed into the[NL]
-desert it was now.[.....] The Vathrylians[A][NL]
-died out. Many of their creations still[NL]
-stand underneath the sands of Draterus,[A][NL]
-but the beings they created guard these ruins.[NL]
-Many people wish to uncover the artifacts[A][NL]
-and secrets of Vathryl,[.] but lack the courage[NL]
-to journey there themselves.[......] It is a[A][NL]
-touchy subject for spirits such as I.[......][A][X]
+## ResMenuText
+Resistance[X]
 
-## PrologueWhoAreYouText
-[MidLeft][LoadNarrator]I am the Guardian Spirit.[....] A new one[NL]
-is chosen at the turn of the era,[A][NL]
-which was underwent just a few years[NL]
-ago when a young man,[.] Efil, [A][NL]
-and his colleagues destroyed the former[NL]
-spirit, Kilthel.[.....] I was selected to[A][NL]
-fill the role at that time.[.....] Tending to[NL]
-lost souls such as you is one of the[A][NL]
-many duties I have.[......] I also have to make[NL]
-sure the world stays in balance,[A][NL]
-no one nation can surpass the others,[.][NL]
-Inge and Vene cannot surpass each other,[A][NL]
-and Chaos must be avoided at all costs.[....][NL]
-I'm a form of Higher Being, which[A][NL]
-includes Spirits,[.] Angels,[.] and Demons.[....][NL]
-You Lesser Beings make up most of[A][NL]
-the inhabitants of Avenir,[.] including[NL]
-humans and the few remaining[A][NL]
-Vathrylians.[.....] I believe you'll[NL]
-come to understand me better in due time.[A][X]
+## LukMenuText
+Luck[X]
 
-## PrologueWhoAmIText
-[MidLeft][LoadNarrator]You are a lost soul. [....]Sometimes,[.] if[NL]
-someone is slain before all of their[A][NL]
-life energy, called Inge, [.]is gone,[NL]
-their soul will come here to be given[A][NL]
-a new body.[.....] It's like a second chance.[.......][NL]
-You'll be given the opportunity to[A][NL]
-pick your own path,[.] and your[NL]
-decisions along that path will[A][NL]
-shape who you meet,[.] where you go,[NL]
-what you accomplish,[.] and[A][NL]
-perhaps the fate of the world.[......][NL]
-You'll also get to experience[A][NL]
-some of the new discoveries of Arcanae,[NL]
-such as skills that warriors such as[A][NL]
-yourself are able to learn with time,[NL]
-or altering certain types of magic[A][NL]
-to be effective against various beings.[.....][NL]
-Perhaps there are even other things,[A][NL]
-that you'll learn about in your travels.[A][X]
+## BaneMenuItemErrorText
+You've already chosen[NL]
+this stat as a boon![X]
 
-## PrologueNeverMindText
-[MidLeft][LoadNarrator]Very well.[....] Simply ask if you have a[NL]
-question.[.....] Much will be revealed in time.[A][X]
+## BoonMenuItemErrorText
+You've already chosen this[NL]
+stat as a bane![X]
 
-## PrologueOpeningNarratorText
-[MidLeft][LoadNarrator]Oh, what have we here?[NL]
-Another lost spirit? Typical. Always[A][NL]
-coming here to the realm of the Guardian[NL]
-Spirit. You don't know what that is?[A][NL]
-It's a parallel dimension where the[NL]
-guardians of the current era watch[A][NL]
-and control the balance of the world.[NL]
-We also cater to you lost spirits, so[A][NL]
-you may get back to your true world.[NL]
-What? You don't know about the world[A][NL]
-you're in? I should cover that before[NL]
-getting to work. This is Avenir. It[A][NL]
-is separated into multiple countries[NL]
-on the main landmass, surrounded by[A][NL]
-the Outer Lands that very few people[NL]
-ever travel to, the most notable of[A][NL]
-which being the assassin dynasty of[NL]
-Shizon. To the southwest lies the[A][NL]
-empire of Cesaria, noted for their very[NL]
-strong military. The Emperor and General[A][NL]
-work together to rule the country. To the[NL]
-east of them is Arcanae, a country[A][NL]
-entirely based around magic, ruled by their[NL]
-council of the Five Grand Magi. The Five[A][NL]
-Grand Magi often operate independently of[NL]
-each other in their own domains. They[A][NL]
-often fight among themselves for power.[NL]
-Just north of Arcanae is Haedric, a[A][NL]
-warrior nation ruled by the Basileus.[NL]
-Their law is maintained by Warlords who[A][NL]
-who command small clans, but they are[NL]
-fiercely loyal to the Basileus. Within[A][NL]
-the long mountain range at the north of[NL]
-the continent are the fliers of Altia.[A][NL]
-Their Dragon Lord and High Priest rule.[NL]
-In the center is the desert of Draterus[A][NL]
-where nobody is known to inhabit, but it[NL]
-was once the legendary Vathrylian[A][NL]
-empire before they destroyed themselves.[NL]
-There is also the small state of Bacrun[A][NL]
-just east of Draterus between Arcanae[NL]
-and Haedric. [.....]Most trade between the[A][NL]
-countries flows through there. It's[NL]
-technically a city state, but it's grown[A][NL]
-so wealthy and essential to trade that[NL]
-it may as well be its own empire. Now[A][NL]
-that you have a basic understanding of the[NL]
-world you're about to inhabit,[A][NL]
-what is your name?[A][X]
+## PegasusKnightNameNotNarrowText
+Pegasus Kn.[X]
 
-## PrologueWhatGenderText
-[MidLeft][LoadNarrator]Understood.[....] And what gender are you?[A][X]
+## WyvernRiderNameNotNarrowText
+W. Rider[X]
 
-## PrologueWhatClassText
-[MidLeft][LoadNarrator]Gotcha.[....] From here,[.] you'll select which[NL]
-lifestyle you wish to follow. Each has[A][NL]
-different classes you can choose; each[NL]
-has different paths to follow. Mercenary[A][NL]
-paths tend to have less units, but will[NL]
-likely give you a higher understanding[A][NL]
-of the lore of the world we inhabit,[NL]
-Avenir. The Military paths will give[A][NL]
-you more units at the cost of having[NL]
-the luxury of getting to know each of[A][NL]
-them well. The Mage path takes a middle[NL]
-ground of these paths,[.] but may prove[A][NL]
-difficult due to your personal inability[NL]
-to fight well at close range.[A][NL]
-Which will it be?[A][X]
+## RandomDescText
+Randomize your character![X]
 
-## PrologueEndOpeningText
-[MidLeft][LoadNarrator]Very well then. Now you will select[NL]
-your class.[.....] You can speak to the images[A][NL]
-of your potential classes to select it.[....][NL]
-If you wish to ask me any questions[A][NL]
-for more depth on the world,[.][NL]
-I will also be here.[A][X]
+## FormDescText
+Choose the form your[NL]
+character will take.[X]
 
-## PrologueEndingText
-[MidLeft][LoadNarrator]Very well.[.....][NL]
-I will now send you into the world.[A][NL]
-I remind you that I will be watching,[NL]
-and your choices directly affect the[A][NL]
-outcomes of your journey through Avenir.[NL]
-Perhaps if you make it out alive,[A][NL]
-I'll give you an opportunity to[NL]
-try a different lifestyle.[A][NL]
-I apologize for throwing you[NL]
-into the middle of things,[A][NL]
-by the way. You may be confused[NL]
-at first, [Smile]but do not worry. [.......]Good luck.[A][X]
+## RouteDescText
+Choose the set of chapters you[NL]
+will progress through. This affects[NL]
+what classes are available to you.[X]
+
+## ClassDescText
+Choose the class you will play as.[X]
+
+## BoonDescText
+Choose a stat bonus[NL]
+for your character.[X]
+
+## BaneDescText
+Choose a stat debuff[NL]
+for your character.[X]
+
+## DoneDescText
+Finalize your character![X]

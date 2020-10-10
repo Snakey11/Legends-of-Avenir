@@ -12,7 +12,7 @@
 GiveToSupply: @ Input is in memory slot 0x1.
 push { lr }
 blh #0x08031570, r0 @ r0 has number of items in the convoy.
-cmp r0, #25 @ This is useful so I don't overflow the supply, but I can't rely on this to tell me where to put it...
+cmp r0, #100 @ This is useful so I don't overflow the supply, but I can't rely on this to tell me where to put it...
 beq End
 ldr r1, =0x030004BC
 ldrb r0, [ r1 ] @ r1 has item ID to add.

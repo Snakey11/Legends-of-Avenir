@@ -1,6 +1,6 @@
 
 MilitaryNarratorFightEvents:
-CHECK_EVENTID 0x6E
+/*CHECK_EVENTID 0x6E
 BNE 0x40 0xC 0x0
 	CHECK_EVENTID 0x69 // Female
 	BEQ 0x42 0xC 0x0
@@ -48,19 +48,11 @@ LABEL 0x40
 	BEQ 0x41 0x0 0xC
 		FIG1 PlayerMWyvernRider Narrator 0x0
 LABEL 0x41
-ENUN
+ENUN*/
+FIG1 0x00 Narrator 0x0
 STAL 0x50
-SET_SOMETHING 0xFFFE
-DISA_IF 0xFFFE // Kills [Tact] assuming that the coordinates were set from the macro call.
+SET_SOMETHING 0x00
+DISA_IF 0x00 // Kills [Tact] assuming that the coordinates were set from the macro call.
 STAL 0x30
-DISA PlayerFCavalier
-DISA PlayerFKnight
-DISA PlayerFSoldier
-DISA PlayerFArcher
-DISA PlayerFWyvernRider
-DISA PlayerMCavalier
-DISA PlayerMKnight
-DISA PlayerMSoldier
-DISA PlayerMArcher
-DISA PlayerMWyvernRider
+DISA 0x00
 ENDA

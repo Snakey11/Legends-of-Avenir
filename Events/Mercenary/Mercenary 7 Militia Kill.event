@@ -77,6 +77,7 @@ ENUT 0x24
 ENUT 0x25 // Disables the turn event to occur a few turns after Rex is killed.
 ENUT 0x26 // Disables the infinite unit spawn loop after Rex dies4
 ENUT 0x22 // Enables Escape
+// Reserving 0x27 for MultitileMarker.
 MUSC Indignation
 SVAL 0xB Coords(7,5)
 LOMA LeavingShizonCutscene
@@ -228,6 +229,7 @@ ENDA
 RexDead:
 ENUF 0x16 // Enables escape points
 ENUF 0x19 // Enables reinforcements immediately after Rex is killed.
+ENUT 0x27 // Show multitile marker.
 CHECK_ALIVE Xexim
 BEQ 0x00 0x0 0xC
 	Text(Merc7MilitiaKillRexDeadGoodText) // Let's get out of here!

@@ -107,7 +107,7 @@ the Captain. None of us can be defeated.[A]
 You're doing pretty well[NL]
 out there, Cadets...[A][NL]
 Let's see how you[NL]
-face up to me![A][X]
+face against me![A][X]
 
 ## Military1ForrestDeathText
 [FarLeft][LoadForrest]
@@ -115,11 +115,9 @@ Heh... Not bad.[NL]
 Not bad at all.[A][X]
 
 ## Military1ChristinaBattleText
+[BattleText]
 [FarLeft][LoadChristina]
-Great work so far,[NL]
-Cadets. But your task[A][NL]
-isn't over yet for[NL]
-I still stand![A][X]
+Great work so far, Cadets! Can you defeat me, I wonder?[X]
 
 ## Military1ChristinaDeathText
 [FarLeft][LoadChristina]

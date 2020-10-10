@@ -131,3 +131,22 @@ Prologue[X]
 
 ## Military7AcceptRetreatHelpNameText
 7: Temple at Shizon[X]
+
+## Military4AcceptHoldNameText
+4: Warzone[X]
+
+## Military5AcceptHoldNameText
+5: Fort Assault[X]
+
+## Military6AcceptHoldNameText
+6: Revenge[X]
+
+## Military7AcceptHoldNameText
+7: The Siege of Arcanae[X]
+
+
+## Mage1NameText
+1: Field Work[X]
+
+## Mage2LeaveNameText
+2: The Grand Magi[X]

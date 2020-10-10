@@ -1,0 +1,338 @@
+
+EventPointerTable(Mage2LeaveEvents,ThisChapter)
+
+//Label ThisChapter
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN EndMainPointer EndMainPointer EndMainPointer
+POIN EndMainPointer
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+//LabelEnd
+
+//Label TurnBasedEvents
+TurnBasedEvents:
+TurnEventPlayer(0x0,Turn4,4)
+TurnEventPlayer(0x0,Turn6,6)
+TurnEventPlayer(0x0,Turn9,9)
+END_MAIN
+
+//Label CharacterBasedEvents
+ALIGN 32
+CharacterBasedEvents:
+CharacterEventBothWays(0x10,TTactAjax,0x00,Ajax)
+CharacterEventBothWays(0x11,TTactZaheva,0x00,Zaheva)
+CharacterEventBothWays(0x12,TAjaxXena,Ajax,Xena)
+CharacterEventBothWays(0x13,TXenaZaheva,Xena,Zaheva)
+END_MAIN
+
+//Label LocationBasedEvents
+LocationBasedEvents:
+Door(8,8)
+Door(10,6)
+Chest(AngelicRobe,10,9)
+ChestMoney(4500,11,8)
+Escape(0x00,EndingScene,15,6)
+Escape(0x00,EndingScene,15,7)
+Escape(0x00,EndingScene,15,8)
+END_MAIN
+
+//Label MiscBasedEvents
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+//Label TrapData
+TrapData:
+ENDTRAP
+ALIGN 4
+
+//Label Units
+Units:
+EndUnit
+
+//Label BeginingScene
+BeginningScene:
+SVAL 0xB Coords(7,5)
+LOMA MistlainThroneCutscene
+LOAD1 0x1 ThroneUnits
+LOAD2 0x1 ThroneXena
+LOAD3 0x1 PlayerLoading1
+ENUN
+MUSC Rest_of_the_Heart
+SetBackground(0x12)
+Text(Mage2LeaveStartingText)
+FADI 0x05
+MUSC Anchoret
+STAL 0x60
+SetBackground(0x10)
+Text(Mage2LeaveWakeUpText)
+FadeOutMusic
+FADI 0x5
+STAL 0x20
+MUSC Stage_One
+STAL 0x10
+EndConvo
+STAL 0x20
+FlashCursor(Arc,60) // Lol I don't have a character ID for Mistlain, so let's just use Arc!
+STAL 0x10
+TEXTSTART
+TEXTSHOW Mage2LeaveTalkMistlainText
+TEXTEND
+MUSC Darker
+TEXTCONT
+TEXTEND
+MUSC Dark_Clouds_Gather
+TEXTCONT
+TEXTEND
+REMA
+MUSC Emergency
+TurnEnemy(Arc)
+TurnEnemy(Zaheva)
+TurnEnemy(Ajax)
+TurnEnemy(Arcanian)
+STAL 0x20
+LOAD1 0x1 ThroneMeanies1
+ENUN
+STAL 0x10
+LOAD1 0x1 ThroneMeanies2
+ENUN
+STAL 0x10
+Text(Mage2LeaveSoldiersHereText)
+STAL 0x08
+MOVE 0x00 Xena [10,5]
+MOVE 0x00 0x00 [8,5]
+STAL 0x0C
+SVAL 0xB Coords(7,9)
+MOVE 0x00 0xFFFE [7,8]
+SVAL 0xB Coords(9,9)
+MOVE 0x00 0xFFFE [9,6]
+SVAL 0xB Coords(11,9)
+MOVE 0x00 0xFFFE [11,8]
+ENUN
+STAL 0x08
+MOVE 0x00 0x00 [8,4]
+ENUN
+STAL 0x08
+Text(Mage2LeaveOutnumberedText)
+STAL 0x08
+MOVE 0x00 Zaheva [12,2]
+ENUN
+MOVE 0x00 Zaheva [8,2]
+ENUN
+StartBattle
+NormalDamage(0,16)
+MissedAttack(1,0)
+NormalDamage(0,16)
+EndAttack
+SetBattleNumbers(98,16,6,37,19,3)
+SVAL 0xB Coords(7,2)
+FIG1 Zaheva 0xFFFE 0x00
+KillUnit(7,2)
+STAL 0x10
+MOVE 0x00 Zaheva [8,5]
+ENUN
+STAL 0x04
+Text(Mage2LeaveAfterTurningText)
+STAL 0x08
+MOVE 0x00 Ajax [9,4]
+ENUN
+STAL 0x08
+StartBattle
+CriticalHit(0,60)
+EndAttack
+SetBattleNumbers(81,16,16,0xFF,0xFF,0xFF)
+SVAL 0xB Coords(9,6)
+FIG1 Ajax 0xFFFE 0x00
+KillUnit(9,6)
+STAL 0x08
+Text(Mage2LeaveFollowUsText)
+STAL 0x08
+TurnAlly(Zaheva)
+TurnAlly(Ajax)
+STAL 0x10
+MOVE 0x00 Xena [0,7]
+MOVE 0x00 0x00 [0,8]
+MOVE 0x00 Zaheva [0,9]
+MOVE 0x00 Ajax [1,9]
+FADI 0x05
+STAL 0x02
+SVAL 0xB Coords(13,6)
+MOVE 0x00 0xFFFE [1,8]
+SVAL 0xB Coords(14,7)
+MOVE 0x00 0xFFFE [1,7]
+FadeOutMusic
+STAL 0x10
+ENUN
+CLEA 0x0
+CLEN 0x0
+CLEE 0x0
+SVAL 0xB Coords(7,5)
+LOMA MageLeave2
+LOAD1 0x1 Meanies
+LOAD1 0x1 Meanies2
+LOAD2 0x1 Friends
+LOAD3 0x1 PlayerLoading2
+ENUN
+STAL 0x70
+MUSC Ascent
+FADU 0x5
+STAL 0x50
+NoFade
+ENDA
+
+//Label EndingScene
+EndingScene:
+FADI 0x5
+CLEA 0x0
+CLEE 0x0
+MUSC Overwhelming_Advance
+REVEAL 0x00
+REVEAL Xena
+REVEAL Zaheva
+REVEAL Ajax
+SetBackground(0x0C)
+Text(Mage2LeaveEndingText)
+MoveToChapter(MageLeave3)
+NoFade
+ENDA
+
+//Label Turn events
+Turn4:
+CamON
+LOAD1 0x1 Turn4Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn6:
+CamON
+LOAD1 0x1 Turn6Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn9:
+CamON
+LOAD1 0x1 Turn9Units
+ENUN
+CamOFF
+ENDA
+
+//Label Character events
+TTactAjax:
+MUSI
+Text(Mage2LeaveTactAjaxText)
+MUNO
+NoFade
+EndA2
+
+TTactZaheva:
+MUSI
+Text(Mage2LeaveTactZahevaText)
+MUNO
+NoFade
+EndA2
+
+TAjaxXena:
+MUSI
+Text(Mage2LeaveAjaxXenaText)
+MUNO
+NoFade
+EndA2
+
+TXenaZaheva:
+MUSI
+Text(Mage2LeaveXenaZahevaText)
+MUNO
+NoFade
+ENDA
+
+	/*UNIT DATA*/
+
+//Label PlayerLoading
+PlayerLoading1:
+UNIT PlayerMMage 0x00 0x00 Level(1,Ally,True) [8,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+PlayerLoading2:
+UNIT PlayerMMage 0x00 0x00 Level(1,Ally,True) [3,4] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
+
+//Label Cutscene units
+ThroneXena:
+UNIT Xena 0x00 0x00 Level(1,Ally,True) [10,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+ThroneUnits:
+UNIT Arc Patriarch Arc Level(1,NPC,True) [9,1] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Zaheva SpellswordF 0x00 Level(4,NPC,True) [12,1] 0x00 0x00 0x00 0x00 [SteelSword,Fire] NoAI
+UNIT Ajax Shaman 0x00 Level(4,NPC,True) [11,2] 0x00 0x00 0x00 0x00 [Luna,Flux,Vulnerary] NoAI
+UNIT Arcanian Fighter 0x00 Level(4,NPC,True) [7,2] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT
+
+ThroneMeanies1:
+UNIT Arcanian Halberdier 0x00 Level(1,Enemy,True) [14,6] 0x00 0x00 0x01 REDA13R6 [0] NoAI
+UNIT Arcanian Soldier 0x00 Level(1,Enemy,True) [14,7] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+ThroneMeanies2:
+UNIT Arcanian Mage 0x00 Level(1,Enemy,True) [7,9] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Arcanian Mercenary 0x00 Level(12,Enemy,True) [9,9] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI
+UNIT Arcanian Mercenary 0x00 Level(1,Enemy,True) [11,9] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
+
+//Label Chapter units
+Friends:
+UNIT Xena 0x00 0x00 Level(1,Ally,True) [4,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [5,4] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Ajax 0x00 0x00 Level(1,Ally,True) [6,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+Meanies:
+UNIT Arcanian Fighter 0x00 Level(4,Enemy,True) [4,7] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
+UNIT Arcanian Soldier 0x00 Level(3,Enemy,True) [6,8] 0x00 0x00 0x00 0x00 [Javelin] NoAI
+UNIT Arcanian Mage 0x00 Level(5,Enemy,True) [7,10] Drop 0x00 0x00 0x00 [Thunder,DoorKey] AttackInRangeAI
+UNIT Arcanian Mage 0x00 Level(4,Enemy,True) [0,10] Drop 0x00 0x00 0x00 [Aqua] NoAI
+UNIT Arcanian Archer 0x00 Level(3,Enemy,True) [4,11] 0x00 0x00 0x00 0x00 [IronBow] AttackIfCloseAI
+UNIT Arcanian Archer 0x00 Level(2,Enemy,True) [10,8] Drop 0x00 0x00 0x00 [IronBow,ChestKey] AttackIfCloseAI
+UNIT Arcanian Shaman 0x00 Level(3,Enemy,True) [11,9] Drop 0x00 0x00 0x00 [Flux,DoorKey] NoAI
+UNIT Arcanian Mercenary 0x00 Level(5,Enemy,True) [10,4] Drop 0x00 0x00 0x00 [IronSword,ChestKey] AttackInRangeAI
+UNIT Arcanian Fighter 0x00 Level(4,Enemy,True) [8,14] 0x00 0x00 0x00 0x00 [DevilAxe] AttackInRangeAI
+UNIT
+
+Meanies2:
+UNIT Arcanian Fighter 0x00 Level(5,Enemy,True) [10,12] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
+UNIT Arcanian Knight 0x00 Level(6,Enemy,True) [11,13] 0x00 0x00 0x00 0x00 [HandAxe] GuardAI
+UNIT Arcanian Knight 0x00 Level(7,Enemy,True) [13,12] 0x00 0x00 0x00 0x00 [Javelin] GuardAI
+UNIT Arcanian Mercenary 0x00 Level(7,Enemy,True) [14,7] Drop 0x00 0x00 0x00 [KillingEdge] AttackInRangeAI
+UNIT Arcanian Monk 0x00 Level(5,Enemy,True) [15,6] 0x00 0x00 0x00 0x00 [Lightning,Mend] HealAlliesAI
+UNIT Arcanian Mage 0x00 Level(3,Enemy,True) [14,5] 0x00 0x00 0x00 0x00 [Fire] AttackInRangeAI
+UNIT Arcanian Soldier 0x00 Level(4,Enemy,True) [12,1] 0x00 0x00 0x00 0x00 [IronLance] AttackInRangeAI
+UNIT Arcanian Myrmidon 0x00 Level(5,Enemy,True) [15,8] 0x00 0x00 0x00 0x00 [SlimSword] ChaseOnceApproachedAI
+UNIT
+
+Turn4Units:
+UNIT Arcanian Cavalier 0x00 Level(5,Enemy,True) [0,1] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Arcanian Cavalier 0x00 Level(6,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [IronLance,Javelin] NoAI
+UNIT
+
+Turn6Units:
+UNIT Arcanian Mage 0x00 Level(6,Enemy,True) [0,2] 0x00 0x00 0x01 REDA4R2 [Elthunder] NoAI
+UNIT Arcanian Soldier 0x00 Level(6,Enemy,True) [0,2] 0x00 0x00 0x01 REDA3R3 [IronLance] NoAI
+UNIT Arcanian Mage 0x00 Level(6,Enemy,True) [0,2] 0x00 0x00 0x01 REDA3R4 [Dasher] NoAI
+UNIT Arcanian Knight 0x00 Level(6,Enemy,True) [0,2] 0x00 0x00 0x01 REDA4R4 [SteelAxe] NoAI
+UNIT Arcanian Fighter 0x00 Level(6,Enemy,True) [0,2] 0x00 0x00 0x01 REDA5R3 [HandAxe] NoAI
+UNIT
+
+Turn9Units:
+UNIT Arcanian Cavalier 0x00 Level(10,Enemy,True) [0,1] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Arcanian Paladin 0x00 Level(4,Enemy,True) [0,2] 0x00 0x00 0x00 0x00 [LightBrand] NoAI
+EndUnit

@@ -11,7 +11,7 @@ POIN EndMainPointer EndMainPointer EndMainPointer
 POIN EndMainPointer
 POIN TrapData TrapData
 POIN Units Units
-POIN GoodEnding BadEnding $0 $0 $0 $0
+POIN GoodEnding EndingScene $0 $0 $0 $0
 POIN BeginningScene EndingScene
 //LabelEnd
 
@@ -40,6 +40,7 @@ END_MAIN
 MiscBasedEvents:
 CauseGameOverIfLordDies
 DefeatBoss(EndingScene)
+AFEV 0x00 CheckAllGuardians 0x00
 END_MAIN
 
 //Label TrapData
@@ -63,6 +64,7 @@ EndUnit
 BeginningScene:
 ENUT 0x13 // Disable Tact's special death quotes until the ending.
 ENUT 0x14
+ENUT 0x20
 CAM1 [18,24]
 LOAD1 0x1 Meanies
 LOAD1 0x1 Meanies2
@@ -109,22 +111,7 @@ Text(Military7AcceptRetreatLeaveEfilText)
 GotoPrepScreen
 
 //Label EndingScene
-GoodEnding:
-#ifdef _DEBUG_
-	SVAL 0x01 0x01 // Xylia is alive.
-	GOTO 0x10
-#endif
-BadEnding:
-#ifdef _DEBUG_
-	SVAL 0x01 0x00 // Xylia is dead.
-	GOTO 0x10
-#endif
-EndingScene:
-#ifdef _DEBUG_
-	CHECK_ALIVE Xylia
-	SADD 0x0C1 // Move slot 0xC into slot 0x1.
-LABEL 0x10
-#endif
+EndingScene: // Efil has been killed. Bad ending.
 FADI 0x5
 CLEA 0x0
 CLEE 0x0
@@ -142,178 +129,128 @@ MUSC A_Tragic_Decision
 LOAD3 0x1 PlayerLoading2
 LOAD2 0x1 EndingFriends
 ENUN
-CHECK_ALIVE Xylia
-#ifdef _DEBUG_
-	SADD 0x01C // Move slot 0x1 into slot 0xC. Used for ending debug menu shenanigans.
-#endif
-BEQ 0x0 0x0 0xC
-	// If Xylia is alive.
-	ENUF 0x13 // Enable Tact's death quote.
-	ENUF 0x18 // Disable some death quotes.
-	ENUF 0x19
-	ENUF 0x1A
-	Text(0x0C,Military7AcceptRetreatLeaveXyliaAliveText)
-	MUSC Raid
-	STAL 0x20
-	TEXTSTART
-	TEXTSHOW Military7AcceptRetreatLeaveAliveTurnText
-	TEXTEND
-	LOAD2 0x1 YvetteHere
-	ENUN
-	TEXTCONT
-	TEXTEND
-	REMA
-	STAL 0x08
-	MOVE 0x00 Yvette [1,21]
-	ENUN
-	STAL 0x08
-	StartBattle
-	NormalDamage(0,18)
-	CriticalHit(1,60)
-	EndAttack
-	SetBattleNumbers(79,18,7,74,22,10)
-	CHECK_EVENTID 0x6E
-	BNE 0x40 0xC 0x0
-		CHECK_EVENTID 0x69 // Female
-		BEQ 0x42 0xC 0x0
-			FIG1 Yvette PlayerFCavalier 0x0
-			GOTO 0x41
-		LABEL 0x42
-		CHECK_EVENTID 0x6A
-		BEQ 0x43 0xC 0x0
-			FIG1 Yvette PlayerFKnight 0x0
-			GOTO 0x41
-		LABEL 0x43
-		CHECK_EVENTID 0x6B
-		BEQ 0x48 0xC 0x0
-			FIG1 Yvette PlayerFSoldier 0x0
-			GOTO 0x41
-		LABEL 0x48
-		CHECK_EVENTID 0x6C
-		BEQ 0x49 0xC 0x0
-			FIG1 Yvette PlayerFArcher 0x0
-			GOTO 0x41
-		LABEL 0x49
-			FIG1 Yvette PlayerFWyvernRider 0x0
-	LABEL 0x40
-		CHECK_EVENTID 0x69 // Male
-		BEQ 0x44 0xC 0x0
-			FIG1 Yvette PlayerMCavalier 0x0
-			GOTO 0x41
-		LABEL 0x44
-		CHECK_EVENTID 0x6A
-		BEQ 0x45 0xC 0x0
-			FIG1 Yvette PlayerMKnight 0x0
-			GOTO 0x41
-		LABEL 0x45
-		CHECK_EVENTID 0x6B
-		BEQ 0x46 0xC 0x0
-			FIG1 Yvette PlayerMSoldier 0x0
-			GOTO 0x41
-		LABEL 0x46
-		CHECK_EVENTID 0x6C
-		BEQ 0x47 0xC 0x0
-			FIG1 Yvette PlayerMArcher 0x0
-			GOTO 0x41
-		LABEL 0x47
-		CHECK_EVENTID 0x6D
-		BEQ 0x41 0x0 0xC
-			FIG1 Yvette PlayerMWyvernRider 0x0
-	LABEL 0x41
-	KillUnit(1,21) // Kill Yvette.
-	MOVE 0x0 Adeline [0,25]
-	ENUN
-	STAL 0x08
-	StartBattle
-	NormalDamage(13,0)
-	MissedAttack(0,0)
-	EndAttack
-	SetBattleNumbers(84,13,5,0xFF,0xFF,0xFF)
-	FIG1 Adeline Derek 0x0
-	STAL 0x10
-	MOVE 0x0 Derek [0,24]
-	ENUN
-	STAL 0x08
-	StartBattle
-	CriticalHit(0,60)
-	EndAttack
-	SetBattleNumbers(74,21,7,0xFF,0xFF,0xFF)
-	FIG1 Derek Adeline 0x0
-	KillUnit(0,25) // Kill Adeline.
-	STAL 0x50
-	Text(Military7AcceptRetreatLeaveAliveFightText)
-	STAL 0x08
-	MUSC Return_of_the_Demon_King
-	WarpIn(2,25,LoadNarrator)
-	STAL 0x30
-	Text(Military7AcceptRetreatLeaveAliveNarratorText)
-	STAL 0x08
-	MOVE 0x0 Narrator [1,25]
-	ENUN
-	StartBattle
-	NormalDamage(0,40)
-	EndAttack
-	SetBattleNumbers(100,40,21,0xFF,0xFF,0xFF)
-	FIG1 Narrator Derek Tomahawk
-	KillUnit(0,24)
-	STAL 0x20
-	Text(Military7AcceptRetreatLeaveAliveDerekDeadText)
-	STAL 0x20
-	WarpOut(3,24,Xylia)
-	STAL 0x20
-	Text(Military7AcceptRetreatLeaveAliveDerekDead2Text)
-	STAL 0x08
-	MOVE 0x0 Narrator [1,23]
-	ENUN
-	StartBattle
-	CriticalHit(1,60)
-	EndAttack
-	SetBattleNumbers(10,2,0,95,44,18)
-	GOTO 0x01
-LABEL 0x0
-	// If Xylia is dead.
-	ENUF 0x14 // Enable Tact's death quote.
-	ENUT 0x18 // Disable some death quotes.
-	ENUT 0x19
-	ENUT 0x1A
-	FADU 0x05
-	STAL 0x10
-	Text(Military7AcceptRetreatLeaveDeadEndingText)
-	MOVE 0x0 Derek [1,23]
-	ENUN
-	StartBattle
-	CriticalHit(0,36)
-	NormalDamage(0,60)
-	EndAttack
-	SetBattleNumbers(84,13,5,0xFF,0xFF,0xFF)
-	FIG1 Adeline Derek 0x0
-	KillUnit(1,23) // Kill Derek.
-	STAL 0x10
-	Text(Military7AcceptRetreatLeaveDeadDerekDeadText)
-	MUSC Return_of_the_Demon_King
-	WarpIn(3,24,LoadNarrator2)
-	STAL 0x20
-	Text(Military7AcceptRetreatLeaveDeadNarratorHereText)
-	MOVE 0x0 Narrator [1,24]
-	ENUN
-	StartBattle
-	NormalDamage(0,30)
-	NormalDamage(0,60)
-	EndAttack
-	SetBattleNumbers(93,30,17,0xFF,0xFF,0xFF)
-	FIG1 Narrator Adeline 0x00
-	KillUnit(1,25)
-	STAL 0x20
-	Text(Military7AcceptRetreatLeaveDeadAdelineDeadText)
-	MOVE 0x0 Narrator [1,23]
-	ENUN
-	StartBattle
-	NormalDamage(1,34)
-	MissedAttack(0,0)
-	NormalDamage(1,60)
-	EndAttack
-	SetBattleNumbers(19,5,0,97,34,20)
-LABEL 0x01
+// If Xylia is alive.
+ENUF 0x13 // Enable Tact's death quote.
+ENUF 0x18 // Disable some death quotes.
+ENUF 0x19
+ENUF 0x1A
+Text(0x0C,Military7AcceptRetreatLeaveXyliaAliveText)
+MUSC Raid
+STAL 0x20
+TEXTSTART
+TEXTSHOW Military7AcceptRetreatLeaveAliveTurnText
+TEXTEND
+LOAD2 0x1 YvetteHere
+ENUN
+TEXTCONT
+TEXTEND
+REMA
+STAL 0x08
+MOVE 0x00 Yvette [1,21]
+ENUN
+STAL 0x08
+StartBattle
+NormalDamage(0,18)
+CriticalHit(1,60)
+EndAttack
+SetBattleNumbers(79,18,7,74,22,10)
+CHECK_EVENTID 0x6E
+BNE 0x40 0xC 0x0
+	CHECK_EVENTID 0x69 // Female
+	BEQ 0x42 0xC 0x0
+		FIG1 Yvette PlayerFCavalier 0x0
+		GOTO 0x41
+	LABEL 0x42
+	CHECK_EVENTID 0x6A
+	BEQ 0x43 0xC 0x0
+		FIG1 Yvette PlayerFKnight 0x0
+		GOTO 0x41
+	LABEL 0x43
+	CHECK_EVENTID 0x6B
+	BEQ 0x48 0xC 0x0
+		FIG1 Yvette PlayerFSoldier 0x0
+		GOTO 0x41
+	LABEL 0x48
+	CHECK_EVENTID 0x6C
+	BEQ 0x49 0xC 0x0
+		FIG1 Yvette PlayerFArcher 0x0
+		GOTO 0x41
+	LABEL 0x49
+		FIG1 Yvette PlayerFWyvernRider 0x0
+LABEL 0x40
+	CHECK_EVENTID 0x69 // Male
+	BEQ 0x44 0xC 0x0
+		FIG1 Yvette PlayerMCavalier 0x0
+		GOTO 0x41
+	LABEL 0x44
+	CHECK_EVENTID 0x6A
+	BEQ 0x45 0xC 0x0
+		FIG1 Yvette PlayerMKnight 0x0
+		GOTO 0x41
+	LABEL 0x45
+	CHECK_EVENTID 0x6B
+	BEQ 0x46 0xC 0x0
+		FIG1 Yvette PlayerMSoldier 0x0
+		GOTO 0x41
+	LABEL 0x46
+	CHECK_EVENTID 0x6C
+	BEQ 0x47 0xC 0x0
+		FIG1 Yvette PlayerMArcher 0x0
+		GOTO 0x41
+	LABEL 0x47
+	CHECK_EVENTID 0x6D
+	BEQ 0x41 0x0 0xC
+		FIG1 Yvette PlayerMWyvernRider 0x0
+LABEL 0x41
+KillUnit(1,21) // Kill Yvette.
+MOVE 0x0 Adeline [0,25]
+ENUN
+STAL 0x08
+StartBattle
+NormalDamage(13,0)
+MissedAttack(0,0)
+EndAttack
+SetBattleNumbers(84,13,5,0xFF,0xFF,0xFF)
+FIG1 Adeline Derek 0x0
+STAL 0x10
+MOVE 0x0 Derek [0,24]
+ENUN
+STAL 0x08
+StartBattle
+CriticalHit(0,60)
+EndAttack
+SetBattleNumbers(74,21,7,0xFF,0xFF,0xFF)
+FIG1 Derek Adeline 0x0
+KillUnit(0,25) // Kill Adeline.
+STAL 0x50
+Text(Military7AcceptRetreatLeaveAliveFightText)
+STAL 0x08
+MUSC Return_of_the_Demon_King
+WarpIn(2,25,LoadNarrator)
+STAL 0x30
+Text(Military7AcceptRetreatLeaveAliveNarratorText)
+STAL 0x08
+MOVE 0x0 Narrator [1,25]
+ENUN
+StartBattle
+NormalDamage(0,40)
+EndAttack
+SetBattleNumbers(100,40,21,0xFF,0xFF,0xFF)
+FIG1 Narrator Derek Tomahawk
+KillUnit(0,24)
+STAL 0x20
+Text(Military7AcceptRetreatLeaveAliveDerekDeadText)
+STAL 0x20
+WarpOut(3,24,Xylia)
+STAL 0x20
+Text(Military7AcceptRetreatLeaveAliveDerekDead2Text)
+STAL 0x08
+MOVE 0x0 Narrator [1,23]
+ENUN
+StartBattle
+CriticalHit(1,60)
+EndAttack
+SetBattleNumbers(10,2,0,95,44,18)
 MilitaryNarratorFight(1,22)
 ENUF 0x67
 ENUF 0x68
@@ -332,6 +269,79 @@ DISA Remus
 DISA Yvette
 DISA Xylia
 MoveToChapter(PrologueChapter)
+EndA2
+
+CheckAllGuardians: // Check for good ending.
+CHECK_EXISTS Guardian // Are any Guardians left alive?
+BNE 0x0 0x0 0xC
+	GoodEnding:
+	FADI 0x05
+	STAL 0x08
+	CLEA 0x0
+	CLEE 0x0
+	ASMC RefreshAll|1
+	ASMC PrepForEnd|1
+	SVAL 0x1 Xylia
+	ASMC MakeNotDeadASM|1
+	ENUF 0x14 // Enable Tact's good ending death quote.
+	ENUF 0x20 // Enable Xylia's death quote.
+	CAM1 [3,21]
+	LOAD1 0x1 EndingEfil
+	LOAD2 0x1 EndingXylia
+	LOAD3 0x1 PlayerLoading2
+	STAL 0x10
+	MUSC Heavens_Rock_Seat
+	STAL 0x08
+	FADU 0x05
+	STAL 0x20
+	FlashCursor(BossEfil,60)
+	Text(Military7AcceptRetreatLeaveGoodEndingText)
+	STAL 0x04
+	MOVE 0x00 BossEfil [3,23]
+	ENUN
+	SetBattleNumbers(91,23,64,69,21,15)
+	StartBattle
+	NormalDamage(0,23)
+	NormalDamage(1,21)
+	CriticalHit(0,60)
+	EndAttack
+	FIG1 BossEfil Xylia 0x00
+	KillUnit(3,22)
+	STAL 0x10
+	Text(Military7AcceptRetreatLeaveGoodEndingXyliaDeadText)
+	STAL 0x08
+	MUSC Return_of_the_Demon_King
+	WarpIn(3,24,LoadNarrator2)
+	STAL 0x40
+	Text(Military7AcceptRetreatLeaveGoodEndingGSHereText)
+	STAL 0x04
+	MOVE 0x00 Narrator [1,23]
+	ENUN
+	SetBattleNumbers(15,2,2,91,31,20)
+	StartBattle
+	MissedAttack(0,0)
+	CriticalHit(1,60)
+	EndAttack
+	MilitaryNarratorFight(1,22)
+	ENUF 0x67
+	ENUF 0x68
+	ENUF 0x69
+	ENUF 0x6A
+	ENUF 0x6B
+	ENUF 0x6C
+	ENUF 0x6D
+	ENUF 0x6E
+	ENUF 0xA0
+	DISA Jasper
+	DISA Derek
+	DISA Zaheva
+	DISA Adeline
+	DISA Remus
+	DISA Yvette
+	DISA Xylia
+	MoveToChapter(PrologueChapter)
+LABEL 0x0
+NoFade
 ENDA
 
 //Label Turn events
@@ -406,6 +416,14 @@ UNIT
 
 YvetteHere:
 UNIT Yvette 0x00 0x00 Level(1,Ally,True) [0,11] 0x00 0x00 0x01 REDA1R19 [0] NoAI
+UNIT
+
+EndingEfil:
+UNIT BossEfil Truerblade BossEfil Level(14,NPC,True) [2,24] 0x00 0x00 0x00 0x00 [KillingEdge] NoAI
+UNIT
+
+EndingXylia:
+UNIT Xylia 0x00 0x00 Level(1,Ally,True) [3,22] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 LoadNarrator:

@@ -1,0 +1,39 @@
+ap_data:
+        SHORT (frame_list - ap_data) (anim_list - ap_data) // header
+
+frame_list: // +$4
+        SHORT (frame_0 - frame_list)
+        SHORT (frame_1 - frame_list)
+
+anim_list: // +$8
+        SHORT (anim_0 - anim_list)
+        SHORT (anim_1 - anim_list)
+
+frame_0: // +$C
+        SHORT 10 // oam entries
+        SHORT 0x40DF 0xC1C9 0x0000 // 0 : 64x32 at [-55, -33], tile +0
+        SHORT 0x00DF 0x8009 0x0008 // 1 : 32x32 at [9, -33], tile +8
+        SHORT 0x40FF 0xC1D1 0x000E // 2 : 64x32 at [-47, -1], tile +14
+        SHORT 0x401F 0x81D9 0x001A // 3 : 32x16 at [-39, 31], tile +26
+        SHORT 0x801F 0x01F9 0x001E // 4 : 8x16 at [-7, 31], tile +30
+        SHORT 0x40FF 0x8011 0x0016 // 5 : 32x16 at [17, -1], tile +22
+        SHORT 0x00EF 0x4029 0x004C // 6 : 16x16 at [41, -17], tile +76
+        SHORT 0x00E7 0x0029 0x002C // 7 : 8x8 at [41, -25], tile +44
+        SHORT 0x000F 0x0011 0x000C // 8 : 8x8 at [17, 15], tile +12
+        SHORT 0x001F 0x01D1 0x001F // 9 : 8x8 at [-47, 31], tile +31
+
+frame_1: // +$4A
+        SHORT 3 // oam entries
+        SHORT 0x40F9 0x81E6 0x0056 // 0 : 32x16 at [-26, -7], tile +86
+        SHORT 0x00F9 0x4006 0x005A // 1 : 16x16 at [6, -7], tile +90
+        SHORT 0x80F9 0x0016 0x005C // 2 : 8x16 at [22, -7], tile +92
+
+anim_0: // +$5E
+        SHORT  4  0
+
+        SHORT 0 (-1) // loop back to start
+
+anim_1: // +$66
+        SHORT  4  1
+
+        SHORT 0 (-1) // loop back to start

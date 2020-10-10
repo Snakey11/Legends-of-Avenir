@@ -59,7 +59,7 @@ WORD 0x0 0x0
 
 DarkKnightAnim:
 SwordAnim(DarkKnightSword)
-StaffAnim(DarkKnightStaff)
+AnimaAnim(DarkKnightMagic) // See note on dread fighter.
 DarkAnim(DarkKnightMagic)
 UnarmedAnim(DarkKnightMagic)
 WORD 0x0 0x0
@@ -80,12 +80,19 @@ WORD 0x0 0x0
 
 EdgySwordmasterAnim:
 SwordAnim(EdgySwordmasterSword)
-UnarmedAnim(EdgySwordmasterUnarmed)
+UnarmedAnim(EdgySwordmasterSword)
+//UnarmedAnim(EdgySwordmasterUnarmed)
 WORD 0x0 0x0
 
 EmperorAnim:
 SwordAnim(EmperorSword)
 UnarmedAnim(EmperorUnarmed)
+WORD 0x0 0x0
+
+ExecutionerAnim:
+SwordAnim(ExecutionerSword)
+DarkAnim(ExecutionerMagic)
+UnarmedAnim(ExecutionerUnarmed)
 WORD 0x0 0x0
 
 GaidenSageAnim:
@@ -212,9 +219,9 @@ UnarmedAnim(MaligKnightMagic)
 WORD 0x0 0x0
 
 MarksmanAnim:
-SwordAnim(MarksmanSword)
-BowAnim(MarksmanBow)
-UnarmedAnim(MarksmanUnarmed)
+SwordAnim(MarksmanMSword)
+BowAnim(MarksmanMBow)
+UnarmedAnim(MarksmanMUnarmed)
 WORD 0x0 0x0
 
 MasterKnightAnim:
@@ -274,12 +281,26 @@ HandAxeAnim(PhantomHandAxe)
 UnarmedAnim(PhantomUnarmed)
 WORD 0x0 0x0
 
+PirateAnim:
+AxeAnim(PirateAxe)
+HandAxeAnim(PirateHandAxe)
+UnarmedAnim(PirateUnarmed)
+WORD 0x0 0x0
+
 SentinelAnim:
 SwordAnim(SentinelSword)
-SpearAnim(SentinelSpear)
+SpearAnim(SentinelLance)
 AxeAnim(SentinelAxe)
 HandAxeAnim(SentinelHandAxe)
 UnarmedAnim(SentinelUnarmed)
+WORD 0x0 0x0
+
+SentinelFAnim:
+SwordAnim(SentinelFSword)
+SpearAnim(SentinelFLance)
+AxeAnim(SentinelFAxe)
+HandAxeAnim(SentinelFHandAxe)
+UnarmedAnim(SentinelFUnarmed)
 WORD 0x0 0x0
 
 SeraphKnightAnim:
@@ -288,6 +309,28 @@ SpearAnim(SeraphKnightSpear)
 StaffAnim(SeraphKnightStaff)
 AnimaAnim(SeraphKnightMagic)
 UnarmedAnim(SeraphKnightMagic)
+WORD 0x0 0x0
+
+ShadeKnightMAnim:
+DarkAnim(ShadeKnightMMagic)
+StaffAnim(ShadeKnightMStaff)
+UnarmedAnim(ShadeKnightMMagic)
+WORD 0x0 0x0
+
+ShadeKnightFAnim:
+DarkAnim(ShadeKnightFMagic)
+StaffAnim(ShadeKnightFStaff)
+UnarmedAnim(ShadeKnightFMagic)
+WORD 0x0 0x0
+
+ShamanMAnim:
+DarkAnim(ShamanMagic)
+UnarmedAnim(ShamanMagic)
+WORD 0x0 0x0
+
+ShamanFAnim:
+DarkAnim(ShamanFMagic)
+UnarmedAnim(ShamanFMagic)
 WORD 0x0 0x0
 
 SpellswordMAnim:
@@ -310,15 +353,9 @@ AnimaAnim(MaximusBattleSageSword)
 UnarmedAnim(MaximusBattleSageUnarmed)
 WORD 0x0 0x0
 
-TruebladeMAnim:
-SwordAnim(TruebladeMSword)
-UnarmedAnim(TruebladeMUnarmed)
-WORD 0x0 0x0
-
-TruebladeFAnim:
-SwordAnim(TruebladeFSword)
-BowAnim(TruebladeFBow)
-UnarmedAnim(TruebladeFUnarmed)
+TruebladeAnim:
+SwordAnim(TruebladeSword)
+UnarmedAnim(TruebladeUnarmed)
 WORD 0x0 0x0
 
 SpearHeroAnim:
@@ -326,6 +363,7 @@ SwordAnim(0x0D)
 SpearAnim(SpearHeroSpear)
 AxeAnim(0x0E)
 HandAxeAnim(0x0F)
+UnarmedAnim(0x10)
 WORD 0x0 0x0
 
 TruerbladeAnim:

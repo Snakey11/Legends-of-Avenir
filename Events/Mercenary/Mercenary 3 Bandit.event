@@ -150,7 +150,7 @@ EndUnit
 
 //Label CaravanPeople
 CaravanPeople:
-UNIT Roger Mercenary Roger Level(4,Enemy,True) [16,13] 0x00 0x00 0x00 0x00 [SteelBlade] GuardAI
+UNIT Roger Mercenary Roger Level(8,Enemy,True) [16,13] 0x00 0x00 0x00 0x00 [SteelBlade] AttackInRangeAI
 UNIT Haedrican Fighter Haedrican Level(6,Enemy,True) [9,7] 0x00 0x00 0x00 0x00 [IronAxe] GuardAI
 UNIT Haedrican Mercenary Haedrican Level(7,Enemy,True) [7,7] 0x00 0x00 0x00 0x00 [IronBlade] GuardAI
 UNIT Haedrican Fighter Haedrican Level(7,Enemy,True) [4,4] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI

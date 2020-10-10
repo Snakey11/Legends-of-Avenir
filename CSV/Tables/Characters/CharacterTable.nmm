@@ -1,0 +1,241 @@
+1
+FE8 Character Editor
+0xC0C0C0
+255
+52
+_CharacterEditorList.txt
+NULL
+
+Name
+0
+2
+NEHU
+NULL
+
+Description
+2
+2
+NEHU
+NULL
+
+Character Number
+4
+1
+NEHU
+NULL
+
+Default Class
+5
+1
+NEHU
+NULL
+
+Portrait
+6
+2
+NEHU
+NULL
+
+Mini Portrait
+8
+1
+NEHU
+NULL
+
+Affinity
+9
+1
+NEDU
+NULL
+
+CharacterTableUnknown10
+10
+1
+NDHU
+NULL
+
+Base Level
+11
+1
+NEDU
+NULL
+
+Base HP
+12
+1
+NEDS
+NULL
+
+Base Pwr
+13
+1
+NEDS
+NULL
+
+Base Skl
+14
+1
+NEDS
+NULL
+
+Base Spd
+15
+1
+NEDS
+NULL
+
+Base Def
+16
+1
+NEDS
+NULL
+
+Base Res
+17
+1
+NEDS
+NULL
+
+Base Lck
+18
+1
+NEDS
+NULL
+
+Base Con
+19
+1
+NEDS
+NULL
+
+Sword Rank
+20
+1
+NEDU
+NULL
+
+Lance Rank
+21
+1
+NEDU
+NULL
+
+Axe Rank
+22
+1
+NEDU
+NULL
+
+Bow Rank
+23
+1
+NEDU
+NULL
+
+Staff Rank
+24
+1
+NEDU
+NULL
+
+Anima Rank
+25
+1
+NEDU
+NULL
+
+Light Rank
+26
+1
+NEDU
+NULL
+
+Dark Rank
+27
+1
+NEDU
+NULL
+
+HP Growth
+28
+1
+NEDU
+NULL
+
+Pwr Growth
+29
+1
+NEDU
+NULL
+
+Skl Growth
+30
+1
+NEDU
+NULL
+
+Spd Growth
+31
+1
+NEDU
+NULL
+
+Def Growth
+32
+1
+NEDU
+NULL
+
+Res Growth
+33
+1
+NEDU
+NULL
+
+Lck Growth
+34
+1
+NEDU
+NULL
+
+CharacterTableUnknown35
+35
+5
+NDHU
+NULL
+
+Character Ability 1
+40
+1
+NDHU
+Ability 1.txt
+
+Character Ability 2
+41
+1
+NDHU
+Ability 2.txt
+
+Character Ability 3
+42
+1
+NDHU
+Ability 3.txt
+
+Character Ability 4
+43
+1
+NDHU
+Ability 4.txt
+
+Support Data Pointer
+44
+4
+NEHU
+NULL
+
+CharacterTableUnknown48
+48
+4
+NDHU
+NULL

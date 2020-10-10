@@ -8,9 +8,4 @@
 	ALIGN 4
 	#include "ScriptedBattles.lyn.event"
 	
-	PUSH
-	ORG $11FD0
-	jumpToHack(SetScriptedNumbers)
-	POP
-	
 #endif // ScriptedBattlesHax

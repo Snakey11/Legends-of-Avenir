@@ -104,7 +104,7 @@ ENUN
 SetBackground(0x22)
 Text(Military7PassHaedricBeginningText)
 FADI 0x5
-MUSC Lloyd
+MUSC FE5_In_Search_of_Victory
 STAL 0x08
 SetBackground(0x27)
 Text(Military7PassHaedricJasperDerekText)
@@ -191,9 +191,6 @@ LABEL 0x0
 	TEXTSHOW Military7PassHaedricBadEndingUzkalisDeadText
 	TEXTEND
 	MUSC Tension
-	TEXTCONT
-	TEXTEND
-	MUSC Tragic_Decision
 	TEXTCONT
 	TEXTEND
 	REMA

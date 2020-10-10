@@ -5,6 +5,8 @@
 
 #include "Chapter Objectives.event"
 
+#include "Escapes.event"
+
 
 #include "Death Quotes.event"
 
@@ -98,3 +100,16 @@
 #include "Military/Military 6 Accept Retreat Help.event"
 
 #include "Military/Military 7 Accept Retreat Help.event"
+
+#include "Military/Military 4 Accept Hold.event"
+
+#include "Military/Military 5 Accept Hold.event"
+
+#include "Military/Military 6 Accept Hold.event"
+
+#include "Military/Military 7 Accept Hold.event"
+
+
+#include "Mage/Mage 1.event"
+
+#include "Mage/Mage 2 Leave.event"

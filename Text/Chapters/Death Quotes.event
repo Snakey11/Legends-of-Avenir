@@ -196,3 +196,9 @@ I never wanted this, but... it seems peaceful...[X]
 [BattleText]
 [FarRight][LoadRex]
 No... I thought I was strong enough... My liege, I'm sorry... I've failed Cesaria...[X]
+
+## JurgenDeathText
+[BattleText]
+[FarRight][LoadJurgen]
+I may fall... But the Lion Brigade will not. I'm just another soldier...[X]
+
