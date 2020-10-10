@@ -181,7 +181,22 @@ class NMM():
                 # Change the type if necessary.
                 if currType != self.fields[j].size:
                     currType = self.fields[j].size
-                    yield f'; {types[currType]} '
+                    newTypeStr = types.get(currType,None)
+                    if newTypeStr:
+                        yield f'; {newTypeStr} '
+                    else:
+                        # Oh we don't have a type that matches a string.
+                        # We need to change our type to byte and split up our cell into bytes.
+                        # This data SHOULD BE little endianed.
+                        yield f'; {types[1]} '
+                        value = 0
+                        try: value = int(cell,0) # Make sure this is a number.
+                        except: exit(f'ERROR in {self.parent.filepath} with cell \"{cell}\": Data with irregular size must be a number.')
+                        for k in range(currType):
+                            toWrite = value & 0xFF
+                            value = value >> 8
+                            yield f'(0x{toWrite:0X}) '
+                        continue
                 yield f'({cell}) '
             yield '\n'
         if not self.parent.isInline or not self.parent.isSequential:

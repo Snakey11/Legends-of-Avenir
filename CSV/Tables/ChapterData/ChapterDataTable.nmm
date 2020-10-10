@@ -77,6 +77,12 @@ Chapter ID
 NDHU
 NULL
 
+ChapterDataUnknown16
+16
+2
+NDHU
+NULL
+
 Weather Condition
 18
 1
@@ -88,6 +94,12 @@ Battle tileset
 1
 NDHU
 Battle tileset.txt
+
+ChapterDataUnknown20
+20
+1
+NDHU
+NULL
 
 Player Phase music
 22
@@ -125,10 +137,22 @@ NPC Phase music 2
 NDHU
 Music List.txt
 
+ChapterDataUnknown34
+34
+10
+NDHU
+NULL
+
 Destructible Walls HP
 44
 1
 NEDU
+NULL
+
+ChapterDataUnknown45
+45
+67
+NEHU
 NULL
 
 Chapter Name ID
@@ -156,10 +180,22 @@ Worldmap Chapter Prologue Scene
 NDHU
 World map prologue.txt
 
+ChapterDataUnknown118
+118
+10
+NDHU
+NULL
+
 Prep Screen Number * 2
 128
 1
 NEDU
+NULL
+
+ChapterDataUnknown129
+129
+5
+NDHU
 NULL
 
 No. of enemies left for Grasping at Victory
@@ -214,4 +250,10 @@ Tile Marker - Y-Coordinate
 144
 1
 NEDU
+NULL
+
+ChapterDataUnknown145
+145
+3
+NDHU
 NULL

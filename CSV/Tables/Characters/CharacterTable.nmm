@@ -48,6 +48,12 @@ Affinity
 NEDU
 NULL
 
+CharacterTableUnknown10
+10
+1
+NDHU
+NULL
+
 Base Level
 11
 1
@@ -186,13 +192,17 @@ Res Growth
 NEDU
 NULL
 
-
 Lck Growth
 34
 1
 NEDU
 NULL
 
+CharacterTableUnknown35
+35
+5
+NDHU
+NULL
 
 Character Ability 1
 40
@@ -222,4 +232,10 @@ Support Data Pointer
 44
 4
 NEHU
+NULL
+
+CharacterTableUnknown48
+48
+4
+NDHU
 NULL
