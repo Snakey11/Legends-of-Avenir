@@ -174,7 +174,7 @@ UNIT Connor Mercenary PlayerMArcher Level(1,Ally,True) [16,16] 0x00 0x00 0x00 0x
 UNIT
 
 CoupleHaedricans:
-UNIT Leon Gladiator Leon Level(9,Enemy,True) [17,1] 0x00 0x00 0x00 0x00 [SilverAxe,Tomahawk] GuardAI
+UNIT Leon Baselius Leon Level(9,Enemy,True) [17,1] 0x00 0x00 0x00 0x00 [SilverAxe,Tomahawk] GuardAI
 UNIT Haedrican Soldier Haedrican Level(11,Enemy,True) [16,13] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
 UNIT Haedrican Soldier Haedrican Level(11,Enemy,True) [19,14] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
 UNIT Haedrican Mage Haedrican Level(9,Enemy,True) [17,8] Drop 0x00 0x00 0x00 [Elfire,ChestKey_5] AttackInRangeAI

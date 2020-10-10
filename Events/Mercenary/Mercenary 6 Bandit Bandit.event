@@ -150,7 +150,7 @@ UNIT Walter Archer Walter Level(1,Ally,True) [7,0] 0x00 0x00 0x00 0x00 [IronAxe,
 UNIT
 
 LoadLeonCutscene:
-UNIT Leon Gladiator Leon Level(1,NPC,True) [7,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT Leon Baselius Leon Level(1,NPC,True) [7,3] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 UNIT
 
 AryaEntersWithTact:
@@ -158,7 +158,7 @@ UNIT Arya Myrmidon_F Arya Level(1,Ally,True) [8,9] 0x00 0x00 0x1 REDA8R5 [IronAx
 UNIT
 
 LoadLeon:
-UNIT Leon Gladiator PlayerMArcher Level(11,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [SilverAxe,Tomahawk,Vulnerary] NoAI 
+UNIT Leon Baselius PlayerMArcher Level(11,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [SilverAxe,Tomahawk,Vulnerary] NoAI 
 EndUnit
 
 //Label BacrunUnits

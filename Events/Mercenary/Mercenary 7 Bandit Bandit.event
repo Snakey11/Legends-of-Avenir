@@ -409,7 +409,7 @@ UNIT Walter Archer PlayerMArcher Level(1,Ally,True) [14,12] 0x00 0x00 0x00 0x00 
 UNIT Arya Myrmidon_F PlayerMArcher Level(1,Ally,True) [8,13] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 UNIT Adlez Brigand PlayerMArcher Level(1,Ally,True) [9,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 UNIT Connor Mercenary PlayerMArcher Level(1,Ally,True) [7,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT Leon Gladiator PlayerMArcher Level(1,Ally,True) [12,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
+UNIT Leon Baselius PlayerMArcher Level(1,Ally,True) [12,12] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
 UNIT
 
 LeonAndEnemies:
@@ -453,7 +453,7 @@ EndUnit
 //Label Ending units
 GoodEndingAdlezLeon:
 UNIT Adlez Myrmidon_F PlayerMArcher Level(1,Ally,True) [4,7] 0x00 0x00 0x00 0x00 [IronAxe,Vulnerary] NoAI 
-UNIT Leon Gladiator PlayerMArcher Level(11,Ally,True) [6,8] 0x00 0x00 0x00 0x00 [SilverAxe,Tomahawk,Vulnerary] NoAI 
+UNIT Leon Baselius PlayerMArcher Level(11,Ally,True) [6,8] 0x00 0x00 0x00 0x00 [SilverAxe,Tomahawk,Vulnerary] NoAI 
 UNIT
 
 BadEndingFriends:
