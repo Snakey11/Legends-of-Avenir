@@ -96,6 +96,16 @@ Fixed a turn one phase theme switch in Military 6 Accept Retreat Help
 Spellswords now have custom map sprites -- Credit SqrtOfPi (Sponsored by Bartz)
 Robert has been buffed
 Cougar has a new mug! -- Credit Atey (Sponsored by Bartz)
+Fixed iron longbow and iron shortbow crash (again)
+Fixed allowing randomizing into a mage class when it shouldn't be allowed
+Fixed devil bow not being effective against fliers
+Fixed male mercenaries not having shove
+Fixed Leon loading as the wrong class more often than not
+Fixed Seraph Knight's name being too long
+Fixed Warlock's description not reading that it uses staves
+Fixed Mercenary 1's units not loading properly for pegasus knight Tact
+Removed Arc's personal skill
+Fixed lag on maps with lots of talk convos
 
 v1.10 (This was only released to playtesters in the Discord server to catch bugs before v2.0.)
 5th and final Military route is a go. Kill Sean after accepting the promotion in chapter 3. Route includes all supports as well
