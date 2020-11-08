@@ -1,6 +1,6 @@
 
 #ifdef _FE8_
-
+	
 	#include "Tools/Tool Helpers.txt"
 	#include "EAstdlib.event"
 	#include "Extensions/Hack Installation.txt"
