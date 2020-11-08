@@ -350,7 +350,7 @@ UNIT Guardian Berserker Xylia Level(5,Enemy,True) [8,24] 0x00 0x00 0x00 0x00 [St
 EndUnit
 
 LoadXylia:
-UNIT Xylia HolySage 0x00 Level(11,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [Aura] NoAI
+UNIT Xylia HolySage 0x00 Level(11,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [Thani] NoAI
 UNIT
 
 PUSH
