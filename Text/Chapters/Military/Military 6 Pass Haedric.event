@@ -288,8 +288,8 @@ Sekar! Nice to see a friendly face... Uzkalis is looking for the Ingefonts in Ha
 That was the same being that[NL]
 led the attack on Bacrun...[A]
 [MidLeft]Must be some experiment by Xavus and[NL]
-Uzkalis. I'm we defeated it this time.[A][NL]
-But... where are Muriel and Uzkalis?[A][CloseSpeech][MidLeft][MoveLeft][FarRight][LoadLeon]
+Uzkalis. I'm glad we defeated it this time.[A][NL]
+But... where are Muriel and Uzkalis?[A][CloseSpeech][MidLeft][MoveLeft][FarLeft][LoadLeon]
 Uzkalis must have gone[NL]
 to one of the Ingefonts...[A]
 [FarRight][MoveFarRight]Basileus![A]
@@ -324,6 +324,7 @@ won this fight, but we don't have[A][NL]
 time to lose! Get moving, soldiers![A][X]
 
 ## Military6PassHaedricEndingLeonSekarText
+[ConversationText]
 [MidRight][LoadSekar][MidLeft][LoadLeon]
 I know we don't have much time, so I'll keep it brief. You've done well, Sekar.[A]
 [MidLeft]Basileus...[A]

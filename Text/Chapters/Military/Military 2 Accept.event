@@ -137,7 +137,7 @@ do much damage against our force.[A]
 [FarRight][.....]Why do you trust her?[A]
 [MidLeft]I don't in the slightest. Nobody knows[NL]
 where she came from. If any members of this[A][NL]
-unit are to die, it might as well be her.[X]
+unit are to die, it might as well be her.[A][X]
 
 ## Military2AcceptZahevaPlanText
 [MidLeft][LoadZaheva]
