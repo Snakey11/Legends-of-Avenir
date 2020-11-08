@@ -1,4 +1,5 @@
 
+from sys import exit
 import os
 import argparse
 from distutils.util import strtobool
@@ -167,6 +168,7 @@ class NMM():
         else:
             yield 'PUSH\n'
             yield f'ORG {self.vanillaOffset}\n'
+            yield f'{self.label}:\n'
         for i,row in enumerate(self.data):
             currType = 0 # Data size of the current type we're writing.
             if not self.parent.isSequential: # We need to do our "ORG {Label} + {index}*{datasize}". There'll already be a ; when we change type.
@@ -381,8 +383,11 @@ if __name__ == '__main__':
                             stripped = line.strip()
                             j = j+1
                             # What do we need to get from the nmm?
+                            if j == 0 and stripped != '1':
+                                j = -1
+                                continue # Skip comments and such and continue until we hit the header.
                             if stripped == '': continue # Ignore whitespace lines.
-                            elif j == 0 or j == 1 or j == 3 or j == 5 or j == 6: continue # We don't care about this information
+                            if j == 0 or j == 1 or j == 3 or j == 5 or j == 6: continue # We don't care about this information
                             elif j == 2:
                                 nmm.vanillaOffset = stripped
                             elif j == 4:
