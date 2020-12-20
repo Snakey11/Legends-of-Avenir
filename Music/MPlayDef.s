@@ -8,6 +8,8 @@
 @***
 @ MML (without running status)
 @******************************************************@
+#ifndef M_PLAY_DEF
+#define M_PLAY_DEF
 
 	.equ	W00,	0x80		@ WAIT
 	.equ	W01,	W00+1		@
@@ -463,3 +465,4 @@
 	.equ	reverb_set,0x80		@ SOUND_MODE_REVERB_SET
 	.equ	PAM, PAN		@ 
 
+#endif

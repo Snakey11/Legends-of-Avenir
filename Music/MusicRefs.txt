@@ -300,6 +300,7 @@ Dry_Trail
 	Military 5 Accept Retreat Help.event
 Earthbound
 	Military 5 Accept Retreat Help.event
+	Military 6 Accept Retreat Help.event
 	Phase theme: Mage1
 	Phase theme: Mage1
 	Phase theme: MilitaryAcceptRetreatHelp5
@@ -373,7 +374,6 @@ FE5_Victory_Minor
 	Military 5 Pass Haedric.event
 	Military 6 Pass Altia.event
 Fighting_of_the_Spirit
-	Military 6 Accept Retreat Help.event
 	Phase theme: MercenaryBanditDisband7
 	Phase theme: MilitaryAcceptRetreatHelp6Grow2
 	Phase theme: MilitaryAcceptRetreatHelp6Grow2
