@@ -1,0 +1,153 @@
+/// - Start Animation
+C00
+C00
+C00
+C00
+C00
+C100029
+C000040
+C00
+C00
+C00
+C00
+C00
+O blank.PNG
+B blankbg.PNG
+1
+C013F48
+O blank.PNG
+B SLV1.PNG
+1
+O blank.PNG
+B SLV2.PNG
+1
+O blank.PNG
+B SLV3.PNG
+1
+O blank.PNG
+B SLV4.PNG
+1
+O blank.PNG
+B SLV5.PNG
+1
+O blank.PNG
+B SLV6.PNG
+1
+C100929
+O blank.PNG
+B SLV7.PNG
+1
+O blank.PNG
+B SLV8.PNG
+1
+O blank.PNG
+B SLV9.PNG
+1
+C101029
+O blank.PNG
+B SLV10.PNG
+1
+O blank.PNG
+B SLV11.PNG
+1
+O blank.PNG
+B SLV12.PNG
+1
+O blank.PNG
+B SLV13.PNG
+1
+C100029
+O blank.PNG
+B SLV15.PNG
+1
+C100529
+O blank.PNG
+B SLV15.PNG
+1
+C100A29
+O blank.PNG
+B SLV15.PNG
+1
+C101029
+O blank.PNG
+B SLV15.PNG
+1
+O blank.PNG
+B blankbg.PNG
+1
+O blank.PNG
+B blankbg.PNG
+1
+O blank.PNG
+B blankbg.PNG
+1
+C100029
+C02C348
+O blank.PNG
+B SLV16.PNG
+1
+O blank.PNG
+B SLV17.PNG
+1
+O blank.PNG
+B SLV18.PNG
+1
+C00001A
+C00001F
+~~~
+O blank.PNG
+B SLV19.PNG
+1
+O blank.PNG
+B SLV20.PNG
+1
+O blank.PNG
+B SLV21.PNG
+1
+O blank.PNG
+B SLV22.PNG
+1
+O blank.PNG
+B SLV23.PNG
+1
+O blank.PNG
+B SLV24.PNG
+1
+O blank.PNG
+B SLV25.PNG
+1
+O blank.PNG
+B SLV26.PNG
+1
+O blank.PNG
+B SLV27.PNG
+1
+O blank.PNG
+B SLV28.PNG
+1
+O blank.PNG
+B SLV29.PNG
+1
+O blank.PNG
+B SLV30.PNG
+2
+C100029
+O blank.PNG
+B SLV15.PNG
+2
+C100529
+O blank.PNG
+B SLV15.PNG
+2
+C100A29
+O blank.PNG
+B SLV15.PNG
+2
+C101029
+O blank.PNG
+B SLV15.PNG
+2
+O blank.PNG
+B blankbg.PNG
+2
+/// - End Animation

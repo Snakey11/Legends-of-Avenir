@@ -1,0 +1,66 @@
+/// - Slime Animation
+C00
+C00
+C00
+C000040
+C00
+C00
+C00
+C00
+C000153
+C061029
+O blank.png
+B s01.png
+4
+C00BE48
+C091029
+O blank.png
+B s02.png
+4
+O blank.png
+B s03.png
+4
+C0B1029
+O blank.png
+B s04.png
+4
+C0D1029
+C00BE48
+O blank.png
+B s05.png
+4
+O blank.png
+B s06.png
+4
+O blank.png
+B s07.png
+4
+C02E248
+O blank.png
+B s08.png
+4
+O blank.png
+B s09.png
+4
+C00001A
+C1F
+~~~
+C51
+O blank.png
+B s10.png
+4
+C091029
+O blank.png
+B s11.png
+4
+C061029
+O blank.png
+B s12.png
+4
+C100029
+O blank.PNG
+B blankbg.PNG
+6
+C00012A
+C000053
+/// - End Animation
