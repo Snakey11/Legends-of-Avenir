@@ -37,7 +37,6 @@ Graphics/Map Sprites/*.dmp
 Graphics/Class Cards/*.dmp
 Music/*.event
 !Music/_Master Music Installer.event
-Graphics/Spells/Spells/*.png
 FE8 Template.event
 FE-CLib-master
 desktop.ini
