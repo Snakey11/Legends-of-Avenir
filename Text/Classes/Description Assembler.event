@@ -166,3 +166,8 @@ weapons. Equip: Swords, Lances, Bows.[X]
 ## ExecutionerDescText
 Skilled, light, and deadly[NL]
 fighters. Equip: Swords, Dark.[X]
+
+## MurielSageDescText
+# 0x031E
+Advanced scholars of magical[NL]
+codices. Equip: Anima, staves.[X]
