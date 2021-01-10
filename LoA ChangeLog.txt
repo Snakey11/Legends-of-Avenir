@@ -1,3 +1,12 @@
+v2.1
+Fixed Military 5 Accept Hold end of chapter crash
+Fixed Xylia's map sprite to use female sage
+Fixed thunder's description
+Fixed some death quotes
+Couple character/class rebalances
+Fixed Muriel's class description about weapon ranks. She can also use staves now
+Fixed some dialogue text issues
+
 v2.0
 Dasher screen streching has been fixed
 Mage knight description includes sword utility
