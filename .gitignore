@@ -54,3 +54,6 @@ Graphics/WorldMap/*.dmp
 !Music/drumfix_fe8.event
 !Graphics/Vanilla Portrait Table.dmp
 
+save/
+screenshots/
+states/
