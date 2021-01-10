@@ -984,7 +984,7 @@
 #define SpearHeroSprite HeroSprite
 #define XeximSprite AssassinSprite
 #define GrandPaladinSprite PaladinSprite
-#define HolySageSprite SageSprite
+#define HolySageSprite SageFSprite
 #define WilSniperSprite SniperSprite
 #define LostSoulSprite Civilian3Sprite
 #define LostSoulFSprite Civilian4Sprite
