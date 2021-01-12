@@ -1,5 +1,5 @@
 
-## Merc2BanditTactMeetsOthersPart1Text
+## Merc2BanditTactMeetsOthersText
 [FarLeft][LoadWalter][Left][LoadVicar][FarRight][LoadPlayer]
 Hey, you all![A]
 [Left]You! What do you want?[A]
@@ -10,32 +10,16 @@ have to trust you?[A]
 [FarRight]Your buddies attacked me back there.[NL]
 If anyone here has cause to not trust[A][NL]
 someone, I shouldn't be trusting[NL]
-you, but here I am.[A][Left][LoadBaret][CloseSpeech][X]
-
-## Merc2BanditTactMeetsOthersHimText
-[FarLeft]He has a point there, Vicar. We might as[NL]
-well bring him along. Maybe[A][NL]
-Adlez will have some use for him.[A][CloseSpeech][X]
-
-## Merc2BanditTactMeetsOthersHerText
-[FarLeft]She has a point there, Vicar. We might as[NL]
-well bring her along. Maybe[A][NL]
-Adlez will have some use for her.[A][CloseSpeech][X]
-
-## Merc2BanditTactMeetsOthersPart2Text
+you, but here I am.[A][Left][LoadBaret]
+[FarLeft][He] has a point there, Vicar. We might as[NL]
+well bring [him] along. Maybe[A][NL]
+Adlez will have some use for [him].[A]
+[Events]
 [Right]Perhaps... What do you think, Baret?[A]
 [Left]We've been just us for ages. I see no[NL]
-reason to add another member to our group.[A][CloseSpeech][X]
-
-## Merc2BanditTactMeetsOthersHeText
-[FarLeft]Lighten up, brother. He's pretty skilled,[NL]
-and Danaan's militia are no pushovers.[A][CloseSpeech][X]
-
-## Merc2BanditTactMeetsOthersSheText
-[FarLeft]Lighten up, brother. She's pretty skilled,[NL]
-and Danaan's militia are no pushovers.[A][CloseSpeech][X]
-
-## Merc2BanditTactMeetsOthersPart3Text
+reason to add another member to our group.[A]
+[FarLeft]Lighten up, brother. [He]'s pretty skilled,[NL]
+and Danaan's militia are no pushovers.[A]
 [Right]I'll make the call. What's your name?[A]
 [FarRight]I'm [Tact].[A]
 [Right]My name's Vicar. I'm a former Haedrician[NL]
@@ -73,27 +57,14 @@ to help with the raid?[A]
 highwaymen that also wanted to join[NL]
 the raid, then joined up with us.[A]
 [FarRight]What are you, a freelancer?[A]
-[FarLeft]Yeah, something like that.[A][X]
-
-## Merc2BanditTactMeetsAdlezHeText
-[FarRight]Well, if he's a good fighter, that's good[NL]
+[FarLeft]Yeah, something like that.[A]
+[FarRight]Well, if [he]'s a good fighter, that's good[NL]
 for me. Anyone who can deal with a whole[A][NL]
 group of highwaymen single-handedly is worth[NL]
 my attention. I already dispatched[A][NL]
 one of my men, Gerwick, to begin the[NL]
 assault on Danaan. If you want[A][NL]
-some loot, you'd better get going.[A][X]
-
-## Merc2BanditTactMeetsAdlezSheText
-[FarRight]Well, if he's a good fighter, that's good[NL]
-for me. Anyone who can deal with a whole[A][NL]
-group of highwaymen single-handedly is worth[NL]
-my attention. I already dispatched[A][NL]
-one of my men, Gerwick, to begin the[NL]
-assault on Danaan. If you want[A][NL]
-some loot, you'd better get going.[A][X]
-
-## Merc2BanditTactMeetsAdlez2Text
+some loot, you'd better get going.[A]
 [Left]We'll be back with your cut.[A]
 [FarRight]I wouldn't have it any other way.[A][X]
 

@@ -56,21 +56,7 @@ ENUN
 LOAD3 0x1 PlayerLoading1
 ENUN
 SetBackground(0x27)
-TEXTSTART
-TEXTSHOW Merc3BanditBeginningText
-TEXTEND
-CHECK_EVENTID 0x6E
-BEQ 0x0 0x0 0xC
-	TEXTSHOW2 Merc3BanditBeginningHimText
-	TEXTEND
-	GOTO 0x1
-LABEL 0x0
-	TEXTSHOW2 Merc3BanditBeginningHerText
-	TEXTEND
-LABEL 0x1
-TEXTSHOW2 Merc3BanditBeginning2Text
-TEXTEND
-REMA
+Text(Merc3BanditBeginningText)
 MUSC Reunion
 SetBackground(0x11)
 Text(Merc3BanditPlanningText)
