@@ -251,8 +251,9 @@ StartBattle
 CriticalHit(1,80)
 EndAttack
 SetBattleNumbers(15,8,0,87,31,23)
-MercenaryNarratorFight(7,3)
-STAL 0x20
+FIG1 0x00 Narrator 0x00
+KillUnit(0x00)
+DISA 0x00
 DISA Vicar
 DISA Walter
 DISA Baret

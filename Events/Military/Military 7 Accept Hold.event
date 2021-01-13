@@ -114,7 +114,10 @@ BNE 0x0 0x0 0xC
 	NormalDamage(1,60)
 	EndAttack
 	SetBattleNumbers(14,2,0,90,31,19)
-	MilitaryNarratorFight(6,7)
+	FIG1 0x00 Narrator 0x00
+	KillUnit(0x00)
+	DISA 0x00
+	STAL 0x20
 	GOTO 0x1
 LABEL 0x0
 	// Bad ending.
@@ -139,7 +142,10 @@ LABEL 0x0
 	CriticalHit(1,60)
 	EndAttack
 	SetBattleNumbers(0xFF,0xFF,0xFF,84,36,15)
-	MilitaryNarratorFight(15,10)
+	FIG1 0x00 Narrator 0x00
+	KillUnit(0x00)
+	DISA 0x00
+	STAL 0x20
 LABEL 0x1
 ENUF 0x67
 ENUF 0x68

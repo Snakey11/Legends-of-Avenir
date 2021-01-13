@@ -157,7 +157,7 @@ STAL 0x10
 Text(Merc7BanditBanditBadEndingTactAdlezText)
 MUSC Return_of_the_Demon_King
 WarpIn(2,6,LoadNarrator3)
-STAL 0x10
+STAL 0x30
 MOVE 0x0 Narrator [4,7]
 ENUN
 StartBattle
@@ -178,7 +178,9 @@ MissedAttack(0,0)
 NormalDamage(1,40)
 EndAttack
 SetBattleNumbers(25,8,5,91,39,18)
-MercenaryNarratorFight(2,4)
+FIG1 0x00 Narrator 0x00
+KillUnit(0x00)
+DISA 0x00
 DISA Vicar
 DISA Walter
 DISA Baret
@@ -261,7 +263,9 @@ NormalDamage(0,10)
 NormalDamage(1,40)
 EndAttack
 SetBattleNumbers(26,7,2,87,30,17)
-MercenaryNarratorFight(5,5)
+FIG1 0x00 Narrator 0x00
+KillUnit(0x00)
+DISA 0x00
 DISA Vicar
 DISA Walter
 DISA Baret

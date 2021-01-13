@@ -164,7 +164,9 @@ BNE 0x0 0x0 0xC
 		NormalDamage(1,30)
 		EndAttack
 		SetBattleNumbers(13,5,0,93,32,18)
-		MilitaryNarratorFight(5,18)
+		FIG1 0x00 Narrator 0x00
+		KillUnit(0x00)
+		DISA 0x00
 		GOTO 0x2
 LABEL 0x0
 		// If Izuk escaped. Good ending.
@@ -211,7 +213,9 @@ LABEL 0x0
 		CriticalHit(1,60)
 		EndAttack
 		SetBattleNumbers(12,6,1,93,35,20)
-		MilitaryNarratorFight(6,6)
+		FIG1 0x00 Narrator 0x00
+		KillUnit(0x00)
+		DISA 0x00
 LABEL 0x2
 ENUF 0x67
 ENUF 0x68
@@ -426,7 +430,7 @@ UNIT Clara 0x00 0x00 Level(1,Ally,True) [8,5] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 EscapeGuardianSpirit:
-UNIT Narrator GuardianSpirit Narrator Level(15,Enemy,True) [4,6] 0x00 0x00 0x00 0x00 [SilverSword] NoAI
+UNIT Narrator NarratorClass Narrator Level(15,Enemy,True) [4,6] 0x00 0x00 0x00 0x00 [SilverSword] NoAI
 UNIT
 
 EndingSylvaine:
@@ -434,5 +438,5 @@ UNIT Sylvaine 0x00 0x00 Level(1,Ally,True) [6,19] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 BadEndingGuardianSpirit:
-UNIT Narrator GuardianSpirit Narrator Level(14,Enemy,True) [5,20] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI
+UNIT Narrator NarratorClass Narrator Level(14,Enemy,True) [5,20] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI
 EndUnit

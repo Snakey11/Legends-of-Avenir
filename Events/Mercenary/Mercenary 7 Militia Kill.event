@@ -194,7 +194,9 @@ StartBattle
 CriticalHit(1,80)
 EndAttack
 SetBattleNumbers(17,7,0,93,29,21)
-MercenaryNarratorFight(7,2) // Calls the fight and kills [Tact], located at [7,2]
+FIG1 0x00 Narrator 0x00
+KillUnit(0x00)
+DISA 0x00
 DISA Xexim
 DISA Kendrick
 DISA Arya
@@ -386,7 +388,7 @@ UNIT Cesarian Fighter Rex Level(15,Enemy,True) [0,19] 0x00 0x00 0x00 0x00 [Steel
 UNIT
 
 LoadNarrator:
-UNIT Narrator NarratorClass Narrator Level(15,NPC,True) [5,2] 0x00 0x00 0x00 0x00 [SilverSword] [0]
+UNIT Narrator NarratorClass Narrator Level(15,Enemy,True) [5,2] 0x00 0x00 0x00 0x00 [SilverSword] [0]
 UNIT
 
 LoadRexDeadUnits1:

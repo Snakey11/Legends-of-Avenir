@@ -132,7 +132,9 @@ BNE 0x0 0x0 0xC
 	CriticalHit(1,60)
 	EndAttack
 	SetBattleNumbers(12,12,0,90,28,21)
-	MilitaryNarratorFight(9,5)
+	FIG1 0x00 Narrator 0x00
+	KillUnit(0x00)
+	DISA 0x00
 	STAL 0x20
 	Text(Military7AcceptRetreatHelpGoodEndingFinalText)
 	GOTO 0x1
@@ -186,7 +188,6 @@ LABEL 0x0
 	SetBattleNumbers(19,16,1,97,34,15)
 	FIG1 Derek Narrator 0x00
 	KillUnit(5,5)
-	STAL 0x10
 	MOVE 0x00 Narrator [5,5]
 	ENUN
 	StartBattle
@@ -195,7 +196,9 @@ LABEL 0x0
 	NormalDamage(1,60)
 	EndAttack
 	SetBattleNumbers(21,12,3,85,31,13)
-	MilitaryNarratorFight(6,5)
+	FIG1 0x00 Narrator 0x00
+	KillUnit(0x00)
+	DISA 0x00
 	STAL 0x20
 	Text(Military7AcceptRetreatHelpBadEndingFinalText)
 LABEL 0x1

@@ -197,7 +197,9 @@ LABEL 0x0
 	EndAttack
 	SetBattleNumbers(19,9,0,90,31,18)
 LABEL 0x1
-MercenaryNarratorFight(11,13)
+FIG1 0x00 Narrator 0x00
+KillUnit(0x00)
+DISA 0x00
 DISA Arc
 DISA Luke
 DISA Jasper

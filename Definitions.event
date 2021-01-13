@@ -1658,6 +1658,7 @@
 
 //#define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
 
+#define KillUnit(charID) "SET_SOMETHING charID ; DISA_IF charID"
 #define KillUnit(X,Y) "SVAL 0xB Coords(X,Y) ; SET_SOMETHING 0xFFFE ; DISA_IF 0xFFFE"
 
 //#define Raid(EventID,Pointer,X,Y) "LOCA EventID Pointer [X,Y] 0x21"
