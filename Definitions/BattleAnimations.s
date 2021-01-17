@@ -97,8 +97,8 @@ SentinelLance
 SentinelAxe
 SentinelHandAxe
 SentinelUnarmed
-TruebladeSword
-TruebladeUnarmed
+ServiusSword
+ServiusUnarmed
 TruerbladeSword
 TruerbladeUnarmed
 WarlockAxe
@@ -148,7 +148,8 @@ ImpalerFUnarmed
 MasterKnightSword
 CommanderAxe
 CommanderHandAxe
-MarksmanMSword
+MarksmanFBow
+MarksmanFUnarmed
 WyvernGeneralLance
 MasterKnightLance
 MasterKnightUnarmed
@@ -186,7 +187,6 @@ ChampionFSword
 ChampionFAxe
 ChampionFHandAxe
 ChampionFUnarmed
-TruebladeFBow
 GladiatorSword
 GladiatorAxe
 GladiatorHandAxe
@@ -204,3 +204,9 @@ SentinelFLance
 SentinelFAxe
 SentinelFHandAxe
 SentinelFUnarmed
+TruebladeMSword
+TruebladeMUnarmed
+TruebladeFSword
+TruebladeFUnarmed
+MistlainMagic
+MistlainStaff

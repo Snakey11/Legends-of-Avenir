@@ -1,7 +1,7 @@
 ///////Animation Install.event///////
     
 PUSH
-AnimTableEntry(TruebladeUnarmed) //CHANGE THIS TO THE SLOT YOU ARE REPLACING
+AnimTableEntry(ServiusUnarmed) //CHANGE THIS TO THE SLOT YOU ARE REPLACING
 WORD 0 0 0 //empty name field, who cares
 POIN Anim_Unarmed_sectiondata
 POIN Anim_Unarmed_framedata

@@ -124,11 +124,14 @@
 #include "Commander Unarmed.event"
 }
 {
-#include "Marksman M Sword.event"
-
 #include "Marksman M Bow.event"
 
 #include "Marksman M Unarmed.event"
+}
+{
+#include "Marksman F Bow.event"
+
+#include "Marksman F Unarmed.event"
 }
 {
 #include "Warlock Axe.event"
@@ -266,4 +269,14 @@
 #include "Sentinel F Hand Axe.event"
 
 #include "Sentinel F Unarmed.event"
+}
+{
+#include "Trueblade M Sword.event"
+
+#include "Trueblade M Unarmed.event"
+}
+{
+#include "Trueblade F Sword.event"
+
+#include "Trueblade F Unarmed.event"
 }
