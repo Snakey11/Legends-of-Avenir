@@ -151,3 +151,4 @@
 [LoadAjax] = [LoadFace][0xEF][0x1]
 [LoadMistlain] = [LoadFace][0xF0][0x1]
 [LoadPascal] = [LoadFace][0xF1][0x1]
+[LoadAlexis] = [LoadFace][0xF2][0x1]

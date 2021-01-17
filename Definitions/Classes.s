@@ -13,9 +13,10 @@ Baron
 ImpalerM
 WyvernGeneral
 MarksmanM
+MarksmanF
 MasterKnightM
 ChampionM
-Trueblade
+ServiusClass
 MountedBrigand
 Gladiator
 SeraphKnight
@@ -80,3 +81,7 @@ ShadeKnightM
 ShadeKnightF
 Executioner
 SentinelF
+TruebladeM
+TruebladeF
+MistlainClass
+AlexisClass

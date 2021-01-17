@@ -133,4 +133,6 @@ Blaine
 BossHelmer
 BossJurgen
 Lakshmi
+Mistlain
+Alexis
 MaxCharacterID

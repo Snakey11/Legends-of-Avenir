@@ -67,6 +67,7 @@ RogerMug
 AjaxMug
 MistlainMug
 PascalMug
+AlexisMug
 
 BattleSageMCard
 BattleSageFCard
