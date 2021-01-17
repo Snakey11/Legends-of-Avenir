@@ -11,7 +11,10 @@ Fixed some Tact gender pronouns
 Reduced Marauder's dummy con
 The Shizonians in Mercenary Militia Kill 6 have been buffed quite a bit
 The prep screen shop has been filled with many useful things
-All of the ending nonsense has been fixes
+All of the ending nonsense has been fixed
+Many many many many battle palette updates
+	This includes updates to character palettes, new character palettes, and many new Tact generic promotion palettes. There's still a lot to go with these, though
+Archer and myrmidon Tact's custom promotions have been updated
 
 v2.0
 Dasher screen streching has been fixed
