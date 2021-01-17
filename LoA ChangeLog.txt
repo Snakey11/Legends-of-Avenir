@@ -15,6 +15,7 @@ All of the ending nonsense has been fixed
 Many many many many battle palette updates
 	This includes updates to character palettes, new character palettes, and many new Tact generic promotion palettes. There's still a lot to go with these, though
 Archer and myrmidon Tact's custom promotions have been updated
+The prep screen armory has been greatly expanded
 
 v2.0
 Dasher screen streching has been fixed
