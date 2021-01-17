@@ -395,4 +395,7 @@ POIN EventPointerListOffset
 ORG $346DC
 POIN EventPointerListOffset
 
+ORG $99E64
+POIN PrepScreenShopList
+
 POP
