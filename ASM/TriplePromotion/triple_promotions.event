@@ -16,13 +16,13 @@ BYTE CavalierM2 MasterKnightM
 BYTE KnightM2 Baron
 BYTE SoldierM2 ImpalerM
 BYTE WyvernRiderM2 WyvernGeneral
-BYTE ArcherM2 HunterM
+BYTE ArcherM2 MarksmanM
 
 BYTE CavalierF2 MasterKnightF
 BYTE KnightF2 Baron
 BYTE SoldierF2 ImpalerF
 BYTE WyvernRiderF2 WyvernGeneral
-BYTE ArcherF2 HunterF
+BYTE ArcherF2 MarksmanF
 
 BYTE MageM2 MagusM
 BYTE MonkM2 Patriarch

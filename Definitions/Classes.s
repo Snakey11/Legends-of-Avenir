@@ -68,7 +68,6 @@ EmperorClass
 MurielSage
 ImpalerF
 SoldierF2
-BowKnight
 HighPriest
 DreadFighterM
 DreadFighterF
