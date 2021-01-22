@@ -1,4 +1,11 @@
 
+AlexisAnim:
+StaffAnim(AlexisStaff)
+AnimaAnim(AlexisMagic)
+LightAnim(AlexisMagic)
+UnarmedAnim(AlexisMagic)
+WORD 0x0 0x0
+
 ArmoredWyvernLordAnim:
 SwordAnim(ArmoredWyvernLordSword)
 LanceAnim(ArmoredWyvernLordLance)
@@ -143,6 +150,7 @@ HolySageAnim:
 LightAnim(HolySageMagic)
 DarkAnim(HolySageMagic)
 StaffAnim(HolySageStaff)
+UnarmedAnim(HolySageMagic)
 WORD 0x0 0x0
 
 ImpalerMAnim:
@@ -237,13 +245,12 @@ WORD 0x0 0x0
 
 MercenaryFAnim:
 SwordAnim(MercenaryFSword)
-UnarmedAnim(MercenaryFSword)
+UnarmedAnim(MercenaryFUnarmed)
 WORD 0x0 0x0
 
 MistlainAnim:
 AnimaAnim(MistlainMagic)
-StaffAnim(MistlainMagic)
-UnarmedAnim(MistlainAnim)
+UnarmedAnim(MistlainMagic)
 WORD 0x0 0x0
 
 MonkMAnim:
