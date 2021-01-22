@@ -148,8 +148,6 @@ ImpalerFUnarmed
 MasterKnightSword
 CommanderAxe
 CommanderHandAxe
-MarksmanFBow
-MarksmanFUnarmed
 WyvernGeneralLance
 MasterKnightLance
 MasterKnightUnarmed
@@ -208,4 +206,7 @@ TruebladeMUnarmed
 TruebladeFSword
 TruebladeFUnarmed
 MistlainMagic
-MistlainStaff
+MarksmanFBow
+MarksmanFUnarmed
+AlexisStaff
+AlexisMagic

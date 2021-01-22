@@ -155,7 +155,7 @@ MilitaryMArcherPaletteID
 	MilitaryMCommanderPaletteID
 	MilitaryMImpalerPaletteID
 	MilitaryMWyvernGeneralPaletteID
-	MilitaryMHunterPaletteID
+	MilitaryMMarksmanPaletteID
 	MilitaryMPaladinPaletteID
 	MilitaryMGreatKnightPaletteID
 	MilitaryMGeneralPaletteID
@@ -175,7 +175,7 @@ MilitaryFArcherPaletteID
 	MilitaryFCommanderPaletteID
 	MilitaryFImpalerPaletteID
 	MilitaryFWyvernGeneralPaletteID
-	MilitaryFHunterPaletteID
+	MilitaryFMarksmanPaletteID
 	MilitaryFPaladinPaletteID
 	MilitaryFGreatKnightPaletteID
 	MilitaryFGeneralPaletteID
