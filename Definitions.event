@@ -107,16 +107,12 @@
 #define Brigand2 BrigandM2
 #define PegasusKnight2 PegasusKnightF2
 #define Baselius Basileus
-//#define Magus MagusM
-//#define Hunter Marksman
 #define Champion ChampionM
 #define BlackFalcoknight SeraphKnight
 #define Combatant BattleSageF
 #define Falcoknight FalcoKnight
 #define Maurader MountedBrigand
 #define Marksman MarksmanM
-#define HunterM Marksman
-#define HunterF BowKnight
 #define Magus MagusM
 #define Trueerblade Truerblade
 /*
