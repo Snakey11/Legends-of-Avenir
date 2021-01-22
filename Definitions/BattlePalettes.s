@@ -185,3 +185,35 @@ MilitaryFArcherPaletteID
 	MilitaryFWyvernKnightPaletteID
 	MilitaryFSniperPaletteID
 	MilitaryFRangerPaletteID
+
+MageMMonkPaletteID
+MageMMagePaletteID
+MageMShamanPaletteID
+MageMSpellswordPaletteID
+	MageMPatriarchPaletteID
+	MageMSorcererPaletteID
+	MageMShadeKnightPaletteID
+	MageMDarkKnightPaletteID
+	MageMBishopPaletteID
+	MageMSagePaletteID
+	MageMMageKnightPaletteID
+	MageMDruidPaletteID
+	MageMSummonerPaletteID
+	MageMBattleSagePaletteID
+	MageMDreadFighterPaletteID
+
+MageFMonkPaletteID
+MageFMagePaletteID
+MageFShamanPaletteID
+MageFSpellswordPaletteID
+	MageFMatriarchPaletteID
+	MageFSorcererPaletteID
+	MageFShadeKnightPaletteID
+	MageFDarkKnightPaletteID
+	MageFBishopPaletteID
+	MageFSagePaletteID
+	MageFMageKnightPaletteID
+	MageFDruidPaletteID
+	MageFSummonerPaletteID
+	MageFBattleSagePaletteID
+	MageFDreadFighterPaletteID
