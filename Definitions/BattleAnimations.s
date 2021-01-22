@@ -191,7 +191,6 @@ GladiatorSword
 GladiatorAxe
 GladiatorHandAxe
 GladiatorUnarmed
-RangerFLance
 ShadeKnightMMagic
 ShadeKnightMStaff
 ShadeKnightFMagic

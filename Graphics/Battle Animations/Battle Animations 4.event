@@ -240,9 +240,6 @@
 #include "Gladiator Unarmed.event"
 }
 {
-#include "Ranger F Lance.event"
-}
-{
 #include "Shade Knight M Magic.event"
 
 #include "Shade Knight M Staff.event"
