@@ -16,6 +16,11 @@ Many many many many battle palette updates
 	This includes updates to character palettes, new character palettes, and many new Tact generic promotion palettes. There's still a lot to go with these, though
 Archer and myrmidon Tact's custom promotions have been updated
 The prep screen armory has been greatly expanded
+Fixed Maximus using the wrong moving map sprite
+Replaced the GetBattleAnimationId function with a custom version because I'm sick of it causing problems
+Xylia's animation's palette orders have been fixed
+Made classes for Mistlain and Alexis (but they're not going to be seen until the mage paths)
+Fixed Maximus not using his custom class in Mercenary 7 Militia Wait Cesaria
 
 v2.0
 Dasher screen streching has been fixed
