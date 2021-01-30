@@ -98,6 +98,7 @@
 #define BattleSage BattleSageM
 #define DreadFighter DreadFighterM
 #define Hector HectorClass
+#define HalberdierF Halberdier
 #define KnightM2 Knight2
 #define KnightF2 Knight2
 #define WyvernRiderM2 WyvernRider2
@@ -109,7 +110,6 @@
 #define Baselius Basileus
 #define Champion ChampionM
 #define BlackFalcoknight SeraphKnight
-#define Combatant BattleSageF
 #define Falcoknight FalcoKnight
 #define Maurader MountedBrigand
 #define Marksman MarksmanM
