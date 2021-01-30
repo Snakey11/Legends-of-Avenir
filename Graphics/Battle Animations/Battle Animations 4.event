@@ -281,6 +281,11 @@
 #include "Mistlain Magic.event"
 }
 {
+#include "Summoner F Magic.event"
+
+#include "Summoner F Staff.event"
+}
+{
 #include "Assassin F Sword.event"
 
 #include "Assassin F Unarmed.event"
