@@ -210,3 +210,7 @@ MarksmanFBow
 MarksmanFUnarmed
 AlexisStaff
 AlexisMagic
+SummonerFMagic
+SummonerFStaff
+AssassinFSword
+AssassinFUnarmed
