@@ -15,6 +15,11 @@ BowAnim(ArmoredWyvernLordBow)
 UnarmedAnim(ArmoredWyvernLordUnarmed)
 WORD 0x0 0x0
 
+AssassinFAnim:
+SwordAnim(AssassinFSword)
+UnarmedAnim(AssassinFUnarmed)
+WORD 0x0 0x0
+
 BasileusAnim:
 AxeAnim(BasileusAxe)
 HandAxeAnim(BasileusHandAxe)
@@ -314,11 +319,15 @@ UnarmedAnim(SentinelFUnarmed)
 WORD 0x0 0x0
 
 SeraphKnightAnim:
-SwordAnim(SeraphKnightSword)
 SpearAnim(SeraphKnightSpear)
 StaffAnim(SeraphKnightStaff)
 AnimaAnim(SeraphKnightMagic)
 UnarmedAnim(SeraphKnightMagic)
+WORD 0x0 0x0
+
+ServiusAnim:
+SwordAnim(ServiusSword)
+UnarmedAnim(ServiusUnarmed)
 WORD 0x0 0x0
 
 ShadeKnightMAnim:
@@ -343,6 +352,14 @@ DarkAnim(ShamanFMagic)
 UnarmedAnim(ShamanFMagic)
 WORD 0x0 0x0
 
+SpearHeroAnim:
+SwordAnim(0x0D)
+SpearAnim(SpearHeroSpear)
+AxeAnim(0x0E)
+HandAxeAnim(0x0F)
+UnarmedAnim(0x10)
+WORD 0x0 0x0
+
 SpellswordMAnim:
 SwordAnim(SpellswordMSword)
 AnimaAnim(SpellswordMSword)
@@ -363,17 +380,10 @@ AnimaAnim(MaximusBattleSageSword)
 UnarmedAnim(MaximusBattleSageUnarmed)
 WORD 0x0 0x0
 
-ServiusAnim:
-SwordAnim(ServiusSword)
-UnarmedAnim(ServiusUnarmed)
-WORD 0x0 0x0
-
-SpearHeroAnim:
-SwordAnim(0x0D)
-SpearAnim(SpearHeroSpear)
-AxeAnim(0x0E)
-HandAxeAnim(0x0F)
-UnarmedAnim(0x10)
+SummonerFAnim:
+DarkAnim(SummonerFMagic)
+StaffAnim(SummonerFStaff)
+UnarmedAnim(SummonerFMagic)
 WORD 0x0 0x0
 
 TruebladeMAnim:
