@@ -136,7 +136,7 @@ MercenaryMBrigandPaletteID
 MercenaryFMercenaryPaletteID
 MercenaryFMyrmidonPaletteID
 MercenaryFPegasusKnightPaletteID
-	MercenaryFCombatantPaletteID
+	MercenaryFChampionPaletteID
 	MercenaryFTruebladePaletteID
 	MercenaryFSeraphKnightPaletteID
 	MercenaryFHeroPaletteID

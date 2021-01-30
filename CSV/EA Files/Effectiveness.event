@@ -25,7 +25,7 @@ BYTE WyvernRider WyvernRider_F WyvernLord WyvernLord_F WyvernKnight WyvernKnight
 
 ALIGN 16
 SwordEffectiveness:
-BYTE Thief Mercenary Mercenary_F Hero Hero_F Myrmidon Myrmidon_F Swordmaster Swordmaster_F Assassin Assassin_F Rogue Champion MercenaryM2 MercenaryF2 MyrmidonM2 MyrmidonF2 JacketHero Hector Truerblade ServiusClass EdgySwordmaster Combatant SpellswordM SpellswordF DreadFighterM DreadFighterF BattleSageM BattleSageF Strategist ChampionF SpellswordM2 SpellswordF2 Executioner TruebladeM TruebladeF 0x0 0x0 0x0 0x0
+BYTE Thief Mercenary Mercenary_F Hero Hero_F Myrmidon Myrmidon_F Swordmaster Swordmaster_F Assassin Assassin_F Rogue ChampionM ChampionF MercenaryM2 MercenaryF2 MyrmidonM2 MyrmidonF2 JacketHero Hector Truerblade ServiusClass EdgySwordmaster ChampionF SpellswordM SpellswordF DreadFighterM DreadFighterF BattleSageM BattleSageF Strategist SpellswordM2 SpellswordF2 Executioner TruebladeM TruebladeF 0x0 0x0 0x0 0x0
 
 ALIGN 16
 LanceEffectiveness:
@@ -33,7 +33,7 @@ BYTE Knight Knight_F General General_F PegasusKnight FalcoKnight PegasusKnight2 
 
 ALIGN 16
 AxeEffectiveness:
-BYTE Hero Hero_F Fighter Warrior Brigand Pirate Berserker Champion Warlock Gladiator Fighter2 Brigand2 Pirate2 JacketHero Gladiator MountedBrigand MaligKnight 0x0 0x0 0x0 0x0
+BYTE Hero Hero_F Fighter Warrior Brigand Pirate Berserker ChampionM ChampionF Warlock Gladiator Fighter2 Brigand2 Pirate2 JacketHero Gladiator MountedBrigand MaligKnight 0x0 0x0 0x0 0x0
 
 ALIGN 16
 MageEffectiveness:
