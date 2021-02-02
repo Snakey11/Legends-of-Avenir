@@ -450,7 +450,6 @@
 #define GrantMug 0x3A // Pablo
 #define PatMug 0x16 // Forde
 #define TyroneMug 0x39 // Binks
-#define MayorMug 0x45 // Orson
 #define HarkenMug 0x4D // Unused rando
 #define MasonMug 0x52 // Hayden
 #define DanielMug 0x3C // Carlyle
