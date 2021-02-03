@@ -125,8 +125,8 @@ BossAdlez,AdlezNameText,AdlezDescText,BossAdlez,Brigand,AdlezMug,0x0,ThunderAff,
 BossConnor,ConnorNameText,ConnorDescText,BossConnor,Mercenary,ConnorMug,0x0,WaterAff,,1,17,4,1,2,2,3,0,6,4,Brank,0,0,0,0,0,0,0,95,45,10,35,30,30,10,60,0,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
 Halleck,HalleckNameText,HalleckDescText,Halleck,Bishop,HalleckMug,0x0,WindAff,,1,10,8,10,9,6,4,7,3,3,0,0,0,0,0,0,Arank,0,80,40,30,45,30,20,50,35,0,BaneID,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
 BossEfil,EfilNameText,EfilDescText,BossEfil,Truerblade,EfilMug,0x0,WindAff,,12,15,14,1,14,16,5,4,8,3,Srank,0,0,0,0,0,0,0,80,60,15,40,60,15,15,20,0,KillingMachineID,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
-BossChristina,ChristinaNameText,ChristinaDescText,BossChristina,Cavalier_F,ChristinaMug,0x0,FireAff,,1,7,6,1,6,3,5,7,6,6,Drank,Brank,0,0,0,0,0,0,95,40,10,45,40,35,30,45,0,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
-BossForrest,ForrestNameText,ForrestDescText,BossForrest,Cavalier,ForrestMug,0x0,WindAff,,1,8,6,0,7,4,4,3,8,5,Brank,Crank,0,0,0,0,0,0,90,35,5,50,45,20,10,40,0,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
+BossChristina,ChristinaNameText,ChristinaDescText,BossChristina,Cavalier_F,ChristinaMug,0x0,FireAff,,1,5,5,0,4,2,2,5,4,4,Drank,Brank,0,0,0,0,0,0,95,40,10,45,40,35,30,45,0,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
+BossForrest,ForrestNameText,ForrestDescText,BossForrest,Cavalier,ForrestMug,0x0,WindAff,,1,6,5,1,5,3,1,2,6,3,Brank,Crank,0,0,0,0,0,0,90,35,5,50,45,20,10,40,0,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
 GenericBandit,BanditNameText,GenericBanditDescText,GenericBandit,0x0,0x0,0x3,NoAff,,1,6,5,5,2,3,2,0,2,2,0,0,0,0,0,0,0,0,85,35,60,20,30,15,5,35,0,0x0,0x0,,0x0,0x0,0x0,0x0,0x0,,,,0x0,0x0,0x0
 Pascal,PascalNameText,PascalDescText,Pascal,Sniper,PascalMug,0x0,FireAff,,1,9,6,6,4,5,4,0,4,1,0,0,0,Arank,0,0,0,0,90,35,30,30,40,20,0,30,0,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
 XeximClone,XeximNameText,XeximDescText,XeximClone,XeximClass,XeximMug,0x0,WindAff,,1,17,13,1,17,16,9,10,9,2,Srank,0,0,Arank,0,0,0,0,85,35,15,55,40,15,30,40,0,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
