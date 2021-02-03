@@ -146,3 +146,5 @@ We_Wont_Give_In
 Winds_across_the_Plains_of_Avenir
 A_Formidable_Friend_Joins_in_the_Fray
 Avatars_of_Avenir
+
+The_Guardian_Spirit

@@ -1023,6 +1023,7 @@ We_Will_Overcome
 We_Will_Persevere
 We_Wont_Give_In
 Winds_across_the_Plains_of_Avenir
+The_Guardian_Spirit
 
 
 List of vanilla music being used:

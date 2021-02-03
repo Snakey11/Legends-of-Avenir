@@ -744,3 +744,8 @@ SongTable(A_Formidable_Friend_Joins_in_the_Fray,songAFormidableFriendJoinsInTheF
 SongTable(Avatars_of_Avenir,songAvatarsOfAvenir)
 #include "AvatarsOfAvenir.event"
 }
+
+{
+SongTable(The_Guardian_Spirit,songTheGuardianSpirit)
+#include "TheGuardianSpirit.event"
+}
