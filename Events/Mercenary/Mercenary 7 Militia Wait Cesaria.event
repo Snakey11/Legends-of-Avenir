@@ -155,7 +155,7 @@ BEQ 0x0 0x0 0xC
 	MOVE 0x0 Derek [5,23]
 	ENUN
 	WarpIn(11,11,LoadNarrator)
-	MUSC Return_of_the_Demon_King
+	MUSC The_Guardian_Spirit
 	STAL 0x30
 	Text(0x30,Merc7MilitiaWaitCesariaGoodEndingNarratorHereText)
 	MOVE 0x0 Narrator [11,12]
@@ -185,7 +185,7 @@ LABEL 0x0
 	EndConvo
 	STAL 0x20
 	WarpIn(11,11,LoadNarrator)
-	MUSC Return_of_the_Demon_King
+	MUSC The_Guardian_Spirit
 	STAL 0x30
 	Text(0x30,Merc7MilitiaWaitCesariaBadEndingNarratorHereText)
 	MOVE 0x0 Narrator [11,12]

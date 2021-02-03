@@ -100,7 +100,7 @@ BNE 0x0 0x0 0xC
 	SetBackground(0x0A)
 	Text(Military7AcceptHoldGoodEndingText)
 	EndConvo
-	MUSC Return_of_the_Demon_King
+	MUSC The_Guardian_Spirit
 	STAL 0x08
 	WarpIn(6,5,LoadNarrator1)
 	STAL 0x30
@@ -132,7 +132,7 @@ LABEL 0x0
 	FadeOutMusic
 	STAL 0x20
 	Text(Military7AcceptHoldBadEndingWhatCostText)
-	MUSC Return_of_the_Demon_King
+	MUSC The_Guardian_Spirit
 	STAL 0x08
 	WarpIn(14,11,LoadNarrator2)
 	STAL 0x30

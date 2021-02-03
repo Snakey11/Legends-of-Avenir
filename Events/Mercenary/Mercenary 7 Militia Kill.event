@@ -174,7 +174,7 @@ LOAD3 0x1 PlayerLoading3
 MoveMercenary(7,2)
 EndConvo
 ENUN
-MUSC Return_of_the_Demon_King
+MUSC The_Guardian_Spirit
 WarpIn(5,2,LoadNarrator)
 ENUN
 STAL 0x30
@@ -185,7 +185,7 @@ BEQ 0x25 0x0 0xC
 LABEL 0x25
 	Text(Merc7MilitiaKillNarratorHereBadEndingText)
 LABEL 0x26
-MUSC Return_of_the_Demon_King
+MUSC The_Guardian_Spirit
 TEXTCONT
 TEXTEND
 MOVE 0x0 Narrator [6,2]

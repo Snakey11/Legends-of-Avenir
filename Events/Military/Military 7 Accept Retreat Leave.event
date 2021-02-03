@@ -182,7 +182,7 @@ KillUnit(Adeline)
 STAL 0x50
 Text(Military7AcceptRetreatLeaveAliveFightText)
 STAL 0x08
-MUSC Return_of_the_Demon_King
+MUSC The_Guardian_Spirit
 WarpIn(2,25,LoadNarrator)
 STAL 0x30
 Text(Military7AcceptRetreatLeaveAliveNarratorText)
@@ -270,7 +270,7 @@ BNE 0x0 0x0 0xC
 	STAL 0x10
 	Text(Military7AcceptRetreatLeaveGoodEndingXyliaDeadText)
 	STAL 0x08
-	MUSC Return_of_the_Demon_King
+	MUSC The_Guardian_Spirit
 	WarpIn(3,24,LoadNarrator2)
 	STAL 0x40
 	Text(Military7AcceptRetreatLeaveGoodEndingGSHereText)

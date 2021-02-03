@@ -155,7 +155,7 @@ LOAD2 0x1 LoadAdlezBadEnding
 ENUN
 STAL 0x10
 Text(Merc7BanditBanditBadEndingTactAdlezText)
-MUSC Return_of_the_Demon_King
+MUSC The_Guardian_Spirit
 WarpIn(2,6,LoadNarrator3)
 STAL 0x30
 MOVE 0x0 Narrator [4,7]
@@ -222,7 +222,7 @@ SetBackground(0x05)
 Text(Merc7BanditBanditGoodEndingText)
 EndConvo
 STAL 0x10
-MUSC Return_of_the_Demon_King
+MUSC The_Guardian_Spirit
 WarpIn(5,10,LoadNarrator1)
 ENUN
 STAL 0x20
@@ -246,7 +246,7 @@ SetBattleNumbers(78,24,18,50,17,11)
 FIG1 Narrator Leon 0x0
 KillUnit(6,8)
 STAL 0x10
-MUSC Return_of_the_Demon_King
+MUSC The_Guardian_Spirit
 FADI 0x5
 CLEE Narrator
 LOAD1 0x1 LoadNarrator2

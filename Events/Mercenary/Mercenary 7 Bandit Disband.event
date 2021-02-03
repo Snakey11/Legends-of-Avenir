@@ -240,7 +240,7 @@ LABEL 0x3
 FadeOutMusic
 EndConvo
 Text(Merc7BanditDisbandHistoryText)
-MUSC Return_of_the_Demon_King
+MUSC The_Guardian_Spirit
 WarpIn(5,3,LoadNarrator)
 ENUN
 STAL 0x20

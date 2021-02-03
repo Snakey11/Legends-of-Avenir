@@ -181,7 +181,7 @@ BEQ 0x0 0x0 0xC
 	SetBackground(0x30)
 	TEXTSHOW Merc7MilitiaWaitArcanaeGoodEndingNarratorText
 	TEXTEND
-	MUSC Return_of_the_Demon_King
+	MUSC The_Guardian_Spirit
 	TEXTCONT
 	TEXTEND
 	EndConvo
@@ -233,7 +233,7 @@ LABEL 0x0
 	STAL 0x30
 	Text(Merc7MilitiaWaitArcanaeBadEndingTactText)
 	STAL 0x10
-	MUSC Return_of_the_Demon_King
+	MUSC The_Guardian_Spirit
 	WarpIn(9,7,BadEndingNarrator)
 	STAL 0x20
 	Text(Merc7MilitiaWaitArcanaeBadEndingNarratorText)

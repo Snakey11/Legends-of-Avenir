@@ -162,7 +162,7 @@ BEQ 0x0 0x0 0xC
 	MOVE 0x00 Derek [0,19]
 	ENUN
 	STAL 0x20
-	MUSC Return_of_the_Demon_King
+	MUSC The_Guardian_Spirit
 	WarpIn(13,19,LoadNarratorGoodEnding)
 	STAL 0x20
 	Text(Military7PassHaedricGoodEndingNarratorText)
@@ -202,7 +202,7 @@ LABEL 0x0
 	STAL 0x20
 	Text(Military7PassHaedricBadEndingElanilText)
 	STAL 0x10
-	MUSC Return_of_the_Demon_King
+	MUSC The_Guardian_Spirit
 	WarpIn(8,10,LoadNarratorBadEnding)
 	STAL 0x20
 	FADI 0x5
