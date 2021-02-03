@@ -327,17 +327,17 @@ SetPaletteFuller(PlayerMBrigand,MercenaryMBrigandPaletteID,Brigand2,0x00,0x00,Me
 
 SetPaletteFuller(PlayerFMercenary,MercenaryFMercenaryPaletteID,MercenaryF2,0x00,0x00,MercenaryFHeroPaletteID,Hero_F,MercenaryFRangerPaletteID,Ranger_F,MercenaryFChampionPaletteID,/*ChampionF*/,0x00,0x00)
 SetPaletteFuller(PlayerFMyrmidon,MercenaryFMyrmidonPaletteID,MyrmidonF2,0x00,0x00,MercenaryFSwordmasterPaletteID,Swordmaster_F,MercenaryFAssassinPaletteID,Assassin_F,MercenaryFTruebladePaletteID,/*TruebladeF*/0,0x00,0x00)
-SetPaletteFuller(PlayerFPegasusKnight,MercenaryFPegasusKnightPaletteID,PegasusKnight2,0x00,0x00,MercenaryFFalcoknightPaletteID,Falcoknight,MercenaryFWyvernKnightPaletteID,/*WyvernKnight_F*/0,MercenaryFSeraphKnightPaletteID,SeraphKnight,0x00,0x00)
+SetPaletteFuller(PlayerFPegasusKnight,MercenaryFPegasusKnightPaletteID,PegasusKnight2,0x00,0x00,MercenaryFFalcoknightPaletteID,Falcoknight,MercenaryFWyvernKnightPaletteID,WyvernKnight_F,MercenaryFSeraphKnightPaletteID,SeraphKnight,0x00,0x00)
 
-SetPaletteFuller(PlayerMCavalier,MilitaryMCavalierPaletteID,CavalierM2,0x00,0x00,MilitaryMPaladinPaletteID,/*Paladin*/0,MilitaryMGreatKnightPaletteID,GreatKnight,MilitaryMMasterKnightPaletteID,/*MasterKnightM*/0,0x00,0x00)
+SetPaletteFuller(PlayerMCavalier,MilitaryMCavalierPaletteID,CavalierM2,0x00,0x00,MilitaryMPaladinPaletteID,Paladin,MilitaryMGreatKnightPaletteID,GreatKnight,MilitaryMMasterKnightPaletteID,/*MasterKnightM*/0,0x00,0x00)
 SetPaletteFuller(PlayerMKnight,MilitaryMKnightPaletteID,Knight2,0x00,0x00,MilitaryMGeneralPaletteID,General,MilitaryMGreatKnightPaletteID,GreatKnight,MilitaryMCommanderPaletteID,/*Baron*/0,0x00,0x00)
-SetPaletteFuller(PlayerMSoldier,MilitaryMSoldierPaletteID,SoldierM2,0x00,0x00,MilitaryMHalberdierPaletteID,Halberdier,MilitaryMSentinelPaletteID,/*Sentinel*/0,MilitaryMImpalerPaletteID,ImpalerM,0x00,0x00)
+SetPaletteFuller(PlayerMSoldier,MilitaryMSoldierPaletteID,SoldierM2,0x00,0x00,MilitaryMHalberdierPaletteID,Halberdier,MilitaryMSentinelPaletteID,Sentinel,MilitaryMImpalerPaletteID,ImpalerM,0x00,0x00)
 SetPaletteFuller(PlayerMWyvernRider,MilitaryMWyvernRiderPaletteID,WyvernRider2,0x00,0x00,MilitaryMWyvernLordPaletteID,WyvernLord,MilitaryMWyvernKnightPaletteID,WyvernKnight,MilitaryMWyvernGeneralPaletteID,/*WyvernGeneral*/0,0x00,0x00)
 SetPaletteFuller(PlayerMArcher,MilitaryMArcherPaletteID,ArcherM2,0x00,0x00,MilitaryMSniperPaletteID,Sniper,MilitaryMRangerPaletteID,Ranger,MilitaryMMarksmanPaletteID,/*MarksmanM*/0,0x00,0x00)
 
 SetPaletteFuller(PlayerFCavalier,MilitaryFCavalierPaletteID,Cavalier_F,0x00,0x00,MilitaryFPaladinPaletteID,Paladin_F,MilitaryFGreatKnightPaletteID,GreatKnight_F,MilitaryFMasterKnightPaletteID,/*MasterKnightF*/0,0x00,0x00)
 SetPaletteFuller(PlayerFKnight,MilitaryFKnightPaletteID,Knight2,0x00,0x00,MilitaryFGeneralPaletteID,General_F,MilitaryFGreatKnightPaletteID,GreatKnight_F,MilitaryFCommanderPaletteID,/*Baron*/0,0x00,0x00)
-SetPaletteFuller(PlayerFSoldier,MilitaryFSoldierPaletteID,SoldierF2,0x00,0x00,MilitaryFHalberdierPaletteID,HalberdierF,MilitaryFSentinelPaletteID,/*SentinelF*/0,MilitaryFImpalerPaletteID,ImpalerF,0x00,0x00)
+SetPaletteFuller(PlayerFSoldier,MilitaryFSoldierPaletteID,SoldierF2,0x00,0x00,MilitaryFHalberdierPaletteID,HalberdierF,MilitaryFSentinelPaletteID,SentinelF,MilitaryFImpalerPaletteID,ImpalerF,0x00,0x00)
 SetPaletteFuller(PlayerFWyvernRider,MilitaryFWyvernRiderPaletteID,WyvernRider2,0x00,0x00,MilitaryFWyvernLordPaletteID,WyvernLord_F,MilitaryFWyvernKnightPaletteID,WyvernKnight_F,MilitaryFWyvernGeneralPaletteID,/*WyvernGeneral*/0,0x00,0x00)
 SetPaletteFuller(PlayerFArcher,MilitaryFArcherPaletteID,ArcherF2,0x00,0x00,MilitaryFSniperPaletteID,Sniper_F,MilitaryFRangerPaletteID,Ranger_F,MilitaryFMarksmanPaletteID,/*MarksmanFMarksmanF*/0,0x00,0x00)
 
@@ -464,7 +464,7 @@ MercenaryFFalcoknightPalette:
 
 ALIGN 4
 MercenaryFWyvernKnightPalette:
-//#incbin "Mercenary F Wyvern Knight.dmp"
+#incbin "Mercenary F Wyvern Knight.dmp"
 
 
 ALIGN 4
@@ -509,7 +509,7 @@ MilitaryMMarksmanPalette:
 
 ALIGN 4
 MilitaryMPaladinPalette:
-//#incbin "Military M Paladin.dmp"
+#incbin "Military M Paladin.dmp"
 
 ALIGN 4
 MilitaryMGreatKnightPalette:
@@ -525,7 +525,7 @@ MilitaryMHalberdierPalette:
 
 ALIGN 4
 MilitaryMSentinelPalette:
-//#incbin "Military M Sentinel.dmp"
+#incbin "Military M Sentinel.dmp"
 
 ALIGN 4
 MilitaryMWyvernLordPalette:
@@ -605,7 +605,7 @@ MilitaryFHalberdierPalette:
 
 ALIGN 4
 MilitaryFSentinelPalette:
-//#incbin "Military F Sentinel.dmp"
+#incbin "Military F Sentinel.dmp"
 
 ALIGN 4
 MilitaryFWyvernLordPalette:
