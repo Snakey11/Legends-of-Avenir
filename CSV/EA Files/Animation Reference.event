@@ -1,4 +1,6 @@
 
+ALIGN 4
+
 AlexisAnim:
 StaffAnim(AlexisStaff)
 AnimaAnim(AlexisMagic)
