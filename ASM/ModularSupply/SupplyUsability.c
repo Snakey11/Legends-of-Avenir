@@ -3,7 +3,7 @@
 #include "FE-CLib-master/include/gbafe.h"
 
 extern u8* SupplyUsabilityTable[];
-extern u8* SupplyUsabilityPhantomIDLink;
+extern u8 SupplyUsabilityPhantomIDLink;
 extern struct Unit* gActiveUnit;
 
 // Returns a boolean for whether the current chapter should make units drop items or send them to the supply.
@@ -40,7 +40,7 @@ u8 SupplyUsability(void)
 	u8* supplyList = SupplyUsabilityTable[gChapterData.chapterIndex];
 	if ( supplyList != NULL )
 	{
-		if ( gActiveUnit->pCharacterData->number != *SupplyUsabilityPhantomIDLink )
+		if ( gActiveUnit->pClassData->number != SupplyUsabilityPhantomIDLink )
 		{
 			if ( DoesCharacterHaveSupply(gActiveUnit,supplyList) )
 			{
