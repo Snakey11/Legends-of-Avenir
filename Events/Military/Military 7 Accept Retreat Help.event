@@ -62,6 +62,10 @@ COUNTER_SET 0x1 0x0
 ENUT 0x10 // Prevent Tact's death quote that doesn't cause a game over.
 ENUT 0x11 // Prevent Derek's and Rex's death quotes in the ending.
 ENUT 0x12
+CHECK_EVENTID 0x6F // If this event ID is set, we're getting the bad ending. Set 0x80 to prevent the Rex/Tact base convo if this is set.
+BEQ 0x0 0x0 0xC
+	ENUT 0x80
+LABEL 0x0
 CAM1 [15,22]
 MUSC End_of_the_World
 LOAD1 0x1 StartingXexim
@@ -120,7 +124,7 @@ BNE 0x0 0x0 0xC
 	SetBackground(0x08)
 	Text(Military7AcceptRetreatHelpGoodEndingBoatText)
 	EndConvo
-	MUSC Return_of_the_Demon_King
+	MUSC The_Guardian_Spirit
 	STAL 0x08
 	WarpIn(6,5,LoadGuardianSpirit1)
 	STAL 0x20
@@ -132,7 +136,9 @@ BNE 0x0 0x0 0xC
 	CriticalHit(1,60)
 	EndAttack
 	SetBattleNumbers(12,12,0,90,28,21)
-	MilitaryNarratorFight(9,5)
+	FIG1 0x00 Narrator 0x00
+	KillUnit(0x00)
+	DISA 0x00
 	STAL 0x20
 	Text(Military7AcceptRetreatHelpGoodEndingFinalText)
 	GOTO 0x1
@@ -152,7 +158,7 @@ LABEL 0x0
 	SetBackground(0x2F)
 	Text(Military7AcceptRetreatHelpBadEndingText)
 	EndConvo
-	MUSC Return_of_the_Demon_King
+	MUSC The_Guardian_Spirit
 	STAL 0x08
 	WarpIn(3,4,LoadGuardianSpirit2)
 	STAL 0x04
@@ -186,7 +192,6 @@ LABEL 0x0
 	SetBattleNumbers(19,16,1,97,34,15)
 	FIG1 Derek Narrator 0x00
 	KillUnit(5,5)
-	STAL 0x10
 	MOVE 0x00 Narrator [5,5]
 	ENUN
 	StartBattle
@@ -195,7 +200,9 @@ LABEL 0x0
 	NormalDamage(1,60)
 	EndAttack
 	SetBattleNumbers(21,12,3,85,31,13)
-	MilitaryNarratorFight(6,5)
+	FIG1 0x00 Narrator 0x00
+	KillUnit(0x00)
+	DISA 0x00
 	STAL 0x20
 	Text(Military7AcceptRetreatHelpBadEndingFinalText)
 LABEL 0x1
@@ -208,6 +215,7 @@ ENUF 0x6B
 ENUF 0x6C
 ENUF 0x6D
 ENUF 0x6E
+ENUF 0x80 // Used for the Rex/Tact base convo.
 DISA Jasper
 DISA Derek
 DISA Zaheva

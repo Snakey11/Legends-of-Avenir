@@ -3,26 +3,26 @@
 ALIGN 4
 TriplePromotionList:
 BYTE MercenaryM2 ChampionM
-BYTE MyrmidonM2 Executioner
+BYTE MyrmidonM2 TruebladeM
 BYTE Fighter2 Warlock
 BYTE Pirate2 Gladiator
 BYTE Brigand2 MountedBrigand
 
 BYTE MercenaryF2 ChampionF
-BYTE MyrmidonF2 Executioner
+BYTE MyrmidonF2 TruebladeF
 BYTE PegasusKnight2 SeraphKnight
 
 BYTE CavalierM2 MasterKnightM
 BYTE KnightM2 Baron
 BYTE SoldierM2 ImpalerM
 BYTE WyvernRiderM2 WyvernGeneral
-BYTE ArcherM2 HunterM
+BYTE ArcherM2 MarksmanM
 
 BYTE CavalierF2 MasterKnightF
 BYTE KnightF2 Baron
 BYTE SoldierF2 ImpalerF
 BYTE WyvernRiderF2 WyvernGeneral
-BYTE ArcherF2 HunterF
+BYTE ArcherF2 MarksmanF
 
 BYTE MageM2 MagusM
 BYTE MonkM2 Patriarch

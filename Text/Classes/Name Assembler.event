@@ -2,7 +2,7 @@
 Lost Soul[X]
 
 ## WyvernRiderNameText ^
-Wyven Rider[X]
+Wyvern Rider[X]
 
 ## WyvernKnightNameText ^
 Wyvern Knight[X]
@@ -64,9 +64,6 @@ Halberdier[X]
 ## SentinelNameText
 Sentinel[X]
 
-## CombatantNameText
-Combatant[X]
-
 ## MountedBrigandNameText
 Marauder[X]
 
@@ -108,9 +105,6 @@ Baron[X]
 
 ## GladiatorNameText
 Gladiator[X]
-
-## BowKnightNameText
-Bow Knight[X]
 
 ## ShadeKnightNameText
 Shade Knight[X]

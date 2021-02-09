@@ -322,7 +322,7 @@ NoFade
 EndA2
 
 ArmoryList:
-SHLI SteelSword KillingEdge SteelLance ToxinLance SteelAxe ShortAxe SteelBow SteelShortbow
+SHLI SteelSword KillingEdge SteelLance Javelin SteelAxe ShortAxe SteelBow SteelShortbow
 ALIGN 4
 
 ShopList:

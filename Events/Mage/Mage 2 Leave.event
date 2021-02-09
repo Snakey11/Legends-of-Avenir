@@ -79,7 +79,7 @@ MUSC Stage_One
 STAL 0x10
 EndConvo
 STAL 0x20
-FlashCursor(Arc,60) // Lol I don't have a character ID for Mistlain, so let's just use Arc!
+FlashCursor(Mistlain,60)
 STAL 0x10
 TEXTSTART
 TEXTSHOW Mage2LeaveTalkMistlainText
@@ -92,7 +92,7 @@ TEXTCONT
 TEXTEND
 REMA
 MUSC Emergency
-TurnEnemy(Arc)
+TurnEnemy(Mistlain)
 TurnEnemy(Zaheva)
 TurnEnemy(Ajax)
 TurnEnemy(Arcanian)
@@ -272,7 +272,7 @@ UNIT Xena 0x00 0x00 Level(1,Ally,True) [10,3] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 ThroneUnits:
-UNIT Arc Patriarch Arc Level(1,NPC,True) [9,1] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Mistlain MistlainClass Mistlain Level(1,NPC,True) [9,1] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Zaheva SpellswordF 0x00 Level(4,NPC,True) [12,1] 0x00 0x00 0x00 0x00 [SteelSword,Fire] NoAI
 UNIT Ajax Shaman 0x00 Level(4,NPC,True) [11,2] 0x00 0x00 0x00 0x00 [Luna,Flux,Vulnerary] NoAI
 UNIT Arcanian Fighter 0x00 Level(4,NPC,True) [7,2] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI

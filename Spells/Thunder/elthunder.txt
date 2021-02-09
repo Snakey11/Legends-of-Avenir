@@ -1,0 +1,43 @@
+/// - Start Animation
+C00
+C00
+C00
+C00
+C00
+C00
+C00
+C000153
+C000040
+C100D29
+O blank.PNG
+B blankbg.PNG
+5
+O blank.png
+B elthunder01.png
+5
+C011A48
+C00001A
+C1F
+O blank.png
+B elthunder02.png
+5
+O blank.png
+B elthunder03.png
+5
+O blank.png
+B elthunder04.png
+5
+O blank.png
+B elthunder05.png
+5
+O blank.png
+B elthunder06.png
+5
+O blank.PNG
+B blankbg.PNG
+10
+~~~
+O blank.PNG
+B blankbg.PNG
+1
+C000053

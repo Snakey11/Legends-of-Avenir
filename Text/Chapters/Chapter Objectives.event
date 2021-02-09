@@ -128,7 +128,7 @@ and Adlez.[X]
 
 ## Military4PassStatusText
 Defend the town[NL]
-and defeat Dunlas.[X]
+or defeat Dunlas.[X]
 
 ## Military5PassAltiaStatusText
 Defeat all of[NL]
@@ -147,8 +147,8 @@ Rout all Arcanians[NL]
 from Diedar.[X]
 
 ## Military6PassHaedricStatusText
-Free Leon and liberate[NL]
-Haedric from Arcanae.[X]
+Free Leon and[NL]
+defeat Dunlas.[X]
 
 ## Military7PassHaedricStatusText
 Navigate the temple[NL]

@@ -62,7 +62,7 @@
 			characters(Adeline,Zaheva)
 			textGetter(SupportBaseConvoMenuTextGetter|1)
 			event(Military7AcceptHoldAdelineZahevaConvo)
-			eventID(0x09)
+			eventID(0x80)
 	Chapter(MilitaryAcceptRetreatLeave5)
 		Entry
 			bg(0x30)
@@ -121,7 +121,7 @@
 			textGetter(SupportBaseConvoMenuTextGetter|1)
 			importance(2)
 			music(Lloyd)
-			eventID(0x09)
+			eventID(0x80)
 	Chapter(MilitaryPass4)
 		Entry
 			bg(0x05)

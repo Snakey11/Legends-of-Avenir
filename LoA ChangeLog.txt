@@ -1,3 +1,41 @@
+v2.1
+Fixed Military 5 Accept Hold end of chapter crash
+Fixed Xylia's map sprite to use female sage
+Fixed thunder's description
+Fixed some death quotes
+Couple character/class rebalances
+Fixed Muriel's class description about weapon ranks. She can also use staves now
+Fixed some dialogue text issues
+Changed knight crest description to include soldiers
+Fixed some Tact gender pronouns
+Reduced Marauder's dummy con
+The Shizonians in Mercenary Militia Kill 6 have been buffed quite a bit
+The prep screen shop has been filled with many useful things
+All of the ending nonsense has been fixed
+Many many many many battle palette updates -- Thank you, author_pendragon!
+	This includes updates to character palettes, new character palettes, and many new Tact generic promotion palettes. There's still a lot to go with these, though
+Archer and myrmidon Tact's custom promotions have been updated
+The prep screen armory has been greatly expanded
+Fixed Maximus using the wrong moving map sprite
+Replaced the GetBattleAnimationId function with a custom version because I'm sick of it causing problems
+Xylia's animation's palette orders have been fixed
+Made classes for Mistlain and Alexis (but they're not going to be seen until the mage paths)
+Fixed Maximus not using his custom class in Mercenary 7 Militia Wait Cesaria
+Chair the madlad has made more music - A custom Guardian Spirit theme is implemented
+Changed the header graphics for the stat screen (these are going to be tweaked in the future along with some stat screen placements). Thanks to Gamma for the replacement graphics!
+Rex has a new mug! -- Credit Vlak
+Ajax has a new mug! -- Credit Atey (Sponsored by Bartz)
+Zaheva's mug has been updated! -- Credit Atey (Sponsored by Bartz)
+The Mayor of Yerchek has a new mug! -- Credit RandomWizard (Pieces from Xenith, NickT, and Blaze)
+Leon has a new mug! -- Credit SqrtOfPi (Sponsored by Bartz)
+Fixed Military Pass Haedric 6's objective being too long
+Anima has been taken away from valkyries. They weren't supposed to have it in the first place?
+Fixed the boss quotes in Military 3 Pass
+Javelins have been added to the Military 5 Accept Retreat Help armory
+Fixed phantoms having access to the supply
+The Adeline/Zaheva base convo in Military 7 Accept Hold is FINALLY fixed
+Same for Rex/Tact base convo in Military 7 Accept Retreat Help
+
 v2.0
 Dasher screen streching has been fixed
 Mage knight description includes sword utility

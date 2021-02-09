@@ -240,7 +240,7 @@ LABEL 0x3
 FadeOutMusic
 EndConvo
 Text(Merc7BanditDisbandHistoryText)
-MUSC Return_of_the_Demon_King
+MUSC The_Guardian_Spirit
 WarpIn(5,3,LoadNarrator)
 ENUN
 STAL 0x20
@@ -251,8 +251,9 @@ StartBattle
 CriticalHit(1,80)
 EndAttack
 SetBattleNumbers(15,8,0,87,31,23)
-MercenaryNarratorFight(7,3)
-STAL 0x20
+FIG1 0x00 Narrator 0x00
+KillUnit(0x00)
+DISA 0x00
 DISA Vicar
 DISA Walter
 DISA Baret
@@ -322,7 +323,7 @@ UNIT Maximus BattleSage Maximus Level(16,NPC,True) [10,4] 0x00 0x00 0x00 0x00 [B
 UNIT Uzkalis GaidenSage Uzkalis Level(17,NPC,True)[12,3] 0x00 0x00 0x00 0x00 [Thoron] NoAI
 UNIT Kilthel GuardianSpirit Kilthel Level(15,Enemy,True) [7,1] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI
 UNIT Arveldir WilSniper Kilthel Level(10,Enemy,True) [8,2] 0x00 0x00 0x00 0x00 [SilverBow] NoAI
-UNIT Servius Trueblade Kilthel Level(13,Enemy,True) [7,3] 0x00 0x00 0x00 0x00 [SilverBlade] NoAI
+UNIT Servius ServiusClass Kilthel Level(13,Enemy,True) [7,3] 0x00 0x00 0x00 0x00 [SilverBlade] NoAI
 UNIT
 
 LoadXylia:

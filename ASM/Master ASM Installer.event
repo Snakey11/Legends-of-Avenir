@@ -70,6 +70,10 @@ ALIGN 4
 
 #include "FillAIRangeMap/FillAIDangerMap.event"
 
+#include "GenderedText/GenderedText.event"
+
+#include "GetBattleAnimationID/GetBattleAnimationID.lyn.event" // Rewriting this vanilla routine because I don't want to debug it lol.
+
 #include "GetMode/GetMode.lyn.event"
 
 #include "GiveToSupply/GiveToSupply.lyn.event"

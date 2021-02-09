@@ -36,7 +36,7 @@ Experienced footsoldiers who[NL]
 strike effectively. Equip: Lances.[X]
 
 ## WyvernGeneralDescText
-Talented wyvern riders who have mastered[NL]
+Talented riders who have mastered[NL]
 their art. Equip: Lances, Axes.[X]
 
 ## SeraphKnightDescText
@@ -83,10 +83,6 @@ Equip: Swords, Lances, Axes.[X]
 Bodyguard of an important[NL]
 figure in the world.[NL]
 Equip: Swords, Lances Axes.[X]
-
-## CombatantDescText
-Battle veterans skilled both in magic[NL]
-and in sword. Equip: Swords, Anima.[X]
 
 ## MountedBrigandDescText
 Riders who strike fear in the hearts[NL]
@@ -159,10 +155,10 @@ military. Equip: Swords, Lances, Axes.[X]
 Frightening skilled physical[NL]
 fighters. Equip: Swords, Axes.[X]
 
-## BowKnightDescText
-Versatile, mounted archers trained with many[NL]
-weapons. Equip: Swords, Lances, Bows.[X]
-
 ## ExecutionerDescText
 Skilled, light, and deadly[NL]
 fighters. Equip: Swords, Dark.[X]
+
+## MurielSageDescText
+Advanced scholars of magical[NL]
+codices. Equip: Anima, staves.[X]

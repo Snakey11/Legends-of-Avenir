@@ -244,6 +244,12 @@ MaximusPortrait:
 #incbin "Maximus_palette.dmp"
 #incbin "Maximus_minimug.dmp"
 
+MayorPortrait:
+#incbin "Mayor_mug.dmp"
+#incbin "Mayor_frames.dmp"
+#incbin "Mayor_palette.dmp"
+#incbin "Mayor_minimug.dmp"
+
 MistlainPortrait:
 #incbin "Mistlain_mug.dmp"
 #incbin "Mistlain_frames.dmp"
@@ -407,7 +413,7 @@ setMugEntry(AdlezMug,AdlezPortrait,2,5,2,3)
 setMugEntry(ArcMug,ArcPortrait,2,4,2,2)
 setMugEntry(ArveldirMug,ArveldirPortrait,2,5,3,3)
 setMugEntry(AryaMug,AryaPortrait,2,6,3,4)
-setMugEntry(AjaxMug,AjaxPortrait,3,5,3,3)
+setMugEntry(AjaxMug,AjaxPortrait,3,4,3,2)
 setMugEntry(BaretMug,BaretPortrait,3,5,3,3)
 setMugEntry(BlaineMug,BlainePortrait,3,4,3,2)
 setMugEntry(ChristinaMug,ChristinaPortrait,2,5,3,3)
@@ -436,12 +442,13 @@ setMugEntry(LeyosMug,LeyosPortrait,3,5,3,3)
 setMugEntry(LukeMug,LukePortrait,3,5,3,3)
 setMugEntry(LuxMug,LuxPortrait,2,6,3,4)
 setMugEntry(MaximusMug,MaximusPortrait,2,5,2,3)
+setMugEntry(MayorMug,MayorPortrait,4,5,3,3)
 setMugEntry(MistlainMug,MistlainPortrait,4,5,4,3)
 setMugEntry(MurielMug,MurielPortrait,3,6,3,4)
 setMugEntry(NarratorMug,NarratorPortrait,3,5,3,3)
 setMugEntry(PascalMug,PascalPortrait,3,6,3,3)
 setMugEntry(RemusMug,RemusPortrait,2,5,3,3)
-setMugEntry(RexMug,RexPortrait,2,5,2,3)
+setMugEntry(RexMug,RexPortrait,3,5,3,3)
 setMugEntry(RobertMug,RobertPortrait,3,5,2,3)
 setMugEntry(RogerMug,RogerPortrait,3,5,3,3)
 setMugEntry(SekarMug,SekarPortrait,3,5,3,3)
@@ -459,7 +466,7 @@ setMugEntry(XenaMug,XenaPortrait,3,6,3,4)
 setMugEntry(XeximMug,XeximPortrait,2,5,3,3)
 setMugEntry(XyliaMug,XyliaPortrait,3,6,3,4)
 setMugEntry(YvetteMug,YvettePortrait,3,5,3,3)
-setMugEntry(ZahevaMug,ZahevaPortrait,3,4,3,2)
+setMugEntry(ZahevaMug,ZahevaPortrait,3,6,3,4)
 setMugEntry(ZaliusMug,ZaliusPortrait,3,5,3,3)
 
 setMugEntry(0x14,UzkalisPortrait,2,6,2,3)

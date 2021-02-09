@@ -270,9 +270,9 @@ UNIT Cesarian Sage BossJurgen Level(4,Enemy,True) [9,14] 0x00 0x00 0x00 0x00 [Ar
 UNIT Cesarian Paladin BossJurgen Level(3,Enemy,True) [16,13] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
 UNIT Cesarian Bishop BossJurgen Level(5,Enemy,True) [6,4] 0x00 0x00 0x00 0x00 [Divine,Mend] [0]
 UNIT Cesarian Cavalier BossJurgen Level(10,Enemy,True) [8,0] 0x00 0x00 0x00 0x00 [KillingEdge,ShortSpear] AttackInRangeAI
-UNIT Shizonian Myrmidon Shizonian Level(11,NPC,True) [14,5] 0x00 0x00 0x00 0x00 [KillingEdge] [0]
-UNIT Shizonian Archer Shizonian Level(9,NPC,True) [16,7] 0x00 0x00 0x00 0x00 [SteelLongbow] [0]
-UNIT Shizonian Warrior Shizonian Level(1,NPC,True) [14,7] 0x00 0x00 0x00 0x00 [SteelAxe,SteelBow] [0]
+UNIT Shizonian Myrmidon Shizonian Level(19,NPC,True) [14,5] 0x00 0x00 0x00 0x00 [KillingEdge] [0]
+UNIT Shizonian Archer Shizonian Level(17,NPC,True) [16,7] 0x00 0x00 0x00 0x00 [SteelLongbow] [0]
+UNIT Shizonian Warrior Shizonian Level(8,NPC,True) [14,7] 0x00 0x00 0x00 0x00 [SteelAxe,SteelBow] [0]
 UNIT
 
 LoadLuke:

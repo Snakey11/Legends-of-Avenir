@@ -26,6 +26,9 @@ NewStatScreen:
 NewStatScreenPal:
 #incext Png2Dmp "StatScreen.png" --palette-only
 
+ALIGN 4
+NewPageNameGraphic: // Credit Gamma.
+#incbin "pagenamegraphic.dmp" // lz77 compressed with png2dmp.
 
 #include "TitleScreen/TitleScreen.event"
 

@@ -12,12 +12,14 @@
 UPDATE.bat
 UPDATEPrivate.bat
 UPDATEPublic.bat
+!Stan.sym
 !ParseDefinitions.txt
 !Table Definitions.txt
 CSV/Nightmare/
 CSV/Tables/*.event
 CSV/Tables/**/*.event
 CG List.png
+Music/WAVs
 Animation Assembler/
 CSA Creator/
 Maps/*.event
@@ -35,7 +37,6 @@ Graphics/Map Sprites/*.dmp
 Graphics/Class Cards/*.dmp
 Music/*.event
 !Music/_Master Music Installer.event
-Spells/Spells/**/*.png
 FE8 Template.event
 FE-CLib-master
 desktop.ini
@@ -50,3 +51,9 @@ Avenir.gif
 Text/ParseDefinitions.txt
 Definitions/Definitions.event
 Graphics/WorldMap/*.dmp
+!Music/drumfix_fe8.event
+!Graphics/Vanilla Portrait Table.dmp
+
+save/
+screenshots/
+states/

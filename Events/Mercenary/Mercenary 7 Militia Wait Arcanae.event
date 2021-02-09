@@ -142,8 +142,6 @@ BadEnding:
 DISA Emperor
 EndingScene:
 FADI 0x5
-CLEA 0x0
-CLEE 0x0
 ASMC RefreshAll|1
 ASMC PrepForEnd|1
 ENUF 0x12
@@ -153,6 +151,8 @@ CAM1 [14,20]
 CHECK_ALIVE Emperor
 BEQ 0x0 0x0 0xC
 	// Emperor is alive. Good ending.
+	CLEA 0x0
+	CLEE 0x0
 	ENUF 0x12
 	LOAD3 0x1 PlayerLoading4
 	LOAD2 0x1 EndingAllies
@@ -181,7 +181,7 @@ BEQ 0x0 0x0 0xC
 	SetBackground(0x30)
 	TEXTSHOW Merc7MilitiaWaitArcanaeGoodEndingNarratorText
 	TEXTEND
-	MUSC Return_of_the_Demon_King
+	MUSC The_Guardian_Spirit
 	TEXTCONT
 	TEXTEND
 	EndConvo
@@ -195,11 +195,15 @@ BEQ 0x0 0x0 0xC
 	CriticalHit(1,60)
 	EndAttack
 	SetBattleNumbers(23,9,4,84,30,23)
-	MercenaryNarratorFight(7,3)
+	FIG1 0x00 Narrator 0x00
+	KillUnit(0x00)
+	DISA 0x00
 	GOTO 0x1
 LABEL 0x0
 	// Emperor is dead. Bad ending.
 	ENUF 0x16
+	CLEA 0x0
+	CLEE 0x0
 	LOAD3 0x1 PlayerLoading4
 	LOAD2 0x1 EndingAllies
 	ENUN
@@ -229,7 +233,7 @@ LABEL 0x0
 	STAL 0x30
 	Text(Merc7MilitiaWaitArcanaeBadEndingTactText)
 	STAL 0x10
-	MUSC Return_of_the_Demon_King
+	MUSC The_Guardian_Spirit
 	WarpIn(9,7,BadEndingNarrator)
 	STAL 0x20
 	Text(Merc7MilitiaWaitArcanaeBadEndingNarratorText)
@@ -241,7 +245,9 @@ LABEL 0x0
 	CriticalHit(1,60)
 	EndAttack
 	SetBattleNumbers(21,5,3,89,26,23)
-	MercenaryNarratorFight(9,9)	
+	FIG1 0x00 Narrator 0x00
+	KillUnit(0x00)	
+	DISA 0x00
 LABEL 0x1
 DISA Arc
 DISA Luke
@@ -407,9 +413,9 @@ UNIT Luke Monk Luke Level(1,Ally,True) [10,8] 0x00 0x00 0x00 0x00 [BraveLance,Ha
 UNIT
 
 GoodEndingNarrator:
-UNIT Narrator GuardianSpirit Narrator Level(15,Enemy,True) [7,6] 0x00 0x00 0x00 0x00 [BraveSword] NoAI
+UNIT Narrator NarratorClass Narrator Level(15,Enemy,True) [7,6] 0x00 0x00 0x00 0x00 [BraveSword] NoAI
 UNIT
 
 BadEndingNarrator:
-UNIT Narrator GuardianSpirit Narrator Level(15,Enemy,True) [9,7] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI
+UNIT Narrator NarratorClass Narrator Level(15,Enemy,True) [9,7] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI
 UNIT

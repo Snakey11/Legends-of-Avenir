@@ -25,9 +25,9 @@
 #include "Sentinel Unarmed.event"
 }
 {
-#include "Trueblade Sword.event"
+#include "Servius Sword.event"
 
-#include "Trueblade Unarmed.event"
+#include "Servius Unarmed.event"
 }
 {
 #include "Grand Paladin Sword.event"

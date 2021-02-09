@@ -98,6 +98,7 @@
 #define BattleSage BattleSageM
 #define DreadFighter DreadFighterM
 #define Hector HectorClass
+#define HalberdierF Halberdier
 #define KnightM2 Knight2
 #define KnightF2 Knight2
 #define WyvernRiderM2 WyvernRider2
@@ -107,16 +108,11 @@
 #define Brigand2 BrigandM2
 #define PegasusKnight2 PegasusKnightF2
 #define Baselius Basileus
-//#define Magus MagusM
-//#define Hunter Marksman
 #define Champion ChampionM
 #define BlackFalcoknight SeraphKnight
-#define Combatant BattleSageF
 #define Falcoknight FalcoKnight
 #define Maurader MountedBrigand
 #define Marksman MarksmanM
-#define HunterM Marksman
-#define HunterF BowKnight
 #define Magus MagusM
 #define Trueerblade Truerblade
 /*
@@ -454,7 +450,6 @@
 #define GrantMug 0x3A // Pablo
 #define PatMug 0x16 // Forde
 #define TyroneMug 0x39 // Binks
-#define MayorMug 0x45 // Orson
 #define HarkenMug 0x4D // Unused rando
 #define MasonMug 0x52 // Hayden
 #define DanielMug 0x3C // Carlyle
@@ -984,7 +979,7 @@
 #define SpearHeroSprite HeroSprite
 #define XeximSprite AssassinSprite
 #define GrandPaladinSprite PaladinSprite
-#define HolySageSprite SageSprite
+#define HolySageSprite SageFSprite
 #define WilSniperSprite SniperSprite
 #define LostSoulSprite Civilian3Sprite
 #define LostSoulFSprite Civilian4Sprite
@@ -1658,6 +1653,7 @@
 
 //#define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
 
+#define KillUnit(charID) "SET_SOMETHING charID ; DISA_IF charID"
 #define KillUnit(X,Y) "SVAL 0xB Coords(X,Y) ; SET_SOMETHING 0xFFFE ; DISA_IF 0xFFFE"
 
 //#define Raid(EventID,Pointer,X,Y) "LOCA EventID Pointer [X,Y] 0x21"

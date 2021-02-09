@@ -103,14 +103,14 @@ MUSC Dry_Trail
 FADI 0x5
 #ifdef __DEBUG__
 	CHECK_EVENTID 0x12
-	BNE 0x0 0x0 0xC
+	BNE 0xFF 0x0 0xC
 	CHECK_EVENTID 0x13
-	BNE 0x0 0x0 0xC
+	BNE 0xFF 0x0 0xC
 		LOAD1 0x1 LoadCougar1
 		ENUN
 		LOAD1 0x1 LoadLux1
 		ENUN
-	LABEL 0x0
+	LABEL 0xFF
 #endif
 COUNTER_CHECK 0x0
 SVAL 0x1 1
@@ -386,7 +386,7 @@ UNIT
 
 Turn13Units:
 UNIT Arcanian Cavalier BossHelmer Level(18,Enemy,True) [3,19] 0x00 0x00 0x00 0x00 [Wyrmslayer] NoAI
-UNIT Arcanian Cavalier BossHelmer Level(29,Enemy,True) [4,19] 0x00 0x00 0x00 0x00 [DevilSword] NoAI
+UNIT Arcanian Cavalier BossHelmer Level(19,Enemy,True) [4,19] 0x00 0x00 0x00 0x00 [DevilSword] NoAI
 UNIT Arcanian Fighter BossHelmer Level(20,Enemy,True) [0,6] 0x00 0x00 0x00 0x00 [ShortAxe] NoAI
 UNIT Arcanian Hero BossHelmer Level(4,Enemy,True) [0,16] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
 UNIT Arcanian Swordmaster BossHelmer Level(5,Enemy,True) [10,19] 0x00 0x00 0x00 0x00 [LightBrand,SteelSword] NoAI

@@ -78,7 +78,6 @@ ALIGN 4
 	{
 	#include "Mercenary/Mercenary 7 Bandit Disband.event"
 	}
-	#include "Mercenary/Narrator Fight.event"
 #endif
 #ifndef __NO_MILITARY__	
 	{
@@ -150,7 +149,6 @@ ALIGN 4
 	{
 	#include "Military/Military 7 Accept Hold.event"
 	}
-	#include "Military/Narrator Fight.event"
 #endif
 #ifndef __NO_MAGE__
 	{

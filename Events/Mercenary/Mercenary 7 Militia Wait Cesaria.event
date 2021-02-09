@@ -155,7 +155,7 @@ BEQ 0x0 0x0 0xC
 	MOVE 0x0 Derek [5,23]
 	ENUN
 	WarpIn(11,11,LoadNarrator)
-	MUSC Return_of_the_Demon_King
+	MUSC The_Guardian_Spirit
 	STAL 0x30
 	Text(0x30,Merc7MilitiaWaitCesariaGoodEndingNarratorHereText)
 	MOVE 0x0 Narrator [11,12]
@@ -185,7 +185,7 @@ LABEL 0x0
 	EndConvo
 	STAL 0x20
 	WarpIn(11,11,LoadNarrator)
-	MUSC Return_of_the_Demon_King
+	MUSC The_Guardian_Spirit
 	STAL 0x30
 	Text(0x30,Merc7MilitiaWaitCesariaBadEndingNarratorHereText)
 	MOVE 0x0 Narrator [11,12]
@@ -197,7 +197,9 @@ LABEL 0x0
 	EndAttack
 	SetBattleNumbers(19,9,0,90,31,18)
 LABEL 0x1
-MercenaryNarratorFight(11,13)
+FIG1 0x00 Narrator 0x00
+KillUnit(0x00)
+DISA 0x00
 DISA Arc
 DISA Luke
 DISA Jasper
@@ -276,7 +278,7 @@ UNIT Finoc WyvernRider PlayerMArcher Level(1,Ally,True) [0,1] 0x00 0x00 0x1 REDA
 UNIT
 
 Cesarians:
-UNIT Maximus BattleSage Maximus Level(10,NPC,True) [7,8] 0x00 0x00 0x00 0x00 [Arcfire,Elwind,SteelSword] GuardAI
+UNIT Maximus Strategist Maximus Level(10,NPC,True) [7,8] 0x00 0x00 0x00 0x00 [Arcfire,Elwind,SteelSword] GuardAI
 UNIT Cesarian GreatKnight Maximus Level(6,NPC,True) [6,7] 0x00 0x00 0x00 0x00 [BraveLance,ShortAxe] GuardAI
 UNIT Cesarian GreatKnight Maximus Level(7,NPC,True) [5,8] 0x00 0x00 0x00 0x00 [KillerAxe,Zanbato] GuardAI
 UNIT Cesarian Ranger Maximus Level(5,NPC,True) [5,6] 0x00 0x00 0x00 0x00 [SilverBow] AttackInRangeAI

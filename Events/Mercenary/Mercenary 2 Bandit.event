@@ -59,30 +59,12 @@ FADU 0x5
 STAL 0x40
 FADI 0x5
 SetBackground(0x18)
-TEXTSHOW Merc2BanditTactMeetsOthersPart1Text // [Tact] cathces up with others
+TEXTSTART
+TEXTSHOW Merc2BanditTactMeetsOthersText // [Tact] cathces up with others
 TEXTEND
 MUSC Comrades
-CHECK_EVENTID 0x6E
-BEQ 0x0 0x0 0xC
-	TEXTSHOW2 Merc2BanditTactMeetsOthersHimText
-	TEXTEND
-	GOTO 0x1
-LABEL 0x0
-	TEXTSHOW2 Merc2BanditTactMeetsOthersHerText // Accounts for him/her
-	TEXTEND
-LABEL 0x1
-TEXTSHOW2 Merc2BanditTactMeetsOthersPart2Text
+TEXTCONT
 TEXTEND
-CHECK_EVENTID 0x6E
-BEQ 0x2 0x0 0xC
-	TEXTSHOW2 Merc2BanditTactMeetsOthersHeText
-	TEXTEND
-	GOTO 0x3
-LABEL 0x2
-	TEXTSHOW2 Merc2BanditTactMeetsOthersSheText
-	TEXTEND
-LABEL 0x3
-TEXTSHOW2 Merc2BanditTactMeetsOthersPart3Text
 EndConvo
 STAL 0x40
 FADI 0x5
@@ -95,21 +77,7 @@ LOAD1 0x1 OutsideDanaanFriends
 LOAD1 0x1 MilitiaMen
 ENUN
 SetBackground(0x1B)
-TEXTSTART
-TEXTSHOW Merc2BanditTactMeetsAdlezText // Meets Adlez
-TEXTEND
-CHECK_EVENTID 0x6E
-BEQ 0x4 0x0 0xC
-	TEXTSHOW2 Merc2BanditTactMeetsAdlezHeText
-	TEXTEND
-	GOTO 0x5
-LABEL 0x4
-	TEXTSHOW2 Merc2BanditTactMeetsAdlezSheText
-	TEXTEND
-LABEL 0x5
-TEXTSHOW2 Merc2BanditTactMeetsAdlez2Text
-TEXTEND
-REMA
+Text(Merc2BanditTactMeetsAdlezText) // Meets Adlez
 SetBackground(0x03)
 Text(Merc2BanditAlmostDanaanText) // Danaan is just ahead
 EndConvo

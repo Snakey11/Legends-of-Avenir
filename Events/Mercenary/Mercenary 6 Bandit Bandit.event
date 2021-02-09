@@ -163,7 +163,7 @@ EndUnit
 
 //Label BacrunUnits
 BacrunEnemies:
-UNIT Harken Hero Harken Level(8,Enemy,True) [4,20] 0x00 0x00 0x00 0x00 [SilverSword] GuardAI
+UNIT Harken Hero Harken Level(8,Enemy,True) [4,20] 0x00 0x00 0x00 0x00 [SilverSword,HandAxe] GuardAI
 UNIT Bacrunian General Harken Level(7,Enemy,True) [4,23] 0x00 0x00 0x00 0x00 [Tomahawk] GuardAI 
 UNIT Bacrunian Sage Harken Level(5,Enemy,True) [7,21] 0x00 0x00 0x00 0x00 [Arcwind] AttackInRangeAI
 UNIT Bacrunian Mage Harken Level(12,Enemy,True) [1,21] 0x00 0x00 0x00 0x00 [Aqua,Meteor] AttackInRangeAI 

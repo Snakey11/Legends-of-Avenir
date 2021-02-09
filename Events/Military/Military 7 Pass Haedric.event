@@ -162,7 +162,7 @@ BEQ 0x0 0x0 0xC
 	MOVE 0x00 Derek [0,19]
 	ENUN
 	STAL 0x20
-	MUSC Return_of_the_Demon_King
+	MUSC The_Guardian_Spirit
 	WarpIn(13,19,LoadNarratorGoodEnding)
 	STAL 0x20
 	Text(Military7PassHaedricGoodEndingNarratorText)
@@ -175,8 +175,9 @@ BEQ 0x0 0x0 0xC
 	CriticalHit(1,60)
 	EndAttack
 	SetBattleNumbers(17,6,0,89,23,20)
-	MilitaryNarratorFight(11,18)
-	DISA Elanil
+	FIG1 0x00 Narrator 0x00
+	KillUnit(0x00)
+	DISA 0x00
 	GOTO 0x1
 LABEL 0x0
 	// Muriel did NOT engage in combat with Uzkalis. Bad ending.
@@ -201,7 +202,7 @@ LABEL 0x0
 	STAL 0x20
 	Text(Military7PassHaedricBadEndingElanilText)
 	STAL 0x10
-	MUSC Return_of_the_Demon_King
+	MUSC The_Guardian_Spirit
 	WarpIn(8,10,LoadNarratorBadEnding)
 	STAL 0x20
 	FADI 0x5
@@ -217,7 +218,10 @@ LABEL 0x0
 	NormalDamage(1,30)
 	EndAttack
 	SetBattleNumbers(17,6,0,85,30,18)
-	MilitaryNarratorFight(8,8)
+	FIG1 0x00 Narrator 0x00
+	KillUnit(0x00)
+	DISA 0x00
+	STAL 0x20
 LABEL 0x1
 ENUF 0x67
 ENUF 0x68
@@ -231,6 +235,7 @@ DISA Jasper
 DISA Derek
 DISA Finoc
 DISA Cougar
+DISA Elanil
 DISA Sekar
 DISA Christina
 DISA Forrest
@@ -442,7 +447,7 @@ UNIT Christina 0x00 0x00 Level(1,Ally,True) [8,18] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 LoadNarratorGoodEnding:
-UNIT Narrator GuardianSpirit 0x00 Level(10,Enemy,True) [13,19] 0x00 0x00 0x00 0x00 [SilverBlade] NoAI
+UNIT Narrator NarratorClass 0x00 Level(10,Enemy,True) [13,19] 0x00 0x00 0x00 0x00 [SilverBlade] NoAI
 UNIT
 
 BadEndingElanil:
@@ -450,7 +455,7 @@ UNIT Elanil 0x00 0x00 Level(1,Ally,True) [7,7] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 LoadNarratorBadEnding:
-UNIT Narrator GuardianSpirit 0x00 Level(10,Enemy,True) [8,10] 0x00 0x00 0x00 0x00 [BraveSword] NoAI
+UNIT Narrator NarratorClass 0x00 Level(10,Enemy,True) [8,10] 0x00 0x00 0x00 0x00 [BraveSword] NoAI
 EndUnit
 
 //Label Chapter Units
