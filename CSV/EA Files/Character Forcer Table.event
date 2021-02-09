@@ -1,3 +1,4 @@
 
+ALIGN 4
 CharacterForcerTable:
 WORD 0x0
