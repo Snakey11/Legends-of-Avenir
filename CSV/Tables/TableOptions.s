@@ -33,7 +33,7 @@ CSV Classes/ClassTable.csv @ Things indexed by class.
 	TABLE ClassLevelUpSkillTable Classes/ClassLevelUpTable.nmm
 	TABLE ClassSkillTable Classes/ClassSkillTable.nmm
 	@ See what I mean with these being a lot to jump around between?
-	INLINE True
+	INLINE TRUE
 	WRITE_SEQUENTIALLY False
 	MAX_ENTRIES 256
 

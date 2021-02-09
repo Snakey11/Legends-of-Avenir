@@ -14,9 +14,9 @@ BEING ABLE TO KEEP DATA FROM DIFFERENT "TABLES" IN-GAME IN THE SAME CSV.
                 (Any number of these entires, extra whitespace is ignored, and these fields don't have to be in order.)
                 
                 CSV (Filepath/to/CSV.csv) @ Entry must start with and contain this.
-                    TABLE (Label) (Filepath/to/nmm.nmm) (Optional adding offset)
+                    TABLE (Label) (Filepath/to/nmm.nmm) (Optional adding offset) (Optional INLINE/FIXED: Leave blank to follow the CSV inlining behavior)
                         @ The adding offset is a number (can be negative) to add to the index if writing non-sequentially. Useful for item usability/effect/etc tables.
-                    TABLE (AnotherLabel) (Filepath/to/Anothernmm.nmm) (Optional adding offset)
+                    TABLE (AnotherLabel) (Filepath/to/Anothernmm.nmm) (Optional adding offset) (Optional INLINE/FIXED)
                     @ As many of these as you like.
                     INLINE (True/False) @ Is this table in free space or overwriting vanilla data? If not, we ORG to where the NMM says this table is.
                     WRITE_SEQUENTIALLY (True/False) @ Only matters if inline. If this is True, we'll just write all this data sequentially (c2ea behavior is followed).
@@ -61,6 +61,10 @@ class File():
         self.maxEntries = maxEntries # Max entries for all tables.
         self.CSVLine = CSVLine # Line in table_options of this CSV. Used for error reporting.
         self.csv = CSV()
+    def updateInline(self): # Update NMM object inline fields with this object's master pattern. Ignore NMMs that already have this filled (because presumably those override the pattern).
+        for nmm in self.nmms:
+            if nmm.isInline == None: # An isInline as None means it is marked to follow parent pattern.
+                nmm.isInline = self.isInline
     def __str__(self,printCSV=False):
         str = ''
         for e in self.generateString(printCSV):
@@ -68,11 +72,11 @@ class File():
         return str
     def generateString(self,printCSV=False):
         yield f'CSV: {self.filepath}'
-        yield f'Is inline: {self.isInline}'
+        yield f'Master inline: {self.isInline}'
         yield f'Is sequential: {self.isSequential}'
         yield f'Max entries: {self.maxEntries}'
         for e in self.nmms:
-            yield f'Referece: {e.label} at {e.filepath} with adding offset {e.addingOffset}'
+            yield f'Referece: {e.label} at {e.filepath} with adding offset {e.addingOffset} and inline status {e.isInline}'
         if printCSV:
             yield 'CSV data:'
             yield str(self.csv)
@@ -133,10 +137,11 @@ class CSV():
 
 class NMM():
     # Storing data from a .nmm file.
-    def __init__(self,label,filepath,addingOffset):
+    def __init__(self,label,filepath,addingOffset,inlineOverride=None):
         self.label = label # Label to use with this specific table.
         self.filepath = filepath # Filepath to .nmm.
         self.addingOffset = addingOffset # "Adding offset" to use with this table. See readme.
+        self.isInline = inlineOverride # None means follow parent CSV pattern. True means inline, false means fixed.
         self.vanillaOffset = 0 # Vanilla offset for this table. Only matters if this table isn't INLINE.
         self.entrySize = 0 # Size for each entry.
         self.fields = [] # List of Fields for this table.
@@ -152,6 +157,7 @@ class NMM():
         yield f'Filepath: {self.filepath}'
         yield f'Label: {self.label}'
         yield f'Adding offset: {self.addingOffset}'
+        yield f'Is inline: {self.inlineOverride}'
         yield f'Vanilla offset: {self.vanillaOffset}'
         yield f'Entry size: {self.entrySize}'
         for e in self.fields:
@@ -159,7 +165,7 @@ class NMM():
     def generateOutput(self,types):
         # Once self.fields and self.data are full, we should be able to print our BYTE/SHORT/WORD installer output.
         # First, we need to either ORG to the vanilla offset or make our label.
-        if self.parent.isInline:
+        if self.isInline:
             yield 'ALIGN 4\n'
             yield f'{self.label}:\n'
             if not self.parent.isSequential: # If we're not writing sequentially, we need to fill with the maximum number of entries.
@@ -201,7 +207,7 @@ class NMM():
                         continue
                 yield f'({cell}) '
             yield '\n'
-        if not self.parent.isInline or not self.parent.isSequential:
+        if not self.isInline or not self.parent.isSequential:
             yield 'POP\n'
     def getOutputFilepath(self):
         return f'{self.filepath[:-3]}event'
@@ -271,20 +277,30 @@ if __name__ == '__main__':
                         else:
                             exit(f'ERROR in {args.table_options} at line {line[1]}: CSV format is (Filepath).')
                     elif line[0].startswith('TABLE'):
-                        if length == 3:
+                        # First check if the inline override is present.
+                        inlineOverride = None
+                        if splitted[-1] == 'INLINE':
+                            inlineOverride = True
+                            del splitted[-1] # Remove this list index for the subsequent handling.
+                            length -= 1
+                        elif splitted[-1] == 'FIXED':
+                            inlineOverride = False
+                            del splitted[-1]
+                            length -= 1
+                        if length == 3: # There is no adding offset.
                             label = splitted[1]
                             nmmFilepath = splitted[2]
-                            nmms.append(NMM(label,nmmFilepath,0))
-                        elif length == 4:
+                            nmms.append(NMM(label,nmmFilepath,0,inlineOverride))
+                        elif length == 4: # There is an adding offset.
                             label = splitted[1]
                             nmmFilepath = splitted[2]
                             try:
                                 addingOffset = int(splitted[3],0)
                             except ValueError:
                                 exit(f'ERROR in {args.table_options} at line {line[1]}: Adding offset must be a number.')
-                            nmms.append(NMM(label,nmmFilepath,addingOffset))
+                            nmms.append(NMM(label,nmmFilepath,addingOffset,inlineOverride))
                         else:
-                            exit(f'ERROR in {args.table_options} at line {line[1]}: TABLE format is (Label) (Filepath to NMM) (Optional adding offset).')
+                            exit(f'ERROR in {args.table_options} at line {line[1]}: TABLE format is (Label) (Filepath to NMM) (Optional adding offset) (optional INLINE/FIXED override).')
                     elif line[0].startswith('INLINE'):
                         if isInline == None:
                             if length == 2:
@@ -318,6 +334,7 @@ if __name__ == '__main__':
                 if isSequential == None: isSequential = False
                 if maxEntries == None: maxEntries = 256
                 file = File(filepath,nmms,isInline,isSequential,maxEntries,CSVLine)
+                file.updateInline()
                 for module in file.nmms:
                     module.parent = file
                 CSVs.append(file)
