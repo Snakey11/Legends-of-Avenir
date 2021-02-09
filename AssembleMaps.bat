@@ -3,4 +3,9 @@
 
 cd "%~dp0/Maps"
 
-tmx2ea --scanfolders --noheader
+echo: | tmx2ea --scanfolders --noheader
+echo ..
+
+if /I not [%1]==[noPause] (
+	pause
+)
