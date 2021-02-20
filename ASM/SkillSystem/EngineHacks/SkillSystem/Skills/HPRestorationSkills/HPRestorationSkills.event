@@ -1,0 +1,31 @@
+
+#include "Amaterasu/Amaterasu.lyn.event"
+
+#include "Bond/Bond.lyn.event"
+
+#include "Camaraderie/Camaraderie.lyn.event"
+
+#include "Forager/Forager.event"
+
+#include "Imbue/Imbue.lyn.event"
+
+#include "Relief/Relief.lyn.event"
+
+#include "Renewal/Renewal.lyn.event"
+
+
+ALIGN 4
+AmaterasuIDLink:
+BYTE AmaterasuID
+BondIDLink:
+BYTE BondID
+CamaraderieIDLink:
+BYTE CamaraderieID
+ForagerIDLink:
+BYTE ForagerID
+ImbueIDLink:
+BYTE ImbueID
+ReliefIDLink:
+BYTE ReliefID
+RenewalIDLink:
+BYTE RenewalID

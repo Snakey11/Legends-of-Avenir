@@ -1,0 +1,9 @@
+
+# c2ea cache
+.cache
+
+# generated table installer
+TableInstaller.event
+
+#openoffice lock files
+*.csv#

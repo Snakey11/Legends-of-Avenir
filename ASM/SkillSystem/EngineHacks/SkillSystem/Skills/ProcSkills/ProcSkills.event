@@ -1,0 +1,236 @@
+
+
+ALIGN 4
+#include "Barricade/BarricadeHook.lyn.event" // Barricade uses r11 for various things through combat. This unsets it afterward.
+
+ALIGN 4
+Proc_Devil:
+#incbin "Devil/proc_devil.dmp"
+POIN SkillTester
+WORD DevilsLuckID
+WORD DevilsPactID
+WORD DevilsWhimID
+
+Proc_Foresight:
+#incbin "Foresight/proc_foresight.dmp"
+POIN SkillTester
+WORD ForesightID
+
+Proc_StealHP:
+#incbin "LifeSteal/proc_stealhp.dmp"
+POIN SkillTester
+WORD LiquidOozeID
+
+Proc_Sureshot:
+#incbin "SureShot/proc_sureshot.dmp"
+POIN SkillTester
+WORD SureShotID
+
+Proc_Aegis:
+#incbin "Aegis/proc_aegis.dmp"
+POIN SkillTester
+WORD AegisID
+
+Proc_Adept:
+#incbin "Adept/proc_adept.dmp"
+POIN SkillTester
+WORD AdeptID
+
+Proc_Astra:
+#incbin "Astra/proc_astra.dmp"
+POIN SkillTester
+WORD AstraID
+
+Proc_Pavise:
+#incbin "Pavise/proc_pavise.dmp"
+POIN SkillTester
+WORD PaviseID
+
+Proc_Sol:
+#incbin "Sol/proc_sol.dmp"
+POIN SkillTester
+WORD SolID
+WORD LiquidOozeID
+
+Proc_Luna:
+#incbin "Luna/proc_luna.dmp"
+POIN SkillTester
+WORD LunaID
+
+Proc_Lethality:
+#incbin "Lethality/proc_lethality.dmp"
+POIN SkillTester
+WORD LethalityID
+
+Proc_AetherHeal:
+#incbin "Aether/proc_aetherheal.dmp"
+POIN SkillTester
+WORD AetherID
+WORD LiquidOozeID
+
+Proc_AetherDamage:
+#incbin "Aether/proc_aetherdamage.dmp"
+POIN SkillTester
+WORD AetherID
+
+Proc_Counter:
+// #incbin "proc_closecounter.dmp"
+#incbin "Counter/proc_counter.dmp"
+POIN SkillTester
+WORD CounterID
+
+Proc_CounterMagic:
+// #incbin "proc_distantcounter.dmp"
+#incbin "Countermagic/proc_countermagic.dmp"
+POIN SkillTester
+WORD CounterMagicID
+
+Proc_Miracle:
+#incbin "Miracle/proc_miracle.dmp"
+POIN SkillTester
+WORD MiracleID
+
+Proc_Mercy:
+#incbin "Mercy/proc_mercy.dmp"
+
+Proc_Impale:
+#incbin "Impale/proc_impale.dmp"
+POIN SkillTester
+WORD ImpaleID
+
+Proc_Colossus:
+#incbin "Colossus/proc_colossus.dmp"
+POIN SkillTester
+WORD ColossusID
+
+Proc_Ignis:
+#incbin "Ignis/proc_ignis.dmp"
+POIN SkillTester
+WORD IgnisID
+
+Proc_Moonbow:
+#ifndef DISABLE_CHARGE
+#incbin "Moonbow/proc_moonbow.dmp"
+#else
+#incbin "Moonbow/proc_moonbowNoCharge.dmp"
+#endif
+POIN SkillTester
+WORD MoonbowID
+
+Proc_Bane: //Proc_Bane should always come after Proc_Lethality
+#incbin "Bane/proc_bane.dmp" //bane does not proc against counter because it was giving problems
+POIN SkillTester
+WORD CounterID
+WORD CounterMagicID
+WORD BaneID
+
+DownWithArch: //lethality if the enemies name starts with "Arch"
+#incbin "DownWithArch/proc_downwitharch.dmp"
+POIN SkillTester
+WORD DownWithArchID
+
+Proc_BlackMagic:
+#incbin "BlackMagic/proc_blackmagic.dmp"
+POIN SkillTester
+WORD BlackMagicID
+POIN BlackMagicTable
+
+//Bytes are status id, percent chance
+//MAKE SURE THE PERCENTAGES SUM UP TO 100%
+BlackMagicTable:
+BYTE 1 25 //poison
+BYTE 2 25 //silence
+BYTE 3 25 //sleep
+BYTE 4 25 //berserk
+//BYTE 0xB 20 //petrify NOTE: As is, Petrify seems hardcoded to not double and will stop combat if it works. Which is neat and all, but if you're expecting to double and don't, that might piss people off instead
+
+//Poison blob only plays when poison effect is done (animations off)
+PUSH
+ORG $7A918
+callHack_r3(BlackMagic_AnimsOff)
+SHORT 0x2800 0xD005 //cmp r0,#0; beq End
+POP
+ALIGN 4
+BlackMagic_AnimsOff:
+#incbin "BlackMagic/BlackMagic_AnimsOff.dmp"
+
+ALIGN 4
+Proc_Corona:
+#incbin "Corona/proc_corona.dmp"
+POIN SkillTester
+WORD CoronaID
+
+ALIGN 4
+Proc_Flare:
+#incbin "Flare/proc_flare.dmp"
+POIN SkillTester
+WORD FlareID
+
+ALIGN 4
+Proc_Petrify:
+#incbin "Petrify/proc_petrify.dmp"
+POIN SkillTester
+WORD PetrifyID
+
+ALIGN 4
+Proc_Enrage:
+#incbin "Enrage/proc_enrage.dmp"
+POIN SkillTester
+WORD EnrageID
+
+ALIGN 4
+Proc_Deadeye:
+#incbin "Deadeye/proc_deadeye.dmp"
+POIN SkillTester
+WORD DeadeyeID
+
+ALIGN 4
+Proc_DragonFang:
+#incbin "DragonFang/proc_dragonfang.dmp"
+POIN SkillTester
+WORD DragonFangID
+
+ALIGN 4
+Proc_Eclipse:
+#incbin "Eclipse/proc_eclipse.dmp"
+POIN SkillTester
+WORD EclipseID
+
+ALIGN 4
+Proc_Corrosion:
+#incbin "Corrosion/proc_corrosion.dmp"
+POIN SkillTester
+WORD CorrosionID
+
+ALIGN 4
+Proc_Glacies:
+#incbin "Glacies/proc_glacies.dmp"
+POIN SkillTester
+WORD GlaciesID
+
+ALIGN 4
+Proc_GreatShield:
+#incbin "GreatShield/proc_greatshield.dmp"
+POIN SkillTester
+WORD GreatShieldID
+
+ALIGN 4
+Proc_Vengeance:
+#incbin "Vengeance/proc_vengeance.dmp"
+POIN SkillTester
+WORD VengeanceID
+
+#include "CombatArts/CombatArtProcSkills.event"
+
+ALIGN 4
+Proc_CmbArtHpCost:
+#include "CmbArtHpCost/CmbArtHpCost.lyn.event"
+
+
+//When animations are on, do the fancy palette swapping thing (pink for poison, etc) CURRENTLY DOESN'T WORK
+//PUSH
+//ORG $58EB8
+//BYTE 0x8 //not exactly sure what this is, but it makes berserk palette only last for one round, rather than throughout, and this fixes it
+//Note to self: if poison bit is set in rounds data, 0x2000 is set at...somewhere, and that's later checked at 55342. 55350 = mov r1,#1; replace 1 with status id
+
+#include "Animations/SkillAnimations.event"

@@ -1,0 +1,28 @@
+
+	/* Post-Action calc loop */
+	
+#include "PostActionCalcLoop.lyn.event"
+PostActionCalcFunctions: // Parameters: r0 = character struct. Immediately after "Turn ended" bit in the turn status bitfield is set.
+POIN LungeUpdate
+#ifdef STAIRS_ASM
+	POIN FixWait2
+#endif // STAIRS_ASM
+#ifdef ESCAPE_ARRIVE
+	POIN FinalEscapeThing
+#endif // ESCAPE_ARRIVE
+
+
+#ifdef PROMOTE_LEVELUP
+POIN PromoteOnLevelUp
+#endif // PROMOTE_LEVELUP
+
+#ifdef GAIDEN_MAGIC
+	POIN GaidenZeroOutSpellVariables
+#endif // GAIDEN_MAGIC
+
+
+
+
+WORD 0
+
+PROTECT $1879A $187B4
