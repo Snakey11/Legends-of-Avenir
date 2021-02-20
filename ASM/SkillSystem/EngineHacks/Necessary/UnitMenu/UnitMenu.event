@@ -172,6 +172,9 @@ UnitMenuTable:
 
   #ifdef __DEBUG__
     MenuCommand(UM_EditSkill, UM_EditSkillDesc, OrangeText, $04F449, SkillDebugCommand_OnSelect)
+    MenuCommand(WinNameText, WinDescText, GreenText, Win_Usability, Win_Button)
+    MenuCommand(DebugNameText, 0, GreenText, 0x4F449, DebugEffect)
+    MenuCommand(ClassDisplayNameText, 0, GreenText, 0x4F449, ClassDisplayUMEffect)
   #endif
 
   UM_Item
