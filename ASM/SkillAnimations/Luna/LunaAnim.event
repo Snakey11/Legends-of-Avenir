@@ -1,0 +1,201 @@
+//Generated with Skill Animation Creator.
+
+#incbin skillanimtemplate.dmp
+POIN Frames
+POIN TSAList
+POIN GraphicsList
+POIN PalettesList
+WORD 0x3d1 //sound id
+
+Frames:    //SHORT image duration
+SHORT 0 3
+SHORT 1 3
+SHORT 2 3
+SHORT 3 3
+SHORT 4 3
+SHORT 5 3
+SHORT 6 3
+SHORT 7 3
+SHORT 8 3
+SHORT 9 3
+SHORT 10 3
+SHORT 11 3
+SHORT 12 3
+SHORT 13 3
+SHORT 14 3
+SHORT 15 3
+SHORT 16 3
+SHORT 17 3
+SHORT 0xFFFF
+ALIGN 4
+
+TSAList:
+POIN TSA_Luna1
+POIN TSA_Luna2
+POIN TSA_Luna3
+POIN TSA_Luna4
+POIN TSA_Luna5
+POIN TSA_Luna6
+POIN TSA_Luna7
+POIN TSA_Luna8
+POIN TSA_Luna9
+POIN TSA_Luna10
+POIN TSA_Luna11
+POIN TSA_Luna12
+POIN TSA_Luna13
+POIN TSA_Luna14
+POIN TSA_Luna15
+POIN TSA_Luna16
+POIN TSA_Luna17
+POIN TSA_Luna18
+
+GraphicsList:
+POIN Graphics_Luna1
+POIN Graphics_Luna2
+POIN Graphics_Luna3
+POIN Graphics_Luna4
+POIN Graphics_Luna5
+POIN Graphics_Luna6
+POIN Graphics_Luna7
+POIN Graphics_Luna8
+POIN Graphics_Luna9
+POIN Graphics_Luna10
+POIN Graphics_Luna11
+POIN Graphics_Luna12
+POIN Graphics_Luna13
+POIN Graphics_Luna14
+POIN Graphics_Luna15
+POIN Graphics_Luna16
+POIN Graphics_Luna17
+POIN Graphics_Luna18
+
+PalettesList:
+POIN Pal_Luna1
+POIN Pal_Luna2
+POIN Pal_Luna3
+POIN Pal_Luna4
+POIN Pal_Luna5
+POIN Pal_Luna6
+POIN Pal_Luna7
+POIN Pal_Luna8
+POIN Pal_Luna9
+POIN Pal_Luna10
+POIN Pal_Luna11
+POIN Pal_Luna12
+POIN Pal_Luna13
+POIN Pal_Luna14
+POIN Pal_Luna15
+POIN Pal_Luna16
+POIN Pal_Luna17
+POIN Pal_Luna18
+
+TSA_Luna1:
+#incbin "Luna1.map.bin"
+TSA_Luna2:
+#incbin "Luna2.map.bin"
+TSA_Luna3:
+#incbin "Luna3.map.bin"
+TSA_Luna4:
+#incbin "Luna4.map.bin"
+TSA_Luna5:
+#incbin "Luna5.map.bin"
+TSA_Luna6:
+#incbin "Luna6.map.bin"
+TSA_Luna7:
+#incbin "Luna7.map.bin"
+TSA_Luna8:
+#incbin "Luna8.map.bin"
+TSA_Luna9:
+#incbin "Luna9.map.bin"
+TSA_Luna10:
+#incbin "Luna10.map.bin"
+TSA_Luna11:
+#incbin "Luna11.map.bin"
+TSA_Luna12:
+#incbin "Luna12.map.bin"
+TSA_Luna13:
+#incbin "Luna13.map.bin"
+TSA_Luna14:
+#incbin "Luna14.map.bin"
+TSA_Luna15:
+#incbin "Luna15.map.bin"
+TSA_Luna16:
+#incbin "Luna16.map.bin"
+TSA_Luna17:
+#incbin "Luna17.map.bin"
+TSA_Luna18:
+#incbin "Luna18.map.bin"
+
+Graphics_Luna1:
+#incbin "Luna1.img.bin"
+Graphics_Luna2:
+#incbin "Luna2.img.bin"
+Graphics_Luna3:
+#incbin "Luna3.img.bin"
+Graphics_Luna4:
+#incbin "Luna4.img.bin"
+Graphics_Luna5:
+#incbin "Luna5.img.bin"
+Graphics_Luna6:
+#incbin "Luna6.img.bin"
+Graphics_Luna7:
+#incbin "Luna7.img.bin"
+Graphics_Luna8:
+#incbin "Luna8.img.bin"
+Graphics_Luna9:
+#incbin "Luna9.img.bin"
+Graphics_Luna10:
+#incbin "Luna10.img.bin"
+Graphics_Luna11:
+#incbin "Luna11.img.bin"
+Graphics_Luna12:
+#incbin "Luna12.img.bin"
+Graphics_Luna13:
+#incbin "Luna13.img.bin"
+Graphics_Luna14:
+#incbin "Luna14.img.bin"
+Graphics_Luna15:
+#incbin "Luna15.img.bin"
+Graphics_Luna16:
+#incbin "Luna16.img.bin"
+Graphics_Luna17:
+#incbin "Luna17.img.bin"
+Graphics_Luna18:
+#incbin "Luna18.img.bin"
+
+Pal_Luna1:
+#incbin "Luna1.pal.bin"
+Pal_Luna2:
+#incbin "Luna2.pal.bin"
+Pal_Luna3:
+#incbin "Luna3.pal.bin"
+Pal_Luna4:
+#incbin "Luna4.pal.bin"
+Pal_Luna5:
+#incbin "Luna5.pal.bin"
+Pal_Luna6:
+#incbin "Luna6.pal.bin"
+Pal_Luna7:
+#incbin "Luna7.pal.bin"
+Pal_Luna8:
+#incbin "Luna8.pal.bin"
+Pal_Luna9:
+#incbin "Luna9.pal.bin"
+Pal_Luna10:
+#incbin "Luna10.pal.bin"
+Pal_Luna11:
+#incbin "Luna11.pal.bin"
+Pal_Luna12:
+#incbin "Luna12.pal.bin"
+Pal_Luna13:
+#incbin "Luna13.pal.bin"
+Pal_Luna14:
+#incbin "Luna14.pal.bin"
+Pal_Luna15:
+#incbin "Luna15.pal.bin"
+Pal_Luna16:
+#incbin "Luna16.pal.bin"
+Pal_Luna17:
+#incbin "Luna17.pal.bin"
+Pal_Luna18:
+#incbin "Luna18.pal.bin"

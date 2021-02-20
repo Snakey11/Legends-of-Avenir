@@ -1,0 +1,61 @@
+//Generated with Skill Animation Creator.
+
+#incbin skillanimtemplate.dmp
+POIN Frames
+POIN TSAList
+POIN GraphicsList
+POIN PalettesList
+WORD 0x3d1 //sound id
+
+Frames:    //SHORT image duration
+SHORT 0 3
+SHORT 1 3
+SHORT 2 3
+SHORT 3 3
+SHORT 0xFFFF
+ALIGN 4
+
+TSAList:
+POIN TSA_Bane1
+POIN TSA_Bane2
+POIN TSA_Bane3
+POIN TSA_Bane4
+
+GraphicsList:
+POIN Graphics_Bane1
+POIN Graphics_Bane2
+POIN Graphics_Bane3
+POIN Graphics_Bane4
+
+PalettesList:
+POIN Pal_Bane1
+POIN Pal_Bane2
+POIN Pal_Bane3
+POIN Pal_Bane4
+
+TSA_Bane1:
+#incbin "Bane1.map.bin"
+TSA_Bane2:
+#incbin "Bane2.map.bin"
+TSA_Bane3:
+#incbin "Bane3.map.bin"
+TSA_Bane4:
+#incbin "Bane4.map.bin"
+
+Graphics_Bane1:
+#incbin "Bane1.img.bin"
+Graphics_Bane2:
+#incbin "Bane2.img.bin"
+Graphics_Bane3:
+#incbin "Bane3.img.bin"
+Graphics_Bane4:
+#incbin "Bane4.img.bin"
+
+Pal_Bane1:
+#incbin "Bane1.pal.bin"
+Pal_Bane2:
+#incbin "Bane2.pal.bin"
+Pal_Bane3:
+#incbin "Bane3.pal.bin"
+Pal_Bane4:
+#incbin "Bane4.pal.bin"

@@ -1,0 +1,321 @@
+//Generated with Skill Animation Creator.
+
+#incbin skillanimtemplate.dmp
+POIN Frames
+POIN TSAList
+POIN GraphicsList
+POIN PalettesList
+WORD 0x3d1 //sound id
+
+Frames:    //SHORT image duration
+SHORT 0 2
+SHORT 1 2
+SHORT 2 2
+SHORT 3 2
+SHORT 4 2
+SHORT 5 2
+SHORT 6 2
+SHORT 7 2
+SHORT 8 2
+SHORT 9 2
+SHORT 10 2
+SHORT 11 2
+SHORT 12 2
+SHORT 13 2
+SHORT 14 2
+SHORT 15 2
+SHORT 16 2
+SHORT 17 2
+SHORT 18 2
+SHORT 19 2
+SHORT 20 2
+SHORT 21 2
+SHORT 22 2
+SHORT 23 2
+SHORT 24 2
+SHORT 25 2
+SHORT 26 2
+SHORT 27 2
+SHORT 28 2
+SHORT 29 2
+SHORT 0xFFFF
+ALIGN 4
+
+TSAList:
+POIN TSA_BM1
+POIN TSA_BM2
+POIN TSA_BM3
+POIN TSA_BM4
+POIN TSA_BM5
+POIN TSA_BM6
+POIN TSA_BM7
+POIN TSA_BM8
+POIN TSA_BM9
+POIN TSA_BM10
+POIN TSA_BM11
+POIN TSA_BM12
+POIN TSA_BM13
+POIN TSA_BM14
+POIN TSA_BM15
+POIN TSA_BM16
+POIN TSA_BM17
+POIN TSA_BM18
+POIN TSA_BM19
+POIN TSA_BM20
+POIN TSA_BM21
+POIN TSA_BM22
+POIN TSA_BM23
+POIN TSA_BM24
+POIN TSA_BM25
+POIN TSA_BM26
+POIN TSA_BM27
+POIN TSA_BM28
+POIN TSA_BM29
+POIN TSA_BM30
+
+GraphicsList:
+POIN Graphics_BM1
+POIN Graphics_BM2
+POIN Graphics_BM3
+POIN Graphics_BM4
+POIN Graphics_BM5
+POIN Graphics_BM6
+POIN Graphics_BM7
+POIN Graphics_BM8
+POIN Graphics_BM9
+POIN Graphics_BM10
+POIN Graphics_BM11
+POIN Graphics_BM12
+POIN Graphics_BM13
+POIN Graphics_BM14
+POIN Graphics_BM15
+POIN Graphics_BM16
+POIN Graphics_BM17
+POIN Graphics_BM18
+POIN Graphics_BM19
+POIN Graphics_BM20
+POIN Graphics_BM21
+POIN Graphics_BM22
+POIN Graphics_BM23
+POIN Graphics_BM24
+POIN Graphics_BM25
+POIN Graphics_BM26
+POIN Graphics_BM27
+POIN Graphics_BM28
+POIN Graphics_BM29
+POIN Graphics_BM30
+
+PalettesList:
+POIN Pal_BM1
+POIN Pal_BM2
+POIN Pal_BM3
+POIN Pal_BM4
+POIN Pal_BM5
+POIN Pal_BM6
+POIN Pal_BM7
+POIN Pal_BM8
+POIN Pal_BM9
+POIN Pal_BM10
+POIN Pal_BM11
+POIN Pal_BM12
+POIN Pal_BM13
+POIN Pal_BM14
+POIN Pal_BM15
+POIN Pal_BM16
+POIN Pal_BM17
+POIN Pal_BM18
+POIN Pal_BM19
+POIN Pal_BM20
+POIN Pal_BM21
+POIN Pal_BM22
+POIN Pal_BM23
+POIN Pal_BM24
+POIN Pal_BM25
+POIN Pal_BM26
+POIN Pal_BM27
+POIN Pal_BM28
+POIN Pal_BM29
+POIN Pal_BM30
+
+TSA_BM1:
+#incbin "BM1.map.bin"
+TSA_BM2:
+#incbin "BM2.map.bin"
+TSA_BM3:
+#incbin "BM3.map.bin"
+TSA_BM4:
+#incbin "BM4.map.bin"
+TSA_BM5:
+#incbin "BM5.map.bin"
+TSA_BM6:
+#incbin "BM6.map.bin"
+TSA_BM7:
+#incbin "BM7.map.bin"
+TSA_BM8:
+#incbin "BM8.map.bin"
+TSA_BM9:
+#incbin "BM9.map.bin"
+TSA_BM10:
+#incbin "BM10.map.bin"
+TSA_BM11:
+#incbin "BM11.map.bin"
+TSA_BM12:
+#incbin "BM12.map.bin"
+TSA_BM13:
+#incbin "BM13.map.bin"
+TSA_BM14:
+#incbin "BM14.map.bin"
+TSA_BM15:
+#incbin "BM15.map.bin"
+TSA_BM16:
+#incbin "BM16.map.bin"
+TSA_BM17:
+#incbin "BM17.map.bin"
+TSA_BM18:
+#incbin "BM18.map.bin"
+TSA_BM19:
+#incbin "BM19.map.bin"
+TSA_BM20:
+#incbin "BM20.map.bin"
+TSA_BM21:
+#incbin "BM21.map.bin"
+TSA_BM22:
+#incbin "BM22.map.bin"
+TSA_BM23:
+#incbin "BM23.map.bin"
+TSA_BM24:
+#incbin "BM24.map.bin"
+TSA_BM25:
+#incbin "BM25.map.bin"
+TSA_BM26:
+#incbin "BM26.map.bin"
+TSA_BM27:
+#incbin "BM27.map.bin"
+TSA_BM28:
+#incbin "BM28.map.bin"
+TSA_BM29:
+#incbin "BM29.map.bin"
+TSA_BM30:
+#incbin "BM30.map.bin"
+
+Graphics_BM1:
+#incbin "BM1.img.bin"
+Graphics_BM2:
+#incbin "BM2.img.bin"
+Graphics_BM3:
+#incbin "BM3.img.bin"
+Graphics_BM4:
+#incbin "BM4.img.bin"
+Graphics_BM5:
+#incbin "BM5.img.bin"
+Graphics_BM6:
+#incbin "BM6.img.bin"
+Graphics_BM7:
+#incbin "BM7.img.bin"
+Graphics_BM8:
+#incbin "BM8.img.bin"
+Graphics_BM9:
+#incbin "BM9.img.bin"
+Graphics_BM10:
+#incbin "BM10.img.bin"
+Graphics_BM11:
+#incbin "BM11.img.bin"
+Graphics_BM12:
+#incbin "BM12.img.bin"
+Graphics_BM13:
+#incbin "BM13.img.bin"
+Graphics_BM14:
+#incbin "BM14.img.bin"
+Graphics_BM15:
+#incbin "BM15.img.bin"
+Graphics_BM16:
+#incbin "BM16.img.bin"
+Graphics_BM17:
+#incbin "BM17.img.bin"
+Graphics_BM18:
+#incbin "BM18.img.bin"
+Graphics_BM19:
+#incbin "BM19.img.bin"
+Graphics_BM20:
+#incbin "BM20.img.bin"
+Graphics_BM21:
+#incbin "BM21.img.bin"
+Graphics_BM22:
+#incbin "BM22.img.bin"
+Graphics_BM23:
+#incbin "BM23.img.bin"
+Graphics_BM24:
+#incbin "BM24.img.bin"
+Graphics_BM25:
+#incbin "BM25.img.bin"
+Graphics_BM26:
+#incbin "BM26.img.bin"
+Graphics_BM27:
+#incbin "BM27.img.bin"
+Graphics_BM28:
+#incbin "BM28.img.bin"
+Graphics_BM29:
+#incbin "BM29.img.bin"
+Graphics_BM30:
+#incbin "BM30.img.bin"
+
+Pal_BM1:
+#incbin "BM1.pal.bin"
+Pal_BM2:
+#incbin "BM2.pal.bin"
+Pal_BM3:
+#incbin "BM3.pal.bin"
+Pal_BM4:
+#incbin "BM4.pal.bin"
+Pal_BM5:
+#incbin "BM5.pal.bin"
+Pal_BM6:
+#incbin "BM6.pal.bin"
+Pal_BM7:
+#incbin "BM7.pal.bin"
+Pal_BM8:
+#incbin "BM8.pal.bin"
+Pal_BM9:
+#incbin "BM9.pal.bin"
+Pal_BM10:
+#incbin "BM10.pal.bin"
+Pal_BM11:
+#incbin "BM11.pal.bin"
+Pal_BM12:
+#incbin "BM12.pal.bin"
+Pal_BM13:
+#incbin "BM13.pal.bin"
+Pal_BM14:
+#incbin "BM14.pal.bin"
+Pal_BM15:
+#incbin "BM15.pal.bin"
+Pal_BM16:
+#incbin "BM16.pal.bin"
+Pal_BM17:
+#incbin "BM17.pal.bin"
+Pal_BM18:
+#incbin "BM18.pal.bin"
+Pal_BM19:
+#incbin "BM19.pal.bin"
+Pal_BM20:
+#incbin "BM20.pal.bin"
+Pal_BM21:
+#incbin "BM21.pal.bin"
+Pal_BM22:
+#incbin "BM22.pal.bin"
+Pal_BM23:
+#incbin "BM23.pal.bin"
+Pal_BM24:
+#incbin "BM24.pal.bin"
+Pal_BM25:
+#incbin "BM25.pal.bin"
+Pal_BM26:
+#incbin "BM26.pal.bin"
+Pal_BM27:
+#incbin "BM27.pal.bin"
+Pal_BM28:
+#incbin "BM28.pal.bin"
+Pal_BM29:
+#incbin "BM29.pal.bin"
+Pal_BM30:
+#incbin "BM30.pal.bin"

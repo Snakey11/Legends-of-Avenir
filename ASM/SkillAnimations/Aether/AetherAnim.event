@@ -1,0 +1,211 @@
+//Generated with Skill Animation Creator.
+
+#incbin skillanimtemplate.dmp
+POIN Frames
+POIN TSAList
+POIN GraphicsList
+POIN PalettesList
+WORD 0x3d1 //sound id
+
+Frames:    //SHORT image duration
+SHORT 0 3
+SHORT 1 3
+SHORT 2 3
+SHORT 3 3
+SHORT 4 3
+SHORT 5 3
+SHORT 6 3
+SHORT 7 3
+SHORT 8 3
+SHORT 9 3
+SHORT 10 3
+SHORT 11 3
+SHORT 12 3
+SHORT 13 3
+SHORT 14 3
+SHORT 15 3
+SHORT 16 3
+SHORT 17 3
+SHORT 18 3
+SHORT 0xFFFF
+ALIGN 4
+
+TSAList:
+POIN TSA_Aether1
+POIN TSA_Aether2
+POIN TSA_Aether3
+POIN TSA_Aether4
+POIN TSA_Aether5
+POIN TSA_Aether6
+POIN TSA_Aether7
+POIN TSA_Aether8
+POIN TSA_Aether9
+POIN TSA_Aether10
+POIN TSA_Aether11
+POIN TSA_Aether12
+POIN TSA_Aether13
+POIN TSA_Aether14
+POIN TSA_Aether15
+POIN TSA_Aether16
+POIN TSA_Aether17
+POIN TSA_Aether18
+POIN TSA_Aether19
+
+GraphicsList:
+POIN Graphics_Aether1
+POIN Graphics_Aether2
+POIN Graphics_Aether3
+POIN Graphics_Aether4
+POIN Graphics_Aether5
+POIN Graphics_Aether6
+POIN Graphics_Aether7
+POIN Graphics_Aether8
+POIN Graphics_Aether9
+POIN Graphics_Aether10
+POIN Graphics_Aether11
+POIN Graphics_Aether12
+POIN Graphics_Aether13
+POIN Graphics_Aether14
+POIN Graphics_Aether15
+POIN Graphics_Aether16
+POIN Graphics_Aether17
+POIN Graphics_Aether18
+POIN Graphics_Aether19
+
+PalettesList:
+POIN Pal_Aether1
+POIN Pal_Aether2
+POIN Pal_Aether3
+POIN Pal_Aether4
+POIN Pal_Aether5
+POIN Pal_Aether6
+POIN Pal_Aether7
+POIN Pal_Aether8
+POIN Pal_Aether9
+POIN Pal_Aether10
+POIN Pal_Aether11
+POIN Pal_Aether12
+POIN Pal_Aether13
+POIN Pal_Aether14
+POIN Pal_Aether15
+POIN Pal_Aether16
+POIN Pal_Aether17
+POIN Pal_Aether18
+POIN Pal_Aether19
+
+TSA_Aether1:
+#incbin "Aether1.map.bin"
+TSA_Aether2:
+#incbin "Aether2.map.bin"
+TSA_Aether3:
+#incbin "Aether3.map.bin"
+TSA_Aether4:
+#incbin "Aether4.map.bin"
+TSA_Aether5:
+#incbin "Aether5.map.bin"
+TSA_Aether6:
+#incbin "Aether6.map.bin"
+TSA_Aether7:
+#incbin "Aether7.map.bin"
+TSA_Aether8:
+#incbin "Aether8.map.bin"
+TSA_Aether9:
+#incbin "Aether9.map.bin"
+TSA_Aether10:
+#incbin "Aether10.map.bin"
+TSA_Aether11:
+#incbin "Aether11.map.bin"
+TSA_Aether12:
+#incbin "Aether12.map.bin"
+TSA_Aether13:
+#incbin "Aether13.map.bin"
+TSA_Aether14:
+#incbin "Aether14.map.bin"
+TSA_Aether15:
+#incbin "Aether15.map.bin"
+TSA_Aether16:
+#incbin "Aether16.map.bin"
+TSA_Aether17:
+#incbin "Aether17.map.bin"
+TSA_Aether18:
+#incbin "Aether18.map.bin"
+TSA_Aether19:
+#incbin "Aether19.map.bin"
+
+Graphics_Aether1:
+#incbin "Aether1.img.bin"
+Graphics_Aether2:
+#incbin "Aether2.img.bin"
+Graphics_Aether3:
+#incbin "Aether3.img.bin"
+Graphics_Aether4:
+#incbin "Aether4.img.bin"
+Graphics_Aether5:
+#incbin "Aether5.img.bin"
+Graphics_Aether6:
+#incbin "Aether6.img.bin"
+Graphics_Aether7:
+#incbin "Aether7.img.bin"
+Graphics_Aether8:
+#incbin "Aether8.img.bin"
+Graphics_Aether9:
+#incbin "Aether9.img.bin"
+Graphics_Aether10:
+#incbin "Aether10.img.bin"
+Graphics_Aether11:
+#incbin "Aether11.img.bin"
+Graphics_Aether12:
+#incbin "Aether12.img.bin"
+Graphics_Aether13:
+#incbin "Aether13.img.bin"
+Graphics_Aether14:
+#incbin "Aether14.img.bin"
+Graphics_Aether15:
+#incbin "Aether15.img.bin"
+Graphics_Aether16:
+#incbin "Aether16.img.bin"
+Graphics_Aether17:
+#incbin "Aether17.img.bin"
+Graphics_Aether18:
+#incbin "Aether18.img.bin"
+Graphics_Aether19:
+#incbin "Aether19.img.bin"
+
+Pal_Aether1:
+#incbin "Aether1.pal.bin"
+Pal_Aether2:
+#incbin "Aether2.pal.bin"
+Pal_Aether3:
+#incbin "Aether3.pal.bin"
+Pal_Aether4:
+#incbin "Aether4.pal.bin"
+Pal_Aether5:
+#incbin "Aether5.pal.bin"
+Pal_Aether6:
+#incbin "Aether6.pal.bin"
+Pal_Aether7:
+#incbin "Aether7.pal.bin"
+Pal_Aether8:
+#incbin "Aether8.pal.bin"
+Pal_Aether9:
+#incbin "Aether9.pal.bin"
+Pal_Aether10:
+#incbin "Aether10.pal.bin"
+Pal_Aether11:
+#incbin "Aether11.pal.bin"
+Pal_Aether12:
+#incbin "Aether12.pal.bin"
+Pal_Aether13:
+#incbin "Aether13.pal.bin"
+Pal_Aether14:
+#incbin "Aether14.pal.bin"
+Pal_Aether15:
+#incbin "Aether15.pal.bin"
+Pal_Aether16:
+#incbin "Aether16.pal.bin"
+Pal_Aether17:
+#incbin "Aether17.pal.bin"
+Pal_Aether18:
+#incbin "Aether18.pal.bin"
+Pal_Aether19:
+#incbin "Aether19.pal.bin"
