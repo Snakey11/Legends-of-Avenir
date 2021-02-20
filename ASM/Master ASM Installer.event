@@ -128,6 +128,8 @@ StaffEXPEntry(0,0,0)
 
 #include "ModularMinimugBox/MMB Installer Default.event"
 
+#include "ModularSupply/ModularSupply.event"
+
 #include "MultiTileMarker/MultiTileMarker_Install.event"
 
 #include "NameSelection/SetName.lyn.event"
@@ -207,12 +209,14 @@ ALIGN 4
 ALIGN 4
 #include "Show Heal Amount/Show Heal Amount.event"
 
+#include "SkillAnimations/AnimInstaller.event"
+
 //ALIGN 4
 //#include "SummonStuff/Summon.event"
 
-#include "ModularSupply/ModularSupply.event"
-
 #include "SupportRework/SupportRework.event"
+
+#include "SupportRtext/Installer.event"
 
 ALIGN 4
 #include "ToggleFixedGrowths/ToggleFixedGrowths.event"
