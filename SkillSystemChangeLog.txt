@@ -1,0 +1,85 @@
+I had a version of this a while ago, but I lost it.
+I'm going to be keeping track of changes I make to the Skill System here in order to make future updates less painful.
+
+Comment anti-huffman in essential fixes
+
+Add Boon/Bane growth effects in EngineHacks/Necessary/GrowthGetters/Extra_Growth_Boosts.asm with...
+MetisCheck:
+@ Actually first let's apply the boon/bane effects.
+mov r0, r4
+mov r1, r5
+mov r2, r6
+blh CreatorApplyBoonBaneGrowth, r3
+mov r5, r0
+
+ldr		r0,[r4,#0xC]	@status word
+
+Comment new page graphic in EngineHacks/ModularStatScreenStrmag/ModularStatScreen.event
+
+Move all growth displays in EngineHacks/ModularStatScreenStrmag/asm/mss_page1_skills.s right by 1 tile
+In EngineHacks/SkillSystem/Ross Skills/BlowCheck.s:
+	Change warding blow to 5 res
+	Change darting blow to 2 AS
+	Change certain blow to 15 hit
+
+Add the following to the unit menu:
+  #ifdef __DEBUG__
+  MenuCommand(WinNameText, WinDescText, GreenText, Win_Usability, Win_Button)
+  MenuCommand(DebugNameText, 0, GreenText, 0x4F449, DebugEffect)
+  MenuCommand(ClassDisplayNameText, 0, GreenText, 0x4F449, ClassDisplayUMEffect)
+ #endif 
+
+In the unit menu, make the supply command use NewSupplyUsability
+
+Add the following to EngineHacks/Strmag/Str Mag Split/MagicSwordRework/MagicSwordRework.event
+	ORG $2ADDC // Remove runesword str/2 (now uses magic) and weird wind sword stuff.
+	SHORT 0xE055 // b #0x0802AE8A
+
+In EngineHacks/SkillSystem/Stances/Stances.event, make:
+	Change mixed stances to +2 to their stat and single stances to +3 to their stat
+
+Remove Capture ItemTable define in EngineHacks/SkillSystem/Teq Skills/FE8-Capture/FE8-Capture Master EA File.txt
+
+Make the following edit to EngineHacks/SkillSystem/Proc Skills/proc_lethality.s (Make lethality not proc on 0 damage)
+beq	End
+mov r1, #0x5A
+ldrh r1, [ r4, r1 ] @ Attack
+mov r2, #0x5C
+ldrh r2, [ r5, r2 ] @ Other's defense
+sub r1, r1, r2
+cmp r1, #0x00
+ble End @ End if damage is 0.
+
+@only activate if crit
+
+In EngineHacks/AnimaTriangle/AnimaTriangle.event, make type lists:
+	FireList:
+	BYTE Fire Elfire Arcfire Bolganone Meteor Flare 0x00
+
+	ALIGN 4
+	ThunderList:
+	BYTE Thunder Elthunder Arcthunder Thoron Bolting 0x00
+
+	ALIGN 4
+	WindList:
+	BYTE Wind Elwind Arcwind Tornado Aircalibur WindSword 0x00
+
+In EngineHacks/_MasterHackInstaller.event, comment the EMS MESSAGE line
+
+In EngineHacks/ModularStatScreenStrmag/ModularStatScreen.event:
+	Make 4 pages
+	ORG $889d0
+ 		SHORT $e010 //Temporary r-text fix to prevent freezing
+	Comment RText_Page4_Ladder code include
+	Comment MSS_page4 code include
+	Comment RText_Page4 RText data
+	(The actual SupportRtext code has been added to the main repository OUTSIDE of the Skill System)
+
+In EngineHacks/SkillSystem/Internals/CalcLoops/MugLoadingCalcLoop/MugLoadCalcLoop.event, comment POIN RandomMug3
+
+Delete default animations in EngineHacks/SkillSystem/Proc Skills/Animations (Customs are outside of the Skill System)
+	Also comment the default installers in EngineHacks/SkillSystem/Proc Skills/Proc Skills Installer.event
+
+Add POIN SpellswordLimits to EngineHacks/SkillSystem/Internals/CalcLoops/WeaponUsabilityLoop/WeaponLockCalcLoop.event
+
+Change Breaker hit/avoid bonus to 15 in EngineHacks/SkillSystem/Master Skill Installer.event
