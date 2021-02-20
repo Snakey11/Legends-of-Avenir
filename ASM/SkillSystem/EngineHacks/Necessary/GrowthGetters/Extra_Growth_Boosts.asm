@@ -1,6 +1,12 @@
 .thumb
 .org 0x0
 
+.macro blh to, reg
+    ldr \reg, =\to
+    mov lr, \reg
+    .short 0xF800
+.endm
+
 .equ Item_Table, Growth_Options+4
 .equ SkillTester, Item_Table+4
 .equ BlossomID, SkillTester+4
@@ -29,6 +35,13 @@ tst		r0,r7
 bne		GoBack	
 
 MetisCheck:
+@ Actually first let's apply the boon/bane effects.
+mov r0, r4
+mov r1, r5
+mov r2, r6
+blh CreatorApplyBoonBaneGrowth, r3
+mov r5, r0
+
 ldr		r0,[r4,#0xC]	@status word
 mov		r1,#0x20
 lsl		r1,#0x8			@metis tome
