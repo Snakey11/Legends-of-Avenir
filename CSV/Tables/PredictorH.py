@@ -3,6 +3,9 @@
 import csv
 import sys
 import argparse
+import random
+import numpy as np
+from decimal import *
 
 class CharacterTable:
     def __init__(self,charTable,charBases,charGrowths,charLevel):
@@ -81,60 +84,113 @@ class Field:
         return f'Constant: {self.constant}' if self.constant != None else f'Location: {self.location}'
 
 class Unit:
-    def __init__(self,character,startingClass,charTable,classTable,statNames):
+    def __init__(self,character,startingClass,charTable,classTable,statNames,isGeneric):
         self.character = character.strip()
         self.currClass = startingClass.strip()
         self.charTable = charTable # These 2 are just pointers to the character and class tables.
         self.classTable = classTable
+        self.charLoc = findRow(self.character,self.charTable) # Index of this character in the character table CSV.
+        self.classLoc = findRow(self.currClass,self.classTable) # Index of this class in the class table CSV.
+        if self.charLoc == 0: exit(f'Error: Character {self.character} not found in {self.charTable.name}')
+        if self.classLoc == 0: exit(f'Error: Class {self.currClass} not found in {self.classTable.name}')
         self.statNames = statNames
+        self.isGeneric = isGeneric
         self.level, self.stats = self.initializeUnit()
+        self.promotedAt, self.promotedFrom = (0,None) # Store the level they promoted at and the class they promoted from.
         self.enforceMaxes()
     def initializeUnit(self): # Return a (startingLevel,[stat,stat,...]) tuple.
         # Read starting level from the character table and bases from the class and character tables.
-        charLoc = findRow(self.character,self.charTable) # Index of this character in the character table CSV.
-        classLoc = findRow(self.currClass,self.classTable) # Index of this class in the class table CSV.
-        if charLoc == 0: exit(f'Error: Character {self.character} not found in {self.charTable.name}')
-        if classLoc == 0: exit(f'Error: Class {self.currClass} not found in {self.classTable.name}')
-        level = self.charTable.charLevel.get(charLoc) # Starting level.
-        stats = [0]*len(self.charTable.bases) # Initialize the stat list.
+        level = self.charTable.charLevel.get(self.charLoc) # Starting level.
+        stats = [Decimal(0)]*len(self.charTable.bases) # Initialize the stat list.
         for i in range(len(self.charTable.bases)):
             table,loc = (None,0) # Declaring this variable is for the error handling.
             try:
-                table,loc = (self.charTable,charLoc)
+                table,loc = (self.charTable,self.charLoc)
                 stats[i] += table.bases[i].get(loc)
-                table,loc = (self.classTable,classLoc)
+                table,loc = (self.classTable,self.classLoc)
                 stats[i] += table.bases[i].get(loc)
             except TypeError:
                 exit(f'Error handling {table.bases[i].get(loc)} in {table.name} at row {loc}, column {table.bases[i].location}: Relevant values need to be numbers.')
         return ( level , stats )
     def enforceMaxes(self): # Takes a list of stats and ensures that there is no overflow based on class table maxes.
-        classLoc = findRow(self.currClass,self.classTable)
         for i in range(len(self.stats)):
-            max = self.classTable.maxes[i].get(classLoc)
+            max = self.classTable.maxes[i].get(self.classLoc)
             if self.stats[i] > max: self.stats[i] = max
-    def __str__(self):
+    def promote(self,promoClass): # Promote this unit to the defined class
+        # We need to reset the unit's level to 1 and change their classLoc variable to their new class. Also add promo bonuses to their stats.
+        self.promotedFrom = self.currClass # Store their previous class and when they promoted.
+        self.promotedAt = self.level
+        self.level = 1
+        self.currClass = promoClass.strip()
+        self.classLoc = findRow(self.currClass,self.classTable)
+        if self.classLoc == 0: exit(f'Error: Class {self.currClass} not found in {self.classTable.name}')
+        for i in range(len(self.stats)):
+            promo = self.classTable.promos[i]
+            if promo.location:
+                self.stats[i] += promo.get(self.classLoc) # Normal behavior. Increase by the promo bonus.
+            else:
+                # Weird behavior. Increment by the difference of the 2 class stats.
+                self.stats[i] += self.classTable.bases[i].get(self.classLoc) - self.classTable.bases[i].get(findRow(self.promotedFrom,self.classTable))
+        self.enforceMaxes()
+    def simLevelUp(self): # Simulated level up. Roll for growths!
+        self.level += 1
+        for i in range(len(self.stats)):
+            growth = self.classTable.growths[i].get(self.classLoc) if self.isGeneric else self.charTable.growths[i].get(self.charLoc)
+            while True: # Reeeeeee Python doesn't support do/while reeeeee.
+                RN = random.randrange(0,100,1) # Roll an integer between 0 and 100.
+                if RN < growth: self.stats[i] += 1
+                growth -= 100
+                if growth < 0: break
+        self.enforceMaxes()
+    def autoLevelUp(self): # Perform ONE autolevel.
+        self.level += 1 # First, increment level.
+        # Next, for each stat, add the growth/100. We will store stats as longs and round at the end if the user wants us to.
+        for i in range(len(self.stats)):
+            self.stats[i] += (Decimal(self.classTable.growths[i].get(self.classLoc)) if self.isGeneric else Decimal(self.charTable.growths[i].get(self.charLoc)))/100
+        self.enforceMaxes()
+    def autoLevel(self,targetLevel,promoLevel=20,promoClass=0,shouldSimulate=False): # Autolevel until we hit the target level. Default is 20.
+        if promoClass:
+            # They're going to want to promote at some point.
+            while promoLevel > self.level:
+                if shouldSimulate: self.simLevelUp()
+                else: self.autoLevelUp()
+            # Now they're ready to promote.
+            self.promote(promoClass)
+            # Now we can just execute behavior as if they didn't want to promote.
+        while targetLevel > self.level:
+            if shouldSimulate: self.simLevelUp()
+            else: self.autoLevelUp()
+    def __str__(self,shouldRound=False):
         str = ''
-        for e in self.generateStr(): str += e + '\n'
+        for e in self.generateStr(shouldRound): str += e + '\n'
         return str
-    def generateStr(self):
+    def generateStr(self,shouldRound=False):
         yield f'Character: {self.character}'
         yield f'Current class: {self.currClass}'
         yield f'Current level: {self.level}'
+        if self.promotedFrom: yield f'Promoted from {self.promotedFrom} at level {self.promotedAt}'
         stats = ''
         for i in range(len(self.statNames)):
-            stats += f'{self.statNames[i]}: {self.stats[i]}  '
+            stats += f'{self.statNames[i]}: {round(self.stats[i]) if shouldRound else self.stats[i]}  '
         yield stats
 
 class LengthException(Exception):
     pass
 
+class ArgparseError(Exception): # This and the following are for catching argparse errors. Argparse doesn't raise errors because ???
+    pass
+
+class ThrowingArgumentParser(argparse.ArgumentParser):
+    def error(self,message):
+        raise ArgparseError(message)
+
 def generateStats(charTable,classTable): # Utility generator for all stats.
-        yield charTable.bases
-        yield charTable.growths
-        yield classTable.bases
-        yield classTable.growths
-        yield classTable.maxes
-        yield classTable.promos
+    yield charTable.bases
+    yield charTable.growths
+    yield classTable.bases
+    yield classTable.growths
+    yield classTable.maxes
+    yield classTable.promos
 
 def validateStatLengths(charTable,classTable,statNames): # Check that the lengths of stat locations are consistent.
     stats = [ list for list in generateStats(charTable,classTable) ]
@@ -153,7 +209,7 @@ def fillValues(list): # Return a new list that replaces strings representing the
 
 def findRow(toFind,table): # Return the relevant class/character data index.
     for i,row in enumerate(table.csv[1:],1):
-        if row[0].split()[0].strip() == toFind: return i
+        if row[0] and row[0].split()[0].strip() == toFind: return i
     return 0
 
 def fillLocations(table,names): # With a table and list of names, return a list of Field objects.
