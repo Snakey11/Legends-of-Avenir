@@ -1,57 +1,57 @@
 
 LunaAnim:
 {
-#include "Animations/Luna/LunaAnim.event"
+#include "Luna/LunaAnim.event"
 }
 
 AstraAnim:
 {
-  #include "Animations/Astra/AstraAnim.event"
+  #include "Astra/AstraAnim.event"
 }
 
 AdeptAnim:
 {
-  #include "Animations/Adept/AdeptAnim.event"
+  #include "Adept/AdeptAnim.event"
 }
 
 SolAnim:
 {
-  #include "Animations/Sol/SolAnim.event"
+  #include "Sol/SolAnim.event"
 }
 
 AetherAnim:
 ColossusAnim:
 {
-  #include "Animations/Aether/AetherAnim.event"
+  #include "Aether/AetherAnim.event"
 }
 
 ImpaleAnim:
 {
-  #include "Animations/Impale/ImpaleAnim.event"
+  #include "Impale/ImpaleAnim.event"
 }
 
 IgnisAnim:
 {
-  #include "Animations/Ignis/IgnisAnim.event"
+  #include "Ignis/IgnisAnim.event"
 }
 
 PaviseAnim:
 {
-  #include "Animations/Pavise/PaviseAnim.event"
+  #include "Pavise/PaviseAnim.event"
 }
 
 AegisAnim:
 {
-  #include "Animations/Aegis/AegisAnim.event"
+  #include "Aegis/AegisAnim.event"
 }
 
 BaneAnim:
 SureShotAnim:
 {
-  #include "Animations/Bane/BaneAnim.event"
+  #include "Bane/BaneAnim.event"
 }
 
 BlackMagicAnim:
 {
-	#include "Animations/Black Magic/BMAnim.event"
+	#include "Black Magic/BMAnim.event"
 }
