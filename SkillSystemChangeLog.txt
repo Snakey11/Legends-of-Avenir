@@ -14,9 +14,9 @@ mov r5, r0
 
 ldr		r0,[r4,#0xC]	@status word
 
-Comment new page graphic in EngineHacks/ModularStatScreenStrmag/ModularStatScreen.event
+Comment new page graphic in EngineHacks/Necessary/ModularStatScreen/ModularStatScreen.event
 
-Move all growth displays in EngineHacks/ModularStatScreenStrmag/asm/mss_page1_skills.s right by 1 tile
+Move all growth displays in EngineHacks/Necessary/ModularStatScreen/pages/strmag/mss_page1_skills.s right by 1 tile
 In EngineHacks/SkillSystem/Ross Skills/BlowCheck.s:
 	Change warding blow to 5 res
 	Change darting blow to 2 AS
@@ -31,16 +31,14 @@ Add the following to the unit menu:
 
 In the unit menu, make the supply command use NewSupplyUsability
 
-Add the following to EngineHacks/Strmag/Str Mag Split/MagicSwordRework/MagicSwordRework.event
+Add the following to EngineHacks/StrMagSplit/StrMagSplit/MagicSwordRework/MagicSwordRework.event
 	ORG $2ADDC // Remove runesword str/2 (now uses magic) and weird wind sword stuff.
 	SHORT 0xE055 // b #0x0802AE8A
 
 In EngineHacks/SkillSystem/Stances/Stances.event, make:
 	Change mixed stances to +2 to their stat and single stances to +3 to their stat
 
-Remove Capture ItemTable define in EngineHacks/SkillSystem/Teq Skills/FE8-Capture/FE8-Capture Master EA File.txt
-
-Make the following edit to EngineHacks/SkillSystem/Proc Skills/proc_lethality.s (Make lethality not proc on 0 damage)
+Make the following edit to EngineHacks/SkillSystem/Skills/ProcSkills/Lethality/proc_lethality.s (Make lethality not proc on 0 damage)
 beq	End
 mov r1, #0x5A
 ldrh r1, [ r4, r1 ] @ Attack
@@ -52,7 +50,7 @@ ble End @ End if damage is 0.
 
 @only activate if crit
 
-In EngineHacks/AnimaTriangle/AnimaTriangle.event, make type lists:
+In EngineHacks/ExternalHacks/AnimaTriangle/AnimaTriangle.event, make type lists:
 	FireList:
 	BYTE Fire Elfire Arcfire Bolganone Meteor Flare 0x00
 
@@ -66,20 +64,27 @@ In EngineHacks/AnimaTriangle/AnimaTriangle.event, make type lists:
 
 In EngineHacks/_MasterHackInstaller.event, comment the EMS MESSAGE line
 
-In EngineHacks/ModularStatScreenStrmag/ModularStatScreen.event:
-	Make 4 pages
+In EngineHacks/Necessary/ModularStatScreen/ModularStatScreen.event:
 	ORG $889d0
- 		SHORT $e010 //Temporary r-text fix to prevent freezing
+ 	SHORT $e010 //Temporary r-text fix to prevent freezing
 	Comment RText_Page4_Ladder code include
 	Comment MSS_page4 code include
-	Comment RText_Page4 RText data
+	Comment RText_Page4 RText data (In RText.event)
 	(The actual SupportRtext code has been added to the main repository OUTSIDE of the Skill System)
 
-In EngineHacks/SkillSystem/Internals/CalcLoops/MugLoadingCalcLoop/MugLoadCalcLoop.event, comment POIN RandomMug3
+In EngineHacks/Necessary/CalcLoops/MugLoadingCalcLoop/MugLoadCalcLoop.event, comment POIN RandomMug3
 
-Delete default animations in EngineHacks/SkillSystem/Proc Skills/Animations (Customs are outside of the Skill System)
+Delete default animations in EngineHacks/SkillSystem/Skills/ProcSkills/Animations (Customs are outside of the Skill System)
 	Also comment the default installers in EngineHacks/SkillSystem/Proc Skills/Proc Skills Installer.event
 
-Add POIN SpellswordLimits to EngineHacks/SkillSystem/Internals/CalcLoops/WeaponUsabilityLoop/WeaponLockCalcLoop.event
+Add POIN SpellswordLimits to EngineHacks/Necessary/CalcLoops/WeaponUsabilityLoop/WeaponLockCalcLoop.event
 
 Change Breaker hit/avoid bonus to 15 in EngineHacks/SkillSystem/Master Skill Installer.event
+
+In EngineHacks/SkillSystem/Skills/MasterSkillInstaller, comment the effectiveness skill line
+
+In EngineHacks\Necessary\ItemEffectRevamp\_ItemStatMacros.event, remove the ItemTable check
+
+In EngineHacks\SkillSystem\Skills\MugLoadingSkills\MugLoadingSkills.event, remove the default mug loading names
+
+In CustomDefinitions.event delete a lot of stuff lol
