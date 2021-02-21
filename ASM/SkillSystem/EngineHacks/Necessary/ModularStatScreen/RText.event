@@ -215,7 +215,7 @@ ST_Skill6:
   
   
 
-#ifdef ENABLE_PERSONAL_INFO
+/*#ifdef ENABLE_PERSONAL_INFO // Page 4 R Text is elsewhere.
 
     RText_Page4:
   
@@ -288,7 +288,7 @@ ST_Skill6:
   ST_Donate:
     RMenu(0,0,ST_Name4,0,0x86,0x48,DonateURL)
 	
-#endif // ENABLE_PERSONAL_INFO
+#endif // ENABLE_PERSONAL_INFO*/
 
 #ifdef GAIDEN_MAGIC
   #ifdef ENABLE_PERSONAL_INFO

@@ -106,7 +106,7 @@
 	  ORG $86E44
         jumpToHack(MSS_leftpage)
 
-    ORG $087184
+    /*ORG $087184 // This is now elsewhere.
 
       // This is Vanilla Stat Screen Page
       // This is now free (because unused) space
@@ -116,7 +116,7 @@
     RText_Page4_ladder:
       // page 4 helptext hook
       #incbin "asm/rtext_page4.dmp"
-      POIN RText_Page4
+      POIN RText_Page4*/
 
   POP
   
@@ -168,16 +168,16 @@
   
   #endif  // ONLY_SHOW_USED_RANKS
   
-  #ifdef ENABLE_PERSONAL_INFO
+  //#ifdef ENABLE_PERSONAL_INFO
   
-      #include "pages/mss_page4_runa.lyn.event"
+    //#include "pages/mss_page4_runa.lyn.event" // Page 4 is included elsewhere.
 	  
 	ALIGN 4
     PageNumberCheck:
       #include "asm/mss_threepageconditional.lyn.event"
 	  POIN PersonalDataTable
   
-  #else // ENABLE_PERSONAL_INFO
+  /*#else // ENABLE_PERSONAL_INFO
   
       #include "pages/mss_page4.lyn.event"
 		
@@ -188,7 +188,7 @@
 
     setText(0x0D4B,TxtData0x0D4B)
   
-  #endif // ENABLE_PERSONAL_INFO
+  #endif // ENABLE_PERSONAL_INFO*/
   
   
   #include "pages/mss_leftstatscreen.lyn.event"
