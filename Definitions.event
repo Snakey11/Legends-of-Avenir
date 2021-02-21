@@ -1599,7 +1599,7 @@
 #define SealMagID 210 //Shaman, Summoner, Druid
 */
 
-#include "ASM/SkillSystem_FE8/Engine Hacks/SkillSystem/skill_definitions.event"
+#include "ASM/SkillSystem/EngineHacks/SkillSystem/skill_definitions.event"
 
 //#ifndef DebuffTable
   //#define DebuffTable     0x0203F100
