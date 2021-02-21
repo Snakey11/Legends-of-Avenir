@@ -14,7 +14,7 @@ IdentityProblemsMugs: //List of mugs that identity problems can be randomized to
 BYTE 0x0c 0x09 0x0a
 ALIGN 2
 IdentityProblemsNames: //Make sure the names match the mugs from the list above and whatnot
-SHORT nameCamus nameZeke nameSirius
+SHORT 0 0 0 // nameCamus nameZeke nameSirius
 
 
 #include "RandomMug/RandomMug.event"
