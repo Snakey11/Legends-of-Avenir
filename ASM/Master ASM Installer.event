@@ -1,7 +1,7 @@
 
 ALIGN 4
 #ifdef SkillSystemIncluded
-	#include "SkillSystem_FE8/Engine Hacks/_MasterHackInstaller.event"
+	#include "SkillSystem/EngineHacks/_MasterHackInstaller.event"
 #else
 	#define SkillTester 0
 	#include "Delete with Skills.event"
