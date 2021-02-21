@@ -131,7 +131,7 @@
   WORD Growth_Options
   ALIGN 4
   BiorhythmTextIDLink:
-  SHORT SS_BiorhythmText
+  //SHORT SS_BiorhythmText
   
   #ifndef USE_STRMAG_SPLIT
   
@@ -168,16 +168,16 @@
   
   #endif  // ONLY_SHOW_USED_RANKS
   
-  //#ifdef ENABLE_PERSONAL_INFO
+  /*#ifdef ENABLE_PERSONAL_INFO
   
-    //#include "pages/mss_page4_runa.lyn.event" // Page 4 is included elsewhere.
+    #include "pages/mss_page4_runa.lyn.event" // Page 4 is included elsewhere.
 	  
 	ALIGN 4
     PageNumberCheck:
       #include "asm/mss_threepageconditional.lyn.event"
 	  POIN PersonalDataTable
   
-  /*#else // ENABLE_PERSONAL_INFO
+  #else // ENABLE_PERSONAL_INFO
   
       #include "pages/mss_page4.lyn.event"
 		
