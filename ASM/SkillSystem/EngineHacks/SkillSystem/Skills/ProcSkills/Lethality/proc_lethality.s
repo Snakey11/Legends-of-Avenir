@@ -33,6 +33,14 @@ cmp	r1,#0x7F	@check if Bane triggered
 beq	End
 cmp	r1,#0x00	@check if 0 chance
 beq	End
+mov r1, #0x5A
+
+ldrh r1, [ r4, r1 ] @ Attack
+mov r2, #0x5C
+ldrh r2, [ r5, r2 ] @ Other's defense
+sub r1, r1, r2
+cmp r1, #0x00
+ble End @ End if damage is 0.
 
 @only activate if crit
 mov r5, #0x64
