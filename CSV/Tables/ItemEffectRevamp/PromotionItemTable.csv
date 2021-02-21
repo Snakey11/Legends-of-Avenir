@@ -1,6 +1,6 @@
 INLINE PromotionItemTable,Promotion Item ID,##UNKNOWN##,Promotion Class List Pointer,Promo Item Usability Pointer
 0x0,HeroCrest,0x0,HeroCrestList|IsPointer,0x0
-0x1,Knightcrest,0x0,KnightCrestList|IsPointer,0x0
+0x1,KnightCrest,0x0,KnightCrestList|IsPointer,0x0
 0x2,OrionBolt,0x0,OrionBoltList|IsPointer,0x0
 0x3,ElysianWhip,0x0,ElysianWhipList|IsPointer,0x0
 0x4,GuidingRing,0x0,GuidingRingList|IsPointer,0x0
