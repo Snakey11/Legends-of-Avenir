@@ -4,14 +4,14 @@ The first number is the growth; second number is palette group index (sort of). 
 Palette group indices 5-14 (inclusive) correspond to the colors defined in "New Palette.txt". Currently, they progress from 5 ( green, high growth) to 14 (red, low growth). Debuffs, both to stats and growths, will use index 14 (dark red), so you may want to leave this one alone. The rest can be defined as you wish. You can see what the current colors look like in 'example text.png', made by L95.
 */
 
-BYTE 20 14
-BYTE 30 13
-BYTE 40 12
-BYTE 45 11
-BYTE 50 10
-BYTE 60 9
-BYTE 70 8
-BYTE 80 7
-BYTE 90 6
-BYTE 100 5
+BYTE 15 14
+BYTE 20 13
+BYTE 25 12
+BYTE 30 11
+BYTE 35 10
+BYTE 40 9
+BYTE 45 8
+BYTE 50 7
+BYTE 55 6
+BYTE 60 5
 BYTE 0 0 	//terminator
