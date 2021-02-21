@@ -8,7 +8,30 @@
 	#define PortraitSelectionEntry(TruePortraitID,FalsePortraitID,EventIDPointerList,ControlCode) "POIN EventIDPointerList ; SHORT ControlCode TruePortraitID FalsePortraitID 0"
 	ALIGN 4
 	PortraitSelectionTable:
+	PortraitSelectionEntry(MaleMilitaryMug,0x00,MaleMilitaryList,0xE0E0)
+	PortraitSelectionEntry(FemaleMilitaryMug,0x00,FemaleMilitaryList,0xE0E0)
+	PortraitSelectionEntry(MaleMercMug,0x00,MaleMercList,0xE0E0)
+	PortraitSelectionEntry(FemaleMercMug,0x00,FemaleMercList,0xE0E0)
+	PortraitSelectionEntry(MaleMageMug,0x00,MaleMageList,0xE0E0)
+	PortraitSelectionEntry(FemaleMageMug,0x00,FemaleMageList,0xE0E0)
+	//PortraitSelectionEntry(KendrickMug,0x00,KendrickList,0xE0E0)
 	SHORT 0x0 0x0 0x0 0x0 0x0 0x0
+	
+	//KendrickList:
+	//BYTE 0x00 0x00
+	
+	MaleMilitaryList:
+	BYTE 0x6E True  0x68 True  0x00 0x00
+	FemaleMilitaryList:
+	BYTE 0x6E False  0x68 True  0x00 0x00
+	MaleMercList:
+	BYTE 0x6E True  0x67 False  0x00 0x00
+	FemaleMercList:
+	BYTE 0x6E False  0x67 False  0x00 0x00
+	MaleMageList:
+	BYTE 0x6E True  0x67 True  0x00 0x00
+	FemaleMageList:
+	BYTE 0x6E False  0x67 True  0x00 0x00
 	
 #endif // PORTRAIT_SELECTION
 	
