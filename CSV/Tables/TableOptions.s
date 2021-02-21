@@ -47,6 +47,11 @@ CSV ItemEffectRevamp/ItemAITable.csv
 	INLINE True
 	WRITE_SEQUENTIALLY True
 
+CSV ItemEffectRevamp/PromotionItemTable.csv
+	TABLE PromotionItemTable ItemEffectRevamp/PromotionItemTable.nmm
+	INLINE True
+	WRITE_SEQUENTIALLY True
+
 CSV ItemEffectRevamp/StaffAITable.csv
 	TABLE AI_StaffArray ItemEffectRevamp/StaffAITable.nmm
 	INLINE True

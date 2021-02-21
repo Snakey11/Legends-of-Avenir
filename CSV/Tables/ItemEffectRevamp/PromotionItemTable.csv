@@ -1,0 +1,12 @@
+INLINE PromotionItemTable,Promotion Item ID,##UNKNOWN##,Promotion Class List Pointer,Promo Item Usability Pointer
+0x0,HeroCrest,0x0,HeroCrestList|IsPointer,0x0
+0x1,Knightcrest,0x0,KnightCrestList|IsPointer,0x0
+0x2,OrionBolt,0x0,OrionBoltList|IsPointer,0x0
+0x3,ElysianWhip,0x0,ElysianWhipList|IsPointer,0x0
+0x4,GuidingRing,0x0,GuidingRingList|IsPointer,0x0
+0x5,MasterSeal,0x0,MasterSealList|IsPointer,0x0
+0x6,HeavenSeal,0x0,0x88ADF96,PromoLordCheck|IsPointer|1
+0x7,OceanSeal,0x0,OceanSealList|IsPointer,0x0
+0x8,MoonBracelet,0x0,0x88ADFA4,PromoLordCheck|IsPointer|1
+0x9,SunBracelet,0x0,0x88ADFA6,PromoLordCheck|IsPointer|1
+End of Table,0xFFFF,0x0,0x0,0x0
