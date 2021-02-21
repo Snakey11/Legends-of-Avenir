@@ -1,5 +1,9 @@
 .thumb
 .org 0x00
+
+.global ArmsScrollPrepScreenUsability
+.type ArmsScrollPrepScreenUsability, %function
+ArmsScrollPrepScreenUsability:
 push {r1-r7}
 
 Effect:

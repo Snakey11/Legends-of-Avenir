@@ -16,7 +16,7 @@
 
 //Definitely don't edit anything below here
 PUSH
-SetArmScroll(ArmsScroll)
+//SetArmScroll(ArmsScroll) // This is now handled in the item table CSV.
 ORG 0x2F820
 BYTE 0x00 0x49 0x08 0x47
 POIN Arms|1
@@ -33,6 +33,5 @@ POIN ItemTable
 //#incbin "ASM+.DMPs/Usability.dmp"
 //POIN ItemTable
 
-Usability2:
 #include "ASM+.DMPs/Usability2.lyn.event"
 //#incbin "ASM+.DMPs/Usability2.dmp"
