@@ -363,7 +363,7 @@ POIN ClassAnimTable
 ORG $70A60
 POIN ClassAnimTable
 
-ORG $29398
+/*ORG $29398
 POIN HeroCrestList
 ORG $293A0
 POIN KnightCrestList
@@ -376,7 +376,7 @@ POIN GuidingRingList
 ORG $293C0
 POIN MasterSealList
 ORG 0x29408
-POIN OceanSealList
+POIN OceanSealList*/
 
 ORG $19900
 POIN EventPointerListOffset
