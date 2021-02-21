@@ -50,7 +50,8 @@ locks, and see in darkness.[X]
 
 ## SD_Lethality
 Lethality: Instantly kill opponent.[N]
-(50 % activation during criticals)[X]
+Must deal damage to activate.[N]
+(Skill/2 % activation)[X]
 
 ## SD_Bane
 Bane: Leave the opponent at 1 HP.[N]
@@ -111,7 +112,7 @@ Pavise: Nullify a physical attack.[N]
 (Skill % activation)[X]
 
 ## SD_DuelistsBlow
-Duelist's Blow: +15 Avo[N]
+Duelist's Blow: +30 Avo[N]
 when initiating battle.[X]
 
 ## SD_DeathBlow
@@ -119,19 +120,19 @@ Death Blow: +20 Crit[N]
 when initiating battle.[X]
 
 ## SD_DartingBlow
-Darting Blow: +2 Attack Speed[N]
+Darting Blow: +5 Attack Speed[N]
 when initiating battle.[X]
 
 ## SD_WardingBlow
-Warding Blow: +5 Res[N]
+Warding Blow: +20 Res[N]
 when initiating battle.[X]
 
 ## SD_CertainBlow
-Certain Blow: +15 Hit[N]
+Certain Blow: +40 Hit[N]
 when initiating battle.[X]
 
 ## SD_ArmoredBlow
-Armored Blow: +5 Def[N]
+Armored Blow: +10 Def[N]
 when initiating battle.[X]
 
 ## SD_Vantage
@@ -331,7 +332,7 @@ to damage dealt.[N]
 (Skill % activation)[X]
 
 ## SD_LifeAndDeath
-Life and Death: +4 to[N]
+Life and Death: +10 to[N]
 damage dealt and taken.[X]
 
 ## SD_LockTouch
@@ -412,31 +413,31 @@ when on terrain with effects.[X]
 
 ## SD_SealStr
 Seal Strength: Debuff opponent's Str[N]
-by 3 after combat. (Recover 1/turn)[X]
+by 6 after combat. (Recover 1/turn)[X]
 
 ## SD_SealSkl
 Seal Skill: Debuff opponent's Skl[N]
-by 3 after combat. (Recover 1/turn)[X]
+by 6 after combat. (Recover 1/turn)[X]
 
 ## SD_SealSpd
 Seal Speed: Debuff opponent's Spd[N]
-by 3 after combat. (Recover 1/turn)[X]
+by 6 after combat. (Recover 1/turn)[X]
 
 ## SD_SealLuk
 Seal Luck: Debuff opponent's Luck[N]
-by 3 after combat. (Recover 1/turn)[X]
+by 6 after combat. (Recover 1/turn)[X]
 
 ## SD_SealDef
 Seal Defense: Debuff opponent's Def[N]
-by 3 after combat. (Recover 1/turn)[X]
+by 6 after combat. (Recover 1/turn)[X]
 
 ## SD_SealRes
 Seal Resistance: Debuff opponent's Res[N]
-by 3 after combat. (Recover 1/turn)[X]
+by 6 after combat. (Recover 1/turn)[X]
 
 ## SD_SealMag
 Seal Magic: Debuff opponent's Mag[N]
-by 3 after combat. (Recover 1/turn)[X]
+by 6 after combat. (Recover 1/turn)[X]
 
 ## SD_Gamble
 Gamble: A reckless attack with[N]
@@ -510,7 +511,7 @@ other units two tiles away.[X]
 ## SD_DownWithArch
 Down with Arch: If the hit lands,[N]
 instantly kill the enemy unit.[N]
-(ONy if name starts with "Arch")[X]
+(Only if name starts with "Arch")[X]
 
 ## SD_UpWithArch
 Up with Arch: Adjacent ally units gain[N]
@@ -579,8 +580,8 @@ Dazzle: Opponents cannot[N]
 counterattack this unit.[X]
 
 ## SD_TriAdept
-Triangle Adept: Doubles[N]
-weapon triangle effects.[X]
+Triangle Adept: Doubles weapon[N]
+triangle effects for this unit.[X]
 
 ## SD_Supply
 Supply: This unit has[N]
@@ -687,7 +688,7 @@ Steal: Unit can steal items.[X]
 
 ## SD_StealPlus
 Steal+: Unit can steal unequipped[N]
-weapons and staffs if con>weight.[X]
+weapons and staves if con>weight.[X]
 
 ## SD_Capture
 Capture: Capture an enemy after[N]
@@ -846,18 +847,396 @@ health, +2 damage, +15% avoid.[X]
 Watchful: This unit cannot be[N]
 captured or stolen from.[X]
 
-##SD_Hero
+## SD_Hero
 Hero: +30% skill activation[N]
 rate when HP is below 50%.[X]
 
-##SD_Boon
+## SD_Boon
 Boon: Cure bad status effects[N]
 at the beginning of each turn.[X]
 
-##SD_ReMove
+## SD_ReMove
 Re-Move: Luck% chance to get[N]
 another action at end of turn.[X]
 
-##SD_Powerstaff
+## SD_Powerstaff
 Powerstaff: Get another action[N]
 after using a staff.[X]
+
+## SD_DriveStr
+Drive Strength: Allies within[N]
+2 spaces receive +4 strength.[X]
+
+## SD_DriveMag
+Drive Magic: Allies within[N]
+2 spaces receive +4 magic.[X]
+
+## SD_DriveSkl
+Drive Skill: Allies within[N]
+2 spaces receive +4 skill.[X]
+
+## SD_DriveSpd
+Drive Speed: Allies within[N]
+2 spaces receive +4 speed.[X]
+
+## SD_DriveLck
+Drive Luck: Allies within[N]
+2 spaces receive +4 luck.[X]
+
+## SD_DriveDef
+Drive Defense: Allies within[N]
+2 spaces receive +4 defense.[X]
+
+## SD_DriveRes
+Drive Resistance: Allies within[N]
+2 spaces receive +4 resistance.[X]
+
+## SD_Blossom
+Blossom: 2x growth rates,[N]
+but 1/2 exp gain.[X]
+
+## SD_Aptitude
+Aptitude: +20% to[N]
+all growth rates.[X]
+
+## SD_QuickRiposte
+Quick Riposte: If defending and[N]
+HP is 50% or higher, unit doubles[N]
+and attacker does not double.[X]
+
+## SD_Resolve
+Resolve: When HP < 50%,[N]
+gain 1.5x Str, Skl, & Spd.[X]
+
+## SD_Insight
+Insight: Hit +20.[X]
+
+## SD_Vigilance
+Vigilance: Avoid +20.[X]
+
+## SD_Daunt
+Daunt: -5 Hit and Crit to all[N]
+enemy units in a 3-tile radius.[X]
+
+## SD_BloodTide
+Blood Tide: Atk and Hit +5[N]
+to adjacent allies.[X]
+
+## SD_WhitePool
+White Pool: Atk and AS +5[N]
+to adjacent allies.[X]
+
+## SD_NightTide
+Night Tide: Def and Res +5[N]
+to adjacent allies.[X]
+
+## SD_Prescience
+Prescience: When initiating[N]
+battle, Hit and Avo +15.[X]
+
+## SD_DefiantAvo
+Deviant Avoid: When HP is 25%[N]
+or lower, gain +30 Avoid.[X]
+
+## SD_DefiantCrit
+Defiant Crit: When HP is 25%[N]
+or lower, gain +30 Crit.[X]
+
+## SD_DefiantStr
+Defiant Str: When HP is 25%[N]
+or lower, gain +4 Strength.[X]
+
+## SD_DefiantMag
+Defiant Mag: When HP is 25%[N]
+or lower, gain +4 Magic.[X]
+
+## SD_DefiantSkl
+Defiant Skl: When HP is 25%[N]
+[N]or lower, gain +4 Skill.[X]
+
+## SD_DefiantSpd
+Defiant Spd: When HP is 25%[N]
+or lower, gain +4 Speed.[X]
+
+## SD_DefiantLck
+Defiant Luck: When HP is 25%[N]
+or lower, gain +4 Luck.[X]
+
+## SD_DefiantDef
+Defiant Def: When HP is 25%[N]
+or lower, gain +4 Defense.[X]
+
+## SD_DefiantRes
+Defiant Res: When HP is 25%[N]
+or lower, gain +4 Resistance.[X]
+
+## SD_Bargain
+Bargain: Halves prices in shops.[X]
+
+## SD_ShortShield
+Short Shield: Gain 6 defense[N]
+against attacks recieved in melee.[X]
+
+## SD_TowerShield
+Tower Shield: Gain 6 defense[N]
+against attacks recieved at range.[X]
+
+## SD_TowerShieldPlus
+Tower Shield+: Take no damage[N]
+against attacks recieved at range.[X]
+
+## SD_VoidCurse
+Void Curse: This unit gives[N]
+no experience when defeated.[X]
+
+## SD_IndoorFighter
+Indoor Fighter: +10 Hit and[N]
+Avo when fighting indoors.[X]
+
+## SD_OutdoorFighter
+Outdoor Fighter: +10 Hit and[N]
+Avo when fighting outdoors.[X]
+
+## SD_TomeRangeUp
+Tome Range +1: Maximum range[N]
+of equipped tome is increased.[X]
+
+## SD_AlertStance
+Alert Stance: +15 Avo[N]
+when defending.[X]
+
+## SD_AlertStancePlus
+Alert Stance+: +30 Avo[N]
+when defending.[X]
+
+## SD_Corona
+Corona: Negate enemy resistance.[N]
+(Skill% activation)[X]
+
+## SD_Flare
+Flare: Halve enemy resistance.[N]
+(Skill% activation)[X]
+
+## SD_Tempest
+Tempest: Double biorhythm effects.[X]
+
+## SD_Serenity
+Serenity: Halve biorhythm effects.[X]
+
+## SD_Petrify
+Petrify: Inflict stone status.[N]
+(Skill% activation)[X]
+
+## SD_Enrage
+Enrage: Inflict berserk status.[N]
+(Skill% activation)[X]
+
+## SD_Deadeye
+Deadeye: Doubles hit rate.[N]
+Skill% chance to inflict sleep.[X]
+
+## SD_DragonFang
+Dragon Fang: 1.5x damage.[N]
+(Skill% activation)[X]
+
+## SD_Fortune
+Fortune: This unit[N]
+cannot be crit.[X]
+
+## SD_Assassinate
+Assassinate: When initiating battle[N]
+at 1 range: +2 Damage, double[N]
+attacks occur before counter.[X]
+
+## SD_ArcaneBlade
+Arcane Blade: When initiating battle[N]
+at 1 range: Add 3+(Mag/2) to Hit[N]
+and Crit[X]
+
+## SD_Poise
+Poise: +1 Move.[N]
+Negates enemy hit bonus from[N]
+weapon triangle advantage.[X]
+
+## SD_BlueFlame
+Blue Flame: Attack +2 to this[N]
+unit. When adjacent to an ally[N]
+with this skill, gain Attack +2.[X]
+
+## SD_DoubleLion
+Double Lion: All weapons[N]
+are treated as brave.[X]
+
+## SD_Eclipse
+Eclipse: Leave opponent with 1 HP.[N]
+(Skill % activation)[X]
+
+## SD_TriangleAttack
+Triangle Attack: Allows this unit[N]
+to perform a triangle attack with[N]
+2 other units who have this skill.[X]
+
+## SD_PushStr
+Push Strength: When HP[N]
+is full, gain +5 strength.[X]
+
+## SD_PushMag
+Push Magic: When HP[N]
+is full, gain +5 magic.[X]
+
+## SD_PushSkl
+Push Skill: When HP[N]
+is full, gain +5 skill.[X]
+
+## SD_PushSpd
+Push Speed: When HP[N]
+is full, gain +5 speed.[X]
+
+## SD_PushDef
+Push Defense: When HP[N]
+is full, gain +5 defense.[X]
+
+## SD_PushRes
+Push Resistance: When HP is[N]
+full, gain +5 resistance.[X]
+
+## SD_Skybreaker
+Skybreaker: Deal effective[N]
+damage to flying units.[X]
+
+## SD_Resourceful
+Resourceful: Double bonus[N]
+effectiveness multipliers.[X]
+
+## SD_Cultured
+Cultured: If attacking next to a unit[N]
+with Nice Thighs, move again.[N]
+-50 hit against units with Nice Thighs.[X]
+
+## SD_LullStr
+Lull Str: Negates the effects of[N]
+rallies on opponent's strength.[X]
+
+## SD_LullMag
+Lull Mag: Negates the effects of[N]
+rallies on opponent's magic.[X]
+
+## SD_LullSkl
+Lull Skl: Negates the effects of[N]
+rallies on opponent's skill.[X]
+
+## SD_LullSpd
+Lull Spd: Negates the effects[N]
+of rallies on opponent's speed.[X]
+
+## SD_LullLck
+Lull Luck: Negates the effects[N]
+of rallies on opponent's luck.[X]
+
+## SD_LullDef
+Lull Def: Negates the effects of[N]
+rallies on opponent's defense.[X]
+
+## SD_LullRes
+Lull Res: Negates the effects of[N]
+rallies on opponent's resistance.[X]
+
+## SD_LullSpectrum
+Lull Spectrum: Negates the[N]
+effects of rallies on opponent.[X]
+
+## SD_Shade
+Shade: Enemies are less[N]
+likely to target this unit.[X]
+
+## SD_ShadePlus
+Shade+: Enemies won't[N]
+target this unit.[X]
+
+## SD_Imbue
+Imbue: Heal HP equal to magic[N]
+at the start of each turn.[X]
+
+## SD_Thighdeology
+Thighdeology: If a unit within[N]
+3 tiles has Nice Thighs, gain[N]
++2 Attack and +20 Hit.[X]
+
+## SD_Thotslayer
+Thotslayer: +15 crit against units[N]
+with Nice Thighs or Personality.[X]
+
+## SD_Corrosion
+Corrosion: Decrease durability[N]
+of enemy's weapon by User's level[N]
+(Skill/2% activation)[X]
+
+## SD_KeepUp
+Keep Up: If unit is within 3[N]
+spaces of an ally with Canto[N]
+or Canto+, unit gains +2 Mov.[X]
+
+## SD_IndoorMarch
+Indoor March: If unit is on[N]
+indoor terrain, unit gains +2 Mov.[X]
+
+## SD_NatureRush
+Nature Rush: If unit is on[N]
+rough terrain, unit gains +2 Mov.[X]
+
+## SD_Amische
+Amische: This unit's religion prevents[N]
+them from using non-Iron weaponry.[X]
+
+## SD_Glacies
+Glacies: Add unit's Resistance[N]
+to damage dealt. (Skill % activation)[X]
+
+## SD_Gridmaster
+Gridmaster: Movement skills[N]
+do not end your action.[X]
+
+## SD_Skyguard
+Skyguard: +4 defense against[N]
+flying enemies if within 3[N]
+spaces of an ally flier.[X]
+
+## SD_Horseguard
+Horseguard: +4 defense against[N]
+horseback enemies if within 3[N]
+spaces of an ally horse rider.[X]
+
+## SD_Armorboost
+Armorboost: +4 attack and defense[N]
+against armored enemies if within[N]
+3 spaces of an armored ally.[X]
+
+## SD_TriAdeptPlus
+Triangle Adept+: Doubles[N]
+weapon triangle effects.[X]
+
+## SD_ChargePlus
+Charge+: If unit has used up[N]
+all movement, gain brave effect.[X]
+
+## SD_GreatShield
+Great Shield: Negate all damage.[N]
+(Defense % activation)[X]
+
+## SD_Moonlight
+Moonlight: Cannot double but[N]
+opponent cannot counterattack.[X]
+
+## SD_Vengeance
+Vengeance: Add half of damage[N]
+taken to damage dealt.[N]
+(Skill % activation)[X]
+
+## SD_Synchronize
+Synchronize: Statuses are also[N]
+applied to the attacker.[X]
+
+## SD_Swarp
+Swarp: Allows unit to swap[N]
+positions with an ally in[N]
+Mag/2 range.[X]
