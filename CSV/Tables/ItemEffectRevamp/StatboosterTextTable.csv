@@ -1,4 +1,4 @@
-INLINE StatBoosterTextTable,ItemID,TextID,Pointer
+INLINE StatBoosterTextTable,Item ID,Text ID,Statboster Text Routine Pointer
 Angelic Robe,0x5B,0x1C,0
 Energy Ring,0x5C,0x0,0x802F8FC
 SecretBook,0x5D,0x15,0

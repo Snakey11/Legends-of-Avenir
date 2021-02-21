@@ -92,11 +92,6 @@ CSV Skills/SkillAnimationTable.csv @ Skill animations.
 	INLINE True
 	WRITE_SEQUENTIALLY True
 	
-CSV Skills/SkillDescriptionTable.csv @ Skill descriptions.
-	TABLE SkillDescTable Skills/SkillDescriptionTable.nmm
-	INLINE True
-	WRITE_SEQUENTIALLY True	
-
 CSV Music/SoundRoomTable.csv @ Sound room.
 	TABLE SoundRoom Music/SoundRoomTable.nmm
 	INLINE True

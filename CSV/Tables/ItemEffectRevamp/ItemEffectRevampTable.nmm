@@ -9,25 +9,25 @@ Item Effect Revamp Pointer Table
 FE8_Item_Effects.txt
 NULL
 
-Usability Pointer
+Item Usability Pointer
 0
 4
 NEHU
 NULL
 
-PrepScreen Usability Pointer
+Item Prep Screen Usability Pointer
 4
 4
 NEHU
 NULL
 
-Targeting Pointer
+Item Target Pointer
 8
 4
 NEHU
 NULL
 
-Effect Pointer
+Item Effect Pointer
 12
 4
 NEHU
