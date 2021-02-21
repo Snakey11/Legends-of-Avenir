@@ -134,17 +134,17 @@ POIN ItemTable
 ORG $1C20E0
 POIN ItemTable
 
-ORG $28E88
-POIN ItemTargetTable
+//ORG $28E88
+//POIN ItemTargetTable
 
-ORG $288AC
-POIN ItemUsabilityTable
+//ORG $288AC
+//POIN ItemUsabilityTable
 
-ORG $2FC8C
-POIN ItemEffectTable
+//ORG $2FC8C
+//POIN ItemEffectTable
 
-ORG $29F30
-POIN PrepScreenUsabilityTable
+//ORG $29F30
+//POIN PrepScreenUsabilityTable
 
 ORG $19458
 POIN ClassTable
