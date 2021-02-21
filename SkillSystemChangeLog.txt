@@ -81,12 +81,61 @@ Add POIN SpellswordLimits to EngineHacks/Necessary/CalcLoops/WeaponUsabilityLoop
 
 Change Breaker hit/avoid bonus to 15 in EngineHacks/SkillSystem/Master Skill Installer.event
 
-In EngineHacks/SkillSystem/Skills/MasterSkillInstaller, comment the effectiveness skill line
+In EngineHacks/Necessary/ItemEffectRevamp/_ItemStatMacros.event, remove the ItemTable check
 
-In EngineHacks\Necessary\ItemEffectRevamp\_ItemStatMacros.event, remove the ItemTable check
-
-In EngineHacks\SkillSystem\Skills\MugLoadingSkills\MugLoadingSkills.event, remove the default mug loading names
+In EngineHacks/SkillSystem/Skills/MugLoadingSkills/MugLoadingSkills.event, remove the default mug loading names
 
 In EngineHacks/SkillSystem/Necessary/ModularStatScreen/ModularStatScreen.event, comment out the entire ENABLE_PERSONAL_INFO #ifdef and the SHORT SS_BiorhythmText
+
+In EngineHacks/SkillSystem/Skills/ProcSkills/ProcSkills.event, comment comment the Proc_CmbArtHpCost code
+
+In EngineHacks/SkillSystem/Skills/EffectivenessSkills/EffectivenessSkills.event, comment the EffectivenessRework.event include (This is outside the Skill System now)
+
+In EngineHacks/SkillSystem/Skills/EffectivenessSkills/Nullify/Nullify.event, replace WORD MonsterType with WORD 0
+
+Add BowDebuff to the pre-battle calc loop
+
+With Portrait Selection, use
+	ALIGN 4
+	PortraitSelectionTable:
+	PortraitSelectionEntry(MaleMilitaryMug,0x00,MaleMilitaryList,0xE0E0)
+	PortraitSelectionEntry(FemaleMilitaryMug,0x00,FemaleMilitaryList,0xE0E0)
+	PortraitSelectionEntry(MaleMercMug,0x00,MaleMercList,0xE0E0)
+	PortraitSelectionEntry(FemaleMercMug,0x00,FemaleMercList,0xE0E0)
+	PortraitSelectionEntry(MaleMageMug,0x00,MaleMageList,0xE0E0)
+	PortraitSelectionEntry(FemaleMageMug,0x00,FemaleMageList,0xE0E0)
+	//PortraitSelectionEntry(KendrickMug,0x00,KendrickList,0xE0E0)
+	SHORT 0x0 0x0 0x0 0x0 0x0 0x0
+	
+	//KendrickList:
+	//BYTE 0x00 0x00
+	
+	MaleMilitaryList:
+	BYTE 0x6E True  0x68 True  0x00 0x00
+	FemaleMilitaryList:
+	BYTE 0x6E False  0x68 True  0x00 0x00
+	MaleMercList:
+	BYTE 0x6E True  0x67 False  0x00 0x00
+	FemaleMercList:
+	BYTE 0x6E False  0x67 False  0x00 0x00
+	MaleMageList:
+	BYTE 0x6E True  0x67 True  0x00 0x00
+	FemaleMageList:
+	BYTE 0x6E False  0x67 True  0x00 0x00
+
+In EngineHacks/Necessary/ModularStatScreen/pages/mss_page3_newranks.s, remove the DrawSupports call
+
+In the growth colors table, use
+BYTE 15 14
+BYTE 20 13
+BYTE 25 12
+BYTE 30 11
+BYTE 35 10
+BYTE 40 9
+BYTE 45 8
+BYTE 50 7
+BYTE 55 6
+BYTE 60 5
+BYTE 0 0 	//terminator
 
 In CustomDefinitions.event delete a lot of stuff lol
