@@ -14,7 +14,7 @@ ALIGN 4
 ALIGN 4
 #include "Always Display Ranged Animation/Ranged Animation by Table Installer.event"
 
-#include "AnimaEffectiveness/AnimaEffectiveness.lyn.event"
+//#include "AnimaEffectiveness/AnimaEffectiveness.lyn.event" // This is now handled by effectiveness rework.
 /*ALIGN 4
 #inctext lyn "AnimaTriangle/NewAnimaTriangle.elf" "AnimaTriangle/Definitions.elf"
 FireList:
@@ -81,6 +81,8 @@ ALIGN 4
 #include "HPBars/HPBars.event"
 
 #include "HybridClasses/HybridHooks.lyn.event"
+#include "HybridClasses/Hybrids.lyn.event"
+
 ALIGN 4
 SpellswordList:
 BYTE SpellswordM SpellswordF SpellswordM2 SpellswordF2 BattleSage BattleSageF DreadFighterM DreadFighterF MaligKnight Executioner 0x00
@@ -137,7 +139,7 @@ KendrickName:
 String(Kendrick)
 BYTE 0x00
 
-#include "NarrowFont/Narrowfont installer.event"
+//#include "NarrowFont/Narrowfont installer.event"
 
 ALIGN 4
 #include "New CHAI/New CHAI.event"
@@ -216,8 +218,6 @@ ALIGN 4
 
 #include "SupportRework/SupportRework.event"
 
-#include "SupportRtext/Installer.event"
-
 ALIGN 4
 #include "ToggleFixedGrowths/ToggleFixedGrowths.event"
 
@@ -231,11 +231,11 @@ ALIGN 4
 
 #ifdef __DEBUG__
 	ALIGN 4
-	#include "SkillSystem_FE8/Engine Hacks/Debug.event"
+	#include "Debug/Debug.event"
 	
-	#inctext lyn "SkillSystem_FE8/Engine Hacks/WinAddition.elf"
+	#include "Debug/WinAddition.lyn.event"
 	
-	#inctext lyn "SkillSystem_FE8/Engine Hacks/winbuttonusability.elf"
+	#include "Debug/winbuttonusability.lyn.event"
 	ALIGN 4
 	WinButtonUsabilityCharacterList:
 	BYTE PlayerMMage PlayerMMonk PlayerMShaman PlayerFMage PlayerFMonk PlayerFShaman
@@ -345,12 +345,12 @@ SHORT 0x2000
 ORG $26B42
 SHORT 0x2000
 
-ORG $2889C // Break ItemUsabilityTable upper bound
+/*ORG $2889C // Break ItemUsabilityTable upper bound
 SHORT 0x2800 0xDA00 // cmp r0, #0x00 ; bge #0x080288A2
 ORG $2FC74 // Break ItemEffectTable upper bound
 SHORT 0x2800 0xDA00 // cmp r0, #0x00 ; bge #0x0802FC7A
 ORG $29F1E // Break PrepScreenUsabilityTable upper bound
-SHORT 0x2800 0xDA00 // cmp r0, #0x00 ; bge #0x08029F24
+SHORT 0x2800 0xDA00 // cmp r0, #0x00 ; bge #0x08029F24*/
 
 ORG $2BA0A // Allow non-player units to gain EXP if their EXP byte isn't 0xFF.
 SHORT 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0
