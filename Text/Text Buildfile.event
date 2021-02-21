@@ -66,6 +66,13 @@ by having this unit arrive.[X]
 ## Mov_Text_ID
 Mov[X]
 
+## PrepScreenUseSkillScroll
+ Skill learned[X]
+
+## SkillScrollDesc
+A scroll that teaches[N]
+a skill when used.[X]
+
 ## PrepScreenSupportDescText
 View conversations for[NL]
 this chapter.[X]
