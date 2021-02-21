@@ -62,7 +62,6 @@ WilSniper
 BattleSageM
 LostSoulM
 LostSoulF
-ArmoredWyvernLord
 EdgySwordmaster
 EmperorClass
 MurielSage
