@@ -1,3 +1,6 @@
+#FE8 Staff AI Table
+#
+
 1
 FE8 Staff AI Table
 0xD868C
@@ -6,11 +9,11 @@ FE8 Staff AI Table
 NULL
 NULL
 
-Item ID
+Item Effect ID
 0
 1
 NDHU
-Item List.txt
+FE8 Item Effect IDs.txt
 
 Staff AI Pointer
 4

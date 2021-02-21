@@ -37,12 +37,34 @@ CSV Classes/ClassTable.csv @ Things indexed by class.
 	WRITE_SEQUENTIALLY False
 	MAX_ENTRIES 256
 
+CSV ItemEffectRevamp/EffectAnimTable.csv @ List linking items to effect animations.
+	TABLE UseEffectAnimTable ItemEffectRevamp/EffectAnimTable.nmm
+	INLINE True
+	WRITE_SEQUENTIALLY True
+
+CSV ItemEffectRevamp/ItemAITable.csv
+	TABLE AI_ItemArray ItemEffectRevamp/ItemAITable.nmm
+	INLINE True
+	WRITE_SEQUENTIALLY True
+
+CSV ItemEffectRevamp/StaffAITable.csv
+	TABLE AI_StaffArray ItemEffectRevamp/StaffAITable.nmm
+	INLINE True
+	WRITE_SEQUENTIALLY True
+
+CSV ItemEffectRevamp/StatboosterTextTable.csv @ List linking statbooster item IDs to use text?
+	TABLE StatBoosterTextTable ItemEffectRevamp/StatboosterTextTable.nmm
+	INLINE True
+	WRITE_SEQUENTIALLY True
+
 CSV Items/ItemTable.csv @ Things indexed by item.
 	TABLE ItemTable Items/ItemTable.nmm
-	TABLE ItemUsabilityTable Items/ItemUsabilityTable.nmm -0x4B
-	TABLE ItemEffectTable Items/ItemEffectTable.nmm -0x4B
-	TABLE PrepScreenUsabilityTable Items/ItemPrepScreenUsabilityTable.nmm -0x5B
-	TABLE ItemTargetTable Items/ItemTargetTable.nmm -0x4B
+	@TABLE ItemUsabilityTable Items/ItemUsabilityTable.nmm -0x4B
+	@TABLE ItemEffectTable Items/ItemEffectTable.nmm -0x4B
+	@TABLE PrepScreenUsabilityTable Items/ItemPrepScreenUsabilityTable.nmm -0x5B
+	@TABLE ItemTargetTable Items/ItemTargetTable.nmm -0x4B
+	TABLE IERevampTable ItemEffectRevamp/ItemEffectRevampTable.nmm -0x4B
+	TABLE IBArray ItemEffectRevamp/ItemBoxEffectTable.nmm -0x4B
 	TABLE SetPoisonItemTable Items/PoisonItemTable.nmm
 	TABLE WeaponLockArrayPointerTable Items/WeaponLockTable.nmm
 	INLINE True
@@ -51,16 +73,6 @@ CSV Items/ItemTable.csv @ Things indexed by item.
 
 CSV Items/SpellAssociationTable.csv @ Just for spell association.
 	TABLE SpellAssociationTable Items/SpellAssociationTable.nmm
-	INLINE True
-	WRITE_SEQUENTIALLY True
-
-CSV Items/ItemAITable.csv @ Just for item AI
-	TABLE AI_ItemArray Items/ItemAITable.nmm
-	INLINE True
-	WRITE_SEQUENTIALLY True
-	
-CSV Items/StaffAITable.csv @ Just for staff AI.
-	TABLE AI_StaffArray Items/StaffAITable.nmm
 	INLINE True
 	WRITE_SEQUENTIALLY True
 	

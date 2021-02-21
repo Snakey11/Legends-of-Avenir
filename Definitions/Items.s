@@ -44,3 +44,4 @@ ToxinBow
 SpiritDust
 DoorKey_5
 Tempest
+SkillScroll
