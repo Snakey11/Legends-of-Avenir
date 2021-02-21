@@ -87,4 +87,6 @@ In EngineHacks\Necessary\ItemEffectRevamp\_ItemStatMacros.event, remove the Item
 
 In EngineHacks\SkillSystem\Skills\MugLoadingSkills\MugLoadingSkills.event, remove the default mug loading names
 
+In EngineHacks/SkillSystem/Necessary/ModularStatScreen/ModularStatScreen.event, comment out the entire ENABLE_PERSONAL_INFO #ifdef and the SHORT SS_BiorhythmText
+
 In CustomDefinitions.event delete a lot of stuff lol
