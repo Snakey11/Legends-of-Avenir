@@ -78,7 +78,7 @@
 	POIN SkillTester
 	WORD SlayerID
 	WORD NullifyID
-	WORD MonsterType
+	WORD 0
 	WORD SkybreakerID
 	WORD FlierType
 	WORD ResourcefulID

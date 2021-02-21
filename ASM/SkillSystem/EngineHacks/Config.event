@@ -24,7 +24,7 @@
 
 // If commented, slayer and effectiveness will remain the same as they are in vanilla
 // Look at SkillSystem/Skills/EffectivenessSkills/Nullify/_README.txt for the full ramifications of uncommenting this
-//#define ENABLE_SLAYER_AND_EFFECTIVENESS_REWORK
+#define ENABLE_SLAYER_AND_EFFECTIVENESS_REWORK
 
 // If uncommented, a full str/split will be implemented without replacing any stats
 // USE_SAVE_EXPANSION will be used even if commented

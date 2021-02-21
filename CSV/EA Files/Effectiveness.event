@@ -1,40 +1,54 @@
+//Sections of what was previousuly the installer for the rework itself, moved to its own file for ease of editing
 
-ALIGN 16
+ALIGN 4
+SlayerTable:
+WORD 0 //terminator
+
+//Protector item (macro still works, even if it's wrongly named)
+
+#define SetWeaponEffectiveness(type_list, coefficient_times_2) "BYTE 0 coefficient_times_2; SHORT type_list"
+
 ArmorEffectiveness:
-BYTE Knight Knight_F General General_F GreatKnight GreatKnight_F Baron Knight2 Sentinel SentinelF Hector MasterKnightM MasterKnightF 0x0 0x0 0x0 0x0
-
-ALIGN 16
+SetWeaponEffectiveness(ArmorType, 6)
+WORD 0
 HorseEffectiveness:
-BYTE Cavalier Cavalier_F Paladin Paladin_F Ranger Ranger_F MageKnight MageKnight_F Troubadour Valkyrie DarkKnightM DarkKnightF MasterKnightM MasterKnightF CavalierM2 CavalierF2 GreatKnight GreatKnight_F MountedBrigand GrandPaladin ShadeKnightM ShadeKnightF 0x0 0x0 0x0 0x0
-
-ALIGN 16
+SetWeaponEffectiveness(HorseType, 6)
+WORD 0
 ArmorHorseEffectiveness:
-BYTE Knight Knight_F General General_F GreatKnight GreatKnight_F Baron Knight2 Sentinel SentinelF Hector Cavalier Cavalier_F Paladin Paladin_F Ranger Ranger_F MageKnight MageKnight_F Troubadour Valkyrie DarkKnightM DarkKnightF MasterKnightM MasterKnightF CavalierM2 CavalierF2 MountedBrigand GrandPaladin ShadeKnightM ShadeKnightF 0x0 0x0 0x0 0x0
-
-ALIGN 16
+SetWeaponEffectiveness(ArmorType, 6)
+SetWeaponEffectiveness(HorseType, 6)
+WORD 0
 FlierEffectiveness:
-BYTE PegasusKnight FalcoKnight PegasusKnight2 BlackFalcoknight WyvernRider WyvernRider_F WyvernLord WyvernLord_F WyvernKnight WyvernKnight_F WyvernRider2 WyvernGeneral ArmoredWyvernLord MaligKnight 0x0 0x0 0x0 0x0
-
-ALIGN 16
+SetWeaponEffectiveness(FlierType, 6)
+WORD 0
 PegasusEffectiveness:
-BYTE PegasusKnight FalcoKnight PegasusKnight2 BlackFalcoknight 0x0 0x0 0x0 0x0
-
-ALIGN 16
-WyvernEffectiveness:
-BYTE WyvernRider WyvernRider_F WyvernLord WyvernLord_F WyvernKnight WyvernKnight_F WyvernRider2 WyvernGeneral ArmoredWyvernLord MaligKnight 0x0 0x0 0x0 0x0
-
-ALIGN 16
+SetWeaponEffectiveness(PegasusType, 6)
+WORD 0
+DragonEffectiveness:
+SetWeaponEffectiveness(DragonType, 6)
+WORD 0
 SwordEffectiveness:
-BYTE Thief Mercenary Mercenary_F Hero Hero_F Myrmidon Myrmidon_F Swordmaster Swordmaster_F Assassin Assassin_F Rogue ChampionM ChampionF MercenaryM2 MercenaryF2 MyrmidonM2 MyrmidonF2 JacketHero Hector Truerblade ServiusClass EdgySwordmaster ChampionF SpellswordM SpellswordF DreadFighterM DreadFighterF BattleSageM BattleSageF Strategist SpellswordM2 SpellswordF2 Executioner TruebladeM TruebladeF 0x0 0x0 0x0 0x0
-
-ALIGN 16
+SetWeaponEffectiveness(SwordType, 6)
+WORD 0
 LanceEffectiveness:
-BYTE Knight Knight_F General General_F PegasusKnight FalcoKnight PegasusKnight2 BlackFalcoknight WyvernRider WyvernRider_F WyvernLord WyvernLord_F WyvernKnight WyvernKnight_F WyvernRider2 Soldier ImpalerM ImpalerF Baron Knight2 SoldierM2 SoldierF2 Halberdier Sentinel SentinelF 0x0 0x0 0x0 0x0
-
-ALIGN 16
+SetWeaponEffectiveness(LanceType, 6)
+WORD 0
 AxeEffectiveness:
-BYTE Hero Hero_F Fighter Warrior Brigand Pirate Berserker ChampionM ChampionF Warlock Gladiator Fighter2 Brigand2 Pirate2 JacketHero Gladiator MountedBrigand MaligKnight 0x0 0x0 0x0 0x0
+SetWeaponEffectiveness(AxeType, 6)
+WORD 0
+FireEffectiveness:
+SetWeaponEffectiveness(HorseType, 4)
+WORD 0
+ThunderEffectiveness:
+SetWeaponEffectiveness(DragonType, 4)
+WORD 0
+WindEffectiveness:
+SetWeaponEffectiveness(PegasusType, 4)
+WORD 0
+WaterEffectiveness:
+SetWeaponEffectiveness(MageType, 4)
+WORD 0
 
-ALIGN 16
-MageEffectiveness:
-BYTE Mage Mage_F Sage Sage_F MageKnight MageKnight_F Bishop Bishop_F Shaman Shaman_F Druid Druid_F Summoner Summoner_F Monk Troubadour Valkyrie Patriarch Matriarch DarkKnightM DarkKnightF Magus MagusF MageM2 MageF2 ShamanM2 ShamanF2 MonkM2 MonkF2 GaidenSage IzukClass ShadeKnightM ShadeKnightF SpellswordM SpellswordF SpellswordM2 SpellswordF2 BattleSageM BattleSageF DreadFighterM DreadFighterF 0x0 0x0 0x0 0x0
+#define SetProtection(type_list) "SHORT 0 type_list"
+FlierProtection:
+SetProtection(FlierType)

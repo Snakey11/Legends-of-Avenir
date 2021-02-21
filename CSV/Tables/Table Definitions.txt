@@ -148,4 +148,31 @@
   // Use in conjunction with debuff table entry with orr operations
     // (Debuff table entries max at 0x1F)
 
+#define ArmorType 0x01
+#define HorseType 0x02
+#define FlierType 0x04
+#define PegasusType 0x08
+#define DragonType 0x10
+#define SwordType 0x20
+#define LanceType 0x40
+#define AxeType 0x80
+#define MageType 0x100
+
+//Status Effects
+#define NoStatusID 0
+#define PoisonStatusID 1
+#define SleepStatusID 2
+#define SilenceStatusID 3
+#define BerserkStatusID 4
+#define AtkRingStatusID 5
+#define DefRingStatusID 6
+#define CritRingStatusID 7
+#define AvoRingStatusID 8
+#define SickStatusID 9
+#define PetrifyStatusID 13
+
+//for setting what status effect 
+//status staves will give 
+#define ItemStatus(StatusID,Duration) "StatusID | (Duration << 4)"
+
 #endif
