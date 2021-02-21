@@ -1,6 +1,8 @@
 
 #define ChapterDataTable NewChapterDataTable
 
+#include "CSV/Tables/Table Definitions.txt"
+
 //Label Item defenitions
 #undef ToxinLance
 #define Dragonspear DragonSpear
@@ -1599,6 +1601,11 @@
 #define SealMagID 210 //Shaman, Summoner, Druid
 */
 
+#define SwordBreakerID SwordbreakerID
+#define LanceBreakerID LancebreakerID
+#define AxeBreakerID AxebreakerID
+#define BowBreakerID BowbreakerID
+#define TomeBreakerID TomebreakerID
 #include "ASM/SkillSystem/EngineHacks/SkillSystem/skill_definitions.event"
 
 //#ifndef DebuffTable
