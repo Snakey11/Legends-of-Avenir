@@ -38,6 +38,7 @@ POIN Frenzy // This was moved here because Str/Mag Split conflict, and... I'm no
 POIN UpWithArch
 POIN AxefaithHit
 POIN StancesASM
+POIN BowDebuff
 #ifdef ENABLE_GBA_LETHALITY
 POIN LethalitySkill Bane
 #else
