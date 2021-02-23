@@ -83,7 +83,7 @@ Change Breaker hit/avoid bonus to 15 in EngineHacks/SkillSystem/Master Skill Ins
 
 In EngineHacks/Necessary/ItemEffectRevamp/_ItemStatMacros.event, remove the ItemTable check
 
-In EngineHacks/SkillSystem/Skills/MugLoadingSkills/MugLoadingSkills.event, remove the default mug loading names
+In EngineHacks/SkillSystem/Skills/MugLoadingSkills/MugLoadingSkills.event, remove the default mug loading names and comment the RandomMug include
 
 In EngineHacks/SkillSystem/Necessary/ModularStatScreen/ModularStatScreen.event, comment out the entire ENABLE_PERSONAL_INFO #ifdef and the SHORT SS_BiorhythmText
 
@@ -136,6 +136,16 @@ BYTE 45 8
 BYTE 50 7
 BYTE 55 6
 BYTE 60 5
+
+In EngineHacks/ExternalHacks/StrMagSplit/StrMagSplit/PrepScreenMagBooster/PrepScreen.event, comment
+//ORG $29F30
+//POIN PrepScreenUsabilityTable
+
+In EngineHacks/ExternalHacks/StrMagSplit/StrMagSplit/Installer.event, change the starting defs with
+#define Mag_Booster_Item_Usability_Ptr "IERevampTable+4*(SpiritDust-0x4B)"
+#define Mag_Booster_Item_Effect_Ptr "IERevampTable+4*(SpiritDust-0x4B)+12" 
+#define Mag_Booster_Prep_Screen_Usability_Ptr "IERevampTable+4*(SpiritDust-0x5B)+4"
+
 BYTE 0 0 	//terminator
 
 In CustomDefinitions.event delete a lot of stuff lol
