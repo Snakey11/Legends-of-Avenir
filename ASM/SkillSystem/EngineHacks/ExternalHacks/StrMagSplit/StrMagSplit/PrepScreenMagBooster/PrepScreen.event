@@ -182,8 +182,8 @@
 	//##### MAG BOOSTER ITEM #####
 	ORG $29F1E
 	BYTE 0x68
-	ORG $29F30
-	POIN PrepScreenUsabilityTable
+	//ORG $29F30
+	//POIN PrepScreenUsabilityTable
 	
 	ORG $29464
 	callHack_r3(Prep_Screen_Usability1)
