@@ -72,7 +72,6 @@ WM_REMOVELOCATION, 0x9440, 8, -game:FE8 -indexMode:8
 
 #Used to load the Tower of Valni, Lagdou Ruins and Melkaen coast.
 WM_LOADLOCATION3, 0x9540, 8, -game:FE8 -indexMode:8
-	Value1, 2, 2
 	LocationID, 4, 2
 	Value2, 6, 2
 

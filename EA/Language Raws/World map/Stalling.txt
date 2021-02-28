@@ -7,10 +7,8 @@ WM_WAITFORFX, 0x9920, 4, -game:FE8 -indexMode:8
 #Don't execute more events until sprites have finished moving	
 WM_WAITFORSPRITES, 0xAC40, 8, -game:FE8 -indexMode:8
 	Value1, 2, 2
-#Always 0xFFFF
-	Value2, 4, 2
-#Always 0xFFFF
-	Value3, 6, 2
+	0xFFFF, 4, 2, -fixed
+	0xFFFF, 6, 2, -fixed
 
 WM_WAITFORTEXT, 0xB120, 4, -game:FE8 -indexMode:8
 

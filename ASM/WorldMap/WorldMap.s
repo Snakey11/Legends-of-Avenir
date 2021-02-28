@@ -25,6 +25,9 @@
 .equ SetBgTileDataOffset, 0x08000FDC
 .equ GetBgControlBuffer, 0x8000F44
 .equ SetBgPosition, 0x0800148D
+.equ gProc_MapTask, 0x0859D908
+.equ gProc_VBlankHandler, 0x0859D8B8
+.equ ProcStartBlocking, 0x08002CE0
 
 .global LoadSmallWorldMap
 .type LoadSmallWorldMap, %function
@@ -230,6 +233,41 @@ mov r2, #0x00
 blh SetBgPosition, r3
 pop { r0 }
 bx r0
+
+.global WorldMapWrapperProcBlockMAPTASK
+.type WorldMapWrapperProcBlockMAPTASK, %function
+WorldMapWrapperProcBlockMAPTASK: @ Called by our proc to block the running MAPTASK proc. Namely it updates BG positions which is NOT what we want. Just block it with our dummy proc.
+push { lr }
+ldr r0, =gProc_MapTask
+blh ProcFind, r1
+cmp r0, #0x00
+beq EndWMWrapperProcBlockMAPTASK @ If for whatever reason MAPTASK doesn't exist, don't block it.
+	mov r1, r0
+	ldr r0, =WorldMapGenericBlocker
+	blh ProcStartBlocking, r2
+EndWMWrapperProcBlockMAPTASK:
+pop { r0 }
+bx r0
+
+.global WorldMapWrapperProcBlockVBlankHandler
+.type WorldMapWrapperProcBlockVBlankHandler, %function
+WorldMapWrapperProcBlockVBlankHandler: @ The VBlank handler appears to flush a map sprite buffer into VRAM where our location sprites are loaded. Prevent that.
+push { lr }
+ldr r0, =gProc_VBlankHandler
+blh ProcFind, r1
+cmp r0, #0x00
+beq EndWMWrapperProcBlockVBlank @ If for whatever reason MAPTASK doesn't exist, don't block it.
+	mov r1, r0
+	ldr r0, =WorldMapGenericBlocker
+	blh ProcStartBlocking, r2
+EndWMWrapperProcBlockVBlank:
+pop { r0 }
+bx r0
+
+.global WorldMapGenericBlockerLoop
+.type WorldMapGenericBlockerLoop, %function
+WorldMapGenericBlockerLoop: @ Dummy loop.
+bx lr
 
 @ THIS was successful in blocking the event engine and showing the small world map. I don't think we invoked the WM event engine, though.
 /*push { r4, lr } @ Wrapper for Make6C_GMap_RM (0x080C2420). r0 = parent proc (event engine).

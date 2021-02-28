@@ -10,14 +10,19 @@ WM_CENTERCAMONLORD, 0x8540, 8, -game:FE8 -indexMode:8
 	0, 6, 2, -fixed
 
 #Coordinates of 0xFFFF set coords to next destination
+#WM_MOVECAM, 0x8680, 16, -game:FE8 -indexMode:8 # These raws are really deceptive and... wrong...
+#	val1, 2, 2
+#	X, 4, 2
+#	Y, 6, 2
+#	val2, 8, 2
+#	Speed, 10, 2
+#	Delay, 12, 2
+#	val3, 14, 2
+
 WM_MOVECAM, 0x8680, 16, -game:FE8 -indexMode:8
-	val1, 2, 2
-	X, 4, 2
-	Y, 6, 2
-	val2, 8, 2
-	Speed, 10, 2
-	Delay, 12, 2
-	val3, 14, 2
+	StartingCoords, 4, 4
+	EndingCoords, 8, 4
+	Speed, 12, 2
 
 #For coords, 0xFFFF uses current location
 WM_MOVECAMTO, 0x8780, 16, -game:FE8 -indexMode:8

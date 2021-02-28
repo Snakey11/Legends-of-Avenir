@@ -8,19 +8,32 @@ ALIGN 4
 WorldMapWrapperProc:
 PROC_YIELD // Buffer.
 PROC_SET_NAME(WorldMapWrapperProcName)
+PROC_CALL_ROUTINE(WorldMapWrapperProcBlockMAPTASK) // MAPTASK does things we don't want it to. Let's block it.
+PROC_CALL_ROUTINE(WorldMapWrapperProcBlockVBlankHandler) // The VBlank handler does a bunch of stuff we don't want.
 PROC_CALL_ROUTINE(0x80311A9)
 PROC_CALL_ROUTINE(0x080BA2E5) // Start gProc_WorldMap.
 PROC_NEW_CHILD(0x08A3E624) // Start gProc_GMapMuEntry.
 PROC_CALL_ROUTINE(0x080B8681) // Start gProc_8A3D700. Seems to be closely tied to displaying faces in WM text?
+PROC_YIELD
+PROC_CALL_ROUTINE(0x080B8E15) // LoadGMObjGraphics. Draws tiles for location sprites.
 PROC_CALL_ROUTINE(WorldMapWrapperProcCallEvents) 
 PROC_LOOP_ROUTINE(WorldMapWrapperProcAreEventsFinished)
 PROC_END_ALL(0x08A3D748) // End gProc_WorldMap.
 PROC_END_ALL(0x08A3EAF0) // End gProc_GmapRMUpdate.
+PROC_END_ALL(WorldMapGenericBlocker)
 PROC_CALL_ROUTINE(WorldMapResetBg2Offset)
 PROC_END
 WorldMapWrapperProcName:
 String("WorldMapWrapper") ; BYTE 0
 // +0x2C is the pointer to our new event engine proc.
+
+ALIGN 4
+WorldMapGenericBlocker: // This is a generic blocker proc to halt processes that we don't want to happen.
+PROC_SET_NAME(WorldMapGenericBlockerName)
+PROC_LOOP_ROUTINE(WorldMapGenericBlockerLoop)
+PROC_END
+WorldMapGenericBlockerName:
+String("WorldMapBlocker") ; BYTE 0
 
 PUSH
 ORG $C2358
@@ -34,6 +47,36 @@ BYTE 0x02
 ORG $C25D2
 SHORT 0x2100 0x2201 
 POP
+
+/* Notes on the LARGE world map:
+	Many palettes are free!
+		Palette 0x0 is consumed by text in the minimug box.
+		Palette 0x1 is consumed by the text box that scrolls from the bottom (but the text itself is composed of sprites!).
+		Palette 0x4 is consumed by the minimug.
+		Palette 0x5 is consumed by the level display.
+		Palette 0x7 is consumed by the minimap.
+		Palette 0x8 is consumed by the background for the minimug box.
+		Palettes 0x9 - 0xC are consumed by the world map itself.
+		Palette 0xE is consumed by paths.
+		Everything else is free?
+		
+		Suppose I want to use palette 0x0 for text...
+		Since I don't care about a TRAVERSABLE world map, I can consider all palettes except for palettes 0x0 and 0x1 as free (unless I want to display routes).
+		This means that I theoretically have 14 palettes to use!
+	
+	The image for the large world map is at 0xA83364 uncompressed (which kinda surprises me tbh). (Thanks MisakaMikoto for this doc)
+	The palette GROUP is at 0xA95FE4 uncompressed.
+	The palette MAP is at 0xA96064 compressed.
+	The palette map is interesting...
+		It is an array with one byte per 2 tiles.
+		The lower nibble is the palette (0-3) of the first tile of the doublet.
+		Likewise, the upper nibble is the palette (0-3) of the second.
+		i.e. 0x03 will indicate that the first tile uses palette 3 and the second tile uses palette 0.
+		These are NOT palette BANKS. These are RELATIVE to the starting bank.
+		I see no reason why I can't change the function reading this to instead behave like...
+			The lower nibble is the static palette ID of the first tile.
+			The higher nibble is the static palette ID of the second tile.
+*/
 
 /*
 ALIGN 4
