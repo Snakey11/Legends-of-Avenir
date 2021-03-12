@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="8" tileheight="8" nextobjectid="1">
+ <tileset firstgid="1" name="TextTiles" tilewidth="8" tileheight="8">
+  <image source="TextTiles.png" width="104" height="8"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt1DEOgCAQRNFRVBDdO3n/UzGlMUuiJO42W7wO8gPFVADVwTJoBa6NMo3cn0II4aNZcRp0te0sBt1dcXT+4Y77DO4z8ouzGqHUefefxKktTm1xaj+7Vm2ta9FugocLig==
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,40 @@
+
+////////////////////////////////////////////////////
+//                                                //
+// Disassembled with Nintenlord's Event Assembler //
+// Version: 11.1.0.0                              //
+// Game: FE8                                      //
+// File: Clean.gba                                //
+// Offset: $A3ACB0                                //
+//                                                //
+////////////////////////////////////////////////////
+
+
+
+ORG $A3ACB0
+EVBIT_MODIFY 0x1
+WM_SPAWNLORD 0x0 0x0 0x1 0xC 0x0
+WM_CENTERCAMONLORD
+WM_FADEOUT 0x0 0x0 0x0
+WM_TEXTDECORATE
+EVBIT_MODIFY 0x0
+STAL 30
+WM_MOVECAM 0x0 0xFFFF 0xFFFF 0xFFFF 0x56 0x2D 0x0
+WM_WAITFORCAM
+STAL 20
+WM_CREATENEXTDESTINATION
+WM_WAITFORFX
+STAL 40
+WM_DRAWPATH 0x0 0xD 0x0
+STAL 70 26
+_0x8880 0x0 0xFFFF 0xFFFF 0x0 0x1A 0x0 0x0
+WM_WAITFORCAM
+STAL 26
+WM_MAKELORDVISIBLE 0x0
+EVBIT_MODIFY 0x1
+CALL 0x591F40
+ENDA
+
+//The next line is to ensure that new events do not overwrite other data.
+//Do not delete unless you are SURE you know what you are doing!
+ASSERT $A3AD40 - currentOffset

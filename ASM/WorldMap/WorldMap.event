@@ -35,6 +35,18 @@ PROC_END
 WorldMapGenericBlockerName:
 String("WorldMapBlocker") ; BYTE 0
 
+ALIGN 4
+NewWMTextTiles:
+#incext png2dmp "TextTiles.png" "--lz77"
+
+ALIGN 4
+NewWMTextTSA:
+#incbin "NewTextBox.dmp"
+
+ALIGN 4
+WorldMapTextBoxPaletteData:
+#incbin "WorldMapTextBoxPaletteData.dmp"
+
 PUSH
 ORG $C2358
 SHORT 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0
@@ -46,6 +58,21 @@ BYTE 0x02
 
 ORG $C25D2
 SHORT 0x2100 0x2201 
+
+ORG $BFD64
+POIN NewWMTextTiles
+
+ORG $BFD6C
+POIN NewWMTextTSA
+
+//ORG $BFDD4
+//SHORT 0x800C // Make the text box just fade in instead of slide in. See - my insane attempt at changing the slide in in WorlMap.s.
+ORG $BFFC4 // This prevents the BG sliding.
+WORD 0
+//ORG $BFDA0 // This nulls out the routine that fills the HBlank update table with colors. This also breaks the idle drawing.
+//SHORT 0x4770
+//ORG $C0092
+//SHORT 0xE02E
 POP
 
 /* Notes on the LARGE world map:
