@@ -117,6 +117,7 @@ EVBIT_T 0x8 // Tell the event engine we're faded in.
 
 SVAL 0x1 True
 SVAL 0x2 PrologueWorldMapEvents|IsPointer
+//SVAL 0x2 PrologueWorldMapTestEvents|IsPointer
 ASMC StartSmallWorldMap|1
 
 ASMC GetMode|1
@@ -142,6 +143,61 @@ EndingScene:
 ENDA
 
 //Label WorldMapEvents
+PrologueWorldMapTestEvents:
+EVBIT_MODIFY 0x1
+WM_MAKELORDDISAPPEAR
+_0xC220
+STAL 32
+WM_FADEOUT 0x0 0x0 0x0
+MUSC Aquatic_Dystopia
+
+EVBIT_MODIFY 0x0
+STAL 0x40
+Text(ProloguePrepForMapText)
+STAL 0x10
+//WM_LOADLOCATION2 0 0 0
+//PLACEDOT 0x0 0x14 0x1
+//PLACEDOT 0x1 0x12 0x1
+//WM_MOVECAM Coords(0,0) Coords(100,100) 0x60
+//WM_WAITFORCAM
+STAL 0x20
+
+/*PUTSPRITE 0x2 Soldier Enemy 0x0 // THIS WORKED FOR A MOVING SPRITE (except that the starting position of the sprite relies on the location coords).
+WM_PUTMOVINGSPRITE 0x2 0x0 20 20 80 80 120 0x3 0x0
+WM_WAITFORSPRITES 0x0*/
+//WM_MOVECAM Coords(0,0) Coords(240,30) 0x60
+//WM_WAITFORCAM
+//WM_CREATENEXTDESTINATION
+//WM_WAITFORFX
+//#define LoadGMObjGraphics $B8E14
+//ASMC LoadGMObjGraphics|1
+STAL 26
+STAL 20
+WM_LOADLOCATION3 0x00 0x0 // Handled by Event95_.
+WM_WAITFORFX
+STAL 40
+WM_LOADLOCATION3 0x02 0x0
+WM_WAITFORFX
+STAL 40 
+
+/*PUTSPRITE 0x2 Soldier Enemy 0x0 // THIS WORKED TO FADE IN A SPRITE!
+WM_PUTSPRITE 0x2 Enemy 20 20
+WM_FADEINSPRITE 0x2 60*/
+
+//WM_PUTMOVINGSPRITE 0x2 Soldier 0x0 216 216 85 65 210 0x3 10 0
+//WM_WAITFORSPRITES 0x0 0x0 0x0
+//WM_PUTSPRITE 0x1 Cavalier Ally 20 20
+/*STAL 0x20
+WM_MOVECAM Coords(0,0) Coords(200,20) 0x60
+WM_WAITFORCAM
+STAL 0x20
+WM_MOVECAM Coords(200,20) Coords(180,100) 0x60
+WM_WAITFORCAM*/
+
+STAL 0x80
+SVAL 0xB 0x1
+ENDA
+
 PrologueWorldMapEvents:
 EVBIT_MODIFY 0x1
 _0xC220
@@ -157,12 +213,29 @@ Text(ProloguePrepForMapText)
 STAL 0x10
 WM_TEXTDECORATE
 EVBIT_MODIFY 0x0
-STAL 60
 WM_SHOWTEXTWINDOW 0x0 0x28 0x1
 WM_WAITFORTEXT
+	STAL 16
+	ASMC WorldMapStartNameProc|1
+	SVAL 0x1 JasperNameText
+	ASMC WorldMapSetNameProcParams|1
+	STAL 16
 WM_TEXTSTART
 WM_TEXT PrologueWMMainText
 TEXTEND
+	STAL 16
+	SVAL 0x1 DerekNameText
+	ASMC WorldMapSetNameProcParams|1
+	STAL 16
+	TEXTCONT
+	TEXTEND
+	STAL 16
+	SVAL 0x1 0x00
+	ASMC WorldMapSetNameProcParams|1
+	STAL 16
+	TEXTCONT
+	TEXTEND
+
 STAL 0x10
 WM_MOVECAM2 0x0 0x0 0x00 0x0 0x10 0x3C 0x0 // WM_MOVECAM2 Value1 *Starting X* *Starting Y* *Ending X* *Ending Y* Speed Delay 
 STAL 90
