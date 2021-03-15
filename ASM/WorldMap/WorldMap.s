@@ -35,9 +35,25 @@
 .equ CallMapEventEngine, 0x0800D07C
 .equ StartMapEventEngine, 0x0800D0B0
 .equ ProcStartBlocking, 0x08002CE0
-.equ gMemorySlot, 0x030004B8
 .equ BreakProcLoop, 0x08002E94
 .equ memcpy, 0x080D1C0C
+.equ GetStringFromIndex, 0x0800A240
+.equ strcpy, 0x080D1D3C
+.equ ProcGoto, 0x08002F24
+.equ Text_Clear, 0x8003DC8
+.equ Text_InsertString, 0x08004480
+.equ Text_Display, 0x08003E70
+.equ gpCurrentFont, 0x02028E70
+.equ gLCDIOBuffer, 0x03003080
+.equ Text_InitFont, 0x08003C94
+.equ Text_GetStringTextCenteredPos, 0x08003F90
+.equ SetColorEffectsParameters, 0x08001EA0
+.equ SetColorEffectsFirstTarget, 0x08001ED0
+.equ SetColorEffectsSecondTarget, 0x08001F0C
+.equ BreakProcLoop, 0x08002E94
+.equ Dialogue_InitObjGfx, 0x080068AC
+.equ EnablePaletteSync, 0x08001F94
+.equ BgMapFillRect, 0x080D74A8
 
 .global LoadSmallWorldMap
 .type LoadSmallWorldMap, %function
@@ -291,6 +307,361 @@ bx r0
 .type WorldMapGenericBlockerLoop, %function
 WorldMapGenericBlockerLoop: @ Dummy loop.
 bx lr
+
+.ltorg
+.align
+
+/*
+struct WorldMapNameProc
+{
+	PROC_HEADER
+	u8 status; // 0x29. 0 = new (nothing drawn), 1 = displaying a name, 2 = termination.
+	u16 fadeState; // 0x2A. Counter for fading in and out.
+	char name[16]; // 0x2C. Name to display.
+	Proc* eventEngineProc; // 0x3C. Pointer to the event engine proc.
+	Proc* eventEngineBlocker; // 0x40. Pointer to the proc blocking the event engine.
+	TextHandle handle; // 0x44.
+}
+*/
+
+.global WorldMapStartNameProc
+.type WorldMapStartNameProc, %function
+WorldMapStartNameProc: @ Start the name display for the world map text. Intended to be ASMCed.
+push { r4, lr }
+mov r4, r0 @ Event engine proc pointer.
+ldr r0, =WorldMapWrapperProc
+blh ProcFind, r1
+cmp r0, #0x00
+beq EndWorldMapStartNameProc @ If our wrapper proc doesn't exist, then just ignore this call.
+	mov r1, r0 @ Make this a child of our world map wrapper proc.
+	ldr r0, =WorldMapNameProc
+	blh ProcStart, r2
+	str r4, [ r0, #0x3C ] @ Store the event engine pointer.
+EndWorldMapStartNameProc:
+pop { r4 }
+pop { r0 }
+bx r0
+
+.ltorg
+.align
+
+.global WorldMapSetNameProcParams
+.type WorldMapSetNameProcParams, %function
+WorldMapSetNameProcParams: @ Set the parameters for this proc and jump accordingly. Designed to be ASMCed. Slot 1 = text ID.
+push { r4, lr }
+ldr r0, =WorldMapNameProc
+blh ProcFind, r1
+mov r4, r0
+cmp r0, #0x00
+beq EndWorldMapNameProcSetParams
+	ldr r0, =gMemorySlot
+	ldr r0, [ r0, #0x04 ]
+	cmp r0, #0x00
+	bne SetNameProcParamsGetString
+		@ They want to terminate.
+		mov r1, #0x02
+		mov r2, #0x29
+		strb r1, [ r4, r2 ] @ Set the status.
+		mov r0, r4
+		mov r1, #0x03
+		b SetNameProcParamsGotoLabel
+	SetNameProcParamsGetString:
+	blh GetStringFromIndex, r1
+	mov r1, r0 @ Source.
+	mov r2, #0x2C
+	add r0, r4, r2 @ Destination.
+	blh strcpy, r2 @ Copy the string to the proc state.
+	mov r1, #0x29
+	ldrb r2, [ r4, r1 ] @ Get the current status.
+	mov r0, #0x01 @ If we're here, we should always want to se the status to 1.
+	strb r0, [ r4, r1 ] @ ... and clear it.
+	add r1, r2, #0x01 @ The proc labels from here are 1+ the corresponding status.
+	mov r0, r4
+	SetNameProcParamsGotoLabel:
+	blh ProcGoto, r2 @ Go to the appropriate proc label depending on whether there currently is a name drawn.
+EndWorldMapNameProcSetParams:
+pop { r4 }
+pop { r0 }
+bx r0
+
+.ltorg
+.align
+
+.global WorldMapNameProcInitialize
+.type WorldMapNameProcInitialize, %function
+WorldMapNameProcInitialize: @ Initialize the proc state parameters. r0 = proc pointer.
+mov r1, #0x00
+mov r2, #0x29
+strb r1, [ r0, r2 ]
+strh r1, [ r0, #0x2A ]
+str r1, [ r0, #0x2C ]
+str r1, [ r0, #0x30 ]
+str r1, [ r0, #0x34 ]
+str r1, [ r0, #0x38 ]
+str r1, [ r0, #0x40 ]
+str r1, [ r0, #0x44 ]
+str r1, [ r0, #0x48 ]
+bx lr
+
+.global WorldMapNameProcBlockEventEngine
+.type WorldMapNameProcBlockEventEngine, %function
+WorldMapNameProcBlockEventEngine: @ Block the event engine with a generic blocker.
+push { r4, lr }
+mov r4, r0 @ Store the proc pointer.
+ldr r1, [ r0, #0x40 ] @ Current blocker proc (shouldn't exist, but we'll check anyway).
+cmp r1, #0x00
+bne EndNameProcBlockEventEngine @ It's already blocked!
+	ldr r1, [ r0, #0x3C ] @ Event engine pointer.
+	ldr r0, =WorldMapGenericBlocker
+	blh ProcStartBlocking, r2
+	str r0, [ r4, #0x40 ]
+EndNameProcBlockEventEngine:
+pop { r4 }
+pop { r0 }
+bx r0
+
+.ltorg
+.align
+
+.global WorldMapNameProcUnblockEventEngine
+.type WorldMapNameProcUnblockEventEngine, %function
+WorldMapNameProcUnblockEventEngine: @ If the event engine is blocked by our generic blocker, unblock it.
+push { lr }
+ldr r2, [ r0, #0x40 ] @ Pointer to our generic blocker (if it exists).
+mov r1, #0x00
+str r1, [ r0, #0x40 ]
+cmp r2, #0x00
+beq EndNameProcUnblockEventEngine
+	mov r0, r2
+	blh BreakProcLoop, r1
+EndNameProcUnblockEventEngine:
+pop { r0 }
+bx r0
+
+.ltorg
+.align
+
+.global WorldMapNameProcWaitForDirection
+.type WorldMapNameProcWaitForDirection, %function
+WorldMapNameProcWaitForDirection: @ Wait for event script input.
+bx lr
+
+.ltorg
+.align
+
+.global WorldMapNameProcHandleTextDraw
+.type WorldMapNameProcHandleTextDraw, %function
+WorldMapNameProcHandleTextDraw: @ Draw the name text. r0 = proc pointer.
+push { r4, lr }
+mov r4, r0
+
+blh Text_InitFont, r0
+mov r0, #0x00
+str r0, [ r4, #0x44 ] @ Clear out our TextHandle space in case it isnt' clear for whatever reason.
+str r0, [ r4, #0x48 ]
+ldr r0, =gpCurrentFont
+ldr r0, [ r0 ]
+ldrh r0, [ r0, #0x12 ] @  handle.tileIndexOffset = gpCurrentFont->tileNext.
+mov r1, #0x44
+strh r0, [ r4, r1 ]
+mov r0, #0x06
+mov r1, #0x48
+strh r0, [ r4, r1 ] @ handle.tileWidth = 0x06.
+mov r1, #0x44
+add r0, r4, r1
+blh Text_Clear, r1
+mov r0, #46 @ 46 pixels wide.
+mov r1, #0x2C
+add r1, r1, r4 @ String pointer.
+blh Text_GetStringTextCenteredPos, r2
+mov r1, r0 @ X shift.
+ldr r0, =Text_InsertString
+mov lr, r0
+mov r2, #0x44
+add r0, r4, r2 @ TextHandle pointer.
+mov r2, #0x00 @ Color.
+mov r3, #0x2C
+add r3, r4, r3
+.short 0xF800
+mov r2, #0x44
+add r0, r4, r2 @ TextHandle pointer.
+ldr r1, =gBg1MapBuffer
+mov r2, #12 @ Y.
+lsl r2, r2, #0x06 @ Multiply Y by 64.
+add r1, r1, r2
+mov r2, #0 @ X.
+lsl r2, r2, #0x01 @ Multiply X by 2.
+add r1, r1, r2
+blh Text_Display, r2
+mov r0, #0x02
+blh EnableBgSyncByMask, r1
+
+@ We also need to make BG1 appear above BG0 by setting BG0 priority to 1 and BG1 priority to 0.
+ldr r0, =gLCDIOBuffer
+ldr r1, [ r0, #0x0C ] @ BG0 control struct. Bottom 2 bits are priority.
+lsr r1, r1, #0x02
+lsl r1, r1, #0x02
+mov r2, #0x01
+orr r1, r1, r2
+str r1, [ r0, #0x0C ]
+ldr r1, [ r0, #0x10 ] @ BG1 control struct.
+lsr r1, r1, #0x02
+lsl r1, r1, #0x02
+str r1, [ r0, #0x10 ]
+
+@ Now we need to do things to make the world map sprite dialogue think that nothing happened.
+mov r0, #0x80
+lsl r0, r0, #0x02
+mov r1, #0x02
+mov r2, #0x02
+blh Dialogue_InitObjGfx, r3
+
+pop { r4 }
+pop { r0 }
+bx r0
+
+.ltorg
+.align
+
+.global WorldMapNameProcHandleTextClear
+.type WorldMapNameProcHandleTextClear, %function
+WorldMapNameProcHandleTextClear: @ Used in termination. Clear the text.
+push { lr }
+mov r2, #0x44
+add r0, r0, r2
+mov r2, #0x48
+ldrh r1, [ r0, r2 ] @ Tile width.
+blh Text_Clear, r1
+@ We also need to clear the BG tiles.
+ldr r0, =BgMapFillRect
+mov lr, r0
+ldr r1, =gBg1MapBuffer
+mov r2, #12 @ Y.
+lsl r2, r2, #0x06 @ Multiply Y by 64.
+add r1, r1, r2
+mov r2, #0 @ X.
+lsl r2, r2, #0x01 @ Multiply X by 2.
+add r0, r1, r2 @ This now has the BG pointer.
+mov r1, #0x06
+mov r2, #0x02
+mov r3, #0x00
+.short 0xF800
+mov r0, #0x02
+blh EnableBgSyncByMask, r1
+pop { r0 }
+bx r0
+
+.global WorldMapNameProcInitFadeCounter
+.type WorldMapNameProcInitFadeCounter, %function
+WorldMapNameProcInitFadeCounter:
+mov r1, #0x00
+strh r1, [ r0, #0x2A ]
+bx lr
+
+.ltorg
+.align
+
+/*
+void SetColorEffectsParameters(int id, int eva, int evb, int evy); //! FE8U = 0x8001EA1
+void SetColorEffectsFirstTarget(int bg0, int bg1, int bg2, int bg3, int obj); //! FE8U = 0x8001ED1
+void SetColorEffectsSecondTarget(int bg0, int bg1, int bg2, int bg3, int obj); //! FE8U = 0x8001F0D
+*/
+
+.global WorldMapNameProcHandleFadeIn
+.type WorldMapNameProcHandleFadeIn, %function
+WorldMapNameProcHandleFadeIn: @ Do fade in shenanigans for the text with color effects. r0 = proc pointer.
+push { r4, lr }
+sub sp, sp, #0x04 @ We need this for parameters.
+mov r4, r0
+ldr r0, =SetColorEffectsFirstTarget
+mov lr, r0
+mov r0, #0x00
+mov r1, #0x01
+mov r2, #0x00
+mov r3, #0x00
+str r3, [ sp ]
+.short 0xF800
+ldr r0, =SetColorEffectsSecondTarget
+mov lr, r0
+mov r0, #0x01
+mov r1, #0x00
+mov r2, #0x00
+mov r3, #0x00
+.short 0xF800
+ldr r0, =SetColorEffectsParameters
+mov lr, r0
+mov r0, #0x01 @ 1 = Alpha blending.
+@ 16 = 1! This is fixed point decimal stuff such that a + b = 1. See http://coranac.com/tonc/text/fixed.htm.
+ldrh r1, [ r4, #0x2A ]
+lsr r1, r1, #0x01
+mov r2, #0x10
+sub r2, r2, r1 @ r1 has the text layer weight, and r2 has the box layer weight.
+mov r3, #0x00
+.short 0xF800 @ At this point, r1 + r2 should always equal 0x10.
+ldrh r0, [ r4, #0x2A ]
+add r0, r0, #0x01
+strh r0, [ r4, #0x2A ]
+mov r1, #0x21
+sub r2, r0, r1
+cmp r2, #0x00
+bne HandleFadeInReturnTrue
+EndHandleFadeIn:
+add sp, sp, #0x04
+pop { r4 }
+pop { r1 }
+bx r1
+HandleFadeInReturnTrue:
+mov r0, #0x01
+b EndHandleFadeIn
+
+.ltorg
+.align
+
+.global WorldMapNameProcHandleFadeOut
+.type WorldMapNameProcHandleFadeOut, %function
+WorldMapNameProcHandleFadeOut: @ Basically the opposite of the fade in function. The only real difference should be switching the alpha and beta channels.
+push { r4, lr }
+sub sp, sp, #0x04 @ We need this for parameters.
+mov r4, r0
+ldr r0, =SetColorEffectsFirstTarget
+mov lr, r0
+mov r0, #0x00
+mov r1, #0x01
+mov r2, #0x00
+mov r3, #0x00
+str r3, [ sp ]
+.short 0xF800
+ldr r0, =SetColorEffectsSecondTarget
+mov lr, r0
+mov r0, #0x01
+mov r1, #0x00
+mov r2, #0x00
+mov r3, #0x00
+.short 0xF800
+ldr r0, =SetColorEffectsParameters
+mov lr, r0
+mov r0, #0x01 @ 1 = Alpha blending.
+ldrh r2, [ r4, #0x2A ]
+lsr r2, r2, #0x01
+mov r1, #0x10
+sub r1, r1, r2 @ r1 has the text layer weight, and r2 has the box layer weight.
+mov r3, #0x00
+.short 0xF800 @ At this point, r1 + r2 should always equal 0x10.
+ldrh r0, [ r4, #0x2A ]
+add r0, r0, #0x01
+strh r0, [ r4, #0x2A ]
+mov r1, #0x21
+sub r2, r0, r1
+cmp r2, #0x00
+bne HandleFadeOutReturnTrue
+EndHandleFadeOut:
+add sp, sp, #0x04
+pop { r4 }
+pop { r1 }
+bx r1
+HandleFadeOutReturnTrue:
+mov r0, #0x01
+b EndHandleFadeOut
 
 .ltorg
 .align

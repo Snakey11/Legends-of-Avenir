@@ -36,6 +36,41 @@ WorldMapGenericBlockerName:
 String("WorldMapBlocker") ; BYTE 0
 
 ALIGN 4
+WorldMapNameProc: // This is a proc that handles the name display on top of the edited world map text box.
+PROC_SET_NAME(WorldMapNameProcName)
+PROC_CALL_ROUTINE(WorldMapNameProcInitialize)
+PROC_LABEL(0)
+	PROC_CALL_ROUTINE(WorldMapNameProcUnblockEventEngine)
+	PROC_LOOP_ROUTINE(WorldMapNameProcWaitForDirection)
+	PROC_GOTO(4) // If our loop is broken, then our proc state is filled with directions to carry out. If our loop is broken here, ig we should end.
+	// Intended behavior is that this loop is broken with a ProcGoto.
+PROC_LABEL(1) // Jumped to when a name is first being initialized.
+	PROC_CALL_ROUTINE(WorldMapNameProcBlockEventEngine)
+	PROC_CALL_ROUTINE(WorldMapNameProcInitFadeCounter)
+	PROC_CALL_ROUTINE(WorldMapNameProcHandleTextDraw)
+	PROC_WHILE_ROUTINE(WorldMapNameProcHandleFadeIn)
+	PROC_GOTO(0)
+PROC_LABEL(2) // Jumped to when a name is being initialized, but a current name needs to be cleared first.
+	PROC_CALL_ROUTINE(WorldMapNameProcBlockEventEngine)
+	PROC_CALL_ROUTINE(WorldMapNameProcInitFadeCounter)
+	PROC_WHILE_ROUTINE(WorldMapNameProcHandleFadeOut)
+	PROC_SLEEP(10)
+	PROC_CALL_ROUTINE(WorldMapNameProcInitFadeCounter)
+	PROC_CALL_ROUTINE(WorldMapNameProcHandleTextDraw)
+	PROC_WHILE_ROUTINE(WorldMapNameProcHandleFadeIn)
+	PROC_GOTO(0)
+PROC_LABEL(3) // Jumped to when a name needs to be cleared, and the proc needs to be terminated.
+	PROC_CALL_ROUTINE(WorldMapNameProcBlockEventEngine)
+	PROC_CALL_ROUTINE(WorldMapNameProcInitFadeCounter)
+	PROC_WHILE_ROUTINE(WorldMapNameProcHandleFadeOut)
+	PROC_CALL_ROUTINE(WorldMapNameProcHandleTextClear)
+PROC_LABEL(4)
+PROC_CALL_ROUTINE(WorldMapNameProcUnblockEventEngine) // ALWAYS unblock the event engine on exit.
+PROC_END
+WorldMapNameProcName:
+String("WorldMapNameProc") ; BYTE 0
+
+ALIGN 4
 NewWMTextTiles:
 #incext png2dmp "TextTiles.png" "--lz77"
 
