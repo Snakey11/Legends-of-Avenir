@@ -1677,6 +1677,9 @@
 
 #define GiveToSupplySilent(Item) "SVAL 0x1 Item ; ASMC GiveToSupply|1"
 
+#define RightWMFace 0x8000
+#define LeftWMFace 0x0000
+
 //#define MaxMercenaryHP "SVAL 0x1 60; SET_HP PlayerMMercenary ; SET_HP PlayerMMyrmidon ; SET_HP PlayerMFighter ; SET_HP PlayerMPirate ; SET_HP PlayerMBrigand ; SET_HP PlayerFMercenary ; SET_HP PlayerFMyrmidon ; SET_HP PlayerFPegasusKnight"
 
 #define MercenaryNarratorFight(TactX,TactY) "SVAL 0xB Coords(TactX,TactY) ; CALL MercenaryNarratorFightEvents"
