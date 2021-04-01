@@ -14,10 +14,10 @@ LYN := $(abspath .)/FE-CLib-master/utility/lyn.exe
 
 # setting up compilation flags
 ARCH   := -mcpu=arm7tdmi -mthumb -mthumb-interwork
-CFLAGS := $(ARCH) -Wall -Os -mtune=arm7tdmi -mlong-calls
+CFLAGS := $(ARCH) $(LDLIBS) -Wall -O1 -mtune=arm7tdmi -fomit-frame-pointer -ffast-math -ffreestanding -mlong-calls
 
 # C to ASM rule
-%.s: %.c *.c
+%.s: %.c *.c Header.h
 	$(CC) $(CFLAGS) -S $< -o $@ -fverbose-asm
 
 # C to OBJ rule
@@ -34,3 +34,6 @@ CFLAGS := $(ARCH) -Wall -Os -mtune=arm7tdmi -mlong-calls
 %.o: %.s *.s
 	$(AS) $(ARCH) $< -o $@
 	
+# Tiled tmx to DMP
+%.dmp: %.tmx %.tmx
+	py tmx2tsa.py $< $@

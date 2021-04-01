@@ -6,24 +6,28 @@ static const u8 RTextStats[] = { 0x20, 0x4A, 0x78 };
 void DrawSupports(void) // Autohook to 0x8087698.
 {
 	Unit* current = gStatScreen.curr;
-	TextHandle* textBase = &TileBufferBase;
-	int y = 2;
+	TextHandle* textBase = &TileBufferBase; // This name is bad but this is what MSS uses so eh.
+	int y = 3;
 	int x;
 	// First, let's display each valid support.
 	for ( int i = 0 ; i < 5 ; i++ )
 	{
 		if ( current->supports[i] )
 		{
-			x = 13; // Doing it like this to keep track of how x is calculated here.
+			x = 16; // Doing it like this to keep track of how x is calculated here.
+			// First, draw the blue box behind the text.
+			BgMap_ApplyTsa(&Bg2_Origin[y-2][2],&SupportStatScreenSmallBox,0x2040);
+			
+			// Now start drawing the text.
 			(textBase+1)->tileIndexOffset = textBase->tileIndexOffset+8;
 			textBase->tileWidth = 8;
 			DrawTextInline(textBase,&Tile_Origin[y][x],0,4,8,GetStringFromIndex(ToUnit(current->supports[i])->pCharacterData->nameTextId)); // Draw the name of the supporting character.
 			textBase++;
 			
-			x = 22;
+			x = 24;
 			(textBase+1)->tileIndexOffset = textBase->tileIndexOffset+2;
 			textBase->tileWidth = 2;
-			DrawTextInline(textBase,&Tile_Origin[y][x],0,0,2,SupportLevelNameTable[GetSupportLevel(current,current->supports[i])]); // Draw the support level.
+			DrawTextInline(textBase,&Tile_Origin[y][x],2,0,2,SupportLevelNameTable[GetSupportLevel(current,current->supports[i])]); // Draw the support level.
 			textBase++;
 			y += 2;
 		}
@@ -31,7 +35,7 @@ void DrawSupports(void) // Autohook to 0x8087698.
 	// Next at the bottom, let's create a blue box similar to the one on the items page that shows the current total support bonuses.
 	x = 1;
 	y = 12;
-	BgMap_ApplyTsa(&Bg2_Origin[y][x],&SupportStatScreenBlueBox,0x3040);
+	BgMap_ApplyTsa(&Bg2_Origin[y][x],&SupportStatScreenBlueBox,0x2040);
 	
 	x = 14;
 	y = 12;

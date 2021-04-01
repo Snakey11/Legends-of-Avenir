@@ -12,7 +12,6 @@
 		
 		#include "SupportReworkBonusTable.event" // Go here to define your individual support bonuses.
 		
-		
 		// 2 required hacks for functionality. (3 if you count Base Convos using the prep screen hack.)
 		#include "CBaseConvos/BaseConvos.event"
 		
@@ -110,7 +109,7 @@
 		NoFade
 		ENDA
 		
-		ASSERT 7 - MaxSupportLevelVal // This gives an error if they tried to define a max level above 7.//
+		ASSERT 7 - MaxSupportLevelVal // This gives an error if they tried to define a max level above 7.
 		MaxSupportLevel:
 		BYTE MaxSupportLevelVal
 		

@@ -26,6 +26,12 @@ asm(".macro blh to, reg\n\
 	0x34 - 0x38 inclusive is an array of character IDs.
 		Each entryis an individual support (with whom the current character supports)
 		0xFF in this field (or any other fields, ROM or RAM) refers to the first character struct.
+	Therefore, the following should be changed in FE-CLib-master/include/gbafe/unit.h:
+			u8 supports[6];
+			u8 unitLeader;
+			to
+			u16 supportLevels;
+			u8 supports[5];
 */
 
 struct BonusStruct
@@ -137,6 +143,7 @@ extern StatScreen gStatScreen; // 0x02003BFC.
 extern TextHandle TileBufferBase; // 0x2003C2C.
 extern u16 Tile_Origin[32][32]; // 0x02003C94.
 extern u16 Bg2_Origin[32][32]; // 0x0200472C.
+extern const void* SupportStatScreenSmallBox;
 extern const void* SupportStatScreenBlueBox;
 extern const char TotalCurrentSupportBonusesText;
 
