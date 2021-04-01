@@ -16,6 +16,7 @@
 .equ Decompress, 0x08012F50
 .equ CopyToPaletteBuffer, 0x08000DB8
 .equ gGenericBuffer, 0x02020188
+.equ gBg0MapBuffer, 0x02022CA8
 .equ gBg1MapBuffer, 0x020234A8
 .equ gBg2MapBuffer, 0x02023CA8
 .equ gBg3MapBuffer, 0x020244A8
@@ -54,6 +55,8 @@
 .equ Dialogue_InitObjGfx, 0x080068AC
 .equ EnablePaletteSync, 0x08001F94
 .equ BgMapFillRect, 0x080D74A8
+.equ StartFace, 0x0800563C
+.equ EndFaceById, 0x08005758
 
 .global LoadSmallWorldMap
 .type LoadSmallWorldMap, %function
@@ -496,7 +499,7 @@ blh Text_Display, r2
 mov r0, #0x02
 blh EnableBgSyncByMask, r1
 
-@ We also need to make BG1 appear above BG0 by setting BG0 priority to 1 and BG1 priority to 0.
+@ We also need to ensure that both BG0 and BG1 have priority 0.
 ldr r0, =gLCDIOBuffer
 ldr r1, [ r0, #0x0C ] @ BG0 control struct. Bottom 2 bits are priority.
 lsr r1, r1, #0x02
@@ -626,14 +629,14 @@ mov r4, r0
 ldr r0, =SetColorEffectsFirstTarget
 mov lr, r0
 mov r0, #0x00
-mov r1, #0x01
+mov r1, #0x01 @ BG1 foreground.
 mov r2, #0x00
 mov r3, #0x00
 str r3, [ sp ]
 .short 0xF800
 ldr r0, =SetColorEffectsSecondTarget
 mov lr, r0
-mov r0, #0x01
+mov r0, #0x01 @ BG0 background.
 mov r1, #0x00
 mov r2, #0x00
 mov r3, #0x00
@@ -662,6 +665,214 @@ bx r1
 HandleFadeOutReturnTrue:
 mov r0, #0x01
 b EndHandleFadeOut
+
+.ltorg
+.align
+
+/*
+struct WorldMapFaceProc
+{
+	PROC_HEADER
+	u8 status; // 0x29. 0 = fading in, 1 = idle, 2 = fading out.
+	u16 fadeCounter; // 0x2A.
+	void* eventInstruction; // 0x2C.
+}
+
+WM_SHOWPORTRAIT, 0xC460, 12, -game:FE8 -indexMode:8
+	Portrait ID, 6, 1
+	Position, 8, 2, -preferredBase:10
+
+WM_CLEARPORTRAIT, 0xC540, 8, -game:FE8 -indexMode:8
+#Always 0
+	Value1, 2, 2
+#0x000 = no movement, no fade
+#0x100 = left
+#0x200,all else = right
+	Direction, 4, 2
+	Delay, 6, 2
+*/
+
+.global WorldMapFaceLoadHack
+.type WorldMapFaceLoadHack, %function
+WorldMapFaceLoadHack: @ Autohook to 0x0800CC8C. This is the handler function for EventC4_, WM_SHOWPORTRAIT. We're going to hack this to fade in with sprites rather than slide in.
+push { r4, lr }
+mov r4, r0 @ Event engine proc.
+ldr r0, =gProc_WorldMap
+blh ProcFind, r1
+cmp r0, #0x00
+beq EndWorldMapFaceLoad @ Handle the case of the world map proc not existing.
+	mov r1, r0
+	ldr r0, =WorldMapFaceProc
+	blh ProcStart, r2
+	ldr r1, [ r4, #0x38 ] @ Pointer to the current event instruction.
+	str r1, [ r0, #0x2C ] @ Store that in our proc.
+	mov r1, #0x00
+	mov r2, #0x29
+	strb r1, [ r0, r2 ]
+	strh r1, [ r0, #0x2A ]
+EndWorldMapFaceLoad:
+mov r0, #0x02 @ Continue event execution but wait a frame.
+pop { r4 }
+pop { r1 }
+bx r1
+
+.ltorg
+.align
+
+.global WorldMapFaceClearHack
+.type WorldMapFaceClearHack, %function
+WorldMapFaceClearHack: @ Autohook to 0x0800CCF0. Handler for EventC5_, WM_CLEARPORTRAIT.
+push { lr }
+ldr r0, =WorldMapFaceProc
+blh ProcFind, r1
+cmp r0, #0x00
+beq EndWorldMapFaceClear
+	blh BreakProcLoop, r1
+EndWorldMapFaceClear:
+mov r0, #0x00
+pop { r1 }
+bx r1
+
+.ltorg
+.align
+
+.global WorldMapFaceProcLoadFace
+.type WorldMapFaceProcLoadFace, %function
+WorldMapFaceProcLoadFace: @ Load the face we want to show. r0 = WM face proc.
+push { lr }
+sub sp, sp, #0x04
+ldr r0, [ r0, #0x2C ] @ Pointer to the event instruction.
+ldrh r1, [ r0, #0x06 ] @ Portrait ID.
+ldrh r2, [ r0, #0x08 ] @ X position.
+lsr r3, r2, #0x0F @ Get only the top bit. Used to denote direction.
+ldr r0, =#0x102 @ Bit 1 flips direction, bit 2 = don't show shoulders.
+orr r0, r0, r3
+str r0, [ sp ]
+mov r3, #0x20 @ Y offset. 0 seems to be the center of the screen with negative values going up.
+ldr r0, =StartFace
+mov lr, r0
+mov r0, #0x00 @ Face ID.
+.short 0xF800
+add sp, sp, #0x04
+pop { r0 }
+bx r0
+
+.ltorg
+.align
+
+.global WorldMapFaceProcHandleFadeIn
+.type WorldMapFaceProcHandleFadeIn, %function
+WorldMapFaceProcHandleFadeIn: @ Handle the alpha blending of the face fade in.
+push { r4, lr }
+sub sp, sp, #0x04
+mov r0, r4 @ WM face proc.
+ldr r0, =SetColorEffectsFirstTarget
+mov lr, r0
+mov r0, #0x00
+mov r1, #0x00
+mov r2, #0x00
+mov r3, #0x01 @ Sprite foreground.
+str r3, [ sp ]
+mov r3, #0x00
+.short 0xF800
+ldr r0, =SetColorEffectsSecondTarget
+mov lr, r0
+mov r0, #0x00
+mov r1, #0x00
+mov r2, #0x01 @ BG2 background.
+mov r3, #0x00
+str r3, [ sp ]
+.short 0xF800
+ldr r0, =SetColorEffectsParameters
+mov lr, r0
+mov r0, #0x01 @ 1 = alpha blending.
+ldrh r1, [ r4, #0x2A ] @ Foreground weight.
+mov r2, #0x10
+sub r2, r2, r1 @ Background weight. r1 + r2 = 0x10.
+mov r3, #0x00 @ evy is irrelevant.
+.short 0xF800
+ldrh r0, [ r4, #0x2A ]
+add r0, r0, #0x01
+strh r0, [ r4, #0x2A ]
+sub r0, r0, #0x10
+cmp r0, #0x00
+bne HandleFaceFadeInReturnTrue
+EndHandleFaceFadeIn:
+add sp, sp, #0x04
+pop { r4 }
+pop { r1 }
+bx r1
+HandleFaceFadeInReturnTrue:
+mov r0, #0x01
+b EndHandleFaceFadeIn
+
+.ltorg
+.align
+
+.global WorldMapFaceProcWaitToBeTerminated
+.type WorldMapFaceProcWaitToBeTerminated, %function
+WorldMapFaceProcWaitToBeTerminated:
+bx lr
+
+.ltorg
+.align
+
+.global WorldMapFaceProcHandleFadeOut
+.type WorldMapFaceProcHandleFadeOut, %function
+WorldMapFaceProcHandleFadeOut:
+push { r4, lr }
+sub sp, sp, #0x04
+mov r0, r4 @ WM face proc.
+ldr r0, =SetColorEffectsFirstTarget
+mov lr, r0
+mov r0, #0x00
+mov r1, #0x00
+mov r2, #0x00
+mov r3, #0x01 @ Sprite foreground.
+str r3, [ sp ]
+mov r3, #0x00
+.short 0xF800
+ldr r0, =SetColorEffectsSecondTarget
+mov lr, r0
+mov r0, #0x00
+mov r1, #0x00
+mov r2, #0x01 @ BG2 background.
+mov r3, #0x00
+str r3, [ sp ]
+.short 0xF800
+ldr r0, =SetColorEffectsParameters
+mov lr, r0
+mov r0, #0x01 @ 1 = alpha blending.
+ldrh r1, [ r4, #0x2A ] @ Foreground weight.
+mov r2, #0x10
+sub r2, r2, r1 @ Background weight. r1 + r2 = 0x10.
+mov r3, #0x00 @ evy is irrelevant.
+.short 0xF800
+ldrh r0, [ r4, #0x2A ]
+sub r0, r0, #0x01
+strh r0, [ r4, #0x2A ]
+cmp r0, #0x00
+bne HandleFaceFadeOutReturnTrue
+EndHandleFaceFadeOut:
+add sp, sp, #0x04
+pop { r4 }
+pop { r1 }
+bx r1
+HandleFaceFadeOutReturnTrue:
+mov r0, #0x01
+b EndHandleFaceFadeOut
+
+.ltorg
+.align
+
+.global WorldMapFaceProcDestructor
+.type WorldMapFaceProcDestructor, %function
+WorldMapFaceProcDestructor: @ Remove the face sprites.
+push { lr }
+mov r0, #0x00
+blh EndFaceById, r1
+pop { r0 }
+bx r0
 
 .ltorg
 .align
