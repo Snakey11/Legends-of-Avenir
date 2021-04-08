@@ -35,8 +35,8 @@ struct BaseConvoProc
 	u8 usability; // 0x2B. Usability bitfield for 8 menu options.
 	u8 free[0x42 - 0x2C]; // 0x2C.
 	u8 prepThemeThing; // 0x42. This needs to be set before exiting?
-	struct MenuDefinition menuData; // 0x44.
-	// Ends at 0x64.
+	Proc* eventEngine; // 0x44.
+	struct MenuDefinition menuData; // 0x48.
 };
 
 #define GetEntry(c,i) &BaseConvoTable[c][i]
@@ -58,7 +58,7 @@ extern char WriteTextTo; // 0x0203EFC0.
 extern void SetBeigeBackground(Proc* proc, int arg2, int arg3, int arg4, int arg5); // 0x08086CE8.
 extern void LoadObjUIGfx(void); // 0x08015680.
 extern void LoadNewUIGraphics(void); // 0x0804EB68.
-extern void StartMapEventEngine(const void* scene, int runKind); // Like CallMapEventEngine, but this one works here. Maybe has to do with multiple event engine procs?
+extern Proc* StartMapEventEngine(const void* scene, int runKind); // Like CallMapEventEngine, but this one works here. Maybe has to do with multiple event engine procs?
 extern void ReturnToPrepScreenTheme(Proc* proc); // 0x080A1930.
 extern void StartFadeInBlackMedium(void); // 0x08013D68.
 extern int IsFadeActive(void); // 0x08013C88.
@@ -169,8 +169,8 @@ void BuildBaseConvoMenuGeometry(BaseConvoProc* proc)
 	{
 		proc->menuData.geometry.y = 0;
 	}
-	proc->menuData.geometry.h = 18; // I honestly have no idea why these are swapped now. They didn't use to be this way I swear.
-	proc->menuData.geometry.w = 0;
+	proc->menuData.geometry.w = 18; // I honestly have no idea why these are swapped now. They didn't use to be this way I swear.
+	proc->menuData.geometry.h = 0;
 	proc->menuData.style = 1;
 	proc->menuData.commandList = &BaseConvoMenuCommands;
 	proc->menuData.onInit = NULL;
@@ -291,11 +291,11 @@ void CallConversation(BaseConvoProc* proc)
 	BaseConvoEntry* entry = GetEntry(gChapterData.chapterIndex,proc->viewingEntry);
 	if ( entry->event == NULL )
 	{
-		StartMapEventEngine(&CallBaseConvoEvents,2);
+		proc->eventEngine = StartMapEventEngine(&CallBaseConvoEvents,2);
 	}
 	else
 	{
-		StartMapEventEngine(entry->event,2);
+		proc->eventEngine = StartMapEventEngine(entry->event,2);
 	}
 }
 
@@ -304,7 +304,7 @@ int CheckToEnd(BaseConvoProc* proc)
 	if ( !proc->wasBPressed )
 	{
 		// Events ran. Check if they're finished.
-		return !gMemorySlot[0xB]; // Keep the proc running if the event's aren't finished running.
+		return ( proc->eventEngine->codeStart ? 1 : 0 ); // Keep the proc running if the event's aren't finished running.
 	}
 	else
 	{
