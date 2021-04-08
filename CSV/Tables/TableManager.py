@@ -164,17 +164,21 @@ class NMM():
             yield str(e)
     def generateOutput(self,types):
         # Once self.fields and self.data are full, we should be able to print our BYTE/SHORT/WORD installer output.
-        # First, we need to either ORG to the vanilla offset or make our label.
-        if self.isInline:
-            yield 'ALIGN 4\n'
-            yield f'{self.label}:\n'
-            if not self.parent.isSequential: # If we're not writing sequentially, we need to fill with the maximum number of entries.
-                yield f'FILL {self.parent.maxEntries}*{self.entrySize}\n'
-                yield 'PUSH\n'
+        # First, we need to either ORG to the vanilla offset or make our label.            
+        # This is a little confusing for what we want to do with our header.
+            # If we are inline, we are writing to free space, so we want to ALIGN 4 and write our label. OTHERWISE, we need to ORG to the vanilla offset.
+            # Sequential writing is INDEPENDENT of being inline. If we want sequential writing, don't do anything here. If we do, we need to FILL/PUSH.
+        if self.isInline: yield 'ALIGN 4\n'
         else:
             yield 'PUSH\n'
             yield f'ORG {self.vanillaOffset}\n'
-            yield f'{self.label}:\n'
+        yield f'{self.label}:\n'
+        
+        if not self.parent.isSequential: # If we're not writing sequentially, we need to fill with the maximum number of entries.
+            yield f'FILL {self.parent.maxEntries}*{self.entrySize}\n'
+            yield 'PUSH\n'
+        
+        # Now we can write for each row.
         for i,row in enumerate(self.data):
             currType = 0 # Data size of the current type we're writing.
             if not self.parent.isSequential: # We need to do our "ORG {Label} + {index}*{datasize}". There'll already be a ; when we change type.
@@ -207,8 +211,8 @@ class NMM():
                         continue
                 yield f'({cell}) '
             yield '\n'
-        if not self.isInline or not self.parent.isSequential:
-            yield 'POP\n'
+        if not self.isInline: yield 'POP\n'
+        if not self.parent.isSequential: yield 'POP\n'
     def getOutputFilepath(self):
         return f'{self.filepath[:-3]}event'
 

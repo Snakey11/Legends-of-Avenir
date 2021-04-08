@@ -21,13 +21,18 @@ parser.add_argument('-c','--character',help='Name of character to simulate.',def
 parser.add_argument('-s','--starting_class',help='Starting class of character.',default=None)
 parser.add_argument('-t','--target_class',help='Ending class of character. No promotion if not defined.',default=None)
 parser.add_argument('-l','--target_level',help='Target level of character.',type=int,default=0)
-parser.add_argument('-p','--promotion_level',help='Level at which this unit promotes.',type=int,default=0)
+parser.add_argument('-p','--promotion_level',help='Level at which this unit promotes.',type=int,default=10)
 parser.add_argument('-d','--simulation_count',help='If defined, runs simulations instead of average statting and reports stat averages and deviations.',type=int,default=0)
 parser.add_argument('-r','--round',help='Round reported stats to the nearest integer.',action='store_true')
 parser.add_argument('-g','--generic',help='If defined, this character is treated as generic.',action='store_true')
 parser.add_argument('-e','--table_help',help='Report table options format.',action='store_true')
-parser.add_argument('-v','--verbose',help='Display output logs with increasing verbosity.',action='count',default=0)
-args = parser.parse_args()
+parser.add_argument('-v','--verbose',help='Display column location logs.',action='store_true')
+args = None
+try:
+    args = parser.parse_args()
+except ArgparseError:
+    type, value, traceback = sys.exc_info()
+    exit(f'Error: {value}')
 
 if args.table_help:
     str = """
@@ -108,17 +113,21 @@ if __name__ == '__main__':
     if not ( args.character and args.starting_class and args.target_level ): # If none of these are defined, prompt with input.
         while not args.character:
             args.character = input('Input a character name: ')
+            checkToExit(args.character)
             if not findRow(args.character.strip(),charTable):
                 args.character = None
                 print(f'Error: Character {args.character} not found in {charTable.name}.')
         while not args.starting_class:
             args.starting_class = input('Input a starting class: ')
+            checkToExit(args.starting_class)
             if not findRow(args.starting_class.strip(),classTable):
                 args.starting_class = None
                 print(f'Error: Class {args.starting_class} not found in {classTable.name}.')
         while not args.target_level:
             try:
-                args.target_level = int(input('Input a level to grow to: '),0)
+                args.target_level = input('Input a level to grow to: ')
+                checkToExit(args.target_level)
+                args.target_level = int(args.target_level,0)
             except ValueError:
                 args.target_level = 0
                 print(f'Error: Please input an integer.')

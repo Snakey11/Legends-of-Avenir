@@ -34,7 +34,7 @@ class CharacterTable:
     def generateStr(self):
         yield f'Base fields: {[str(e) for e in self.bases]}'
         yield f'Growth fields: {[str(e) for e in self.growths]}'
-        yield f'Character starting level field: {[str(e) for e in self.charLevel]}'
+        yield f'Character starting level field: {self.charLevel}'
     
 class ClassTable:
     def __init__(self,classTable,classBases,classGrowths,classMaxes,promoGains):
@@ -214,3 +214,7 @@ def findRow(toFind,table): # Return the relevant class/character data index.
 
 def fillLocations(table,names): # With a table and list of names, return a list of Field objects.
     return [ Field(table,name) for name in names ]
+
+def checkToExit(text): # Used in seeing if the user wants to exit during a prompt.
+    text = text.lower()
+    if text == 'quit' or text == 'exit' or text == 'stop' or text == 'cease' or text == 'enough' or text == 'escape' or text == 'bye': exit()

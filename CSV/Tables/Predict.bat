@@ -1,6 +1,10 @@
 
 @echo off
 
-py Predictor.py PredictorOptions.s -v
-
-pause
+if "%*" == "" (
+	Predictor PredictorOptions.s
+) else (
+	Predictor PRedictorOptions.s %*
+)
+ pause
+ 
