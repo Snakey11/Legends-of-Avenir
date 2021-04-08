@@ -16,11 +16,8 @@ class TSA:
     def __init__(self,width,height,tiles,paletteID): # List of bytes.
         self.width = width # Width is the length per list.
         self.height = height
-        #print([e.gid for e in tiles])
         self.tiles = [ tiles[i:i+self.width] for i in range(0,self.width*self.height,self.width) ] # This sorts the rows in reverse order.
         self.tiles.reverse()
-        #for row in self.tiles:
-        #    print([e.gid for e in row])
         self.paletteID = paletteID
     def write(self,file): # Output width-1, height-1, and then the list of struct unsigned halfwords.
         with open(file,'wb') as out:

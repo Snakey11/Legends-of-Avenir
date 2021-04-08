@@ -133,7 +133,7 @@ SHORT 0x2100 0x2201 // mov r1, #0x00 ; mov r2, #0x01.
 ORG $B8732
 SHORT 0x2001 0x2100 // mov r0, #0x01 ; mov r1, #0x00. */
 
-ORG $59106C // Change world map face priorities to 2 instead of 1.
+/*ORG $59106C // Change world map face priorities to 2 instead of 1.
 // This is changing the ROM object data. Here specifically, it's an array[6] of { short, short, short } (with a single size short header). We're editing the last short, object attribute 2.
 SHORT 0x0400
 ORG $591072
@@ -145,7 +145,7 @@ SHORT 0x0410
 ORG $591084
 SHORT 0x0416
 ORG $59108A
-SHORT 0x0414
+SHORT 0x0414*/
 
 ORG $BFD64
 POIN NewWMTextTiles
