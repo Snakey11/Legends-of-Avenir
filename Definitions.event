@@ -117,6 +117,7 @@
 #define Marksman MarksmanM
 #define Magus MagusM
 #define Trueerblade Truerblade
+#define ArmoredWyvernLord MaligKnight
 /*
 #define Falcoknight FalcoKnight
 #define Phantom 0x51
