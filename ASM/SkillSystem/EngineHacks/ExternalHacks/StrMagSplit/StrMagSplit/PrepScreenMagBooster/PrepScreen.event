@@ -180,8 +180,8 @@
 	SHORT 0x3050 0x210B
 	
 	//##### MAG BOOSTER ITEM #####
-	ORG $29F1E
-	BYTE 0x68
+	//ORG $29F1E
+	//BYTE 0x68
 	//ORG $29F30
 	//POIN PrepScreenUsabilityTable
 	
