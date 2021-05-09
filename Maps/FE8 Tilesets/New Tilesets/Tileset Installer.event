@@ -1,7 +1,7 @@
 
 ALIGN 4
 DesertTempleTilesetObjects: // lz77 compressed.
-#incbin "Compressed Desert Temple.dmp"
+#incbin "Desert Temple.dmp"
 
 ALIGN 4
 DesertTempleTilesetPalette:
@@ -18,11 +18,11 @@ EventPointerTable(DesertTempleTileConfig,DesertTempleTilesetTileConfig)
 
 ALIGN 4
 OutdoorSnowyTilesetObjects: // lz77 compressed.
-#incbin "Compressed Outdoor Snowy.dmp"
+#incbin "Outdoor Snowy.dmp"
 
 ALIGN 4
 OutdoorSnowyTilesetPalette:
-#incbin "Snowy Tileset Outdoor Palette.dmp"
+#incbin "Outdoor Snowy Palette.dmp"
 
 ALIGN 4
 OutdoorSnowyTilesetTileConfig:
@@ -35,11 +35,11 @@ EventPointerTable(OutdoorSnowyTileConfig,OutdoorSnowyTilesetTileConfig)
 
 ALIGN 4
 IndoorSnowyTilesetObjects: // lz77 compressed.
-#incbin "Compressed Indoor Snowy.dmp"
+#incbin "Indoor Snowy.dmp"
 
 ALIGN 4
 IndoorSnowyTilesetPalette:
-#incbin "Snowy Tileset Indoor Palette.dmp"
+#incbin "Indoor Snowy Palette.dmp"
 
 ALIGN 4
 IndoorSnowyTilesetTileConfig:
@@ -48,6 +48,24 @@ IndoorSnowyTilesetTileConfig:
 EventPointerTable(IndoorSnowyObjectSet,IndoorSnowyTilesetObjects)
 EventPointerTable(IndoorSnowyPalette,IndoorSnowyTilesetPalette)
 EventPointerTable(IndoorSnowyTileConfig,IndoorSnowyTilesetTileConfig)
+
+
+ALIGN 4
+WesternIslesTilesetObjects:
+#incbin "Western Isles - Extended - Object Set and Palette.dmp"
+
+ALIGN 4
+WesternIslesTilesetPalette:
+#incbin "Western Isles - Extended - Object Set and Palette Palette.dmp"
+
+ALIGN 4
+WesternIslesTilesetTileConfig:
+#incext compress "Western Isles - Extended - Config.mapchip_config"
+
+EventPointerTable(WesternIslesObjectSet,WesternIslesTilesetObjects)
+EventPointerTable(WesternIslesPalette,WesternIslesTilesetPalette)
+EventPointerTable(WesternIslesTileConfig,WesternIslesTilesetTileConfig)
+
 
 
 ALIGN 4
