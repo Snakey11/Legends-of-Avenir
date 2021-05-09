@@ -62,14 +62,19 @@ CSV ItemEffectRevamp/StatboosterTextTable.csv @ List linking statbooster item ID
 	INLINE True
 	WRITE_SEQUENTIALLY True
 
+CSV ItemEffectRevamp/IERevampTable.csv @ These are indexed by item effect ID.
+	TABLE IERevampTable ItemEffectRevamp/ItemEffectRevampTable.nmm
+	TABLE IBArray ItemEffectRevamp/ItemBoxEffectTable.nmm
+	INLINE True
+	WRITE_SEQUENTIALLY False
+
 CSV Items/ItemTable.csv @ Things indexed by item.
 	TABLE ItemTable Items/ItemTable.nmm
 	@TABLE ItemUsabilityTable Items/ItemUsabilityTable.nmm -0x4B
 	@TABLE ItemEffectTable Items/ItemEffectTable.nmm -0x4B
 	@TABLE PrepScreenUsabilityTable Items/ItemPrepScreenUsabilityTable.nmm -0x5B
 	@TABLE ItemTargetTable Items/ItemTargetTable.nmm -0x4B
-	TABLE IERevampTable ItemEffectRevamp/ItemEffectRevampTable.nmm -0x4B
-	TABLE IBArray ItemEffectRevamp/ItemBoxEffectTable.nmm -0x4B
+	@TABLE IERevampTable ItemEffectRevamp/ItemEffectRevampTable.nmm -0x4B @ Including this in the item table was a mistake - IER indexes by arbitrary effect ID.
 	TABLE SetPoisonItemTable Items/PoisonItemTable.nmm
 	TABLE WeaponLockArrayPointerTable Items/WeaponLockTable.nmm
 	INLINE True
