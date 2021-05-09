@@ -7,6 +7,7 @@
 .include EventPointers.s
 .include Glowy.s
 .include Items.s
+.include ItemEffects.s
 .include Music.s
 .include Portraits.s
 .include Spells.s
