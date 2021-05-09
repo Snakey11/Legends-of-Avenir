@@ -1,3 +1,8 @@
+v2.2
+Fixed (at the very least lessened in extreme cases?) lag in maps with many talk convos
+Anima "effectiveness" has been reworked using effectiveness rework that ships with the skill system. It is now 2x effectiveness (everything else as 3x is unchanged).
+Wyvern riders are no longer considered horse units by effective weapons
+
 v2.1
 Fixed Military 5 Accept Hold end of chapter crash
 Fixed Xylia's map sprite to use female sage
