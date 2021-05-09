@@ -50,6 +50,7 @@
 [LoadHawken] = [LoadFace][0x4D][0x01]
 [LoadGuildsman] = [LoadFace][0x51][0x01]
 [LoadMason] = [LoadFace][0x52][0x01]
+[LoadKaid] = [LoadFace][0x3A][0x01]
 
 [LoadVillagerMan1] = [LoadFace][0x58][0x01]
 [LoadVillagerOldMan] = [LoadFace][0x59][0x01]

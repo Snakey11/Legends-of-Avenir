@@ -1,270 +1,340 @@
-
+﻿
 EventPointerTable(Merc5MilitiaWaitCesariaEvents,ThisChapter)
 
+//Label ThisChapter
 ThisChapter:
 POIN TurnBasedEvents
 POIN CharacterBasedEvents
 POIN LocationBasedEvents
 POIN MiscBasedEvents
-POIN Dunno Dunno Dunno
-POIN Tutorial
+POIN EndMainPointer EndMainPointer EndMainPointer
+POIN EndMainPointer
 POIN TrapData TrapData
 POIN Units Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
+//LabelEnd
 
+//Label TurnBasedEvents
 TurnBasedEvents:
-TurnEventPlayer(0x0,FinocElanilHere,2)
+TurnEventPlayer(0x0,Turn2,2)
+TurnEventPlayer(0x0,Turn4,4)
+TurnEventPlayer(0x0,Turn5,5)
+TurnEventPlayer(0x0,Turn6,6)
+TurnEventPlayer(0x0,Turn7,7)
 END_MAIN
-ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
+//Label CharacterBasedEvents
+ALIGN 32
 CharacterBasedEvents:
+CharacterEventBothWays(0x10,TTactFinoc,0x00,Finoc)
+CharacterEventBothWays(0x11,TTactElanil,0x00,Elanil)
 END_MAIN
 
+//Label LocationBasedEvents
 LocationBasedEvents:
-Armory(ShopList,5,12)
-Village(0x11,NVillage,12,15)
-Village(0x12,SVillage,5,17)
-House(0x0,NHouse,15,15)
-House(0x0,SHouse,14,16)
+Village(0x13,VillageEvent,1,4)
+House(0x00,HouseEvent1,11,1)
+House(0x00,HouseEvent2,15,2)
+House(0x00,HouseEvent3,16,12)
+Armory(ShopList,14,1)
 END_MAIN
 
+//Label MiscBasedEvents
 MiscBasedEvents:
-AREA 0x13 MendPickup [11,2] [14,3]
-AREA 0x14 TempestPickup [9,0] [10,3]
-AREA 0x15 TalismanPickup [2,5] [5,6]
-AREA 0x16 SteelLongbowPickup [18,17] [18,18]
+DefeatBoss(EndingScene)
 CauseGameOverIfLordDies
-DefeatAll(EndingScene)
 END_MAIN
 
-Dunno:
-END_MAIN
-
-Tutorial:
-END_MAIN
-
+//Label TrapData
 TrapData:
 ENDTRAP
-
 ALIGN 4
 
+//Label Units
 Units:
-UNIT PlayerMMercenary 0x00 0x00 Level(1,Ally,True) [4,1] 0x00 0x00 0x00 0x00 [0] NoAI 
-UNIT Lux 0x00 0x00 Level(1,Ally,True) [1,2] 0x00 0x00 0x00 0x00 [0] NoAI 
-UNIT Arc 0x00 0x00 Level(1,Ally,True) [2,1] 0x00 0x00 0x00 0x00 [0] NoAI 
-UNIT Luke 0x00 0x00 Level(1,Ally,True) [0,3] 0x00 0x00 0x00 0x00 [0] NoAI 
-UNIT Jasper 0x00 0x00 Level(1,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [0] NoAI 
-UNIT Derek 0x00 0x00 Level(1,Ally,True) [3,2] 0x00 0x00 0x00 0x00 [0] NoAI 
-UNIT
+UNIT PlayerMMercenary 0x00 0x00 Level(1,Ally,True) [1,16] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Arc 0x00 0x00 Level(1,Ally,True) [2,17] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Luke 0x00 0x00 Level(1,Ally,True) [3,18] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Lux 0x00 0x00 Level(1,Ally,True) [0,17] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Jasper 0x00 0x00 Level(1,Ally,True) [1,18] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [2,19] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
 
+//Label BeginingScene
 BeginningScene:
-REMU Finoc
-REMU Elanil
-MUSC Indignation
-SVAL 0xB Coords(7,5)
-LOMA LeavingUndergroundCutscene
+SVAL 0xB Coords(8,11)
+LOMA MercenaryMilitia2 // Load the Danaan map.
+TILECHANGE 0 // Destroy the houses.
+TILECHANGE 1
+TILECHANGE 2
+TILECHANGE 3
+TILECHANGE 5
+STAL 0x10
+LOAD1 0x1 DanaanGreens
+LOAD2 0x1 DanaanFriends
 LOAD3 0x1 PlayerLoading1
-LOAD2 0x1 LukeArcStart
-SetBackground(0x30)
-Text(Merc5MilitiaWaitCesariaBeginningText)
-GiveGold(4000)
-EndConvo
-STAL 0x10
-MoveMercenary(5,4)
-STAL 0x10
-LOAD1 0x1 MaximusCutscene
-LOAD2 0x1 LoadLux
 ENUN
-EnterStop
-STAL 0x8
-FADI 0x5
-MUSC Advance
-LOAD2 0x1 JasperDerek
-ENUN
-CLEN 0x0
-SetBackground(0x30)
-Text(Merc5MilitiaWaitCesariaPlansText)
-EndConvo
-STAL 0x10
-MoveMercenary(8,6)
-FADI 0x5
-MUSC Sorrow
-CLEN Maximus
-SVAL 0xB Coords(6,6)
-LOMA MercenaryMilitiaWaitCesaria5
-LOAD3 0x1 PlayerLoading2
-LOAD1 0x1 Meanies
-LOAD2 0x1 Allies
-ENUN
-SetBackground(0x30)
-Text(Merc5MilitiaWaitCesariaArcPlayerText)
-FADI 0x5
-MUSC Advance
 STAL 0x20
+MUSC Forbidden_Forest
 SetBackground(0x30)
-Text(Merc5MilitiaWaitJasperDerekText)
+Text(Merc5MilitiaWaitCesariaStartingText)
+MUSC Justice
+SetBackground(0x26)
+Text(Merc5MilitiaWaitCesariaSettingOutText)
+MUSC FE5_In_Search_of_Victory
+SetBackground(0x18)
+Text(Merc5MilitiaWaitCesariaApproachingText)
+FadeOutMusic
+FADI 0x5
+STAL 0x70
+MUSC A_Tragic_Decision
+STAL 0x10
 EndConvo
+STAL 0x10
+Text(Merc5MilitiaWaitCesariaDanaanText)
+STAL 0x20
+FadeOutMusic
+FADI 0x5
+CLEA 0x0
+CLEN 0x0
+SVAL 0xB Coords(23,5)
+LOMA MercenaryMilitiaWaitCesaria5
+LOAD1 0x1 Meanies1
+LOAD1 0x1 Meanies2
+LOAD1 0x1 Meanies3
+LOAD2 0x1 Friends
+LOAD3 0x1 PlayerLoading2
+ENUN
+STAL 0x40
+MUSC The_Devoted
+FADU 0x5
 STAL 0x30
-CAM1 [12,14]
-EnterStop
-Text(Merc5MilitiaWaitCesariaGrantText)
-SetSupport(Jasper,Derek,CSupport)
+CAM1 Arc
+STAL 0x20
+FlashCursor(0x00,60)
+STAL 0x20
+Text(Merc5MilitiaWaitCesariaStartBattleText)
+STAL 0x20
+CAM1 Kaid
+STAL 0x20
+Text(Merc5MilitiaWaitCesariaBossStartBattleText)
+STAL 0x20
+CAM1 Arc
+STAL 0x20
 NoFade
-GotoPrepScreen
+ENDA
 
+//Label EndingScene
 EndingScene:
 FADI 0x5
-REVEAL Finoc
-REVEAL Elanil
-MUSC Victory
-SetBackground(0x30)
+MUSC FE5_Victory_Minor
+CLEA 0x0
+CLEE 0x0
+SetBackground(0x18)
 Text(Merc5MilitiaWaitCesariaEndingText)
 MoveToChapter(MercenaryMilitiaWaitCesaria6)
+NoFade
 ENDA
 
-FinocElanilHere:
-MUSS Comrades
-_0x2620 0x1700
-LOAD1 0x1 LoadFinoc
+//Label Turn events
+Turn2:
+MUSC With_Us
+LOAD2 0x1 FinocHere
 ENUN
-REVEAL Finoc
-SVAL 0x1 0x1
-SET_STATE Finoc
-_0x2620 0x1700
-LOAD1 0x1 LoadElanil
+STAL 0x04
+LOAD2 0x1 ElanilHere
 ENUN
 REVEAL Elanil
-SVAL 0x1 0x1
-SET_STATE Elanil
-CAM1 [6,9]
+REVEAL Finoc
+STAL 0x10
+FlashCursor(Finoc,0x60)
+STAL 0x10
+Text(Merc5MilitiaWaitCesariaAltiansJoinText)
+MURE 0x05
+NoFade
+EndA2
+
+Turn4:
+CamON
+LOAD1 0x1 Turn4Units
 ENUN
-STAL 0x20
-Text(Merc5MilitiaWaitCesariaElanilFinocHereText)
-MURE 0x5
+CamOFF
+NoFade
+EndA2
+
+Turn5:
+CamON
+LOAD1 0x1 Turn5Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn6:
+CamON
+LOAD1 0x1 Turn6Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn7:
+CamON
+LOAD1 0x1 Turn7Units
+ENUN
+CamOFF
 NoFade
 ENDA
 
+//Label Talk events
+TTactFinoc:
+MUSI
+STAL 0x08
+Text(Merc5MilitiaWaitCesariaTactFinocText)
+MUNO
+NoFade
+EndA2
+
+TTactElanil:
+MUSI
+STAL 0x08
+Text(Merc5MilitiaWaitCesariaTactElanilText)
+MUNO
+NoFade
+ENDA
+
+//Label Location events
 ShopList:
-SHLI SteelSword SteelLance SteelAxe SteelBow Elwind Elthunder Divine 0x0
+SHLI SteelSword Armorslayer SteelLance Javelin SteelAxe HandAxe SteelBow KillerBow Heal Fire Lightning Flux Vulnerary 0x00
 ALIGN 4
 
-NVillage:
+VillageEvent:
+MUSI
+Text(0x2,Merc5MilitiaWaitCesariaVillageText)
+GiveItem(0xFFFF,Elixir)
+MUNO
+NoFade
+EndA2
+
+HouseEvent1:
 MUSI
 Text(0x2,Merc5MilitiaWaitCesariaHouse1Text)
-GiveItem(ShortAxe,0xFFFF)
 MUNO
 NoFade
-ENDA
+EndA2
 
-SVillage:
+HouseEvent2:
 MUSI
 Text(0x2,Merc5MilitiaWaitCesariaHouse2Text)
-GiveItem(BraveAxe,0xFFFF)
 MUNO
 NoFade
-ENDA
+EndA2
 
-NHouse:
+HouseEvent3:
 MUSI
-Text(Merc5MilitiaWaitCesariaHouse3Text)
+Text(0x2,Merc5MilitiaWaitCesariaHouse3Text)
 MUNO
-NoFade
-ENDA
-
-SHouse:
-MUSI
-Text(Merc5MilitiaWaitCesariaHouse4Text)
-MUNO
-NoFade
-ENDA
-
-MendPickup:
-SandPickup(0x13,Mend)
-NoFade
-ENDA
-
-TempestPickup:
-SandPickup(0x14,Tempest)
-NoFade
-ENDA
-
-TalismanPickup:
-SandPickup(0x15,Talisman)
-NoFade
-ENDA
-
-SteelLongbowPickup:
-SandPickup(0x16,SteelLongbow)
 NoFade
 ENDA
 
 	/*UNIT DATA*/
 
+//Label PlayerLoading
 PlayerLoading1:
-UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [8,9] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT	
-	
+UNIT PlayerMMercenary 0x00 0x00 Level(1,Ally,True) [10,13] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
 PlayerLoading2:
-UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [4,1] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
+UNIT PlayerMMercenary 0x00 0x00 Level(1,Ally,True) [2,17] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
+
+//Label ChapterUnits
+FinocHere:
+UNIT Finoc 0x00 0x00 Level(5,Ally,True) [0,18] 0x00 0x00 0x01 REDA2R16 [0] NoAI
 UNIT
 
-LukeArcStart:
-UNIT Luke 0x00 0x00 Level(4,Ally,True) [7,8] 0x00 0x00 0x00 0x00 [0] NoAI 
-UNIT Arc 0x00 0x00 Level(4,Ally,True) [10,6] 0x00 0x00 0x00 0x00 [0] NoAI 
+ElanilHere:
+UNIT Elanil 0x00 0x00 Level(5,Ally,True) [2,16] 0x00 0x00 0x01 REDA2R17 [0] NoAI
 UNIT
 
-MaximusCutscene:
-UNIT Maximus BattleSage Maximus Level(4,NPC,True) [0,1] 0x00 0x00 0x1 REDA4R3 [IronSword,Vulnerary] NoAI 
+Meanies1:
+UNIT Kaid Hero Kaid Level(5,Enemy,True) [27,4] Drop 0x00 0x00 0x00 [SilverAxe] GuardAI
+UNIT GerwickBandit Mercenary Kaid Level(11,Enemy,True) [26,5] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
+UNIT GerwickBandit Mercenary Kaid Level(14,Enemy,True) [28,5] 0x00 0x00 0x00 0x00 [IronBlade] NoAI
+UNIT GerwickBandit Cavalier Kaid Level(10,Enemy,True) [28,8] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT GerwickBandit Fighter Kaid Level(9,Enemy,True) [27,12] 0x00 0x00 0x00 0x00 [DevilAxe] AttackInRangeAI
+UNIT GerwickBandit Soldier Kaid Level(11,Enemy,True) [26,16] 0x00 0x00 0x00 0x00 [Javelin] ChaseOnceApproachedAI
+UNIT GerwickBandit Halberdier Kaid Level(2,Enemy,True) [28,18] Drop 0x00 0x00 0x00 [Dragonspear,BlueGem] AttackInRangeAI
+UNIT GerwickBandit Mage Kaid Level(15,Enemy,True) [24,7] 0x00 0x00 0x00 0x00 [Elthunder] AttackInRangeAI
+UNIT GerwickBandit Archer Kaid Level(12,Enemy,True) [25,9] 0x00 0x00 0x00 0x00 [SteelBow] ChaseOnceApproachedAI
+UNIT GerwickBandit Cavalier Kaid Level(12,Enemy,True) [26,8] Drop 0x00 0x00 0x00 [IronLance,KillingEdge] ChaseOnceApproachedAI
 UNIT
 
-LoadLux:
-UNIT Lux Mage_F Lux Level(10,Ally,True) [1,0] 0x00 0x00 0x1 REDA5R2 [Elaqua,Fire] NoAI 
+Meanies2:
+UNIT GerwickBandit Myrmidon Kaid Level(16,Enemy,True) [20,9] 0x00 0x00 0x00 0x00 [WindSword] AttackInRangeAI
+UNIT GerwickBandit Spellsword Kaid Level(15,Enemy,True) [21,11] 0x00 0x00 0x00 0x00 [Zanbato,Thunder] ChaseOnceApproachedAI
+UNIT GerwickBandit Soldier Kaid Level(14,Enemy,True) [19,11] 0x00 0x00 0x00 0x00 [ToxinLance] AttackInRangeAI
+UNIT GerwickBandit Knight Kaid Level(16,Enemy,True) [18,14] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
+UNIT GerwickBandit Archer Kaid Level(13,Enemy,True) [20,14] 0x00 0x00 0x00 0x00 [SteelLongbow] AttackInRangeAI
+UNIT GerwickBandit Monk Kaid Level(15,Enemy,True) [15,13] 0x00 0x00 0x00 0x00 [Lightning,Physic] HealAlliesAI
+UNIT GerwickBandit Knight Kaid Level(12,Enemy,True) [15,16] 0x00 0x00 0x00 0x00 [Spear] GuardAI
+UNIT GerwickBandit Knight Kaid Level(13,Enemy,True) [16,18] 0x00 0x00 0x00 0x00 [BattleAxe] GuardAI
+UNIT GerwickBandit Pirate Kaid Level(12,Enemy,True) [21,17] 0x00 0x00 0x00 0x00 [ShortAxe] AttackInRangeAI
+UNIT GerwickBandit Brigand Kaid Level(15,Enemy,True) [12,19] 0x00 0x00 0x00 0x00 [PoisonAxe] NoAI
+UNIT GerwickBandit Mercenary Kaid Level(14,Enemy,True) [12,17] 0x00 0x00 0x00 0x00 [Wyrmslayer] NoAI
+UNIT GerwickBandit Knight Kaid Level(11,Enemy,True) [1,11] 0x00 0x00 0x00 0x00 [HeavySpear,HandAxe] GuardAI
 UNIT
 
-Meanies:
-UNIT Grant Ranger Grant Level(4,Enemy,True) [17,16] 0x00 0x00 0x00 0x00 [SteelShortbow,Armorslayer] AttackInRangeAI
-UNIT Arcanian Hero Grant Level(3,Enemy,True) [16,12] 0x00 0x00 0x00 0x00 [Wyrmslayer] AttackInRangeAI
-UNIT Arcanian Mage Grant Level(10,Enemy,True) [17,11] 0x00 0x00 0x00 0x00 [Elfire] AttackInRangeAI
-UNIT Arcanian MageKnight Grant Level(2,Enemy,True) [15,18] 0x00 0x00 0x00 0x00 [Arcaqua,Mend] ChaseOnceApproachedAI
-UNIT Arcanian Soldier Grant Level(9,Enemy,True) [0,15] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
-UNIT Arcanian Fighter Grant Level(9,Enemy,True) [1,14] 0x00 0x00 0x00 0x00 [Halberd] NoAI
-UNIT Arcanian Pirate Grant Level(8,Enemy,True) [2,15] 0x00 0x00 0x00 0x00 [HandAxe] ChaseOnceApproachedAI
-UNIT Arcanian Myrmidon Grant Level(8,Enemy,True) [3,16] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
-UNIT Arcanian Druid Grant Level(4,Enemy,True) [1,17] Drop 0x00 0x00 0x00 [Slime,Wind,GuidingRing] AttackInRangeAI
-UNIT Arcanian PegasusKnight Grant Level(11,Enemy,True) [16,18] 0x00 0x00 0x00 0x00 [SlimLance] NoAI
-UNIT Arcanian WyvernRider Grant Level(11,Enemy,True) [17,17] 0x00 0x00 0x00 0x00 [SilverLance] NoAI
-UNIT Arcanian PegasusKnight Grant Level(10,Enemy,True) [18,16] 0x00 0x00 0x00 0x00 [HeavySpear] NoAI
-UNIT Arcanian Knight Grant Level(7,Enemy,True) [6,6] 0x00 0x00 0x00 0x00 [Javelin,Hammer] GuardAI
-UNIT Arcanian Sentinel Grant Level(2,Enemy,True) [7,5] 0x00 0x00 0x00 0x00 [KillerAxe,SteelLance] GuardAI
-UNIT Arcanian Mage Grant Level(6,Enemy,True) [8,4] 0x00 0x00 0x00 0x00 [Thunder] GuardAI
-UNIT Arcanian Archer Grant Level(8,Enemy,True) [8,8] 0x00 0x00 0x00 0x00 [SteelShortbow] AttackInRangeAI
-UNIT Arcanian Archer Grant Level(9,Enemy,True) [9,7] 0x00 0x00 0x00 0x00 [DevilBow] AttackInRangeAI
-UNIT Arcanian Pirate Grant Level(8,Enemy,True) [7,15] 0x00 0x00 0x00 0x00 [Tomahawk] ChaseOnceApproachedAI
-UNIT Arcanian Mage Grant Level(9,Enemy,True) [15,6] 0x00 0x00 0x00 0x00 [Elwind] AttackInRangeAI
-UNIT Arcanian Halberdier Grant Level(3,Enemy,True) [15,4] 0x00 0x00 0x00 0x00 [ShortSpear] AttackInRangeAI
-UNIT Arcanian Halberdier Grant Level(3,Enemy,True) [13,6] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
-UNIT Arcanian Cavalier Grant Level(7,Enemy,True) [7,10] 0x00 0x00 0x00 0x00 [SteelLance,Zanbato] NoAI
-UNIT Arcanian Cavalier Grant Level(9,Enemy,True) [6,11] 0x00 0x00 0x00 0x00 [DragonSpear] NoAI
-UNIT Arcanian GreatKnight Grant Level(2,Enemy,True) [9,17] 0x00 0x00 0x00 0x00 [BraveLance,HandAxe] ChaseOnceApproachedAI
-UNIT Arcanian Monk Grant Level(10,Enemy,True) [3,10] Drop 0x00 0x00 0x00 [Shine] AttackInRangeAI
-UNIT Arcanian Mercenary Grant Level(9,Enemy,True) [16,8] 0x00 0x00 0x00 0x00 [IronSword] AttackInRangeAI
+Meanies3:
+UNIT GerwickBandit Pirate Kaid Level(14,Enemy,True) [2,8] 0x00 0x00 0x00 0x00 [DragonAxe] NoAI
+UNIT GerwickBandit Mage Kaid Level(14,Enemy,True) [1,7] 0x00 0x00 0x00 0x00 [Arcfire] AttackInRangeAI
+UNIT GerwickBandit Brigand Kaid Level(13,Enemy,True) [3,5] Drop 0x00 0x00 0x00 [Halberd] AttackInRangeAI
+UNIT GerwickBandit PegasusKnight Kaid Level(16,Enemy,True) [6,1] 0x00 0x00 0x00 0x00 [SlimLance] ChaseOnceApproachedAI
+UNIT GerwickBandit Sentinel Kaid Level(1,Enemy,True) [8,4] 0x00 0x00 0x00 0x00 [SilverSword,Javelin] GuardAI
+UNIT GerwickBandit Archer Kaid Level(13,Enemy,True) [12,3] 0x00 0x00 0x00 0x00 [IronShortbow] AttackInRangeAI
+UNIT GerwickBandit Spellsword Kaid Level(12,Enemy,True) [14,4] 0x00 0x00 0x00 0x00 [IronSword,Flux] AttackInRangeAI
+UNIT GerwickBandit Fighter Kaid Level(14,Enemy,True) [13,5] 0x00 0x00 0x00 0x00 [Hammer] AttackInRangeAI
+UNIT GerwickBandit Berserker Kaid Level(2,Enemy,True) [19,5] 0x00 0x00 0x00 0x00 [SteelAxe] ChaseOnceApproachedAI
 UNIT
 
-Allies:
-UNIT Lux Mage_F Lux Level(4,Ally,True) [1,2] 0x00 0x00 0x00 0x00 [Elaqua,Fire] NoAI 
-UNIT Arc Mage_F Lux Level(4,Ally,True) [2,1] 0x00 0x00 0x00 0x00 [Elaqua,Fire] NoAI 
-UNIT Luke Mage_F Lux Level(4,Ally,True) [0,3] 0x00 0x00 0x00 0x00 [Elaqua,Fire] NoAI 
-
-JasperDerek:
-UNIT Jasper Cavalier Lux Level(9,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [SteelSword,Javelin] NoAI 
-UNIT Derek Knight Lux Level(8,Ally,True) [3,2] 0x00 0x00 0x00 0x00 [SteelAxe,HeavySpear] NoAI 
+Turn4Units:
+UNIT GerwickBandit Cavalier Kaid Level(10,Enemy,True) [27,4] 0x00 0x00 0x01 REDA26R7 [SteelBlade] NoAI
+UNIT GerwickBandit Cavalier Kaid Level(9,Enemy,True) [27,4] 0x00 0x00 0x01 REDA28R7 [Lancereaver] NoAI
+UNIT GerwickBandit Warrior Kaid Level(2,Enemy,True) [27,17] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
 UNIT
 
-LoadFinoc:
-UNIT Finoc Cavalier Lux Level(6,Ally,True) [0,8] 0x00 0x00 0x00 0x00 [SteelSword,Javelin] NoAI 
+Turn5Units:
+UNIT GerwickBandit PegasusKnight Kaid Level(13,Enemy,True) [10,4] 0x00 0x00 0x00 0x00 [IronLance] NoAI
 UNIT
 
-LoadElanil:
-UNIT Elanil Cavalier Lux Level(6,Ally,True) [0,7] 0x00 0x00 0x00 0x00 [SteelSword,Javelin] NoAI 
+Turn6Units:
+UNIT GerwickBandit Warrior Kaid Level(1,Enemy,True) [27,17] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
 UNIT
+
+Turn7Units:
+UNIT GerwickBandit PegasusKnight Kaid Level(14,Enemy,True) [10,4] 0x00 0x00 0x00 0x00 [Javelin] NoAI
+EndUnit
+
+//Label CutsceneUnits
+DanaanFriends:
+UNIT Arc 0x00 0x00 Level(1,Ally,True) [12,11] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Luke 0x00 0x00 Level(1,Ally,True) [13,12] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+DanaanGreens:
+UNIT Maximus Strategist 0x00 Level(1,NPC,True) [8,13] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Cesarian Mage_F 0x00 Level(1,NPC,True) [6,12] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Cesarian Soldier 0x00 Level(1,NPC,True) [8,6] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Cesarian Soldier 0x00 Level(1,NPC,True) [10,7] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Cesarian Mercenary 0x00 Level(1,NPC,True) [2,8] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Cesarian Fighter 0x00 Level(1,NPC,True) [12,5] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+Friends:
+UNIT Arc 0x00 0x00 Level(1,Ally,True) [4,16] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Luke 0x00 0x00 Level(1,Ally,True) [3,18] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Jasper 0x00 0x00 Level(1,Ally,True) [1,15] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Derek 0x00 0x00 Level(1,Ally,True) [2,16] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Lux 0x00 0x00 Level(1,Ally,True) [1,18] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit

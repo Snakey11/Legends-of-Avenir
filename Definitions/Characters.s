@@ -85,7 +85,7 @@ Arcanian
 Guardian
 William
 Emperor
-Grant
+Kaid
 Pat
 BossUzkalis
 BossArc

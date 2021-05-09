@@ -1,295 +1,205 @@
 
-## Merc5MilitiaWaitCesariaBeginningText
-[MidLeft][LoadLuke][Tact], wake up![A][NL]
-[MidRight]Huh?[A]
-[MidLeft]Maximus[MidRight][LoadPlayer][MidLeft] wants to speak with us.[A]
-[MidRight]Oh, sorry, I'm on my way.[A][X]
-
-## Merc5MilitiaWaitCesariaPlansText
-[FarLeft][LoadLux][MidRight][LoadPlayer][Left][LoadMaximus]
-Ah, you're here, [Tact]. Thank you.[A]
-[MidRight]So what's the word?[A]
-[Left]Vice-Captain Lux here was scouting out in[NL]
-Draterus to keep track of Uzkalis'[A][NL]
-movements. She had just started her report[NL]
-when I decided to send for you.[A]
-[MidRight]Understood.[A]
-[FarLeft]It's good to meet you, [Tact].[A]
-[MidRight]And you as well.[A]
-[Left]Go ahead and continue[NL]
-your report, Lux.[A]
-[FarLeft]Yes, sir. I was tracking the[NL]
-movements of Arcanae through the desert.[A][NL]
-They seemed to be heading for various[NL]
-locations of ruins, but took a slight detour.[A][NL]
-I don't think they had originally been[NL]
-prepared to journey into Draterus itself, so[A][NL]
-they changed route to stop at an Oasis.[A]
-[MidRight]Are those rare in the desert?[A]
-[Left]Very. Because of that, we have a good[NL]
-idea of where Uzkalis and his men[A][NL]
-are right now. Continue, Lux.[A]
-[FarLeft]Last I checked, they had divided their forces,[NL]
-likely to widen their search for artifacts.[A][NL]
-Many of them still reside at the Oasis. I[NL]
-believe that if we attack that group and[A][NL]
-capture the Oasis, we could scatter[NL]
-a large portion of Uzkalis' men.[A]
-[Left]That definitely seems like a good plan. I[NL]
-have to return to Cesaria and mobilize the[A][NL]
-rest of the Tiger Brigade as I understand[NL]
-that Xavus' main force is moving towards[A][NL]
-the border. Lux, [Tact], I leave you two[NL]
-to lead the operation in Draterus. I'll[A][NL]
-leave a few graduated cadets as well.[NL]
-Derek! Jasper![A][CloseSpeech][MidRight][MoveRight][FarRight][LoadDerek]
-Private Derek reporting for duty.[A][ClearFace][LoadJasper]
-Private Jasper, sir![A]
-[Left]You're being sent into Draterus with the[NL]
-Vice-Captain and [Tact], here.[A][NL]
-You'll be answering to them.[A]
-[FarRight]Understood.[A]
-[Left]I've made arrangements for a small[NL]
-supply convoy to accompany you.[A][NL]
-I will return as soon as I[NL]
-am able. I wish you all luck.[A]
-[FarLeft]Godspeed, Captain.[A][CloseSpeech][Left][ClearFace]
-[Right]See you around. So when[NL]
-do we move out, Lux?[A]
-[FarLeft]Likely in about an hour. Go[NL]
-speak with your friends for now.[A]
-[Right]Will do.[A][X]
-
-## Merc5MilitiaWaitCesariaArcPlayerText
+## Merc5MilitiaWaitCesariaStartingText
+[ConversationText]
 [MidLeft][LoadArc][MidRight][LoadPlayer]
-Hey, Arc.[A]
-[MidLeft][Tact]... *sigh* I'm such a fool.[A]
-[MidRight]Arc, you can't cling to what happened[NL]
-to Danaan. It's not any of our faults[A][NL]
-individually. Blame Gerwick[NL]
-for being a fool.[A]
-[MidLeft]It was my choice to leave.[NL]
-I should have stayed. We[A][NL]
-should have divided[NL]
-and conquered.[A]
-[MidRight]And then what? All three of us would be[NL]
-dead and Danaan would still be destroyed.[A]
-[MidLeft]I'd rather have died doing my[NL]
-duty than live knowing I failed.[A]
-[MidRight]I'd rather honor their memory[NL]
-by doing what I know is right.[A][CloseSpeech][.......]
-[MidLeft][Tact]...[.....][A]
-[MidRight]Arc. It's your choice what[NL]
-to do with your life.[A]
-[MidLeft][TMM]...[......][TMM] I'm coming with you. Perhaps I'll[NL]
-find a new purpose in our journey.[A]
-[MidRight][Smile]Thank you, Arc. I appreciate it.[NL]
-It brings me great comfort having[A][NL]
-someone I can thoroughly rely on.[A]
-[MidLeft][Smile]You can rely on me so long as I[NL]
-believe this is a path to follow.[A][CloseSpeech][MoveLeft][FarLeft][LoadLuke]
-Arc! [Tact]! Lux is calling[NL]
-us! We're heading out.[A]
-[MidRight]We're on our way![A][X]
+Arc...
+[MidLeft]What do you want, [Tact]?
+[MidRight]I'm so sorry...
+[MidLeft]Well, sorry doesn't bring back my friends. My family. My people.
+[MidRight]I know...
+[MidLeft]Then leave me alone.[CloseSpeech][MidRight][MoveFarRight][MidLeft][MoveRight][ClearFace][LoadArc]
+[FarLeft][LoadLux][Tact]?
+[FarRight]What is it?
+[FarLeft]I'm Vice-Captain Lux of the Tiger Brigade. Captain Maximus sent me to fetch you so you can talk further.[CloseSpeech][FarRight][MoveLeft][ClearFace][LoadPlayer]
+Right. Arc...
+[Right]Just go.[X]
 
-## Merc5MilitiaWaitJasperDerekText
-[FarRight][LoadJasper][Right][LoadDerek]
-How far to the oasis? This heat[NL]
-is killing me in this armor.[A]
-[FarRight]Calm down, Derek. I'm used to riding a[NL]
-horse everywhere, having to walk[A][NL]
-[Left][LoadLux][FarRight]and lead it on is killing my feet.[A]
-[Left]Quiet, you two![A]
-[FarLeft][LoadPlayer]Calm down, Lux. The wind is blowing at[NL]
-us, so our voices won't carry[A][NL]
-forwards to our quarry.[A]
-[Left]You really have no idea of[NL]
-protocol, do you?[A]
-[FarLeft]I'm a freelancer, not a soldier.[A]
-[FarRight]Hey, [Tact], what is[NL]
-Haedric like, anyway?[A]
-[FarLeft]What do[Left][ClearFace][FarLeft] you mean?[A]
-[FarRight]Well, we've heard the culture there is[NL]
-vastly different from Cesaria.[A]
-[FarLeft]I'm not quite the best one to answer[NL]
-that, considering how much time I spend[A][NL]
-around Avenir. Arc, think you can[NL]
-take this one on?[A][NL][CloseSpeech][FarLeft][MoveLeft][FarLeft][LoadArc]
-I've got it. Our cultures are definitely quite[NL]
-different, in more ways than one. We're not[A][NL]
-quite as organized as you Cesarians, with your[NL]
-brigades and strict hierarchy. We call our[A][NL]
-leader the Basileus. Basileus Leon was[NL]
-selected by the last Basileus, but[A][NL]
-normally, the Basileus will hold a tournament[NL]
-to select the strongest warrior as their[A][NL]
-successor. Haedric itself is mostly ruled[NL]
-by the Warlords, who often squabble with[A][NL]
-each other, but no other nation on[NL]
-Avenir has quite the same strong sense[A][NL]
-of nationalism that Haedricians share. If[NL]
-there's a matter of national importance,[A][NL]
-everyone will follow Basileus Leon into[NL]
-battle, regardless of past quarrels.[A]
-[Right]That seems... Unstable.[NL]
-Isn't there fear of civil war?[A]
-[Left]Do you all fear the General[NL]
-turning on the Emperor?[A]
-[Right]I suppose not. Is it really that similar?[A]
-[Left]From my experiences, yes.[A]
-[FarRight]There were concerns about Captain Maximus'[NL]
-predecessor, but he was killed in[A][NL]
-battle and Maximus succeeded him. Just[NL]
-like if the Captain were to die now,[A][NL]
-Vice Captain Lux would succeed him. We[NL]
-all trust each other, so long as we[A][NL]
-have such a strong leader like[NL]
-General Rex leading us.[A]
-[Left]I suppose we're all more[NL]
-similar than we seem.[A][FarLeft][ClearFace][LoadLux]
-Quiet down! We're near the oasis where I[NL]
-saw Uzkalis' men before. It looks[A][NL]
-like Uzkalis himself isn't there...[NL]
-But we might as well strike now. This[A][NL]
-is clearly their temporary base of[NL]
-operations, and we'll scatter[A][NL]
-Uzkalis' entire group if we can[NL]
-eliminate this base.[A]
-[Left]Understood. Arc, follow me.[A][FarRight][ClearFace][LoadArc]
-I'm right behind you, [Tact].[A][ClearFace][LoadJasper][FarLeft]
-Derek, Jasper, go with them. Time to[NL]
-prove yourselves, rookies. Luke[A][NL]
-and I will head up the back.[A]
-[FarRight]Yes, sir![A]
-[Right]I'm on it.[A][X]
+## Merc5MilitiaWaitCesariaSettingOutText
+[ConversationText]
+[MidLeft][LoadPlayer][MidRight][LoadMaximus]
+Greetings, [Tact]. Do you want some tea?
+[MidLeft]No thanks.
+[MidRight]Very well. So, [Tact], I must admit... This war with Arcanae is an uncertain one. Both in our ability to find victory, and in our ability to allow other countries their neutrality. I worry that if it goes on much longer, Altia or even Haedric will be forced to enter the war.
+[MidLeft]What does this really have to do with me?
+[MidRight]Well, you did a great job recovering that artifact. It seems odd to place trust in any random freelancer, but... you seem trustworthy. You sought the bandits of your own accord. You're the exact kind of person I want on my side helping me.
+[MidLeft]How will I make any difference?
+[MidRight]I want to assemble a small strike force. A group that can slip past Arcanae's lines and make a beeline straight for the capital. Capture that, and Arcanae loses the source of their power and influence. It would deal a huge blow to them.
+[MidLeft]Okay...
+[MidRight]Most Cesarians aren't well-suited for that job. We're trained to fight as parts of a large group. This will be much more based on individual skill, something you definitely seem to have.
+[MidLeft]What about Arc and Luke?
+[MidRight]That's up to them. Lux?[CloseSpeech][MoveRight]
+[FarRight][LoadLux]Yes, sir?
+[Right]Bring the Haedricians here. They should be able to make their own choices.
+[FarRight]Understood.[ClearFace]
+[MidLeft]Luke had expressed a willingness, but Arc...
+[FarRight][LoadLux]Here they are.[CloseSpeech][MidLeft][MoveLeft]
+[FarLeft][LoadLuke]What's this about?
+[Right]I'm assembling a strike force to go into Arcanae and take their capital. I asked [Tact] here to be a part of it. I figured I would extend the offer to you two.
+[FarLeft]... I'm in. With Danaan gone... I don't know what else to do with myself. Continuing to journey seems like the best option.
+[Right]Very well.
+[Left]I'll be glad to have you along, Luke. Arc...?
+[FarRight][ClearFace][LoadArc]... I want to see the destruction of Danaan for myself.
+[FarLeft]Arc...
+[FarRight]They could have made that up to keep us here! I want to confirm the damage for myself.
+[Right]... Very well.
+[FarLeft][ClearFace][LoadLux]Sir?
+[Right]Assemble the rest of the strike force.
+[FarLeft]I'm on it.[ClearFace]
+[Right]I'll escort you and the rest of the strike force to Danaan. Once you see what's there... You can make your choice. I'll brief the rest of the strike force on the entire mission from there.
+[FarRight]... Thank you.
+[Left]Guess this means the rest of us should pack our stuff up too.
+[Right]We'll move out whenever you're ready. There will be a few Cesarian soldiers joining you as well. Vice-Captain Lux is getting them now.
+[FarLeft][LoadLuke]Arc... What we find may not please you...
+[FarRight]I know. But I have to see for myself.
+[FarLeft]I understand... But please... Prepare yourself...
+[FarRight]I'm more than prepared.
+[FarLeft]...[X]
 
-## Merc5MilitiaWaitCesariaGrantText
-[FarRight][LoadGrant]
-Dammit, it's a surprise attack! Come on[NL]
-men, we have to fend them off! If[A][NL]
-we lose this position, we lose our[NL]
-home base for this desert excursion![A][X]
+## Merc5MilitiaWaitCesariaApproachingText
+[ConversationText]
+[MidRight][LoadPlayer][MidLeft][LoadLux]
+[Tact], these are Privates Jasper and Derek. They're recently graduated Cadets but both graduated near the top of the class. They'll be with us on this mission.[CloseSpeech][MoveLeft]
+[FarLeft][LoadJasper]A pleasure to meet you, [Tact].[ClearFace]
+[LoadDerek]What he said.
+[Left]Captain Maximus assigned me to the mission as well, [Tact].
+[MidRight]Glad to have the three of you along. Thanks for coming out here to check out Danaan as well...
+[Left]The plan involves us moving into Arcanae from Haedric anyway. This is pretty much en route for us.
+[FarLeft][ClearFace][LoadJasper]Wait, are we really able to make a strike against Arcanae from Haedrician territory?[ClearFace]
+[LoadDerek]Yeah, aren't they neutral?
+[Left]The Captain received approval from the Basileus for this operation. Hopefully Arc agrees to go with us...
+[MidRight]Right... We'll need a guide through some of the thick forests at the border.
+[Left]Exactly.
+[FarLeft][ClearFace][LoadMaximus]Lux! You've brought [Tact] up to speed?
+[Left]Yes, sir.
+[FarLeft]Good. We're approaching Danaan now.[X]
 
-## Merc5MilitiaWaitCesariaElanilFinocHereText
+## Merc5MilitiaWaitCesariaDanaanText
+[ConversationText]
+[Right][LoadArc]
+No...
+[FarRight][LoadLuke]Arc...
+[Right]This can't... This can't be real... It's completely destroyed...
+[Left][LoadLux]Jasper, Derek, secure our position.
+[FarLeft][LoadDerek]We're on it!
+[ClearFace][LoadPlayer]Arc... I'm so sorry...
+[Right]... There's nothing to be done.
+[Left][ClearFace][LoadMaximus]This is strange...
+[FarRight]What is it?
+[Left]It looks like others have been here... Recently, too...
+[FarLeft][ClearFace][LoadLux]Pillagers?
+[Left]It must be...
+[Right]What would they want here?
+[Left]Collect any riches potentially left behind? I don't know.
+[Right]How dare they deface my home...
+[FarRight]Arc...
+[Right][MoveRight]Maximus! Where can we find these pillagers you speak of?
+[Left]The tracks lead off in that direction.
+[Right]Good. Let's go, Luke.
+[FarRight]... Right.
+[ClearFace][LoadPlayer]I'm coming too.
+[FarLeft]The Privates and I will too.
+[Left]I'll stay here and secure the area. It may be a ruin, but it's not a bad place for us to finish discussing the plan when you all return.
+[FarLeft]Understood.
+[FarRight]I have some tracking experience. I'll lead the way.[X]
+
+## Merc5MilitiaWaitCesariaStartBattleText
+[ConversationText]
+[MidRight][LoadArc][FarLeft][LoadDerek][Left][LoadPlayer]
+There they are...
+[MidRight]What are we waiting for? [MoveMidRight]Let's knock some heads!
+[FarLeft]And I thought I was a maverick...
+[Left]Be careful, Arc. We have to do this together. There looks to be a fair few of them...
+[MidRight]I don't care! They taint my home, they die!
+[Left]I guess we're doing this...![X]
+
+## Merc5MilitiaWaitCesariaBossStartBattleText
+[ConversationText]
+[FarRight][LoadKaid]
+What the-? We're under attack! Get 'em, boys![X]
+
+## Merc5MilitiaWaitCesariaAltiansJoinText
+[ConversationText]
 [FarLeft][LoadElanil][Left][LoadFinoc]
-What's that there?[A]
-[FarLeft]It looks like a skirmish between[NL]
-some Arcanians and Cesarians...[A][NL]
-But... is that [Tact]?[A]
-[Left]Looks like it. Luke and[NL]
-Arc are with them too.[A]
-[FarLeft]Then what are we waiting for?[NL]
-We're siding with Cesaria.[A]
-[Left]I don't know. I never thought I[NL]
-would make the first strike in a[A][NL]
-war between Altia and Arcanae.[A]
-[FarLeft]Those are our friends fighting[NL]
-them, Finoc. Suck it up![A]
-[Left]Ha! Normally I'm the one to make[NL]
-rash decisions, but you make a[A][NL]
-good point. Let's have at 'em![A][X]
+There they are!
+[FarLeft]Looks like they've gotten themselves into trouble yet again...
+[Left]Well we're gonna help them, right?
+[FarLeft]Of course we are. Let's go![X]
 
-## Merc5MilitiaWaitCesariaGrantBattleText
-[FarLeft][LoadGrant]
-Grr... I'll handle this myself![A][X]
+## Merc5MilitiaWaitCesariaTactFinocText
+[ConversationText]
+[MidLeft][LoadFinoc][MidRight][LoadPlayer]
+Finoc! You returned!
+[MidLeft]You bet! We'll talk after, let's clean up these bandits.[X]
 
-## Merc5MilitiaWaitCesariaGrantDeathText
-[FarLeft][LoadGrant]
-Lord Uzkalis...[CloseEyes][....] Glory[NL]
-to...[....] Arcanae...[A][X]
+## Merc5MilitiaWaitCesariaTactElanilText
+[ConversationText]
+[MidLeft][LoadPlayer][MidRight][LoadElanil]
+We're here, [Tact].
+[MidLeft]We're glad to have you.
+[MidRight]I'll update you after the battle. For now, keep me covered!
+[MidLeft]I'm on it![X]
+
+## Merc5MilitiaWaitCesariaKaidBattleText
+[BattleText]
+[FarLeft][LoadKaid]
+How'd you find us!? Whatever... I'll deal with you myself![X]
+
+## Merc5MilitiaWaitCesariaKaidDeathText
+[BattleText]
+[FarLeft][LoadKaid]
+Dammit...[X]
+
+## Merc5MilitiaWaitCesariaArcKaidBattleText
+[BattleText]
+[FarRight][LoadArc]
+You're the one who led the pillagers?[ClearFace]
+[FarLeft][LoadKaid]
+We didn't destroy the village, we're just cleaning up after those that did![ClearFace]
+[FarRight][LoadArc]
+Even so... You will die.[ClearFace]
+[FarLeft][LoadKaid]
+Grr... I won't fall so easily![X]
 
 ## Merc5MilitiaWaitCesariaEndingText
-[FarLeft][LoadDerek][Left][LoadJasper][Right][LoadPlayer][FarRight][LoadLux]
-Well done! Derek, Jasper,[NL]
-secure this position![A]
-[FarLeft]Understood![A]
-[Left]I'm on it![A][ClearFace][FarLeft][ClearFace][Right]
-Arc, would you [MidLeft][LoadArc][Right]lend them a hand?[A]
-[MidLeft]It would be my pleasure.[A][ClearFace][....]
-[Left][LoadElanil][FarLeft][LoadFinoc][Tact]! You're here![A]
-[Right]Finoc! Elanil! Thanks for the help back[NL]
-there! What brings you here?[A]
-[Left]The Anguis told us that Altia is going to[NL]
-side with Cesaria in this conflict. We[A][NL]
-were dispatched to rejoin with you. Didn't[NL]
-expect to find you out here in Draterus.[A]
-[Right]We joined up with Cesaria too.[NL]
-Finoc, Elanil, this is Lietenant Lux,[A][NL]
-Vice Captain of the Tiger Brigade.[A]
-[FarRight]It's a pleasure to meet you both. Thank[NL]
-you for joining this conflict on our side.[A]
-[FarLeft]It was the decision of Anguis and High[NL]
-Priest Izuk. We're just following orders.[A]
-[FarRight]I still thank you for your assistance. I[NL]
-will send a messenger bird to Captain[A][NL]
-Maximus at the capital to inform[NL]
-him and the rest of the leadership[A][NL]
-of this new development.[A][ClearFace][.....][LoadLuke][Smile]
-Elanil! Finoc! You're here.[A]
-[Left]Luke! It's good to see you. Didn't[NL]
-realize it would be so soon.[A]
-[FarLeft]Looks like we're all back together.[NL]
-Care to fill us in, [Tact]?[A][FarRight][Smile]
-[Right]Sure thing. Uzkalis and his branch of the[NL]
-Arcanian military has fled into Draterus.[A][NL]
-They were using this Oasis as a sort of base[NL]
-camp, so we decided to strike here first[A][NL]
-to make the rest of them easy pickings.[A]
-[FarLeft]I see. Where is Uzkalis now?[A]
-[Right]Likely exploring ruins[NL]
-hoping to find artifacts.[A][FarRight][ClearFace][LoadJasper]
-[Tact]! It looks like some of the[NL]
-enemies got away! Their tracks[A][NL]
-are leading south, towards Bacrun.[A]
-[Right]Bacrun? Damn, they must be trying[NL]
-and sever the connection between[A][NL]
-the nations. Where's Lux?[A][FarLeft][ClearFace][LoadLux]
-I'm here. What's going on?[A]
-[FarRight]A portion of Uzkalis' forces[NL]
-are headed towards Bacrun.[A]
-[FarLeft]Dammit. We'll have to move quickly.[NL]
-Everyone! We head south for Bacrun![A]
-[FarRight]Yes sir![A]
-[Right]I hope we can make it in time.[A][X]
+[ConversationText]
+[MidRight][LoadPlayer][FarLeft][LoadLuke][Left][LoadArc]
+Go to hell...
+[FarLeft]It's done, Arc.
+[Left]... I know. I'm sorry. I couldn't let them desecrate my home any longer.
+[FarLeft]I understand.
+[MidRight]Take a moment to rest, you two.
+[Left]Thanks, [Tact].[ClearFace][FarLeft][ClearFace]
+[MidRight]Jasper, Derek, can[Left][LoadJasper][FarLeft][LoadDerek][MidRight] you two secure the perimeter? Make sure there are no stragglers or anything.
+[Left]I'm on it!
+[FarLeft]You can count on us.[ClearFace][Left][ClearFace]
+[MidLeft][LoadLux][Tact], let's talk with the Altians.[CloseSpeech][MidRight][MoveFarRight][MidLeft][MoveRight][ClearFace][LoadLux]
+[FarRight]Right. Finoc, Elanil! I'm [FarLeft][LoadFinoc][Left][LoadElanil][FarRight]glad to see you, but... why?
+[FarLeft]Well, we have some good news.
+[Left]Our Anguis has decided that Altia will enter the war. Arcanae is digging themselves deeper and deeper into dangerous research, and High Priest Izuk believes it could hold drastic effects upon Avenir if the war continues on.
+[FarLeft]That's right. So, here we are. We were dispatched to assist you along with Captain Maximus. We're lucky we found you, to be honest.
+[FarRight]No kidding. I'm glad to have you along.
+[Right]Does Captain Maximus know you're here?
+[FarLeft]All Cesarian Captains had a courier sent directly to them.
+[Right]Perfect. Once Arc and Luke have rested, we'll be returning to Danaan to meet with Captain Maximus. For now, let's all get a bit of rest. That last battle was a bit tough. 
+[FarRight]I agree. Get some rest, we'll return to Maximus when we're all ready.[X]
+
+## Merc5MilitiaWaitCesariaVillageText
+[ConversationText]
+[MidRight][LoadCurrent]
+oof[X]
 
 ## Merc5MilitiaWaitCesariaHouse1Text
-[MidRight][LoadCurrent][MidLeft][LoadVillagerMan1]
-We don't see people out here too[NL]
-often... I would've thought[A][NL]
-your meaningless war would steer[NL]
-clear of Draterus. We came out[A][NL]
-here to escape your politics...[NL]
-Just... Take this and leave us.[A][X]
+[ConversationText]
+[MidRight][LoadCurrent]
+oof[X]
 
 ## Merc5MilitiaWaitCesariaHouse2Text
-[MidRight][LoadCurrent][MidLeft][LoadVillagerMan4]
-Starting a battle in Draterus... The[NL]
-Wanderers may not take too kindly[A][NL]
-to that... You'll want to end this[NL]
-quickly and get out. For your sake,[A][NL]
-for their sake, and for our sake.[NL]
-I suppose it's fair I help you out.[A][NL]
-Just a little bit though. Take this.[A][X]
+[ConversationText]
+[MidRight][LoadCurrent]
+oof[X]
 
 ## Merc5MilitiaWaitCesariaHouse3Text
-[MidRight][LoadCurrent][MidLeft][LoadVillagerMan3]
-A skirmish? Out here? There hasn't been[NL]
-much battle in Draterus at all in the[A][NL]
-past few centuries ever since the fall[NL]
-of Vathryl. I'd take care to end the[A][NL]
-battle quickly. The Wanderers who[NL]
-inhabit the desert aren't[A][NL]
-especially fond of visitors.[A][X]
-
-## Merc5MilitiaWaitCesariaHouse4Text
-[MidRight][LoadCurrent][MidLeft][LoadVillagerOldMan]
-I would've thought hiding all the way[NL]
-out here in my retirement would have[A][NL]
-spared me the war, but I guess I[NL]
-thought wrong. Take care fighting[A][NL]
-against the Arcanian mages. They've[NL]
-mastered the art of quick movement[A][NL]
-over the sands, and their magic[NL]
-could tear through your units[A][NL]
-that have a tougher time of it.[A][X]
+[ConversationText]
+[MidRight][LoadCurrent]
+oof[X]
 

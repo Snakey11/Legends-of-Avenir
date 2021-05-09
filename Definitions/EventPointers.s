@@ -117,6 +117,7 @@ PrisonBreakMap
 ClintManorMap
 MistlainThroneCutsceneMap
 ArcanaeEscapeMap
+LooterBaseMap
 
 ArcanaeCapitalChanges
 BanditPassChanges
@@ -159,6 +160,7 @@ PrisonBreakChanges
 ClintManorChanges
 SmallRuinChanges
 ArcanaeEscapeChanges
+LooterBaseChanges
 
 DesertTempleObjectSet
 DesertTemplePalette
@@ -169,6 +171,9 @@ OutdoorSnowyTileConfig
 IndoorSnowyObjectSet
 IndoorSnowyPalette
 IndoorSnowyTileConfig
+WesternIslesObjectSet
+WesternIslesPalette
+WesternIslesTileConfig
 FE6WaterAnimations
 
 PrologueEvent

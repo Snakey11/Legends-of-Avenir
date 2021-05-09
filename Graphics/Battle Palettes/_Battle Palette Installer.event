@@ -79,7 +79,6 @@ setPalette(ForrestCavalierPaletteID,ForrestCavalierPalette)
 	setPalette(ForrestPaladinPaletteID,ForrestPaladinPalette)
 setPalette(GerwickPiratePaletteID,GerwickPiratePalette)
 setPalette(GhostSwordmasterPaletteID,GhostSwordmasterPalette)
-setPalette(GrantRangerPaletteID,GrantRangerPalette)
 setPalette(GuardianSpiritHarbingerPaletteID,GuardianSpiritHarbingerPalette)
 setPalette(HarkenHeroPaletteID,HarkenHeroPalette)	
 setPalette(HelmerSoldierPaletteID,HelmerSoldierPalette)
@@ -91,6 +90,7 @@ setPalette(JasperCavalierPaletteID,JasperCavalierPalette)
 	setPalette(JasperGreatKnightPaletteID,JasperGreatKnightPalette)
 	setPalette(JasperPaladinPaletteID,JasperPaladinPalette)
 setPalette(JurgenHeroPaletteID,JurgenHeroPalette)
+setPalette(KaidHeroPaletteID,KaidHeroPalette)
 setPalette(KendrickPiratePaletteID,KendrickPiratePalette)
 	setPalette(KendrickBerserkerPaletteID,KendrickBerserkerPalette)
 	setPalette(KendrickWarriorPaletteID,KendrickWarriorPalette)
@@ -274,7 +274,6 @@ SetPaletteFull(Forrest,ForrestCavalierPaletteID,Cavalier,ForrestGreatKnightPalet
 SetPaletteFull(BossForrest,ForrestCavalierPaletteID,Cavalier,ForrestGreatKnightPaletteID,GreatKnight,ForrestPaladinPaletteID,Paladin)
 SetPaletteFull(Gerwick,GerwickPiratePaletteID,Pirate,0x00,0x00,0x00,0x00)
 SetPaletteFull(BossGhost,0x00,0x00,GhostSwordmasterPaletteID,Swordmaster,0x00,0x00)
-SetPaletteFull(Grant,0x00,0x00,GrantRangerPaletteID,Ranger,0x00,0x00)
 SetPaletteFull(Narrator,0x00,0x00,GuardianSpiritHarbingerPaletteID,NarratorClass,0x00,0x00)
 SetPaletteFull(Harken,0x00,0x00,HarkenHeroPaletteID,Hero,0x00,0x00)
 SetPaletteFull(Helmer,HelmerSoldierPaletteID,Soldier,HelmerHalberdierPaletteID,Halberdier,HelmerSentinelPaletteID,Sentinel)
@@ -284,6 +283,7 @@ SetPaletteFull(Izuk,0x00,0x00,IzukPatriarchPaletteID,Patriarch,0x00,0x00)
 SetPaletteFull(Jasper,JasperCavalierPaletteID,Cavalier,JasperGreatKnightPaletteID,GreatKnight,JasperPaladinPaletteID,Paladin)
 SetPaletteFull(Jurgen,0x00,0x00,JurgenHeroPaletteID,SpearHero,0x00,0x00)
 SetPaletteFull(BossJurgen,0x00,0x00,JurgenHeroPaletteID,SpearHero,0x00,0x00)
+SetPaletteFull(Kaid,0x00,0x00,KaidHeroPaletteID,/*Hero*/0,0x00,0x00)
 SetPaletteFull(Kendrick,KendrickPiratePaletteID,Pirate,KendrickBerserkerPaletteID,Berserker,KendrickWarriorPaletteID,Warrior)
 SetPaletteFull(Leon,0x00,0x00,LeonBasileusPaletteID,Basileus,0x00,0x00)
 SetPaletteFull(Leyos,0x00,0x00,LeyosGuardianPaletteID,HectorClass,0x00,0x00)
@@ -997,6 +997,10 @@ JasperPaladinPalette:
 ALIGN 4
 JurgenHeroPalette:
 #incbin "Jurgen Hero.dmp"
+
+ALIGN 4
+KaidHeroPalette:
+//#incbin "Kaid Hero.dmp"
 
 ALIGN 4
 KendrickPiratePalette:

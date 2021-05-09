@@ -46,7 +46,6 @@ FinocWyvernRiderPaletteID
 	FinocWyvernLordPaletteID
 GerwickPiratePaletteID
 GhostSwordmasterPaletteID
-GrantRangerPaletteID
 GuardianSpiritHarbingerPaletteID
 ForrestCavalierPaletteID
 	ForrestGreatKnightPaletteID
@@ -61,6 +60,7 @@ JasperCavalierPaletteID
 	JasperGreatKnightPaletteID
 	JasperPaladinPaletteID
 JurgenHeroPaletteID
+KaidHeroPaletteID
 KendrickPiratePaletteID
 	KendrickBerserkerPaletteID
 	KendrickWarriorPaletteID

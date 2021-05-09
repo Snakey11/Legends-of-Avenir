@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="29" height="20" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="Western Isles Extended - Tileset" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/New Tilesets/Western Isles Extended - Tileset.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="29" height="20">
+  <properties>
+   <property name="Anims" value="WesternIslesAnims"/>
+   <property name="ChapterID" value="MercenaryMilitiaWaitCesaria5"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="LooterBaseChanges"/>
+   <property name="MapID" value="LooterBaseMap"/>
+   <property name="ObjectType" value="WesternIslesObjectSet"/>
+   <property name="PaletteID" value="WesternIslesPalette"/>
+   <property name="TileConfig" value="WesternIslesTileConfig"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJx9lktIVVEUhvc5J/OZ4QXLVw2C9PoorUGF0CS9ojnJoAyjSC++mkQ0C7QsRZEa5CSaWKY2KYNu88wapKmEEg57WRmkRrNqUP3L9W/O0R6Dj73vWWvvf+911lrnVhhjMkC6o8yZP5Hn/TKCMtACykEj2Gf+vW4usG8b5kMgCgY5ZgXswT2Ca7Z7qvkCdGHejLH9P+e1z49hnk2tChDG2nxQAHKM2m+u0a/jGtGLw+9cR88pZ8ii/9+0hEze7y5874ERUAmqwEHeoQhsAkdArdE1ZYyFUIV9UqkZ4dm3rtGzazdzrfhNYv8pMA1aQCs4DZJgm3GNSeDZbNxlbIQ9GfvFgxh+V2JMAT2YP4JtlDzm2eNBstG9JJ6f8XwRLNFexfWiWSjx5vnGYH8Ccqm9BHbDb1b8MBaBJsxfwec1eeOp3lmMIc/fS7gC/07ulYh5iaMaH1zVaQAd4BKo99RX7jsE+zwZBmPgJ+y/iFlnTBrGh9STNRsYH8kDibPsdxKcArd57wFPkd/znIvfHezfCvsBT/Weulor/cw9W0spIE/uwne0AHoZH4mz7NsOLnp+DIRJo2cLgQRHdd/JOVw9949Afm4x+l6HSTPvFqGOtXUzrrLWarbB5zhoBxdAKcji+B1+aYzRt0AfkPGE0T7RRb1noA/Pl42+E2srp7bEpR96tzz/3DbXg3WWHjhDUK+ONRHMa9ErcDSOnYzvV1e1m+m/EfZPrMtM1qiQwzo9SmrN6n5ha9fW7xLvFwaLrJdE2j5Cs8Nojor/F65bOSvz/JyntSX+C66es8z4vcrmi/SiKOdyz2rHr02pddGUGngvdWd0vBw4Zxz1XrqqKbl+CPMzIORqDczSZuvd9l9Z38iaFb8arpf7SZ7KOxbNEHvYDFjvaH4/gD3G+lqWXoE1E5J/tF/D8z7GIY6xy4dtnPqDrJMwa6oU417m3YDRnLC97aqja8S/kNyHXonUBtgGDrurzxRmTfVg7U5H94nwzpI7b13/u3PDaK/LoM32P9u7o6xdqW256xTWFoMRV3VSiGhID8xjDadSV/rGHnAejILrYAIk8V7d1JSciwV6wBTPbPu+1YoyV2R/6Z82t3ZQW3pAPRgjDaCY9dPk6d7l1I3wvcRof85YRAN3sr1zwvh+42b1N6SBPVP2ymaPkvv0sobyHP8/xsr3Buziu6lmDtr3be+zQL0Y9xDfGuZUgVG9YG/cb/xvaAXj9BtkveuR
+  </data>
+ </layer>
+ <layer name="CloseVillage" width="29" height="20">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="1"/>
+   <property name="Y" value="4"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFww0oDrQDRsEoGAWjYBSMgiEGAPfMACI=
+  </data>
+ </layer>
+</map>

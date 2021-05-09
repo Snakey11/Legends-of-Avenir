@@ -22,6 +22,8 @@
 #define SilverSpear SilverLance
 #define Naglfal Naglfar
 #define DragonShield Dragonshield
+#define MineEffectID MineItemEffectID
+#define HeavanSealEffectID HeavenSealEffectID
 /*
 #undef ToxinLance
 #define Spears Lances
@@ -450,7 +452,7 @@
 #define MilitiaManMug 0x0E // Garcia
 #define EscortMug 0x4B // Glen
 #define OfficialMug 0x20 // Saleh
-#define GrantMug 0x3A // Pablo
+#define KaidMug 0x3A // Pablo
 #define PatMug 0x16 // Forde
 #define TyroneMug 0x39 // Binks
 #define HarkenMug 0x4D // Unused rando
@@ -957,6 +959,7 @@
 
 #define FE6WaterAnimation FE6WaterAnimations
 #define DesertTempleAnims _42Anims
+#define WesternIslesAnims _42Anims
 //LabelEnd
 
 //Label Map Sprites (Standing)
