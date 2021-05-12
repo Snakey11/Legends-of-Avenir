@@ -293,7 +293,7 @@ UNIT Helmer Soldier Helmer Level(13,Ally,True) [0,1] 0x00 0x00 0x00 0x00 [SteelL
 UNIT
 
 LoadJasperDerekLux:
-UNIT Jasper Cavalier Lux Level(9,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [SteelSword,Javelin] NoAI 
-UNIT Derek Knight Lux Level(8,Ally,True) [0,1] 0x00 0x00 0x00 0x00 [SteelAxe,HeavySpear] NoAI 
-UNIT Lux Mage_F Lux Level(10,Ally,True) [0,2] 0x00 0x00 0x00 0x00 [Elaqua,Fire] NoAI 
+UNIT Jasper Cavalier Lux Level(11,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [SteelSword,Javelin,Vulnerary] NoAI 
+UNIT Derek Knight Lux Level(10,Ally,True) [0,1] 0x00 0x00 0x00 0x00 [SteelAxe,HeavySpear] NoAI 
+UNIT Lux Mage_F Lux Level(10,Ally,True) [0,2] 0x00 0x00 0x00 0x00 [Elaqua,Fire,Vulnerary] NoAI 
 UNIT
