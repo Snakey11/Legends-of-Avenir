@@ -148,4 +148,6 @@ In EngineHacks/ExternalHacks/StrMagSplit/StrMagSplit/Installer.event, change the
 
 BYTE 0 0 	//terminator
 
+In EngineHacks/SkillSystem/DebuffSkills/SealSkills/SealSkills.s, change the debuff amount to 3 instead of 6. Change the skill descriptions accordingly
+
 In CustomDefinitions.event delete a lot of stuff lol
