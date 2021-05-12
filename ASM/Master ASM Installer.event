@@ -80,8 +80,7 @@ ALIGN 4
 
 #include "HPBars/HPBars.event"
 
-#include "HybridClasses/HybridHooks.lyn.event"
-#include "HybridClasses/Hybrids.lyn.event"
+#include "HybridClasses/HybridClasses.event"
 
 ALIGN 4
 SpellswordList:

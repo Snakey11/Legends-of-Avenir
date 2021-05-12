@@ -952,7 +952,7 @@
 
 //Hero: +30% skill activation rate when HP is below 50%.
 //By Sme
-#define HeroID 106
+#define HeroID 255 // used to be 106
 
 //Rightful King: +10% to Skill activation rate.
 //Author Unknown (Initial Commit)
@@ -1036,6 +1036,11 @@
 #define CunningID 4
 #define NiceThighsID 115
 #define PersonalityID 116
+
+
+//Custom skills:
+#define StrongArmID 255 //All lances have 1-2 range.
+#define SpeedCastID 106 //Hybrids can counter with magic.
 
 
 //Broken Skills

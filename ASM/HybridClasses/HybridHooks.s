@@ -12,8 +12,10 @@
 .equ GetItemData, 0x080177B0
 .equ GetEquippedItemSlot, 0x08016B58
 .equ GetChapterEventDataPointer, 0x080346B0
+.equ EquipUnitItemSlot, 0x08016BC0
 
-.global HybridAttackUsability
+@ The following commented functions are depreciated.
+/*.global HybridAttackUsability
 .type HybridAttackUsability, %function
 HybridAttackUsability: @ Autohook to 0x080249E8. r4 = weapon we're testing.
 @ This check should only apply if
@@ -63,14 +65,14 @@ HybridSetupBattleWeaponDataJump:
 ldr r0, [ r5, #0x0C ]
 mov r1, #0x80
 ldr r2, =#0x0802A751
-bx r2
+bx r2*/
 
 .global HybridSetupNewPhase
 .type HybridSetupNewPhase, %function
 HybridSetupNewPhase: @ Autohook to 0x08083F20. For all spellswords, we want to unequip a tome if it's equipped.
 lsr r4, r0, #0x18 @ Vanilla
 
-push { r4 - r6 }
+push { r4, r5 }
 mov r4, #0x00
 StartPhaseLoop:
 cmp r4, #0xFF
@@ -95,7 +97,7 @@ beq StartPhaseLoop
 		lsr r0, r0, #0x06
 		lsl r0, r0, #0x06 @ Isolate allegiance.
 		ldr r1, =gChapterData
-		ldrb r1, [ r1, #0x0F ] @ Current phase (in this case, the phase we're ABOUT to turn to).
+		ldrb r1, [ r1, #0x0F ] @ Phase we're about to turn to.
 		cmp r0, r1
 		beq StartPhaseLoop @ If it's going to be this unit's phase, we won't care about re-equipping things.
 			@ Next, is this unit even labeled as a spellsword?
@@ -109,47 +111,21 @@ beq StartPhaseLoop
 			add r0, r0, #0x01
 			cmp r2, r1
 			bne PhaseSpellswordLoop
-				@ This IS a spellsword. Let's see if their equipped item "would be" a tome.
+				@ If this is a spellsword, we should be able to get their equipped item slot (or what it SHOULD be now that it's a new phase),
+				@  and call the "equip function" on that item slot. That _should_ bring that item to the top of their inventory.
 				mov r0, r5
 				blh GetEquippedItemSlot, r1
 				mov r1, #0x01
 				neg r1, r1
 				cmp r0, r1
-				beq PhaseSpellswordLoop @ Nothing equipped.
-				@ Next, let's get the item at that slot.
-				lsl r0, r0, #0x01
-				add r0, r0, #0x1E
-				mov r6, r0 @ The "offset" of this item will be saved in r6.
-				ldrh r0, [ r5, r6 ] @ Item halfword for the equipped item.
-				blh GetItemIndex, r1
-				blh GetItemData, r1 @ r0 = ROM item data.
-				@ Is this a tome?
-				ldrb r0, [ r0, #0x07 ]
-				cmp r0, #0x04
-				blt StartPhaseLoop
-				cmp r0, #0x08
-				bge StartPhaseLoop @ Their equipped item isn't a tome. All good!
-					@ Their equipped item IS a tome! Is there a physical weapon that they can use instead?
-						@ We could have a big logic thing and bla bla... but why don't we "cheat" a bit?
-						@ Assuming that HybridGetUnitEquippedItemSlot behaves correctly,
-						@  it should find a physical weapon that works and ignore tomes.
-					mov r0, r5
-					bl HybridGetUnitEquippedItemSlot
-					mov r1, #0x01
-					neg r1, r1
-					cmp r0, r1
-					beq StartPhaseLoop @ Oops... they don't have anything else to equip. Just loop back.
-						@ Ah ha! They have a different weapon to equip that respects hybrid limitations!
-						lsl r0, r0, #0x01
-						add r0, r0, #0x1E @ r0 has the current "offset" of the new item.
-						ldrh r1, [ r5, r0 ] @ Halfword for the new item.
-						@ r6 still has the "offset" of the tome.
-						ldrh r2, [ r5, r6 ] @ r2 has the halfword for the tome.
-						strh r1, [ r5, r6 ] @ Store the new item in the tome's slot.
-						strh r2, [ r5, r0 ] @ Store the tome in the new item's slot.
-						b StartPhaseLoop
+				beq StartPhaseLoop @ If the function returned -1, then there is no equipped slot. Nothing to do here, so reiterate.
+				@ For the spellsword, bring that item to the top of their equipment list.
+				mov r1, r0
+				mov r0, r5
+				blh EquipUnitItemSlot, r2
+				b StartPhaseLoop
 EndPhaseLoop:
-pop { r4 - r6 }
+pop { r4, r5 }
 
 ldr r0, =gChapterData @ Vanilla from here out.
 ldrb r0, [ r0, #0x0E ]
@@ -162,7 +138,7 @@ mov r0, r13
 ldr r1, =#0x08083F35
 bx r1
 
-.global HybridGetUnitEquippedItemSlot
+/*.global HybridGetUnitEquippedItemSlot
 .type HybridGetUnitEquippedItemSlot, %function
 HybridGetUnitEquippedItemSlot: @ Another version of GetUnitEquippedItemSlot that handles checking for spellsword stuff.
 push { r4 - r6, lr }
@@ -194,9 +170,9 @@ EndHybridGetUnitEquppedItemSlot:
 sub r0, r4, #0x01
 pop { r4 - r6 }
 pop { r1 }
-bx r1
+bx r1*/
 
-.type HybridIsRestricted, %function
+/*.type HybridIsRestricted, %function
 HybridIsRestricted: @ r0 = unit, r1 = item halfword. Is this weapon affected by the hybrid limitations?
 @ Okay. Certain classes can only use E rank spells. All spellswords can only use spells on their own phase.
 push { r4, r5, lr }
@@ -231,8 +207,18 @@ bge EndIsRestricted
 		lsl r1, r1, #0x06
 		mov r0, #0x00
 		cmp r1, r2
-		beq EndIsRestricted @ It is our phase. Return not restricted.
+		beq IsRestrictedCheckSkill @ It is our phase. Return not restricted.
 			mov r0, #0x01 @ It is not our phase.
+			b EndIsRestricted
+		IsRestrictedCheckSkill: @ Let's find out if they have the Speed Cast skill.
+		mov r0, r4
+		ldr r1, =gSpeedCastID
+		ldrb r1, [ r1 ]
+		ldr r2, =gHybridSkillTester
+		ldr r2, [ r2 ]
+		mov lr, r2
+		.short 0xF800
+		@ We can just return the boolean for having the skill.
 EndIsRestricted:
 pop { r4, r5 }
 pop { r1 }
@@ -277,3 +263,4 @@ EndERankLimitations:
 pop { r4 - r5 }
 pop { r1 }
 bx r1
+*/

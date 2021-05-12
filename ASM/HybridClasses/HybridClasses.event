@@ -1,0 +1,9 @@
+
+#include "HybridHooks.lyn.event"
+#include "Hybrids.lyn.event"
+
+ALIGN 4
+gHybridSkillTester:
+POIN SkillTester2|1
+gSpeedCastID:
+BYTE SpeedCastID
