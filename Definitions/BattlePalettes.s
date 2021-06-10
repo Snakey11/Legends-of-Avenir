@@ -37,6 +37,7 @@ DerekKnightPaletteID
 	DerekGeneralPaletteID
 	DerekGreatKnightPaletteID
 DunlasHalberdierPaletteID
+EdwardSagePaletteID
 EfilTruerbladePaletteID
 ElanilArcherPaletteID
 	ElanilRangerPaletteID
@@ -81,7 +82,6 @@ RichterHeroPaletteID
 RobertBerserkerPaletteID
 RogerMercenaryPaletteID
 MaximusStrategistPaletteID
-PatMageKnightPaletteID
 RemusSoldierPaletteID
 	RemusSentinelPaletteID
 	RemusHalberdierPaletteID

@@ -86,7 +86,7 @@ Guardian
 William
 Emperor
 Kaid
-Pat
+Edward
 BossUzkalis
 BossArc
 Roger

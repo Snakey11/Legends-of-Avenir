@@ -126,7 +126,6 @@ CAM1 Arc
 STAL 0x20
 NoFade
 GotoPrepScreen
-ENDA
 
 //Label EndingScene
 EndingScene:

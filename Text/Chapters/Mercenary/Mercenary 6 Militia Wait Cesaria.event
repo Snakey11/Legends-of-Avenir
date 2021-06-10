@@ -1,240 +1,186 @@
 
-## Merc6MilitiaWaitCesariaBeginningText
-[MidLeft][LoadLux][Right][LoadPlayer][FarRight][LoadArc]
-We must be getting close at this point...[A]
-[MidLeft]There's a bridge near here. It was[NL]
-assembled a few years ago to defend[A][NL]
-against the Wanderers in Draterus, but[NL]
-it's controlled by Bacrun now.[A]
-[Right]Who governs Bacrun, anyway?[A]
-[MidLeft]The Council of Guildsmen. It's a group[NL]
-of people who run the largest[A][NL]
-merchant guilds in Avenir.[A]
-[FarRight]Doesn't sound like they have much[NL]
-of a way to defend themselves.[A]
-[MidLeft]There's a mercenary group there, employed by[NL]
-the Council, but they're unlikely to[A][NL]
-interfere in this. No, we have to catch[NL]
-up to Uzkalis before he reaches[A][NL]
-Bacrun. I sent Jasper ahead to scout.[A][FarRight][ClearFace][LoadElanil]
-Another question, Lux, if you don't mind.[A]
-[MidLeft]Ask away. If we're fighting together, we[NL]
-might as well understand each other.[A]
-[FarRight]Why are so many of the Captains and[NL]
-Vice-Captains in Cesaria so young? I know[A][NL]
-Maximus rose to Captain when he was young.[NL]
-You're obviously quite young. I've heard[A][NL]
-that Captain Sylvaine of the Leopard[NL]
-Brigade is young. Why is that?[A]
-[MidLeft]Ah, a good question. Maximus isn't so[NL]
-young now, but it's true he rose to[A][NL]
-Captain  during the war ten years ago. At[NL]
-the time, he would have been considered[A][NL]
-young to take that position. Many of our[NL]
-commanders fell in that war. For Maximus,[A][NL]
-his Captain had dubbed him Vice-Captain[NL]
-due to his skills as a strategist.[A][NL]
-Captain Darren himself was not known for[NL]
-his brain. When Darren was killed,[A][NL]
-Maximus filled the position. I was only[NL]
-recently made the Vice-Captain of the[A][NL]
-Tiger Brigade, as the last one fell[NL]
-in a skirmish on the border.[A]
-[FarRight]What about Captain Sylvaine?[A]
-[MidLeft]I don't know much about Sylvaine to be[NL]
-honest. It's said she originally was born[A][NL]
-in Altia and grew up there but then came[NL]
-to Cesaria which is why she's so[A][NL]
-skilled in riding a wyvern.[A]
-[FarRight]I hadn't heard that before...[A]
-[MidLeft]I believe she mostly rose to the position[NL]
-of Captain due to her leadership skills[A][NL]
-and filling a niche. The former Captain of[NL]
-the Leopard Brigade retired and now serves[A][NL]
-as one of the royal blacksmiths of Cesaria.[NL]
-He hadn't had a Vice-Captain, however.[A]
-[FarRight]Interesting. I didn't realize the war[NL]
-had had so many effects on the commanders[A][NL]
-in Cesaria. It looks like Jasper is[NL]
-coming back now. Thanks, Lux.[A]
-[MidLeft]Private Jasper,[FarRight][ClearFace][LoadJasper][MidLeft] what do[NL]
-you have to report?[A]
-[FarRight]They've moved past the bridge, but[NL]
-they seem to have stopped there.[A][NL]
-I saw no sign of Uzkalis himself.[A]
-[MidLeft][LoadLux]What!?[A]
-[Right]Were we lured off?[A]
-[FarRight]I couldn't tell you.[A]
-[MidLeft]Very well. Thank you for the information,[NL]
-Private. You're dismissed.[A]
-[FarRight]Thank you sir.[A][ClearFace][MidLeft][MoveLeft][FarLeft][LoadElanil]
-[Tact], we have a problem. Finoc and I[NL]
-were watching our back, and on one[A][NL]
-of his quick flank checks, he saw[NL]
-Uzkalis and some of his men.[A]
-[Left][LoadLux]Dammit! He plans on flanking us![NL]
-We have to push forward and get[A][NL]
-rid of the group across the bridge. We[NL]
-might have the manpower to push[A][NL]
-through them to avoid being caught[NL]
-between the two groups.[A][X]
+## Merc6MilitiaWaitCesariaStartingText
+[ConversationText]
+[FarLeft][LoadFinoc][Left][LoadElanil][MidRight][LoadMaximus]
+Ah, you've returned... With guests?
+[FarLeft]I'm Sergeant Finoc of Altia. You should have received a missive from our Anguis?
+[MidRight]Ah that's right. Didn't expect you to join up with us so soon.
+[FarLeft]We Altians move quickly. This is Corporal Elanil.
+[Left]A pleasure to meet you, Captain.
+[MidRight]We're glad to have you two along. I think this squad will work well for the operation I have in mind...[FarLeft][ClearFace][Left][ClearFace][FarLeft][LoadPlayer][Left][LoadArc]
+Captain, count me in.
+[MidRight]Are you sure, Arc?
+[Left]Yes. I've seen Danaan for myself. Those pillagers may not have been the one who destroyed it, but removing them makes me feel better. I'm under your command.
+[FarLeft]I'll be glad to have you at my back, Arc.
+[Left][Smile]You can count on me.
+[MidRight]So you're all in? Good. Now, let's discuss the plan at hand...[X]
 
-## Merc6MilitiaWaitCesariaUzkalisText
-[MidLeft][LoadUzkalis][.....][MidRight][LoadSoldier4]
-Lord Uzkalis, we have a problem. It seems[NL]
-the Altian Wyvern Rider took notice of[A][NL]
-us on his reconnaissance flight. The[NL]
-enemy has sped their movements.[A]
-[MidLeft]It is no matter. The esteemed Captain[NL]
-Maximus is far away in Cesaria at[A][NL]
-this point. We have nothing to worry[NL]
-about. Their Vice-Captain, Lux is[A][NL]
-nothing, and [Tact] is a fool for[NL]
-not siding with Arcanae. What[A][NL]
-are their movements now?[A]
-[MidRight]They seem to have sped their movements[NL]
-towards the bridge. They must want to[A][NL]
-intercept the group headed towards Bacrun.[A]
-[MidLeft]Very well. Let them. We shall try to maintain[NL]
-our distance. Should the other group fall,[A][NL]
-we use their sacrifice to make our escape.[A]
-[MidRight]Yes, my lord.[A][X]
+## Merc6MilitiaWaitCesariaWMText
+#Lux: The goal is for a small strike force to make it to the Arcanian Capital, undetected, and take out the leaders of New Arcanae, namely Uzkalis and Xavus. It will have to be quick, or else they'll catch on. A small group would not be able to last very long against Arcanae's elite if they were to pull forces back from the border where they fight Jurgen.
+#Maximus: Thankfully, Arcanae does not do a good job of guarding their northern border, particularly the further east you go. While there are watchmen and border guards, there's hardly anything that could be called a standing force.
+#Finoc: Slipping past undetected will still be difficult... The forests at the border are thick enough that you won't easily be able to just get by.
+#Maximus: That's why I intend to lead a strike along the western part of the border with the rest of the Tiger Brigade. That should lure most of the stronger parts of the border guards away from the border.
+#Avatar: Okay, and what if it doesn't?
+#Lux: We'll just have to fight our way through them. Leave no survivors. If they raise the alarm, we're done.
+#Maximus: Lux is right. Once the mission starts, there's no way to go back. It could already be more than the Tiger Brigade can handle.
+#Avatar: So just so we're clear... Our strike force will stake out one of the paths into Arcanae. Once a large portion of their force is drawn away by the Tiger Brigade, we'll strike swiftly so that no messengers can escape. Then, we push to the capital of Arcanae, trying to remain undetected so we can take out Uzkalis and Xavus.
+#Maximus: That's quite right.
+[X]
 
-## Merc6MilitiaWaitCesariaUzkalisMaximusText
-[FarLeft][LoadUzkalis][FarRight][LoadMaximus]
-Stop right there, Uzkalis![A]
-[FarLeft]Well, well, well. If it isn't Captain[NL]
-Maximus. And the Tiger Brigade![A][CloseSpeech][FarRight][MoveMidRight]
-I had an idea you might try to[NL]
-sacrifice your men to make[A][NL]
-an escape, but it won't work![A]
-[FarLeft]Oh, if only you were right.[NL]
-[Smile]I'll just dispose of you all[A][NL]
-and then make my escape then![A]
-[MidRight]Your strategies are predictable, Uzkalis.[NL]
-Just as they've always been.[A]
-[FarLeft]You can't cling to the past, Maximus.[NL]
-This is war. You may be the better[A][NL]
-strategist, but you can't hope to stand up[NL]
-to the power of a Grand Magus![A]
-[MidRight]Try me![A][X]
+## Merc6MilitiaWaitCesariaAfterWMText
+[ConversationText]
+[FarRight][LoadLux][Right][LoadMaximus][Left][LoadPlayer][FarLeft][LoadElanil]
+That's a big risk you all seem willing to take...
+[Right]That's what I'm told by the other Captains...
+[FarLeft]Still, I'm guessing Cesaria's casualties on the border aren't sustainable forever.
+[Right]Quite so. We have the advantage in numbers, Arcanae has the advantage in firepower.
+[FarRight]Now that you know the exact plan, are you still in?
+[Left]I am.[FarLeft][ClearFace][LoadArc]
+There's nothing for me in Danaan now. Might as well see what the rest of the world looks like.[Left][ClearFace][LoadLuke]
+Arc summarized my feelings too. I'm with you.[FarLeft][ClearFace][LoadFinoc]
+Sounds like it could be fun. Elanil?[Left][ClearFace][LoadElanil]
+I'd rather do this than be on the front lines.
+[FarLeft]Agreed. We're in.
+[Right]Perfect. Lux will be leading you on this mission. And, of course, Jasper and Derek are accompanying you as well.
+[FarRight]That should be a sufficient strike force.[FarLeft][ClearFace][LoadPlayer]
+Makes sense to me. When do we put this plan into action?
+[Right]You all should start moving to the border as soon as possible. We can't risk my attack starting too soon. When you get to the border, wait for something to happen. I've discussed fallback plans with Lux in case you wait too long or something goes awry.
+[FarLeft]Not for public consumption?
+[Right]Not yet.
+[FarRight]Don't worry, [Tact], it's nothing to be worried about.
+[Right]I've given you the plans. I must return to the Tiger Brigade so we can prepare for our assault. Good luck, friends. I hope to see you in a few days' time in the Arcanian Capital, with Uzkalis and Xavus' heads on pikes![X]
 
-## Merc6MilitiaWaitCesariaPatText
-[FarLeft][LoadPat]
-The enemy is advancing towards us. Lord[NL]
-Uzkalis should be able to sweep in from[A][NL]
-behind and be the hammer to our anvil. We[NL]
-have a chance to deal a great blow to[A][NL]
-Cesaria today. Don't muck it up, men![A][X]
+## Merc6MilitiaWaitCesariaMovingText
+[ConversationText]
+[MidRight][LoadPlayer][FarLeft][LoadElanil][Left][LoadFinoc]
+I must confess, my wyvern doesn't love being below all the trees...
+[MidRight]Used to the free sky, eh?
+[Left]Yeah, he doesn't like being confined to the ground.
+[FarLeft]Make sure he doesn't complain too loudly...
+[MidRight]Hey, Derek![FarLeft][ClearFace][Left][ClearFace][MidLeft][LoadDerek]
+What's up, [Tact]?
+[MidRight]Was just a bit curious as to what you can tell me about Cesaria. I can't say I fully understand their motivation in the war.
+[MidLeft]Truth be told... Jasper's far better for that question. I just kind of enlisted for the pay. Farm work wasn't quite right for me.
+[MidRight]I see...[CloseSpeech][MidLeft][MoveLeft][FarLeft][LoadJasper]
+What are you guys talking about?
+[Left]Oh, [Tact] wanted to know a bit about why Cesaria is in this war.
+[FarLeft]I mean, I'm no expert, but I can tell you what I know. Arcanae and Cesaria have been at each other's throats for awhile. I think a large part of it is just a disagreement between the two countries, but it's also gotten worse. The crisis ten years ago, which the hero Efil resolved, revealed that certain parts of Arcanae's research were slowly crippling the world. Uzkalis and Xavus advocated trying to continue research in a way to continue advancement without causing the same issues. The other Magi just wanted to either continue their old research, or stop altogether. So a civil war broke out in Arcanae.
+[MidRight]So that's how Uzkalis and Xavus hold all the power in Arcanae right now...
+[FarLeft]Pretty much. However, Cesaria wasn't willing to let them upset the balance in that way, so we've stepped in to try and stop Uzkalis and Xavus so as to reinstate the structure of Five Grand Magi.
+[MidRight]An intervention, of sorts. Why does Cesaria care?
+[Left]The balance of Avenir is a delicate one. Plus, General Rex doesn't entirely trust Xavus...
+[MidRight]Interesting...
+[FarFarLeft]Jasper! Derek! We're getting close. We're gonna try to set up camp in a nearby clearing, but no fires. We can't give away our position.
+[FarLeft]Understood, Vice-Captain![ClearFace]
+[Left]We're on it![ClearFace][MidLeft][LoadLux]
+[Tact], there's a border crossing a short distance from here. It has a squadron of pretty strong looking Arcanian soldiers, not something we can easily deal with right now. We'll want to periodically send scouts out to try and keep an eye on their movements.
+[MidRight]Got it. I'll let the others know.
+[MidLeft]Thanks.[X]
 
-## Merc6MilitiaWaitCesariaLuxText
-[FarRight][LoadLux]
-There's the bridge. Alright everyone,[NL]
-let's assemble and finish this[A][NL]
-quick before Uzkalis arrives![A][X]
+## Merc6MilitiaWaitCesariaScoutingText
+[ConversationText]
+[MidLeft][LoadPlayer][MidRight][LoadElanil]
+[Tact], wake up!
+[MidLeft]Huh?
+[MidRight]It's our turn to go scout out the Arcanians. Let's go.
+[MidLeft]Got it.[X]
 
-## Merc6MilitiaWaitCesariaPatBattleText
-[FarLeft][LoadPat]Where is Lord Uzkalis?[NL]
-We had a plan![A][X]
+## Merc6MilitiaWaitCesariaArcaniansText
+[ConversationText]
+[MidRight][LoadSoldier1][MidLeft][LoadSoldier3]
+Imagine being stuck here, on the border with Haedric. There's nothing to do!
+[MidRight]No kidding. So many others are seeing good action on the front lines with Cesaria, but here we are.
+[MidLeft]Haedric's neutral anyway, it's not like they're going to just attack us. They don't care!
+[MidRight]Right!? Yet Xavus is supposed to be the smart one...[CloseSpeech][MidRight][MoveFarRight][MidLeft][MoveRight][ClearFace][LoadSoldier3][MidLeft][LoadEdward]
+You two, shut up.
+[Right]Sorry, sir!
+[MidLeft]I just received word. There's a Cesarian Brigade striking to the west. They need assistance. I'm sending you two and a few others to help. The rest of us will stay here.
+[Right]You said you wanted action...
+[FarRight]Dammit all...
+[MidLeft]Get moving![X]
 
-## Merc6MilitiaWaitCesariaPatDeathText
-[FarLeft][LoadPat]Lord Uzkalis...[.] Why[CloseEyes] did[NL]
-you...[.....] use us...?[A][X]
+## Merc6MilitiaWaitCesariaComingBackText
+[ConversationText]
+[MidLeft][LoadPlayer][MidRight][LoadElanil]
+Looks like they're going.
+[MidLeft]Right. Let's wake the others. We have to go hard and fast.[X]
 
-## Merc6MilitiaWaitCesariaEndingText
-[Left][LoadLux][Right][LoadPlayer]
-I would have expected Uzkalis to have[NL]
-struck by now. What's going on?[A]
-[FarRight][LoadFinoc]I'll fly out and see what I can see.[A]
-[Left]Thank you, Finoc. [FarRight][ClearFace][....]
-[Events]
-[Left]Luke, can [FarLeft][LoadLuke][Left]you go around and[NL]
-make sure the nearby villagers are taken[A][NL]
-care of? We may have caused more[NL]
-destruction here than intended.[A]
-[FarLeft]Will do.[A][CloseSpeech][ClearFace]
-[Events]
-[Left][MoveMidLeft]
-Elanil,[FarRight][LoadElanil][MidLeft] [Tact], we need to talk.[A]
-[Right]What's our plan?[A]
-[MidLeft]We can't let Uzkalis escape. This is our[NL]
-chance. We have to start moving now.[A]
-[FarRight][LoadElanil]Before Finoc returns? That doesn't[NL]
-make any strategic sense.[A]
-[Right]I agree with Elanil.[A]
-[MidLeft]We can at the very least start moving back[NL]
-towards Draterus. Finoc has sharp eyes and[A][NL]
-better mobility than the rest of us.[NL]
-He won't have any issue catching up.[A][NL]
-It's a risk I believe we must take.[A]
-[Right]What about Maximus? Did he ever[NL]
-send a reply to your message?[A]
-[MidLeft]That would be unlike any Cesarian captain,[NL]
-including him. They receive countless updates[A][NL]
-a day, especially those in the field. It[NL]
-would be a waste of time for him to[A][NL]
-reply to each one. No, we must take[NL]
-care of this ourselves.[A]
-[Right]You're talking about taking on one of[NL]
-the Grand Magi. Even Cesarian Captains[A][NL]
-struggle to fight against that.[A]
-[MidLeft]But we have the advantage over[NL]
-individual Arcanian soldiers.[A][NL]
-They're researchers, not fighters.[A]
-[Right]That's still ignoring the[NL]
-core issue of Uzkalis.[A]
-[MidLeft]Please, [Tact]. Trust me.[NL]
-I think we can do this.[A]
-[Right][TMM]...[......][TMM] If you say so, Lux. You[NL]
-are the one in command here.[A][NL]
-Anything to add, Elanil?[A]
-[FarRight]I share the same concerns as [Tact],[NL]
-but my orders from my Anguis are to take[A][NL]
-orders from my Cesarian commander, who[NL]
-is Lux. I'll notify the others[NL]
-that we'll be setting out soon.[A]
-[MidLeft]Immediately. We'll be setting out immediately.[A]
-[FarRight]So be it.[A][ClearFace][Right]
-Are you sure about this, Lux?[A]
-[MidLeft]Positively. If we catch up to Uzkalis[NL]
-and put an end to him, this war will end[A][NL]
-that much faster. I received word from the[NL]
-Vice-Captain of the Lion Brigade that[A][NL]
-Captain Jurgen recently pushed Xavus back[NL]
-towards the Arcanian capital. We have[A][NL]
-to keep Xavus and Uzkalis separate,[NL]
-or else they'll unite their forces.[A]
-[Right]I understand. We have to go then.[A]
-[Events]
-[MidLeft]Indeed. Better now than never.[A]
-[Events]
-[FarRight][LoadLuke]
-The villagers are grateful for us[NL]
-dealing with the Arcanians. They're[A][NL]
-giving us some weapons and wish us[NL]
-luck. I've aranged for them to[A][NL]
-be added to the supply convoy.[A]
-[Right]Excellent work, Luke.[NL]
-Thank you.[A][X]
+## Merc6MilitiaWaitCesariaMoveOutText
+[ConversationText]
+[MidRight][LoadElanil][MidLeft][LoadLux]
+The attack has begun?
+[MidRight]Yes. A portion of the Arcanian forces at the outpost have left to go and support the resistance against Maximus.
+[MidLeft]We have to move quickly then.[MidRight][ClearFace][FarRight][LoadJasper][Right][LoadDerek]
+I'll take point!
+[FarRight]I'll wake the others.[ClearFace]
+[MidLeft]Thanks, Privates. We need to move quickly.[X]
 
-## Merc6MilitiaWaitCesariaHouse1Text
-[MidRight][LoadCurrent][MidLeft][LoadVillagerMan4]
-Damn those Arcanians... Their[NL]
-occupation here in Bacrun is[A][NL]
-disrupting business.[NL]
-Eradicate those pesky[A][NL]
-scholars. I won't have them[NL]
-disrupting business any longer.[A][X]
+## Merc6MilitiaWaitCesariaHereText
+[ConversationText]
+[FarLeft][LoadLux][Left][LoadDerek]
+There they are.
+[FarLeft]We rush quickly. Let nobody escape.[X]
 
-## Merc6MilitiaWaitCesariaHouse2Text
-[MidRight][LoadCurrent][MidLeft][LoadVillagerOldWoman]
-Maintaining independence from this war[NL]
-has been difficult, especially when[A][NL]
-Bacrun lies right on the edge of both[NL]
-Cesaria and Arcanae. But I never[A][NL]
-thought one side would actually make a[NL]
-move to use any part of Bacrun for[A][NL]
-their purposes in this war... Take this,[NL]
-and get rid of them. Many of[A][NL]
-us came here to escape the[NL]
-war, not be dragged into it.[A][X]
+## Merc6MilitiaWaitCesariaStartBattleText
+[ConversationText]
+[Left][LoadEdward]
+What? We're under attack! Dammit! We need to stop them! They can't get through the border![X]
+
+## Merc6MilitiaWaitCesariaEscapingText
+[ConversationText]
+[Right][LoadSoldier2]
+We have to warn the capital... They're too strong![X]
+
+## Merc6MilitiaWaitCesariaOneEscapedText
+[ConversationText]
+[Left][LoadLux]
+Dammit, one of them got away! [Tact], [Right][LoadPlayer][Left]we have to clean up here and move quickly!
+[Right]Right![X]
+
+## Merc6MilitiaWaitCesariaBadEndingText
+[ConversationText]
+[MidLeft][LoadLux]
+They'll know we're coming.[MidRight][LoadFinoc]
+I can take Elanil to the capital and scout around fairly easily. If anything is looking awry, getting back to you will be no issue.
+[MidLeft]Hm... I lack the Captain's mind for strategy...[CloseSpeech][MidRight][MoveFarRight][Right][LoadPlayer]
+I think Finoc has the right idea. We need to start moving for the capital as soon as possible. While we do so, he can fly ahead with Elanil to scout out what it looks like we're dealing with.
+[MidLeft]But the numbers...
+[Right]It'll take the fleeing soldiers time to reach the capital, then they have to get to the deployed soldiers at the border, then they have to return. We have time to make this work. Finoc, you move quickly. You need to get Elanil to the capital, then immediately get word to Captain Maximus.
+[FarRight]It'll be a stretch, but I can make it work. I'll want to leave some gear here. Make the load lighter, you know?
+[Right]Whatever works. The rest of us will start moving to the capital.
+[MidLeft][Tact]... Thanks.
+[Right]No worries. I understand that you're flustered. But we don't have time to waste.
+[MidLeft]You're right.[CloseSpeech][FarRight][ClearFace][Right][MoveFarRight][MidLeft][MoveRight][ClearFace][LoadLux]Jasper! Derek! We're moving out!
+[Left][LoadDerek][FarLeft][LoadJasper]I'm on it!
+[Left]I just wanted one nice rest...[FarRight][ClearFace][LoadArc]
+Get used to it, Cesarian.
+[Left]Yeah... I guess you're right.
+[Right]Don't waste time! Move![X]
+
+## Merc6MilitiaWaitCesariaGoodEndingText
+[ConversationText]
+[MidLeft][LoadPlayer][MidRight][LoadLux]
+That was relatively easy to clear up.
+[MidLeft]Yeah, but we have to move quickly. They'll notice this soon.
+[MidRight]Right...[CloseSpeech][MidLeft][MoveLeft][FarLeft][LoadArc]
+Luke and I are ready to head out at any moment.
+[MidRight]We'll need some reconnaissance. We also need to get a message to Captain Maximus.[CloseSpeech][MidRight][MoveRight][FarRight][LoadFinoc]
+I can get Elanil to the capital to scout things out then fly a message to the Captain. I have the mobility advantage.
+[Right]Right, many of you Altians are trained as couriers.
+[FarRight]Can't say I've been a courier for awhile, but I'm happy to temporarily fill that role.
+[Right]Right. Let's do that. Everybody else, get ready to move. We don't want to waste too much time. Jasper! Derek! We're moving out![FarRight][ClearFace][LoadJasper]
+I'm on it![ClearFace][LoadDerek]
+I just wanted one nice rest...
+[FarLeft]Get used to it, Cesarian.
+[FarRight]Yeah... I guess you're right.[Left][ClearFace][LoadLuke]
+Come on, we have to get going![X]
+
+## Merc6MilitiaWaitCesariaEdwardBattleText
+[BattleText]
+[FarLeft][LoadEdward]
+It was never supposed to come to this! Those grunts on the front lines were supposed to take care of you![X]
+
+## Merc6MilitiaWaitCesariaEdwardDeathText
+[BattleText]
+[FarLeft][LoadEdward]
+So it comes to this...[X]

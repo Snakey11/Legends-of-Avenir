@@ -32,7 +32,6 @@
 [LoadBandit2] = [LoadFace][0x4C][0x01]
 [LoadBandit3] = [LoadFace][0x4C][0x01]
 [LoadMage] = [LoadFace][0x10][0x01]
-[LoadPat] = [LoadFace][0x16][0x01]
 [LoadAaron] = [LoadFace][0x1B][0x01]
 [LoadOfficial] = [LoadFace][0x20][0x01]
 [LoadHalleck] = [LoadFace][0x20][0x01]
@@ -51,6 +50,7 @@
 [LoadGuildsman] = [LoadFace][0x51][0x01]
 [LoadMason] = [LoadFace][0x52][0x01]
 [LoadKaid] = [LoadFace][0x3A][0x01]
+[LoadEdward] = [LoadFace][0x16][0x01]
 
 [LoadVillagerMan1] = [LoadFace][0x58][0x01]
 [LoadVillagerOldMan] = [LoadFace][0x59][0x01]

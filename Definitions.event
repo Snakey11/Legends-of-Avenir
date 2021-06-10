@@ -453,7 +453,7 @@
 #define EscortMug 0x4B // Glen
 #define OfficialMug 0x20 // Saleh
 #define KaidMug 0x3A // Pablo
-#define PatMug 0x16 // Forde
+#define EdwardMug 0x16 // Forde
 #define TyroneMug 0x39 // Binks
 #define HarkenMug 0x4D // Unused rando
 #define MasonMug 0x52 // Hayden
@@ -1264,6 +1264,8 @@
 #define Blizzard_Sound 0x50
 #define Soft_Birds_Sound 0x52
 #define River_Sound 0x53
+
+#define Jugdral_Calls Judgral_Calls
 /*
 #define Legends_of_Avenir 0x0043 // Overwrite the main theme
 #define Encounter_with_Renegades 0x0400

@@ -67,6 +67,7 @@ setPalette(DanielSwordmasterPaletteID,DanielSwordmasterPalette)
 	setPalette(DerekGeneralPaletteID,DerekGeneralPalette)
 	setPalette(DerekGreatKnightPaletteID,DerekGreatKnightPalette)
 setPalette(DunlasHalberdierPaletteID,DunlasHalberdierPalette)
+setPalette(EdwardSagePaletteID,EdwardSagePalette)
 setPalette(EfilTruerbladePaletteID,EfilTruerbladePalette)
 setPalette(ElanilArcherPaletteID,ElanilArcherPalette)
 	setPalette(ElanilRangerPaletteID,ElanilRangerPalette)
@@ -106,7 +107,6 @@ setPalette(MasonRangerPaletteID,MasonRangerPalette)
 setPalette(MaximusStrategistPaletteID,MaximusStrategistPalette)
 setPalette(MistlainSagePaletteID,MistlainSagePalette)
 setPalette(MurielSagePaletteID,MurielSagePalette)
-setPalette(PatMageKnightPaletteID,PatMageKnightPalette)
 setPalette(RemusSoldierPaletteID,RemusSoldierPalette)
 	setPalette(RemusSentinelPaletteID,RemusSentinelPalette)
 	setPalette(RemusHalberdierPaletteID,RemusHalberdierPalette)
@@ -265,6 +265,7 @@ SetPaletteFull(Cougar,CougarWyvernRiderPaletteID,WyvernRider,CougarWyvernLordPal
 SetPaletteFull(Daniel,0x00,0x00,DanielSwordmasterPaletteID,Swordmaster,0x00,0x00)
 SetPaletteFull(Derek,DerekKnightPaletteID,Knight,DerekGeneralPaletteID,General,DerekGreatKnightPaletteID,GreatKnight)
 SetPaletteFull(Dunlas,0x00,0x00,DunlasHalberdierPaletteID,Halberdier,0x00,0x00)
+SetPaletteFull(Edward,0x00,0x00,EdwardSagePaletteID,Sage,0x00,0x00)
 SetPaletteFull(Efil,0x00,0x00,EfilTruerbladePaletteID,Truerblade,0x00,0x00)
 SetPaletteFull(BossEfil,0x00,0x00,EfilTruerbladePaletteID,Truerblade,0x00,0x00)
 SetPaletteFull(BossEfil,0x00,0x00,EfilTruerbladePaletteID,Truerblade,0x00,0x00)
@@ -289,7 +290,6 @@ SetPaletteFull(Leon,0x00,0x00,LeonBasileusPaletteID,Basileus,0x00,0x00)
 SetPaletteFull(Leyos,0x00,0x00,LeyosGuardianPaletteID,HectorClass,0x00,0x00)
 SetPaletteFull(Luke,LukeMonkPaletteID,Monk,LukeBishopPaletteID,Bishop,LukeSagePaletteID,Sage)
 SetPaletteFull(Lux,LuxMagePaletteID,Mage_F,LuxMageKnightPaletteID,MageKnight_F,LuxSagePaletteID,Sage_F)
-SetPaletteFull(Pat,0x00,0x00,PatMageKnightPaletteID,MageKnight,0x00,0x00)
 SetPaletteFull(Mason,0x00,0x00,MasonRangerPaletteID,Ranger,0x00,0x00)
 SetPaletteFull(Maximus,0x00,0x00,MaximusStrategistPaletteID,Strategist,0x00,0x00)
 SetPaletteFull(Mistlain,0x00,0x00,MistlainSagePaletteID,MistlainClass,0x00,0x00)
@@ -903,6 +903,10 @@ DunlasHalberdierPalette:
 #incbin "Dunlas Halberdier.dmp"
 
 ALIGN 4
+EdwardSagePalette:
+//#incbin "Edward Sage.dmp"
+
+ALIGN 4
 EfilTruerbladePalette:
 #incbin "Efil Truerblade.dmp"
 
@@ -949,10 +953,6 @@ GerwickPiratePalette:
 ALIGN 4
 GhostSwordmasterPalette:
 #incbin "Ghost Swordmaster.dmp"
-
-ALIGN 4
-GrantRangerPalette:
-#incbin "Grant Ranger.dmp"
 
 ALIGN 4
 GuardianSpiritHarbingerPalette:
@@ -1061,10 +1061,6 @@ MistlainSagePalette:
 ALIGN 4
 MurielSagePalette:
 #incbin "Muriel Sage.dmp"
-
-ALIGN 4
-PatMageKnightPalette:
-#incbin "Pat Mage Knight.dmp"
 
 ALIGN 4
 RemusSoldierPalette:

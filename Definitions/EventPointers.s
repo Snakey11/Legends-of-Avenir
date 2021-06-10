@@ -37,9 +37,9 @@ AssassinTestMap
 BanditPassMap
 BigBattlegroundMap
 BigBoatDockMap
-BigBridgeMap
 BigPathMap
 BoatsAtSeaMap
+BorderFortMap
 CaravanPathMap
 BacrunCity3Map
 CastleHallMap
@@ -120,10 +120,10 @@ ArcanaeEscapeMap
 LooterBaseMap
 
 ArcanaeCapitalChanges
+BacrunCity3Changes
 BanditPassChanges
 BigBoatDockChanges
-BigBridgeChanges
-BacrunCity3Changes
+BorderFortChanges
 CastleHallChanges
 CesarianCapitalAssassinChanges
 DefenseHallChanges

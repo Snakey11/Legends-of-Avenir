@@ -89,7 +89,7 @@ Guardian,GuardianNameText,GuardianDescText,Guardian,0x0,0x0,0x3,NoAff,,1,3,4,7,3
 William,WilliamNameText,WilliamDescText,William,General,WilliamMug,0x0,WaterAff,,1,13,6,0,2,3,6,3,0,1,Drank,Drank,Drank,0,0,0,0,0,110,25,0,15,14,15,20,15,0,LiquidOozeID,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
 Emperor,EmperorNameText,EmperorDescText,Emperor,EmperorClass,EmperorMug,0x0,AnimaAff,,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,0,0,0,0,0,0,0x0,0x0,,0x0,0x0,0x0,0x0,0x0,,,,0x0,0x0,0x0
 Kaid,KaidNameText,KaidDescText,Kaid,Hero,KaidMug,0x0,WindAff,,1,14,3,2,3,2,4,1,2,1,Brank,0,Arank,0,0,0,0,0,100,35,10,30,20,20,10,15,0,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
-Pat,PatNameText,PatDescText,Pat,MageKnight,PatMug,0x0,ThunderAff,,1,14,11,9,6,11,7,12,10,1,0,0,0,0,Crank,Arank,0,0,100,15,30,15,25,15,30,50,0,OpportunistID,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
+Edward,EdwardNameText,EdwardDescText,Edward,Sage,EdwardMug,0x0,ThunderAff,,1,14,5,11,9,5,6,1,5,2,0,0,0,0,Crank,Arank,Drank,0,85,10,45,40,25,20,25,55,0,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
 BossUzkalis,UzkalisNameText,UzkalisDescText,BossUzkalis,GaidenSage,UzkalisMug,0x0,ThunderAff,,1,10,4,0,9,10,3,8,3,2,0,0,0,0,Crank,Srank,0,0,85,15,5,20,15,15,30,20,0,TomeRangeUpID,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
 BossArc,ArcNameText,ArcDescText,BossArc,Fighter,ArcMug,0x0,FireAff,,5,9,7,2,5,4,2,1,6,5,0,0,Crank,0,0,0,0,0,105,55,15,45,40,20,10,65,0,AxeFaithID,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
 Roger,RogerNameText,RogerDescText,Roger,Mercenary,RogerMug,0x0,WaterAff,,1,5,6,1,6,3,0,2,2,3,Brank,0,0,0,0,0,0,0,85,60,10,40,45,10,10,20,0,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
