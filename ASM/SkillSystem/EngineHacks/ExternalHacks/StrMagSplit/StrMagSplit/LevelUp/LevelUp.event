@@ -142,9 +142,9 @@ PUSH
 	ORG $7F43C
 	POIN Growths_Anims_Off_Stat_Name_Table
 	
-	//Add mag boost in battle struct
+	/*//Add mag boost in battle struct
 	ORG $2BB44
-	callHack_r3(Write_Mag_Growth)
+	callHack_r3(Write_Mag_Growth)*/
 POP
 
 ALIGN 4

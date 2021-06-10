@@ -151,3 +151,7 @@ BYTE 0 0 	//terminator
 In EngineHacks/SkillSystem/DebuffSkills/SealSkills/SealSkills.s, change the debuff amount to 3 instead of 6. Change the skill descriptions accordingly
 
 In CustomDefinitions.event delete a lot of stuff lol
+
+In ExternalHacks/StrMagSplit/StrMagSplit/LevelUp/LevelUp.event comment the hook with the comment, "Add mag boost in battle struct"
+
+Take the up-to-date versions of ExternalHacks/Necessary/ModularStatScreen/asm/Write_Growths_To_Battle_Struct.* from master (includes proper magic growths)
