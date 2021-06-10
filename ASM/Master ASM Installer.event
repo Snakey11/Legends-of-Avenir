@@ -92,6 +92,8 @@ ALIGN 4
 SpellswordERankList:
 BYTE SpellswordM SpellswordF 0x00
 
+#include "IsActiveUnitCleared/IsActiveUnitCleared.lyn.event"
+
 #include "MakeNotDead/MakeNotDead.lyn.event"
 
 #include "Menus/Menu Commands.event"
