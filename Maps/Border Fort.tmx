@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="21" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="3C00CE3E" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/3C00CE3E.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="19" height="21">
+  <properties>
+   <property name="Anims" value="_3CAnims"/>
+   <property name="ChapterID" value="MercenaryMilitiaWaitCesaria6"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="BorderFortChanges"/>
+   <property name="MapID" value="BorderFortMap"/>
+   <property name="ObjectType" value="0x3C"/>
+   <property name="PaletteID" value="0xCE"/>
+   <property name="TileConfig" value="0x3E"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxtlF9KW0EUxu+klBDFh9LuQKix+qI7EBX/PFjRdgNesDVQSB+6hFgwVlRcgUZsiIp2C9G2EgRNsoGAEKzaatIF9Dvc7zDHm0J+zGTOzDffOXdmwiAIQpBj+wW8BqtgmWNjbK/Y7pCQ2HmnoAwmQBZ8BfvU/Qy6QEPmOz82wzWqXaCfAnUy3CNPX+9AEkxyzUfu1Qemqakx9SfeDuhFdEugm3EZP+S4rkmDPeom6fHE1EnnphLQcp2sYjxvYl3o4xcUwZHZZwGxURd5rKB9hkmbYBZssH+N8V+gjn4tEc17wprtMz+tn9Q1pNZzzP0EsuAF+6r1gH4BbT89vkpEmqHJT3IdcY+12uBtTOsS/RZIgwHSy5qv0ZueEdEaQvwb1xyzb31VQZM5PkU7CZLOf4eU8azzLxKRD+lLThprGa0/4A7MUWuFfurMq8r59+Av/7dZ86rRtt+zyfOxHjyOaU10zPpVr7XY9wyp9T7wdayY+taMH/WrXlv8r1oNerLnv+L+Xy9ZuxBEsVTMr/oq8m6tme+ovuIe2sbLYOxMnNPPEv3p+doGO87rxu+VehnjG9GNsTOe0w+smfo6Bd+dzzfuQ73s6h120ZkoU2+Ze9ywlj+Cznui74C2ZeYmOm9ADxgHPxnXPeddp48J815pbotyT8AUSIt/uasgL2+LizzN0bfEb/kOZljbGZPbb+Y64PxZkH6f8xrDYMv5muTopcQ35hK8dN6jtP8ANGPNPA==
+  </data>
+ </layer>
+ <layer name="OpenDoor" width="19" height="21" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="2"/>
+   <property name="X" value="5"/>
+   <property name="Y" value="15"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIKBBReZGBg+MQ20K0YBKQAACYEByA==
+  </data>
+ </layer>
+ <layer name="OpenChest" width="19" height="21" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="11"/>
+   <property name="Y" value="13"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjHTgNNAOGAVDDgAAl6QAQw==
+  </data>
+ </layer>
+</map>
