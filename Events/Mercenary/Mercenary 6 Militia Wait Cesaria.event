@@ -169,18 +169,26 @@ BEQ 0x0 0x0 0xC
 LABEL 0x0
 	ENUF 0x14
 LABEL 0x2
+NoFade
 ENDA
 
 //Label Misc events
 ChangeAI: // Simple AREA event to change some unit AI if the player gets a certain distance in.
-SVAL 0x1 0x00000000 // NoAI.
-CHAI [11,19]
-CHAI [13,18]
-CHAI [13,20]
-CHAI [16,19]
-CHAI [17,18]
-CHAI [18,19]
-CHAI [17,20]
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x0 0x0 0xC
+	// Only for a player unit in this area.
+	SVAL 0x1 0x00000000 // NoAI.
+	CHAI [11,19]
+	CHAI [13,18]
+	CHAI [13,20]
+	CHAI [16,19]
+	CHAI [17,18]
+	CHAI [18,19]
+	CHAI [17,20]
+	GOTO 0x1
+LABEL 0x0
+	ENUF 0x12
+LABEL 0x1
 NoFade
 ENDA
 
