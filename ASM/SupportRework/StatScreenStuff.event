@@ -14,7 +14,7 @@ String("Total current bonuses:"); BYTE 0x00
 
 ALIGN 4
 MSS_page4:
-#incbin "mss_page4.dmp"
+#include "mss_page4.lyn.event"
 
 ALIGN 4
 //Page4 stuff
