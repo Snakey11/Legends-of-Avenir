@@ -155,3 +155,50 @@ In CustomDefinitions.event delete a lot of stuff lol
 In ExternalHacks/StrMagSplit/StrMagSplit/LevelUp/LevelUp.event comment the hook with the comment, "Add mag boost in battle struct"
 
 Take the up-to-date versions of ExternalHacks/Necessary/ModularStatScreen/asm/Write_Growths_To_Battle_Struct.* from master (includes proper magic growths)
+
+In SkillSystem/SkillSystem.event, change
+
+SkillTesterOriginal: //does unit have X skill?
+#include "skillTester.lyn.event"
+POIN Skill_Getter
+POIN ItemSkill_Getter EquipSkill_Getter
+/*
+#incbin skillTester.dmp
+POIN Skill_Getter
+POIN ItemTable
+*/
+
+SkillTester: //does enemy have Nihil? if so, does Nihil negate X skill?
+#incbin nihilTester.dmp
+POIN SkillTesterOriginal
+WORD NihilID
+POIN Skill_Getter
+POIN NegatedSkills
+POIN SkillTester
+WORD CatchEmAllID
+
+//this version does not check for equipped weapons
+SkillTesterOriginal2:
+#include "skillTester2.lyn.event"
+POIN Skill_Getter ItemSkill_Getter
+
+SkillTester2:
+#include "nihilTester2.lyn.event"
+POIN SkillTesterOriginal2 NegatedSkills
+WORD NihilID CatchEmAllID
+
+to
+
+//this version does not check for equipped weapons
+SkillTesterOriginal:
+SkillTesterOriginal2:
+#include "skillTester2.lyn.event"
+POIN Skill_Getter ItemSkill_Getter
+
+SkillTester2:
+SkillTester:
+#include "nihilTester2.lyn.event"
+POIN SkillTesterOriginal2 NegatedSkills
+WORD NihilID CatchEmAllID
+
+Implement PRs 278 and 279 (Fix MSS character and class names blinking)
