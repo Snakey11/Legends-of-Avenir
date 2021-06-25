@@ -91,31 +91,14 @@ POIN ItemSkill_Getter
 POIN IsItemSkillPassive
 POIN GetItemSkill
 
-SkillTesterOriginal: //does unit have X skill?
-#include "skillTester.lyn.event"
-POIN Skill_Getter
-POIN ItemSkill_Getter EquipSkill_Getter
-/*
-#incbin skillTester.dmp
-POIN Skill_Getter
-POIN ItemTable
-*/
-
-SkillTester: //does enemy have Nihil? if so, does Nihil negate X skill?
-#incbin nihilTester.dmp
-POIN SkillTesterOriginal
-WORD NihilID
-POIN Skill_Getter
-POIN NegatedSkills
-POIN SkillTester
-WORD CatchEmAllID
-
 //this version does not check for equipped weapons
+SkillTesterOriginal:
 SkillTesterOriginal2:
 #include "skillTester2.lyn.event"
 POIN Skill_Getter ItemSkill_Getter
 
 SkillTester2:
+SkillTester:
 #include "nihilTester2.lyn.event"
 POIN SkillTesterOriginal2 NegatedSkills
 WORD NihilID CatchEmAllID
