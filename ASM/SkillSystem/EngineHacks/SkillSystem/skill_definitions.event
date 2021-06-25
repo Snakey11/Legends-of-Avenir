@@ -172,7 +172,7 @@
 
 //Paragon: Experience gain is doubled.
 //Author Unknown (Initial Commit)
-#define ParagonID 49
+#define ParagonID 255//49
 
 //Void Curse: This unit gives no experience when defeated.
 //By Sme
@@ -1039,7 +1039,7 @@
 
 
 //Custom skills:
-#define StrongArmID 255 //All lances have 1-2 range.
+#define StrongArmID 49 //All lances have 1-2 range.
 #define SpeedCastID 106 //Hybrids can counter with magic.
 
 

@@ -36,4 +36,5 @@ RangeSkill(BowRangeUpID, BowRangeBonus|1)
 RangeSkill(StaffSavantID, StaffSavantBonus|1)
 RangeSkill(PointBlankID, PointBlankBonus|1)
 RangeSkill(TomeRangeUpID, TomeRangeBonus|1)
+RangeSkill(StrongArmID, StrongArmBonus|1)
 RangeSkill(0,0)	//End of list

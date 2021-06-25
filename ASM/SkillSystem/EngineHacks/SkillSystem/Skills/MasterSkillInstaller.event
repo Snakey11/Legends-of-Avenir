@@ -36,4 +36,6 @@ POP
 #include "WeaponUsabilitySkills/WeaponUsabilitySkills.event"
 #include "WTASkills/WTASkills.event"
 
+#include "CustomSkills/CustomSkills.lyn.event"
+
 #include "charge_table.event"
