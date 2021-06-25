@@ -1245,3 +1245,7 @@ Mag/2 range.[X]
 ## SD_SpeedCast
 Speed Cast: This spellsword[N]
 unit may counter with magic.[X]
+
+## SD_StrongArm
+Strong Arm: All lances[NL]
+may be used at 2 range.[X]
