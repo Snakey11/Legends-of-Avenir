@@ -14,7 +14,7 @@ draw_character_name_at 3,10
 draw_class_name_at 1,13
 
 
-draw_left_affinity_icon_at 10,10
+@draw_left_affinity_icon_at 10,10
 
 
 draw_lv_icon_at 1, 15
