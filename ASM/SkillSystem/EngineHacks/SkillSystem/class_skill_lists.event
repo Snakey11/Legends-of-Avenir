@@ -1,0 +1,345 @@
+
+ALIGN 4
+CavalierSkillList:
+BYTE 1 ElbowRoomID
+BYTE 00 00
+
+ALIGN 4
+PaladinSkillList:
+BYTE 255 ElbowRoomID
+BYTE 1 SaviorID
+BYTE 00 00
+
+ALIGN 4
+KnightSkillList:
+BYTE 1 ArmoredBlowID
+BYTE 00 00
+
+ALIGN 4
+GeneralSkillList:
+BYTE 255 ArmoredBlowID
+BYTE 1 KeepUpID
+BYTE 00 00
+
+ALIGN 4
+ThiefSkillList:
+BYTE 1 CunningID
+BYTE 10 AcrobatID
+BYTE 00 00
+
+ALIGN 4
+MercenarySkillList:
+BYTE 1 CertainBlowID
+BYTE 00 00
+
+ALIGN 4
+HeroSkillList:
+BYTE 255 CertainBlowID
+BYTE 1 ResourcefulID
+BYTE 00 00
+
+ALIGN 4
+MyrmidonSkillList:
+BYTE 1 DuelistsBlowID
+BYTE 00 00
+
+ALIGN 4
+SwordmasterSkillList:
+BYTE 255 DuelistsBlowID
+BYTE 1 CritBoostID
+BYTE 5 SwordfaireID
+BYTE 00 00
+
+ALIGN 4
+AssassinSkillList:
+BYTE 255 DuelistsBlowID
+BYTE 1 AssassinateID
+BYTE 00 00
+
+ALIGN 4
+ArcherSkillList:
+BYTE 1 QuickDrawID
+BYTE 00 00
+
+ALIGN 4
+SniperSkillList:
+BYTE 255 QuickDrawID
+BYTE 1 CritBoostID
+BYTE 5 BowfaireID
+BYTE 00 00
+
+ALIGN 4
+RangerSkillList:
+BYTE 255 QuickDrawID
+BYTE 1 CantoPlusID
+BYTE 00 00
+
+ALIGN 4
+WyvernRiderSkillList:
+BYTE 1 TantivyID
+BYTE 00 00
+
+ALIGN 4
+WyvernLordSkillList:
+BYTE 255 TantivyID
+BYTE 1 FierceStanceID
+BYTE 00 00
+
+ALIGN 4
+WyvernKnightSkillList:
+BYTE 255 TantivyID
+BYTE 1 SavageBlowID
+BYTE 00 00
+
+ALIGN 4
+MageSkillList:
+BYTE 1 SwiftStanceID
+BYTE 00 00
+
+ALIGN 4
+SageSkillList:
+BYTE 255 SwiftStanceID
+BYTE 1 TomefaireID
+BYTE 00 00
+
+ALIGN 4
+MageKnightSkillList:
+BYTE 255 SwiftStanceID
+BYTE 1 DriveMagID
+BYTE 00 00
+
+ALIGN 4
+BishopSkillList:
+BYTE 255 WardingBlowID
+BYTE 1 InspirationID
+BYTE 00 00
+
+ALIGN 4
+ShamanSkillList:
+BYTE 1 PushMagID
+BYTE 00 00
+
+ALIGN 4
+DruidSkillList:
+BYTE 255 PushMagID
+BYTE 1 MaleficAuraID
+BYTE 00 00
+
+ALIGN 4
+SummonerSkillList:
+BYTE 255 MaleficAuraID
+BYTE 1 SummonID
+BYTE 00 00
+
+ALIGN 4
+GreatKnightSkillList:
+BYTE 255 ArmoredBlowID
+BYTE 1 SpurDefID
+BYTE 00 00
+
+ALIGN 4
+FighterSkillList:
+BYTE 1 FieryBloodID
+BYTE 00 00
+
+ALIGN 4
+WarriorSkillList:
+BYTE 255 FieryBloodID
+BYTE 1 DefiantStrID
+BYTE 00 00
+
+ALIGN 4
+BrigandSkillList:
+BYTE 1 DeathBlowID
+BYTE 00 00
+
+ALIGN 4
+PirateSkillList:
+BYTE 1 CamaraderieID
+BYTE 00 00
+
+ALIGN 4
+BerserkerSkillList:
+BYTE 255 CamaraderieID
+BYTE 1 CritBoostID
+BYTE 5 AxefaireID
+BYTE 00 00
+
+ALIGN 4
+MonkSkillList:
+BYTE 1 WardingBlowID
+BYTE 00 00
+
+ALIGN 4
+PriestSkillList:
+BYTE 00 00
+
+ALIGN 4
+PegKnightSkillList:
+BYTE 1 DartingBlowID
+BYTE 00 00
+
+ALIGN 4
+FalcoknightSkillList:
+BYTE 255 DartingBlowID
+BYTE 1 DesperationID
+BYTE 00 00
+
+ALIGN 4
+ClericSkillList:
+BYTE 00 00
+
+ALIGN 4
+TroubadourSkillList:
+BYTE 1 LiveToServeID
+BYTE 00 00
+
+ALIGN 4
+ValkyrieSkillList:
+BYTE 255 LiveToServeID
+BYTE 1 BreathOfLifeID
+BYTE 00 00
+
+ALIGN 4
+SoldierSkillList:
+BYTE 1 WindDiscipleID
+BYTE 00 00
+
+ALIGN 4
+NecromancerSkillList:
+BYTE 00 00
+
+ALIGN 4
+FleetSkillList:
+BYTE 00 00
+
+ALIGN 4
+PhantomSkillList:
+BYTE 00 00
+
+ALIGN 4
+PatriarchMatriarchSkillList:
+BYTE 255 WardingBlowID
+BYTE 1 CounterMagicID
+BYTE 00 00
+
+ALIGN 4
+DarkKnightSkillList:
+BYTE 255 AlertStanceID
+BYTE 1 DefiantMagID
+BYTE 00 00
+
+ALIGN 4
+ShadeKnightSkillList:
+BYTE 255 MaleficAuraID
+BYTE 1 VanityID
+BYTE 00 00
+
+ALIGN 4
+MagusSkillList:
+BYTE 255 SwiftStanceID
+BYTE 1 NightTideID
+BYTE 00 00
+
+ALIGN 4
+MasterKnightSkillList:
+BYTE 255 ElbowRoomID
+BYTE 1 ChargePlusID
+BYTE 00 00
+
+ALIGN 4
+CommanderSkillList:
+BYTE 255 ArmoredBlowID
+BYTE 1 BracingStanceID
+BYTE 00 00
+
+ALIGN 4
+ImpalerSkillList:
+BYTE 255 WindDiscipleID
+BYTE 1 StrongArmID
+BYTE 5 LancefaireID
+BYTE 00 00
+
+ALIGN 4
+WyvernGeneralSkillList:
+BYTE 255 TantivyID
+BYTE 1 PushDefID
+BYTE 00 00
+
+ALIGN 4
+HunterSkillList:
+BYTE 255 QuickDrawID
+BYTE 1 BowRangeUpID
+BYTE 00 00
+
+ALIGN 4
+ChampionSkillList:
+BYTE 255 CertainBlowID
+BYTE 1 SpectrumStanceID
+BYTE 00 00
+
+ALIGN 4
+TruebladeSkillList:
+BYTE 255 DuelistsBlowID
+BYTE 1 CriticalForceID
+BYTE 5 CritBoostID
+BYTE 00 00
+
+ALIGN 4
+MountedBrigandSkillList:
+BYTE 255 DeathBlowID
+BYTE 1 OutriderID
+BYTE 00 00
+
+ALIGN 4
+WarlockSkillList:
+BYTE 255 FieryBloodID
+BYTE 1 DriveStrID
+BYTE 00 00
+
+ALIGN 4
+GladiatorSkillList:
+BYTE 255 CamaraderieID
+BYTE 1 FocusID
+BYTE 00 00
+
+ALIGN 4
+SeraphKnightSkillList:
+BYTE 255 DartingBlowID
+BYTE 1 NullifyID
+BYTE 00 00
+
+ALIGN 4
+HalberdierSkillList:
+BYTE 255 WindDiscipleID
+BYTE 1 CritBoostID
+BYTE 5 LancefaireID
+BYTE 00 00
+
+ALIGN 4
+SentinelSkillList:
+BYTE 255 WindDiscipleID
+BYTE 1 ShortShieldID
+BYTE 00 00
+
+ALIGN 4
+SpellswordSkillList:
+BYTE 1 AlertStanceID
+BYTE 00 00
+
+ALIGN 4
+DreadFighterSkillList:
+BYTE 255 AlertStanceID
+BYTE 1 DefiantCritID
+BYTE 00 00
+
+ALIGN 4
+BattleSageSkillList:
+BYTE 255 AlertStanceID
+BYTE 1 HexID
+BYTE 00 00
+
+ALIGN 4
+RogueSkillList:
+DancerSkillList:
+BYTE 00 00
