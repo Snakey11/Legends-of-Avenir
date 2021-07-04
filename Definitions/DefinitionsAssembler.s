@@ -10,5 +10,6 @@
 .include ItemEffects.s
 .include Music.s
 .include Portraits.s
+.include Skills.s
 .include Spells.s
 .include StandingSprites.s

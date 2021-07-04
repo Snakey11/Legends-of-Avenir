@@ -1612,7 +1612,7 @@
 #define AxeBreakerID AxebreakerID
 #define BowBreakerID BowbreakerID
 #define TomeBreakerID TomebreakerID
-#include "ASM/SkillSystem/EngineHacks/SkillSystem/skill_definitions.event"
+//#include "ASM/SkillSystem/EngineHacks/SkillSystem/skill_definitions.event"
 
 //#ifndef DebuffTable
   //#define DebuffTable     0x0203F100
