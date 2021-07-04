@@ -1,0 +1,34 @@
+
+#include "CustomSkills.lyn.event"
+
+ALIGN 4
+gFirstAidSkillTester:
+POIN SkillTester|1 // This is to ensure the top bit is set.
+gFirstAidID:
+BYTE FirstAidID
+gFirstAidActionID:
+BYTE 0x23 // Referred to in UnitActionRework.
+
+/*struct TargetSelectionDefinition {
+	 void(*onInit)(struct TargetSelectionProc*);
+	 void(*onEnd)(struct TargetSelectionProc*);
+
+	 void(*onInitTarget)(struct TargetSelectionProc*, struct TargetEntry*);
+
+	 void(*onSwitchIn)(struct TargetSelectionProc*, struct TargetEntry*);
+	 void(*onSwitchOut)(struct TargetSelectionProc*, struct TargetEntry*);
+
+	 int(*onAPress)(struct TargetSelectionProc*, struct TargetEntry*);
+	 int(*onBPress)(struct TargetSelectionProc*, struct TargetEntry*);
+	 int(*onRPress)(struct TargetSelectionProc*, struct TargetEntry*);
+};*/
+ALIGN 4
+FirstAidTargetSelection: // To do this, I'm mimicking the talk target selection data for now.
+POIN 0x080247B1 // onInit.
+POIN 0x0804E885 // onEnd.
+POIN 0x00000000 // onInitTarget.
+POIN 0x080247D1 // onSwitchIn.
+POIN 0x00000000 // onSwitchOut.
+POIN FirstAidTargetAPress // onAPress.
+POIN 0x08022749 // onBPress.
+POIN 0x00000000 // onRPress.

@@ -160,3 +160,10 @@ hits and does 1.5x damage.[N]
 ## UM_SwarpDesc
 Swap positions with a distant[N]
 ally.[X]
+
+## UM_FirstAid
+ First Aid[X]
+
+## UM_FirstAidDesc
+Heal an ally for a[N]
+small amount of HP.[X]

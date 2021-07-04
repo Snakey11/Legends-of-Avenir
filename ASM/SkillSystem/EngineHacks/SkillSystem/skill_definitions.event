@@ -1041,7 +1041,7 @@
 //Custom skills:
 #define StrongArmID 49 //All lances have 1-2 range.
 #define SpeedCastID 106 //Hybrids can counter with magic.
-
+#define FirstAidID 00 //Adds a menu command that lets Tact heal an ally for 10 HP and get some EXP.
 
 //Broken Skills
 #define Roll12ID 255

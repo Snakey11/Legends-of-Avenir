@@ -911,5 +911,8 @@ ORG SkillIcon(SpeedCastID)
 ORG SkillIcon(StrongArmID)
 #incbin "SkillIcons/StrongArm.dmp"
 
+ORG SkillIcon(FirstAidID)
+#incbin "SkillIcons/FirstAid.dmp"
+
 ORG SkillIcons+0x8000
 

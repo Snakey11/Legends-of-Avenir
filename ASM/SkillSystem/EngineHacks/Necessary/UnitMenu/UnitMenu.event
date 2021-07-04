@@ -111,6 +111,9 @@ UnitMenuTable:
 
   UM_Steal
   
+  //First aid
+  MenuCommand(UM_FirstAid, UM_FirstAidDesc, GreenText, FirstAid_Usability, FirstAid_Effect)
+  
   //UM_Summon
   MenuCommand(0x693,0x6DD,NormalText,NewSummonUsability,0x244B8)
   

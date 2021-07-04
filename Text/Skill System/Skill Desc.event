@@ -1249,3 +1249,7 @@ unit may counter with magic.[X]
 ## SD_StrongArm
 Strong Arm: All lances[NL]
 may be used at 2 range.[X]
+
+## SD_FirstAid
+First Aid: This unit may heal[NL]
+another for a small amount of HP.[X]

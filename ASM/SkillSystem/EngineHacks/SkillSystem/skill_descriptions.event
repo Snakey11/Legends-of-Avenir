@@ -308,3 +308,4 @@ SkillDescription(SwarpID,SD_Swarp)
 
 SkillDescription(SpeedCastID,SD_SpeedCast)
 SkillDescription(StrongArmID,SD_StrongArm)
+SkillDescription(FirstAidID,SD_FirstAid)
