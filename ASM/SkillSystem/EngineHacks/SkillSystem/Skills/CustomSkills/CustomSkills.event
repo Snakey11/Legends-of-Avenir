@@ -58,5 +58,11 @@ PROC_CALL_ROUTINE(FirstAidResetTargetState)
 PROC_CALL_ROUTINE(0x080790A5) // MU_EndAll.
 PROC_CALL_ROUTINE(0x080311A9) // ReloadGameCoreGraphics.
 PROC_SLEEP(2)
-
+PROC_CALL_ROUTINE(FirstAidGiveEXP) // Give some EXP to our healing unit.
 PROC_END
+
+ALIGN 4
+gFirstAidEXPEvent:
+GiveEXP(0xFFFF,100)
+NoFade
+ENDA

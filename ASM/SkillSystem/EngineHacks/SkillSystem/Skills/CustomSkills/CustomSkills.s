@@ -283,3 +283,19 @@ str r1, [ r0, #0x0C ]
 pop { r0 }
 bx r0
 .ltorg
+
+.global FirstAidGiveEXP
+.type FirstAidGiveEXP, %function
+FirstAidGiveEXP: @ r0 = First aid proc. Call the "give an arbitrary amount of EXP" hack function. Slot 0x1 = unit, slot 0x2 = EXP to give. Also pass in the proc pointer.
+push { lr }
+/*ldr r1, =gEventSlot
+ldr r2, =#0xFFFF
+str r2, [ r1, #0x04 ]
+mov r2, #0x20 @ EXP to give.
+str r2, [ r1, #0x08 ]
+blh give_exp_Install, r1*/
+ldr r0, =gFirstAidEXPEvent
+mov r1, #0x01
+blh CallMapEventEngine, r2
+pop { r0 }
+bx r0
