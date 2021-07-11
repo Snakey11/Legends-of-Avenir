@@ -80,6 +80,8 @@ ALIGN 4
 
 #include "GiveToSupply/GiveToSupply.lyn.event"
 
+#include "GiveEXP/give_exp_install.event" // Add an ASMC that gives an arbitrary amount of EXP.
+
 #include "HPBars/HPBars.event"
 
 #include "HybridClasses/HybridClasses.event"

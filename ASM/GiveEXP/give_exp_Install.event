@@ -1,0 +1,16 @@
+
+// Credit aera, 7743
+
+#include "EAstdlib.event"
+#include "Extensions/Hack Installation.txt"
+
+
+ALIGN 4
+give_exp_Install:
+//#incbin "give_exp.dmp" //HINT=ASM
+#include "give_exp.lyn.event"
+
+ALIGN 4
+give_exp_proc:
+//#incbin "event_fe8j.bin" //HINT=PROCS
+#incbin "event_fe8u.bin" //HINT=PROCS

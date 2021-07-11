@@ -1700,6 +1700,8 @@
 
 #define SandPickup(EventID,Item) "CHECK_ALLEGIANCE 0xFFFF ; BNE 0x0 0x0 0xC ; RANDOMNUMBER 20 ; SADD 0xC01 ; CHECK_LUCK 0xFFFF ; BGE 0x0 0x1 0xC ; GiveItem(Item,0xFFFF) ; GOTO 0x1 ; LABEL 0x0 ; ENUF EventID ; LABEL 0x1"
 
+#define GiveEXP(eventParameter, EXP) "SVAL 0x1 eventParameter ; SVAL 0x2 EXP ; ASMC give_exp_Install|1"
+
 #define EventMenuCommand(aTextId,Effect) "WORD 0; SHORT aTextId 0; WORD 0; POIN (0x04F448|1); WORD 0; POIN (Effect|1); WORD 0 0 0"
 #define EventMenuCommandEnd "WORD 0 0 0 0 0 0 0 0 0"
 
