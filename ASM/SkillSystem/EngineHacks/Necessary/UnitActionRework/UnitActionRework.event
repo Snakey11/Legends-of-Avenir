@@ -67,8 +67,7 @@ pActionRoutineTable:
 	NoActionRoutine               // 0x20 ?
 	NoActionRoutine               // 0x21 Ride Ballista
 	NoActionRoutine               // 0x22 Exit Ballista
-	//NoActionRoutine               // 0x23 FREE
-	ActionRoutine(FirstAidAction|1)
+	NoActionRoutine               // 0x23 FREE
 	NoActionRoutine               // 0x24 FREE
 	NoActionRoutine               // 0x25 FREE
 	NoActionRoutine               // 0x26 FREE
@@ -83,5 +82,7 @@ pActionRoutineTable:
 	NoActionRoutine               // 0x2F FREE etc...
 
 ORG (pActionRoutineTable+ACTION_TABLE_SIZE*4)
+
+SetUnitAction(0x28,ActionRoutine(FirstAidAction|1))
 
 #endif // HAX_ACTION_APPLICATION_REWORK_EVENT

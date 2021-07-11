@@ -1,13 +1,21 @@
 
+#include "ProcDefinitions.event"
+
 #include "CustomSkills.lyn.event"
 
 ALIGN 4
 gFirstAidSkillTester:
 POIN SkillTester|1 // This is to ensure the top bit is set.
+gFirstAidBottomText:
+SHORT FirstAidBottomTextID
 gFirstAidID:
 BYTE FirstAidID
 gFirstAidActionID:
-BYTE 0x23 // Referred to in UnitActionRework.
+BYTE 0x28 // Referred to in UnitActionRework.
+gFirstAidHealAmount:
+BYTE 8
+gFirstAidVulnerary:
+BYTE Vulnerary
 
 /*struct TargetSelectionDefinition {
 	 void(*onInit)(struct TargetSelectionProc*);
@@ -23,8 +31,8 @@ BYTE 0x23 // Referred to in UnitActionRework.
 	 int(*onRPress)(struct TargetSelectionProc*, struct TargetEntry*);
 };*/
 ALIGN 4
-FirstAidTargetSelection: // To do this, I'm mimicking the talk target selection data for now.
-POIN 0x080247B1 // onInit.
+gFirstAidTargetSelection: // To do this, I'm mimicking the talk target selection data for now.
+POIN FirstAidTargetInit // onInit.
 POIN 0x0804E885 // onEnd.
 POIN 0x00000000 // onInitTarget.
 POIN 0x080247D1 // onSwitchIn.
@@ -32,3 +40,23 @@ POIN 0x00000000 // onSwitchOut.
 POIN FirstAidTargetAPress // onAPress.
 POIN 0x08022749 // onBPress.
 POIN 0x00000000 // onRPress.
+
+ALIGN 4
+gFirstAidEvent:
+ASMC StartFirstAidProc
+STAL 0x01
+NoFade
+ENDA
+
+ALIGN 4
+gFirstAidProc: // Called upon selecting a target. 
+PROC_CALL_ROUTINE(FirstAidExecHeal)
+PROC_YIELD
+PROC_WHILE_EXISTS(0x089A3874) // gProc_MapAnimBattleWithMapEvents. Wait for this proc to finish before finishing up here.
+PROC_YIELD
+PROC_CALL_ROUTINE(FirstAidResetTargetState)
+PROC_CALL_ROUTINE(0x080790A5) // MU_EndAll.
+PROC_CALL_ROUTINE(0x080311A9) // ReloadGameCoreGraphics.
+PROC_SLEEP(2)
+
+PROC_END
