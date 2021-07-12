@@ -132,7 +132,7 @@ Certain Blow: +40 Hit[N]
 when initiating battle.[X]
 
 ## SD_ArmoredBlow
-Armored Blow: +10 Def[N]
+Armored Blow: +4 Def[N]
 when initiating battle.[X]
 
 ## SD_Vantage
@@ -912,7 +912,7 @@ gain 1.5x Str, Skl, & Spd.[X]
 Insight: Hit +20.[X]
 
 ## SD_Vigilance
-Vigilance: Avoid +20.[X]
+Vigilance: Avoid +10.[X]
 
 ## SD_Daunt
 Daunt: -5 Hit and Crit to all[N]
@@ -974,11 +974,11 @@ or lower, gain +4 Resistance.[X]
 Bargain: Halves prices in shops.[X]
 
 ## SD_ShortShield
-Short Shield: Gain 6 defense[N]
+Short Shield: Gain 3 defense[N]
 against attacks recieved in melee.[X]
 
 ## SD_TowerShield
-Tower Shield: Gain 6 defense[N]
+Tower Shield: Gain 3 defense[N]
 against attacks recieved at range.[X]
 
 ## SD_TowerShieldPlus
