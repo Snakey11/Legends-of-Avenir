@@ -51,7 +51,7 @@ ChargeID
 ChargePlusID
 CriticalForceID
 KillingMachineID
-CritBoostID
+CritUpID
 StrongRiposteID
 PursuitID
 ChivalryID
@@ -189,7 +189,6 @@ LancebreakerID 0xFF
 AxebreakerID 0xFF
 BowbreakerID 0xFF
 TomebreakerID 0xFF
-CritUpID 0xFF
 PatienceID 0xFF
 DefiantAvoID 0xFF
 IndoorFighterID 0xFF
