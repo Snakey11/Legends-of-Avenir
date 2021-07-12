@@ -25,11 +25,11 @@ ldr r1, ShortShieldID
 cmp r0, #0
 beq GoBack
 
-@apply def +6
+@apply def +3
 mov r0, r4
 add r0,#0x5C
 ldrh r3,[r0]
-add r3,#6
+add r3,#3
 strh r3,[r0]
 
 GoBack:
