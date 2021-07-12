@@ -46,7 +46,7 @@ BYTE 00 00
 ALIGN 4
 SwordmasterSkillList:
 BYTE 255 DuelistsBlowID
-BYTE 1 CritBoostID
+BYTE 1 CritUpID
 BYTE 5 SwordfaireID
 BYTE 00 00
 
@@ -64,7 +64,7 @@ BYTE 00 00
 ALIGN 4
 SniperSkillList:
 BYTE 255 QuickDrawID
-BYTE 1 CritBoostID
+BYTE 1 CritUpID
 BYTE 5 BowfaireID
 BYTE 00 00
 
@@ -161,7 +161,7 @@ BYTE 00 00
 ALIGN 4
 BerserkerSkillList:
 BYTE 255 CamaraderieID
-BYTE 1 CritBoostID
+BYTE 1 CritUpID
 BYTE 5 AxefaireID
 BYTE 00 00
 
@@ -282,7 +282,7 @@ ALIGN 4
 TruebladeSkillList:
 BYTE 255 DuelistsBlowID
 BYTE 1 CriticalForceID
-BYTE 5 CritBoostID
+BYTE 5 CritUpID
 BYTE 00 00
 
 ALIGN 4
@@ -312,7 +312,7 @@ BYTE 00 00
 ALIGN 4
 HalberdierSkillList:
 BYTE 255 WindDiscipleID
-BYTE 1 CritBoostID
+BYTE 1 CritUpID
 BYTE 5 LancefaireID
 BYTE 00 00
 
