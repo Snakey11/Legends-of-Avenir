@@ -196,6 +196,8 @@ PrepForEndItemList:
 BYTE SteelSword SteelLance SteelAxe SteelShortbow 0x00 Elwind Divine Worm
 
 #include "PrepScreen/PrepScreen.event"
+
+#include "PromoLevelCheck/PromoLevelCheck.lyn.event" // For some reason after IER, promo items work at any level, so this routine is the usability routine referenced in PromotionItemTable.
 /*
 ALIGN 4
 #include "Raid/Raid.event"
