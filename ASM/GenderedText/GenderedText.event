@@ -16,7 +16,7 @@
 	GenderedTextEntry(0x3280,GenderEventID,HerString,HimString) // Use the control codes like [0x80][0xXX].
 	GenderedTextEntry(0x3380,GenderEventID,herString,himString)
 	GenderedTextEntry(0x3480,GenderEventID,HersString,HisString)
-	GenderedTextEntry(0x3580,GenderEventID,HisString,hisString)
+	GenderedTextEntry(0x3580,GenderEventID,hersString,hisString)
 	GenderedTextEntry(0,0,0,0)
 	
 	HeString:
