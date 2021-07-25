@@ -112,15 +112,15 @@ Pavise: Nullify a physical attack.[N]
 (Skill % activation)[X]
 
 ## SD_DuelistsBlow
-Duelist's Blow: +30 Avo[N]
+Duelist's Blow: +15 Avo[N]
 when initiating battle.[X]
 
 ## SD_DeathBlow
-Death Blow: +20 Crit[N]
+Death Blow: +10 Crit[N]
 when initiating battle.[X]
 
 ## SD_DartingBlow
-Darting Blow: +5 Attack Speed[N]
+Darting Blow: +2 Attack Speed[N]
 when initiating battle.[X]
 
 ## SD_WardingBlow
@@ -128,7 +128,7 @@ Warding Blow: +20 Res[N]
 when initiating battle.[X]
 
 ## SD_CertainBlow
-Certain Blow: +40 Hit[N]
+Certain Blow: +25 Hit[N]
 when initiating battle.[X]
 
 ## SD_ArmoredBlow

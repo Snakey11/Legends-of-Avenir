@@ -53,7 +53,7 @@ DuelistsSkill:
 ldr     r0,=0x203A4EC       @Move attacker data into r0.
 add     r0,#0x62    @Move to the attacker's avoid.
 ldrh    r3,[r0]     @Load the attacker's avoid into r3.
-add     r3,#0x1E    @Add 30 to the attacker's avoid.
+add     r3,#15    @Add 15 to the attacker's avoid.
 strh    r3,[r0]     @Store attacker avoid.
 b       SkillReturn
 
@@ -61,14 +61,14 @@ DeathSkill:
 ldr     r0,=0x203A4EC       @Move attacker data into r0.
 add     r0,#0x66    @Move to the attacker's crit.
 ldrh    r3,[r0]     @Load the attacker's crit into r3.
-add     r3,#0x14    @Add 20 to the attacker's crit.
+add     r3,#10    @Add 10 to the attacker's crit.
 strh    r3,[r0]     @Store attacker crit.
 b       SkillReturn
 DartingSkill:
 ldr     r0,=0x203A4EC       @Move attacker data into r0.
 add     r0,#0x5E    @Move to the attacker's AS.
 ldrh    r3,[r0]     @Load the attacker's AS into r3.
-add     r3,#0x05    @Add 5 to the attacker's AS.
+add     r3,#2    @Add 2 to the attacker's AS.
 strh    r3,[r0]     @Store attacker AS.
 b       SkillReturn
 WardingSkill:
@@ -99,7 +99,7 @@ CertainSkill:
 ldr     r0,=0x203A4EC       @Move attacker data into r0.
 add     r0,#0x60    @Move to the attacker's hit.
 ldrh    r3,[r0]     @Load the attacker's hit into r3.
-add     r3,#0x1E    @Add 30 to the attacker's hit.
+add     r3,#25    @Add 25 to the attacker's hit.
 strh    r3,[r0]     @Store attacker hit.
 b       SkillReturn
 ArmoredSkill:
