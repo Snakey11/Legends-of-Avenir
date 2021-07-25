@@ -49,8 +49,6 @@ ALIGN 4
 
 #include "CharacterCreator/CharacterCreator.event"
 
-#include "ClassDisplay/ClassDisplay.event"
-
 #include "Class Expansion.event"
 
 #include "CopyUnit/Installer.event"
@@ -243,6 +241,11 @@ ALIGN 4
 	#include "Debug/WinAddition.lyn.event"
 	
 	#include "Debug/winbuttonusability.lyn.event"
+	
+	#include "Debug/ClassDisplay/ClassDisplay.event"
+	
+	#include "Debug/DebugUnitMenu/DebugUnitMenu.event"
+	
 	ALIGN 4
 	WinButtonUsabilityCharacterList:
 	BYTE PlayerMMage PlayerMMonk PlayerMShaman PlayerFMage PlayerFMonk PlayerFShaman

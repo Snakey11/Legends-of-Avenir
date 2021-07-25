@@ -1,0 +1,17 @@
+
+#include "DebugUnitMenu.lyn.event"
+
+ALIGN 4
+gDebugUnitMenuDefinition:
+BYTE 10 4 10 10 // Geometry: x, y, w, h.
+WORD 0 // Style.
+POIN gDebugUnitMenuCommands
+WORD 0 0 0 0 0 0 // Other routines we don't care about.
+
+ALIGN 4
+gDebugUnitMenuCommands:
+MenuCommand(UM_EditSkill, UM_EditSkillDesc, OrangeText, $04F449, SkillDebugCommand_OnSelect)
+MenuCommand(WinNameText, WinDescText, GreenText, Win_Usability, Win_Button)
+MenuCommand(DebugNameText, 0, GreenText, 0x4F449, DebugEffect)
+MenuCommand(ClassDisplayNameText, 0, GreenText, 0x4F449, ClassDisplayUMEffect)
+UM_Separator

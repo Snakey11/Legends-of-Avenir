@@ -173,11 +173,14 @@ UnitMenuTable:
   // MenuCommand(UMText_Switch,UMText_SwitchDesc,GreenText,SwitchUsability,SwitchCommand)   //switch
   UM_Drop
 
-  #ifdef __DEBUG__
+  /*#ifdef __DEBUG__ // These have been put into a submenu.
     MenuCommand(UM_EditSkill, UM_EditSkillDesc, OrangeText, $04F449, SkillDebugCommand_OnSelect)
     MenuCommand(WinNameText, WinDescText, GreenText, Win_Usability, Win_Button)
     MenuCommand(DebugNameText, 0, GreenText, 0x4F449, DebugEffect)
     MenuCommand(ClassDisplayNameText, 0, GreenText, 0x4F449, ClassDisplayUMEffect)
+  #endif*/
+  #ifdef __DEBUG__
+    MenuCommand(DebugNameText,0,GreenText,0x4F449,DebugSubmenuEffect)
   #endif
 
   UM_Item
