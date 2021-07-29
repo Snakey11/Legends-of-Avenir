@@ -17,7 +17,7 @@
 	//Spirit Dust item icon
 	#ifndef SpiritDustIcon
 		
-		#define SpiritDustIcon 0xAB
+		#define SpiritDustIcon 0xC7
 		PUSH
 		ORG $5926F4 + ( SpiritDustIcon * 0x80 )
 		#incext Png2Dmp "SpiritDust.png"
