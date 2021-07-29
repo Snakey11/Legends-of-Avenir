@@ -85,13 +85,13 @@ bne SkillReturn
 ldr r0, =0x203a4ec
 @ add     r0,#0x5A    @Move to the defender's damage.
 @ ldrh    r3,[r0]     @Load the defender's damage into r3.
-@ sub     r3,#0x14    @Subtract 20 from the defender's avoid.
-@ strh    r3,[r0]     @Store defender avoid.
+@ sub     r3,#4    @Subtract 4 from the defender's damage.
+@ strh    r3,[r0]     @Store defender damage.
 
 @testing
 add r0, #0x5c @attacker defense
 ldrh r3, [r0]
-add r3, #20
+add r3, #4
 strh r3, [r0]
 
 b       SkillReturn
