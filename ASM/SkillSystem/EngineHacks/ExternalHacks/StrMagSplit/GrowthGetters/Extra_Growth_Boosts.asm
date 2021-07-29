@@ -1,10 +1,17 @@
 .thumb
 .org 0x0
 
+.macro blh to, reg
+    ldr \reg, =\to
+    mov lr, \reg
+    .short 0xF800
+.endm
+
 .equ Item_Table, Growth_Options+4
 .equ SkillTester, Item_Table+4
 .equ BlossomID, SkillTester+4
 .equ AptitudeID, BlossomID+4
+.equ CreatorApplyBoonBaneGrowth, AptitudeID+4
 @r0=battle struct or char data ptr, r1 = growth so far (from char data), r2=index in stat booster pointer of growth
 
 push	{r4-r7,r14}
@@ -29,6 +36,15 @@ tst		r0,r7
 bne		GoBack	
 
 MetisCheck:
+@ Actually first let's apply the boon/bane effects.
+mov r0, r4
+mov r1, r5
+mov r2, r6
+ldr r3, CreatorApplyBoonBaneGrowth
+mov lr, r3
+.short 0xF800
+mov r5, r0
+
 ldr		r0,[r4,#0xC]	@status word
 mov		r1,#0x20
 lsl		r1,#0x8			@metis tome

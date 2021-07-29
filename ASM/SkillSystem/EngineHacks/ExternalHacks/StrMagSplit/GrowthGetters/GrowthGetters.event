@@ -60,4 +60,5 @@
 	POIN SkillTester
 	WORD BlossomID
 	WORD AptitudeID
+	POIN CreatorApplyBoonBaneGrowth
 	
