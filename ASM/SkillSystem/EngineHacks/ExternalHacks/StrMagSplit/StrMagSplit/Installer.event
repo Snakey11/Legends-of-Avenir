@@ -14,9 +14,9 @@
 #define Mag_Booster_Item_Effect_Ptr "ItemEffectTable+4*(SpiritDust-0x4B)" 
 #define Mag_Booster_Prep_Screen_Usability_Ptr "PrepScreenUsabilityTable+4*(SpiritDust-0x5B)"
 */
-#define Mag_Booster_Item_Usability_Ptr "IERevampTable+4*(SpiritDust-0x4B)"
-#define Mag_Booster_Item_Effect_Ptr "IERevampTable+4*(SpiritDust-0x4B)+12" 
-#define Mag_Booster_Prep_Screen_Usability_Ptr "IERevampTable+4*(SpiritDust-0x5B)+4"
+#define Mag_Booster_Item_Usability_Ptr "IERevampTable+4*(SpiritDustEffectID)"
+#define Mag_Booster_Item_Effect_Ptr "IERevampTable+4*(SpiritDustEffectID)+12" 
+#define Mag_Booster_Prep_Screen_Usability_Ptr "IERevampTable+4*(SpiritDustEffectID)+4"
 
 #include "LevelUp/LevelUp.event"
 

@@ -194,8 +194,8 @@
 	ORG ItemTable+(0x24*SpiritDust)+0xC //Stat booster pointer
 	POIN Mag_Booster_Item_Ptr
 	
-	ORG ItemTable+(0x24*SpiritDust)+0x1E //Staff/use effect; without this, can't use the item outside prep screen
-	BYTE 0x11
+	//ORG ItemTable+(0x24*SpiritDust)+0x1E //Staff/use effect; without this, can't use the item outside prep screen
+	//BYTE SpiritDustEffectID
 	
 	ORG Mag_Booster_Item_Usability_Ptr
 	POIN 0x28B4C
