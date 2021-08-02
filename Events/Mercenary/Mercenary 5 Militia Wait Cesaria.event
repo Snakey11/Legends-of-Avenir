@@ -150,7 +150,11 @@ STAL 0x04
 LOAD2 0x1 ElanilHere
 ENUN
 REVEAL Elanil
+SVAL 0x1 0x1
+SET_STATE Elanil
 REVEAL Finoc
+SVAL 0x1 0x1
+SET_STATE Finoc
 STAL 0x10
 FlashCursor(Finoc,0x60)
 STAL 0x10
@@ -263,55 +267,58 @@ UNIT Elanil 0x00 0x00 Level(5,Ally,True) [2,16] 0x00 0x00 0x01 REDA2R17 [0] NoAI
 UNIT
 
 Meanies1:
-UNIT Kaid Hero Kaid Level(5,Enemy,True) [27,4] Drop 0x00 0x00 0x00 [SilverAxe] GuardAI
-UNIT GerwickBandit Mercenary Kaid Level(10,Enemy,True) [26,5] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
-UNIT GerwickBandit Mercenary Kaid Level(12,Enemy,True) [28,5] 0x00 0x00 0x00 0x00 [IronBlade] NoAI
-UNIT GerwickBandit Cavalier Kaid Level(10,Enemy,True) [28,8] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
-UNIT GerwickBandit Fighter Kaid Level(9,Enemy,True) [27,12] 0x00 0x00 0x00 0x00 [DevilAxe] AttackInRangeAI
-UNIT GerwickBandit Soldier Kaid Level(10,Enemy,True) [26,16] Drop 0x00 0x00 0x00 [Javelin,KnightCrest] ChaseOnceApproachedAI
-UNIT GerwickBandit Halberdier Kaid Level(2,Enemy,True) [28,18] Drop 0x00 0x00 0x00 [Dragonspear,BlueGem] AttackInRangeAI
-UNIT GerwickBandit Mage Kaid Level(13,Enemy,True) [24,7] 0x00 0x00 0x00 0x00 [Elthunder] AttackInRangeAI
-UNIT GerwickBandit Archer Kaid Level(10,Enemy,True) [25,9] 0x00 0x00 0x00 0x00 [SteelBow] ChaseOnceApproachedAI
-UNIT GerwickBandit Cavalier Kaid Level(10,Enemy,True) [26,8] Drop 0x00 0x00 0x00 [IronLance,KillingEdge] ChaseOnceApproachedAI
-UNIT GerwickBandit Spellsword Kaid Level(12,Enemy,True) [13,19] 0x00 0x00 0x00 0x00 [SteelSword,Flux] NoAI
-UNIT GerwickBandit PegasusKnight Kaid Level(14,Enemy,True) [2,2] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT Kaid Hero Kaid Level(7,Enemy,True) [27,4] Drop 0x00 0x00 0x00 [Tomahawk] GuardAI
+UNIT GerwickBandit Mercenary Kaid Level(11,Enemy,True) [26,5] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
+UNIT GerwickBandit Mercenary Kaid Level(13,Enemy,True) [28,5] 0x00 0x00 0x00 0x00 [IronBlade] NoAI
+UNIT GerwickBandit Cavalier Kaid Level(11,Enemy,True) [28,8] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT GerwickBandit Fighter Kaid Level(10,Enemy,True) [27,12] 0x00 0x00 0x00 0x00 [DevilAxe] AttackInRangeAI
+UNIT GerwickBandit Soldier Kaid Level(11,Enemy,True) [26,16] Drop 0x00 0x00 0x00 [Javelin,KnightCrest] ChaseOnceApproachedAI
+UNIT GerwickBandit Halberdier Kaid Level(3,Enemy,True) [28,18] Drop 0x00 0x00 0x00 [Dragonspear,BlueGem] AttackInRangeAI
+UNIT GerwickBandit Mage Kaid Level(14,Enemy,True) [24,7] 0x00 0x00 0x00 0x00 [Elthunder] AttackInRangeAI
+UNIT GerwickBandit Archer Kaid Level(11,Enemy,True) [25,9] 0x00 0x00 0x00 0x00 [SteelBow] ChaseOnceApproachedAI
+UNIT GerwickBandit Cavalier Kaid Level(11,Enemy,True) [26,8] Drop 0x00 0x00 0x00 [IronLance,KillingEdge] ChaseOnceApproachedAI
+UNIT GerwickBandit Spellsword Kaid Level(13,Enemy,True) [13,19] 0x00 0x00 0x00 0x00 [SteelSword,Flux] NoAI
+UNIT GerwickBandit PegasusKnight Kaid Level(15,Enemy,True) [2,2] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
 UNIT
 
 Meanies2:
-UNIT GerwickBandit Myrmidon Kaid Level(14,Enemy,True) [20,9] 0x00 0x00 0x00 0x00 [WindSword] AttackInRangeAI
-UNIT GerwickBandit Spellsword Kaid Level(13,Enemy,True) [21,11] 0x00 0x00 0x00 0x00 [Zanbato,Thunder] ChaseOnceApproachedAI
-UNIT GerwickBandit Soldier Kaid Level(12,Enemy,True) [19,11] 0x00 0x00 0x00 0x00 [ToxinLance] AttackInRangeAI
-UNIT GerwickBandit Knight Kaid Level(14,Enemy,True) [18,14] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
-UNIT GerwickBandit Archer Kaid Level(11,Enemy,True) [20,14] 0x00 0x00 0x00 0x00 [SteelLongbow] AttackInRangeAI
-UNIT GerwickBandit Monk Kaid Level(13,Enemy,True) [15,13] 0x00 0x00 0x00 0x00 [Lightning,Physic] HealAlliesAI
-UNIT GerwickBandit Knight Kaid Level(10,Enemy,True) [15,16] 0x00 0x00 0x00 0x00 [Spear] GuardAI
-UNIT GerwickBandit Knight Kaid Level(11,Enemy,True) [16,18] 0x00 0x00 0x00 0x00 [BattleAxe] GuardAI
-UNIT GerwickBandit Pirate Kaid Level(10,Enemy,True) [21,17] 0x00 0x00 0x00 0x00 [ShortAxe] AttackInRangeAI
-UNIT GerwickBandit Brigand Kaid Level(13,Enemy,True) [12,19] 0x00 0x00 0x00 0x00 [PoisonAxe] NoAI
-UNIT GerwickBandit Mercenary Kaid Level(12,Enemy,True) [12,17] 0x00 0x00 0x00 0x00 [Wyrmslayer] NoAI
-UNIT GerwickBandit Knight Kaid Level(11,Enemy,True) [1,11] 0x00 0x00 0x00 0x00 [HeavySpear,HandAxe] GuardAI
+UNIT GerwickBandit Myrmidon Kaid Level(15,Enemy,True) [20,9] 0x00 0x00 0x00 0x00 [WindSword] AttackInRangeAI
+UNIT GerwickBandit Spellsword Kaid Level(14,Enemy,True) [21,11] 0x00 0x00 0x00 0x00 [Zanbato,Thunder] ChaseOnceApproachedAI
+UNIT GerwickBandit Soldier Kaid Level(13,Enemy,True) [19,11] 0x00 0x00 0x00 0x00 [ToxinLance] AttackInRangeAI
+UNIT GerwickBandit Knight Kaid Level(15,Enemy,True) [18,14] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
+UNIT GerwickBandit Archer Kaid Level(12,Enemy,True) [20,14] 0x00 0x00 0x00 0x00 [SteelLongbow] AttackInRangeAI
+UNIT GerwickBandit Monk Kaid Level(14,Enemy,True) [15,13] 0x00 0x00 0x00 0x00 [Lightning,Physic] HealAlliesAI
+UNIT GerwickBandit Knight Kaid Level(11,Enemy,True) [15,16] 0x00 0x00 0x00 0x00 [Spear] GuardAI
+UNIT GerwickBandit Knight Kaid Level(12,Enemy,True) [16,18] 0x00 0x00 0x00 0x00 [BattleAxe] GuardAI
+UNIT GerwickBandit Pirate Kaid Level(11,Enemy,True) [21,17] 0x00 0x00 0x00 0x00 [ShortAxe] AttackInRangeAI
+UNIT GerwickBandit Brigand Kaid Level(14,Enemy,True) [12,19] 0x00 0x00 0x00 0x00 [PoisonAxe] NoAI
+UNIT GerwickBandit Mercenary Kaid Level(13,Enemy,True) [12,17] 0x00 0x00 0x00 0x00 [Wyrmslayer] NoAI
+UNIT GerwickBandit Knight Kaid Level(12,Enemy,True) [1,11] 0x00 0x00 0x00 0x00 [HeavySpear,HandAxe] GuardAI
 UNIT
 
 Meanies3:
-UNIT GerwickBandit Pirate Kaid Level(14,Enemy,True) [2,8] 0x00 0x00 0x00 0x00 [DragonAxe] NoAI
-UNIT GerwickBandit Mage Kaid Level(12,Enemy,True) [1,7] 0x00 0x00 0x00 0x00 [Arcfire] AttackInRangeAI
-UNIT GerwickBandit Brigand Kaid Level(11,Enemy,True) [3,5] Drop 0x00 0x00 0x00 [Halberd] AttackInRangeAI
-UNIT GerwickBandit PegasusKnight Kaid Level(14,Enemy,True) [6,1] 0x00 0x00 0x00 0x00 [SlimLance] ChaseOnceApproachedAI
-UNIT GerwickBandit Sentinel Kaid Level(1,Enemy,True) [8,4] 0x00 0x00 0x00 0x00 [SilverSword,Javelin] GuardAI
-UNIT GerwickBandit Archer Kaid Level(12,Enemy,True) [12,3] 0x00 0x00 0x00 0x00 [IronShortbow] AttackInRangeAI
-UNIT GerwickBandit Spellsword Kaid Level(11,Enemy,True) [14,4] Drop 0x00 0x00 0x00 [IronSword,Fire,GuidingRing] AttackInRangeAI
-UNIT GerwickBandit Fighter Kaid Level(12,Enemy,True) [13,5] 0x00 0x00 0x00 0x00 [Hammer] AttackInRangeAI
-UNIT GerwickBandit Berserker Kaid Level(2,Enemy,True) [19,5] 0x00 0x00 0x00 0x00 [SteelAxe] ChaseOnceApproachedAI
+UNIT GerwickBandit Pirate Kaid Level(15,Enemy,True) [2,8] 0x00 0x00 0x00 0x00 [DragonAxe] NoAI
+UNIT GerwickBandit Mage Kaid Level(13,Enemy,True) [1,7] 0x00 0x00 0x00 0x00 [Arcfire] AttackInRangeAI
+UNIT GerwickBandit Brigand Kaid Level(12,Enemy,True) [3,5] Drop 0x00 0x00 0x00 [Halberd] AttackInRangeAI
+UNIT GerwickBandit PegasusKnight Kaid Level(15,Enemy,True) [6,1] 0x00 0x00 0x00 0x00 [SlimLance] ChaseOnceApproachedAI
+UNIT GerwickBandit Sentinel Kaid Level(2,Enemy,True) [8,4] 0x00 0x00 0x00 0x00 [SilverSword,Javelin] GuardAI
+UNIT GerwickBandit Archer Kaid Level(13,Enemy,True) [12,3] 0x00 0x00 0x00 0x00 [IronShortbow] AttackInRangeAI
+UNIT GerwickBandit Spellsword Kaid Level(12,Enemy,True) [14,4] Drop 0x00 0x00 0x00 [IronSword,Fire,GuidingRing] AttackInRangeAI
+UNIT GerwickBandit Fighter Kaid Level(13,Enemy,True) [13,5] 0x00 0x00 0x00 0x00 [Hammer] AttackInRangeAI
+UNIT GerwickBandit Berserker Kaid Level(4,Enemy,True) [19,5] 0x00 0x00 0x00 0x00 [SteelAxe] ChaseOnceApproachedAI
 UNIT
 
 Turn4Units:
-UNIT GerwickBandit Cavalier Kaid Level(10,Enemy,True) [27,4] 0x00 0x00 0x01 REDA26R7 [SteelBlade] NoAI
-UNIT GerwickBandit Cavalier Kaid Level(9,Enemy,True) [27,4] 0x00 0x00 0x01 REDA28R7 [Lancereaver] NoAI
-UNIT GerwickBandit Warrior Kaid Level(2,Enemy,True) [27,17] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT GerwickBandit Cavalier Kaid Level(12,Enemy,True) [27,4] 0x00 0x00 0x01 REDA26R7 [SteelBlade] NoAI
+UNIT GerwickBandit Cavalier Kaid Level(10,Enemy,True) [27,4] 0x00 0x00 0x01 REDA28R7 [Lancereaver] NoAI
+UNIT GerwickBandit Warrior Kaid Level(3,Enemy,True) [27,17] 0x00 0x00 0x00 0x00 [SteelAxe] NoAI
+UNIT GerwickBandit Cavalier Kaid Level(15,Enemy,True) [0,18] 0x00 0x00 0x01 REDA2R16 [SteelLance] NoAI
 UNIT
 
 Turn5Units:
-UNIT GerwickBandit PegasusKnight Kaid Level(13,Enemy,True) [10,4] 0x00 0x00 0x00 0x00 [IronLance] NoAI
+UNIT GerwickBandit PegasusKnight Kaid Level(14,Enemy,True) [10,4] 0x00 0x00 0x00 0x00 [IronLance] NoAI
+UNIT GerwickBandit Cavalier Kaid Level(15,Enemy,True) [0,18] 0x00 0x00 0x01 REDA2R16 [ToxinSword,Horseslayer] NoAI
+UNIT GerwickBandit Cavalier Kaid Level(15,Enemy,True) [0,19] 0x00 0x00 0x01 REDA2R17 [ShortSpear] NoAI
 UNIT
 
 Turn6Units:
@@ -320,6 +327,9 @@ UNIT
 
 Turn7Units:
 UNIT GerwickBandit PegasusKnight Kaid Level(14,Enemy,True) [10,4] 0x00 0x00 0x00 0x00 [Javelin] NoAI
+UNIT GerwickBandit Cavalier Kaid Level(14,Enemy,True) [0,17] 0x00 0x00 0x01 REDA2R17 [Wyrmslayer] NoAI
+UNIT GerwickBandit MageKnight Kaid Level(4,Enemy,True) [0,18] Drop 0x00 0x01 REDA3R18 [Dasher,SpiritDust] NoAI
+UNIT GerwickBandit GreatKnight Kaid Level(5,Enemy,True) [0,19] 0x00 0x00 0x01 REDA2R19 [SilverAxe] NoAI
 EndUnit
 
 //Label CutsceneUnits
