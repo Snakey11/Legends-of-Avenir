@@ -12,7 +12,7 @@ ElysianWhipList:
 BYTE PegasusKnight WyvernRider PegasusKnight2 WyvernRider2 0x00 0x00 0x00 0x00
 
 GuidingRingList:
-BYTE Mage Mage_F Shaman Shaman_F Monk Monk Priest Cleric Troubadour MageM2 MageF2 ShamanM2 ShamanF2 MonkM2 MonkF2 0x00 0x00 0x00 0x00
+BYTE Mage Mage_F Shaman Shaman_F Monk Monk Priest Cleric Troubadour MageM2 MageF2 ShamanM2 ShamanF2 MonkM2 MonkF2 SpellswordM SpellswordF SpellswordM2 SpellswordF2 0x00 0x00 0x00 0x00
 
 OceanSealList:
 BYTE Pirate Thief Pirate2 0x00 0x00 0x00 0x00
