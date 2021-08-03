@@ -16,18 +16,21 @@ struct RectangleList
 	Rectangle rects[255];
 };
 
+extern Unit* GetUnitStructFromEventParameter(int eventParameter);
+
 void GetRandomUnitInRange(Proc* eventEngine);
 int IsUnitInRectangle(Unit* unit, Rectangle* rect);
 static int IsContained(int val1, int val2, int value);
 
 void GetRandomUnitInRange(Proc* eventEngine) // Memory slot 0x1 = character ID, memory slot 0x2 = rectangle struct list.
 {
-	int character = gEventSlot[0x1];
+	s16 eventParameter = gEventSlot[0x1];
+	int character = GetUnitStructFromEventParameter(eventParameter)->pCharacterData->number;
 	RectangleList* rects = (RectangleList*)gEventSlot[0x2]; // Pointer to an 0xFFFF 0xFFFF-terminated list of Rectangles.
 	int allegiance = gEventSlot[0x3];
 	
 	// We can make an array of valid unit IDs and store the current length of the array. Let's start building it.
-	u16 units[50];
+	u8 units[50];
 	CPU_FILL(0,&units,50,16); // Clear our list.
 	int unitsLength = 0;
 	for ( int i = 0 ; i < 0xFF ; i++ )
@@ -54,8 +57,9 @@ void GetRandomUnitInRange(Proc* eventEngine) // Memory slot 0x1 = character ID, 
 	if ( unitsLength == 0 ) { gEventSlot[0xC] = -1; return; }
 	
 	int rand = RandNext();
-	rand = rand % unitsLength; // Get a random index of the list.
-	gEventSlot[0xC] = units[rand];
+	Unit* chosenUnit = GetUnit(units[Mod(rand,unitsLength)]); // Get a random index of the list.
+	Vec2 chosenCoords = { .x = chosenUnit->xPos, .y = chosenUnit->yPos };
+	gEventSlot[0xC] = *((u32*)&chosenCoords);
 }
 
 int IsUnitInRectangle(Unit* unit, Rectangle* rect) // Is this unit's X and Y coordinates contained within this rectangle?

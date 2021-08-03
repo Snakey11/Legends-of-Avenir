@@ -3,7 +3,7 @@
 	.eabi_attribute 24, 1	@ Tag_ABI_align8_needed
 	.eabi_attribute 25, 1	@ Tag_ABI_align8_preserved
 	.eabi_attribute 26, 1	@ Tag_ABI_enum_size
-	.eabi_attribute 30, 2	@ Tag_ABI_optimization_goals
+	.eabi_attribute 30, 1	@ Tag_ABI_optimization_goals
 	.eabi_attribute 34, 0	@ Tag_CPU_unaligned_access
 	.eabi_attribute 18, 4	@ Tag_ABI_PCS_wchar_t
 	.file	"GetRandomUnitInRange.c"
@@ -14,333 +14,45 @@
 @ -iprefix c:\devkitpro\devkitarm\bin\../lib/gcc/arm-none-eabi/10.2.0/
 @ -D__USES_INITFINI__ GetRandomUnitInRange.c -mcpu=arm7tdmi -mthumb
 @ -mthumb-interwork -mtune=arm7tdmi -mlong-calls -march=armv4t
-@ -auxbase-strip GetRandomUnitInRange.s -O3 -Wall -fomit-frame-pointer
+@ -auxbase-strip GetRandomUnitInRange.s -O1 -Wall -fomit-frame-pointer
 @ -ffast-math -ffreestanding -fverbose-asm
-@ options enabled:  -faggressive-loop-optimizations -falign-functions
-@ -falign-jumps -falign-labels -falign-loops -fallocation-dce
-@ -fassociative-math -fauto-inc-dec -fbranch-count-reg -fcaller-saves
-@ -fcode-hoisting -fcombine-stack-adjustments -fcompare-elim
-@ -fcprop-registers -fcrossjumping -fcse-follow-jumps -fcx-limited-range
-@ -fdefer-pop -fdelete-null-pointer-checks -fdevirtualize
-@ -fdevirtualize-speculatively -fdwarf2-cfi-asm -fearly-inlining
-@ -feliminate-unused-debug-symbols -feliminate-unused-debug-types
-@ -fexpensive-optimizations -ffinite-math-only -fforward-propagate
-@ -ffp-int-builtin-inexact -ffunction-cse -fgcse -fgcse-after-reload
-@ -fgcse-lm -fgnu-unique -fguess-branch-probability -fhoist-adjacent-loads
-@ -fident -fif-conversion -fif-conversion2 -findirect-inlining -finline
-@ -finline-atomics -finline-functions -finline-functions-called-once
-@ -finline-small-functions -fipa-bit-cp -fipa-cp -fipa-cp-clone -fipa-icf
-@ -fipa-icf-functions -fipa-icf-variables -fipa-profile -fipa-pure-const
-@ -fipa-reference -fipa-reference-addressable -fipa-sra
-@ -fipa-stack-alignment -fipa-vrp -fira-hoist-pressure
-@ -fira-share-save-slots -fira-share-spill-slots
-@ -fisolate-erroneous-paths-dereference -fivopts -fkeep-static-consts
-@ -fleading-underscore -flifetime-dse -floop-interchange
-@ -floop-unroll-and-jam -flra-remat -fmerge-constants -fmerge-debug-strings
-@ -fmove-loop-invariants -fomit-frame-pointer -foptimize-sibling-calls
-@ -foptimize-strlen -fpartial-inlining -fpeel-loops -fpeephole -fpeephole2
-@ -fplt -fpredictive-commoning -fprefetch-loop-arrays -freciprocal-math
-@ -freg-struct-return -freorder-blocks -freorder-functions
-@ -frerun-cse-after-loop -fsched-critical-path-heuristic
+@ options enabled:  -faggressive-loop-optimizations -fallocation-dce
+@ -fassociative-math -fauto-inc-dec -fbranch-count-reg
+@ -fcombine-stack-adjustments -fcompare-elim -fcprop-registers
+@ -fcx-limited-range -fdefer-pop -fdelete-null-pointer-checks
+@ -fdwarf2-cfi-asm -fearly-inlining -feliminate-unused-debug-symbols
+@ -feliminate-unused-debug-types -ffinite-math-only -fforward-propagate
+@ -ffp-int-builtin-inexact -ffunction-cse -fgcse-lm -fgnu-unique
+@ -fguess-branch-probability -fident -fif-conversion -fif-conversion2
+@ -finline -finline-atomics -finline-functions-called-once -fipa-profile
+@ -fipa-pure-const -fipa-reference -fipa-reference-addressable
+@ -fipa-stack-alignment -fira-hoist-pressure -fira-share-save-slots
+@ -fira-share-spill-slots -fivopts -fkeep-static-consts
+@ -fleading-underscore -flifetime-dse -fmerge-constants
+@ -fmerge-debug-strings -fmove-loop-invariants -fomit-frame-pointer
+@ -fpeephole -fplt -fprefetch-loop-arrays -freciprocal-math
+@ -freg-struct-return -freorder-blocks -fsched-critical-path-heuristic
 @ -fsched-dep-count-heuristic -fsched-group-heuristic -fsched-interblock
 @ -fsched-last-insn-heuristic -fsched-pressure -fsched-rank-heuristic
 @ -fsched-spec -fsched-spec-insn-heuristic -fsched-stalled-insns-dep
-@ -fschedule-insns2 -fsection-anchors -fsemantic-interposition
-@ -fshow-column -fshrink-wrap -fshrink-wrap-separate
-@ -fsplit-ivs-in-unroller -fsplit-loops -fsplit-paths -fsplit-wide-types
-@ -fssa-backprop -fssa-phiopt -fstdarg-opt -fstore-merging
-@ -fstrict-aliasing -fstrict-volatile-bitfields -fsync-libcalls
-@ -fthread-jumps -ftoplevel-reorder -ftree-bit-ccp -ftree-builtin-call-dce
+@ -fsection-anchors -fsemantic-interposition -fshow-column -fshrink-wrap
+@ -fshrink-wrap-separate -fsplit-ivs-in-unroller -fsplit-wide-types
+@ -fssa-backprop -fssa-phiopt -fstdarg-opt -fstrict-volatile-bitfields
+@ -fsync-libcalls -ftoplevel-reorder -ftree-bit-ccp -ftree-builtin-call-dce
 @ -ftree-ccp -ftree-ch -ftree-coalesce-vars -ftree-copy-prop -ftree-cselim
 @ -ftree-dce -ftree-dominator-opts -ftree-dse -ftree-forwprop -ftree-fre
-@ -ftree-loop-distribution -ftree-loop-if-convert -ftree-loop-im
-@ -ftree-loop-ivcanon -ftree-loop-optimize -ftree-loop-vectorize
-@ -ftree-parallelize-loops= -ftree-partial-pre -ftree-phiprop -ftree-pre
-@ -ftree-pta -ftree-reassoc -ftree-scev-cprop -ftree-sink
-@ -ftree-slp-vectorize -ftree-slsr -ftree-sra -ftree-switch-conversion
-@ -ftree-tail-merge -ftree-ter -ftree-vrp -funit-at-a-time
-@ -funsafe-math-optimizations -funswitch-loops -fverbose-asm
-@ -fversion-loops-for-strides -fzero-initialized-in-bss -mbe32
-@ -mlittle-endian -mlong-calls -mpic-data-is-text-relative -msched-prolog
-@ -mthumb -mthumb-interwork -mvectorize-with-neon-quad
+@ -ftree-loop-if-convert -ftree-loop-im -ftree-loop-ivcanon
+@ -ftree-loop-optimize -ftree-parallelize-loops= -ftree-phiprop -ftree-pta
+@ -ftree-reassoc -ftree-scev-cprop -ftree-sink -ftree-slsr -ftree-sra
+@ -ftree-ter -funit-at-a-time -funsafe-math-optimizations -fverbose-asm
+@ -fzero-initialized-in-bss -mbe32 -mlittle-endian -mlong-calls
+@ -mpic-data-is-text-relative -msched-prolog -mthumb -mthumb-interwork
+@ -mvectorize-with-neon-quad
 
 	.text
-	.global	__aeabi_idivmod
 	.align	1
-	.p2align 2,,3
-	.global	GetRandomUnitInRange
-	.arch armv4t
-	.syntax unified
-	.code	16
-	.thumb_func
-	.fpu softvfp
-	.type	GetRandomUnitInRange, %function
-GetRandomUnitInRange:
-	@ Function supports interworking.
-	@ args = 0, pretend = 0, frame = 120
-	@ frame_needed = 0, uses_anonymous_args = 0
-	push	{r4, r5, r6, r7, lr}	@
-	mov	r5, r8	@,
-	mov	lr, fp	@,
-	mov	r6, r9	@,
-	mov	r7, r10	@,
-	push	{r5, r6, r7, lr}	@
-@ GetRandomUnitInRange.c:25: 	int character = gEventSlot[0x1];
-	ldr	r3, .L45	@ tmp285,
-	ldr	r5, [r3, #4]	@ character, gEventSlot[1]
-@ GetRandomUnitInRange.c:26: 	RectangleList* rects = (RectangleList*)gEventSlot[0x2]; // Pointer to an 0xFFFF 0xFFFF-terminated list of Rectangles.
-	ldr	r3, [r3, #8]	@ rects, gEventSlot[2]
-@ GetRandomUnitInRange.c:24: {
-	sub	sp, sp, #124	@,,
-@ GetRandomUnitInRange.c:26: 	RectangleList* rects = (RectangleList*)gEventSlot[0x2]; // Pointer to an 0xFFFF 0xFFFF-terminated list of Rectangles.
-	str	r3, [sp, #8]	@ rects, %sfp
-@ GetRandomUnitInRange.c:27: 	int allegiance = gEventSlot[0x3];
-	ldr	r3, .L45	@ tmp289,
-	ldr	r3, [r3, #12]	@ allegiance, gEventSlot[3]
-	mov	r9, r3	@ allegiance, allegiance
-@ GetRandomUnitInRange.c:31: 	CPU_FILL(0,&units,50,16); // Clear our list.
-	add	r3, sp, #16	@ tmp291,,
-	adds	r0, r3, #2	@ tmp168, tmp291,
-	movs	r3, #0	@ tmp169,
-	ldr	r2, .L45+4	@,
-	strh	r3, [r0]	@ tmp169, tmp
-	add	r1, sp, #20	@ tmp292,,
-	ldr	r3, .L45+8	@ tmp174,
-	bl	.L47		@
-@ GetRandomUnitInRange.c:32: 	int unitsLength = 0;
-	movs	r3, #0	@ unitsLength,
-	str	r3, [sp, #12]	@ unitsLength, %sfp
-@ GetRandomUnitInRange.c:39: 		if ( unit->state & US_DEAD ) { continue; } // Reiterate if dead.
-	adds	r3, r3, #4	@ tmp264,
-	mov	r8, r3	@ tmp264, tmp264
-	mov	r3, r9	@ allegiance, allegiance
-@ GetRandomUnitInRange.c:33: 	for ( int i = 0 ; i < 0xFF ; i++ )
-	movs	r4, #0	@ i,
-@ GetRandomUnitInRange.c:39: 		if ( unit->state & US_DEAD ) { continue; } // Reiterate if dead.
-	mov	r9, r5	@ character, character
-	str	r3, [sp, #4]	@ allegiance, %sfp
-	b	.L10		@
-.L2:
-@ GetRandomUnitInRange.c:33: 	for ( int i = 0 ; i < 0xFF ; i++ )
-	adds	r4, r4, #1	@ i,
-@ GetRandomUnitInRange.c:33: 	for ( int i = 0 ; i < 0xFF ; i++ )
-	cmp	r4, #255	@ i,
-	beq	.L44		@,
-.L10:
-@ GetRandomUnitInRange.c:35: 		Unit* unit = GetUnit(i);
-	lsls	r0, r4, #24	@ tmp176, i,
-	ldr	r3, .L45+12	@ tmp297,
-	lsrs	r0, r0, #24	@ tmp175, tmp176,
-	bl	.L47		@
-@ GetRandomUnitInRange.c:36: 		if ( !unit ) { continue; }
-	cmp	r0, #0	@ unit,
-	beq	.L2		@,
-@ GetRandomUnitInRange.c:38: 		if ( !(unit->index & allegiance) ) { continue; } // Reiterate if not an enemy.
-	movs	r3, #11	@ tmp178,
-@ GetRandomUnitInRange.c:38: 		if ( !(unit->index & allegiance) ) { continue; } // Reiterate if not an enemy.
-	ldr	r2, [sp, #4]	@ allegiance, %sfp
-@ GetRandomUnitInRange.c:38: 		if ( !(unit->index & allegiance) ) { continue; } // Reiterate if not an enemy.
-	ldrsb	r3, [r0, r3]	@ tmp178,
-@ GetRandomUnitInRange.c:38: 		if ( !(unit->index & allegiance) ) { continue; } // Reiterate if not an enemy.
-	tst	r2, r3	@ allegiance, tmp178
-	beq	.L2		@,
-@ GetRandomUnitInRange.c:39: 		if ( unit->state & US_DEAD ) { continue; } // Reiterate if dead.
-	mov	r2, r8	@ tmp264, tmp264
-	ldr	r3, [r0, #12]	@ tmp300, unit_44->state
-	tst	r3, r2	@ tmp300, tmp264
-	bne	.L2		@,
-@ GetRandomUnitInRange.c:40: 		if ( unit->pCharacterData->number != character ) { continue; } // Reiterate if the character IDs don't match.
-	ldr	r3, [r0]	@ tmp302, unit_44->pCharacterData
-	ldrb	r3, [r3, #4]	@ tmp184,
-@ GetRandomUnitInRange.c:40: 		if ( unit->pCharacterData->number != character ) { continue; } // Reiterate if the character IDs don't match.
-	cmp	r3, r9	@ tmp184, character
-	bne	.L2		@,
-@ GetRandomUnitInRange.c:42: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
-	ldr	r3, [sp, #8]	@ rects, %sfp
-	movs	r2, #0	@ tmp280,
-	ldrsh	r7, [r3, r2]	@ _16, rects, tmp280
-@ GetRandomUnitInRange.c:42: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
-	cmp	r7, #0	@ _16,
-	blt	.L2		@,
-	mov	ip, r4	@ i, i
-	mov	fp, r0	@ unit, unit
-	adds	r2, r3, #2	@ ivtmp.10, rects,
-.L3:
-@ GetRandomUnitInRange.c:42: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
-	movs	r3, #4	@ tmp283,
-	ldrsh	r6, [r2, r3]	@ _17, ivtmp.10, tmp283
-@ GetRandomUnitInRange.c:42: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
-	cmp	r6, #0	@ _17,
-	blt	.L41		@,
-@ GetRandomUnitInRange.c:42: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
-	movs	r3, #2	@ tmp284,
-	ldrsh	r5, [r2, r3]	@ _18, ivtmp.10, tmp284
-@ GetRandomUnitInRange.c:42: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
-	cmp	r5, #0	@ _18,
-	blt	.L41		@,
-@ GetRandomUnitInRange.c:63: 	return IsContained(rect->start.x,rect->end.x,unit->xPos) && IsContained(rect->start.y,rect->end.y,unit->yPos);
-	mov	r3, fp	@ unit, unit
-	movs	r1, #16	@ _54,
-	ldrsb	r1, [r3, r1]	@ _54,* _54
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsrs	r3, r7, #31	@ tmp189, _16,
-	asrs	r0, r1, #31	@ tmp263, _54,
-	cmp	r1, r7	@ _54, _16
-	adcs	r3, r3, r0	@ tmp188, tmp189, tmp263
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsls	r3, r3, #24	@ tmp192, tmp188,
-	beq	.L13		@,
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	asrs	r3, r5, #31	@ tmp195, _18,
-	lsrs	r4, r1, #31	@ tmp196, _54,
-	cmp	r5, r1	@ _18, _54
-	adcs	r3, r3, r4	@ tmp194, tmp195, tmp196
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsls	r3, r3, #24	@ tmp198, tmp194,
-	beq	.L13		@,
-.L4:
-@ GetRandomUnitInRange.c:63: 	return IsContained(rect->start.x,rect->end.x,unit->xPos) && IsContained(rect->start.y,rect->end.y,unit->yPos);
-	movs	r3, #0	@ tmp281,
-	ldrsh	r0, [r2, r3]	@ _62, ivtmp.10, tmp281
-	movs	r1, #17	@ _66,
-	mov	r3, fp	@ unit, unit
-	ldrsb	r1, [r3, r1]	@ _66,* _66
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsrs	r3, r0, #31	@ tmp213, _62,
-	asrs	r5, r1, #31	@ tmp259, _66,
-	cmp	r1, r0	@ _66, _62
-	adcs	r3, r3, r5	@ tmp212, tmp213, tmp259
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsls	r3, r3, #24	@ tmp216, tmp212,
-	beq	.L14		@,
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	asrs	r3, r6, #31	@ tmp219, _17,
-	lsrs	r7, r1, #31	@ tmp220, _66,
-	cmp	r6, r1	@ _17, _66
-	adcs	r3, r3, r7	@ tmp218, tmp219, tmp220
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsls	r3, r3, #24	@ tmp222, tmp218,
-	beq	.L14		@,
-.L7:
-@ GetRandomUnitInRange.c:47: 				units[unitsLength] = i;
-	mov	r4, ip	@ i, i
-	ldr	r2, [sp, #12]	@ unitsLength, %sfp
-	add	r1, sp, #20	@ tmp309,,
-	lsls	r3, r2, #1	@ tmp236, unitsLength,
-	strh	r4, [r1, r3]	@ i, units[unitsLength_82]
-@ GetRandomUnitInRange.c:48: 				unitsLength++;
-	adds	r3, r2, #1	@ unitsLength, unitsLength,
-@ GetRandomUnitInRange.c:33: 	for ( int i = 0 ; i < 0xFF ; i++ )
-	adds	r4, r4, #1	@ i,
-@ GetRandomUnitInRange.c:48: 				unitsLength++;
-	str	r3, [sp, #12]	@ unitsLength, %sfp
-@ GetRandomUnitInRange.c:33: 	for ( int i = 0 ; i < 0xFF ; i++ )
-	cmp	r4, #255	@ i,
-	bne	.L10		@,
-.L44:
-@ GetRandomUnitInRange.c:54: 	if ( unitsLength == 0 ) { gEventSlot[0xC] = -1; return; }
-	ldr	r3, [sp, #12]	@ unitsLength, %sfp
-	cmp	r3, #0	@ unitsLength,
-	bne	.L11		@,
-@ GetRandomUnitInRange.c:54: 	if ( unitsLength == 0 ) { gEventSlot[0xC] = -1; return; }
-	ldr	r2, .L45	@ tmp313,
-	subs	r3, r3, #1	@ tmp246,
-	str	r3, [r2, #48]	@ tmp246, gEventSlot[12]
-.L1:
-@ GetRandomUnitInRange.c:59: }
-	add	sp, sp, #124	@,,
-	@ sp needed	@
-	pop	{r4, r5, r6, r7}
-	mov	fp, r7
-	mov	r10, r6
-	mov	r9, r5
-	mov	r8, r4
-	pop	{r4, r5, r6, r7}
-	pop	{r0}
-	bx	r0
-.L13:
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsrs	r3, r5, #31	@ tmp201, _18,
-	cmp	r1, r5	@ _54, _18
-	adcs	r0, r0, r3	@ tmp200, tmp263, tmp201
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsls	r0, r0, #24	@ tmp204, tmp200,
-	beq	.L6		@,
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	asrs	r3, r7, #31	@ tmp207, _16,
-	lsrs	r0, r1, #31	@ tmp208, _54,
-	cmp	r7, r1	@ _16, _54
-	adcs	r3, r3, r0	@ tmp206, tmp207, tmp208
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsls	r3, r3, #24	@ tmp210, tmp206,
-	bne	.L4		@,
-.L6:
-@ GetRandomUnitInRange.c:42: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
-	adds	r2, r2, #8	@ ivtmp.10,
-@ GetRandomUnitInRange.c:42: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
-	subs	r3, r2, #2	@ tmp238, ivtmp.10,
-	movs	r7, #0	@ _16,
-	ldrsh	r7, [r3, r7]	@ _16, tmp238, _16
-@ GetRandomUnitInRange.c:42: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
-	cmp	r7, #0	@ _16,
-	bge	.L3		@,
-.L41:
-	mov	r4, ip	@ i, i
-	b	.L2		@
-.L14:
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsrs	r3, r6, #31	@ tmp225, _17,
-	cmp	r1, r6	@ _66, _17
-	adcs	r5, r5, r3	@ tmp224, tmp259, tmp225
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsls	r5, r5, #24	@ tmp228, tmp224,
-	beq	.L6		@,
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	asrs	r3, r0, #31	@ tmp231, _62,
-	lsrs	r5, r1, #31	@ tmp232, _66,
-	cmp	r0, r1	@ _62, _66
-	adcs	r3, r3, r5	@ tmp230, tmp231, tmp232
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsls	r3, r3, #24	@ tmp234, tmp230,
-	bne	.L7		@,
-@ GetRandomUnitInRange.c:42: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
-	adds	r2, r2, #8	@ ivtmp.10,
-@ GetRandomUnitInRange.c:42: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
-	subs	r3, r2, #2	@ tmp238, ivtmp.10,
-	movs	r7, #0	@ _16,
-	ldrsh	r7, [r3, r7]	@ _16, tmp238, _16
-@ GetRandomUnitInRange.c:42: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
-	cmp	r7, #0	@ _16,
-	bge	.L3		@,
-	b	.L41		@
-.L11:
-@ GetRandomUnitInRange.c:56: 	int rand = RandNext();
-	ldr	r3, .L45+16	@ tmp247,
-	bl	.L47		@
-@ GetRandomUnitInRange.c:57: 	rand = rand % unitsLength; // Get a random index of the list.
-	ldr	r1, [sp, #12]	@, %sfp
-	ldr	r3, .L45+20	@ tmp256,
-	bl	.L47		@
-@ GetRandomUnitInRange.c:58: 	gEventSlot[0xC] = units[rand];
-	add	r3, sp, #20	@ tmp315,,
-	lsls	r1, r1, #1	@ tmp257, tmp267,
-	ldrh	r3, [r3, r1]	@ tmp258, units
-	ldr	r2, .L45	@ tmp316,
-	str	r3, [r2, #48]	@ tmp258, gEventSlot[12]
-	b	.L1		@
-.L46:
-	.align	2
-.L45:
-	.word	gEventSlot
-	.word	16777241
-	.word	CpuSet
-	.word	GetUnit
-	.word	RandNext
-	.word	__aeabi_idivmod
-	.size	GetRandomUnitInRange, .-GetRandomUnitInRange
-	.align	1
-	.p2align 2,,3
 	.global	IsUnitInRectangle
+	.arch armv4t
 	.syntax unified
 	.code	16
 	.thumb_func
@@ -350,103 +62,304 @@ IsUnitInRectangle:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-@ GetRandomUnitInRange.c:63: 	return IsContained(rect->start.x,rect->end.x,unit->xPos) && IsContained(rect->start.y,rect->end.y,unit->yPos);
-	movs	r2, #16	@ _6,
-@ GetRandomUnitInRange.c:62: {
-	push	{r4, r5, r6, r7, lr}	@
-@ GetRandomUnitInRange.c:63: 	return IsContained(rect->start.x,rect->end.x,unit->xPos) && IsContained(rect->start.y,rect->end.y,unit->yPos);
-	ldrsb	r2, [r0, r2]	@ _6,* _6
-	movs	r3, #4	@ tmp197,
-	ldrsh	r4, [r1, r3]	@ _4, rect, tmp197
-	movs	r3, #0	@ tmp196,
-	ldrsh	r5, [r1, r3]	@ _2, rect, tmp196
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsrs	r6, r2, #31	@ tmp191, _6,
-	asrs	r3, r4, #31	@ tmp142, _4,
-	cmp	r4, r2	@ _4, _6
-	adcs	r3, r3, r6	@ tmp141, tmp142, tmp191
-	asrs	r7, r2, #31	@ tmp190, _6,
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsls	r3, r3, #24	@ tmp145, tmp141,
-	beq	.L55		@,
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsrs	r3, r5, #31	@ tmp148, _2,
-	asrs	r7, r2, #31	@ tmp190, _6,
-	cmp	r2, r5	@ _6, _2
-	adcs	r3, r3, r7	@ tmp147, tmp148, tmp190
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsls	r3, r3, #24	@ tmp151, tmp147,
-	beq	.L55		@,
-.L49:
-@ GetRandomUnitInRange.c:63: 	return IsContained(rect->start.x,rect->end.x,unit->xPos) && IsContained(rect->start.y,rect->end.y,unit->yPos);
-	movs	r2, #17	@ _12,
-	movs	r3, #2	@ tmp198,
-	ldrsh	r4, [r1, r3]	@ _8, rect, tmp198
-	ldrsb	r2, [r0, r2]	@ _12,* _12
-	movs	r3, #6	@ tmp199,
-	ldrsh	r1, [r1, r3]	@ _10, rect, tmp199
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	asrs	r5, r2, #31	@ tmp188, _12,
-	lsrs	r3, r4, #31	@ tmp166, _8,
-	cmp	r2, r4	@ _12, _8
-	adcs	r3, r3, r5	@ tmp165, tmp166, tmp188
-	lsrs	r6, r2, #31	@ tmp189, _12,
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsls	r3, r3, #24	@ tmp169, tmp165,
-	beq	.L56		@,
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	asrs	r3, r1, #31	@ tmp172, _10,
-	lsrs	r6, r2, #31	@ tmp189, _12,
-	cmp	r1, r2	@ _10, _12
-	adcs	r3, r3, r6	@ tmp171, tmp172, tmp189
-@ GetRandomUnitInRange.c:63: 	return IsContained(rect->start.x,rect->end.x,unit->xPos) && IsContained(rect->start.y,rect->end.y,unit->yPos);
-	movs	r0, #1	@ <retval>,
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsls	r3, r3, #24	@ tmp175, tmp171,
-	beq	.L56		@,
-.L48:
-@ GetRandomUnitInRange.c:64: }
+	push	{r4, r5, r6, lr}	@
+@ GetRandomUnitInRange.c:67: 	return IsContained(rect->start.x,rect->end.x,unit->xPos) && IsContained(rect->start.y,rect->end.y,unit->yPos);
+	movs	r3, #0	@ tmp197,
+	ldrsh	r4, [r1, r3]	@ _2, rect, tmp197
+	movs	r3, #4	@ tmp198,
+	ldrsh	r5, [r1, r3]	@ _4, rect, tmp198
+	movs	r3, #16	@ _6,
+	ldrsb	r3, [r0, r3]	@ _6,* _6
+@ GetRandomUnitInRange.c:72: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
+	lsrs	r2, r4, #31	@ tmp144, _2,
+	asrs	r6, r3, #31	@ tmp145, _6,
+	cmp	r3, r4	@ _6, _2
+	adcs	r2, r2, r6	@ tmp143, tmp144, tmp145
+@ GetRandomUnitInRange.c:72: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
+	lsls	r2, r2, #24	@ tmp147, tmp143,
+	beq	.L9		@,
+@ GetRandomUnitInRange.c:72: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
+	asrs	r2, r5, #31	@ tmp150, _4,
+	lsrs	r6, r3, #31	@ tmp151, _6,
+	cmp	r5, r3	@ _4, _6
+	adcs	r2, r2, r6	@ tmp149, tmp150, tmp151
+@ GetRandomUnitInRange.c:72: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
+	lsls	r2, r2, #24	@ tmp153, tmp149,
+	beq	.L9		@,
+.L2:
+@ GetRandomUnitInRange.c:67: 	return IsContained(rect->start.x,rect->end.x,unit->xPos) && IsContained(rect->start.y,rect->end.y,unit->yPos);
+	movs	r3, #2	@ tmp199,
+	ldrsh	r4, [r1, r3]	@ _9, rect, tmp199
+	movs	r3, #6	@ tmp200,
+	ldrsh	r1, [r1, r3]	@ _11, rect, tmp200
+	movs	r3, #17	@ _13,
+	ldrsb	r3, [r0, r3]	@ _13,* _13
+@ GetRandomUnitInRange.c:72: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
+	lsrs	r2, r4, #31	@ tmp168, _9,
+	asrs	r0, r3, #31	@ tmp169, _13,
+	cmp	r3, r4	@ _13, _9
+	adcs	r2, r2, r0	@ tmp167, tmp168, tmp169
+@ GetRandomUnitInRange.c:72: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
+	lsls	r2, r2, #24	@ tmp171, tmp167,
+	beq	.L10		@,
+@ GetRandomUnitInRange.c:72: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
+	asrs	r2, r1, #31	@ tmp174, _11,
+	lsrs	r0, r3, #31	@ tmp175, _13,
+	cmp	r1, r3	@ _11, _13
+	adcs	r2, r2, r0	@ tmp173, tmp174, tmp175
+@ GetRandomUnitInRange.c:72: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
+	lsls	r2, r2, #24	@ tmp177, tmp173,
+	movs	r0, #1	@ iftmp.2_32,
+	cmp	r2, #0	@ tmp177,
+	beq	.L10		@,
+.L5:
+@ GetRandomUnitInRange.c:67: 	return IsContained(rect->start.x,rect->end.x,unit->xPos) && IsContained(rect->start.y,rect->end.y,unit->yPos);
+	subs	r3, r0, #1	@ tmp191, iftmp.2_32
+	sbcs	r0, r0, r3	@ <retval>, iftmp.2_32, tmp191
+.L1:
+@ GetRandomUnitInRange.c:68: }
 	@ sp needed	@
-	pop	{r4, r5, r6, r7}
+	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-.L55:
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsrs	r3, r4, #31	@ tmp154, _4,
-	cmp	r2, r4	@ _6, _4
-	adcs	r3, r3, r7	@ tmp153, tmp154, tmp190
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsls	r3, r3, #24	@ tmp157, tmp153,
-	beq	.L53		@,
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	asrs	r3, r5, #31	@ tmp160, _2,
-	cmp	r5, r2	@ _2, _6
-	adcs	r6, r6, r3	@ tmp159, tmp191, tmp160
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsls	r6, r6, #24	@ tmp163, tmp159,
-	bne	.L49		@,
-.L53:
-@ GetRandomUnitInRange.c:63: 	return IsContained(rect->start.x,rect->end.x,unit->xPos) && IsContained(rect->start.y,rect->end.y,unit->yPos);
+.L9:
+@ GetRandomUnitInRange.c:72: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
+	lsrs	r2, r5, #31	@ tmp156, _4,
+	asrs	r6, r3, #31	@ tmp157, _6,
+	cmp	r3, r5	@ _6, _4
+	adcs	r2, r2, r6	@ tmp155, tmp156, tmp157
+@ GetRandomUnitInRange.c:67: 	return IsContained(rect->start.x,rect->end.x,unit->xPos) && IsContained(rect->start.y,rect->end.y,unit->yPos);
+	lsls	r2, r2, #24	@ tmp159, tmp155,
+	beq	.L7		@,
+@ GetRandomUnitInRange.c:72: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
+	asrs	r2, r4, #31	@ tmp162, _2,
+	lsrs	r5, r3, #31	@ tmp163, _6,
+	cmp	r4, r3	@ _2, _6
+	adcs	r2, r2, r5	@ tmp161, tmp162, tmp163
+@ GetRandomUnitInRange.c:67: 	return IsContained(rect->start.x,rect->end.x,unit->xPos) && IsContained(rect->start.y,rect->end.y,unit->yPos);
+	lsls	r3, r2, #24	@ tmp165, tmp161,
+	bne	.L2		@,
+.L7:
 	movs	r0, #0	@ <retval>,
-	b	.L48		@
-.L56:
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	lsrs	r0, r1, #31	@ tmp178, _10,
-	cmp	r2, r1	@ _12, _10
-	adcs	r5, r5, r0	@ tmp177, tmp188, tmp178
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	asrs	r0, r4, #31	@ tmp182, _8,
-	cmp	r4, r2	@ _8, _12
-	adcs	r0, r0, r6	@ tmp181, tmp182, tmp189
-@ GetRandomUnitInRange.c:68: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
-	ands	r0, r5	@ tmp184, tmp177
-@ GetRandomUnitInRange.c:63: 	return IsContained(rect->start.x,rect->end.x,unit->xPos) && IsContained(rect->start.y,rect->end.y,unit->yPos);
-	lsls	r0, r0, #24	@ tmp186, tmp184,
-	lsrs	r0, r0, #24	@ <retval>, tmp186,
-	b	.L48		@
+	b	.L1		@
+.L10:
+@ GetRandomUnitInRange.c:72: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
+	lsrs	r0, r1, #31	@ tmp180, _11,
+	asrs	r2, r3, #31	@ tmp181, _13,
+	cmp	r3, r1	@ _13, _11
+	adcs	r2, r2, r0	@ tmp179, tmp181, tmp180
+@ GetRandomUnitInRange.c:72: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
+	asrs	r0, r4, #31	@ tmp184, _9,
+	lsrs	r1, r3, #31	@ tmp185, _13,
+	cmp	r4, r3	@ _9, _13
+	adcs	r0, r0, r1	@ tmp183, tmp184, tmp185
+@ GetRandomUnitInRange.c:72: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
+	ands	r0, r2	@ tmp186, tmp179
+@ GetRandomUnitInRange.c:72: 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
+	lsls	r0, r0, #24	@ tmp188, tmp186,
+	lsrs	r0, r0, #24	@ iftmp.2_32, tmp188,
+	b	.L5		@
 	.size	IsUnitInRectangle, .-IsUnitInRectangle
+	.align	1
+	.global	GetRandomUnitInRange
+	.syntax unified
+	.code	16
+	.thumb_func
+	.fpu softvfp
+	.type	GetRandomUnitInRange, %function
+GetRandomUnitInRange:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 72
+	@ frame_needed = 0, uses_anonymous_args = 0
+	push	{r4, r5, r6, r7, lr}	@
+	mov	lr, fp	@,
+	mov	r7, r10	@,
+	mov	r6, r9	@,
+	mov	r5, r8	@,
+	push	{r5, r6, r7, lr}	@
+	sub	sp, sp, #76	@,,
+@ GetRandomUnitInRange.c:27: 	s16 eventParameter = gEventSlot[0x1];
+	ldr	r4, .L24	@ tmp155,
+@ GetRandomUnitInRange.c:28: 	int character = GetUnitStructFromEventParameter(eventParameter)->pCharacterData->number;
+	movs	r3, #4	@ tmp228,
+	ldrsh	r0, [r4, r3]	@ eventParameter, tmp155, tmp228
+	ldr	r3, .L24+4	@ tmp159,
+	bl	.L26		@
+@ GetRandomUnitInRange.c:28: 	int character = GetUnitStructFromEventParameter(eventParameter)->pCharacterData->number;
+	ldr	r3, [r0]	@ _3->pCharacterData, _3->pCharacterData
+	ldrb	r3, [r3, #4]	@ _5,
+	mov	fp, r3	@ _5, _5
+@ GetRandomUnitInRange.c:29: 	RectangleList* rects = (RectangleList*)gEventSlot[0x2]; // Pointer to an 0xFFFF 0xFFFF-terminated list of Rectangles.
+	ldr	r3, [r4, #8]	@ rects, gEventSlot[2]
+	str	r3, [sp]	@ rects, %sfp
+@ GetRandomUnitInRange.c:30: 	int allegiance = gEventSlot[0x3];
+	ldr	r3, [r4, #12]	@ allegiance, gEventSlot[3]
+	mov	r9, r3	@ allegiance, allegiance
+@ GetRandomUnitInRange.c:34: 	CPU_FILL(0,&units,50,16); // Clear our list.
+	add	r3, sp, #8	@ tmp236,,
+	adds	r0, r3, #6	@ tmp163, tmp236,
+	movs	r3, #0	@ tmp164,
+	strh	r3, [r0]	@ tmp164, tmp
+	ldr	r2, .L24+8	@,
+	add	r1, sp, #20	@,,
+	ldr	r3, .L24+12	@ tmp169,
+	bl	.L26		@
+@ GetRandomUnitInRange.c:36: 	for ( int i = 0 ; i < 0xFF ; i++ )
+	movs	r7, #0	@ i,
+@ GetRandomUnitInRange.c:35: 	int unitsLength = 0;
+	movs	r3, #0	@ unitsLength,
+	str	r3, [sp, #4]	@ unitsLength, %sfp
+@ GetRandomUnitInRange.c:38: 		Unit* unit = GetUnit(i);
+	ldr	r3, .L24+16	@ tmp171,
+	mov	r8, r3	@ tmp171, tmp171
+@ GetRandomUnitInRange.c:42: 		if ( unit->state & US_DEAD ) { continue; } // Reiterate if dead.
+	movs	r3, #4	@ tmp210,
+	mov	r10, r3	@ tmp210, tmp210
+	b	.L16		@
+.L23:
+@ GetRandomUnitInRange.c:50: 				units[unitsLength] = i;
+	add	r2, sp, #8	@ tmp246,,
+	ldr	r3, [sp, #4]	@ unitsLength, %sfp
+	movs	r1, #12	@ tmp249,
+	adds	r2, r2, r1	@ tmp248, tmp246, tmp249
+	strb	r6, [r2, r3]	@ _78, units[unitsLength_67]
+@ GetRandomUnitInRange.c:51: 				unitsLength++;
+	adds	r3, r3, #1	@ unitsLength,
+	str	r3, [sp, #4]	@ unitsLength, %sfp
+.L12:
+@ GetRandomUnitInRange.c:36: 	for ( int i = 0 ; i < 0xFF ; i++ )
+	adds	r7, r7, #1	@ i,
+@ GetRandomUnitInRange.c:36: 	for ( int i = 0 ; i < 0xFF ; i++ )
+	cmp	r7, #255	@ i,
+	beq	.L22		@,
+.L16:
+	lsls	r6, r7, #24	@ tmp170, i,
+	lsrs	r6, r6, #24	@ _78, tmp170,
+@ GetRandomUnitInRange.c:38: 		Unit* unit = GetUnit(i);
+	movs	r0, r6	@, _78
+	bl	.L27		@
+	subs	r4, r0, #0	@ unit, tmp213,
+@ GetRandomUnitInRange.c:39: 		if ( !unit ) { continue; }
+	beq	.L12		@,
+@ GetRandomUnitInRange.c:41: 		if ( !(unit->index & allegiance) ) { continue; } // Reiterate if not an enemy.
+	movs	r3, #11	@ tmp172,
+	ldrsb	r3, [r0, r3]	@ tmp172,
+@ GetRandomUnitInRange.c:41: 		if ( !(unit->index & allegiance) ) { continue; } // Reiterate if not an enemy.
+	mov	r2, r9	@ allegiance, allegiance
+	tst	r2, r3	@ allegiance, tmp172
+	beq	.L12		@,
+@ GetRandomUnitInRange.c:42: 		if ( unit->state & US_DEAD ) { continue; } // Reiterate if dead.
+	ldr	r3, [r0, #12]	@ tmp241, unit_56->state
+	mov	r2, r10	@ tmp210, tmp210
+	tst	r3, r2	@ tmp241, tmp210
+	bne	.L12		@,
+@ GetRandomUnitInRange.c:43: 		if ( unit->pCharacterData->number != character ) { continue; } // Reiterate if the character IDs don't match.
+	ldr	r3, [r0]	@ tmp243, unit_56->pCharacterData
+	ldrb	r3, [r3, #4]	@ tmp178,
+	cmp	r3, fp	@ tmp178, _5
+	bne	.L12		@,
+@ GetRandomUnitInRange.c:45: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
+	ldr	r2, [sp]	@ rects, %sfp
+	movs	r1, #0	@ tmp229,
+	ldrsh	r3, [r2, r1]	@ *rects_39, rects, tmp229
+	cmp	r3, #0	@ *rects_39,
+	blt	.L12		@,
+	adds	r5, r2, #4	@ ivtmp.12, rects,
+.L13:
+@ GetRandomUnitInRange.c:45: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
+	movs	r2, #2	@ tmp231,
+	ldrsh	r3, [r5, r2]	@ MEM[base: _64, offset: 2B], ivtmp.12, tmp231
+	cmp	r3, #0	@ MEM[base: _64, offset: 2B],
+	blt	.L12		@,
+@ GetRandomUnitInRange.c:45: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
+	movs	r2, #0	@ tmp232,
+	ldrsh	r3, [r5, r2]	@ MEM[base: _64, offset: 0B], ivtmp.12, tmp232
+	cmp	r3, #0	@ MEM[base: _64, offset: 0B],
+	blt	.L12		@,
+@ GetRandomUnitInRange.c:47: 			if ( IsUnitInRectangle(unit,&rects->rects[j]) )
+	subs	r1, r5, #4	@ tmp182, ivtmp.12,
+	movs	r0, r4	@, unit
+	bl	IsUnitInRectangle		@
+@ GetRandomUnitInRange.c:47: 			if ( IsUnitInRectangle(unit,&rects->rects[j]) )
+	cmp	r0, #0	@ tmp214,
+	bne	.L23		@,
+@ GetRandomUnitInRange.c:45: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
+	adds	r5, r5, #8	@ ivtmp.12,
+@ GetRandomUnitInRange.c:45: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
+	subs	r3, r5, #4	@ tmp185, ivtmp.12,
+@ GetRandomUnitInRange.c:45: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
+	movs	r2, #0	@ tmp230,
+	ldrsh	r3, [r3, r2]	@ MEM[base: _61, offset: 4294967292B], tmp185, tmp230
+	cmp	r3, #0	@ MEM[base: _61, offset: 4294967292B],
+	bge	.L13		@,
+	b	.L12		@
+.L22:
+@ GetRandomUnitInRange.c:57: 	if ( unitsLength == 0 ) { gEventSlot[0xC] = -1; return; }
+	ldr	r3, [sp, #4]	@ unitsLength, %sfp
+	cmp	r3, #0	@ unitsLength,
+	bne	.L17		@,
+@ GetRandomUnitInRange.c:57: 	if ( unitsLength == 0 ) { gEventSlot[0xC] = -1; return; }
+	ldr	r3, .L24	@ tmp195,
+	movs	r2, #1	@ tmp196,
+	rsbs	r2, r2, #0	@ tmp196, tmp196
+	str	r2, [r3, #48]	@ tmp196, gEventSlot[12]
+.L11:
+@ GetRandomUnitInRange.c:63: }
+	add	sp, sp, #76	@,,
+	@ sp needed	@
+	pop	{r4, r5, r6, r7}
+	mov	fp, r7
+	mov	r10, r6
+	mov	r9, r5
+	mov	r8, r4
+	pop	{r4, r5, r6, r7}
+	pop	{r0}
+	bx	r0
+.L17:
+@ GetRandomUnitInRange.c:59: 	int rand = RandNext();
+	ldr	r3, .L24+20	@ tmp197,
+	bl	.L26		@
+@ GetRandomUnitInRange.c:60: 	Unit* chosenUnit = GetUnit(units[Mod(rand,unitsLength)]); // Get a random index of the list.
+	ldr	r1, [sp, #4]	@, %sfp
+	ldr	r3, .L24+24	@ tmp198,
+	bl	.L26		@
+@ GetRandomUnitInRange.c:60: 	Unit* chosenUnit = GetUnit(units[Mod(rand,unitsLength)]); // Get a random index of the list.
+	add	r3, sp, #20	@ tmp199,,
+	ldrb	r0, [r3, r0]	@ tmp200, units
+	ldr	r3, .L24+16	@ tmp201,
+	bl	.L26		@
+@ GetRandomUnitInRange.c:61: 	Vec2 chosenCoords = { .x = chosenUnit->xPos, .y = chosenUnit->yPos };
+	add	r3, sp, #16	@ tmp202,,
+@ GetRandomUnitInRange.c:61: 	Vec2 chosenCoords = { .x = chosenUnit->xPos, .y = chosenUnit->yPos };
+	movs	r2, #16	@ tmp204,
+	ldrsb	r2, [r0, r2]	@ tmp204,
+@ GetRandomUnitInRange.c:61: 	Vec2 chosenCoords = { .x = chosenUnit->xPos, .y = chosenUnit->yPos };
+	strh	r2, [r3]	@ tmp204, chosenCoords.x
+@ GetRandomUnitInRange.c:61: 	Vec2 chosenCoords = { .x = chosenUnit->xPos, .y = chosenUnit->yPos };
+	movs	r2, #17	@ tmp207,
+	ldrsb	r2, [r0, r2]	@ tmp207,
+@ GetRandomUnitInRange.c:61: 	Vec2 chosenCoords = { .x = chosenUnit->xPos, .y = chosenUnit->yPos };
+	strh	r2, [r3, #2]	@ tmp207, chosenCoords.y
+@ GetRandomUnitInRange.c:62: 	gEventSlot[0xC] = *((u32*)&chosenCoords);
+	ldr	r3, .L24	@ tmp208,
+	ldr	r2, [sp, #16]	@ tmp253, MEM[(u32 *)&chosenCoords]
+	str	r2, [r3, #48]	@ tmp253, gEventSlot[12]
+	b	.L11		@
+.L25:
+	.align	2
+.L24:
+	.word	gEventSlot
+	.word	GetUnitStructFromEventParameter
+	.word	16777241
+	.word	CpuSet
+	.word	GetUnit
+	.word	RandNext
+	.word	Mod
+	.size	GetRandomUnitInRange, .-GetRandomUnitInRange
 	.ident	"GCC: (devkitARM release 55) 10.2.0"
 	.code 16
 	.align	1
-.L47:
+.L26:
 	bx	r3
+.L27:
+	bx	r8
