@@ -145,7 +145,7 @@ BYTE 0x00
 //#include "NarrowFont/Narrowfont installer.event"
 
 ALIGN 4
-#include "New CHAI/New CHAI.event"
+#include "NewCHAI/NewCHAI.lyn.event"
 
 #include "Nice.event"
 
