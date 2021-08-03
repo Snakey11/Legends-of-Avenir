@@ -48,3 +48,4 @@ JunaFruitEffectID
 LatonaEffectID
 SkillScrollEffectID
 ArmsScrollEffectID
+SpiritDustEffectID

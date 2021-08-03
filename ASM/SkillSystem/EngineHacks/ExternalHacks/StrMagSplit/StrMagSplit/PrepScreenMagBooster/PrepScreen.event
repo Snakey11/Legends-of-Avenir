@@ -197,14 +197,14 @@
 	//ORG ItemTable+(0x24*SpiritDust)+0x1E //Staff/use effect; without this, can't use the item outside prep screen
 	//BYTE SpiritDustEffectID
 	
-	ORG Mag_Booster_Item_Usability_Ptr
+	/*ORG Mag_Booster_Item_Usability_Ptr
 	POIN 0x28B4C
 	
 	ORG Mag_Booster_Item_Effect_Ptr
 	POIN 0x2FF40
 	
 	ORG Mag_Booster_Prep_Screen_Usability_Ptr
-	POIN 0x2A0D0
+	POIN 0x2A0D0*/
 	
 	ORG 0x2F8A4
 	SHORT 0x46C0 0x46C0 0x46C0 0x4902 ; BYTE SpiritDust 0x28 ; SHORT 0xD127 0x2514 0xE02B // nop ; nop ; nop ; ldr r1, =#0x0802F8B4 ; cmp r0, #(SpiritDust) ; bne #0x0802F900 ; mov r5, #0x14 ; b #0x0802F90C.

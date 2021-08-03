@@ -1,6 +1,6 @@
 INLINE StatBoosterTextTable,Item ID,Text ID,Statboster Text Routine Pointer
 Angelic Robe,AngelicRobe,0x1C,0
-Energy Ring,EnergyRing,0x0,0x802F8FC
+Energy Ring,EnergyRing,0x13,0
 SecretBook,SecretBook,0x15,0
 Speedwing,Speedwing,0x16,0
 Goddess Icon,GoddessIcon,0x17,0
@@ -8,4 +8,5 @@ Dragonshield,Dragonshield,0x18,0
 Talisman,Talisman,0x19,0
 Swiftsoles,Boots,0x1A,0
 Body Ring,BodyRing,0x1B,0
+Spirit Dust,SpiritDust,0x14,0
 Default,0x0,0x25,0

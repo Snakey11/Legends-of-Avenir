@@ -48,3 +48,4 @@ SolarBraceEffectID,0x8028b56,0x802a0da,0x802905c,0x802feec,,0x802F90C
 JunaFruitEffectID,0x8028bf8,0x802a0f4,0x802905c,0x802ff70,,0x802F90C
 LatonaEffectID,0x8028b98,0x802a100,0x8029014,0x802ff48,,0x802F90C
 SkillScrollEffectID,MultiScrollUsability|IsPointer,MultiScrollPrepUsability|IsPointer,0x802905c,MultiScrollEffect|IsPointer,,MultiScrollPrepEffect|IsPointer
+SpiritDustEffectID,0x8028B4C,0x802A0D0,0x802905c,0x802FF40,,0x802f83a
