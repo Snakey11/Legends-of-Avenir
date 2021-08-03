@@ -328,7 +328,7 @@ UNIT
 Turn7Units:
 UNIT GerwickBandit PegasusKnight Kaid Level(14,Enemy,True) [10,4] 0x00 0x00 0x00 0x00 [Javelin] NoAI
 UNIT GerwickBandit Cavalier Kaid Level(14,Enemy,True) [0,17] 0x00 0x00 0x01 REDA2R17 [Wyrmslayer] NoAI
-UNIT GerwickBandit MageKnight Kaid Level(4,Enemy,True) [0,18] Drop 0x00 0x01 REDA3R18 [Dasher,SpiritDust] NoAI
+UNIT GerwickBandit MageKnight Kaid Level(4,Enemy,True) [0,18] Drop 0x00 0x01 REDA3R18 [SteelSword,Dasher,SpiritDust] NoAI
 UNIT GerwickBandit GreatKnight Kaid Level(5,Enemy,True) [0,19] 0x00 0x00 0x01 REDA2R19 [SilverAxe] NoAI
 EndUnit
 

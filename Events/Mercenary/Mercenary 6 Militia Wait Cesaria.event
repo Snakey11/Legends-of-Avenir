@@ -18,8 +18,8 @@ POIN BeginningScene EndingScene
 //Label TurnBasedEvents
 TurnBasedEvents:
 TurnEventPlayer(0x0,Turn1,1)
-TurnEventPlayer(0x11,TryChangeAI,10,255)
-TurnEventPlayer(0x14,TryPlayEscapedText,1,255)
+InfiniteTurnEventPlayer(0x11,TryChangeAI,1)
+InfiniteTurnEventPlayer(0x14,TryPlayEscapedText,1)
 END_MAIN
 
 //Label CharacterBasedEvents
@@ -29,6 +29,8 @@ END_MAIN
 
 //Label LocationBasedEvents
 LocationBasedEvents:
+DOOR 0x00 [5,15] 0x12
+DOOR 0x00 [6,15] 0x12
 END_MAIN
 
 //Label MiscBasedEvents
@@ -119,7 +121,7 @@ ENDA
 
 //Label Turn events
 Turn1:
-MUSC Judgral_Calls
+MUSC Aquatic_Ruin
 CAM1 Edward
 STAL 0x20
 FlashCursor(Edward,60)
@@ -130,27 +132,28 @@ EndA2
 
 TryChangeAI: // Get a random Arcanian unit outside and change their AI to escape (SVAL 0x01 0x0506).
 SVAL 0x1 Arcanian
-SVAL 0x2 OutsideRanges
+SVAL 0x2 OutsideRanges|IsPointer
 SVAL 0x3 0x80 // Enemy allegiance.
-ASMC GetRandomUnitInRange|1 // Slot 1 = character ID. Slot 2 = "rectangle structure" pointer. Random unit is in slot 0xC, slot 0x3 = allegiance.
-BEQ 0x0 0x0 0xC // If there are no units in this range, end.
+ASMC GetRandomUnitInRange|1 // Slot 1 = character ID, slot 2 = "rectangle structure" pointer, slot 0x3 = allegiance. Random unit coords are in slot 0xC.
+SVAL 0x1 0xFFFFFF
+BEQ 0x0 0x1 0xC // If there are no units in this range, end.
 	// We have a unit! Change its AI.
 	SVAL 0x01 0x0506 // Escape AI.
-	SADD 0x0C2 // Move slot 0xC into slot 0x2.
-	CHAI 0xFFFD // Change AI of unit in slot 0x2.
+	SADD 0x0CB // Move slot 0xC into slot 0xB.
+	CHAI 0xFFFE // Change AI of unit with coords in slot 0xB.
 LABEL 0x0
 ENUF 0x11
 NoFade
 EndA2
 
 OutsideRanges: // Just a list of rectangles for getting units in this range.
-SHORT Coords(0,9) Coords(1,12)
-SHORT Coords(0,13) Coords(3,20)
-SHORT Coords(4,19) Coords(18,20)
-SHORT Coords(10,17) Coords(18,18)
-SHORT Coords(14,15) Coords(18,16)
-SHORT Coords(17,6) Coords(18,14)
-SHORT 0xFFFF 0xFFFF
+WORD Coords(0,9) Coords(1,12)
+WORD Coords(0,13) Coords(3,20)
+WORD Coords(4,19) Coords(18,20)
+WORD Coords(10,17) Coords(18,18)
+WORD Coords(14,15) Coords(18,16)
+WORD Coords(17,6) Coords(18,14)
+WORD (-1) (-1)
 
 TryPlayEscapedText:
 CHECK_EVENTID 0x13
@@ -162,7 +165,10 @@ BEQ 0x0 0x0 0xC
 		CAM1 Lux
 		STAL 0x20
 		FlashCursor(Lux,60)
+		GOTO 0x3
 	LABEL 0x1
+		CAM1 0x00 // If Lux is dead, just put the camera on Tact ig.
+	LABEL 0x3
 	STAL 0x20
 	Text(Merc6MilitiaWaitCesariaOneEscapedText)
 	GOTO 0x2
@@ -190,6 +196,25 @@ LABEL 0x0
 	ENUF 0x12
 LABEL 0x1
 NoFade
+EndA2
+
+CheckForEscape: // Area event to see if an enemy just escaped.
+CHECK_ALLEGIANCE 0xFFFF
+SVAL 0x1 0x2 // Enemy team.
+BNE 0x0 0x1 0xC
+	CHECK_ALIVE 0xFFFF
+	BEQ 0x0 0x0 0xC // If they somehow died on this tile, exit.
+		ASMC IsActiveUnitCleared|1 // Returns in slot 0xC whether the active unit has the character data pointer cleared in slot 0xC.
+		BEQ 0x0 0x0 0xC // If the character data pointer isn't cleared, they're not escaping, exit.
+			// This is an enemy unit who is escaping! Play the dialogue that they're escaping and let the rest of the escape sequence remove them from the map.
+			ENUT 0x70 // Set this event ID.
+			Text(Merc6MilitiaWaitCesariaEscapingText)
+			GOTO 0x1
+LABEL 0x0
+	ENUF 0x13
+LABEL 0x1
+NoFade
+ENDA
 ENDA
 
 //Label Escape points
@@ -231,25 +256,6 @@ EscapePoint(18,8,MoveRight)
 EscapePointEnd
 //LabelEnd
 
-//Label Handle escape
-CheckForEscape:
-CHECK_ALLEGIANCE 0xFFFF
-SVAL 0x1 0x2 // Enemy team.
-BNE 0x0 0x1 0xC
-	CHECK_ALIVE 0xFFFF
-	BEQ 0x0 0x0 0xC // If they somehow died on this tile, exit.
-		ASMC IsActiveUnitCleared|1 // Returns whether the active unit has the character data pointer cleared in slot 0xC.
-		BNE 0x0 0x0 0xC // If the character data pointer isn't cleared, they're not escaping, exit.
-			// This is an enemy unit who is escaping! Play the dialogue that they're escaping and let the rest of the escape sequence remove them from the map.
-			ENUT 0x70 // Set this event ID.
-			Text(Merc6MilitiaWaitCesariaEscapingText)
-			GOTO 0x1
-LABEL 0x0
-	ENUF 0x13
-LABEL 0x1
-NoFade
-ENDA
-
 	/*UNIT DATA*/
 
 //Label PlayerLoading
@@ -270,46 +276,46 @@ EndUnit
 
 //Label ChapterUnits
 Meanies1:
-UNIT Edward Sage Edward Level(6,Enemy,True) [7,6] 0x00 0x00 0x00 0x00 [Arcwind,Physic] GuardAI
-UNIT Arcanian GreatKnight Edward Level(4,Enemy,True) [6,7] 0x00 0x00 0x00 0x00 [SteelAxe,Armorslayer] AttackInRangeAI
-UNIT Arcanian GreatKnight Edward Level(3,Enemy,True) [8,7] Drop 0x00 0x00 0x00 [BraveLance] AttackInRangeAI
-UNIT Arcanian Archer Edward Level(16,Enemy,True) [5,10] 0x00 0x00 0x00 0x00 [SilverLongbow] AttackIfCloseAI
-UNIT Arcanian Mage Edward Level(17,Enemy,True) [13,7] 0x00 0x00 0x00 0x00 [Elthunder] AttackIfCloseAI
-UNIT Arcanian Soldier Edward Level(18,Enemy,True) [9,10] 0x00 0x00 0x00 0x00 [IronLance] ChaseOnceApproachedAI
-UNIT Arcanian Sniper Edward Level(3,Enemy,True) [9,14] Drop 0x00 0x00 0x00 [SteelBow,ChestKey] AttackIfCloseAI
+UNIT Edward Sage Edward Level(8,Enemy,True) [7,6] 0x00 0x00 0x00 0x00 [Arcwind,Physic] GuardAI
+UNIT Arcanian GreatKnight Edward Level(5,Enemy,True) [6,7] 0x00 0x00 0x00 0x00 [SteelAxe,Armorslayer] AttackInRangeAI
+UNIT Arcanian GreatKnight Edward Level(6,Enemy,True) [8,7] Drop 0x00 0x00 0x00 [BraveLance] AttackInRangeAI
+UNIT Arcanian Archer Edward Level(18,Enemy,True) [5,10] 0x00 0x00 0x00 0x00 [SilverLongbow] AttackIfCloseAI
+UNIT Arcanian Mage Edward Level(19,Enemy,True) [13,7] 0x00 0x00 0x00 0x00 [Elthunder] AttackIfCloseAI
+UNIT Arcanian Soldier Edward Level(20,Enemy,True) [9,10] 0x00 0x00 0x00 0x00 [IronLance] ChaseOnceApproachedAI
+UNIT Arcanian Sniper Edward Level(5,Enemy,True) [9,14] Drop 0x00 0x00 0x00 [SteelBow,ChestKey] AttackIfCloseAI
 UNIT Arcanian Mercenary Edward Level(20,Enemy,True) [6,13] 0x00 0x00 0x00 0x00 [Zanbato,Lancereaver] AttackIfCloseAI
-UNIT Arcanian Archer Edward Level(19,Enemy,True) [15,11] 0x00 0x00 0x00 0x00 [SteelBow] AttackIfCloseAI
-UNIT Arcanian Archer Edward Level(17,Enemy,True) [14,12] 0x00 0x00 0x00 0x00 [DevilBow] AttackIfCloseAI
-UNIT Arcanian Knight Edward Level(18,Enemy,True) [13,11] 0x00 0x00 0x00 0x00 [Dragonspear] AttackInRangeAI
-UNIT Arcanian Warrior Edward Level(2,Enemy,True) [11,12] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
-UNIT Arcanian Soldier Edward Level(19,Enemy,True) [14,9] Drop 0x00 0x00 0x00 [Javelin] AttackInRangeAI
-UNIT Arcanian Soldier Edward Level(19,Enemy,True) [15,8] 0x00 0x00 0x00 0x00 [Axereaver] AttackInRangeAI
+UNIT Arcanian Archer Edward Level(20,Enemy,True) [15,11] 0x00 0x00 0x00 0x00 [SteelBow] AttackIfCloseAI
+UNIT Arcanian Archer Edward Level(19,Enemy,True) [14,12] 0x00 0x00 0x00 0x00 [DevilBow] AttackIfCloseAI
+UNIT Arcanian Knight Edward Level(20,Enemy,True) [13,11] 0x00 0x00 0x00 0x00 [Dragonspear] AttackInRangeAI
+UNIT Arcanian Warrior Edward Level(5,Enemy,True) [11,12] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
+UNIT Arcanian Soldier Edward Level(20,Enemy,True) [14,9] Drop 0x00 0x00 0x00 [Javelin] AttackInRangeAI
+UNIT Arcanian Soldier Edward Level(20,Enemy,True) [15,8] 0x00 0x00 0x00 0x00 [Axereaver] AttackInRangeAI
 UNIT
 
 Meanies2:
 UNIT Arcanian Cavalier Edward Level(20,Enemy,True) [12,9] Drop 0x00 0x00 0x00 [SteelSword,Horseslayer] ChaseOnceApproachedAI
-UNIT Arcanian Halberdier Edward Level(3,Enemy,True) [17,9] 0x00 0x00 0x00 0x00 [SilverLance] AttackInRangeAI
-UNIT Arcanian Cavalier Edward Level(18,Enemy,True) [11,19] 0x00 0x00 0x00 0x00 [HeavySpear] AttackInRangeAI
-UNIT Arcanian MageKnight Edward Level(5,Enemy,True) [13,18] 0x00 0x00 0x00 0x00 [Thunder] ChaseOnceApproachedAI
-UNIT Arcanian Valkyrie Edward Level(4,Enemy,True) [13,20] 0x00 0x00 0x00 0x00 [Lightning,Mend] HealAlliesAI
-UNIT Arcanian Paladin Edward Level(6,Enemy,True) [17,20] 0x00 0x00 0x00 0x00 [DevilLance,LightBrand] AttackInRangeAI
-UNIT Arcanian Cavalier Edward Level(17,Enemy,True) [16,19] 0x00 0x00 0x00 0x00 [IronSword] AttackInRangeAI
+UNIT Arcanian Halberdier Edward Level(6,Enemy,True) [17,9] 0x00 0x00 0x00 0x00 [SilverLance,Axeslayer] AttackInRangeAI
+UNIT Arcanian Cavalier Edward Level(20,Enemy,True) [11,19] 0x00 0x00 0x00 0x00 [HeavySpear] AttackInRangeAI
+UNIT Arcanian MageKnight Edward Level(6,Enemy,True) [13,18] 0x00 0x00 0x00 0x00 [Thunder] ChaseOnceApproachedAI
+UNIT Arcanian Valkyrie Edward Level(7,Enemy,True) [13,20] 0x00 0x00 0x00 0x00 [Lightning,Mend] HealAlliesAI
+UNIT Arcanian Paladin Edward Level(7,Enemy,True) [17,20] 0x00 0x00 0x00 0x00 [DevilLance,LightBrand] AttackInRangeAI
+UNIT Arcanian Cavalier Edward Level(19,Enemy,True) [16,19] 0x00 0x00 0x00 0x00 [IronSword] AttackInRangeAI
 UNIT Arcanian Cavalier Edward Level(18,Enemy,True) [18,19] 0x00 0x00 0x00 0x00 [Lanceslayer,Javelin] AttackInRangeAI
-UNIT Arcanian Ranger Edward Level(3,Enemy,True) [17,18] 0x00 0x00 0x00 0x00 [SteelBlade,IronBow] AttackInRangeAI
+UNIT Arcanian Ranger Edward Level(5,Enemy,True) [17,18] 0x00 0x00 0x00 0x00 [SteelBlade,IronBow] AttackInRangeAI
 UNIT Arcanian General Edward Level(4,Enemy,True) [5,19] Drop 0x00 0x00 0x00 [Spear,DoorKey] GuardAI
-UNIT Arcanian Shaman Edward Level(19,Enemy,True) [6,17] 0x00 0x00 0x00 0x00 [Worm] AttackIfCloseAI
-UNIT Arcanian Mage Edward Level(17,Enemy,True) [7,20] 0x00 0x00 0x00 0x00 [Elfire] AttackIfCloseAI
+UNIT Arcanian Shaman Edward Level(20,Enemy,True) [6,17] 0x00 0x00 0x00 0x00 [Worm] AttackIfCloseAI
+UNIT Arcanian Mage Edward Level(19,Enemy,True) [7,20] 0x00 0x00 0x00 0x00 [Elfire] AttackIfCloseAI
 UNIT
 
 Meanies3:
 UNIT Arcanian Myrmidon Edward Level(20,Enemy,True) [18,19] 0x00 0x00 0x00 0x00 [WindSword] AttackInRangeAI
-UNIT Arcanian BattleSage Edward Level(5,Enemy,True) [1,17] 0x00 0x00 0x00 0x00 [IronBlade,Aqua] ChaseOnceApproachedAI
-UNIT Arcanian Cavalier Edward Level(18,Enemy,True) [2,20] 0x00 0x00 0x00 0x00 [Javelin] NoAI
+UNIT Arcanian BattleSage Edward Level(7,Enemy,True) [1,17] 0x00 0x00 0x00 0x00 [IronBlade,Aqua] ChaseOnceApproachedAI
+UNIT Arcanian Cavalier Edward Level(20,Enemy,True) [2,20] 0x00 0x00 0x00 0x00 [Javelin] NoAI
 UNIT Arcanian Knight Edward Level(19,Enemy,True) [1,11] 0x00 0x00 0x00 0x00 [ShortAxe,SteelLance] GuardAI
-UNIT Arcanian Fighter Edward Level(17,Enemy,True) [1,11] 0x00 0x00 0x00 0x00 [Hammer] AttackIfCloseAI
-UNIT Arcanian DreadFighter Edward Level(4,Enemy,True) [17,13] 0x00 0x00 0x00 0x00 [IronSword,Slime] AttackInRangeAI
+UNIT Arcanian Fighter Edward Level(19,Enemy,True) [1,11] 0x00 0x00 0x00 0x00 [Hammer] AttackIfCloseAI
+UNIT Arcanian DreadFighter Edward Level(5,Enemy,True) [17,13] 0x00 0x00 0x00 0x00 [IronSword,Slime] AttackInRangeAI
 UNIT Arcanian Soldier Edward Level(20,Enemy,True) [18,5] 0x00 0x00 0x00 0x00 [DevilLance] NoAI
-UNIT Arcanian Hero Edward Level(4,Enemy,True) [17,4] 0x00 0x00 0x00 0x00 [SilverSword,Halberd] AttackInRangeAI
-UNIT Arcanian Sniper Edward Level(3,Enemy,True) [18,1] 0x00 0x00 0x00 0x00 [SteelShortbow] AttackInRangeAI
+UNIT Arcanian Hero Edward Level(5,Enemy,True) [17,4] 0x00 0x00 0x00 0x00 [SilverSword,Halberd] AttackInRangeAI
+UNIT Arcanian Sniper Edward Level(4,Enemy,True) [18,1] 0x00 0x00 0x00 0x00 [SteelShortbow] AttackInRangeAI
 UNIT Arcanian Spellsword Edward Level(19,Enemy,True) [16,0] 0x00 0x00 0x00 0x00 [SteelSword,Wind] AttackInRangeAI
 EndUnit
