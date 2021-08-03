@@ -108,7 +108,9 @@ UnitMenuTable:
   
   //UM_Dance
   MenuCommand(0x67E,0x6C2,NormalText,NewDanceUsability,0x231D0)
-
+  
+  MenuCommand(PromoteNameText, PromoteDescText, NormalText, AutoPromoteUsability, AutoPromoteEffect)
+  
   UM_Steal
   
   //First aid
