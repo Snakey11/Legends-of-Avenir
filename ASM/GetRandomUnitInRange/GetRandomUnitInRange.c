@@ -71,3 +71,8 @@ static int IsContained(int val1, int val2, int value) // Is this value contained
 {
 	return ( val1 <= value && value <= val2 ) || ( val2 <= value && value <= val1 );
 }
+
+void IsActiveUnitEscaping(void) // Is the active unit currently escaping?
+{
+	gEventSlot[0xC] = !gActiveUnit->pCharacterData && !(gActiveUnit->state & US_DEAD); // Return true only if they're not dead and if their pCharacterData is cleared.
+}

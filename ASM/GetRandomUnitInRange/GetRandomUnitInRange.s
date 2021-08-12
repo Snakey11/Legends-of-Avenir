@@ -264,29 +264,29 @@ GetRandomUnitInRange:
 	ldrsh	r3, [r2, r1]	@ *rects_39, rects, tmp229
 	cmp	r3, #0	@ *rects_39,
 	blt	.L12		@,
-	adds	r5, r2, #4	@ ivtmp.12, rects,
+	adds	r5, r2, #4	@ ivtmp.17, rects,
 .L13:
 @ GetRandomUnitInRange.c:45: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
 	movs	r2, #2	@ tmp231,
-	ldrsh	r3, [r5, r2]	@ MEM[base: _64, offset: 2B], ivtmp.12, tmp231
+	ldrsh	r3, [r5, r2]	@ MEM[base: _64, offset: 2B], ivtmp.17, tmp231
 	cmp	r3, #0	@ MEM[base: _64, offset: 2B],
 	blt	.L12		@,
 @ GetRandomUnitInRange.c:45: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
 	movs	r2, #0	@ tmp232,
-	ldrsh	r3, [r5, r2]	@ MEM[base: _64, offset: 0B], ivtmp.12, tmp232
+	ldrsh	r3, [r5, r2]	@ MEM[base: _64, offset: 0B], ivtmp.17, tmp232
 	cmp	r3, #0	@ MEM[base: _64, offset: 0B],
 	blt	.L12		@,
 @ GetRandomUnitInRange.c:47: 			if ( IsUnitInRectangle(unit,&rects->rects[j]) )
-	subs	r1, r5, #4	@ tmp182, ivtmp.12,
+	subs	r1, r5, #4	@ tmp182, ivtmp.17,
 	movs	r0, r4	@, unit
 	bl	IsUnitInRectangle		@
 @ GetRandomUnitInRange.c:47: 			if ( IsUnitInRectangle(unit,&rects->rects[j]) )
 	cmp	r0, #0	@ tmp214,
 	bne	.L23		@,
 @ GetRandomUnitInRange.c:45: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
-	adds	r5, r5, #8	@ ivtmp.12,
+	adds	r5, r5, #8	@ ivtmp.17,
 @ GetRandomUnitInRange.c:45: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
-	subs	r3, r5, #4	@ tmp185, ivtmp.12,
+	subs	r3, r5, #4	@ tmp185, ivtmp.17,
 @ GetRandomUnitInRange.c:45: 		for ( int j = 0 ; rects->rects[j].start.x >= 0 && rects->rects[j].end.y >= 0 && rects->rects[j].end.x >= 0 && rects->rects[j].end.y >= 0 ; j++ )
 	movs	r2, #0	@ tmp230,
 	ldrsh	r3, [r3, r2]	@ MEM[base: _61, offset: 4294967292B], tmp185, tmp230
@@ -356,6 +356,46 @@ GetRandomUnitInRange:
 	.word	RandNext
 	.word	Mod
 	.size	GetRandomUnitInRange, .-GetRandomUnitInRange
+	.align	1
+	.global	IsActiveUnitEscaping
+	.syntax unified
+	.code	16
+	.thumb_func
+	.fpu softvfp
+	.type	IsActiveUnitEscaping, %function
+IsActiveUnitEscaping:
+	@ Function supports interworking.
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	@ link register save eliminated.
+@ GetRandomUnitInRange.c:77: 	gEventSlot[0xC] = !gActiveUnit->pCharacterData && !(gActiveUnit->state & US_DEAD); // Return true only if they're not dead and if their pCharacterData is cleared.
+	ldr	r3, .L32	@ tmp120,
+	ldr	r2, [r3]	@ gActiveUnit.4_1, gActiveUnit
+@ GetRandomUnitInRange.c:77: 	gEventSlot[0xC] = !gActiveUnit->pCharacterData && !(gActiveUnit->state & US_DEAD); // Return true only if they're not dead and if their pCharacterData is cleared.
+	movs	r3, #0	@ iftmp.3_6,
+	ldr	r1, [r2]	@ tmp129, gActiveUnit.4_1->pCharacterData
+	cmp	r1, #0	@ tmp129,
+	beq	.L31		@,
+.L29:
+@ GetRandomUnitInRange.c:77: 	gEventSlot[0xC] = !gActiveUnit->pCharacterData && !(gActiveUnit->state & US_DEAD); // Return true only if they're not dead and if their pCharacterData is cleared.
+	ldr	r2, .L32+4	@ tmp128,
+	str	r3, [r2, #48]	@ iftmp.3_6, gEventSlot[12]
+@ GetRandomUnitInRange.c:78: }
+	@ sp needed	@
+	bx	lr
+.L31:
+@ GetRandomUnitInRange.c:77: 	gEventSlot[0xC] = !gActiveUnit->pCharacterData && !(gActiveUnit->state & US_DEAD); // Return true only if they're not dead and if their pCharacterData is cleared.
+	ldr	r2, [r2, #12]	@ gActiveUnit.4_1->state, gActiveUnit.4_1->state
+	lsrs	r2, r2, #2	@ tmp122, gActiveUnit.4_1->state,
+	adds	r3, r3, #1	@ tmp124,
+	bics	r3, r2	@ iftmp.3_6, tmp122
+	b	.L29		@
+.L33:
+	.align	2
+.L32:
+	.word	gActiveUnit
+	.word	gEventSlot
+	.size	IsActiveUnitEscaping, .-IsActiveUnitEscaping
 	.ident	"GCC: (devkitARM release 55) 10.2.0"
 	.code 16
 	.align	1
