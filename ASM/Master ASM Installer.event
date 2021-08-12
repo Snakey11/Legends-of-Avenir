@@ -40,7 +40,29 @@ ASMC PromotionTime|1
 NoFade
 ENDA
 
+/*
+For 1 range, lower
+  AS by 2,
+  hit by 20, and
+  damage by 5.
+For 3 range, lower
+  AS by 4,
+  hit by 30, and
+  damage by 4.
+For 4 range, lower
+  AS by 6,
+  hit by 45, and
+  damage by 6.
+*/
 #include "BowDebuff/BowDebuff.lyn.event"
+ALIGN 4
+BowDebuffTable:
+// Order is: Range ASChange HitChange DamageChange. (Range is unused but it's nice to make each entry a word.)
+BYTE 0 0 0 0 // No debuffs at 0 range.
+BYTE 1 (-2) (-20) (-5) // These debuffs at 1 range.
+BYTE 2 0 0 0 // No debuffs at 2 range.
+BYTE 3 (-4) (-30) (-4) // These debuffs at 3 range.
+BYTE 4 (-6) (-45) (-6) // These debuffs at 4 range.
 
 ALIGN 4
 #include "Chapter Names/fe8_chnames.event"
@@ -91,8 +113,6 @@ BYTE SpellswordM SpellswordF SpellswordM2 SpellswordF2 BattleSage BattleSageF Dr
 ALIGN 4
 SpellswordERankList:
 BYTE SpellswordM SpellswordF 0x00
-
-#include "IsActiveUnitCleared/IsActiveUnitCleared.lyn.event"
 
 #include "MakeNotDead/MakeNotDead.lyn.event"
 
