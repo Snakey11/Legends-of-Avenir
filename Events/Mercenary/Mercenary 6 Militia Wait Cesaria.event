@@ -18,8 +18,8 @@ POIN BeginningScene EndingScene
 //Label TurnBasedEvents
 TurnBasedEvents:
 TurnEventPlayer(0x0,Turn1,1)
-InfiniteTurnEventPlayer(0x11,TryChangeAI,1)
-InfiniteTurnEventPlayer(0x14,TryPlayEscapedText,1)
+InfiniteTurnEventPlayer(0x11,TryChangeAI,9)
+InfiniteTurnEventPlayer(0x14,TryPlayEscapedText,9)
 END_MAIN
 
 //Label CharacterBasedEvents
@@ -204,7 +204,7 @@ SVAL 0x1 0x2 // Enemy team.
 BNE 0x0 0x1 0xC
 	CHECK_ALIVE 0xFFFF
 	BEQ 0x0 0x0 0xC // If they somehow died on this tile, exit.
-		ASMC IsActiveUnitCleared|1 // Returns in slot 0xC whether the active unit has the character data pointer cleared in slot 0xC.
+		ASMC IsActiveUnitEscaping|1 // Returns in slot 0xC whether the active unit has the character data pointer cleared in slot 0xC.
 		BEQ 0x0 0x0 0xC // If the character data pointer isn't cleared, they're not escaping, exit.
 			// This is an enemy unit who is escaping! Play the dialogue that they're escaping and let the rest of the escape sequence remove them from the map.
 			ENUT 0x70 // Set this event ID.
