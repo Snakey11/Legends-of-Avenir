@@ -1,4 +1,5 @@
 
+// Desert Bastion.
 ALIGN 4
 DesertTempleTilesetObjects: // lz77 compressed.
 #incbin "Desert Temple.dmp"
@@ -15,7 +16,7 @@ EventPointerTable(DesertTempleObjectSet,DesertTempleTilesetObjects)
 EventPointerTable(DesertTemplePalette,DesertTempleTilesetPalette)
 EventPointerTable(DesertTempleTileConfig,DesertTempleTilesetTileConfig)
 
-
+// Outdoor FE6 snowy.
 ALIGN 4
 OutdoorSnowyTilesetObjects: // lz77 compressed.
 #incbin "Outdoor Snowy.dmp"
@@ -32,7 +33,7 @@ EventPointerTable(OutdoorSnowyObjectSet,OutdoorSnowyTilesetObjects)
 EventPointerTable(OutdoorSnowyPalette,OutdoorSnowyTilesetPalette)
 EventPointerTable(OutdoorSnowyTileConfig,OutdoorSnowyTilesetTileConfig)
 
-
+// Indoor FE6 snowy.
 ALIGN 4
 IndoorSnowyTilesetObjects: // lz77 compressed.
 #incbin "Indoor Snowy.dmp"
@@ -49,7 +50,7 @@ EventPointerTable(IndoorSnowyObjectSet,IndoorSnowyTilesetObjects)
 EventPointerTable(IndoorSnowyPalette,IndoorSnowyTilesetPalette)
 EventPointerTable(IndoorSnowyTileConfig,IndoorSnowyTilesetTileConfig)
 
-
+// Western Isles (improved).
 ALIGN 4
 WesternIslesTilesetObjects:
 #incbin "Western Isles - Extended - Object Set and Palette.dmp"
@@ -66,8 +67,71 @@ EventPointerTable(WesternIslesObjectSet,WesternIslesTilesetObjects)
 EventPointerTable(WesternIslesPalette,WesternIslesTilesetPalette)
 EventPointerTable(WesternIslesTileConfig,WesternIslesTilesetTileConfig)
 
+// Improved castle (library).
+ALIGN 4
+ImprovedCastleTilesetObjects:
+#incbin "Improved Castle Objects.dmp"
 
+ALIGN 4
+ImprovedCastleTilesetPalette:
+#incbin "Improved Castle Objects Palette.dmp"
 
+ALIGN 4
+ImprovedCastleTilesetTileConfig:
+#incext compress "Improved Castle.mapchip_config"
+
+EventPointerTable(ImprovedCastleObjectSet,ImprovedCastleTilesetObjects)
+EventPointerTable(ImprovedCastlePalette,ImprovedCastleTilesetPalette)
+EventPointerTable(ImprovedCastleTileConfig,ImprovedCastleTilesetTileConfig)
+
+// Improved castle animations.
+ALIGN 4
+ImprovedCastleTilesetAnimation:
+TilesetAnimation(28,400,ImprovedCastle1)
+TilesetAnimation(28,400,ImprovedCastle2)
+TilesetAnimation(28,400,ImprovedCastle3)
+TilesetAnimation(28,400,ImprovedCastle4)
+TilesetAnimation(28,400,ImprovedCastle5)
+TilesetAnimation(28,400,ImprovedCastle6)
+TilesetAnimation(28,400,ImprovedCastle7)
+TilesetAnimation(28,400,ImprovedCastle8)
+WORD 0x00 0x00
+
+EventPointerTable(ImprovedCastleAnims,ImprovedCastleTilesetAnimation)
+
+ALIGN 4
+ImprovedCastle1:
+#incbin "castle_anims.mapanime 1_000.dmp"
+
+ALIGN 4
+ImprovedCastle2:
+#incbin "castle_anims.mapanime 1_001.dmp"
+
+ALIGN 4
+ImprovedCastle3:
+#incbin "castle_anims.mapanime 1_002.dmp"
+
+ALIGN 4
+ImprovedCastle4:
+#incbin "castle_anims.mapanime 1_003.dmp"
+
+ALIGN 4
+ImprovedCastle5:
+#incbin "castle_anims.mapanime 1_004.dmp"
+
+ALIGN 4
+ImprovedCastle6:
+#incbin "castle_anims.mapanime 1_005.dmp"
+
+ALIGN 4
+ImprovedCastle7:
+#incbin "castle_anims.mapanime 1_006.dmp"
+
+ALIGN 4
+ImprovedCastle8:
+#incbin "castle_anims.mapanime 1_007.dmp"
+
+// FE6 water animations.
 ALIGN 4
 FE6WaterTilesetAnimation:
 TilesetAnimation(28,0x1000,FE6Water1)
