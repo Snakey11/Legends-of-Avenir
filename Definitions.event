@@ -1629,14 +1629,15 @@
 
 #define TilesetAnimation(speed, size, pointer)    "BYTE speed 0; SHORT size; POIN pointer"
 
-#define DeathQuote(Character,Chapter,EventID,TextID) "SHORT Character; BYTE 0xFF Chapter; SHORT EventID TextID 0 0"
-#define DeathQuote(Character,Chapter,EventID,TextID,Pointer) "SHORT Character; BYTE 0xFF Chapter; SHORT EventID TextID ; POIN Pointer"
+#define DeathQuote(Character,Chapter,EventID,TextID) "SHORT Character; SHORT Chapter; SHORT EventID TextID 0 0"
+#define DeathQuote(Character,Chapter,EventID,TextID,Pointer) "SHORT Character; SHORT Chapter; SHORT EventID TextID ; POIN Pointer"
 #define AllChapters 0xFF
 
+// Note: I changed the battle convo getter function, so 0x6969 is NOT vanilla for "no character specified"!
 //#define SpecifiedBattleConvo(Character1,Character2,Chapter,EventID,TextID) "BYTE Character1 0x0 Character2 0x0 Chapter 0x0 EventID 0x0 ; SHORT TextID 0x0 0x0 0x0 ; BYTE Character2 0x0 Character1 0x0 Chapter 0x0 EventID 0x0 ; SHORT TextID 0x0 0x0 0x0"
 #define SpecifiedBattleConvo(Character1,Character2,Chapter,EventID,TextID) "SHORT Character1 Character2 Chapter EventID TextID 0x0 0x0 0x0; SHORT Character2 Character1 Chapter EventID TextID 0x0 0x0 0x0"
 //#define UnspecifiedBattleConvo(Character,Chapter,EventID,TextID) "BYTE Character 0x0 0x0 0x0 Chapter 0x0 EventID 0x0; SHORT TextID 0x0 0x0 0x0 ; BYTE 0x0 0x0 Character 0x0 Chapter 0x0 0x0 EventID ; SHORT TextID 0x0 0x0 0x0"
-#define UnspecifiedBattleConvo(Character,Chapter,EventID,TextID) "SHORT Character 0x0 Chapter EventID TextID 0x0 0x0 0x0; SHORT 0x0 Character Chapter EventID TextID 0x0 0x0 0x0"
+#define UnspecifiedBattleConvo(Character,Chapter,EventID,TextID) "SHORT Character 0x6969 Chapter EventID TextID 0x0 0x0 0x0; SHORT 0x6969 Character Chapter EventID TextID 0x0 0x0 0x0"
 
 #define ForceCharacter(Character,Chapter) "BYTE Character 0x00 0xFF Chapter"
 

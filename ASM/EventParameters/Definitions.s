@@ -10,3 +10,7 @@ SET_FUNC GetPlayerLeaderUnitId, (0x08033258+1)
 SET_FUNC EventParameters, (0x0800BC50+1)
 
 SET_FUNC CHAREventFix, (0x080838AC+1)
+
+SET_FUNC NewGetBattleQuoteEntry, (0x0808464C+1)
+
+SET_FUNC NewGetCharDeathQuoteEntry, (0x080846E4+1)
