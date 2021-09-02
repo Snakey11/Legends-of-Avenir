@@ -175,7 +175,11 @@ IndoorSnowyTileConfig
 WesternIslesObjectSet
 WesternIslesPalette
 WesternIslesTileConfig
+ImprovedCastleObjectSet
+ImprovedCastlePalette
+ImprovedCastleTileConfig
 FE6WaterAnimations
+ImprovedCastleAnims
 
 PrologueEvent
 Merc1Events
