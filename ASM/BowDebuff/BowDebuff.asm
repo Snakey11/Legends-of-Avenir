@@ -21,9 +21,16 @@ extern struct BowDebuff {
 .global BowDebuff
 .type BowDebuff, %function
 BowDebuff: @ r0 and r1 have the opposing battle structs. Called from the prebattle calc loop.
-push { r4 - r5, lr }
+push { r4, r5, lr }
 mov r4, r0
 mov r5, r1
+ldr r1, [ r5, #0x04 ] @ If the class pointer of the target is cleared, there is no battle.
+cmp r1, #0x00
+beq End
+mov r2, #0x52
+ldrh r1, [ r4, r2 ] @ If this unit can't counter, end. 
+cmp r1, #0x00
+beq End
 blh GetUnitEquippedWeapon, r1
 blh GetItemIndex, r1
 mov r6, r0 @ Store the equipped weapon index for later.
@@ -72,6 +79,6 @@ add r3, r0, r3
 strh r3, [ r4, r2 ] @ Store new attack.
 
 End:
-pop { r4 - r5 }
+pop { r4, r5 }
 pop { r0 }
 bx r0
