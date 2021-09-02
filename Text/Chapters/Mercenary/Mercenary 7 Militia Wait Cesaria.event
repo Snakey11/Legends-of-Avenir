@@ -1,346 +1,218 @@
 
-## Merc7MilitiaWaitCesariaBeginningText
-[Right][LoadPlayer][FarLeft][LoadFinoc]
-[Tact]! I have news![A]
-[Right]What is it? You seem flustered.[A][CloseSpeech]
-[FarLeft][MoveMidLeft]Captain Maximus... He and Uzkalis are[NL]
-engaged with each other! But it's not[A][NL]
-looking good for the Tiger Brigade...[A]
-[Right]What!? Lux! Get over here![A][FarRight][LoadLux]
-What is it?[A]
-[MidLeft]Maximus returned to intercept Uzkalis,[NL]
-but he's having a hard time. It[A][NL]
-looked like he was losing ground.[A]
-[FarRight]Maximus... Dammit![A]
-[Right]Lux, control yourself! Stay calm![A]
-[FarRight]You don't understand... Maximus was the[NL]
-one who told me to enlist. I was from a[A][NL]
-small village on the outskirts of the[NL]
-capital... My mother had died when I[A][NL]
-was young, and one day, a debt collector[NL]
-killed my father. Maximus took me under[A][NL]
-his wing. He's the reason I am who I am today.[NL]
-We have to hurry to his rescue.[A]
-[Right]I understand, Lux, but we can't be rash.[NL]
-If Maximus and his men are having[A][NL]
-trouble with Uzkalis, then we need[NL]
-strategy to counter him. Finoc,[A][NL]
-how far to the battleground?[A]
-[MidLeft]Not too far. We should be able to get[NL]
-there and aid them if we're fast.[A]
-[FarRight]Derek! Jasper! Break's over,[MidLeft][ClearFace][FarRight][NL]
-we're moving double time![A][FarLeft][LoadJasper][Left][LoadDerek]
-Oh come on, Vice-Captain! You've been[NL]
-pushing us like mad for days now![A]
-[FarRight]I don't care! Captain Maximus is[NL]
-in danger! We have to move now![A][ClearFace][FarLeft][ClearFace][Left][ClearFace][Right]
-Finoc! Take Elanil and fly to Maximus' aid.[NL]
-I suspect he could use the quick support.[A][FarLeft][LoadFinoc][Left][LoadElanil]
-Good idea, [Tact].[A]
-[FarLeft]Right. His men are probably exhausted, we[NL]
-should be able to provide some relief.[A][ClearFace][Left][ClearFace][FarRight][LoadArc]
-[Tact], are you sure that Lux is okay?[A][Right][MoveMidLeft][ClearFace][LoadPlayer]
-We have to put our faith in her. This could[NL]
-be our last battle. If we defeat Uzkalis,[A][NL]
-and word reaches Xavus, he may surrender.[A][Right][LoadLuke]
-We've come so far...[NL]
-What about afterwards?[A]
+## Merc7MilitiaWaitCesariaOpeningText
+[ConversationText]
+[MidLeft][LoadLux][MidRight][LoadMaximus]
+I'm glad I got your message, Vice-Captain.
+[MidLeft]We're just glad you made it... How's the rest of the brigade?
+[MidRight]They're going to be fine, I suspect. But we have to move quickly.
+[MidLeft]Right. So far, Finoc has yet to return from his scouting mission to the capital.[CloseSpeech][MoveLeft][FarLeft][LoadElanil]
+I wouldn't worry about him.
+[Left]I'm not worried. It's just hard to move in without intel.
+[MidRight]Of course. We can't strategize without knowing numbers, defenses, enemy placement...[CloseSpeech][MoveRight][FarRight][LoadPlayer]
+We can at least move out, though.
+[Right]Hm?
+[FarRight]We can meet Finoc between here and the capital. There's no reason to wait around if we're on a time crunch.
+[Right]You do make a fair point. For now, let's move to the capital. Get packed up.
+[Left]You hear that, recruits? We're moving out![FarRight][ClearFace][LoadJasper][FarLeft][ClearFace][LoadDerek]
+But we just got here...
+[FarRight]No use complaining, Derek.[Left][ClearFace][FarRight][ClearFace][LoadLuke]
+On the move again...[FarLeft][ClearFace][Right][ClearFace][Left]
+[MidLeft][LoadArc]We're almost at the end of our journey, Luke. Then we can go home and rebuild.
+[FarRight]Yeah... Yeah. We will rebuild Danaan.
+[MidLeft]Of course we will![X]
+
+## Merc7MilitiaWaitCesariaDistantText
+[ConversationText]
+[FarLeft][LoadElanil][Left][LoadMaximus]
+There in the distance... The capital of Arcanae.
+[FarLeft]Look, there's Finoc.[Right][LoadPlayer][FarRight][LoadFinoc]
+Glad you guys made it.
+[Left]Ah, good, you're here. What did you find out?
+[FarRight]The city is largely undefended. I don't even think Uzkalis is here right now. Xavus seems to be wrapped up in some research while Uzkalis leads the front lines.
+[Right]So if there's a moment to strike...[ClearFace][LoadLux]
+... This is it.
+[Left]Right. We don't have time to waste. Finoc, how alert are their defenses?
+[FarRight]Pretty relaxed, as far as I could tell. I didn't even have to hide my wyvern.
+[FarLeft]That relaxed, huh?
+[FarRight]Yeah. We could sneak into the city one by one, then mount an attack on the actual palace under nightfall.
+[Left]A direct attack?
+[Left]They wouldn't expect it. If they're not prepared for it, it's not worth our time to try and play the stealth game.[FarRight][ClearFace][LoadArc]
+So we're sneaking in one by one then attacking at nightfall?
+[Left]Correct. We don't need to sneak in individually though. Lux, Luke, and I could all pass as Arcanians because of our skill with magic.[FarLeft][ClearFace][LoadPlayer]
+You don't exactly look like Arcanians, though...
+[Left]Doesn't matter. Arcanians are all about what you can do. Even though most native-born Arcanians are dark-skinned, our magic knowledge will be more than enough.
+[Right]This means we can sneak in with three groups...
+[Left]Right. I'll take the Privates.[FarLeft][ClearFace][LoadJasper]
+We're with the Captain?[ClearFace][LoadDerek]
+Oh no...
+[Left][Smile]I've wanted a chance to observe you two myself anyway.
+[Right]It's probably best for Luke, Arc, and [Tact] to stick together.
+[FarRight]Works for me.
+[Right]That means I'm going in with Finoc and Elanil.[FarRight][ClearFace][LoadPlayer]
+So we'll move in throughout the day, then meet up at nightfall to make our move.
+[Left][Smile]That's right. It's best to avoid each other throughout the day otherwise, however. Privates! We're moving in first, so let's get moving now.[FarRight][ClearFace][LoadJasper]
+Yes, sir!
+[FarLeft]Already...?
+[FarRight][MoveFarRight]Derek...! [MoveFarRight]Quiet...!
+[FarLeft]Oh, you're right... Let's go!
+[Left]Lux, you three will move in next. Wait a few hours. Luke, lead [Tact] and Arc in a few hours after them.[FarRight][ClearFace][LoadLuke]
+I've got it.
+[Right]You can count on me, Captain.[X]
+
+## Merc7MilitiaWaitCesariaSunsetText
+[ConversationText]
+[FarLeft][LoadLuke][Left][LoadArc][MidRight][LoadPlayer]
+It's nearly sunset now...
+[FarLeft]We've had ample time. Let's get in there and try to find Maximus and Lux.
+[Left]Where do you think they've gone?
+[MidRight]Let's just follow the main street. Hopefully one of them will make contact.[CloseSpeech][MoveRight][FarRight][LoadLux]
+What are you three doing?
+[Right]Uh... We didn't know where to meet you.
+[FarRight]... Right, none of you are Cesarian. You don't know our signals. Follow me. We think we found a way into the Tower of the Magi.
+[FarLeft]How?
+[FarRight]Just... follow me.[ClearFace][FarLeft][ClearFace][Right][ClearFace][FarRight][ClearFace]
 [Events]
-[MidLeft]I intend to continue journeying[NL]
-around as a mercenary.[A]
-[FarRight]Aye. That definitely has appeal to me. But I[NL]
-think I'd like to start trying to get the[A][NL]
-Warlords to work together in Haedric...[NL]
-Prevent another Danaan.[A]
-[MidLeft][Smile]I respect that, Arc. A[NL]
-very noble thing to do...[A]
-[Right]I'm going to help with reconstruction[NL]
-in Arcanae. I'm sure many homes and farms[A][NL]
-have been destroyed due to the war both[NL]
-with Cesaria and between the Magi...[A]
-[MidLeft]I suppose I hadn't considered the fact[NL]
-that this was also an internal[A][NL]
-civil war for Arcanae.[A]
-[Right]Yeah. I want to do my part to help.[A]
-[MidLeft]I wouldn't expect anything different from[NL]
-you, Luke. Anyways, we have to get going.[A][NL]
-This is all for naught if we fail here.[A]
-[Right]Yes. I look forward to[NL]
-this last battle together.[A]
-[MidLeft]It has been an honor, friends.[A][X]
+[MidRight][LoadPlayer][MidLeft][LoadMaximus]
+Ah, you've made it.
+[MidRight]Nice you all to wait up.
+[MidLeft]There's a side entrance to the tower. The main entrance is not only guarded by a few tough customers, but there's a lot of citizens in that area. I don't want civilian lives caught in our fight.
+[MidRight]Right. So when do we move in?
+[MidLeft]I had Elanil run reconnaissance. She's to return when she feels that we have an opening. Until then, everyone else is taking a rest so that we're prepared when the opportunity arises.
+[MidRight]Got it.[CloseSpeech][MoveRight][MidLeft][MoveLeft][FarLeft][LoadLux][FarRight][LoadElanil]
+Maximus! [Tact]!
+[Left]Ah, you're back. Are we good?
+[FarRight]Yeah. Looks like as the sun is setting the number of guards is thinning.
+[Left]Let's go then! Lux, get the others.
+[FarLeft]I'm on it.
+[Left]Thank you again for your help here, [Tact].
+[Right]Don't thank me yet. Not until Xavus is dead or in captivity.
+[Left]Well said. Let's move out![X]
 
-## Merc7MilitiaWaitCesariaUzkalisMaximusCutsceneBattleText
-[FarLeft][LoadUzkalis]Captain Maximus of the[NL]
-Tiger Brigade...[Smile][A][NL]
-I've been waiting for this.[A][ClearFace]
-[FarRight][LoadMaximus]You predicted our strategy...[NL]
-We're cut off! Dammit,[A][NL]
-Lux, where are you?[A][ClearFace]
-[FarLeft][LoadUzkalis]Let's bring this to a[NL]
-swift end. Come on![A][ClearFace]
-[FarRight][LoadMaximus]For Cesaria![A][X]
+## Merc7MilitiaWaitCesariaOnMapText
+[ConversationText]
+[Left][LoadMaximus]
+Looks like this tunnel leads into the library... You were right, Elanil. Their guard has been relaxed a remarkable amount.[X]
 
-## Merc7MilitiaWaitCesariaMaximusWoundedText
-[FarRight][LoadUzkalis]What's the matter, Captain?[NL]
-Did you underestimate my power?[A]
-[FarLeft][LoadMaximus]Urgh... Tiger Brigade, fall back![NL]
-Dammit, Lux, where are you?![A]
-[FarRight]Press the assault![NL]
-Kill Maximus![A][X]
+## Merc7MilitiaWaitCesariaXavusHereText
+[ConversationText]
+[MidRight][LoadMaximus][MidLeft][LoadXavus]
+Well, if it isn't Maximus.
+[MidRight]I was wondering when you'd take notice of our presence...
+[MidLeft]Indeed. I take it you're here for me?
+[MidRight]Your wisdom as a Grand Magus is really coming through...
+[MidLeft]Unfortunately, I don't have time to mess with you. Guards! Apprehend these fools. Kill them if you must.[X]
 
-## Merc7MilitiaWaitCesariaFinocHereText
-[FarRight][LoadMaximus][FarLeft][LoadFinoc]Captain Maximus! I come bringing aid[A]
-[FarRight]You! The Altian! Lux notified me you[NL]
-had joined their team. Finoc, was it?[A]
-[FarLeft]Yes. I think they're following[NL]
-me, but I'm not alone.[A][Left][LoadElanil]
-We fight beside you, Captain.[NL]
-Altia won't let you fall here.[A]
-[FarRight]We're in a tough position[NL]
-here. Many of my men are wounded.[A]
-[FarLeft]Order them to hold this position. Lux and[NL]
-[Tact] should be arriving with the[A][NL]
-others soon. We're both capable, we should[NL]
-be able to hold out at least for a bit.[A]
-[FarRight]Thank you, Finoc and Elanil. Capable soldiers,[NL]
-to me! We'll have to hold off until[A][NL]
-we can meet up with Vice-Captain[NL]
-Lux and [Tact]![A][X]
+## Merc7MilitiaWaitCesariaStartBattleText
+[ConversationText]
+[Left][LoadMaximus]
+We have to do this quickly. I get the sense that Xavus is close to completing something, and we don't want to be here when he does![X]
 
-## Merc7MilitiaWaitCesariaRestHereText
-[FarLeft][LoadJasper][Left][LoadDerek][Right][LoadLux][FarRight][LoadPlayer]
-Look! There they are! Seems that Finoc found[NL]
-them first. They seem to be in trouble![A]
-[Right]We have to meet up with them and then take[NL]
-out Uzkalis while we have the chance![A]
-[Left]I never would have guessed that one of my[NL]
-first assignments after graduating[A][NL]
-was taking out one of the two[NL]
-greatest enemies of Cesaria.[A]
-[FarLeft]Just our luck, eh Derek? Maybe[NL]
-we'll get some honor for this.[A]
-[Right]Focus, you two! This battle is more[NL]
-important than just honor. This[A][NL]
-could turn the tide of the war.[NL]
-[Tact], are we ready?[A]
-[FarRight]Absolutely. Let's put Uzkalis[NL]
-in his place and help Maximus.[A][X]
+## Merc7MilitiaWaitCesariaSummonText
+[ConversationText]
+[Right][LoadXavus]
+I don't have enough time to finish this... I'll have to make do with what I have...![X]
 
-## Merc7MilitiaWaitCesariaUzkalisBattleText
-[FarLeft][LoadUzkalis]
-Reinforcements!? How!? They[NL]
-must have survived the[A][NL]
-skirmish at the bridge...[A][X]
+## Merc7MilitiaWaitCesariaAfterSummonText
+[ConversationText]
+[Left][LoadXavus]
+These Vathrylian Guardians should give those fools some trouble.[X]
 
-## Merc7MilitiaWaitCesariaMaximusUzkalisBattleText
+## Merc7MilitiaWaitCesariaXavusBattleText
+[BattleText]
+[FarLeft][LoadXavus]
+Even if you can defeat me, you won't be able to stop the path of New Arcanae![X]
+
+## Merc7MilitiaWaitCesariaXavusDeathText
+[BattleText]
+[FarLeft][LoadXavus]
+My death... means nothing... Someone else will [CloseEyes]step in... One day...[X]
+
+## Merc7MilitiaWaitCesariaMaximusXavusBattleText
+[BattleText]
 [FarRight][LoadMaximus]
-Seems you didn't predict[NL]
-this part of our[A][NL]
-strategy, Uzkalis.[A][ClearFace]
-[FarLeft][LoadUzkalis]
-Heh... Seems you've raised your[NL]
-Vice-Captain well, Maximus.[A][ClearFace]
+I can't believe you.[ClearFace]
+[FarLeft][LoadXavus]
+Is it truly so wrong for a mage to seek knowledge?[ClearFace]
 [FarRight][LoadMaximus]
-Does this surprise you?[A][ClearFace]
-[FarLeft][LoadUzkalis]
-Not tremendously. You[NL]
-always were an efficient[A][NL]
-commander to those you[NL]
-trained, but it won't[A][NL]
-save you. This is a duel[NL]
-between us, and we know[A][NL]
-who the better mage[NL]
-is between us.[A][ClearFace]
-[FarRight][LoadMaximus]
-Perhaps...[A][X]
-
-## Merc7MilitiaWaitCesariaUzkalisDeathText
-[FarLeft][LoadUzkalis]
-I may die here...[....] But Xavus[NL]
-will not fall...[CloseEyes][.....] As easily...[A][X]
+You've pushed the boundaries of what the world can tolerate. It falls to me to stop you.[ClearFace]
+[FarLeft][LoadXavus]
+Very well then... Give it your best shot![X]
 
 ## Merc7MilitiaWaitCesariaGoodEndingText
-[MidLeft][LoadPlayer][Right][LoadLux][FarRight][LoadMaximus]
-Well done, Lux. I appreciate the support.[A]
-[Right]Thank you, Captain. But credit must go where[NL]
-it is due. [Tact] was brilliant. I'm not[A][NL]
-sure we could have done it without[NL]
-the aid from him and his friends.[A]
-[MidLeft]I simply did what was right.[A]
-[FarRight]Even so. Let us set out for Bacrun. It's[NL]
-the nearest cililized area, and I need[A][NL]
-to contact General Rex. Rookies![A][MidLeft][ClearFace][Left][LoadDerek]
-Sir![A][FarLeft][LoadJasper]
-Reporting for duty![A]
-[FarRight]You've done well the past few days.[NL]
-I'll see to it you receive appropriate[A][NL]
-honors for your duty.[A]
-[Left]Thank you sir![A]
-[FarRight]For now, escort [Tact] and his friends[NL]
-to the capital. I plan to take Lux and[A][NL]
-the remains of the brigade to assist[NL]
-Jurgen with his assault.[A]
-[FarLeft]Understood sir![A]
-[Events]
-[ClearFace][Left][ClearFace][....][FarRight][ClearFace][Left][LoadElanil][FarLeft][LoadFinoc]
-I believe this is where Elanil[NL][FarRight][LoadPlayer][FarLeft]
-and I must bid you all adieu.[A]
-[FarRight]Finoc?[A]
-[Left]We have to report to our leaders in Altia.[NL]
-They have been anxiously awaiting news[A][NL]
-surrounding the fate of Uzkalis.[A]
-[FarRight]Ah, I understand. [Smile]I'll be sure to[NL]
-visit you all in the future, after[A][NL]
-this war comes to its close.[A]
-[FarLeft][Smile]I look forward to it, [Tact].[A]
-[Left][Smile]As do I. Make sure to bring layers[NL]
-though. It gets chilly up there.[A]
-[FarRight]I'll be sure to.[A][ClearFace][Left][ClearFace][FarLeft][ClearFace][MidLeft][LoadLuke]
-Captain Maximus! I wish to go with you.[NL]
-I want to see firsthand this war, and[FarRight][LoadMaximus][MidLeft][A][NL]
-perhaps help Arcanae with their[NL]
-reconstruction after it is done...[A]
-[FarRight]Lux?[A]
-[Right]I've seen Luke's abilities firsthand. He's[NL]
-a kind soul and will be good to have.[A]
-[FarRight]Very well then. If my Vice-Captain[NL]
-is convinced, I'm convinced.[A][MidLeft][ClearFace][Right][ClearFace][LoadPlayer]
-What about you, Arc?[A]
-[MidLeft][LoadArc]I'm heading back to Haedric. I want[NL]
-to meet with Basileus Leon. What happened[A][NL]
-to Danaan... It can't happen again. We need[NL]
-to be more organized. We'll need it.[A]
-[Right]A good cause. Until we[NL]
-meet again, friend.[A][MidLeft][ClearFace][FarLeft][LoadJasper][Left][LoadDerek]
-Do you wish to go to[NL]
-the capital, [Tact]?[A]
-[FarRight]I think so. Lead the way.[A]
-I'll scout ahead and bring word to[NL]
-General Rex and the Emperor first.[A]
-[FarRight]A good idea. Let's rest first.[A]
-[Right]Godspeed, friend.[A][X]
+[ConversationText]
+[Left][LoadLux][MidRight][LoadPlayer][FarLeft][LoadMaximus]
+It's done. We've taken the capital.
+[Left]There doesn't seem to be any further resistance, sir.
+[FarLeft]Perfect. I have to thank you again for your help, [Tact].
+[MidRight]Make no mention of it. Hopefully this can bring peace to Avenir for a time.
+[FarLeft]My work is not yet done, unfortunately. With this city taken, I'll be taking the Tiger Brigade to flank Uzkalis' remaining forces. With any luck, we'll catch them unawares and finally end this war. Vice-Captain, I'll be leaving you here to maintain order in the city until I can return to help Muriel and the others select new Grand Magi.
+[Left]Understood.
+[MidRight]I'll stay here with the others as well to help Lux out.
+[FarLeft]Thank you, [Tact]. I shall head out within the day.
+[MidRight]Good luck to you.
+[FarLeft]Thank you, friend. Good luck to you two as well.[ClearFace][......]
+[Left][Tact], I'm gonna check in with the others.
+[MidRight]Alrighty. I think I might get some rest.
+[Left]Go ahead, you've earned it.[X]
 
-## Merc7MilitiaWaitCesariaDerekLeavesText
-[MidLeft][LoadDerek][MidRight][LoadPlayer]
-Go ahead and get some rest, Derek. I know[NL]
-it's been hard going for you. All of[A][NL]
-this traveling has me tired.[NL]
-I can't imagine how you feel.[A]
-[MidLeft][Smile]Thanks, [Tact].[A][X]
-
-## Merc7MilitiaWaitCesariaGoodEndingNarratorHereText
-[MidRight][LoadPlayer][MidLeft][LoadNarrator]
-Finally, you're alone again.[A]
-[MidRight]What the hell!? Who are you!?[A]
-[MidLeft]You don't have any recollection? I[NL]
-gave you this life, you know.[A]
-[MidRight]I have a... vague recollection. Yes.[NL]
-I felt like this life just kind of[A][NL]
-suddenly started. Was that you?[A]
-[MidLeft]Yes, that would be the fault of yours truly,[NL]
-the Guardian Spirit. You were a lost soul,[A][NL]
-so I decided I'd give you a new life. Always[NL]
-entertaining to see what one can do.[A]
-[MidRight]So what are you doing here?[A]
-[MidLeft]Ah yes, you see... By the contract[NL]
-that gives me the power of the Guardian[A][NL]
-Spirit, I can't directly influence the[NL]
-events of the world too greatly. Your part[A][NL]
-in this war... Well, it kind of messed that[NL]
-up, but I can roll time back to before[A][NL]
-giving you this new life. The only issue[NL]
-is what to do about you...[A]
-[MidRight]You don't mean...[A]
-[MidLeft]Sorry, [Tact]. It's nothing[NL]
-personal. Just good business.[A][X]
+## Merc7MilitiaWaitCesariaGoodEndingGSText
+[ConversationText]
+[MidLeft][LoadPlayer][MidRight][LoadNarrator]
+Finally, you're alone.
+[MidLeft]What the- who are you?
+[MidRight]No recollection? Not surprising. After all, I did remove most memories of our interactions.
+[MidLeft]"Most" memories?
+[MidRight]Hard to get all of them, you know? Memory's a finicky thing. However... If I kill you here and roll back time, you'll remember nothing and I get the entertainment of you upsetting the delicate balance of Avenir all over again. What do you say?
+[MidLeft]Let you kill me? Not in a million years!
+[MidRight]... Alright, your funeral.[X]
 
 ## Merc7MilitiaWaitCesariaGoodEndingPlayerDeathText
-[FarRight][LoadPlayer]Damn you... I'm not[NL]
-your...[CloseEyes] Plaything...[A][X]
+[BattleText]
+[FarRight][LoadPlayer]
+Dammit... My friends, I'm sorry...[X]
 
 ## Merc7MilitiaWaitCesariaBadEndingText
-[FarRight][LoadElanil][Right][LoadPlayer][Left][LoadLux]
-We did it...[....] Uzkalis is[NL]
-dead...[....][CloseEyes] But Maximus...[A]
-[Right]Lux... I'm sorry.[A]
-[FarRight]We did all we could.[NL]
-We knew the risks.[A][FarLeft][LoadArc]
-Aye... He died a noble death,[NL]
-even by Haedrician standards.[A]
-[Left]We need to bring him[NL][OpenEyes]
-back to Cesaria...[A][FarRight][ClearFace][LoadFinoc]
-I'll help.[A]
-[FarLeft]Aye. As will I.[A]
-[Left]Finoc, Arc...[.....] Thank you...[A][FarLeft][ClearFace][FarRight][ClearFace][LoadElanil]
-We have to return to Cesaria quickly. It's[NL]
-too dangerous out here in Draterus.[A]
-[Right]Elanil is right. We may not have Uzkalis[NL]
-to worry about now, but the[A][NL]
-Wanderers are still out there.[A][FarLeft][LoadJasper]
-What of Xavus?[A]
-[Right]With Uzkalis's death, Xavus will likely[NL]
-either surrender or retreat somewhere where[A][NL]
-he can easily resist a siege. I doubt he has[NL]
-any chance of winning the war now. All of[A][NL]
-Uzkalis's troops are scattered, and Uzkalis[NL]
-himself is dead, which is half[A][NL]
-of Xavus's fighting force.[A][FarLeft][ClearFace][LoadDerek]
-Let's get moving then.[A]
-[Left]Maximus... I'm sorry... I wish I could have[NL]
-repaid you... But even to the end,[A][NL]
-it was you saving my life...[A]
-[FarRight]Lux, Maximus would be proud to see what[NL]
-you accomplished here. Don't taint his[A][NL]
-memory by seeing yourself as a failure.[NL]
-In a lot of ways, you're his greatest[A][NL]
-success. He did a good job of both[NL]
-raising you and training you.[A]
-[Left]Elanil, thank you...[A]
-[Right]Let's get going. We can't linger here any[NL]
-longer. Finoc, Arc, get Maximus's body.[A][FarRight][ClearFace][LoadFinoc]
-I'm on it.[A][ClearFace][LoadArc]
-Aye.[A][ClearFace]
-[Right]I'll cover the back and make sure we[NL]
-aren't being followed. We should be[A][NL]
-fine, but it never hurts to make sure.[A][FarRight][LoadJasper]
-I'll lead the way to Cesaria![A]
-[Left]Thank you, Jasper.[A]
-[Right]Get going, you guys.[NL]
-I'll follow behind.[A]
-[FarLeft]Right. Thanks, [Tact].[A][X]
+[ConversationText]
+[Right][LoadMaximus]
+We did it. Xavus is defeated.[FarLeft][LoadJasper][Left][LoadLux]
+Captain, we have a problem.
+[FarLeft]An Arcanian platoon has surrounded the capital. They're under the command of one Duke Clint.
+[MidRight]Damn... I didn't expect them to mobilize so quickly. This must have been due to the sloppy work we did at the border.[FarLeft][ClearFace][LoadPlayer]
+I'm sorry... I wouldn't have thought they'd get away and issue a warning so quickly.
+[Left]What can we do, sir? We're outnumbered...[FarLeft][ClearFace][LoadDerek]
+I don't think my armor can take all of this...
+[MidRight]... You all get to the tunnels underground. I will stand and surrender.
+[Left]Captain, you can't![ClearFace]
+[MidRight]Someone will need to buy you all time. You have your orders! Get out of here![Left][LoadPlayer]
+Arc, grab Lux!
+[FarFarRight]I'm on it![X]
 
-## Merc7MilitiaWaitCesariaBadEndingNarratorHereText
-[MidLeft][LoadPlayer][MidRight][LoadNarrator]
-So, here we are, [Tact]. You killed a[NL]
-Grand Magus but failed to protect a[A][NL]
-Cesarian Captain. Do you really[NL]
-think this makes a difference?[A]
-[MidLeft]What? Who are you?[NL]
-What do you mean?[A]
-[MidRight]Ah, right, I've forgotten. You lost souls[NL]
-have memories that are so...[.....] temperamental.[A][NL]
-Unreliable. I always have to go and[NL]
-elaborate about who I am.[A]
-[MidLeft]Cut to the chase, I have places to be.[A]
-[MidRight]Well you're a confident one, eh? Pity. I[NL]
-am the Guardian Spirit. You, my friend, are[A][NL]
-a lost soul to whom I gave this life.[NL]
-Normally, I'm perfectly allowed to do[A][NL]
-that, but you're a special one. You have[NL]
-the ability to play a large role in the[A][NL]
-events of Avenir, but I'm not allowed to[NL]
-let that happen... So either I lose my[A][NL]
-power, or I kill you and roll time back[NL]
-to before this whole mess.[A]
-[MidLeft]So?[A]
-[MidRight]Being the benevolent and selfless[NL]
-Guardian Spirit I am, of course I'll[A][NL]
-sacrifice my power... Ha. Not. It's far[NL]
-easier to kill you and be done with it.[A]
-[MidLeft]You can't![A]
-[MidRight]Oh, it won't be too hard... Ha![A][X]
+## Merc7MilitiaWaitCesariaTunnelsText
+[ConversationText]
+[Left][LoadLuke]
+There must be a way out...[X]
+
+## Merc7MilitiaWaitCesariaBadEndingGSText
+[ConversationText]
+[FarLeft][LoadElanil][Left][LoadNarrator][FarRight][LoadPlayer][Right][LoadLuke]
+What the-!
+[Left]Silence, fools.
+[Events]
+[FarLeft][ClearFace][Right][ClearFace][....]
+[FarRight][MoveFarRight]What did you do? Who are you?
+[Left]I've frozen all of your friends in time. I need to have a word with you, [Tact].
+[FarRight]You know my name... Who are you?!
+[Left]Silly you... I gave you this life. I'd expect you to be more grateful.
+[FarRight]Wait a minute... You...
+[Left]... are the Guardian Spirit. Yes, yes, you can grovel all you like, it won't save you from what's coming.
+[FarRight]What do you want?
+[Left]You see, in exchange for my power there are certain... rules that must be followed. One of those is me and my creations cannot have too much interference in the events of Avenir. Killing a Grand Magus? That's a pretty big no-no by those standards.
+[FarRight]So, what?
+[Left]If I kill you and roll time back to before you ever entered Avenir, this is no issue.
+[FarRight]And you think I won't put up a fight?
+[Left]Oh, I'd hoped you would. Perhaps then you'll understand just how weak you really are. Come on![X]
 
 ## Merc7MilitiaWaitCesariaBadEndingPlayerDeathText
+[BattleText]
 [FarRight][LoadPlayer]
-No...[....] Not now...[.....] Not[NL]
-after I [CloseEyes]came so far...[A][X]
+My friends... Run...[X]

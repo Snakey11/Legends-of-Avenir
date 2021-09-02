@@ -29,8 +29,9 @@ END_MAIN
 
 //Label LocationBasedEvents
 LocationBasedEvents:
-DOOR 0x00 [5,15] 0x12
-DOOR 0x00 [6,15] 0x12
+Door(5,15)
+Door(6,15)
+Chest(BraveSword,11,13)
 END_MAIN
 
 //Label MiscBasedEvents
@@ -116,6 +117,7 @@ LABEL 0x0
 	MUSC FE5_Victory_Minor
 	Text(Merc6MilitiaWaitCesariaBadEndingText)
 LABEL 0x1
+LOAD1 0x1 LoadMaximus
 MoveToChapter(MercenaryMilitiaWaitCesaria7)
 ENDA
 
@@ -272,6 +274,10 @@ UNIT Finoc 0x0 0x0 Level(1,Ally,True) [6,2] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Lux 0x0 0x0 Level(1,Ally,True) [7,1] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Jasper 0x0 0x0 Level(1,Ally,True) [8,0] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Derek 0x0 0x0 Level(1,Ally,True) [8,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+LoadMaximus:
+UNIT Maximus Strategist 0x0 Level(8,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [SteelBlade,Bolganone,Arcthunder] NoAI
 EndUnit
 
 //Label ChapterUnits

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="23" height="24" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="Improved Castle" tilewidth="16" tileheight="16">
+  <image source="FE8 Tilesets/New Tilesets/Improved Castle.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="23" height="24">
+  <properties>
+   <property name="Anims" value="ImprovedCastleAnims"/>
+   <property name="ChapterID" value="MercenaryMilitiaWaitCesaria7"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="ArcanaePalaceChanges"/>
+   <property name="MapID" value="ArcanaePalaceMap"/>
+   <property name="ObjectType" value="ImprovedCastleObjectSet"/>
+   <property name="PaletteID" value="ImprovedCastlePalette"/>
+   <property name="TileConfig" value="ImprovedCastleTileConfig"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJyNlT9oVEEQxnffNYmVBvQksfGsTjDdveddbGzF9jzMiYJVLAKKf6IXFcuUNsEuRAWNptFUliL+QU4hVWoN2miZxsbgN+4M+7m+pyl+zO7svm/nzc7u9pxzOXieOXdF6YKr1Dff7ZpzP8CdWhgv8N0H71wL/QLkZH/jIj21ps0+WXsJ8y/BLsOuZWHMtPMEWeMuaXzFvK7qrKnffPxvpiu+UbQ/Ys7hLMbfVN9l2GuwOVhBexX2AXjoQ1t8LV27cH//p8T9GXM2sxi/9L+AZ2AM/VuYM4P2Xszfp9Rd8K36aiTeo/i+TbluK2O1qD0C+wb2nfJWfa9rIY4yLN51yom1WfsC7AI4ScyADsVShsQ6CfpJm7VnYU+UwHv/R40lY6NJ/naqXSQ6uf77Ou2h7KvlPs23acv8WbLvMfZE+Ub1PJnk4pWONVywcz5wirQvgiNkq7TT/9nUMauZ44itAQ6BaV+eE9aWs7QIrvuoKefjno5xvhcRv8+CHfxD+6lqy1kax9wDLtSr1Ok02mfA0MdzI2zD91Mx7TTfTdp/qfcO5h4j7QHaN1Wb93LDRUw7zbfV+grGz4P9dHaZYbIXZdpVjGQBuUskD30woflpJdpFot3VPWK9ZnIedmXhXpQ8zIMpzQ9rFyVxH9SaaYMOmNJ+g2ppqHeu3WWWj16incZt+3pa6hH0da/Nv23f7yAnadwGa6djFndVTpb1TMradi4NyfcNaA7AvL4bc/p2bFDcnJO6vhXfMfYS9r7Wpd0n/0PumxeqPU55+KRWtLd8fFtkPTkfe0ijqs/adnYkN47e00c+2LPgHNiN77ayqFXVZ22LLScrb+ljH2xd+QWkKePR
+  </data>
+ </layer>
+ <layer name="TunnelDoor" width="23" height="24" visible="0">
+  <properties>
+   <property name="Height" value="2"/>
+   <property name="ID" value="3"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="21"/>
+   <property name="Y" value="20"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwUAAU2bamW1GO6PpAgBvPQBv
+  </data>
+ </layer>
+ <layer name="OpenChest" width="23" height="24" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="2"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="21"/>
+   <property name="Y" value="9"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDBbANNAOGAWjYBSMgkECABLAAAM=
+  </data>
+ </layer>
+ <layer name="ChestDoor" width="23" height="24" visible="0">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="2"/>
+   <property name="X" value="19"/>
+   <property name="Y" value="8"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUEANeMzIwMNLIbEtmBgYzZtqYfZqG7h4Fo2AUjAJaAQAzOQIw
+  </data>
+ </layer>
+ <layer name="ThroneDoor" width="23" height="24" visible="0">
+  <properties>
+   <property name="Height" value="2"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="4"/>
+   <property name="X" value="4"/>
+   <property name="Y" value="3"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFhIAWEwODKZA2A2JNJuqazQg11wzKHgWjYBSMglEwCkYBAwMAvbABMQ==
+  </data>
+ </layer>
+</map>

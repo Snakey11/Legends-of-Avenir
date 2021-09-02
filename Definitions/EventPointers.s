@@ -33,6 +33,7 @@
 
 ArcanaeCapitalMap 0x04
 ArcanaeOutpostMap
+ArcanaePalaceMap
 AssassinTestMap
 BanditPassMap
 BigBattlegroundMap
@@ -47,7 +48,6 @@ CesarianCapitalAssassinMap
 CliffMap
 CliffyRiverMap
 DefenseHallMap
-DesertWithGrassMap
 DesertyMap
 FarmyTownMap
 FortressMap
@@ -120,6 +120,7 @@ ArcanaeEscapeMap
 LooterBaseMap
 
 ArcanaeCapitalChanges
+ArcanaePalaceChanges
 BacrunCity3Changes
 BanditPassChanges
 BigBoatDockChanges

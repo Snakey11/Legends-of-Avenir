@@ -265,7 +265,7 @@ SetPaletteFull(Cougar,CougarWyvernRiderPaletteID,WyvernRider,CougarWyvernLordPal
 SetPaletteFull(Daniel,0x00,0x00,DanielSwordmasterPaletteID,Swordmaster,0x00,0x00)
 SetPaletteFull(Derek,DerekKnightPaletteID,Knight,DerekGeneralPaletteID,General,DerekGreatKnightPaletteID,GreatKnight)
 SetPaletteFull(Dunlas,0x00,0x00,DunlasHalberdierPaletteID,Halberdier,0x00,0x00)
-SetPaletteFull(Edward,0x00,0x00,EdwardSagePaletteID,Sage,0x00,0x00)
+SetPaletteFull(Edward,0x00,0x00,EdwardSagePaletteID,/*Sage*/0,0x00,0x00)
 SetPaletteFull(Efil,0x00,0x00,EfilTruerbladePaletteID,Truerblade,0x00,0x00)
 SetPaletteFull(BossEfil,0x00,0x00,EfilTruerbladePaletteID,Truerblade,0x00,0x00)
 SetPaletteFull(BossEfil,0x00,0x00,EfilTruerbladePaletteID,Truerblade,0x00,0x00)
