@@ -11,7 +11,7 @@ POIN EndMainPointer EndMainPointer EndMainPointer
 POIN EndMainPointer
 POIN TrapData TrapData
 POIN Units Units
-POIN $0 $0 $0 $0 $0 $0
+POIN GoodEnding BadEnding $0 $0 $0 $0
 POIN BeginningScene EndingScene
 //LabelEnd
 
@@ -62,10 +62,6 @@ EndUnit
 
 //Label BeginingScene
 BeginningScene:
-LOAD1 0x1 LoadMaximus
-ENUN
-CLEA 0x0
-
 ENUT 0x12 // Disable Tact's special death quotes for the endings.
 ENUT 0x13
 LOAD1 0x1 Meanies1
@@ -125,6 +121,12 @@ Text(Merc7MilitiaWaitCesariaStartBattleText)
 GotoPrepScreen
 
 //Label EndingScene
+GoodEnding:
+ENUF 0x70
+GOTO 0x69
+BadEnding:
+ENUT 0x70
+LABEL 0x69
 EndingScene:
 FADI 0x5
 CLEA 0x0
