@@ -18,11 +18,14 @@ POIN BeginningScene EndingScene
 //Label TurnBasedEvents
 TurnBasedEvents:
 TurnEventPlayer(0x00,XavusWarp,3)
+TurnEventPlayer(0x00,Turn6,6)
+TurnEventPlayer(0x00,Turn9,9)
 END_MAIN
 
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
+SupportEvent(ASupport,Lux,Maximus,MaximusLuxSupport)
 END_MAIN
 
 //Label LocationBasedEvents
@@ -56,10 +59,6 @@ UNIT Jasper 0x0 0x0 Level(1,Ally,True) [21,17] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Derek 0x0 0x0 Level(1,Ally,True) [20,18] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Maximus 0x0 0x0 Level(1,Ally,True) [22,18] 0x00 0x00 0x00 0x00 [0] NoAI
 EndUnit
-
-LoadMaximus: // Temporary because I screwed up and forgot to load Maximus in chapter 6!
-UNIT Maximus Strategist 0x0 Level(8,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [SteelBlade,Bolganone,Arcthunder] NoAI
-UNIT
 
 //Label BeginingScene
 BeginningScene:
@@ -267,6 +266,7 @@ ENDA
 
 //Label Turn events
 XavusWarp:
+MUSI
 CAM1 BossXavus
 STAL 0x20
 FlashCursor(BossXavus,60)
@@ -287,6 +287,45 @@ CAM1 [12,1]
 STAL 0x40
 WarpIn(12,1,XavusThrone)
 STAL 0x40
+MUNO
+NoFade
+EndA2
+
+Turn6:
+STAL 0x10
+CAM1 BossXavus
+STAL 0x30
+FAWI 0x5
+SOUN 0x2D0
+LOAD1 0x1 Turn6Units
+ENUN
+STAL 0x20
+FAWU 0x5
+STAL 0x20
+NoFade
+EndA2
+
+Turn9:
+STAL 0x10
+CAM1 BossXavus
+STAL 0x30
+FAWI 0x5
+SOUN 0x2D0
+LOAD1 0x1 Turn9Units
+ENUN
+STAL 0x20
+FAWU 0x5
+STAL 0x20
+NoFade
+ENDA
+
+//Label Character events
+MaximusLuxSupport:
+MUSI
+Text(Merc7MilitiaWaitCesariaLuxMaximusSupportText)
+GiveItem(Lux,Fimbulvetr)
+IncreaseSupport(Lux,Maximus,True)
+MUNO
 NoFade
 ENDA
 
@@ -403,4 +442,25 @@ UNIT Guardian BattleSage BossXavus Level(8,Enemy,True) [8,7] 0x00 0x00 0x00 0x00
 UNIT Guardian Hero BossXavus Level(6,Enemy,True) [4,13] 0x00 0x00 0x00 0x00 [SilverSword,HandAxe] AttackInRangeAI
 UNIT Guardian Halberdier BossXavus Level(8,Enemy,True) [7,1] Drop 0x00 0x00 0x00 [Javelin,KillerLance] NoAI
 UNIT Guardian Bishop BossXavus Level(7,Enemy,True) [5,0] 0x00 0x00 0x00 0x00 [Divine] NoAI
+UNIT
+
+Turn6Units:
+UNIT Guardian Paladin BossXavus Level(9,Enemy,True) [1,23] 0x00 0x00 0x00 0x00 [SilverSword] NoAI
+UNIT Guardian Paladin BossXavus Level(8,Enemy,True) [1,21] 0x00 0x00 0x00 0x00 [Spear] NoAI
+UNIT Guardian GreatKnight BossXavus Level(10,Enemy,True) [2,22] 0x00 0x00 0x00 0x00 [Axeslayer,HandAxe] NoAI
+UNIT Guardian BattleSage BossXavus Level(9,Enemy,True) [6,23] 0x00 0x00 0x00 0x00 [Zanbato,Elwind] NoAI
+UNIT Guardian Falcoknight BossXavus Level(10,Enemy,True) [10,9] 0x00 0x00 0x00 0x00 [Dragonspear] NoAI
+UNIT Guardian MageKnight BossXavus Level(8,Enemy,True) [17,0] 0x00 0x00 0x00 0x00 [Dasher] NoAI
+UNIT Guardian Berserker BossXavus Level(7,Enemy,True) [22,1] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI
+UNIT
+
+Turn9Units:
+UNIT Guardian Ranger BossXavus Level(7,Enemy,True) [6,23] 0x00 0x00 0x00 0x00 [KillerBow] NoAI
+UNIT Guardian WyvernKnight BossXavus Level(8,Enemy,True) [1,0] 0x00 0x00 0x00 0x00 [DevilLance] NoAI
+UNIT Guardian WyvernKnight BossXavus Level(9,Enemy,True) [0,1] 0x00 0x00 0x00 0x00 [Horseslayer,Javelin] NoAI
+UNIT Guardian FalcoKnight BossXavus Level(11,Enemy,True) [1,18] 0x00 0x00 0x00 0x00 [HeavySpear,Axeslayer] NoAI
+UNIT Guardian Hero BossXavus Level(8,Enemy,True) [21,0] 0x00 0x00 0x00 0x00 [BraveAxe] NoAI
+UNIT Guardian Druid BossXavus Level(9,Enemy,True) [22,4] 0x00 0x00 0x00 0x00 [Fenrir] NoAI
+UNIT Guardian Valkyrie BossXavus Level(10,Enemy,True) [18,1] 0x00 0x00 0x00 0x00 [Divine,Physic] HealAlliesAI
+UNIT Guardian Halberdier BossXavus Level(7,Enemy,True) [22,1] 0x00 0x00 0x00 0x00 [KillerLance] NoAI
 EndUnit

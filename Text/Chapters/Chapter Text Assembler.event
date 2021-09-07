@@ -7,8 +7,10 @@
 
 #include "Escapes.event"
 
-
 #include "Death Quotes.event"
+
+
+#include "Mercenary/Wait Supports.event"
 
 #include "Mercenary/Mercenary 1.event"
 

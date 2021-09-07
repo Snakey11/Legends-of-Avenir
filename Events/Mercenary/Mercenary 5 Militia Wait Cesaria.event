@@ -29,6 +29,7 @@ ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0x10,TTactFinoc,0x00,Finoc)
 CharacterEventBothWays(0x11,TTactElanil,0x00,Elanil)
+SupportConvo(ASupport,Arc,Luke,Merc5MilitiaWaitCesariaArcLukeSupportText)
 END_MAIN
 
 //Label LocationBasedEvents

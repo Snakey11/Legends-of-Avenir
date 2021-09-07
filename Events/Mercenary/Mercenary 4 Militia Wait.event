@@ -144,6 +144,8 @@ GOTO 0x31
 LABEL 0x30
 	// Cesaria
 	LOAD1 0x1 LoadJasperDerekLux
+	ENUN
+	AddSupport(Jasper,Derek,CSupport)
 	SetBackground(0x30)
 	Text(Merc4MilitiaWaitChooseCesariaText)
 	GiveToSupplySilent(SteelSword)

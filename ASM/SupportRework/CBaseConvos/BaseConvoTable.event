@@ -230,24 +230,19 @@
 	Chapter(MercenaryMilitiaWaitCesaria5)
 		Entry
 			bg(0x30)
-			text(Support1Text)
+			text(Merc5MilitiaWaitCesariaDerekJasperSupportText)
 			baseSupport(Jasper,Derek,BSupport)
 			eventID(0x07)
-		Entry
-			bg(0x30)
-			text(Support1Text)
-			baseSupport(Arc,Luke,ASupport)
-			eventID(0x08)
 	Chapter(MercenaryMilitiaWaitCesaria6)
 		Entry
 			bg(0x21)
-			text(Support1Text)
+			text(Merc6MilitiaWaitCesariaDerekJasperSupportText)
 			baseSupport(Jasper,Derek,ASupport)
 			eventID(0x07)
 	Chapter(MercenaryMilitiaWaitCesaria7)
 		Entry
 			bg(0x30)
-			text(Support1Text)
+			text(Merc7MilitiaWaitCesariaTactArcSupportText)
 			baseSupport(0xFF,Arc,ASupport)
 			eventID(0x07)
 	Chapter(MercenaryMilitiaKill4)

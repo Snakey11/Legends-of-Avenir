@@ -20,6 +20,7 @@ TurnBasedEvents:
 TurnEventPlayer(0x0,Turn1,1)
 InfiniteTurnEventPlayer(0x11,TryChangeAI,9)
 InfiniteTurnEventPlayer(0x14,TryPlayEscapedText,9)
+SupportConvo(ASupport,Elanil,Finoc,Merc6MilitiaWaitCesariaElanilFinocSupportText)
 END_MAIN
 
 //Label CharacterBasedEvents
@@ -118,6 +119,8 @@ LABEL 0x0
 	Text(Merc6MilitiaWaitCesariaBadEndingText)
 LABEL 0x1
 LOAD1 0x1 LoadMaximus
+ENUN
+SetSupport(Lux,Maximus,BSupport)
 MoveToChapter(MercenaryMilitiaWaitCesaria7)
 ENDA
 
