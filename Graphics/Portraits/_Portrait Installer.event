@@ -160,6 +160,12 @@ ForrestPortrait:
 #incbin "Forrest_palette.dmp"
 #incbin "Forrest_minimug.dmp"
 
+GeraldPortrait:
+#incbin "Gerald_mug.dmp"
+#incbin "Gerald_frames.dmp"
+#incbin "Gerald_palette.dmp"
+#incbin "Gerald_minimug.dmp"
+
 GerwickPortrait:
 #incbin "Gerwick_mug.dmp"
 #incbin "Gerwick_frames.dmp"
@@ -410,7 +416,7 @@ setMugEntry(MaleMageMug,MageMAvatarPortrait,3,5,3,3)
 setMugEntry(FemaleMageMug,MageFAvatarPortrait,3,6,3,4)
 setMugEntry(AdelineMug,AdelinePortrait,2,5,3,3)
 setMugEntry(AdlezMug,AdlezPortrait,2,5,2,3)
-setMugEntry(ArcMug,ArcPortrait,2,4,2,2)
+setMugEntry(ArcMug,ArcPortrait,2,5,2,3)
 setMugEntry(ArveldirMug,ArveldirPortrait,2,5,3,3)
 setMugEntry(AryaMug,AryaPortrait,2,6,3,4)
 setMugEntry(AjaxMug,AjaxPortrait,3,4,3,2)
@@ -419,28 +425,29 @@ setMugEntry(BlaineMug,BlainePortrait,3,4,3,2)
 setMugEntry(ChristinaMug,ChristinaPortrait,2,5,3,3)
 setMugEntry(ClaraMug,ClaraPortrait,3,6,3,4)
 setMugEntry(ClintMug,ClintPortrait,2,5,3,3)
-setMugEntry(ConnorMug,ConnorPortrait,3,5,3,3)
+setMugEntry(ConnorMug,ConnorPortrait,2,4,2,2)
 setMugEntry(CougarMug,CougarPortrait,3,5,3,3)
 setMugEntry(DerekMug,DerekPortrait,2,5,2,3)
 setMugEntry(DunlasMug,DunlasPortrait,3,5,2,3)
 setMugEntry(EfilMug,EfilPortrait,2,5,3,3)
-setMugEntry(ElanilMug,ElanilPortrait,4,5,4,3)
+setMugEntry(ElanilMug,ElanilPortrait,2,5,2,3)
 setMugEntry(EmperorMug,EmperorPortrait,3,5,3,3)
 setMugEntry(FinocMug,FinocPortrait,3,5,3,3)
 setMugEntry(ForrestMug,ForrestPortrait,3,5,3,3)
+setMugEntry(GeraldMug,GeraldPortrait,2,3,3,3)
 setMugEntry(GerwickMug,GerwickPortrait,2,5,2,3)
 setMugEntry(HelmerMug,HelmerPortrait,3,5,3,3)
 setMugEntry(HenningMug,HenningPortrait,3,5,3,3)
 setMugEntry(IzukMug,IzukPortrait,3,5,3,3)
 setMugEntry(JasperMug,JasperPortrait,3,5,3,3)
-setMugEntry(JurgenMug,JurgenPortrait,2,6,3,3)
+setMugEntry(JurgenMug,JurgenPortrait,3,5,3,3)
 setMugEntry(KendrickMug,KendrickPortrait,3,4,3,2)
 setMugEntry(KilthelMug,KilthelPortrait,3,5,3,3)
 setMugEntry(LakshmiMug,LakshmiPortrait,3,5,3,3)
 setMugEntry(LeonMug,LeonPortrait,2,5,2,3)
 setMugEntry(LeyosMug,LeyosPortrait,3,5,3,3)
 setMugEntry(LukeMug,LukePortrait,3,5,3,3)
-setMugEntry(LuxMug,LuxPortrait,2,6,3,4)
+setMugEntry(LuxMug,LuxPortrait,3,5,3,3)
 setMugEntry(MaximusMug,MaximusPortrait,2,5,2,3)
 setMugEntry(MayorMug,MayorPortrait,4,5,3,3)
 setMugEntry(MistlainMug,MistlainPortrait,4,5,4,3)
@@ -463,7 +470,7 @@ setMugEntry(WestonMug,WestonPortrait,3,5,3,3)
 setMugEntry(WilliamMug,WilliamPortrait,3,5,3,3)
 setMugEntry(XavusMug,XavusPortrait,2,5,3,3)
 setMugEntry(XenaMug,XenaPortrait,3,6,3,4)
-setMugEntry(XeximMug,XeximPortrait,2,5,3,3)
+setMugEntry(XeximMug,XeximPortrait,3,5,3,3)
 setMugEntry(XyliaMug,XyliaPortrait,3,6,3,4)
 setMugEntry(YvetteMug,YvettePortrait,3,5,3,3)
 setMugEntry(ZahevaMug,ZahevaPortrait,3,6,3,4)
