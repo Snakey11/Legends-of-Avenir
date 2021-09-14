@@ -69,6 +69,7 @@ MistlainMug
 PascalMug
 AlexisMug
 MayorMug
+GeraldMug
 
 BattleSageMCard
 BattleSageFCard
