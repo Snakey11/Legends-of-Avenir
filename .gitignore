@@ -1,7 +1,10 @@
+
+# Global file types to ignore.
 *.sav
 *.sgm
 *.gba
 *.sym
+!sym
 *.wav
 *.ups
 *.SNA
@@ -9,51 +12,51 @@
 *.avi
 *.mp4
 *.lnk
+desktop.ini
+*.ss*
+
+# Base directories to ignore.
+save/
+screenshots/
+states/
+
+# Update/release related batch scripts.
 UPDATE.bat
 UPDATEPrivate.bat
 UPDATEPublic.bat
-!Stan.sym
-!ParseDefinitions.txt
-!Table Definitions.txt
+
+# CSV-related ignores.
 CSV/Nightmare/
 CSV/Tables/*.event
 CSV/Tables/**/*.event
-CG List.png
-Music/WAVs
-Animation Assembler/
-CSA Creator/
+
+# Map-related ignores.
 Maps/*.event
 Maps/*dmp
-_textentries/
+
+# Music-related ignores.
+Music/WAVs
+Music/*.event
+!Music/_Master Music Installer.event
+!Music/drumfix_fe8.event
+
+# Text-related ignores.
 .TextEntries/
-devkitPro/
 Install Text Data.event
 Text Definitions.event
-textdump.event
+Text/ParseDefinitions.txt
+
+# Graphics-related ignores.
+Animation Assembler/
+CSA Creator/
 Animation Assembler/
 Graphics/Battle Palettes/*.dmp
 Graphics/Portraits/*.dmp
 Graphics/Map Sprites/*.dmp
 Graphics/Class Cards/*.dmp
-Music/*.event
-!Music/_Master Music Installer.event
-FE8 Template.event
-FE-CLib-master
-desktop.ini
-Legends of Avenir.png
-Tools/Py/
-Tools/FE-CLib/
-ASM/SkillSystem_FE8
-avenir.png
-Avenir-*.png
-Avenir.gif
-*.ss*
-Text/ParseDefinitions.txt
-Definitions/Definitions.event
 Graphics/WorldMap/*.dmp
-!Music/drumfix_fe8.event
 !Graphics/Vanilla Portrait Table.dmp
 
-save/
-screenshots/
-states/
+# Misc ignores.
+FE-CLib-master
+Definitions/Definitions.event
