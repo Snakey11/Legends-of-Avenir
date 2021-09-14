@@ -145,7 +145,7 @@ static Unit* ToUnit(int charID)
 {
 	if ( charID == 0xFF) { return GetUnit(1); }
 	//else { return GetUnitByCharId(charID); }
-	else { return GetUnitByEventParameter(charID); }
+	else { return GetUnitStructFromEventParameter(charID); }
 }
 
 static int ToCharID(Unit* unit)
