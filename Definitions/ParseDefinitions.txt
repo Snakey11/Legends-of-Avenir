@@ -37,7 +37,6 @@
 [LoadHalleck] = [LoadFace][0x20][0x01]
 [LoadRichter] = [LoadFace][0x23][0x01]
 [LoadInkeeper] = [LoadFace][0x29][0x01]
-[LoadGerald] = [LoadFace][0x29][0x01]
 [LoadSam] = [LoadFace][0x2A][0x01]
 [LoadMerchant] = [LoadFace][0x31][0x01]
 [LoadSean] = [LoadFace][0x34][0x01]
