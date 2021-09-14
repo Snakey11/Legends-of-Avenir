@@ -144,7 +144,8 @@ static int GetNthValidSupport(Unit* unit, int n) // Used for the stat screen R t
 static Unit* ToUnit(int charID)
 {
 	if ( charID == 0xFF) { return GetUnit(1); }
-	else { return GetUnitByCharId(charID); }
+	//else { return GetUnitByCharId(charID); }
+	else { return GetUnitByEventParameter(charID); }
 }
 
 static int ToCharID(Unit* unit)

@@ -154,6 +154,7 @@ extern void RTextUp(RTextProc* proc); // 0x08089354.
 extern void RTextDown(RTextProc* proc); // 0x08089384.
 extern void RTextLeft(RTextProc* proc); // 0x080893B4.
 extern void RTextRight(RTextProc* proc); // 0x080893E4.
+extern Unit* GetUnitByEventParameter(int eventParameter); // 0x800BC50.
 
 void MasterSupportCalculation(Unit* unit, BonusStruct* bonuses);
 static int GetCharacterDistance(Unit* unit1, Unit* unit2);
