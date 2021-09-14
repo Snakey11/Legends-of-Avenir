@@ -101,7 +101,8 @@ BYTE 23 SpeedCastID
 BYTE 00 00
 
 ALIGN 4
-ArcSkillList:
+MercenaryArcSkillList:
+FighterArcSkillList:
 BYTE 1 RallyStrID
 BYTE 23 CounterID
 BYTE 00 00

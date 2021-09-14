@@ -45,7 +45,8 @@ Zalius
 Leyos
 Clara
 Luke
-Arc
+FighterArc
+MercenaryArc
 Efil
 Uzkailis
 Arya

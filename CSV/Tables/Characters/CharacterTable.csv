@@ -48,7 +48,8 @@ Zalius,ZaliusNameText,ZaliusDescText,Zalius,EdgySwordmaster,ZaliusMug,0x0,Thunde
 Leyos,LeyosNameText,LeyosDescText,Leyos,HectorClass,LeyosMug,0x0,AnimaAff,,1,25,8,2,11,9,7,0,5,5,Arank,0,Crank,0,0,0,0,0,95,40,15,30,30,30,5,25,LeyosSkillList|IsPointer,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
 Clara,ClaraNameText,ClaraDescText,Clara,Troubadour,ClaraMug,0x0,LightAff,,6,6,2,6,3,6,2,7,6,1,0,0,0,0,Brank,0,0,0,70,15,50,35,45,15,45,30,ClaraSkillList|IsPointer,0x0,0x0,,0x0,0x0,0x0,0x0,0x0,,,,0x0,0x0,0x0
 Luke,LukeNameText,LukeDescText,Luke,Monk,LukeMug,0x0,LightAff,,1,4,1,4,5,5,3,5,3,4,0,0,0,0,0,0,Crank,0,65,10,45,55,50,20,55,40,LukeSkillList|IsPointer,0x0,LukeEscapeText,,0x0,0x0,0x0,0x0,0x0,,,,0x0,0x0,0x0
-Arc,ArcNameText,ArcDescText,Arc,Fighter,ArcMug,0x0,FireAff,,5,9,7,0,6,3,3,3,6,5,0,0,0,0,0,0,0,0,90,55,5,35,25,30,20,45,ArcSkillList|IsPointer,0x0,ArcEscapeText,,0x0,0x0,0x0,0x0,0x0,,,,0x0,0x0,0x0
+FighterArc,ArcNameText,ArcDescText,FighterArc,Fighter,ArcMug,0x0,FireAff,,5,9,7,0,6,3,3,3,6,5,0,0,Crank,0,0,0,0,0,90,55,5,30,20,25,20,45,FighterArcSkillList|IsPointer,0x0,ArcEscapeText,,0x0,0x0,0x0,0x0,0x0,,,,0x0,0x0,0x0
+MercenaryArc,ArcNameText,ArcDescText,MercenaryArc,Mercenary,ArcMug,0x0,FireAff,,5,6,5,0,4,1,3,3,6,5,Crank,0,0,0,0,0,0,0,80,40,5,35,30,25,20,45,MercenaryArcSkillList|IsPointer,0x0,ArcEscapeText,,0x0,0x0,0x0,0x0,0x0,,,,0x0,0x0,0x0
 Efil,EfilNameText,EfilDescText,Efil,Truerblade,EfilMug,0x0,WindAff,,12,15,14,6,14,16,5,4,8,3,Srank,0,0,0,0,0,0,0,80,60,30,40,60,15,15,20,EfilSkillList|IsPointer,0x0,0x0,,0x0,0x0,0x0,0x0,0x0,,,,0x0,0x0,0x0
 Uzkailis,UzkalisNameText,UzkalisDescText,Uzkailis,GaidenSage,UzkalisMug,0x0,ThunderAff,,1,10,3,11,8,5,8,4,5,3,0,0,0,0,0,Arank,0,0,75,15,45,35,35,15,25,30,UzkalisSkillList|IsPointer,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
 Arya,AryaNameText,AryaDescText,Arya,Myrmidon_F,AryaMug,0x0,AnimaAff,,1,5,3,1,4,2,3,5,2,3,Crank,0,0,0,0,0,0,0,80,30,15,50,55,20,40,80,AryaSkillList|IsPointer,0x0,AryaEscapeText,,0x0,0x0,0x0,0x0,0x0,,,,0x0,0x0,0x0
@@ -69,7 +70,7 @@ Adeline,AdelineNameText,AdelineDescText,Adeline,Archer_F,AdelineMug,0x0,WaterAff
 Remus,RemusNameText,RemusDescText,Remus,Soldier,RemusMug,0x0,AnimaAff,,1,8,4,0,4,4,3,1,4,2,0,Crank,0,0,0,0,0,0,90,35,5,40,40,25,20,25,RemusSkillList|IsPointer,0x0,RemusEscapeText,,0x0,0x0,0x0,0x0,0x0,,,,0x0,0x0,0x0
 Ajax,AjaxNameText,AjaxDescText,Ajax,Shaman,AjaxMug,0x0,FireAff,,1,8,3,5,5,3,6,4,4,2,0,0,0,0,0,0,0,Crank,95,30,50,40,25,40,40,35,AjaxSkillList|IsPointer,0x0,AjaxEscapeText,,0x0,0x0,0x0,0x0,0x0,,,,0x0,0x0,0x0
 Mistlain,MistlainNameText,MistlainDescText,Mistlain,MistlainClass,MistlainMug,0x0,FireAff,,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,MistlainSkillList|IsPointer,0x0,0x0,,0x0,0x0,0x0,0x0,0x0,,,,0x0,0x0,0x0
-Alexis,AlexisNameText,AlexisDescText,Alexis,AlexisClass,AlexisMug,0x0,LightAff,,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,AlexisSkillList|IsPointer,0x0,0x0,,0x0,0x0,0x0,0x0,0x0,,,,0x0,0x0,0x0
+Alexis,AlexisNameText,AlexisDescText,Alexis,AlexisClass,AlexisMug,0x0,LightAff,,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,AlexisSkillList|IsPointer,0x0,0x0,,0x0,0x0,0x0,0x0,0x0,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Henning,HenningNameText,HenningDescText,Henning,Fighter,HenningMug,0x0,FireAff,,1,2,1,0,0,1,1,0,1,2,0,0,0,0,0,0,0,0,80,30,0,25,20,15,5,30,0,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
 Gerwick,GerwickNameText,GerwickDescText,Gerwick,Pirate,GerwickMug,0x0,WaterAff,,1,3,3,0,2,2,3,1,3,3,0,0,Crank,0,0,0,0,0,90,40,5,25,25,15,10,35,0,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
@@ -91,7 +92,7 @@ Emperor,EmperorNameText,EmperorDescText,Emperor,EmperorClass,EmperorMug,0x0,Anim
 Kaid,KaidNameText,KaidDescText,Kaid,Hero,KaidMug,0x0,WindAff,,1,14,3,2,3,2,4,1,2,1,Brank,0,Arank,0,0,0,0,0,100,35,10,30,20,20,10,15,0,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
 Edward,EdwardNameText,EdwardDescText,Edward,Sage,EdwardMug,0x0,ThunderAff,,1,14,5,11,9,5,6,1,5,2,0,0,0,0,Crank,Arank,Drank,0,85,10,45,40,25,20,25,55,0,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
 BossUzkalis,UzkalisNameText,UzkalisDescText,BossUzkalis,GaidenSage,UzkalisMug,0x0,ThunderAff,,1,10,4,0,9,10,3,8,3,2,0,0,0,0,Crank,Srank,0,0,85,15,5,20,15,15,30,20,UzkalisSkillList|IsPointer,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
-BossArc,ArcNameText,ArcDescText,BossArc,Fighter,ArcMug,0x0,FireAff,,5,9,7,2,5,4,2,1,6,5,0,0,Crank,0,0,0,0,0,105,55,15,45,40,20,10,65,ArcSkillList|IsPointer,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
+BossArc,ArcNameText,ArcDescText,BossArc,Fighter,ArcMug,0x0,FireAff,,5,9,7,2,5,4,2,1,6,5,0,0,Crank,0,0,0,0,0,105,55,15,45,40,20,10,65,FighterArcSkillList|IsPointer,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
 Roger,RogerNameText,RogerDescText,Roger,Mercenary,RogerMug,0x0,WaterAff,,1,5,6,1,6,3,0,2,2,3,Brank,0,0,0,0,0,0,0,85,60,10,40,45,10,10,20,0,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
 Haedrican,HaedricanNameText,HaedricanDescText,Haedrican,0x0,0x0,0x3,NoAff,,1,6,4,6,3,2,2,0,2,3,0,0,0,0,0,0,0,0,80,30,25,20,20,20,10,35,0,0x0,0x0,,0x0,0x0,0x0,0x0,0x0,,,,0x0,0x0,0x0
 Tyrone,TyroneNameText,TyroneDescText,Tyrone,Warrior,TyroneMug,0x0,DarkAff,,1,10,7,11,5,4,7,4,4,5,0,0,Arank,Crank,0,0,0,0,90,40,45,30,20,15,10,50,0,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0

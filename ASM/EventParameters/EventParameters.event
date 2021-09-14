@@ -22,8 +22,14 @@
 	EventParameter(-1,EventParameterGetActive) // Get current unit.
 	EventParameter(-2,EventParameterGetCoordsInSlotB) // Get unit at coordinates in memory slot 0xB.
 	EventParameter(-3,EventParameterGetUnitInSlot2) // Get unit in memory slot 0x2.
+	EventParameter(FighterArc,EventParameterGetArc) // For these two since Arc can have 2 character IDs, get the correct one.
+	EventParameter(MercenaryArc,EventParameterGetArc)
 	
 	WORD 0 0 // Terminator.
 	
+	gArcFighter:
+	SHORT FighterArc
+	gArcMercenary:
+	SHORT MercenaryArc
 	
 #endif // EVENT_PARAMETER_HAX

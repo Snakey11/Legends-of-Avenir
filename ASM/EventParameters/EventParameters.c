@@ -11,6 +11,7 @@ struct EventParameterEntry
 };
 
 extern EventParameterEntry EventParameterTable[0xFF];
+extern u16 gArcFighter, gArcMercenary; // Use these to try to get Arc's Unit*.
 extern u32 gMemorySlot[15]; // 0x030004B8.
 
 extern int GetPlayerLeaderUnitId(void); // 0x08033258
@@ -58,4 +59,11 @@ Unit* EventParameterGetFirstUnit(int key)
 Unit* EventParametersGetLeader(int key)
 {
 	return GetUnitByCharId(GetPlayerLeaderUnitId());
+}
+
+Unit* EventParameterGetArc(int key)
+{
+	Unit* fighterUnit = GetUnitByCharId(gArcFighter);
+	if ( fighterUnit ) { return fighterUnit; } // If we found a unit for ArcFighter, return it.
+	return GetUnitByCharId(gArcMercenary); // If we found a unit for ArcMercenary, return it. For none found, NULL is returned.
 }
