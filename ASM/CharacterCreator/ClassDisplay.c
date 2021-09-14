@@ -11,6 +11,7 @@ void CreatorClassStartPlatform(CreatorClassProc* proc) // At this point, Creator
 	if ( creator->route == Mercenary ) { proc->platformType = GrassPlatform; }
 	else if ( creator->route == Military ) { proc->platformType = RoadPlatform; }
 	else if ( creator->route == Mage ) { proc->platformType = SandPlatform; }
+	else { proc->platformType = GrassPlatform; }
 	proc->mode = 1;
 	for ( int i = 0 ; i < 5 ; i++ ) { proc->classes[i] = creator->currSet->list[i].class; }
 	proc->menuItem = creator->lastClassIndex;

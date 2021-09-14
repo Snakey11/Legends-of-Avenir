@@ -177,7 +177,9 @@ CreatorClassDisplayLoop:
     /* 080CD14E (T) */  ldr     r0,=#0x201FADC
     /* 080CD150 (T) */  blh     #0x805AE14, r2
     /* 080CD154 (T) */  mov     r3,r9
-    /* 080CD156 (T) */  ldr     r0,[r3,#0x50]
+						mov 	r2, #0x50
+						ldrb	r0,[r3,r2]
+    @/* 080CD156 (T) */  ldrb    r0,[r3,#0x50] @ Sometimes this gets loaded as something bad and loading only the byte fixes it? I wish I understood it better to doc better...
     /* 080CD158 (T) */  mov     r2,#0x32
     /* 080CD15A (T) */  ldsh    r1,[r7,r2]
     /* 080CD15C (T) */  mov     r3,#0x3A
