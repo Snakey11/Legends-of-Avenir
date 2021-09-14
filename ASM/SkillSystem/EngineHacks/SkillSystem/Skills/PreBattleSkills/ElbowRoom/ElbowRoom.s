@@ -32,7 +32,7 @@ beq End
 @add 3 damage
 mov r1, #0x5a
 ldrh r0, [r4, r1] @atk
-add r0, #3
+add r0, #2
 strh r0, [r4,r1]
 
 End:

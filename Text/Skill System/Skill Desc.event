@@ -400,11 +400,11 @@ from critical hits by 50%.[X]
 Celerity: Movement +2.[X]
 
 ## SD_FieryBlood
-Fiery Blood: +4 damage[N]
+Fiery Blood: +2 damage[N]
 when HP is not at max.[X]
 
 ## SD_ElbowRoom
-Elbow Room: +3 damage dealt[N]
+Elbow Room: +2 damage dealt[N]
 when on open terrain.[X]
 
 ## SD_NaturalCover
