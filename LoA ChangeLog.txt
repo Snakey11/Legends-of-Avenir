@@ -2,6 +2,13 @@ v2.2
 Fixed (at the very least lessened in extreme cases?) lag in maps with many talk convos
 Anima "effectiveness" has been reworked using effectiveness rework that ships with the skill system. It is now 2x effectiveness (everything else as 3x is unchanged).
 Wyvern riders are no longer considered horse units by effective weapons
+Fixed camera movement on reinforcements in Mercenary Bandit Disband 6
+Fixed the Emperor's map sprite
+Fixed bugs associated with units rejoining mid-map (Elanil/Finoc is that you?)
+Hopefully fix an emulator-specific crash in Mercenary Militia Kill 5
+Fixed Kilthel loading as the wrong class in the Bandit Disband cutscene
+Fixed "Appies 5 poison"
+Fixed an incorrect gendered pronoun in Assassin 5
 
 v2.1
 Fixed Military 5 Accept Hold end of chapter crash
