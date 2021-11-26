@@ -523,8 +523,10 @@ NoFade
 EndA2
 
 RunCycle1:
+CamON
 LOAD1 0x1 LoadCycle1
 ENUN
+CamOFF
 NoFade
 EndA2
 
@@ -540,7 +542,10 @@ NoFade
 EndA2
 
 RunCycle2:
+CamON
 LOAD1 0x1 LoadCycle2
+ENUN
+CamOFF
 NoFade
 EndA2
 
@@ -551,70 +556,92 @@ UNIT Wanderer Mercenary Daniel Level(14,Enemy,True) [5,20] 0x00 0x00 0x00 0x00 [
 UNIT
 
 Turn3Wanderers:
+CamON
 LOAD1 0x1 LoadTurn3Wanderers
 ENUN
+CamOFF
 NoFade
 EndA2
 
 Turn5Wanderers:
+CamON
 LOAD1 0x1 LoadTurn5Wanderers
 ENUN
+CamOFF
 NoFade
 EndA2
 
 Turn6Wanderers:
+CamON
 LOAD1 0x1 LoadTurn6Wanderers
 ENUN
+CamOFF
 NoFade
 EndA2
 
 Turn7Wanderers:
+CamON
 LOAD1 0x1 LoadTurn7Wanderers
 ENUN
+CamOFF
 NoFade
 EndA2
 
 Turn9Wanderers:
+CamON
 LOAD1 0x1 LoadTurn9Wanderers
 ENUN
+CamOFF
 NoFade
 EndA2
 
 Turn11Wanderers:
+CamON
 LOAD1 0x1 LoadTurn11Wanderers
 ENUN
+CamOFF
 NoFade
 EndA2
 
 Turn12Wanderers:
+CamON
 LOAD1 0x1 LoadTurn12Wanderers
 ENUN
+CamOFF
 NoFade
 EndA2
 
 Turn13Wanderers:
+CAM1 [7,16]
+STAL 0x30
 LOAD1 0x1 LoadTurn13Wanderers
 ENUN
-CAM1 [7,16]
+FlashCursor(Daniel,60)
 Text(Merc6BanditDisbandDanielHereText)
 NoFade
 EndA2
 
 Turn15Wanderers:
+CamON
 LOAD1 0x1 LoadTurn15Wanderers
 ENUN
+CamOFF
 NoFade
 EndA2
 
 Turn16Wanderers:
+CamON
 LOAD1 0x1 LoadTurn16Wanderers
 ENUN
+CamOFF
 NoFade
 EndA2
 
 Turn17Wanderers:
+CamON
 LOAD1 0x1 LoadTurn17Wanderers
 ENUN
+CamOFF
 NoFade
 EndA2
 
