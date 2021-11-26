@@ -156,6 +156,7 @@ NoFade
 EndA2
 
 Home2:
+EnterStop
 MUSI
 Text(0x1,Merc2MilitiaHouse1Text)
 GiveItem(Speedwing,0xFFFF)
