@@ -219,7 +219,6 @@
 
 //Label Character definitions
 #define Uzkalis BossUzkalis
-#define GuardianSpirit Narrator
 #define BossGhost GhostBoss
 #define Haedrician Haedrican
 #define Hawken Harken
