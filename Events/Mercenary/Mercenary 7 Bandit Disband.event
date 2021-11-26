@@ -321,7 +321,7 @@ StartingKilthelFightPeople:
 UNIT BossEfil Truerblade BossEfil Level(11,NPC,True) [11,1] 0x00 0x00 0x00 0x00 [SilverSword] NoAI
 UNIT Maximus BattleSage Maximus Level(16,NPC,True) [10,4] 0x00 0x00 0x00 0x00 [Bolganone] NoAI
 UNIT Uzkalis GaidenSage Uzkalis Level(17,NPC,True)[12,3] 0x00 0x00 0x00 0x00 [Thoron] NoAI
-UNIT Kilthel GuardianSpirit Kilthel Level(15,Enemy,True) [7,1] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI
+UNIT Kilthel NarratorClass Kilthel Level(15,Enemy,True) [7,1] 0x00 0x00 0x00 0x00 [Tomahawk] NoAI
 UNIT Arveldir WilSniper Kilthel Level(10,Enemy,True) [8,2] 0x00 0x00 0x00 0x00 [SilverBow] NoAI
 UNIT Servius ServiusClass Kilthel Level(13,Enemy,True) [7,3] 0x00 0x00 0x00 0x00 [SilverBlade] NoAI
 UNIT
