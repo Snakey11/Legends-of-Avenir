@@ -82,11 +82,14 @@ NoFade
 GotoPrepScreen
 
 EndingScene:
+EnterStop
 MUSC Indignation
 FADI 0x5
 CLEA 0x0
 CLEE 0x0
 REVEAL Kendrick
+SVAL 0x1 0x1
+SET_STATE Kendrick
 STAL 0x20
 SetBackground(0x23)
 TEXTSHOW Merc5MilitiaKillEndingText
