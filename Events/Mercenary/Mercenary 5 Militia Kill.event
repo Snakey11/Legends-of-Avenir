@@ -98,46 +98,7 @@ MUSC Raid
 TEXTCONT
 TEXTEND
 REMA
-CHECK_EVENTID 0x6E
-BNE 0x0 0xC 0x0
-	CHECK_EVENTID 0x69 // Female
-	BEQ 0x2 0xC 0x0
-		GiveItem(HeroCrest,PlayerFMercenary) // Mercenary
-	GOTO 0x1
-	LABEL 0x2
-	CHECK_EVENTID 0x6A
-	BEQ 0x3 0xC 0x0
-		GiveItem(HeroCrest,PlayerFMyrmidon) // Myrmidon
-	GOTO 0x1
-	LABEL 0x3
-		GiveItem(ElysianWhip,PlayerFPegasusKnight) // Pregasus Knight
-	GOTO 0x1
-LABEL 0x0
-	CHECK_EVENTID 0x69 // Male
-	BEQ 0x4 0xC 0x0
-		GiveItem(HeroCrest,PlayerMMercenary) // Mercenary
-	GOTO 0x1
-	LABEL 0x4
-	CHECK_EVENTID 0x6A
-	BEQ 0x5 0xC 0x0
-		GiveItem(HeroCrest,PlayerMMyrmidon) // Myrmidon
-	GOTO 0x1
-	LABEL 0x5
-	CHECK_EVENTID 0x6B
-	BEQ 0x6 0xC 0x0
-		GiveItem(HeroCrest,PlayerMFighter) // Fighter
-	GOTO 0x1
-	LABEL 0x6
-	CHECK_EVENTID 0x6C
-	BEQ 0x7 0xC 0x0
-		GiveItem(OceanSeal,PlayerMPirate) // Pirate
-	GOTO 0x1
-	LABEL 0x7
-	CHECK_EVENTID 0x6D
-	BEQ 0x8 0x0 0xC
-		GiveItem(HeroCrest,PlayerMBrigand) // Brigand
-	LABEL 0x8
-LABEL 0x1
+GiveItem(HeroCrest,0x00)
 MoveToChapter(MercenaryMilitiaKill6)
 ENDA
 
