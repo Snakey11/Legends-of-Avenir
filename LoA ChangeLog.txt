@@ -9,6 +9,7 @@ Hopefully fix an emulator-specific crash in Mercenary Militia Kill 5
 Fixed Kilthel loading as the wrong class in the Bandit Disband cutscene
 Fixed "Appies 5 poison"
 Fixed an incorrect gendered pronoun in Assassin 5
+Promotion items and stat boosters have been lowered in price (mainly so they don't sell for a shitload)
 
 v2.1
 Fixed Military 5 Accept Hold end of chapter crash
