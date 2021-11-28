@@ -1,0 +1,16 @@
+
+ArcFighter:
+#incbin "ArcFighter.dmp"
+
+ArcHero:
+#incbin "ArcHero.dmp"
+
+ArcMercenary:
+#incbin "ArcMercenary.dmp"
+
+ArcRanger:
+#incbin "ArcRanger.dmp"
+
+ArcWarrior:
+#incbin "ArcWarrior.dmp"
+
