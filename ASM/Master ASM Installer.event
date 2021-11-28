@@ -102,6 +102,16 @@ ALIGN 4
 
 #include "GiveEXP/give_exp_install.event" // Add an ASMC that gives an arbitrary amount of EXP.
 
+#include "FactionPalettes/FactionPalettes.lyn.event"
+ALIGN 4
+FactionPaletteList:
+//WORD Cesarian CesarianPalettes
+//WORD Arcanian ArcanianPalettes
+//WORD Altian AltianPalettes
+//WORD Haedrician HaedricianPalettes
+//WORD Shizonian ShizonianPalettes
+WORD 0 0
+
 #include "HPBars/HPBars.event"
 
 #include "HybridClasses/HybridClasses.event"
