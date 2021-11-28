@@ -413,6 +413,9 @@ BYTE 0xAC
 ORG $24DEC // Remove 5x 0 gold hardcoding.
 SHORT 0x46C0 0x46C0 0x46C0 0x46C0
 
+ORG $A8A22 // Fix R text crash on the save screen (by removing the button press check).
+SHORT 0xE025
+
 /*ORG 0x229A8 // Thracia trading.
 SHORT 0x1C00
 ORG 0x22A10
