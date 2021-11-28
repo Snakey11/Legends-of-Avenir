@@ -122,8 +122,13 @@ ENDA
 
 //Label AryaComment
 AryaComment:
-CAM1 Arya
-Text(Merc5BanditBanditAryaText)
+CHECK_ALIVE Arya
+BEQ 0x0 0x0 0xC
+	CAM1 Arya
+	STAL 0x40
+	FlashCursor(Arya,60)
+	Text(Merc5BanditBanditAryaText)
+LABEL 0x0
 NoFade
 ENDA
 
