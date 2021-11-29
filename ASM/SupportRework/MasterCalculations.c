@@ -146,6 +146,7 @@ extern u16 Bg2_Origin[32][32]; // 0x0200472C.
 extern const void* SupportStatScreenSmallBox;
 extern const void* SupportStatScreenBlueBox;
 extern const char TotalCurrentSupportBonusesText;
+extern u8 SupportReworkShouldUse0xFFBehavior; // Should we treat 0xFF as the first character struct?
 
 extern const void** GetChapterEvents(int number); // 0x080346B0.
 extern void StartMapEventEngine(const void* scene, int runKind); // 0x0800D0B0.

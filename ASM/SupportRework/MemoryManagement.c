@@ -143,13 +143,13 @@ static int GetNthValidSupport(Unit* unit, int n) // Used for the stat screen R t
 // These 2 functions are for use with 0xFF representing the first character struct.
 static Unit* ToUnit(int charID)
 {
-	if ( charID == 0xFF) { return GetUnit(1); }
+	if ( SupportReworkShouldUse0xFFBehavior && charID == 0xFF) { return GetUnit(1); }
 	//else { return GetUnitByCharId(charID); }
 	else { return GetUnitStructFromEventParameter(charID); }
 }
 
 static int ToCharID(Unit* unit)
 {
-	if ( unit == GetUnit(1) ) { return 0xFF; }
+	if ( SupportReworkShouldUse0xFFBehavior && unit == GetUnit(1) ) { return 0xFF; }
 	else { return unit->pCharacterData->number; }
 }

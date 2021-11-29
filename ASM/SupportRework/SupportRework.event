@@ -17,6 +17,9 @@
 		
 		#include "CHARASM/CHARASM.event" // If a CHARASM function returns 2, the convo is useable independent of other fields. Used for making suppor convos appear with talk bubbles.
 		
+		ALIGN 4
+		SupportReworkShouldUse0xFFBehavior:
+		BYTE True // Set this to true if you want character ID 0xFF passed into support rework fields to equate to the first character struct.
 		
 		ALIGN 4
 		SupportLevelNameTable: // Each entry is a pointer to a string. i.e. A, B, B+, whatever. Indexed by level from 0 to 7.
