@@ -1,4 +1,5 @@
 v2.2
+Longbows and shortbows should work more predictably with bow range up now
 Fixed (at the very least lessened in extreme cases?) lag in maps with many talk convos
 Anima "effectiveness" has been reworked using effectiveness rework that ships with the skill system. It is now 2x effectiveness (everything else as 3x is unchanged).
 Wyvern riders are no longer considered horse units by effective weapons
@@ -12,6 +13,15 @@ Fixed an incorrect gendered pronoun in Assassin 5
 Promotion items and stat boosters have been lowered in price (mainly so they don't sell for a shitload)
 Adlez warrior palette should be fixed
 Fixed R text crashing on the save screen
+Fixed crashing on resume after Tact death (as well as RN state not being saved properly sometimes)
+Fixed Marksman (Archer Tact promotion) not having sword access
+Fixed swordmaster weapon locks
+Kind of remedied water tiles in the assassin boat map
+Fixed seraph knight description saying it gets sword use
+Derek has been given an iron axe in Military 1
+Baron promotion gains have been buffed
+Changed the brave axe chest in 7 Pass Haedric to a brave lance
+Sentinel description now mentions that they are armored
 
 v2.1
 Fixed Military 5 Accept Hold end of chapter crash
