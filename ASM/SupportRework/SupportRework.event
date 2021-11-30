@@ -140,6 +140,9 @@
 		SHORT 0x7922 // ldrb r2, [ r4, #0x04 ].
 		ORG $2AA2E
 		SHORT 0x7964 // ldrb r4, [ r4, #0x05 ].
+		
+		ORG $281C8 // Make GetROMUnitSupportCount always return zero, effectively removing vanilla support initialization for units.
+		SHORT 0x2000 0x4770 // mov r0, #0x00 ; bx lr.
 		POP
 		
 	#endif // SUPPORT_REWORK
