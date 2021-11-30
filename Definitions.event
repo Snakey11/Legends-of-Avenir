@@ -1735,6 +1735,9 @@
 
 #include "Definitions/Definitions.event"
 
+#undef CauseGameOverIfLordDies
+#define CauseGameOverIfLordDies "AFEV 0 GameOverStart 0x65"
+
 /*
 #define LoadingMercenary(Index,UnitPointer)
 CHECK_EVENTID 0x66

@@ -1,5 +1,9 @@
 
 ALIGN 4
+GameOverStart:
+ASMC 0x800D391
+NoFade
+ENDB
 
 #include "REDAs.event"
 {
