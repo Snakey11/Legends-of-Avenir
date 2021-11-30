@@ -43,7 +43,7 @@ END_MAIN
 LocationBasedEvents:
 Chest(Physic,17,3)
 Chest(SilverBow,18,4)
-Chest(BraveAxe,11,10)
+Chest(BraveLance,11,10)
 Chest(Elixir,10,22)
 END_MAIN
 
