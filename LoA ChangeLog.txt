@@ -22,6 +22,8 @@ Derek has been given an iron axe in Military 1
 Baron promotion gains have been buffed
 Changed the brave axe chest in 7 Pass Haedric to a brave lance
 Sentinel description now mentions that they are armored
+Nerfed wyvern Tact :)
+Battle sage and dread fighter have been made a little more distinct/rebalanced/buffed/nerfed
 
 v2.1
 Fixed Military 5 Accept Hold end of chapter crash
