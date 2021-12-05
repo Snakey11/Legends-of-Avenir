@@ -140,6 +140,8 @@ ORG $160AE
 SHORT 0x46C0
 POP
 
+#include "PromotionStats/PromotionStats.event"
+
 // Completely rewrite ComputeExpFromBattle and GetBattleUnitStaffExp.
 #include "ModularerEXP/ModularerEXP.lyn.event"
 #define StaffEXPEntry(Item,T1EXP,T2EXP) "BYTE Item T1EXP T2EXP 0"

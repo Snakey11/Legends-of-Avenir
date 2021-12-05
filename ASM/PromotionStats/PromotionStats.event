@@ -1,0 +1,7 @@
+
+PUSH
+ORG $CCAAC // nop out PromotionDisplay_InitClassName to prevent drawing the class name.
+SHORT 0x4770
+ORG $CCB40
+SHORT 0x4770
+POP
