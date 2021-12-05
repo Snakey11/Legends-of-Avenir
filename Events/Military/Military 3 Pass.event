@@ -192,9 +192,9 @@ EndUnit
 //Label Turn 4 Units
 LoadTurn4Units:
 UNIT GerwickBandit Cavalier BossAdlez Level(7,Enemy,True) [17,15] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
-UNIT GerwickBandit Pirate BossAdlez Level(8,Enemy,True) [17,14] 0x00 0x00 0x01 REDA12R12 [SteelAxe] AttackInRangeAI
-UNIT GerwickBandit Fighter BossAdlez Level(8,Enemy,True) [0,19] 0x00 0x00 0x00 0x00 [ShortAxe] ChaseOnceApproachedAI
-UNIT GerwickBandit Soldier BossAdlez Level(7,Enemy,True) [17,0] 0x00 0x00 0x00 0x00 [IronLance] ChaseOnceApproachedAI
+UNIT GerwickBandit Pirate BossAdlez Level(8,Enemy,True) [17,14] 0x00 0x00 0x01 REDA12R12 [SteelAxe] NoAI
+UNIT GerwickBandit Fighter BossAdlez Level(8,Enemy,True) [0,19] 0x00 0x00 0x00 0x00 [ShortAxe] NoAI
+UNIT GerwickBandit Soldier BossAdlez Level(7,Enemy,True) [17,0] 0x00 0x00 0x00 0x00 [IronLance] NoAI
 UNIT GerwickBandit Fighter BossAdlez Level(9,Enemy,True) [17,4] 0x00 0x00 0x00 0x00 [DragonAxe] NoAI
 UNIT GerwickBandit Mercenary BossAdlez Level(8,Enemy,True) [17,3] 0x00 0x00 0x00 0x00 [Wyrmslayer] NoAI
 UNIT GerwickBandit Mercenary BossAdlez Level(7,Enemy,True) [17,3] 0x00 0x00 0x01 REDA16R3 [IronSword] NoAI
