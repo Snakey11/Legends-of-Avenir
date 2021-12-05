@@ -56,7 +56,7 @@ Well, there's certainly a horde of Vathrylian Guardians...
 ## Military6AcceptRetreatLeaveXyliaText
 [ConversationText]
 [MidLeft][LoadXylia]
-Looks like [Tact] finally found his way here. Good. I can already feel the seal around the temple dissipating... Let's see how they fare against the Guardians. I'll wait here to see if they can reach me...[X]
+Looks like [Tact] finally found [his2] way here. Good. I can already feel the seal around the temple dissipating... Let's see how they fare against the Guardians. I'll wait here to see if they can reach me...[X]
 
 ## Military6AcceptRetreatLeaveReachText
 [ConversationText]
