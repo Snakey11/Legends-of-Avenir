@@ -6,7 +6,7 @@
 # 0x0094
 HP Bars[.][X]
 
-# 0x00B2
+# 0x0903
 Set health bar display[X]
 
 ## StairsNameText
@@ -20,7 +20,7 @@ the connecting end.[X]
 The staircase is blocked[NL]
 from the other side.[X]
 
-# 0x903 RaidNameText
+## RaidNameText
  Raid[X]
 
 ## RaidDescText
