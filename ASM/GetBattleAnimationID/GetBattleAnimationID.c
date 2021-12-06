@@ -16,7 +16,7 @@ short GetBattleAnimationID(Unit* unit, AnimReference* ref, int item, int idk) //
 	int type = GetItemType(GetItemIndex(item));
 	if ( !item ) { type = 9; } // If item is 0, type is 9.
 	short ret = 0; // We'll return this with the best weapon type if there's no specific item rule.
-	for ( int i = 0 ; ref[i].type ; i++ )
+	for ( int i = 0 ; ref && ref[i].type ; i++ )
 	{
 		if ( ref[i].type & 0x100 )
 		{
