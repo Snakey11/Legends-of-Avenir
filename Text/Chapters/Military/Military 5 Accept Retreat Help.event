@@ -237,30 +237,30 @@ You can count on me.
 
 ## Military5AcceptRetreatHelpNRedHouseText
 [ConversationText]
-[MidRight][LoadCurrent]
-oof[X]
+[MidRight][LoadCurrent][MidLeft][LoadSoldier1]
+Hey! I'm glad you're here. I've noticed these damn Arcanians slipping into the village slowly but surely, but wasn't able to gather enough evidence to make a report! Here, take this axe I nicked off one of their patrols I ambushed. It has some special enchantment on it to do more damage to wyvern riders, but it also packs a hefty punch. I'd join you out there, but you seem to have it under control...[X]
 
 ## Military5AcceptRetreatHelpCRedHouseText
 [ConversationText]
-[MidRight][LoadCurrent]
-oof[X]
+[MidRight][LoadCurrent][MidLeft][LoadVillagerMan2]
+You look like a fighter... Say, you want to take this lance off my hands? Bought it off some guy when I thought I wanted to enlist, but once the war broke out in full force, the pay didn't seem to make up for the potential of dying. Take it! I'll feel less guilty that way.[X]
 
 ## Military5AcceptRetreatHelpWRedHouseText
 [ConversationText]
-[MidRight][LoadCurrent]
-oof[X]
+[MidRight][LoadCurrent][MidLeft][LoadVillagerOldMan]
+Back in my day, we didn't use any enhancements to make ourselves any stronger... That being said, I've definitely slowed down a bit in my old age, so my son went ahead and got me one of those speed-increasing artifacts to try and help me... But I just can't bring myself to use it! Here, take it. I can tell him I used it, and you need it more than I.[X]
 
 ## Military5AcceptRetreatHelpSRedHouseText
 [ConversationText]
-[MidRight][LoadCurrent]
-oof[X]
+[MidRight][LoadCurrent][MidLeft][LoadVillagerWoman]
+You're military? Dammit... My husband lost his life fighting your damn war. All I got back was this seal. It's almost like a taunt. The one thing I have to remember him by is something he got killed earning... I can't stand it... Take the damn thing. I'd rather just have my memories than this. Now get out![X]
 
 ## Military5AcceptRetreatHelpInnText
 [ConversationText]
-[MidRight][LoadCurrent]
-oof[X]
+[MidRight][LoadCurrent][MidLeft][LoadVillagerOldWoman]
+Sorry, we don't do business when our city is under attack! To think a few of those soldiers were sleeping in these rooms just last night, right under our noses... Give them a good thrashing for me!... At least they paid well...[X]
 
 ## Military5AcceptRetreatHelpYellowHouseText
 [ConversationText]
-[MidRight][LoadCurrent]
-oof[X]
+[MidRight][LoadCurrent][MidLeft][LoadVillagerGirl1]
+My parents are both out right now... They work for some dude named Kendrick. They have a lot of respect for him, but every time I've met him, he just seems a bit off...[X]

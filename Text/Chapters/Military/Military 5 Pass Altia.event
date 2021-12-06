@@ -204,4 +204,6 @@ we moving out now?[A]
 [FarLeft]Understood.[A][X]
 
 ## Military5PassAltiaHouseText
-[FarLeft][LoadCurrent]oof[A][X]
+[ConversationText]
+[MidLeft][LoadCurrent][MidLeft][LoadVillagerMan3]
+What the hell's goin on out there? A fight? Well, leave me out of it! What's that? Warlord Richter? It's unusual for any Warlord to go against the Basileus like that... A man like that deserves to die.[X]
