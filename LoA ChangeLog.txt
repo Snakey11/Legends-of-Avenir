@@ -34,6 +34,10 @@ Fixed broken wall stat issues and crashing (there are still minor graphical issu
 Fixed stairs text appearing in the options menu
 Added the house text to Military Pass Altia 5, Military Accept Retreat Help 5
 Fixed a game over caused by finishing Military Pass Haedric 7
+Fixed the wrong cutscene map loading in the opening cutscene of Mercenary Bandit Disband 6
+Added a couple disclaimers prefacing bad routes, directing you to take better ones (namely avoid merc arcanae and merc true bandit)
+Enemy control is back in through the debug menu now
+Fixed a bug where Cougar wouldn't load back in the debug build in Military 5 Accept Hold
 
 v2.1
 Fixed Military 5 Accept Hold end of chapter crash
