@@ -1,0 +1,53 @@
+/* No need for any of this because I made the toggle work from the debug menu.
+PUSH
+  ORG $1c90c
+  jumpToHack(ArrowCheck)
+
+  ORG $1c8b2
+  // SHORT 0x8919 //prevent key bounce
+
+  // ORG $1c8bc
+  ORG $1c8c8
+  // jumpToHack(BCheck)
+  BYTE 0x00 0x4A 0x10 0x47; POIN (BCheck|0x1) //jumptohack but using r2
+
+  ORG $1ca1c
+  jumpToHack(ACheck)
+
+  //ORG $1cae4
+  //jumpToHack(StartCheck) //this check is now part of dangerzone
+  
+  ORG $15450
+  jumpToHack(EnemyControl)
+POP
+
+ALIGN 4
+ArrowCheck:
+#incbin "arrowcheck.dmp"
+
+BCheck:
+#incbin "b_check.dmp"
+
+ACheck:
+#incbin "a_check.dmp"
+
+//StartCheck:
+//#incbin "start_check.dmp"
+//POIN SecretEvent
+*/
+#include "EnemyControl.lyn.event"
+
+SecretEvent:
+CHECK_EVENTID 0xB2 //slot c = 0 or 1
+BNE 0x1234 0xC 0x0
+ENUT 0xB2
+NOTIFY ControlONMessage 0x0 0x0 //text, music/sound, 0
+ENUN
+GOTO 0x1235
+LABEL 0x1234
+ENUF 0xB2
+NOTIFY ControlOFFMessage 0x0 0x0
+ENUN
+LABEL 0x1235
+NoFade
+ENDA

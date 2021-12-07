@@ -14,4 +14,5 @@ MenuCommand(UM_EditSkill, UM_EditSkillDesc, OrangeText, $04F449, SkillDebugComma
 MenuCommand(WinNameText, WinDescText, GreenText, Win_Usability, Win_Button)
 MenuCommand(DebugNameText, 0, GreenText, 0x4F449, DebugEffect)
 MenuCommand(ClassDisplayNameText, 0, GreenText, 0x4F449, ClassDisplayUMEffect)
+MenuCommand(EnemyControlText,0,GreenText,0x4F449,EnemyControlMenuEffect)
 UM_Separator
