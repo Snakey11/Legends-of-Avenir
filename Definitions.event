@@ -510,7 +510,7 @@
 //LabelEnd
 
 //Label Chapter Defenitions
-#define OutsideKilthelCutscene OutsideTempleCutscene
+#define KilthelCutscene OutsideKilthelCutscene
 /*
 #define PrologueChapter 0x0
 #define Mage1 0x1
