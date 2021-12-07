@@ -66,7 +66,7 @@ OutsideTempleCutscene
 MercenaryCampCutscene
 MaximusUzkalisCutscene
 HaedricCastleCutscene
-KilthelCutscene
+OutsideKilthelCutscene
 ArtifactDoorCutscene
 BacrunRuins1Cutscene
 BacrunRuins2Cutscene
