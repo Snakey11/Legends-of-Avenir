@@ -119,6 +119,8 @@ ENUN
 STAL 0x60
 Text(0x30,Merc4MilitiaWaitCesariaHereText)
 EnterStop
+Text(ArcanaeDisclaimerText)
+EnterStop
 ASMC CallMerc4MilitiaWaitMenu|1
 FADI 0x5
 MUSC Advance
