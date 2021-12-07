@@ -24,6 +24,16 @@ Changed the brave axe chest in 7 Pass Haedric to a brave lance
 Sentinel description now mentions that they are armored
 Nerfed wyvern Tact :)
 Battle sage and dread fighter have been made a little more distinct/rebalanced/buffed/nerfed
+Fixed a conversation in Military Haedric 6 between Sekar and Leon
+Fixed rangers and mage knights having the wrong movement sound
+Fixed some gendered pronouns for Tact being wrong in the Military Accept Retreat Leave route
+Fixed reinforcement AI in military pass 3
+Replaced Remus's vulnerary with a javelin in Military 3 Accept
+Removed fancy text in the promotion screen (no more narrow font issues with it if it doesn't exist anymore!)
+Fixed broken wall stat issues and crashing (there are still minor graphical issues that appear unrelated? I'm going to deal with those later)
+Fixed stairs text appearing in the options menu
+Added the house text to Military Pass Altia 5, Military Accept Retreat Help 5
+Fixed a game over caused by finishing Military Pass Haedric 7
 
 v2.1
 Fixed Military 5 Accept Hold end of chapter crash
