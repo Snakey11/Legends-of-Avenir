@@ -95,9 +95,11 @@ ALIGN 4
 
 #include "GetRandomUnitInRange/GetRandomUnitInRange.lyn.event"
 
-#include "GiveToSupply/GiveToSupply.lyn.event"
+#include "GiveGold/GiveGold.lyn.event"
 
 #include "GiveEXP/give_exp_install.event" // Add an ASMC that gives an arbitrary amount of EXP.
+
+#include "GiveToSupply/GiveToSupply.lyn.event"
 
 #include "FactionPalettes/FactionPalettes.lyn.event"
 ALIGN 4

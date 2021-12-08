@@ -1649,6 +1649,7 @@
 
 #define GiveItem(Item,Character) "SMOV 0x3 Item ; GIVEITEMTO Character"
 #define GiveGold(Amount) "SVAL 0x3 Amount ; GIVEITEMTOMAIN 0x0"
+#define GiveGoldSilent(Amount) "SVAL 0x1 (Amount) ; ASMC GiveGoldSilent|1"
 
 #define EndConvo "CALL $9EE2C4"
 
