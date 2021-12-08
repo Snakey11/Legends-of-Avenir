@@ -141,6 +141,8 @@ GiveToSupplySilent(SteelLance)
 GiveToSupplySilent(HandAxe)
 GiveToSupplySilent(SteelBow)
 GiveToSupplySilent(Flux)
+GiveGoldSilent(1000)
+GiveGoldSilent(-2000)
 MoveToChapter(MilitaryAccept3)
 NoFade
 ENDA
