@@ -1,4 +1,7 @@
 v2.2
+Brand new Merc->Cesaria route!
+	This is a complete overhaul of the old Merc->Cesaria route which was pretty bad. We have new chapters, dialogue, the works!
+	To get the route, help Danaan, don't kill Gerwick, then side with Cesaria
 Longbows and shortbows should work more predictably with bow range up now
 Fixed (at the very least lessened in extreme cases?) lag in maps with many talk convos
 Anima "effectiveness" has been reworked using effectiveness rework that ships with the skill system. It is now 2x effectiveness (everything else as 3x is unchanged).
@@ -38,6 +41,8 @@ Fixed the wrong cutscene map loading in the opening cutscene of Mercenary Bandit
 Added a couple disclaimers prefacing bad routes, directing you to take better ones (namely avoid merc arcanae and merc true bandit)
 Enemy control is back in through the debug menu now
 Fixed a bug where Cougar wouldn't load back in the debug build in Military 5 Accept Hold
+Effective speed now uses strength against weapon weight instead of con
+	By consequence, I've increased the strength across the board for mages.
 
 v2.1
 Fixed Military 5 Accept Hold end of chapter crash
