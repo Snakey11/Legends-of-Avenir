@@ -20,8 +20,8 @@ TurnBasedEvents:
 TurnEventPlayer(0x0,Turn2,2)
 TurnEventPlayer(0x0,Turn4,4)
 TurnEventPlayer(0x0,Turn5,5)
-TurnEventPlayer(0x0,Turn6,6)
 TurnEventPlayer(0x0,Turn7,7)
+TurnEventPlayer(0x0,Turn9,9)
 END_MAIN
 
 //Label CharacterBasedEvents
@@ -180,17 +180,17 @@ CamOFF
 NoFade
 EndA2
 
-Turn6:
+Turn7:
 CamON
-LOAD1 0x1 Turn6Units
+LOAD1 0x1 Turn7Units
 ENUN
 CamOFF
 NoFade
 EndA2
 
-Turn7:
+Turn9:
 CamON
-LOAD1 0x1 Turn7Units
+LOAD1 0x1 Turn9Units
 ENUN
 CamOFF
 NoFade
@@ -322,11 +322,11 @@ UNIT GerwickBandit Cavalier Kaid Level(15,Enemy,True) [0,18] 0x00 0x00 0x01 REDA
 UNIT GerwickBandit Cavalier Kaid Level(15,Enemy,True) [0,19] 0x00 0x00 0x01 REDA2R17 [ShortSpear] NoAI
 UNIT
 
-Turn6Units:
+Turn7Units:
 UNIT GerwickBandit Warrior Kaid Level(1,Enemy,True) [27,17] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
 UNIT
 
-Turn7Units:
+Turn9Units:
 UNIT GerwickBandit PegasusKnight Kaid Level(14,Enemy,True) [10,4] 0x00 0x00 0x00 0x00 [Javelin] NoAI
 UNIT GerwickBandit Cavalier Kaid Level(14,Enemy,True) [0,17] 0x00 0x00 0x01 REDA2R17 [Wyrmslayer] NoAI
 UNIT GerwickBandit MageKnight Kaid Level(4,Enemy,True) [0,18] Drop 0x00 0x01 REDA3R18 [SteelSword,Dasher,SpiritDust] NoAI
