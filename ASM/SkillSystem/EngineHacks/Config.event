@@ -54,13 +54,13 @@
 
 //If uncommented, will use Trap Rework.
 //This is automatically used if Dragon Veins or Heal Tiles are uncommented.
-#define TRAP_REWORK
+//#define TRAP_REWORK
 
 //If uncommented, will enable Dragon Veins.
 //#define DRAGON_VEINS
 
 //If uncommented, will enable Heal Tiles.
-#define HEAL_TILES
+//#define HEAL_TILES
 
 //If uncommented, will enable event ASMCs for adding traps, rescuing units, and sending items to the convoy respectively.
 #define EVENT_ADD_TRAPS
