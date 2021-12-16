@@ -40,6 +40,8 @@ ASMC PromotionTime|1
 NoFade
 ENDA
 
+#include "BattleCritCap/CritCap.event"
+
 /*
 For 1 range, lower
   AS by 2,

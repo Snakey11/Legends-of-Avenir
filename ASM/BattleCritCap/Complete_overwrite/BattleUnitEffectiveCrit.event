@@ -1,0 +1,20 @@
+#include "Extensions/Hack Installation.txt"
+
+/*PUSH
+ORG $2AC90
+jumpToHack(NewComputeBattleUnitEffectiveCrit)
+POP*/
+
+PUSH
+ORG $2ACA4
+callHack_r3(CritCap)
+POP
+
+
+ALIGN 4
+NewComputeBattleUnitEffectiveCrit:
+#incbin "NewComputeBattleUnitEffectiveCrit.dmp"
+
+ALIGN 4
+CritCap:
+#incbin "CritCap(Hooked).dmp"
