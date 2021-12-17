@@ -103,7 +103,7 @@ ALIGN 4
 
 #include "GiveToSupply/GiveToSupply.lyn.event"
 
-#include "FactionPalettes/FactionPalettes.lyn.event"
+//#include "FactionPalettes/FactionPalettes.lyn.event"
 ALIGN 4
 FactionPaletteList:
 //WORD Cesarian CesarianPalettes
