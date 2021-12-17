@@ -185,21 +185,20 @@ Go to hell...
 
 ## Merc5MilitiaWaitCesariaVillageText
 [ConversationText]
-[MidRight][LoadCurrent]
-oof[X]
+[MidRight][LoadCurrent][MidLeft][LoadVillagerMan2]
+Shady boi: You're taking care of those bandits? I appreciate it. I wanted to do something about them myself, but I wasn't super comfortable without backup... Here, take this. It should come in handy.[X]
 
 ## Merc5MilitiaWaitCesariaHouse1Text
 [ConversationText]
-[MidRight][LoadCurrent]
-oof[X]
+[MidRight][LoadCurrent][MidLeft][LoadVillagerWoman]
+We don't see people out here too often who aren't bandits... If you're here to deal with them, your presence is appreciated.[X]
 
 ## Merc5MilitiaWaitCesariaHouse2Text
 [ConversationText]
-[MidRight][LoadCurrent]
-oof[X]
+[MidRight][LoadCurrent][MidLeft][LoadVillagerOldWoman]
+It's a shame what happened to that nearby town... Danaan, was it? These damn bandits only get bolder and bolder as this war goes on... I'm sorry, there was nothing I could do.[X]
 
 ## Merc5MilitiaWaitCesariaHouse3Text
 [ConversationText]
-[MidRight][LoadCurrent]
-oof[X]
-
+[MidRight][LoadCurrent][MidLeft][LoadVillagerOldMan]
+Old man: I've lived a long while, and seen this region of Haedric slowly sink further and further into chaos. It is horrible that they have gotten so bold as to raze an entire town to the ground, all under the nose of the local Warlord or the Basileus...[X]
