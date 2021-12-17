@@ -46,6 +46,7 @@ BEING ABLE TO KEEP DATA FROM DIFFERENT "TABLES" IN-GAME IN THE SAME CSV.
 parser = argparse.ArgumentParser()
 parser.add_argument('table_options',help='Filepath to table options text file.')
 parser.add_argument('output',help='Filepath for desired output master EA script.')
+parser.add_argument('-d','--delimiter',help='Delimiter to be used for reading tables. Default is a comma.',default=',')
 parser.add_argument('-v','--verbose',help='Print what this script is doing as it runs. Use -vv to make more verbose.',action='count',default=0)
 parser.add_argument('-m','--error_on_missing',help='Error if a referenced NMM field exists without a matching column in the CSV.',action='store_true')
 parser.add_argument('-e','--error_on_empty',help='Error if a cell is empty in a CSV. If not defined, 0 will be written for this cell.',action='store_true')
@@ -53,12 +54,14 @@ args = parser.parse_args()
 
 class File():
     # Referring to a single .csv file.
-    def __init__(self,filepath,nmms,isInline,isSequential,maxEntries,CSVLine):
+    def __init__(self,filepath,nmms,isInline,isSequential,maxEntries,CSVLine,delimiter,terminator):
         self.filepath = filepath # Filepath to CSV.
         self.nmms = nmms # List of NMM objects.
         self.isInline = isInline # Boolean for whether this is inline.
         self.isSequential = isSequential # Boolean for whether this is sequential.
         self.maxEntries = maxEntries # Max entries for all tables.
+        self.delimiter = delimiter # Delimiter to be used for reading this file.
+        self.terminator = terminator # If this is non-None, append the terminator to the end of the file.
         self.CSVLine = CSVLine # Line in table_options of this CSV. Used for error reporting.
         self.csv = CSV()
     def updateInline(self): # Update NMM object inline fields with this object's master pattern. Ignore NMMs that already have this filled (because presumably those override the pattern).
@@ -75,6 +78,8 @@ class File():
         yield f'Master inline: {self.isInline}'
         yield f'Is sequential: {self.isSequential}'
         yield f'Max entries: {self.maxEntries}'
+        yield f'Delimiter: {self.delimiter}'
+        yield f'Terminator: {self.terminator}'
         for e in self.nmms:
             yield f'Referece: {e.label} at {e.filepath} with adding offset {e.addingOffset} and inline status {e.isInline}'
         if printCSV:
@@ -211,6 +216,7 @@ class NMM():
                         continue
                 yield f'({cell}) '
             yield '\n'
+        #if self.terminator: yield self.terminator
         if not self.isInline: yield 'POP\n'
         if not self.parent.isSequential: yield 'POP\n'
     def getOutputFilepath(self):
@@ -259,7 +265,7 @@ if __name__ == '__main__':
             lines = [] # List of doubles: (line,number).
             for i,line in enumerate(f,1):
                 if line.split('@')[0].strip() == '': continue
-                lines.append((line.split('@')[0].strip(),i))
+                lines.append((line.split('@')[0].strip(' \n').lstrip(),i)) # This line removes following spaces, leading whitepsace, removes comments, and makes it a (string,line number) tuple.
             segmented = segmentLists(lines) # List of lists of doubles.
             
             for e in segmented:
@@ -269,10 +275,12 @@ if __name__ == '__main__':
                 isInline = None
                 isSequential = None
                 maxEntries = None
+                delimiter = None
+                terminator = None
                 CSVLine = 0
                 
                 for line in e:
-                    splitted = line[0].split()
+                    splitted = line[0].split(' ')
                     length = len(splitted)
                     if line[0].startswith('CSV'):
                         if length == 2:
@@ -329,6 +337,22 @@ if __name__ == '__main__':
                                 exit(f'Error in {args.table_options} at line {line[1]}: MAX_ENTRIES format is (Value).')
                         else:
                             exit(f'Error in {args.table_options} at line {line[1]}: Duplicate MAX_ENTRIES command.')
+                    elif line[0].startswith('DELIMITER'):
+                        if delimiter == None:
+                            if length == 2:
+                                delimiter = splitted[1]
+                            else:
+                                exit(f'Error in {args.table_options} at line {line[1]}: DELIMITER format is (delimiter).')
+                        else:
+                            exit(f'Error in {args.table_options} at line {line[1]}: Duplicate DELIMITER command.')
+                    elif line[0].startswith('TERMINATOR'):
+                        if terminator == None:
+                            if length > 1:
+                                terminator = line[0][line[0].find(splitted[1]):] # Treat the rest of the string after TERMINATOR as the terminator.
+                            else:
+                                exit(f'Error in {args.table_options} at line {line[1]}: TERMINATOR format is (terminator).')
+                        else:
+                            exit(f'Error in {args.table_options} at line {line[1]}: Duplicate TERMINATOR command.')
                     else:
                         exit(f'ERROR in {args.table_options} at line {line[1]}: Unrecognized command. See Readme.txt for usage.')
                 
@@ -337,7 +361,8 @@ if __name__ == '__main__':
                 if isInline == None: isInline = False
                 if isSequential == None: isSequential = False
                 if maxEntries == None: maxEntries = 256
-                file = File(filepath,nmms,isInline,isSequential,maxEntries,CSVLine)
+                if delimiter == None: delimiter = args.delimiter
+                file = File(filepath,nmms,isInline,isSequential,maxEntries,CSVLine,delimiter,terminator)
                 file.updateInline()
                 for module in file.nmms:
                     module.parent = file
@@ -354,11 +379,11 @@ if __name__ == '__main__':
             with open(os.getcwd()+'/'+e.filepath,'r') as f:
                 for i,line in enumerate(f):
                     if i == 0:
-                        e.csv.names = line.split(',')[1:]
+                        e.csv.names = line.split(e.delimiter)[1:]
                         for i,name in enumerate(e.csv.names):
                             e.csv.names[i] = name.strip()
                     else:
-                        splitted = line.split(',')
+                        splitted = line.split(e.delimiter)
                         if not isListEmpty(splitted):
                             e.csv.data.append([])
                             for j in range(len(splitted)):
