@@ -113,11 +113,14 @@ BNE 0x0 0x0 0xC
 	// Good ending. No Arcanians escaped.
 	MUSC FE5_Victory
 	Text(Merc6MilitiaWaitCesariaGoodEndingText)
+	GOTO 0x1
 LABEL 0x0
 	// Bad ending. An Arcanian did escape.
 	MUSC FE5_Victory_Minor
 	Text(Merc6MilitiaWaitCesariaBadEndingText)
 LABEL 0x1
+FADU 0x5
+STAL 0x20
 LOAD1 0x1 LoadMaximus
 ENUN
 SetSupport(Lux,Maximus,BSupport)

@@ -70,7 +70,7 @@ What are you three doing?
 [Right]Uh... We didn't know where to meet you.
 [FarRight]... Right, none of you are Cesarian. You don't know our signals. Follow me. We think we found a way into the Tower of the Magi.
 [FarLeft]How?
-[FarRight]Just... follow me.[ClearFace][FarLeft][ClearFace][Right][ClearFace][FarRight][ClearFace]
+[FarRight]Just... follow me.[ClearFace][FarLeft][ClearFace][Right][ClearFace][Left][ClearFace]
 [Events]
 [MidRight][LoadPlayer][MidLeft][LoadMaximus]
 Ah, you've made it.
