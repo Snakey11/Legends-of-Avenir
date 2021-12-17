@@ -191,6 +191,20 @@ POP
 		I see no reason why I can't change the function reading this to instead behave like...
 			The lower nibble is the static palette ID of the first tile.
 			The higher nibble is the static palette ID of the second tile.
+		It is decompressed only at 0x080BA794 into 0x020087A0 - This seems to be a free area of RAM, and I'm unsure if I expand the palette map that it'll fit...
+			I may want to change behavior to treat it as uncompressed to avoid the issue entirely.
+			This RAM address is referenced only once - when it's written to...? Ah - it's because the pointer is stored in a parent proc - GMapScreen+0x44.
+			This function, gMapScreen_Init also initializes palettes for the large world map.
+			It does NOT write any sort of image or register tiles, however. It only clears BG3 in that regard.
+		Hits for referencing the palette map:
+			0x080BA7E4 (in the function where it's initalized lmao). Used in a call to StartGMapScreenVSync.
+			0x080BA4E0 (plus a couple other hits in this function). This function seems to be the only thing now accessing the palette map and only when loading new tiles.
+		Looking at the proc behavior, 0x080BAB0C is what's looped through. This function has many subroutines and seems to handle the entire logic of when to load new tiles, etc.
+			A subroutine, 0x080BA8A0 seems to handle everything we may be interested in?
+				The function immediately compares proc+0x2B to proc+0x2D (both signed) and does update things if they're not equal.
+				If they're equal, it does the same for proc+0x2C and 0x2E (both signed). I'm guessing these are current and new X,Y coordinates?
+				The function just ends if no update occurs. The update procedure seems pretty similar between the two cases if not the same!
+				This function, however, doesn't seem to have anything to do with "are the coordinates we're moving to valid?"...?
 */
 
 /*
