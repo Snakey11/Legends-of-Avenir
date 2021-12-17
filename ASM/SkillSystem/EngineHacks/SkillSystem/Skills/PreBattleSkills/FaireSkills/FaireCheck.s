@@ -35,7 +35,7 @@ beq     NoSkill
 mov     r0,r4        @Move attacker data into r0.
 add     r0,#0x5A    @Move to the attacker's power.
 ldrh    r3,[r0]        @Load the attacker's power into r3.
-add     r3,#0x04    @Add 4 to the attacker's power.
+add     r3,#0x02    @Add 2 to the attacker's power.
 strh     r3,[r0]        @Store attacker power.
 NoSkill:
 pop {r4-r7} 

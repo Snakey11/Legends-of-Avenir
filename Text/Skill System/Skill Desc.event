@@ -160,23 +160,23 @@ Miracle: Survive a lethal[N]
 attack if HP > 50%.[X]
 
 ## SD_Swordfaire
-Swordfaire: +4 damage[N]
+Swordfaire: +2 damage[N]
 when equipping a sword.[X]
 
 ## SD_Lancefaire
-Lancefaire: +4 damage[N]
+Lancefaire: +2 damage[N]
 when equipping a lance.[X]
 
 ## SD_Axefaire
-Axefaire: +4 damage[N]
+Axefaire: +2 damage[N]
 when equipping an axe.[X]
 
 ## SD_Bowfaire
-Bowfaire: +4 damage[N]
+Bowfaire: +2 damage[N]
 when equipping a bow.[X]
 
 ## SD_Tomefaire
-Tomefaire: +4 damage[N]
+Tomefaire: +2 damage[N]
 when equipping a tome.[X]
 
 ## SD_CritUp
