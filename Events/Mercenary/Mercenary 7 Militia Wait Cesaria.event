@@ -123,9 +123,11 @@ GotoPrepScreen
 //Label EndingScene
 GoodEnding:
 ENUF 0x70
+TILECHANGE 0x0 // Open the throne door.
 GOTO 0x69
 BadEnding:
 ENUT 0x70
+TILECHANGE 0x0 // Open the throne door.
 LABEL 0x69
 EndingScene:
 FADI 0x5
@@ -262,6 +264,7 @@ DISA Elanil
 DISA Finoc
 DISA Jasper
 DISA Derek
+DISA Lux
 DISA Maximus
 MoveToChapter(PrologueChapter)
 ENDA
@@ -325,7 +328,7 @@ ENDA
 MaximusLuxSupport:
 MUSI
 Text(Merc7MilitiaWaitCesariaLuxMaximusSupportText)
-GiveItem(Lux,Fimbulvetr)
+GiveItem(Fimbulvetr,Lux)
 IncreaseSupport(Lux,Maximus,True)
 MUNO
 NoFade
@@ -366,8 +369,8 @@ UNIT BossXavus Necromancer BossXavus Level(11,Enemy,True) [12,1] 0x00 0x00 0x00 
 UNIT
 
 GoodEndingFriends:
-UNIT Maximus 0x0 0x0 Level(1,Ally,True) [11,12] 0x00 0x00 0x00 0x00 [0] NoAI
-UNIT Lux 0x0 0x0 Level(1,Ally,True) [13,12] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Maximus 0x0 0x0 Level(1,Ally,True) [11,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Lux 0x0 0x0 Level(1,Ally,True) [13,2] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 GoodEndingGS:
@@ -403,7 +406,7 @@ UNIT Arcanian Sentinel BossXavus Level(7,Enemy,True) [6,19] 0x00 0x00 0x00 0x00 
 UNIT Arcanian Bishop BossXavus Level(8,Enemy,True) [8,14] 0x00 0x00 0x00 0x00 [Divine,Physic] HealAlliesAI
 UNIT Arcanian Valkyrie BossXavus Level(6,Enemy,True) [5,17] Drop 0x00 0x00 0x00 [Aura] AttackInRangeAI
 UNIT Arcanian MageKnight BossXavus Level(7,Enemy,True) [7,17] 0x00 0x00 0x00 0x00 [SilverSword,Elwind] AttackInRangeAI
-UNIT Arcanian Paladin BossXavus Level(8,Enemy,True) [2,22] 0x00 0x00 0x00 0x00 [SteelSword,Axeslayer] ChaseOnceApproachedAI
+UNIT Arcanian Paladin BossXavus Level(8,Enemy,True) [2,22] 0x00 0x00 0x00 0x00 [SteelSword] ChaseOnceApproachedAI
 UNIT
 
 Meanies2:
@@ -415,7 +418,7 @@ UNIT Arcanian WyvernRider BossXavus Level(17,Enemy,True) [2,15] 0x00 0x00 0x00 0
 UNIT Arcanian WyvernKnight BossXavus Level(5,Enemy,True) [1,16] 0x00 0x00 0x00 0x00 [KillerLance] ChaseOnceApproachedAI
 UNIT Arcanian Hero BossXavus Level(8,Enemy,True) [5,15] 0x00 0x00 0x00 0x00 [BraveAxe] AttackInRangeAI
 UNIT Arcanian Swordmaster BossXavus Level(6,Enemy,True) [6,11] 0x00 0x00 0x00 0x00 [WindSword] AttackInRangeAI
-UNIT Arcanian BattleSage BossXavus Level(5,Enemy,True) [21,9] Drop 0x00 0x00 0x00 [SteelBlade,Aqua,ChestKey] NoAI
+UNIT Arcanian BattleSage BossXavus Level(5,Enemy,True) [21,9] Drop 0x00 0x00 0x00 [SteelSword,Aqua,ChestKey] NoAI
 UNIT Arcanian Sniper BossXavus Level(6,Enemy,True) [4,7] 0x00 0x00 0x00 0x00 [SteelShortbow] NoAI
 UNIT
 
@@ -430,17 +433,14 @@ UNIT
 
 Guardians1:
 UNIT Guardian Halberdier BossXavus Level(8,Enemy,True) [4,10] 0x00 0x00 0x00 0x00 [Spear] AttackInRangeAI
-UNIT Guardian GreatKnight BossXavus Level(6,Enemy,True) [14,6] 0x00 0x00 0x00 0x00 [ShortAxe,Dragonspear] NoAI
+UNIT Guardian GreatKnight BossXavus Level(6,Enemy,True) [14,6] 0x00 0x00 0x00 0x00 [ShortAxe,SteelLance] NoAI
 UNIT Guardian Berserker BossXavus Level(7,Enemy,True) [17,7] 0x00 0x00 0x00 0x00 [BraveAxe] NoAI
 UNIT Guardian Sentinel BossXavus Level(5,Enemy,True) [13,8] 0x00 0x00 0x00 0x00 [SilverAxe,Lanceslayer] NoAI
-UNIT Guardian Paladin BossXavus Level(4,Enemy,True) [19,1] 0x00 0x00 0x00 0x00 [SilverLance] AttackInRangeAI
 UNIT Guardian Paladin BossXavus Level(6,Enemy,True) [20,1] 0x00 0x00 0x00 0x00 [LightBrand] AttackInRangeAI
 UNIT Guardian WyvernLord BossXavus Level(9,Enemy,True) [18,0] 0x00 0x00 0x00 0x00 [DevilLance] ChaseOnceApproachedAI
-UNIT Guardian WyvernLord BossXavus Level(7,Enemy,True) [21,0] 0x00 0x00 0x00 0x00 [BraveLance] ChaseOnceApproachedAI
 UNIT Guardian MageKnight BossXavus Level(8,Enemy,True) [22,4] 0x00 0x00 0x00 0x00 [Bolganone] AttackInRangeAI
-UNIT Guardian MageKnight BossXavus Level(6,Enemy,True) [22,6] 0x00 0x00 0x00 0x00 [KillingEdge,Arcthunder] AttackInRangeAI
 UNIT Guardian Druid BossXavus Level(10,Enemy,True) [1,9] 0x00 0x00 0x00 0x00 [Dulam,Eclipse] AttackInRangeAI
-UNIT Guardian BattleSage BossXavus Level(8,Enemy,True) [8,7] 0x00 0x00 0x00 0x00 [Wyrmslayer,Arcaqua] AttackInRangeAI
+UNIT Guardian BattleSage BossXavus Level(8,Enemy,True) [8,7] 0x00 0x00 0x00 0x00 [Wyrmslayer,Arcwind] AttackInRangeAI
 UNIT Guardian Hero BossXavus Level(6,Enemy,True) [4,13] 0x00 0x00 0x00 0x00 [SilverSword,HandAxe] AttackInRangeAI
 UNIT Guardian Halberdier BossXavus Level(8,Enemy,True) [7,1] Drop 0x00 0x00 0x00 [Javelin,KillerLance] NoAI
 UNIT Guardian Bishop BossXavus Level(7,Enemy,True) [5,0] 0x00 0x00 0x00 0x00 [Divine] NoAI
@@ -448,11 +448,9 @@ UNIT
 
 Turn6Units:
 UNIT Guardian Paladin BossXavus Level(9,Enemy,True) [1,23] 0x00 0x00 0x00 0x00 [SilverSword] NoAI
-UNIT Guardian Paladin BossXavus Level(8,Enemy,True) [1,21] 0x00 0x00 0x00 0x00 [Spear] NoAI
-UNIT Guardian GreatKnight BossXavus Level(10,Enemy,True) [2,22] 0x00 0x00 0x00 0x00 [Axeslayer,HandAxe] NoAI
+UNIT Guardian GreatKnight BossXavus Level(10,Enemy,True) [2,22] 0x00 0x00 0x00 0x00 [SilverLance,HandAxe] NoAI
 UNIT Guardian BattleSage BossXavus Level(9,Enemy,True) [6,23] 0x00 0x00 0x00 0x00 [Zanbato,Elwind] NoAI
-UNIT Guardian Falcoknight BossXavus Level(10,Enemy,True) [10,9] 0x00 0x00 0x00 0x00 [Dragonspear] NoAI
-UNIT Guardian MageKnight BossXavus Level(8,Enemy,True) [17,0] 0x00 0x00 0x00 0x00 [Dasher] NoAI
+UNIT Guardian Falcoknight BossXavus Level(10,Enemy,True) [10,8] 0x00 0x00 0x00 0x00 [Dragonspear] NoAI
 UNIT Guardian Berserker BossXavus Level(7,Enemy,True) [22,1] 0x00 0x00 0x00 0x00 [SilverAxe] NoAI
 UNIT
 

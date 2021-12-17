@@ -74,7 +74,7 @@ What are you three doing?
 [Events]
 [MidRight][LoadPlayer][MidLeft][LoadMaximus]
 Ah, you've made it.
-[MidRight]Nice you all to wait up.
+[MidRight]Nice of you all to wait up.
 [MidLeft]There's a side entrance to the tower. The main entrance is not only guarded by a few tough customers, but there's a lot of citizens in that area. I don't want civilian lives caught in our fight.
 [MidRight]Right. So when do we move in?
 [MidLeft]I had Elanil run reconnaissance. She's to return when she feels that we have an opening. Until then, everyone else is taking a rest so that we're prepared when the opportunity arises.
@@ -173,7 +173,7 @@ Dammit... My friends, I'm sorry...[X]
 
 ## Merc7MilitiaWaitCesariaBadEndingText
 [ConversationText]
-[Right][LoadMaximus]
+[MidRight][LoadMaximus]
 We did it. Xavus is defeated.[FarLeft][LoadJasper][Left][LoadLux]
 Captain, we have a problem.
 [FarLeft]An Arcanian platoon has surrounded the capital. They're under the command of one Duke Clint.
