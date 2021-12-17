@@ -43,6 +43,11 @@ Enemy control is back in through the debug menu now
 Fixed a bug where Cougar wouldn't load back in the debug build in Military 5 Accept Hold
 Effective speed now uses strength against weapon weight instead of con
 	By consequence, I've increased the strength across the board for mages.
+Fixed crit over 100 display in the battle preview
+Fixed a bug with enemies showing danger exclamations sometimes during death
+Fixed broken wall HP freaking out (but there's still a graphical glitch with particles)
+Faire skills have been nerfed to +2 damage over +4
+Fixed Maximus not having spellsword limitations
 
 v2.1
 Fixed Military 5 Accept Hold end of chapter crash
