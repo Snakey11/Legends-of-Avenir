@@ -216,7 +216,7 @@ EVBIT_MODIFY 0x0
 WM_SHOWTEXTWINDOW 0x0 0x28 0x1
 WM_WAITFORTEXT
 
-	WM_SHOWPORTRAIT LeonMug 80|RightWMFace
+/*	WM_SHOWPORTRAIT LeonMug 80|RightWMFace
 	STAL 0x60
 	WM_CLEARPORTRAIT 0x0 0x0 0x0
 	STAL 0x60
@@ -229,11 +229,11 @@ WM_WAITFORTEXT
 	ASMC WorldMapStartNameProc|1
 	SVAL 0x1 JasperNameText
 	ASMC WorldMapSetNameProcParams|1
-	STAL 16
+	STAL 16*/
 WM_TEXTSTART
 WM_TEXT PrologueWMMainText
 TEXTEND
-	STAL 16
+/*	STAL 16
 	SVAL 0x1 DerekNameText
 	ASMC WorldMapSetNameProcParams|1
 	STAL 16
@@ -244,7 +244,7 @@ TEXTEND
 	ASMC WorldMapSetNameProcParams|1
 	STAL 16
 	TEXTCONT
-	TEXTEND
+	TEXTEND*/
 
 STAL 0x10
 WM_MOVECAM2 0x0 0x0 0x00 0x0 0x10 0x3C 0x0 // WM_MOVECAM2 Value1 *Starting X* *Starting Y* *Ending X* *Ending Y* Speed Delay 
@@ -303,7 +303,7 @@ BNE 0x7 0x1 0xC
 	STAL 0x08
 	TEXTCONT
 	TEXTEND
-	WM_SHOWPORTRAIT LeonMug 1332
+	WM_SHOWPORTRAIT LeonMug 80|RightWMFace
 	STAL 6 26
 	TEXTCONT
 	TEXTEND
@@ -330,7 +330,7 @@ BNE 0x8 0x2 0xC
 	WM_HIGHLIGHTCLEAR2 0x0 CesariaGlowy 0x0
 	TEXTCONT
 	TEXTEND
-	WM_SHOWPORTRAIT RexMug 0x1B0 // The top byte of this is a bitfield! Bit 0 is direction to slide in from. Bit 2 is direction for facing. idk what bit 3 and 4 do.
+	WM_SHOWPORTRAIT RexMug 190|LeftWMFace // The top byte of this is a bitfield! Bit 0 is direction to slide in from. Bit 2 is direction for facing. idk what bit 3 and 4 do.
 	STAL 6 26
 	TEXTCONT
 	TEXTEND
@@ -338,7 +338,7 @@ BNE 0x8 0x2 0xC
 	STAL 32
 	TEXTCONT
 	TEXTEND
-	WM_SHOWPORTRAIT EmperorMug 0x1B0
+	WM_SHOWPORTRAIT EmperorMug 190|LeftWMFace
 	STAL 6 26
 	TEXTCONT
 	TEXTEND
