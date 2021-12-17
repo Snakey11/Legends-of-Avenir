@@ -16,7 +16,7 @@ FactionAttackerPalette: @ Autohook to 0x08059A50. This is where (in battle) the 
 ldr r1, =gBattleActor
 ldr r0, [ r1 ]
 ldrb r0, [ r0, #0x04 ] @ Character ID.
-ldr r1, [ r1 ]
+ldr r1, [ r1, #0x04 ]
 ldrb r1, [ r1, #0x04 ] @ Class ID.
 bl GetFactionPalette
 cmp r0, #0x00
@@ -42,7 +42,7 @@ FactionDefenderPalette: @ Autohook to 0x08059B30. This is where (in battle) the 
 ldr r1, =gBattleTarget
 ldr r0, [ r1 ]
 ldrb r0, [ r0, #0x04 ] @ Character ID.
-ldr r1, [ r1 ]
+ldr r1, [ r1, #0x04 ]
 ldrb r1, [ r1, #0x04 ] @ Class ID.
 bl GetFactionPalette
 cmp r0, #0x00
