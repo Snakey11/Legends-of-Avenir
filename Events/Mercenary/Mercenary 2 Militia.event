@@ -214,11 +214,11 @@ UNIT Militiaman Fighter Arc Level(2,NPC,True) [2,6] 0x00 0x00 0x0 0x0 [HandAxe] 
 UNIT
 
 ArcStuff:
-UNIT Arc Fighter Arc Level(1,Ally,True) [13,6] 0x00 0x00 0x1 REDA11R5 [IronAxe,Elixir] [0]
+UNIT FighterArc Fighter Arc Level(1,Ally,True) [13,6] 0x00 0x00 0x1 REDA11R5 [IronAxe,Elixir] [0]
 UNIT
 
 SwordArc:
-UNIT Arc Mercenary Arc Level(1,Ally,True) [13,6] 0x00 0x00 0x1 REDA11R5 [SteelSword,Elixir] [0]
+UNIT MercenaryArc Mercenary Arc Level(1,Ally,True) [13,6] 0x00 0x00 0x1 REDA11R5 [SteelSword,Elixir] [0]
 UNIT
 
 LukeStuff:
