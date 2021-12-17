@@ -119,7 +119,7 @@ WORD 0 0
 
 ALIGN 4
 SpellswordList:
-BYTE SpellswordM SpellswordF SpellswordM2 SpellswordF2 BattleSage BattleSageF DreadFighterM DreadFighterF MaligKnight Executioner 0x00
+BYTE SpellswordM SpellswordF SpellswordM2 SpellswordF2 BattleSage BattleSageF DreadFighterM DreadFighterF MaligKnight Executioner Strategist 0x00
 
 ALIGN 4
 SpellswordERankList:
