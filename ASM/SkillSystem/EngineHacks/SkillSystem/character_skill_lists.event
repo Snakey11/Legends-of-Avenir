@@ -3,198 +3,198 @@ ALIGN 4
 PlayerMMercenarySkillList:
 PlayerFMercenarySkillList:
 BYTE 1 RallyStrID
-BYTE 23 DesperationID
+BYTE 25 DesperationID
 BYTE 00 00
 
 ALIGN 4
 PlayerMMyrmidonSkillList:
 PlayerFMyrmidonSkillList:
 BYTE 1 LightWeightID
-BYTE 23 ArcaneBladeID
+BYTE 25 ArcaneBladeID
 BYTE 00 00
 
 ALIGN 4
 PlayerMFighterSkillList:
 BYTE 1 RallySklID
-BYTE 23 SwordbreakerID
+BYTE 25 SwordbreakerID
 BYTE 00 00
 
 ALIGN 4
 PlayerMPirateSkillList:
 BYTE 1 BondID
-BYTE 23 AcrobatID
+BYTE 25 AcrobatID
 BYTE 00 00
 
 ALIGN 4
 PlayerMBrigandSkillList:
 BYTE 1 FieryBloodID
-BYTE 23 HeavyStrikesID
+BYTE 25 HeavyStrikesID
 BYTE 00 00
 
 ALIGN 4
 PlayerFPegasusKnightSkillList:
 BYTE 1 ImbueID
-BYTE 23 GaleforceID
+BYTE 25 GaleforceID
 BYTE 00 00
 
 ALIGN 4
 PlayerMCavalierSkillList:
 PlayerFCavalierSkillList:
 BYTE 1 KnightAspirantID
-BYTE 23 TrampleID
+BYTE 25 TrampleID
 BYTE 00 00
 
 ALIGN 4
 PlayerMKnightSkillList:
 PlayerFKnightSkillList:
 BYTE 1 RallyDefID
-BYTE 23 BarricadeID
+BYTE 25 BarricadeID
 BYTE 00 00
 
 ALIGN 4
 PlayerMSoldierSkillList:
 PlayerFSoldierSkillList:
 BYTE 1 ChivalryID
-BYTE 23 WrathID
+BYTE 25 WrathID
 BYTE 00 00
 
 ALIGN 4
 PlayerMArcherSkillList:
 PlayerFArcherSkillList:
 BYTE 1 ArmorMarchID
-BYTE 23 PointBlankID
+BYTE 25 PointBlankID
 BYTE 00 00
 
 ALIGN 4
 PlayerMWyvernRiderSkillList:
 PlayerFWyvernRiderSkillList:
 BYTE 1 PursuitID
-BYTE 23 VantageID
+BYTE 25 VantageID
 BYTE 00 00
 
 ALIGN 4
 PlayerMMageSkillList:
 PlayerFMageSkillList:
 BYTE 1 BondID
-BYTE 23 AdeptID
+BYTE 25 AdeptID
 BYTE 00 00
 
 ALIGN 4
 PlayerMMonkSkillList:
 PlayerFMonkSkillList:
 BYTE 1 RallyResID
-BYTE 23 HolyAuraID
+BYTE 25 HolyAuraID
 BYTE 00 00
 
 ALIGN 4
 PlayerMShamanSkillList:
 PlayerFShamanSkillList:
 BYTE 1 SealMagID
-BYTE 23 ThunderstormID
+BYTE 25 ThunderstormID
 BYTE 00 00
 
 ALIGN 4
 PlayerMSpellswordSkillList:
 PlayerFSpellswordSkillList:
 BYTE 1 SealResID
-BYTE 23 SpeedCastID
+BYTE 25 SpeedCastID
 BYTE 00 00
 
 ALIGN 4
 MercenaryArcSkillList:
 FighterArcSkillList:
 BYTE 1 RallyStrID
-BYTE 23 CounterID
+BYTE 25 CounterID
 BYTE 00 00
 
 ALIGN 4
 LukeSkillList:
 BYTE 1 MiracleID
-BYTE 23 LiveToServeID
+BYTE 25 LiveToServeID
 BYTE 00 00
 
 ALIGN 4
 AryaSkillList:
 BYTE 1 GrislyWoundID
-BYTE 23 SolidarityID
+BYTE 25 SolidarityID
 BYTE 00 00
 
 ALIGN 4
 KendrickSkillList:
 BYTE 1 BargainID
-BYTE 23 CharmID
+BYTE 25 CharmID
 BYTE 00 00
 
 ALIGN 4
 XeximSkillList:
 BYTE 1 DazzleID
-BYTE 23 SummonID
+BYTE 25 SummonID
 BYTE 00 00
 
 ALIGN 4
 FinocSkillList:
 BYTE 1 ExpertiseID
-BYTE 23 IntimidateID
+BYTE 25 IntimidateID
 BYTE 00 00
 
 ALIGN 4
 ElanilSkillList:
 BYTE 1 DartingStanceID
-BYTE 23 BowRangeUpID
+BYTE 25 BowRangeUpID
 BYTE 00 00
 
 ALIGN 4
 ValSkillList:
 BYTE 1 SealMagID
-BYTE 23 LifetakerID
+BYTE 25 LifetakerID
 BYTE 00 00
 
 ALIGN 4
 HelmerSkillList:
 BYTE 1 ForesightID
-BYTE 23 MirrorStanceID
+BYTE 25 MirrorStanceID
 BYTE 00 00
 
 ALIGN 4
 UzkalisSkillList:
 BYTE 1 TomeRangeUpID
-BYTE 23 IgnisID
+BYTE 25 IgnisID
 BYTE 00 00
 
 ALIGN 4
 JasperSkillList:
 BYTE 1 DisciplineID
-BYTE 23 VoiceOfPeaceID
+BYTE 25 VoiceOfPeaceID
 BYTE 00 00
 
 ALIGN 4
 DerekSkillList:
 BYTE 1 RallyDefID
-BYTE 23 ProvokeID
+BYTE 25 ProvokeID
 BYTE 00 00
 
 ALIGN 4
 LuxSkillList:
 BYTE 1 RallyResID
-BYTE 23 TriangleAdeptID
+BYTE 25 TriangleAdeptID
 BYTE 00 00
 
 ALIGN 4
 MaximusSkillList:
 BYTE 1 AdeptID
-BYTE 23 HawkeyeID
+BYTE 25 HawkeyeID
 BYTE 00 00
 
 ALIGN 4
 BaretSkillList:
 BYTE 1 PoisonStrikeID
-BYTE 23 KestrelStanceID
+BYTE 25 KestrelStanceID
 BYTE 00 00
 
 ALIGN 4
 WalterSkillList:
 BYTE 1 NaturalCoverID
-BYTE 23 PointBlankID
+BYTE 25 PointBlankID
 BYTE 00 00
 
 ALIGN 4
@@ -205,109 +205,109 @@ BYTE 00 00
 ALIGN 4
 AdlezSkillList:
 BYTE 1 SpurStrID
-BYTE 23 StrongRiposteID
+BYTE 25 StrongRiposteID
 BYTE 00 00
 
 ALIGN 4
 ConnorSkillList:
 BYTE 1 DefiantStrID
-BYTE 23 SturdyStanceID
+BYTE 25 SturdyStanceID
 BYTE 00 00
 
 ALIGN 4
 EfilSkillList:
 BYTE 1 CriticalForceID
-BYTE 23 KillingMachineID
+BYTE 25 KillingMachineID
 BYTE 00 00
 
 ALIGN 4
 LeonSkillList:
 BYTE 1 AxefaithID
-BYTE 23 PuissanceID
+BYTE 25 PuissanceID
 BYTE 00 00
 
 ALIGN 4
 CougarSkillList:
 BYTE 1 VigilanceID
-BYTE 23 LightWeightID
+BYTE 25 LightWeightID
 BYTE 00 00
 
 ALIGN 4
 SekarSkillList:
 BYTE 1 PragmaticID
-BYTE 23 CounterMagicID
+BYTE 25 CounterMagicID
 BYTE 00 00
 
 ALIGN 4
 ClaraSkillList:
 BYTE 1 StaffSavantID
-BYTE 23 PowerstaffID
+BYTE 25 PowerstaffID
 BYTE 00 00
 
 ALIGN 4
 ForrestSkillList:
 BYTE 1 RallySpdID
-BYTE 23 ChivalryID
+BYTE 25 ChivalryID
 BYTE 00 00
 
 ALIGN 4
 ChristinaSkillList:
 BYTE 1 ReliefID
-BYTE 23 ExpertiseID
+BYTE 25 ExpertiseID
 BYTE 00 00
 
 ALIGN 4
 SylvaineSkillList:
 BYTE 1 DesperationID
-BYTE 23 AegisID
+BYTE 25 AegisID
 BYTE 00 00
 
 ALIGN 4
 MurielSkillList:
 BYTE 1 CelerityID
-BYTE 23 VantagePlusID
+BYTE 25 VantagePlusID
 BYTE 00 00
 
 ALIGN 4
 ZahevaSkillList:
 BYTE 1 MageSlayerID
-BYTE 23 FocusID
+BYTE 25 FocusID
 BYTE 00 00
 
 ALIGN 4
 AdelineSkillList:
 BYTE 1 ForeignPrincessID
-BYTE 23 OpportunistID
+BYTE 25 OpportunistID
 BYTE 00 00
 
 ALIGN 4
 RemusSkillList:
 BYTE 1 SpurSpdID
-BYTE 23 GrislyWoundID
+BYTE 25 GrislyWoundID
 BYTE 00 00
 
 ALIGN 4
 YvetteSkillList:
 BYTE 1 RallySpdID
-BYTE 23 InfiltratorID
+BYTE 25 InfiltratorID
 BYTE 00 00
 
 ALIGN 4
 RexSkillList:
 BYTE 1 SpectrumStanceID
-BYTE 23 ChargeID
+BYTE 25 ChargeID
 BYTE 00 00
 
 ALIGN 4
 XyliaSkillList:
 BYTE 1 ForesightID
-BYTE 23 DauntID
+BYTE 25 DauntID
 BYTE 00 00
 
 ALIGN 4
 JurgenSkillList:
 BYTE 1 HeavyStrikesID
-BYTE 23 ThunderstormID
+BYTE 25 ThunderstormID
 BYTE 00 00
 
 ALIGN 4
@@ -318,7 +318,7 @@ BYTE 00 00
 ALIGN 4
 AjaxSkillList:
 BYTE 1 RallyMagID
-BYTE 23 LifetakerID
+BYTE 25 LifetakerID
 BYTE 00 00
 
 ALIGN 4
