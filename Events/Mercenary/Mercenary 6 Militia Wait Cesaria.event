@@ -107,6 +107,8 @@ EndingScene:
 FADI 0x5
 CLEA 0x0
 CLEE 0x0
+LOAD1 0x1 LoadMaximus
+ENUN
 SetBackground(0x26)
 CHECK_EVENTID 0x70
 BNE 0x0 0x0 0xC
@@ -119,10 +121,8 @@ LABEL 0x0
 	MUSC FE5_Victory_Minor
 	Text(Merc6MilitiaWaitCesariaBadEndingText)
 LABEL 0x1
-FADU 0x5
-STAL 0x20
-LOAD1 0x1 LoadMaximus
-ENUN
+FADI 0x5
+STAL 0x40
 SetSupport(Lux,Maximus,BSupport)
 MoveToChapter(MercenaryMilitiaWaitCesaria7)
 ENDA
