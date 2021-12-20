@@ -26,6 +26,10 @@ UPDATE.bat
 UPDATEPrivate.bat
 UPDATEPublic.bat
 
+# Definition-related ignores.
+Definitions/Definitions.event
+Definitions/Skills.s
+
 # CSV-related ignores.
 CSV/Nightmare/
 CSV/Tables/*.event
@@ -60,4 +64,3 @@ Graphics/WorldMap/*.dmp
 
 # Misc ignores.
 FE-CLib-master
-Definitions/Definitions.event
