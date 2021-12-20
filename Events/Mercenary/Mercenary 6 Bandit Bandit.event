@@ -28,7 +28,8 @@ END_MAIN
 //Label LocationBasedEvents
 LocationBasedEvents:
 Chest(Elixir,11,20)
-Chest(ArmsScroll,13,20)
+//Chest(ArmsScroll,13,20)
+Chest(AngelicRobe,13,20)
 Door(12,22)
 END_MAIN
 

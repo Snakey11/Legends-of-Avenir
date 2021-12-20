@@ -285,7 +285,7 @@ UNIT Cesarian Mage Rex Level(11,Enemy,True) [5,18] 0x00 0x00 0x00 0x00 [Elaqua] 
 UNIT Cesarian Sage Rex Level(4,Enemy,True) [3,16] Drop 0x00 0x00 0x00 [Arcfire,Mend] AttackInRangeAI
 UNIT Cesarian Cavalier Rex Level(11,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [KillerLance] AttackInRangeAI	
 UNIT Cesarian Cavalier Rex Level(12,Enemy,True) [10,10] 0x00 0x00 0x00 0x00 [SteelBlade,HeavySpear] AttackInRangeAI
-UNIT Cesarian Shaman Rex Level(10,Enemy,True) [0,21] Drop 0x00 0x00 0x00 [Nosferatu,ArmsScroll] AttackInRangeAI
+UNIT Cesarian Shaman Rex Level(10,Enemy,True) [0,21] Drop 0x00 0x00 0x00 [Nosferatu,Vulnerary] AttackInRangeAI
 UNIT Cesarian Soldier Rex Level(9,Enemy,True) [12,23] 0x00 0x00 0x00 0x00 [IronLance] AttackInRangeAI
 UNIT Cesarian Soldier Rex Level(11,Enemy,True) [13,24] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
 UNIT Cesarian Halberdier Rex Level(6,Enemy,True) [9,23] 0x00 0x00 0x00 0x00 [DragonSpear] ChaseOnceApproachedAI

@@ -149,7 +149,8 @@ EndA2
 BottomHouse:
 MUSI
 Text(0x01,Military5PassHaedricHouse3Text)
-GiveItem(ArmsScroll,0xFFFF)
+//GiveItem(ArmsScroll,0xFFFF)
+GiveItem(SpiritDust,0xFFFF)
 TileChange(9,14)
 MUNO
 NoFade

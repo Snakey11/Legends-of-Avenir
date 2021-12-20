@@ -162,7 +162,8 @@ NoFade
 EndA2
 
 DVillage2:
-GiveItem(ArmsScroll,0xFFFF)
+//GiveItem(ArmsScroll,0xFFFF)
+GiveItem(EnergyRing,0xFFFF)
 TileChange(12,2)
 NoFade
 EndA2
