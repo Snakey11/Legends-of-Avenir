@@ -104,7 +104,7 @@ Kilthel
 Xylia
 Servius
 Arveldir
-ValSummon
+PlayerSummon
 Weston
 GerwickBandit
 WestonBandit
