@@ -138,7 +138,7 @@ ENDA
 
 //Label Visit events
 Home1:
-MUSS Comrades
+MUSS With_Us
 SVAL 0x1 FighterArc
 SVAL 0x2 MercenaryArc
 CHECK_ACTIVE
