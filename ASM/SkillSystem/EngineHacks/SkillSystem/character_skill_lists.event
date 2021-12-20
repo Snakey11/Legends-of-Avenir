@@ -176,7 +176,7 @@ BYTE 00 00
 ALIGN 4
 LuxSkillList:
 BYTE 1 RallyResID
-BYTE 25 TriangleAdeptID
+BYTE 25 TriAdeptID
 BYTE 00 00
 
 ALIGN 4

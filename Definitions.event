@@ -1611,7 +1611,6 @@
 #define AxeBreakerID AxebreakerID
 #define BowBreakerID BowbreakerID
 #define TomeBreakerID TomebreakerID
-#define TriAdeptID TriangleAdeptID
 //#include "ASM/SkillSystem/EngineHacks/SkillSystem/skill_definitions.event"
 
 //#ifndef DebuffTable
