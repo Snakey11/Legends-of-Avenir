@@ -139,14 +139,16 @@ ENDA
 //Label Visit events
 Home1:
 MUSS Comrades
-SETVAL 0x1 Arc
+SVAL 0x1 FighterArc
+SVAL 0x2 MercenaryArc
 CHECK_ACTIVE
-BNE 0x10 0xC 0x1
-	Text(0x2E,Merc2MilitiaGetLukeArcText)//Arc text
-GOTO 0x11
-LABEL 0x10
-	Text(0x2E,Merc2MilitiaGetLukePlayerText)//Player text
-LABEL 0x11
+BEQ 0x0 0x1 0xC
+BEQ 0x0 0x2 0xC
+	Text(0x2E,Merc2MilitiaGetLukePlayerText) // Player text.
+GOTO 0x1
+LABEL 0x0
+	Text(0x2E,Merc2MilitiaGetLukeArcText) // Arc text.
+LABEL 0x1
 LOAD1 0x1 LukeStuff
 ENUN
 TileChange(11,9)
