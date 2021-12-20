@@ -103,6 +103,12 @@ EndingScene:
 FADI 0x5
 TileChange(1,6) // Open the door in case it wasn't
 MUSC Into_the_Shadow_of_Victory
+CHECK_EVENTID 0x10
+BNE 0x20 0x0 0xC
+	// They weren't recruited.
+	TurnAlly(Finoc)
+	TurnAlly(Elanil)
+LABEL 0x20
 CLEA 0x0
 CLEE 0x0
 ASMC RefreshAll|1
@@ -112,7 +118,7 @@ FADU 0x5
 STAL 0x60
 FADI 0x5
 CLEA Finoc
-LOAD3 0x1 PlayerLoading2
+LOAD2 0x1 EndingTact
 SetBackground(0x26)
 CHECK_EVENTID 0x10
 BEQ 0x19 0x0 0xC
@@ -225,11 +231,12 @@ UNIT Elanil Archer_F Elanil Level(7,Ally,True) [0,12] 0x00 0x00 0x00 0x00 [Steel
 UNIT
 
 EndingPeople:
-UNIT 0x0 0x0 0x0 Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
 UNIT Finoc WyvernRider Finoc Level(1,Ally,True) [1,5] 0x00 0x00 0x00 0x00 [IronAxe,Elixir] AttackInRangeAI
 UNIT Elanil Archer_F Elanil Level(1,Ally,True) [3,5] 0x00 0x00 0x00 0x00 [IronAxe,Elixir] AttackInRangeAI
 UNIT Arc Fighter Arc Level(1,Ally,True) [0,4] 0x00 0x00 0x00 0x00 [IronAxe,Elixir] NoAI
 UNIT Luke Monk Arc Level(1,Ally,True) [0,3] 0x00 0x00 0x00 0x00 [Lightning,Vulnerary] NoAI
+EndingTact:
+UNIT 0x0 0x0 0x0 Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
 UNIT
 
 LoadFinoc:
