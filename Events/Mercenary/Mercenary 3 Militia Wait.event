@@ -85,7 +85,6 @@ EndConvo
 MOVE 0x0 BossConnor [2,2]
 CAM1 [7,8]
 LOAD2 0x1 ArcLuke
-LOAD3 0x1 PlayerLoading1
 ENUN
 Text(Merc3MilitiaWaitTheyreHereText)
 NoFade
@@ -107,7 +106,6 @@ MUSC Into_the_Shadow_of_Victory
 CLEA 0x0
 CLEE 0x0
 ASMC RefreshAll|1
-LOAD3 0x1 PlayerLoading2
 LOAD2 0x1 EndingPeople
 ENUN
 FADU 0x5
@@ -210,15 +208,8 @@ UNIT GerwickBandit Mercenary BossConnor Level(4,Enemy,True) [6,4] 0x00 0x00 0x00
 UNIT GerwickBandit Fighter BossConnor Level(4,Enemy,True) [7,6] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
 UNIT
 
-PlayerLoading1:
-UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [0,12] 0x00 0x00 0x1 REDA3R12 [IronSword,Vulnerary] NoAI 
-UNIT
-
-PlayerLoading2:
-UNIT PlayerMMercenary 0x0 0x0 Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
-UNIT
-
 ArcLuke:
+UNIT 0x0 0x0 0x0 Level(4,Ally,True) [0,12] 0x00 0x00 0x1 REDA3R12 [IronSword,Vulnerary] NoAI 
 UNIT Arc Fighter Arc Level(1,Ally,True) [0,13] 0x00 0x00 0x1 REDA3R13 [IronAxe,Elixir] NoAI
 UNIT Luke Monk Arc Level(1,Ally,True) [0,11] 0x00 0x00 0x1 REDA2R11 [Lightning,Vulnerary] NoAI
 UNIT
@@ -234,6 +225,7 @@ UNIT Elanil Archer_F Elanil Level(7,Ally,True) [0,12] 0x00 0x00 0x00 0x00 [Steel
 UNIT
 
 EndingPeople:
+UNIT 0x0 0x0 0x0 Level(4,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [IronSword,Vulnerary] NoAI 
 UNIT Finoc WyvernRider Finoc Level(1,Ally,True) [1,5] 0x00 0x00 0x00 0x00 [IronAxe,Elixir] AttackInRangeAI
 UNIT Elanil Archer_F Elanil Level(1,Ally,True) [3,5] 0x00 0x00 0x00 0x00 [IronAxe,Elixir] AttackInRangeAI
 UNIT Arc Fighter Arc Level(1,Ally,True) [0,4] 0x00 0x00 0x00 0x00 [IronAxe,Elixir] NoAI
