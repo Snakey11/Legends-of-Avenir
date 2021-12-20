@@ -8,6 +8,7 @@
 .endm
 
 .equ GetUnitStructFromEventParameter, 0x0800BC50
+.equ UNIT_Filter, 0x0800F914
 
 .global CHAREventFix
 .type CHAREventFix, %function
@@ -182,4 +183,39 @@ EndDeathQuoteLoop:
 pop { r4 - r6 }
 pop { r1 }
 bx r1
+.ltorg
+
+.global LOAD2WithEventParameters
+.type LOAD2WithEventParameters, %function
+LOAD2WithEventParameters: @ Autohook to 0x0800FC30. Run [r5] (byte) through event parameters and store ret->pCharData->index (if ret is non-null).
+add r4, r4, #0x4F
+ldrb r0, [ r4 ]
+lsr r0, r0, #0x07
+str r0, [ sp ]
+mov r0, r5
+mov r1, r9
+blh UNIT_Filter, r2
+mov r5, r0
+@ r9 has the number of units in the buffer and r5 has the unit buffer.
+push { r4, r5 } @ Gimme registers.
+mov r4, #0x00 @ I'm gonna use this as a counter.
+StartLoadLoop:
+	mov r0, #0x00
+	ldsb r0, [ r5, r0 ] @ Potentially either an event parameter or a character ID now!
+	blh GetUnitStructFromEventParameter, r1
+	cmp r0, #0x00
+	beq ReiterateLoadLoop @ If we returned null, just continue with vanilla.
+		@ We have a Unit*! Fill [r5] with the index of the character.
+		ldr r0, [ r0 ] @ Character data*.
+		ldrb r0, [ r0, #0x04 ] @ Index.
+		strb r0, [ r5 ] @ Store the index.
+ReiterateLoadLoop:
+	add r5, r5, #0x14 @ This should be the correct size for each struct.
+	add r4, r4, #0x01
+	cmp r4, r9
+	blt StartLoadLoop @ If r4 < r9 still, then we have units still to work with.
+LOAD2Vanilla:
+pop { r4, r5 }
+ldr r0, =#0x0800FC0F
+bx r0
 .ltorg

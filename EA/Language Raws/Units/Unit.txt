@@ -71,12 +71,14 @@ UNIT, 0, 16, -game:FE6:FE7 -priority:unit -indexMode:8
 ##Starting AI of this unit.
 	DontMoveAI, 15, 1
 
-UNIT, 0, 20, -game:FE8 -priority:unit -end -indexMode:8
-	0, 0, 4, -fixed
-	0, 4, 4, -fixed
-	0, 8, 4, -fixed
-	0, 12, 4, -fixed
-	0, 16, 4, -fixed
+##UNIT, 0, 20, -game:FE8 -priority:unit -end -indexMode:8
+##	0, 0, 4, -fixed
+##	0, 4, 4, -fixed
+##	0, 8, 4, -fixed
+##	0, 12, 4, -fixed
+##	0, 16, 4, -fixed
+UNIT, 0, 32, -game:FE8 -priority:unit -end -indexMode:8
+	0xFFFFFF, 0, 32, -fixed
 
 UNIT, 0, 160, -game:FE8 -priority:unit
 	Char ID, 0, 8

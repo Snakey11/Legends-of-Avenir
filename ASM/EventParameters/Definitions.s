@@ -14,3 +14,5 @@ SET_FUNC CHAREventFix, (0x080838AC+1)
 SET_FUNC NewGetBattleQuoteEntry, (0x0808464C+1)
 
 SET_FUNC NewGetCharDeathQuoteEntry, (0x080846E4+1)
+
+SET_FUNC LOAD2WithEventParameters, (0x0800FBFC+1)

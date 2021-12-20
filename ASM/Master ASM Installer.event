@@ -426,6 +426,9 @@ SHORT 0xE025
 ORG $2AB82 // Make AS use strength, not constitution.
 SHORT 0x2014 // mov r0, #0x14.
 
+ORG $F51E // Make the UNIT terminator check for 0xFF instead of 0x00 (to make Tact event parameters work with unit loading).
+SHORT 0x28FF // cmp r0, #0xFF.
+
 /*ORG 0x229A8 // Thracia trading.
 SHORT 0x1C00
 ORG 0x22A10
