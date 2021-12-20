@@ -1,6 +1,18 @@
 v2.2 hotfixes
 Fixed mistakes in house text in 5 Merc Cesaria
 Fixed Arc loading as the wrong character ID as a mercenary, causing various bugs
+Fixed mastery skills being learned at level 3 instead of level 5
+Fixed Imbue and Bond not functioning
+Fixed Merc 7 Cesaria's status description
+Fixed Tri adept
+Removed arms scrolls for the time being (they were causing crashes)
+Fixed a music cue and the condition with Arc in Luke's house loading scene
+Fixed bugs with Arc loading wrong generally
+Development sided: Changed UNIT terminators to 0xFF instead of 0x00 to make way for event parameter wizardry
+Fixed a typo in recruitment text in Mercenary 2 Wait
+Fixed an issue with the Finoc and Elanil not joining if they weren't recruited at the end of Mercenary 3 Militia Wait
+Fixed loading problems (causing problems later) at the end of 6 Assassin
+Xexim should now summon properly
 
 v2.2
 Brand new Merc->Cesaria route!
