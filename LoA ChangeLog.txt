@@ -13,6 +13,12 @@ Fixed a typo in recruitment text in Mercenary 2 Wait
 Fixed an issue with the Finoc and Elanil not joining if they weren't recruited at the end of Mercenary 3 Militia Wait
 Fixed loading problems (causing problems later) at the end of 6 Assassin
 Xexim should now summon properly
+Keep Up description has been clarified
+Fixed stairs (that is, warping stairs) crashing sometimes
+Debug build: Fixed enemy control
+5 use chest key has been fixed
+Fixed staff EXP using the vanilla routine
+Fixed first aid not using a proper routine
 
 v2.2
 Brand new Merc->Cesaria route!
