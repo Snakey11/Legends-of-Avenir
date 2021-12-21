@@ -1172,9 +1172,9 @@ of enemy's weapon by User's level[N]
 (Skill/2% activation)[X]
 
 ## SD_KeepUp
-Keep Up: If unit is within 3[N]
-spaces of an ally with Canto[N]
-or Canto+, unit gains +1 Mov.[X]
+Keep Up: At start of turn, if unit[N]
+is within 3 spaces of an ally with[N]
+Cantoor Canto+, unit gains +1 Mov.[X]
 
 ## SD_IndoorMarch
 Indoor March: If unit is on[N]
