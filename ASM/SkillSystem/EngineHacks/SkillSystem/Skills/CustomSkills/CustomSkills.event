@@ -63,6 +63,13 @@ PROC_END
 
 ALIGN 4
 gFirstAidEXPEvent:
-GiveEXP(0xFFFF,20)
+ASMC FirstAidGetEXP|1 // = 15 - (effective level)/2.
+// Memory slot 0xC has EXP to give.
+SADD 0x0C2 // Move slot 0xC into 0x2.
+SVAL 0x1 0xFFFF
+ASMC give_exp_Install|1
 NoFade
 ENDA
+
+gFirstAidEXPBase:
+BYTE 15

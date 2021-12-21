@@ -299,3 +299,25 @@ mov r1, #0x01
 blh CallMapEventEngine, r2
 pop { r0 }
 bx r0
+.ltorg
+
+.global FirstAidGetEXP
+.type FirstAidGetEXP, %function
+FirstAidGetEXP: @ Return in memory slot 0xC the EXP to give for first aid = 15 - (effective level)/2.
+push { lr }
+ldr r0, =gActiveUnit
+ldr r0, [ r0 ]
+blh GetEffectiveLevel, r1 @ This is installed from my custom EXP routines.
+lsr r0, r0, #0x01 @ Divide effective level by 2.
+ldr r1, =gFirstAidEXPBase
+ldrb r1, [ r1 ]
+sub r1, r1, r0
+cmp r1, #0x01
+bge StoreEXP
+	mov r1, #0x01 @ Minimum EXP is 1.
+StoreEXP:
+ldr r2, =gEventSlot
+str r1, [ r2, #0x30 ] @ Memory slot 0xC.
+pop { r0 }
+bx r0
+.ltorg
