@@ -18,6 +18,7 @@ extern struct
 	u8 itemID;
 	u8 T1EXP;
 	u8 T2EXP;
+	u8 pad;
 } StaffEXPList[];
 
 extern int CanBattleUnitGainLevels(BattleUnit* unit); // 0x0802B9F4.
