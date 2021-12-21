@@ -36,6 +36,10 @@ ACheck:
 //POIN SecretEvent
 */
 #include "EnemyControl.lyn.event"
+PUSH
+  ORG $15450
+  jumpToHack(EnemyControl)
+POP
 
 SecretEvent:
 CHECK_EVENTID 0xB2 //slot c = 0 or 1
