@@ -20,6 +20,7 @@ Debug build: Fixed enemy control
 Fixed staff EXP using the vanilla routine
 Fixed first aid not using a proper routine
 Fixed a bug with every square being available for repositioning in battle prep
+Fixed a bug where staves would not give exp
 
 v2.2
 Brand new Merc->Cesaria route!
