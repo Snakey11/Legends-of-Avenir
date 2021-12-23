@@ -73,65 +73,71 @@ ModularerStaffEXP:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	push	{r4, r5, r6, lr}	@
-@ ModularerEXP.c:90: 	if ( !CanBattleUnitGainLevels(&gBattleActor) ) { return 0; }
-	ldr	r4, .L10	@ tmp128,
-	ldr	r3, .L10+4	@ tmp129,
-	movs	r0, r4	@, tmp128
+	push	{r3, r4, r5, r6, r7, lr}	@
+@ ModularerEXP.c:90: 	if ( !CanBattleUnitGainLevels(actor) ) { return 0; }
+	ldr	r3, .L10	@ tmp131,
+@ ModularerEXP.c:89: {
+	movs	r4, r0	@ actor, tmp158
+@ ModularerEXP.c:92: 	for ( int i = 0 ; StaffEXPList[i].itemID ; i++ )
+	movs	r5, #0	@ i,
+@ ModularerEXP.c:90: 	if ( !CanBattleUnitGainLevels(actor) ) { return 0; }
 	bl	.L12		@
-@ ModularerEXP.c:90: 	if ( !CanBattleUnitGainLevels(&gBattleActor) ) { return 0; }
-	cmp	r0, #0	@ <retval>,
-	beq	.L1		@,
-@ ModularerEXP.c:94: 		if ( StaffEXPList[i].itemID == gBattleActor.weapon )
-	movs	r3, r4	@ tmp133, tmp128
-	adds	r3, r3, #72	@ tmp133,
-	ldrh	r6, [r3]	@ _4,
-@ ModularerEXP.c:92: 	for ( int i = 0 ; StaffEXPList[i].itemID ; i++ )
-	movs	r3, #0	@ i,
-@ ModularerEXP.c:92: 	for ( int i = 0 ; StaffEXPList[i].itemID ; i++ )
-	ldr	r1, .L10+8	@ tmp155,
-.L3:
-@ ModularerEXP.c:92: 	for ( int i = 0 ; StaffEXPList[i].itemID ; i++ )
-	lsls	r2, r3, #2	@ tmp153, i,
-	ldrb	r0, [r1, r2]	@ _13, MEM[symbol: StaffEXPList, index: _22, offset: 0B]
-	adds	r5, r2, r1	@ tmp154, tmp153, tmp155
-@ ModularerEXP.c:92: 	for ( int i = 0 ; StaffEXPList[i].itemID ; i++ )
-	cmp	r0, #0	@ _13,
-	beq	.L1		@,
-@ ModularerEXP.c:94: 		if ( StaffEXPList[i].itemID == gBattleActor.weapon )
-	cmp	r0, r6	@ _13, _4
-	bne	.L4		@,
-@ ModularerEXP.c:96: 			return ( UNIT_CATTRIBUTES(&gBattleActor.unit) & CA_PROMOTED ? StaffEXPList[i].T2EXP : StaffEXPList[i].T1EXP );
-	ldr	r3, [r4]	@ gBattleActor.unit.pCharacterData, gBattleActor.unit.pCharacterData
-	ldr	r2, [r4, #4]	@ gBattleActor.unit.pClassData, gBattleActor.unit.pClassData
-	ldr	r3, [r3, #40]	@ _5->attributes, _5->attributes
-	ldr	r2, [r2, #40]	@ _7->attributes, _7->attributes
-	orrs	r3, r2	@ tmp140, _7->attributes
-@ ModularerEXP.c:96: 			return ( UNIT_CATTRIBUTES(&gBattleActor.unit) & CA_PROMOTED ? StaffEXPList[i].T2EXP : StaffEXPList[i].T1EXP );
-	lsls	r3, r3, #23	@ tmp159, tmp140,
-	bpl	.L5		@,
-@ ModularerEXP.c:96: 			return ( UNIT_CATTRIBUTES(&gBattleActor.unit) & CA_PROMOTED ? StaffEXPList[i].T2EXP : StaffEXPList[i].T1EXP );
-	ldrb	r0, [r5, #2]	@ <retval>, StaffEXPList
+@ ModularerEXP.c:90: 	if ( !CanBattleUnitGainLevels(actor) ) { return 0; }
+	cmp	r0, r5	@ tmp159,
+	bne	.L2		@,
+.L7:
+@ ModularerEXP.c:90: 	if ( !CanBattleUnitGainLevels(actor) ) { return 0; }
+	movs	r0, #0	@ <retval>,
 .L1:
 @ ModularerEXP.c:100: }
 	@ sp needed	@
-	pop	{r4, r5, r6}
+	pop	{r3, r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
 .L5:
-@ ModularerEXP.c:96: 			return ( UNIT_CATTRIBUTES(&gBattleActor.unit) & CA_PROMOTED ? StaffEXPList[i].T2EXP : StaffEXPList[i].T1EXP );
-	ldrb	r0, [r5, #1]	@ <retval>, StaffEXPList
+@ ModularerEXP.c:96: 			return ( UNIT_CATTRIBUTES(&actor->unit) & CA_PROMOTED ? StaffEXPList[i].T2EXP : StaffEXPList[i].T1EXP );
+	ldrb	r0, [r6, #1]	@ <retval>, StaffEXPList
 	b	.L1		@
 .L4:
 @ ModularerEXP.c:92: 	for ( int i = 0 ; StaffEXPList[i].itemID ; i++ )
-	adds	r3, r3, #1	@ i,
-	b	.L3		@
+	adds	r5, r5, #1	@ i,
+.L2:
+@ ModularerEXP.c:92: 	for ( int i = 0 ; StaffEXPList[i].itemID ; i++ )
+	ldr	r2, .L10+4	@ tmp156,
+	lsls	r3, r5, #2	@ tmp154, i,
+	ldrb	r7, [r2, r3]	@ _14, MEM[symbol: StaffEXPList, index: _28, offset: 0B]
+	adds	r6, r3, r2	@ tmp155, tmp154, tmp156
+@ ModularerEXP.c:92: 	for ( int i = 0 ; StaffEXPList[i].itemID ; i++ )
+	cmp	r7, #0	@ _14,
+	beq	.L7		@,
+@ ModularerEXP.c:94: 		if ( StaffEXPList[i].itemID == GetItemIndex(actor->weapon) )
+	movs	r3, r4	@ tmp134, actor
+	adds	r3, r3, #72	@ tmp134,
+@ ModularerEXP.c:94: 		if ( StaffEXPList[i].itemID == GetItemIndex(actor->weapon) )
+	ldrh	r0, [r3]	@ tmp135,
+	ldr	r3, .L10+8	@ tmp136,
+	bl	.L12		@
+@ ModularerEXP.c:94: 		if ( StaffEXPList[i].itemID == GetItemIndex(actor->weapon) )
+	cmp	r0, r7	@ tmp160, _14
+	bne	.L4		@,
+@ ModularerEXP.c:96: 			return ( UNIT_CATTRIBUTES(&actor->unit) & CA_PROMOTED ? StaffEXPList[i].T2EXP : StaffEXPList[i].T1EXP );
+	ldr	r3, [r4]	@ actor_21(D)->unit.pCharacterData, actor_21(D)->unit.pCharacterData
+	ldr	r2, [r4, #4]	@ actor_21(D)->unit.pClassData, actor_21(D)->unit.pClassData
+	ldr	r3, [r3, #40]	@ _6->attributes, _6->attributes
+	ldr	r2, [r2, #40]	@ _8->attributes, _8->attributes
+	orrs	r3, r2	@ tmp141, _8->attributes
+@ ModularerEXP.c:96: 			return ( UNIT_CATTRIBUTES(&actor->unit) & CA_PROMOTED ? StaffEXPList[i].T2EXP : StaffEXPList[i].T1EXP );
+	lsls	r3, r3, #23	@ tmp162, tmp141,
+	bpl	.L5		@,
+@ ModularerEXP.c:96: 			return ( UNIT_CATTRIBUTES(&actor->unit) & CA_PROMOTED ? StaffEXPList[i].T2EXP : StaffEXPList[i].T1EXP );
+	ldrb	r0, [r6, #2]	@ <retval>, StaffEXPList
+	b	.L1		@
 .L11:
 	.align	2
 .L10:
-	.word	gBattleActor
 	.word	CanBattleUnitGainLevels
 	.word	StaffEXPList
+	.word	GetItemIndex
 	.size	ModularerStaffEXP, .-ModularerStaffEXP
 	.align	1
 	.global	GetOtherAttack

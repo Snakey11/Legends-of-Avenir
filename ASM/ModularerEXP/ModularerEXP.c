@@ -31,7 +31,7 @@ extern int BattleCheckDoubling(BattleUnit** outAttacker, BattleUnit** outDefende
 extern int GetBattleHitCount(BattleUnit* unit); // 0x0802B080. It appears that this returns 1 or 2 depending on the equipped weapon's brave effect.
 
 int ModularerEXP(BattleUnit* actor, BattleUnit* target);
-int ModularerStaffEXP(void);
+int ModularerStaffEXP(BattleUnit* actor);
 int GetEffectiveLevel(Unit* unit);
 
 int GetOtherAttack(BattleUnit* actor, BattleUnit* target);
@@ -85,15 +85,15 @@ int ModularerEXP(BattleUnit* actor, BattleUnit* target) // Autohook to 0x0802C53
 	return EXP;
 }
 
-int ModularerStaffEXP(void) // Autohook to 0x0802C6A0 (GetBattleUnitStaffExp).
+int ModularerStaffEXP(BattleUnit* actor) // Autohook to 0x0802C6A0 (GetBattleUnitStaffExp).
 {
-	if ( !CanBattleUnitGainLevels(&gBattleActor) ) { return 0; }
+	if ( !CanBattleUnitGainLevels(actor) ) { return 0; }
 	
 	for ( int i = 0 ; StaffEXPList[i].itemID ; i++ )
 	{
-		if ( StaffEXPList[i].itemID == gBattleActor.weapon )
+		if ( StaffEXPList[i].itemID == GetItemIndex(actor->weapon) )
 		{
-			return ( UNIT_CATTRIBUTES(&gBattleActor.unit) & CA_PROMOTED ? StaffEXPList[i].T2EXP : StaffEXPList[i].T1EXP );
+			return ( UNIT_CATTRIBUTES(&actor->unit) & CA_PROMOTED ? StaffEXPList[i].T2EXP : StaffEXPList[i].T1EXP );
 		}
 	}
 	return 0; // Staff EXP is undefined.
