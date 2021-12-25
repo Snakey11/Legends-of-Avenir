@@ -77,3 +77,4 @@ HaedricCityCutscene
 PortSelsingCutscene
 KendrickShipCutscene
 MistlainThroneCutscene
+MilitaryHaedricBadEndingCutscene

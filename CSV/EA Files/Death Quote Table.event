@@ -13,7 +13,7 @@ DeathQuote(0x00,GuardianSpiritWallCutscene,0x13,Merc7BanditDisbandEndingPlayerDe
 DeathQuote(0x00,AltianDungeonCutscene,0x15,Military7PassAltiaEscapePlayerDeathText) // Military Pass Altia.
 DeathQuote(0x00,MilitaryPassAltia7,0x12,Military7PassAltiaBadEndingPlayerDeathText)
 DeathQuote(0x00,HaedricCityCutscene,0x12,Military7PassHaedricGoodEndingPlayerDeathText) // Military Pass Haedric.
-DeathQuote(0x00,MercenaryBandit3,0x13,Military7PassHaedricBadEndingPlayerDeathText)
+DeathQuote(0x00,MilitaryHaedricBadEndingCutscene,0x13,Military7PassHaedricBadEndingPlayerDeathText)
 DeathQuote(0x00,MilitaryAcceptRetreatLeave7,0x14,Military7AcceptRetreatLeaveGoodEndingPlayerDeathText) // Military Accept Retreat Leave.
 DeathQuote(0x00,MilitaryAcceptRetreatLeave7,0x13,Military7AcceptRetreatLeaveBadEndingPlayerDeathText)
 DeathQuote(0x00,KendrickShipCutscene,0x10,0x0) // Military Accept Retreat Help.

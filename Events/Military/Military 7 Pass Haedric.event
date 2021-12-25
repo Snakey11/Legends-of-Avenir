@@ -183,7 +183,7 @@ LABEL 0x0
 	// Muriel did NOT engage in combat with Uzkalis. Bad ending.
 	ENUF 0x13 // Enable Tact's special death quote
 	SVAL 0xB Coords(8,7)
-	LOMA MercenaryBandit3
+	LOMA MilitaryHaedricBadEndingCutscene
 	LOAD3 0x1 PlayerLoading3
 	LOAD2 0x1 BadEndingElanil
 	ENUN
