@@ -202,3 +202,7 @@ No... I thought I was strong enough... My liege, I'm sorry... I've failed Cesari
 [FarRight][LoadJurgen]
 I may fall... But the Lion Brigade will not. I'm just another soldier...[X]
 
+## MurielDeathText
+[BattleText]
+[FarRight][LoadMuriel]
+I can't fall here... I can't... Push any more. Must I withdraw?[X]
