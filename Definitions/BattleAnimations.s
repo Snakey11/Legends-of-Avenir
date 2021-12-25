@@ -148,6 +148,7 @@ ImpalerFUnarmed
 MasterKnightSword
 CommanderAxe
 CommanderHandAxe
+CommanderMagic
 WyvernGeneralLance
 MasterKnightLance
 MasterKnightUnarmed

@@ -121,6 +121,8 @@
 
 #include "Commander Hand Axe.event"
 
+#include "Commander Magic.event"
+
 #include "Commander Unarmed.event"
 }
 {

@@ -52,6 +52,7 @@ SwordAnim(CommanderSword)
 SpearAnim(CommanderLance)
 AxeAnim(CommanderAxe)
 HandAxeAnim(CommanderHandAxe)
+AnimaAnim(CommanderMagic)
 UnarmedAnim(CommanderUnarmed)
 WORD 0x0 0x0
 
