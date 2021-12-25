@@ -38,7 +38,7 @@ END_MAIN
 //Label MiscBasedEvents
 MiscBasedEvents:
 CauseGameOverIfLordDies
-DefeatBoss(EndingScene)
+DefeatAll(EndingScene)
 END_MAIN
 
 //Label TrapData
