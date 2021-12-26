@@ -397,7 +397,7 @@ UNIT Arcanian Pirate Shanley Level(14,Enemy,True) [6,15] 0x00 0x00 0x00 0x00 [St
 UNIT Arcanian Archer Shanley Level(16,Enemy,True) [3,13] 0x00 0x00 0x00 0x00 [IronBow] NoAI
 UNIT Arcanian Mage Shanley Level(15,Enemy,True) [1,8] 0x00 0x00 0x00 0x00 [Elaqua] AttackInRangeAI
 UNIT Arcanian PegasusKnight Shanley Level(17,Enemy,True) [7,11] 0x00 0x00 0x00 0x00 [Javelin] NoAI
-UNIT Arcanian General Shanley Level(3,Enemy,True) [5,7] 0x00 0x00 0x00 0x00 [DevilLance] GuardAI
+UNIT Arcanian General Shanley Level(3,Enemy,True) [5,7] 0x00 0x00 0x00 0x00 [Runesword] GuardAI
 UNIT Arcanian Knight Shanley Level(18,Enemy,True) [9,4] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
 UNIT
 
