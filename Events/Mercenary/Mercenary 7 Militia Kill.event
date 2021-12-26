@@ -171,7 +171,7 @@ FADI 0x5
 SETVAL 0xB Coords(7,5)
 LOMA LeavingShizonCutscene
 LOAD3 0x1 PlayerLoading3
-MoveMercenary(7,2)
+MOVE 0x0 0x0 [7,2]
 EndConvo
 ENUN
 MUSC The_Guardian_Spirit
