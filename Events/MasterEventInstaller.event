@@ -1,0 +1,169 @@
+
+ALIGN 4
+GameOverStart:
+ASMC 0x800D391
+NoFade
+ENDB
+
+#include "REDAs.event"
+{
+#include "Prologue.event"
+}
+#ifndef __NO_MERCENARY__
+	{
+	#include "Mercenary/Mercenary1.event"
+	}
+	{
+	#include "Mercenary/Mercenary2Militia.event"
+	}
+	{
+	#include "Mercenary/Mercenary3MilitiaKill.event"
+	}
+	{
+	#include "Mercenary/Mercenary4MilitiaKill.event"
+	}
+	{
+	#include "Mercenary/Mercenary5MilitiaKill.event"
+	}
+	{
+	#include "Mercenary/Mercenary6MilitiaKill.event"
+	}
+	{
+	#include "Mercenary/Mercenary7MilitiaKill.event"
+	}
+	{
+	#include "Mercenary/Mercenary3MilitiaWait.event"
+	}
+	{
+	#include "Mercenary/Mercenary4MilitiaWait.event"
+	}
+	{
+	#include "Mercenary/Mercenary5MilitiaWaitArcanae.event"
+	}
+	{
+	#include "Mercenary/Mercenary6MilitiaWaitArcanae.event"
+	}
+	{
+	#include "Mercenary/Mercenary7MilitiaWaitArcanae.event"
+	}
+	{
+	#include "Mercenary/Mercenary5MilitiaWaitCesaria.event"
+	}
+	{
+	#include "Mercenary/Mercenary6MilitiaWaitCesaria.event"
+	}
+	{
+	#include "Mercenary/Mercenary7MilitiaWaitCesaria.event"
+	}
+	{
+	#include "Mercenary/Mercenary2Bandit.event"
+	}
+	{
+	#include "Mercenary/Mercenary3Bandit.event"
+	}
+	{
+	#include "Mercenary/Mercenary4Bandit.event"
+	}
+	{
+	#include "Mercenary/Mercenary5BanditBandit.event"
+	}
+	{
+	#include "Mercenary/Mercenary6BanditBandit.event"
+	}
+	{
+	#include "Mercenary/Mercenary7BanditBandit.event"
+	}
+	{
+	#include "Mercenary/Mercenary5BanditDisband.event"
+	}
+	{
+	#include "Mercenary/Mercenary6BanditDisband.event"
+	}
+	{
+	#include "Mercenary/Mercenary7BanditDisband.event"
+	}
+#endif
+#ifndef __NO_MILITARY__	
+	{
+	#include "Military/Military1.event"
+	}
+	{
+	#include "Military/Military2Pass.event"
+	}
+	{
+	#include "Military/Military3Pass.event"
+	}
+	{
+	#include "Military/Military4Pass.event"
+	}
+	{
+	#include "Military/Military5PassHaedric.event"
+	}
+	{
+	#include "Military/Military6PassHaedric.event"
+	}
+	{
+	#include "Military/Military7PassHaedric.event"
+	}
+	{
+	#include "Military/Military5PassAltia.event"
+	}
+	{
+	#include "Military/Military6PassAltia.event"
+	}
+	{
+	#include "Military/Military7PassAltia.event"
+	}
+	{
+	#include "Military/Military2Accept.event"
+	}
+	{
+	#include "Military/Military3Accept.event"
+	}
+	{
+	#include "Military/Military4AcceptRetreat.event"
+	}
+	{
+	#include "Military/Military5AcceptRetreatLeave.event"
+	}
+	{
+	#include "Military/Military6AcceptRetreatLeave.event"
+	}
+	{
+	#include "Military/Military7AcceptRetreatLeave.event"
+	}
+	{
+	#include "Military/Military5AcceptRetreatHelp.event"
+	}
+	{
+	#include "Military/Military6AcceptRetreatHelp.event"
+	}
+	{
+	#include "Military/Military7AcceptRetreatHelp.event"
+	}
+	{
+	#include "Military/Military4AcceptHold.event"
+	}
+	{
+	#include "Military/Military5AcceptHold.event"
+	}
+	{
+	#include "Military/Military6AcceptHold.event"
+	}
+	{
+	#include "Military/Military7AcceptHold.event"
+	}
+#endif
+#ifndef __NO_MAGE__
+	{
+	#include "Mage/Mage1.event"
+	}
+	{
+	#include "Mage/Mage2Leave.event"
+	}
+#endif
+
+#include "Sassy.event"
+
+EndMainPointer:
+END_MAIN

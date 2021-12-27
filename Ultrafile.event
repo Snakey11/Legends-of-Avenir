@@ -92,7 +92,7 @@
 		MESSAGE ASM data ends at CURRENTOFFSET
 		
 		//Events
-		#include "Events/Master Event Installer.event"
+		#include "Events/MasterEventInstaller.event"
 		MESSAGE Events end at CURRENTOFFSET
 		
 		ALIGN 4
