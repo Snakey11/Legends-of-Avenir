@@ -718,7 +718,7 @@ grants +Luck*1.5 Hit when wielding axes.[X]
 ## SD_ArmorMarch
 Armor March: At start of turn, if unit[N]
 is adjacent to an armor ally, unit and[N]
-adjacent armor allies gain +2 Mov.[X]
+adjacent armor allies gain +1 Mov.[X]
 
 ## SD_VigorDance
 Inspiring Tune: Refreshing a unit grants[N]
