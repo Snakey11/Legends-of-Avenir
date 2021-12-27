@@ -112,7 +112,6 @@ STAL 0x20
 CAM1 [5,5]
 STAL 0x10
 WarpIn(1,8,XavusBalcony)
-TILECHANGE 3 // Open the door from the opening area.
 STAL 0x30
 CAM1 [21,16]
 STAL 0x20
