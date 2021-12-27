@@ -13,16 +13,16 @@ Fixed a typo in recruitment text in Mercenary 2 Wait
 Fixed an issue with the Finoc and Elanil not joining if they weren't recruited at the end of Mercenary 3 Militia Wait
 Fixed loading problems (causing problems later) at the end of 6 Assassin
 Xexim should now summon properly
-Keep Up description has been clarified
+Clarified keep Up description
 Fixed stairs (that is, warping stairs) crashing sometimes
 Debug build: Fixed enemy control
-5 use chest key has been fixed
+Fixed 5 use chest key
 Fixed staff EXP using the vanilla routine
 Fixed first aid not using a proper routine
 Fixed a bug with every square being available for repositioning in battle prep
 Fixed a bug where staves would not give exp
 Fixed a typo in Keep Up's description
-The objective in Military Haedric 5 has been fixed - it's now correctly defeat all
+Fixed the objective in Military Haedric 5 - it's now correctly defeat all
 Fixed no game over on Tact death in Mercenary Bandit 3
 Fixed a game over after finishing the Military Pass Haedric bad ending route
 Fixed Baron not being able to use magic (including their broken description)
@@ -33,6 +33,13 @@ Increased magic a bit for Maximus and reduced resistance and defense
 Fixed Maximus not being able to use A rank anima tomes
 Fixed a general that could easily be cheesed in Military 5 Accept Retreat Help
 Fixed a text typo in Military 4 Accept Retreat
+Fixed chapter objectives in Mercenary 3 Bandit, Military 6 Accept Retreat Help, and Mercenary 7 Militia Wait Cesaria
+Fixed Armor march's description for +1 move instead of +2
+Fixed crashes with certain houses in Military 5 Accept Retreat Help
+Adeline and Remus appear a turn sooner in Military 3 Accept, preventing problems associated with immediately retreating before they appear
+Removed sword use from Marksman (Archer Tact promotion)
+Fixed a problem with autolevelling with skills with prepromotes (namely Maximus with adept)
+De-cramped a bit of the starting area in Mercenary 7 Militia Wait Cesaria
 
 v2.2
 Brand new Merc->Cesaria route!
