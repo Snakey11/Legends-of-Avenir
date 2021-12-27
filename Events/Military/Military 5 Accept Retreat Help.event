@@ -40,8 +40,8 @@ Village(0x14,NorthRedHouse,16,1)
 Village(0x15,CenterRedHouse,12,8)
 Village(0x16,WestRedHouse,2,11)
 Village(0x17,SouthRedHouse,9,13)
-Village(0x00,InnHouse,16,17)
-Village(0x00,YellowHouse,10,18)
+House(0x00,InnHouse,16,17)
+House(0x00,YellowHouse,10,18)
 END_MAIN
 
 //Label MiscBasedEvents
@@ -310,13 +310,11 @@ NoFade
 EndA2
 
 InnHouse:
-EnterStop
 Text(0x01,Military5AcceptRetreatHelpInnText)
 NoFade
 EndA2
 
 YellowHouse:
-EnterStop
 Text(0x01,Military5AcceptRetreatHelpYellowHouseText)
 NoFade
 EndA2
