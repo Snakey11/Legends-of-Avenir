@@ -20,7 +20,7 @@ POIN BeginningScene EndingScene
 //Label TurnBasedEvents
 TurnBasedEvents:
 TurnEventPlayer(0x00,Turn2,2)
-TurnEventPlayer(0x00,AdelineRemusHere,3)
+TurnEventPlayer(0x00,AdelineRemusHere,2)
 TurnEventEnemy(0x00,ThiefHere,4)
 TurnEventPlayer(0x00,Turn5,5)
 InfiniteTurnEventPlayer(0x00,Turn7,7)
