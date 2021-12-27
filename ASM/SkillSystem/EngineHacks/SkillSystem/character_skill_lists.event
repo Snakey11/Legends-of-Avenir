@@ -127,7 +127,7 @@ BYTE 00 00
 
 ALIGN 4
 XeximSkillList:
-BYTE 1 DazzleID
+BYTE 21 DazzleID
 BYTE 25 SummonID
 BYTE 00 00
 
@@ -157,7 +157,7 @@ BYTE 00 00
 
 ALIGN 4
 UzkalisSkillList:
-BYTE 1 TomeRangeUpID
+BYTE 21 TomeRangeUpID
 BYTE 25 IgnisID
 BYTE 00 00
 
@@ -181,7 +181,7 @@ BYTE 00 00
 
 ALIGN 4
 MaximusSkillList:
-BYTE 1 AdeptID
+BYTE 21 AdeptID
 BYTE 25 HawkeyeID
 BYTE 00 00
 
@@ -199,7 +199,7 @@ BYTE 00 00
 
 ALIGN 4
 VicarSkillList:
-BYTE 1 RallyStrID
+BYTE 21 RallyStrID
 BYTE 00 00
 
 ALIGN 4
@@ -216,13 +216,13 @@ BYTE 00 00
 
 ALIGN 4
 EfilSkillList:
-BYTE 1 CriticalForceID
+BYTE 21 CriticalForceID
 BYTE 25 KillingMachineID
 BYTE 00 00
 
 ALIGN 4
 LeonSkillList:
-BYTE 1 AxefaithID
+BYTE 21 AxefaithID
 BYTE 25 PuissanceID
 BYTE 00 00
 
@@ -258,13 +258,13 @@ BYTE 00 00
 
 ALIGN 4
 SylvaineSkillList:
-BYTE 1 DesperationID
+BYTE 21 DesperationID
 BYTE 25 AegisID
 BYTE 00 00
 
 ALIGN 4
 MurielSkillList:
-BYTE 1 CelerityID
+BYTE 21 CelerityID
 BYTE 25 VantagePlusID
 BYTE 00 00
 
@@ -294,25 +294,25 @@ BYTE 00 00
 
 ALIGN 4
 RexSkillList:
-BYTE 1 SpectrumStanceID
+BYTE 21 SpectrumStanceID
 BYTE 25 ChargeID
 BYTE 00 00
 
 ALIGN 4
 XyliaSkillList:
-BYTE 1 ForesightID
+BYTE 21 ForesightID
 BYTE 25 DauntID
 BYTE 00 00
 
 ALIGN 4
 JurgenSkillList:
-BYTE 1 HeavyStrikesID
+BYTE 21 HeavyStrikesID
 BYTE 25 ThunderstormID
 BYTE 00 00
 
 ALIGN 4
 XenaSkillList:
-BYTE 1 SpeedCastID
+BYTE 21 SpeedCastID
 BYTE 00 00
 
 ALIGN 4
