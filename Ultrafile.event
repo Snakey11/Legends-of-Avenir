@@ -68,7 +68,7 @@
 		MESSAGE Text data ends at CURRENTOFFSET
 		
 		//CSV
-		#include "CSV/Master CSV Installer.event"
+		#include "CSV/MasterCSVInstaller.event"
 		MESSAGE Tables end at CURRENTOFFSET
 		
 		//Music

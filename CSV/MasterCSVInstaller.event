@@ -1,32 +1,32 @@
 
 ALIGN 4
-#include "EA Files/Effectiveness.event"
+#include "EAFiles/Effectiveness.event"
 
 ALIGN 16
 #include "Tables/TableInstaller.event"
 
 ALIGN 4
-#include "EA Files/Animation Reference.event"
+#include "EAFiles/AnimationReference.event"
 
 ALIGN 4
-#include "EA Files/Promotion Item Lists.event"
+#include "EAFiles/PromotionItems.event"
 
 ALIGN 4
 DeathQuoteTable:
-#include "EA Files/Death Quote Table.event"
+#include "EAFiles/DeathQuotes.event"
 
 ALIGN 4
 BattleQuoteTable:
-#include "EA Files/Battle Quote Table.event"
+#include "EAFiles/BattleQuotes.event"
 
 ALIGN 4
-#include "EA Files/Character Forcer Table.event"
+#include "EAFiles/CharacterForces.event"
 
 ALIGN 4
 AIOptionsTable: // Whether AI should use door keys, lockpicks, etc. Set within event files with macros.
 FILL 4 * 0xFF // Allocate space for 0xFF chapters.
 
-#include "EA Files/Repointers.event"
+#include "EAFiles/Repointers.event"
 
 ALIGN 4
 WeaponDebuffTable:
