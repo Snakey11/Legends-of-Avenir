@@ -47,8 +47,8 @@ Music/*.event
 
 # Text-related ignores.
 .TextEntries/
-Install Text Data.event
-Text Definitions.event
+InstallTextData.event
+TextDefinitions.event
 Text/ParseDefinitions.txt
 
 # Graphics-related ignores.
