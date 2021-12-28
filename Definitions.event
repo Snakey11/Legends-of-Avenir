@@ -1803,3 +1803,5 @@ cd "%~dp0ASM/SupportRework"
 // In text, 0x97F is my magical number to start at.
 
 //#inctext PFinder Clean.gba (Vanilla memory location) NewTableLabel
+
+//get-childitem *.event | foreach {rename-item $_ $_.name.replace(" ","")}

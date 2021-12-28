@@ -1,0 +1,208 @@
+
+## PlayerDeathText
+[FarRight][LoadPlayer]
+This feels...[....] Familiar.[NL]
+My friends...[CloseEyes] I am sorry[A][X]
+
+## VicarDeathText
+[FarRight][LoadVicar]
+Looks like I bit off more[NL]
+than I can chew...[....] I'll[A][NL]
+have to step out for[NL]
+now, [Tact].[A][X]
+
+## WalterDeathText
+[FarRight][LoadWalter]
+I'm sorry, [Tact]...[....][NL]
+This is too much for me...[CloseEyes][....][A][NL]
+I'm gonna have to [OpenEyes]pull out.[A][X]
+
+## BaretDeathText
+[FarRight][LoadBaret]
+I'm...[.][.] wounded? Dammit...[.][NL]
+I can't go on like this.[A][NL]
+Finish this, [Tact][A][X]
+
+## ValDeathText
+[FarRight][LoadVal]
+I can't fall here...[....][NL]
+[Tact], finish the[A][NL]
+mission. I'm pulling out.[A][X]
+
+## HelmerDeathText
+[FarRight][LoadHelmer]
+Why can't I...[CloseEyes][.] lift my[NL]
+spear? Shit...[....] I leave[A][NL]
+this [OpenEyes]to you, [Tact].[A][X]
+
+## FinocDeathText
+[FarRight][LoadFinoc]
+I have to fall back.[NL]
+Sorry, [Tact].[A][X]
+
+## ElanilDeathText
+[FarRight][LoadElanil]
+This is too much for[NL]
+me...[.] I'm gonna[A][NL]
+drop out here. Keep[NL]
+pushing, [Tact].[A][X]
+
+## MaximusDeathText
+[FarRight][LoadMaximus]
+I had come so far...[....][NL]
+Just to fall here.[CloseEyes][A][NL]
+I'm sorry...[A][X]
+
+## LeonDeathText
+[FarRight][LoadLeon]
+You've slain me...[.] The[NL]
+Basileus of Haedric...[A][NL]
+Heh...[....] Guess I[NL]
+lost my edge...[A][X]
+
+## JasperDeathText
+[FarRight][LoadJasper]
+Is this...[.] my blood?[NL]
+No...[....] I don't want[A][NL]
+to die here...[NL]
+Not...[CloseEyes][....] now...[A][X]
+
+## DerekDeathText
+[FarRight][LoadDerek]
+No...[.] no, no, no...[....][NL]
+My armor is stronger[A][NL]
+than this...[.] I...[....][NL]
+can't fall here...[A][X]
+
+## LuxDeathText
+[FarRight][LoadLux]
+Maximus...[.] I'm sorry[NL]
+to have been such[CloseEyes][A][NL]
+a disappointment...[A][X]
+
+## LukeDeathText
+[FarRight][LoadLuke]
+Is this the will of[NL]
+the Higher Beings?[A][NL]
+That I fall here?[NL]
+It...[....][CloseEyes] matters not.[A][X]
+
+## ArcDeathText
+[FarRight][LoadArc]
+So this is where I[NL]
+meet my end...[.] Aye,[A][NL]
+'tis a noble death...[....][NL]
+I can...[CloseEyes][.] accept this...[A][X]
+
+## EfilDeathText
+[FarRight][LoadEfil]
+No...[.] Dammit! I came[NL]
+all this way...[....] Just[A][NL]
+to fall here...[.] [Tact],[NL]
+finish what I started.[A][X]
+
+## UzkalisDeathText
+[FarRight][LoadUzkalis]
+The years of study I[NL]
+put into thunder...[A][NL]
+Just to have it wasted[NL]
+so...[CloseEyes][....] pathetically...[A][X]
+
+## AryaDeathText
+[FarRight][LoadArya]
+This day comes for all[NL]
+of us...[....] I am sorry,[A][NL]
+friends...[....] You'll[NL]
+have to leave me...[A][X]
+
+## KendrickDeathText
+[FarRight][LoadKendrick]
+And so, I finally pay[NL]
+the price...[.....] I knew[A][NL]
+this day would come.[NL]
+I've accepted my fate.[A][X]
+
+## ConnorDeathText
+[FarRight][LoadConnor]
+Dammit![CloseEyes][.......][....][OpenEyes] Dammit! Dammit![NL]
+Dammit! Dammit! Dammit![A][X]
+
+## AdlezDeathText
+[FarRight][LoadAdlez]
+This day comes for any[NL]
+in my business...[....][CloseEyes] I[A][NL]
+suppose it's just my[NL]
+way of atonement...[A][X]
+
+## XeximDeathText
+[FarRight][LoadXexim]
+And so our ancient[NL]
+order falls...[CloseEyes][A][X]
+
+## CougarDeathText
+[FarRight][CloseEyes][LoadCougar]
+So... weak... I'm just[NL]
+a liability out here.[A][NL]
+I'm sorry, everyone.[A][X]
+
+## SekarDeathText
+[FarRight][LoadSekar]
+I'm... wounded...[NL]
+shameful for a Haedrician.[A][NL]
+I'm sorry to everyone.[A][X]
+
+## ForrestDeathText
+[FarRight][LoadForrest]
+No... Not like this![A][X]
+
+## ChristinaDeathText
+[FarRight][LoadChristina]
+I'm sorry, Captain Sylvaine.[NL]
+I can't take any more.[A][X]
+
+## ClaraDeathText
+[FarRight][LoadClara]
+Ah! This is too much.[NL]
+I'm sorry, everyone.[A][X]
+
+## SylvaineDeathText
+[FarRight][LoadSylvaine]
+I musn't fall...[CloseEyes] Altia[NL]
+must be liberated...[A][X]
+
+## ZahevaDeathText
+[FarRight][LoadZaheva]
+[Tact], it's been fun...[NL]
+Hold on and keep pushing.[A][X]
+
+## YvetteDeathText
+[FarRight][LoadYvette]
+Ah! I'm sorry, [Tact]. We[NL]
+can barely fly anymore.[A][NL]
+Watch your back out there![A][X]
+
+## AdelineDeathText
+[FarRight][LoadAdeline]
+No... I... can't keep pushing...[NL]
+Remus... I'm sorry.[A][NL]
+I'm pulling back.[A][X]
+
+## RemusDeathText
+[BattleText]
+[FarRight][LoadRemus]
+I never wanted this, but... it seems peaceful...[X]
+
+## RexDeathText
+[BattleText]
+[FarRight][LoadRex]
+No... I thought I was strong enough... My liege, I'm sorry... I've failed Cesaria...[X]
+
+## JurgenDeathText
+[BattleText]
+[FarRight][LoadJurgen]
+I may fall... But the Lion Brigade will not. I'm just another soldier...[X]
+
+## MurielDeathText
+[BattleText]
+[FarRight][LoadMuriel]
+I can't fall here... I can't... Push any more. Must I withdraw?[X]

@@ -63,8 +63,8 @@
 		
 		//Text
 		TextTable:
-		#incbin "Text/Vanilla Text Table.dmp"
-		#include "Text/Install Text Data.event"
+		#incbin "Text/VanillaTextTable.dmp"
+		#include "Text/InstallTextData.event"
 		MESSAGE Text data ends at CURRENTOFFSET
 		
 		//CSV

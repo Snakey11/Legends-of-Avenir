@@ -1,0 +1,214 @@
+
+## Military4AcceptHoldBeginningText
+[ConversationText]
+[Right][LoadPlayer][FarRight][LoadRemus][MidLeft][LoadBlaine]
+You did well, [Tact], despite all expectations.
+[Right]I knew there would be no issues.
+[MidLeft]Even with the Arcanian? The trust you place in her is fascinating. Remus, what did you observe of Zooheeva during the battle?
+[Right]It's Zaheva, sir.
+[MidLeft]Whichever. Remus?
+[FarRight]... She fought with intent. There was nothing to suspect about her.
+[MidLeft]Bah! Ever the pinnacle of honesty. It's no wonder you're still a Private.
+[Right]What is our plan moving forward?
+[MidLeft]We're moving into Arcanae. Our platoon's objective is to sweep along the south and then up towards the capital. Captain Jurgen's force is the strongest of our three, so his will be the main push along the center.
+[Right]What's our strategy for our move into Arcanae?
+[MidLeft]We're going to split our platoon. Smaller groups will be harder for Arcanian soldiers to detect, so we'll be able to cover ground much faster.
+[Right]Sir, what's the point in splitting our strength? Won't it be harder to capture important points?
+[MidLeft]There's only one main military point in the southern part of Arcanae. We'll meet up there.
+[Right]Understood. How are we splitting the platoon?
+[MidLeft]You can keep Adeline and Remus for now. I need Adeline keeping an eye on the Arcanian. It's clear I can't trust you and your friends to do that for me.
+[Right]If you think so, sir.
+[MidLeft]I will go ahead and start moving my platoon now. Catch your men up on the plan, and then head out. Plan to assault the fort two weeks from today.
+[Right]Understood, sir![X]
+
+## Military4AcceptHoldHesMeanText
+[ConversationText]
+[FarLeft][LoadZaheva][Left][LoadPlayer][FarRight][LoadRemus][Right][LoadDerek]
+I don't get how you manage to stay so calm with him. How that man ever rose in the ranks, I'll never understand.
+[Left]I don't know, but it's easier to remain calm and respectful than start a fight... You doing okay, Remus?
+[FarRight]Yeah, I'm fine.
+[Left]He was pretty harsh towards you.
+[FarRight]I'm used to it. There's a reason I only speak when asked a question...
+[Left]Hey, it's okay.
+[FarLeft]Being honest isn't a fault. This Blaine seems like a pathetic excuse for a commander.
+[Right]You're telling me. Entirely different from what we saw of Captain Sylvaine back in the capital...
+[FarRight]Regardless, Vice Captain Blaine is our commanding officer. I just have to deal with it...
+[Left]Remus, I want you to always express what you're thinking with us.
+[FarRight]I'm sorry?
+[Left]I value your opinion. It took a lot of guts to stand up to Blaine back there, even if it was you being honest.
+[FarRight][Tact]... Thank you. I'll go let Adeline know we're leaving soon.[ClearFace][.....]
+[Right]Why'd you say that, [Tact]?
+[Left]No soldier should be silenced. The Vice Captain isn't here now, so Remus deserves the opportunity to speak his mind.
+[FarLeft]A smart move. What about Adeline?
+[Left]She's just been told to keep an eye on you, regardless of what any of the rest of us say.
+[FarLeft]Understandable. Can't say I blame them.
+[Right]I suppose. Still, I find it hard to imagine you betraying us, Zaheva.
+[FarLeft]So long as you all stay fighting Arcanae, I'll fight with you.
+[Right]Ha! Well I don't see that changing anytime soon.
+[Left]Derek's right. Anyway, we need to move out. We've got a lot of ground to cover.[X]
+
+## Military4AcceptHoldTactAdelineText
+[ConversationText]
+[MidLeft][LoadPlayer][MidRight][LoadAdeline]
+[Tact], why do you trust Zaheva?
+[MidLeft]Why shouldn't I?
+[MidRight]She's an Arcanian. Easy answer.
+[MidLeft]That's true. Why do you trust Vice-Captain Blaine?
+[MidRight]Well... He's my commanding officer and-
+[MidLeft]Because he's a Cesarian.
+[MidRight]Why shouldn't I trust my own countrymen?
+[MidLeft]It's not that you shouldn't trust your own countrymen, but you should always look at a person's convictions first.
+[MidRight]... What do you mean by that?
+[MidLeft]Not every Cesarian is good, and not every Arcanian is evil.
+[Events]
+[MidRight]I'll believe it when I see it. Hey, what's that coming our way?
+[MidLeft]Is that a courier?
+[MidRight]It must be.[CloseSpeech][MidLeft][MoveFarLeft][MidRight][MoveLeft][ClearFace][LoadAdeline][MidRight][LoadCougar]
+[Events]
+Are you Corporals [Tact] and Adeline of the Cesarian Lion Brigade?
+[FarLeft]I'm [Tact]. This is Adeline. Who are you?
+[MidRight]I'm an Altian Courier enlisted by your Vice-Captain Blaine. He's encountered a substantial Arcanian platoon and is in dire need of reinforcements. He orders you to move north to help him rather than continue the march on the fort. Here's the official missive.
+[Left][MoveLeft]Dammit! This wasn't in the plan...
+[FarLeft]I told him splitting was a bad idea...
+[Left]We have our orders, [Tact]. I'll rouse the men.
+[FarLeft]What's your name, courier?
+[MidRight]My name's Cougar.
+[FarLeft]Is there a way to reach the Vice-Captain easily?
+[MidRight]There is, but we're pressed for time. I won't be able to reach him with another note, I barely made it out of there alive to begin with.
+[FarLeft]I understand. Can you guide us there?
+[MidRight]Absolutely.
+[FarLeft]Lead the way, Cougar. We don't have much time.[X]
+
+## Military4AcceptHoldAtBattleText
+[ConversationText]
+[MidLeft][LoadPlayer][FarRight][LoadRemus][Right][LoadAdeline]
+There they are!
+[FarRight]Look at that... They're completely surrounded...
+[MidLeft]How did you ever get out of there, Cougar?[Right][ClearFace][LoadCougar]
+There weren't as many when I left... It looks like your Vice-Captain's taken up a defensive position there.
+[MidLeft]Who's the Arcanian Commander?
+[Right]A Duke by the name of Clint. He's known as a cunning man with little patience for others.[FarRight][ClearFace][LoadZaheva]
+Clint...[CloseSpeech][MoveFarLeft]
+[Events]
+[....][Right][MoveFarRight][MidLeft][MoveRight][ClearFace][LoadPlayer]
+Zaheva! What are you doing?[FarLeft][ClearFace][LoadZaheva]
+Taking my revenge.[CloseSpeech][Right][MoveLeft]
+Wait! You won't make it halfway to him right now. We'll get him sooner or later. But right now, we have to rescue the Vice-Captain.
+[FarLeft]... Fine. I'll hold back just this once.[Right][LoadAdeline]
+Glad to see you are capable of intelligent thought...
+[Left]Everyone, [MoveLeft]stop! We have to get moving.
+[FarRight][MoveFarRight][Tact], look![X]
+
+## Military4AcceptHoldKillBlaineText
+[ConversationText]
+[MidLeft][LoadBlaine][MidRight][LoadClint]
+So... You're the fabled Vice-Captain Blaine. I've heard wonders of your ability with a lance.
+[MidLeft]You... Duke Clint. What brings you out here?
+[MidRight]A pathetic and small Cesarian strike force caught my attention. [Smile]Sure, your Captain Jurgen poses a larger threat, but I wouldn't miss an opportunity to crush a Cesarian platoon.
+[MidLeft]You can't honestly expect me to sit down and die in front of you like a dog!
+[MidRight]Oh, but I do.[X]
+
+## Military4AcceptHoldBlaineDeathText
+[BattleText]
+[FarRight][LoadBlaine]
+No... I can't... Fall...[X]
+
+## Military4AcceptHoldBlaineDeadText
+[ConversationText]
+[MidRight][Smile][LoadClint]
+[FarFarLeft]The Vice-Captain has fallen! We need to retreat!
+[MidRight]Pathetic. He'll be dead soon. Helmer![CloseSpeech][MoveFarRight][Right][LoadHelmer]
+Sir!
+[FarRight]Take these soldiers captive and back to the fort. I'm going to go report to Lord Uzkalis.
+[Right]Yes, sir.[X]
+
+## Military4AcceptHoldRecruitCougarText
+[ConversationText]
+[FarRight][LoadPlayer][Right][LoadAdeline][MoveRight]
+No!
+[FarRight]We're going in there. We can't afford to let them take all those soldiers captive. Derek, you take point![Left][LoadDerek]
+I'm on it!
+[Events]
+[FarLeft][LoadCougar][Tact]! I'm not much of a fighter, but I'll join you for this. You'll need the help.
+[FarRight]Aren't you an Altian?
+[FarLeft]We Couriers are in service to whatever country has us hired at the time. It won't be an issue.
+[FarRight]... Very well. We're glad to have you with us, Cougar. Let's move out![X]
+
+## Military4AcceptHoldClintLeavesText
+[ConversationText]
+[MidRight][LoadVal][MidLeft][LoadClint]
+Well, well, well... Looks like there are more Cesarians out and about. Val, I leave them to you![X]
+
+## Military4AcceptHoldClintGoneText
+[ConversationText]
+[MidRight][LoadVal]
+Soldiers, form up! We must deal with this threat swiftly![X]
+
+## Military4AcceptHoldStartBattleText
+[ConversationText]
+[FarLeft][LoadDerek][Left][LoadPlayer][Right][LoadJasper][FarRight][LoadZaheva]
+He's getting away!
+[Left]We need to focus on the task at hand.
+[FarLeft]I've got point!
+[Right]I'm right behind you, Derek![X]
+
+## Military4AcceptHoldZahevaValBattleText
+[BattleText]
+[FarRight][LoadZaheva]
+Where is he!?[ClearFace]
+[FarLeft][LoadVal]
+Who?[ClearFace]
+[FarRight][LoadZaheva]
+That monster you call Clint.[ClearFace]
+[FarLeft][LoadVal]
+Duke Clint is an honorable Arcanian noble! I don't know who you are, but I won't let you slander his name![ClearFace]
+[FarRight][LoadZaheva]
+Then you'll die![X]
+
+## Military4AcceptHoldValBattleText
+[BattleText]
+[FarLeft][LoadVal]
+I have my orders. I won't let you pass![X]
+
+## Military4AcceptHoldValDeathText
+[BattleText]
+[FarLeft][LoadVal]
+Duke Clint... I failed...[X]
+
+## Military4AcceptHoldFinishedText
+[ConversationText]
+[Right][LoadPlayer][FarRight][LoadAdeline][FarLeft][LoadRemus]
+[Tact]! Adeline! Vice-Captain Blaine is still alive!
+[FarRight]What?! Let's go![X]
+
+## Military4AcceptHoldBlaineDiesText
+[ConversationText]
+[Right][LoadPlayer][FarRight][LoadAdeline][MidLeft][LoadBlaine]
+Adeline... [Tact]...
+[FarRight]Vice-Captain...
+[MidLeft]You have to... Push on...
+[Right]To the fort? We're obliterated. Your entire platoon is gone.
+[MidLeft]Rescue them...[CloseEyes] I failed them... You can't let them die...
+[FarRight]We will, sir. We will.
+[MidLeft]Send Cougar... Tiger Brigade... Vice-Captain Lux...
+[FarRight]What?
+[MidLeft]No time... I'm sorry...[ClearFace]
+[FarRight]Vice-Captain? Vice-Captain!
+[Right]He's gone. We'll take a rest here. You and Remus can bury the body.
+[FarRight]Right...[CloseSpeech][.......]
+[Right]I'll go talk to Cougar and Zaheva and plan our next move.
+[FarRight]... Understood.[X]
+
+## Military4AcceptHoldEndingText
+[ConversationText]
+[FarLeft][LoadZaheva][Left][LoadPlayer][MidRight][LoadCougar]
+Vice-Captain Lux? I know of her, but don't know the face.
+[Left]I don't know. Currently, we're without a commander. We can make do just our small group, but once we rescue the rest of the platoon, we'll need a commander.
+[FarLeft]It seems this Lux would be the only one to fill that void. Maximus and Jurgen have to work with their platoons.
+[Left]Right... We don't have much time though.
+[MidRight]I'll go to the Tiger Brigade and give them an update, then return with Lux. You all push to the fort. They won't expect such a small force to make an attack, and you should be able to catch them by surprise.
+[FarLeft]Cougar is right. We don't have time to wait for Lux to get here.
+[Left]... I think you're right. Give Adeline and Remus their time, and then we'll move out.
+[MidRight]I'll head out now. Hopefully I can meet you before you get back to the fort.
+[FarLeft]It's a plan. I'll get some rest now too.
+[Left]We'll head out in the morning.[X]
