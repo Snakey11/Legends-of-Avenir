@@ -29,28 +29,28 @@
 	#incbin "CSV/ClassAnimTable.dmp" // Vanilla ClassAnimTable.
 	POP
 	{
-	#include "Graphics/Battle Animations/Battle Animations 2.event" // FULL!
+	#include "Graphics/BattleAnimations/BattleAnimations2.event"
 	}
 	MESSAGE First animation block ends at CURRENTOFFSET
 	ASSERT $C00000 - CURRENTOFFSET
 	
 	ORG FreeSpaceB
 	{
-	#include "Graphics/Battle Animations/Battle Animations 1.event" // FULL!
+	#include "Graphics/BattleAnimations/BattleAnimations1.event"
 	}
 	MESSAGE Second animation block ends at CURRENTOFFSET
 	ASSERT $EE0000 - CURRENTOFFSET
 	
 	ORG FreeSpaceC
 	{
-	#include "Graphics/Battle Animations/Battle Animations 3.event" // FULL!
+	#include "Graphics/BattleAnimations/BattleAnimations3.event"
 	}
 	MESSAGE Third animation block ends at CURRENTOFFSET
 	ASSERT $FE0000 - CURRENTOFFSET
 	
 	ORG EndofROM
 	{
-	#include "Graphics/Battle Animations/Battle Animations 4.event"
+	#include "Graphics/BattleAnimations/BattleAnimations4.event"
 	}
 	MESSAGE Fourth animation block ends at CURRENTOFFSET
 	ASSERT EndOfAnimations - CURRENTOFFSET // Yell at me if I add animations without updating offsets.
