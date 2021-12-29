@@ -76,7 +76,7 @@ ALIGN 4
 #include "CopyUnit/Installer.event"
 
 ALIGN 4
-#include "Display All Weapon Level Ups/Promotion Ranks Fix Installer.event"
+#include "DisplayAllWeaponLevelUps/PromotionRanksFixInstaller.event"
 
 #include "DoorsAndChests/DoorsAndChests.event"
 
