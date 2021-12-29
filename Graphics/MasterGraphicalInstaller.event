@@ -1,5 +1,5 @@
 
-#include "Spells/Master Spell Installer.event"
+#include "Spells/MasterSpellInstaller.event"
 
 #include "Portraits/_PortraitInstaller.event"
 

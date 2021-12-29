@@ -5,7 +5,7 @@
 #define setCustomSpell_nodim(index) "PUSH; ORG SpellTable+(index*4); POIN CSAEngine_NoDim|1; POP"
 
 SpellTable:	 // Was $5d4e60
-#incbin "Repointed Spell Table.dmp"
+#incbin "RepointedSpellTable.dmp"
 
 
 CSATable:
@@ -14,15 +14,13 @@ CSATable:
 PUSH
 ORG $95d780
 CSAEngine:
-#incbin "CSA System_fe8.dmp" //the custom spell engine. All custom spells point here.
+#incbin "CSASystem_fe8.dmp" //the custom spell engine. All custom spells point here.
 POIN CSATable //needed for the routine
 POP
 
 #define CSAEngine_Dim $95d7ec
 #define CSAEngine_NoDim $95d898 //the last word in the dmp, this should be updated if you edit the engine.
 
-ALIGN 4
-#inctext lyn "SpellFix.elf" "SpellFixHook.elf"   
 {
 #include "Spells/Aqua/Aqua.event"
 }
