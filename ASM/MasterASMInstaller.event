@@ -164,7 +164,7 @@ StaffEXPEntry(Unlock,25,10)
 StaffEXPEntry(Barrier,20,10)
 StaffEXPEntry(0,0,0)
 
-#include "ModularMinimugBox/MMB Installer Default.event"
+#include "ModularMinimugBox/MMBInstaller.event"
 
 #include "ModularSupply/ModularSupply.event"
 
