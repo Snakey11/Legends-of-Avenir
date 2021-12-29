@@ -2,15 +2,15 @@
 // Desert Bastion.
 ALIGN 4
 DesertTempleTilesetObjects: // lz77 compressed.
-#incbin "Desert Temple.dmp"
+#incbin "DesertTemple.dmp"
 
 ALIGN 4
 DesertTempleTilesetPalette:
-#incbin "Desert Temple Palette.dmp"
+#incbin "DesertTemplePalette.dmp"
 
 ALIGN 4
 DesertTempleTilesetTileConfig:
-#incext compress "Desert Temple.mapchip_config"
+#incext compress "DesertTemple.mapchip_config"
 
 EventPointerTable(DesertTempleObjectSet,DesertTempleTilesetObjects)
 EventPointerTable(DesertTemplePalette,DesertTempleTilesetPalette)
@@ -19,15 +19,15 @@ EventPointerTable(DesertTempleTileConfig,DesertTempleTilesetTileConfig)
 // Outdoor FE6 snowy.
 ALIGN 4
 OutdoorSnowyTilesetObjects: // lz77 compressed.
-#incbin "Outdoor Snowy.dmp"
+#incbin "OutdoorSnowy.dmp"
 
 ALIGN 4
 OutdoorSnowyTilesetPalette:
-#incbin "Outdoor Snowy Palette.dmp"
+#incbin "OutdoorSnowyPalette.dmp"
 
 ALIGN 4
 OutdoorSnowyTilesetTileConfig:
-#incext compress "Snowy Tileset Outdoor Tile Configuration.mapchip_config"
+#incext compress "SnowyTilesetOutdoorTileConfiguration.mapchip_config"
 
 EventPointerTable(OutdoorSnowyObjectSet,OutdoorSnowyTilesetObjects)
 EventPointerTable(OutdoorSnowyPalette,OutdoorSnowyTilesetPalette)
@@ -36,15 +36,15 @@ EventPointerTable(OutdoorSnowyTileConfig,OutdoorSnowyTilesetTileConfig)
 // Indoor FE6 snowy.
 ALIGN 4
 IndoorSnowyTilesetObjects: // lz77 compressed.
-#incbin "Indoor Snowy.dmp"
+#incbin "IndoorSnowy.dmp"
 
 ALIGN 4
 IndoorSnowyTilesetPalette:
-#incbin "Indoor Snowy Palette.dmp"
+#incbin "IndoorSnowyPalette.dmp"
 
 ALIGN 4
 IndoorSnowyTilesetTileConfig:
-#incext compress "Snowy Tileset Indoor Tile Configuration.mapchip_config"
+#incext compress "SnowyTilesetIndoorTileConfiguration.mapchip_config"
 
 EventPointerTable(IndoorSnowyObjectSet,IndoorSnowyTilesetObjects)
 EventPointerTable(IndoorSnowyPalette,IndoorSnowyTilesetPalette)
@@ -53,15 +53,15 @@ EventPointerTable(IndoorSnowyTileConfig,IndoorSnowyTilesetTileConfig)
 // Western Isles (improved).
 ALIGN 4
 WesternIslesTilesetObjects:
-#incbin "Western Isles - Extended - Object Set and Palette.dmp"
+#incbin "WesternIsles-Extended-ObjectSetandPalette.dmp"
 
 ALIGN 4
 WesternIslesTilesetPalette:
-#incbin "Western Isles - Extended - Object Set and Palette Palette.dmp"
+#incbin "WesternIsles-Extended-ObjectSetandPalettePalette.dmp"
 
 ALIGN 4
 WesternIslesTilesetTileConfig:
-#incext compress "Western Isles - Extended - Config.mapchip_config"
+#incext compress "WesternIsles-Extended-Config.mapchip_config"
 
 EventPointerTable(WesternIslesObjectSet,WesternIslesTilesetObjects)
 EventPointerTable(WesternIslesPalette,WesternIslesTilesetPalette)
@@ -70,15 +70,15 @@ EventPointerTable(WesternIslesTileConfig,WesternIslesTilesetTileConfig)
 // Improved castle (library).
 ALIGN 4
 ImprovedCastleTilesetObjects:
-#incbin "Improved Castle Objects.dmp"
+#incbin "ImprovedCastleObjects.dmp"
 
 ALIGN 4
 ImprovedCastleTilesetPalette:
-#incbin "Improved Castle Objects Palette.dmp"
+#incbin "ImprovedCastleObjectsPalette.dmp"
 
 ALIGN 4
 ImprovedCastleTilesetTileConfig:
-#incext compress "Improved Castle.mapchip_config"
+#incext compress "ImprovedCastle.mapchip_config"
 
 EventPointerTable(ImprovedCastleObjectSet,ImprovedCastleTilesetObjects)
 EventPointerTable(ImprovedCastlePalette,ImprovedCastleTilesetPalette)
@@ -101,35 +101,35 @@ EventPointerTable(ImprovedCastleAnims,ImprovedCastleTilesetAnimation)
 
 ALIGN 4
 ImprovedCastle1:
-#incbin "castle_anims.mapanime 1_000.dmp"
+#incbin "castle_anims.mapanime1_000.dmp"
 
 ALIGN 4
 ImprovedCastle2:
-#incbin "castle_anims.mapanime 1_001.dmp"
+#incbin "castle_anims.mapanime1_001.dmp"
 
 ALIGN 4
 ImprovedCastle3:
-#incbin "castle_anims.mapanime 1_002.dmp"
+#incbin "castle_anims.mapanime1_002.dmp"
 
 ALIGN 4
 ImprovedCastle4:
-#incbin "castle_anims.mapanime 1_003.dmp"
+#incbin "castle_anims.mapanime1_003.dmp"
 
 ALIGN 4
 ImprovedCastle5:
-#incbin "castle_anims.mapanime 1_004.dmp"
+#incbin "castle_anims.mapanime1_004.dmp"
 
 ALIGN 4
 ImprovedCastle6:
-#incbin "castle_anims.mapanime 1_005.dmp"
+#incbin "castle_anims.mapanime1_005.dmp"
 
 ALIGN 4
 ImprovedCastle7:
-#incbin "castle_anims.mapanime 1_006.dmp"
+#incbin "castle_anims.mapanime1_006.dmp"
 
 ALIGN 4
 ImprovedCastle8:
-#incbin "castle_anims.mapanime 1_007.dmp"
+#incbin "castle_anims.mapanime1_007.dmp"
 
 // FE6 water animations.
 ALIGN 4
@@ -156,49 +156,49 @@ EventPointerTable(FE6WaterAnimation,FE6WaterTilesetAnimation)
 
 ALIGN 4
 FE6Water1: // None of these are compressed
-#incbin "FE6 Water Tile Animations.mapanime 1_000.dmp"
+#incbin "FE6WaterTileAnimations.mapanime1_000.dmp"
 ALIGN 4
 FE6Water2:
-#incbin "FE6 Water Tile Animations.mapanime 1_001.dmp"
+#incbin "FE6WaterTileAnimations.mapanime1_001.dmp"
 ALIGN 4
 FE6Water3:
-#incbin "FE6 Water Tile Animations.mapanime 1_002.dmp"
+#incbin "FE6WaterTileAnimations.mapanime1_002.dmp"
 ALIGN 4
 FE6Water4:
-#incbin "FE6 Water Tile Animations.mapanime 1_003.dmp"
+#incbin "FE6WaterTileAnimations.mapanime1_003.dmp"
 ALIGN 4
 FE6Water5:
-#incbin "FE6 Water Tile Animations.mapanime 1_004.dmp"
+#incbin "FE6WaterTileAnimations.mapanime1_004.dmp"
 ALIGN 4
 FE6Water6:
-#incbin "FE6 Water Tile Animations.mapanime 1_005.dmp"
+#incbin "FE6WaterTileAnimations.mapanime1_005.dmp"
 ALIGN 4
 FE6Water7:
-#incbin "FE6 Water Tile Animations.mapanime 1_006.dmp"
+#incbin "FE6WaterTileAnimations.mapanime1_006.dmp"
 ALIGN 4
 FE6Water8:
-#incbin "FE6 Water Tile Animations.mapanime 1_007.dmp"
+#incbin "FE6WaterTileAnimations.mapanime1_007.dmp"
 ALIGN 4
 FE6Water9:
-#incbin "FE6 Water Tile Animations.mapanime 1_008.dmp"
+#incbin "FE6WaterTileAnimations.mapanime1_008.dmp"
 ALIGN 4
 FE6Water10:
-#incbin "FE6 Water Tile Animations.mapanime 1_009.dmp"
+#incbin "FE6WaterTileAnimations.mapanime1_009.dmp"
 ALIGN 4
 FE6Water11:
-#incbin "FE6 Water Tile Animations.mapanime 1_010.dmp"
+#incbin "FE6WaterTileAnimations.mapanime1_010.dmp"
 ALIGN 4
 FE6Water12:
-#incbin "FE6 Water Tile Animations.mapanime 1_011.dmp"
+#incbin "FE6WaterTileAnimations.mapanime1_011.dmp"
 ALIGN 4
 FE6Water13:
-#incbin "FE6 Water Tile Animations.mapanime 1_012.dmp"
+#incbin "FE6WaterTileAnimations.mapanime1_012.dmp"
 ALIGN 4
 FE6Water14:
-#incbin "FE6 Water Tile Animations.mapanime 1_013.dmp"
+#incbin "FE6WaterTileAnimations.mapanime1_013.dmp"
 ALIGN 4
 FE6Water15:
-#incbin "FE6 Water Tile Animations.mapanime 1_014.dmp"
+#incbin "FE6WaterTileAnimations.mapanime1_014.dmp"
 ALIGN 4
 FE6Water16:
-#incbin "FE6 Water Tile Animations.mapanime 1_015.dmp"
+#incbin "FE6WaterTileAnimations.mapanime1_015.dmp"

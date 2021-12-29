@@ -83,7 +83,7 @@
 		
 		//Maps
 		#define TMX2EA
-		#include "Maps/FE8 Tilesets/New Tilesets/Tileset Installer.event"
+		#include "Maps/Tilesets/NewTilesets/TilesetInstaller.event"
 		#include "Maps/Master Map Installer.event"	
 		MESSAGE Map data ends at CURRENTOFFSET
 		
