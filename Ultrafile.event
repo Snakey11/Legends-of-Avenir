@@ -78,7 +78,7 @@
 		MESSAGE Music data ends at CURRENTOFFSET
 		
 		//Miscellaneous Graphical
-		#include "Graphics/Master Graphical Installer.event"
+		#include "Graphics/MasterGraphicalInstaller.event"
 		MESSAGE Misc graphical data ends at CURRENTOFFSET
 		
 		//Maps
