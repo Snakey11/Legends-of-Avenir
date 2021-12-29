@@ -1,15 +1,5 @@
 
-ALIGN 4
-#ifdef SkillSystemIncluded
-	#include "SkillSystem/EngineHacks/_MasterHackInstaller.event"
-#else
-	#define SkillTester 0
-	#include "Delete with Skills.event"
-	#include "Skill System/EngineHacks/SkillSystem/skill_lists.event"
-	#include "Skill System/EngineHacks/SkillSystem/Proc Skills/Proc Skills Installer.event"
-	ALIGN 4
-	#include "FE8 Battle Stats with Anims Off/FE8-Battle Stats.event"
-#endif
+#include "SkillSystem/EngineHacks/_MasterHackInstaller.event"
 
 ALIGN 4
 #include "AlwaysDisplayRangedAnimation/RangedAnimationbyTableInstaller.event"

@@ -11,9 +11,7 @@
 
 #include "SkillAnimations/AnimInstaller.event"
 
-#ifdef IncludeBigStuff
 #include "BattlePalettes/_BattlePaletteInstaller.event"
-#endif
 
 PUSH
 ORG $88638

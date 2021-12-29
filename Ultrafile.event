@@ -22,12 +22,9 @@
 	#define FreeSpaceBLRange BLRange
 	#define BlRange BLRange
 	
-	#define IncludeBigStuff
-	#define SkillSystemIncluded
 	#ifndef __PUBLIC__
 		#define __DEBUG__
 	#endif
-	//#define TESTING
 	#ifdef __PRIVATE__
 		MESSAGE Assembling PRIVATE release
 	#endif
@@ -53,52 +50,44 @@
 		MESSAGE Assembling with debug features
 	#endif
 	
-	#ifdef TESTING // For clean-ROM-style testing
+	ORG EndOfAnimations
 	
-		#include "TEST/Test Buildfile.event"
-		
-	#else
-		
-		ORG EndOfAnimations
-		
-		//Text
-		TextTable:
-		#incbin "Text/VanillaTextTable.dmp"
-		#include "Text/InstallTextData.event"
-		MESSAGE Text data ends at CURRENTOFFSET
-		
-		//CSV
-		#include "CSV/MasterCSVInstaller.event"
-		MESSAGE Tables end at CURRENTOFFSET
-		
-		//Music
-		{
-		#include "Music/_Master Music Installer.event"
-		}
-		MESSAGE Music data ends at CURRENTOFFSET
-		
-		//Miscellaneous Graphical
-		#include "Graphics/MasterGraphicalInstaller.event"
-		MESSAGE Misc graphical data ends at CURRENTOFFSET
-		
-		//Maps
-		#define TMX2EA
-		#include "Maps/Tilesets/NewTilesets/TilesetInstaller.event"
-		#include "Maps/Master Map Installer.event"	
-		MESSAGE Map data ends at CURRENTOFFSET
-		
-		//ASM
-		#include "ASM/MasterASMInstaller.event"
-		MESSAGE ASM data ends at CURRENTOFFSET
-		
-		//Events
-		#include "Events/MasterEventInstaller.event"
-		MESSAGE Events end at CURRENTOFFSET
-		
-		ALIGN 4
-		WORD 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Prevent NUPS from cutting off the last 6 bytes
-	#endif
+	//Text
+	TextTable:
+	#incbin "Text/VanillaTextTable.dmp"
+	#include "Text/InstallTextData.event"
+	MESSAGE Text data ends at CURRENTOFFSET
 	
+	//CSV
+	#include "CSV/MasterCSVInstaller.event"
+	MESSAGE Tables end at CURRENTOFFSET
+	
+	//Music
+	{
+	#include "Music/_Master Music Installer.event"
+	}
+	MESSAGE Music data ends at CURRENTOFFSET
+	
+	//Miscellaneous Graphical
+	#include "Graphics/MasterGraphicalInstaller.event"
+	MESSAGE Misc graphical data ends at CURRENTOFFSET
+	
+	//Maps
+	#define TMX2EA
+	#include "Maps/Tilesets/NewTilesets/TilesetInstaller.event"
+	#include "Maps/Master Map Installer.event"	
+	MESSAGE Map data ends at CURRENTOFFSET
+	
+	//ASM
+	#include "ASM/MasterASMInstaller.event"
+	MESSAGE ASM data ends at CURRENTOFFSET
+	
+	//Events
+	#include "Events/MasterEventInstaller.event"
+	MESSAGE Events end at CURRENTOFFSET
+	
+	ALIGN 4
+	WORD 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Prevent NUPS from cutting off the last 6 bytes
 #else
 
 	ERROR "You stupid! Write FE8 events!"
