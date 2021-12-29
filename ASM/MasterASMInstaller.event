@@ -247,8 +247,6 @@ ALIGN 4
 ALIGN 4
 #include "ShowHealAmount/ShowHealAmount.event"
 
-#include "SkillAnimations/AnimInstaller.event"
-
 #include "SpellFix/SpellFix.lyn.event" // Band aid hack that I made forever ago to "fix" the backwards dodge CSA crash.
 
 //ALIGN 4

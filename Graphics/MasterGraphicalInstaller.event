@@ -9,6 +9,8 @@
 
 #include "ClassCards/ClassCardInstaller.event"
 
+#include "SkillAnimations/AnimInstaller.event"
+
 #ifdef IncludeBigStuff
 #include "BattlePalettes/_BattlePaletteInstaller.event"
 #endif
