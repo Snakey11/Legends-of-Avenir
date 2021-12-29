@@ -52,15 +52,14 @@ TextDefinitions.event
 Text/ParseDefinitions.txt
 
 # Graphics-related ignores.
-Animation Assembler/
-CSA Creator/
-Animation Assembler/
-Graphics/Battle Palettes/*.dmp
+AnimationAssembler/
+CSACreator/
+Graphics/BattlePalettes/*.dmp
 Graphics/Portraits/*.dmp
-Graphics/Map Sprites/*.dmp
-Graphics/Class Cards/*.dmp
+Graphics/MapSprites/*.dmp
+Graphics/ClassCards/*.dmp
 Graphics/WorldMap/*.dmp
-!Graphics/Vanilla Portrait Table.dmp
+!Graphics/VanillaPortraitTable.dmp
 
 # Misc ignores.
 FE-CLib-master
