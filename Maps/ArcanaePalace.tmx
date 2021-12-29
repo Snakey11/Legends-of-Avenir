@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="23" height="24" tilewidth="16" tileheight="16" nextobjectid="1">
  <tileset firstgid="1" name="Improved Castle" tilewidth="16" tileheight="16">
-  <image source="FE8 Tilesets/New Tilesets/Improved Castle.png" width="512" height="512"/>
+  <image source="Tilesets/NewTilesets/ImprovedCastle.png" width="512" height="512"/>
  </tileset>
  <layer name="Tile Layer 1" width="23" height="24">
   <properties>

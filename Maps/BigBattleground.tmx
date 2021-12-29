@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="27" height="28" tilewidth="16" tileheight="16" nextobjectid="1">
  <tileset firstgid="1" name="01003803" tilewidth="16" tileheight="16">
-  <image source="FE8 Tilesets/01003803.png" width="512" height="512"/>
+  <image source="Tilesets/01003803.png" width="512" height="512"/>
   <tile id="276">
    <properties>
     <property name="Main" value=""/>
