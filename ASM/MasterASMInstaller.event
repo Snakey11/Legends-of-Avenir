@@ -67,7 +67,7 @@ BYTE 3 (-4) (-30) (-4) // These debuffs at 3 range.
 BYTE 4 (-6) (-45) (-6) // These debuffs at 4 range.
 
 ALIGN 4
-#include "Chapter Names/fe8_chnames.event"
+#include "ChapterNames/fe8_chnames.event"
 
 #include "CharacterCreator/CharacterCreator.event"
 
