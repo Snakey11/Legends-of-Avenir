@@ -311,8 +311,8 @@ ALIGN 4
 
 ALIGN 4
 HectorAnimationData:
-#incbin "Hector Animation Data.bin"
+#incbin "HectorAnimationData.dmp"
 
 ALIGN 4
 BaseliusAnimationData:
-#incbin "Baselius Animation Data.bin"
+#incbin "BaseliusAnimationData.dmp"
