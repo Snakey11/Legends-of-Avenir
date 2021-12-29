@@ -260,7 +260,7 @@ ALIGN 4
 #include "TriplePromotion/triple_promotions.event"
 
 ALIGN 4
-#include "Walking Sounds Fix/FE8-Walking Sounds EA.event"
+#include "WalkingSoundsFix/FE8-WalkingSounds.event"
 
 #include "WorldMap/WorldMap.event"
 
