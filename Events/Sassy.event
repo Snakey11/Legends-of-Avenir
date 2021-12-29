@@ -188,8 +188,8 @@ ENDA
 	POIN MercenaryMilitia2DebugMenuCommands // Command Definitions
 	WORD 0 0 0 0 0 0        // No routines to handle B press/R press/construction/etc
 	MercenaryMilitia2DebugMenuCommands:
-		EventMenuCommand(Merc3MilitiaWaitNameText,Set00Command)
-		EventMenuCommand(Merc3MilitiaKillNameText,Set01Command)
+		EventMenuCommand(Merc3MilitiaWaitNameText,StoreMenuIndex)
+		EventMenuCommand(Merc3MilitiaKillNameText,StoreMenuIndex)
 	EventMenuCommandEnd
 
 	MercenaryBandit4DebugMenu:
@@ -201,8 +201,8 @@ ENDA
 	POIN MercenaryBandit4DebugMenuCommands // Command Definitions
 	WORD 0 0 0 0 0 0        // No routines to handle B press/R press/construction/etc
 	MercenaryBandit4DebugMenuCommands:
-		EventMenuCommand(Merc5BanditDisbandNameText,Set00Command)
-		EventMenuCommand(Merc5BanditBanditNameText,Set01Command)
+		EventMenuCommand(Merc5BanditDisbandNameText,StoreMenuIndex)
+		EventMenuCommand(Merc5BanditBanditNameText,StoreMenuIndex)
 	EventMenuCommandEnd
 
 	MilitaryPass4DebugMenu:
@@ -214,8 +214,8 @@ ENDA
 	POIN MilitaryPass4DebugMenuCommands // Command Definitions
 	WORD 0 0 0 0 0 0        // No routines to handle B press/R press/construction/etc
 	MilitaryPass4DebugMenuCommands:
-		EventMenuCommand(Military5PassHaedricNameText,Set00Command)
-		EventMenuCommand(Military5PassAltiaNameText,Set01Command)
+		EventMenuCommand(Military5PassHaedricNameText,StoreMenuIndex)
+		EventMenuCommand(Military5PassAltiaNameText,StoreMenuIndex)
 	EventMenuCommandEnd
 	
 	MilitaryPassAltia7DebugMenu:
@@ -227,9 +227,9 @@ ENDA
 	POIN MilitaryPassAltia7DebugMenuCommands // Command Definitions
 	WORD 0 0 0 0 0 0        // No routines to handle B press/R press/construction/etc
 	MilitaryPassAltia7DebugMenuCommands:
-		EventMenuCommand(Military7PassAltiaNoEscapeDebugMenuText,Set00Command)
-		EventMenuCommand(Military7PassAltiaEscapeDebugMenuText,Set01Command)
-		EventMenuCommand(Military7PassAltiaDeathDebugMenuText,Set02Command)
+		EventMenuCommand(Military7PassAltiaNoEscapeDebugMenuText,StoreMenuIndex)
+		EventMenuCommand(Military7PassAltiaEscapeDebugMenuText,StoreMenuIndex)
+		EventMenuCommand(Military7PassAltiaDeathDebugMenuText,StoreMenuIndex)
 	EventMenuCommandEnd
 	
 	MilitaryAccept3DebugMenu:
@@ -241,8 +241,8 @@ ENDA
 	POIN MilitaryAccept3DebugMenuCommands // Command Definitions
 	WORD 0 0 0 0 0 0        // No routines to handle B press/R press/construction/etc
 	MilitaryAccept3DebugMenuCommands:
-		EventMenuCommand(Military3AcceptEscapeDebugMenuText,Set00Command)
-		EventMenuCommand(Military3AcceptKillBossDebugMenuText,Set01Command)
+		EventMenuCommand(Military3AcceptEscapeDebugMenuText,StoreMenuIndex)
+		EventMenuCommand(Military3AcceptKillBossDebugMenuText,StoreMenuIndex)
 	EventMenuCommandEnd
 	
 	MilitaryAcceptRetreat4DebugMenu:
@@ -254,8 +254,8 @@ ENDA
 	POIN MilitaryAcceptRetreat4DebugMenuCommands // Command Definitions
 	WORD 0 0 0 0 0 0        // No routines to handle B press/R press/construction/etc
 	MilitaryAcceptRetreat4DebugMenuCommands:
-		EventMenuCommand(Military4AcceptRetreatFoughtDebugMenuText,Set00Command)
-		EventMenuCommand(Military4AcceptRetreatNotFoughtDebugMenuText,Set01Command)
+		EventMenuCommand(Military4AcceptRetreatFoughtDebugMenuText,StoreMenuIndex)
+		EventMenuCommand(Military4AcceptRetreatNotFoughtDebugMenuText,StoreMenuIndex)
 	EventMenuCommandEnd
 	
 	GoodBadEndingDebugMenu:
@@ -267,8 +267,8 @@ ENDA
 	POIN GoodBadEndingDebugMenuCommands // Command Definitions
 	WORD 0 0 0 0 0 0        // No routines to handle B press/R press/construction/etc
 	GoodBadEndingDebugMenuCommands:
-		EventMenuCommand(GoodEndingMenuText,Set00Command)
-		EventMenuCommand(BadEndingMenuText,Set01Command)
+		EventMenuCommand(GoodEndingMenuText,StoreMenuIndex)
+		EventMenuCommand(BadEndingMenuText,StoreMenuIndex)
 	EventMenuCommandEnd
 //LabelEnd
 #endif

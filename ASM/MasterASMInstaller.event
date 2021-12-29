@@ -125,7 +125,7 @@ BYTE SpellswordM SpellswordF 0x00
 
 #include "MakeNotDead/MakeNotDead.lyn.event"
 
-#include "Menus/Menu Commands.event"
+#include "Menus/MenuCommands.event"
 
 #include "MiscMusics/MiscMusics.lyn.event"
 gVictoryMusic:

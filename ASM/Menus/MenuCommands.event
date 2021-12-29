@@ -54,50 +54,28 @@ POIN Mage1MenuCommands // Command Definitions
 WORD 0 0 0 0 0 0        // No routines to handle B press/R press/construction/etc
 
 Merc1MenuCommands:
-	EventMenuCommand(Merc1HelpDanaanMenuText,Set00Command)
-	EventMenuCommand(Merc1JoinBanditsMenuText,Set01Command)
+	EventMenuCommand(Merc1HelpDanaanMenuText,StoreMenuIndex)
+	EventMenuCommand(Merc1JoinBanditsMenuText,StoreMenuIndex)
 EventMenuCommandEnd
 
 Merc4MilitiaWaitMenuCommands:
-	EventMenuCommand(Merc4MilitiaWaitArcanaeMenuText,Set00Command)
-	EventMenuCommand(Merc4MilitiaWaitCesariaMenuText,Set04Command)
+	EventMenuCommand(Merc4MilitiaWaitArcanaeMenuText,StoreMenuIndex)
+	EventMenuCommand(Merc4MilitiaWaitCesariaMenuText,StoreMenuIndex)
 EventMenuCommandEnd
 
 Military1MenuCommands:
-	EventMenuCommand(Military1PromotionMenuText,Set00Command)
-	EventMenuCommand(Military1PassMenuText,Set01Command)
+	EventMenuCommand(Military1PromotionMenuText,StoreMenuIndex)
+	EventMenuCommand(Military1PassMenuText,StoreMenuIndex)
 EventMenuCommandEnd
 
 Military4AcceptRetreatMenuCommands:
-	EventMenuCommand(Military4AcceptRetreatCheckOnEmperorText,Set00Command)
-	EventMenuCommand(Military4AcceptRetreatCheckOnRexText,Set01Command)
+	EventMenuCommand(Military4AcceptRetreatCheckOnEmperorText,StoreMenuIndex)
+	EventMenuCommand(Military4AcceptRetreatCheckOnRexText,StoreMenuIndex)
 EventMenuCommandEnd
 
 Mage1MenuCommands:
-	EventMenuCommand(Mage1InvestigateText,Set00Command)
-	EventMenuCommand(Mage1ReturnText,Set01Command)
+	EventMenuCommand(Mage1InvestigateText,StoreMenuIndex)
+	EventMenuCommand(Mage1ReturnText,StoreMenuIndex)
 EventMenuCommandEnd
 
-Set00Command:
-#incbin "Set 0x00 Command.dmp"
-
-Set01Command:
-#incbin "Set 0x01 Command.dmp"
-
-Set02Command:
-#incbin "Set 0x02 Command.dmp"
-
-Set03Command:
-#incbin "Set 0x03 Command.dmp"
-
-Set04Command:
-#incbin "Set 0x04 Command.dmp"
-
-Set05Command:
-#incbin "Set 0x05 Command.dmp"
-
-Set06Command:
-#incbin "Set 0x06 Command.dmp"
-
-Set07Command:
-#incbin "Set 0x07 Command.dmp"
+#include "StoreIndex.lyn.event"
