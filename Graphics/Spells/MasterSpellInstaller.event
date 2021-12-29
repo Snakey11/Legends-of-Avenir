@@ -82,10 +82,10 @@ POP
 #include "Spells/Tempest/Tempest.event"
 }
 {
-#include "Spells/Thoron Elthunder/Elthunder.event"
+#include "Spells/ThoronElthunder/Elthunder.event"
 }
 {
-#include "Spells/Thoron Elthunder/Thoron.event"
+#include "Spells/ThoronElthunder/Thoron.event"
 }
 {
 #include "Spells/Thunder/Thunder.event"
