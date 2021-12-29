@@ -29,7 +29,7 @@ BYTE Aqua Elaqua Arcaqua Fimbulvetr 0x00
 #include "Antihuffman/Antihuffman.event"
 
 ALIGN 4
-#include "Arms Scroll/EA Installer.event"
+#include "ArmsScroll/ArmsScroll.event"
 
 #include "AutoNewline/Installer.event"
 
