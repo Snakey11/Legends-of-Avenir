@@ -12,7 +12,7 @@ ALIGN 4
 #endif
 
 ALIGN 4
-#include "Always Display Ranged Animation/Ranged Animation by Table Installer.event"
+#include "AlwaysDisplayRangedAnimation/RangedAnimationbyTableInstaller.event"
 
 //#include "AnimaEffectiveness/AnimaEffectiveness.lyn.event" // This is now handled by effectiveness rework.
 /*ALIGN 4
