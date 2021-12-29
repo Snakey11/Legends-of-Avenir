@@ -71,7 +71,7 @@ ALIGN 4
 
 #include "CharacterCreator/CharacterCreator.event"
 
-#include "Class Expansion.event"
+#include "ClassExpansion.event"
 
 #include "CopyUnit/Installer.event"
 
