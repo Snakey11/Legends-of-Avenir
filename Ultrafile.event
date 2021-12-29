@@ -88,7 +88,7 @@
 		MESSAGE Map data ends at CURRENTOFFSET
 		
 		//ASM
-		#include "ASM/Master ASM Installer.event"
+		#include "ASM/MasterASMInstaller.event"
 		MESSAGE ASM data ends at CURRENTOFFSET
 		
 		//Events
