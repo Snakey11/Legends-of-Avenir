@@ -17,6 +17,6 @@
 	
 	ALIGN 4
 	FE8_Show_Heal_Amount:
-	#incbin "FE8-Show Heal Amount.dmp"
+	#incbin "FE8-ShowHealAmount.dmp"
 	WORD Arrow_Text_ID
 	

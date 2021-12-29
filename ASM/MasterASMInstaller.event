@@ -245,7 +245,7 @@ ALIGN 4
 #include "SetUnitState/SetUnitState.lyn.event"
 
 ALIGN 4
-#include "Show Heal Amount/Show Heal Amount.event"
+#include "ShowHealAmount/ShowHealAmount.event"
 
 #include "SkillAnimations/AnimInstaller.event"
 
