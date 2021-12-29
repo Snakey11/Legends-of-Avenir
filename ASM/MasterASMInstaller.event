@@ -175,8 +175,6 @@ KendrickName:
 String(Kendrick)
 BYTE 0x00
 
-//#include "NarrowFont/Narrowfont installer.event"
-
 ALIGN 4
 #include "NewCHAI/NewCHAI.lyn.event"
 
