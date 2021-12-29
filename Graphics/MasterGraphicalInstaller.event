@@ -1,7 +1,7 @@
 
 #include "Spells/Master Spell Installer.event"
 
-#include "Portraits/_Portrait Installer.event"
+#include "Portraits/_PortraitInstaller.event"
 
 #include "ItemIcons/ItemIconInstaller.event"
 
