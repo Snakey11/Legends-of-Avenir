@@ -59,6 +59,7 @@ Graphics/Portraits/*.dmp
 Graphics/MapSprites/*.dmp
 Graphics/ClassCards/*.dmp
 Graphics/WorldMap/*.dmp
+Graphics/ItemIcons/*.dmp
 !Graphics/VanillaPortraitTable.dmp
 
 # Misc ignores.
