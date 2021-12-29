@@ -2,18 +2,18 @@
 PUSH
 ORG $5926F4
 
-#incext Png2Dmp "Sheet1.png"
+#incbin "Sheet1.dmp"
 
-#incext Png2Dmp "Sheet2.png"
+#incbin "Sheet2.dmp"
 
-#incext Png2Dmp "Sheet3.png"
+#incbin "Sheet3.dmp"
 
-#incext Png2Dmp "Sheet4.png"
+#incbin "Sheet4.dmp"
 
-#incext Png2Dmp "Sheet5.png"
+#incbin "Sheet5.dmp"
 
-#incext Png2Dmp "Sheet6.png"
+#incbin "Sheet6.dmp"
 
-#incext Png2Dmp "Sheet7.png"
+#incbin "Sheet7.dmp"
 
 POP
