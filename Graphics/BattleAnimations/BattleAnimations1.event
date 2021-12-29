@@ -1,0 +1,39 @@
+
+{
+#include "SeraphKnightMagic.event"
+
+#include "SeraphKnightStaff.event"
+}
+{
+#include "ChampionMSword.event"
+
+#include "ChampionMAxe.event"
+
+#include "ChampionMHandAxe.event"
+
+#include "ChampionMUnarmed.event"
+}
+{
+#include "DarkKnightSword.event"
+
+#include "DarkKnightMagic.event"
+
+#include "DarkKnightStaff.event"
+}
+{
+#include "GaidenSageMagic.event"
+
+#include "GaidenSageStaff.event"
+}
+{
+#include "BaseliusAxe.event"
+
+#include "BaseliusHandAxe.event"
+
+#include "BaseliusUnarmed.event"
+}
+{
+#include "HalberdierSpear.event"
+
+#include "HalberdierUnarmed.event"
+}

@@ -1,0 +1,63 @@
+
+{
+#include "TruerbladeSword.event"
+
+#include "TruerbladeUnarmed.event"
+}
+{
+#include "WyvernGeneralAxe.event"
+
+#include "WyvernGeneralHandAxe.event"
+
+#include "WyvernGeneralLance.event"
+
+#include "WyvernGeneralUnarmed.event"
+}
+{
+#include "SentinelSword.event"
+
+#include "SentinelLance.event"
+
+#include "SentinelAxe.event"
+
+#include "SentinelHandAxe.event"
+
+#include "SentinelUnarmed.event"
+}
+{
+#include "ServiusSword.event"
+
+#include "ServiusUnarmed.event"
+}
+{
+#include "GrandPaladinSword.event"
+
+#include "GrandPaladinLance.event"
+
+#include "GrandPaladinAxe.event"
+
+#include "GrandPaladinHandAxe.event"
+
+#include "GrandPaladinUnarmed.event"
+}
+{
+#include "SpearHero.event"
+}
+{
+#include "XeximSword.event"
+
+#include "XeximBow.event"
+
+#include "XeximUnarmed.event"
+}
+{
+#include "HarbingerSword.event"
+
+#include "HarbingerAxe.event"
+
+#include "HarbingerHandAxe.event"
+
+#include "HarbingerMagic.event"
+
+#include "HarbingerUnarmed.event"
+}

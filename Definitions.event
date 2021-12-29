@@ -1037,6 +1037,11 @@
 //LabelEnd
 
 //Label Battle Animations
+//#ifndef ClassAnimTable
+//    #define ClassAnimTable (0xc00008-0x20)
+//#endif
+#define AnimTableEntry(index) "ORG ClassAnimTable - 0x20 + (index * 0x20)"
+
 #define SwordAnim(Animation) "BYTE Swords 0x01 ; SHORT Animation"
 #define SpearAnim(Animation) "BYTE Spears 0x01 ; SHORT Animation"
 #define LanceAnim(Animation) "BYTE Spears 0x1 ; SHORT Animation"

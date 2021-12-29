@@ -1,0 +1,70 @@
+
+{
+#include "ImpalerMLance.event"
+
+#include "ImpalerMUnarmed.event"
+}
+{
+#include "IzukMagic.event"
+}
+{
+#include "JacketHeroSword.event"
+
+#include "JacketHeroAxe.event"
+
+#include "JacketHeroHandAxe.event"
+
+#include "JacketHeroUnarmed.event"
+}
+{
+#include "MonkFMagic.event"
+}
+{
+#include "MagusMMagic.event"
+
+#include "MagusMStaff.event"
+
+#include "MagusFMagic.event"
+
+#include "MagusFStaff.event"
+}
+{
+#include "MasterKnightSword.event"
+
+#include "MasterKnightLance.event"
+
+#include "MasterKnightAxe.event"
+
+#include "MasterKnightHandAxe.event"
+
+#include "MasterKnightUnarmed.event"
+}
+{
+#include "MatriarchMagic.event"
+
+#include "MatriarchStaff.event"
+}
+{
+#include "MountedBrigandAxe.event"
+
+#include "MountedBrigandHandAxe.event"
+
+#include "MountedBrigandBow.event"
+
+#include "MountedBrigandUnarmed.event"
+}
+{
+#include "NecromancerMagic.event"
+
+#include "NecromancerStaff.event"
+}
+{
+#include "PatriarchMagic.event"
+
+#include "PatriarchStaff.event"
+}
+{
+#include "MercenaryFSword.event"
+
+#include "MercenaryFUnarmed.event"
+}

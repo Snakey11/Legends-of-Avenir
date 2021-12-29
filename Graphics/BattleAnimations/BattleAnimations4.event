@@ -1,0 +1,294 @@
+
+{
+#include "FighterAxe.event"
+
+#include "FighterHandAxe.event"
+
+#include "FighterUnarmed.event"
+}
+{
+#include "HectorSword.event"
+
+#include "HectorLance.event"
+
+#include "HectorAxe.event"
+
+#include "HectorHandAxe.event"
+
+#include "HectorUnarmed.event"
+}
+{
+#include "ArmoredWyvernLordSword.event"
+
+#include "ArmoredWyvernLordLance.event"
+
+#include "ArmoredWyvernLordAxe.event"
+
+#include "ArmoredWyvernLordHandAxe.event"
+
+#include "ArmoredWyvernLordBow.event"
+
+#include "ArmoredWyvernLordUnarmed.event"
+}
+{
+#include "WilSniperBow.event"
+
+#include "WilSniperUnarmed.event"
+}
+{
+#include "BattleSageSword.event"
+
+#include "BattleSageMagic.event"
+}
+{
+#include "HolySageMagic.event"
+
+#include "HolySageStaff.event"
+}
+{
+#include "EdgySwordmasterSword.event"
+
+//#include "EdgySwordmasterUnarmed.event"//Doesn'texistreee
+}
+{
+#include "EmperorSword.event"
+
+//#include "EmperorUnarmed.event"
+}
+{
+#include "PhantomAxe.event"
+
+#include "PhantomHandAxe.event"
+
+#include "PhantomUnarmed.event"
+}
+{
+#include "WyvernKnightLance.event"
+
+#include "WyvernKnightUnarmed.event"
+}
+{
+#include "KnightLance.event"
+
+#include "KnightAxe.event"
+
+#include "KnightHandAxe.event"
+
+#include "KnightUnarmed.event"
+}
+{
+#include "GreatKnightSword.event"
+
+#include "GreatKnightLance.event"
+
+#include "GreatKnightAxe.event"
+
+#include "GreatKnightHandAxe.event"
+
+#include "GreatKnightUnarmed.event"
+}
+{
+#include "MonkMagic.event"
+
+#include "MonkStaff.event"
+}
+{
+#include "MurielSageMagic.event"
+}
+{
+#include "SoldierLance.event"
+
+#include "SoldierUnarmed.event"
+}
+{
+#include "CavalierSword.event"
+
+#include "CavalierLance.event"
+
+#include "CavalierUnarmed.event"
+}
+{
+#include "ImpalerFLance.event"
+
+#include "ImpalerFUnarmed.event"
+}
+{
+#include "CommanderSword.event"
+
+#include "CommanderLance.event"
+
+#include "CommanderAxe.event"
+
+#include "CommanderHandAxe.event"
+
+#include "CommanderMagic.event"
+
+#include "CommanderUnarmed.event"
+}
+{
+#include "MarksmanMBow.event"
+
+#include "MarksmanMUnarmed.event"
+}
+{
+#include "MarksmanFBow.event"
+
+#include "MarksmanFUnarmed.event"
+}
+{
+#include "WarlockAxe.event"
+
+#include "WarlockHandAxe.event"
+
+#include "WarlockStaff.event"
+
+#include "WarlockUnarmed.event"
+}
+{
+#include "CavalierFSword.event"
+
+#include "CavalierFLance.event"
+
+#include "CavalierFUnarmed.event"
+}
+{
+#include "PaladinSword.event"
+
+#include "PaladinLance.event"
+
+#include "PaladinUnarmed.event"
+}
+{
+#include "HeroFSword.event"
+
+#include "HeroFAxe.event"
+
+#include "HeroFHandAxe.event"
+
+#include "HeroFUnarmed.event"
+}
+{
+#include "BattleSageFSword.event"
+
+#include "BattleSageFMagic.event"
+
+#include "BattleSageFStaff.event"
+}
+{
+#include "PirateAxe.event"
+
+#include "PirateHandAxe.event"
+
+#include "PirateUnarmed.event"
+}
+{
+#include "DreadFighterMSword.event"
+
+#include "DreadFighterMMagic.event"
+
+#include "DreadFighterMUnarmed.event"
+}
+{
+#include "DreadFighterFSword.event"
+
+#include "DreadFighterFMagic.event"
+
+#include "DreadFighterFUnarmed.event"
+}
+{
+#include "MageKnightMSword.event"
+}
+{
+#include "MageKnightFSword.event"
+}
+{
+#include "MaligKnightAxe.event"
+
+#include "MaligKnightHandAxe.event"
+
+#include "MaligKnightMagic.event"
+}
+{
+#include "MaximusBattleSageSword.event"
+
+#include "MaximusBattleSageUnarmed.event"
+}
+{
+#include "SpellswordMSword.event"
+
+#include "SpellswordMUnarmed.event"
+}
+{
+#include "SpellswordFSword.event"
+
+#include "SpellswordFUnarmed.event"
+}
+{
+#include "ChampionFSword.event"
+
+#include "ChampionFAxe.event"
+
+#include "ChampionFHandAxe.event"
+
+#include "ChampionFUnarmed.event"
+}
+{
+#include "GladiatorSword.event"
+
+#include "GladiatorAxe.event"
+
+#include "GladiatorHandAxe.event"
+
+#include "GladiatorUnarmed.event"
+}
+{
+#include "ShadeKnightMMagic.event"
+
+#include "ShadeKnightMStaff.event"
+}
+{
+#include "ShadeKnightFMagic.event"
+
+#include "ShadeKnightFStaff.event"
+}
+{
+#include "ExecutionerSword.event"
+
+#include "ExecutionerMagic.event"
+
+#include "ExecutionerUnarmed.event"
+}
+{
+#include "SentinelFSword.event"
+
+#include "SentinelFLance.event"
+
+#include "SentinelFAxe.event"
+
+#include "SentinelFHandAxe.event"
+
+#include "SentinelFUnarmed.event"
+}
+{
+#include "TruebladeMSword.event"
+
+#include "TruebladeMUnarmed.event"
+}
+{
+#include "TruebladeFSword.event"
+
+#include "TruebladeFUnarmed.event"
+}
+{
+#include "MistlainMagic.event"
+}
+{
+#include "SummonerFMagic.event"
+
+#include "SummonerFStaff.event"
+}
+{
+#include "AssassinFSword.event"
+
+#include "AssassinFUnarmed.event"
+}
