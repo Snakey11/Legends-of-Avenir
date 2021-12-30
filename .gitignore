@@ -42,7 +42,7 @@ Maps/*.dmp
 # Music-related ignores.
 Music/WAVs
 Music/*.event
-!Music/_Master Music Installer.event
+!Music/_MasterMusicInstaller.event
 !Music/drumfix_fe8.event
 
 # Text-related ignores.
