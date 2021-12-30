@@ -75,7 +75,7 @@
 	//Maps
 	#define TMX2EA
 	#include "Maps/Tilesets/NewTilesets/TilesetInstaller.event"
-	#include "Maps/Master Map Installer.event"	
+	#include "Maps/MasterMapInstaller.event"	
 	MESSAGE Map data ends at CURRENTOFFSET
 	
 	//ASM
