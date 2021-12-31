@@ -1,406 +1,205 @@
 
 ALIGN 4
 MercMAvatarPortrait:
-#incbin "MaleMercAvatar_mug.dmp"
-#incbin "MaleMercAvatar_frames.dmp"
-#incbin "MaleMercAvatar_palette.dmp"
-#incbin "MaleMercAvatar_minimug.dmp"
+#incbin "cache/MaleMercAvatar.dmp"
 
 MercFAvatarPortrait:
-#incbin "FemaleMercAvatar_mug.dmp"
-#incbin "FemaleMercAvatar_frames.dmp"
-#incbin "FemaleMercAvatar_palette.dmp"
-#incbin "FemaleMercAvatar_minimug.dmp"
+#incbin "cache/FemaleMercAvatar.dmp"
 
 MilitaryMAvatarPortrait:
-#incbin "MaleMilitaryAvatar_mug.dmp"
-#incbin "MaleMilitaryAvatar_frames.dmp"
-#incbin "MaleMilitaryAvatar_palette.dmp"
-#incbin "MaleMilitaryAvatar_minimug.dmp"
+#incbin "cache/MaleMilitaryAvatar.dmp"
 
 MilitaryFAvatarPortrait:
-#incbin "FemaleMilitaryAvatar_mug.dmp"
-#incbin "FemaleMilitaryAvatar_frames.dmp"
-#incbin "FemaleMilitaryAvatar_palette.dmp"
-#incbin "FemaleMilitaryAvatar_minimug.dmp"
+#incbin "cache/FemaleMilitaryAvatar.dmp"
 
 MageMAvatarPortrait:
-#incbin "MaleMageAvatar_mug.dmp"
-#incbin "MaleMageAvatar_frames.dmp"
-#incbin "MaleMageAvatar_palette.dmp"
-#incbin "MaleMageAvatar_minimug.dmp"
+#incbin "cache/MaleMageAvatar.dmp"
 
 MageFAvatarPortrait:
-#incbin "FemaleMageAvatar_mug.dmp"
-#incbin "FemaleMageAvatar_frames.dmp"
-#incbin "FemaleMageAvatar_palette.dmp"
-#incbin "FemaleMageAvatar_minimug.dmp"
+#incbin "cache/FemaleMageAvatar.dmp"
 
 AdelinePortrait:
-#incbin "Adeline_mug.dmp"
-#incbin "Adeline_frames.dmp"
-#incbin "Adeline_palette.dmp"
-#incbin "Adeline_minimug.dmp"
+#incbin "cache/Adeline.dmp"
 
 AdlezPortrait:
-#incbin "Adlez_mug.dmp"
-#incbin "Adlez_frames.dmp"
-#incbin "Adlez_palette.dmp"
-#incbin "Adlez_minimug.dmp"
+#incbin "cache/Adlez.dmp"
 
 ArcPortrait:
-#incbin "Arc_mug.dmp"
-#incbin "Arc_frames.dmp"
-#incbin "Arc_palette.dmp"
-#incbin "Arc_minimug.dmp"
+#incbin "cache/Arc.dmp"
 
 ArveldirPortrait:
-#incbin "Arveldir_mug.dmp"
-#incbin "Arveldir_frames.dmp"
-#incbin "Arveldir_palette.dmp"
-#incbin "Arveldir_minimug.dmp"
+#incbin "cache/Arveldir.dmp"
 
 AryaPortrait:
-#incbin "Arya_mug.dmp"
-#incbin "Arya_frames.dmp"
-#incbin "Arya_palette.dmp"
-#incbin "Arya_minimug.dmp"
+#incbin "cache/Arya.dmp"
 
 AjaxPortrait:
-#incbin "Ajax_mug.dmp"
-#incbin "Ajax_frames.dmp"
-#incbin "Ajax_palette.dmp"
-#incbin "Ajax_minimug.dmp"
+#incbin "cache/Ajax.dmp"
 
 BaretPortrait:
-#incbin "Baret_mug.dmp"
-#incbin "Baret_frames.dmp"
-#incbin "Baret_palette.dmp"
-#incbin "Baret_minimug.dmp"
+#incbin "cache/Baret.dmp"
 
 BlainePortrait:
-#incbin "Blaine_mug.dmp"
-#incbin "Blaine_frames.dmp"
-#incbin "Blaine_palette.dmp"
-#incbin "Blaine_minimug.dmp"
+#incbin "cache/Blaine.dmp"
 
 ChristinaPortrait:
-#incbin "Christina_mug.dmp"
-#incbin "Christina_frames.dmp"
-#incbin "Christina_palette.dmp"
-#incbin "Christina_minimug.dmp"
+#incbin "cache/Christina.dmp"
 
 ClaraPortrait:
-#incbin "Clara_mug.dmp"
-#incbin "Clara_frames.dmp"
-#incbin "Clara_palette.dmp"
-#incbin "Clara_minimug.dmp"
+#incbin "cache/Clara.dmp"
 
 ClintPortrait:
-#incbin "Clint_mug.dmp"
-#incbin "Clint_frames.dmp"
-#incbin "Clint_palette.dmp"
-#incbin "Clint_minimug.dmp"
+#incbin "cache/Clint.dmp"
 
 ConnorPortrait:
-#incbin "Connor_mug.dmp"
-#incbin "Connor_frames.dmp"
-#incbin "Connor_palette.dmp"
-#incbin "Connor_minimug.dmp"
+#incbin "cache/Connor.dmp"
 
 CougarPortrait:
-#incbin "Cougar_mug.dmp"
-#incbin "Cougar_frames.dmp"
-#incbin "Cougar_palette.dmp"
-#incbin "Cougar_minimug.dmp"
+#incbin "cache/Cougar.dmp"
 
 DerekPortrait:
-#incbin "Derek_mug.dmp"
-#incbin "Derek_frames.dmp"
-#incbin "Derek_palette.dmp"
-#incbin "Derek_minimug.dmp"
+#incbin "cache/Derek.dmp"
 
 DunlasPortrait:
-#incbin "Dunlas_mug.dmp"
-#incbin "Dunlas_frames.dmp"
-#incbin "Dunlas_palette.dmp"
-#incbin "Dunlas_minimug.dmp"
+#incbin "cache/Dunlas.dmp"
 
 EfilPortrait:
-#incbin "Efil_mug.dmp"
-#incbin "Efil_frames.dmp"
-#incbin "Efil_palette.dmp"
-#incbin "Efil_minimug.dmp"
+#incbin "cache/Efil.dmp"
 
 ElanilPortrait:
-#incbin "Elanil_mug.dmp"
-#incbin "Elanil_frames.dmp"
-#incbin "Elanil_palette.dmp"
-#incbin "Elanil_minimug.dmp"
+#incbin "cache/Elanil.dmp"
 
 EmperorPortrait:
-#incbin "Emperor_mug.dmp"
-#incbin "Emperor_frames.dmp"
-#incbin "Emperor_palette.dmp"
-#incbin "Emperor_minimug.dmp"
+#incbin "cache/Emperor.dmp"
 
 FinocPortrait:
-#incbin "Finoc_mug.dmp"
-#incbin "Finoc_frames.dmp"
-#incbin "Finoc_palette.dmp"
-#incbin "Finoc_minimug.dmp"
+#incbin "cache/Finoc.dmp"
 
 ForrestPortrait:
-#incbin "Forrest_mug.dmp"
-#incbin "Forrest_frames.dmp"
-#incbin "Forrest_palette.dmp"
-#incbin "Forrest_minimug.dmp"
+#incbin "cache/Forrest.dmp"
 
 GeraldPortrait:
-#incbin "Gerald_mug.dmp"
-#incbin "Gerald_frames.dmp"
-#incbin "Gerald_palette.dmp"
-#incbin "Gerald_minimug.dmp"
+#incbin "cache/Gerald.dmp"
 
 GerwickPortrait:
-#incbin "Gerwick_mug.dmp"
-#incbin "Gerwick_frames.dmp"
-#incbin "Gerwick_palette.dmp"
-#incbin "Gerwick_minimug.dmp"
+#incbin "cache/Gerwick.dmp"
 
 HelmerPortrait:
-#incbin "Helmer_mug.dmp"
-#incbin "Helmer_frames.dmp"
-#incbin "Helmer_palette.dmp"
-#incbin "Helmer_minimug.dmp"
+#incbin "cache/Helmer.dmp"
 
 HenningPortrait:
-#incbin "Henning_mug.dmp"
-#incbin "Henning_frames.dmp"
-#incbin "Henning_palette.dmp"
-#incbin "Henning_minimug.dmp"
+#incbin "cache/Henning.dmp"
 
 IzukPortrait:
-#incbin "Izuk_mug.dmp"
-#incbin "Izuk_frames.dmp"
-#incbin "Izuk_palette.dmp"
-#incbin "Izuk_minimug.dmp"
+#incbin "cache/Izuk.dmp"
 
 JasperPortrait:
-#incbin "Jasper_mug.dmp"
-#incbin "Jasper_frames.dmp"
-#incbin "Jasper_palette.dmp"
-#incbin "Jasper_minimug.dmp"
+#incbin "cache/Jasper.dmp"
 
 JurgenPortrait:
-#incbin "Jurgen_mug.dmp"
-#incbin "Jurgen_frames.dmp"
-#incbin "Jurgen_palette.dmp"
-#incbin "Jurgen_minimug.dmp"
+#incbin "cache/Jurgen.dmp"
 
 KendrickPortrait:
-#incbin "Kendrick_mug.dmp"
-#incbin "Kendrick_frames.dmp"
-#incbin "Kendrick_palette.dmp"
-#incbin "Kendrick_minimug.dmp"
+#incbin "cache/Kendrick.dmp"
 
 KilthelPortrait:
-#incbin "Kilthel_mug.dmp"
-#incbin "Kilthel_frames.dmp"
-#incbin "Kilthel_palette.dmp"
-#incbin "Kilthel_minimug.dmp"
+#incbin "cache/Kilthel.dmp"
 
 LakshmiPortrait:
-#incbin "Lakshmi_mug.dmp"
-#incbin "Lakshmi_frames.dmp"
-#incbin "Lakshmi_palette.dmp"
-#incbin "Lakshmi_minimug.dmp"
+#incbin "cache/Lakshmi.dmp"
 
 LeonPortrait:
-#incbin "Leon_mug.dmp"
-#incbin "Leon_frames.dmp"
-#incbin "Leon_palette.dmp"
-#incbin "Leon_minimug.dmp"
+#incbin "cache/Leon.dmp"
 
 LeyosPortrait:
-#incbin "Leyos_mug.dmp"
-#incbin "Leyos_frames.dmp"
-#incbin "Leyos_palette.dmp"
-#incbin "Leyos_minimug.dmp"
+#incbin "cache/Leyos.dmp"
 
 LukePortrait:
-#incbin "Luke_mug.dmp"
-#incbin "Luke_frames.dmp"
-#incbin "Luke_palette.dmp"
-#incbin "Luke_minimug.dmp"
+#incbin "cache/Luke.dmp"
 
 LuxPortrait:
-#incbin "Lux_mug.dmp"
-#incbin "Lux_frames.dmp"
-#incbin "Lux_palette.dmp"
-#incbin "Lux_minimug.dmp"
+#incbin "cache/Lux.dmp"
 
 MaximusPortrait:
-#incbin "Maximus_mug.dmp"
-#incbin "Maximus_frames.dmp"
-#incbin "Maximus_palette.dmp"
-#incbin "Maximus_minimug.dmp"
+#incbin "cache/Maximus.dmp"
 
 MayorPortrait:
-#incbin "Mayor_mug.dmp"
-#incbin "Mayor_frames.dmp"
-#incbin "Mayor_palette.dmp"
-#incbin "Mayor_minimug.dmp"
+#incbin "cache/Mayor.dmp"
 
 MistlainPortrait:
-#incbin "Mistlain_mug.dmp"
-#incbin "Mistlain_frames.dmp"
-#incbin "Mistlain_palette.dmp"
-#incbin "Mistlain_minimug.dmp"
+#incbin "cache/Mistlain.dmp"
 
 MurielPortrait:
-#incbin "Muriel_mug.dmp"
-#incbin "Muriel_frames.dmp"
-#incbin "Muriel_palette.dmp"
-#incbin "Muriel_minimug.dmp"
+#incbin "cache/Muriel.dmp"
 
 NarratorPortrait:
-#incbin "Narrator_mug.dmp"
-#incbin "Narrator_frames.dmp"
-#incbin "Narrator_palette.dmp"
-#incbin "Narrator_minimug.dmp"
+#incbin "cache/Narrator.dmp"
 
 PascalPortrait:
-#incbin "Pascal_mug.dmp"
-#incbin "Pascal_frames.dmp"
-#incbin "Pascal_palette.dmp"
-#incbin "Pascal_minimug.dmp"
+#incbin "cache/Pascal.dmp"
 
 RemusPortrait:
-#incbin "Remus_mug.dmp"
-#incbin "Remus_frames.dmp"
-#incbin "Remus_palette.dmp"
-#incbin "Remus_minimug.dmp"
+#incbin "cache/Remus.dmp"
 
 RexPortrait:
-#incbin "Rex_mug.dmp"
-#incbin "Rex_frames.dmp"
-#incbin "Rex_palette.dmp"
-#incbin "Rex_minimug.dmp"
+#incbin "cache/Rex.dmp"
 
 RobertPortrait:
-#incbin "Robert_mug.dmp"
-#incbin "Robert_frames.dmp"
-#incbin "Robert_palette.dmp"
-#incbin "Robert_minimug.dmp"
+#incbin "cache/Robert.dmp"
 
 RogerPortrait:
-#incbin "Roger_mug.dmp"
-#incbin "Roger_frames.dmp"
-#incbin "Roger_palette.dmp"
-#incbin "Roger_minimug.dmp"
+#incbin "cache/Roger.dmp"
 
 SekarPortrait:
-#incbin "Sekar_mug.dmp"
-#incbin "Sekar_frames.dmp"
-#incbin "Sekar_palette.dmp"
-#incbin "Sekar_minimug.dmp"
+#incbin "cache/Sekar.dmp"
 
 ServiusPortrait:
-#incbin "Servius_mug.dmp"
-#incbin "Servius_frames.dmp"
-#incbin "Servius_palette.dmp"
-#incbin "Servius_minimug.dmp"
+#incbin "cache/Servius.dmp"
 
 ShanleyPortrait:
-#incbin "Shanley_mug.dmp"
-#incbin "Shanley_frames.dmp"
-#incbin "Shanley_palette.dmp"
-#incbin "Shanley_minimug.dmp"
+#incbin "cache/Shanley.dmp"
 
 SylvainePortrait:
-#incbin "Sylvaine_mug.dmp"
-#incbin "Sylvaine_frames.dmp"
-#incbin "Sylvaine_palette.dmp"
-#incbin "Sylvaine_minimug.dmp"
+#incbin "cache/Sylvaine.dmp"
 
 UzkalisPortrait:
-#incbin "Uzkalis_mug.dmp"
-#incbin "Uzkalis_frames.dmp"
-#incbin "Uzkalis_palette.dmp"
-#incbin "Uzkalis_minimug.dmp"
+#incbin "cache/Uzkalis.dmp"
 
 ValPortrait:
-#incbin "Val_mug.dmp"
-#incbin "Val_frames.dmp"
-#incbin "Val_palette.dmp"
-#incbin "Val_minimug.dmp"
+#incbin "cache/Val.dmp"
 
 VicarPortrait:
-#incbin "Vicar_mug.dmp"
-#incbin "Vicar_frames.dmp"
-#incbin "Vicar_palette.dmp"
-#incbin "Vicar_minimug.dmp"
+#incbin "cache/Vicar.dmp"
 
 WalterPortrait:
-#incbin "Walter_mug.dmp"
-#incbin "Walter_frames.dmp"
-#incbin "Walter_palette.dmp"
-#incbin "Walter_minimug.dmp"
+#incbin "cache/Walter.dmp"
 
 WestonPortrait:
-#incbin "Weston_mug.dmp"
-#incbin "Weston_frames.dmp"
-#incbin "Weston_palette.dmp"
-#incbin "Weston_minimug.dmp"
+#incbin "cache/Weston.dmp"
 
 WilliamPortrait:
-#incbin "William_mug.dmp"
-#incbin "William_frames.dmp"
-#incbin "William_palette.dmp"
-#incbin "William_minimug.dmp"
+#incbin "cache/William.dmp"
 
 XavusPortrait:
-#incbin "Xavus_mug.dmp"
-#incbin "Xavus_frames.dmp"
-#incbin "Xavus_palette.dmp"
-#incbin "Xavus_minimug.dmp"
+#incbin "cache/Xavus.dmp"
 
 XenaPortrait:
-#incbin "Xena_mug.dmp"
-#incbin "Xena_frames.dmp"
-#incbin "Xena_palette.dmp"
-#incbin "Xena_minimug.dmp"
+#incbin "cache/Xena.dmp"
 
 XeximPortrait:
-#incbin "Xexim_mug.dmp"
-#incbin "Xexim_frames.dmp"
-#incbin "Xexim_palette.dmp"
-#incbin "Xexim_minimug.dmp"
+#incbin "cache/Xexim.dmp"
 
 XyliaPortrait:
-#incbin "Xylia_mug.dmp"
-#incbin "Xylia_frames.dmp"
-#incbin "Xylia_palette.dmp"
-#incbin "Xylia_minimug.dmp"
+#incbin "cache/Xylia.dmp"
 
 YvettePortrait:
-#incbin "Yvette_mug.dmp"
-#incbin "Yvette_frames.dmp"
-#incbin "Yvette_palette.dmp"
-#incbin "Yvette_minimug.dmp"
+#incbin "cache/Yvette.dmp"
 
 ZahevaPortrait:
-#incbin "Zaheva_mug.dmp"
-#incbin "Zaheva_frames.dmp"
-#incbin "Zaheva_palette.dmp"
-#incbin "Zaheva_minimug.dmp"
+#incbin "cache/Zaheva.dmp"
 
 ZaliusPortrait:
-#incbin "Zalius_mug.dmp"
-#incbin "Zalius_frames.dmp"
-#incbin "Zalius_palette.dmp"
-#incbin "Zalius_minimug.dmp"
+#incbin "cache/Zalius.dmp"
 
 //setMugEntry(MugEntry,MugOffset,MouthX,MouthY,EyeX,EyeY)
 

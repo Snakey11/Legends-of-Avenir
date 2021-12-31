@@ -50,7 +50,7 @@ Text/ParseDefinitions.txt
 AnimationAssembler/
 CSACreator/
 Graphics/BattlePalettes/cache
-Graphics/Portraits/*.dmp
+Graphics/Portraits/cache
 Graphics/MapSprites/cache
 Graphics/ClassCards/cache
 Graphics/WorldMap/*.dmp
