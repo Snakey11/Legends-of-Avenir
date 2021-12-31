@@ -51,7 +51,7 @@ AnimationAssembler/
 CSACreator/
 Graphics/BattlePalettes/cache
 Graphics/Portraits/*.dmp
-Graphics/MapSprites/*.dmp
+Graphics/MapSprites/cache
 Graphics/ClassCards/cache
 Graphics/WorldMap/*.dmp
 Graphics/ItemIcons/*.dmp
