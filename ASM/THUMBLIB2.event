@@ -1,0 +1,438 @@
+
+#include "EAstdlib.event"
+
+#ifndef THUMBLIB2
+  #define THUMBLIB2
+
+  // Registers
+
+  #ifndef r0
+    #define r0 0
+  #endif
+
+  #ifndef r1
+    #define r1 1
+  #endif
+
+  #ifndef r2
+    #define r2 2
+  #endif
+
+  #ifndef r3
+    #define r3 3
+  #endif
+
+  #ifndef r4
+    #define r4 4
+  #endif
+
+  #ifndef r5
+    #define r5 5
+  #endif
+
+  #ifndef r6
+    #define r6 6
+  #endif
+
+  #ifndef r7
+    #define r7 7
+  #endif
+
+  #ifndef r8
+    #define r8 8
+  #endif
+
+  #ifndef r9
+    #define r9 9
+  #endif
+
+  #ifndef r10
+    #define r10 10
+  #endif
+
+  #ifndef r11
+    #define r11 11
+  #endif
+
+  #ifndef r12
+    #define r12 12
+  #endif
+
+  #ifndef r13
+    #define r13 13
+  #endif
+
+  #ifndef r14
+    #define r14 14
+  #endif
+
+  #ifndef r15
+    #define r15 15
+  #endif
+
+  #ifndef ip
+    #define ip r12
+  #endif
+
+  #ifndef sp
+    #define sp r13
+  #endif
+
+  #ifndef lr
+    #define lr r14
+  #endif
+
+  #ifndef pc
+    #define pc r15
+  #endif
+
+
+
+  // Helpers
+
+  // hex to binary coded decimal for EA's awful print that only prints hex
+  #define h2d(num) "((num / 100) << 8) + (((num % 100) / 10) << 4) + (num % 10)"
+
+  // Throws an error for the current line
+  #define errorLine "ERROR Error on line h2d(_line_) BCD"
+
+  // Parameter errors
+  #define mustLo(code) "code uses registers 0 thru 7 only"
+  #define mustHi(code) "code uses registers 8 thru 15 only"
+  #define mustRange(code, val, min, max) "code parameter val must be min thru max"
+
+
+
+  // Opcodes
+
+  // Move shifted register opcodes
+  #define msrBase(Opcode, Rd, Rs, Shift) "SHORT (Opcode << 11) | (Shift << 6) | (Rs << 3) | Rd"
+
+  // lsl Rd, Rs, #NN
+  #define t_lsl(Rd, Rs, Shift) "Switch(IsGreater((Rd | Rs), 7) + (IsGreater(Shift, 31) * 2) + 1, msrBase(00b, Rd, Rs, Shift), errorLine mustLo(t_lsl), errorLine mustRange(t_lsl, Shift, 0, 31), errorLine mustLo(t_lsl) mustRange(t_lsl, Shift, 0, 31))"
+
+  // lsr Rd, Rs, #NN
+  #define t_lsr(Rd, Rs, Shift) "Switch(IsGreater((Rd | Rs), 7) + ((IsGreater(Shift, 32) | IsSmaller(Shift, 1)) * 2) + 1, msrBase(01b, Rd, Rs, (Shift & 0x1F)), errorLine mustLo(t_lsr), errorLine mustRange(t_lsr, Shift, 1, 32), errorLine mustLo(t_lsr) mustRange(t_lsr, Shift, 1, 32))"
+
+  // asr Rd, Rs, #NN
+  #define t_asr(Rd, Rs, Shift) "Switch(IsGreater((Rd | Rs), 7) + ((IsGreater(Shift, 32) | IsSmaller(Shift, 1)) * 2) + 1, msrBase(10b, Rd, Rs, (Shift & 0x1F)), errorLine mustLo(t_asr), errorLine mustRange(t_asr, Shift, 1, 32), errorLine mustLo(t_asr) mustRange(t_asr, Shift, 1, 32))"
+
+
+  // Add/Subtract register opcodes
+
+  #define asrBase(Opcode, Rd, Rs, Rn) "SHORT (00011b << 11) | (Opcode << 9) | (Rn << 6) | (Rs << 3) | Rd"
+
+  // add Rd, Rs, Rn
+  #define t_adr(Rd, Rs, Rn) "Switch(IsGreater((Rd | Rs | Rn), 7) + 1, asrBase(00b, Rd, Rs, Rn), errorLine mustLo(t_adr))"
+
+  // sub Rd, Rs, Rn
+  #define t_sbr(Rd, Rs, Rn) "Switch(IsGreater((Rd | Rs | Rn), 7) + 1, asrBase(01b, Rd, Rs, Rn), errorLine mustLo(t_sbr))"
+
+
+  // Add/Subtract immediate opcodes
+
+  #define asiBase(Opcode, Rd, Rs, Num) "SHORT (00011b << 11) | (Opcode << 9) | (Num << 6) | (Rs << 3) | Rd"
+
+  // add Rd, Rs, #NN
+  #define t_adi(Rd, Rs, Num) "Switch(IsEqual(Rd, Rs) + 1, Switch(IsGreater((Rd | Rs), 7) + (IsGreater(Num, 7) * 2) + 1, asiBase(10b, Rd, Rs, Num), errorLine mustLo(t_adi), errorLine mustRange(t_adi, Num, 0, 7), errorLine mustLo(t_adi) mustRange(t_adi, Num, 0, 7)), t_adi(Rd, Num))"
+
+  // sub Rd, Rs, #NN
+  #define t_sbi(Rd, Rs, Num) "Switch(IsEqual(Rd, Rs) + 1, Switch(IsGreater((Rd | Rs), 7) + (IsGreater(Num, 7) * 2) + 1, asiBase(11b, Rd, Rs, Num), errorLine mustLo(t_sbi), errorLine mustRange(t_sbi, Num, 0, 7), errorLine mustLo(t_sbi) mustRange(t_sbi, Num, 0, 7)), t_sbi(Rd, Num))"
+
+  //mov Rd, Rs
+  #define t_mov(Rd, Rs) "t_adi(Rd, Rs, 0)"
+
+
+  // Move/Compare/Add/Subtract immediate opcodes
+
+  #define mcasiBase(Opcode, Rd, Num) "SHORT (001b << 13) | (Opcode << 11) | (Rd << 8) | Num"
+
+  // mov Rd, #NN
+  #define t_mvi(Rd, Num) "Switch(IsGreater(Rd, 7) + (IsGreater(Num, 255) * 2) + 1, mcasiBase(00b, Rd, Num), errorLine mustLo(t_mvi), errorLine mustRange(t_mvi, Num, 0, 255), errorLine mustLo(t_mvi) mustRange(t_mvi, Num, 0, 255))"
+
+  // cmp Rd, #NN
+  #define t_cpi(Rd, Num) "Switch(IsGreater(Rd, 7) + (IsGreater(Num, 255) * 2) + 1, mcasiBase(01b, Rd, Num), errorLine mustLo(t_cpi), errorLine mustRange(t_cpi, Num, 0, 255), errorLine mustLo(t_cpi) mustRange(t_cpi, Num, 0, 255))"
+
+  // add Rd, #NN
+  #define t_adi(Rd, Num) "Switch(IsGreater(Rd, 7) + (IsGreater(Num, 255) * 2) + 1, mcasiBase(10b, Rd, Num), errorLine mustLo(t_adi), errorLine mustRange(t_adi, Num, 0, 255), errorLine mustLo(t_adi) mustRange(t_adi, Num, 0, 255))"
+
+  // sub Rd, #NN
+  #define t_sbi(Rd, Num) "Switch(IsGreater(Rd, 7) + (IsGreater(Num, 255) * 2) + 1, mcasiBase(11b, Rd, Num), errorLine mustLo(t_sbi), errorLine mustRange(t_sbi, Num, 0, 255), errorLine mustLo(t_sbi) mustRange(t_sbi, Num, 0, 255))"
+
+
+  // ALU opcodes
+
+  #define aluBase(Opcode, Rd, Rs) "SHORT (010000b << 10) | (Opcode << 6) | (Rs << 3) | Rd"
+
+  // and Rd, Rs
+  #define t_and(Rd, Rs) "Switch(IsGreater((Rd | Rs), 7) + 1, aluBase(0000b, Rd, Rs), errorLine mustLo(t_and))"
+
+  // eor Rd, Rs
+  #define t_eor(Rd, Rs) "Switch(IsGreater((Rd | Rs), 7) + 1, aluBase(0001b, Rd, Rs), errorLine mustLo(t_eor))"
+
+  // lsl Rd, Rs
+  #define t_lsl(Rd, Rs) "Switch(IsGreater((Rd | Rs), 7) + 1, aluBase(0010b, Rd, Rs), errorLine mustLo(t_lsl))"
+
+  // lsr Rd, Rs
+  #define t_lsr(Rd, Rs) "Switch(IsGreater((Rd | Rs), 7) + 1, aluBase(0011b, Rd, Rs), errorLine mustLo(t_lsr))"
+
+  // asr Rd, Rs
+  #define t_asr(Rd, Rs) "Switch(IsGreater((Rd | Rs), 7) + 1, aluBase(0100b, Rd, Rs), errorLine mustLo(t_asr))"
+
+  // adc Rd, Rs
+  #define t_adc(Rd, Rs) "Switch(IsGreater((Rd | Rs), 7) + 1, aluBase(0101b, Rd, Rs), errorLine mustLo(t_adc))"
+
+  // sbc Rd, Rs
+  #define t_sbc(Rd, Rs) "Switch(IsGreater((Rd | Rs), 7) + 1, aluBase(0110b, Rd, Rs), errorLine mustLo(t_sbc))"
+
+  // ror Rd, Rs
+  #define t_ror(Rd, Rs) "Switch(IsGreater((Rd | Rs), 7) + 1, aluBase(0111b, Rd, Rs), errorLine mustLo(t_ror))"
+
+  // tst Rd, Rs
+  #define t_tst(Rd, Rs) "Switch(IsGreater((Rd | Rs), 7) + 1, aluBase(1000b, Rd, Rs), errorLine mustLo(t_tst))"
+
+  // neg Rd, Rs
+  #define t_neg(Rd, Rs) "Switch(IsGreater((Rd | Rs), 7) + 1, aluBase(1001b, Rd, Rs), errorLine mustLo(t_neg))"
+
+  // cmp Rd, Rs
+  #define t_cmp(Rd, Rs) "Switch(IsGreater((Rd | Rs), 7) + 1, aluBase(1010b, Rd, Rs), errorLine mustLo(t_cmp))"
+
+  // cmn Rd, Rs
+  #define t_cmn(Rd, Rs) "Switch(IsGreater((Rd | Rs), 7) + 1, aluBase(1011b, Rd, Rs), errorLine mustLo(t_cmn))"
+
+  // orr Rd, Rs
+  #define t_orr(Rd, Rs) "Switch(IsGreater((Rd | Rs), 7) + 1, aluBase(1100b, Rd, Rs), errorLine mustLo(t_orr))"
+
+  // mul Rd, Rs
+  #define t_mul(Rd, Rs) "Switch(IsGreater((Rd | Rs), 7) + 1, aluBase(1101b, Rd, Rs), errorLine mustLo(t_mul))"
+
+  // bic Rd, Rs
+  #define t_bic(Rd, Rs) "Switch(IsGreater((Rd | Rs), 7) + 1, aluBase(1110b, Rd, Rs), errorLine mustLo(t_bic))"
+
+  // mvn Rd, Rs
+ #define t_mvn(Rd, Rs) "Switch(IsGreater((Rd | Rs), 7) + 1, aluBase(1111b, Rd, Rs), errorLine mustLo(t_mvn))"
+
+
+  // Hi register opcodes
+
+  #define hirBase(Opcode, Rd, Rs) "SHORT (010001b << 10) | (Opcode << 8) | ((Rd >> 3) << 7) | ((Rs >> 3) << 6) | ((Rs & 0111b) << 3) | (Rd & 0111b)"
+
+  // add Rd, Rs
+  #define t_adh(Rd, Rs) "Switch((IsSmaller(Rd, 8) & IsSmaller(Rs, 8)) + 1, hirBase(00b, Rd, Rs), errorLine t_adh requires at least one hi register)"
+
+  // cmp Rd, Rs
+  #define t_cph(Rd, Rs) "Switch((IsSmaller(Rd, 8) & IsSmaller(Rs, 8)) + 1, hirBase(01b, Rd, Rs), errorLine t_cph requires at least one hi register)"
+
+  // mov Rd, rs
+  #define t_mvh(Rd, Rs) "Switch((IsSmaller(Rd, 8) & IsSmaller(Rs, 8)) + 1, hirBase(10b, Rd, Rs), errorLine t_mvh requires at least one hi register)"
+
+  // nop
+  #define t_nop "t_mvh(r8, r8)"
+
+  // bx Rs
+  #define t_bx(Rs) "hirBase(11b, 0, Rs)"
+
+
+  // Load PC relative opcodes
+
+  #define ldpcBase(Rd, Label) "SHORT (01001b << 11) | (Rd << 8) | ((Label - (CURRENTOFFSET & 0xFFFFFFFD) - 4) / 4)"
+
+  #define t_ldr(Rd, Label) "Switch(IsGreater(Rd, 7) + 1, ldpcBase(Rd, Label), errorLine mustLo(t_ldr))"
+
+
+  // Load/store with register offset opcodes
+
+  #define lsoBase(Opcode, Rd, Rb, Ro) "SHORT (0101b << 12) | (Opcode << 10) | (0b << 9) | (Ro << 6) | (Rb << 3) | Rd"
+
+  // str Rd, [Rb, Ro]
+  #define t_str(Rd, Rb, Ro) "Switch(IsGreater((Rd | Rb | Ro), 7) + 1, lsoBase(00b, Rd, Rb, Ro), errorLine mustLo(t_str))"
+
+  // strb Rd, [Rb, Ro]
+  #define t_strb(Rd, Rb, Ro) "Switch(IsGreater((Rd | Rb | Ro), 7) + 1, lsoBase(01b, Rd, Rb, Ro), errorLine mustLo(t_strb))"
+
+  // ldr Rd, [Rb, Ro]
+  #define t_ldr(Rd, Rb, Ro) "Switch(IsGreater((Rd | Rb | Ro), 7) + 1, lsoBase(10b, Rd, Rb, Ro), errorLine mustLo(t_ldr))"
+
+  // ldrb Rd, [Rb, Ro]
+  #define t_ldrb(Rd, Rb, Ro) "Switch(IsGreater((Rd | Rb | Ro), 7) + 1, lsoBase(11b, Rd, Rb, Ro), errorLine mustLo(t_ldrb))"
+
+
+  // Load/store sign-extended opcodes
+
+  #define lsseBase(Opcode, Rd, Rb, Ro) "SHORT (0101b << 12) | (Opcode << 10) | (1b << 9) | (Ro << 6) | (Rb << 3) | Rd"
+
+  // strh Rd, [Rb, Ro]
+  #define t_strh(Rd, Rb, Ro) "Switch(IsGreater((Rd | Rb | Ro), 7) + 1, lsseBase(00b, Rd, Rb, Ro), errorLine mustLo(t_strh))"
+
+  // ldsb Rd, [Rb, Ro]
+  #define t_ldsb(Rd, Rb, Ro) "Switch(IsGreater((Rd | Rb | Ro), 7) + 1, lsseBase(01b, Rd, Rb, Ro), errorLine mustLo(t_ldsb))"
+
+  // ldrh Rd, [Rb, Ro]
+  #define t_ldrh(Rd, Rb, Ro) "Switch(IsGreater((Rd | Rb | Ro), 7) + 1, lsseBase(10b, Rd, Rb, Ro), errorLine mustLo(t_ldrh))"
+
+  // ldsh Rd, [Rb, Ro]
+  #define t_ldsh(Rd, Rb, Ro) "Switch(IsGreater((Rd | Rb | Ro), 7) + 1, lsseBase(11b, Rd, Rb, Ro), errorLine mustLo(t_ldsh))"
+
+
+  // Load/store with immediate offset opcodes
+
+  #define lsiBase(Opcode, Rd, Rb, Num) "SHORT (011b << 13) | (Opcode << 11) | (Num << 6) | (Rb << 3) | Rd"
+
+  // str Rd, [Rb, #NN]
+  #define t_sti(Rd, Rb, Num) "Switch(IsGreater((Rd | Rb), 7) + ((IsGreater(Num, 124)) * 2) + (Signum((Num % 4)) * 4) + 1, lsiBase(00b, Rd, Rb, Num >> 2), errorLine mustLo(t_sti), errorLine mustRange(t_sti, Num, 0, 124), errorLine mustLo(t_sti) mustRange(t_sti, Num, 0, 124), errorLine t_sti parameter must be a multiple of 4, errorLine mustLo(t_sti) t_sti parameter must be a multiple of 4, errorLine mustRange(t_sti, Num, 0, 124) t_sti parameter must be a multiple of 4, errorLine mustLo(t_sti) mustRange(t_sti, Num, 0, 124) t_sti parameter must be a multiple of 4)"
+
+  // ldr Rd, [Rb, #NN]
+  #define t_ldi(Rd, Rb, Num) "Switch(IsGreater((Rd | Rb), 7) + ((IsGreater(Num, 124)) * 2) + (Signum((Num % 4)) * 4) + 1, lsiBase(01b, Rd, Rb, Num >> 2), errorLine mustLo(t_ldi), errorLine mustRange(t_ldi, Num, 0, 124), errorLine mustLo(t_ldi) mustRange(t_ldi, Num, 0, 124), errorLine t_ldi parameter must be a multiple of 4, errorLine mustLo(t_ldi) t_ldi parameter must be a multiple of 4, errorLine mustRange(t_ldi, Num, 0, 124) t_ldi parameter must be a multiple of 4, errorLine mustLo(t_ldi) mustRange(t_ldi, Num, 0, 124) t_ldi parameter must be a multiple of 4)"
+
+  // strb Rd, [Rb, #NN]
+  #define t_stbi(Rd, Rb, Num) "Switch(IsGreater((Rd | Rb), 7) + ((IsGreater(Num, 124)) * 2) + (Signum((Num % 4)) * 4) + 1, lsiBase(10b, Rd, Rb, Num >> 2), errorLine mustLo(t_stbi), errorLine mustRange(t_stbi, Num, 0, 124), errorLine mustLo(t_stbi) mustRange(t_stbi, Num, 0, 124), errorLine t_stbi parameter must be a multiple of 4, errorLine mustLo(t_stbi) t_stbi parameter must be a multiple of 4, errorLine mustRange(t_stbi, Num, 0, 124) t_stbi parameter must be a multiple of 4, errorLine mustLo(t_stbi) mustRange(t_stbi, Num, 0, 124) t_stbi parameter must be a multiple of 4)"
+
+  // ldrb Rd, [Rb, #NN]
+  #define t_ldbi(Rd, Rb, Num) "Switch(IsGreater((Rd | Rb), 7) + ((IsGreater(Num, 124)) * 2) + (Signum((Num % 4)) * 4) + 1, lsiBase(11b, Rd, Rb, Num >> 2), errorLine mustLo(t_ldbi), errorLine mustRange(t_ldbi, Num, 0, 124), errorLine mustLo(t_ldbi) mustRange(t_ldbi, Num, 0, 124), errorLine t_ldbi parameter must be a multiple of 4, errorLine mustLo(t_ldbi) t_ldbi parameter must be a multiple of 4, errorLine mustRange(t_ldbi, Num, 0, 124) t_ldbi parameter must be a multiple of 4, errorLine mustLo(t_ldbi) mustRange(t_ldbi, Num, 0, 124) t_ldbi parameter must be a multiple of 4)"
+
+
+  // Load/store halfword opcodes
+
+  #define lshBase(Opcode, Rd, Rb, Num) "SHORT (1000b << 12) | (Opcode << 11) | (Num << 6) | (Rb << 3) | Rd"
+
+  // strh Rd, [Rb, #NN]
+  #define t_sthi(Rd, Rb, Num) "Switch(IsGreater((Rd | Rb), 7) + ((IsGreater(Num, 62)) * 2) + (Signum((Num % 2)) * 4) + 1, lshBase(0b, Rd, Rb, Num >> 1), errorLine mustLo(t_sthi), errorLine mustRange(t_sthi, Num, 0, 62), errorLine mustLo(t_sthi) mustRange(t_sthi, Num, 0, 62), errorLine t_sthi parameter must be a multiple of 2, errorLine mustLo(t_sthi) t_sthi parameter must be a multiple of 2, errorLine mustRange(t_sthi, Num, 0, 62) t_sthi parameter must be a multiple of 2, errorLine mustLo(t_sthi) mustRange(t_sthi, Num, 0, 62) t_sthi parameter must be a multiple of 2)"
+
+  // strh Rd, [Rb]
+  #define t_sthi(Rd, Rb) "t_sthi(Rd, Rb, 0)"
+
+  // ldrh Rd, [Rb, #NN]
+  #define t_ldhi(Rd, Rb, Num) "Switch(IsGreater((Rd | Rb), 7) + ((IsGreater(Num, 62)) * 2) + (Signum((Num % 2)) * 4) + 1, lshBase(1b, Rd, Rb, Num >> 1), errorLine mustLo(t_ldhi), errorLine mustRange(t_ldhi, Num, 0, 62), errorLine mustLo(t_ldhi) mustRange(t_ldhi, Num, 0, 62), errorLine t_ldhi parameter must be a multiple of 2, errorLine mustLo(t_ldhi) t_ldhi parameter must be a multiple of 2, errorLine mustRange(t_ldhi, Num, 0, 62) t_ldhi parameter must be a multiple of 2, errorLine mustLo(t_ldhi) mustRange(t_ldhi, Num, 0, 62) t_ldhi parameter must be a multiple of 2)"
+
+  // ldrh Rd, [Rb]
+  #define t_ldhi(Rd, Rb) "t_ldhi(Rd, Rb, 0)"
+
+
+  // Load/store SP-relative opcodes
+
+  #define lsspBase(Opcode, Rd, Num) "SHORT (1001b << 12) | (Opcode << 11) | (Rd << 8) | Num"
+
+  // str Rd, [sp, #NN]
+  #define t_ssp(Rd, Num) "Switch(IsGreater(Rd, 7) + ((IsGreater(Num, 1020)) * 2) + (Signum((Num % 4)) * 4) + 1, lsspBase(0b, Rd, Num >> 2), errorLine mustLo(t_ssp), errorLine mustRange(t_ssp, Num, 0, 1020), errorLine mustLo(t_ssp) mustRange(t_ssp, Num, 0, 1020), errorLine t_ssp parameter must be a multiple of 4, errorLine mustLo(t_ssp) t_ssp parameter must be a multiple of 4, errorLine mustRange(t_ssp, Num, 0, 1020) t_ssp parameter must be a multiple of 4, errorLine mustLo(t_ssp) mustRange(t_ssp, Num, 0, 1020) t_ssp parameter must be a multiple of 4)"
+
+  // ldr Rd, [sp, #NN]
+  #define t_lsp(Rd, Num) "Switch(IsGreater(Rd, 7) + ((IsGreater(Num, 1020)) * 2) + (Signum((Num % 4)) * 4) + 1, lsspBase(1b, Rd, Num >> 2), errorLine mustLo(t_lsp), errorLine mustRange(t_lsp, Num, 0, 1020), errorLine mustLo(t_lsp) mustRange(t_lsp, Num, 0, 1020), errorLine t_lsp parameter must be a multiple of 4, errorLine mustLo(t_lsp) t_lsp parameter must be a multiple of 4, errorLine mustRange(t_lsp, Num, 0, 1020) t_lsp parameter must be a multiple of 4, errorLine mustLo(t_lsp) mustRange(t_lsp, Num, 0, 1020) t_lsp parameter must be a multiple of 4)"
+
+
+  // Get relative address opcodes
+
+  #define graBase(Opcode, Rd, Num) "SHORT (1010b << 12) | (Opcode << 11) | (Rd << 8) | Num"
+
+  // add Rd, pc, #NN
+  // AKA add Rd, =addr
+  #define t_adpc(Rd, Label) "Switch(IsGreater(Rd, 7) + 1, graBase(0b, Rd, ((Label - (CURRENTOFFSET & 0xFFFFFFFD) - 4) / 4)), errorLine mustLo(t_adpc))"
+
+  // add Rd, sp, #NN
+  #define t_adsp(Rd, Num) "Switch(IsGreater(Rd, 7) + ((IsGreater(Num, 1020)) * 2) + (Signum((Num % 4)) * 4) + 1, graBase(1b, Rd, Num >> 2), errorLine mustLo(t_adsp), errorLine mustRange(t_adsp, Num, 0, 1020), errorLine mustLo(t_adsp) mustRange(t_adsp, Num, 0, 1020), errorLine t_adsp parameter must be a multiple of 4, errorLine mustLo(t_adsp) t_adsp parameter must be a multiple of 4, errorLine mustRange(t_adsp, Num, 0, 1020) t_adsp parameter must be a multiple of 4, errorLine mustLo(t_adsp) mustRange(t_adsp, Num, 0, 1020) t_adsp parameter must be a multiple of 4)"
+
+
+  // Add offset to sp opcodes
+
+  #define aspBase(Opcode, Num) "SHORT (10110000b << 8) | (Opcode << 7) | Num"
+
+  #define t_adsp(Num) "Switch(IsGreater(Num, 508) + (Signum((Num % 4)) * 2) + 1, aspBase(0b, (Num >> 2)), errorLine mustRange(t_adsp, Num, 0, 508), errorLine t_adsp parameter must be a multiple of 4, errorLine mustRange(t_adsp, Num, 0, 508) t_adsp parameter must be a multiple of 4)"
+
+  #define t_sbsp(Num) "Switch(IsGreater(Num, 508) + (Signum((Num % 4)) * 2) + 1, aspBase(1b, (Num >> 2)), errorLine mustRange(t_sbsp, Num, 0, 508), errorLine t_sbsp parameter must be a multiple of 4, errorLine mustRange(t_sbsp, Num, 0, 508) t_sbsp parameter must be a multiple of 4)"
+
+
+  // push/pop opcodes
+
+  #define ppBase(Opcode, Reg0, Reg1, Reg2, Reg3, Reg4, Reg5, Reg6, Reg7, RegHi) "SHORT (1011b << 12) | (Opcode << 11) | (10b << 9) | (RegHi << 8) | (Reg7 << 7) | (Reg6 << 6) | (Reg5 << 5) | (Reg4 << 4) | (Reg3 << 3) | (Reg2 << 2) | (Reg1 << 1) | Reg0"
+
+  // push {Rlist}{lr}
+  #define t_push(Reg0, Reg1, Reg2, Reg3, Reg4, Reg5, Reg6, Reg7, Reglr) "ppBase(0b, Reg0, Reg1, Reg2, Reg3, Reg4, Reg5, Reg6, Reg7, Reglr)"
+
+  // pop {Rlist}{pc}
+  #define t_pop(Reg0, Reg1, Reg2, Reg3, Reg4, Reg5, Reg6, Reg7, Regpc) "ppBase(1b, Reg0, Reg1, Reg2, Reg3, Reg4, Reg5, Reg6, Reg7, Regpc)"
+
+
+  // Multiple load/store opcodes
+
+  #define mlsBase(Opcode, Rb, Reg0, Reg1, Reg2, Reg3, Reg4, Reg5, Reg6, Reg7) "SHORT (1100b << 12)| (Opcode << 11) | (Rb << 8) | (Reg7 << 7) | (Reg6 << 6) | (Reg5 << 5) | (Reg4 << 4) | (Reg3 << 3) | (Reg2 << 2) | (Reg1 << 1) | Reg0"
+
+  // stmia Rb!, {Rlist}
+  #define t_stmia(Rb, Reg0, Reg1, Reg2, Reg3, Reg4, Reg5, Reg6, Reg7) "Switch(IsGreater(Rb, 7) + 1, mlsBase(0b, Rb, Reg0, Reg1, Reg2, Reg3, Reg4, Reg5, Reg6, Reg7), errorLine mustLo(t_stmia))"
+
+  // ldmia Rb!, {Rlist}
+  #define t_ldmia(Rb, Reg0, Reg1, Reg2, Reg3, Reg4, Reg5, Reg6, Reg7) "Switch(IsGreater(Rb, 7) + 1, mlsBase(1b, Rb, Reg0, Reg1, Reg2, Reg3, Reg4, Reg5, Reg6, Reg7), errorLine mustLo(t_ldmia))"
+
+
+  // Conditional branch instructions
+
+  #define cbBase(Opcode, Label) "SHORT (1101b << 12) | (Opcode << 8) | (((Label - CURRENTOFFSET - 4) >> 1) & 0xFF)"
+
+  // beq Label
+  #define t_beq(Label) "cbBase(0000b, Label)"
+
+  // bne Label
+  #define t_bne(Label) "cbBase(0001b, Label)"
+
+  // bcs Label
+  #define t_bcs(Label) "cbBase(0010b, Label)"
+
+  // bhs Label
+  #define t_bhs(Label) "t_bcs(Label)"
+
+  // bcc Label
+  #define t_bcc(Label) "cbBase(0011b, Label)"
+
+  // blo Label
+  #define t_blo(Label) "t_bcc(Label)"
+
+  // bmi Label
+  #define t_bmi(Label) "cbBase(0100b, Label)"
+
+  // bpl Label
+  #define t_bpl(Label) "cbBase(0101b, Label)"
+
+  // bvs Label
+  #define t_bvs(Label) "cbBase(0110b, Label)"
+
+  // bvc Label
+  #define t_bvc(Label) "cbBase(0111b, Label)"
+
+  // bhi Label
+  #define t_bhi(Label) "cbBase(1000b, Label)"
+
+  // bls Label
+  #define t_bls(Label) "cbBase(1001b, Label)"
+
+  // bge Label
+  #define t_bge(Label) "cbBase(1010b, Label)"
+
+  // blt Label
+  #define t_blt(Label) "cbBase(1011b, Label)"
+
+  // bgt Label
+  #define t_bgt(Label) "cbBase(1100b, Label)"
+
+  // ble Label
+  #define t_ble(Label) "cbBase(1101b, Label)"
+
+
+  // Unconditional branch
+
+  // b Label
+  #define t_b(Label) "SHORT (11100b << 11) | ((Label - CURRENTOFFSET - 4) >> 1)"
+
+
+  // Long branch with link
+
+  // bl Label
+  #define t_bl(Label) "SHORT ((11110b << 11) | (((Label - CURRENTOFFSET -4) >> 12) & 0x07FF)) ((11111b << 11) | (((Label - CURRENTOFFSET - 4) >> 1) & 0x07FF))"
+
+  // blh
+  #define t_blh "SHORT (11111b << 11)"
+
+
+  // Software interrupt opcodes
+
+  // swi NN
+  #define t_swi(Num) "Switch(IsGreater(Num, 255) + 1, SHORT (11011111b << 8) | (Num & 0xFF), errorLine mustRange(t_swi, Num, 0, 255))"
+
+#endif // THUMBLIB2

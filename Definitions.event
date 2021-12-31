@@ -1,7 +1,9 @@
 
 #define ChapterDataTable NewChapterDataTable
 
-#include "CSV/Tables/Table Definitions.txt"
+#include "CSV/Tables/TableDefinitions.event"
+
+#include "ASM/THUMBLIB2.event"
 
 //Label Item defenitions
 #undef ToxinLance
