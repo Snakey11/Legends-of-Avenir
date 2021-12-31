@@ -267,7 +267,7 @@ ALIGN 4
 	
 	#include "Debug/DebugUnitMenu/DebugUnitMenu.event"
 	
-	#include "Debug/EnemyControl/Enemy Control.event"
+	#include "Debug/EnemyControl/EnemyControl.event"
 	
 	ALIGN 4
 	WinButtonUsabilityCharacterList:
