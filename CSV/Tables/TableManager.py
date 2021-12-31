@@ -507,7 +507,7 @@ if __name__ == '__main__':
     # Finally, we need to write to our master output file that's defined in arguments.
     with open(args.output,'w') as out:
         out.write('// Generated table output by TableManager.\n\n')
-        out.write('#include \"Table Definitions.txt\"\n\n')
+        out.write('#include \"TableDefinitions.event\"\n\n')
         for e in CSVs:
             out.writelines([f'#include \"{f.getOutputFilepath()}\"\n' for f in e.nmms])
     
