@@ -31,8 +31,6 @@ if /I not [%2]==[noRefs] (
 	
 	cd "%~dp0Music"
 	py "MusicRef.py" "../Events" "../CSV/Tables/ChapterData/ChapterDataTable.csv" "../ASM/PersonalMusic/PersonalMusic.event" "OtherRefs.txt" "../Definitions/Music.s" "MusicRefs.txt"
-	
-	copy "MusicRefs.txt" "../../../../../Google Drive/MusicRefs.txt"
 )
 
 if /I not [%1]==[noPause] (
