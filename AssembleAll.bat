@@ -2,14 +2,11 @@
 @echo off
 setlocal enabledelayedexpansion
 
-rem This will try to assemble everything that has a script to auto-assemble it.
-rem For now, Pyhton and Java are required on the machine to build everything, but I plan to change that eventually.
-
 set currDir=%~dp0
 
-echo --------------------------------------------------------
-echo Assembling everything and building ROM... Please wait...
-echo --------------------------------------------------------
+echo -----------------------------------
+echo Assembling assets... Please wait...
+echo -----------------------------------
 
 
 cd "!currDir!"
@@ -46,7 +43,6 @@ call "AssembleMusic.bat" noPause noRefs
 
 
 cd "!currDir!"
-rem Reeee I can't make tmx2ea not pause!
 echo Assembling maps...
 
 call "AssembleMaps.bat" noPause
