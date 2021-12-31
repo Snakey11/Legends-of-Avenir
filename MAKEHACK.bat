@@ -26,7 +26,7 @@ cd "!currDir!sym"
 SymCombo "!currDir!Avenir.sym" "!currDir!Avenir.sym" "!currDir!Clean.sym"
 
 cd "!currDir!ups"
-ups diff -b "!currDir!Clean.gba" -m "!currDir!Avenir.gba" -o "!currDir!Legends of Avenir.ups"
+ups diff -b "!currDir!Clean.gba" -m "!currDir!Avenir.gba" -o "!currDir!Avenir.ups"
 
 if /I not [%1]==[noPause] (
 	pause
