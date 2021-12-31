@@ -1,17 +1,17 @@
 
 #include "Spells/MasterSpellInstaller.event"
 
-#include "Portraits/_PortraitInstaller.event"
+#include "Portraits/PortraitInstaller.event"
 
 #include "ItemIcons/ItemIconInstaller.event"
 
-#include "MapSprites/_MapSpriteInstaller.event"
+#include "MapSprites/MapSpriteInstaller.event"
 
 #include "ClassCards/ClassCardInstaller.event"
 
 #include "SkillAnimations/AnimInstaller.event"
 
-#include "BattlePalettes/_BattlePaletteInstaller.event"
+#include "BattlePalettes/BattlePaletteInstaller.event"
 
 PUSH
 ORG $88638
