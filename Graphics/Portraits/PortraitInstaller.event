@@ -1,5 +1,9 @@
 
 ALIGN 4
+PortraitTable:
+#incbin "VanillaPortraitTable.dmp"
+
+ALIGN 4
 MercMAvatarPortrait:
 #incbin "cache/MaleMercAvatar.dmp"
 

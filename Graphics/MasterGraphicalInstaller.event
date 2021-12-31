@@ -1,10 +1,6 @@
 
 #include "Spells/MasterSpellInstaller.event"
 
-ALIGN 4
-PortraitTable:
-#incbin "VanillaPortraitTable.dmp"
-
 #include "Portraits/PortraitInstaller.event"
 
 #include "ItemIcons/ItemIconInstaller.event"
