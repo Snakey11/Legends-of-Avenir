@@ -21,6 +21,10 @@ POIN NewStatScreenPal
 POP
 
 ALIGN 4
+PortraitTable:
+#incbin "VanillaPortraitTable.dmp"
+
+ALIGN 4
 NewStatScreen:
 #incext Png2Dmp "StatScreen.png" --lz77
 NewStatScreenPal:

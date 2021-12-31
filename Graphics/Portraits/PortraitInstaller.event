@@ -1,9 +1,5 @@
 
 ALIGN 4
-PortraitTable:
-#incbin "Vanilla Portrait Table.dmp"
-
-ALIGN 4
 MercMAvatarPortrait:
 #incbin "MaleMercAvatar_mug.dmp"
 #incbin "MaleMercAvatar_frames.dmp"
