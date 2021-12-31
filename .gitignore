@@ -21,11 +21,6 @@ save/
 screenshots/
 states/
 
-# Update/release related batch scripts.
-UPDATE.bat
-UPDATEPrivate.bat
-UPDATEPublic.bat
-
 # Definition-related ignores.
 Definitions/Definitions.event
 Definitions/Skills.s
