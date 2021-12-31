@@ -2,7 +2,7 @@
 	#include "EAStdlib.event"
 	#include "Extensions/Hack Installation.txt"
 
-	#include "Internal/UI1 Proc Code.event"
+	#include "Internal/UI1ProcCode.event"
 
 	#include "Internal/MMBInit.lyn.event"
 	WORD MMBNameWidth
