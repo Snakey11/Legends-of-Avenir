@@ -2,310 +2,310 @@
 ALIGN 4
 
 BaseliusSt:
-#incbin "BaseliusSt.dmp"
+#incbin "cache/BaseliusSt.dmp"
 ALIGN 4
 
 BaseliusMv:
-#incbin "BaseliusMv.dmp"
+#incbin "cache/BaseliusMv.dmp"
 ALIGN 4
 
 
 BattleSageSt:
-#incbin "BattleSageSt.dmp"
+#incbin "cache/BattleSageSt.dmp"
 ALIGN 4
 
 BattleSageMv:
-#incbin "BattleSageMv.dmp"
+#incbin "cache/BattleSageMv.dmp"
 ALIGN 4
 
 BattleSageFSt:
-#incbin "BattleSageFSt.dmp"
+#incbin "cache/BattleSageFSt.dmp"
 ALIGN 4
 
 BattleSageFMv:
-#incbin "BattleSageFMv.dmp"
+#incbin "cache/BattleSageFMv.dmp"
 ALIGN 4
 
 
 ChampionSt:
-#incbin "ChampionSt.dmp"
+#incbin "cache/ChampionSt.dmp"
 ALIGN 4
 
 ChampionMv:
-#incbin "ChampionMv.dmp"
+#incbin "cache/ChampionMv.dmp"
 ALIGN 4
 
 
 CommanderSt:
-#incbin "CommanderSt.dmp"
+#incbin "cache/CommanderSt.dmp"
 ALIGN 4
 
 CommanderMv:
-#incbin "CommanderMv.dmp"
+#incbin "cache/CommanderMv.dmp"
 ALIGN 4
 
 
 DarkKnightSt:
-#incbin "DarkKnightSt.dmp"
+#incbin "cache/DarkKnightSt.dmp"
 ALIGN 4
 
 DarkKnightMv:
-#incbin "DarkKnightMv.dmp"
+#incbin "cache/DarkKnightMv.dmp"
 ALIGN 4
 
 
 DreadFighterMSt:
-#incbin "DreadFighterMSt.dmp"
+#incbin "cache/DreadFighterMSt.dmp"
 ALIGN 4
 
 DreadFighterMMv:
-#incbin "DreadFighterMMv.dmp"
+#incbin "cache/DreadFighterMMv.dmp"
 ALIGN 4
 
 DreadFighterFSt:
-#incbin "DreadFighterFSt.dmp"
+#incbin "cache/DreadFighterFSt.dmp"
 ALIGN 4
 
 DreadFighterFMv:
-#incbin "DreadFighterFMv.dmp"
+#incbin "cache/DreadFighterFMv.dmp"
 ALIGN 4
 
 
 EdgySwordmasterSt:
-#incbin "EdgySwordmasterSt.dmp"
+#incbin "cache/EdgySwordmasterSt.dmp"
 ALIGN 4
 
 EdgySwordmasterMv:
-#incbin "EdgySwordmasterMv.dmp"
+#incbin "cache/EdgySwordmasterMv.dmp"
 ALIGN 4
 
 
 ExecutionerSt:
-#incbin "ExecutionerSt.dmp"
+#incbin "cache/ExecutionerSt.dmp"
 ALIGN 4
 
 ExecutionerMv:
-#incbin "ExecutionerMv.dmp"
+#incbin "cache/ExecutionerMv.dmp"
 ALIGN 4
 
 
 GoldKnightSt:
-#incbin "GoldKnightSt.dmp"
+#incbin "cache/GoldKnightSt.dmp"
 ALIGN 4
 
 GoldKnightMv:
-#incbin "GoldKnightMv.dmp"
+#incbin "cache/GoldKnightMv.dmp"
 ALIGN 4
 
 
 
 HalberdierSt:
-#incbin "HalberdierSt.dmp"
+#incbin "cache/HalberdierSt.dmp"
 ALIGN 4
 
 HalberdierMv:
-#incbin "HalberdierMv.dmp"
+#incbin "cache/HalberdierMv.dmp"
 ALIGN 4
 
 
 HarbingerSt:
-#incbin "HarbingerSt.dmp"
+#incbin "cache/HarbingerSt.dmp"
 ALIGN 4
 
 HarbingerMv:
-#incbin "HarbingerMv.dmp"
+#incbin "cache/HarbingerMv.dmp"
 ALIGN 4
 
 
 HectorSt:
-#incbin "HectorSt.dmp"
+#incbin "cache/HectorSt.dmp"
 ALIGN 4
 
 HectorMv:
-#incbin "HectorMv.dmp"
+#incbin "cache/HectorMv.dmp"
 ALIGN 4
 
 
 HunterSt:
-#incbin "HunterSt.dmp"
+#incbin "cache/HunterSt.dmp"
 ALIGN 4
 
 HunterMv:
-#incbin "HunterMv.dmp"
+#incbin "cache/HunterMv.dmp"
 ALIGN 4
 
 
 ImaplerSt:
-#incbin "ImpalerSt.dmp"
+#incbin "cache/ImpalerSt.dmp"
 ALIGN 4
 
 ImpalerMv:
-#incbin "ImpalerMv.dmp"
+#incbin "cache/ImpalerMv.dmp"
 ALIGN 4
 
 
 IzukSt:
-#incbin "IzukSt.dmp"
+#incbin "cache/IzukSt.dmp"
 ALIGN 4
 
 IzukMv:
-#incbin "IzukMv.dmp"
+#incbin "cache/IzukMv.dmp"
 ALIGN 4
 
 
 KnightSt:
-#incbin "KnightSt.dmp"
+#incbin "cache/KnightSt.dmp"
 ALIGN 4
 
 KnightMv:
-#incbin "KnightMv.dmp"
+#incbin "cache/KnightMv.dmp"
 ALIGN 4
 
 
 MagusMSt:
-#incbin "MagusMSt.dmp"
+#incbin "cache/MagusMSt.dmp"
 ALIGN 4
 
 MagusMMv:
-#incbin "MagusMMv.dmp"
+#incbin "cache/MagusMMv.dmp"
 ALIGN 4
 
 
 MagusFSt:
-#incbin "MagusFSt.dmp"
+#incbin "cache/MagusFSt.dmp"
 ALIGN 4
 
 MagusFMv:
-#incbin "MagusFMv.dmp"
+#incbin "cache/MagusFMv.dmp"
 ALIGN 4
 
 
 MaligKnightSt:
-#incbin "MaligKnightSt.dmp"
+#incbin "cache/MaligKnightSt.dmp"
 ALIGN 4
 
 MaligKnightMv:
-#incbin "MaligKnightMv.dmp"
+#incbin "cache/MaligKnightMv.dmp"
 ALIGN 4
 
 MatriarchSt:
-#incbin "MatriarchSt.dmp"
+#incbin "cache/MatriarchSt.dmp"
 ALIGN 4
 
 MatriarchMv:
-#incbin "MatriarchMv.dmp"
+#incbin "cache/MatriarchMv.dmp"
 ALIGN 4
 
 
 MonkFSt:
-#incbin "FemaleMonkSt.dmp"
+#incbin "cache/FemaleMonkSt.dmp"
 ALIGN 4
 
 MonkFMv:
-#incbin "FemaleMonkMv.dmp"
+#incbin "cache/FemaleMonkMv.dmp"
 ALIGN 4
 
 
 MountedBrigandSt:
-#incbin "MountedBrigandSt.dmp"
+#incbin "cache/MountedBrigandSt.dmp"
 ALIGN 4
 
 MountedBrigandMv:
-#incbin "MountedBrigandMv.dmp"
+#incbin "cache/MountedBrigandMv.dmp"
 ALIGN 4
 
 
 NomadSt:
-//#incbin "NomadSt.dmp"
+//#incbin "cache/NomadSt.dmp"
 ALIGN 4
 
 NomadMv:
-//#incbin "NomadMv.dmp"
+//#incbin "cache/NomadMv.dmp"
 ALIGN 4
 
 
 PatriarchSt:
-#incbin "PatriarchSt.dmp"
+#incbin "cache/PatriarchSt.dmp"
 ALIGN 4
 
 PatriarchMv:
-#incbin "PatriarchMv.dmp"
+#incbin "cache/PatriarchMv.dmp"
 ALIGN 4
 
 
 PirateSt:
-#incbin "PirateSt.dmp"
+#incbin "cache/PirateSt.dmp"
 ALIGN 4
 
 PirateMv:
-#incbin "PirateMv.dmp"
+#incbin "cache/PirateMv.dmp"
 ALIGN 4
 
 
 SentinelSt:
-#incbin "SentinelSt.dmp"
+#incbin "cache/SentinelSt.dmp"
 ALIGN 4
 
 SentinelMv:
-#incbin "SentinelMv.dmp"
+#incbin "cache/SentinelMv.dmp"
 ALIGN 4
 
 
 SpellswordMSt:
-#incbin "SpellswordMSt.dmp"
+#incbin "cache/SpellswordMSt.dmp"
 ALIGN 4
 
 SpellswordMMv:
-#incbin "SpellswordMMv.dmp"
+#incbin "cache/SpellswordMMv.dmp"
 ALIGN 4
 
 SpellswordFSt:
-#incbin "SpellswordFSt.dmp"
+#incbin "cache/SpellswordFSt.dmp"
 ALIGN 4
 
 SpellswordFMv:
-#incbin "SpellswordFMv.dmp"
+#incbin "cache/SpellswordFMv.dmp"
 ALIGN 4
 
 
 TruebladeFSt:
-#incbin "TruebladeFSt.dmp"
+#incbin "cache/TruebladeFSt.dmp"
 ALIGN 4
 
 TruebladeFMv:
-#incbin "TruebladeFMv.dmp"
+#incbin "cache/TruebladeFMv.dmp"
 ALIGN 4
 
 
 TruebladeSt:
-#incbin "TruebladeSt.dmp"
+#incbin "cache/TruebladeSt.dmp"
 ALIGN 4
 
 TruebladeMv:
-#incbin "TruebladeMv.dmp"
+#incbin "cache/TruebladeMv.dmp"
 ALIGN 4
 
 
 TruerbladeSt:
-#incbin "TruerbladeSt.dmp"
+#incbin "cache/TruerbladeSt.dmp"
 ALIGN 4
 
 TruerbladeMv:
-#incbin "TruerbladeMv.dmp"
+#incbin "cache/TruerbladeMv.dmp"
 ALIGN 4
 
 
 WarlockSt:
-#incbin "WarlockSt.dmp"
+#incbin "cache/WarlockSt.dmp"
 ALIGN 4
 
 WarlockMv:
-#incbin "WarlockMv.dmp"
+#incbin "cache/WarlockMv.dmp"
 ALIGN 4
 
 
 FMercenaryFix:
-#incbin "FemaleMercenaryFix.dmp"
+#incbin "cache/FemaleMercenaryFix.dmp"
 ALIGN 4
 
 
