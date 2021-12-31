@@ -53,5 +53,5 @@ SureShotAnim:
 
 BlackMagicAnim:
 {
-	#include "Black Magic/BMAnim.event"
+	#include "BlackMagic/BMAnim.event"
 }
