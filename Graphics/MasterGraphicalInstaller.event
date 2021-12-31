@@ -1,6 +1,10 @@
 
 #include "Spells/MasterSpellInstaller.event"
 
+ALIGN 4
+PortraitTable:
+#incbin "VanillaPortraitTable.dmp"
+
 #include "Portraits/PortraitInstaller.event"
 
 #include "ItemIcons/ItemIconInstaller.event"
@@ -19,10 +23,6 @@ POIN NewStatScreen
 ORG $88640
 POIN NewStatScreenPal
 POP
-
-ALIGN 4
-PortraitTable:
-#incbin "VanillaPortraitTable.dmp"
 
 ALIGN 4
 NewStatScreen:
