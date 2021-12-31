@@ -82,58 +82,58 @@ B blankbg.png
 3
 C0D1029
 C00AB48
-O rocks (1).png
+O rocks(1).png
 B s02.png
 5
-O rocks (2).png
+O rocks(2).png
 B s03.png
 5
-O rocks (3).png
+O rocks(3).png
 B s04.png
 5
-O rocks (4).png
+O rocks(4).png
 B s05.png
 5
-O rocks (5).png
+O rocks(5).png
 B s06.png
 5
-O rocks (6).png
+O rocks(6).png
 B s07.png
 5
 C00AB48
-O rocks (7).png
+O rocks(7).png
 B s08.png
 5
-O rocks (8).png
+O rocks(8).png
 B s09.png
 5
-O rocks (8).png
+O rocks(8).png
 B s10.png
 5
-O rocks (10).png
+O rocks(10).png
 B s11.png
 5
-O rocks (21).png
+O rocks(21).png
 B s22.png
 5
-O rocks (22).png
+O rocks(22).png
 B s23.png
 5
-O rocks (23).png
+O rocks(23).png
 B s24.png
 5
-O rocks (24).png
+O rocks(24).png
 B s25.png
 5
-O rocks (25).png
+O rocks(25).png
 B s26.png
 5
 C061029
-O rocks (26).png
+O rocks(26).png
 B s27.png
 5
 C031029
-O rocks (27).png
+O rocks(27).png
 B s28.png
 5
 C02CB48
