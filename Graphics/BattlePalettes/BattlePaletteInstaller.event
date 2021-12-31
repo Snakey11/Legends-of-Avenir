@@ -355,851 +355,851 @@ SetPaletteFuller(PlayerFSpellsword,MageFSpellswordPaletteID,SpellswordF2,0x00,0x
 
 ALIGN 4
 MercenaryMMercenaryPalette:
-#incbin "MercenaryMMercenary.dmp"
+#incbin "cache/MercenaryMMercenary.dmp"
 
 ALIGN 4
 MercenaryMMyrmidonPalette:
-#incbin "MercenaryMMyrmidon.dmp"
+#incbin "cache/MercenaryMMyrmidon.dmp"
 
 ALIGN 4
 MercenaryMFighterPalette:
-#incbin "MercenaryMFighter.dmp"
+#incbin "cache/MercenaryMFighter.dmp"
 
 ALIGN 4
 MercenaryMPiratePalette:
-#incbin "MercenaryMPirate.dmp"
+#incbin "cache/MercenaryMPirate.dmp"
 
 ALIGN 4
 MercenaryMBrigandPalette:
-#incbin "MercenaryMBrigand.dmp"
+#incbin "cache/MercenaryMBrigand.dmp"
 
 ALIGN 4
 MercenaryMChampionPalette:
-//#incbin "MercenaryMChampion.dmp"
+//#incbin "cache/MercenaryMChampion.dmp"
 
 ALIGN 4
 MercenaryMTruebladePalette:
-#incbin "MercenaryMTrueblade.dmp"
+#incbin "cache/MercenaryMTrueblade.dmp"
 
 ALIGN 4
 MercenaryMWarlockPalette:
-#incbin "MercenaryMWarlock.dmp"
+#incbin "cache/MercenaryMWarlock.dmp"
 
 ALIGN 4
 MercenaryMGladiatorPalette:
-//#incbin "MercenaryMGladiator.dmp"
+//#incbin "cache/MercenaryMGladiator.dmp"
 
 ALIGN 4
 MercenaryMMauraderPalette:
-#incbin "MercenaryMMaurader.dmp"
+#incbin "cache/MercenaryMMaurader.dmp"
 
 
 ALIGN 4
 MercenaryMHeroPalette:
-#incbin "MercenaryMHero.dmp"
+#incbin "cache/MercenaryMHero.dmp"
 
 ALIGN 4
 MercenaryMRangerPalette:
-#incbin "MercenaryMRanger.dmp"
+#incbin "cache/MercenaryMRanger.dmp"
 
 ALIGN 4
 MercenaryMSwordmasterPalette:
-#incbin "MercenaryMSwordmaster.dmp"
+#incbin "cache/MercenaryMSwordmaster.dmp"
 
 ALIGN 4
 MercenaryMAssassinPalette:
-#incbin "MercenaryMAssassin.dmp"
+#incbin "cache/MercenaryMAssassin.dmp"
 
 ALIGN 4
 MercenaryMWarriorPalette:
-#incbin "MercenaryMWarrior.dmp"
+#incbin "cache/MercenaryMWarrior.dmp"
 
 ALIGN 4
 MercenaryMBerserkerPalette:
-#incbin "MercenaryMBerserker.dmp"
+#incbin "cache/MercenaryMBerserker.dmp"
 
 
 ALIGN 4
 MercenaryFMercenaryPalette:
-#incbin "MercenaryFMercenary.dmp"
+#incbin "cache/MercenaryFMercenary.dmp"
 
 ALIGN 4
 MercenaryFMyrmidonPalette:
-#incbin "MercenaryFMyrmidon.dmp"
+#incbin "cache/MercenaryFMyrmidon.dmp"
 
 ALIGN 4
 MercenaryFPegasusKnightPalette:
-#incbin "MercenaryFPegasusKnight.dmp"
+#incbin "cache/MercenaryFPegasusKnight.dmp"
 
 ALIGN 4
 MercenaryFChampionPalette:
-//#incbin "MercenaryFChampion.dmp"
+//#incbin "cache/MercenaryFChampion.dmp"
 
 ALIGN 4
 MercenaryFTruebladePalette:
-//#incbin "MercenaryFTrueblade.dmp"
+//#incbin "cache/MercenaryFTrueblade.dmp"
 
 ALIGN 4
 MercenaryFSeraphKnightPalette:
-#incbin "MercenaryFSeraphKnight.dmp"
+#incbin "cache/MercenaryFSeraphKnight.dmp"
 
 
 ALIGN 4
 MercenaryFHeroPalette:
-#incbin "MercenaryFHero.dmp"
+#incbin "cache/MercenaryFHero.dmp"
 
 ALIGN 4
 MercenaryFRangerPalette:
-#incbin "MercenaryFRanger.dmp"
+#incbin "cache/MercenaryFRanger.dmp"
 
 ALIGN 4
 MercenaryFSwordmasterPalette:
-#incbin "MercenaryFSwordmaster.dmp"
+#incbin "cache/MercenaryFSwordmaster.dmp"
 
 ALIGN 4
 MercenaryFAssassinPalette:
-#incbin "MercenaryFAssassin.dmp"
+#incbin "cache/MercenaryFAssassin.dmp"
 
 ALIGN 4
 MercenaryFFalcoknightPalette:
-#incbin "MercenaryFFalcoknight.dmp"
+#incbin "cache/MercenaryFFalcoknight.dmp"
 
 ALIGN 4
 MercenaryFWyvernKnightPalette:
-#incbin "MercenaryFWyvernKnight.dmp"
+#incbin "cache/MercenaryFWyvernKnight.dmp"
 
 
 ALIGN 4
 MilitaryMCavalierPalette:
-#incbin "MilitaryMCavalier.dmp"
+#incbin "cache/MilitaryMCavalier.dmp"
 
 ALIGN 4
 MilitaryMKnightPalette:
-#incbin "MilitaryMKnight.dmp"
+#incbin "cache/MilitaryMKnight.dmp"
 
 ALIGN 4
 MilitaryMSoldierPalette:
-#incbin "MilitaryMSoldier.dmp"
+#incbin "cache/MilitaryMSoldier.dmp"
 
 ALIGN 4
 MilitaryMWyvernRiderPalette:
-#incbin "MilitaryMWyvernRider.dmp"
+#incbin "cache/MilitaryMWyvernRider.dmp"
 
 ALIGN 4
 MilitaryMArcherPalette:
-#incbin "MilitaryMArcher.dmp"
+#incbin "cache/MilitaryMArcher.dmp"
 
 ALIGN 4
 MilitaryMMasterKnightPalette:
-//#incbin "MilitaryMMasterKnight.dmp"
+//#incbin "cache/MilitaryMMasterKnight.dmp"
 
 ALIGN 4
 MilitaryMCommanderPalette:
-//#incbin "MilitaryMCommander.dmp"
+//#incbin "cache/MilitaryMCommander.dmp"
 
 ALIGN 4
 MilitaryMImpalerPalette:
-#incbin "MilitaryMImpaler.dmp"
+#incbin "cache/MilitaryMImpaler.dmp"
 
 ALIGN 4
 MilitaryMWyvernGeneralPalette:
-//#incbin "MilitaryMWyvernGeneral.dmp"
+//#incbin "cache/MilitaryMWyvernGeneral.dmp"
 
 ALIGN 4
 MilitaryMMarksmanPalette:
-//#incbin "MilitaryMHunter.dmp"
+//#incbin "cache/MilitaryMHunter.dmp"
 
 ALIGN 4
 MilitaryMPaladinPalette:
-#incbin "MilitaryMPaladin.dmp"
+#incbin "cache/MilitaryMPaladin.dmp"
 
 ALIGN 4
 MilitaryMGreatKnightPalette:
-#incbin "MilitaryMGreatKnight.dmp"
+#incbin "cache/MilitaryMGreatKnight.dmp"
 
 ALIGN 4
 MilitaryMGeneralPalette:
-#incbin "MilitaryMGeneral.dmp"
+#incbin "cache/MilitaryMGeneral.dmp"
 
 ALIGN 4
 MilitaryMHalberdierPalette:
-#incbin "MilitaryMHalberdier.dmp"
+#incbin "cache/MilitaryMHalberdier.dmp"
 
 ALIGN 4
 MilitaryMSentinelPalette:
-#incbin "MilitaryMSentinel.dmp"
+#incbin "cache/MilitaryMSentinel.dmp"
 
 ALIGN 4
 MilitaryMWyvernLordPalette:
-#incbin "MilitaryMWyvernLord.dmp"
+#incbin "cache/MilitaryMWyvernLord.dmp"
 
 ALIGN 4
 MilitaryMWyvernKnightPalette:
-#incbin "MilitaryMWyvernKnight.dmp"
+#incbin "cache/MilitaryMWyvernKnight.dmp"
 
 ALIGN 4
 MilitaryMSniperPalette:
-#incbin "MilitaryMSniper.dmp"
+#incbin "cache/MilitaryMSniper.dmp"
 
 ALIGN 4
 MilitaryMRangerPalette:
-#incbin "MilitaryMRanger.dmp"
+#incbin "cache/MilitaryMRanger.dmp"
 
 
 ALIGN 4
 MilitaryFCavalierPalette:
-#incbin "MilitaryFCavalier.dmp"
+#incbin "cache/MilitaryFCavalier.dmp"
 
 ALIGN 4
 MilitaryFKnightPalette:
-#incbin "MilitaryFKnight.dmp"
+#incbin "cache/MilitaryFKnight.dmp"
 
 ALIGN 4
 MilitaryFSoldierPalette:
-#incbin "MilitaryFSoldier.dmp"
+#incbin "cache/MilitaryFSoldier.dmp"
 
 ALIGN 4
 MilitaryFWyvernRiderPalette:
-#incbin "MilitaryFWyvernRider.dmp"
+#incbin "cache/MilitaryFWyvernRider.dmp"
 
 ALIGN 4
 MilitaryFArcherPalette:
-#incbin "MilitaryFArcher.dmp"
+#incbin "cache/MilitaryFArcher.dmp"
 
 
 
 ALIGN 4
 MilitaryFMasterKnightPalette:
-//#incbin "MilitaryFMasterKnight.dmp"
+//#incbin "cache/MilitaryFMasterKnight.dmp"
 
 ALIGN 4
 MilitaryFCommanderPalette:
-//#incbin "MilitaryFCommander.dmp"
+//#incbin "cache/MilitaryFCommander.dmp"
 
 ALIGN 4
 MilitaryFImpalerPalette:
-#incbin "MilitaryFImpaler.dmp"
+#incbin "cache/MilitaryFImpaler.dmp"
 
 ALIGN 4
 MilitaryFWyvernGeneralPalette:
-//#incbin "MilitaryFWyvernGeneral.dmp"
+//#incbin "cache/MilitaryFWyvernGeneral.dmp"
 
 ALIGN 4
 MilitaryFMarksmanPalette:
-//#incbin "MilitaryFMarksman.dmp"
+//#incbin "cache/MilitaryFMarksman.dmp"
 
 
 ALIGN 4
 MilitaryFPaladinPalette:
-#incbin "MilitaryFPaladin.dmp"
+#incbin "cache/MilitaryFPaladin.dmp"
 
 ALIGN 4
 MilitaryFGreatKnightPalette:
-#incbin "MilitaryFGreatKnight.dmp"
+#incbin "cache/MilitaryFGreatKnight.dmp"
 
 ALIGN 4
 MilitaryFGeneralPalette:
-#incbin "MilitaryFGeneral.dmp"
+#incbin "cache/MilitaryFGeneral.dmp"
 
 ALIGN 4
 MilitaryFHalberdierPalette:
-#incbin "MilitaryFHalberdier.dmp"
+#incbin "cache/MilitaryFHalberdier.dmp"
 
 ALIGN 4
 MilitaryFSentinelPalette:
-#incbin "MilitaryFSentinel.dmp"
+#incbin "cache/MilitaryFSentinel.dmp"
 
 ALIGN 4
 MilitaryFWyvernLordPalette:
-#incbin "MilitaryFWyvernLord.dmp"
+#incbin "cache/MilitaryFWyvernLord.dmp"
 
 ALIGN 4
 MilitaryFWyvernKnightPalette:
-#incbin "MilitaryFWyvernKnight.dmp"
+#incbin "cache/MilitaryFWyvernKnight.dmp"
 
 ALIGN 4
 MilitaryFSniperPalette:
-#incbin "MilitaryFSniper.dmp"
+#incbin "cache/MilitaryFSniper.dmp"
 
 ALIGN 4
 MilitaryFRangerPalette:
-//#incbin "MilitaryFRanger.dmp"
+//#incbin "cache/MilitaryFRanger.dmp"
 
 
 ALIGN 4
 MageMMonkPalette:
-#incbin "MageMMonk.dmp"
+#incbin "cache/MageMMonk.dmp"
 
 ALIGN 4
 MageMMagePalette:
-#incbin "MageMMage.dmp"
+#incbin "cache/MageMMage.dmp"
 
 ALIGN 4
 MageMShamanPalette:
-#incbin "MageMShaman.dmp"
+#incbin "cache/MageMShaman.dmp"
 
 ALIGN 4
 MageMSpellswordPalette:
-#incbin "MageMSpellsword.dmp"
+#incbin "cache/MageMSpellsword.dmp"
 
 
 ALIGN 4
 MageMPatriarchPalette:
-//#incbin "MageMPatriarch.dmp"
+//#incbin "cache/MageMPatriarch.dmp"
 
 ALIGN 4
 MageMSorcererPalette:
-//#incbin "MageMSorcerer.dmp"
+//#incbin "cache/MageMSorcerer.dmp"
 
 ALIGN 4
 MageMShadeKnightPalette:
-//#incbin "MageMShadeKnight.dmp"
+//#incbin "cache/MageMShadeKnight.dmp"
 
 ALIGN 4
 MageMDarkKnightPalette:
-//#incbin "MageMDarkKnight.dmp"
+//#incbin "cache/MageMDarkKnight.dmp"
 
 
 ALIGN 4
 MageMBishopPalette:
-#incbin "MageMBishop.dmp"
+#incbin "cache/MageMBishop.dmp"
 
 ALIGN 4
 MageMSagePalette:
-#incbin "MageMSage.dmp"
+#incbin "cache/MageMSage.dmp"
 
 ALIGN 4
 MageMMageKnightPalette:
-#incbin "MageMMageKnight.dmp"
+#incbin "cache/MageMMageKnight.dmp"
 
 ALIGN 4
 MageMDruidPalette:
-#incbin "MageMDruid.dmp"
+#incbin "cache/MageMDruid.dmp"
 
 ALIGN 4
 MageMSummonerPalette:
-#incbin "MageMSummoner.dmp"
+#incbin "cache/MageMSummoner.dmp"
 
 ALIGN 4
 MageMBattleSagePalette:
-#incbin "MageMBattleSage.dmp"
+#incbin "cache/MageMBattleSage.dmp"
 
 ALIGN 4
 MageMDreadFighterPalette:
-#incbin "MageMDreadFighter.dmp"
+#incbin "cache/MageMDreadFighter.dmp"
 
 
 ALIGN 4
 MageFMonkPalette:
-#incbin "MageFMonk.dmp"
+#incbin "cache/MageFMonk.dmp"
 
 ALIGN 4
 MageFMagePalette:
-#incbin "MageFMage.dmp"
+#incbin "cache/MageFMage.dmp"
 
 ALIGN 4
 MageFShamanPalette:
-#incbin "MageFShaman.dmp"
+#incbin "cache/MageFShaman.dmp"
 
 ALIGN 4
 MageFSpellswordPalette:
-#incbin "MageFSpellsword.dmp"
+#incbin "cache/MageFSpellsword.dmp"
 
 
 ALIGN 4
 MageFMatriarchPalette:
-//#incbin "MageFMatriarch.dmp"
+//#incbin "cache/MageFMatriarch.dmp"
 
 ALIGN 4
 MageFSorcererPalette:
-//#incbin "MageFSorcerer.dmp"
+//#incbin "cache/MageFSorcerer.dmp"
 
 ALIGN 4
 MageFShadeKnightPalette:
-//#incbin "MageFShadeKnight.dmp"
+//#incbin "cache/MageFShadeKnight.dmp"
 
 ALIGN 4
 MageFDarkKnightPalette:
-//#incbin "MageFDarkKnight.dmp"
+//#incbin "cache/MageFDarkKnight.dmp"
 
 
 ALIGN 4
 MageFBishopPalette:
-#incbin "MageFBishop.dmp"
+#incbin "cache/MageFBishop.dmp"
 
 ALIGN 4
 MageFSagePalette:
-#incbin "MageFSage.dmp"
+#incbin "cache/MageFSage.dmp"
 
 ALIGN 4
 MageFMageKnightPalette:
-#incbin "MageFMageKnight.dmp"
+#incbin "cache/MageFMageKnight.dmp"
 
 ALIGN 4
 MageFDruidPalette:
-#incbin "MageFDruid.dmp"
+#incbin "cache/MageFDruid.dmp"
 
 ALIGN 4
 MageFSummonerPalette:
-#incbin "MageFSummoner.dmp"
+#incbin "cache/MageFSummoner.dmp"
 
 ALIGN 4
 MageFBattleSagePalette:
-#incbin "MageFBattleSage.dmp"
+#incbin "cache/MageFBattleSage.dmp"
 
 ALIGN 4
 MageFDreadFighterPalette:
-#incbin "MageFDreadFighter.dmp"
+#incbin "cache/MageFDreadFighter.dmp"
 
 
 ALIGN 4
 AdelineArcherPalette:
-#incbin "AdelineArcher.dmp"
+#incbin "cache/AdelineArcher.dmp"
 
 ALIGN 4
 AdelineSniperPalette:
-#incbin "AdelineSniper.dmp"
+#incbin "cache/AdelineSniper.dmp"
 
 ALIGN 4
 AdelineRangerPalette:
-#incbin "AdelineRanger.dmp"
+#incbin "cache/AdelineRanger.dmp"
 
 ALIGN 4
 AdlezBrigandPalette:
-#incbin "AdlezBrigand.dmp"
+#incbin "cache/AdlezBrigand.dmp"
 
 ALIGN 4
 AdlezBerserkerPalette:
-#incbin "AdlezBerserker.dmp"
+#incbin "cache/AdlezBerserker.dmp"
 
 ALIGN 4
 AdlezWarriorPalette:
-#incbin "AdlezWarrior.dmp"
+#incbin "cache/AdlezWarrior.dmp"
 
 ALIGN 4
 AjaxShamanPalette:
-#incbin "AjaxShaman.dmp"
+#incbin "cache/AjaxShaman.dmp"
 
 ALIGN 4
 AjaxDruidPalette:
-#incbin "AjaxDruid.dmp"
+#incbin "cache/AjaxDruid.dmp"
 
 ALIGN 4
 AjaxSummonerPalette:
-#incbin "AjaxSummoner.dmp"
+#incbin "cache/AjaxSummoner.dmp"
 
 ALIGN 4
 AlexisSagePalette:
-#incbin "AlexisSage.dmp"
+#incbin "cache/AlexisSage.dmp"
 
 ALIGN 4
 ArcFighterPalette:
-#incbin "ArcFighter.dmp"
+#incbin "cache/ArcFighter.dmp"
 
 ALIGN 4
 ArcMercenaryPalette:
-#incbin "ArcMercenary.dmp"
+#incbin "cache/ArcMercenary.dmp"
 
 ALIGN 4
 ArcHeroPalette:
-#incbin "ArcHero.dmp"
+#incbin "cache/ArcHero.dmp"
 
 ALIGN 4
 ArcWarriorPalette:
-#incbin "ArcWarrior.dmp"
+#incbin "cache/ArcWarrior.dmp"
 
 ALIGN 4
 ArcRangerPalette:
-#incbin "ArcRanger.dmp"
+#incbin "cache/ArcRanger.dmp"
 
 ALIGN 4
 AryaMyrmidonPalette:
-#incbin "AryaMyrmidon.dmp"
+#incbin "cache/AryaMyrmidon.dmp"
 
 ALIGN 4
 AryaAssassinPalette:
-#incbin "AryaAssassin.dmp"
+#incbin "cache/AryaAssassin.dmp"
 
 ALIGN 4
 AryaSwordmasterPalette:
-#incbin "AryaSwordmaster.dmp"
+#incbin "cache/AryaSwordmaster.dmp"
 
 ALIGN 4
 BaretSoldierPalette:
-#incbin "BaretSoldier.dmp"
+#incbin "cache/BaretSoldier.dmp"
 
 ALIGN 4
 BaretHalberdierPalette:
-#incbin "BaretHalberdier.dmp"
+#incbin "cache/BaretHalberdier.dmp"
 
 ALIGN 4
 BaretSentinelPalette:
-#incbin "BaretSentinel.dmp"
+#incbin "cache/BaretSentinel.dmp"
 
 ALIGN 4
 ChristinaCavalierPalette:
-#incbin "ChristinaCavalier.dmp"
+#incbin "cache/ChristinaCavalier.dmp"
 
 ALIGN 4
 ChristinaGreatKnightPalette:
-#incbin "ChristinaGreatKnight.dmp"
+#incbin "cache/ChristinaGreatKnight.dmp"
 
 ALIGN 4
 ChristinaPaladinPalette:
-#incbin "ChristinaPaladin.dmp"
+#incbin "cache/ChristinaPaladin.dmp"
 
 ALIGN 4
 ClaraTroubadourPalette:
-#incbin "ClaraTroubadour.dmp"
+#incbin "cache/ClaraTroubadour.dmp"
 
 ALIGN 4
 ClaraMageKnightPalette:
-#incbin "ClaraMageKnight.dmp"
+#incbin "cache/ClaraMageKnight.dmp"
 
 ALIGN 4
 ClaraValkyriePalette:
-#incbin "ClaraValkyrie.dmp"
+#incbin "cache/ClaraValkyrie.dmp"
 
 ALIGN 4
 ConnorMercenaryPalette:
-#incbin "ConnorMercenary.dmp"
+#incbin "cache/ConnorMercenary.dmp"
 
 ALIGN 4
 ConnorHeroPalette:
-#incbin "ConnorHero.dmp"
+#incbin "cache/ConnorHero.dmp"
 
 ALIGN 4
 ConnorRangerPalette:
-#incbin "ConnorRanger.dmp"
+#incbin "cache/ConnorRanger.dmp"
 
 ALIGN 4
 CougarWyvernRiderPalette:
-#incbin "CougarWyvernRider.dmp"
+#incbin "cache/CougarWyvernRider.dmp"
 
 ALIGN 4
 CougarWyvernLordPalette:
-#incbin "CougarWyvernLord.dmp"
+#incbin "cache/CougarWyvernLord.dmp"
 
 ALIGN 4
 CougarWyvernKnightPalette:
-#incbin "CougarWyvernKnight.dmp"
+#incbin "cache/CougarWyvernKnight.dmp"
 
 ALIGN 4
 DanielSwordmasterPalette:
-#incbin "DanielSwordmaster.dmp"
+#incbin "cache/DanielSwordmaster.dmp"
 
 ALIGN 4
 DerekKnightPalette:
-#incbin "DerekKnight.dmp"
+#incbin "cache/DerekKnight.dmp"
 
 ALIGN 4
 DerekGeneralPalette:
-#incbin "DerekGeneral.dmp"
+#incbin "cache/DerekGeneral.dmp"
 
 ALIGN 4
 DerekGreatKnightPalette:
-#incbin "DerekGreatKnight.dmp"
+#incbin "cache/DerekGreatKnight.dmp"
 
 ALIGN 4
 DunlasHalberdierPalette:
-#incbin "DunlasHalberdier.dmp"
+#incbin "cache/DunlasHalberdier.dmp"
 
 ALIGN 4
 EdwardSagePalette:
-//#incbin "EdwardSage.dmp"
+//#incbin "cache/EdwardSage.dmp"
 
 ALIGN 4
 EfilTruerbladePalette:
-#incbin "EfilTruerblade.dmp"
+#incbin "cache/EfilTruerblade.dmp"
 
 ALIGN 4
 ElanilArcherPalette:
-#incbin "ElanilArcher.dmp"
+#incbin "cache/ElanilArcher.dmp"
 
 ALIGN 4
 ElanilRangerPalette:
-#incbin "ElanilRanger.dmp"
+#incbin "cache/ElanilRanger.dmp"
 
 ALIGN 4
 ElanilSniperPalette:
-#incbin "ElanilSniper.dmp"
+#incbin "cache/ElanilSniper.dmp"
 
 ALIGN 4
 FinocWyvernRiderPalette:
-#incbin "FinocWyvernRider.dmp"
+#incbin "cache/FinocWyvernRider.dmp"
 
 ALIGN 4
 FinocWyvernKnightPalette:
-#incbin "FinocWyvernKnight.dmp"
+#incbin "cache/FinocWyvernKnight.dmp"
 
 ALIGN 4
 FinocWyvernLordPalette:
-#incbin "FinocWyvernLord.dmp"
+#incbin "cache/FinocWyvernLord.dmp"
 
 ALIGN 4
 ForrestCavalierPalette:
-#incbin "ForrestCavalier.dmp"
+#incbin "cache/ForrestCavalier.dmp"
 
 ALIGN 4
 ForrestGreatKnightPalette:
-#incbin "ForrestGreatKnight.dmp"
+#incbin "cache/ForrestGreatKnight.dmp"
 
 ALIGN 4
 ForrestPaladinPalette:
-#incbin "ForrestPaladin.dmp"
+#incbin "cache/ForrestPaladin.dmp"
 
 ALIGN 4
 GerwickPiratePalette:
-#incbin "GerwickPirate.dmp"
+#incbin "cache/GerwickPirate.dmp"
 
 ALIGN 4
 GhostSwordmasterPalette:
-#incbin "GhostSwordmaster.dmp"
+#incbin "cache/GhostSwordmaster.dmp"
 
 ALIGN 4
 GuardianSpiritHarbingerPalette:
-#incbin "GuardianSpirit.dmp"
+#incbin "cache/GuardianSpirit.dmp"
 
 ALIGN 4
 HarkenHeroPalette:
-#incbin "HarkenHero.dmp"
+#incbin "cache/HarkenHero.dmp"
 
 ALIGN 4
 HelmerSoldierPalette:
-#incbin "HelmerSoldier.dmp"
+#incbin "cache/HelmerSoldier.dmp"
 
 ALIGN 4
 HelmerHalberdierPalette:
-#incbin "HelmerHalberdier.dmp"
+#incbin "cache/HelmerHalberdier.dmp"
 
 ALIGN 4
 HelmerSentinelPalette:
-#incbin "HelmerSentinel.dmp"
+#incbin "cache/HelmerSentinel.dmp"
 
 ALIGN 4
 HenningFighterPalette:
-#incbin "HenningFighter.dmp"
+#incbin "cache/HenningFighter.dmp"
 
 ALIGN 4
 IzukPatriarchPalette:
-#incbin "IzukPatriarch.dmp"
+#incbin "cache/IzukPatriarch.dmp"
 
 ALIGN 4
 JasperCavalierPalette:
-#incbin "JasperCavalier.dmp"
+#incbin "cache/JasperCavalier.dmp"
 
 ALIGN 4
 JasperGreatKnightPalette:
-#incbin "JasperGreatKnight.dmp"
+#incbin "cache/JasperGreatKnight.dmp"
 
 ALIGN 4
 JasperPaladinPalette:
-#incbin "JasperPaladin.dmp"
+#incbin "cache/JasperPaladin.dmp"
 
 ALIGN 4
 JurgenHeroPalette:
-#incbin "JurgenHero.dmp"
+#incbin "cache/JurgenHero.dmp"
 
 ALIGN 4
 KaidHeroPalette:
-//#incbin "KaidHero.dmp"
+//#incbin "cache/KaidHero.dmp"
 
 ALIGN 4
 KendrickPiratePalette:
-#incbin "KendrickPirate.dmp"
+#incbin "cache/KendrickPirate.dmp"
 
 ALIGN 4
 KendrickBerserkerPalette:
-#incbin "KendrickBerserker.dmp"
+#incbin "cache/KendrickBerserker.dmp"
 
 ALIGN 4
 KendrickWarriorPalette:
-#incbin "KendrickWarrior.dmp"
+#incbin "cache/KendrickWarrior.dmp"
 
 ALIGN 4
 LeonBasileusPalette:
-#incbin "LeonBasileus.dmp"
+#incbin "cache/LeonBasileus.dmp"
 
 ALIGN 4
 LeyosGuardianPalette:
-#incbin "LeyosGuardian.dmp"
+#incbin "cache/LeyosGuardian.dmp"
 
 ALIGN 4
 LukeMonkPalette:
-#incbin "LukeMonk.dmp"
+#incbin "cache/LukeMonk.dmp"
 
 ALIGN 4
 LukeBishopPalette:
-#incbin "LukeBishop.dmp"
+#incbin "cache/LukeBishop.dmp"
 
 ALIGN 4
 LukeSagePalette:
-#incbin "LukeSage.dmp"
+#incbin "cache/LukeSage.dmp"
 
 ALIGN 4
 LuxMagePalette:
-#incbin "LuxMage.dmp"
+#incbin "cache/LuxMage.dmp"
 
 ALIGN 4
 LuxMageKnightPalette:
-#incbin "LuxMageKnight.dmp"
+#incbin "cache/LuxMageKnight.dmp"
 
 ALIGN 4
 LuxSagePalette:
-#incbin "LuxSage.dmp"
+#incbin "cache/LuxSage.dmp"
 
 ALIGN 4
 MasonRangerPalette:
-#incbin "MasonRanger.dmp"
+#incbin "cache/MasonRanger.dmp"
 
 ALIGN 4
 MaximusStrategistPalette:
-#incbin "MaximusStrategist.dmp"
+#incbin "cache/MaximusStrategist.dmp"
 
 ALIGN 4
 MistlainSagePalette:
-#incbin "MistlainSage.dmp"
+#incbin "cache/MistlainSage.dmp"
 
 ALIGN 4
 MurielSagePalette:
-#incbin "MurielSage.dmp"
+#incbin "cache/MurielSage.dmp"
 
 ALIGN 4
 RemusSoldierPalette:
-#incbin "RemusSoldier.dmp"
+#incbin "cache/RemusSoldier.dmp"
 
 ALIGN 4
 RemusSentinelPalette:
-#incbin "RemusSentinel.dmp"
+#incbin "cache/RemusSentinel.dmp"
 
 ALIGN 4
 RemusHalberdierPalette:
-#incbin "RemusHalberdier.dmp"
+#incbin "cache/RemusHalberdier.dmp"
 
 ALIGN 4
 RexPaladinPalette:
-#incbin "RexPaladin.dmp"
+#incbin "cache/RexPaladin.dmp"
 
 ALIGN 4
 RichterHeroPalette:
-#incbin "RichterHero.dmp"
+#incbin "cache/RichterHero.dmp"
 
 ALIGN 4
 RobertBerserkerPalette:
-#incbin "RobertBerserker.dmp"
+#incbin "cache/RobertBerserker.dmp"
 
 ALIGN 4
 SamMyrmidonPalette:
-#incbin "SamMyrmidon.dmp"
+#incbin "cache/SamMyrmidon.dmp"
 
 ALIGN 4
 SekarFighterPalette:
-#incbin "SekarFighter.dmp"
+#incbin "cache/SekarFighter.dmp"
 
 ALIGN 4
 SekarHeroPalette:
-#incbin "SekarHero.dmp"
+#incbin "cache/SekarHero.dmp"
 
 ALIGN 4
 SekarWarriorPalette:
-#incbin "SekarWarrior.dmp"
+#incbin "cache/SekarWarrior.dmp"
 
 ALIGN 4
 ShanleyMagePalette:
-#incbin "ShanleyMage.dmp"
+#incbin "cache/ShanleyMage.dmp"
 
 ALIGN 4
 ShanleySagePalette:
-#incbin "ShanleySage.dmp"
+#incbin "cache/ShanleySage.dmp"
 
 ALIGN 4
 ShanleyMageKnightPalette:
-#incbin "ShanleyMageKnight.dmp"
+#incbin "cache/ShanleyMageKnight.dmp"
 
 ALIGN 4
 SylvaineMaligKnightPalette:
-#incbin "SylvaineMaligKnight.dmp"
+#incbin "cache/SylvaineMaligKnight.dmp"
 
 ALIGN 4
 UzkalisGaidenSagePalette:
-#incbin "UzkalisGaidenSage.dmp"
+#incbin "cache/UzkalisGaidenSage.dmp"
 
 ALIGN 4
 ValShamanPalette:
-#incbin "ValShaman.dmp"
+#incbin "cache/ValShaman.dmp"
 
 ALIGN 4
 ValDruidPalette:
-#incbin "ValDruid.dmp"
+#incbin "cache/ValDruid.dmp"
 
 ALIGN 4
 ValSummonerPalette:
-#incbin "ValSummoner.dmp"
+#incbin "cache/ValSummoner.dmp"
 
 ALIGN 4
 VicarWarriorPalette:
-#incbin "VicarWarrior.dmp"
+#incbin "cache/VicarWarrior.dmp"
 
 ALIGN 4
 WalterArcherPalette:
-#incbin "WalterArcher.dmp"
+#incbin "cache/WalterArcher.dmp"
 
 ALIGN 4
 WalterRangerPalette:
-#incbin "WalterRanger.dmp"
+#incbin "cache/WalterRanger.dmp"
 
 ALIGN 4
 WalterSniperPalette:
-#incbin "WalterSniper.dmp"
+#incbin "cache/WalterSniper.dmp"
 
 ALIGN 4
 WestonMercenaryPalette:
-#incbin "WestonMercenary.dmp"
+#incbin "cache/WestonMercenary.dmp"
 
 ALIGN 4
 WilliamGeneralPalette:
-#incbin "WilliamGeneral.dmp"
+#incbin "cache/WilliamGeneral.dmp"
 
 ALIGN 4
 XavusNecromancerPalette:
-#incbin "XavusNecromancer.dmp"
+#incbin "cache/XavusNecromancer.dmp"
 
 ALIGN 4
 XenaDreadFighterPalette:
-#incbin "XenaDreadFighter.dmp"
+#incbin "cache/XenaDreadFighter.dmp"
 
 ALIGN 4
 XeximAssassinPalette:
-#incbin "XeximAssassin.dmp"
+#incbin "cache/XeximAssassin.dmp"
 
 ALIGN 4
 XyliaSagePalette:
-#incbin "XyliaSage.dmp"
+#incbin "cache/XyliaSage.dmp"
 
 ALIGN 4
 YvettePegasusKnightPalette:
-#incbin "YvettePegasusKnight.dmp"
+#incbin "cache/YvettePegasusKnight.dmp"
 
 ALIGN 4
 YvetteFalcoknightPalette:
-#incbin "YvetteFalcoknight.dmp"
+#incbin "cache/YvetteFalcoknight.dmp"
 
 ALIGN 4
 YvetteWyvernKnightPalette:
-#incbin "YvetteWyvernKnight.dmp"
+#incbin "cache/YvetteWyvernKnight.dmp"
 
 ALIGN 4
 ZahevaSpellswordPalette:
-#incbin "ZahevaSpellsword.dmp"
+#incbin "cache/ZahevaSpellsword.dmp"
 
 ALIGN 4
 ZahevaBattleSagePalette:
-#incbin "ZahevaBattleSage.dmp"
+#incbin "cache/ZahevaBattleSage.dmp"
 
 ALIGN 4
 ZahevaDreadFighterPalette:
-#incbin "ZahevaDreadFighter.dmp"
+#incbin "cache/ZahevaDreadFighter.dmp"
 
 ALIGN 4
 ZaliusSwordmasterPalette:
-#incbin "ZaliusSwordmaster.dmp"
+#incbin "cache/ZaliusSwordmaster.dmp"

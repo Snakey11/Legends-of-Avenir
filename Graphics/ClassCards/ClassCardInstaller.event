@@ -1,61 +1,61 @@
 
 ALIGN 4
 SentinelPortrait:
-#incbin "Sentinel.dmp"
+#incbin "cache/Sentinel.dmp"
 SentinelPortraitPalette:
-#incbin "SentinelPalette.dmp"
+#incbin "cache/SentinelPalette.dmp"
 
 HalberdierPortrait:
-#incbin "Halberdier.dmp"
+#incbin "cache/Halberdier.dmp"
 HalberdierPortraitPalette:
-#incbin "HalberdierPalette.dmp"
+#incbin "cache/HalberdierPalette.dmp"
 
 AssassinPortrait:
-#incbin "Assassin.dmp"
+#incbin "cache/Assassin.dmp"
 AssassinPortraitPalette:
-#incbin "AssassinPalette.dmp"
+#incbin "cache/AssassinPalette.dmp"
 
 KnightPortrait:
-#incbin "Knight.dmp"
+#incbin "cache/Knight.dmp"
 KnightPortraitPalette:
-#incbin "KnightPalette.dmp"
+#incbin "cache/KnightPalette.dmp"
 
 PiratePortrait:
-#incbin "Pirate.dmp"
+#incbin "cache/Pirate.dmp"
 PiratePortraitPalette:
-#incbin "PiratePalette.dmp"
+#incbin "cache/PiratePalette.dmp"
 
 BattleSageMPortrait:
-#incbin "BattleSageM.dmp"
+#incbin "cache/BattleSageM.dmp"
 BattleSageMPortraitPalette:
-#incbin "BattleSageMPalette.dmp"
+#incbin "cache/BattleSageMPalette.dmp"
 BattleSageFPortrait:
-#incbin "BattleSageF.dmp"
+#incbin "cache/BattleSageF.dmp"
 BattleSageFPortraitPalette:
-#incbin "BattleSageFPalette.dmp"
+#incbin "cache/BattleSageFPalette.dmp"
 
 DreadFighterMPortrait:
-#incbin "DreadFighterM.dmp"
+#incbin "cache/DreadFighterM.dmp"
 DreadFighterMPortraitPalette:
-#incbin "DreadFighterMPalette.dmp"
+#incbin "cache/DreadFighterMPalette.dmp"
 DreadFighterFPortrait:
-#incbin "DreadFighterF.dmp"
+#incbin "cache/DreadFighterF.dmp"
 DreadFighterFPortraitPalette:
-#incbin "DreadFighterFPalette.dmp"
+#incbin "cache/DreadFighterFPalette.dmp"
 
 MaligKnightPortrait:
-#incbin "MaligKnight.dmp"
+#incbin "cache/MaligKnight.dmp"
 MaligKnightPortraitPalette:
-#incbin "MaligKnightPalette.dmp"
+#incbin "cache/MaligKnightPalette.dmp"
 
 SpellswordMPortrait:
-#incbin "SpellswordM.dmp"
+#incbin "cache/SpellswordM.dmp"
 SpellswordMPortraitPalette:
-#incbin "SpellswordMPalette.dmp"
+#incbin "cache/SpellswordMPalette.dmp"
 SpellswordFPortrait:
-#incbin "SpellswordF.dmp"
+#incbin "cache/SpellswordF.dmp"
 SpellswordFPortraitPalette:
-#incbin "SpellswordFPalette.dmp"
+#incbin "cache/SpellswordFPalette.dmp"
 
 setCardEntry(SentinelCard,SentinelPortrait,SentinelPortraitPalette)
 setCardEntry(HalberdierCard,HalberdierPortrait,HalberdierPortraitPalette)
