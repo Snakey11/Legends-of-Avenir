@@ -52,7 +52,7 @@ CSACreator/
 Graphics/BattlePalettes/cache
 Graphics/Portraits/*.dmp
 Graphics/MapSprites/*.dmp
-Graphics/ClassCards/*.dmp
+Graphics/ClassCards/cache
 Graphics/WorldMap/*.dmp
 Graphics/ItemIcons/*.dmp
 !Graphics/VanillaPortraitTable.dmp
