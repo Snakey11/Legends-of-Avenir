@@ -64,7 +64,7 @@
 	
 	//Music
 	{
-	#include "Music/_MasterMusicInstaller.event"
+	#include "Music/MasterMusicInstaller.event"
 	}
 	MESSAGE Music data ends at CURRENTOFFSET
 	
