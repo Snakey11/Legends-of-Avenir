@@ -6,61 +6,61 @@ C00
 C40
 C00
 C000153
-O Blank Image.png
-B BG Blank.png
+O BlankImage.png
+B BGBlank.png
 4
 C101029
-O Blank Image.png
+O BlankImage.png
 B s01.png
 2
 C51
 C00001A
 C1F
 C011A48
-O Blank Image.png
+O BlankImage.png
 B s02.png
 1
-O Blank Image.png
+O BlankImage.png
 B s03.png
 1
-O Blank Image.png
+O BlankImage.png
 B s04.png
 20
-O Blank Image.png
+O BlankImage.png
 B s05.png
 1
-O Blank Image.png
+O BlankImage.png
 B s06.png
 1
-O Blank Image.png
+O BlankImage.png
 B s07.png
 1
-O Blank Image.png
+O BlankImage.png
 B s07.png
 1
-O Blank Image.png
+O BlankImage.png
 B s08.png
 1
-O Blank Image.png
+O BlankImage.png
 B s09.png
 1
-O Blank Image.png
+O BlankImage.png
 B s010.png
 1
-O Blank Image.png
+O BlankImage.png
 B s011.png
 1
-O Blank Image.png
+O BlankImage.png
 B s012.png
 1
-O Blank Image.png
+O BlankImage.png
 B s013.png
 1
-O Blank Image.png
+O BlankImage.png
 B s014.png
 1
-O Blank Image.png
-B BG Blank.png
+O BlankImage.png
+B BGBlank.png
 10
 C000053
 ~~~

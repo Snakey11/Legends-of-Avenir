@@ -52,7 +52,7 @@ BYTE 0x1 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x1 0x0 0x0 0x0 0x0 0x0 0x0
 
 //TSA Data
 Arcthunder_TSA_0:
-#incbin "BG Blank.map.bin"
+#incbin "BGBlank.map.bin"
 Arcthunder_TSA_1:
 #incbin "s01.map.bin"
 Arcthunder_TSA_2:
@@ -92,7 +92,7 @@ SHORT 0x0 0x1f 0x200 0x210 0x4000 0x4010 0x4200 0x6318 0x4210 0x1f 0x3e0 0x3ff 0
 
 //BG Graphics Data
 Arcthunder_bgImage_0:
-#incbin "BG Blank.img.bin"
+#incbin "BGBlank.img.bin"
 Arcthunder_bgImage_1:
 #incbin "s01.img.bin"
 Arcthunder_bgImage_2:
@@ -124,7 +124,7 @@ Arcthunder_bgImage_14:
 
 //BG Palettes Data
 Arcthunder_bgPalette_0:
-#incbin "BG Blank.pal.bin"
+#incbin "BGBlank.pal.bin"
 Arcthunder_bgPalette_1:
 #incbin "s01.pal.bin"
 Arcthunder_bgPalette_2:
