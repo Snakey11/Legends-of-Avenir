@@ -11,12 +11,13 @@ set png2dmp=%~dp0Png2Dmp.exe
 
 for /R "%~dp0" %%F in (%FILE_MATCH%) do (
     set SHOULD_COMPILE=0
-    set DUMP_FILE=%%~dF%%~pF%%~nF%.dmp
+	set DUMP_FILE=%%~dF%%~pFcache\%%~nF%.dmp
     if exist "!DUMP_FILE!" (
-	For /F "Delims=" %%I In ('dir /b /OD "!DUMP_FILE!" "%%F" ^| more +1') Do Set NEWER=%%I
-	if "!NEWER!" == "%%~nxF" (
-	    set SHOULD_COMPILE=1
-	)
+		For /F "Delims=" %%I In ('dir /b /s /OD "!DUMP_FILE!" "%%F" ^| more +1') Do Set NEWER=%%I
+		echo "%%F"
+		if "!NEWER!" == "%%~nxF" (
+			set SHOULD_COMPILE=1
+		)
     ) else (
 		set SHOULD_COMPILE=1
     )
@@ -24,10 +25,10 @@ for /R "%~dp0" %%F in (%FILE_MATCH%) do (
 		echo Assembling "%%~nxF"...
 		cd "%%~dpF"
 		png2dmp "%%~nxF" -po "temp.dmp"
+		del "%%~dF%%~pF%%~nF%.dmp"
 		
 		PaletteCondenser "temp.dmp" "temp.dmp"
-		del "!DUMP_FILE!"
-
+		
 		compress "temp.dmp" >> "!DUMP_FILE!"
 		del "temp.dmp"
     )

@@ -49,7 +49,7 @@ Text/ParseDefinitions.txt
 # Graphics-related ignores.
 AnimationAssembler/
 CSACreator/
-Graphics/BattlePalettes/*.dmp
+Graphics/BattlePalettes/cache
 Graphics/Portraits/*.dmp
 Graphics/MapSprites/*.dmp
 Graphics/ClassCards/*.dmp
