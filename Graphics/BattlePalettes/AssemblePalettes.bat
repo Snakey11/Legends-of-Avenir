@@ -18,20 +18,18 @@ for /R "%~dp0" %%F in (%FILE_MATCH%) do (
 	    set SHOULD_COMPILE=1
 	)
     ) else (
-	set SHOULD_COMPILE=1
+		set SHOULD_COMPILE=1
     )
     if /I "!SHOULD_COMPILE!" EQU "1" (
-	echo Assembling "%%~nxF"...
-	cd "%%~dpF"
-	png2dmp "%%~nxF" -po "temp.dmp"
+		echo Assembling "%%~nxF"...
+		cd "%%~dpF"
+		png2dmp "%%~nxF" -po "temp.dmp"
+		
+		PaletteCondenser "temp.dmp" "temp.dmp"
+		del "!DUMP_FILE!"
 
-	java -jar "Palette.jar" "temp.dmp"
-	
-	del "!DUMP_FILE!"
-
-	compress "temp.dmp" >> "!DUMP_FILE!"
-
-	del "temp.dmp"
+		compress "temp.dmp" >> "!DUMP_FILE!"
+		del "temp.dmp"
     )
 )
 
