@@ -40,6 +40,15 @@ Adeline and Remus appear a turn sooner in Military 3 Accept, preventing problems
 Removed sword use from Marksman (Archer Tact promotion)
 Fixed a problem with autolevelling with skills with prepromotes (namely Maximus with adept)
 De-cramped a bit of the starting area in Mercenary 7 Militia Wait Cesaria
+Fixed a bug with armor march allowing units with guard AI to have nonzero movement
+Fixed a problem with Kendrick's loading cutscene text in 5 Militia Kill
+Fixed a shadow error in 3 Militia Wait
+Fixed elaqua and arcaqua not giving WEXP
+Fixed a potential crash maybe on turn 9 of Military 4 Accept Hold
+Fixed the halberdier HP overflow bug
+Fixed units stacking in the ending scene of Mercenary 7 Militia Wait Cesaria
+Nerfed Derek and buffed Knight Tact
+Rebalanced axe bro Tacts - they should be all about even in goodness now
 
 v2.2
 Brand new Merc->Cesaria route!
