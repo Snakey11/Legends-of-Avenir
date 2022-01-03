@@ -41,8 +41,12 @@ def addToRefList(song,place,refs):
     # Does this song already exist in the list?
     ref = getSongRef(song,refs)
     if not ref:
+        # This song hasn't been referenced yet.
         ref = SongRef(song)
         refs.append(ref)
+    else:
+        # This song has been referenced. Let's check to see if this location is already recorded.
+        if place in ref.places: return
     ref.places.append(place)
 
 def getSong(ref):
@@ -91,8 +95,10 @@ if __name__ == '__main__':
                 defenseIndex = getIndexes(DEFENSE_NAME,splitted)[0]
             else:
                 chapter = splitted[0]
-                for j in phaseIndexes:
-                    if chapter != '' and not splitted[j].startswith('0'): addToRefList(splitted[j],'Phase theme: '+chapter,MUSIC_REFS)
+                for k,j in enumerate(phaseIndexes):
+                    if chapter != '' and not splitted[j].startswith('0'):
+                        themes = [ 'Player phase theme: ', 'Enemy phase theme: ', 'NPC phase theme: ', 'Player phase theme: ', 'Enemy phase theme: ', 'NPC phase theme: ' ]
+                        addToRefList(splitted[j],themes[k]+chapter,MUSIC_REFS)
                 if chapter != '' and not splitted[attackIndex].startswith('0'): addToRefList(splitted[attackIndex],'Attack theme: '+chapter,MUSIC_REFS)
                 if chapter != '' and not splitted[defenseIndex].startswith('0'): addToRefList(splitted[attackIndex],'Defense theme: '+chapter,MUSIC_REFS)
         # MUSIC_REFS should have phase themes now.

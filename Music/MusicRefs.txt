@@ -4,7 +4,6 @@ List of all music references:
 
 A_Formidable_Friend_Joins_in_the_Fray
 	Military2Accept.event
-	Military2Accept.event
 	Military3Accept.event
 	Military4AcceptHold.event
 	Military4AcceptRetreat.event
@@ -18,7 +17,6 @@ A_Tragic_Decision
 	Military6AcceptRetreatLeave.event
 	Military7AcceptRetreatHelp.event
 	Military7AcceptRetreatLeave.event
-	Military7AcceptRetreatLeave.event
 	Military7PassAltia.event
 Advance
 	Mercenary1.event
@@ -26,12 +24,10 @@ Advance
 	Mercenary2Militia.event
 	Mercenary3Bandit.event
 	Mercenary3MilitiaKill.event
-	Mercenary3MilitiaKill.event
 	Mercenary3MilitiaWait.event
 	Mercenary4Bandit.event
 	Mercenary4MilitiaWait.event
 	Mercenary5MilitiaKill.event
-	Mercenary5MilitiaWaitArcanae.event
 	Mercenary5MilitiaWaitArcanae.event
 	Mercenary6BanditBandit.event
 	Mercenary6BanditDisband.event
@@ -45,46 +41,30 @@ Anchoret
 	Mercenary6BanditDisband.event
 	Mercenary7BanditDisband.event
 	Military4AcceptRetreat.event
-	Military4AcceptRetreat.event
 	Military5AcceptRetreatLeave.event
 	Military7PassAltia.event
 Aquatic_Dystopia
 	Prologue.event
-	Prologue.event
-	Prologue.event
 Aquatic_Ruin
 	Mercenary6MilitiaWaitCesaria.event
-	Phase theme: MilitaryAcceptHold6
-	Phase theme: MilitaryAcceptHold6
-	Phase theme: MercenaryMilitiaWaitCesaria6
-	Phase theme: MercenaryMilitiaWaitCesaria6
+	Player phase theme: MilitaryAcceptHold6
+	Player phase theme: MercenaryMilitiaWaitCesaria6
 Armories_of_Avenir
 	Armories
 Ascent
 	Mage2Leave.event
-	Phase theme: MageLeave2
-	Phase theme: MageLeave2
-	Phase theme: MilitaryAcceptHold7
-	Phase theme: MilitaryAcceptHold7
+	Player phase theme: MageLeave2
+	Player phase theme: MilitaryAcceptHold7
 Assault
-	Phase theme: MercenaryMilitiaWait3
-	Phase theme: MercenaryMilitiaWait3
-	Phase theme: MercenaryMilitiaWait4
-	Phase theme: MercenaryMilitiaWait4
-	Phase theme: MercenaryMilitiaWaitArcanae5
-	Phase theme: MercenaryMilitiaWaitArcanae5
-	Phase theme: MercenaryMilitiaKill3
-	Phase theme: MercenaryMilitiaKill3
-	Phase theme: MercenaryMilitiaKill4
-	Phase theme: MercenaryMilitiaKill4
-	Phase theme: MercenaryBandit3
-	Phase theme: MercenaryBandit3
-	Phase theme: MercenaryBandit4
-	Phase theme: MercenaryBandit4
-	Phase theme: MercenaryBanditBandit5
-	Phase theme: MercenaryBanditBandit5
-	Phase theme: MercenaryBanditDisband5
-	Phase theme: MercenaryBanditDisband5
+	Enemy phase theme: MercenaryMilitiaWait3
+	Enemy phase theme: MercenaryMilitiaWait4
+	Enemy phase theme: MercenaryMilitiaWaitArcanae5
+	Enemy phase theme: MercenaryMilitiaKill3
+	Enemy phase theme: MercenaryMilitiaKill4
+	Enemy phase theme: MercenaryBandit3
+	Enemy phase theme: MercenaryBandit4
+	Enemy phase theme: MercenaryBanditBandit5
+	Enemy phase theme: MercenaryBanditDisband5
 Avatars_of_Avenir
 	Prologue.event
 Avenir_Healing
@@ -96,153 +76,89 @@ Binding_Vow
 	Mercenary4Bandit.event
 	Mercenary6BanditDisband.event
 	Mercenary6MilitiaWaitArcanae.event
-	Phase theme: Mage1
-	Phase theme: Mage1
-	Phase theme: MageLeave2
-	Phase theme: MageLeave2
-	Phase theme: Military1
-	Phase theme: Military1
-	Phase theme: MilitaryAccept2
-	Phase theme: MilitaryAccept2
-	Phase theme: MilitaryAccept3
-	Phase theme: MilitaryAccept3
-	Phase theme: MilitaryAcceptHold4
-	Phase theme: MilitaryAcceptHold4
-	Phase theme: MilitaryAcceptHold5
-	Phase theme: MilitaryAcceptHold5
-	Phase theme: MilitaryAcceptHold6
-	Phase theme: MilitaryAcceptHold6
-	Phase theme: MilitaryAcceptHold7
-	Phase theme: MilitaryAcceptHold7
-	Phase theme: MilitaryAcceptRetreat4
-	Phase theme: MilitaryAcceptRetreat4
-	Phase theme: MilitaryAcceptRetreatLeave5
-	Phase theme: MilitaryAcceptRetreatLeave5
-	Phase theme: MilitaryAcceptRetreatLeave6
-	Phase theme: MilitaryAcceptRetreatLeave6
-	Phase theme: MilitaryAcceptRetreatLeave7
-	Phase theme: MilitaryAcceptRetreatLeave7
-	Phase theme: MilitaryAcceptRetreatHelp5
-	Phase theme: MilitaryAcceptRetreatHelp5
-	Phase theme: MilitaryAcceptRetreatHelp6
-	Phase theme: MilitaryAcceptRetreatHelp6
-	Phase theme: MilitaryAcceptRetreatHelp7
-	Phase theme: MilitaryAcceptRetreatHelp7
-	Phase theme: MilitaryPass2
-	Phase theme: MilitaryPass2
-	Phase theme: MilitaryPass3
-	Phase theme: MilitaryPass3
-	Phase theme: MilitaryPass4
-	Phase theme: MilitaryPass4
-	Phase theme: MilitaryPassHaedric5
-	Phase theme: MilitaryPassHaedric5
-	Phase theme: MilitaryPassHaedric6
-	Phase theme: MilitaryPassHaedric6
-	Phase theme: MilitaryPassHaedric7
-	Phase theme: MilitaryPassHaedric7
-	Phase theme: MilitaryPassAltia5
-	Phase theme: MilitaryPassAltia5
-	Phase theme: MilitaryPassAltia6
-	Phase theme: MilitaryPassAltia6
-	Phase theme: MilitaryPassAltia7
-	Phase theme: MilitaryPassAltia7
-	Phase theme: MilitaryAcceptRetreatHelp6Grow2
-	Phase theme: MilitaryAcceptRetreatHelp6Grow2
-	Phase theme: MilitaryAcceptRetreatHelp6Grow3
-	Phase theme: MilitaryAcceptRetreatHelp6Grow3
-	Phase theme: Mercenary1
-	Phase theme: Mercenary1
-	Phase theme: MercenaryMilitia2
-	Phase theme: MercenaryMilitia2
-	Phase theme: MercenaryMilitiaWait3
-	Phase theme: MercenaryMilitiaWait3
-	Phase theme: MercenaryMilitiaWait4
-	Phase theme: MercenaryMilitiaWait4
-	Phase theme: MercenaryMilitiaWaitArcanae5
-	Phase theme: MercenaryMilitiaWaitArcanae5
-	Phase theme: MercenaryMilitiaWaitArcanae6
-	Phase theme: MercenaryMilitiaWaitArcanae6
-	Phase theme: MercenaryMilitiaWaitArcanae7
-	Phase theme: MercenaryMilitiaWaitArcanae7
-	Phase theme: MercenaryMilitiaWaitCesaria5
-	Phase theme: MercenaryMilitiaWaitCesaria5
-	Phase theme: MercenaryMilitiaWaitCesaria6
-	Phase theme: MercenaryMilitiaWaitCesaria6
-	Phase theme: MercenaryMilitiaWaitCesaria7
-	Phase theme: MercenaryMilitiaWaitCesaria7
-	Phase theme: MercenaryMilitiaKill3
-	Phase theme: MercenaryMilitiaKill3
-	Phase theme: MercenaryMilitiaKill4
-	Phase theme: MercenaryMilitiaKill4
-	Phase theme: MercenaryMilitiaKill5
-	Phase theme: MercenaryMilitiaKill5
-	Phase theme: MercenaryMilitiaKill6
-	Phase theme: MercenaryMilitiaKill6
-	Phase theme: MercenaryMilitiaKill7
-	Phase theme: MercenaryMilitiaKill7
-	Phase theme: MercenaryBandit2
-	Phase theme: MercenaryBandit2
-	Phase theme: MercenaryBandit3
-	Phase theme: MercenaryBandit3
-	Phase theme: MercenaryBandit4
-	Phase theme: MercenaryBandit4
-	Phase theme: MercenaryBanditBandit5
-	Phase theme: MercenaryBanditBandit5
-	Phase theme: MercenaryBanditBandit6
-	Phase theme: MercenaryBanditBandit6
-	Phase theme: MercenaryBanditBandit7
-	Phase theme: MercenaryBanditBandit7
-	Phase theme: MercenaryBanditDisband5
-	Phase theme: MercenaryBanditDisband5
-	Phase theme: MercenaryBanditDisband6
-	Phase theme: MercenaryBanditDisband6
-	Phase theme: MercenaryBanditDisband7
-	Phase theme: MercenaryBanditDisband7
-	Phase theme: 0x3A Link Arena
-	Phase theme: 0x3A Link Arena
+	NPC phase theme: Mage1
+	NPC phase theme: MageLeave2
+	NPC phase theme: Military1
+	NPC phase theme: MilitaryAccept2
+	NPC phase theme: MilitaryAccept3
+	NPC phase theme: MilitaryAcceptHold4
+	NPC phase theme: MilitaryAcceptHold5
+	NPC phase theme: MilitaryAcceptHold6
+	NPC phase theme: MilitaryAcceptHold7
+	NPC phase theme: MilitaryAcceptRetreat4
+	NPC phase theme: MilitaryAcceptRetreatLeave5
+	NPC phase theme: MilitaryAcceptRetreatLeave6
+	NPC phase theme: MilitaryAcceptRetreatLeave7
+	NPC phase theme: MilitaryAcceptRetreatHelp5
+	NPC phase theme: MilitaryAcceptRetreatHelp6
+	NPC phase theme: MilitaryAcceptRetreatHelp7
+	NPC phase theme: MilitaryPass2
+	NPC phase theme: MilitaryPass3
+	NPC phase theme: MilitaryPass4
+	NPC phase theme: MilitaryPassHaedric5
+	NPC phase theme: MilitaryPassHaedric6
+	NPC phase theme: MilitaryPassHaedric7
+	NPC phase theme: MilitaryPassAltia5
+	NPC phase theme: MilitaryPassAltia6
+	NPC phase theme: MilitaryPassAltia7
+	NPC phase theme: MilitaryAcceptRetreatHelp6Grow2
+	NPC phase theme: MilitaryAcceptRetreatHelp6Grow3
+	NPC phase theme: Mercenary1
+	NPC phase theme: MercenaryMilitia2
+	NPC phase theme: MercenaryMilitiaWait3
+	NPC phase theme: MercenaryMilitiaWait4
+	NPC phase theme: MercenaryMilitiaWaitArcanae5
+	NPC phase theme: MercenaryMilitiaWaitArcanae6
+	NPC phase theme: MercenaryMilitiaWaitArcanae7
+	NPC phase theme: MercenaryMilitiaWaitCesaria5
+	NPC phase theme: MercenaryMilitiaWaitCesaria6
+	NPC phase theme: MercenaryMilitiaWaitCesaria7
+	NPC phase theme: MercenaryMilitiaKill3
+	NPC phase theme: MercenaryMilitiaKill4
+	NPC phase theme: MercenaryMilitiaKill5
+	NPC phase theme: MercenaryMilitiaKill6
+	NPC phase theme: MercenaryMilitiaKill7
+	NPC phase theme: MercenaryBandit2
+	NPC phase theme: MercenaryBandit3
+	NPC phase theme: MercenaryBandit4
+	NPC phase theme: MercenaryBanditBandit5
+	NPC phase theme: MercenaryBanditBandit6
+	NPC phase theme: MercenaryBanditBandit7
+	NPC phase theme: MercenaryBanditDisband5
+	NPC phase theme: MercenaryBanditDisband6
+	NPC phase theme: MercenaryBanditDisband7
+	NPC phase theme: 0x3A Link Arena
 Bloodpool
 	Mercenary7MilitiaWaitCesaria.event
 	Military3Accept.event
 	Military4AcceptRetreat.event
-	Military4AcceptRetreat.event
 	Military5AcceptHold.event
 	Military6AcceptRetreatLeave.event
 Bloody_Tears
-	Phase theme: MilitaryAcceptRetreatHelp7
-	Phase theme: MilitaryAcceptRetreatHelp7
+	Player phase theme: MilitaryAcceptRetreatHelp7
 Boss_Theme
-	Phase theme: Military1
-	Phase theme: Military1
+	Enemy phase theme: Military1
 Cavern_of_Splendor
 	Mage prep theme
 Chemical_Plant
-	Phase theme: MilitaryPassAltia5
-	Phase theme: MilitaryPassAltia5
-	Phase theme: MilitaryPassAltia6
-	Phase theme: MilitaryPassAltia6
+	Player phase theme: MilitaryPassAltia5
+	Player phase theme: MilitaryPassAltia6
 Chinese_Tea
 	Military4AcceptHold.event
-	Phase theme: MilitaryAcceptHold4
-	Phase theme: MilitaryAcceptHold4
-	Phase theme: MilitaryPass4
-	Phase theme: MilitaryPass4
+	Player phase theme: MilitaryAcceptHold4
+	Player phase theme: MilitaryPass4
 Combat_Preparation
 	Mercenary5BanditDisband.event
 Comrades
 	Mercenary2Bandit.event
 	Mercenary3MilitiaKill.event
-	Mercenary3MilitiaKill.event
-	Mercenary3MilitiaKill.event
-	Mercenary3MilitiaWait.event
-	Mercenary3MilitiaWait.event
 	Mercenary3MilitiaWait.event
 	Mercenary5BanditDisband.event
 	Mercenary5MilitiaKill.event
 Confront_the_Past
 	Mercenary6MilitiaWaitArcanae.event
 Courage_and_Pride_from_the_Heart
-	Phase theme: MilitaryPassHaedric7
-	Phase theme: MilitaryPassHaedric7
+	Player phase theme: MilitaryPassHaedric7
 Dark_Clouds_Gather
 	Mage2Leave.event
 Darker
@@ -254,7 +170,6 @@ Derris_Kharlan_Appear
 	Military3Accept.event
 	Military4AcceptRetreat.event
 	Military5AcceptRetreatLeave.event
-	Military5AcceptRetreatLeave.event
 	Military6AcceptRetreatHelp.event
 	Military6AcceptRetreatLeave.event
 	Military7AcceptRetreatLeave.event
@@ -264,10 +179,8 @@ Determination
 Distant_Roads
 	Mercenary1.event
 	Mercenary7MilitiaKill.event
-	Phase theme: Mercenary1
-	Phase theme: Mercenary1
-	Phase theme: MercenaryBandit2
-	Phase theme: MercenaryBandit2
+	Player phase theme: Mercenary1
+	Player phase theme: MercenaryBandit2
 Divine_Providence
 	Military6AcceptHold.event
 Drop_Em
@@ -296,12 +209,9 @@ Dry_Trail
 Earthbound
 	Military5AcceptRetreatHelp.event
 	Military6AcceptRetreatHelp.event
-	Phase theme: Mage1
-	Phase theme: Mage1
-	Phase theme: MilitaryAcceptRetreatHelp5
-	Phase theme: MilitaryAcceptRetreatHelp5
-	Phase theme: MilitaryAcceptRetreatHelp6
-	Phase theme: MilitaryAcceptRetreatHelp6
+	Player phase theme: Mage1
+	Player phase theme: MilitaryAcceptRetreatHelp5
+	Player phase theme: MilitaryAcceptRetreatHelp6
 Emergency
 	Mage2Leave.event
 	Mercenary7MilitiaWaitCesaria.event
@@ -311,18 +221,12 @@ Emergency
 	Military7AcceptHold.event
 	Military7PassAltia.event
 Encounter_with_Renegades
-	Phase theme: Mage1
-	Phase theme: Mage1
-	Phase theme: MageLeave2
-	Phase theme: MageLeave2
-	Phase theme: MilitaryAccept2
-	Phase theme: MilitaryAccept2
-	Phase theme: MilitaryAccept3
-	Phase theme: MilitaryAccept3
-	Phase theme: MilitaryAcceptHold4
-	Phase theme: MilitaryAcceptHold4
-	Phase theme: MilitaryAcceptRetreatHelp5
-	Phase theme: MilitaryAcceptRetreatHelp5
+	Enemy phase theme: Mage1
+	Enemy phase theme: MageLeave2
+	Enemy phase theme: MilitaryAccept2
+	Enemy phase theme: MilitaryAccept3
+	Enemy phase theme: MilitaryAcceptHold4
+	Enemy phase theme: MilitaryAcceptRetreatHelp5
 Encroaching_Foe
 	Military4AcceptRetreat.event
 	Military5PassAltia.event
@@ -334,20 +238,13 @@ End_of_the_World
 	Military4Pass.event
 	Military7AcceptRetreatHelp.event
 	Military7AcceptRetreatLeave.event
-	Military7AcceptRetreatLeave.event
 Evil_Approaches
-	Phase theme: MilitaryPass2
-	Phase theme: MilitaryPass2
-	Phase theme: MilitaryPass3
-	Phase theme: MilitaryPass3
-	Phase theme: MercenaryMilitiaWaitCesaria5
-	Phase theme: MercenaryMilitiaWaitCesaria5
+	Enemy phase theme: MilitaryPass2
+	Enemy phase theme: MilitaryPass3
+	Enemy phase theme: MercenaryMilitiaWaitCesaria5
 FE5_Adversity
 	Military5AcceptHold.event
-	Military5AcceptHold.event
-	Military5AcceptHold.event
-	Phase theme: MilitaryAcceptHold5
-	Phase theme: MilitaryAcceptHold5
+	Player phase theme: MilitaryAcceptHold5
 FE5_In_Search_of_Victory
 	Mercenary5MilitiaWaitCesaria.event
 	Military3Pass.event
@@ -358,10 +255,8 @@ FE5_Loptr_B
 FE5_Map_A
 	Military6PassHaedric.event
 FE5_Searching_the_Enemy
-	Phase theme: MilitaryAcceptRetreatLeave5
-	Phase theme: MilitaryAcceptRetreatLeave5
-	Phase theme: MilitaryAcceptRetreatLeave6
-	Phase theme: MilitaryAcceptRetreatLeave6
+	Enemy phase theme: MilitaryAcceptRetreatLeave5
+	Enemy phase theme: MilitaryAcceptRetreatLeave6
 FE5_Victory
 	Mercenary6MilitiaWaitCesaria.event
 	Military1.event
@@ -374,29 +269,19 @@ FE5_Victory_Minor
 	Military5PassHaedric.event
 	Military6PassAltia.event
 Fighting_of_the_Spirit
-	Phase theme: MilitaryAcceptRetreatHelp6Grow2
-	Phase theme: MilitaryAcceptRetreatHelp6Grow2
-	Phase theme: MilitaryAcceptRetreatHelp6Grow3
-	Phase theme: MilitaryAcceptRetreatHelp6Grow3
-	Phase theme: MercenaryBanditDisband7
+	Player phase theme: MilitaryAcceptRetreatHelp6Grow2
+	Player phase theme: MilitaryAcceptRetreatHelp6Grow3
+	Player phase theme: MercenaryBanditDisband7
 Fodlan_Winds
-	Phase theme: MilitaryAccept2
-	Phase theme: MilitaryAccept2
-	Phase theme: MilitaryAccept3
-	Phase theme: MilitaryAccept3
-	Phase theme: MilitaryPass2
-	Phase theme: MilitaryPass2
-	Phase theme: MilitaryPass3
-	Phase theme: MilitaryPass3
-	Phase theme: MercenaryMilitiaWaitCesaria5
-	Phase theme: MercenaryMilitiaWaitCesaria5
+	Player phase theme: MilitaryAccept2
+	Player phase theme: MilitaryAccept3
+	Player phase theme: MilitaryPass2
+	Player phase theme: MilitaryPass3
+	Player phase theme: MercenaryMilitiaWaitCesaria5
 Follow_Me
-	Phase theme: MercenaryMilitiaWait3
-	Phase theme: MercenaryMilitiaWait3
-	Phase theme: MercenaryMilitiaWaitArcanae5
-	Phase theme: MercenaryMilitiaWaitArcanae5
-	Phase theme: MercenaryMilitiaWaitArcanae6
-	Phase theme: MercenaryMilitiaWaitArcanae6
+	Player phase theme: MercenaryMilitiaWait3
+	Player phase theme: MercenaryMilitiaWaitArcanae5
+	Player phase theme: MercenaryMilitiaWaitArcanae6
 Forbidden_Forest
 	Mercenary5MilitiaWaitCesaria.event
 	Military3Pass.event
@@ -404,23 +289,16 @@ Forbidden_Forest
 From_the_Darkness
 	Mercenary6MilitiaWaitArcanae.event
 	Military7PassAltia.event
-	Phase theme: MercenaryMilitiaWaitArcanae6
-	Phase theme: MercenaryMilitiaWaitArcanae6
-	Phase theme: MercenaryMilitiaKill5
-	Phase theme: MercenaryMilitiaKill5
-	Phase theme: MercenaryMilitiaKill6
-	Phase theme: MercenaryMilitiaKill6
-	Phase theme: MercenaryBanditBandit6
-	Phase theme: MercenaryBanditBandit6
-	Phase theme: MercenaryBanditBandit7
-	Phase theme: MercenaryBanditBandit7
+	Enemy phase theme: MercenaryMilitiaWaitArcanae6
+	Enemy phase theme: MercenaryMilitiaKill5
+	Enemy phase theme: MercenaryMilitiaKill6
+	Enemy phase theme: MercenaryBanditBandit6
+	Enemy phase theme: MercenaryBanditBandit7
 Green_Emerald
 	Mercenary7MilitiaWaitCesaria.event
 Hand_Combat
-	Phase theme: MilitaryPassHaedric5
-	Phase theme: MilitaryPassHaedric5
-	Phase theme: MilitaryPassHaedric6
-	Phase theme: MilitaryPassHaedric6
+	Enemy phase theme: MilitaryPassHaedric5
+	Enemy phase theme: MilitaryPassHaedric6
 Heavens_Rock_Seat
 	Military3Accept.event
 	Military4AcceptRetreat.event
@@ -432,18 +310,12 @@ Heavens_Rock_Seat
 	Military7AcceptRetreatLeave.event
 Hollow_Bastion
 	Military5AcceptHold.event
-	Phase theme: MilitaryAcceptHold5
-	Phase theme: MilitaryAcceptHold5
-	Phase theme: MilitaryAcceptRetreatLeave7
-	Phase theme: MilitaryAcceptRetreatLeave7
-	Phase theme: MilitaryPassHaedric7
-	Phase theme: MilitaryPassHaedric7
-	Phase theme: MilitaryPassAltia7
-	Phase theme: MilitaryPassAltia7
-	Phase theme: MilitaryAcceptRetreatHelp6Grow2
-	Phase theme: MilitaryAcceptRetreatHelp6Grow2
-	Phase theme: MilitaryAcceptRetreatHelp6Grow3
-	Phase theme: MilitaryAcceptRetreatHelp6Grow3
+	Enemy phase theme: MilitaryAcceptHold5
+	Enemy phase theme: MilitaryAcceptRetreatLeave7
+	Enemy phase theme: MilitaryPassHaedric7
+	Enemy phase theme: MilitaryPassAltia7
+	Enemy phase theme: MilitaryAcceptRetreatHelp6Grow2
+	Enemy phase theme: MilitaryAcceptRetreatHelp6Grow3
 I_Dont_Think_We_Can_Take_Em
 	Battle theme at Military1 for BossChristina
 	Battle theme at Military1 for BossForrest
@@ -458,25 +330,20 @@ I_Dont_Think_We_Can_Take_Em
 Indignation
 	Mercenary2Bandit.event
 	Mercenary3MilitiaKill.event
-	Mercenary3MilitiaKill.event
 	Mercenary4MilitiaKill.event
 	Mercenary4MilitiaWait.event
 	Mercenary5BanditBandit.event
 	Mercenary5MilitiaKill.event
-	Mercenary5MilitiaKill.event
-	Mercenary6BanditBandit.event
 	Mercenary6BanditBandit.event
 	Mercenary6BanditDisband.event
 	Mercenary6MilitiaWaitArcanae.event
 	Mercenary7BanditBandit.event
-	Mercenary7MilitiaKill.event
 	Mercenary7MilitiaKill.event
 	Mercenary7MilitiaWaitArcanae.event
 	Military5AcceptRetreatLeave.event
 	Military5PassAltia.event
 Into_the_Shadow_of_Victory
 	Mercenary2Bandit.event
-	Mercenary2Militia.event
 	Mercenary2Militia.event
 	Mercenary3Bandit.event
 	Mercenary3MilitiaWait.event
@@ -492,10 +359,8 @@ Into_the_Shadow_of_Victory
 	Military7AcceptHold.event
 	Military7PassHaedric.event
 Judgral_Calls
-	Phase theme: MilitaryPassHaedric5
-	Phase theme: MilitaryPassHaedric5
-	Phase theme: MilitaryPassHaedric6
-	Phase theme: MilitaryPassHaedric6
+	Player phase theme: MilitaryPassHaedric5
+	Player phase theme: MilitaryPassHaedric6
 Jugdral_Calls
 	Mercenary6MilitiaWaitCesaria.event
 Justice
@@ -526,14 +391,11 @@ Kratos
 	Military2Accept.event
 	Military7AcceptRetreatHelp.event
 Land_of_Promise
-	Phase theme: MercenaryMilitiaWait4
-	Phase theme: MercenaryMilitiaWait4
-	Phase theme: MercenaryBanditDisband6
-	Phase theme: MercenaryBanditDisband6
-	Phase theme: MercenaryBanditDisband7
+	Player phase theme: MercenaryMilitiaWait4
+	Player phase theme: MercenaryBanditDisband6
+	Player phase theme: MercenaryBanditDisband7
 Last_Battle_Decision
-	Phase theme: MilitaryPassAltia7
-	Phase theme: MilitaryPassAltia7
+	Player phase theme: MilitaryPassAltia7
 Legacy
 	Mercenary5BanditDisband.event
 Legends_of_Avenir
@@ -550,8 +412,7 @@ Lloyd
 	Military5PassHaedric.event
 	Military7AcceptRetreatLeave.event
 Locked_Girl
-	Phase theme: MilitaryAcceptRetreat4
-	Phase theme: MilitaryAcceptRetreat4
+	Player phase theme: MilitaryAcceptRetreat4
 Lost_Heart
 	Mercenary5MilitiaWaitArcanae.event
 	Mercenary7BanditDisband.event
@@ -591,36 +452,26 @@ Overwhelming_Advance
 	Mage2Leave.event
 	Military5AcceptRetreatHelp.event
 	Military7AcceptHold.event
-	Military7AcceptHold.event
-	Military7PassAltia.event
 	Military7PassAltia.event
 PrologueMusic
-	Phase theme: Prologue
-	Phase theme: Prologue
-	Phase theme: Prologue
-	Phase theme: Prologue
-	Phase theme: Prologue
-	Phase theme: Prologue
+	Player phase theme: Prologue
+	Enemy phase theme: Prologue
+	NPC phase theme: Prologue
 Promotions_of_Avenir
 	Promotions
 Pub_Theme
 	Support Theme
 Puppet_Ganon
-	Phase theme: MilitaryPassAltia5
-	Phase theme: MilitaryPassAltia5
-	Phase theme: MilitaryPassAltia6
-	Phase theme: MilitaryPassAltia6
-	Phase theme: MercenaryMilitiaWaitCesaria6
-	Phase theme: MercenaryMilitiaWaitCesaria6
+	Enemy phase theme: MilitaryPassAltia5
+	Enemy phase theme: MilitaryPassAltia6
+	Enemy phase theme: MercenaryMilitiaWaitCesaria6
 Raid
 	Mercenary5MilitiaKill.event
 	Mercenary6BanditDisband.event
 	Mercenary6MilitiaKill.event
 	Mercenary7BanditBandit.event
 	Mercenary7BanditDisband.event
-	Mercenary7BanditDisband.event
 	Military3Accept.event
-	Military7AcceptRetreatLeave.event
 	Military7AcceptRetreatLeave.event
 Rest_of_the_Heart
 	Mage2Leave.event
@@ -629,43 +480,28 @@ Reunion
 	Mercenary3Bandit.event
 	Mercenary4Bandit.event
 	Mercenary5BanditBandit.event
-	Mercenary5BanditBandit.event
 Ringabel
 	Military1.event
-	Military1.event
-	Phase theme: Military1
-	Phase theme: Military1
+	Player phase theme: Military1
 Rise_Above
-	Phase theme: MercenaryMilitia2
-	Phase theme: MercenaryMilitia2
-	Phase theme: MercenaryMilitiaKill3
-	Phase theme: MercenaryMilitiaKill3
-	Phase theme: MercenaryMilitiaKill4
-	Phase theme: MercenaryMilitiaKill4
-	Phase theme: MercenaryMilitiaKill5
-	Phase theme: MercenaryMilitiaKill5
-	Phase theme: MercenaryMilitiaKill6
-	Phase theme: MercenaryMilitiaKill6
-	Phase theme: MercenaryBandit3
-	Phase theme: MercenaryBandit3
-	Phase theme: MercenaryBandit4
-	Phase theme: MercenaryBandit4
-	Phase theme: MercenaryBanditBandit5
-	Phase theme: MercenaryBanditBandit5
-	Phase theme: MercenaryBanditDisband5
-	Phase theme: MercenaryBanditDisband5
+	Player phase theme: MercenaryMilitia2
+	Player phase theme: MercenaryMilitiaKill3
+	Player phase theme: MercenaryMilitiaKill4
+	Player phase theme: MercenaryMilitiaKill5
+	Player phase theme: MercenaryMilitiaKill6
+	Player phase theme: MercenaryBandit3
+	Player phase theme: MercenaryBandit4
+	Player phase theme: MercenaryBanditBandit5
+	Player phase theme: MercenaryBanditDisband5
 Roar_of_Dominion
 	Mercenary7MilitiaWaitCesaria.event
 	Military5PassHaedric.event
 	Military6PassHaedric.event
 Shadow_of_the_Enemy
 	Mercenary1.event
-	Phase theme: Mercenary1
-	Phase theme: Mercenary1
-	Phase theme: MercenaryMilitia2
-	Phase theme: MercenaryMilitia2
-	Phase theme: MercenaryBandit2
-	Phase theme: MercenaryBandit2
+	Enemy phase theme: Mercenary1
+	Enemy phase theme: MercenaryMilitia2
+	Enemy phase theme: MercenaryBandit2
 Shadows_Approach
 	Mercenary4MilitiaWait.event
 Shihna
@@ -697,14 +533,10 @@ Show_Em_Whats_What
 	Battle theme at MercenaryBanditDisband5 for Mason
 	Battle theme at MercenaryBanditDisband7 for BossXylia
 Showdown_with_Hector
-	Phase theme: MilitaryAcceptRetreat4
-	Phase theme: MilitaryAcceptRetreat4
-	Phase theme: MilitaryAcceptRetreatHelp6
-	Phase theme: MilitaryAcceptRetreatHelp6
-	Phase theme: MilitaryAcceptRetreatHelp7
-	Phase theme: MilitaryAcceptRetreatHelp7
-	Phase theme: MilitaryPass4
-	Phase theme: MilitaryPass4
+	Enemy phase theme: MilitaryAcceptRetreat4
+	Enemy phase theme: MilitaryAcceptRetreatHelp6
+	Enemy phase theme: MilitaryAcceptRetreatHelp7
+	Enemy phase theme: MilitaryPass4
 Snow_Battle
 	Military2Accept.event
 	Military2Pass.event
@@ -759,7 +591,6 @@ Solve_the_Riddle
 Sorrow
 	Mercenary6BanditBandit.event
 	Mercenary7BanditDisband.event
-	Mercenary7BanditDisband.event
 	Mercenary7MilitiaWaitArcanae.event
 Stage_One
 	Mage2Leave.event
@@ -790,8 +621,6 @@ Tension
 	Mercenary5MilitiaWaitArcanae.event
 	Mercenary6BanditDisband.event
 	Mercenary6MilitiaKill.event
-	Mercenary6MilitiaKill.event
-	Mercenary6MilitiaKill.event
 	Mercenary6MilitiaWaitArcanae.event
 	Military2Accept.event
 	Military5AcceptRetreatHelp.event
@@ -805,31 +634,19 @@ The_Devoted
 	Military6PassAltia.event
 	Military6PassHaedric.event
 The_Final_Battle
-	Phase theme: MercenaryMilitiaWaitArcanae7
-	Phase theme: MercenaryMilitiaWaitArcanae7
+	Player phase theme: MercenaryMilitiaWaitArcanae7
 The_First_Campaign
-	Military1.event
 	Military1.event
 The_Guardian_Spirit
 	Mercenary7BanditBandit.event
-	Mercenary7BanditBandit.event
-	Mercenary7BanditBandit.event
 	Mercenary7BanditDisband.event
 	Mercenary7MilitiaKill.event
-	Mercenary7MilitiaKill.event
-	Mercenary7MilitiaWaitArcanae.event
 	Mercenary7MilitiaWaitArcanae.event
 	Mercenary7MilitiaWaitCesaria.event
-	Mercenary7MilitiaWaitCesaria.event
-	Military7AcceptHold.event
 	Military7AcceptHold.event
 	Military7AcceptRetreatHelp.event
-	Military7AcceptRetreatHelp.event
-	Military7AcceptRetreatLeave.event
 	Military7AcceptRetreatLeave.event
 	Military7PassAltia.event
-	Military7PassAltia.event
-	Military7PassHaedric.event
 	Military7PassHaedric.event
 The_Law_of_Battle
 	Military4AcceptRetreat.event
@@ -849,49 +666,34 @@ Ties_of_Friendship
 	Mercenary5BanditDisband.event
 	Mercenary5MilitiaWaitArcanae.event
 Truth_Despair_and_Hope
-	Phase theme: MercenaryMilitiaKill7
-	Phase theme: MercenaryMilitiaKill7
-	Phase theme: MercenaryBanditBandit6
-	Phase theme: MercenaryBanditBandit6
-	Phase theme: MercenaryBanditBandit7
-	Phase theme: MercenaryBanditBandit7
+	Player phase theme: MercenaryMilitiaKill7
+	Player phase theme: MercenaryBanditBandit6
+	Player phase theme: MercenaryBanditBandit7
 Twinrova
 	Military5AcceptRetreatHelp.event
 	Military6AcceptRetreatLeave.event
 	Military7AcceptRetreatLeave.event
 Twisted_ShadowsA
-	Phase theme: MercenaryMilitiaWaitArcanae7
-	Phase theme: MercenaryMilitiaWaitArcanae7
-	Phase theme: MercenaryMilitiaKill7
-	Phase theme: MercenaryMilitiaKill7
+	Enemy phase theme: MercenaryMilitiaWaitArcanae7
+	Enemy phase theme: MercenaryMilitiaKill7
 Twisted_ShadowsB
 	Mercenary7MilitiaKill.event
-	Phase theme: MercenaryBanditDisband6
-	Phase theme: MercenaryBanditDisband6
+	Enemy phase theme: MercenaryBanditDisband6
 Twisted_Shadows_A
 	Mercenary7BanditBandit.event
-	Phase theme: MercenaryBanditDisband7
-	Phase theme: MercenaryBanditDisband7
+	Enemy phase theme: MercenaryBanditDisband7
 Twisted_Shadows_B
 	Military6AcceptHold.event
 	Military7AcceptHold.event
 UN_Owen_Was_Her
-	Phase theme: MilitaryAcceptRetreatLeave7
-	Phase theme: MilitaryAcceptRetreatLeave7
+	Player phase theme: MilitaryAcceptRetreatLeave7
 Vendors_of_Avenir
 	Vendors
 Venus_Lighthouse
 	Military6AcceptRetreatLeave.event
-	Military6AcceptRetreatLeave.event
-	Military6AcceptRetreatLeave.event
-	Military6AcceptRetreatLeave.event
-	Military6AcceptRetreatLeave.event
-	Phase theme: MilitaryAcceptRetreatLeave5
-	Phase theme: MilitaryAcceptRetreatLeave5
-	Phase theme: MilitaryAcceptRetreatLeave6
-	Phase theme: MilitaryAcceptRetreatLeave6
-	Phase theme: MercenaryMilitiaWaitCesaria7
-	Phase theme: MercenaryMilitiaWaitCesaria7
+	Player phase theme: MilitaryAcceptRetreatLeave5
+	Player phase theme: MilitaryAcceptRetreatLeave6
+	Player phase theme: MercenaryMilitiaWaitCesaria7
 Victory
 	Mercenary1.event
 	Mercenary3Bandit.event
@@ -901,7 +703,6 @@ Victory
 	Mercenary7BanditDisband.event
 	Mercenary7MilitiaKill.event
 	Mercenary7MilitiaWaitArcanae.event
-	Military2Accept.event
 	Military2Accept.event
 	Military5AcceptRetreatHelp.event
 	Military7AcceptRetreatHelp.event
@@ -954,17 +755,12 @@ With_Us
 	Mercenary2Militia.event
 	Mercenary5MilitiaWaitCesaria.event
 Wrath_Strike
-	Phase theme: MilitaryAcceptHold6
-	Phase theme: MilitaryAcceptHold6
-	Phase theme: MilitaryAcceptHold7
-	Phase theme: MilitaryAcceptHold7
-	Phase theme: MercenaryMilitiaWaitCesaria7
-	Phase theme: MercenaryMilitiaWaitCesaria7
+	Enemy phase theme: MilitaryAcceptHold6
+	Enemy phase theme: MilitaryAcceptHold7
+	Enemy phase theme: MercenaryMilitiaWaitCesaria7
 Zelos
 	Mercenary4MilitiaKill.event
-	Mercenary4MilitiaKill.event
 	Mercenary5BanditDisband.event
-	Military5AcceptRetreatHelp.event
 	Military5AcceptRetreatHelp.event
 	Military6AcceptRetreatHelp.event
 
@@ -1035,12 +831,10 @@ Advance
 	Mercenary2Militia.event
 	Mercenary3Bandit.event
 	Mercenary3MilitiaKill.event
-	Mercenary3MilitiaKill.event
 	Mercenary3MilitiaWait.event
 	Mercenary4Bandit.event
 	Mercenary4MilitiaWait.event
 	Mercenary5MilitiaKill.event
-	Mercenary5MilitiaWaitArcanae.event
 	Mercenary5MilitiaWaitArcanae.event
 	Mercenary6BanditBandit.event
 	Mercenary6BanditDisband.event
@@ -1050,141 +844,76 @@ Advance
 	Military4Pass.event
 	Military5AcceptHold.event
 Assault
-	Phase theme: MercenaryMilitiaWait3
-	Phase theme: MercenaryMilitiaWait3
-	Phase theme: MercenaryMilitiaWait4
-	Phase theme: MercenaryMilitiaWait4
-	Phase theme: MercenaryMilitiaWaitArcanae5
-	Phase theme: MercenaryMilitiaWaitArcanae5
-	Phase theme: MercenaryMilitiaKill3
-	Phase theme: MercenaryMilitiaKill3
-	Phase theme: MercenaryMilitiaKill4
-	Phase theme: MercenaryMilitiaKill4
-	Phase theme: MercenaryBandit3
-	Phase theme: MercenaryBandit3
-	Phase theme: MercenaryBandit4
-	Phase theme: MercenaryBandit4
-	Phase theme: MercenaryBanditBandit5
-	Phase theme: MercenaryBanditBandit5
-	Phase theme: MercenaryBanditDisband5
-	Phase theme: MercenaryBanditDisband5
+	Enemy phase theme: MercenaryMilitiaWait3
+	Enemy phase theme: MercenaryMilitiaWait4
+	Enemy phase theme: MercenaryMilitiaWaitArcanae5
+	Enemy phase theme: MercenaryMilitiaKill3
+	Enemy phase theme: MercenaryMilitiaKill4
+	Enemy phase theme: MercenaryBandit3
+	Enemy phase theme: MercenaryBandit4
+	Enemy phase theme: MercenaryBanditBandit5
+	Enemy phase theme: MercenaryBanditDisband5
 Binding_Vow
 	Mercenary4Bandit.event
 	Mercenary6BanditDisband.event
 	Mercenary6MilitiaWaitArcanae.event
-	Phase theme: Mage1
-	Phase theme: Mage1
-	Phase theme: MageLeave2
-	Phase theme: MageLeave2
-	Phase theme: Military1
-	Phase theme: Military1
-	Phase theme: MilitaryAccept2
-	Phase theme: MilitaryAccept2
-	Phase theme: MilitaryAccept3
-	Phase theme: MilitaryAccept3
-	Phase theme: MilitaryAcceptHold4
-	Phase theme: MilitaryAcceptHold4
-	Phase theme: MilitaryAcceptHold5
-	Phase theme: MilitaryAcceptHold5
-	Phase theme: MilitaryAcceptHold6
-	Phase theme: MilitaryAcceptHold6
-	Phase theme: MilitaryAcceptHold7
-	Phase theme: MilitaryAcceptHold7
-	Phase theme: MilitaryAcceptRetreat4
-	Phase theme: MilitaryAcceptRetreat4
-	Phase theme: MilitaryAcceptRetreatLeave5
-	Phase theme: MilitaryAcceptRetreatLeave5
-	Phase theme: MilitaryAcceptRetreatLeave6
-	Phase theme: MilitaryAcceptRetreatLeave6
-	Phase theme: MilitaryAcceptRetreatLeave7
-	Phase theme: MilitaryAcceptRetreatLeave7
-	Phase theme: MilitaryAcceptRetreatHelp5
-	Phase theme: MilitaryAcceptRetreatHelp5
-	Phase theme: MilitaryAcceptRetreatHelp6
-	Phase theme: MilitaryAcceptRetreatHelp6
-	Phase theme: MilitaryAcceptRetreatHelp7
-	Phase theme: MilitaryAcceptRetreatHelp7
-	Phase theme: MilitaryPass2
-	Phase theme: MilitaryPass2
-	Phase theme: MilitaryPass3
-	Phase theme: MilitaryPass3
-	Phase theme: MilitaryPass4
-	Phase theme: MilitaryPass4
-	Phase theme: MilitaryPassHaedric5
-	Phase theme: MilitaryPassHaedric5
-	Phase theme: MilitaryPassHaedric6
-	Phase theme: MilitaryPassHaedric6
-	Phase theme: MilitaryPassHaedric7
-	Phase theme: MilitaryPassHaedric7
-	Phase theme: MilitaryPassAltia5
-	Phase theme: MilitaryPassAltia5
-	Phase theme: MilitaryPassAltia6
-	Phase theme: MilitaryPassAltia6
-	Phase theme: MilitaryPassAltia7
-	Phase theme: MilitaryPassAltia7
-	Phase theme: MilitaryAcceptRetreatHelp6Grow2
-	Phase theme: MilitaryAcceptRetreatHelp6Grow2
-	Phase theme: MilitaryAcceptRetreatHelp6Grow3
-	Phase theme: MilitaryAcceptRetreatHelp6Grow3
-	Phase theme: Mercenary1
-	Phase theme: Mercenary1
-	Phase theme: MercenaryMilitia2
-	Phase theme: MercenaryMilitia2
-	Phase theme: MercenaryMilitiaWait3
-	Phase theme: MercenaryMilitiaWait3
-	Phase theme: MercenaryMilitiaWait4
-	Phase theme: MercenaryMilitiaWait4
-	Phase theme: MercenaryMilitiaWaitArcanae5
-	Phase theme: MercenaryMilitiaWaitArcanae5
-	Phase theme: MercenaryMilitiaWaitArcanae6
-	Phase theme: MercenaryMilitiaWaitArcanae6
-	Phase theme: MercenaryMilitiaWaitArcanae7
-	Phase theme: MercenaryMilitiaWaitArcanae7
-	Phase theme: MercenaryMilitiaWaitCesaria5
-	Phase theme: MercenaryMilitiaWaitCesaria5
-	Phase theme: MercenaryMilitiaWaitCesaria6
-	Phase theme: MercenaryMilitiaWaitCesaria6
-	Phase theme: MercenaryMilitiaWaitCesaria7
-	Phase theme: MercenaryMilitiaWaitCesaria7
-	Phase theme: MercenaryMilitiaKill3
-	Phase theme: MercenaryMilitiaKill3
-	Phase theme: MercenaryMilitiaKill4
-	Phase theme: MercenaryMilitiaKill4
-	Phase theme: MercenaryMilitiaKill5
-	Phase theme: MercenaryMilitiaKill5
-	Phase theme: MercenaryMilitiaKill6
-	Phase theme: MercenaryMilitiaKill6
-	Phase theme: MercenaryMilitiaKill7
-	Phase theme: MercenaryMilitiaKill7
-	Phase theme: MercenaryBandit2
-	Phase theme: MercenaryBandit2
-	Phase theme: MercenaryBandit3
-	Phase theme: MercenaryBandit3
-	Phase theme: MercenaryBandit4
-	Phase theme: MercenaryBandit4
-	Phase theme: MercenaryBanditBandit5
-	Phase theme: MercenaryBanditBandit5
-	Phase theme: MercenaryBanditBandit6
-	Phase theme: MercenaryBanditBandit6
-	Phase theme: MercenaryBanditBandit7
-	Phase theme: MercenaryBanditBandit7
-	Phase theme: MercenaryBanditDisband5
-	Phase theme: MercenaryBanditDisband5
-	Phase theme: MercenaryBanditDisband6
-	Phase theme: MercenaryBanditDisband6
-	Phase theme: MercenaryBanditDisband7
-	Phase theme: MercenaryBanditDisband7
-	Phase theme: 0x3A Link Arena
-	Phase theme: 0x3A Link Arena
+	NPC phase theme: Mage1
+	NPC phase theme: MageLeave2
+	NPC phase theme: Military1
+	NPC phase theme: MilitaryAccept2
+	NPC phase theme: MilitaryAccept3
+	NPC phase theme: MilitaryAcceptHold4
+	NPC phase theme: MilitaryAcceptHold5
+	NPC phase theme: MilitaryAcceptHold6
+	NPC phase theme: MilitaryAcceptHold7
+	NPC phase theme: MilitaryAcceptRetreat4
+	NPC phase theme: MilitaryAcceptRetreatLeave5
+	NPC phase theme: MilitaryAcceptRetreatLeave6
+	NPC phase theme: MilitaryAcceptRetreatLeave7
+	NPC phase theme: MilitaryAcceptRetreatHelp5
+	NPC phase theme: MilitaryAcceptRetreatHelp6
+	NPC phase theme: MilitaryAcceptRetreatHelp7
+	NPC phase theme: MilitaryPass2
+	NPC phase theme: MilitaryPass3
+	NPC phase theme: MilitaryPass4
+	NPC phase theme: MilitaryPassHaedric5
+	NPC phase theme: MilitaryPassHaedric6
+	NPC phase theme: MilitaryPassHaedric7
+	NPC phase theme: MilitaryPassAltia5
+	NPC phase theme: MilitaryPassAltia6
+	NPC phase theme: MilitaryPassAltia7
+	NPC phase theme: MilitaryAcceptRetreatHelp6Grow2
+	NPC phase theme: MilitaryAcceptRetreatHelp6Grow3
+	NPC phase theme: Mercenary1
+	NPC phase theme: MercenaryMilitia2
+	NPC phase theme: MercenaryMilitiaWait3
+	NPC phase theme: MercenaryMilitiaWait4
+	NPC phase theme: MercenaryMilitiaWaitArcanae5
+	NPC phase theme: MercenaryMilitiaWaitArcanae6
+	NPC phase theme: MercenaryMilitiaWaitArcanae7
+	NPC phase theme: MercenaryMilitiaWaitCesaria5
+	NPC phase theme: MercenaryMilitiaWaitCesaria6
+	NPC phase theme: MercenaryMilitiaWaitCesaria7
+	NPC phase theme: MercenaryMilitiaKill3
+	NPC phase theme: MercenaryMilitiaKill4
+	NPC phase theme: MercenaryMilitiaKill5
+	NPC phase theme: MercenaryMilitiaKill6
+	NPC phase theme: MercenaryMilitiaKill7
+	NPC phase theme: MercenaryBandit2
+	NPC phase theme: MercenaryBandit3
+	NPC phase theme: MercenaryBandit4
+	NPC phase theme: MercenaryBanditBandit5
+	NPC phase theme: MercenaryBanditBandit6
+	NPC phase theme: MercenaryBanditBandit7
+	NPC phase theme: MercenaryBanditDisband5
+	NPC phase theme: MercenaryBanditDisband6
+	NPC phase theme: MercenaryBanditDisband7
+	NPC phase theme: 0x3A Link Arena
 Combat_Preparation
 	Mercenary5BanditDisband.event
 Comrades
 	Mercenary2Bandit.event
 	Mercenary3MilitiaKill.event
-	Mercenary3MilitiaKill.event
-	Mercenary3MilitiaKill.event
-	Mercenary3MilitiaWait.event
-	Mercenary3MilitiaWait.event
 	Mercenary3MilitiaWait.event
 	Mercenary5BanditDisband.event
 	Mercenary5MilitiaKill.event
@@ -1195,52 +924,37 @@ Determination
 Distant_Roads
 	Mercenary1.event
 	Mercenary7MilitiaKill.event
-	Phase theme: Mercenary1
-	Phase theme: Mercenary1
-	Phase theme: MercenaryBandit2
-	Phase theme: MercenaryBandit2
+	Player phase theme: Mercenary1
+	Player phase theme: MercenaryBandit2
 Follow_Me
-	Phase theme: MercenaryMilitiaWait3
-	Phase theme: MercenaryMilitiaWait3
-	Phase theme: MercenaryMilitiaWaitArcanae5
-	Phase theme: MercenaryMilitiaWaitArcanae5
-	Phase theme: MercenaryMilitiaWaitArcanae6
-	Phase theme: MercenaryMilitiaWaitArcanae6
+	Player phase theme: MercenaryMilitiaWait3
+	Player phase theme: MercenaryMilitiaWaitArcanae5
+	Player phase theme: MercenaryMilitiaWaitArcanae6
 From_the_Darkness
 	Mercenary6MilitiaWaitArcanae.event
 	Military7PassAltia.event
-	Phase theme: MercenaryMilitiaWaitArcanae6
-	Phase theme: MercenaryMilitiaWaitArcanae6
-	Phase theme: MercenaryMilitiaKill5
-	Phase theme: MercenaryMilitiaKill5
-	Phase theme: MercenaryMilitiaKill6
-	Phase theme: MercenaryMilitiaKill6
-	Phase theme: MercenaryBanditBandit6
-	Phase theme: MercenaryBanditBandit6
-	Phase theme: MercenaryBanditBandit7
-	Phase theme: MercenaryBanditBandit7
+	Enemy phase theme: MercenaryMilitiaWaitArcanae6
+	Enemy phase theme: MercenaryMilitiaKill5
+	Enemy phase theme: MercenaryMilitiaKill6
+	Enemy phase theme: MercenaryBanditBandit6
+	Enemy phase theme: MercenaryBanditBandit7
 Indignation
 	Mercenary2Bandit.event
-	Mercenary3MilitiaKill.event
 	Mercenary3MilitiaKill.event
 	Mercenary4MilitiaKill.event
 	Mercenary4MilitiaWait.event
 	Mercenary5BanditBandit.event
 	Mercenary5MilitiaKill.event
-	Mercenary5MilitiaKill.event
-	Mercenary6BanditBandit.event
 	Mercenary6BanditBandit.event
 	Mercenary6BanditDisband.event
 	Mercenary6MilitiaWaitArcanae.event
 	Mercenary7BanditBandit.event
-	Mercenary7MilitiaKill.event
 	Mercenary7MilitiaKill.event
 	Mercenary7MilitiaWaitArcanae.event
 	Military5AcceptRetreatLeave.event
 	Military5PassAltia.event
 Into_the_Shadow_of_Victory
 	Mercenary2Bandit.event
-	Mercenary2Militia.event
 	Mercenary2Militia.event
 	Mercenary3Bandit.event
 	Mercenary3MilitiaWait.event
@@ -1258,11 +972,9 @@ Into_the_Shadow_of_Victory
 Jugdral_Calls
 	Mercenary6MilitiaWaitCesaria.event
 Land_of_Promise
-	Phase theme: MercenaryMilitiaWait4
-	Phase theme: MercenaryMilitiaWait4
-	Phase theme: MercenaryBanditDisband6
-	Phase theme: MercenaryBanditDisband6
-	Phase theme: MercenaryBanditDisband7
+	Player phase theme: MercenaryMilitiaWait4
+	Player phase theme: MercenaryBanditDisband6
+	Player phase theme: MercenaryBanditDisband7
 Legacy
 	Mercenary5BanditDisband.event
 Lights_in_the_Dark
@@ -1274,54 +986,36 @@ LyonTheme
 	Mercenary6BanditDisband.event
 	Mercenary6MilitiaKill.event
 PrologueMusic
-	Phase theme: Prologue
-	Phase theme: Prologue
-	Phase theme: Prologue
-	Phase theme: Prologue
-	Phase theme: Prologue
-	Phase theme: Prologue
+	Player phase theme: Prologue
+	Enemy phase theme: Prologue
+	NPC phase theme: Prologue
 Raid
 	Mercenary5MilitiaKill.event
 	Mercenary6BanditDisband.event
 	Mercenary6MilitiaKill.event
 	Mercenary7BanditBandit.event
 	Mercenary7BanditDisband.event
-	Mercenary7BanditDisband.event
 	Military3Accept.event
-	Military7AcceptRetreatLeave.event
 	Military7AcceptRetreatLeave.event
 Reunion
 	Mercenary3Bandit.event
 	Mercenary4Bandit.event
 	Mercenary5BanditBandit.event
-	Mercenary5BanditBandit.event
 Rise_Above
-	Phase theme: MercenaryMilitia2
-	Phase theme: MercenaryMilitia2
-	Phase theme: MercenaryMilitiaKill3
-	Phase theme: MercenaryMilitiaKill3
-	Phase theme: MercenaryMilitiaKill4
-	Phase theme: MercenaryMilitiaKill4
-	Phase theme: MercenaryMilitiaKill5
-	Phase theme: MercenaryMilitiaKill5
-	Phase theme: MercenaryMilitiaKill6
-	Phase theme: MercenaryMilitiaKill6
-	Phase theme: MercenaryBandit3
-	Phase theme: MercenaryBandit3
-	Phase theme: MercenaryBandit4
-	Phase theme: MercenaryBandit4
-	Phase theme: MercenaryBanditBandit5
-	Phase theme: MercenaryBanditBandit5
-	Phase theme: MercenaryBanditDisband5
-	Phase theme: MercenaryBanditDisband5
+	Player phase theme: MercenaryMilitia2
+	Player phase theme: MercenaryMilitiaKill3
+	Player phase theme: MercenaryMilitiaKill4
+	Player phase theme: MercenaryMilitiaKill5
+	Player phase theme: MercenaryMilitiaKill6
+	Player phase theme: MercenaryBandit3
+	Player phase theme: MercenaryBandit4
+	Player phase theme: MercenaryBanditBandit5
+	Player phase theme: MercenaryBanditDisband5
 Shadow_of_the_Enemy
 	Mercenary1.event
-	Phase theme: Mercenary1
-	Phase theme: Mercenary1
-	Phase theme: MercenaryMilitia2
-	Phase theme: MercenaryMilitia2
-	Phase theme: MercenaryBandit2
-	Phase theme: MercenaryBandit2
+	Enemy phase theme: Mercenary1
+	Enemy phase theme: MercenaryMilitia2
+	Enemy phase theme: MercenaryBandit2
 Shadows_Approach
 	Mercenary4MilitiaWait.event
 Solve_the_Riddle
@@ -1337,7 +1031,6 @@ Solve_the_Riddle
 	Mercenary7MilitiaWaitArcanae.event
 Sorrow
 	Mercenary6BanditBandit.event
-	Mercenary7BanditDisband.event
 	Mercenary7BanditDisband.event
 	Mercenary7MilitiaWaitArcanae.event
 Strong_Wind_Sound
@@ -1355,39 +1048,29 @@ Tension
 	Mercenary5MilitiaWaitArcanae.event
 	Mercenary6BanditDisband.event
 	Mercenary6MilitiaKill.event
-	Mercenary6MilitiaKill.event
-	Mercenary6MilitiaKill.event
 	Mercenary6MilitiaWaitArcanae.event
 	Military2Accept.event
 	Military5AcceptRetreatHelp.event
 	Military6PassHaedric.event
 	Military7PassHaedric.event
 The_Final_Battle
-	Phase theme: MercenaryMilitiaWaitArcanae7
-	Phase theme: MercenaryMilitiaWaitArcanae7
+	Player phase theme: MercenaryMilitiaWaitArcanae7
 Ties_of_Friendship
 	Mercenary5BanditDisband.event
 	Mercenary5MilitiaWaitArcanae.event
 Truth_Despair_and_Hope
-	Phase theme: MercenaryMilitiaKill7
-	Phase theme: MercenaryMilitiaKill7
-	Phase theme: MercenaryBanditBandit6
-	Phase theme: MercenaryBanditBandit6
-	Phase theme: MercenaryBanditBandit7
-	Phase theme: MercenaryBanditBandit7
+	Player phase theme: MercenaryMilitiaKill7
+	Player phase theme: MercenaryBanditBandit6
+	Player phase theme: MercenaryBanditBandit7
 Twisted_ShadowsA
-	Phase theme: MercenaryMilitiaWaitArcanae7
-	Phase theme: MercenaryMilitiaWaitArcanae7
-	Phase theme: MercenaryMilitiaKill7
-	Phase theme: MercenaryMilitiaKill7
+	Enemy phase theme: MercenaryMilitiaWaitArcanae7
+	Enemy phase theme: MercenaryMilitiaKill7
 Twisted_ShadowsB
 	Mercenary7MilitiaKill.event
-	Phase theme: MercenaryBanditDisband6
-	Phase theme: MercenaryBanditDisband6
+	Enemy phase theme: MercenaryBanditDisband6
 Twisted_Shadows_A
 	Mercenary7BanditBandit.event
-	Phase theme: MercenaryBanditDisband7
-	Phase theme: MercenaryBanditDisband7
+	Enemy phase theme: MercenaryBanditDisband7
 Twisted_Shadows_B
 	Military6AcceptHold.event
 	Military7AcceptHold.event
@@ -1400,7 +1083,6 @@ Victory
 	Mercenary7BanditDisband.event
 	Mercenary7MilitiaKill.event
 	Mercenary7MilitiaWaitArcanae.event
-	Military2Accept.event
 	Military2Accept.event
 	Military5AcceptRetreatHelp.event
 	Military7AcceptRetreatHelp.event

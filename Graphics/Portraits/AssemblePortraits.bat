@@ -12,20 +12,21 @@ set portraitformatter=%~dp0PortraitFormatter.exe
 if not exist cache ( mkdir cache )
 
 for /R "%~dp0" %%F in (%FILE_MATCH%) do (
-    SET SHOULD_COMPILE=0
-    set DUMP_FILE="%%~dF%%~pFcache\%%~nF%.dmp"
-    if exist !DUMP_FILE! (
-		For /F "Delims=" %%I In ('dir /b /OD "!DUMP_FILE!" %%F ^| more +1') Do Set NEWER=%%I
-		if !NEWER! == %%~nxF (
+    set SHOULD_COMPILE=0
+    set DUMP_FILE=%%~dF%%~pFcache\%%~nF%.dmp
+    if exist "!DUMP_FILE!" (
+		set NEWER=%%F
+		xcopy /DYLR "%%F" "!DUMP_FILE!*" | findstr /BC:"0" >nul && set NEWER=!DUMP_FILE!
+		if "!NEWER!" == "%%F" (
 			set SHOULD_COMPILE=1
 		)
     ) else (
 		set SHOULD_COMPILE=1
     )
-    if /I "!SHOULD_COMPILE!" EQU "1" (
-	echo Assembling "%%~nxF"...
-	cd "%%~dpF"
-	portraitformatter "%%~nxF" -o "!DUMP_FILE!"
+	if /I "!SHOULD_COMPILE!" EQU "1" (
+		echo Assembling "%%~nxF"...
+		cd "%%~dpF"
+		portraitformatter "%%~nxF" -o "!DUMP_FILE!"
     )
 )
 
