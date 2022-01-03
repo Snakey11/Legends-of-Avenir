@@ -54,7 +54,7 @@
 
 //If uncommented, will use Trap Rework.
 //This is automatically used if Dragon Veins or Heal Tiles are uncommented.
-//#define TRAP_REWORK
+#define TRAP_REWORK
 
 //If uncommented, will enable Dragon Veins.
 //#define DRAGON_VEINS

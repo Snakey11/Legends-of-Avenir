@@ -96,3 +96,5 @@ SpellswordSprite,0x2,0x0,Small,0x0,SpellswordMSt|IsPointer
 SpellswordFSprite,0x2,0x0,Small,0x0,SpellswordFSt|IsPointer
 BaseliusSprite,0x2,0x0,Medium,0x0,BaseliusSt|IsPointer
 ExecutionerSprite,0x2,0x0,Small,0x0,ExecutionerSt|IsPointer
+LitTorchSprite,0x2,0x0,Medium,0x0,LitTorchSt|IsPointer
+UnlitTorchSprite,0x2,0x0,Medium,0x0,UnlitTorchSt|IsPointer

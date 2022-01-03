@@ -98,3 +98,5 @@ GoldKnightSprite
 SpellswordSprite
 SpellswordFSprite
 ExecutionerSprite
+LitTorchSprite
+UnlitTorchSprite

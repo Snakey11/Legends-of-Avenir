@@ -309,6 +309,15 @@ FMercenaryFix:
 ALIGN 4
 
 
+LitTorchSt:
+#incbin "cache/LitTorchSt.dmp"
+ALIGN 4
+
+UnlitTorchSt:
+#incbin "cache/UnlitTorchSt.dmp"
+ALIGN 4
+
+
 ALIGN 4
 HectorAnimationData:
 #incbin "HectorAnimationData.dmp"
