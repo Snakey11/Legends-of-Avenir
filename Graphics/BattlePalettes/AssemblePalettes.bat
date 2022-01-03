@@ -15,9 +15,9 @@ for /R "%~dp0" %%F in (%FILE_MATCH%) do (
     set SHOULD_COMPILE=0
 	set DUMP_FILE=%%~dF%%~pFcache\%%~nF%.dmp
     if exist "!DUMP_FILE!" (
-		For /F "Delims=" %%I In ('dir /b /s /OD "!DUMP_FILE!" "%%F" ^| more +1') Do Set NEWER=%%I
-		echo "%%F"
-		if "!NEWER!" == "%%~nxF" (
+		set NEWER=%%F
+		xcopy /DYLR "%%F" "!DUMP_FILE!*" | findstr /BC:"0" >nul && set NEWER=!DUMP_FILE!
+		if "!NEWER!" == "%%F" (
 			set SHOULD_COMPILE=1
 		)
     ) else (
