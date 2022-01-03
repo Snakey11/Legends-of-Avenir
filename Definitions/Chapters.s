@@ -58,6 +58,7 @@ Mage1
 MageSearch2
 MageLeave2
 MageLeave3
+MageLeave4
 
 ShizonShrineCutscene
 LeavingShizonCutscene

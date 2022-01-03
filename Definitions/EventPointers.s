@@ -234,3 +234,5 @@ Military7AcceptHoldEvents
 Mage1Events
 Mage2SearchEvents
 Mage2LeaveEvents
+Mage3LeaveEvents
+Mage4LeaveEvents
