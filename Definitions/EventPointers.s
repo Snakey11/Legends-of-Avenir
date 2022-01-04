@@ -178,8 +178,11 @@ WesternIslesTileConfig
 ImprovedCastleObjectSet
 ImprovedCastlePalette
 ImprovedCastleTileConfig
-FE6WaterAnimations
 ImprovedCastleAnims
+VillageV2ObjectSet
+VillageV2NightPalette
+VillageV2TileConfig
+FE6WaterAnimations
 
 PrologueEvent
 Merc1Events

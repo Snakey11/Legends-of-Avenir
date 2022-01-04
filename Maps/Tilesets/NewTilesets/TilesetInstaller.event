@@ -84,6 +84,72 @@ EventPointerTable(ImprovedCastleObjectSet,ImprovedCastleTilesetObjects)
 EventPointerTable(ImprovedCastlePalette,ImprovedCastleTilesetPalette)
 EventPointerTable(ImprovedCastleTileConfig,ImprovedCastleTilesetTileConfig)
 
+// Village V2.
+ALIGN 4
+VillageV2TilesetObjects:
+#incbin "VillageV2NightTiles.dmp"
+
+ALIGN 4
+VillageV2NightTilesetPalette:
+#incbin "VillageV2NightTilesPalette.dmp"
+
+ALIGN 4
+VillageV2TilesetTileConfig:
+#incext compress "VillageV2.mapchip_config"
+
+EventPointerTable(VillageV2ObjectSet,VillageV2TilesetObjects)
+EventPointerTable(VillageV2NightPalette,VillageV2TilesetPalette)
+EventPointerTable(VillageV2TileConfig,VillageV2TilesetTileConfig)
+
+// Village V2 Animations.
+
+ALIGN 4
+VillageV21:
+#incbin "villageanims000.dmp"
+
+ALIGN 4
+VillageV22:
+#incbin "villageanims001.dmp"
+
+ALIGN 4
+VillageV23:
+#incbin "villageanims002.dmp"
+
+ALIGN 4
+VillageV24:
+#incbin "villageanims003.dmp"
+
+ALIGN 4
+VillageV25:
+#incbin "villageanims004.dmp"
+
+ALIGN 4
+VillageV26:
+#incbin "villageanims005.dmp"
+
+ALIGN 4
+VillageV27:
+#incbin "villageanims006.dmp"
+
+ALIGN 4
+VillageV28:
+#incbin "villageanims007.dmp"
+
+// Improved castle animations.
+ALIGN 4
+VillageV2TilesetAnimation:
+TilesetAnimation(28,400,VillageV21)
+TilesetAnimation(28,400,VillageV22)
+TilesetAnimation(28,400,VillageV23)
+TilesetAnimation(28,400,VillageV24)
+TilesetAnimation(28,400,VillageV25)
+TilesetAnimation(28,400,VillageV26)
+TilesetAnimation(28,400,VillageV27)
+TilesetAnimation(28,400,VillageV28)
+WORD 0x00 0x00
+
+EventPointerTable(VillageV2Anims,VillageV2TilesetAnimation)
+
 // Improved castle animations.
 ALIGN 4
 ImprovedCastleTilesetAnimation:
