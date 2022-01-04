@@ -182,6 +182,7 @@ ImprovedCastleAnims
 VillageV2ObjectSet
 VillageV2NightPalette
 VillageV2TileConfig
+VillageV2Anims
 FE6WaterAnimations
 
 PrologueEvent

@@ -98,7 +98,7 @@ VillageV2TilesetTileConfig:
 #incext compress "VillageV2.mapchip_config"
 
 EventPointerTable(VillageV2ObjectSet,VillageV2TilesetObjects)
-EventPointerTable(VillageV2NightPalette,VillageV2TilesetPalette)
+EventPointerTable(VillageV2NightPalette,VillageV2NightTilesetPalette)
 EventPointerTable(VillageV2TileConfig,VillageV2TilesetTileConfig)
 
 // Village V2 Animations.
