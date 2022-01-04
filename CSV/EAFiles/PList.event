@@ -1,0 +1,72 @@
+
+ALIGN 4
+EventPointerListOffset:
+#incbin "EventPointerTable.dmp"
+FILL 4*0x20 // Fill missing entries beyond 0xFF. This is a band-aid until we get the event pointer split.
+
+// Allocate space for our new split PLists.
+ALIGN 4
+ObjTypePalettePLIST:
+TileConfigPLIST:
+TileAnimPLIST:
+FILL 0xFF * 4
+//MapPLIST:
+//MapChangesPLIST:
+// Events, maps, and map changes will use the vanilla PList area.
+
+// Set up vanilla object sets.
+ObjTypePalettePointerTable(0x01, 0x198D8C) //01
+ObjTypePalettePointerTable(0x0E, 0x191B14) //0E
+ObjTypePalettePointerTable(0x18, 0x18B89C) //18
+ObjTypePalettePointerTable(0x2E, 0x185154) //2E
+ObjTypePalettePointerTable(0x3C, 0x1816B8) //3C
+ObjTypePalettePointerTable(0x42, 0x17A9F4) //42
+ObjTypePalettePointerTable(0x50, 0x1756B4) //50
+ObjTypePalettePointerTable(0x5F, 0x170DA8) //5F
+ObjTypePalettePointerTable(0x6C, 0x169D54) //6C
+ObjTypePalettePointerTable(0x79, 0x165F7C) //79
+ObjTypePalettePointerTable(0x88, 0x1609BC) //88
+
+// Set up vanilla map palettes.
+ObjTypePalettePointerTable(0x02, 0x1AEBF0) //02
+ObjTypePalettePointerTable(0x38, 0x1AE5B0) //38
+ObjTypePalettePointerTable(0x4C, 0x1AE0B0) //4C
+ObjTypePalettePointerTable(0x5B, 0x1ADCF0) //5B
+ObjTypePalettePointerTable(0x0F, 0x1AEAB0) //0F
+ObjTypePalettePointerTable(0x72, 0x1AD7F0) //72
+ObjTypePalettePointerTable(0x19, 0x1AE970) //19
+ObjTypePalettePointerTable(0x48, 0x1AE1F0) //48
+ObjTypePalettePointerTable(0x57, 0x1ADE30) //57
+ObjTypePalettePointerTable(0xB9, 0x1AD2F0) //B9
+ObjTypePalettePointerTable(0x2F, 0x1AE830) //2F
+ObjTypePalettePointerTable(0x34, 0x1AE6F0) //34
+ObjTypePalettePointerTable(0x3D, 0x1AE470) //3D
+ObjTypePalettePointerTable(0x68, 0x1ADA70) //68
+ObjTypePalettePointerTable(0xCE, 0x1AD1B0) //CE
+ObjTypePalettePointerTable(0x43, 0x1AE330) //43
+ObjTypePalettePointerTable(0x51, 0x1ADF70) //51
+ObjTypePalettePointerTable(0x60, 0x1ADBB0) //60
+ObjTypePalettePointerTable(0xA3, 0x1AD430) //A3
+ObjTypePalettePointerTable(0x7A, 0x1AD6B0) //7A
+ObjTypePalettePointerTable(0x89, 0x1AD570) //89
+
+// Set up vanilla tile config.
+TileConfigPointerTable(0x03, 0x1AB69C) //03
+TileConfigPointerTable(0x10, 0x1AA140) //10
+TileConfigPointerTable(0x1A, 0x1A8CCC) //1A
+TileConfigPointerTable(0x30, 0x1A7674) //30
+TileConfigPointerTable(0x3E, 0x1A6604) //3E
+TileConfigPointerTable(0x44, 0x1A55B4) //44
+TileConfigPointerTable(0x52, 0x1A4510) //52
+TileConfigPointerTable(0x61, 0x1A3660) //61
+TileConfigPointerTable(0x6E, 0x1A1FC0) //6E
+TileConfigPointerTable(0x7B, 0x1A1440) //7B
+TileConfigPointerTable(0x8A, 0x1A0514) //8A
+
+// Set up vanilla map animations.
+TileAnimPointerTable(5, 0x59D498)
+TileAnimPointerTable(0x12, 0x0859D568)
+TileAnimPointerTable(0x1C, 0x0859D6F8)
+TileAnimPointerTable(0x54, 0x0859D800)
+TileAnimPointerTable(0x7D, 0x0859D678)
+TileAnimPointerTable(0xD3, 0x0859D520)

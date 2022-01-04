@@ -398,4 +398,24 @@ POIN EventPointerListOffset
 ORG $99E64
 POIN PrepScreenShopList
 
+
+// Split the PList.
+ORG 0x19900
+POIN TileConfigPLIST
+ORG 0x19968
+POIN ObjTypePalettePLIST
+ORG 0x1999C
+POIN ObjTypePalettePLIST
+ORG 0x30134
+POIN TileAnimPLIST
+ORG 0x30C78
+POIN TileAnimPLIST
+//ORG 0x34680
+//POIN MapPLIST
+//ORG 0x346AC
+//POIN MapChangesPLIST
+//ORG 0xB3018
+//POIN MapChangesPLIST
+//ORG 0xC66E8
+//POIN MapChangesPLIST
 POP

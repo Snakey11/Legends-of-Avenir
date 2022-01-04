@@ -963,8 +963,6 @@
 #define FE6WaterAnimation FE6WaterAnimations
 #define DesertTempleAnims _42Anims
 #define WesternIslesAnims _42Anims
-
-ASSERT 0x100 - LastEventPointerEntry
 //LabelEnd
 
 //Label Map Sprites (Standing)
@@ -1632,6 +1630,13 @@ ASSERT 0x100 - LastEventPointerEntry
 
 //Label Misc.
 #define GenderEventID 0x6E
+
+// For split PList.
+#define TileConfigPointerTable(aId, apointer) "PUSH; ORG TileConfigPLIST+(0x4 * aId); POIN apointer; POP"
+#define ObjTypePalettePointerTable(aId, apointer) "PUSH; ORG ObjTypePalettePLIST+(0x4 * aId); POIN apointer; POP"
+#define TileAnimPointerTable(aId, apointer) "PUSH; ORG TileAnimPLIST+(0x4 * aId); POIN apointer; POP"
+#define MapPointerTable(aId, apointer) "PUSH; ORG MapPLIST+(4*aId); POIN apointer; POP"
+#define MapChangesPointerTable(aId, apointer) "PUSH; ORG MapChangesPLIST+(0x4 * aId); POIN apointer; POP"
 
 #define SetChapterData(ChapterID,ObjectType1,ObjectType2,PaletteID,TileConfig,MapID,MapPointer,Anims1,Anims2,MapChanges) "PUSH; ORG ChapterDataTable+(ChapterID*148)+4; BYTE ObjectType1 ObjectType2 PaletteID TileConfig MapID Anims1 Anims2 MapChanges; EventPointerTable(MapID,MapPointer); POP"
 

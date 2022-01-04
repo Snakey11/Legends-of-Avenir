@@ -13,3 +13,4 @@
 .include Skills.s
 .include Spells.s
 .include StandingSprites.s
+.include Tilesets.s
