@@ -1,0 +1,17 @@
+
+Notes for Gamma on what we're thinking about UI:
+
+We've been looking closely at the overall UI edits for Ternon and SE, and we've got new ideas for what we're thinking (mostly regarding the general UI tilemap).
+
+Borders:
+We noticed that Ternon went for a more paper-like border, and SE has a straighter, more shadowed border. We like the SE border more.
+Would a small flair on corners of borders be feasible?
+We were hoping that we could replace the vanilla dragon on the top border with a design that we're still developing too.
+
+Colors:
+We're thinking of a green/blue/gold color scheme. Maybe teal as a primary color, slightly dark blue for secondary, and gold for borders.
+For gradients that transition to a darker base in vanilla, we were wondering if we could instead transition to our dark blue secondary color.
+Because of this choice for background colors, we may want to change number palettes: For numbers that would be blue in vanilla, we think something red might work better.
+
+Background:
+We got ahead of ourselves with thinking about designs for the stat screen, battle screen, etc. It's probably best to start with the general tilemap and go from there.
