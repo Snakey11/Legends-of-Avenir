@@ -115,3 +115,7 @@
 #include "Mage/Mage1.s"
 
 #include "Mage/Mage2Leave.s"
+
+#include "Mage/Mage3Leave.s"
+
+#include "Mage/Mage4Leave.s"
