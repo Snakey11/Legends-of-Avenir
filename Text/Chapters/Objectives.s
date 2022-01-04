@@ -216,3 +216,6 @@ Defeat Lakshmi.[X]
 ## Mage2LeaveStatusText
 Escape[NL]
 Mistlain's tower.[X]
+
+## Mage3LeaveStatusText
+Defeat Pascal.[X]

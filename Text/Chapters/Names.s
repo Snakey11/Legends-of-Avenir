@@ -150,3 +150,6 @@ Prologue[X]
 
 ## Mage2LeaveNameText
 2: The Grand Magi[X]
+
+## Mage3LeaveNameText
+3: Battle in Shadows[X]

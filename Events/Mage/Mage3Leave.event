@@ -1,5 +1,5 @@
 
-EventPointerTable(eventPointer,ThisChapter)
+EventPointerTable(Mage3LeaveEvents,ThisChapter)
 
 //Label ThisChapter
 ThisChapter:
