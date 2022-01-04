@@ -964,7 +964,7 @@
 #define DesertTempleAnims _42Anims
 #define WesternIslesAnims _42Anims
 
-ASSERT LastEventPointerEntry - 0x100
+ASSERT 0x100 - LastEventPointerEntry
 //LabelEnd
 
 //Label Map Sprites (Standing)
