@@ -741,6 +741,7 @@
 //Label Maps, Map Changes, Events, and Tilesets
 #define EnterMap(ID) "PUSH;ORG EventPointerListOffset+(ID*4);POIN Map;POP"
 #define EnterChanges(ID) "PUSH;ORG EventPointerListOffset+(ID*4);POIN MapChanges;POP"
+ASSERT LastEventPointerEntry - 0x100
 /*
 #define ArcanaeCapitalMap 0x04
 #define ArcanaeOutpostMap 0x06
