@@ -118,6 +118,7 @@ ClintManorMap
 MistlainThroneCutsceneMap
 ArcanaeEscapeMap
 LooterBaseMap
+TorchAttackMap
 
 ArcanaeCapitalChanges
 ArcanaePalaceChanges
@@ -162,6 +163,7 @@ ClintManorChanges
 SmallRuinChanges
 ArcanaeEscapeChanges
 LooterBaseChanges
+TorchAttackChanges
 
 DesertTempleObjectSet
 DesertTemplePalette

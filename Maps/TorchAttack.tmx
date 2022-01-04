@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="19" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="VillageV2Night" tilewidth="16" tileheight="16">
+  <image source="Tilesets/NewTilesets/VillageV2Night.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="25" height="19">
+  <properties>
+   <property name="Anims" value="VillageV2Anims"/>
+   <property name="ChapterID" value="MageLeave3"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="TorchAttackChanges"/>
+   <property name="MapID" value="TorchAttackMap"/>
+   <property name="ObjectType" value="VillageV2Tiles"/>
+   <property name="PaletteID" value="VillageV2NightPalette"/>
+   <property name="TileConfig" value="VillageV2TileConfig"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxllctLlUEYxmfmW3Q5gV2MMDftktxkSFCHgsiQoE4t0gjpIraQ0qyFhdhdOSEWQdA/UEhZiij9Ax055NF1V1odT3QTovuFFj1v7zPMeFz8+Gbm++Z95r3M+w0ZY5ZbZQMoYp4Dr50x6cSYKrDZ6dpjvrsJVoCVYAf3FDm+jedRcAw47CtZ3fcRvKHW9Wif2HuB7w5B5yvWWkEbGMN6HdgEVoFKcIs6PeASuMy56CzmWLTeginO90Zaa5Og47VnQRaMg3owwfVJUIrG06DLqI6sDYM5kAKNkf+vcJZm6mQw3uf0uYuaG8V/kHKqXWGVEm2cBB20u5t6tdTw8c/RF9E5BTtdoAnkYecB+ABGGfcGq7Gfi8643y1Ezigag0bzU2QNiMa5ROcZakxbHYstOUu/Db56e6fBmbKnnLUG3z8BIybkWnz56VRDvlmNtTVWx5Irqb9vNvjq7T1MtJ7uR/4Vo9zFtejjtYVaBeybAQeZq3qsnY3qQp6/sNaHd+2JnjfH+BXwXGoX1uIzxitNrTHMx0EL599dsP0D461cnwRDoBa0mnDX2hnfggn1IWeqYj7k3nwCn0EP1nojH71toRvcAW0gTx3Zvwf239mQR+EPfXjuQn4K/O5//dngp7fdHWn00ZeaROt8ygZ//kaxqOYZbtCv9bR/1+p9nrXqX7lGPzXyxMc49tnH4iXWl4FO2k6Z0CeuUCdx6k8m0pLzH6f9nUmIsff5qVN7ReZmxoYesyiqu+qo/uReVoLttCG2G2lfYj2AdyfABMaPwD32hSxrbokN/a0zqrs0WMf6k3t5gL18G203Mw6SgwuJ6nyR++T0e09F1P/jPiS6dexPw3a+huBj8tstrGuJ03vuacG7w+BIdI8GTeh9vreNsH9JPs4n8zUEXz9p+tXAM4tOr/gILtKHAXDNqI2sCXfb17v0zCG+9/XVXBYz4Srvgc/5aHRH5T8Q++Z1/LdNtCM9+B8lDP2b
+  </data>
+ </layer>
+ <layer name="BottomRed" width="25" height="19">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMNSAwkA7YBSQBAA9bAAh
+  </data>
+ </layer>
+ <layer name="LeftRed" width="25" height="19">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUUAIUBtoBo2AUjIJBDwCMbAAh
+  </data>
+ </layer>
+ <layer name="TopRed" width="25" height="19">
+  <data encoding="base64" compression="zlib">
+   eJxjYBiaQGGgHTAKRsEoGAWjYBQQCQDd7AAh
+  </data>
+ </layer>
+</map>
