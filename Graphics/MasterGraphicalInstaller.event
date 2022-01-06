@@ -13,6 +13,8 @@
 
 #include "BattlePalettes/BattlePaletteInstaller.event"
 
+#include "UI/UI.event"
+
 PUSH
 ORG $88638
 POIN NewStatScreen

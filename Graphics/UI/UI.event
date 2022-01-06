@@ -1,0 +1,29 @@
+
+
+// Vanilla general tile graphics are at 0x005B65C0.
+ALIGN 4
+GeneralUITileGraphics:
+#incext png2dmp "GeneralTiles.png" --lz77
+// Vanilla general tile (blue) palette is at 0x005B6BB4.
+ALIGN 4
+GeneralUITilePalette:
+#incext png2dmp "GeneralTiles.png" --palette-only
+
+PUSH
+ORG $5B6470
+POIN GeneralUITileGraphics GeneralUITileGraphics GeneralUITileGraphics GeneralUITileGraphics
+ORG $36D2C
+POIN GeneralUITilePalette
+ORG $8E070
+POIN GeneralUITilePalette
+ORG $98528
+POIN GeneralUITilePalette
+ORG $B3A4C
+POIN GeneralUITilePalette
+ORG $B4E80
+POIN GeneralUITilePalette
+ORG $CEF08
+POIN GeneralUITilePalette
+ORG $5B6450
+POIN GeneralUITilePalette
+POP
