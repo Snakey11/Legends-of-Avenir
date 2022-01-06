@@ -3,6 +3,7 @@ import os
 from os import walk
 from os import path
 import argparse
+import subprocess
 
 parser = argparse.ArgumentParser()
 parser.add_argument('chapter_name',help='List of chapter IDs to open maps for.')
@@ -25,4 +26,5 @@ if __name__ == '__main__':
         print(f'No maps associated with chapter {args.chapter_name}')
     for map in maps_to_open:
         print(f'Opening {map}...')
-        os.system(f'tiled {map}')
+        #os.system(f'tiled {map}')
+        subprocess.Popen(['tiled',map])
