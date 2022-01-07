@@ -22,6 +22,7 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
+CharacterEvent(0x10,TAryaTact,Arya,0x00)
 END_MAIN
 
 //Label LocationBasedEvents
@@ -35,6 +36,7 @@ END_MAIN
 
 //Label TrapData
 TrapData:
+TelliusTorchOn(
 ENDTRAP
 ALIGN 4
 
@@ -44,10 +46,58 @@ EndUnit
 
 //Label BeginingScene
 BeginningScene:
+VCWF 4
+CAM1 [23,3]
+LOAD2 0x1 StartingFriends
+LOAD1 0x1 Meanies
+ENUN
+MUSC Dry_Trail
+SetBackground(0x1C)
+Text(Mage3LeaveStartingText)
+MUSC Forbidden_Forest
+SetBackground(0x1F)
+TEXTSTART
+TEXTSHOW Mage3LeaveGettingDarkText
+TEXTEND
+MUSC Emergency
+TEXTCONT
+TEXTEND
+EndConvo
+MUSC Blindly_Charging
+STAL 0x30
+FlashCursor(Pascal,60)
+STAL 0x30
+Text(Mage3LeaveBossHereText)
+STAL 0x30
+CAM1 [1,1]
+CHECK_ALIVE Zaheva
+BEQ 0x0 0x0 0xC
+	STAL 0x30
+	FlashCursor(Zaheva,60)
+LABEL 0x0
+STAL 0x30
+Text(Mage3LeaveTorchesUpText)
+STAL 0x10
+GiveItem(0x00,Torch)
+NoFade
 ENDA
 
 //Label EndingScene
 EndingScene:
+FADI 0x5
+MUSC Victory_Minor
+SetBackground(0x20)
+Text(Mage3LeaveEndingText)
+MoveToChapter(MageLeave4)
+ENDA
+
+//Label Talk events
+TAryaTact:
+MUSS With_Us
+Text(Mage3LeaveRecruitAryaText)
+TurnAlly(Arya)
+MURE 0x05
+NoFade
 ENDA
 
 	/*UNIT DATA*/
