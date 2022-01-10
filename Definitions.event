@@ -1632,8 +1632,9 @@
 #define GenderEventID 0x6E
 
 // For split PList.
+#define ObjTypePointerTable(aId, apointer) "PUSH; ORG ObjTypePLIST+(0x4 * aId); POIN apointer; POP"
+#define PalettePointerTable(aId, apointer) "PUSH; ORG PalettePLIST+(0x4 * aId); POIN apointer; POP"
 #define TileConfigPointerTable(aId, apointer) "PUSH; ORG TileConfigPLIST+(0x4 * aId); POIN apointer; POP"
-#define ObjTypePalettePointerTable(aId, apointer) "PUSH; ORG ObjTypePalettePLIST+(0x4 * aId); POIN apointer; POP"
 #define TileAnimPointerTable(aId, apointer) "PUSH; ORG TileAnimPLIST+(0x4 * aId); POIN apointer; POP"
 #define MapPointerTable(aId, apointer) "PUSH; ORG MapPLIST+(4*aId); POIN apointer; POP"
 #define MapChangesPointerTable(aId, apointer) "PUSH; ORG MapChangesPLIST+(0x4 * aId); POIN apointer; POP"

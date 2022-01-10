@@ -12,9 +12,9 @@ ALIGN 4
 DesertTempleTilesetTileConfig:
 #incext compress "DesertTemple.mapchip_config"
 
-EventPointerTable(DesertTempleObjectSet,DesertTempleTilesetObjects)
-EventPointerTable(DesertTemplePalette,DesertTempleTilesetPalette)
-EventPointerTable(DesertTempleTileConfig,DesertTempleTilesetTileConfig)
+ObjTypePointerTable(DesertTempleObjectSet,DesertTempleTilesetObjects)
+PalettePointerTable(DesertTemplePalette,DesertTempleTilesetPalette)
+TileConfigPointerTable(DesertTempleTileConfig,DesertTempleTilesetTileConfig)
 
 // Outdoor FE6 snowy.
 ALIGN 4
@@ -29,9 +29,9 @@ ALIGN 4
 OutdoorSnowyTilesetTileConfig:
 #incext compress "SnowyTilesetOutdoorTileConfiguration.mapchip_config"
 
-EventPointerTable(OutdoorSnowyObjectSet,OutdoorSnowyTilesetObjects)
-EventPointerTable(OutdoorSnowyPalette,OutdoorSnowyTilesetPalette)
-EventPointerTable(OutdoorSnowyTileConfig,OutdoorSnowyTilesetTileConfig)
+ObjTypePointerTable(OutdoorSnowyObjectSet,OutdoorSnowyTilesetObjects)
+PalettePointerTable(OutdoorSnowyPalette,OutdoorSnowyTilesetPalette)
+TileConfigPointerTable(OutdoorSnowyTileConfig,OutdoorSnowyTilesetTileConfig)
 
 // Indoor FE6 snowy.
 ALIGN 4
@@ -46,9 +46,9 @@ ALIGN 4
 IndoorSnowyTilesetTileConfig:
 #incext compress "SnowyTilesetIndoorTileConfiguration.mapchip_config"
 
-EventPointerTable(IndoorSnowyObjectSet,IndoorSnowyTilesetObjects)
-EventPointerTable(IndoorSnowyPalette,IndoorSnowyTilesetPalette)
-EventPointerTable(IndoorSnowyTileConfig,IndoorSnowyTilesetTileConfig)
+ObjTypePointerTable(IndoorSnowyObjectSet,IndoorSnowyTilesetObjects)
+PalettePointerTable(IndoorSnowyPalette,IndoorSnowyTilesetPalette)
+TileConfigPointerTable(IndoorSnowyTileConfig,IndoorSnowyTilesetTileConfig)
 
 // Western Isles (improved).
 ALIGN 4
@@ -63,9 +63,9 @@ ALIGN 4
 WesternIslesTilesetTileConfig:
 #incext compress "WesternIsles-Extended-Config.mapchip_config"
 
-EventPointerTable(WesternIslesObjectSet,WesternIslesTilesetObjects)
-EventPointerTable(WesternIslesPalette,WesternIslesTilesetPalette)
-EventPointerTable(WesternIslesTileConfig,WesternIslesTilesetTileConfig)
+ObjTypePointerTable(WesternIslesObjectSet,WesternIslesTilesetObjects)
+PalettePointerTable(WesternIslesPalette,WesternIslesTilesetPalette)
+TileConfigPointerTable(WesternIslesTileConfig,WesternIslesTilesetTileConfig)
 
 // Improved castle (library).
 ALIGN 4
@@ -80,9 +80,9 @@ ALIGN 4
 ImprovedCastleTilesetTileConfig:
 #incext compress "ImprovedCastle.mapchip_config"
 
-EventPointerTable(ImprovedCastleObjectSet,ImprovedCastleTilesetObjects)
-EventPointerTable(ImprovedCastlePalette,ImprovedCastleTilesetPalette)
-EventPointerTable(ImprovedCastleTileConfig,ImprovedCastleTilesetTileConfig)
+ObjTypePointerTable(ImprovedCastleObjectSet,ImprovedCastleTilesetObjects)
+PalettePointerTable(ImprovedCastlePalette,ImprovedCastleTilesetPalette)
+TileConfigPointerTable(ImprovedCastleTileConfig,ImprovedCastleTilesetTileConfig)
 
 // Village V2.
 ALIGN 4
@@ -97,9 +97,9 @@ ALIGN 4
 VillageV2TilesetTileConfig:
 #incext compress "VillageV2.mapchip_config"
 
-EventPointerTable(VillageV2ObjectSet,VillageV2TilesetObjects)
-EventPointerTable(VillageV2NightPalette,VillageV2NightTilesetPalette)
-EventPointerTable(VillageV2TileConfig,VillageV2TilesetTileConfig)
+ObjTypePointerTable(VillageV2ObjectSet,VillageV2TilesetObjects)
+PalettePointerTable(VillageV2NightPalette,VillageV2NightTilesetPalette)
+TileConfigPointerTable(VillageV2TileConfig,VillageV2TilesetTileConfig)
 
 // Village V2 Animations.
 
@@ -148,7 +148,7 @@ TilesetAnimation(28,400,VillageV27)
 TilesetAnimation(28,400,VillageV28)
 WORD 0x00 0x00
 
-EventPointerTable(VillageV2Anims,VillageV2TilesetAnimation)
+TileAnimPointerTable(VillageV2Anims,VillageV2TilesetAnimation)
 
 // Improved castle animations.
 ALIGN 4
@@ -163,7 +163,7 @@ TilesetAnimation(28,400,ImprovedCastle7)
 TilesetAnimation(28,400,ImprovedCastle8)
 WORD 0x00 0x00
 
-EventPointerTable(ImprovedCastleAnims,ImprovedCastleTilesetAnimation)
+TileAnimPointerTable(ImprovedCastleAnims,ImprovedCastleTilesetAnimation)
 
 ALIGN 4
 ImprovedCastle1:
@@ -218,7 +218,7 @@ TilesetAnimation(28,0x1000,FE6Water15)
 TilesetAnimation(28,0x1000,FE6Water16)
 WORD 0x00 0x00
 
-EventPointerTable(FE6WaterAnimation,FE6WaterTilesetAnimation)
+TileAnimPointerTable(FE6WaterAnimation,FE6WaterTilesetAnimation)
 
 ALIGN 4
 FE6Water1: // None of these are compressed
