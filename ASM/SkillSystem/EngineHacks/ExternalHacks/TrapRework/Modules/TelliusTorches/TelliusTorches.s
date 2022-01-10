@@ -27,6 +27,8 @@
 .equ SpawnTrap,0x802E2B8 @r0 = x coord, r1 = y coord, r2 = trap ID
 .equ Init_ReturnPoint,0x8037901
 
+.equ gEventSlot, 0x30004B8
+
 TelliusTorchInitialization:
 
 @r5 = pointer to trap data in events
@@ -214,3 +216,20 @@ bx r1
 .ltorg
 .align
 
+.global SetTelliusTorchAt
+.type SetTelliusTorchAt, %function
+SetTelliusTorchAt: @ Memory slot 0x1 = coordinates, slot 0x2 = status (0x0 = off, 0x1 = on).
+push { lr }
+ldr r0, =gEventSlot
+ldr r0, [ r0, #0x04 ] @ Coordinate word. Lower short has x, higher short has y.
+lsr r1, r0, #0x10 @ Get y short in r1.
+blh GetTrapAt @ Get the pointer to the trap at these coordinates.
+cmp r0, #0x00
+beq EndSetTelliusTorchAt
+	ldr r1, =gEventSlot
+	ldrb r1, [ r1, #0x08 ]
+	strb r1, [ r0, #0x03 ] @ Store the status in the trap status field.
+EndSetTelliusTorchAt:
+pop { r0 }
+bx r0
+.ltorg
