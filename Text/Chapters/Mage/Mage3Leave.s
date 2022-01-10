@@ -28,7 +28,7 @@ She's only shared a little with me. We both have issues with the way Arcanae has
 [ConversationText]
 [FarLeft][LoadPlayer][Left][LoadXena]
 It's starting to get dark out. Ajax, should we set up camp?
-[MidRight][LoadAjax]I see somewhere off road up here that should leave us relatively out of sight. Let's do that. Zaheva will catch up.
+[MidRight][LoadAjax]I see somewhere off road up here that should leave us out of sight. We can pick up supplies in town tomorrow. Zaheva will catch up.
 [FarLeft]... We don't have camping supplies, do we?
 [MidRight]Nope! I have a couple of torches but we shouldn't light them unless we need them. Looks like we'll be bundling up in our cloaks for a quick rest.
 [FarLeft]Not quite what I'm used to.
@@ -43,10 +43,10 @@ What's the problem, Zaheva?
 [Right]Arcanians? I didn't think they'd be able to mobilize so quickly.
 [MidLeft]No, Ajax... Not Arcanians.
 [FarRight]Mistlain wouldn't... Did he hire Shizonians?!
-[MidLeft]Yes.[CloseSpeech][MoveLeft][FarLeft][LoadPlayer]
+[MidLeft]Yes. I think they've set a trap for us ahead.[CloseSpeech][MoveLeft][FarLeft][LoadPlayer]
 Shizonians? The assassins from the isle south of Avenir?
-[FarRight]The very same. This won't be easy... Ajax, you said you had torches, right?
-[Right]Yep. I'll set them up around the perimeter. It'll give us advance notice of their approach, but if they destroy them, there's nothing we can do.
+[FarRight]The very same. This won't be easy... Ajax, you said you had torches, right? There are set up on the road ahead that we can use too.
+[Right]Yep. They'll give us advance notice of their approach, but if they douse them, we'll be fighting blind.
 [FarRight]Save a few for us too.
 [Right]Right![X]
 
