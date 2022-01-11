@@ -216,19 +216,28 @@ bx r1
 .ltorg
 .align
 
-.global SetTelliusTorchAt
-.type SetTelliusTorchAt, %function
-SetTelliusTorchAt: @ Memory slot 0x1 = coordinates, slot 0x2 = status (0x0 = off, 0x1 = on).
+.global ToggleTelliusTorchAt
+.type ToggleTelliusTorchAt, %function
+ToggleTelliusTorchAt: @ Memory slot 0x1 = coordinates.
 push { lr }
 ldr r0, =gEventSlot
 ldr r0, [ r0, #0x04 ] @ Coordinate word. Lower short has x, higher short has y.
 lsr r1, r0, #0x10 @ Get y short in r1.
+lsl r0, r0, #0x10
+lsr r0, r0, #0x10 @ Clear the upper y short from the x coordinate.
 blh GetTrapAt @ Get the pointer to the trap at these coordinates.
 cmp r0, #0x00
 beq EndSetTelliusTorchAt
-	ldr r1, =gEventSlot
-	ldrb r1, [ r1, #0x08 ]
-	strb r1, [ r0, #0x03 ] @ Store the status in the trap status field.
+	@ Toggle the state of +3 between 0 or the contents of +4.
+	ldrb r1, [ r0, #0x03 ]
+	cmp r1, #0x0
+	bne ToggleTurnOff
+		ldrb r1, [ r0, #0x04 ]
+		strb r1, [ r0, #0x03 ]
+		b EndSetTelliusTorchAt
+	ToggleTurnOff:
+		mov r1, #0x0
+		strb r1, [ r0, #0x03 ]
 EndSetTelliusTorchAt:
 pop { r0 }
 bx r0

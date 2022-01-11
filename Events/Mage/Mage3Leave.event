@@ -36,12 +36,12 @@ END_MAIN
 
 //Label TrapData
 TrapData:
-TelliusTorchOn(8,5,6)
-TelliusTorchOn(6,11,6)
-TelliusTorchOn(8,16,6)
-TelliusTorchOn(12,11,6)
-TelliusTorchOn(19,17,6)
-TelliusTorchOn(15,4,6)
+TelliusTorchOn(8,5,4)
+TelliusTorchOn(6,11,4)
+TelliusTorchOn(8,16,4)
+TelliusTorchOn(12,11,4)
+TelliusTorchOn(19,17,4)
+TelliusTorchOn(15,4,4)
 ENDTRAP
 ALIGN 4
 
@@ -82,8 +82,7 @@ STAL 0x20
 ENUN
 STAL 0x10
 SVAL 0x1 Coords(12,11)
-SVAL 0x2 0x0 // Torch off.
-ASMC SetTelliusTorchAt|1 // Douse the torch at [12,11].
+ASMC ToggleTelliusTorchAt|1 // Douse the torch at [12,11].
 STAL 0x30
 MOVE 0x0 Arya [12,15]
 ENUN
