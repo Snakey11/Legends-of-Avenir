@@ -238,6 +238,7 @@ beq EndSetTelliusTorchAt
 	ToggleTurnOff:
 		mov r1, #0x0
 		strb r1, [ r0, #0x03 ]
+	blh RefreshTerrainMap
 EndSetTelliusTorchAt:
 pop { r0 }
 bx r0

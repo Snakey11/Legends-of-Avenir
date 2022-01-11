@@ -237,11 +237,13 @@ NewRefreshTrapFogVision_ValidTrap:
 ldrb r0,[r4]
 ldrb r1,[r4,#1]
 ldrb r2,[r4,#3]
-ldr r3,=MapAddInRange
-mov r14,r3
-mov r3,#1
-.short 0xF800
-
+cmp r2, #0x00
+beq SkipFogVisionMapAddInRange
+	ldr r3,=MapAddInRange
+	mov r14,r3
+	mov r3,#1
+	.short 0xF800
+SkipFogVisionMapAddInRange:
 
 NewRefreshTrapFogVision_LoopRestart:
 add r4,#8 @size of trap data entry
