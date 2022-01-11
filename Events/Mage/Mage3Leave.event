@@ -41,12 +41,16 @@ TelliusTorchOn(6,11,4)
 TelliusTorchOn(8,16,4)
 TelliusTorchOn(12,11,4)
 TelliusTorchOn(19,17,4)
-TelliusTorchOn(15,4,4)
+TelliusTorchOff(15,4,4)
 ENDTRAP
 ALIGN 4
 
 //Label Units
 Units:
+UNIT 0x00 0x00 0x00 Level(1,Ally,True) [3,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Xena 0x00 0x00 Level(1,Ally,True) [4,1] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [2,3] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Ajax 0x00 0x00 Level(1,Ally,True) [3,4] 0x00 0x00 0x00 0x00 [0] NoAI
 EndUnit
 
 //Label BeginingScene
@@ -83,7 +87,7 @@ ENUN
 STAL 0x10
 SVAL 0x1 Coords(12,11)
 ASMC ToggleTelliusTorchAt|1 // Douse the torch at [12,11].
-STAL 0x30
+STAL 0x50
 MOVE 0x0 Arya [12,15]
 ENUN
 STAL 0x10
@@ -97,8 +101,9 @@ STAL 0x30
 Text(Mage3LeaveTorchesUpText)
 STAL 0x10
 GiveItem(Torch,0x00)
+STAL 0x20
 NoFade
-ENDA
+GotoPrepScreen
 
 //Label EndingScene
 EndingScene:
