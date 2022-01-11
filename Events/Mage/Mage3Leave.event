@@ -41,7 +41,7 @@ TelliusTorchOn(6,11,4)
 TelliusTorchOn(8,16,4)
 TelliusTorchOn(12,11,4)
 TelliusTorchOn(19,17,4)
-TelliusTorchOff(15,4,4)
+TelliusTorchOn(15,4,4)
 ENDTRAP
 ALIGN 4
 
@@ -160,5 +160,5 @@ UNIT Shizonian Fighter Pascal Level(8,Enemy,True) [8,10] 0x00 0x00 0x00 0x00 [De
 UNIT Shizonian Myrmidon Pascal Level(10,Enemy,True) [2,8] 0x00 0x00 0x00 0x00 [IronSword] NoAI
 UNIT Shizonian Fighter Pascal Level(12,Enemy,True) [5,8] 0x00 0x00 0x00 0x00 [HandAxe] DouseTorchesAI
 UNIT Shizonian Soldier Pascal Level(11,Enemy,True) [6,5] 0x00 0x00 0x00 0x00 [IronLance] NoAI
-UNIT Arya Myrmidon_F Pascal Level(7,Enemy,True) [19,3] 0x00 0x00 0x00 0x00 [SteelSword,Shamshir] NoAI
+UNIT Arya Myrmidon_F Pascal Level(7,Enemy,True) [19,3] 0x00 0x00 0x00 0x00 [SteelSword,Shamshir] AttackInRangeAI
 EndUnit
