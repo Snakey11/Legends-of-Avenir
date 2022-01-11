@@ -1078,27 +1078,27 @@ to perform a triangle attack with[N]
 
 ## SD_PushStr
 Push Strength: When HP[N]
-is full, gain +5 strength.[X]
+is full, gain +2 strength.[X]
 
 ## SD_PushMag
 Push Magic: When HP[N]
-is full, gain +5 magic.[X]
+is full, gain +2 magic.[X]
 
 ## SD_PushSkl
 Push Skill: When HP[N]
-is full, gain +5 skill.[X]
+is full, gain +2 skill.[X]
 
 ## SD_PushSpd
 Push Speed: When HP[N]
-is full, gain +5 speed.[X]
+is full, gain +2 speed.[X]
 
 ## SD_PushDef
 Push Defense: When HP[N]
-is full, gain +5 defense.[X]
+is full, gain +2 defense.[X]
 
 ## SD_PushRes
 Push Resistance: When HP is[N]
-full, gain +5 resistance.[X]
+full, gain +2 resistance.[X]
 
 ## SD_Skybreaker
 Skybreaker: Deal effective[N]

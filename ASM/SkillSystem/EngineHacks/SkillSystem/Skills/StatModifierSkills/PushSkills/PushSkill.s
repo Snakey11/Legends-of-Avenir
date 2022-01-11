@@ -29,7 +29,7 @@ cmp r0, #0
 beq GoBack
 
 mov r0,r4
-add r0,#5
+add r0,#2
 mov r4,r0 
 
 
