@@ -116,7 +116,7 @@ EndUnit
 
 //Label ChapterUnits
 LoadXena:
-UNIT Xena DreadFighterF 0x00 Level(3,Ally,True) [13,4] 0x00 0x00 0x00 0x00 [SteelSword] NoAI
+UNIT Xena DreadFighterF 0x00 Level(3,Ally,True) [13,4] 0x00 0x00 0x00 0x00 [IronSword] NoAI
 UNIT
 
 LoadLakshmi:
@@ -124,11 +124,11 @@ UNIT Lakshmi Shaman_F 0x00 Level(6,Enemy,True) [1,5] 0x00 0x00 0x01 REDA10R4 [Wo
 UNIT
 
 Meanies:
-UNIT Arcanian Mage Lakshmi Level(6,Enemy,True) [4,0] 0x00 0x00 0x01 REDA7R2 [Fire] AttackInRangeAI
-UNIT Arcanian Mercenary Lakshmi Level(7,Enemy,True) [0,4] 0x00 0x00 0x01 REDA0R5 [IronSword] AttackInRangeAI
-UNIT Arcanian Shaman Lakshmi Level(6,Enemy,True) [1,14] Drop 0x00 0x01 REDA7R5 [Flux] ChaseOnceApproachedAI
-UNIT Arcanian Fighter Lakshmi Level(7,Enemy,True) [3,14] 0x00 0x00 0x01 REDA3R8 [IronAxe] NoAI
-UNIT Arcanian Monk Lakshmi Level(8,Enemy,True) [5,13] Drop 0x00 0x00 0x00 [Exordium,ChestKey] AttackInRangeAI
+UNIT Arcanian Mage Lakshmi Level(3,Enemy,True) [4,0] 0x00 0x00 0x01 REDA7R2 [Fire] AttackInRangeAI
+UNIT Arcanian Mercenary Lakshmi Level(4,Enemy,True) [0,4] 0x00 0x00 0x01 REDA0R5 [IronSword] AttackInRangeAI
+UNIT Arcanian Shaman Lakshmi Level(4,Enemy,True) [1,14] Drop 0x00 0x01 REDA7R5 [Flux] ChaseOnceApproachedAI
+UNIT Arcanian Fighter Lakshmi Level(6,Enemy,True) [3,14] 0x00 0x00 0x01 REDA3R8 [IronAxe] NoAI
+UNIT Arcanian Monk Lakshmi Level(5,Enemy,True) [5,13] Drop 0x00 0x00 0x00 [Exordium,ChestKey] AttackInRangeAI
 UNIT Arcanian Soldier Lakshmi Level(7,Enemy,True) [10,12] 0x00 0x00 0x00 0x00 [IronLance] ChaseOnceApproachedAI
 UNIT Arcanian Soldier Lakshmi Level(6,Enemy,True) [9,14] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
 EndUnit
