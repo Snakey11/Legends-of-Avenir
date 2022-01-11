@@ -30,25 +30,25 @@ She's only shared a little with me. We both have issues with the way Arcanae has
 It's starting to get dark out. Ajax, should we set up camp?
 [MidRight][LoadAjax]I see somewhere off road up here that should leave us out of sight. We can pick up supplies in town tomorrow. Zaheva will catch up.
 [FarLeft]... We don't have camping supplies, do we?
-[MidRight]Nope! I have a couple of torches but we shouldn't light them unless we need them. Looks like we'll be bundling up in our cloaks for a quick rest.
+[MidRight]Nope! I have a couple of torches, but we shouldn't light them unless we need them. Looks like we'll be bundling up in our cloaks for a quick rest.
 [FarLeft]Not quite what I'm used to.
-[Right]This is what being on the run is like. Never thought I'd end up in this position, especially not this late in life...
-[MidLeft]As this war went on, I knew it was only a matter of time 'til I found myself out here on the run. War breeds the worst in people, and our leaders are no exceptions.
-[FarRight]I've never thought about it that way... We always see the Grand Magi as such infallible leaders...
-[MidLeft]Well, now you've seen firsthand how wrong that can be.
-[FarFarLeft]Finally, I caught up to you![CloseSpeech][FarRight][ClearFace][Right][MoveFarRight][MidLeft][MoveRight][ClearFace][LoadAjax]
+[Left]This is what being on the run is like. Never thought I'd end up in this position, especially not this late in life...
+[MidRight]As this war went on, I knew it was only a matter of time 'til I found myself out here on the run. War breeds the worst in people, and our leaders are no exceptions.
+[FarLeft]I've never thought about it that way... We always see the Grand Magi as such infallible leaders...
+[MidRight]Well, now you've seen firsthand how wrong that can be.
+[FarFarRight]Finally, I caught up to you![CloseSpeech][FarLeft][ClearFace][Left][MoveFarLeft][MidRight][MoveLeft][ClearFace][LoadAjax]
 What's the problem, Zaheva?
-[MidLeft][LoadZaheva]We're being followed.
+[MidRight][LoadZaheva]We're being followed.
 [Events]
-[Right]Arcanians? I didn't think they'd be able to mobilize so quickly.
-[MidLeft]No, Ajax... Not Arcanians.
-[FarRight]Mistlain wouldn't... Did he hire Shizonians?!
-[MidLeft]Yes. I think they've set a trap for us ahead.[CloseSpeech][MoveLeft][FarLeft][LoadPlayer]
+[Left]Arcanians? I didn't think they'd be able to mobilize so quickly.
+[MidRight]No, Ajax... Not Arcanians.
+[FarLeft]Mistlain wouldn't... Did he hire Shizonians?!
+[MidRight]Yes. I think they've set a trap for us ahead.[CloseSpeech][MoveRight][FarRight][LoadPlayer]
 Shizonians? The assassins from the isle south of Avenir?
-[FarRight]The very same. This won't be easy... Ajax, you said you had torches, right? There are set up on the road ahead that we can use too.
-[Right]Yep. They'll give us advance notice of their approach, but if they douse them, we'll be fighting blind.
-[FarRight]Save a few for us too.
-[Right]Right![X]
+[FarLeft]The very same. This won't be easy... Ajax, you said you had torches, right? There are set up on the road ahead that we can use too.
+[Left]Yep. They'll give us advance notice of their approach, but if they douse them, we'll be fighting blind.
+[FarLeft]Save a few for us too.
+[Left]Right![X]
 
 ## Mage3LeaveBossHereText
 [ConversationText]
