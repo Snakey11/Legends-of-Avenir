@@ -167,3 +167,10 @@ ally.[X]
 ## UM_FirstAidDesc
 Heal an ally for a[N]
 small amount of HP.[X]
+
+## UM_TelliusTorch
+ Torch[X]
+
+## UM_TelliusTorchDesc
+Light or douse an[N]
+adjacent torch.[X]
