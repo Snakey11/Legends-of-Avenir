@@ -17,12 +17,14 @@ POIN BeginningScene EndingScene
 
 //Label TurnBasedEvents
 TurnBasedEvents:
+InfiniteTurnEventPlayer(0x11,TryTurnArya,2)
 END_MAIN
 
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
-CharacterEvent(0x10,TAryaTact,Arya,0x00)
+//CharacterEvent(0x10,TAryaTact,Arya,Xena)
+CharacterEventBothWays(0x10,TAryaTact,Arya,Xena)
 END_MAIN
 
 //Label LocationBasedEvents
@@ -36,12 +38,12 @@ END_MAIN
 
 //Label TrapData
 TrapData:
-TelliusTorchOn(8,5,4)
-TelliusTorchOn(6,11,4)
-TelliusTorchOn(8,16,4)
-TelliusTorchOn(12,11,4)
-TelliusTorchOn(19,17,4)
-TelliusTorchOn(15,4,4)
+TelliusTorchOn(8,5,5)
+TelliusTorchOn(6,11,5)
+TelliusTorchOn(8,16,5)
+TelliusTorchOn(12,11,5)
+TelliusTorchOn(19,17,5)
+TelliusTorchOn(15,4,5)
 ENDTRAP
 ALIGN 4
 
@@ -55,7 +57,7 @@ EndUnit
 
 //Label BeginingScene
 BeginningScene:
-VCWF 4
+VCWF 3
 CAM1 [23,3]
 LOAD2 0x1 StartingFriends
 LOAD1 0x1 Meanies1
@@ -88,7 +90,7 @@ STAL 0x10
 SVAL 0x1 Coords(12,11)
 ASMC ToggleTelliusTorchAt|1 // Douse the torch at [12,11].
 STAL 0x50
-MOVE 0x0 Arya [12,15]
+MOVE 0x0 Arya [5,3] // 12,15
 ENUN
 STAL 0x10
 CAM1 [1,1]
@@ -114,11 +116,23 @@ Text(Mage3LeaveEndingText)
 MoveToChapter(MageLeave4)
 ENDA
 
+//Label Turn events
+TryTurnArya:
+CHECK_EVENTID 0x10
+BEQ 0x0 0x0 0xC
+	// If Arya just talked to us, she should exist.
+	TurnAlly(Arya)
+	GOTO 0x1
+LABEL 0x0
+	ENUF 0x11
+LABEL 0x1
+NoFade
+ENDA
+
 //Label Talk events
 TAryaTact:
 MUSS With_Us
 Text(Mage3LeaveRecruitAryaText)
-TurnAlly(Arya)
 MURE 0x05
 NoFade
 ENDA
@@ -160,5 +174,5 @@ UNIT Shizonian Fighter Pascal Level(8,Enemy,True) [8,10] 0x00 0x00 0x00 0x00 [De
 UNIT Shizonian Myrmidon Pascal Level(10,Enemy,True) [2,8] 0x00 0x00 0x00 0x00 [IronSword] NoAI
 UNIT Shizonian Fighter Pascal Level(12,Enemy,True) [5,8] 0x00 0x00 0x00 0x00 [HandAxe] DouseTorchesAI
 UNIT Shizonian Soldier Pascal Level(11,Enemy,True) [6,5] 0x00 0x00 0x00 0x00 [IronLance] NoAI
-UNIT Arya Myrmidon_F Pascal Level(7,Enemy,True) [19,3] 0x00 0x00 0x00 0x00 [SteelSword,Shamshir] AttackInRangeAI
+UNIT Arya Myrmidon_F Pascal Level(7,Enemy,True) [19,3] 0x00 0x00 0x00 0x00 [SteelSword,Shamshir] [TalkToTactAI1,DontMove,0x0,0x0]
 EndUnit

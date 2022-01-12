@@ -69,17 +69,17 @@ These fools... Trying to escape the wrath of a Grand Magus? I wouldn't want to b
 You're... One of the Arcanians... I have to kill you!
 [MidRight][MoveRight]Wait! I can see your hesitancy.
 [MidLeft][MidLeft]What!? Don't try to distract me!
-[MidRight]Do you honestly believe in what you're doing? Killing a few innocent people who were scapegoated by a ruler they trusted!?
+[Right]Do you honestly believe in what you're doing? Killing a few innocent people who were scapegoated by a ruler they trusted!?
 [MidLeft]It's not my job to care why it is you have to die! I have a job to do...
-[MidRight]What's your name?
+[Right]What's your name?
 [MidLeft]Why should I tell you?
-[MidRight]You don't have to do this. This war... This conflict... None of it matters, does it? Yet here you are, blindly propagating it.
+[Right]You don't have to do this. This war... This conflict... None of it matters, does it? Yet here you are, blindly propagating it.
 [MidLeft]... Arya. My name is Arya.
-[MidRight]Mine's [Tact]. You should come with us.
+[Right]Mine's [Tact]. You should come with us.
 [MidLeft]But...
-[MidRight]Make your choice. But you're not gonna kill me, are you?
+[Right]Make your choice. But you're not gonna kill me, are you?
 [MidLeft]...
-[MidRight]Then your choice is made.
+[Right]Then your choice is made.
 [MidLeft]Dammit all... Fine, fine! I'll help you out.[X]
 
 ## Mage3LeaveAryaPascalBattleText
