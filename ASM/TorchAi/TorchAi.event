@@ -1,0 +1,17 @@
+
+// Make an AI script that makes enemies try to douse Tellius torches.
+// Eh I'll assume Stan AI defs are installed.
+
+#define AiMoveTowardsTellisTorch "AiMoveTowardsTerrain(0)"
+
+#include "TorchAi.lyn.event"
+
+ALIGN 4
+DouseTorchAiScript:
+MESSAGE Torch script is at CURRENTOFFSET
+	AiMoveTowardsTellisTorch
+	AiGotoIfNE(0,2) // Restart if we're not adjacent to a torch.
+	
+	AiFunc(DouseAdjacentTelliusTorch)
+	AiRestart
+InjectAi1(DouseTorchesAI1,DouseTorchAiScript)

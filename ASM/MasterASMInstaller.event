@@ -1,6 +1,8 @@
 
 #include "SkillSystem/EngineHacks/_MasterHackInstaller.event"
 
+#include "AiPerformExtension/AiPerformExt.event"
+
 ALIGN 4
 #include "AlwaysDisplayRangedAnimation/RangedAnimationbyTableInstaller.event"
 
@@ -244,8 +246,12 @@ ALIGN 4
 
 #include "SupportRework/SupportRework.event"
 
+#include "TalkAi/TalkAi.event"
+
 ALIGN 4
 #include "ToggleFixedGrowths/ToggleFixedGrowths.event"
+
+#include "TorchAi/TorchAi.event"
 
 #include "TriplePromotion/triple_promotions.event"
 

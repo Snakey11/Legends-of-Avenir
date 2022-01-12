@@ -1,0 +1,68 @@
+#ifndef AISCR_DEFINITIONS_INCLUDED
+#define AISCR_DEFINITIONS_INCLUDED
+
+// "Extensions/AI Assembly.txt" is very much similar to this
+// But it has been broken for a while, and is also generally incomplete
+
+// However, this is meant with exclusively FE8 in mind.
+// While "Extensions/AI Assembly.txt" supports FE7 too.
+
+#define InjectAi1(aId, aScr) "PUSH; ORG 0x5A9184+(4*(aId)); POIN (aScr); POP"
+#define InjectAi2(aId, aScr) "PUSH; ORG 0x5A9138+(4*(aId)); POIN (aScr); POP"
+
+#define AiResultAddr 0x0203AA8A
+
+#define AiGotoIfHI(aLabel, aLAddr, aRValue)    "BYTE 0x00 0 0xFF (aLabel); WORD (aRValue) (aLAddr) 0"
+#define AiGotoIfHS(aLabel, aLAddr, aRValue)    "BYTE 0x00 1 0xFF (aLabel); WORD (aRValue) (aLAddr) 0"
+#define AiGotoIfEQ(aLabel, aLAddr, aRValue)    "BYTE 0x00 2 0xFF (aLabel); WORD (aRValue) (aLAddr) 0"
+#define AiGotoIfLS(aLabel, aLAddr, aRValue)    "BYTE 0x00 3 0xFF (aLabel); WORD (aRValue) (aLAddr) 0"
+#define AiGotoIfLO(aLabel, aLAddr, aRValue)    "BYTE 0x00 4 0xFF (aLabel); WORD (aRValue) (aLAddr) 0"
+#define AiGotoIfNE(aLabel, aLAddr, aRValue)    "BYTE 0x00 5 0xFF (aLabel); WORD (aRValue) (aLAddr) 0"
+#define AiGotoIfHI(aLabel, aRValue)            "BYTE 0x00 0 0xFF (aLabel); WORD (aRValue) (AiResultAddr) 0"
+#define AiGotoIfHS(aLabel, aRValue)            "BYTE 0x00 1 0xFF (aLabel); WORD (aRValue) (AiResultAddr) 0"
+#define AiGotoIfEQ(aLabel, aRValue)            "BYTE 0x00 2 0xFF (aLabel); WORD (aRValue) (AiResultAddr) 0"
+#define AiGotoIfLS(aLabel, aRValue)            "BYTE 0x00 3 0xFF (aLabel); WORD (aRValue) (AiResultAddr) 0"
+#define AiGotoIfLO(aLabel, aRValue)            "BYTE 0x00 4 0xFF (aLabel); WORD (aRValue) (AiResultAddr) 0"
+#define AiGotoIfNE(aLabel, aRValue)            "BYTE 0x00 5 0xFF (aLabel); WORD (aRValue) (AiResultAddr) 0"
+#define AiFunc(aFuncAddr, aParamAddr)          "BYTE 0x01 0 0xFF 0; WORD 0; POIN (aFuncAddr) (aParamAddr)"
+#define AiFunc(aFuncAddr)                      "BYTE 0x01 0 0xFF 0; WORD 0; POIN (aFuncAddr); WORD 0"
+#define AiChangeAi(aNewAi1, aNewAi2)           "BYTE 0x02 (aNewAi1) (aNewAi2) 0; WORD 0 0 0"
+#define AiGoto(aLabel)                         "BYTE 0x03 0 0xFF (aLabel); WORD 0 0 0"
+#define AiMaybeAttackCharacter(aChar, aChance) "BYTE 0x04 (aChance) 0xFF 0; WORD (aChar) 0 0"
+#define AiAttackCharacter(aChar)               "BYTE 0x04 100 0xFF 0; WORD (aChar) 0 0"
+#define AiMaybeAttackIgnoring(aList, aChance)  "BYTE 0x05 (aChance) 0xFF 0; WORD 0; POIN (aList); WORD 0"
+#define AiAttackIgnoring(aList)                "BYTE 0x05 100 0xFF 0; WORD 0; POIN (aList); WORD 0"
+#define AiMaybeAttack(aChance)                 "BYTE 0x05 (aChance) 0xFF 0; WORD 0 0 0"
+#define AiAttack                               "BYTE 0x05 100 0xFF 0; WORD 0 0 0"
+#define AiDoNothing                            "BYTE 0x06 0 0xFF 0; WORD 0 0 0"
+#define AiMaybeAttackInPlace(aChance)          "BYTE 0x07 (aChance) 0xFF 0; WORD 0 0 0"
+#define AiAttackInPlace                        "BYTE 0x07 100 0xFF 0; WORD 0 0 0"
+#define AiMaybeAttackClass(aClassId, aChance)  "BYTE 0x08 (aChance) 0xFF 0; WORD (aClassId) 0 0"
+#define AiAttackClass(aClassId)                "BYTE 0x08 100 0xFF 0; WORD (aClassId) 0 0"
+#define AiMaybeStaffOnly(aChance)              "BYTE 0x09 0 0xFF 0; WORD 0 0 0"
+#define AiMoveTowardsPoint(aX, aY, aSafety)    "BYTE 0x0C (aX) (aSafety) (aY); WORD 0 0 0"
+#define AiMoveTowardsPoint(aX, aY)             "BYTE 0x0C (aX) 0xFF (aY); WORD 0 0 0"
+#define AiMoveTowardsCharacter(aChar, aSafety) "BYTE 0x0D 0 (aSafety) 0; WORD (aChar) 0 0"
+#define AiMoveTowardsCharacter(aChar)          "BYTE 0x0D 0 0xFF 0; WORD (aChar) 0 0"
+#define AiMoveTowardsClass(aClassId, aSafety)  "BYTE 0x0F 0 (aSafety) 0; WORD (aClassId) 0 0"
+#define AiMoveTowardsClass(aClassId)           "BYTE 0x0F 0 0xFF 0; WORD (aClassId) 0 0"
+#define AiLoot(aMaxCount)                      "BYTE 0x10 0 0xFF (aMaxCount); WORD 0 0 0"
+#define AiLoot                                 "BYTE 0x10 0 0xFF 0; WORD 0 0 0"
+#define AiMoveTowardsSafety                    "BYTE 0x11 0 0xFF 0; WORD 0 0 0"
+#define AiMoveTowardsEnemyIgnoring(aList, aSafety) "BYTE 0x12 0 (aSafety) 0; WORD 0; POIN (aList); WORD 0"
+#define AiMoveTowardsEnemyIgnoring(aList)      "BYTE 0x12 0 0xFF 0; WORD 0; POIN (aList); WORD 0"
+#define AiMoveTowardsEnemy(aSafety)            "BYTE 0x12 0 (aSafety) 0; WORD 0 0 0"
+#define AiMoveTowardsEnemy                     "BYTE 0x12 0 0xFF 0; WORD 0 0 0"
+#define AiMoveTowardsEnemyNoWallsIgnoring(aList) "BYTE 0x13 0 0xFF 0; WORD 0; POIN (aList); WORD 0"
+#define AiMoveTowardsEnemyNoWalls              "BYTE 0x13 0 0xFF 0; WORD 0 0 0"
+#define AiMoveRandom                           "BYTE 0x16 0 0xFF 0; WORD 0 0 0"
+#define AiEscape                               "BYTE 0x17 0 0xFF 0; WORD 0 0 0"
+#define AiTargetObstacles                      "BYTE 0x18 0 0xFF 0; WORD 0 0 0"
+#define AiMoveTowardsTerrain(aTerrainId)       "BYTE 0x19 0 0xFF (aTerrainId); WORD 0 0 0"
+#define AiMoveTowardsTerrains(aList)           "BYTE 0x1A 0 0xFF 0; WORD 0; POIN (aList); WORD 0"
+#define AiNop                                  "BYTE 0x1B 0 0xFF 0; WORD 0 0 0"
+#define AiLabel(aId)                           "BYTE 0x1C 0 0xFF (aId); WORD 0 0 0"
+
+#define AiRestart "AiGoto(0)"
+
+#endif // AISCR_DEFINITIONS_INCLUDED

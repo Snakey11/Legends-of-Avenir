@@ -1,0 +1,49 @@
+#ifndef TALKAI_INCLUDED
+#define TALKAI_INCLUDED
+
+// TalkAi
+// hack by Stan
+
+// This provides the necessary elements to define your own "approach and talk to character" ai through a macro
+
+/* Example:
+
+ALIGN 4
+DanAi:
+	AiTryTalkToCharacter(Eirika)
+
+	InjectAi2(CH10_DAN_AI2, DanAi) // Use whatever macro you use to inject AIs
+
+*/
+
+/* Note:
+
+The AiTryTalkToCharacter(aCharacter) macro is equivalent to:
+{
+	AiMoveUntilAdjacentTo(aCharacter)
+	AiGotoIfNE(0, 2)
+
+	/* moved adjacent */
+	AiFunc(AiTransformMoveIntoTalk, TalkAiCharacterParam)
+
+	AiRestart
+
+TalkAiCharacterParam:
+	BYTE aCharacter
+}
+
+If you need more complex ai behavior from your unit, you can instead of using the macro edit this above to fit your needs.
+
+*/
+
+#include "Src/TalkAi.lyn.event"
+
+#define AiTryTalkToCharacter(aCharacter) "{ BYTE 0x0D 100 0xFF 0; WORD (aCharacter) 0 0; BYTE 0x00 5 0xFF 0; WORD 2 0x0203AA8A 0; BYTE 0x01 0 0xFF 0; WORD 0; POIN (AiTransformMoveIntoTalk) (TalkAiCharacterParam); BYTE 0x03 0 0xFF 0; WORD 0 0 0; TalkAiCharacterParam: BYTE (aCharacter); }"
+
+ALIGN 4
+TalkToTactAiScript:
+	AiTryTalkToCharacter(Xena)
+	
+	InjectAi1(TalkToTactAI1,TalkToTactAiScript)
+
+#endif // TALKAI_INCLUDED

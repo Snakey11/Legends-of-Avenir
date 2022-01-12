@@ -1,0 +1,29 @@
+#ifndef AIPERFORMEXT_INCLUDED
+#define AIPERFORMEXT_INCLUDED
+
+// Extends the number of AI actions ("performs") the game can handle, and provide convenient ways of injecting new handlers
+// hack by Stan
+
+#ifndef PERFORM_EXTENSION_COUNT
+  #define PERFORM_EXTENSION_COUNT 10
+#endif // PERFORM_EXTENSION_COUNT
+
+#define InjectAiPerformer(aId, apFunc) "PUSH; ORG AiPerfomExtensionTable+4*((aId)-14); POIN (apFunc); POP"
+
+ALIGN 4
+AiPerfomExtensionTable:
+	ORG AiPerfomExtensionTable + 4*(PERFORM_EXTENSION_COUNT)
+
+#include "Src/PerformHook.lyn.event"
+
+PUSH
+
+	ORG $03A504 // Allow for extended performs
+		WORD $47184B00; POIN PerformHook
+
+	ORG $03A3E6 // Don't have the target cursor explode for this kind of stuff
+		BYTE $77
+
+POP
+
+#endif // AIPERFORMEXT_INCLUDED
