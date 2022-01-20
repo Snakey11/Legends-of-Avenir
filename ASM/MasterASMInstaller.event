@@ -212,7 +212,7 @@ BYTE 0x6E False  0x67 True  0x00 0x00
 
 #include "PrepForEnd/PrepForEnd.lyn.event"
 PrepForEndItemList:
-BYTE SteelSword SteelLance SteelAxe SteelShortbow 0x00 Elwind Divine Worm
+BYTE IronSword IronLance IronAxe IronShortbow 0x00 Wind Lightning Flux
 
 #include "PrepScreen/PrepScreen.event"
 

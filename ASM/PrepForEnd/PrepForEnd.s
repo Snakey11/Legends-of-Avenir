@@ -7,75 +7,73 @@
     .short 0xF800
 .endm
 
+.equ GetConvoyItemArray, 0x08031501
+.equ GetUnitEquippedWeapon, 0x08016B28
+.equ GetItemType, 0x08017548
+.equ CanUnitUseWeaponNow, 0x08016574
+.equ memset, 0x080D1C6C
+.equ GetUnit, 0x8019430
+.equ gChapterData, 0x0202BCF0
+
 .global PrepForEnd
 .type PrepForEnd, %function
-.global MaxMercenaryHP
-.type MaxMercenaryHP, %function
-
-PrepForEnd:
-push { r4, r5, lr }
-ldr r0, =#0x0203A81C
-mov r1, #0x00
-mov r2, #0x00
-StartLoop:
-strh r2, [ r0, r1 ]
-add r1, r1, #0x01
-cmp r1, #100
-ble StartLoop
-@ Let's also clear the cashpile.
-ldr r0, =0x0202BCF0
+PrepForEnd: @ ASMCed at the end of a route to reset various things and make sure all player units have weapons they can use.
+push { r4, lr }
+@ Let's clear the cashpile.
+ldr r0, =gChapterData
 mov r1, #0x00
 str r1, [ r0, #0x08 ]
-@ Let's also make sure that Tact has a usable weapon. I think that it's safe to assume that Tact will ALWAYS occupy the first character struct.
-ldr r4, =#0x0202BE4C
-blh #0x08016B28, r1 @ Tact's equiped weapon in r0
-mov r5, r0
-blh #0x08017548, r1 @ Weapon type in r0
-cmp r0, #0x03
-bne NotBow
-	@ Tact has a bow equiped... let's ensure that it's a shortbow.
-	ldr r1, =PrepForEndItemList
-	ldrb r0, [ r1, r0 ]
-	mov r1, #0x10
-	lsl r1, #0x08
-	orr r0, r1
-	strh r0, [ r4, #0x1E ] @ Adds the item to Tact's inventory.
-	b GoodWeapon
-NotBow:
-	cmp r5, #0x00
-	bne GoodWeapon
-		@ Tact doesn't have a usable weapon equiped.
-		add r4, #0x28 @ Beginning of sword rank
-		mov r0, #0x00 @ r0 is a counter and also the current rank I'm checking.
-		sub r0, #0x01
-		StartRankLoop:
-		add r0, #0x01
-		ldrb r1, [ r4, r0 ]
-		cmp r1, #0x00
-		beq StartRankLoop
-		@ This is a usable weapon type.
-		ldr r1, =PrepForEndItemList
-		ldrb r0, [ r1, r0 ] @ Load this ranks, weapon to add.
-		mov r1, #0x10
-		lsl r1, #0x08
-		orr r0, r1
-		sub r4, #0x28
-		strh r0, [ r4, #0x1E ]
-		
-GoodWeapon: @ Let's also clear the supply convoy.
-ldr r5, =#0x0203A81C
-mov r0, #0 @ r0 is a counter.
-mov r1, #0x00
-ConvoyLoop:
-ldrh r2, [ r5, r0 ]
-cmp r2, #0x00
-beq End @ End if we've hit the end of the items.
-strh r1, [ r5, r0 ]
-add r0, #1
-cmp r0, #202 @ Return if we haven't hit 100 items.
-bne ConvoyLoop
 
-End:
+@ Let's also clear the supply convoy.
+blh GetConvoyItemArray, r0 @ Destination.
+mov r1, #0x00 @ Byte to fill.
+mov r2, #200 @ Length.
+blh memset, r3
+
+@ For every existing player unit, give them an item that they can use.
+mov r4, #0x00
+InventoryLoop:
+	cmp r4, #62
+	bgt EndInventoryLoop
+	mov r0, r4
+	blh GetUnit, r1
+	add r4, r4, #0x01
+	cmp r0, #0x00
+	beq InventoryLoop @ Reiterate for a null unit.
+	ldr r1, [ r0 ]
+	cmp r1, #0x00
+	beq InventoryLoop @ Reiterate for a unit that does not exist.
+		bl TryGiveUnitUsableWeapon
+		b InventoryLoop
+EndInventoryLoop:
+pop { r4 }
+pop { r0 }
+bx r0
+.ltorg
+
+TryGiveUnitUsableWeapon: @ r0 = Unit*. If the unit has a weapon equipped, do nothing. Otherwise, give them one that they can use.
+push { r4, r5, lr }
+mov r4, r0 @ Unit.
+cmp r0, #0x00
+beq EndTryGiveUnitUsableWeapon @ In case we were given a null unit, return.
+	blh GetUnitEquippedWeapon, r1
+	cmp r0, #0x00
+	bne EndTryGiveUnitUsableWeapon @ If they have a weapon they can use already, end.
+		@ They don't have a weapon they can use. Give them the first one they can use from the u8 array, PrepForEndItemList.
+		ldr r5, =PrepForEndItemList
+		TryGiveUnitUsableWeaponLoop:
+			mov r0, r4
+			ldrb r1, [ r5 ]
+			blh CanUnitUseWeaponNow, r2
+			add r5, r5, #0x01
+			cmp r0, #0x00
+			beq TryGiveUnitUsableWeaponLoop @ Try again if they can't use this weapon.
+				@ Give them this weapon. Just force it into inventory slot 0x1.
+				sub r0, r5, #0x01
+				ldrb r0, [ r0 ]
+				strh r0, [ r4, #0x1E ]
+EndTryGiveUnitUsableWeapon:
 pop { r4, r5 }
 pop { r0 }
 bx r0
+.ltorg
