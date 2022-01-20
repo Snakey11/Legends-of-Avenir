@@ -26,15 +26,10 @@ mov	r4,#1
 unsetLoop:
 
 @unset the bit for this skill in the debuff table entry for the unit
-mov r0,r4
-ldr r2,=GetUnit
-mov lr,r2
-.short 0xf800
-cmp r0,#0
-beq unsetReit
-ldr	r2,DebuffTable
-ldr	r1,EntrySize
-mul	r1,r4
+ldr	r0,DebuffTable
+mov	r1,r4
+ldr	r2,EntrySize
+mul	r1,r2
 add	r0,r1		@debuff table entry for this unit
 push	{r0}
 ldr	r0,ArmorMarchBit
