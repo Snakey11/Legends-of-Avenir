@@ -39,12 +39,9 @@ mov lr,r2
 cmp r0,#0
 beq unsetReit
 ldr	r2,DebuffTable
-mov lr,r2
-.short 0xf800
-@ mov	r1,r4
-@ ldr	r2,EntrySize
-@ mul	r1,r2
-@ add	r0,r1		@debuff table entry for this unit
+ldr	r1,EntrySize
+mul	r1,r4
+add	r0,r1		@debuff table entry for this unit
 push	{r0}
 ldr	r0,ArmorMarchBit
 mov	r1,#8

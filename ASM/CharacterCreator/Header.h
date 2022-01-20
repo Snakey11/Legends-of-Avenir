@@ -204,8 +204,7 @@ extern const struct
 {
 	u8 base, growth;
 } gCreatorBoonBaneEffects[];
-extern const u16 gBoonMenuItemErrorText;
-extern const u16 gBaneMenuItemErrorText;
+extern const u16 gBoonMenuItemErrorText, gBaneMenuItemErrorText, gBoonMagicLimitText, gBaneMagicLimitText;
 const struct
 {
 	u8 growthID, stat;

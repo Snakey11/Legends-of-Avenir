@@ -18,7 +18,7 @@ ArmorMarchSkill: //set a bit in the debuff table's entry for the refreshed unit
 #incbin "armormarchskill.dmp"
 POIN AuraSkillCheck
 WORD ArmorMarchID
-WORD DebuffTable
+POIN DebuffTable
 WORD ArmorMarchBit
 WORD 8 //size of a debuff table entry
 POIN SkillTester

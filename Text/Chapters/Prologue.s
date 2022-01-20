@@ -201,6 +201,14 @@ this stat as a boon![X]
 You've already chosen this[NL]
 stat as a bane![X]
 
+## BoonMagicLimitText
+A magic boon is not[NL]
+available for this route.[X]
+
+## BaneMagicLimitText
+A magic bane is not[NL]
+available for this route.[X]
+
 ## PegasusKnightNameNotNarrowText
 Pegasus Kn.[X]
 

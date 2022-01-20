@@ -110,6 +110,7 @@
     WORD DebuffTable
     WORD DebuffTableSize
 
+
 #else // _FE8_
   ERROR Suspend Expansion and Debuff hack is for FE8
 #endif // _FE8_

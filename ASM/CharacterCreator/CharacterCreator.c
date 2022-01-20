@@ -124,11 +124,11 @@ void CreatorStartMenu(CreatorProc* proc)
 			CreatorBoonBaneDraw(proc);
 			if ( proc->currMenu == BoonMenu )
 			{
-				if ( proc->boon ) { newMenu->commandIndex = ( proc->boon < Mag ? proc->boon-1 : proc->boon-2 ); }
+				newMenu->commandIndex = ( proc->boon ? proc->boon-1 : 0 );
 			}
 			else // if ( proc->currMenu == BaneMenu )
 			{
-				if ( proc->bane ) { newMenu->commandIndex = ( proc->bane < Mag ? proc->bane-1 : proc->bane-2 ); }
+				newMenu->commandIndex = ( proc->bane ? proc->bane-1 : 0);
 			}
 			break;
 	}
@@ -139,18 +139,16 @@ int CreatorSubmenuUsability(const MenuCommandDefinition* command, int index)
 {
 	CreatorProc* proc = (CreatorProc*)ProcFind(&gCreatorProc);
 	if ( proc->currMenu == RouteMenu && !CreatorShouldRouteBeAvailable[index] ) { return 3; }
-	// Don't allow a magic bane/boon unless we're a magic class.
-	if ( ( proc->currMenu == BaneMenu || proc->currMenu == BoonMenu ) && index == 2 && proc->route != 3 ) { return 3; }
 	if ( proc->currMenu == BoonMenu )
 	{
-		if ( proc->bane == index+1 ) { return 2; }
-		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
+		if ( proc->bane == index+1 ) { return 2; } // Don't allow them to pick this boon if it's their bane.
+		else if ( index == 2 && proc->route != Mage ) { return 2; } // Disallow mag on non-mage routes.
 		else { return 1; }
 	}
 	if ( proc->currMenu == BaneMenu )
 	{
-		if ( proc->boon == index+1 ) { return 2; }
-		else if ((index == 1 && proc->route == Mage) || (index == 2 && proc->route != Mage)) { return 3; } // Disallow str/mag on mage/non-mage routes.
+		if ( proc->boon == index+1 ) { return 2; } // Don't allow them to pick this boon if it's their bane.
+		else if ( index == 2 && proc->route != Mage ) { return 2; } // Disallow mag on non-mage routes.
 		else { return 1; }
 	}
 	return 1;
@@ -200,6 +198,11 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
 		case BoonMenu:
 			if ( commandProc->availability == 2 )
 			{
+				if ( commandProc->commandDefinitionIndex == 2 && creator->route != Mage )
+				{
+					MenuCallHelpBox(proc,gBaneMagicLimitText);
+					return ME_PLAY_BOOP;
+				}
 				MenuCallHelpBox(proc,gBoonMenuItemErrorText);
 				return ME_PLAY_BOOP;
 			}
@@ -209,6 +212,11 @@ int CreatorSubmenuEffect(MenuProc* proc, MenuCommandProc* commandProc)
 		case BaneMenu:
 			if ( commandProc->availability == 2 )
 			{
+				if ( commandProc->commandDefinitionIndex == 2 && creator->route != Mage )
+				{
+					MenuCallHelpBox(proc,gBaneMagicLimitText);
+					return ME_PLAY_BOOP;
+				}
 				MenuCallHelpBox(proc,gBaneMenuItemErrorText);
 				return ME_PLAY_BOOP;
 			}

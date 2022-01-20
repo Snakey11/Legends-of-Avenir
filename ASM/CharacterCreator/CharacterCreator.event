@@ -257,7 +257,7 @@
 	
 	ALIGN 4
 	gCreatorBoonBaneMenuDefs:
-	BYTE 2 3 8 0
+	BYTE 2 2 8 0
 	WORD 1
 	POIN gCreatorBoonBaneMenuCommands
 	POIN 0 0 0 CreatorRegressMenu 0 0
@@ -293,6 +293,10 @@
 	SHORT BaneMenuItemErrorText
 	gBoonMenuItemErrorText:
 	SHORT BoonMenuItemErrorText
+	gBoonMagicLimitText:
+	SHORT BoonMagicLimitText
+	gBaneMagicLimitText:
+	SHORT BaneMagicLimitText
 	
 	/*
 	What do we want displayed on each screen?
