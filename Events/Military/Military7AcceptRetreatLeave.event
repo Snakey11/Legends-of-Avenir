@@ -164,10 +164,10 @@ MOVE 0x0 Adeline [0,25]
 ENUN
 STAL 0x08
 StartBattle
-NormalDamage(13,0)
+NormalDamage(21,0)
 MissedAttack(0,0)
 EndAttack
-SetBattleNumbers(84,13,5,0xFF,0xFF,0xFF)
+SetBattleNumbers(84,21,5,0xFF,0xFF,0xFF)
 FIG1 Adeline Derek 0x0
 STAL 0x10
 MOVE 0x0 Derek [0,24]
