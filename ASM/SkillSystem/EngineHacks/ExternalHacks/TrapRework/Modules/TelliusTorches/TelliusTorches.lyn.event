@@ -1,7 +1,8 @@
 ALIGN 4
 PUSH
 ORG CURRENTOFFSET+$1;TelliusTorchInitialization:
-ORG CURRENTOFFSET+$9c;TelliusTorchUsability:
+ORG CURRENTOFFSET+$2c;GetAdjacentTelliusTorch:
+ORG CURRENTOFFSET+$70;TelliusTorchUsability:
 ORG CURRENTOFFSET+$2c;TelliusTorchEffect:
 ORG CURRENTOFFSET+$34;TelliusTorchMapSpriteFunc:
 ORG CURRENTOFFSET+$2c;ToggleTelliusTorchAt:

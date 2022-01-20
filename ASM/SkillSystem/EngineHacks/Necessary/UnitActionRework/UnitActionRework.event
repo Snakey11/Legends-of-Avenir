@@ -84,5 +84,6 @@ pActionRoutineTable:
 ORG (pActionRoutineTable+ACTION_TABLE_SIZE*4)
 
 SetUnitAction(0x28,ActionRoutine(FirstAidAction|1))
+SetUnitAction(0x29,ActionRoutine(DouseAdjacentTelliusTorch|1))
 
 #endif // HAX_ACTION_APPLICATION_REWORK_EVENT

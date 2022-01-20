@@ -90,7 +90,7 @@ STAL 0x10
 SVAL 0x1 Coords(12,11)
 ASMC ToggleTelliusTorchAt|1 // Douse the torch at [12,11].
 STAL 0x50
-MOVE 0x0 Arya [5,3] // 12,15
+MOVE 0x0 Arya [12,15]
 ENUN
 STAL 0x10
 CAM1 [1,1]
@@ -148,6 +148,7 @@ UNIT Ajax 0x00 0x00 Level(1,Ally,True) [3,4] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 Meanies1:
+UNIT Shizonian Mage Pascal Level(9,Enemy,True) [6,14] 0x00 0x00 0x00 0x00 [Fire] DouseTorchesAI
 UNIT Pascal Sniper Pascal Level(2,Enemy,True) [23,3] Drop 0x00 0x00 0x00 [SteelShortbow,AngelicRobe] GuardAI
 UNIT Shizonian Soldier Pascal Level(9,Enemy,True) [19,2] 0x00 0x00 0x00 0x00 [IronLance] ChaseOnceApproachedAI
 UNIT Shizonian Mercenary Pascal Level(11,Enemy,True) [22,2] 0x00 0x00 0x00 0x00 [SteelSword] DouseTorchesAI
@@ -169,7 +170,7 @@ UNIT Shizonian PegasusKnight Pascal Level(12,Enemy,True) [23,18] 0x00 0x00 0x00 
 UNIT Shizonian Monk Pascal Level(11,Enemy,True) [3,15] Drop 0x00 0x00 0x00 [Exordium,SpiritDust] AttackInRangeAI
 UNIT Shizonian Knight Pascal Level(10,Enemy,True) [5,14] 0x00 0x00 0x00 0x00 [ShortSpear] GuardAI
 UNIT Shizonian Soldier Pascal Level(9,Enemy,True) [4,11] 0x00 0x00 0x00 0x00 [Dragonspear] AttackInRangeAI
-UNIT Shizonian Mage Pascal Level(9,Enemy,True) [7,14] 0x00 0x00 0x00 0x00 [Fire] DouseTorchesAI
+
 UNIT Shizonian Fighter Pascal Level(8,Enemy,True) [8,10] 0x00 0x00 0x00 0x00 [DevilAxe] NoAI
 UNIT Shizonian Myrmidon Pascal Level(10,Enemy,True) [2,8] 0x00 0x00 0x00 0x00 [IronSword] NoAI
 UNIT Shizonian Fighter Pascal Level(12,Enemy,True) [5,8] 0x00 0x00 0x00 0x00 [HandAxe] DouseTorchesAI

@@ -4,6 +4,9 @@
 .global TelliusTorchInitialization
 .type TelliusTorchInitialization, %function
 
+.global GetAdjacentTelliusTorch
+.type GetAdjacentTelliusTorch, %function
+
 .global TelliusTorchUsability
 .type TelliusTorchUsability, %function
 
