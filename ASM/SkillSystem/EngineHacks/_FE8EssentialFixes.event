@@ -140,6 +140,14 @@ ORG $3E320
 //Add a check for r0=0 in the decompression routine so that no$gba doesn't crash when trying to decompress something it shouldn't (Tequila)
 ORG $12F52
   SHORT $2800 $D014 $22FA $0612 $1852 $4B0A $2501 $429A $D800 $2500 $4A09 $7803 $24F0 $4023 $08DB $195B $009B $18D2 $6812 $46C0 $46C0
+  
+//Make attacks at 2-15 range not use long-range anims by default (by Sme)
+//use the Uncounterable flag for long-range anims instead
+PUSH
+  ORG $57314
+  BYTE 0xF
+POP
+
 /*
 #include "Extensions/Hack Installation.txt"
 //Anti-Huffman Patch, by Hextator and Nintenlord
