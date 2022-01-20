@@ -49,6 +49,11 @@ Fixed the halberdier HP overflow bug
 Fixed units stacking in the ending scene of Mercenary 7 Militia Wait Cesaria
 Nerfed Derek and buffed Knight Tact
 Rebalanced axe bro Tacts - they should be all about even in goodness now
+Fixed an edge case of Derek not actually dying correctly at the end of Military 7 Accept Retreat Kill bad ending
+Cleaned up the general ending handler function, so that should be more stable (included: Yvette not having a weapon for the same bad ending ^)
+Fixed custom classes not function properly with armor march
+Fixed in-battle range issues with bows at 4 range
+Fixed item stolen popup background not showing
 
 v2.2
 Brand new Merc->Cesaria route!
