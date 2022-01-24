@@ -343,13 +343,14 @@ static void DrawStatNames(TextHandle handle, char* string, int x, int y)
 
 static void ApplyBGBox(u16 map[32][32], TSA* tsa, int x, int y)
 {
-	for ( int i = 0 ; i < tsa->height+1 ; i++ )
+	/*for ( int i = 0 ; i < tsa->height+1 ; i++ )
 	{
 		for ( int j = 0 ; j < tsa->width+1 ; j++ )
 		{
 			map[i+y][j+x] = ((u16*)(tsa->tiles))[i*(tsa->width+1)+j];
 		}
-	}
+	}*/
+	BgMap_ApplyTsa(&map[y][x],tsa,0);
 }
 
 static int GetNumLines(char* string) // Basically count the number of NL codes.
