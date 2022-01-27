@@ -25,6 +25,7 @@
 .equ AiFillUnitStandingRangeWithWeapon, 0x803D880
 .equ FillMovementAndRangeMapForItem, 0x803B558
 .equ AiUpdateDecision, 0x8039C64
+.equ gActionData, 0x203A958
 
 .global AiSetActionToDouse
 .type AiSetActionToDouse, %function
@@ -36,12 +37,12 @@ ldr r0, =AiUpdateDecision
 mov lr, r0
 ldr r0, =gActionDouse
 ldrb r0, [ r0 ]
-mov r1, #0x00
 ldr r1, =gActiveUnit
+ldr r1, [ r1 ]
 ldrb r1, [ r1, #0x0B ]
-mov r2, #0xFF
-mov r3, #0xFF
-str r3, [ sp ]
+mov r2, #0xFF @ AI decision parameter 1. 0xFF for these means don't update.
+mov r3, #0xFF @ AI decision parameter 2.
+str r3, [ sp ] @ AI decision parameter 3.
 .short 0xF800
 
 mov r0, #0x01
@@ -50,18 +51,20 @@ pop { r1 }
 bx r1
 .ltorg
 
-.global DouseAdjacentTelliusTorch
-.type DouseAdjacentTelliusTorch, %function
-DouseAdjacentTelliusTorch: @ The AI active unit should be adjacent to a Tellius torch. Douse it. Called by unit action rework/
+.global ActionDouseTelliusTorch
+.type ActionDouseTelliusTorch, %function
+ActionDouseTelliusTorch: @ The AI active unit should be adjacent to a Tellius torch. Douse it. Called by unit action rework.
 push { lr }
-ldr r0, =gActiveUnit
-blh GetAdjacentTelliusTorch, r1
+ldr r1, =gActionData
+ldrb r0, [ r1, #0x0E ]
+ldrb r1, [ r1, #0x0F ]
+blh GetAdjacentTelliusTorchAt, r2
 cmp r0, #0x00
-beq EndAiDouseAdjacentTelliusTorch @ End if no torch is found.
+beq EndAiDouseTelliusTorch
 	mov r1, #0x00
-	strb r1, [ r0, #0x03 ] @ Current vision.
-EndAiDouseAdjacentTelliusTorch:
-mov r0, #0x01
+	strb r1, [ r0, #0x03 ]	@ Current vision.
+EndAiDouseTelliusTorch:
+mov r0, #0x00 @ Have the parent proc yield.
 pop { r1 }
 bx r1
 .ltorg
@@ -91,12 +94,11 @@ beq UnsuccessfulDouse
 	mov lr, r2
 	ldrb r1, [ r0, #0x01 ] @ Trap Y coord.
 	ldrb r0, [ r0 ] @ Trap X coord.
-	@mov r0, #0x00 @ X coord.
-	@mov r1, #0x00 @ Y coord.
 	mov r2, #0x00 @ ???
 	mov r3, #0xFF @ ???
 	str r2, [ sp ] @ ???
 	.short 0xF800
+	mov r3, #0x00 @ Store this to gAiScriptEndedFlag (unsuccessful).
 	b EndDouse
 
 UnsuccessfulDouse: @ No lit Tellius torch in range. We need to do this to report that there's nothing in range.
@@ -105,13 +107,14 @@ add r0, r0, #0x86
 mov r2, #0x00
 mov r1, #0x04
 strb r1, [ r0 ]
+mov r3, #0x01 @ Store this to gAiScriptEndedFlag.
 
 EndDouse:
 ldrb r0, [ r4 ]
 add r0, r0, #0x01
 strb r0, [ r4 ]
 
-mov r0, #0x00
+mov r0, r3
 add sp, sp, #0x04
 pop { r4 }
 pop { r1 }

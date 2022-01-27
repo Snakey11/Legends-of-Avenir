@@ -7,6 +7,9 @@
 .global GetAdjacentTelliusTorch
 .type GetAdjacentTelliusTorch, %function
 
+.global GetAdjacentTelliusTorchAt
+.type GetAdjacentTelliusTorchAt, %function
+
 .global TelliusTorchUsability
 .type TelliusTorchUsability, %function
 
@@ -57,46 +60,59 @@ bx r3
 
 .equ GetTrapAt,0x802e1f0
 
+
+
 GetAdjacentTelliusTorch: @r0 = unit we're checking for adjacency to
-push {r4-r6,r14}
-mov r4,r0
+push {r14}
+ldrb r1,[r0,#0x11] @ Unit Y.
+ldrb r0,[r0,#0x10] @ Unit X.
+bl GetAdjacentTelliusTorchAt
+pop {r1}
+bx r1
+.ltorg
 
-ldrb r5,[r4,#0x10] @x coord
-ldrb r6,[r4,#0x11] @y coord
+GetAdjacentTelliusTorchAt: @ r0 = X, r1 = Y.
+push {r5,r6,lr}
+mov r5,r0
+mov r6,r1
 
+CheckLeft:
 mov r0,r5
 sub r0,#1
 mov r1,r6
 blh GetTrapAt
-
-ldrb r1,[r0,#2]
-ldr r2,=TelliusTorchTrapIDLink
-ldrb r2,[r2]
-cmp r1,r2
-beq RetTrap
-
+cmp r0,#0x00
+beq CheckAbove
+	ldrb r1,[r0,#2]
+	ldr r2,=TelliusTorchTrapIDLink
+	ldrb r2,[r2]
+	cmp r1,r2
+	beq RetTrap
+CheckAbove:
 mov r0,r5
 mov r1,r6
 sub r1,#1
 blh GetTrapAt
-
-ldrb r1,[r0,#2]
-ldr r2,=TelliusTorchTrapIDLink
-ldrb r2,[r2]
-cmp r1,r2
-beq RetTrap
-
+cmp r0,#0x00
+beq CheckRight
+	ldrb r1,[r0,#2]
+	ldr r2,=TelliusTorchTrapIDLink
+	ldrb r2,[r2]
+	cmp r1,r2
+	beq RetTrap
+CheckRight:
 mov r0,r5
 add r0,#1
 mov r1,r6
 blh GetTrapAt
-
-ldrb r1,[r0,#2]
-ldr r2,=TelliusTorchTrapIDLink
-ldrb r2,[r2]
-cmp r1,r2
-beq RetTrap
-
+cmp r0,#0x00
+beq CheckBelow
+	ldrb r1,[r0,#2]
+	ldr r2,=TelliusTorchTrapIDLink
+	ldrb r2,[r2]
+	cmp r1,r2
+	beq RetTrap
+CheckBelow:
 mov r0,r5
 mov r1,r6
 add r1,#1
@@ -111,7 +127,7 @@ beq RetTrap
 mov r0,#0
 
 RetTrap:
-pop {r4-r6}
+pop {r5,r6}
 pop {r1}
 bx r1
 

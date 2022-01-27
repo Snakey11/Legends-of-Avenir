@@ -14,3 +14,4 @@ DouseTorchAiScript:
 		AiFunc(AiSetActionToDouse)
 		AiRestart
 InjectAi1(DouseTorchesAI1,DouseTorchAiScript)
+InjectAiPerformer(0x29,ActionDouseTelliusTorch)
