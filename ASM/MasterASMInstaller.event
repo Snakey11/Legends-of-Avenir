@@ -277,7 +277,7 @@ ALIGN 4
 	
 	ALIGN 4
 	WinButtonUsabilityCharacterList:
-	BYTE PlayerMMage PlayerMMonk PlayerMShaman PlayerFMage PlayerFMonk PlayerFShaman
+	BYTE PlayerMMage PlayerMMonk PlayerMShaman PlayerFMage PlayerFMonk PlayerFShaman PlayerMSpellsword PlayerFSpellsword
 	BYTE PlayerMCavalier PlayerMKnight PlayerMSoldier PlayerMWyvernRider PlayerMArcher PlayerFCavalier PlayerFKnight PlayerFSoldier PlayerFWyvernRider PlayerFArcher
 	BYTE PlayerMMercenary PlayerMMyrmidon PlayerMFighter PlayerMPirate PlayerMBrigand PlayerFMercenary PlayerFMyrmidon PlayerFPegasusKnight
 	
