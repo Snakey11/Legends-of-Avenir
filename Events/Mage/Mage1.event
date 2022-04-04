@@ -93,6 +93,7 @@ CLEE 0x0
 MUSC Victory_March
 SetBackground(0x33)
 Text(Mage1FinishChapterText)
+EnterStop
 STAL 0x60
 ASMC CallMage1Menu|1
 STAL 0x20
