@@ -27,6 +27,62 @@
 .equ AiUpdateDecision, 0x8039C64
 .equ gActionData, 0x203A958
 
+.global AiMoveTowardsTelliusTorch
+.type AiMoveTowardsTelliusTorch, %function
+AiMoveTowardsTelliusTorch: @ This function is modeled after AiScriptCmd_19_MoveTowardsTerrain (0x803D2D8).
+push { lr }
+sub sp, sp, #0x04
+
+/*ldr r0, =gActiveUnit
+ldr r0, [ r0 ]
+blh GetUnitMovCostTable, r1
+mov r2, r0
+ldr r0, =gActiveUnit
+ldr r0, [ r0 ]
+ldrb r1, [ r0, #0x11 ] @ Unit Y coordinate.
+ldrb r0, [ r0, #0x10 ] @ Unit X coordinate.
+blh MapRangeFillMovementFromPosition, r3*/
+ldr r0, =gActiveUnit
+ldr r0, [ r0 ]
+bl AiFindTelliusTorchInRange @ Returns a pointer to the torch trap struct. Return of NULL means none found.
+mov r1, #0x00 @ Unsuccessful.
+cmp r0, #0x00
+beq EndDouse
+	ldr r2, =AiTryMoveTowards
+	mov lr, r2
+	ldrb r1, [ r0, #0x01 ] @ Trap Y coord.
+	ldrb r0, [ r0 ] @ Trap X coord.
+	mov r2, #0x00 @ ???
+	mov r3, #0xFF @ ???
+	str r2, [ sp ] @ ???
+	.short 0xF800
+	mov r1, #0x01 @ Successful.
+EndDouse: @ Store our success result to the AI result field.
+ldr r0, =gAiData
+add r0, r0, #0x86
+strb r1, [ r0 ]
+
+@EndDouse:
+@ldrb r0, [ r4 ]
+@add r0, r0, #0x01
+@strb r0, [ r4 ]
+
+mov r0, #0x00 @ Store this to gAiScriptEndedFlag
+add sp, sp, #0x04
+pop { r1 }
+bx r1
+.ltorg
+
+.global AiTelliusYield
+.type AiTelliusYield, %function
+AiTelliusYield: @ There's probably a more clever way to do this but I just want to make the script wait for a turn.
+@ldr r0, =gAiScriptEndedFlag
+@mov r1, #0x01
+@strb r1, [ r0 ]
+mov r0, #0x01
+bx lr
+.ltorg
+
 .global AiSetActionToDouse
 .type AiSetActionToDouse, %function
 AiSetActionToDouse: @ Use AiUpdateDecision to make the unit take the "douse" action when they get to the torch.
@@ -45,7 +101,18 @@ mov r3, #0xFF @ AI decision parameter 2.
 str r3, [ sp ] @ AI decision parameter 3.
 .short 0xF800
 
-mov r0, #0x01
+@ While we're here, reset the ai counter.
+@ldr r1, =gActiveUnit
+@ldr r1, [ r1 ]
+@mov r0, #0x43
+@mov r2, #0x00
+@strb r2, [ r1, r0 ] @ AI1 counter.
+
+@ldrb r0, [ r4 ]
+@add r0, r0, #0x01
+@strb r0, [ r4 ]
+
+mov r0, #0x01 @ Set gAiScriptEndedFlag to end.
 add sp, sp, #0x04
 pop { r1 }
 bx r1
@@ -65,58 +132,6 @@ beq EndAiDouseTelliusTorch
 	strb r1, [ r0, #0x03 ]	@ Current vision.
 EndAiDouseTelliusTorch:
 mov r0, #0x00 @ Have the parent proc yield.
-pop { r1 }
-bx r1
-.ltorg
-
-.global AiMoveTowardsTelliusTorch
-.type AiMoveTowardsTelliusTorch, %function
-AiMoveTowardsTelliusTorch: @ This function is modeled after AiScriptCmd_19_MoveTowardsTerrain (0x803D2D8).
-push { r4, lr }
-sub sp, sp, #0x04
-mov r0, r4 @ Some parameter, counter, idk.
-
-/*ldr r0, =gActiveUnit
-ldr r0, [ r0 ]
-blh GetUnitMovCostTable, r1
-mov r2, r0
-ldr r0, =gActiveUnit
-ldr r0, [ r0 ]
-ldrb r1, [ r0, #0x11 ] @ Unit Y coordinate.
-ldrb r0, [ r0, #0x10 ] @ Unit X coordinate.
-blh MapRangeFillMovementFromPosition, r3*/
-ldr r0, =gActiveUnit
-ldr r0, [ r0 ]
-bl AiFindTelliusTorchInRange @ Returns a pointer to the torch trap struct. Return of NULL means none found.
-cmp r0, #0x00
-beq UnsuccessfulDouse
-	ldr r2, =AiTryMoveTowards
-	mov lr, r2
-	ldrb r1, [ r0, #0x01 ] @ Trap Y coord.
-	ldrb r0, [ r0 ] @ Trap X coord.
-	mov r2, #0x00 @ ???
-	mov r3, #0xFF @ ???
-	str r2, [ sp ] @ ???
-	.short 0xF800
-	mov r3, #0x00 @ Store this to gAiScriptEndedFlag (unsuccessful).
-	b EndDouse
-
-UnsuccessfulDouse: @ No lit Tellius torch in range. We need to do this to report that there's nothing in range.
-ldr r0, =gAiData
-add r0, r0, #0x86
-mov r2, #0x00
-mov r1, #0x04
-strb r1, [ r0 ]
-mov r3, #0x01 @ Store this to gAiScriptEndedFlag.
-
-EndDouse:
-ldrb r0, [ r4 ]
-add r0, r0, #0x01
-strb r0, [ r4 ]
-
-mov r0, r3
-add sp, sp, #0x04
-pop { r4 }
 pop { r1 }
 bx r1
 .ltorg

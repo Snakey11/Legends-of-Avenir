@@ -10,8 +10,13 @@ BYTE 0x29 // Referred to in unit action rework.
 ALIGN 4
 DouseTorchAiScript:
 	AiFunc(AiMoveTowardsTelliusTorch)
-	AiGotoIfNE(0,2) // Restart if we're not adjacent to a torch.
+	AiGotoIfNE(2,1) // Restart if we're not adjacent to a torch.
 		AiFunc(AiSetActionToDouse)
 		AiRestart
+	AiLabel(2)
+		AiFunc(AiTelliusYield)
+		AiRestart
+//AiRestart
+//AiRestart
 InjectAi1(DouseTorchesAI1,DouseTorchAiScript)
 InjectAiPerformer(0x29,ActionDouseTelliusTorch)
