@@ -129,7 +129,7 @@ BossEfil,EfilNameText,EfilDescText,BossEfil,Truerblade,EfilMug,0x0,WindAff,,12,1
 BossChristina,ChristinaNameText,ChristinaDescText,BossChristina,Cavalier_F,ChristinaMug,0x0,FireAff,,1,5,5,0,4,2,0,5,4,4,Drank,Brank,0,0,0,0,0,0,95,40,10,45,40,30,30,45,ChristinaSkillList|IsPointer,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
 BossForrest,ForrestNameText,ForrestDescText,BossForrest,Cavalier,ForrestMug,0x0,WindAff,,1,6,5,1,5,3,1,2,6,3,Brank,Crank,0,0,0,0,0,0,90,35,5,50,45,20,10,40,ForrestSkillList|IsPointer,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
 GenericBandit,BanditNameText,GenericBanditDescText,GenericBandit,0x0,0x0,0x3,NoAff,,1,6,5,5,2,3,2,0,2,2,0,0,0,0,0,0,0,0,85,35,60,20,30,15,5,35,0,0x0,0x0,,0x0,0x0,0x0,0x0,0x0,,,,0x0,0x0,0x0
-Pascal,PascalNameText,PascalDescText,Pascal,Sniper,PascalMug,0x0,FireAff,,1,9,6,6,4,5,4,0,4,1,0,0,0,Arank,0,0,0,0,90,35,30,30,40,20,0,30,0,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
+Pascal,PascalNameText,PascalDescText,Pascal,Sniper,PascalMug,0x0,FireAff,,1,11,7,9,7,5,4,1,4,1,0,0,0,Arank,0,0,0,0,90,35,30,30,40,20,0,30,0,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
 XeximClone,XeximNameText,XeximDescText,XeximClone,XeximClass,XeximMug,0x0,WindAff,,1,17,13,1,17,16,9,10,9,2,Srank,0,0,Arank,0,0,0,0,85,35,15,55,40,15,30,40,XeximSkillList|IsPointer,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
 BossVal,ValNameText,ValDescText,BossVal,Druid_F,ValMug,0x0,DarkAff,,1,10,8,6,9,5,6,7,4,2,0,0,0,0,Drank,0,0,Arank,75,10,40,50,35,20,30,50,ValSkillList|IsPointer,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
 Clint,ClintNameText,ClintDescText,Clint,DreadFighter,ClintMug,0x0,ThunderAff,,1,9,8,10,7,6,6,7,7,4,Arank,0,0,0,0,0,0,Arank,90,45,35,30,35,15,25,45,0,0x0,0x0,,0x0,IsBoss,0x0,0x0,0x0,,,,0x0,0x0,0x0
