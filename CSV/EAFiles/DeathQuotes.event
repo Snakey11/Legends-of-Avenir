@@ -97,6 +97,8 @@ DeathQuote(BossUzkalis,MilitaryAcceptHold7,0x14,Military7AcceptHoldUzkalisDeathT
 DeathQuote(BossXavus,MilitaryAcceptHold7,0x15,Military7AcceptHoldXavusDeathText)
 
 DeathQuote(Lakshmi,Mage1,0x02,Mage1LakshmiDeathText)
+DeathQuote(Arya,MageLeave3,0x13,Mage3LeaveAryaDeathText)
+DeathQuote(Pascal,MageLeave3,0x02,Mage3LeavePascalDeathText)
 
 // Nonspecific death quotes come after.
 DeathQuote(Vicar,AllChapters,0x00,VicarDeathText)

@@ -1751,7 +1751,7 @@
 
 #define TalkToTactAI1 0x07
 #define DouseTorchesAI1 0x14
-#define DouseTorchesAI "[DouseTorchesAI1,0x0,0x0,0x0]"
+#define DouseTorchesAI "[DouseTorchesAI1,0x3,0x0,0x0]"
 //LabelEnd
 #define EndUnit UNIT // Necessary for folding
 #define EndA2 ENDA

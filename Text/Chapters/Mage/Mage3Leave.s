@@ -65,22 +65,32 @@ These fools... Trying to escape the wrath of a Grand Magus? I wouldn't want to b
 
 ## Mage3LeaveRecruitAryaText
 [ConversationText]
-[MidRight][LoadPlayer][MidLeft][LoadArya]
+[MidLeft][LoadXena][MidRight][LoadArya]
 You're... One of the Arcanians... I have to kill you!
-[MidRight][MoveRight]Wait! I can see your hesitancy.
-[MidLeft][MidLeft]What!? Don't try to distract me!
-[Right]Do you honestly believe in what you're doing? Killing a few innocent people who were scapegoated by a ruler they trusted!?
-[MidLeft]It's not my job to care why it is you have to die! I have a job to do...
-[Right]What's your name?
-[MidLeft]Why should I tell you?
-[Right]You don't have to do this. This war... This conflict... None of it matters, does it? Yet here you are, blindly propagating it.
-[MidLeft]... Arya. My name is Arya.
-[Right]Mine's [Tact]. You should come with us.
-[MidLeft]But...
-[Right]Make your choice. But you're not gonna kill me, are you?
-[MidLeft]...
-[Right]Then your choice is made.
-[MidLeft]Dammit all... Fine, fine! I'll help you out.[X]
+[MidLeft][MoveMidLeft]Wait! I can see your hesitancy.
+[MidRight][MoveMidRight]What!? Don't try to distract me!
+[MidLeft]Do you honestly believe in what you're doing? Killing a few innocent people who were scapegoated by a ruler they trusted!?
+[MidRight]It's not my job to care why it is you have to die! I have a job to do...
+[MidLeft]What's your name?
+[MidRight]Why should I tell you?
+[MidLeft]You don't have to do this. This war... This conflict... None of it matters, does it? Yet here you are, blindly propagating it.
+[MidRight]... Arya. My name is Arya.
+[MidLeft]Mine's Xena. You should come with us.
+[MidRight]But...
+[MidLeft]Make your choice. But you're not gonna kill me, are you?
+[MidRight]...
+[MidLeft]Then your choice is made.
+[MidRight]Dammit all... Fine, fine! I'll help you out.[X]
+
+## Mage3LeaveAryaBattleText
+[BattleText]
+[FarLeft][LoadArya]
+I have a job to do...[X]
+
+## Mage3LeaveAryaDeathText
+[BattleText]
+[FarLeft][LoadArya]
+Damn... I need to fall back...[X]
 
 ## Mage3LeaveAryaPascalBattleText
 [BattleText]
@@ -121,13 +131,54 @@ We managed to fend them off...
 [Right]Most of them.[MidLeft][LoadArya][FarRight][ClearFace][LoadPlayer]
 Wait, Zaheva!
 [Right]She's one of them!
-[MidLeft]She's right, [Tact]... I came here with the intention to kill all of you.
+[Left]She's right, [Tact]... I came here with the intention to kill all of you.
 [FarRight]But you realized the error in that!
-[MidLeft]The fact remains, I broke the laws of Shizon. One way or another, my fate is sealed.
+[Left]The fact remains, I broke the laws of Shizon. One way or another, my fate is sealed.
 [Right]In other words, I have her permission to lop her head off.[CloseSpeech][MidLeft][MoveLeft][FarLeft][LoadAjax]
 Zaheva, stop. We don't have time for this. Mistlain surely has Arcanians en route to confirm the deed is done. We don't have the energy to deal with that. Besides, adding Arya to our little group will only be helpful in the long run.
 [Right]And when she tries to kill us?
 [FarRight]She had every opportunity to kill me. Besides, why fake betraying the Shizonians only to get back at us later? It puts her at a disadvantage![Right][ClearFace][LoadXena]
 [Tact] is right. Let's trust Arya. She'll need people accompanying her now anyway.
-[MidLeft][Tact]... Thank you.
+[Left][Tact]... Thank you.
 [FarLeft]Now that that's figured out, we should get a brief bit of rest then try to get to Bacrun as fast as possible. I'll take watch. We'll set out in a few hours, before first light.[X]
+
+## Mage3LeaveEndingAryaDiedText
+[ConversationText]
+[FarRight][LoadPlayer][Right][LoadZaheva]
+[Tact], we've got a live one over here!
+[FarRight]What's [MidLeft][LoadArya][FarRight]your name?
+[MidLeft]I'm... Arya.
+[FarRight]You're one of the Shizonians?
+[MidLeft]Yes... I'm... sorry for attacking you...
+[Right]Can I just kill her?
+[FarRight]No, wait!
+[Right]Ugh, fine, you deal with her.[ClearFace]
+[FarRight]Arya, were you hired by Mistlain?
+[MidLeft]I don't know... Pascal was leading this operation... But I can see that you all aren't evil.[CloseSpeech][FarRight][MoveMidRight]
+We were betrayed by Mistlain, and now he's trying to hunt us down.
+[MidLeft]He betrayed you?
+[MidRight]Yes, to save himself.
+[MidLeft]I'm sorry... that's awful. I didn't know...
+[MidRight]That's alright. Can you walk?
+[MidLeft]Yes... Can I... Journey with you? I can't exactly return to Shizon now anyway...
+[MidRight]Of course.[CloseSpeech][MoveRight][FarRight][LoadZaheva]
+You're a fool for trusting her, [Tact]. I've got an eye on you.
+[MidLeft]I don't blame you.[CloseSpeech][MoveLeft][FarLeft][LoadAjax]
+Zaheva! [Tact]! We've decided we're going to try and move towards Bacrun. We should be safe there for awhile. I'll take watch so that we can set out before first light. Get some rest.[X]
+
+## Mage3LeaveTopLeftHouseText
+[ConversationText]
+[MidRight][LoadCurrent]
+oof[X]
+
+## Mage3LeaveTopRightHouseText
+[MidRight][LoadCurrent]
+oof[X]
+
+## Mage3LeaveBottomRightHouseText
+[MidRight][LoadCurrent]
+oof[X]
+
+## Mage3LeaveBottomLeftHouseText
+[MidRight][LoadCurrent]
+oof[X]
