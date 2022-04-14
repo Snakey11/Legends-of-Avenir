@@ -36,9 +36,7 @@ Maps/*.dmp
 
 # Music-related ignores.
 Music/WAVs
-Music/*.event
-!Music/MasterMusicInstaller.event
-!Music/drumfix_fe8.event
+Music/cache
 
 # Text-related ignores.
 .TextEntries/

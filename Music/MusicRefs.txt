@@ -54,6 +54,8 @@ Armories_of_Avenir
 Ascent
 	Mage2Leave.event
 	Player phase theme: MageLeave2
+	Player phase theme: MageLeave3
+	Player phase theme: MageLeave4
 	Player phase theme: MilitaryAcceptHold7
 Assault
 	Enemy phase theme: MercenaryMilitiaWait3
@@ -78,6 +80,8 @@ Binding_Vow
 	Mercenary6MilitiaWaitArcanae.event
 	NPC phase theme: Mage1
 	NPC phase theme: MageLeave2
+	NPC phase theme: MageLeave3
+	NPC phase theme: MageLeave4
 	NPC phase theme: Military1
 	NPC phase theme: MilitaryAccept2
 	NPC phase theme: MilitaryAccept3
@@ -128,6 +132,8 @@ Binding_Vow
 	NPC phase theme: MercenaryBanditDisband6
 	NPC phase theme: MercenaryBanditDisband7
 	NPC phase theme: 0x3A Link Arena
+Blindly_Charging
+	Mage3Leave.event
 Bloodpool
 	Mercenary7MilitiaWaitCesaria.event
 	Military3Accept.event
@@ -203,6 +209,7 @@ Drop_Em
 	Attack theme: MercenaryBandit4
 	Defense theme: MercenaryBandit4
 Dry_Trail
+	Mage3Leave.event
 	Military4Pass.event
 	Military5AcceptHold.event
 	Military5AcceptRetreatHelp.event
@@ -214,6 +221,7 @@ Earthbound
 	Player phase theme: MilitaryAcceptRetreatHelp6
 Emergency
 	Mage2Leave.event
+	Mage3Leave.event
 	Mercenary7MilitiaWaitCesaria.event
 	Military2Pass.event
 	Military5PassAltia.event
@@ -223,6 +231,8 @@ Emergency
 Encounter_with_Renegades
 	Enemy phase theme: Mage1
 	Enemy phase theme: MageLeave2
+	Enemy phase theme: MageLeave3
+	Enemy phase theme: MageLeave4
 	Enemy phase theme: MilitaryAccept2
 	Enemy phase theme: MilitaryAccept3
 	Enemy phase theme: MilitaryAcceptHold4
@@ -263,6 +273,7 @@ FE5_Victory
 	Military3Accept.event
 	Military3Pass.event
 FE5_Victory_Minor
+	Mage3Leave.event
 	Mercenary5MilitiaWaitCesaria.event
 	Mercenary6MilitiaWaitCesaria.event
 	Military5AcceptRetreatLeave.event
@@ -283,6 +294,7 @@ Follow_Me
 	Player phase theme: MercenaryMilitiaWaitArcanae5
 	Player phase theme: MercenaryMilitiaWaitArcanae6
 Forbidden_Forest
+	Mage3Leave.event
 	Mercenary5MilitiaWaitCesaria.event
 	Military3Pass.event
 	Military4AcceptHold.event
@@ -608,6 +620,10 @@ Take_Em_Down
 	Defense theme: Mage1
 	Attack theme: MageLeave2
 	Defense theme: MageLeave2
+	Attack theme: MageLeave3
+	Defense theme: MageLeave3
+	Attack theme: MageLeave4
+	Defense theme: MageLeave4
 Tension
 	Mercenary2Bandit.event
 	Mercenary2Militia.event
@@ -752,6 +768,7 @@ Wild_Fields
 Wind_Sound
 	Military4AcceptHold.event
 With_Us
+	Mage3Leave.event
 	Mercenary2Militia.event
 	Mercenary5MilitiaWaitCesaria.event
 Wrath_Strike
@@ -808,7 +825,6 @@ FE5_Field
 Battle_One
 Cutting_Edge_of_Notion
 Team_Making
-Blindly_Charging
 Annihilate_Em
 Cataclysm
 Crossroads
@@ -859,6 +875,8 @@ Binding_Vow
 	Mercenary6MilitiaWaitArcanae.event
 	NPC phase theme: Mage1
 	NPC phase theme: MageLeave2
+	NPC phase theme: MageLeave3
+	NPC phase theme: MageLeave4
 	NPC phase theme: Military1
 	NPC phase theme: MilitaryAccept2
 	NPC phase theme: MilitaryAccept3
