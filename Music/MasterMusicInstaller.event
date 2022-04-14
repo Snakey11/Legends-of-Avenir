@@ -53,8 +53,7 @@ SongTable(Lloyd,songLloyd)
 #include "cache/Lloyd.event"
 }
 
-
-/*//{
+/*/{
 SongTable(Beedles_Shop,songBeedlesShop)
 //#include "cache/BeedlesShop.event"
 }*/
@@ -748,4 +747,75 @@ SongTable(Avatars_of_Avenir,songAvatarsOfAvenir)
 {
 SongTable(The_Guardian_Spirit,songTheGuardianSpirit)
 #include "cache/TheGuardianSpirit.event"
+}
+
+
+{
+SongTable(Avenir_Magic_Map,songAvenirMagicMap)
+#include "cache/AvenirMagicMap.event"
+}
+
+{
+SongTable(Everything_Tastes_Purple,songEverythingTastesPurple)
+#include "cache/EverythingTastesPurple.event"
+}
+
+{
+SongTable(Fried_Bologna_Sandwiches,songFriedBolognaSandwiches)
+#include "cache/FriedBolognaSandwiches.event"
+}
+
+{
+SongTable(Maps_N_Shit,songMapsNShit)
+#include "cache/MapsNShit.event"
+}
+
+{
+SongTable(McDouble_Extra_Pickles,songMcDoubleExtraPickles)
+#include "cache/McDoubleExtraPickles.event"
+}
+
+{
+SongTable(Preppin_Spells,songPreppinSpells)
+#include "cache/PreppinSpells.event"
+}
+
+{
+SongTable(Pork_Chop_Sandwiches,songPorkChopSandwiches)
+#include "cache/PorkChopSandwiches.event"
+}
+
+{
+SongTable(Random_Avenir_Track,songRandomAvenirTrack)
+#include "cache/RandomAvenirTrack.event"
+}
+
+{
+SongTable(Slurms_MacKenzie,songSlurmsMacKenzie)
+#include "cache/SlurmsMacKenzie.event"
+}
+
+{
+SongTable(Strife,songStrife)
+#include "cache/Strife.event"
+}
+
+{
+SongTable(Strengthen_Your_Resolve,songStrengthenYourResolve)
+#include "cache/StrengthenYourResolve.event"
+}
+
+{
+SongTable(The_Battle_for_Everyones_Soul,songTheBattleForEveryonesSoul)
+#include "cache/TheBattleForEveryonesSoul.event"
+}
+
+{
+SongTable(TLP_Two,songTLPTwo)
+#include "cache/TLPTwo.event"
+}
+
+{
+SongTable(Wlate,songWlate)
+#include "cache/Wlate.event"
 }

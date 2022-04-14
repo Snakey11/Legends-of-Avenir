@@ -434,3 +434,45 @@ Avatars of Avenir[X]
 
 ## TheGuardianSpiritText
 The Guardian Spirit[X]
+
+## AvenirMagicMapText
+Avenir Magic Map[X]
+
+## EverythingTastesPurpleText
+Everything Tastes Purple[X]
+
+## FriedBolognaSandwichesText
+Fried Bologna Sandwiches[X]
+
+## MapsNShitText
+Maps 'N Shit[X]
+
+## McDoubleExtraPicklesText
+McDouble Extra Pickles[X]
+
+## PreppinSpellsText
+Preppin' Spells[X]
+
+## PorkChopSandwichesText
+Pork Chop Sandwiches[X]
+
+## RandomAvenirTrackText
+Random Avenir Track[X]
+
+## SlurmsMacKenzieText
+Slurms MacKenzie[X]
+
+## StrengthenYourResolveText
+Strengthen Your Resolve[X]
+
+## StrifeText
+Strife[X]
+
+## TheBattleForEveryonesSoulText
+The Battle for Everyone's Soul[X]
+
+## TLPTwoText
+TLP 2[X]
+
+## WlateText
+Wlate[X]

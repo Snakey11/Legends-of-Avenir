@@ -15,10 +15,11 @@ for /R "%~dp0Music" %%F in (%FILE_MATCH%) do (
     set SHOULD_COMPILE=0
     set EVENT_FILE="%%~dF%%~pFcache\%%~nF%.event"
     if exist "!EVENT_FILE!" (
-		for /F "Delims=" %%I in ('dir /b /OD "!EVENT_FILE!" "%%F" ^| more +1') do set NEWER=%%I
-		if "!NEWER!" == "%%~nxF" (
+		set NEWER=%%F
+		xcopy /DYLR "%%F" "!EVENT_FILE!" | findstr /BC:"0" >nul && set NEWER=!EVENT_FILE!
+		if "!NEWER!" == "%%F" (
 			set SHOULD_COMPILE=1
-		) 
+		)
 	) else (
 		set SHOULD_COMPILE=1
 	)

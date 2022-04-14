@@ -118,6 +118,20 @@ Darker
 Evil_Approaches
 Judgral_Calls
 Roar_of_Dominion
+Avenir_Magic_Map
+Everything_Tastes_Purple
+Fried_Bologna_Sandwiches
+Maps_N_Shit
+McDouble_Extra_Pickles
+Preppin_Spells
+Pork_Chop_Sandwiches
+Random_Avenir_Track
+Slurms_MacKenzie
+Strengthen_Your_Resolve
+Strife
+The_Battle_for_Everyones_Soul
+TLP_Two
+Wlate
 
 Annihilate_Em
 Aquatic_Dystopia

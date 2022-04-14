@@ -13,1817 +13,1612 @@
 	.global	songZelos
 	.align	2
 
+@**************** Track 1 (Midi-Chn.1) ****************@
 
-@**************** Track 1 (Midi-Chn.0) ****************@
-
-songZelos_001:
+songZelos_1:
+	.byte	KEYSH , songZelos_key+0
 @ 000   ----------------------------------------
- .byte   KEYSH , songZelos_key+0
-Label_0_012794BA:
- .byte   TEMPO , 124*songZelos_tbs/2
- .byte   VOICE , 24
- .byte   VOL , 45*songZelos_mvl/mxv
- .byte   MODT 0
- .byte   CnM2 ,v000
- .byte   LFOS 0
- .byte   CnM2 ,v044
- .byte   VOL , 88*songZelos_mvl/mxv
- .byte   PAN , c_v+0
- .byte   VOL , 88*songZelos_mvl/mxv
- .byte   N06 ,Dn3 ,v040
- .byte   W06
- .byte   Dn4
- .byte   W06
- .byte   N12
- .byte   W12
- .byte   N06 ,Cs4
- .byte   W06
- .byte   N12
- .byte   W12
- .byte   N06 ,Cn4
- .byte   W12
- .byte   N06
- .byte   W12
- .byte   N06
- .byte   W06
- .byte   N12 ,Bn3
- .byte   W12
- .byte   N12
- .byte   W12
+	.byte	TEMPO , 123*songZelos_tbs/2
+	.byte		VOICE , 24
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 88*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 88*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		        c_v+0
+	.byte		VOL   , 88*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		        c_v+0
+	.byte		VOL   , 88*songZelos_mvl/mxv
+	.byte		BEND  , c_v+0
+	.byte		N06   , Dn3 , v040
+	.byte	W06
+	.byte		        Dn4 
+	.byte	W06
+	.byte		N12   
+	.byte	W12
+	.byte		N06   , Cs4 
+	.byte	W06
+	.byte		N12   
+	.byte	W12
+	.byte		N06   , Cn4 
+	.byte	W12
+	.byte		N06   
+	.byte	W12
+	.byte		N06   
+	.byte	W06
+	.byte		N12   , Bn3 
+	.byte	W12
+	.byte		N12   
+	.byte	W12
 @ 001   ----------------------------------------
-Label_0_012794E5:
- .byte   N06 ,An3 ,v040
- .byte   W12
- .byte   N06
- .byte   W20
- .byte   N07
- .byte   W07
- .byte   N08
- .byte   W09
- .byte   N08
- .byte   W48
- .byte   PEND 
+	.byte		N06   , An3 
+	.byte	W12
+	.byte		N06   
+	.byte	W20
+	.byte		N07   
+	.byte	W07
+	.byte		N08   
+	.byte	W09
+	.byte		N08   
+	.byte	W48
+songZelos_1_B1:
 @ 002   ----------------------------------------
-Label_0_012794F2:
- .byte   N12 ,Fs3 ,v040
- .byte   W18
- .byte   N06 ,Dn3
- .byte   W06
- .byte   Fs3
- .byte   W06
- .byte   An3
- .byte   W12
- .byte   Fs3
- .byte   W12
- .byte   N06
- .byte   W12
- .byte   N06
- .byte   W06
- .byte   N12 ,Dn3
- .byte   W24
- .byte   PEND 
+songZelos_1_002:
+	.byte		N12   , Fs3 , v040
+	.byte	W18
+	.byte		N06   , Dn3 
+	.byte	W06
+	.byte		        Fs3 
+	.byte	W06
+	.byte		        An3 
+	.byte	W12
+	.byte		        Fs3 
+	.byte	W12
+	.byte		N06   
+	.byte	W12
+	.byte		N06   
+	.byte	W06
+	.byte		N12   , Dn3 
+	.byte	W24
+	.byte	PEND
 @ 003   ----------------------------------------
-Label_0_01279507:
- .byte   N12 ,Bn3 ,v040
- .byte   W18
- .byte   N06 ,Dn3
- .byte   W06
- .byte   Gn3
- .byte   W06
- .byte   Bn3
- .byte   W12
- .byte   Gn3
- .byte   W12
- .byte   N06
- .byte   W12
- .byte   N06
- .byte   W06
- .byte   N12 ,Dn3
- .byte   W24
- .byte   PEND 
+songZelos_1_003:
+	.byte		N12   , Bn3 , v040
+	.byte	W18
+	.byte		N06   , Dn3 
+	.byte	W06
+	.byte		        Gn3 
+	.byte	W06
+	.byte		        Bn3 
+	.byte	W12
+	.byte		        Gn3 
+	.byte	W12
+	.byte		N06   
+	.byte	W12
+	.byte		N06   
+	.byte	W06
+	.byte		N12   , Dn3 
+	.byte	W24
+	.byte	PEND
 @ 004   ----------------------------------------
-Label_0_0127951C:
- .byte   N12 ,An3 ,v040
- .byte   W18
- .byte   N06 ,En3
- .byte   W06
- .byte   An3
- .byte   W06
- .byte   Cs4
- .byte   W12
- .byte   An3
- .byte   W12
- .byte   N06
- .byte   W12
- .byte   N06
- .byte   W06
- .byte   N12 ,En3
- .byte   W24
- .byte   PEND 
+songZelos_1_004:
+	.byte		N12   , An3 , v040
+	.byte	W18
+	.byte		N06   , En3 
+	.byte	W06
+	.byte		        An3 
+	.byte	W06
+	.byte		        Cs4 
+	.byte	W12
+	.byte		        An3 
+	.byte	W12
+	.byte		N06   
+	.byte	W12
+	.byte		N06   
+	.byte	W06
+	.byte		N12   , En3 
+	.byte	W24
+	.byte	PEND
 @ 005   ----------------------------------------
-Label_0_01279531:
- .byte   N12 ,Dn3 ,v040
- .byte   W24
- .byte   Cs3
- .byte   W24
- .byte   Cn3
- .byte   W24
- .byte   Bn2
- .byte   W24
- .byte   PEND 
- .byte   PATT
-  .word Label_0_012794F2
- .byte   PATT
-  .word Label_0_01279507
- .byte   PATT
-  .word Label_0_0127951C
+	.byte		        Dn3 
+	.byte	W24
+	.byte		        Cs3 
+	.byte	W24
+	.byte		        Cn3 
+	.byte	W24
+	.byte		        Bn2 
+	.byte	W24
 @ 006   ----------------------------------------
-Label_0_0127954B:
- .byte   N72 ,Dn4 ,v040
- .byte   W72
- .byte   N12 ,Cs4
- .byte   W12
- .byte   Dn4
- .byte   W12
- .byte   PEND 
+	.byte	PATT
+	 .word	songZelos_1_002
 @ 007   ----------------------------------------
-Label_0_01279555:
- .byte   N48 ,En4 ,v040
- .byte   W54
- .byte   N18
- .byte   W18
- .byte   N12 ,Gn3
- .byte   W12
- .byte   En4
- .byte   W12
- .byte   PEND 
+	.byte	PATT
+	 .word	songZelos_1_003
 @ 008   ----------------------------------------
-Label_0_01279561:
- .byte   N60 ,An3 ,v040
- .byte   W60
- .byte   N12 ,Dn4
- .byte   W12
- .byte   Cs4
- .byte   W12
- .byte   Bn3
- .byte   W12
- .byte   PEND 
+	.byte	PATT
+	 .word	songZelos_1_004
 @ 009   ----------------------------------------
-Label_0_0127956D:
- .byte   N48 ,An3 ,v040
- .byte   W54
- .byte   N18
- .byte   W18
- .byte   N12 ,Cs3
- .byte   W12
- .byte   En3
- .byte   W12
- .byte   PEND 
+	.byte		N72   , Dn4 , v040
+	.byte	W72
+	.byte		N12   , Cs4 
+	.byte	W12
+	.byte		        Dn4 
+	.byte	W12
 @ 010   ----------------------------------------
-Label_0_01279579:
- .byte   N60 ,Dn3 ,v040
- .byte   W60
- .byte   N12 ,Gn3
- .byte   W12
- .byte   N12
- .byte   W12
- .byte   N12
- .byte   W12
- .byte   PEND 
+	.byte		N48   , En4 
+	.byte	W54
+	.byte		N18   
+	.byte	W18
+	.byte		N12   , Gn3 
+	.byte	W12
+	.byte		        En4 
+	.byte	W12
 @ 011   ----------------------------------------
-Label_0_01279585:
- .byte   N60 ,Fs3 ,v040
- .byte   W60
- .byte   N12
- .byte   W12
- .byte   Fs4
- .byte   W12
- .byte   En4
- .byte   W12
- .byte   PEND 
+	.byte		N60   , An3 
+	.byte	W60
+	.byte		N12   , Dn4 
+	.byte	W12
+	.byte		        Cs4 
+	.byte	W12
+	.byte		        Bn3 
+	.byte	W12
 @ 012   ----------------------------------------
-Label_0_01279590:
- .byte   N18 ,Dn4 ,v040
- .byte   W18
- .byte   Cs4
- .byte   W18
- .byte   N60 ,Fs3
- .byte   W60
- .byte   PEND 
+	.byte		N48   , An3 
+	.byte	W54
+	.byte		N18   
+	.byte	W18
+	.byte		N12   , Cs3 
+	.byte	W12
+	.byte		        En3 
+	.byte	W12
 @ 013   ----------------------------------------
-Label_0_0127959A:
- .byte   W12
- .byte   N12 ,Bn3 ,v040
- .byte   W12
- .byte   N12
- .byte   W12
- .byte   N06 ,Cs4
- .byte   W06
- .byte   N12 ,Dn4
- .byte   W12
- .byte   N12
- .byte   W12
- .byte   N06 ,Gn3
- .byte   W06
- .byte   N08 ,Fs4
- .byte   W08
- .byte   N07 ,En4
- .byte   W07
- .byte   N08 ,Dn4
- .byte   W09
- .byte   PEND 
+	.byte		N60   , Dn3 
+	.byte	W60
+	.byte		N12   , Gn3 
+	.byte	W12
+	.byte		N12   
+	.byte	W12
+	.byte		N12   
+	.byte	W12
 @ 014   ----------------------------------------
-Label_0_012795B6:
- .byte   N72 ,En4 ,v040
- .byte   W72
- .byte   N08 ,Gs4
- .byte   W08
- .byte   N07 ,Fs4
- .byte   W07
- .byte   N08 ,En4
- .byte   W09
- .byte   PEND 
+	.byte		N60   , Fs3 
+	.byte	W60
+	.byte		N12   
+	.byte	W12
+	.byte		        Fs4 
+	.byte	W12
+	.byte		        En4 
+	.byte	W12
 @ 015   ----------------------------------------
- .byte   N72 ,Fs4
- .byte   W96
- .byte   PATT
-  .word Label_0_012794E5
- .byte   PATT
-  .word Label_0_012794F2
- .byte   PATT
-  .word Label_0_01279507
- .byte   PATT
-  .word Label_0_0127951C
- .byte   PATT
-  .word Label_0_01279531
- .byte   PATT
-  .word Label_0_012794F2
- .byte   PATT
-  .word Label_0_01279507
- .byte   PATT
-  .word Label_0_0127951C
- .byte   PATT
-  .word Label_0_0127954B
- .byte   PATT
-  .word Label_0_01279555
- .byte   PATT
-  .word Label_0_01279561
- .byte   PATT
-  .word Label_0_0127956D
- .byte   PATT
-  .word Label_0_01279579
- .byte   PATT
-  .word Label_0_01279585
- .byte   PATT
-  .word Label_0_01279590
- .byte   PATT
-  .word Label_0_0127959A
- .byte   PATT
-  .word Label_0_012795B6
+	.byte		N18   , Dn4 
+	.byte	W18
+	.byte		        Cs4 
+	.byte	W18
+	.byte		N60   , Fs3 
+	.byte	W60
 @ 016   ----------------------------------------
- .byte   N72 ,Fs4 ,v040
- .byte   W72
- .byte   VOL , 88*songZelos_mvl/mxv
- .byte   W24
+	.byte	W12
+	.byte		N12   , Bn3 
+	.byte	W12
+	.byte		N12   
+	.byte	W12
+	.byte		N06   , Cs4 
+	.byte	W06
+	.byte		N12   , Dn4 
+	.byte	W12
+	.byte		N12   
+	.byte	W12
+	.byte		N06   , Gn3 
+	.byte	W06
+	.byte		N08   , Fs4 
+	.byte	W08
+	.byte		N07   , En4 
+	.byte	W07
+	.byte		N08   , Dn4 
+	.byte	W09
 @ 017   ----------------------------------------
- .byte   GOTO
-  .word Label_0_012794BA
- .byte   FINE
-
-@**************** Track 2 (Midi-Chn.1) ****************@
-
-songZelos_002:
-@ 000   ----------------------------------------
- .byte   KEYSH , songZelos_key+0
-Label_1_0127962E:
- .byte   VOICE , 24
- .byte   VOL , 45*songZelos_mvl/mxv
- .byte   MODT 0
- .byte   CnM2 ,v000
- .byte   LFOS 0
- .byte   CnM2 ,v044
- .byte   VOL , 85*songZelos_mvl/mxv
- .byte   PAN , c_v+0
- .byte   VOL , 85*songZelos_mvl/mxv
- .byte   N06 ,Fs3 ,v040
- .byte   W12
- .byte   N12 ,Dn3
- .byte   W12
- .byte   N06 ,Cs3
- .byte   W06
- .byte   N12
- .byte   W12
- .byte   N06 ,Cn3
- .byte   W12
- .byte   N06
- .byte   W12
- .byte   N06
- .byte   W06
- .byte   N12 ,Bn2
- .byte   W12
- .byte   N12
- .byte   W12
-@ 001   ----------------------------------------
-Label_1_01279656:
- .byte   N06 ,An2 ,v040
- .byte   W12
- .byte   N06
- .byte   W20
- .byte   N07
- .byte   W07
- .byte   N08
- .byte   W09
- .byte   N08
- .byte   W48
- .byte   PEND 
-@ 002   ----------------------------------------
-Label_1_01279663:
- .byte   N12 ,An3 ,v040
- .byte   W42
- .byte   N06
- .byte   W12
- .byte   N06
- .byte   W42
- .byte   PEND 
-@ 003   ----------------------------------------
-Label_1_0127966C:
- .byte   N12 ,Gn3 ,v040
- .byte   W42
- .byte   N06 ,Bn3
- .byte   W12
- .byte   N06
- .byte   W42
- .byte   PEND 
-@ 004   ----------------------------------------
-Label_1_01279676:
- .byte   N12 ,Cs4 ,v040
- .byte   W42
- .byte   N06
- .byte   W12
- .byte   N06
- .byte   W42
- .byte   PEND 
-@ 005   ----------------------------------------
-Label_1_0127967F:
- .byte   N12 ,An3 ,v040
- .byte   W24
- .byte   N12
- .byte   W24
- .byte   N12
- .byte   W24
- .byte   N12
- .byte   W24
- .byte   PEND 
- .byte   PATT
-  .word Label_1_01279663
- .byte   PATT
-  .word Label_1_0127966C
- .byte   PATT
-  .word Label_1_01279676
-@ 006   ----------------------------------------
- .byte   N72 ,An3 ,v040
- .byte   W96
-@ 007   ----------------------------------------
-Label_1_0127969D:
- .byte   W54
- .byte   N18 ,Bn3 ,v040
- .byte   W30
- .byte   N12
- .byte   W12
- .byte   PEND 
-@ 008   ----------------------------------------
- .byte   N60 ,Dn4
- .byte   W96
-@ 009   ----------------------------------------
-Label_1_012796A8:
- .byte   W54
- .byte   N18 ,En3 ,v040
- .byte   W30
- .byte   N12 ,An3
- .byte   W12
- .byte   PEND 
-@ 010   ----------------------------------------
- .byte   N60 ,Fs3
- .byte   W96
-@ 011   ----------------------------------------
- .byte   Cs3
- .byte   W96
-@ 012   ----------------------------------------
-Label_1_012796B6:
- .byte   N18 ,Fs3 ,v040
- .byte   W36
- .byte   N60 ,Bn3
- .byte   W60
- .byte   PEND 
-@ 013   ----------------------------------------
- .byte   W96
-@ 014   ----------------------------------------
- .byte   W96
-@ 015   ----------------------------------------
- .byte   W96
- .byte   PATT
-  .word Label_1_01279656
- .byte   PATT
-  .word Label_1_01279663
- .byte   PATT
-  .word Label_1_0127966C
- .byte   PATT
-  .word Label_1_01279676
- .byte   PATT
-  .word Label_1_0127967F
- .byte   PATT
-  .word Label_1_01279663
- .byte   PATT
-  .word Label_1_0127966C
- .byte   PATT
-  .word Label_1_01279676
-@ 016   ----------------------------------------
- .byte   N72 ,An3 ,v040
- .byte   W96
- .byte   PATT
-  .word Label_1_0127969D
-@ 017   ----------------------------------------
- .byte   N60 ,Dn4 ,v040
- .byte   W96
- .byte   PATT
-  .word Label_1_012796A8
+	.byte		N72   , En4 
+	.byte	W72
+	.byte		N08   , Gs4 
+	.byte	W08
+	.byte		N07   , Fs4 
+	.byte	W07
+	.byte		N08   , En4 
+	.byte	W09
 @ 018   ----------------------------------------
- .byte   N60 ,Fs3 ,v040
- .byte   W96
+	.byte		N72   , Fs4 
+	.byte	W96
 @ 019   ----------------------------------------
- .byte   Cs3
- .byte   W96
- .byte   PATT
-  .word Label_1_012796B6
+	.byte		N06   , An3 
+	.byte	W12
+	.byte		N06   
+	.byte	W20
+	.byte		N07   
+	.byte	W07
+	.byte		N08   
+	.byte	W09
+	.byte		N08   
+	.byte	W44
+	.byte	W03
+	.byte	TEMPO , 123*songZelos_tbs/2
+	.byte		VOICE , 24
+	.byte		VOL   , 88*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte	W01
+	.byte	GOTO
+	 .word	songZelos_1_B1
+songZelos_1_B2:
 @ 020   ----------------------------------------
- .byte   W96
-@ 021   ----------------------------------------
- .byte   W96
-@ 022   ----------------------------------------
- .byte   W72
- .byte   VOL , 85*songZelos_mvl/mxv
- .byte   W24
-@ 023   ----------------------------------------
- .byte   GOTO
-  .word Label_1_0127962E
- .byte   FINE
+	.byte		VOICE , 24
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 88*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 88*songZelos_mvl/mxv
+	.byte		BEND  , c_v+0
+	.byte	FINE
 
-@**************** Track 3 (Midi-Chn.2) ****************@
+@**************** Track 2 (Midi-Chn.2) ****************@
 
-songZelos_003:
+songZelos_2:
+	.byte	KEYSH , songZelos_key+0
 @ 000   ----------------------------------------
- .byte   KEYSH , songZelos_key+0
-Label_2_01279716:
- .byte   VOICE , 24
- .byte   VOL , 56*songZelos_mvl/mxv
- .byte   MODT 0
- .byte   CnM2 ,v000
- .byte   LFOS 0
- .byte   CnM2 ,v044
- .byte   VOL , 85*songZelos_mvl/mxv
- .byte   PAN , c_v+0
- .byte   VOL , 85*songZelos_mvl/mxv
- .byte   W03
- .byte   N06 ,An3 ,v060
- .byte   W09
- .byte   N12
- .byte   W12
- .byte   N06
- .byte   W06
- .byte   N12
- .byte   W12
- .byte   N06
- .byte   W12
- .byte   N06
- .byte   W12
- .byte   N06
- .byte   W06
- .byte   N12
- .byte   W12
- .byte   N12
- .byte   W12
+	.byte		VOICE , 24
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 85*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 85*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		        c_v+0
+	.byte		VOL   , 85*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		        c_v+0
+	.byte		VOL   , 85*songZelos_mvl/mxv
+	.byte		BEND  , c_v+0
+	.byte		N06   , Fs3 , v040
+	.byte	W12
+	.byte		N12   , Dn3 
+	.byte	W12
+	.byte		N06   , Cs3 
+	.byte	W06
+	.byte		N12   
+	.byte	W12
+	.byte		N06   , Cn3 
+	.byte	W12
+	.byte		N06   
+	.byte	W12
+	.byte		N06   
+	.byte	W06
+	.byte		N12   , Bn2 
+	.byte	W12
+	.byte		N12   
+	.byte	W12
 @ 001   ----------------------------------------
-Label_2_0127973B:
- .byte   N06 ,En3 ,v060
- .byte   W12
- .byte   N06
- .byte   W20
- .byte   N07
- .byte   W07
- .byte   N08
- .byte   W09
- .byte   N08
- .byte   W48
- .byte   PEND 
+	.byte		N06   , An2 
+	.byte	W12
+	.byte		N06   
+	.byte	W20
+	.byte		N07   
+	.byte	W07
+	.byte		N08   
+	.byte	W09
+	.byte		N08   
+	.byte	W48
+songZelos_2_B1:
 @ 002   ----------------------------------------
- .byte   W96
+songZelos_2_002:
+	.byte		N12   , An3 , v040
+	.byte	W42
+	.byte		N06   
+	.byte	W12
+	.byte		N06   
+	.byte	W42
+	.byte	PEND
 @ 003   ----------------------------------------
- .byte   W96
+songZelos_2_003:
+	.byte		N12   , Gn3 , v040
+	.byte	W42
+	.byte		N06   , Bn3 
+	.byte	W12
+	.byte		N06   
+	.byte	W42
+	.byte	PEND
 @ 004   ----------------------------------------
- .byte   W96
+songZelos_2_004:
+	.byte		N12   , Cs4 , v040
+	.byte	W42
+	.byte		N06   
+	.byte	W12
+	.byte		N06   
+	.byte	W42
+	.byte	PEND
 @ 005   ----------------------------------------
-Label_2_0127974B:
- .byte   N12 ,Dn4 ,v060
- .byte   W24
- .byte   Cs4
- .byte   W24
- .byte   Cn4
- .byte   W24
- .byte   Bn3
- .byte   W24
- .byte   PEND 
+	.byte		N12   , An3 
+	.byte	W24
+	.byte		N12   
+	.byte	W24
+	.byte		N12   
+	.byte	W24
+	.byte		N12   
+	.byte	W24
 @ 006   ----------------------------------------
- .byte   W96
+	.byte	PATT
+	 .word	songZelos_2_002
 @ 007   ----------------------------------------
- .byte   W96
+	.byte	PATT
+	 .word	songZelos_2_003
 @ 008   ----------------------------------------
- .byte   W96
+	.byte	PATT
+	 .word	songZelos_2_004
 @ 009   ----------------------------------------
- .byte   N72 ,Dn3
- .byte   W96
+	.byte		N72   , An3 , v040
+	.byte	W96
 @ 010   ----------------------------------------
- .byte   W96
+	.byte	W54
+	.byte		N18   , Bn3 
+	.byte	W30
+	.byte		N12   
+	.byte	W12
 @ 011   ----------------------------------------
- .byte   W96
+	.byte		N60   , Dn4 
+	.byte	W96
 @ 012   ----------------------------------------
- .byte   W96
+	.byte	W54
+	.byte		N18   , En3 
+	.byte	W30
+	.byte		N12   , An3 
+	.byte	W12
 @ 013   ----------------------------------------
- .byte   W96
+	.byte		N60   , Fs3 
+	.byte	W96
 @ 014   ----------------------------------------
- .byte   W96
+	.byte		        Cs3 
+	.byte	W96
 @ 015   ----------------------------------------
- .byte   W96
+	.byte		N18   , Fs3 
+	.byte	W36
+	.byte		N60   , Bn3 
+	.byte	W60
 @ 016   ----------------------------------------
- .byte   W96
+	.byte	W96
 @ 017   ----------------------------------------
- .byte   W96
+	.byte	W96
 @ 018   ----------------------------------------
- .byte   W96
- .byte   PATT
-  .word Label_2_0127973B
+	.byte	W96
 @ 019   ----------------------------------------
- .byte   W96
+	.byte		N06   , An2 
+	.byte	W12
+	.byte		N06   
+	.byte	W20
+	.byte		N07   
+	.byte	W07
+	.byte		N08   
+	.byte	W09
+	.byte		N08   
+	.byte	W44
+	.byte	W03
+	.byte		VOICE , 24
+	.byte		VOL   , 85*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte	W01
+	.byte	GOTO
+	 .word	songZelos_2_B1
+songZelos_2_B2:
 @ 020   ----------------------------------------
- .byte   W96
-@ 021   ----------------------------------------
- .byte   W96
- .byte   PATT
-  .word Label_2_0127974B
-@ 022   ----------------------------------------
- .byte   W96
-@ 023   ----------------------------------------
- .byte   W96
-@ 024   ----------------------------------------
- .byte   W96
-@ 025   ----------------------------------------
- .byte   N72 ,Dn3 ,v060
- .byte   W96
-@ 026   ----------------------------------------
- .byte   W96
-@ 027   ----------------------------------------
- .byte   W96
-@ 028   ----------------------------------------
- .byte   W96
-@ 029   ----------------------------------------
- .byte   W96
-@ 030   ----------------------------------------
- .byte   W96
-@ 031   ----------------------------------------
- .byte   W96
-@ 032   ----------------------------------------
- .byte   W96
-@ 033   ----------------------------------------
- .byte   W96
-@ 034   ----------------------------------------
- .byte   W72
- .byte   VOL , 85*songZelos_mvl/mxv
- .byte   W24
-@ 035   ----------------------------------------
- .byte   GOTO
-  .word Label_2_01279716
- .byte   FINE
+	.byte		VOICE , 24
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 85*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 85*songZelos_mvl/mxv
+	.byte		BEND  , c_v+0
+	.byte	FINE
 
-@**************** Track 4 (Midi-Chn.3) ****************@
+@**************** Track 3 (Midi-Chn.3) ****************@
 
-songZelos_004:
+songZelos_3:
+	.byte	KEYSH , songZelos_key+0
 @ 000   ----------------------------------------
- .byte   KEYSH , songZelos_key+0
-Label_3_0127978E:
- .byte   VOICE , 65
- .byte   VOL , 25*songZelos_mvl/mxv
- .byte   MODT 0
- .byte   CnM2 ,v000
- .byte   LFOS 0
- .byte   CnM2 ,v044
- .byte   VOL , 60*songZelos_mvl/mxv
- .byte   PAN , c_v+0
- .byte   VOL , 60*songZelos_mvl/mxv
- .byte   W96
+	.byte		VOICE , 24
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 85*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 85*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		        c_v+0
+	.byte		VOL   , 85*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		        c_v+0
+	.byte		VOL   , 85*songZelos_mvl/mxv
+	.byte		BEND  , c_v+0
+	.byte	W03
+	.byte		N06   , An3 , v060
+	.byte	W09
+	.byte		N12   
+	.byte	W12
+	.byte		N06   
+	.byte	W06
+	.byte		N12   
+	.byte	W12
+	.byte		N06   
+	.byte	W12
+	.byte		N06   
+	.byte	W12
+	.byte		N06   
+	.byte	W06
+	.byte		N12   
+	.byte	W12
+	.byte		N12   
+	.byte	W12
 @ 001   ----------------------------------------
- .byte   N06 ,An3 ,v080
- .byte   W12
- .byte   N06
- .byte   W20
- .byte   N07
- .byte   W07
- .byte   N08
- .byte   W09
- .byte   N08
- .byte   W18
- .byte   N06
- .byte   W06
- .byte   Bn3
- .byte   W12
- .byte   Cs4
- .byte   W12
+	.byte		N06   , En3 
+	.byte	W12
+	.byte		N06   
+	.byte	W20
+	.byte		N07   
+	.byte	W07
+	.byte		N08   
+	.byte	W09
+	.byte		N08   
+	.byte	W48
+songZelos_3_B1:
 @ 002   ----------------------------------------
-Label_3_012797B1:
- .byte   N60 ,Dn4 ,v080
- .byte   W60
- .byte   N06
- .byte   W12
- .byte   Cs4
- .byte   W12
- .byte   Dn4
- .byte   W12
- .byte   PEND 
+	.byte	W96
 @ 003   ----------------------------------------
-Label_3_012797BC:
- .byte   N12 ,En4 ,v080
- .byte   W12
- .byte   N06
- .byte   W06
- .byte   N84 ,Bn3
- .byte   W78
- .byte   PEND 
+	.byte	W96
 @ 004   ----------------------------------------
-Label_3_012797C6:
- .byte   W12
- .byte   N06 ,Cs4 ,v080
- .byte   W12
- .byte   An3
- .byte   W12
- .byte   Bn3
- .byte   W06
- .byte   Cs4
- .byte   W12
- .byte   N06
- .byte   W12
- .byte   Dn4
- .byte   W06
- .byte   N12 ,En4
- .byte   W12
- .byte   Cs4
- .byte   W12
- .byte   PEND 
+	.byte	W96
 @ 005   ----------------------------------------
-Label_3_012797DB:
- .byte   N12 ,Bn3 ,v080
- .byte   W12
- .byte   N06
- .byte   W06
- .byte   N78 ,An3
- .byte   W78
- .byte   PEND 
- .byte   PATT
-  .word Label_3_012797B1
- .byte   PATT
-  .word Label_3_012797BC
+	.byte		N12   , Dn4 , v060
+	.byte	W24
+	.byte		        Cs4 
+	.byte	W24
+	.byte		        Cn4 
+	.byte	W24
+	.byte		        Bn3 
+	.byte	W24
 @ 006   ----------------------------------------
-Label_3_012797EF:
- .byte   W12
- .byte   N06 ,Cs4 ,v080
- .byte   W12
- .byte   An3
- .byte   W12
- .byte   Bn3
- .byte   W06
- .byte   Cs4
- .byte   W12
- .byte   N06
- .byte   W12
- .byte   Dn4
- .byte   W06
- .byte   N12 ,An4
- .byte   W12
- .byte   Fs4
- .byte   W12
- .byte   PEND 
+	.byte	W96
 @ 007   ----------------------------------------
-Label_3_01279804:
- .byte   N12 ,En4 ,v080
- .byte   W12
- .byte   N06
- .byte   W06
- .byte   N78 ,Dn4
- .byte   W78
- .byte   PEND 
+	.byte	W96
 @ 008   ----------------------------------------
- .byte   W96
+	.byte	W96
 @ 009   ----------------------------------------
- .byte   W96
+	.byte		N72   , Dn3 
+	.byte	W96
 @ 010   ----------------------------------------
- .byte   W96
+	.byte	W96
 @ 011   ----------------------------------------
- .byte   W96
+	.byte	W96
 @ 012   ----------------------------------------
- .byte   W96
+	.byte	W96
 @ 013   ----------------------------------------
- .byte   W96
+	.byte	W96
 @ 014   ----------------------------------------
- .byte   W96
+	.byte	W96
 @ 015   ----------------------------------------
- .byte   W96
+	.byte	W96
 @ 016   ----------------------------------------
- .byte   W96
+	.byte	W96
 @ 017   ----------------------------------------
- .byte   W66
- .byte   N06 ,An3
- .byte   W06
- .byte   Bn3
- .byte   W12
- .byte   Cs4
- .byte   W12
- .byte   PATT
-  .word Label_3_012797B1
- .byte   PATT
-  .word Label_3_012797BC
- .byte   PATT
-  .word Label_3_012797C6
- .byte   PATT
-  .word Label_3_012797DB
- .byte   PATT
-  .word Label_3_012797B1
- .byte   PATT
-  .word Label_3_012797BC
- .byte   PATT
-  .word Label_3_012797EF
- .byte   PATT
-  .word Label_3_01279804
+	.byte	W96
 @ 018   ----------------------------------------
- .byte   VOL , 60*songZelos_mvl/mxv
- .byte   W96
+	.byte	W96
 @ 019   ----------------------------------------
- .byte   W96
+	.byte		N06   , En3 
+	.byte	W12
+	.byte		N06   
+	.byte	W20
+	.byte		N07   
+	.byte	W07
+	.byte		N08   
+	.byte	W09
+	.byte		N08   
+	.byte	W44
+	.byte	W03
+	.byte		VOICE , 24
+	.byte		VOL   , 85*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte	W01
+	.byte	GOTO
+	 .word	songZelos_3_B1
+songZelos_3_B2:
 @ 020   ----------------------------------------
- .byte   W96
-@ 021   ----------------------------------------
- .byte   W96
-@ 022   ----------------------------------------
- .byte   W96
-@ 023   ----------------------------------------
- .byte   W96
-@ 024   ----------------------------------------
- .byte   W96
-@ 025   ----------------------------------------
- .byte   W96
-@ 026   ----------------------------------------
- .byte   W96
-@ 027   ----------------------------------------
- .byte   GOTO
-  .word Label_3_0127978E
- .byte   FINE
+	.byte		VOICE , 24
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 85*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 85*songZelos_mvl/mxv
+	.byte		BEND  , c_v+0
+	.byte	FINE
 
-@**************** Track 5 (Midi-Chn.4) ****************@
+@**************** Track 4 (Midi-Chn.4) ****************@
 
-songZelos_005:
+songZelos_4:
+	.byte	KEYSH , songZelos_key+0
 @ 000   ----------------------------------------
- .byte   KEYSH , songZelos_key+0
-Label_4_0127985A:
- .byte   VOICE , 38
- .byte   VOL , 18*songZelos_mvl/mxv
- .byte   MODT 0
- .byte   CnM2 ,v000
- .byte   LFOS 0
- .byte   CnM2 ,v044
- .byte   VOL , 60*songZelos_mvl/mxv
- .byte   PAN , c_v+0
- .byte   VOL , 60*songZelos_mvl/mxv
- .byte   N06 ,Dn2 ,v060
- .byte   W12
- .byte   N12
- .byte   W12
- .byte   N06 ,Cs2
- .byte   W06
- .byte   N12
- .byte   W12
- .byte   N06 ,Cn2
- .byte   W12
- .byte   N06
- .byte   W12
- .byte   N06
- .byte   W06
- .byte   N12 ,Bn1
- .byte   W12
- .byte   N12
- .byte   W12
+	.byte		VOICE , 65
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		        c_v+0
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		        c_v+0
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		BEND  , c_v+0
+	.byte	W96
 @ 001   ----------------------------------------
-Label_4_01279881:
- .byte   N06 ,An1 ,v060
- .byte   W12
- .byte   N06
- .byte   W20
- .byte   N07
- .byte   W07
- .byte   N08
- .byte   W09
- .byte   N08
- .byte   W48
- .byte   PEND 
+	.byte		N06   , An3 , v080
+	.byte	W12
+	.byte		N06   
+	.byte	W20
+	.byte		N07   
+	.byte	W07
+	.byte		N08   
+	.byte	W09
+	.byte		N08   
+	.byte	W18
+	.byte		N06   
+	.byte	W06
+	.byte		        Bn3 
+	.byte	W12
+	.byte		        Cs4 
+	.byte	W12
+songZelos_4_B1:
 @ 002   ----------------------------------------
-Label_4_0127988E:
- .byte   N24 ,Dn2 ,v060
- .byte   W24
- .byte   N18 ,An1
- .byte   W18
- .byte   N12 ,Dn2
- .byte   W12
- .byte   N12
- .byte   W12
- .byte   N06
- .byte   W06
- .byte   N24 ,An1
- .byte   W24
- .byte   PEND 
+songZelos_4_002:
+	.byte		N60   , Dn4 , v080
+	.byte	W60
+	.byte		N06   
+	.byte	W12
+	.byte		        Cs4 
+	.byte	W12
+	.byte		        Dn4 
+	.byte	W12
+	.byte	PEND
 @ 003   ----------------------------------------
-Label_4_012798A0:
- .byte   N24 ,Gn1 ,v060
- .byte   W24
- .byte   N18 ,Dn2
- .byte   W18
- .byte   N12 ,Gn1
- .byte   W12
- .byte   N12
- .byte   W12
- .byte   N06
- .byte   W06
- .byte   N24 ,Dn2
- .byte   W24
- .byte   PEND 
+songZelos_4_003:
+	.byte		N12   , En4 , v080
+	.byte	W12
+	.byte		N06   
+	.byte	W06
+	.byte		N84   , Bn3 
+	.byte	W78
+	.byte	PEND
 @ 004   ----------------------------------------
-Label_4_012798B2:
- .byte   N24 ,An1 ,v060
- .byte   W24
- .byte   N18 ,En2
- .byte   W18
- .byte   N12 ,An1
- .byte   W12
- .byte   N12
- .byte   W12
- .byte   N06
- .byte   W06
- .byte   N24 ,En1
- .byte   W24
- .byte   PEND 
+	.byte	W12
+	.byte		N06   , Cs4 
+	.byte	W12
+	.byte		        An3 
+	.byte	W12
+	.byte		        Bn3 
+	.byte	W06
+	.byte		        Cs4 
+	.byte	W12
+	.byte		N06   
+	.byte	W12
+	.byte		        Dn4 
+	.byte	W06
+	.byte		N12   , En4 
+	.byte	W12
+	.byte		        Cs4 
+	.byte	W12
 @ 005   ----------------------------------------
-Label_4_012798C4:
- .byte   N48 ,Dn2 ,v060
- .byte   W48
- .byte   N24 ,Fs2
- .byte   W24
- .byte   An1
- .byte   W24
- .byte   PEND 
- .byte   PATT
-  .word Label_4_0127988E
- .byte   PATT
-  .word Label_4_012798A0
- .byte   PATT
-  .word Label_4_012798B2
+	.byte		        Bn3 
+	.byte	W12
+	.byte		N06   
+	.byte	W06
+	.byte		N78   , An3 
+	.byte	W78
 @ 006   ----------------------------------------
-Label_4_012798DD:
- .byte   N48 ,Dn2 ,v060
- .byte   W48
- .byte   N24 ,Fn1
- .byte   W24
- .byte   Dn2
- .byte   W24
- .byte   PEND 
+	.byte	PATT
+	 .word	songZelos_4_002
 @ 007   ----------------------------------------
-Label_4_012798E7:
- .byte   N18 ,Gn2 ,v060
- .byte   W18
- .byte   N06
- .byte   W06
- .byte   N18 ,Dn2
- .byte   W18
- .byte   N06
- .byte   W06
- .byte   N18 ,Gn2
- .byte   W18
- .byte   N06 ,Bn1
- .byte   W06
- .byte   N12 ,Dn2
- .byte   W12
- .byte   Gn2
- .byte   W12
- .byte   PEND 
+	.byte	PATT
+	 .word	songZelos_4_003
 @ 008   ----------------------------------------
-Label_4_012798FE:
- .byte   N18 ,Gn2 ,v060
- .byte   W18
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N18 ,Cs2
- .byte   W18
- .byte   N06
- .byte   W06
- .byte   N18 ,Fs2
- .byte   W18
- .byte   N06 ,Cs2
- .byte   W06
- .byte   N12 ,Dn2
- .byte   W12
- .byte   Fs2
- .byte   W12
- .byte   PEND 
+	.byte	W12
+	.byte		N06   , Cs4 , v080
+	.byte	W12
+	.byte		        An3 
+	.byte	W12
+	.byte		        Bn3 
+	.byte	W06
+	.byte		        Cs4 
+	.byte	W12
+	.byte		N06   
+	.byte	W12
+	.byte		        Dn4 
+	.byte	W06
+	.byte		N12   , An4 
+	.byte	W12
+	.byte		        Fs4 
+	.byte	W12
 @ 009   ----------------------------------------
-Label_4_01279916:
- .byte   N18 ,En2 ,v060
- .byte   W18
- .byte   N06
- .byte   W06
- .byte   N18 ,Bn1
- .byte   W18
- .byte   N06
- .byte   W06
- .byte   N18 ,En2
- .byte   W18
- .byte   N06 ,Bn1
- .byte   W06
- .byte   N12 ,Dn2
- .byte   W12
- .byte   Fs2
- .byte   W12
- .byte   PEND 
+	.byte		        En4 
+	.byte	W12
+	.byte		N06   
+	.byte	W06
+	.byte		N78   , Dn4 
+	.byte	W78
 @ 010   ----------------------------------------
-Label_4_0127992D:
- .byte   N24 ,Cs2 ,v060
- .byte   W24
- .byte   An2
- .byte   W24
- .byte   Fs2
- .byte   W24
- .byte   N12 ,Cs2
- .byte   W12
- .byte   En2
- .byte   W12
- .byte   PEND 
+	.byte	W96
 @ 011   ----------------------------------------
-Label_4_0127993B:
- .byte   N24 ,Fs2 ,v060
- .byte   W24
- .byte   N12
- .byte   W12
- .byte   N12
- .byte   W12
- .byte   N48 ,Cs3
- .byte   W48
- .byte   PEND 
+	.byte	W96
 @ 012   ----------------------------------------
-Label_4_01279947:
- .byte   N24 ,Bn2 ,v060
- .byte   W24
- .byte   Fs2
- .byte   W24
- .byte   N18 ,Bn2
- .byte   W18
- .byte   Fs2
- .byte   W18
- .byte   N12 ,Dn2
- .byte   W12
- .byte   PEND 
+	.byte	W96
 @ 013   ----------------------------------------
-Label_4_01279956:
- .byte   N18 ,En2 ,v060
- .byte   W18
- .byte   N06
- .byte   W06
- .byte   N18 ,Bn1
- .byte   W18
- .byte   N06
- .byte   W06
- .byte   N18 ,En2
- .byte   W18
- .byte   N06 ,Bn1
- .byte   W06
- .byte   N12 ,Dn2
- .byte   W12
- .byte   En2
- .byte   W12
- .byte   PEND 
+	.byte	W96
 @ 014   ----------------------------------------
-Label_4_0127996D:
- .byte   N18 ,An2 ,v060
- .byte   W18
- .byte   N06
- .byte   W06
- .byte   N18 ,En2
- .byte   W18
- .byte   N06
- .byte   W06
- .byte   N18 ,An2
- .byte   W18
- .byte   N06 ,En2
- .byte   W06
- .byte   N12 ,Gs2
- .byte   W12
- .byte   An2
- .byte   W12
- .byte   PEND 
+	.byte	W96
 @ 015   ----------------------------------------
-Label_4_01279984:
- .byte   N18 ,Bn2 ,v060
- .byte   W18
- .byte   N06
- .byte   W06
- .byte   N18 ,Fs2
- .byte   W18
- .byte   N06
- .byte   W06
- .byte   N18 ,Ds2
- .byte   W18
- .byte   N06
- .byte   W06
- .byte   N12 ,Bn1
- .byte   W12
- .byte   Bn2
- .byte   W12
- .byte   PEND 
- .byte   PATT
-  .word Label_4_01279881
- .byte   PATT
-  .word Label_4_0127988E
- .byte   PATT
-  .word Label_4_012798A0
- .byte   PATT
-  .word Label_4_012798B2
- .byte   PATT
-  .word Label_4_012798C4
- .byte   PATT
-  .word Label_4_0127988E
- .byte   PATT
-  .word Label_4_012798A0
- .byte   PATT
-  .word Label_4_012798B2
- .byte   PATT
-  .word Label_4_012798DD
- .byte   PATT
-  .word Label_4_012798E7
- .byte   PATT
-  .word Label_4_012798FE
- .byte   PATT
-  .word Label_4_01279916
- .byte   PATT
-  .word Label_4_0127992D
- .byte   PATT
-  .word Label_4_0127993B
- .byte   PATT
-  .word Label_4_01279947
- .byte   PATT
-  .word Label_4_01279956
- .byte   PATT
-  .word Label_4_0127996D
- .byte   PATT
-  .word Label_4_01279984
+	.byte	W96
 @ 016   ----------------------------------------
- .byte   GOTO
-  .word Label_4_0127985A
- .byte   FINE
-
-@**************** Track 6 (Midi-Chn.5) ****************@
-
-songZelos_006:
-@ 000   ----------------------------------------
- .byte   KEYSH , songZelos_key+0
-Label_5_012799FE:
- .byte   VOICE , 51
- .byte   VOL , 10*songZelos_mvl/mxv
- .byte   MODT 0
- .byte   CnM2 ,v000
- .byte   LFOS 0
- .byte   CnM2 ,v044
- .byte   VOL , 40*songZelos_mvl/mxv
- .byte   PAN , c_v+0
- .byte   W96
-@ 001   ----------------------------------------
- .byte   W96
-@ 002   ----------------------------------------
- .byte   W96
-@ 003   ----------------------------------------
- .byte   W96
-@ 004   ----------------------------------------
- .byte   W96
-@ 005   ----------------------------------------
- .byte   W96
-@ 006   ----------------------------------------
- .byte   W96
-@ 007   ----------------------------------------
- .byte   W96
-@ 008   ----------------------------------------
- .byte   W96
-@ 009   ----------------------------------------
- .byte   W96
-@ 010   ----------------------------------------
- .byte   N96 ,Gn4 ,v040
- .byte   W96
-@ 011   ----------------------------------------
- .byte   Fs4
- .byte   W96
-@ 012   ----------------------------------------
- .byte   En4
- .byte   W96
-@ 013   ----------------------------------------
- .byte   Cs4
- .byte   W96
-@ 014   ----------------------------------------
- .byte   An3
- .byte   W96
-@ 015   ----------------------------------------
- .byte   N92 ,Bn3
- .byte   W96
-@ 016   ----------------------------------------
- .byte   N96
- .byte   W96
+	.byte	W96
 @ 017   ----------------------------------------
- .byte   Cs4
- .byte   W96
+	.byte	W96
 @ 018   ----------------------------------------
-Label_5_01279A2B:
- .byte   N48 ,En4 ,v060
- .byte   W48
- .byte   Ds4
- .byte   W48
- .byte   PEND 
+	.byte	W96
 @ 019   ----------------------------------------
- .byte   W96
+	.byte	W66
+	.byte		N06   , An3 
+	.byte	W06
+	.byte		        Bn3 
+	.byte	W12
+	.byte		        Cs4 
+	.byte	W11
+	.byte		VOICE , 65
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte	W01
+	.byte	GOTO
+	 .word	songZelos_4_B1
+songZelos_4_B2:
 @ 020   ----------------------------------------
- .byte   W96
-@ 021   ----------------------------------------
- .byte   W96
-@ 022   ----------------------------------------
- .byte   W96
-@ 023   ----------------------------------------
- .byte   W96
-@ 024   ----------------------------------------
- .byte   W96
-@ 025   ----------------------------------------
- .byte   W96
-@ 026   ----------------------------------------
- .byte   W96
-@ 027   ----------------------------------------
- .byte   W96
-@ 028   ----------------------------------------
- .byte   N96 ,Gn4
- .byte   W96
-@ 029   ----------------------------------------
- .byte   Fs4
- .byte   W96
-@ 030   ----------------------------------------
- .byte   En4
- .byte   W96
-@ 031   ----------------------------------------
- .byte   Cs4
- .byte   W96
-@ 032   ----------------------------------------
- .byte   An3
- .byte   W96
-@ 033   ----------------------------------------
- .byte   N92 ,Bn3
- .byte   W96
-@ 034   ----------------------------------------
- .byte   N96
- .byte   W96
-@ 035   ----------------------------------------
- .byte   Cs4
- .byte   W96
- .byte   PATT
-  .word Label_5_01279A2B
-@ 036   ----------------------------------------
- .byte   GOTO
-  .word Label_5_012799FE
- .byte   FINE
+	.byte		VOICE , 65
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		BEND  , c_v+0
+	.byte	FINE
 
-@**************** Track 7 (Midi-Chn.6) ****************@
+@**************** Track 5 (Midi-Chn.5) ****************@
 
-songZelos_007:
+songZelos_5:
+	.byte	KEYSH , songZelos_key+0
 @ 000   ----------------------------------------
- .byte   KEYSH , songZelos_key+0
-Label_6_01279A5A:
- .byte   VOICE , 56
- .byte   VOL , 30*songZelos_mvl/mxv
- .byte   MODT 0
- .byte   CnM2 ,v000
- .byte   LFOS 0
- .byte   CnM2 ,v044
- .byte   VOL , 80*songZelos_mvl/mxv
- @.byte   PAN , c_v+0
- .byte   W96
+	.byte		VOICE , 38
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		        c_v+0
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		        c_v+0
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		BEND  , c_v+0
+	.byte		N06   , Dn2 , v060
+	.byte	W12
+	.byte		N12   
+	.byte	W12
+	.byte		N06   , Cs2 
+	.byte	W06
+	.byte		N12   
+	.byte	W12
+	.byte		N06   , Cn2 
+	.byte	W12
+	.byte		N06   
+	.byte	W12
+	.byte		N06   
+	.byte	W06
+	.byte		N12   , Bn1 
+	.byte	W12
+	.byte		N12   
+	.byte	W12
 @ 001   ----------------------------------------
- .byte   W96
+	.byte		N06   , An1 
+	.byte	W12
+	.byte		N06   
+	.byte	W20
+	.byte		N07   
+	.byte	W07
+	.byte		N08   
+	.byte	W09
+	.byte		N08   
+	.byte	W48
+songZelos_5_B1:
 @ 002   ----------------------------------------
- .byte   W96
+songZelos_5_002:
+	.byte		N24   , Dn2 , v060
+	.byte	W24
+	.byte		N18   , An1 
+	.byte	W18
+	.byte		N12   , Dn2 
+	.byte	W12
+	.byte		N12   
+	.byte	W12
+	.byte		N06   
+	.byte	W06
+	.byte		N24   , An1 
+	.byte	W24
+	.byte	PEND
 @ 003   ----------------------------------------
- .byte   W96
+songZelos_5_003:
+	.byte		N24   , Gn1 , v060
+	.byte	W24
+	.byte		N18   , Dn2 
+	.byte	W18
+	.byte		N12   , Gn1 
+	.byte	W12
+	.byte		N12   
+	.byte	W12
+	.byte		N06   
+	.byte	W06
+	.byte		N24   , Dn2 
+	.byte	W24
+	.byte	PEND
 @ 004   ----------------------------------------
- .byte   W96
+songZelos_5_004:
+	.byte		N24   , An1 , v060
+	.byte	W24
+	.byte		N18   , En2 
+	.byte	W18
+	.byte		N12   , An1 
+	.byte	W12
+	.byte		N12   
+	.byte	W12
+	.byte		N06   
+	.byte	W06
+	.byte		N24   , En1 
+	.byte	W24
+	.byte	PEND
 @ 005   ----------------------------------------
- .byte   W96
+	.byte		N48   , Dn2 
+	.byte	W48
+	.byte		N24   , Fs2 
+	.byte	W24
+	.byte		        An1 
+	.byte	W24
 @ 006   ----------------------------------------
- .byte   W96
+	.byte	PATT
+	 .word	songZelos_5_002
 @ 007   ----------------------------------------
- .byte   W96
+	.byte	PATT
+	 .word	songZelos_5_003
 @ 008   ----------------------------------------
- .byte   W96
+	.byte	PATT
+	 .word	songZelos_5_004
 @ 009   ----------------------------------------
- .byte   W96
+	.byte		N48   , Dn2 , v060
+	.byte	W48
+	.byte		N24   , Fn1 
+	.byte	W24
+	.byte		        Dn2 
+	.byte	W24
 @ 010   ----------------------------------------
-Label_6_01279A74:
- .byte   N06 ,Gn4 ,v115
- .byte   W48
- .byte   N12
- .byte   W12
- .byte   N06
- .byte   W36
-@ .byte   PEND 
+	.byte		N18   , Gn2 
+	.byte	W18
+	.byte		N06   
+	.byte	W06
+	.byte		N18   , Dn2 
+	.byte	W18
+	.byte		N06   
+	.byte	W06
+	.byte		N18   , Gn2 
+	.byte	W18
+	.byte		N06   , Bn1 
+	.byte	W06
+	.byte		N12   , Dn2 
+	.byte	W12
+	.byte		        Gn2 
+	.byte	W12
 @ 011   ----------------------------------------
-Label_6_01279A7D:
- .byte   W12
- .byte   N06 ,Fs4 ,v115
- .byte   W12
- .byte   N06
- .byte   W12
- .byte   En4
- .byte   W12
- .byte   Fs4
- .byte   W06
- .byte   En4
- .byte   W12
- .byte   N12 ,Dn4
- .byte   W30
-@ .byte   PEND 
+	.byte		N18   
+	.byte	W18
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N18   , Cs2 
+	.byte	W18
+	.byte		N06   
+	.byte	W06
+	.byte		N18   , Fs2 
+	.byte	W18
+	.byte		N06   , Cs2 
+	.byte	W06
+	.byte		N12   , Dn2 
+	.byte	W12
+	.byte		        Fs2 
+	.byte	W12
 @ 012   ----------------------------------------
-Label_6_01279A8E:
- .byte   N06 ,En4 ,v115
- .byte   W48
- .byte   N12
- .byte   W12
- .byte   N06
- .byte   W36
-@ .byte   PEND 
+	.byte		N18   , En2 
+	.byte	W18
+	.byte		N06   
+	.byte	W06
+	.byte		N18   , Bn1 
+	.byte	W18
+	.byte		N06   
+	.byte	W06
+	.byte		N18   , En2 
+	.byte	W18
+	.byte		N06   , Bn1 
+	.byte	W06
+	.byte		N12   , Dn2 
+	.byte	W12
+	.byte		        Fs2 
+	.byte	W12
 @ 013   ----------------------------------------
-Label_6_01279A97:
- .byte   W06
- .byte   N06 ,Dn4 ,v115
- .byte   W06
- .byte   En4
- .byte   W06
- .byte   Fs4
- .byte   W12
- .byte   N06
- .byte   W06
- .byte   Gn4
- .byte   W06
- .byte   An4
- .byte   W12
- .byte   N06
- .byte   W12
- .byte   Gs4
- .byte   W12
- .byte   N18 ,Gn4
- .byte   W18
-@ .byte   PEND 
+	.byte		N24   , Cs2 
+	.byte	W24
+	.byte		        An2 
+	.byte	W24
+	.byte		        Fs2 
+	.byte	W24
+	.byte		N12   , Cs2 
+	.byte	W12
+	.byte		        En2 
+	.byte	W12
 @ 014   ----------------------------------------
-Label_6_01279AAE:
- .byte   N06 ,Fs4 ,v115
- .byte   W18
- .byte   N06
- .byte   W78
-@ .byte   PEND 
+	.byte		N24   , Fs2 
+	.byte	W24
+	.byte		N12   
+	.byte	W12
+	.byte		N12   
+	.byte	W12
+	.byte		N48   , Cs3 
+	.byte	W48
 @ 015   ----------------------------------------
-Label_6_01279AB5:
- .byte   W12
- .byte   N06 ,Dn4 ,v115
- .byte   W12
- .byte   En4
- .byte   W06
- .byte   Fs4
- .byte   W12
- .byte   N06
- .byte   W30
- .byte   N06
- .byte   W12
- .byte   Dn4
- .byte   W12
-@ .byte   PEND 
+	.byte		N24   , Bn2 
+	.byte	W24
+	.byte		        Fs2 
+	.byte	W24
+	.byte		N18   , Bn2 
+	.byte	W18
+	.byte		        Fs2 
+	.byte	W18
+	.byte		N12   , Dn2 
+	.byte	W12
 @ 016   ----------------------------------------
-Label_6_01279AC5:
- .byte   N72 ,En4 ,v115
- .byte   W72
- .byte   N03
- .byte   W08
- .byte   Fs4
- .byte   W07
- .byte   N04 ,Gn4
- .byte   W09
-@ .byte   PEND 
+	.byte		N18   , En2 
+	.byte	W18
+	.byte		N06   
+	.byte	W06
+	.byte		N18   , Bn1 
+	.byte	W18
+	.byte		N06   
+	.byte	W06
+	.byte		N18   , En2 
+	.byte	W18
+	.byte		N06   , Bn1 
+	.byte	W06
+	.byte		N12   , Dn2 
+	.byte	W12
+	.byte		        En2 
+	.byte	W12
 @ 017   ----------------------------------------
-Label_6_01279AD1:
- .byte   N72 ,An4 ,v115
- .byte   W72
- .byte   N03 ,Gs4
- .byte   W08
- .byte   An4
- .byte   W07
- .byte   N04 ,As4
- .byte   W09
-@ .byte   PEND 
+	.byte		N18   , An2 
+	.byte	W18
+	.byte		N06   
+	.byte	W06
+	.byte		N18   , En2 
+	.byte	W18
+	.byte		N06   
+	.byte	W06
+	.byte		N18   , An2 
+	.byte	W18
+	.byte		N06   , En2 
+	.byte	W06
+	.byte		N12   , Gs2 
+	.byte	W12
+	.byte		        An2 
+	.byte	W12
 @ 018   ----------------------------------------
- .byte   N96 ,Bn4
- .byte   W96
+	.byte		N18   , Bn2 
+	.byte	W18
+	.byte		N06   
+	.byte	W06
+	.byte		N18   , Fs2 
+	.byte	W18
+	.byte		N06   
+	.byte	W06
+	.byte		N18   , Ds2 
+	.byte	W18
+	.byte		N06   
+	.byte	W06
+	.byte		N12   , Bn1 
+	.byte	W12
+	.byte		        Bn2 
+	.byte	W12
 @ 019   ----------------------------------------
- .byte   W96
+	.byte		N06   , An1 
+	.byte	W12
+	.byte		N06   
+	.byte	W20
+	.byte		N07   
+	.byte	W07
+	.byte		N08   
+	.byte	W09
+	.byte		N08   
+	.byte	W44
+	.byte	W03
+	.byte		VOICE , 38
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte	W01
+	.byte	GOTO
+	 .word	songZelos_5_B1
+songZelos_5_B2:
 @ 020   ----------------------------------------
- .byte   W96
-@ 021   ----------------------------------------
- .byte   W96
-@ 022   ----------------------------------------
- .byte   W96
-@ 023   ----------------------------------------
- .byte   W96
-@ 024   ----------------------------------------
- .byte   W96
-@ 025   ----------------------------------------
- .byte   W96
-@ 026   ----------------------------------------
- .byte   W96
-@ 027   ----------------------------------------
- .byte   W96
- .byte   PATT
-  .word Label_6_01279A74
- .byte   PATT
-  .word Label_6_01279A7D
- .byte   PATT
-  .word Label_6_01279A8E
- .byte   PATT
-  .word Label_6_01279A97
- .byte   PATT
-  .word Label_6_01279AAE
- .byte   PATT
-  .word Label_6_01279AB5
- .byte   PATT
-  .word Label_6_01279AC5
- .byte   PATT
-  .word Label_6_01279AD1
-@ 028   ----------------------------------------
- .byte   N96 ,Bn4 ,v115
- .byte   W96
-@ 029   ----------------------------------------
- .byte   GOTO
-  .word Label_6_01279A5A
- .byte   FINE
+	.byte		VOICE , 38
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		BEND  , c_v+0
+	.byte	FINE
 
-@**************** Track 8 (Midi-Chn.7) ****************@
+@**************** Track 6 (Midi-Chn.6) ****************@
 
-songZelos_008:
+songZelos_6:
+	.byte	KEYSH , songZelos_key+0
 @ 000   ----------------------------------------
- .byte   KEYSH , songZelos_key+0
-Label_7_01279B1E:
- .byte   VOICE , 121
- .byte   VOL , 60*songZelos_mvl/mxv
- .byte   MODT 0
- .byte   CnM2 ,v000
- .byte   LFOS 0
- .byte   CnM2 ,v044
- .byte   VOL , 60*songZelos_mvl/mxv
- .byte   PAN , c_v+0
- .byte   VOL , 60*songZelos_mvl/mxv
- .byte   MODT 0
- .byte   CnM2 ,v000
- .byte   LFOS 0
- .byte   CnM2 ,v044
- .byte   VOL , 60*songZelos_mvl/mxv
- .byte   PAN , c_v+0
- .byte   VOL , 60*songZelos_mvl/mxv
- .byte   MODT 0
- .byte   CnM2 ,v000
- .byte   LFOS 0
- .byte   CnM2 ,v044
- .byte   VOL , 60*songZelos_mvl/mxv
- .byte   PAN , c_v+0
- .byte   VOL , 60*songZelos_mvl/mxv
- .byte   N06 ,Cn1 ,v060
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Dn1
- .byte   N06 ,En1
- .byte   N06 ,An1
- .byte   W06
- .byte   Fs2
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Dn1
- .byte   N06 ,En1
- .byte   N06 ,An1
- .byte   W06
- .byte   Fs2
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   N03 ,Fn3
- .byte   W03
- .byte   N02
- .byte   W03
- .byte   N06 ,Fs2
- .byte   N03 ,Fn3
- .byte   W03
- .byte   N02
- .byte   W03
+	.byte		VOICE , 51
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 40*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 40*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		        c_v+0
+	.byte		VOL   , 40*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		        c_v+0
+	.byte		VOL   , 40*songZelos_mvl/mxv
+	.byte		BEND  , c_v+0
+	.byte	W96
 @ 001   ----------------------------------------
-Label_7_01279B85:
- .byte   N06 ,Dn1 ,v060
- .byte   N06 ,En1
- .byte   N06 ,An1
- .byte   W12
- .byte   Dn1
- .byte   N06 ,En1
- .byte   N06 ,An1
- .byte   W20
- .byte   N07 ,Dn1
- .byte   N07 ,En1
- .byte   N07 ,An1
- .byte   W07
- .byte   N08 ,Dn1
- .byte   N08 ,En1
- .byte   N08 ,An1
- .byte   W09
- .byte   Dn1
- .byte   N08 ,En1
- .byte   N08 ,An1
- .byte   W48
- .byte   PEND 
+	.byte	W96
+songZelos_6_B1:
 @ 002   ----------------------------------------
-Label_7_01279BA8:
- .byte   N06 ,Cn1 ,v060
- .byte   N48 ,Cs2
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Dn1
- .byte   N06 ,En1
- .byte   W06
- .byte   Fs2
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Dn1
- .byte   N06 ,En1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   PEND 
+	.byte	W96
 @ 003   ----------------------------------------
-Label_7_01279BDF:
- .byte   N06 ,Cn1 ,v060
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Dn1
- .byte   N06 ,En1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   Dn1
- .byte   N06 ,En1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Dn1
- .byte   N06 ,En1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   PEND 
+	.byte	W96
 @ 004   ----------------------------------------
-Label_7_01279C1A:
- .byte   N06 ,Cn1 ,v060
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Dn1
- .byte   N06 ,En1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Dn1
- .byte   N06 ,En1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   PEND 
+	.byte	W96
 @ 005   ----------------------------------------
-Label_7_01279C51:
- .byte   N06 ,Cn1 ,v060
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Dn1
- .byte   N06 ,En1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Dn1
- .byte   N06 ,En1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Dn1
- .byte   N06 ,En1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   Dn1
- .byte   N06 ,En1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   PEND 
- .byte   PATT
-  .word Label_7_01279BA8
- .byte   PATT
-  .word Label_7_01279BDF
- .byte   PATT
-  .word Label_7_01279C1A
- .byte   PATT
-  .word Label_7_01279C51
- .byte   PATT
-  .word Label_7_01279BA8
- .byte   PATT
-  .word Label_7_01279BDF
- .byte   PATT
-  .word Label_7_01279C1A
- .byte   PATT
-  .word Label_7_01279C51
- .byte   PATT
-  .word Label_7_01279BA8
- .byte   PATT
-  .word Label_7_01279C51
- .byte   PATT
-  .word Label_7_01279C1A
+	.byte	W96
 @ 006   ----------------------------------------
-Label_7_01279CC5:
- .byte   N06 ,Cn1 ,v060
- .byte   N48 ,Cs2
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Dn1
- .byte   N06 ,En1
- .byte   W06
- .byte   Fs2
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Dn1
- .byte   N06 ,En1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Dn1
- .byte   N06 ,En1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   Dn1
- .byte   N06 ,En1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   PEND 
+	.byte	W96
 @ 007   ----------------------------------------
-Label_7_01279D02:
- .byte   N06 ,Cn1 ,v060
- .byte   N48 ,Cs2
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Dn1
- .byte   N06 ,En1
- .byte   W06
- .byte   Fs2
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N48 ,Cs2
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Cn1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   N06
- .byte   W06
- .byte   Dn1
- .byte   N06 ,En1
- .byte   W06
- .byte   Fs2
- .byte   W06
- .byte   En1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   En1
- .byte   N06 ,Fs2
- .byte   W06
- .byte   PEND 
- .byte   PATT
-  .word Label_7_01279B85
- .byte   PATT
-  .word Label_7_01279BA8
- .byte   PATT
-  .word Label_7_01279BDF
- .byte   PATT
-  .word Label_7_01279C1A
- .byte   PATT
-  .word Label_7_01279C51
- .byte   PATT
-  .word Label_7_01279BA8
- .byte   PATT
-  .word Label_7_01279BDF
- .byte   PATT
-  .word Label_7_01279C1A
- .byte   PATT
-  .word Label_7_01279C51
- .byte   PATT
-  .word Label_7_01279BA8
- .byte   PATT
-  .word Label_7_01279BDF
- .byte   PATT
-  .word Label_7_01279C1A
- .byte   PATT
-  .word Label_7_01279C51
- .byte   PATT
-  .word Label_7_01279BA8
- .byte   PATT
-  .word Label_7_01279C51
- .byte   PATT
-  .word Label_7_01279C1A
- .byte   PATT
-  .word Label_7_01279CC5
- .byte   PATT
-  .word Label_7_01279D02
+	.byte	W96
 @ 008   ----------------------------------------
- .byte   GOTO
-  .word Label_7_01279B1E
- .byte   FINE
+	.byte	W96
+@ 009   ----------------------------------------
+	.byte	W96
+@ 010   ----------------------------------------
+	.byte		N96   , Gn4 , v040
+	.byte	W96
+@ 011   ----------------------------------------
+	.byte		        Fs4 
+	.byte	W96
+@ 012   ----------------------------------------
+	.byte		        En4 
+	.byte	W96
+@ 013   ----------------------------------------
+	.byte		        Cs4 
+	.byte	W96
+@ 014   ----------------------------------------
+	.byte		        An3 
+	.byte	W96
+@ 015   ----------------------------------------
+	.byte		N92   , Bn3 
+	.byte	W96
+@ 016   ----------------------------------------
+	.byte		N96   
+	.byte	W96
+@ 017   ----------------------------------------
+	.byte		        Cs4 
+	.byte	W96
+@ 018   ----------------------------------------
+	.byte		N48   , En4 , v060
+	.byte	W48
+	.byte		        Ds4 
+	.byte	W48
+@ 019   ----------------------------------------
+	.byte	W92
+	.byte	W03
+	.byte		VOICE , 51
+	.byte		VOL   , 40*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte	W01
+	.byte	GOTO
+	 .word	songZelos_6_B1
+songZelos_6_B2:
+@ 020   ----------------------------------------
+	.byte		VOICE , 51
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 40*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 40*songZelos_mvl/mxv
+	.byte		BEND  , c_v+0
+	.byte	FINE
+
+@**************** Track 7 (Midi-Chn.7) ****************@
+
+songZelos_7:
+	.byte	KEYSH , songZelos_key+0
+@ 000   ----------------------------------------
+	.byte		VOICE , 56
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 80*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 80*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 80*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 80*songZelos_mvl/mxv
+	.byte		BEND  , c_v+0
+	.byte	W96
+@ 001   ----------------------------------------
+	.byte	W96
+songZelos_7_B1:
+@ 002   ----------------------------------------
+	.byte	W96
+@ 003   ----------------------------------------
+	.byte	W96
+@ 004   ----------------------------------------
+	.byte	W96
+@ 005   ----------------------------------------
+	.byte	W96
+@ 006   ----------------------------------------
+	.byte	W96
+@ 007   ----------------------------------------
+	.byte	W96
+@ 008   ----------------------------------------
+	.byte	W96
+@ 009   ----------------------------------------
+	.byte	W96
+@ 010   ----------------------------------------
+	.byte		N06   , Gn4 , v116
+	.byte	W48
+	.byte		N12   
+	.byte	W12
+	.byte		N06   
+	.byte	W36
+@ 011   ----------------------------------------
+	.byte	W12
+	.byte		        Fs4 
+	.byte	W12
+	.byte		N06   
+	.byte	W12
+	.byte		        En4 
+	.byte	W12
+	.byte		        Fs4 
+	.byte	W06
+	.byte		        En4 
+	.byte	W12
+	.byte		N12   , Dn4 
+	.byte	W30
+@ 012   ----------------------------------------
+	.byte		N06   , En4 
+	.byte	W48
+	.byte		N12   
+	.byte	W12
+	.byte		N06   
+	.byte	W36
+@ 013   ----------------------------------------
+	.byte	W06
+	.byte		        Dn4 
+	.byte	W06
+	.byte		        En4 
+	.byte	W06
+	.byte		        Fs4 
+	.byte	W12
+	.byte		N06   
+	.byte	W06
+	.byte		        Gn4 
+	.byte	W06
+	.byte		        An4 
+	.byte	W12
+	.byte		N06   
+	.byte	W12
+	.byte		        Gs4 
+	.byte	W12
+	.byte		N18   , Gn4 
+	.byte	W18
+@ 014   ----------------------------------------
+	.byte		N06   , Fs4 
+	.byte	W18
+	.byte		N06   
+	.byte	W78
+@ 015   ----------------------------------------
+	.byte	W12
+	.byte		        Dn4 
+	.byte	W12
+	.byte		        En4 
+	.byte	W06
+	.byte		        Fs4 
+	.byte	W12
+	.byte		N06   
+	.byte	W30
+	.byte		N06   
+	.byte	W12
+	.byte		        Dn4 
+	.byte	W12
+@ 016   ----------------------------------------
+	.byte		N72   , En4 
+	.byte	W72
+	.byte		N03   
+	.byte	W08
+	.byte		        Fs4 
+	.byte	W07
+	.byte		N04   , Gn4 
+	.byte	W09
+@ 017   ----------------------------------------
+	.byte		N72   , An4 
+	.byte	W72
+	.byte		N03   , Gs4 
+	.byte	W08
+	.byte		        An4 
+	.byte	W07
+	.byte		N04   , As4 
+	.byte	W09
+@ 018   ----------------------------------------
+	.byte		N96   , Bn4 
+	.byte	W96
+@ 019   ----------------------------------------
+	.byte	W92
+	.byte	W03
+	.byte		VOICE , 56
+	.byte		VOL   , 80*songZelos_mvl/mxv
+	.byte	W01
+	.byte	GOTO
+	 .word	songZelos_7_B1
+songZelos_7_B2:
+@ 020   ----------------------------------------
+	.byte		VOICE , 56
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 80*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 80*songZelos_mvl/mxv
+	.byte		BEND  , c_v+0
+	.byte	FINE
+
+@**************** Track 8 (Midi-Chn.8) ****************@
+
+songZelos_8:
+	.byte	KEYSH , songZelos_key+0
+@ 000   ----------------------------------------
+	.byte		VOICE , 121
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		        c_v+0
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		        c_v+0
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		BEND  , c_v+0
+	.byte		N06   , Cn1 , v060
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte		N06   , An1 
+	.byte	W06
+	.byte		        Fs2 
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte		N06   , An1 
+	.byte	W06
+	.byte		        Fs2 
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte		N03   , Fn3 
+	.byte	W03
+	.byte		N02   
+	.byte	W03
+	.byte		N06   , Fs2 
+	.byte		N03   , Fn3 
+	.byte	W03
+	.byte		N02   
+	.byte	W03
+@ 001   ----------------------------------------
+	.byte		N06   , Dn1 
+	.byte		N06   , En1 
+	.byte		N06   , An1 
+	.byte	W12
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte		N06   , An1 
+	.byte	W20
+	.byte		N07   , Dn1 
+	.byte		N07   , En1 
+	.byte		N07   , An1 
+	.byte	W07
+	.byte		N08   , Dn1 
+	.byte		N08   , En1 
+	.byte		N08   , An1 
+	.byte	W09
+	.byte		        Dn1 
+	.byte		N08   , En1 
+	.byte		N08   , An1 
+	.byte	W48
+songZelos_8_B1:
+@ 002   ----------------------------------------
+songZelos_8_002:
+	.byte		N06   , Cn1 , v060
+	.byte		N48   , Cs2 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte	W06
+	.byte		        Fs2 
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte	PEND
+@ 003   ----------------------------------------
+songZelos_8_003:
+	.byte		N06   , Cn1 , v060
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte	PEND
+@ 004   ----------------------------------------
+songZelos_8_004:
+	.byte		N06   , Cn1 , v060
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte	PEND
+@ 005   ----------------------------------------
+songZelos_8_005:
+	.byte		N06   , Cn1 , v060
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte	PEND
+@ 006   ----------------------------------------
+	.byte	PATT
+	 .word	songZelos_8_002
+@ 007   ----------------------------------------
+	.byte	PATT
+	 .word	songZelos_8_003
+@ 008   ----------------------------------------
+	.byte	PATT
+	 .word	songZelos_8_004
+@ 009   ----------------------------------------
+	.byte	PATT
+	 .word	songZelos_8_005
+@ 010   ----------------------------------------
+	.byte	PATT
+	 .word	songZelos_8_002
+@ 011   ----------------------------------------
+	.byte	PATT
+	 .word	songZelos_8_003
+@ 012   ----------------------------------------
+	.byte	PATT
+	 .word	songZelos_8_004
+@ 013   ----------------------------------------
+	.byte	PATT
+	 .word	songZelos_8_005
+@ 014   ----------------------------------------
+	.byte	PATT
+	 .word	songZelos_8_002
+@ 015   ----------------------------------------
+	.byte	PATT
+	 .word	songZelos_8_005
+@ 016   ----------------------------------------
+	.byte	PATT
+	 .word	songZelos_8_004
+@ 017   ----------------------------------------
+	.byte		N06   , Cn1 , v060
+	.byte		N48   , Cs2 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte	W06
+	.byte		        Fs2 
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte		N06   , Fs2 
+	.byte	W06
+@ 018   ----------------------------------------
+	.byte		        Cn1 
+	.byte		N48   , Cs2 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte	W06
+	.byte		        Fs2 
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N48   , Cs2 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Cn1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		N06   
+	.byte	W06
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte	W06
+	.byte		        Fs2 
+	.byte	W06
+	.byte		        En1 
+	.byte		N06   , Fs2 
+	.byte	W06
+	.byte		        En1 
+	.byte		N06   , Fs2 
+	.byte	W06
+@ 019   ----------------------------------------
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte		N06   , An1 
+	.byte	W12
+	.byte		        Dn1 
+	.byte		N06   , En1 
+	.byte		N06   , An1 
+	.byte	W20
+	.byte		N07   , Dn1 
+	.byte		N07   , En1 
+	.byte		N07   , An1 
+	.byte	W07
+	.byte		N08   , Dn1 
+	.byte		N08   , En1 
+	.byte		N08   , An1 
+	.byte	W09
+	.byte		        Dn1 
+	.byte		N08   , En1 
+	.byte		N08   , An1 
+	.byte	W44
+	.byte	W03
+	.byte		VOICE , 121
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte	W01
+	.byte	GOTO
+	 .word	songZelos_8_B1
+songZelos_8_B2:
+@ 020   ----------------------------------------
+	.byte		VOICE , 121
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		VOL   , 60*songZelos_mvl/mxv
+	.byte		BEND  , c_v+0
+	.byte	FINE
 
 @******************************************************@
 	.align	2
@@ -1833,16 +1628,16 @@ songZelos:
 	.byte	0	@ NumBlks
 	.byte	songZelos_pri	@ Priority
 	.byte	songZelos_rev	@ Reverb.
-    
+
 	.word	songZelos_grp
-    
-	.word	songZelos_001
-	.word	songZelos_002
-	.word	songZelos_003
-	.word	songZelos_004
-	.word	songZelos_005
-	.word	songZelos_006
-	.word	songZelos_007
-	.word	songZelos_008
+
+	.word	songZelos_1
+	.word	songZelos_2
+	.word	songZelos_3
+	.word	songZelos_4
+	.word	songZelos_5
+	.word	songZelos_6
+	.word	songZelos_7
+	.word	songZelos_8
 
 	.end
