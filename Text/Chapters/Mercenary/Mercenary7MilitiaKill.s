@@ -331,3 +331,34 @@ I'm sure I'll give you this[A][NL]
 opportunity again, lost soul.[A]
 [MidRight]Dammit, no![A][X]
 
+## Merc7MilitiaKillArcEscapeText
+[Left][LoadArc]
+I'm getting out of here, [Tact].[NL]
+Don't be too far behind.[A][X]
+
+## Merc7MilitiaKillLukeEscapeText
+[Left][LoadLuke]
+Hurry up, [Tact]! We don't[NL]
+have the time to dally around![A][X]
+
+## Merc7MilitiaKillAryaEscapeText
+[Left][LoadArya]
+I'm gonna move ahead and make[NL]
+sure the way is clear, [Tact].[A][X]
+
+## Merc7MilitiaKillKendrickEscapeText
+[Left][LoadKendrick]
+Looks like it's my time to[NL]
+skate, [Tact]! Don't be[A][NL]
+too long, now.[A][X]
+
+## Merc7MilitiaKillXeximEscapeText
+[Left][LoadXexim]
+Thanks for helping me[NL]
+out, [Tact]. I'll meet[A][NL]
+you outside the city.[A][X]
+
+## Merc7MilitiaKillTactEscapeText
+[Left][LoadPlayer]
+Let's all get out of[NL]
+here! Our work is done![A][X]

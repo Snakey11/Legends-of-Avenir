@@ -144,3 +144,23 @@ We made it out... Is everyone okay?
 [Left]Bacrun? 
 [FarLeft]We should be able to get passports there. For now, we just need to put distance between ourselves and the city.
 [Left]Right. Let's move.[X]
+
+## Mage2LeaveAjaxEscapeText
+[ConversationText]
+[Left][LoadAjax]
+This way should get us out of here. I'll go on ahead.[X]
+
+## Mage2LeaveXenaEscapeText
+[ConversationText]
+[Left][LoadXena]
+[Tact], I'm leaving! Don't lag too far behind or you'll be overwhelmed![X]
+
+## Mage2LeaveTactEscapeText
+[ConversationText]
+[Left][LoadPlayer]
+This path leads outside? Alright, let's get out of here.[X]
+
+## Mage2LeaveZahevaEscapeText
+[ConversationText]
+[Left][LoadZaheva]
+I'm getting out of here. We'll all be killed if we linger here too long.[X]

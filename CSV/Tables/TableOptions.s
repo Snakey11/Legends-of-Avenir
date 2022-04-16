@@ -13,7 +13,7 @@ CSV Characters/CharacterTable.csv @ Things indexed by character.
 	TABLE MagCharTable Characters/CharacterMagicTable.nmm
 	TABLE CharLevelUpSkillTable Characters/CharacterLevelUpTable.nmm
 	TABLE PersonalSkillTable Characters/PersonalSkillTable.nmm
-	TABLE EscapeQuoteTable Characters/EscapeQuoteTable.nmm
+	@ TABLE EscapeQuoteTable Characters/EscapeQuoteTable.nmm @ The escape quote table has been rewritten as a list to include chapter ID conditions.
 	INLINE True
 	WRITE_SEQUENTIALLY False
 	MAX_ENTRIES 256
