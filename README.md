@@ -20,19 +20,19 @@ My (Snek's) scheme for a buildfile is a little different than other buildfiles i
 
 Any method I use in this buildfile is free to use, reference, and edit. I ask that any custom (namely Python) script that hasn't been released not be taken because it probably isn't finished.
 
-`MAKEAll.bat` calls all other necessary batch files to preassemble things and builds the ROM.
-`MAKEAnims.bat` specifically assembles battle animations into the ROM. This system exists for speed optimization since animations are not very volatile and are written to free space blocks and the start of the end of the ROM.
-`MAKEHACK.bat` assembles the entire ROM (except battle animations). Neither this nor `MAKEAnims.bat` preassemble anything.
+### To assemble everything (use this for the first time):
+`AssembleAll.bat` calls all other necessary batch files to preassemble things and builds the ROM. Call this to build for the first time.
 
+### To assemble individual components:
+`MAKEAnims.bat` specifically assembles battle animations into the ROM. This system exists for speed optimization since animations are not very volatile and are written to free space blocks and the start of the end of the ROM.
+`MAKEHACK.bat` assembles the entire ROM (except battle animations). Neither this nor `MAKEAnims.bat` preassemble anything for the sake of speed.
 `AssembleDefs.bat` Uses my custom definition enumeration script for those definitions where "I really only kinda loosely care what the actual IDs are. I just want them to be unique." For example, battle animations, palette IDs, class IDs, character IDs, item IDs, etc all use this system.
 `AssembleGraphics.bat` calls a few other batch scripts that assemble miscellaneous graphical things including battle palettes, class cards, portraits, and world map things. Each of these use date checking to only assemble when necessary.
-`AssembleMaps.bat` just calls `tmx2ea` to assemble chapter maps. (I have no intermediate pauses in `MAKEAll.bat` except unfortunately for this script because `tmx2ea` natively pauses.)
+`AssembleMaps.bat` just calls `tmx2ea` to assemble chapter maps.
 `AssembleMusic.bat` calls `s2ea` for each `.s` file in `Music` and also date checks.
 `AssembleTables.bat` calls a custom script that's similar to `c2ea`. Instead of writing sequentially, this script treats each row name as a definition and writes to that index in its respective table. (See EA outputs.) This is designed to go hand in hand with my definition system.
 `AssembleText.bat` calls `text-process-classic` which assembles text IDs.
 
-For now, building requires both Java and Python, but I intend to change that soon by using not Java for something and compiling my scripts into executables. I'm also slowly fixing some oof convention like spaces in filenames where I can.
-
-The FE8 Skill System is included from `ASM/Master ASM Installer.event`. I'm phasing out trying to use it as a gitmodule (which didn't work). As is, I don't think this clones correctly because of this. Next time I update the Skill System, this will be fixed.
+The FE8 Skill System is included from `ASM/MasterASMInstaller.event`.
 
 Feel free to reach out to me (Snek) through Discord or FEU!
