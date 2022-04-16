@@ -18,10 +18,11 @@ ALIGN 4
 LordMustEscapeLastTextIDLink:
 SHORT LordMustEscapeLastText
 
-ALIGN 4
+/*ALIGN 4
 RefEscapeTable:
 #incbin "RefEscapeTable.dmp"
-POIN EscapeQuoteTable
+POIN EscapeQuoteTable*/
+#include "RefEscapeTable.lyn.event"
 
 ALIGN 4
 FinalEscapeThing: //hooks with post-action calc loop

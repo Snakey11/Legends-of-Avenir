@@ -1,0 +1,30 @@
+
+#define EscapeQuote(character,chapter,textID) "BYTE character chapter ; SHORT textID"
+
+ALIGN 4
+EscapeQuoteList:
+EscapeQuote(0x00,MageLeave2,Mage2LeaveTactEscapeText) // 0x00 means player leader.
+EscapeQuote(Xena,MageLeave2,Mage2LeaveXenaEscapeText)
+EscapeQuote(Ajax,MageLeave2,Mage2LeaveAjaxEscapeText)
+EscapeQuote(Zaheva,MageLeave2,Mage2LeaveZahevaEscapeText)
+
+EscapeQuote(0x00,MageLeave4,Mage4LeaveTactEscapeText)
+EscapeQuote(Xena,MageLeave4,Mage4LeaveXenaEscapeText)
+EscapeQuote(Ajax,MageLeave4,Mage4LeaveAjaxEscapeText)
+EscapeQuote(Zaheva,MageLeave4,Mage4LeaveZahevaEscapeText)
+EscapeQuote(Arya,MageLeave4,Mage4LeaveAryaEscapeText)
+
+EscapeQuote(0x00,MilitaryAccept3,Military3AcceptTactEscapeText)
+EscapeQuote(Jasper,MilitaryAccept3,Military3AcceptJasperEscapeText)
+EscapeQuote(Derek,MilitaryAccept3,Military3AcceptDerekEscapeText)
+EscapeQuote(Remus,MilitaryAccept3,Military3AcceptRemusEscapeText)
+EscapeQuote(Adeline,MilitaryAccept3,Military3AcceptAdelineEscapeText)
+
+EscapeQuote(0x00,MercenaryMilitiaKill7,Merc7MilitiaKillTactEscapeText)
+EscapeQuote(Arc,MercenaryMilitiaKill7,Merc7MilitiaKillArcEscapeText) // Because I did event parameter magic, this works despite Arc's silly character ID things.
+EscapeQuote(Luke,MercenaryMilitiaKill7,Merc7MilitiaKillArcEscapeText)
+EscapeQuote(Arya,MercenaryMilitiaKill7,Merc7MilitiaKillAryaEscapeText)
+EscapeQuote(Kendrick,MercenaryMilitiaKill7,Merc7MilitiaKillKendrickEscapeText)
+EscapeQuote(Xexim,MercenaryMilitiaKill7,Merc7MilitiaKillXeximEscapeText)
+
+WORD 0 // Terminator.
