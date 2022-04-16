@@ -1,4 +1,6 @@
 v2.3
+Reduced Wind weight
+Slightly rewrote the readme to be up to date with various re-org things (oops this was supposed to be updated a while ago)
 
 v2.2 hotfixes
 Fixed mistakes in house text in 5 Merc Cesaria
