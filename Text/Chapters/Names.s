@@ -153,3 +153,6 @@ Prologue[X]
 
 ## Mage3LeaveNameText
 3: Battle in Shadows[X]
+
+## Mage4LeaveNameText
+Caught in the Middle[X]

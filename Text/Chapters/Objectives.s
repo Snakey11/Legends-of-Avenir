@@ -219,3 +219,8 @@ Mistlain's tower.[X]
 
 ## Mage3LeaveStatusText
 Defeat Pascal.[X]
+
+## Mage4LeaveStatusText
+Escape to the[NL]
+north or talk[NL]
+to Blaine[X]

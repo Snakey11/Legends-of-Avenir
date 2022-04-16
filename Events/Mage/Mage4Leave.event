@@ -22,15 +22,19 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
+CHAR 0x10 TTactBlaine [0x00,Blaine]
 END_MAIN
 
 //Label LocationBasedEvents
 LocationBasedEvents:
+Escape(0x13,EscapeScene,6,0)
+Escape(0x13,EscapeScene,7,0)
 END_MAIN
 
 //Label MiscBasedEvents
 MiscBasedEvents:
 CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
 END_MAIN
 
 //Label TrapData
@@ -40,14 +44,116 @@ ALIGN 4
 
 //Label Units
 Units:
+UNIT 0x00 0x00 0x00 Level(1,Ally,True) [10,16] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Xena 0x00 0x00 Level(1,Ally,True) [9,17] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [8,16] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Ajax 0x00 0x00 Level(1,Ally,True) [8,18] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Arya 0x00 0x00 Level(1,Ally,True) [9,19] 0x00 0x00 0x00 0x00 [0] NoAI
 EndUnit
 
 //Label BeginingScene
 BeginningScene:
-ENDA
+MUSC Dry_Trail
+CAM1 [9,9]
+LOAD2 0x1 Friends
+LOAD1 0x1 Meanies1
+LOAD1 0x1 Meanies2
+LOAD1 0x1 Cesarians
+ENUN
+SetBackground(0x18)
+Text(Mage4LeaveStartingText)
+MUSI
+FADI 0x5
+STAL 0x30
+MUNO
+FADU 0x5
+Text(Mage4LeaveTrustText)
+MUSC The_Devoted
+STAL 0x60
+CAM1 [8,18]
+STAL 0x20
+FlashCursor(0x00,60)
+STAL 0x10
+Text(Mage4LeaveOnMapText)
+GotoPrepScreen
 
 //Label EndingScene
-EndingScene:
+EndingScene: // Gerald was defeated.
+MUSC Heavens_Rock_Seat
+FADI 0x5
+CLEA 0x0
+CLEE 0x0
+CLEN 0x0
+SetBackground(0x18)
+Text(Mage4LeaveKillText)
+MoveToChapter(MageLeaveKill5)
+NoFade
+EndA2
+
+EscapeScene: // Tact escaped.
+MUSC Victory_Minor
+FADI 0x5
+CLEA 0x0
+CLEE 0x0
+CLEN 0x0
+SetBackground(0x18)
+Text(Mage4LeaveEscapeText)
+MoveToChapter(MageLeaveLeave5)
+NoFade
+ENDA
+
+//Label Character events
+TTactBlaine:
+MUSI
+Text(Mage4LeaveTactBlaineText)
+MUNO
+ENUT 0x13 // Disable escaping.
+NoFade
 ENDA
 
 	/*UNIT DATA*/
+
+//Label Cutscene units
+Friends:
+UNIT 0x00 0x00 0x00 Level(1,Ally,True) [10,16] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Xena 0x00 0x00 Level(1,Ally,True) [9,17] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [8,16] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Ajax 0x00 0x00 Level(1,Ally,True) [8,18] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Arya 0x00 0x00 Level(1,Ally,True) [9,19] 0x00 0x00 0x00 0x00 [0] NoAI
+EndUnit
+
+//Label Chapter units
+Meanies1:
+UNIT Gerald Mage Gerald Level(14,Enemy,True) [19,2] Drop 0x00 0x00 0x00 [Elfire,MasterSeal] GuardAI
+UNIT Arcanian Cavalier Gerald Level(10,Enemy,True) [19,2] 0x00 0x00 0x00 0x00 [SteelSword] ChaseOnceApproachedAI
+UNIT Arcanian Cavalier Gerald Level(11,Enemy,True) [20,1] 0x00 0x00 0x00 0x00 [HeavySpear] ChaseOnceApproachedAI
+UNIT Arcanian BattleSage Gerald Level(2,Enemy,True) [17,4] 0x00 0x00 0x00 0x00 [IronBlade,Thunder] AttackIfCloseAI
+UNIT Arcanian Mercenary Gerald Level(12,Enemy,True) [12,3] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
+UNIT Arcanian Sage Gerald Level(3,Enemy,True) [8,4] Drop 0x00 0x00 0x00 [Elaqua,GuidingRing] AttackInRangeAI
+UNIT Arcanian PegasusKnight Gerald Level(10,Enemy,True) [20,9] 0x00 0x00 0x00 0x00 [SlimLance] AttackInRangeAI
+UNIT Arcanian Cavalier Gerald Level(9,Enemy,True) [19,5] 0x00 0x00 0x00 0x00 [Horseslayer] NoAI
+UNIT Arcanian Shaman Gerald Level(10,Enemy,True) [14,7] 0x00 0x00 0x00 0x00 [Dulam] GuardAI
+UNIT
+
+Meanies2:
+UNIT Arcanian Spellsword Gerald Level(11,Enemy,True) [20,14] 0x00 0x00 0x00 0x00 [Wyrmslayer,Wind] NoAI
+UNIT Arcanian Soldier Gerald Level(12,Enemy,True) [20,15] 0x00 0x00 0x00 0x00 [IronLance] NoAI
+UNIT Arcanian Knight Gerald Level(11,Enemy,True) [18,13] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
+UNIT Arcanian Mage Gerald Level(10,Enemy,True) [11,9] 0x00 0x00 0x00 0x00 [Dasher] NoAI
+UNIT Arcanian Mage Gerald Level(9,Enemy,True) [12,10] 0x00 0x00 0x00 0x00 [Elfire] NoAI
+UNIT Arcanian Fighter Gerald Level(10,Enemy,True) [16,11] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
+UNIT Arcanian Archer Gerald Level(13,Enemy,True) [15,14] 0x00 0x00 0x00 0x00 [IronLongbow] NoAI
+UNIT Arcanian Soldier Gerald Level(12,Enemy,True) [14,14] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT
+
+Cesarians:
+UNIT Blaine Halberdier Gerald Level(4,NPC,True) [2,13] 0x00 0x00 0x00 0x00 [Spear] GuardAI
+UNIT Cesarian Sniper Gerald Level(1,NPC,True) [6,8] 0x00 0x00 0x00 0x00 [SilverLongbow] GuardAI
+UNIT Cesarian Knight Gerald Level(14,NPC,True) [7,10] 0x00 0x00 0x00 0x00 [SteelAxe] GuardAI
+UNIT Cesarian Soldier Gerald Level(13,NPC,True) [7,10] 0x00 0x00 0x00 0x00 [KillerLance] AttackIfCloseAI
+UNIT Cesarian Monk Gerald Level(15,NPC,True) [3,11] 0x00 0x00 0x00 0x00 [Lightning,Mend] HealAlliesAI
+UNIT Cesarian Fighter Gerald Level(16,NPC,True) [3,8] 0x00 0x00 0x00 0x00 [HandAxe] AttackInRangeAI
+UNIT Cesarian Cavalier Gerald Level(14,NPC,True) [1,7] 0x00 0x00 0x00 0x00 [DevilLance] AttackInRangeAI
+UNIT Cesarian Cavalier Gerald Level(14,NPC,True) [1,9] 0x00 0x00 0x00 0x00 [SteelBlade] AttackInRangeAI
+UNIT Cesarian Archer Gerald Level(16,NPC,True) [1,12] 0x00 0x00 0x00 0x00 [SteelBow] AttackInRangeAI
+EndUnit

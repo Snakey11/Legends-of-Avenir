@@ -88,6 +88,7 @@ MistlainThroneCutsceneMap
 ArcanaeEscapeMap
 LooterBaseMap
 TorchAttackMap
+InTheMiddleMap
 
 @ Map changes.
 ArcanaeCapitalChanges
@@ -134,6 +135,7 @@ SmallRuinChanges
 ArcanaeEscapeChanges
 LooterBaseChanges
 TorchAttackChanges
+InTheMiddleChanges
 
 @ Events.
 

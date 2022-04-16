@@ -91,6 +91,8 @@ UnspecifiedBattleConvo(Arya,MageLeave3,0x12,Mage3LeaveAryaBattleText)
 SpecifiedBattleConvo(Arya,Pascal,MageLeave3,0x17,Mage3LeaveAryaPascalBattleText)
 SpecifiedBattleConvo(Zaheva,Pascal,MageLeave3,0x18,Mage3LeaveZahevaPascalBattleText)
 SpecifiedBattleConvo(Xena,Pascal,MageLeave3,0x19,Mage3LeaveXenaPascalBattleText)
+SpecifiedBattleConvo(Zaheva,Gerald,MageLeave4,0x11,Mage4LeaveZahevaGeraldBattleText)
+UnspecifiedBattleConvo(Gerald,MageLeave3,0x12,Mage4LeaveGeraldBattleText)
 
 // This terminator deviates from vanilla because I changed the battle quote getter function.
 BYTE 0xF0 0xF0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Terminator
