@@ -1,0 +1,455 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	DivineProvidence_grp  voicegroup000
+	#define	DivineProvidence_pri  0
+	#define	DivineProvidence_rev  0
+	#define	DivineProvidence_mvl  127
+	#define	DivineProvidence_key  0
+	#define	DivineProvidence_tbs  1
+	#define	DivineProvidence_exg  0
+	#define	DivineProvidence_cmp  1
+
+	// .rodata
+	//	DivineProvidence
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+DivineProvidence_001:
+// 000   ----------------------------------------
+ BYTE   KEYSH   DivineProvidence_key+0
+ BYTE   TEMPO   88*DivineProvidence_tbs/2
+ BYTE   VOICE   19
+ BYTE   VOL   62*DivineProvidence_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   N11  Cn3  v080
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+Label_0_0106BFD6:
+ BYTE   N11  Gs2  v080
+ BYTE   W12
+ BYTE   Ds3
+ BYTE   W12
+ BYTE   Gs3
+ BYTE   W12
+ BYTE   PEND 
+Label_0_0106BFDF:
+ BYTE   N11  Dn3  v080
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+// 001   ----------------------------------------
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   PEND 
+Label_0_0106BFE8:
+ BYTE   N05  Cn4  v080
+ BYTE   W06
+ BYTE   As3
+ BYTE   W06
+ BYTE   Gs3
+ BYTE   W06
+ BYTE   Gn3
+ BYTE   W06
+ BYTE   Fn3
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   PEND 
+Label_0_0106BFF7:
+ BYTE   N03  Cn3  v080
+ BYTE   W04
+ BYTE   Bn2
+ BYTE   W04
+ BYTE   Cn3
+ BYTE   W04
+ BYTE   Gn3
+ BYTE   W04
+ BYTE   Fs3
+ BYTE   W04
+ BYTE   Gn3
+ BYTE   W04
+ BYTE   Cn4
+ BYTE   W04
+ BYTE   Bn3
+ BYTE   W04
+ BYTE   Cn4
+ BYTE   W04
+ BYTE   PEND 
+Label_0_0106C00C:
+ BYTE   N03  Gs2  v080
+ BYTE   W04
+ BYTE   Gn2
+ BYTE   W04
+ BYTE   Gs2
+ BYTE   W04
+// 002   ----------------------------------------
+ BYTE   Ds3
+ BYTE   W04
+ BYTE   Dn3
+ BYTE   W04
+ BYTE   Ds3
+ BYTE   W04
+ BYTE   Gs3
+ BYTE   W04
+ BYTE   Gn3
+ BYTE   W04
+ BYTE   Gs3
+ BYTE   W04
+ BYTE   PEND 
+Label_0_0106C021:
+ BYTE   N03  Dn3  v080
+ BYTE   W04
+ BYTE   Cs3
+ BYTE   W04
+ BYTE   Dn3
+ BYTE   W04
+ BYTE   Gn3
+ BYTE   W04
+ BYTE   Fs3
+ BYTE   W04
+ BYTE   Gn3
+ BYTE   W04
+ BYTE   Bn3
+ BYTE   W04
+ BYTE   As3
+ BYTE   W04
+ BYTE   Bn3
+ BYTE   W04
+ BYTE   PEND 
+Label_0_0106C036:
+ BYTE   N01  Cn6  v080
+ BYTE   W01
+ BYTE   Bn5
+ BYTE   W01
+ BYTE   As5
+ BYTE   W02
+ BYTE   An5
+ BYTE   W01
+ BYTE   Gs5
+ BYTE   W01
+ BYTE   Gn5
+ BYTE   W02
+ BYTE   Fs5
+ BYTE   W01
+ BYTE   Fn5
+ BYTE   W02
+ BYTE   En5
+ BYTE   W01
+ BYTE   Ds5
+ BYTE   W01
+ BYTE   Dn5
+ BYTE   W02
+ BYTE   Cs5
+ BYTE   W01
+ BYTE   Cn5
+ BYTE   W02
+ BYTE   Bn4
+ BYTE   W01
+ BYTE   As4
+ BYTE   W02
+ BYTE   An4
+ BYTE   W01
+ BYTE   Gs4
+ BYTE   W02
+ BYTE   N11  Gn4
+ BYTE   W12
+ BYTE   PEND 
+// 003   ----------------------------------------
+Label_0_0106C05E:
+ BYTE   N11  Cn3  v080
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_0_0106BFD6
+ BYTE   PATT
+  POIN2 Label_0_0106BFDF
+ BYTE   PATT
+  POIN2 Label_0_0106BFE8
+ BYTE   PATT
+  POIN2 Label_0_0106BFF7
+ BYTE   PATT
+  POIN2 Label_0_0106C00C
+ BYTE   PATT
+  POIN2 Label_0_0106C021
+ BYTE   PATT
+  POIN2 Label_0_0106C036
+ BYTE   PATT
+  POIN2 Label_0_0106C05E
+ BYTE   PATT
+  POIN2 Label_0_0106BFD6
+ BYTE   PATT
+  POIN2 Label_0_0106BFDF
+ BYTE   PATT
+  POIN2 Label_0_0106BFE8
+ BYTE   PATT
+  POIN2 Label_0_0106BFF7
+ BYTE   PATT
+  POIN2 Label_0_0106C00C
+ BYTE   PATT
+  POIN2 Label_0_0106C021
+ BYTE   PATT
+  POIN2 Label_0_0106C036
+ BYTE   PATT
+  POIN2 Label_0_0106C05E
+ BYTE   PATT
+  POIN2 Label_0_0106BFD6
+ BYTE   PATT
+  POIN2 Label_0_0106BFDF
+ BYTE   PATT
+  POIN2 Label_0_0106BFE8
+ BYTE   PATT
+  POIN2 Label_0_0106BFF7
+ BYTE   PATT
+  POIN2 Label_0_0106C00C
+ BYTE   PATT
+  POIN2 Label_0_0106C021
+ BYTE   PATT
+  POIN2 Label_0_0106C036
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+DivineProvidence_002:
+// 000   ----------------------------------------
+ BYTE   KEYSH   DivineProvidence_key+0
+ BYTE   VOICE   19
+ BYTE   VOL   62*DivineProvidence_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   N02  Cn2  v080
+ BYTE   W06
+ BYTE   N11  Ds2
+ BYTE   W12
+ BYTE   N05  Cn2
+ BYTE   W06
+ BYTE   N11  Ds2
+ BYTE   W12
+Label_1_0106C0F1:
+ BYTE   N11  Fn2  v080
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   PEND 
+Label_1_0106C0FA:
+ BYTE   N02  Gn1  v080
+ BYTE   W06
+ BYTE   N11  Bn1
+ BYTE   W12
+ BYTE   N05  Fn1
+ BYTE   W06
+// 001   ----------------------------------------
+ BYTE   N11  Bn1
+ BYTE   W12
+ BYTE   PEND 
+Label_1_0106C108:
+ BYTE   N11  Cn2  v080
+ BYTE   W12
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   PEND 
+Label_1_0106C111:
+ BYTE   N02  Cn2  v080
+ BYTE   N02  Cn3
+ BYTE   W06
+ BYTE   N11  Ds2
+ BYTE   N11  Ds3
+ BYTE   W12
+ BYTE   N05  Cn2
+ BYTE   N05  Cn3
+ BYTE   W06
+ BYTE   N11  Ds2
+ BYTE   N11  Ds3
+ BYTE   W12
+ BYTE   PEND 
+Label_1_0106C127:
+ BYTE   N11  Dn2  v080
+ BYTE   N11  Fn3
+ BYTE   W12
+// 002   ----------------------------------------
+ BYTE   Cn2
+ BYTE   N11  Ds3
+ BYTE   W12
+ BYTE   As1
+ BYTE   N11  Dn3
+ BYTE   W12
+ BYTE   PEND 
+Label_1_0106C136:
+ BYTE   N02  Gn1  v080
+ BYTE   N02  Gn2
+ BYTE   W06
+ BYTE   N11  Bn1
+ BYTE   N11  Bn2
+ BYTE   W12
+ BYTE   N05  Gn1
+ BYTE   N05  Gn2
+ BYTE   W06
+ BYTE   N11  Bn1
+ BYTE   N11  Bn2
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   W36
+// 003   ----------------------------------------
+Label_1_0106C14D:
+ BYTE   N02  Cn2  v080
+ BYTE   W06
+ BYTE   N11  Ds2
+ BYTE   W12
+ BYTE   N05  Cn2
+ BYTE   W06
+ BYTE   N11  Ds2
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_1_0106C0F1
+ BYTE   PATT
+  POIN2 Label_1_0106C0FA
+ BYTE   PATT
+  POIN2 Label_1_0106C108
+ BYTE   PATT
+  POIN2 Label_1_0106C111
+ BYTE   PATT
+  POIN2 Label_1_0106C127
+ BYTE   PATT
+  POIN2 Label_1_0106C136
+// 004   ----------------------------------------
+ BYTE   W36
+ BYTE   PATT
+  POIN2 Label_1_0106C14D
+ BYTE   PATT
+  POIN2 Label_1_0106C0F1
+ BYTE   PATT
+  POIN2 Label_1_0106C0FA
+ BYTE   PATT
+  POIN2 Label_1_0106C108
+ BYTE   PATT
+  POIN2 Label_1_0106C111
+ BYTE   PATT
+  POIN2 Label_1_0106C127
+ BYTE   PATT
+  POIN2 Label_1_0106C136
+// 005   ----------------------------------------
+ BYTE   W36
+ BYTE   PATT
+  POIN2 Label_1_0106C14D
+ BYTE   PATT
+  POIN2 Label_1_0106C0F1
+ BYTE   PATT
+  POIN2 Label_1_0106C0FA
+ BYTE   PATT
+  POIN2 Label_1_0106C108
+ BYTE   PATT
+  POIN2 Label_1_0106C111
+ BYTE   PATT
+  POIN2 Label_1_0106C127
+ BYTE   PATT
+  POIN2 Label_1_0106C136
+// 006   ----------------------------------------
+ BYTE   W36
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+DivineProvidence_003:
+// 000   ----------------------------------------
+ BYTE   KEYSH   DivineProvidence_key+0
+ BYTE   VOICE   19
+ BYTE   VOL   112*DivineProvidence_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   W36
+ BYTE   W36
+ BYTE   W36
+// 001   ----------------------------------------
+ BYTE   W36
+ BYTE   W36
+ BYTE   W36
+// 002   ----------------------------------------
+ BYTE   W36
+ BYTE   W36
+Label_2_0106C1D4:
+ BYTE   N11  Cn2  v080
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+// 003   ----------------------------------------
+ BYTE   N11
+ BYTE   W12
+ BYTE   PEND 
+Label_2_0106C1DD:
+ BYTE   N11  Dn2  v080
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_2_0106C1DD
+ BYTE   PATT
+  POIN2 Label_2_0106C1D4
+ BYTE   PATT
+  POIN2 Label_2_0106C1D4
+ BYTE   PATT
+  POIN2 Label_2_0106C1DD
+ BYTE   PATT
+  POIN2 Label_2_0106C1DD
+// 004   ----------------------------------------
+ BYTE   N32  Gn3  v080
+ BYTE   W36
+ BYTE   W36
+ BYTE   W36
+// 005   ----------------------------------------
+ BYTE   W36
+ BYTE   W36
+ BYTE   W36
+// 006   ----------------------------------------
+ BYTE   W36
+ BYTE   W36
+ BYTE   W36
+ BYTE   PATT
+  POIN2 Label_2_0106C1D4
+ BYTE   PATT
+  POIN2 Label_2_0106C1DD
+ BYTE   PATT
+  POIN2 Label_2_0106C1DD
+ BYTE   PATT
+  POIN2 Label_2_0106C1D4
+ BYTE   PATT
+  POIN2 Label_2_0106C1D4
+ BYTE   PATT
+  POIN2 Label_2_0106C1DD
+ BYTE   PATT
+  POIN2 Label_2_0106C1DD
+// 007   ----------------------------------------
+ BYTE   N32  Gn3  v080
+ BYTE   W36
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+songDivineProvidence:
+	BYTE	3	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	DivineProvidence_pri	// Priority
+	BYTE	DivineProvidence_rev	// Reverb.
+    
+	POIN2	DivineProvidence_grp
+    
+	POIN2	DivineProvidence_001
+	POIN2	DivineProvidence_002
+	POIN2	DivineProvidence_003
+
+	

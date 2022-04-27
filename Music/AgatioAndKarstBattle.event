@@ -1,0 +1,2383 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	AgatioAndKarstBattle_grp  voicegroup000
+	#define	AgatioAndKarstBattle_pri  10
+	#define	AgatioAndKarstBattle_rev  0
+	#define	AgatioAndKarstBattle_mvl  127
+	#define	AgatioAndKarstBattle_key  0
+	#define	AgatioAndKarstBattle_tbs  1
+	#define	AgatioAndKarstBattle_exg  0
+	#define	AgatioAndKarstBattle_cmp  1
+
+	// .rodata
+	//	m
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+AgatioAndKarstBattle_001:
+// 000   ----------------------------------------
+AgatioAndKarstBattle_Label_0_00:
+ BYTE   TEMPO   104*AgatioAndKarstBattle_tbs/2
+ BYTE   KEYSH   AgatioAndKarstBattle_key+0
+ BYTE   VOICE   19
+ BYTE   VOL   30*AgatioAndKarstBattle_mvl/mxv
+ BYTE   VOL   31*AgatioAndKarstBattle_mvl/mxv
+ BYTE   W19
+ BYTE   N48  Cn4  v127
+ BYTE   N48  Cn3
+ BYTE   W48
+ BYTE   N42  Gn3
+ BYTE   N42  Gn2
+ BYTE   W42
+// 001   ----------------------------------------
+ BYTE   N06  Cn4
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   N48  Ds4
+ BYTE   N48  Ds3
+ BYTE   W48
+ BYTE   Bn3
+ BYTE   N48  Bn2
+ BYTE   W48
+// 002   ----------------------------------------
+AgatioAndKarstBattle_Label_0_2106:
+ BYTE   N48  Cn4  v127
+ BYTE   N48  Cn3
+ BYTE   W48
+ BYTE   N12  Ds4
+ BYTE   N12  Ds3
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   N12  Fn3
+ BYTE   W12
+ BYTE   Gn4
+ BYTE   N12  Gn3
+ BYTE   W12
+ BYTE   As4
+ BYTE   N12  As3
+ BYTE   W12
+ BYTE   PEND 
+// 003   ----------------------------------------
+AgatioAndKarstBattle_Label_0_3006:
+ BYTE   N48  An4  v127
+ BYTE   N48  An3
+ BYTE   W48
+ BYTE   Ds4
+ BYTE   N48  Ds3
+ BYTE   W48
+ BYTE   PEND 
+// 004   ----------------------------------------
+AgatioAndKarstBattle_Label_0_3F06:
+ BYTE   N48  Fn4  v127
+ BYTE   N48  Fn3
+ BYTE   W48
+ BYTE   N12  Fn4
+ BYTE   N12  Fn3
+ BYTE   W12
+ BYTE   Gn4
+ BYTE   N12  Gn3
+ BYTE   W12
+ BYTE   Gs4
+ BYTE   N12  Gs3
+ BYTE   W12
+ BYTE   Cn5
+ BYTE   N12  Cn4
+ BYTE   W12
+ BYTE   PEND 
+// 005   ----------------------------------------
+AgatioAndKarstBattle_Label_0_4E06:
+ BYTE   N48  Bn4  v127
+ BYTE   N48  Bn3
+ BYTE   W48
+ BYTE   Gn4
+ BYTE   N48  Gn3
+ BYTE   W48
+ BYTE   PEND 
+// 006   ----------------------------------------
+AgatioAndKarstBattle_Label_0_5D06:
+ BYTE   N48  As4  v127
+ BYTE   N48  As3
+ BYTE   W48
+ BYTE   Fs4
+ BYTE   N48  Fs3
+ BYTE   W48
+ BYTE   PEND 
+// 007   ----------------------------------------
+AgatioAndKarstBattle_Label_0_6C06:
+ BYTE   N48  Gn4  v127
+ BYTE   N48  Gn3
+ BYTE   W48
+ BYTE   Gn4
+ BYTE   N48  Gn3
+ BYTE   W48
+ BYTE   PEND 
+// 008   ----------------------------------------
+AgatioAndKarstBattle_Label_0_7B06:
+ BYTE   N72  Cn4  v127
+ BYTE   N72  Cn3
+ BYTE   W72
+ BYTE   N18  Gn3
+ BYTE   N18  Gn2
+ BYTE   W18
+ BYTE   N06  Cn4
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   PEND 
+// 009   ----------------------------------------
+AgatioAndKarstBattle_Label_0_8A06:
+ BYTE   N48  Ds4  v127
+ BYTE   N48  Ds3
+ BYTE   W48
+ BYTE   Bn3
+ BYTE   N48  Bn2
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_4E06
+// 010   ----------------------------------------
+AgatioAndKarstBattle_Label_0_D506:
+ BYTE   N48  Gs4  v127
+ BYTE   N48  Gs3
+ BYTE   W48
+ BYTE   N12  Gs4
+ BYTE   N12  Gs3
+ BYTE   W12
+ BYTE   As4
+ BYTE   N12  As3
+ BYTE   W12
+ BYTE   Cn5
+ BYTE   N12  Cn4
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   N12  Ds4
+ BYTE   W12
+ BYTE   PEND 
+// 011   ----------------------------------------
+AgatioAndKarstBattle_Label_0_E406:
+ BYTE   N48  Dn5  v127
+ BYTE   N48  Dn4
+ BYTE   W48
+ BYTE   N24  Gn5
+ BYTE   N24  Gn4
+ BYTE   W24
+ BYTE   Gn4
+ BYTE   N24  Gn3
+ BYTE   W24
+ BYTE   PEND 
+// 012   ----------------------------------------
+AgatioAndKarstBattle_Label_0_F306:
+ BYTE   N48  Cn3  v127
+ BYTE   W48
+ BYTE   Fs3
+ BYTE   W48
+ BYTE   PEND 
+// 013   ----------------------------------------
+AgatioAndKarstBattle_Label_0_010206:
+ BYTE   N48  Cn3  v127
+ BYTE   W48
+ BYTE   N24  Gn3
+ BYTE   W24
+ BYTE   Fs3
+ BYTE   W24
+ BYTE   PEND 
+// 014   ----------------------------------------
+AgatioAndKarstBattle_Label_0_011106:
+ BYTE   N48  Cn3  v127
+ BYTE   W48
+ BYTE   As3
+ BYTE   W48
+ BYTE   PEND 
+// 015   ----------------------------------------
+AgatioAndKarstBattle_Label_0_012006:
+ BYTE   N16  An3  v127
+ BYTE   W16
+ BYTE   Gs3
+ BYTE   W16
+ BYTE   Gn3
+ BYTE   W16
+ BYTE   Fs3
+ BYTE   W16
+ BYTE   Fn3
+ BYTE   W16
+ BYTE   En3
+ BYTE   W16
+ BYTE   PEND 
+// 016   ----------------------------------------
+AgatioAndKarstBattle_Label_0_012F06:
+ BYTE   N03  Dn4  v127
+ BYTE   N06  Gn4
+ BYTE   N48  Cn3
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   N48  Fs3
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   PEND 
+// 017   ----------------------------------------
+AgatioAndKarstBattle_Label_0_013E06:
+ BYTE   N03  Dn4  v127
+ BYTE   N06  Gn4
+ BYTE   N48  Cn3
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   N24  Gn3
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   N24  Fs3
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   PEND 
+// 018   ----------------------------------------
+AgatioAndKarstBattle_Label_0_014D06:
+ BYTE   N03  Dn4  v127
+ BYTE   N06  Gn4
+ BYTE   N48  Cn3
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   N48  As3
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   PEND 
+// 019   ----------------------------------------
+AgatioAndKarstBattle_Label_0_015C06:
+ BYTE   N03  Dn4  v127
+ BYTE   N06  Gn4
+ BYTE   N48  Bn3
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   N48  Gn3
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   PEND 
+// 020   ----------------------------------------
+AgatioAndKarstBattle_Label_0_016B06:
+ BYTE   N48  Cn4  v127
+ BYTE   N48  Cn3
+ BYTE   W48
+ BYTE   N42  Gn3
+ BYTE   N42  Gn2
+ BYTE   W42
+ BYTE   N06  Cn4
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_8A06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_5D06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_6C06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_7B06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_8A06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_D506
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_E406
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_010206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_011106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_012006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_012F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_013E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_014D06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_015C06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_016B06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_8A06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_5D06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_6C06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_7B06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_8A06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_D506
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_E406
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_010206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_011106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_012006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_012F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_013E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_014D06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_015C06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_016B06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_8A06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_5D06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_6C06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_7B06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_8A06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_D506
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_E406
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_010206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_011106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_012006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_012F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_013E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_0_014D06
+// 021   ----------------------------------------
+ BYTE   N03  Dn4  v127
+ BYTE   N06  Gn4
+ BYTE   N48  Bn3
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   N48  Gn3
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W12
+ BYTE   N03  Dn4
+ BYTE   N06  Gn4
+ BYTE   W36
+// 022   ----------------------------------------
+ BYTE   GoTo
+  POIN2 AgatioAndKarstBattle_Label_0_00
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+AgatioAndKarstBattle_002:
+// 000   ----------------------------------------
+AgatioAndKarstBattle_Label_1_00:
+ BYTE   TEMPO   104*AgatioAndKarstBattle_tbs/2
+ BYTE   KEYSH   AgatioAndKarstBattle_key+0
+ BYTE   VOICE   65
+ BYTE   VOL   32*AgatioAndKarstBattle_mvl/mxv
+ BYTE   W19
+ BYTE   N48  Cn3  v127
+ BYTE   N48  Gn2
+ BYTE   W48
+ BYTE   Ds3
+ BYTE   N48  As2
+ BYTE   W48
+// 001   ----------------------------------------
+AgatioAndKarstBattle_Label_1_1206:
+ BYTE   N48  Dn3  v127
+ BYTE   N48  An2
+ BYTE   W48
+ BYTE   Cs3
+ BYTE   N48  Gs2
+ BYTE   W48
+ BYTE   PEND 
+// 002   ----------------------------------------
+AgatioAndKarstBattle_Label_1_2106:
+ BYTE   N48  Cn3  v127
+ BYTE   N48  Gn2
+ BYTE   W48
+ BYTE   Ds3
+ BYTE   N48  As2
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_1206
+// 003   ----------------------------------------
+AgatioAndKarstBattle_Label_1_3F06:
+ BYTE   N48  Dn3  v127
+ BYTE   N48  An2
+ BYTE   W48
+ BYTE   Fn3
+ BYTE   N48  Cn3
+ BYTE   W48
+ BYTE   PEND 
+// 004   ----------------------------------------
+AgatioAndKarstBattle_Label_1_4E06:
+ BYTE   N48  En3  v127
+ BYTE   N48  Bn2
+ BYTE   W48
+ BYTE   Ds3
+ BYTE   N48  As2
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_4E06
+// 005   ----------------------------------------
+AgatioAndKarstBattle_Label_1_F306:
+ BYTE   N06  Cn1  v127
+ BYTE   W06
+ BYTE   Cn1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   W06
+ BYTE   Cn1
+ BYTE   W06
+ BYTE   Ds1
+ BYTE   W06
+ BYTE   Cn1
+ BYTE   W06
+ BYTE   Cn1
+ BYTE   W06
+ BYTE   Gs1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+ BYTE   Cn1
+ BYTE   W06
+ BYTE   Ds1
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_1_F306
+// 006   ----------------------------------------
+ BYTE   N06  Cn1  v127
+ BYTE   W06
+ BYTE   Cn1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   W06
+ BYTE   Cn1
+ BYTE   W06
+ BYTE   Ds1
+ BYTE   W06
+ BYTE   Cn1
+ BYTE   W06
+ BYTE   Cn1
+ BYTE   W06
+ BYTE   Gs1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+ BYTE   Cn1
+ BYTE   W06
+ BYTE   Ds1
+ BYTE   W30
+// 007   ----------------------------------------
+ BYTE   GoTo
+  POIN2 AgatioAndKarstBattle_Label_1_00
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+AgatioAndKarstBattle_003:
+// 000   ----------------------------------------
+AgatioAndKarstBattle_Label_2_00:
+ BYTE   TEMPO   104*AgatioAndKarstBattle_tbs/2
+ BYTE   KEYSH   AgatioAndKarstBattle_key+0
+ BYTE   VOICE   52
+ BYTE   VOL   18*AgatioAndKarstBattle_mvl/mxv
+ BYTE   W19
+ BYTE   N48  Cn2  v127
+ BYTE   N48  Gn1
+ BYTE   W48
+ BYTE   Ds2
+ BYTE   N48  As1
+ BYTE   W48
+// 001   ----------------------------------------
+AgatioAndKarstBattle_Label_2_1206:
+ BYTE   N48  Dn2  v127
+ BYTE   N48  An1
+ BYTE   W48
+ BYTE   Cs2
+ BYTE   N48  Gs1
+ BYTE   W48
+ BYTE   PEND 
+// 002   ----------------------------------------
+AgatioAndKarstBattle_Label_2_2106:
+ BYTE   N48  Cn2  v127
+ BYTE   N48  Gn1
+ BYTE   W48
+ BYTE   Ds2
+ BYTE   N48  As1
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_1206
+// 003   ----------------------------------------
+AgatioAndKarstBattle_Label_2_3F06:
+ BYTE   N48  Dn2  v127
+ BYTE   N48  An1
+ BYTE   W48
+ BYTE   Fn2
+ BYTE   N48  Cn2
+ BYTE   W48
+ BYTE   PEND 
+// 004   ----------------------------------------
+AgatioAndKarstBattle_Label_2_4E06:
+ BYTE   N48  En2  v127
+ BYTE   N48  Bn1
+ BYTE   W48
+ BYTE   Ds2
+ BYTE   N48  As1
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_3F06
+// 005   ----------------------------------------
+AgatioAndKarstBattle_Label_2_E406:
+ BYTE   N48  En2  v127
+ BYTE   N48  Bn1
+ BYTE   W48
+ BYTE   Ds2
+ BYTE   N48  As1
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_E406
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_E406
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_1206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_2_3F06
+// 006   ----------------------------------------
+ BYTE   N48  En2  v127
+ BYTE   N48  Bn1
+ BYTE   W48
+ BYTE   Ds2
+ BYTE   N48  As1
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W96
+ BYTE   W72
+// 007   ----------------------------------------
+ BYTE   GoTo
+  POIN2 AgatioAndKarstBattle_Label_2_00
+ BYTE   FINE
+
+//**************** Track 4 (Midi-Chn.3) ****************//
+
+AgatioAndKarstBattle_004:
+// 000   ----------------------------------------
+AgatioAndKarstBattle_Label_3_00:
+ BYTE   TEMPO   104*AgatioAndKarstBattle_tbs/2
+ BYTE   KEYSH   AgatioAndKarstBattle_key+0
+ BYTE   VOICE   20
+ BYTE   VOL   25*AgatioAndKarstBattle_mvl/mxv
+ BYTE   W19
+ BYTE   N48  Cn3  v127
+ BYTE   W48
+ BYTE   N42  Gn2
+ BYTE   W42
+// 001   ----------------------------------------
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   N48  Ds3
+ BYTE   W48
+ BYTE   Bn2
+ BYTE   W48
+// 002   ----------------------------------------
+AgatioAndKarstBattle_Label_3_2106:
+ BYTE   N48  Cn3  v127
+ BYTE   W48
+ BYTE   N12  Ds3
+ BYTE   W12
+ BYTE   Fn3
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   As3
+ BYTE   W12
+ BYTE   PEND 
+// 003   ----------------------------------------
+AgatioAndKarstBattle_Label_3_3006:
+ BYTE   N48  An3  v127
+ BYTE   W48
+ BYTE   Ds3
+ BYTE   W48
+ BYTE   PEND 
+// 004   ----------------------------------------
+AgatioAndKarstBattle_Label_3_3F06:
+ BYTE   N48  Fn3  v127
+ BYTE   W48
+ BYTE   N12
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   Gs3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   PEND 
+// 005   ----------------------------------------
+AgatioAndKarstBattle_Label_3_4E06:
+ BYTE   N48  Bn3  v127
+ BYTE   W48
+ BYTE   Gn3
+ BYTE   W48
+ BYTE   PEND 
+// 006   ----------------------------------------
+AgatioAndKarstBattle_Label_3_5D06:
+ BYTE   N48  As3  v127
+ BYTE   W48
+ BYTE   Fs3
+ BYTE   W48
+ BYTE   PEND 
+// 007   ----------------------------------------
+AgatioAndKarstBattle_Label_3_6C06:
+ BYTE   N48  Gn3  v127
+ BYTE   W48
+ BYTE   Gn3
+ BYTE   W48
+ BYTE   PEND 
+// 008   ----------------------------------------
+AgatioAndKarstBattle_Label_3_7B06:
+ BYTE   N72  Cn3  v127
+ BYTE   W72
+ BYTE   N18  Gn2
+ BYTE   W18
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   PEND 
+// 009   ----------------------------------------
+AgatioAndKarstBattle_Label_3_8A06:
+ BYTE   N48  Ds3  v127
+ BYTE   W48
+ BYTE   Bn2
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_4E06
+// 010   ----------------------------------------
+AgatioAndKarstBattle_Label_3_D506:
+ BYTE   N48  Gs3  v127
+ BYTE   W48
+ BYTE   N12
+ BYTE   W12
+ BYTE   As3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   PEND 
+// 011   ----------------------------------------
+AgatioAndKarstBattle_Label_3_E406:
+ BYTE   N48  Dn4  v127
+ BYTE   W48
+ BYTE   N24  Gn4
+ BYTE   W24
+ BYTE   Gn3
+ BYTE   W24
+ BYTE   PEND 
+// 012   ----------------------------------------
+AgatioAndKarstBattle_Label_3_F306:
+ BYTE   N48  Cn3  v127
+ BYTE   W48
+ BYTE   Fs3
+ BYTE   W48
+ BYTE   PEND 
+// 013   ----------------------------------------
+AgatioAndKarstBattle_Label_3_010206:
+ BYTE   N48  Cn3  v127
+ BYTE   W48
+ BYTE   N24  Gn3
+ BYTE   W24
+ BYTE   Fs3
+ BYTE   W24
+ BYTE   PEND 
+// 014   ----------------------------------------
+AgatioAndKarstBattle_Label_3_011106:
+ BYTE   N48  Cn3  v127
+ BYTE   W48
+ BYTE   As3
+ BYTE   W48
+ BYTE   PEND 
+// 015   ----------------------------------------
+AgatioAndKarstBattle_Label_3_012006:
+ BYTE   N16  An3  v127
+ BYTE   W16
+ BYTE   Gs3
+ BYTE   W16
+ BYTE   Gn3
+ BYTE   W16
+ BYTE   Fs3
+ BYTE   W16
+ BYTE   Fn3
+ BYTE   W16
+ BYTE   En3
+ BYTE   W16
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_010206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_011106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_4E06
+// 016   ----------------------------------------
+AgatioAndKarstBattle_Label_3_016B06:
+ BYTE   N48  Cn3  v127
+ BYTE   W48
+ BYTE   N42  Gn2
+ BYTE   W42
+ BYTE   N06  Cn3
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_8A06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_5D06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_6C06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_7B06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_8A06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_D506
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_E406
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_010206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_011106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_012006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_010206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_011106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_016B06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_8A06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_5D06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_6C06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_7B06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_8A06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_D506
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_E406
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_010206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_011106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_012006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_010206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_011106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_016B06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_8A06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_5D06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_6C06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_7B06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_8A06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_D506
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_E406
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_010206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_011106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_012006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_010206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_3_011106
+// 017   ----------------------------------------
+ BYTE   N48  Bn3  v127
+ BYTE   W48
+ BYTE   Gn3
+ BYTE   W72
+// 018   ----------------------------------------
+ BYTE   GoTo
+  POIN2 AgatioAndKarstBattle_Label_3_00
+ BYTE   FINE
+
+//**************** Track 5 (Midi-Chn.4) ****************//
+
+AgatioAndKarstBattle_005:
+// 000   ----------------------------------------
+AgatioAndKarstBattle_Label_4_00:
+ BYTE   TEMPO   104*AgatioAndKarstBattle_tbs/2
+ BYTE   KEYSH   AgatioAndKarstBattle_key+0
+ BYTE   VOICE   19
+ BYTE   VOL   15*AgatioAndKarstBattle_mvl/mxv
+ BYTE   W19
+ BYTE   N48  Cn4  v127
+ BYTE   W48
+ BYTE   N42  Gn3
+ BYTE   W42
+// 001   ----------------------------------------
+ BYTE   N06  Cn4
+ BYTE   W06
+ BYTE   N48  Ds4
+ BYTE   W48
+ BYTE   Bn3
+ BYTE   W48
+// 002   ----------------------------------------
+AgatioAndKarstBattle_Label_4_2106:
+ BYTE   N48  Cn4  v127
+ BYTE   W48
+ BYTE   N12  Ds4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   Gn4
+ BYTE   W12
+ BYTE   As4
+ BYTE   W12
+ BYTE   PEND 
+// 003   ----------------------------------------
+AgatioAndKarstBattle_Label_4_3006:
+ BYTE   N48  An4  v127
+ BYTE   W48
+ BYTE   Ds4
+ BYTE   W48
+ BYTE   PEND 
+// 004   ----------------------------------------
+AgatioAndKarstBattle_Label_4_3F06:
+ BYTE   N48  Fn4  v127
+ BYTE   W48
+ BYTE   N12
+ BYTE   W12
+ BYTE   Gn4
+ BYTE   W12
+ BYTE   Gs4
+ BYTE   W12
+ BYTE   Cn5
+ BYTE   W12
+ BYTE   PEND 
+// 005   ----------------------------------------
+AgatioAndKarstBattle_Label_4_4E06:
+ BYTE   N48  Bn4  v127
+ BYTE   W48
+ BYTE   Gn4
+ BYTE   W48
+ BYTE   PEND 
+// 006   ----------------------------------------
+AgatioAndKarstBattle_Label_4_5D06:
+ BYTE   N48  As4  v127
+ BYTE   W48
+ BYTE   Fs4
+ BYTE   W48
+ BYTE   PEND 
+// 007   ----------------------------------------
+AgatioAndKarstBattle_Label_4_6C06:
+ BYTE   N48  Gn4  v127
+ BYTE   W48
+ BYTE   Gn4
+ BYTE   W48
+ BYTE   PEND 
+// 008   ----------------------------------------
+AgatioAndKarstBattle_Label_4_7B06:
+ BYTE   N72  Cn4  v127
+ BYTE   W72
+ BYTE   N18  Gn3
+ BYTE   W18
+ BYTE   N06  Cn4
+ BYTE   W06
+ BYTE   PEND 
+// 009   ----------------------------------------
+AgatioAndKarstBattle_Label_4_8A06:
+ BYTE   N48  Ds4  v127
+ BYTE   W48
+ BYTE   Bn3
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_4E06
+// 010   ----------------------------------------
+AgatioAndKarstBattle_Label_4_D506:
+ BYTE   N48  Gs4  v127
+ BYTE   W48
+ BYTE   N12
+ BYTE   W12
+ BYTE   As4
+ BYTE   W12
+ BYTE   Cn5
+ BYTE   W12
+ BYTE   Ds5
+ BYTE   W12
+ BYTE   PEND 
+// 011   ----------------------------------------
+AgatioAndKarstBattle_Label_4_E406:
+ BYTE   N48  Dn5  v127
+ BYTE   W48
+ BYTE   N24  Gn5
+ BYTE   W24
+ BYTE   Gn4
+ BYTE   W24
+ BYTE   PEND 
+// 012   ----------------------------------------
+AgatioAndKarstBattle_Label_4_F306:
+ BYTE   N48  Cn4  v127
+ BYTE   W48
+ BYTE   Fs4
+ BYTE   W48
+ BYTE   PEND 
+// 013   ----------------------------------------
+AgatioAndKarstBattle_Label_4_010206:
+ BYTE   N48  Cn4  v127
+ BYTE   W48
+ BYTE   N24  Gn4
+ BYTE   W24
+ BYTE   Fs4
+ BYTE   W24
+ BYTE   PEND 
+// 014   ----------------------------------------
+AgatioAndKarstBattle_Label_4_011106:
+ BYTE   N48  Cn4  v127
+ BYTE   W48
+ BYTE   As4
+ BYTE   W48
+ BYTE   PEND 
+// 015   ----------------------------------------
+AgatioAndKarstBattle_Label_4_012006:
+ BYTE   N16  An4  v127
+ BYTE   W16
+ BYTE   Gs4
+ BYTE   W16
+ BYTE   Gn4
+ BYTE   W16
+ BYTE   Fs4
+ BYTE   W16
+ BYTE   Fn4
+ BYTE   W16
+ BYTE   En4
+ BYTE   W16
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_010206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_011106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_4E06
+// 016   ----------------------------------------
+AgatioAndKarstBattle_Label_4_016B06:
+ BYTE   N48  Cn4  v127
+ BYTE   W48
+ BYTE   N42  Gn3
+ BYTE   W42
+ BYTE   N06  Cn4
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_8A06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_5D06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_6C06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_7B06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_8A06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_D506
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_E406
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_010206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_011106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_012006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_010206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_011106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_016B06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_8A06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_5D06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_6C06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_7B06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_8A06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_D506
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_E406
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_010206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_011106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_012006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_010206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_011106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_016B06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_8A06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_5D06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_6C06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_7B06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_8A06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_2106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_3006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_3F06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_4E06
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_D506
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_E406
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_010206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_011106
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_012006
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_F306
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_010206
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_4_011106
+// 017   ----------------------------------------
+ BYTE   N48  Bn4  v127
+ BYTE   W48
+ BYTE   Gn4
+ BYTE   W72
+// 018   ----------------------------------------
+ BYTE   GoTo
+  POIN2 AgatioAndKarstBattle_Label_4_00
+ BYTE   FINE
+
+//**************** Track 6 (Midi-Chn.5) ****************//
+
+AgatioAndKarstBattle_006:
+// 000   ----------------------------------------
+AgatioAndKarstBattle_Label_5_00:
+ BYTE   TEMPO   104*AgatioAndKarstBattle_tbs/2
+ BYTE   KEYSH   AgatioAndKarstBattle_key+0
+ BYTE   VOICE   47
+ BYTE   VOL   12*AgatioAndKarstBattle_mvl/mxv
+ BYTE   W01
+ BYTE   N06  Dn1  v127
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   An2
+ BYTE   N06  Cs2
+ BYTE   N06  Ds2
+ BYTE   N06  Gn2
+ BYTE   N06  Bn2
+ BYTE   W36
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   An2
+ BYTE   N06  Cs2
+ BYTE   N06  Ds2
+ BYTE   N06  Gn2
+ BYTE   N06  Bn2
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W06
+// 001   ----------------------------------------
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W12
+// 002   ----------------------------------------
+AgatioAndKarstBattle_Label_5_1F26:
+ BYTE   N06  Bn0  v127
+ BYTE   W12
+ BYTE   N04
+ BYTE   N06  An2
+ BYTE   N06  Cs2
+ BYTE   N06  Ds2
+ BYTE   N06  Gn2
+ BYTE   N06  Bn2
+ BYTE   W48
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   An2
+ BYTE   N06  Cs2
+ BYTE   N06  Ds2
+ BYTE   N06  Gn2
+ BYTE   N06  Bn2
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   PEND 
+// 003   ----------------------------------------
+AgatioAndKarstBattle_Label_5_2E26:
+ BYTE   N06  Dn1  v127
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   N04  An1
+ BYTE   W04
+ BYTE   An1
+ BYTE   W04
+ BYTE   An1
+ BYTE   W04
+ BYTE   Gn1
+ BYTE   W04
+ BYTE   Gn1
+ BYTE   W04
+ BYTE   Gn1
+ BYTE   W04
+ BYTE   PEND 
+// 004   ----------------------------------------
+AgatioAndKarstBattle_Label_5_3D26:
+ BYTE   N04  Fn1  v127
+ BYTE   W04
+ BYTE   Fn1
+ BYTE   W04
+ BYTE   Fn1
+ BYTE   W04
+ BYTE   N06  Bn0
+ BYTE   W12
+ BYTE   An2
+ BYTE   N06  Cs2
+ BYTE   N06  Ds2
+ BYTE   N06  Gn2
+ BYTE   N06  Bn2
+ BYTE   W36
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   An2
+ BYTE   N06  Cs2
+ BYTE   N06  Ds2
+ BYTE   N06  Gn2
+ BYTE   N06  Bn2
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   PEND 
+// 005   ----------------------------------------
+AgatioAndKarstBattle_Label_5_4C26:
+ BYTE   N06  Dn1  v127
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_1F26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_2E26
+// 006   ----------------------------------------
+AgatioAndKarstBattle_Label_5_7926:
+ BYTE   N04  Fn1  v127
+ BYTE   W04
+ BYTE   Fn1
+ BYTE   W04
+ BYTE   Fn1
+ BYTE   W04
+ BYTE   N06  An2
+ BYTE   N06  Bn0
+ BYTE   N06  Gn2
+ BYTE   N06  Cs2
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   N06  Gs1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   PEND 
+// 007   ----------------------------------------
+AgatioAndKarstBattle_Label_5_8826:
+ BYTE   N06  Fs1  v127
+ BYTE   N06  Gs1
+ BYTE   N06  Dn1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   N06  Gs1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   PEND 
+// 008   ----------------------------------------
+AgatioAndKarstBattle_Label_5_9726:
+ BYTE   N06  Fs1  v127
+ BYTE   N06  Gs1
+ BYTE   N06  Dn1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   N06  Gs1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   N06  Gs1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   PEND 
+// 009   ----------------------------------------
+AgatioAndKarstBattle_Label_5_A626:
+ BYTE   N06  Dn1  v127
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   N06  Gs1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   N04  An1
+ BYTE   N06  Dn1
+ BYTE   W04
+ BYTE   N04  An1
+ BYTE   W02
+ BYTE   N06  Bn0
+ BYTE   W02
+ BYTE   N04  An1
+ BYTE   W04
+ BYTE   Gn1
+ BYTE   N06  Bn0
+ BYTE   W04
+ BYTE   N04  Gn1
+ BYTE   W04
+ BYTE   Gn1
+ BYTE   W04
+ BYTE   PEND 
+// 010   ----------------------------------------
+AgatioAndKarstBattle_Label_5_B526:
+ BYTE   N04  Fn1  v127
+ BYTE   N06  Dn1
+ BYTE   W04
+ BYTE   N04  Fn1
+ BYTE   W04
+ BYTE   Fn1
+ BYTE   W04
+ BYTE   N06  An2
+ BYTE   N06  Bn0
+ BYTE   N06  Gn2
+ BYTE   N06  Cs2
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   N06  Gs1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_8826
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_9726
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_A626
+// 011   ----------------------------------------
+AgatioAndKarstBattle_Label_5_F126:
+ BYTE   N04  Fn1  v127
+ BYTE   N06  Dn1
+ BYTE   W04
+ BYTE   N04  Fn1
+ BYTE   W04
+ BYTE   Fn1
+ BYTE   W04
+ BYTE   N06  Bn0
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   N06  Fs1
+ BYTE   N06  Gs1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   N06  Gs1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   N06  Gs1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   PEND 
+// 012   ----------------------------------------
+AgatioAndKarstBattle_Label_5_010026:
+ BYTE   N06  Fn1  v127
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   N06  Fs1
+ BYTE   N06  Gs1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   N06  Gs1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   N06  Gs1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_010026
+// 013   ----------------------------------------
+AgatioAndKarstBattle_Label_5_011E26:
+ BYTE   N06  Fn1  v127
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   N06  Fs1
+ BYTE   N06  Gs1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   N06  Gs1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   N06  Gs1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   PEND 
+// 014   ----------------------------------------
+AgatioAndKarstBattle_Label_5_012D26:
+ BYTE   N06  Dn1  v127
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Cs2
+ BYTE   N06  Bn0
+ BYTE   N06  Gn2
+ BYTE   N06  Bn2
+ BYTE   N06  Ds2
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   N06  Fs1
+ BYTE   N06  Gs1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   N06  Gs1
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   N06  Gs1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_010026
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_010026
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_011E26
+// 015   ----------------------------------------
+AgatioAndKarstBattle_Label_5_016926:
+ BYTE   N06  Dn1  v127
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   An2
+ BYTE   N06  Cs2
+ BYTE   N06  Ds2
+ BYTE   N06  Gn2
+ BYTE   N06  Bn2
+ BYTE   W36
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   An2
+ BYTE   N06  Cs2
+ BYTE   N06  Ds2
+ BYTE   N06  Gn2
+ BYTE   N06  Bn2
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_4C26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_1F26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_2E26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_3D26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_4C26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_1F26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_2E26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_7926
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_8826
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_9726
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_A626
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_B526
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_8826
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_9726
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_A626
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_F126
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_010026
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_010026
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_011E26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_012D26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_010026
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_010026
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_011E26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_016926
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_4C26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_1F26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_2E26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_3D26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_4C26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_1F26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_2E26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_7926
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_8826
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_9726
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_A626
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_B526
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_8826
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_9726
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_A626
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_F126
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_010026
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_010026
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_011E26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_012D26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_010026
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_010026
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_011E26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_016926
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_4C26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_1F26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_2E26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_3D26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_4C26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_1F26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_2E26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_7926
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_8826
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_9726
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_A626
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_B526
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_8826
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_9726
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_A626
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_F126
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_010026
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_010026
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_011E26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_012D26
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_010026
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_010026
+ BYTE   PATT
+  POIN2 AgatioAndKarstBattle_Label_5_011E26
+// 016   ----------------------------------------
+ BYTE   N06  Dn1  v127
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W30
+ BYTE   GoTo
+  POIN2 AgatioAndKarstBattle_Label_5_00
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+songAgatioAndKarstBattle:
+	BYTE	6	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	AgatioAndKarstBattle_pri	// Priority
+	BYTE	AgatioAndKarstBattle_rev	// Reverb.
+    
+	POIN2	AgatioAndKarstBattle_grp
+    
+	POIN2	AgatioAndKarstBattle_001
+	POIN2	AgatioAndKarstBattle_002
+	POIN2	AgatioAndKarstBattle_003
+	POIN2	AgatioAndKarstBattle_004
+	POIN2	AgatioAndKarstBattle_005
+	POIN2	AgatioAndKarstBattle_006
+
+	

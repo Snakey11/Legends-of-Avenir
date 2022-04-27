@@ -1,0 +1,1585 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	songTwinrova_grp  voicegroup000
+	#define	songTwinrova_pri  0
+	#define	songTwinrova_rev  0
+	#define	songTwinrova_mvl  80
+	#define	songTwinrova_key  0
+	#define	songTwinrova_tbs  1
+	#define	songTwinrova_exg  0
+	#define	songTwinrova_cmp  1
+
+	// .rodata
+	//	songTwinrova
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+songTwinrova_001:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songTwinrova_key+0
+LabelTwinrova_0_0105A3F2:
+ BYTE   VOICE   24
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   50*songTwinrova_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   50*songTwinrova_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   W96
+// 008   ----------------------------------------
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   W96
+// 010   ----------------------------------------
+ BYTE   W96
+// 011   ----------------------------------------
+ BYTE   W96
+// 012   ----------------------------------------
+LabelTwinrova_0_0105A410:
+ BYTE   W54
+ BYTE   N05  En1  v100
+ BYTE   W06
+ BYTE   N11  Bn1
+ BYTE   W36
+ BYTE   PEND 
+// 013   ----------------------------------------
+LabelTwinrova_0_0105A419:
+ BYTE   W54
+ BYTE   N05  Cn2  v100
+ BYTE   W06
+ BYTE   N11  En2
+ BYTE   W36
+ BYTE   PEND 
+// 014   ----------------------------------------
+ BYTE   W96
+// 015   ----------------------------------------
+LabelTwinrova_0_0105A423:
+ BYTE   W66
+ BYTE   N05  Dn2  v100
+ BYTE   W06
+ BYTE   N20  Gs1
+ BYTE   W24
+ BYTE   PEND 
+// 016   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelTwinrova_0_0105A419
+// 017   ----------------------------------------
+ BYTE   W96
+// 018   ----------------------------------------
+ BYTE   W96
+// 019   ----------------------------------------
+ BYTE   W96
+// 020   ----------------------------------------
+ BYTE   W96
+// 021   ----------------------------------------
+ BYTE   W96
+// 022   ----------------------------------------
+ BYTE   W96
+// 023   ----------------------------------------
+ BYTE   W96
+// 024   ----------------------------------------
+ BYTE   W96
+// 025   ----------------------------------------
+ BYTE   W96
+// 026   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelTwinrova_0_0105A410
+ BYTE   PATT
+  POIN2 LabelTwinrova_0_0105A419
+// 027   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelTwinrova_0_0105A423
+// 028   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelTwinrova_0_0105A419
+// 029   ----------------------------------------
+ BYTE   W96
+// 030   ----------------------------------------
+ BYTE   W96
+// 031   ----------------------------------------
+ BYTE   W96
+// 032   ----------------------------------------
+ BYTE   W96
+// 033   ----------------------------------------
+ BYTE   W96
+// 034   ----------------------------------------
+ BYTE   W96
+// 035   ----------------------------------------
+ BYTE   W96
+// 036   ----------------------------------------
+ BYTE   W96
+// 037   ----------------------------------------
+ BYTE   W96
+// 038   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelTwinrova_0_0105A410
+ BYTE   PATT
+  POIN2 LabelTwinrova_0_0105A419
+// 039   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelTwinrova_0_0105A423
+// 040   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelTwinrova_0_0105A419
+// 041   ----------------------------------------
+ BYTE   W96
+// 042   ----------------------------------------
+ BYTE   W90
+ BYTE   GoTo
+  POIN2 LabelTwinrova_0_0105A3F2
+// 043   ----------------------------------------
+ BYTE   W02
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+songTwinrova_002:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songTwinrova_key+0
+LabelTwinrova_1_0105A47E:
+ BYTE   VOICE   117
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   50*songTwinrova_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+LabelTwinrova_1_0105A48C:
+ BYTE   N20  Fn1  v100
+ BYTE   W24
+ BYTE   N20
+ BYTE   W24
+ BYTE   N20
+ BYTE   W24
+ BYTE   N20
+ BYTE   W24
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+// 005   ----------------------------------------
+LabelTwinrova_1_0105A4A6:
+ BYTE   N20  Fn1  v100
+ BYTE   W48
+ BYTE   N20
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A4A6
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A4A6
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A4A6
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A4A6
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A4A6
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A4A6
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A4A6
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A4A6
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A4A6
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A4A6
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A4A6
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+ BYTE   PATT
+  POIN2 LabelTwinrova_1_0105A48C
+// 006   ----------------------------------------
+ BYTE   N20  Fn1  v100
+ BYTE   W24
+ BYTE   N20
+ BYTE   W24
+ BYTE   N20
+ BYTE   W24
+ BYTE   N20
+ BYTE   W18
+ BYTE   GoTo
+  POIN2 LabelTwinrova_1_0105A47E
+// 007   ----------------------------------------
+ BYTE   W02
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+songTwinrova_003:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songTwinrova_key+0
+LabelTwinrova_2_0105A592:
+ BYTE   VOICE   93
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   50*songTwinrova_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   N42  An1  v100
+ BYTE   W48
+ BYTE   N44  Bn1
+ BYTE   W48
+// 001   ----------------------------------------
+LabelTwinrova_2_0105A5A3:
+ BYTE   N42  Cn2  v100
+ BYTE   W48
+ BYTE   N44  Dn2
+ BYTE   W48
+ BYTE   PEND 
+// 002   ----------------------------------------
+LabelTwinrova_2_0105A5AB:
+ BYTE   N42  An1  v100
+ BYTE   W48
+ BYTE   N44  Bn1
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5A3
+// 003   ----------------------------------------
+LabelTwinrova_2_0105A5B8:
+ BYTE   N20  An1  v100
+ BYTE   W24
+ BYTE   N20
+ BYTE   W24
+ BYTE   Bn1
+ BYTE   W24
+ BYTE   N20
+ BYTE   W24
+ BYTE   PEND 
+// 004   ----------------------------------------
+LabelTwinrova_2_0105A5C3:
+ BYTE   N20  Cn2  v100
+ BYTE   W24
+ BYTE   N20
+ BYTE   W24
+ BYTE   Dn2
+ BYTE   W24
+ BYTE   N20
+ BYTE   W24
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5B8
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5C3
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5AB
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5A3
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5AB
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5A3
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5B8
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5C3
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5B8
+// 005   ----------------------------------------
+LabelTwinrova_2_0105A5FB:
+ BYTE   N20  Cn2  v100
+ BYTE   W24
+ BYTE   N20
+ BYTE   W24
+ BYTE   Bn1
+ BYTE   W24
+ BYTE   N20
+ BYTE   W24
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5B8
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5C3
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5B8
+// 006   ----------------------------------------
+LabelTwinrova_2_0105A615:
+ BYTE   N20  Cn2  v100
+ BYTE   W24
+ BYTE   Bn1
+ BYTE   W24
+ BYTE   An1
+ BYTE   W24
+ BYTE   N20
+ BYTE   W24
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5B8
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5C3
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5B8
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5C3
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5AB
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5A3
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5AB
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5A3
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5B8
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5C3
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5B8
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5FB
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5B8
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5C3
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5B8
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A615
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5B8
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5C3
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5B8
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5C3
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5AB
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5A3
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5AB
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5A3
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5B8
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5C3
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5B8
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5FB
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5B8
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5C3
+ BYTE   PATT
+  POIN2 LabelTwinrova_2_0105A5B8
+// 007   ----------------------------------------
+ BYTE   N20  Cn2  v100
+ BYTE   W24
+ BYTE   Bn1
+ BYTE   W24
+ BYTE   An1
+ BYTE   W24
+ BYTE   N20
+ BYTE   W18
+ BYTE   GoTo
+  POIN2 LabelTwinrova_2_0105A592
+// 008   ----------------------------------------
+ BYTE   W02
+ BYTE   FINE
+
+//**************** Track 4 (Midi-Chn.3) ****************//
+
+songTwinrova_004:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songTwinrova_key+0
+LabelTwinrova_3_0105A6CE:
+ BYTE   VOICE   79
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   50*songTwinrova_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W84
+ BYTE   N11  An4  v100
+ BYTE   W12
+// 004   ----------------------------------------
+LabelTwinrova_3_0105A6E0:
+ BYTE   N11  Cn5  v100
+ BYTE   W12
+ BYTE   N05  Bn4
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   N11  Gs4
+ BYTE   W12
+ BYTE   Bn4
+ BYTE   W12
+ BYTE   N23  Fn5
+ BYTE   W24
+ BYTE   N11  Gs4
+ BYTE   W12
+ BYTE   PEND 
+// 005   ----------------------------------------
+LabelTwinrova_3_0105A6F9:
+ BYTE   N11  Cn5  v100
+ BYTE   W12
+ BYTE   N05  Bn4
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   N11  Gs4
+ BYTE   W12
+ BYTE   An4
+ BYTE   W12
+ BYTE   N23  Dn4
+ BYTE   W24
+ BYTE   N11  An4
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A6E0
+// 006   ----------------------------------------
+LabelTwinrova_3_0105A717:
+ BYTE   N11  Cn5  v100
+ BYTE   W12
+ BYTE   N05  Bn4
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   N11  Gs4
+ BYTE   W12
+ BYTE   An4
+ BYTE   W12
+ BYTE   N32  Dn4
+ BYTE   W36
+ BYTE   PEND 
+// 007   ----------------------------------------
+LabelTwinrova_3_0105A72D:
+ BYTE   W48
+ BYTE   N05  Bn4  v100
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   N54  An4
+ BYTE   W12
+ BYTE   PEND 
+// 008   ----------------------------------------
+LabelTwinrova_3_0105A740:
+ BYTE   W48
+ BYTE   N05  En5  v100
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   Gs5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   N54  En5
+ BYTE   W12
+ BYTE   PEND 
+// 009   ----------------------------------------
+LabelTwinrova_3_0105A753:
+ BYTE   W48
+ BYTE   N05  Bn4  v100
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   N54  Bn4
+ BYTE   W12
+ BYTE   PEND 
+// 010   ----------------------------------------
+LabelTwinrova_3_0105A766:
+ BYTE   W48
+ BYTE   N05  En5  v100
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   Gs5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   Gs5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   Bn5
+ BYTE   W06
+ BYTE   An5
+ BYTE   W06
+ BYTE   PEND 
+// 011   ----------------------------------------
+LabelTwinrova_3_0105A77A:
+ BYTE   N05  Gs5  v100
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   N11  Dn4
+ BYTE   W12
+ BYTE   N05  Cn5
+ BYTE   W06
+ BYTE   PEND 
+// 012   ----------------------------------------
+LabelTwinrova_3_0105A79D:
+ BYTE   N05  Bn4  v100
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   An3
+ BYTE   W06
+ BYTE   Gs3
+ BYTE   W06
+ BYTE   Fn3
+ BYTE   W06
+ BYTE   N17  En3
+ BYTE   W18
+ BYTE   PEND 
+// 013   ----------------------------------------
+LabelTwinrova_3_0105A7BD:
+ BYTE   N05  An3  v100
+ BYTE   W06
+ BYTE   Gs3
+ BYTE   W06
+ BYTE   An3
+ BYTE   W06
+ BYTE   Gs3
+ BYTE   W06
+ BYTE   An3
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   W06
+ BYTE   N17  Dn4
+ BYTE   W18
+ BYTE   PEND 
+// 014   ----------------------------------------
+LabelTwinrova_3_0105A7DD:
+ BYTE   N05  En4  v100
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   N20  Bn4
+ BYTE   W24
+ BYTE   PEND 
+// 015   ----------------------------------------
+LabelTwinrova_3_0105A7FB:
+ BYTE   N05  Bn4  v100
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   W06
+ BYTE   N17  Bn3
+ BYTE   W18
+ BYTE   PEND 
+// 016   ----------------------------------------
+LabelTwinrova_3_0105A81B:
+ BYTE   N05  Bn4  v100
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   N11  Cn5
+ BYTE   W12
+ BYTE   N05  Dn5
+ BYTE   W06
+ BYTE   PEND 
+// 017   ----------------------------------------
+LabelTwinrova_3_0105A83E:
+ BYTE   N05  Cn5  v100
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   Gs5
+ BYTE   W06
+ BYTE   An5
+ BYTE   W06
+ BYTE   Gs5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   PEND 
+// 018   ----------------------------------------
+LabelTwinrova_3_0105A861:
+ BYTE   N05  Cn5  v100
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   N11  Gs4
+ BYTE   W12
+ BYTE   N23  En4
+ BYTE   W24
+ BYTE   N11  An4
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A6E0
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A6F9
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A6E0
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A717
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A72D
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A740
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A753
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A766
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A77A
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A79D
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A7BD
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A7DD
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A7FB
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A81B
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A83E
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A861
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A6E0
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A6F9
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A6E0
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A717
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A72D
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A740
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A753
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A766
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A77A
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A79D
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A7BD
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A7DD
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A7FB
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A81B
+ BYTE   PATT
+  POIN2 LabelTwinrova_3_0105A83E
+// 019   ----------------------------------------
+ BYTE   N05  Cn5  v100
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   N11  Gs4
+ BYTE   W12
+ BYTE   N32  En4
+ BYTE   W30
+ BYTE   GoTo
+  POIN2 LabelTwinrova_3_0105A6CE
+// 020   ----------------------------------------
+ BYTE   W02
+ BYTE   FINE
+
+//**************** Track 5 (Midi-Chn.4) ****************//
+
+songTwinrova_005:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songTwinrova_key+0
+LabelTwinrova_4_0105A93A:
+ BYTE   VOICE   79
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   50*songTwinrova_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W84
+ BYTE   N11  En5  v100
+ BYTE   W12
+// 005   ----------------------------------------
+LabelTwinrova_4_0105A94D:
+ BYTE   N11  Gs5  v100
+ BYTE   W12
+ BYTE   N05  Fn5
+ BYTE   W06
+ BYTE   Gs5
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   N11  Dn5
+ BYTE   W12
+ BYTE   Fn5
+ BYTE   W12
+ BYTE   N32  Bn4
+ BYTE   W36
+ BYTE   PEND 
+// 006   ----------------------------------------
+ BYTE   W84
+ BYTE   N11  En5
+ BYTE   W12
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105A94D
+// 007   ----------------------------------------
+LabelTwinrova_4_0105A96C:
+ BYTE   N05  Cn5  v100
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   N56  An4
+ BYTE   W60
+ BYTE   PEND 
+// 008   ----------------------------------------
+LabelTwinrova_4_0105A97E:
+ BYTE   N05  Dn5  v100
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   N56  An4
+ BYTE   W60
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105A96C
+// 009   ----------------------------------------
+LabelTwinrova_4_0105A995:
+ BYTE   N05  Dn5  v100
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   N44  An4
+ BYTE   W48
+ BYTE   N05  Bn5
+ BYTE   W06
+ BYTE   An5
+ BYTE   W06
+ BYTE   PEND 
+// 010   ----------------------------------------
+LabelTwinrova_4_0105A9AC:
+ BYTE   N05  Gs5  v100
+ BYTE   W06
+ BYTE   Fn5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   N11  Dn4
+ BYTE   W12
+ BYTE   N05  Cn5
+ BYTE   W06
+ BYTE   PEND 
+// 011   ----------------------------------------
+LabelTwinrova_4_0105A9CF:
+ BYTE   N05  Bn4  v100
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   An3
+ BYTE   W06
+ BYTE   Gs3
+ BYTE   W06
+ BYTE   Fn3
+ BYTE   W06
+ BYTE   N17  En3
+ BYTE   W18
+ BYTE   PEND 
+// 012   ----------------------------------------
+LabelTwinrova_4_0105A9EF:
+ BYTE   N05  An3  v100
+ BYTE   W06
+ BYTE   Gs3
+ BYTE   W06
+ BYTE   An3
+ BYTE   W06
+ BYTE   Gs3
+ BYTE   W06
+ BYTE   An3
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   W06
+ BYTE   N17  Dn4
+ BYTE   W18
+ BYTE   PEND 
+// 013   ----------------------------------------
+LabelTwinrova_4_0105AA0F:
+ BYTE   N05  En4  v100
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   N11  Bn4
+ BYTE   W12
+ BYTE   N05  An3
+ BYTE   W06
+ BYTE   Gs3
+ BYTE   W06
+ BYTE   PEND 
+// 014   ----------------------------------------
+LabelTwinrova_4_0105AA32:
+ BYTE   N05  An3  v100
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   An3
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   N11  Dn4
+ BYTE   W12
+ BYTE   N05
+ BYTE   W06
+ BYTE   PEND 
+// 015   ----------------------------------------
+LabelTwinrova_4_0105AA54:
+ BYTE   N05  En4  v100
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   W06
+ BYTE   N17  Dn4
+ BYTE   W18
+ BYTE   PEND 
+// 016   ----------------------------------------
+LabelTwinrova_4_0105AA74:
+ BYTE   N05  En4  v100
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   N11  Bn4
+ BYTE   W12
+ BYTE   N05  Dn5
+ BYTE   W06
+ BYTE   Cn5
+ BYTE   W06
+ BYTE   PEND 
+// 017   ----------------------------------------
+LabelTwinrova_4_0105AA97:
+ BYTE   N05  Bn4  v100
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   N11  Dn4
+ BYTE   W12
+ BYTE   N32  An3
+ BYTE   W36
+ BYTE   PEND 
+// 018   ----------------------------------------
+ BYTE   W84
+ BYTE   N11  En5
+ BYTE   W12
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105A94D
+// 019   ----------------------------------------
+ BYTE   W84
+ BYTE   N11  En5  v100
+ BYTE   W12
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105A94D
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105A96C
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105A97E
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105A96C
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105A995
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105A9AC
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105A9CF
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105A9EF
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105AA0F
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105AA32
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105AA54
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105AA74
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105AA97
+// 020   ----------------------------------------
+ BYTE   W84
+ BYTE   N11  En5  v100
+ BYTE   W12
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105A94D
+// 021   ----------------------------------------
+ BYTE   W84
+ BYTE   N11  En5  v100
+ BYTE   W12
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105A94D
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105A96C
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105A97E
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105A96C
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105A995
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105A9AC
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105A9CF
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105A9EF
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105AA0F
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105AA32
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105AA54
+ BYTE   PATT
+  POIN2 LabelTwinrova_4_0105AA74
+// 022   ----------------------------------------
+ BYTE   N05  Bn4  v100
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   Gs4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   N11  Dn4
+ BYTE   W12
+ BYTE   N32  An3
+ BYTE   W30
+ BYTE   GoTo
+  POIN2 LabelTwinrova_4_0105A93A
+// 023   ----------------------------------------
+ BYTE   W02
+ BYTE   FINE
+
+//**************** Track 6 (Midi-Chn.5) ****************//
+
+songTwinrova_006:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songTwinrova_key+0
+LabelTwinrova_5_0105AB6E:
+ BYTE   VOICE   50
+ BYTE   MODT 0
+ BYTE   CnM2
+ BYTE   LFOS 0
+ BYTE   Gs1
+ BYTE   VOL   50*songTwinrova_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   N42  An3  v100
+ BYTE   W48
+ BYTE   N44  Bn3
+ BYTE   W48
+// 001   ----------------------------------------
+LabelTwinrova_5_0105AB7F:
+ BYTE   N42  Cn4  v100
+ BYTE   W48
+ BYTE   N44  Dn4
+ BYTE   W48
+ BYTE   PEND 
+// 002   ----------------------------------------
+LabelTwinrova_5_0105AB87:
+ BYTE   N42  An3  v100
+ BYTE   W48
+ BYTE   N44  Bn3
+ BYTE   W48
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 LabelTwinrova_5_0105AB7F
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelTwinrova_5_0105AB87
+ BYTE   PATT
+  POIN2 LabelTwinrova_5_0105AB7F
+ BYTE   PATT
+  POIN2 LabelTwinrova_5_0105AB87
+ BYTE   PATT
+  POIN2 LabelTwinrova_5_0105AB7F
+// 007   ----------------------------------------
+ BYTE   W96
+// 008   ----------------------------------------
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   W96
+// 010   ----------------------------------------
+ BYTE   W96
+// 011   ----------------------------------------
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   W96
+// 013   ----------------------------------------
+ BYTE   W96
+// 014   ----------------------------------------
+ BYTE   W96
+// 015   ----------------------------------------
+ BYTE   W96
+// 016   ----------------------------------------
+ BYTE   W96
+// 017   ----------------------------------------
+ BYTE   W96
+// 018   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelTwinrova_5_0105AB87
+ BYTE   PATT
+  POIN2 LabelTwinrova_5_0105AB7F
+ BYTE   PATT
+  POIN2 LabelTwinrova_5_0105AB87
+ BYTE   PATT
+  POIN2 LabelTwinrova_5_0105AB7F
+// 019   ----------------------------------------
+ BYTE   W96
+// 020   ----------------------------------------
+ BYTE   W96
+// 021   ----------------------------------------
+ BYTE   W96
+// 022   ----------------------------------------
+ BYTE   W96
+// 023   ----------------------------------------
+ BYTE   W96
+// 024   ----------------------------------------
+ BYTE   W96
+// 025   ----------------------------------------
+ BYTE   W96
+// 026   ----------------------------------------
+ BYTE   W96
+// 027   ----------------------------------------
+ BYTE   W96
+// 028   ----------------------------------------
+ BYTE   W96
+// 029   ----------------------------------------
+ BYTE   W96
+// 030   ----------------------------------------
+ BYTE   W96
+ BYTE   PATT
+  POIN2 LabelTwinrova_5_0105AB87
+ BYTE   PATT
+  POIN2 LabelTwinrova_5_0105AB7F
+ BYTE   PATT
+  POIN2 LabelTwinrova_5_0105AB87
+ BYTE   PATT
+  POIN2 LabelTwinrova_5_0105AB7F
+// 031   ----------------------------------------
+ BYTE   W96
+// 032   ----------------------------------------
+ BYTE   W96
+// 033   ----------------------------------------
+ BYTE   W96
+// 034   ----------------------------------------
+ BYTE   W96
+// 035   ----------------------------------------
+ BYTE   W96
+// 036   ----------------------------------------
+ BYTE   W96
+// 037   ----------------------------------------
+ BYTE   W96
+// 038   ----------------------------------------
+ BYTE   W90
+ BYTE   GoTo
+  POIN2 LabelTwinrova_5_0105AB6E
+// 039   ----------------------------------------
+ BYTE   W02
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+songTwinrova:
+	BYTE	6	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	songTwinrova_pri	// Priority
+	BYTE	songTwinrova_rev	// Reverb.
+    
+	POIN2	songTwinrova_grp
+    
+	POIN2	songTwinrova_001
+	POIN2	songTwinrova_002
+	POIN2	songTwinrova_003
+	POIN2	songTwinrova_004
+	POIN2	songTwinrova_005
+	POIN2	songTwinrova_006
+
+	

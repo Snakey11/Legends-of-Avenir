@@ -1,0 +1,505 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	songTheGuardianSpirit_grp  voicegroup000
+	#define	songTheGuardianSpirit_pri  0
+	#define	songTheGuardianSpirit_rev  0
+	#define	songTheGuardianSpirit_mvl  150
+	#define	songTheGuardianSpirit_key  0
+	#define	songTheGuardianSpirit_tbs  1
+	#define	songTheGuardianSpirit_exg  0
+	#define	songTheGuardianSpirit_cmp  1
+
+	// .rodata
+	//	songTheGuardianSpirit
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+songTheGuardianSpirit_001:
+// 000   ----------------------------------------
+ BYTE   VOL   60*songTheGuardianSpirit_mvl/mxv
+ BYTE   KEYSH   songTheGuardianSpirit_key+0
+Label_0_01045E84:
+ BYTE   TEMPO   120*songTheGuardianSpirit_tbs/2
+ BYTE   VOICE   103
+ BYTE   W84
+ BYTE   W84
+// 001   ----------------------------------------
+ BYTE   W84
+ BYTE   W84
+// 002   ----------------------------------------
+ BYTE   N12  Ds3  v064
+ BYTE   W12
+ BYTE   As3  v052
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   En3  v056
+ BYTE   W12
+ BYTE   Ds3  v052
+ BYTE   W12
+ BYTE   En3
+ BYTE   W12
+ BYTE   Ds3  v064
+ BYTE   W12
+// 003   ----------------------------------------
+ BYTE   Bn3  v052
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   En3  v056
+ BYTE   W12
+ BYTE   Ds3  v052
+ BYTE   W12
+ BYTE   En3
+ BYTE   W12
+ BYTE   Ds3  v064
+ BYTE   W12
+ BYTE   Cs4  v052
+ BYTE   W12
+// 004   ----------------------------------------
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   En4  v056
+ BYTE   W12
+ BYTE   Ds4  v052
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   N06  Ds3  v064
+ BYTE   W06
+ BYTE   En3  v052
+ BYTE   W06
+ BYTE   Fs3
+ BYTE   W06
+ BYTE   As3
+ BYTE   W06
+ BYTE   En3
+ BYTE   W06
+ BYTE   Fs3
+ BYTE   W06
+// 005   ----------------------------------------
+ BYTE   As3
+ BYTE   W06
+ BYTE   Ds4
+ BYTE   W06
+ BYTE   Ds3  v064
+ BYTE   W06
+ BYTE   En3  v052
+ BYTE   W06
+ BYTE   Fs3
+ BYTE   W06
+ BYTE   As3
+ BYTE   W06
+ BYTE   En3
+ BYTE   W06
+ BYTE   Fs3
+ BYTE   W06
+ BYTE   N84  Ds3
+ BYTE   W84
+// 006   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_0_01045E84
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+songTheGuardianSpirit_002:
+// 000   ----------------------------------------
+ BYTE   VOL   80*songTheGuardianSpirit_mvl/mxv
+ BYTE   KEYSH   songTheGuardianSpirit_key+0
+Label_1_0104A81C:
+ BYTE   VOICE   30
+ BYTE   N06  Ds1  v064
+ BYTE   W06
+ BYTE   Ds1  v052
+ BYTE   W06
+ BYTE   N12  En1
+ BYTE   W12
+ BYTE   Ds1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   Ds2  v056
+ BYTE   W12
+ BYTE   Cs2  v052
+ BYTE   W12
+ BYTE   As1
+ BYTE   W12
+Label_1_0104A834:
+ BYTE   N06  Ds1  v064
+ BYTE   W06
+ BYTE   Ds1  v052
+ BYTE   W06
+// 001   ----------------------------------------
+ BYTE   N12  En1
+ BYTE   W12
+ BYTE   Ds1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   Ds2  v056
+ BYTE   W12
+ BYTE   Cs2  v052
+ BYTE   W12
+ BYTE   As1
+ BYTE   W12
+ BYTE   PEND 
+// 002   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_1_0104A834
+// 003   ----------------------------------------
+ BYTE   N06  Ds1  v064
+ BYTE   W06
+ BYTE   Ds1  v052
+ BYTE   W06
+ BYTE   N12  En1
+ BYTE   W12
+ BYTE   N06  Ds2  v040
+ BYTE   W06
+ BYTE   En2  v036
+ BYTE   W06
+ BYTE   Ds2  v032
+ BYTE   W06
+ BYTE   En2  v028
+ BYTE   W06
+ BYTE   N12  Ds1  v064
+ BYTE   W12
+ BYTE   En1  v052
+ BYTE   W12
+ BYTE   N06  Ds2  v040
+ BYTE   W06
+ BYTE   En2  v036
+ BYTE   W06
+Label_1_0104A875:
+ BYTE   N06  Ds1  v064
+ BYTE   W06
+ BYTE   Ds1  v052
+ BYTE   W06
+// 004   ----------------------------------------
+ BYTE   N12  En1
+ BYTE   W12
+ BYTE   N06  Ds2  v040
+ BYTE   W06
+ BYTE   En2  v036
+ BYTE   W06
+ BYTE   Ds2  v032
+ BYTE   W06
+ BYTE   En2  v028
+ BYTE   W06
+ BYTE   N12  Ds2  v064
+ BYTE   W12
+ BYTE   As1  v052
+ BYTE   W12
+ BYTE   N06  Ds2  v040
+ BYTE   W06
+ BYTE   En2  v036
+ BYTE   W06
+ BYTE   PEND 
+Label_1_0104A89B:
+ BYTE   N06  Ds1  v064
+ BYTE   W06
+ BYTE   Ds1  v052
+ BYTE   W06
+ BYTE   N12  En1
+ BYTE   W12
+// 005   ----------------------------------------
+ BYTE   N06  Ds2  v040
+ BYTE   W06
+ BYTE   En2  v036
+ BYTE   W06
+ BYTE   Ds2  v032
+ BYTE   W06
+ BYTE   En2  v028
+ BYTE   W06
+ BYTE   N12  Ds2  v064
+ BYTE   W12
+ BYTE   As1  v052
+ BYTE   W12
+ BYTE   N06  En1  v040
+ BYTE   W06
+ BYTE   Ds1  v036
+ BYTE   W06
+ BYTE   PEND 
+// 006   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_1_0104A875
+// 007   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_1_0104A89B
+// 008   ----------------------------------------
+ BYTE   N24  Ds1  v064
+ BYTE   W24
+ BYTE   Ds1  v052
+ BYTE   W24
+ BYTE   Ds1  v056
+ BYTE   W24
+ BYTE   N12  Ds1  v052
+ BYTE   W12
+ BYTE   GoTo
+  POIN2 Label_1_0104A81C
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+songTheGuardianSpirit_003:
+// 000   ----------------------------------------
+ BYTE   VOL   80*songTheGuardianSpirit_mvl/mxv
+ BYTE   KEYSH   songTheGuardianSpirit_key+0
+Label_2_0104A8E4:
+ BYTE   VOICE   36
+ BYTE   N12  Ds3  v064
+ BYTE   W12
+ BYTE   Ds3  v052
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   Ds3  v056
+ BYTE   W12
+ BYTE   Ds3  v052
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   Bn2  v064
+ BYTE   W12
+// 001   ----------------------------------------
+ BYTE   Bn2  v052
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   Bn2  v056
+ BYTE   W12
+ BYTE   Bn2  v052
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   As2  v064
+ BYTE   W12
+ BYTE   As2  v052
+ BYTE   W12
+// 002   ----------------------------------------
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   As2  v056
+ BYTE   W12
+ BYTE   As2  v052
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+Label_2_0104A91D:
+ BYTE   N12  Ds3  v064
+ BYTE   W12
+ BYTE   Ds3  v052
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+// 003   ----------------------------------------
+ BYTE   N12
+ BYTE   W12
+ BYTE   Ds3  v056
+ BYTE   W12
+ BYTE   Ds3  v052
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   PEND 
+// 004   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_2_0104A91D
+// 005   ----------------------------------------
+ BYTE   N12  En3  v064
+ BYTE   W12
+ BYTE   En3  v052
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   En3  v056
+ BYTE   W12
+ BYTE   En3  v052
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+// 006   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_2_0104A91D
+// 007   ----------------------------------------
+ BYTE   N12  En3  v064
+ BYTE   W12
+ BYTE   En3  v052
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   Cs4  v056
+ BYTE   W12
+ BYTE   Bn3  v052
+ BYTE   W12
+ BYTE   En3
+ BYTE   W12
+ BYTE   N24  Ds3  v064
+ BYTE   W24
+// 008   ----------------------------------------
+ BYTE   Ds3  v052
+ BYTE   W24
+ BYTE   Ds3  v056
+ BYTE   W24
+ BYTE   N12  Ds3  v052
+ BYTE   W12
+ BYTE   GoTo
+  POIN2 Label_2_0104A8E4
+ BYTE   FINE
+
+//**************** Track 4 (Midi-Chn.3) ****************//
+
+songTheGuardianSpirit_004:
+// 000   ----------------------------------------
+ BYTE   VOL   80*songTheGuardianSpirit_mvl/mxv
+ BYTE   KEYSH   songTheGuardianSpirit_key+0
+Label_3_01046008:
+ BYTE   VOICE   66
+ BYTE   N84  Ds2  v064
+ BYTE   W84
+ BYTE   Bn2
+ BYTE   W84
+// 001   ----------------------------------------
+ BYTE   As2
+ BYTE   W84
+ BYTE   N21  En2
+ BYTE   W21
+// 002   ----------------------------------------
+ BYTE   N60  Ds2
+ BYTE   W60
+ BYTE   W03
+ BYTE   N84  Ds3
+ BYTE   W84
+// 003   ----------------------------------------
+ BYTE   En3
+ BYTE   W84
+ BYTE   Ds3
+ BYTE   W84
+// 004   ----------------------------------------
+ BYTE   En3
+ BYTE   W84
+ BYTE   Ds3
+ BYTE   W84
+// 005   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_3_01046008
+ BYTE   FINE
+
+//**************** Track 5 (Midi-Chn.4) ****************//
+
+songTheGuardianSpirit_005:
+// 000   ----------------------------------------
+ BYTE   VOL   80*songTheGuardianSpirit_mvl/mxv
+ BYTE   KEYSH   songTheGuardianSpirit_key+0
+Label_4_01045F64:
+ BYTE   VOICE   127
+ BYTE   N24  Dn1  v064
+ BYTE   N12  En1
+ BYTE   N24  Cs2  v052
+ BYTE   W12
+ BYTE   N12  Cs1
+ BYTE   W12
+ BYTE   N24  Dn1
+ BYTE   N12  En1
+ BYTE   N24  Cs2  v048
+ BYTE   W12
+ BYTE   N12  Cs1  v052
+ BYTE   W12
+ BYTE   N24  Dn1  v056
+ BYTE   N12  En1
+ BYTE   N24  Cs2  v040
+ BYTE   W12
+ BYTE   N12  Cs1  v052
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   N12  En1
+ BYTE   N12  Cs2  v036
+ BYTE   W12
+Label_4_01045F92:
+ BYTE   N24  Dn1  v064
+ BYTE   N12  En1
+ BYTE   N24  Cs2  v052
+ BYTE   W12
+// 001   ----------------------------------------
+ BYTE   N12  Cs1
+ BYTE   W12
+ BYTE   N24  Dn1
+ BYTE   N12  En1
+ BYTE   N24  Cs2  v048
+ BYTE   W12
+ BYTE   N12  Cs1  v052
+ BYTE   W12
+ BYTE   N24  Dn1  v056
+ BYTE   N12  En1
+ BYTE   N24  Cs2  v040
+ BYTE   W12
+ BYTE   N12  Cs1  v052
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   N12  En1
+ BYTE   N12  Cs2  v036
+ BYTE   W12
+ BYTE   PEND 
+// 002   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_01045F92
+// 003   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_01045F92
+// 004   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_01045F92
+// 005   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_01045F92
+// 006   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_01045F92
+// 007   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_01045F92
+// 008   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_01045F92
+// 009   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_4_01045F64
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+songTheGuardianSpirit:
+	BYTE	5	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	songTheGuardianSpirit_pri	// Priority
+	BYTE	songTheGuardianSpirit_rev	// Reverb.
+    
+	POIN2	songTheGuardianSpirit_grp
+    
+	POIN2	songTheGuardianSpirit_001
+	POIN2	songTheGuardianSpirit_002
+	POIN2	songTheGuardianSpirit_003
+	POIN2	songTheGuardianSpirit_004
+	POIN2	songTheGuardianSpirit_005
+
+	

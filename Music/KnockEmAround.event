@@ -1,0 +1,493 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	songKnockEmAround_grp  voicegroup000
+	#define	songKnockEmAround_pri  0
+	#define	songKnockEmAround_rev  0
+	#define	songKnockEmAround_mvl  150
+	#define	songKnockEmAround_key  0
+	#define	songKnockEmAround_tbs  1
+	#define	songKnockEmAround_exg  0
+	#define	songKnockEmAround_cmp  1
+
+	// .rodata
+	//	songKnockEmAround
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+songKnockEmAround_001:
+// 000   ----------------------------------------
+ BYTE   VOL   80*songKnockEmAround_mvl/mxv
+ BYTE   KEYSH   songKnockEmAround_key+0
+Label_0_01496164:
+ BYTE   TEMPO   160*songKnockEmAround_tbs/2
+ BYTE   VOICE   48
+ BYTE   N12  En3  v064
+ BYTE   W12
+ BYTE   En4
+ BYTE   W24
+ BYTE   N48  Dn4
+ BYTE   W60
+// 001   ----------------------------------------
+Label_0_01496171:
+ BYTE   N12  An3  v064
+ BYTE   W12
+ BYTE   Gs3
+ BYTE   W24
+ BYTE   N48  Fs3
+ BYTE   W60
+ BYTE   PEND 
+// 002   ----------------------------------------
+Label_0_0149617B:
+ BYTE   N12  En3  v064
+ BYTE   W12
+ BYTE   En4
+ BYTE   W24
+ BYTE   N48  Dn4
+ BYTE   W60
+ BYTE   PEND 
+// 003   ----------------------------------------
+ BYTE   N96  En4
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_0_0149617B
+ BYTE   PATT
+  POIN2 Label_0_01496171
+ BYTE   PATT
+  POIN2 Label_0_0149617B
+// 004   ----------------------------------------
+ BYTE   N96  En4  v064
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   N12  En3
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W24
+ BYTE   N48  Bn3
+ BYTE   W48
+ BYTE   PATT
+  POIN2 Label_0_01496171
+// 006   ----------------------------------------
+Label_0_014961AA:
+ BYTE   N48  Dn4  v064
+ BYTE   W48
+ BYTE   N12  Cs4
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   An3
+ BYTE   W12
+ BYTE   Fs3
+ BYTE   W12
+ BYTE   PEND 
+// 007   ----------------------------------------
+ BYTE   N96  En3
+ BYTE   W96
+// 008   ----------------------------------------
+ BYTE   N12
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W24
+ BYTE   N48  Dn4
+ BYTE   W48
+ BYTE   PATT
+  POIN2 Label_0_01496171
+ BYTE   PATT
+  POIN2 Label_0_014961AA
+// 009   ----------------------------------------
+ BYTE   N96  En4  v064
+ BYTE   W96
+// 010   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_0_01496164
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+songKnockEmAround_002:
+// 000   ----------------------------------------
+ BYTE   VOL   80*songKnockEmAround_mvl/mxv
+ BYTE   KEYSH   songKnockEmAround_key+0
+Label_1_01496044:
+ BYTE   VOICE   62
+ BYTE   N12  En3  v064
+ BYTE   W12
+ BYTE   En4
+ BYTE   W24
+ BYTE   N48  Dn4
+ BYTE   W60
+// 001   ----------------------------------------
+Label_1_0149604F:
+ BYTE   N12  An3  v064
+ BYTE   W12
+ BYTE   Gs3
+ BYTE   W24
+ BYTE   N48  Fs3
+ BYTE   W60
+ BYTE   PEND 
+// 002   ----------------------------------------
+Label_1_01496059:
+ BYTE   N12  En3  v064
+ BYTE   W12
+ BYTE   En4
+ BYTE   W24
+ BYTE   N48  Dn4
+ BYTE   W60
+ BYTE   PEND 
+// 003   ----------------------------------------
+ BYTE   N96  En4
+ BYTE   W96
+ BYTE   PATT
+  POIN2 Label_1_01496059
+ BYTE   PATT
+  POIN2 Label_1_0149604F
+ BYTE   PATT
+  POIN2 Label_1_01496059
+// 004   ----------------------------------------
+ BYTE   N96  En4  v064
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   N12  En3
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W24
+ BYTE   N48  Bn3
+ BYTE   W48
+// 006   ----------------------------------------
+ BYTE   N12  An3
+ BYTE   W12
+ BYTE   Gs3
+ BYTE   W24
+ BYTE   N48  Fs4
+ BYTE   W60
+// 007   ----------------------------------------
+Label_1_0149608B:
+ BYTE   N48  Dn4  v064
+ BYTE   W48
+ BYTE   N12  Cs4
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   An3
+ BYTE   W12
+ BYTE   Fs3
+ BYTE   W12
+ BYTE   PEND 
+// 008   ----------------------------------------
+ BYTE   N96  En3
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   N12
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W24
+ BYTE   N48  Dn4
+ BYTE   W48
+ BYTE   PATT
+  POIN2 Label_1_0149604F
+ BYTE   PATT
+  POIN2 Label_1_0149608B
+// 010   ----------------------------------------
+ BYTE   N96  En4  v064
+ BYTE   W96
+// 011   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_1_01496044
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+songKnockEmAround_003:
+// 000   ----------------------------------------
+ BYTE   VOL   80*songKnockEmAround_mvl/mxv
+ BYTE   KEYSH   songKnockEmAround_key+0
+Label_2_014960C0:
+ BYTE   VOICE   36
+ BYTE   N12  En1  v064
+ BYTE   W12
+ BYTE   N06  En2
+ BYTE   W12
+ BYTE   N12  En1
+ BYTE   W12
+ BYTE   N06  En2
+ BYTE   W12
+ BYTE   N12  Dn2
+ BYTE   W12
+ BYTE   Bn1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W12
+// 001   ----------------------------------------
+Label_2_014960D8:
+ BYTE   N12  En1  v064
+ BYTE   W12
+ BYTE   N06  En2
+ BYTE   W12
+ BYTE   N12  En1
+ BYTE   W12
+ BYTE   N06  En2
+ BYTE   W12
+ BYTE   N12  Dn2
+ BYTE   W12
+ BYTE   Bn1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W12
+ BYTE   PEND 
+// 002   ----------------------------------------
+Label_2_014960EF:
+ BYTE   N12  Fs1  v064
+ BYTE   W12
+ BYTE   N06  Fs2
+ BYTE   W12
+ BYTE   N12  Fs1
+ BYTE   W12
+ BYTE   N06  Fs2
+ BYTE   W12
+ BYTE   N12  En2
+ BYTE   W12
+ BYTE   Cs2
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   PEND 
+// 003   ----------------------------------------
+Label_2_01496106:
+ BYTE   N12  Gs1  v064
+ BYTE   W12
+ BYTE   N06  Gs2
+ BYTE   W12
+ BYTE   N12  Gs1
+ BYTE   W12
+ BYTE   N06  Gs2
+ BYTE   W12
+ BYTE   N12  Fs2
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Gs1
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_2_014960D8
+ BYTE   PATT
+  POIN2 Label_2_014960D8
+ BYTE   PATT
+  POIN2 Label_2_014960EF
+ BYTE   PATT
+  POIN2 Label_2_01496106
+ BYTE   PATT
+  POIN2 Label_2_014960D8
+ BYTE   PATT
+  POIN2 Label_2_014960D8
+ BYTE   PATT
+  POIN2 Label_2_014960EF
+ BYTE   PATT
+  POIN2 Label_2_01496106
+ BYTE   PATT
+  POIN2 Label_2_014960D8
+ BYTE   PATT
+  POIN2 Label_2_014960D8
+ BYTE   PATT
+  POIN2 Label_2_014960EF
+ BYTE   PATT
+  POIN2 Label_2_01496106
+// 004   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_2_014960C0
+ BYTE   FINE
+
+//**************** Track 4 (Midi-Chn.3) ****************//
+
+songKnockEmAround_004:
+// 000   ----------------------------------------
+ BYTE   VOL   80*songKnockEmAround_mvl/mxv
+ BYTE   KEYSH   songKnockEmAround_key+0
+Label_3_01495FC8:
+ BYTE   VOICE   60
+ BYTE   N96  En2  v040
+ BYTE   N96  An2
+ BYTE   N96  Bn2
+ BYTE   W96
+// 001   ----------------------------------------
+Label_3_01495FD2:
+ BYTE   N96  En2  v040
+ BYTE   N96  An2
+ BYTE   N96  Cs3
+ BYTE   W96
+ BYTE   PEND 
+// 002   ----------------------------------------
+Label_3_01495FDB:
+ BYTE   N96  Fs2  v040
+ BYTE   N96  Bn2
+ BYTE   N96  Dn3
+ BYTE   W96
+ BYTE   PEND 
+// 003   ----------------------------------------
+Label_3_01495FE4:
+ BYTE   N96  Gs2  v040
+ BYTE   N96  Bn2
+ BYTE   N96  En3
+ BYTE   W96
+ BYTE   PEND 
+// 004   ----------------------------------------
+Label_3_01495FED:
+ BYTE   N96  En2  v040
+ BYTE   N96  An2
+ BYTE   N96  Bn2
+ BYTE   W96
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_3_01495FD2
+ BYTE   PATT
+  POIN2 Label_3_01495FDB
+ BYTE   PATT
+  POIN2 Label_3_01495FE4
+ BYTE   PATT
+  POIN2 Label_3_01495FED
+// 005   ----------------------------------------
+Label_3_0149600A:
+ BYTE   N96  En2  v040
+ BYTE   N96  Gs2
+ BYTE   N96  Cs3
+ BYTE   W96
+ BYTE   PEND 
+// 006   ----------------------------------------
+Label_3_01496013:
+ BYTE   N96  Fs2  v040
+ BYTE   N96  An2
+ BYTE   N96  Dn3
+ BYTE   W96
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_3_01495FE4
+ BYTE   PATT
+  POIN2 Label_3_01495FED
+ BYTE   PATT
+  POIN2 Label_3_0149600A
+ BYTE   PATT
+  POIN2 Label_3_01496013
+ BYTE   PATT
+  POIN2 Label_3_01495FE4
+// 007   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_3_01495FC8
+ BYTE   FINE
+
+//**************** Track 5 (Midi-Chn.4) ****************//
+
+songKnockEmAround_005:
+// 000   ----------------------------------------
+ BYTE   VOL   80*songKnockEmAround_mvl/mxv
+ BYTE   KEYSH   songKnockEmAround_key+0
+Label_4_014961DC:
+ BYTE   VOICE   124
+ BYTE   N24  Dn1  v064
+ BYTE   W24
+ BYTE   N12  Fn1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   N24  Dn1
+ BYTE   W24
+ BYTE   N24
+ BYTE   W24
+// 001   ----------------------------------------
+Label_4_014961EC:
+ BYTE   N24  Dn1  v064
+ BYTE   W24
+ BYTE   N12  Fn1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   N24  Dn1
+ BYTE   W24
+ BYTE   N24
+ BYTE   W24
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_4_014961EC
+// 002   ----------------------------------------
+Label_4_01496200:
+ BYTE   N24  Dn1  v064
+ BYTE   W24
+ BYTE   N12  Fn1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   N06  An1
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_4_014961EC
+ BYTE   PATT
+  POIN2 Label_4_014961EC
+ BYTE   PATT
+  POIN2 Label_4_014961EC
+ BYTE   PATT
+  POIN2 Label_4_01496200
+ BYTE   PATT
+  POIN2 Label_4_014961EC
+ BYTE   PATT
+  POIN2 Label_4_014961EC
+ BYTE   PATT
+  POIN2 Label_4_014961EC
+ BYTE   PATT
+  POIN2 Label_4_01496200
+ BYTE   PATT
+  POIN2 Label_4_014961EC
+ BYTE   PATT
+  POIN2 Label_4_014961EC
+ BYTE   PATT
+  POIN2 Label_4_014961EC
+ BYTE   PATT
+  POIN2 Label_4_01496200
+// 003   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_4_014961DC
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+songKnockEmAround:
+	BYTE	5	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	songKnockEmAround_pri	// Priority
+	BYTE	songKnockEmAround_rev	// Reverb.
+    
+	POIN2	songKnockEmAround_grp
+    
+	POIN2	songKnockEmAround_001
+	POIN2	songKnockEmAround_002
+	POIN2	songKnockEmAround_003
+	POIN2	songKnockEmAround_004
+	POIN2	songKnockEmAround_005
+
+	

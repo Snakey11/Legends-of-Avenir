@@ -1,0 +1,246 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	songCrossroads_grp  voicegroup000
+	#define	songCrossroads_pri  0
+	#define	songCrossroads_rev  0
+	#define	songCrossroads_mvl  127
+	#define	songCrossroads_key  0
+	#define	songCrossroads_tbs  1
+	#define	songCrossroads_exg  0
+	#define	songCrossroads_cmp  1
+
+	// .rodata
+	//	songCrossroads
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+songCrossroads_001:
+// 000   ----------------------------------------
+ BYTE   VOL   80*songCrossroads_mvl/mxv
+ BYTE   KEYSH   songCrossroads_key+0
+Label_0_0148D81C:
+ BYTE   TEMPO   80*songCrossroads_tbs/2
+ BYTE   VOICE   100
+ BYTE   N24  Fn3  v064
+ BYTE   W24
+ BYTE   Fs3
+ BYTE   W72
+// 001   ----------------------------------------
+ BYTE   N24
+ BYTE   W24
+ BYTE   Fn3
+ BYTE   W72
+// 002   ----------------------------------------
+ BYTE   N48  Cs3
+ BYTE   W48
+ BYTE   Bn3
+ BYTE   W48
+// 003   ----------------------------------------
+ BYTE   Fn3
+ BYTE   W48
+ BYTE   N24  Fs3
+ BYTE   W24
+ BYTE   N12  As3
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+// 004   ----------------------------------------
+ BYTE   N48  Fs3
+ BYTE   W48
+ BYTE   N24  Fn3
+ BYTE   W24
+ BYTE   N12  As3
+ BYTE   W12
+ BYTE   Bn3
+ BYTE   W12
+// 005   ----------------------------------------
+Label_0_0148D844:
+ BYTE   N48  Cs4  v064
+ BYTE   W48
+ BYTE   N24  Bn3
+ BYTE   W48
+ BYTE   PEND 
+// 006   ----------------------------------------
+ BYTE   Fn4
+ BYTE   W24
+ BYTE   Fs4
+ BYTE   W72
+// 007   ----------------------------------------
+ BYTE   N24
+ BYTE   W24
+ BYTE   Fn4
+ BYTE   W72
+// 008   ----------------------------------------
+ BYTE   As4
+ BYTE   W24
+ BYTE   Gs4
+ BYTE   W24
+ BYTE   N48  Fs4
+ BYTE   W48
+ BYTE   PATT
+  POIN2 Label_0_0148D844
+// 009   ----------------------------------------
+ BYTE   N48  Fs4  v064
+ BYTE   W48
+ BYTE   N24  Fn4
+ BYTE   W24
+ BYTE   N12  Bn3
+ BYTE   W12
+ BYTE   As3
+ BYTE   W12
+ BYTE   PATT
+  POIN2 Label_0_0148D844
+// 010   ----------------------------------------
+ BYTE   N72  Fn4  v064
+ BYTE   W96
+// 011   ----------------------------------------
+ BYTE   As4
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   N24  Cs4
+ BYTE   W24
+ BYTE   Bn3
+ BYTE   W24
+ BYTE   N48  As3
+ BYTE   W48
+// 013   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_0_0148D81C
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+songCrossroads_002:
+// 000   ----------------------------------------
+ BYTE   VOL   80*songCrossroads_mvl/mxv
+ BYTE   KEYSH   songCrossroads_key+0
+Label_1_0148D768:
+ BYTE   VOICE   89
+ BYTE   N96  Bn2  v032
+ BYTE   N96  Fs3
+ BYTE   N96  Fn4
+ BYTE   W96
+// 001   ----------------------------------------
+Label_1_0148D772:
+ BYTE   N96  Fs3  v032
+ BYTE   N96  Gs3
+ BYTE   N96  Cs4
+ BYTE   W96
+ BYTE   PEND 
+// 002   ----------------------------------------
+Label_1_0148D77B:
+ BYTE   N96  Ds3  v032
+ BYTE   N96  Fs3
+ BYTE   N96  Bn3
+ BYTE   W96
+ BYTE   PEND 
+// 003   ----------------------------------------
+Label_1_0148D784:
+ BYTE   N96  Bn2  v032
+ BYTE   N96  Fs3
+ BYTE   N96  Fn4
+ BYTE   W96
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_1_0148D772
+ BYTE   PATT
+  POIN2 Label_1_0148D77B
+ BYTE   PATT
+  POIN2 Label_1_0148D784
+ BYTE   PATT
+  POIN2 Label_1_0148D772
+ BYTE   PATT
+  POIN2 Label_1_0148D77B
+ BYTE   PATT
+  POIN2 Label_1_0148D784
+ BYTE   PATT
+  POIN2 Label_1_0148D772
+ BYTE   PATT
+  POIN2 Label_1_0148D77B
+ BYTE   PATT
+  POIN2 Label_1_0148D784
+ BYTE   PATT
+  POIN2 Label_1_0148D772
+ BYTE   PATT
+  POIN2 Label_1_0148D77B
+// 004   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_1_0148D768
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+songCrossroads_003:
+// 000   ----------------------------------------
+ BYTE   VOL   80*songCrossroads_mvl/mxv
+ BYTE   KEYSH   songCrossroads_key+0
+Label_2_0148E058:
+ BYTE   VOICE   50
+ BYTE   N96  Bn1  v056
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   Fs2
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   Ds2
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   Bn1
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   Fs2
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   Ds2
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   Bn1
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   Fs2
+ BYTE   W96
+// 008   ----------------------------------------
+ BYTE   Ds2
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   Bn1
+ BYTE   W96
+// 010   ----------------------------------------
+ BYTE   Fs2
+ BYTE   W96
+// 011   ----------------------------------------
+ BYTE   Ds2
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   Bn1
+ BYTE   W96
+// 013   ----------------------------------------
+ BYTE   Fs2
+ BYTE   W96
+// 014   ----------------------------------------
+ BYTE   Ds2
+ BYTE   W96
+// 015   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_2_0148E058
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+songCrossroads:
+	BYTE	3	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	songCrossroads_pri	// Priority
+	BYTE	songCrossroads_rev	// Reverb.
+    
+	POIN2	songCrossroads_grp
+    
+	POIN2	songCrossroads_001
+	POIN2	songCrossroads_002
+	POIN2	songCrossroads_003
+
+	

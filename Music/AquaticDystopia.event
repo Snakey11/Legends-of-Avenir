@@ -1,0 +1,467 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	songAquaticDystopia_grp  voicegroup000
+	#define	songAquaticDystopia_pri  0
+	#define	songAquaticDystopia_rev  0
+	#define	songAquaticDystopia_mvl  200
+	#define	songAquaticDystopia_key  0
+	#define	songAquaticDystopia_tbs  1
+	#define	songAquaticDystopia_exg  0
+	#define	songAquaticDystopia_cmp  1
+
+	// .rodata
+	//	songAquaticDystopia
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+songAquaticDystopia_001:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songAquaticDystopia_key+0
+Label_0_54B1FE:
+ BYTE   TEMPO   54*songAquaticDystopia_tbs/2
+ BYTE   VOICE   46
+ BYTE   VOL   62*songAquaticDystopia_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   N68  Cn4  v064
+ BYTE   W72
+ BYTE   Gn4
+ BYTE   W24
+// 001   ----------------------------------------
+ BYTE   W72
+ BYTE   N22  Fn4
+ BYTE   W24
+// 002   ----------------------------------------
+ BYTE   Ds4
+ BYTE   W24
+ BYTE   N68  Dn4
+ BYTE   W72
+// 003   ----------------------------------------
+ BYTE   Cn4
+ BYTE   W72
+ BYTE   N44  Gn4
+ BYTE   W24
+// 004   ----------------------------------------
+ BYTE   W24
+ BYTE   N22  As4
+ BYTE   W24
+ BYTE   N44  An4
+ BYTE   W48
+// 005   ----------------------------------------
+ BYTE   N11  Gn4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   Ds4
+ BYTE   W12
+ BYTE   Fn4
+ BYTE   W12
+ BYTE   N44  Gn4
+ BYTE   W48
+// 006   ----------------------------------------
+ BYTE   W24
+ BYTE   N22  Gn4  v096
+ BYTE   N22  Gn5
+ BYTE   W24
+ BYTE   Cn4
+ BYTE   N22  Cn5
+ BYTE   W24
+ BYTE   N68  Gn4
+ BYTE   N68  Gn5
+ BYTE   W24
+// 007   ----------------------------------------
+ BYTE   W72
+ BYTE   N22  Fn4  v064
+ BYTE   N22  Fn5
+ BYTE   W24
+// 008   ----------------------------------------
+ BYTE   Ds4
+ BYTE   N22  Ds5
+ BYTE   W24
+ BYTE   N68  Dn4
+ BYTE   N68  Dn5
+ BYTE   W72
+// 009   ----------------------------------------
+ BYTE   Cn4
+ BYTE   N68  Cn5
+ BYTE   W72
+ BYTE   Dn4
+ BYTE   N68  Dn5
+ BYTE   W24
+// 010   ----------------------------------------
+ BYTE   W48
+ BYTE   Cn4
+ BYTE   N68  Ds5
+ BYTE   W48
+// 011   ----------------------------------------
+ BYTE   W24
+ BYTE   N44  Dn4
+ BYTE   N44  Ds5
+ BYTE   W48
+ BYTE   N22  Dn4
+ BYTE   N22  Dn5
+ BYTE   W24
+// 012   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_0_54B1FE
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+songAquaticDystopia_002:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songAquaticDystopia_key+0
+Label_1_54B26E:
+ BYTE   VOICE   42
+ BYTE   VOL   42*songAquaticDystopia_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   N68  Cn2  v052
+ BYTE   W72
+ BYTE   As1
+ BYTE   W24
+// 001   ----------------------------------------
+ BYTE   W48
+ BYTE   Fn1
+ BYTE   W48
+// 002   ----------------------------------------
+ BYTE   W24
+ BYTE   N23  Gn1
+ BYTE   W24
+ BYTE   N44  Bn1
+ BYTE   W48
+// 003   ----------------------------------------
+ BYTE   N68  Cn2
+ BYTE   W72
+ BYTE   Fn2
+ BYTE   W24
+// 004   ----------------------------------------
+ BYTE   W48
+ BYTE   Ds2
+ BYTE   W48
+// 005   ----------------------------------------
+ BYTE   W24
+ BYTE   N92  Dn2
+ BYTE   W72
+// 006   ----------------------------------------
+ BYTE   W24
+ BYTE   TIE  Cn4
+ BYTE   W72
+// 007   ----------------------------------------
+ BYTE   W44
+ BYTE   W03
+ BYTE   EOT
+ BYTE   W01
+ BYTE   N68  Dn4
+ BYTE   W48
+// 008   ----------------------------------------
+ BYTE   W24
+ BYTE   Gn4
+ BYTE   W72
+// 009   ----------------------------------------
+ BYTE   Ds4
+ BYTE   W72
+ BYTE   Dn4
+ BYTE   W24
+// 010   ----------------------------------------
+ BYTE   W48
+ BYTE   TIE  Cn4
+ BYTE   W48
+// 011   ----------------------------------------
+ BYTE   W68
+ BYTE   W03
+ BYTE   EOT
+ BYTE   W01
+ BYTE   N23  Bn3
+ BYTE   W24
+// 012   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_1_54B26E
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+songAquaticDystopia_003:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songAquaticDystopia_key+0
+Label_2_54B2B6:
+ BYTE   VOICE   42
+ BYTE   VOL   82*songAquaticDystopia_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   W72
+ BYTE   N68  Ds1  v052
+ BYTE   W24
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   W48
+ BYTE   As3
+ BYTE   W48
+// 008   ----------------------------------------
+ BYTE   W24
+ BYTE   N68
+ BYTE   W72
+// 009   ----------------------------------------
+ BYTE   N68
+ BYTE   W96
+// 010   ----------------------------------------
+ BYTE   W48
+ BYTE   TIE  Cn3
+ BYTE   W48
+// 011   ----------------------------------------
+ BYTE   W68
+ BYTE   W03
+ BYTE   EOT
+ BYTE   W01
+ BYTE   N23  Bn2
+ BYTE   W24
+// 012   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_2_54B2B6
+ BYTE   FINE
+
+//**************** Track 4 (Midi-Chn.3) ****************//
+
+songAquaticDystopia_004:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songAquaticDystopia_key+0
+Label_3_54B7A2:
+ BYTE   VOICE   1
+ BYTE   VOL   62*songAquaticDystopia_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   W12
+ BYTE   N11  Cn2  v080
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   Ds3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+// 001   ----------------------------------------
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   As2  v076
+ BYTE   W12
+ BYTE   Gs2
+ BYTE   W12
+ BYTE   Gn2  v072
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Dn2  v068
+ BYTE   W12
+ BYTE   As1  v064
+ BYTE   W12
+ BYTE   Cn2
+ BYTE   W12
+// 002   ----------------------------------------
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+// 003   ----------------------------------------
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Cn2  v068
+ BYTE   W12
+ BYTE   Ds2  v072
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Cn3  v076
+ BYTE   W12
+ BYTE   Dn3  v080
+ BYTE   W12
+ BYTE   Ds3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+// 004   ----------------------------------------
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   Bn2
+ BYTE   W12
+ BYTE   As2  v076
+ BYTE   W12
+ BYTE   An2
+ BYTE   W12
+ BYTE   Gs2  v072
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Fn2  v068
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+// 005   ----------------------------------------
+ BYTE   Dn2  v064
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Cn2
+ BYTE   W12
+ BYTE   As1
+ BYTE   W12
+ BYTE   Gs1
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+// 006   ----------------------------------------
+ BYTE   Bn1  v096
+ BYTE   W12
+ BYTE   Cn2
+ BYTE   W12
+ BYTE   Ds2  v064
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   Ds3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+// 007   ----------------------------------------
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   Gs2
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   As1
+ BYTE   W12
+ BYTE   Cn2
+ BYTE   W12
+// 008   ----------------------------------------
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   Fn2  v072
+ BYTE   W12
+// 009   ----------------------------------------
+ BYTE   Gs2  v080
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Cn2  v076
+ BYTE   W12
+ BYTE   Gs1  v068
+ BYTE   W12
+ BYTE   As1  v064
+ BYTE   W12
+ BYTE   Cn2  v056
+ BYTE   W12
+ BYTE   Dn2  v052
+ BYTE   N44  Gn2
+ BYTE   W12
+ BYTE   N11  Bn1
+ BYTE   W12
+// 010   ----------------------------------------
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   Gs1  v060
+ BYTE   W12
+ BYTE   An1  v072
+ BYTE   W12
+ BYTE   Bn1  v084
+ BYTE   W12
+ BYTE   Gn2  v096
+ BYTE   W12
+ BYTE   Cn2
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+// 011   ----------------------------------------
+ BYTE   Dn2
+ BYTE   W12
+ BYTE   Fs2
+ BYTE   W12
+ BYTE   Gn2
+ BYTE   W12
+ BYTE   Ds2
+ BYTE   W12
+ BYTE   Cn2
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   Bn1
+ BYTE   W12
+ BYTE   Dn2
+ BYTE   W12
+// 012   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_3_54B7A2
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+songAquaticDystopia:
+	BYTE	4	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	songAquaticDystopia_pri	// Priority
+	BYTE	songAquaticDystopia_rev	// Reverb.
+    
+	POIN2	songAquaticDystopia_grp
+    
+	POIN2	songAquaticDystopia_001
+	POIN2	songAquaticDystopia_002
+	POIN2	songAquaticDystopia_003
+	POIN2	songAquaticDystopia_004
+
+	

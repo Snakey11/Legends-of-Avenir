@@ -1,0 +1,1335 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	ordonvillage_grp  voicegroup000
+	#define	ordonvillage_pri  0
+	#define	ordonvillage_rev  0
+	#define	ordonvillage_mvl  85
+	#define	ordonvillage_key  0
+	#define	ordonvillage_tbs  1
+	#define	ordonvillage_exg  0
+	#define	ordonvillage_cmp  1
+
+	// .rodata
+	//	ordonvillage
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+ordonvillage_1:
+	BYTE	KEYSH   ordonvillage_key+0
+// 000   ----------------------------------------
+	BYTE	TEMPO   140*ordonvillage_tbs/2
+	BYTE		VOICE   45
+	BYTE		PAN     c_v-45
+	BYTE		VOL     64*ordonvillage_mvl/mxv
+	BYTE		N12     Cn2   v127
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		N12   
+	BYTE		N12     Gn3 
+	BYTE	W48
+// 001   ----------------------------------------
+ordonvillage_1_001:
+	BYTE		N12     An1   v127
+	BYTE	W12
+	BYTE		        En2 
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W12
+	BYTE		        An2 
+	BYTE		N12     Cn3 
+	BYTE	W48
+	BYTE	PEND
+// 002   ----------------------------------------
+ordonvillage_1_002:
+	BYTE		N12     Cn2   v127
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		N12   
+	BYTE		N12     Gn3 
+	BYTE	W48
+	BYTE	PEND
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_001
+ordonvillage_1_B1:
+// 004   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_002
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_001
+// 006   ----------------------------------------
+ordonvillage_1_006:
+	BYTE		N12     Fn1   v127
+	BYTE	W12
+	BYTE		        Cn2 
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        An2 
+	BYTE		N12     Cn3 
+	BYTE	W48
+	BYTE	PEND
+// 007   ----------------------------------------
+ordonvillage_1_007:
+	BYTE	W12
+	BYTE		N12     Cn2   v127
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE	W12
+	BYTE		        Cn2 
+	BYTE	W12
+	BYTE		        En2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE	PEND
+// 008   ----------------------------------------
+ordonvillage_1_008:
+	BYTE		N12     Dn2   v127
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE		N12     An3 
+	BYTE	W48
+	BYTE	PEND
+// 009   ----------------------------------------
+ordonvillage_1_009:
+	BYTE	W12
+	BYTE		N12     An2   v127
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE		N12     An3 
+	BYTE	W48
+	BYTE	PEND
+// 010   ----------------------------------------
+ordonvillage_1_010:
+	BYTE		N12     Gn1   v127
+	BYTE	W12
+	BYTE		        Dn2 
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W12
+	BYTE		N12   
+	BYTE		N12     Dn3 
+	BYTE	W48
+	BYTE	PEND
+// 011   ----------------------------------------
+ordonvillage_1_011:
+	BYTE	W12
+	BYTE		N12     Dn2   v127
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        Fn1 
+	BYTE	W12
+	BYTE		        Dn2 
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE	PEND
+// 012   ----------------------------------------
+ordonvillage_1_012:
+	BYTE		N12     En1   v127
+	BYTE	W12
+	BYTE		        Bn1 
+	BYTE	W12
+	BYTE		        En2 
+	BYTE	W12
+	BYTE		        Fs2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE		N12     En3 
+	BYTE	W48
+	BYTE	PEND
+// 013   ----------------------------------------
+ordonvillage_1_013:
+	BYTE		N12     An1   v127
+	BYTE	W12
+	BYTE		        En2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE		N12     En3 
+	BYTE	W48
+	BYTE	PEND
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_008
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_010
+// 016   ----------------------------------------
+ordonvillage_1_016:
+	BYTE		N12     Cn2   v127
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE		N12     En3 
+	BYTE	W48
+	BYTE	PEND
+// 017   ----------------------------------------
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE		N12     Fn3 
+	BYTE	W48
+// 018   ----------------------------------------
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        Ds2 
+	BYTE	W12
+	BYTE		        Gs2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		N12   
+	BYTE		N12     Ds3 
+	BYTE	W48
+// 019   ----------------------------------------
+	BYTE	W12
+	BYTE		        Dn2 
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE		        Dn2 
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_002
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_001
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_006
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_007
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_008
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_009
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_010
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_011
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_012
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_013
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_008
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_010
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_016
+// 033   ----------------------------------------
+	BYTE	W12
+	BYTE		N12     Cn2   v127
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        An2 
+	BYTE		N12     Cn3 
+	BYTE	W48
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_002
+// 035   ----------------------------------------
+ordonvillage_1_035:
+	BYTE	W12
+	BYTE		N12     Gn2   v127
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		N12   
+	BYTE		N12     Gn3 
+	BYTE	W48
+	BYTE	PEND
+// 036   ----------------------------------------
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        Ds2 
+	BYTE	W12
+	BYTE		        Gs2 
+	BYTE	W12
+	BYTE		        As2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE		N12     Ds3 
+	BYTE	W48
+// 037   ----------------------------------------
+	BYTE	W12
+	BYTE		        Ds2 
+	BYTE	W12
+	BYTE		        Gs2 
+	BYTE	W12
+	BYTE		        As2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE		N12     Ds3 
+	BYTE	W48
+// 038   ----------------------------------------
+	BYTE		        As1 
+	BYTE	W12
+	BYTE		        Ds2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        As2 
+	BYTE	W12
+	BYTE		N12   
+	BYTE		N12     Ds3 
+	BYTE	W48
+// 039   ----------------------------------------
+	BYTE	W12
+	BYTE		        Ds2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        As2 
+	BYTE	W12
+	BYTE		N12   
+	BYTE		N12     Ds3 
+	BYTE	W48
+// 040   ----------------------------------------
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE		        Dn2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W12
+	BYTE		        As2 
+	BYTE		N12     Dn3 
+	BYTE	W48
+// 041   ----------------------------------------
+	BYTE	W12
+	BYTE		        Dn2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W12
+	BYTE		        As2 
+	BYTE		N12     Dn3 
+	BYTE	W48
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_008
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_009
+// 044   ----------------------------------------
+	BYTE		VOL     64*ordonvillage_mvl/mxv
+	BYTE		N12     Cn2   v127
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		N12   
+	BYTE		N12     Gn3 
+	BYTE	W48
+// 045   ----------------------------------------
+	BYTE		VOL     64*ordonvillage_mvl/mxv
+	BYTE	W12
+	BYTE		N12     Gn2 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		N12   
+	BYTE		N12     Gn3 
+	BYTE	W48
+// 046   ----------------------------------------
+	BYTE		        Bn1 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		N12   
+	BYTE		N12     Gn3 
+	BYTE	W48
+// 047   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_1_035
+// 048   ----------------------------------------
+	BYTE		N12     As1   v127
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        As2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		        As2 
+	BYTE		N12     Dn3 
+	BYTE	W48
+// 049   ----------------------------------------
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        As2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		        As2 
+	BYTE		N12     Dn3 
+	BYTE	W48
+// 050   ----------------------------------------
+	BYTE		        Fn1 
+	BYTE	W12
+	BYTE		        Cn2 
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE		N12     An2 
+	BYTE	W48
+// 051   ----------------------------------------
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	ordonvillage_1_B1
+ordonvillage_1_B2:
+// 052   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+ordonvillage_2:
+	BYTE	KEYSH   ordonvillage_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   73
+	BYTE		VOL     95*ordonvillage_mvl/mxv
+	BYTE		PAN     c_v+44
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W72
+	BYTE		N24     Gn3   v127
+	BYTE	W24
+ordonvillage_2_B1:
+// 004   ----------------------------------------
+ordonvillage_2_004:
+	BYTE		N72     Cn4   v127
+	BYTE	W72
+	BYTE		N24     Bn3 
+	BYTE	W24
+	BYTE	PEND
+// 005   ----------------------------------------
+ordonvillage_2_005:
+	BYTE		N48     Cn4   v127
+	BYTE	W48
+	BYTE		        En4 
+	BYTE	W48
+	BYTE	PEND
+// 006   ----------------------------------------
+	BYTE		TIE     An3 
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W48
+	BYTE		EOT   
+	BYTE	W24
+	BYTE		N24   
+	BYTE	W24
+// 008   ----------------------------------------
+ordonvillage_2_008:
+	BYTE		N72     Dn4   v127
+	BYTE	W72
+	BYTE		N24     Cs4 
+	BYTE	W24
+	BYTE	PEND
+// 009   ----------------------------------------
+ordonvillage_2_009:
+	BYTE		N48     Dn4   v127
+	BYTE	W48
+	BYTE		        Fn4 
+	BYTE	W48
+	BYTE	PEND
+// 010   ----------------------------------------
+	BYTE		TIE     Bn3 
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W48
+	BYTE		EOT   
+	BYTE	W24
+	BYTE		N24   
+	BYTE	W24
+// 012   ----------------------------------------
+ordonvillage_2_012:
+	BYTE		N72     Gn4   v127
+	BYTE	W72
+	BYTE		N24     Dn4 
+	BYTE	W24
+	BYTE	PEND
+// 013   ----------------------------------------
+ordonvillage_2_013:
+	BYTE		N72     Cs4   v127
+	BYTE	W72
+	BYTE		N12     Dn4 
+	BYTE	W12
+	BYTE		        En4 
+	BYTE	W12
+	BYTE	PEND
+// 014   ----------------------------------------
+ordonvillage_2_014:
+	BYTE		N72     Fn4   v127
+	BYTE	W72
+	BYTE		N24     Cn4 
+	BYTE	W24
+	BYTE	PEND
+// 015   ----------------------------------------
+ordonvillage_2_015:
+	BYTE		N72     Bn3   v127
+	BYTE	W72
+	BYTE		N12     Cn4 
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE	W12
+	BYTE	PEND
+// 016   ----------------------------------------
+ordonvillage_2_016:
+	BYTE		N12     En4   v127
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE	W12
+	BYTE		N48     En4 
+	BYTE	W48
+	BYTE		N24     Fn4 
+	BYTE	W24
+	BYTE	PEND
+// 017   ----------------------------------------
+	BYTE		N96     Dn4 
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE		N12     Cn4 
+	BYTE	W12
+	BYTE		        Bn3 
+	BYTE	W12
+	BYTE		N48     Cn4 
+	BYTE	W48
+	BYTE		N24     Dn4 
+	BYTE	W24
+// 019   ----------------------------------------
+	BYTE		N72     Bn3 
+	BYTE	W72
+	BYTE		N24     Gn3 
+	BYTE	W24
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_2_004
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_2_005
+// 022   ----------------------------------------
+	BYTE		TIE     An3   v127
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W48
+	BYTE		EOT   
+	BYTE	W24
+	BYTE		N24   
+	BYTE	W24
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_2_008
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_2_009
+// 026   ----------------------------------------
+	BYTE		TIE     Bn3   v127
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W48
+	BYTE		EOT   
+	BYTE	W24
+	BYTE		N24   
+	BYTE	W24
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_2_012
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_2_013
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_2_014
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_2_015
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_2_016
+// 033   ----------------------------------------
+	BYTE		N48     Dn4   v127
+	BYTE	W48
+	BYTE		N24     An3 
+	BYTE	W24
+	BYTE		        Cn4 
+	BYTE	W24
+// 034   ----------------------------------------
+	BYTE		TIE   
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W48
+	BYTE		EOT   
+	BYTE	W48
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W96
+// 046   ----------------------------------------
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE	W96
+// 048   ----------------------------------------
+	BYTE	W96
+// 049   ----------------------------------------
+	BYTE	W96
+// 050   ----------------------------------------
+	BYTE	W96
+// 051   ----------------------------------------
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	ordonvillage_2_B1
+ordonvillage_2_B2:
+// 052   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+ordonvillage_3:
+	BYTE	KEYSH   ordonvillage_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   68
+	BYTE		VOL     93*ordonvillage_mvl/mxv
+	BYTE		PAN     c_v+44
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+ordonvillage_3_B1:
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W72
+	BYTE		N24     Cn3   v127
+	BYTE	W24
+// 036   ----------------------------------------
+	BYTE		N48   
+	BYTE	W60
+	BYTE		N12     As2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+// 037   ----------------------------------------
+	BYTE		N48     Ds3 
+	BYTE	W48
+	BYTE		        Fn3 
+	BYTE	W48
+// 038   ----------------------------------------
+	BYTE		N96     Ds3 
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE		N72     As2 
+	BYTE	W72
+	BYTE		N24   
+	BYTE	W24
+// 040   ----------------------------------------
+	BYTE		N48   
+	BYTE	W60
+	BYTE		N12     An2 
+	BYTE	W12
+	BYTE		        As2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+// 041   ----------------------------------------
+	BYTE		N48     Dn3 
+	BYTE	W48
+	BYTE		        Ds3 
+	BYTE	W48
+// 042   ----------------------------------------
+	BYTE		TIE     Dn3 
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W72
+	BYTE		EOT   
+	BYTE		N24     En3 
+	BYTE	W24
+// 044   ----------------------------------------
+	BYTE		N48   
+	BYTE	W60
+	BYTE		N12     Dn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		        Fs3 
+	BYTE	W12
+// 045   ----------------------------------------
+	BYTE		N48     Gn3 
+	BYTE	W48
+	BYTE		        An3 
+	BYTE	W48
+// 046   ----------------------------------------
+	BYTE		N72     Gn3 
+	BYTE	W72
+	BYTE		N12     Fs3 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+// 047   ----------------------------------------
+	BYTE		N96     Dn4 
+	BYTE	W96
+// 048   ----------------------------------------
+	BYTE		TIE   
+	BYTE	W96
+// 049   ----------------------------------------
+	BYTE	W48
+	BYTE		EOT   
+	BYTE	W12
+	BYTE		N12     Fn4 
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE	W12
+	BYTE		        Cn4 
+	BYTE	W12
+// 050   ----------------------------------------
+	BYTE		TIE     Dn4 
+	BYTE	W96
+// 051   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+	BYTE	GoTo
+	 POIN2	ordonvillage_3_B1
+ordonvillage_3_B2:
+// 052   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+ordonvillage_4:
+	BYTE	KEYSH   ordonvillage_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   49
+	BYTE		PAN     c_v-45
+	BYTE		VOL     38*ordonvillage_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+ordonvillage_4_B1:
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE		TIE     Cn2   v127
+	BYTE		TIE     Ds2 
+	BYTE		TIE     Gs2 
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Cn2 
+	BYTE		        Ds2 
+	BYTE		        Gs2 
+// 038   ----------------------------------------
+	BYTE		TIE     As1 
+	BYTE		TIE     Ds2 
+	BYTE		TIE     Gn2 
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     As1 
+	BYTE		        Ds2 
+	BYTE		        Gn2 
+// 040   ----------------------------------------
+	BYTE		TIE     As1 
+	BYTE		TIE     Dn2 
+	BYTE		TIE     Gn2 
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     As1 
+	BYTE		        Dn2 
+	BYTE		        Gn2 
+// 042   ----------------------------------------
+	BYTE		TIE     Dn2 
+	BYTE		TIE     Fn2 
+	BYTE		TIE     An2 
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Dn2 
+	BYTE		        Fn2 
+	BYTE		        An2 
+// 044   ----------------------------------------
+	BYTE		TIE     Cn2 
+	BYTE		TIE     En2 
+	BYTE		TIE     Gn2 
+	BYTE		N96     Cn3 
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE		N96   
+	BYTE	W96
+	BYTE		EOT     Cn2 
+	BYTE		        En2 
+	BYTE		        Gn2 
+// 046   ----------------------------------------
+	BYTE		TIE     Bn1 
+	BYTE		TIE     Dn2 
+	BYTE		TIE     Gn2 
+	BYTE		N96     Bn2 
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE		N96   
+	BYTE	W96
+	BYTE		EOT     Bn1 
+	BYTE		        Dn2 
+	BYTE		        Gn2 
+// 048   ----------------------------------------
+	BYTE		TIE     Dn2 
+	BYTE		TIE     Fn2 
+	BYTE		TIE     As2 
+	BYTE		N96     Dn3 
+	BYTE	W96
+// 049   ----------------------------------------
+	BYTE		N96   
+	BYTE	W96
+	BYTE		EOT     Dn2 
+	BYTE		        Fn2 
+	BYTE		        As2 
+// 050   ----------------------------------------
+	BYTE		N96     Fn2 
+	BYTE		N96     An2 
+	BYTE		N96     Cn3 
+	BYTE	W96
+// 051   ----------------------------------------
+	BYTE		        Fn2 
+	BYTE		N96     Gn2 
+	BYTE		N96     Bn2 
+	BYTE		N96     Dn3 
+	BYTE		N96     Bn3 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	ordonvillage_4_B1
+ordonvillage_4_B2:
+// 052   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+ordonvillage_5:
+	BYTE	KEYSH   ordonvillage_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   13
+	BYTE		PAN     c_v+63
+	BYTE		VOL     37*ordonvillage_mvl/mxv
+	BYTE	W48
+	BYTE		N12     En3   v127
+	BYTE		N12     Gn3 
+	BYTE	W48
+// 001   ----------------------------------------
+ordonvillage_5_001:
+	BYTE	W12
+	BYTE		N12     En2   v127
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W48
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE	W48
+	BYTE		        En3 
+	BYTE		N12     Gn3 
+	BYTE	W48
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_001
+ordonvillage_5_B1:
+// 004   ----------------------------------------
+	BYTE	W48
+	BYTE		N12     En3   v127
+	BYTE		N12     Gn3 
+	BYTE	W48
+// 005   ----------------------------------------
+	BYTE	W48
+	BYTE		        An2 
+	BYTE	W48
+// 006   ----------------------------------------
+ordonvillage_5_006:
+	BYTE	W48
+	BYTE		N12     An2   v127
+	BYTE		N12     Cn3 
+	BYTE	W48
+	BYTE	PEND
+// 007   ----------------------------------------
+ordonvillage_5_007:
+	BYTE	W24
+	BYTE		N12     Fn2   v127
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W36
+	BYTE		        En2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE	PEND
+// 008   ----------------------------------------
+ordonvillage_5_008:
+	BYTE	W48
+	BYTE		N12     Fn3   v127
+	BYTE		N12     An3 
+	BYTE	W48
+	BYTE	PEND
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_008
+// 010   ----------------------------------------
+ordonvillage_5_010:
+	BYTE	W48
+	BYTE		N12     Bn2   v127
+	BYTE		N12     Dn3 
+	BYTE	W48
+	BYTE	PEND
+// 011   ----------------------------------------
+ordonvillage_5_011:
+	BYTE	W24
+	BYTE		N12     Fn2   v127
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W36
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE	PEND
+// 012   ----------------------------------------
+ordonvillage_5_012:
+	BYTE	W48
+	BYTE		N12     Gn2   v127
+	BYTE		N12     En3 
+	BYTE	W48
+	BYTE	PEND
+// 013   ----------------------------------------
+ordonvillage_5_013:
+	BYTE	W48
+	BYTE		N12     Dn3   v127
+	BYTE		N12     En3 
+	BYTE	W48
+	BYTE	PEND
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_008
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_010
+// 016   ----------------------------------------
+ordonvillage_5_016:
+	BYTE	W48
+	BYTE		N12     Cn3   v127
+	BYTE		N12     En3 
+	BYTE	W48
+	BYTE	PEND
+// 017   ----------------------------------------
+ordonvillage_5_017:
+	BYTE	W48
+	BYTE		N12     Dn3   v127
+	BYTE		N12     Fn3 
+	BYTE	W48
+	BYTE	PEND
+// 018   ----------------------------------------
+ordonvillage_5_018:
+	BYTE	W48
+	BYTE		N12     Cn3   v127
+	BYTE		N12     Ds3 
+	BYTE	W48
+	BYTE	PEND
+// 019   ----------------------------------------
+	BYTE	W24
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE		        Dn2 
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+// 020   ----------------------------------------
+	BYTE	W48
+	BYTE		        En3 
+	BYTE		N12     Gn3 
+	BYTE	W48
+// 021   ----------------------------------------
+	BYTE	W48
+	BYTE		        An2 
+	BYTE	W48
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_006
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_007
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_008
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_008
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_010
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_011
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_012
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_013
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_008
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_010
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_016
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_017
+// 034   ----------------------------------------
+	BYTE	W48
+	BYTE		N12     En3   v127
+	BYTE		N12     Gn3 
+	BYTE	W48
+// 035   ----------------------------------------
+	BYTE	W48
+	BYTE		        En3 
+	BYTE		N12     Gn3 
+	BYTE	W48
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_018
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_018
+// 038   ----------------------------------------
+ordonvillage_5_038:
+	BYTE	W48
+	BYTE		N12     As2   v127
+	BYTE		N12     Ds3 
+	BYTE	W48
+	BYTE	PEND
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_038
+// 040   ----------------------------------------
+ordonvillage_5_040:
+	BYTE	W48
+	BYTE		N12     As2   v127
+	BYTE		N12     Dn3 
+	BYTE	W48
+	BYTE	PEND
+// 041   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_040
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_008
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_008
+// 044   ----------------------------------------
+	BYTE	W48
+	BYTE		N12     En3   v127
+	BYTE		N12     Gn3 
+	BYTE	W48
+// 045   ----------------------------------------
+	BYTE	W48
+	BYTE		        En3 
+	BYTE		N12     Gn3 
+	BYTE	W48
+// 046   ----------------------------------------
+	BYTE	W48
+	BYTE		        En3 
+	BYTE		N12     Gn3 
+	BYTE	W48
+// 047   ----------------------------------------
+	BYTE	W48
+	BYTE		        En3 
+	BYTE		N12     Gn3 
+	BYTE	W48
+// 048   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_040
+// 049   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ordonvillage_5_040
+// 050   ----------------------------------------
+	BYTE	W48
+	BYTE		N12     Fn2   v127
+	BYTE		N12     An2 
+	BYTE	W48
+// 051   ----------------------------------------
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	ordonvillage_5_B1
+ordonvillage_5_B2:
+// 052   ----------------------------------------
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+songOrdonVillage:
+	BYTE	6	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	ordonvillage_pri	// Priority
+	BYTE	ordonvillage_rev	// Reverb.
+
+	POIN2	ordonvillage_grp
+
+	POIN2	ordonvillage_1
+	POIN2	ordonvillage_2
+	POIN2	ordonvillage_3
+	POIN2	ordonvillage_4
+	POIN2	ordonvillage_5
+
+	

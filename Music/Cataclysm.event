@@ -1,0 +1,620 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	songCataclysm_grp  voicegroup000
+	#define	songCataclysm_pri  0
+	#define	songCataclysm_rev  0
+	#define	songCataclysm_mvl  127
+	#define	songCataclysm_key  0
+	#define	songCataclysm_tbs  1
+	#define	songCataclysm_exg  0
+	#define	songCataclysm_cmp  1
+
+	// .rodata
+	//	songCataclysm
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+songCataclysm_001:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songCataclysm_key+0
+Label_0_011A41B2:
+ BYTE   TEMPO   120*songCataclysm_tbs/2
+ BYTE   VOICE   48
+ BYTE   VOL   62*songCataclysm_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   N17  En3  v080
+ BYTE   W18
+ BYTE   N05  Fn3
+ BYTE   W78
+// 002   ----------------------------------------
+ BYTE   N17  En3
+ BYTE   W18
+ BYTE   N05  Gn3
+ BYTE   W78
+// 003   ----------------------------------------
+ BYTE   Cn4
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   An3
+ BYTE   W06
+ BYTE   Gn3
+ BYTE   W06
+ BYTE   N11  Fn3
+ BYTE   W72
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   N17  En3
+ BYTE   W18
+ BYTE   N17
+ BYTE   W18
+ BYTE   N11
+ BYTE   W12
+ BYTE   N17  Fn3
+ BYTE   W18
+ BYTE   Gn3
+ BYTE   W18
+ BYTE   N11  Fn3
+ BYTE   W12
+// 006   ----------------------------------------
+ BYTE   N17  An3
+ BYTE   W18
+ BYTE   Gn3
+ BYTE   W18
+ BYTE   N11  Fn3
+ BYTE   W12
+ BYTE   N44  En3
+ BYTE   W48
+// 007   ----------------------------------------
+ BYTE   N17  Fn3
+ BYTE   W18
+ BYTE   Gn3
+ BYTE   W18
+ BYTE   N11  Fn3
+ BYTE   W12
+ BYTE   N17  En3
+ BYTE   W18
+ BYTE   Dn3
+ BYTE   W18
+ BYTE   N11  En3
+ BYTE   W12
+// 008   ----------------------------------------
+ BYTE   N17  Fn3
+ BYTE   W18
+ BYTE   Gn3
+ BYTE   W18
+ BYTE   N11  Dn3
+ BYTE   W12
+ BYTE   TIE  En3
+ BYTE   W48
+// 009   ----------------------------------------
+ BYTE   W92
+ BYTE   W03
+ BYTE   EOT
+ BYTE   W01
+// 010   ----------------------------------------
+ BYTE   N17  En4
+ BYTE   W18
+ BYTE   N17
+ BYTE   W18
+ BYTE   N11
+ BYTE   W12
+ BYTE   N17  Fn4
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   W18
+ BYTE   N11  An4
+ BYTE   W12
+// 011   ----------------------------------------
+ BYTE   N17  As4
+ BYTE   W18
+ BYTE   An4
+ BYTE   W18
+ BYTE   N05  Gn4
+ BYTE   W06
+ BYTE   Fn4
+ BYTE   W06
+ BYTE   N44  An4
+ BYTE   W48
+// 012   ----------------------------------------
+ BYTE   N23  Gn4
+ BYTE   W24
+ BYTE   N05  Fn4
+ BYTE   W06
+ BYTE   En4
+ BYTE   W06
+ BYTE   Dn4
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   W06
+ BYTE   N17  Bn3
+ BYTE   W18
+ BYTE   Cn4
+ BYTE   W18
+ BYTE   N11  An3
+ BYTE   W12
+// 013   ----------------------------------------
+ BYTE   Bn3
+ BYTE   W12
+ BYTE   Cn4
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W12
+ BYTE   En4
+ BYTE   W12
+ BYTE   N17  En5
+ BYTE   W18
+ BYTE   N17
+ BYTE   W18
+ BYTE   N11
+ BYTE   W12
+// 014   ----------------------------------------
+ BYTE   N17  Fn5
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   W18
+ BYTE   N11  Fn5
+ BYTE   W12
+ BYTE   N17  En5
+ BYTE   W18
+ BYTE   Dn5
+ BYTE   W18
+ BYTE   N11  En5
+ BYTE   W12
+// 015   ----------------------------------------
+ BYTE   N44
+ BYTE   W48
+ BYTE   N17  Fn5
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   W18
+ BYTE   N11  Fn5
+ BYTE   W12
+// 016   ----------------------------------------
+ BYTE   N17  En5
+ BYTE   W18
+ BYTE   Dn5
+ BYTE   W18
+ BYTE   N11  En5
+ BYTE   W12
+ BYTE   N17  Fn5
+ BYTE   W18
+ BYTE   Gn5
+ BYTE   W18
+ BYTE   N11  Dn5
+ BYTE   W12
+// 017   ----------------------------------------
+ BYTE   N92  En5
+ BYTE   W96
+// 018   ----------------------------------------
+ BYTE   W96
+// 019   ----------------------------------------
+ BYTE   W96
+// 020   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_0_011A41B2
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+songCataclysm_002:
+// 000   ----------------------------------------
+ BYTE   VOL   80*songCataclysm_mvl/mxv
+ BYTE   KEYSH   songCataclysm_key+0
+Label_1_011A4288:
+ BYTE   VOICE   0
+ BYTE   N05  Bn1  v080
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+// 001   ----------------------------------------
+Label_1_011A42AC:
+ BYTE   N05  Bn1  v080
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_1_011A42AC
+// 002   ----------------------------------------
+ BYTE   N05  Bn1  v080
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Cn2
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Cn3
+ BYTE   W06
+ BYTE   Cn2
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Cn3
+ BYTE   W06
+ BYTE   Cn2
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   PATT
+  POIN2 Label_1_011A42AC
+ BYTE   PATT
+  POIN2 Label_1_011A42AC
+ BYTE   PATT
+  POIN2 Label_1_011A42AC
+ BYTE   PATT
+  POIN2 Label_1_011A42AC
+// 003   ----------------------------------------
+ BYTE   N05  Cn2  v080
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Cn3
+ BYTE   W06
+ BYTE   Cn2
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Cn3
+ BYTE   W06
+ BYTE   Cn2
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+// 004   ----------------------------------------
+ BYTE   N05
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   N11
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   Bn2
+ BYTE   W12
+ BYTE   Fn3
+ BYTE   W12
+ BYTE   PATT
+  POIN2 Label_1_011A42AC
+ BYTE   PATT
+  POIN2 Label_1_011A42AC
+// 005   ----------------------------------------
+ BYTE   N05  An1  v080
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   An2
+ BYTE   W06
+ BYTE   An1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   An2
+ BYTE   W06
+ BYTE   An1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   An2
+ BYTE   W06
+ BYTE   An1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   An2
+ BYTE   W06
+ BYTE   An1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+// 006   ----------------------------------------
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+// 007   ----------------------------------------
+Label_1_011A4390:
+ BYTE   N05  Bn2  v080
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_1_011A4390
+// 008   ----------------------------------------
+ BYTE   N05  Bn2  v080
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Cn3
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   W06
+ BYTE   Cn3
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   W06
+ BYTE   Cn3
+ BYTE   W06
+ BYTE   N05
+ BYTE   W06
+ BYTE   PATT
+  POIN2 Label_1_011A4390
+ BYTE   PATT
+  POIN2 Label_1_011A4390
+ BYTE   PATT
+  POIN2 Label_1_011A42AC
+// 009   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_1_011A4288
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+songCataclysm_003:
+// 000   ----------------------------------------
+ BYTE   KEYSH   songCataclysm_key+0
+Label_2_011A43F2:
+ BYTE   VOICE   127
+ BYTE   VOL   62*songCataclysm_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   N17  Cn1  v080
+ BYTE   W18
+ BYTE   N17
+ BYTE   W78
+// 001   ----------------------------------------
+Label_2_011A43FE:
+ BYTE   N17  Cn1  v080
+ BYTE   W18
+ BYTE   N17
+ BYTE   W78
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_2_011A43FE
+ BYTE   PATT
+  POIN2 Label_2_011A43FE
+ BYTE   PATT
+  POIN2 Label_2_011A43FE
+ BYTE   PATT
+  POIN2 Label_2_011A43FE
+ BYTE   PATT
+  POIN2 Label_2_011A43FE
+ BYTE   PATT
+  POIN2 Label_2_011A43FE
+ BYTE   PATT
+  POIN2 Label_2_011A43FE
+ BYTE   PATT
+  POIN2 Label_2_011A43FE
+ BYTE   PATT
+  POIN2 Label_2_011A43FE
+ BYTE   PATT
+  POIN2 Label_2_011A43FE
+ BYTE   PATT
+  POIN2 Label_2_011A43FE
+// 002   ----------------------------------------
+ BYTE   N17  Cn1  v080
+ BYTE   W18
+ BYTE   N17
+ BYTE   W30
+ BYTE   N17
+ BYTE   W18
+ BYTE   N17
+ BYTE   W30
+// 003   ----------------------------------------
+Label_2_011A4446:
+ BYTE   W48
+ BYTE   N17  Cn1  v080
+ BYTE   W18
+ BYTE   N17
+ BYTE   W30
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 Label_2_011A4446
+ BYTE   PATT
+  POIN2 Label_2_011A4446
+ BYTE   PATT
+  POIN2 Label_2_011A4446
+ BYTE   PATT
+  POIN2 Label_2_011A4446
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_2_011A43F2
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+songCataclysm:
+	BYTE	3	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	songCataclysm_pri	// Priority
+	BYTE	songCataclysm_rev	// Reverb.
+    
+	POIN2	songCataclysm_grp
+    
+	POIN2	songCataclysm_001
+	POIN2	songCataclysm_002
+	POIN2	songCataclysm_003
+
+	

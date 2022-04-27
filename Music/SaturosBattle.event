@@ -1,0 +1,6191 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	SaturoBattle_grp  voicegroup000
+	#define	SaturoBattle_pri  0
+	#define	SaturoBattle_rev  148
+	#define	SaturoBattle_mvl  95
+	#define	SaturoBattle_key  0
+	#define	SaturoBattle_tbs  1
+	#define	SaturoBattle_exg  0
+	#define	SaturoBattle_cmp  1
+
+	// .rodata
+	//	SaturoBattle
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+SaturoBattle_001:
+// 000   ----------------------------------------
+ BYTE   KEYSH   SaturoBattle_key+0
+ BYTE   TEMPO   130*SaturoBattle_tbs/2
+ BYTE   VOICE   110
+ BYTE   MOD 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   DsM2
+ BYTE   VOL   59*SaturoBattle_mvl/mxv
+ BYTE   PAN   c_v+3
+ BYTE   LFOS 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   En1
+ BYTE   TUNE 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   En3
+ BYTE   LFODL 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   Cn3
+ BYTE   BEND   c_v+0
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+SaturoBattle_Label_0_0100FE72:
+ BYTE   N56  En4  v076
+ BYTE   N56  Gn4  v076
+ BYTE   W12
+ BYTE   W12
+// 001   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+SaturoBattle_Label_0_0100FE7D:
+ BYTE   N06  Dn4  v076
+ BYTE   N06  Fs4  v076
+ BYTE   W06
+ BYTE   N06  En4  v076
+ BYTE   N06  Gn4  v076
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   N32  Fs4  v076
+ BYTE   N32  An4  v076
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+SaturoBattle_Label_0_0100FE95:
+ BYTE   N32  An4  v076
+ BYTE   N17  Dn5  v076
+ BYTE   W12
+ BYTE   PEND 
+// 002   ----------------------------------------
+ BYTE   W06
+ BYTE   N17  Cn5  v076
+ BYTE   W06
+ BYTE   W12
+ BYTE   N32  Gn4  v076
+ BYTE   N32  Bn4  v076
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N11  Gn4  v076
+ BYTE   N11  Bn4  v076
+ BYTE   W12
+ BYTE   N11  Fs4  v076
+ BYTE   N11  An4  v076
+ BYTE   W12
+ BYTE   N11  Gn4  v076
+ BYTE   N11  Bn4  v076
+ BYTE   W12
+// 003   ----------------------------------------
+ BYTE   N68  En4  v076
+ BYTE   N32  Bn4  v076
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N11  Gs4  v076
+ BYTE   W12
+ BYTE   N11  An4  v076
+ BYTE   W12
+ BYTE   N11  Bn4  v076
+ BYTE   W12
+SaturoBattle_Label_0_0100FED6:
+ BYTE   N06  En4  v076
+ BYTE   N06  Cn5  v076
+ BYTE   W06
+ BYTE   N06  Dn4  v076
+ BYTE   N06  Bn4  v076
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   N23  En4  v076
+ BYTE   N23  Cn5  v076
+ BYTE   W12
+// 004   ----------------------------------------
+ BYTE   W12
+ BYTE   N11  Cn5  v076
+ BYTE   N11  En5  v076
+ BYTE   W12
+ BYTE   N11  Bn4  v076
+ BYTE   N11  Dn5  v076
+ BYTE   W12
+ BYTE   N11  An4  v076
+ BYTE   N11  Cn5  v076
+ BYTE   W12
+ BYTE   N32  Gn4  v076
+ BYTE   N32  Bn4  v076
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N17  Dn4  v076
+ BYTE   N17  Gn4  v076
+ BYTE   W12
+// 005   ----------------------------------------
+SaturoBattle_Label_0_0100FF12:
+ BYTE   W06
+ BYTE   N17  Bn3  v076
+ BYTE   N17  Dn4  v076
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   W12
+SaturoBattle_Label_0_0100FF1C:
+ BYTE   N68  Cn4  v076
+ BYTE   N32  Fn4  v076
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   W12
+ BYTE   W12
+ BYTE   N17  Gn4  v076
+ BYTE   W12
+ BYTE   W06
+ BYTE   N17  An4  v076
+ BYTE   W06
+ BYTE   W12
+// 006   ----------------------------------------
+ BYTE   N68  En4  v076
+ BYTE   N32  An4  v076
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Gs4  v076
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   BEND   c_v+0
+ BYTE   N56  En4  v076
+ BYTE   N56  Gn4  v076
+ BYTE   W12
+ BYTE   W12
+// 007   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_0_0100FE7D
+// 008   ----------------------------------------
+ BYTE   N32  Fs4  v076
+ BYTE   N32  An4  v076
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_0_0100FE95
+// 009   ----------------------------------------
+ BYTE   W06
+ BYTE   N17  Cn5  v076
+ BYTE   W06
+ BYTE   W12
+ BYTE   N32  Gn4  v076
+ BYTE   N32  Bn4  v076
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N11  Gn4  v076
+ BYTE   N11  Bn4  v076
+ BYTE   W12
+ BYTE   N11  Fs4  v076
+ BYTE   N11  An4  v076
+ BYTE   W12
+ BYTE   N11  Gn4  v076
+ BYTE   N11  Bn4  v076
+ BYTE   W12
+// 010   ----------------------------------------
+ BYTE   N68  En4  v076
+ BYTE   N32  Bn4  v076
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N11  Gs4  v076
+ BYTE   W12
+ BYTE   N11  An4  v076
+ BYTE   W12
+ BYTE   N11  Bn4  v076
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_0_0100FED6
+// 011   ----------------------------------------
+ BYTE   N23  En4  v076
+ BYTE   N23  Cn5  v076
+ BYTE   W12
+ BYTE   W12
+ BYTE   N11  Cn5  v076
+ BYTE   N11  En5  v076
+ BYTE   W12
+ BYTE   N11  Bn4  v076
+ BYTE   N11  Dn5  v076
+ BYTE   W12
+ BYTE   N11  An4  v076
+ BYTE   N11  Cn5  v076
+ BYTE   W12
+ BYTE   N32  Gn4  v076
+ BYTE   N32  Bn4  v076
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 012   ----------------------------------------
+ BYTE   N17  Dn4  v076
+ BYTE   N17  Gn4  v076
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_0_0100FF12
+// 013   ----------------------------------------
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_0_0100FF1C
+// 014   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   N17  Gn4  v076
+ BYTE   W12
+ BYTE   W06
+ BYTE   N17  An4  v076
+ BYTE   W06
+ BYTE   W12
+ BYTE   N68  En4  v076
+ BYTE   N32  An4  v076
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 015   ----------------------------------------
+ BYTE   N32  Gs4  v076
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 016   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 017   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 018   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 019   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 020   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Fs4  v084
+ BYTE   N32  An4  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 021   ----------------------------------------
+ BYTE   N11  En4  v084
+ BYTE   N11  Gs4  v084
+ BYTE   W12
+ BYTE   N11  Cs4  v084
+ BYTE   N11  Fs4  v084
+ BYTE   W12
+ BYTE   N11  Bn3  v084
+ BYTE   N11  En4  v084
+ BYTE   W12
+ BYTE   N32  An3  v084
+ BYTE   N32  En4  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+SaturoBattle_Label_0_01010041:
+ BYTE   N32  Dn4  v084
+ BYTE   N11  Fs4  v084
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   N11  Gs4  v084
+ BYTE   W12
+// 022   ----------------------------------------
+ BYTE   N11  An4  v084
+ BYTE   W12
+ BYTE   N32  Cs4  v084
+ BYTE   N32  An4  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  En4  v084
+ BYTE   N11  Bn4  v084
+ BYTE   W12
+ BYTE   N11  An4  v084
+ BYTE   W12
+ BYTE   N11  Bn4  v084
+ BYTE   W12
+ BYTE   N32  En4  v084
+ BYTE   N32  Cs5  v084
+ BYTE   W12
+// 023   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Ds4  v084
+ BYTE   N32  Fs4  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Fs4  v084
+ BYTE   N32  An4  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 024   ----------------------------------------
+ BYTE   N11  En4  v084
+ BYTE   N11  Gs4  v084
+ BYTE   W12
+ BYTE   N11  Cs4  v084
+ BYTE   N11  Fs4  v084
+ BYTE   W12
+ BYTE   N11  Bn3  v084
+ BYTE   N11  En4  v084
+ BYTE   W12
+ BYTE   N32  An3  v084
+ BYTE   N32  En4  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_0_01010041
+// 025   ----------------------------------------
+ BYTE   N11  Gs4  v084
+ BYTE   W12
+ BYTE   N11  An4  v084
+ BYTE   W12
+ BYTE   N32  Cs4  v084
+ BYTE   N32  An4  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  En4  v084
+ BYTE   N11  Bn4  v084
+ BYTE   W12
+ BYTE   N11  An4  v084
+ BYTE   W12
+ BYTE   N11  Bn4  v084
+ BYTE   W12
+// 026   ----------------------------------------
+ BYTE   N32  En4  v084
+ BYTE   N32  Cs5  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Ds4  v084
+ BYTE   N32  Fs4  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   TIE  Gs4  v040
+ BYTE   W12
+ BYTE   W12
+// 027   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 028   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W11
+ BYTE   EOT
+ BYTE   W01
+ BYTE   N56  Fs4  v040
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 029   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   TIE  Gs4  v040
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 030   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 031   ----------------------------------------
+ BYTE   W11
+ BYTE   EOT
+ BYTE   W01
+ BYTE   N56  Fs4  v040
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 032   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 033   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 034   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 035   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 036   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N68  Fn3  v072
+ BYTE   N68  En4  v072
+ BYTE   W12
+ BYTE   W12
+// 037   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N23  Fs3  v072
+ BYTE   N23  Fn4  v072
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Fs4  v084
+ BYTE   N32  An4  v084
+ BYTE   W12
+ BYTE   W12
+// 038   ----------------------------------------
+ BYTE   W12
+ BYTE   N11  En4  v084
+ BYTE   N11  Gs4  v084
+ BYTE   W12
+ BYTE   N11  Cs4  v084
+ BYTE   N11  Fs4  v084
+ BYTE   W12
+ BYTE   N11  Bn3  v084
+ BYTE   N11  En4  v084
+ BYTE   W12
+ BYTE   N32  An3  v084
+ BYTE   N32  En4  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_0_01010041
+// 039   ----------------------------------------
+ BYTE   N11  Gs4  v084
+ BYTE   W12
+ BYTE   N11  An4  v084
+ BYTE   W12
+ BYTE   N32  Cs4  v084
+ BYTE   N32  An4  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  En4  v084
+ BYTE   N11  Bn4  v084
+ BYTE   W12
+ BYTE   N11  An4  v084
+ BYTE   W12
+ BYTE   N11  Bn4  v084
+ BYTE   W12
+// 040   ----------------------------------------
+ BYTE   N32  En4  v084
+ BYTE   N32  Cs5  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Ds4  v084
+ BYTE   N32  Fs4  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Fs4  v084
+ BYTE   N32  An4  v084
+ BYTE   W12
+ BYTE   W12
+// 041   ----------------------------------------
+ BYTE   W12
+ BYTE   N11  En4  v084
+ BYTE   N11  Gs4  v084
+ BYTE   W12
+ BYTE   N11  Cs4  v084
+ BYTE   N11  Fs4  v084
+ BYTE   W12
+ BYTE   N11  Bn3  v084
+ BYTE   N11  En4  v084
+ BYTE   W12
+ BYTE   N32  An3  v084
+ BYTE   N32  En4  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_0_01010041
+// 042   ----------------------------------------
+ BYTE   N11  Gs4  v084
+ BYTE   W12
+ BYTE   N11  An4  v084
+ BYTE   W12
+ BYTE   N32  Cs4  v084
+ BYTE   N32  An4  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  En4  v084
+ BYTE   N11  Bn4  v084
+ BYTE   W12
+ BYTE   N11  An4  v084
+ BYTE   W12
+ BYTE   N11  Bn4  v084
+ BYTE   W12
+// 043   ----------------------------------------
+ BYTE   N32  En4  v084
+ BYTE   N32  Cs5  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Ds4  v084
+ BYTE   N32  Fs4  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+SaturoBattle_Label_0_01010209:
+ BYTE   N32  Gn3  v084
+ BYTE   N32  Bn3  v084
+ BYTE   N32  En4  v084
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   W12
+// 044   ----------------------------------------
+ BYTE   W12
+ BYTE   N32  Fs3  v084
+ BYTE   N32  An3  v084
+ BYTE   N32  Dn4  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N68  En3  v084
+ BYTE   N68  Gn3  v084
+ BYTE   N68  Bn3  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 045   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_0_01010209
+// 046   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   N11  Gn3  v084
+ BYTE   N11  Bn3  v084
+ BYTE   N11  Dn4  v084
+ BYTE   W12
+ BYTE   N11  Bn3  v084
+ BYTE   N11  En4  v084
+ BYTE   N11  Gn4  v084
+ BYTE   W12
+ BYTE   N11  An3  v084
+ BYTE   N11  Dn4  v084
+ BYTE   N11  Fs4  v084
+ BYTE   W12
+ BYTE   N68  An3  v084
+ BYTE   N68  Bn3  v084
+ BYTE   N68  En4  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 047   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N68  Gn3  v084
+ BYTE   N68  An3  v084
+ BYTE   N68  Dn4  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 048   ----------------------------------------
+ BYTE   W12
+ BYTE   N68  Fn3  v084
+ BYTE   N68  Gn3  v084
+ BYTE   N68  Cn4  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N68  En3  v084
+ BYTE   N68  Fs3  v084
+ BYTE   N68  Bn3  v084
+ BYTE   W12
+// 049   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  En4  v084
+ BYTE   N32  Fs4  v084
+ BYTE   N32  Bn4  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 050   ----------------------------------------
+ BYTE   N32  Fs4  v084
+ BYTE   N32  Bn4  v084
+ BYTE   N32  En5  v084
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   GoTo
+  POIN2 SaturoBattle_Label_0_0100FE72
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+SaturoBattle_002:
+// 000   ----------------------------------------
+ BYTE   KEYSH   SaturoBattle_key+0
+ BYTE   VOICE   68
+ BYTE   MOD 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   DsM2
+ BYTE   VOL   105*SaturoBattle_mvl/mxv
+ BYTE   PAN   c_v-14
+ BYTE   LFOS 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   En1
+ BYTE   TUNE 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   En3
+ BYTE   LFODL 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   Cn3
+ BYTE   BEND   c_v+0
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+SaturoBattle_Label_1_010102F0:
+ BYTE   N05  Gn3  v064
+ BYTE   W06
+ BYTE   N05  Fs3  v064
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_1_010102F9:
+ BYTE   N05  Gn3  v064
+ BYTE   W06
+ BYTE   N05  An3  v064
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_1_010102F0
+// 001   ----------------------------------------
+ BYTE   N10  Gn3  v064
+ BYTE   W12
+ BYTE   N10  Fs3  v064
+ BYTE   W12
+ BYTE   N10  Gn3  v064
+ BYTE   W12
+ BYTE   N32  An3  v064
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N10  An3  v064
+ BYTE   W12
+ BYTE   N10  Bn3  v064
+ BYTE   W12
+// 002   ----------------------------------------
+ BYTE   N10  Cn4  v064
+ BYTE   W12
+ BYTE   N32  Bn3  v064
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N17  Dn3  v064
+ BYTE   W12
+ BYTE   W06
+ BYTE   N17  Bn3  v064
+ BYTE   W06
+ BYTE   W12
+ BYTE   N32  Bn3  v064
+ BYTE   W12
+// 003   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   N11  Bn3  v064
+ BYTE   W12
+ BYTE   N11  Cn4  v064
+ BYTE   W12
+ BYTE   N11  Dn4  v064
+ BYTE   W12
+SaturoBattle_Label_1_01010347:
+ BYTE   N05  Cn4  v064
+ BYTE   W06
+ BYTE   N05  Bn3  v064
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_1_01010350:
+ BYTE   N05  Cn4  v064
+ BYTE   W06
+ BYTE   N05  Dn4  v064
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_1_01010347
+// 004   ----------------------------------------
+ BYTE   N17  Cn4  v064
+ BYTE   W12
+ BYTE   W06
+ BYTE   N17  En4  v064
+ BYTE   W06
+ BYTE   W12
+ BYTE   N32  Dn4  v064
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N10  Dn4  v064
+ BYTE   W12
+ BYTE   N10  Gn3  v064
+ BYTE   W12
+// 005   ----------------------------------------
+ BYTE   N10  Gn4  v064
+ BYTE   W12
+ BYTE   N17  Fn4  v064
+ BYTE   W12
+ BYTE   W06
+ BYTE   N05  En4  v064
+ BYTE   W06
+ BYTE   N08  Dn4  v064
+ BYTE   W12
+ BYTE   N10  Fn4  v064
+ BYTE   W12
+ BYTE   N10  En4  v064
+ BYTE   W12
+ BYTE   N08  Dn4  v064
+ BYTE   W12
+SaturoBattle_Label_1_01010393:
+ BYTE   N05  En3  v064
+ BYTE   W06
+ BYTE   N05  An3  v064
+ BYTE   W06
+ BYTE   PEND 
+// 006   ----------------------------------------
+SaturoBattle_Label_1_0101039C:
+ BYTE   N05  Bn3  v064
+ BYTE   W06
+ BYTE   N05  En4  v064
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_1_010103A5:
+ BYTE   N05  An4  v064
+ BYTE   W06
+ BYTE   N05  Bn4  v064
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_1_010103AE:
+ BYTE   N05  Gs4  v064
+ BYTE   W06
+ BYTE   N05  An4  v064
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_1_010103B7:
+ BYTE   N05  Bn4  v064
+ BYTE   W06
+ BYTE   N05  En4  v064
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_1_0101039C
+// 007   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   N05  Gn3  v064
+ BYTE   W06
+ BYTE   N05  Fs3  v064
+ BYTE   W06
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_1_010102F9
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_1_010102F0
+// 008   ----------------------------------------
+ BYTE   N10  Gn3  v064
+ BYTE   W12
+ BYTE   N10  Fs3  v064
+ BYTE   W12
+ BYTE   N10  Gn3  v064
+ BYTE   W12
+ BYTE   N32  An3  v064
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N10  An3  v064
+ BYTE   W12
+ BYTE   N10  Bn3  v064
+ BYTE   W12
+// 009   ----------------------------------------
+ BYTE   N10  Cn4  v064
+ BYTE   W12
+ BYTE   N32  Bn3  v064
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N17  Dn3  v064
+ BYTE   W12
+ BYTE   W06
+ BYTE   N17  Bn3  v064
+ BYTE   W06
+ BYTE   W12
+ BYTE   N32  Bn3  v064
+ BYTE   W12
+// 010   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   N11  Bn3  v064
+ BYTE   W12
+ BYTE   N11  Cn4  v064
+ BYTE   W12
+ BYTE   N11  Dn4  v064
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_1_01010347
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_1_01010350
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_1_01010347
+// 011   ----------------------------------------
+ BYTE   N17  Cn4  v064
+ BYTE   W12
+ BYTE   W06
+ BYTE   N17  En4  v064
+ BYTE   W06
+ BYTE   W12
+ BYTE   N32  Dn4  v064
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N10  Dn4  v064
+ BYTE   W12
+ BYTE   N10  Gn3  v064
+ BYTE   W12
+// 012   ----------------------------------------
+ BYTE   N10  Gn4  v064
+ BYTE   W12
+ BYTE   N17  Fn4  v064
+ BYTE   W12
+ BYTE   W06
+ BYTE   N05  En4  v064
+ BYTE   W06
+ BYTE   N08  Dn4  v064
+ BYTE   W12
+ BYTE   N10  Fn4  v064
+ BYTE   W12
+ BYTE   N10  En4  v064
+ BYTE   W12
+ BYTE   N08  Dn4  v064
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_1_01010393
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_1_0101039C
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_1_010103A5
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_1_010103AE
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_1_010103B7
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_1_0101039C
+// 013   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 014   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 015   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 016   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 017   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 018   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 019   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 020   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 021   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 022   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 023   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 024   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 025   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 026   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 027   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 028   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 029   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Cs4  v064
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N64  Gs4  v064
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 030   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W06
+ BYTE   N05  Gs4  v064
+ BYTE   W06
+SaturoBattle_Label_1_01010510:
+ BYTE   N05  Fs4  v064
+ BYTE   W06
+ BYTE   N05  Gs4  v064
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   N17  An4  v064
+ BYTE   W12
+ BYTE   W06
+ BYTE   N17  Gs4  v064
+ BYTE   W06
+ BYTE   W12
+ BYTE   N80  Fs4  v064
+ BYTE   W12
+// 031   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Cs4  v064
+ BYTE   W12
+ BYTE   W12
+// 032   ----------------------------------------
+ BYTE   W12
+ BYTE   N64  Gs4  v064
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W06
+ BYTE   N05  Gs4  v064
+ BYTE   W06
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_1_01010510
+// 033   ----------------------------------------
+ BYTE   N17  An4  v064
+ BYTE   W12
+ BYTE   W06
+ BYTE   N17  Bn4  v064
+ BYTE   W06
+ BYTE   W12
+ BYTE   N80  Cs5  v064
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 034   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 035   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 036   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 037   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 038   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 039   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 040   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 041   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 042   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 043   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 044   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 045   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 046   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 047   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   GoTo
+  POIN2 SaturoBattle_Label_1_010102F0
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+SaturoBattle_003:
+// 000   ----------------------------------------
+ BYTE   KEYSH   SaturoBattle_key+0
+ BYTE   VOICE   34
+ BYTE   MOD 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2
+ BYTE   VOL   64*SaturoBattle_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   LFOS 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   En1
+ BYTE   TUNE 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   En3
+ BYTE   LFODL 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   Cn3
+ BYTE   BEND   c_v+0
+ BYTE   N05  Fn1  v127
+ BYTE   W06
+ BYTE   N05  Bn1  v127
+ BYTE   W06
+ BYTE   N05  En2  v127
+ BYTE   W06
+ BYTE   N05  Fn2  v127
+ BYTE   W06
+ BYTE   N05  Bn2  v127
+ BYTE   W06
+ BYTE   N05  Cn3  v127
+ BYTE   W06
+ BYTE   N05  En3  v127
+ BYTE   W06
+ BYTE   N05  Fn3  v127
+ BYTE   W06
+ BYTE   N05  Bn2  v127
+ BYTE   W06
+ BYTE   N05  En2  v127
+ BYTE   W06
+ BYTE   N05  Cn3  v127
+ BYTE   W06
+ BYTE   N05  Fn3  v127
+ BYTE   W06
+SaturoBattle_Label_2_01010632:
+ BYTE   VOICE   34
+ BYTE   N11  En1  v127
+ BYTE   W12
+SaturoBattle_Label_2_01010638:
+ BYTE   N05  En1  v127
+ BYTE   W06
+ BYTE   N05  En2  v127
+ BYTE   W06
+ BYTE   PEND 
+// 001   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 002   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+SaturoBattle_Label_2_01010656:
+ BYTE   N05  Fs1  v127
+ BYTE   W06
+ BYTE   N05  Fs2  v127
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010656
+// 003   ----------------------------------------
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   N11  Gn1  v127
+ BYTE   W12
+SaturoBattle_Label_2_01010674:
+ BYTE   N05  Gn1  v127
+ BYTE   W06
+ BYTE   N05  Gn2  v127
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   N11  Gn1  v127
+ BYTE   W12
+ BYTE   N11  Gn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010674
+// 004   ----------------------------------------
+ BYTE   N11  Gn1  v127
+ BYTE   W12
+ BYTE   BEND   c_v+0
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+SaturoBattle_Label_2_01010694:
+ BYTE   N05  Gs1  v127
+ BYTE   W06
+ BYTE   N05  Gs2  v127
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010694
+// 005   ----------------------------------------
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   N11  An1  v127
+ BYTE   W12
+SaturoBattle_Label_2_010106B2:
+ BYTE   N05  An1  v127
+ BYTE   W06
+ BYTE   N05  An2  v127
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_2_010106BB:
+ BYTE   N05  An1  v127
+ BYTE   W06
+ BYTE   N05  An1  v127
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_2_010106C4:
+ BYTE   N05  Gn2  v127
+ BYTE   W06
+ BYTE   N05  An1  v127
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010106B2
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010106BB
+// 006   ----------------------------------------
+ BYTE   N11  Gn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010674
+// 007   ----------------------------------------
+ BYTE   N11  Gn1  v127
+ BYTE   W12
+ BYTE   N11  Gn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010674
+// 008   ----------------------------------------
+ BYTE   N11  Gn1  v127
+ BYTE   W12
+ BYTE   N11  Fn1  v127
+ BYTE   W12
+SaturoBattle_Label_2_010106F5:
+ BYTE   N05  Fn1  v127
+ BYTE   W06
+ BYTE   N05  Fn2  v127
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   N11  Fn1  v127
+ BYTE   W12
+ BYTE   N11  Fn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010106F5
+// 009   ----------------------------------------
+ BYTE   N11  Fn1  v127
+ BYTE   W12
+SaturoBattle_Label_2_0101070F:
+ BYTE   N05  En1  v127
+ BYTE   W06
+ BYTE   N05  En1  v127
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_0101070F
+// 010   ----------------------------------------
+SaturoBattle_Label_2_01010722:
+ BYTE   N05  Gs2  v127
+ BYTE   W06
+ BYTE   N05  En2  v127
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_2_0101072B:
+ BYTE   N05  Bn1  v127
+ BYTE   W06
+ BYTE   N05  Bn2  v127
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010722
+// 011   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 012   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 013   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010656
+// 014   ----------------------------------------
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010656
+// 015   ----------------------------------------
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   N11  Gn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010674
+// 016   ----------------------------------------
+ BYTE   N11  Gn1  v127
+ BYTE   W12
+ BYTE   N11  Gn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010674
+// 017   ----------------------------------------
+ BYTE   N11  Gn1  v127
+ BYTE   W12
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010694
+// 018   ----------------------------------------
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010694
+// 019   ----------------------------------------
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   N11  An1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010106B2
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010106BB
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010106C4
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010106B2
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010106BB
+// 020   ----------------------------------------
+ BYTE   N11  Gn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010674
+// 021   ----------------------------------------
+ BYTE   N11  Gn1  v127
+ BYTE   W12
+ BYTE   N11  Gn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010674
+// 022   ----------------------------------------
+ BYTE   N11  Gn1  v127
+ BYTE   W12
+ BYTE   N11  Fn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010106F5
+// 023   ----------------------------------------
+ BYTE   N11  Fn1  v127
+ BYTE   W12
+ BYTE   N11  Fn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010106F5
+// 024   ----------------------------------------
+ BYTE   N11  Fn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_0101070F
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_0101070F
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010722
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_0101072B
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010722
+// 025   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   N05  Fs1  v127
+ BYTE   W06
+ BYTE   N05  En1  v127
+ BYTE   W06
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+SaturoBattle_Label_2_01010822:
+ BYTE   N05  Fs1  v127
+ BYTE   W06
+ BYTE   N05  Fs1  v127
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010656
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010822
+// 026   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 027   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 028   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  Cs1  v127
+ BYTE   W12
+ BYTE   N05  Cs1  v127
+ BYTE   W06
+ BYTE   N05  Cs2  v127
+ BYTE   W06
+ BYTE   N11  Cs1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N05  Dn1  v127
+ BYTE   W06
+ BYTE   N05  Dn2  v127
+ BYTE   W06
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Ds1  v127
+ BYTE   W12
+// 029   ----------------------------------------
+SaturoBattle_Label_2_01010873:
+ BYTE   N05  Ds1  v127
+ BYTE   W06
+ BYTE   N05  Ds2  v127
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   N11  Ds1  v127
+ BYTE   W12
+ BYTE   N11  Ds1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010873
+// 030   ----------------------------------------
+ BYTE   N11  Ds1  v127
+ BYTE   W12
+ BYTE   N11  Ds1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010873
+// 031   ----------------------------------------
+ BYTE   N11  Ds1  v127
+ BYTE   W12
+ BYTE   N11  Ds1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010873
+// 032   ----------------------------------------
+ BYTE   N11  Ds1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 033   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 034   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 035   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 036   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010656
+// 037   ----------------------------------------
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010694
+// 038   ----------------------------------------
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   N11  An1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010106B2
+// 039   ----------------------------------------
+ BYTE   N11  An1  v127
+ BYTE   W12
+ BYTE   N11  Bn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_0101072B
+// 040   ----------------------------------------
+ BYTE   N11  Bn1  v127
+ BYTE   W12
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010656
+// 041   ----------------------------------------
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010694
+// 042   ----------------------------------------
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   N11  An1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010106B2
+// 043   ----------------------------------------
+ BYTE   N11  An1  v127
+ BYTE   W12
+ BYTE   N11  Bn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_0101072B
+// 044   ----------------------------------------
+ BYTE   N11  Bn1  v127
+ BYTE   W12
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010656
+// 045   ----------------------------------------
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010694
+// 046   ----------------------------------------
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   N11  An1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010106B2
+// 047   ----------------------------------------
+ BYTE   N11  An1  v127
+ BYTE   W12
+ BYTE   N11  Bn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_0101072B
+// 048   ----------------------------------------
+ BYTE   N11  Bn1  v127
+ BYTE   W12
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010656
+// 049   ----------------------------------------
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010694
+// 050   ----------------------------------------
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   N11  An1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010106B2
+// 051   ----------------------------------------
+ BYTE   N11  An1  v127
+ BYTE   W12
+ BYTE   N11  Bn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_0101072B
+// 052   ----------------------------------------
+ BYTE   N11  Bn1  v127
+ BYTE   W12
+SaturoBattle_Label_2_010109AB:
+ BYTE   BEND   c_v+0
+ BYTE   N11  Cs1  v127
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   N11  Cs2  v127
+ BYTE   W12
+SaturoBattle_Label_2_010109B6:
+ BYTE   N05  Cs2  v127
+ BYTE   W06
+ BYTE   N11  Bn1  v127
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   W06
+ BYTE   N11  Cs2  v127
+ BYTE   W06
+ BYTE   W06
+ BYTE   N05  Bn1  v127
+ BYTE   W06
+ BYTE   N11  Cs1  v127
+ BYTE   W12
+ BYTE   N11  Cs2  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010109B6
+// 053   ----------------------------------------
+ BYTE   W06
+ BYTE   N11  Cs2  v127
+ BYTE   W06
+ BYTE   W06
+ BYTE   N05  Bn1  v127
+ BYTE   W06
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn2  v127
+ BYTE   W12
+SaturoBattle_Label_2_010109E8:
+ BYTE   N05  Dn2  v127
+ BYTE   W06
+ BYTE   N11  Cs2  v127
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   W06
+ BYTE   N11  Dn2  v127
+ BYTE   W06
+ BYTE   W06
+ BYTE   N05  Cs2  v127
+ BYTE   W06
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+// 054   ----------------------------------------
+ BYTE   N11  Dn2  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010109E8
+// 055   ----------------------------------------
+ BYTE   W06
+ BYTE   N11  Dn2  v127
+ BYTE   W06
+ BYTE   W06
+ BYTE   N05  Cs2  v127
+ BYTE   W06
+ BYTE   N11  Cs1  v127
+ BYTE   W12
+ BYTE   N11  Cs2  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010109B6
+// 056   ----------------------------------------
+ BYTE   W06
+ BYTE   N11  Cs2  v127
+ BYTE   W06
+ BYTE   W06
+ BYTE   N05  Bn1  v127
+ BYTE   W06
+ BYTE   N11  Cs1  v127
+ BYTE   W12
+ BYTE   N11  Cs2  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010109B6
+// 057   ----------------------------------------
+ BYTE   W06
+ BYTE   N11  Cs2  v127
+ BYTE   W06
+ BYTE   W06
+ BYTE   N05  Bn1  v127
+ BYTE   W06
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn2  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010109E8
+// 058   ----------------------------------------
+ BYTE   W06
+ BYTE   N11  Dn2  v127
+ BYTE   W06
+ BYTE   W06
+ BYTE   N05  Cs2  v127
+ BYTE   W06
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn2  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010109E8
+// 059   ----------------------------------------
+ BYTE   W06
+ BYTE   N11  Dn2  v127
+ BYTE   W06
+ BYTE   W06
+ BYTE   N05  Cs2  v127
+ BYTE   W06
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010109AB
+// 060   ----------------------------------------
+ BYTE   N11  Cs2  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010109B6
+// 061   ----------------------------------------
+ BYTE   W06
+ BYTE   N11  Cs2  v127
+ BYTE   W06
+ BYTE   W06
+ BYTE   N05  Bn1  v127
+ BYTE   W06
+ BYTE   N11  Cs1  v127
+ BYTE   W12
+ BYTE   N11  Cs2  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010109B6
+// 062   ----------------------------------------
+ BYTE   W06
+ BYTE   N11  Cs2  v127
+ BYTE   W06
+ BYTE   W06
+ BYTE   N05  Bn1  v127
+ BYTE   W06
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn2  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010109E8
+// 063   ----------------------------------------
+ BYTE   W06
+ BYTE   N11  Dn2  v127
+ BYTE   W06
+ BYTE   W06
+ BYTE   N05  Cs2  v127
+ BYTE   W06
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn2  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010109E8
+// 064   ----------------------------------------
+ BYTE   W06
+ BYTE   N11  Dn2  v127
+ BYTE   W06
+ BYTE   W06
+ BYTE   N05  Cs2  v127
+ BYTE   W06
+ BYTE   N11  Cs1  v127
+ BYTE   W12
+ BYTE   N11  Cs2  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010109B6
+// 065   ----------------------------------------
+ BYTE   W06
+ BYTE   N11  Cs2  v127
+ BYTE   W06
+ BYTE   W06
+ BYTE   N05  Bn1  v127
+ BYTE   W06
+ BYTE   N11  Cs1  v127
+ BYTE   W12
+ BYTE   N11  Cs2  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010109B6
+// 066   ----------------------------------------
+ BYTE   W06
+ BYTE   N11  Cs2  v127
+ BYTE   W06
+ BYTE   W06
+ BYTE   N05  Bn1  v127
+ BYTE   W06
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn2  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010109E8
+// 067   ----------------------------------------
+ BYTE   W06
+ BYTE   N11  Dn2  v127
+ BYTE   W06
+ BYTE   W06
+ BYTE   N05  Cs2  v127
+ BYTE   W06
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn2  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010109E8
+// 068   ----------------------------------------
+ BYTE   W06
+ BYTE   N11  Dn2  v127
+ BYTE   W06
+ BYTE   W06
+ BYTE   N05  Cs2  v127
+ BYTE   W06
+ BYTE   BEND   c_v+0
+ BYTE   N05  En1  v127
+ BYTE   W06
+ BYTE   N05  En1  v127
+ BYTE   W06
+ BYTE   N05  En2  v127
+ BYTE   W06
+ BYTE   N05  En1  v127
+ BYTE   W06
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_0101070F
+// 069   ----------------------------------------
+ BYTE   N05  En2  v127
+ BYTE   W06
+ BYTE   N05  En1  v127
+ BYTE   W06
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 070   ----------------------------------------
+ BYTE   N05  Fn1  v127
+ BYTE   W06
+ BYTE   N05  Fn1  v127
+ BYTE   W06
+ BYTE   N05  Fn2  v127
+ BYTE   W06
+ BYTE   N05  Fn1  v127
+ BYTE   W06
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010656
+// 071   ----------------------------------------
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010694
+// 072   ----------------------------------------
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   N11  An1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010106B2
+// 073   ----------------------------------------
+ BYTE   N11  An1  v127
+ BYTE   W12
+ BYTE   N11  Bn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_0101072B
+// 074   ----------------------------------------
+ BYTE   N11  Bn1  v127
+ BYTE   W12
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010656
+// 075   ----------------------------------------
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010694
+// 076   ----------------------------------------
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   N11  An1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010106B2
+// 077   ----------------------------------------
+ BYTE   N11  An1  v127
+ BYTE   W12
+ BYTE   N11  Bn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_0101072B
+// 078   ----------------------------------------
+ BYTE   N11  Bn1  v127
+ BYTE   W12
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010656
+// 079   ----------------------------------------
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010694
+// 080   ----------------------------------------
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   N11  An1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010106B2
+// 081   ----------------------------------------
+ BYTE   N11  An1  v127
+ BYTE   W12
+ BYTE   N11  Bn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_0101072B
+// 082   ----------------------------------------
+ BYTE   N11  Bn1  v127
+ BYTE   W12
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010656
+// 083   ----------------------------------------
+ BYTE   N11  Fs1  v127
+ BYTE   W12
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010694
+// 084   ----------------------------------------
+ BYTE   N11  Gs1  v127
+ BYTE   W12
+ BYTE   N11  An1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_010106B2
+// 085   ----------------------------------------
+ BYTE   N11  An1  v127
+ BYTE   W12
+ BYTE   N11  Bn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_0101072B
+// 086   ----------------------------------------
+ BYTE   N11  Bn1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 087   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 088   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 089   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 090   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 091   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 092   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 093   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 094   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 095   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 096   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 097   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 098   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 099   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 100   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 101   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_2_01010638
+// 102   ----------------------------------------
+ BYTE   N11  En1  v127
+ BYTE   W12
+ BYTE   GoTo
+  POIN2 SaturoBattle_Label_2_01010632
+ BYTE   FINE
+
+//**************** Track 4 (Midi-Chn.3) ****************//
+
+SaturoBattle_004:
+// 000   ----------------------------------------
+ BYTE   KEYSH   SaturoBattle_key+0
+ BYTE   VOICE   110
+ BYTE   MOD 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   DsM2
+ BYTE   VOL   67*SaturoBattle_mvl/mxv
+ BYTE   PAN   c_v+16
+ BYTE   LFOS 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   En1
+ BYTE   TUNE 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   En3
+ BYTE   LFODL 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   Cn3
+ BYTE   BEND   c_v+0
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+SaturoBattle_Label_3_01010D48:
+ BYTE   N32  Bn3  v092
+ BYTE   W12
+ BYTE   W12
+// 001   ----------------------------------------
+ BYTE   W12
+ BYTE   N32  En3  v092
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Fs3  v092
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N18  Gn3  v092
+ BYTE   W12
+// 002   ----------------------------------------
+ BYTE   W06
+ BYTE   N18  An3  v092
+ BYTE   W06
+ BYTE   W12
+ BYTE   N32  Gn3  v092
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Dn3  v092
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 003   ----------------------------------------
+ BYTE   N32  Gs3  v092
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N17  An3  v092
+ BYTE   W12
+ BYTE   W06
+ BYTE   N17  Bn3  v092
+ BYTE   W06
+ BYTE   W12
+ BYTE   N32  An3  v092
+ BYTE   W12
+ BYTE   W12
+// 004   ----------------------------------------
+ BYTE   W12
+ BYTE   N32  En3  v092
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Dn3  v092
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Gn3  v092
+ BYTE   W12
+// 005   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   N18  Fn3  v092
+ BYTE   W12
+ BYTE   W06
+ BYTE   N18  Cn3  v092
+ BYTE   W06
+ BYTE   W12
+ BYTE   N18  Fn3  v092
+ BYTE   W12
+ BYTE   W06
+ BYTE   N18  An3  v092
+ BYTE   W06
+ BYTE   W12
+// 006   ----------------------------------------
+ BYTE   N32  An3  v092
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Bn3  v092
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   BEND   c_v+0
+ BYTE   N32  Bn3  v092
+ BYTE   W12
+ BYTE   W12
+// 007   ----------------------------------------
+ BYTE   W12
+ BYTE   N32  En3  v092
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Fs3  v092
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N18  Gn3  v092
+ BYTE   W12
+// 008   ----------------------------------------
+ BYTE   W06
+ BYTE   N18  An3  v092
+ BYTE   W06
+ BYTE   W12
+ BYTE   N32  Gn3  v092
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Dn3  v092
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 009   ----------------------------------------
+ BYTE   N32  Gs3  v092
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N17  An3  v092
+ BYTE   W12
+ BYTE   W06
+ BYTE   N17  Bn3  v092
+ BYTE   W06
+ BYTE   W12
+ BYTE   N32  An3  v092
+ BYTE   W12
+ BYTE   W12
+// 010   ----------------------------------------
+ BYTE   W12
+ BYTE   N32  En3  v092
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Dn3  v092
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Gn3  v092
+ BYTE   W12
+// 011   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   N18  Fn3  v092
+ BYTE   W12
+ BYTE   W06
+ BYTE   N18  Cn3  v092
+ BYTE   W06
+ BYTE   W12
+ BYTE   N18  Fn3  v092
+ BYTE   W12
+ BYTE   W06
+ BYTE   N18  An3  v092
+ BYTE   W06
+ BYTE   W12
+// 012   ----------------------------------------
+ BYTE   N32  An3  v092
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Bn3  v092
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 013   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 014   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 015   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 016   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 017   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 018   ----------------------------------------
+SaturoBattle_Label_3_01010E54:
+ BYTE   BEND   c_v+0
+ BYTE   N32  Cs3  v056
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   W12
+ BYTE   W12
+ BYTE   N11  Cs3  v056
+ BYTE   W12
+ BYTE   N11  Dn3  v056
+ BYTE   W12
+ BYTE   N11  En3  v056
+ BYTE   W12
+ BYTE   N32  En3  v056
+ BYTE   W12
+ BYTE   W12
+// 019   ----------------------------------------
+ BYTE   W12
+ BYTE   N32  Fs3  v056
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+SaturoBattle_Label_3_01010E75:
+ BYTE   BEND   c_v+0
+ BYTE   N32  An3  v056
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   W12
+ BYTE   W12
+ BYTE   N11  Gs3  v056
+ BYTE   W12
+// 020   ----------------------------------------
+ BYTE   N11  Fs3  v056
+ BYTE   W12
+ BYTE   N11  En3  v056
+ BYTE   W12
+ BYTE   N32  En3  v056
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N32  Fs3  v056
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_3_01010E54
+// 021   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   N11  Cs3  v056
+ BYTE   W12
+ BYTE   N11  Dn3  v056
+ BYTE   W12
+ BYTE   N11  En3  v056
+ BYTE   W12
+ BYTE   N32  En3  v056
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 022   ----------------------------------------
+ BYTE   N32  Fs3  v056
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_3_01010E75
+// 023   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   N11  Gs3  v056
+ BYTE   W12
+ BYTE   N11  Fs3  v056
+ BYTE   W12
+ BYTE   N11  En3  v056
+ BYTE   W12
+ BYTE   N32  En3  v056
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 024   ----------------------------------------
+ BYTE   N32  Fs3  v056
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 025   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 026   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 027   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 028   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 029   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 030   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 031   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 032   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 033   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 034   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 035   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_3_01010E54
+// 036   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   N11  Cs3  v056
+ BYTE   W12
+ BYTE   N11  Dn3  v056
+ BYTE   W12
+ BYTE   N11  En3  v056
+ BYTE   W12
+ BYTE   N32  En3  v056
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 037   ----------------------------------------
+ BYTE   N32  Fs3  v056
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_3_01010E75
+// 038   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   N11  Gs3  v056
+ BYTE   W12
+ BYTE   N11  Fs3  v056
+ BYTE   W12
+ BYTE   N11  En3  v056
+ BYTE   W12
+ BYTE   N32  En3  v056
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 039   ----------------------------------------
+ BYTE   N32  Fs3  v056
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_3_01010E54
+// 040   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   N11  Cs3  v056
+ BYTE   W12
+ BYTE   N11  Dn3  v056
+ BYTE   W12
+ BYTE   N11  En3  v056
+ BYTE   W12
+ BYTE   N32  En3  v056
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 041   ----------------------------------------
+ BYTE   N32  Fs3  v056
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_3_01010E75
+// 042   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   N11  Gs3  v056
+ BYTE   W12
+ BYTE   N11  Fs3  v056
+ BYTE   W12
+ BYTE   N11  En3  v056
+ BYTE   W12
+ BYTE   N32  En3  v056
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 043   ----------------------------------------
+ BYTE   N32  Fs3  v056
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 044   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 045   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 046   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 047   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 048   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 049   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   GoTo
+  POIN2 SaturoBattle_Label_3_01010D48
+ BYTE   FINE
+
+//**************** Track 5 (Midi-Chn.4) ****************//
+
+SaturoBattle_005:
+// 000   ----------------------------------------
+ BYTE   KEYSH   SaturoBattle_key+0
+ BYTE   VOICE   48
+ BYTE   MOD 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   DsM2
+ BYTE   VOL   84*SaturoBattle_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   LFOS 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   En1
+ BYTE   TUNE 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   En3
+ BYTE   LFODL 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   Cn3
+ BYTE   N08  En3  v064
+ BYTE   N08  Fn3  v064
+ BYTE   N08  Bn3  v064
+ BYTE   N08  En4  v064
+ BYTE   W12
+ BYTE   N05  En3  v064
+ BYTE   N05  Fn3  v064
+ BYTE   N05  Bn3  v064
+ BYTE   N05  En4  v064
+ BYTE   W06
+ BYTE   N05  En3  v064
+ BYTE   N05  Fn3  v064
+ BYTE   N05  Bn3  v064
+ BYTE   N05  En4  v064
+ BYTE   W06
+ BYTE   N08  En3  v064
+ BYTE   N08  Fn3  v064
+ BYTE   N08  Bn3  v064
+ BYTE   N08  En4  v064
+ BYTE   W12
+SaturoBattle_Label_4_0101104C:
+ BYTE   N08  Fn3  v064
+ BYTE   N08  Fs3  v064
+ BYTE   N08  Cn4  v064
+ BYTE   N08  Fn4  v064
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   N05  Fn3  v064
+ BYTE   N05  Fs3  v064
+ BYTE   N05  Cn4  v064
+ BYTE   N05  Fn4  v064
+ BYTE   W06
+ BYTE   N05  Fn3  v064
+ BYTE   N05  Fs3  v064
+ BYTE   N05  Cn4  v064
+ BYTE   N05  Fn4  v064
+ BYTE   W06
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_0101104C
+// 001   ----------------------------------------
+SaturoBattle_Label_4_01011079:
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 002   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 003   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 004   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 005   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 006   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 007   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 008   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 009   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 010   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 011   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 012   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 013   ----------------------------------------
+ BYTE   N15  Cs3  v064
+ BYTE   N15  Fs3  v064
+ BYTE   N15  An3  v064
+ BYTE   W12
+ BYTE   W06
+ BYTE   N05  Cs3  v064
+ BYTE   N05  Fs3  v064
+ BYTE   N05  Gs3  v064
+ BYTE   W06
+ BYTE   N10  Cs3  v064
+ BYTE   N10  Fs3  v064
+ BYTE   N10  An3  v064
+ BYTE   W12
+SaturoBattle_Label_4_010110F8:
+ BYTE   N10  Bn2  v064
+ BYTE   N10  En3  v064
+ BYTE   N10  Gs3  v064
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   N10  Bn2  v064
+ BYTE   N10  Fs3  v064
+ BYTE   W12
+ BYTE   N10  Bn2  v064
+ BYTE   N10  En3  v064
+ BYTE   W12
+ BYTE   N15  Bn2  v064
+ BYTE   N15  En3  v064
+ BYTE   N15  Gs3  v064
+ BYTE   W12
+ BYTE   W06
+ BYTE   N05  Bn2  v064
+ BYTE   N05  En3  v064
+ BYTE   N05  Fs3  v064
+ BYTE   W06
+// 014   ----------------------------------------
+ BYTE   N10  Bn2  v064
+ BYTE   N10  En3  v064
+ BYTE   N10  Gs3  v064
+ BYTE   W11
+ BYTE   BEND   c_v-64
+ BYTE   W01
+ BYTE   N10  Bn2  v064
+ BYTE   N10  En3  v064
+ BYTE   N10  An3  v064
+ BYTE   W02
+ BYTE   BEND   c_v-24
+ BYTE   W02
+ BYTE   BEND   c_v-9
+ BYTE   W02
+ BYTE   BEND   c_v-3
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010110F8
+// 015   ----------------------------------------
+ BYTE   N10  Bn2  v064
+ BYTE   N10  En3  v064
+ BYTE   N10  Fs3  v064
+ BYTE   W12
+ BYTE   N32  Cs3  v064
+ BYTE   N32  Fn3  v064
+ BYTE   N32  Gs3  v064
+ BYTE   W12
+ BYTE   W12
+ BYTE   W11
+ BYTE   BEND   c_v-64
+ BYTE   W01
+ BYTE   N11  Dn3  v064
+ BYTE   N11  Fs3  v064
+ BYTE   N11  An3  v064
+ BYTE   W02
+ BYTE   BEND   c_v-24
+ BYTE   W02
+ BYTE   BEND   c_v-9
+ BYTE   W02
+ BYTE   BEND   c_v-3
+ BYTE   W02
+ BYTE   BEND   c_v-1
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   N11  Dn3  v064
+ BYTE   N11  Fs3  v064
+ BYTE   N11  Gs3  v064
+ BYTE   W12
+ BYTE   N11  Dn3  v064
+ BYTE   N11  Fs3  v064
+ BYTE   N11  An3  v064
+ BYTE   W12
+ BYTE   N68  Ds3  v064
+ BYTE   N68  Fs3  v064
+ BYTE   N68  An3  v064
+ BYTE   N68  Cs4  v064
+ BYTE   W12
+// 016   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   N68  Ds3  v064
+ BYTE   N68  Fs3  v064
+ BYTE   N68  An3  v064
+ BYTE   N32  Bn3  v064
+ BYTE   W12
+ BYTE   W12
+ BYTE   W11
+ BYTE   BEND   c_v-64
+ BYTE   W01
+// 017   ----------------------------------------
+ BYTE   N32  Cs4  v064
+ BYTE   W02
+ BYTE   BEND   c_v-46
+ BYTE   W02
+ BYTE   BEND   c_v-34
+ BYTE   W02
+ BYTE   BEND   c_v-24
+ BYTE   W02
+ BYTE   BEND   c_v-18
+ BYTE   W02
+ BYTE   BEND   c_v-13
+ BYTE   W02
+SaturoBattle_Label_4_010111CE:
+ BYTE   BEND   c_v-9
+ BYTE   W02
+ BYTE   BEND   c_v-7
+ BYTE   W02
+ BYTE   BEND   c_v-5
+ BYTE   W02
+ BYTE   BEND   c_v-3
+ BYTE   W02
+ BYTE   BEND   c_v-2
+ BYTE   W04
+ BYTE   PEND 
+ BYTE   BEND   c_v-1
+ BYTE   W04
+ BYTE   BEND   c_v+0
+ BYTE   W08
+ BYTE   N68  En3  v064
+ BYTE   N68  An3  v064
+ BYTE   N68  Bn3  v064
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 018   ----------------------------------------
+ BYTE   W12
+ BYTE   BEND   c_v-64
+ BYTE   N32  En3  v064
+ BYTE   N32  Gs3  v064
+ BYTE   N32  Bn3  v064
+ BYTE   W02
+ BYTE   BEND   c_v-46
+ BYTE   W02
+ BYTE   BEND   c_v-34
+ BYTE   W02
+ BYTE   BEND   c_v-24
+ BYTE   W02
+ BYTE   BEND   c_v-18
+ BYTE   W02
+ BYTE   BEND   c_v-13
+ BYTE   W02
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010111CE
+// 019   ----------------------------------------
+ BYTE   BEND   c_v-1
+ BYTE   W04
+ BYTE   BEND   c_v+0
+ BYTE   W08
+ BYTE   N32  Gs3  v064
+ BYTE   N32  Bn3  v064
+ BYTE   N32  En4  v064
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 020   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 021   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 022   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 023   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 024   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 025   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+SaturoBattle_Label_4_01011255:
+ BYTE   BEND   c_v+0
+ BYTE   N05  Bn2  v064
+ BYTE   N05  En3  v064
+ BYTE   N05  Gs3  v064
+ BYTE   W12
+ BYTE   PEND 
+SaturoBattle_Label_4_01011262:
+ BYTE   N05  Bn2  v064
+ BYTE   N05  En3  v064
+ BYTE   N05  Gs3  v064
+ BYTE   W12
+ BYTE   PEND 
+SaturoBattle_Label_4_0101126D:
+ BYTE   N05  Bn2  v064
+ BYTE   N05  En3  v064
+ BYTE   N05  Fs3  v064
+ BYTE   W06
+ BYTE   N05  Bn2  v064
+ BYTE   N05  En3  v064
+ BYTE   N05  Gs3  v064
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_4_01011282:
+ BYTE   W05
+ BYTE   BEND   c_v-64
+ BYTE   W01
+ BYTE   N11  Bn2  v064
+ BYTE   N11  En3  v064
+ BYTE   N11  Gs3  v064
+ BYTE   W01
+ BYTE   BEND   c_v-38
+ BYTE   W01
+ BYTE   BEND   c_v-24
+ BYTE   W01
+ BYTE   BEND   c_v-14
+ BYTE   W01
+ BYTE   BEND   c_v-9
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   PEND 
+// 026   ----------------------------------------
+SaturoBattle_Label_4_010112A0:
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   N05  Bn2  v064
+ BYTE   N05  En3  v064
+ BYTE   N05  Fs3  v064
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011262
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011262
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_0101126D
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011282
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112A0
+// 027   ----------------------------------------
+SaturoBattle_Label_4_010112D0:
+ BYTE   N05  Bn2  v064
+ BYTE   N05  Dn3  v064
+ BYTE   N05  Gs3  v064
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112D0
+// 028   ----------------------------------------
+SaturoBattle_Label_4_010112E0:
+ BYTE   N05  Bn2  v064
+ BYTE   N05  Dn3  v064
+ BYTE   N05  Fs3  v064
+ BYTE   W06
+ BYTE   N05  Bn2  v064
+ BYTE   N05  Dn3  v064
+ BYTE   N05  Gs3  v064
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_4_010112F5:
+ BYTE   W05
+ BYTE   BEND   c_v-64
+ BYTE   W01
+ BYTE   N11  Bn2  v064
+ BYTE   N11  Dn3  v064
+ BYTE   N11  Gs3  v064
+ BYTE   W01
+ BYTE   BEND   c_v-38
+ BYTE   W01
+ BYTE   BEND   c_v-24
+ BYTE   W01
+ BYTE   BEND   c_v-14
+ BYTE   W01
+ BYTE   BEND   c_v-9
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   PEND 
+SaturoBattle_Label_4_01011313:
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W03
+ BYTE   N05  Bn2  v064
+ BYTE   N05  Dn3  v064
+ BYTE   N05  Fs3  v064
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112D0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112D0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112E0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112F5
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011313
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011255
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011262
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_0101126D
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011282
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112A0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011262
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011262
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_0101126D
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011282
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112A0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112D0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112D0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112E0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112F5
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011313
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112D0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112D0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112E0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112F5
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011313
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011255
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011262
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_0101126D
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011282
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112A0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011262
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011262
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_0101126D
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011282
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112A0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112D0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112D0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112E0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112F5
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011313
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112D0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112D0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112E0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112F5
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011313
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011255
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011262
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_0101126D
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011282
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112A0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011262
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011262
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_0101126D
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011282
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112A0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112D0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112D0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112E0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112F5
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011313
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112D0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112D0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112E0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_010112F5
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011313
+// 029   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   N05  Fn3  v064
+ BYTE   N05  Bn3  v064
+ BYTE   N05  En4  v064
+ BYTE   W06
+ BYTE   N05  Fn3  v064
+ BYTE   N05  Bn3  v064
+ BYTE   N05  En4  v064
+ BYTE   W06
+SaturoBattle_Label_4_01011485:
+ BYTE   W06
+ BYTE   N05  Fn3  v064
+ BYTE   N05  Bn3  v064
+ BYTE   N05  En4  v064
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_4_01011491:
+ BYTE   N05  Fn3  v064
+ BYTE   N05  Bn3  v064
+ BYTE   N05  En4  v064
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   N05  Fn3  v064
+ BYTE   N05  Bn3  v064
+ BYTE   N05  En4  v064
+ BYTE   W06
+ BYTE   N05  Fn3  v064
+ BYTE   N05  Bn3  v064
+ BYTE   N05  En4  v064
+ BYTE   W06
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011485
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_01011491
+// 030   ----------------------------------------
+ BYTE   N23  Gn3  v064
+ BYTE   N23  Cn4  v064
+ BYTE   N23  Fn4  v064
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 031   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 032   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 033   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 034   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 035   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 036   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   N05  En3  v064
+ BYTE   W06
+ BYTE   N05  Gn3  v064
+ BYTE   W06
+ BYTE   N05  En3  v064
+ BYTE   W06
+ BYTE   N05  Bn3  v064
+ BYTE   W06
+ BYTE   N05  En3  v064
+ BYTE   W06
+ BYTE   N05  En3  v064
+ BYTE   W06
+SaturoBattle_Label_4_0101150D:
+ BYTE   N05  Dn4  v064
+ BYTE   W06
+ BYTE   N05  En3  v064
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   N05  En3  v064
+ BYTE   W06
+ BYTE   N05  An3  v064
+ BYTE   W06
+ BYTE   N05  Fs3  v064
+ BYTE   W06
+ BYTE   N05  An3  v064
+ BYTE   W06
+// 037   ----------------------------------------
+ BYTE   N05  En3  v064
+ BYTE   W06
+ BYTE   N05  Gn3  v064
+ BYTE   W06
+ BYTE   N05  En3  v064
+ BYTE   W06
+ BYTE   N05  En4  v064
+ BYTE   W06
+ BYTE   N05  En3  v064
+ BYTE   W06
+ BYTE   N05  En3  v064
+ BYTE   W06
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_0101150D
+// 038   ----------------------------------------
+ BYTE   N05  En3  v064
+ BYTE   W06
+ BYTE   N05  En4  v064
+ BYTE   W06
+ BYTE   N05  En3  v064
+ BYTE   W06
+ BYTE   N05  En3  v064
+ BYTE   W06
+ BYTE   N05  En3  v064
+ BYTE   W06
+ BYTE   N05  Bn3  v064
+ BYTE   W06
+ BYTE   N05  En3  v064
+ BYTE   W06
+ BYTE   N05  Gn3  v064
+ BYTE   W06
+ BYTE   N05  Bn3  v064
+ BYTE   W06
+ BYTE   N05  En3  v064
+ BYTE   W06
+ BYTE   N05  Dn4  v064
+ BYTE   W06
+ BYTE   N05  An3  v064
+ BYTE   W06
+ BYTE   N05  Gn4  v064
+ BYTE   W06
+ BYTE   N05  An3  v064
+ BYTE   W06
+ BYTE   N05  Fs4  v064
+ BYTE   W06
+ BYTE   N05  An3  v064
+ BYTE   W06
+// 039   ----------------------------------------
+ BYTE   N05  En3  v064
+ BYTE   W06
+ BYTE   N05  An3  v064
+ BYTE   W06
+ BYTE   N05  Bn3  v064
+ BYTE   W06
+ BYTE   N05  En4  v064
+ BYTE   W06
+ BYTE   N05  An4  v064
+ BYTE   W06
+ BYTE   N05  Bn4  v064
+ BYTE   W06
+ BYTE   N05  En5  v064
+ BYTE   W06
+ BYTE   N05  Bn4  v064
+ BYTE   W06
+ BYTE   N05  An4  v064
+ BYTE   W06
+ BYTE   N05  En4  v064
+ BYTE   W06
+ BYTE   N05  Bn3  v064
+ BYTE   W06
+ BYTE   N05  An3  v064
+ BYTE   W06
+ BYTE   N05  Dn3  v064
+ BYTE   W06
+ BYTE   N05  Gn3  v064
+ BYTE   W06
+ BYTE   N05  An3  v064
+ BYTE   W06
+ BYTE   N05  Dn4  v064
+ BYTE   W06
+// 040   ----------------------------------------
+ BYTE   N05  Gn4  v064
+ BYTE   W06
+ BYTE   N05  An4  v064
+ BYTE   W06
+ BYTE   N05  Dn5  v064
+ BYTE   W06
+ BYTE   N05  An4  v064
+ BYTE   W06
+ BYTE   N05  Gn4  v064
+ BYTE   W06
+ BYTE   N05  Dn4  v064
+ BYTE   W06
+ BYTE   N05  An3  v064
+ BYTE   W06
+ BYTE   N05  Gn3  v064
+ BYTE   W06
+ BYTE   N05  Cn3  v064
+ BYTE   W06
+ BYTE   N05  Fn3  v064
+ BYTE   W06
+ BYTE   N05  Gn3  v064
+ BYTE   W06
+ BYTE   N05  Cn4  v064
+ BYTE   W06
+ BYTE   N05  Fn4  v064
+ BYTE   W06
+ BYTE   N05  Gn4  v064
+ BYTE   W06
+ BYTE   N05  Cn5  v064
+ BYTE   W06
+ BYTE   N05  Gn4  v064
+ BYTE   W06
+// 041   ----------------------------------------
+ BYTE   N05  Fn4  v064
+ BYTE   W06
+ BYTE   N05  Cn4  v064
+ BYTE   W06
+ BYTE   N05  Gn3  v064
+ BYTE   W06
+ BYTE   N05  Fn3  v064
+ BYTE   W06
+ BYTE   N05  Bn2  v064
+ BYTE   W06
+ BYTE   N05  En3  v064
+ BYTE   W06
+SaturoBattle_Label_4_0101161B:
+ BYTE   N05  Fs3  v064
+ BYTE   W06
+ BYTE   N05  En3  v064
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   N05  Fs3  v064
+ BYTE   W06
+ BYTE   N05  Bn3  v064
+ BYTE   W06
+SaturoBattle_Label_4_0101162C:
+ BYTE   N05  Fs4  v064
+ BYTE   W06
+ BYTE   N05  Bn3  v064
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   N05  En4  v064
+ BYTE   W06
+ BYTE   N05  Bn4  v064
+ BYTE   W06
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_0101162C
+// 042   ----------------------------------------
+ BYTE   N05  Bn4  v064
+ BYTE   W06
+ BYTE   N05  Fs4  v064
+ BYTE   W06
+ BYTE   N05  Bn4  v064
+ BYTE   W06
+ BYTE   N05  Bn3  v064
+ BYTE   W06
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_0101162C
+// 043   ----------------------------------------
+ BYTE   N05  En4  v064
+ BYTE   W06
+ BYTE   N05  Bn3  v064
+ BYTE   W06
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_4_0101161B
+// 044   ----------------------------------------
+ BYTE   N05  Bn2  v064
+ BYTE   W06
+ BYTE   N05  En2  v064
+ BYTE   W06
+ BYTE   GoTo
+  POIN2 SaturoBattle_Label_4_01011079
+ BYTE   FINE
+
+//**************** Track 6 (Midi-Chn.5) ****************//
+
+SaturoBattle_006:
+// 000   ----------------------------------------
+ BYTE   KEYSH   SaturoBattle_key+0
+ BYTE   VOICE   46
+ BYTE   MOD 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   DsM2
+ BYTE   VOL   83*SaturoBattle_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   LFOS 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   En1
+ BYTE   TUNE 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   En3
+ BYTE   LFODL 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+SaturoBattle_Label_5_010116B2:
+ BYTE   W12
+ BYTE   W12
+// 001   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 002   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 003   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 004   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 005   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 006   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 007   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 008   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 009   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 010   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 011   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 012   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 013   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 014   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 015   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 016   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 017   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 018   ----------------------------------------
+SaturoBattle_Label_5_0101173C:
+ BYTE   N05  Fs2  v056
+ BYTE   W06
+ BYTE   N05  An2  v056
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_5_01011745:
+ BYTE   N05  Cs3  v056
+ BYTE   W06
+ BYTE   N05  Fs3  v056
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_5_0101174E:
+ BYTE   N05  An3  v056
+ BYTE   W06
+ BYTE   N05  Cs4  v056
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_5_01011757:
+ BYTE   N05  Gs2  v056
+ BYTE   W06
+ BYTE   N05  Bn2  v056
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_5_01011760:
+ BYTE   N05  En3  v056
+ BYTE   W06
+ BYTE   N05  Gs3  v056
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_5_01011769:
+ BYTE   N05  Bn3  v056
+ BYTE   W06
+ BYTE   N05  En4  v056
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_5_01011772:
+ BYTE   N05  Cs2  v056
+ BYTE   W06
+ BYTE   N05  En2  v056
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_5_0101177B:
+ BYTE   N05  An2  v056
+ BYTE   W06
+ BYTE   N05  Cs3  v056
+ BYTE   W06
+ BYTE   PEND 
+// 019   ----------------------------------------
+SaturoBattle_Label_5_01011784:
+ BYTE   N05  En3  v056
+ BYTE   W06
+ BYTE   N05  An3  v056
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_5_0101178D:
+ BYTE   N05  Fs2  v056
+ BYTE   W06
+ BYTE   N05  Bn2  v056
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_5_01011796:
+ BYTE   N05  Dn3  v056
+ BYTE   W06
+ BYTE   N05  Fs3  v056
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_5_0101179F:
+ BYTE   N05  Bn3  v056
+ BYTE   W06
+ BYTE   N05  Dn4  v056
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101173C
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011745
+// 020   ----------------------------------------
+SaturoBattle_Label_5_010117B2:
+ BYTE   N05  Gs3  v056
+ BYTE   W06
+ BYTE   N05  An3  v056
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_5_010117BB:
+ BYTE   N05  En2  v056
+ BYTE   W06
+ BYTE   N05  Gs2  v056
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_5_010117C4:
+ BYTE   N05  Bn2  v056
+ BYTE   W06
+ BYTE   N05  En3  v056
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_5_010117CD:
+ BYTE   N05  Gs3  v056
+ BYTE   W06
+ BYTE   N05  Bn3  v056
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_5_010117D6:
+ BYTE   N05  En2  v056
+ BYTE   W06
+ BYTE   N05  An2  v056
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_5_010117DF:
+ BYTE   N05  Cs3  v056
+ BYTE   W06
+ BYTE   N05  En3  v056
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101174E
+// 021   ----------------------------------------
+SaturoBattle_Label_5_010117ED:
+ BYTE   N05  Ds2  v056
+ BYTE   W06
+ BYTE   N05  Fs2  v056
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_5_010117F6:
+ BYTE   N05  Bn2  v056
+ BYTE   W06
+ BYTE   N05  Ds3  v056
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_5_010117FF:
+ BYTE   N05  Fs3  v056
+ BYTE   W06
+ BYTE   N05  Bn3  v056
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101173C
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011745
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101174E
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011757
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011760
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011769
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011772
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101177B
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011784
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101178D
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011796
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101179F
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101173C
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011745
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117B2
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117BB
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117C4
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117CD
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117D6
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117DF
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101174E
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117ED
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117F6
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117FF
+// 022   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 023   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 024   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 025   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 026   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 027   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 028   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 029   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 030   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 031   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 032   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101173C
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011745
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101174E
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011757
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011760
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011769
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011772
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101177B
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011784
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101178D
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011796
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101179F
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101173C
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011745
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117B2
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117BB
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117C4
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117CD
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117D6
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117DF
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101174E
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117ED
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117F6
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117FF
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101173C
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011745
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101174E
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011757
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011760
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011769
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011772
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101177B
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011784
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101178D
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011796
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101179F
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101173C
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_01011745
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117B2
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117BB
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117C4
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117CD
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117D6
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117DF
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_0101174E
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117ED
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117F6
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_5_010117FF
+// 033   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 034   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 035   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 036   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 037   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 038   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 039   ----------------------------------------
+ BYTE   GoTo
+  POIN2 SaturoBattle_Label_5_010116B2
+ BYTE   FINE
+
+//**************** Track 7 (Midi-Chn.6) ****************//
+
+SaturoBattle_007:
+// 000   ----------------------------------------
+ BYTE   KEYSH   SaturoBattle_key+0
+ BYTE   VOICE   68
+ BYTE   MOD 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   DsM2
+ BYTE   VOL   79*SaturoBattle_mvl/mxv
+ BYTE   PAN   c_v-14
+ BYTE   LFOS 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   En1
+ BYTE   TUNE 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   As2
+ BYTE   LFODL 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   Cn3
+ BYTE   BEND   c_v+0
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+SaturoBattle_Label_6_01011A40:
+ BYTE   W11
+ BYTE   N05  Gn3  v064
+ BYTE   W01
+SaturoBattle_Label_6_01011A45:
+ BYTE   W05
+ BYTE   N05  Fs3  v064
+ BYTE   W06
+ BYTE   N05  Gn3  v064
+ BYTE   W01
+ BYTE   PEND 
+// 001   ----------------------------------------
+SaturoBattle_Label_6_01011A4F:
+ BYTE   W05
+ BYTE   N05  An3  v064
+ BYTE   W06
+ BYTE   N05  Gn3  v064
+ BYTE   W01
+ BYTE   PEND 
+SaturoBattle_Label_6_01011A59:
+ BYTE   W05
+ BYTE   N05  Fs3  v064
+ BYTE   W06
+ BYTE   N10  Gn3  v064
+ BYTE   W01
+ BYTE   PEND 
+ BYTE   W11
+ BYTE   N10  Fs3  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N10  Gn3  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N32  An3  v064
+ BYTE   W01
+ BYTE   W12
+ BYTE   W12
+ BYTE   W11
+ BYTE   N10  An3  v064
+ BYTE   W01
+// 002   ----------------------------------------
+ BYTE   W11
+ BYTE   N10  Bn3  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N10  Cn4  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N32  Bn3  v064
+ BYTE   W01
+ BYTE   W12
+ BYTE   W12
+ BYTE   W11
+ BYTE   N17  Dn3  v064
+ BYTE   W01
+ BYTE   W12
+ BYTE   W05
+ BYTE   N17  Bn3  v064
+ BYTE   W07
+// 003   ----------------------------------------
+ BYTE   W11
+ BYTE   N32  Bn3  v064
+ BYTE   W01
+ BYTE   W12
+ BYTE   W12
+ BYTE   W11
+ BYTE   N11  Bn3  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N11  Cn4  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N11  Dn4  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N05  Cn4  v064
+ BYTE   W01
+SaturoBattle_Label_6_01011AB0:
+ BYTE   W05
+ BYTE   N05  Bn3  v064
+ BYTE   W06
+ BYTE   N05  Cn4  v064
+ BYTE   W01
+ BYTE   PEND 
+// 004   ----------------------------------------
+SaturoBattle_Label_6_01011ABA:
+ BYTE   W05
+ BYTE   N05  Dn4  v064
+ BYTE   W06
+ BYTE   N05  Cn4  v064
+ BYTE   W01
+ BYTE   PEND 
+SaturoBattle_Label_6_01011AC4:
+ BYTE   W05
+ BYTE   N05  Bn3  v064
+ BYTE   W06
+ BYTE   N17  Cn4  v064
+ BYTE   W01
+ BYTE   PEND 
+ BYTE   W12
+ BYTE   W05
+ BYTE   N17  En4  v064
+ BYTE   W07
+ BYTE   W11
+ BYTE   N32  Dn4  v064
+ BYTE   W01
+ BYTE   W12
+ BYTE   W12
+ BYTE   W11
+ BYTE   N10  Dn4  v064
+ BYTE   W01
+// 005   ----------------------------------------
+ BYTE   W11
+ BYTE   N10  Gn3  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N10  Gn4  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N17  Fn4  v064
+ BYTE   W01
+ BYTE   W12
+SaturoBattle_Label_6_01011AF0:
+ BYTE   W05
+ BYTE   N05  En4  v064
+ BYTE   W06
+ BYTE   N08  Dn4  v064
+ BYTE   W01
+ BYTE   PEND 
+ BYTE   W11
+ BYTE   N10  Fn4  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N10  En4  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N08  Dn4  v064
+ BYTE   W01
+// 006   ----------------------------------------
+ BYTE   W11
+ BYTE   N05  En3  v064
+ BYTE   W01
+SaturoBattle_Label_6_01011B0E:
+ BYTE   W05
+ BYTE   N05  An3  v064
+ BYTE   W06
+ BYTE   N05  Bn3  v064
+ BYTE   W01
+ BYTE   PEND 
+SaturoBattle_Label_6_01011B18:
+ BYTE   W05
+ BYTE   N05  En4  v064
+ BYTE   W06
+ BYTE   N05  An4  v064
+ BYTE   W01
+ BYTE   PEND 
+SaturoBattle_Label_6_01011B22:
+ BYTE   W05
+ BYTE   N05  Bn4  v064
+ BYTE   W06
+ BYTE   N05  Gs4  v064
+ BYTE   W01
+ BYTE   PEND 
+SaturoBattle_Label_6_01011B2C:
+ BYTE   W05
+ BYTE   N05  An4  v064
+ BYTE   W06
+ BYTE   N05  Bn4  v064
+ BYTE   W01
+ BYTE   PEND 
+SaturoBattle_Label_6_01011B36:
+ BYTE   W05
+ BYTE   N05  En4  v064
+ BYTE   W06
+ BYTE   N05  Bn3  v064
+ BYTE   W01
+ BYTE   PEND 
+ BYTE   W05
+ BYTE   N05  En4  v064
+ BYTE   W06
+ BYTE   BEND   c_v+0
+ BYTE   N05  Gn3  v064
+ BYTE   W01
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_6_01011A45
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_6_01011A4F
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_6_01011A59
+// 007   ----------------------------------------
+ BYTE   W11
+ BYTE   N10  Fs3  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N10  Gn3  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N32  An3  v064
+ BYTE   W01
+ BYTE   W12
+ BYTE   W12
+ BYTE   W11
+ BYTE   N10  An3  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N10  Bn3  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N10  Cn4  v064
+ BYTE   W01
+// 008   ----------------------------------------
+ BYTE   W11
+ BYTE   N32  Bn3  v064
+ BYTE   W01
+ BYTE   W12
+ BYTE   W12
+ BYTE   W11
+ BYTE   N17  Dn3  v064
+ BYTE   W01
+ BYTE   W12
+ BYTE   W05
+ BYTE   N17  Bn3  v064
+ BYTE   W07
+ BYTE   W11
+ BYTE   N32  Bn3  v064
+ BYTE   W01
+ BYTE   W12
+// 009   ----------------------------------------
+ BYTE   W12
+ BYTE   W11
+ BYTE   N11  Bn3  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N11  Cn4  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N11  Dn4  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N05  Cn4  v064
+ BYTE   W01
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_6_01011AB0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_6_01011ABA
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_6_01011AC4
+// 010   ----------------------------------------
+ BYTE   W12
+ BYTE   W05
+ BYTE   N17  En4  v064
+ BYTE   W07
+ BYTE   W11
+ BYTE   N32  Dn4  v064
+ BYTE   W01
+ BYTE   W12
+ BYTE   W12
+ BYTE   W11
+ BYTE   N10  Dn4  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N10  Gn3  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N10  Gn4  v064
+ BYTE   W01
+// 011   ----------------------------------------
+ BYTE   W11
+ BYTE   N17  Fn4  v064
+ BYTE   W01
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_6_01011AF0
+// 012   ----------------------------------------
+ BYTE   W11
+ BYTE   N10  Fn4  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N10  En4  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N08  Dn4  v064
+ BYTE   W01
+ BYTE   W11
+ BYTE   N05  En3  v064
+ BYTE   W01
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_6_01011B0E
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_6_01011B18
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_6_01011B22
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_6_01011B2C
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_6_01011B36
+// 013   ----------------------------------------
+ BYTE   W05
+ BYTE   N05  En4  v064
+ BYTE   W07
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 014   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 015   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 016   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 017   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 018   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 019   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 020   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 021   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 022   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 023   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 024   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 025   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 026   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 027   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 028   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 029   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 030   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 031   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 032   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 033   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 034   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 035   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 036   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 037   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 038   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 039   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 040   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 041   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 042   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 043   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 044   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 045   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 046   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+ BYTE   W12
+// 047   ----------------------------------------
+ BYTE   W12
+ BYTE   W12
+ BYTE   GoTo
+  POIN2 SaturoBattle_Label_6_01011A40
+ BYTE   FINE
+
+//**************** Track 8 (Midi-Chn.7) ****************//
+
+SaturoBattle_008:
+// 000   ----------------------------------------
+ BYTE   KEYSH   SaturoBattle_key+0
+ BYTE   VOICE   124
+ BYTE   MOD 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2
+ BYTE   VOL   67*SaturoBattle_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   LFOS 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   En1
+ BYTE   TUNE 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   En3
+ BYTE   LFODL 0
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   CnM2  v000
+ BYTE   Cn3
+ BYTE   N10  Dn1  v120
+ BYTE   N68  Cs2  v120
+ BYTE   W12
+ BYTE   N05  Cn1  v120
+ BYTE   W06
+ BYTE   N05  Cn1  v120
+ BYTE   W06
+ BYTE   N05  Cn2  v120
+ BYTE   W06
+ BYTE   N05  An1  v120
+ BYTE   W06
+ BYTE   N05  Dn1  v060
+ BYTE   W06
+ BYTE   N05  Dn1  v092
+ BYTE   W06
+ BYTE   N05  Dn1  v120
+ BYTE   W06
+ BYTE   N05  Dn1  v092
+ BYTE   N05  Fn1  v092
+ BYTE   W06
+ BYTE   N05  Dn1  v120
+ BYTE   N05  Fn1  v120
+ BYTE   W06
+ BYTE   N05  Dn1  v120
+ BYTE   N05  Fn1  v120
+ BYTE   W06
+SaturoBattle_Label_7_01011D98:
+ BYTE   N05  Cn1  v127
+ BYTE   N68  Cs2  v127
+ BYTE   W12
+ BYTE   PEND 
+SaturoBattle_Label_7_01011DA0:
+ BYTE   N05  Cn1  v127
+ BYTE   W06
+ BYTE   N05  Dn1  v127
+ BYTE   W06
+ BYTE   PEND 
+// 001   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 002   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 003   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 004   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 005   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 006   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 007   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 008   ----------------------------------------
+SaturoBattle_Label_7_01011E04:
+ BYTE   N05  Dn1  v127
+ BYTE   W06
+ BYTE   N05  Dn1  v127
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011D98
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 009   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 010   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 011   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 012   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 013   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 014   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+SaturoBattle_Label_7_01011E5C:
+ BYTE   N05  Cn2  v127
+ BYTE   W06
+ BYTE   N05  Cn2  v127
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_7_01011E65:
+ BYTE   N05  Cn2  v127
+ BYTE   W06
+ BYTE   N05  An1  v127
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_7_01011E6E:
+ BYTE   N05  Fn1  v127
+ BYTE   W06
+ BYTE   N05  An1  v127
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_7_01011E77:
+ BYTE   N05  Cn1  v127
+ BYTE   W06
+ BYTE   N05  Cn1  v127
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_7_01011E80:
+ BYTE   N05  Cn1  v127
+ BYTE   W06
+ BYTE   N05  Dn1  v112
+ BYTE   N17  Cs2  v112
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E04
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011D98
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 015   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 016   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 017   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 018   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 019   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 020   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 021   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E04
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011D98
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 022   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 023   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 024   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 025   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 026   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 027   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E5C
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E65
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E6E
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E80
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E04
+// 028   ----------------------------------------
+SaturoBattle_Label_7_01011F68:
+ BYTE   N05  Cn1  v127
+ BYTE   N32  Cs2  v127
+ BYTE   W06
+ BYTE   N05  Cn1  v127
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011F68
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011F68
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011D98
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 029   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 030   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 031   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 032   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011D98
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 033   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 034   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E5C
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E65
+// 035   ----------------------------------------
+SaturoBattle_Label_7_01012023:
+ BYTE   N05  An1  v127
+ BYTE   W06
+ BYTE   N05  An1  v127
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_7_0101202C:
+ BYTE   N05  Fn1  v127
+ BYTE   W06
+ BYTE   N05  Fn1  v127
+ BYTE   W06
+ BYTE   PEND 
+SaturoBattle_Label_7_01012035:
+ BYTE   N05  Fn1  v127
+ BYTE   W06
+ BYTE   N05  Dn1  v127
+ BYTE   W06
+ BYTE   PEND 
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E04
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011D98
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 036   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 037   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 038   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 039   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 040   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 041   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 042   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E04
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011D98
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 043   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 044   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 045   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 046   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 047   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 048   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E5C
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E65
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E6E
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E80
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E04
+// 049   ----------------------------------------
+SaturoBattle_Label_7_0101211A:
+ BYTE   N11  Cn1  v127
+ BYTE   N56  Cs2  v127
+ BYTE   W12
+ BYTE   PEND 
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+// 050   ----------------------------------------
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Cn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+// 051   ----------------------------------------
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Cn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+SaturoBattle_Label_7_01012150:
+ BYTE   N03  Cn1  v127
+ BYTE   W04
+ BYTE   N03  Cn1  v127
+ BYTE   W04
+ BYTE   N03  Cn1  v127
+ BYTE   W04
+ BYTE   PEND 
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01012150
+// 052   ----------------------------------------
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01012150
+// 053   ----------------------------------------
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_0101211A
+// 054   ----------------------------------------
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+// 055   ----------------------------------------
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Cn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+// 056   ----------------------------------------
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Cn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01012150
+// 057   ----------------------------------------
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01012150
+// 058   ----------------------------------------
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01012150
+// 059   ----------------------------------------
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Cn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+// 060   ----------------------------------------
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Cn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+// 061   ----------------------------------------
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Cn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01012150
+// 062   ----------------------------------------
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01012150
+// 063   ----------------------------------------
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01012150
+// 064   ----------------------------------------
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Cn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+// 065   ----------------------------------------
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Cn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+// 066   ----------------------------------------
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Cn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01012150
+// 067   ----------------------------------------
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01012150
+// 068   ----------------------------------------
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01012150
+// 069   ----------------------------------------
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N11  Dn1  v127
+ BYTE   W12
+ BYTE   N05  Dn1  v127
+ BYTE   W06
+ BYTE   N05  An1  v127
+ BYTE   W06
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01012035
+// 070   ----------------------------------------
+ BYTE   N05  Bn1  v127
+ BYTE   W06
+ BYTE   N05  Gn1  v127
+ BYTE   W06
+ BYTE   N05  Dn1  v127
+ BYTE   W06
+ BYTE   N05  Cn2  v127
+ BYTE   W06
+ BYTE   N05  Cn2  v127
+ BYTE   W06
+ BYTE   N05  Dn1  v127
+ BYTE   W06
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_0101202C
+// 071   ----------------------------------------
+ BYTE   N23  Cn1  v127
+ BYTE   N23  Cs2  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E04
+// 072   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   N68  Cs2  v127
+ BYTE   W06
+ BYTE   N05  Cn1  v127
+ BYTE   W06
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+// 073   ----------------------------------------
+ BYTE   N05  Cn2  v127
+ BYTE   N68  Cs2  v127
+ BYTE   W06
+ BYTE   N05  Dn1  v040
+ BYTE   W06
+ BYTE   N05  Dn1  v040
+ BYTE   W06
+ BYTE   N05  An1  v127
+ BYTE   W06
+ BYTE   N05  Dn1  v040
+ BYTE   W06
+ BYTE   N05  Dn1  v040
+ BYTE   W06
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E5C
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01012023
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_0101202C
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011D98
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 074   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 075   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 076   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 077   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 078   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 079   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 080   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E04
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011D98
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 081   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 082   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 083   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 084   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 085   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 086   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E5C
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E65
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E6E
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E80
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E04
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011D98
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 087   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 088   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 089   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 090   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 091   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+// 092   ----------------------------------------
+ BYTE   N05  Cn1  v127
+ BYTE   W12
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E5C
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E65
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E6E
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E77
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011DA0
+ BYTE   PATT
+  POIN2 SaturoBattle_Label_7_01011E04
+// 093   ----------------------------------------
+ BYTE   GoTo
+  POIN2 SaturoBattle_Label_7_01011D98
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+songSaturosBattle:
+	BYTE	8	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	SaturoBattle_pri	// Priority
+	BYTE	SaturoBattle_rev	// Reverb.
+    
+	POIN2	SaturoBattle_grp
+    
+	POIN2	SaturoBattle_001
+	POIN2	SaturoBattle_002
+	POIN2	SaturoBattle_003
+	POIN2	SaturoBattle_004
+	POIN2	SaturoBattle_005
+	POIN2	SaturoBattle_006
+	POIN2	SaturoBattle_007
+	POIN2	SaturoBattle_008
+
+	
