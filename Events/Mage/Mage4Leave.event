@@ -85,7 +85,20 @@ CLEA 0x0
 CLEE 0x0
 CLEN 0x0
 SetBackground(0x18)
-Text(Mage4LeaveKillText)
+TEXTSTART
+CHECK_EVENTID 0x13
+BEQ 0x0 0x0 0xC
+	// Event ID 0x13 is set. Tact talked to Blaine.
+	TEXTSHOW Mage4KillTalkText
+	GOTO 0x1
+LABEL 0x0
+	// Event ID 0x13 is unset. Tact did not talk to Blaine.
+	TEXTSHOW Mage4KillNoTalkText
+LABEL 0x1
+TEXTEND
+TEXTSHOW2 Mage4LeaveKillText
+TEXTEND
+REMA
 MoveToChapter(MageLeaveKill5)
 NoFade
 EndA2
@@ -124,7 +137,7 @@ EndUnit
 
 //Label Chapter units
 Meanies1:
-UNIT Gerald Mage Gerald Level(14,Enemy,True) [19,2] Drop 0x00 0x00 0x00 [Elfire,MasterSeal] GuardAI
+UNIT Gerald Mage Gerald Level(14,Enemy,True) [19,2] Drop 0x00 0x00 0x00 [Arcfire,MasterSeal] GuardAI
 UNIT Arcanian Cavalier Gerald Level(10,Enemy,True) [19,2] 0x00 0x00 0x00 0x00 [SteelSword] ChaseOnceApproachedAI
 UNIT Arcanian Cavalier Gerald Level(11,Enemy,True) [20,1] 0x00 0x00 0x00 0x00 [HeavySpear] ChaseOnceApproachedAI
 UNIT Arcanian BattleSage Gerald Level(2,Enemy,True) [17,4] 0x00 0x00 0x00 0x00 [IronBlade,Thunder] AttackIfCloseAI
