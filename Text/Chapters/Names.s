@@ -155,4 +155,4 @@ Prologue[X]
 3: Battle in Shadows[X]
 
 ## Mage4LeaveNameText
-Caught in the Middle[X]
+4: Caught in the Middle[X]
