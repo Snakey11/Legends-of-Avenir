@@ -4,7 +4,7 @@
 cd "%~dp0"
 
 echo Assembling world map...
-py SmallWMAssembler.py SmallWM.s SmallWMGraphics.dmp SmallWMPalette.dmp SmallWMTSA.dmp Png2Dmp.exe compress.exe
+echo: | ( SmallWMAssembler SmallWM.s SmallWMGraphics.dmp SmallWMPalette.dmp SmallWMTSA.dmp Png2Dmp.exe compress.exe )
 
 echo Assembling glowy regions...
 set FILE_MATCH=*.png

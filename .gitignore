@@ -26,9 +26,9 @@ Definitions/Definitions.event
 Definitions/Skills.s
 
 # CSV-related ignores.
-CSV/Nightmare/
 CSV/Tables/*.event
 CSV/Tables/**/*.event
+!CSV/Tables/TableDefinitions.event
 
 # Map-related ignores.
 Maps/*.event
