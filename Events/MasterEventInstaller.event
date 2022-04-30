@@ -164,6 +164,9 @@ ENDB
 	{
 	#include "Mage/Mage3Leave.event"
 	}
+	{
+	#include "Mage/Mage4Leave.event"
+	}
 #endif
 
 #include "Sassy.event"

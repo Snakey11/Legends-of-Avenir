@@ -22,7 +22,7 @@ END_MAIN
 //Label CharacterBasedEvents
 ALIGN 32
 CharacterBasedEvents:
-CHAR 0x10 TTactBlaine [0x00,Blaine]
+CHAR 0x10 TTactBlaine [0x00,Blaine] 0x0
 END_MAIN
 
 //Label LocationBasedEvents
@@ -89,11 +89,11 @@ TEXTSTART
 CHECK_EVENTID 0x13
 BEQ 0x0 0x0 0xC
 	// Event ID 0x13 is set. Tact talked to Blaine.
-	TEXTSHOW Mage4KillTalkText
+	TEXTSHOW Mage4LeaveKillTalkText
 	GOTO 0x1
 LABEL 0x0
 	// Event ID 0x13 is unset. Tact did not talk to Blaine.
-	TEXTSHOW Mage4KillNoTalkText
+	TEXTSHOW Mage4LeaveKillNoTalkText
 LABEL 0x1
 TEXTEND
 TEXTSHOW2 Mage4LeaveKillText
@@ -104,7 +104,7 @@ NoFade
 EndA2
 
 EscapeScene: // Tact escaped.
-MUSC Victory_Minor
+MUSC FE5_Victory_Minor
 FADI 0x5
 CLEA 0x0
 CLEE 0x0
@@ -119,6 +119,14 @@ ENDA
 TTactBlaine:
 MUSI
 Text(Mage4LeaveTactBlaineText)
+CHECK_EXISTS Remus
+BEQ 0x0 0x0 0xC
+	TurnAlly(Remus)
+LABEL 0x0
+CHECK_EXISTS Adeline
+BEQ 0x1 0x0 0xC
+	TurnAlly(Adeline)
+LABEL 0x1
 MUNO
 ENUT 0x13 // Disable escaping.
 NoFade
@@ -133,6 +141,14 @@ UNIT Xena 0x00 0x00 Level(1,Ally,True) [9,17] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [8,16] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Ajax 0x00 0x00 Level(1,Ally,True) [8,18] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT Arya 0x00 0x00 Level(1,Ally,True) [9,19] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+EndingRemus:
+UNIT Remus Soldier 0x00 Level(11,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [SteelLance,Vulnerary] NoAI
+UNIT
+
+EndingAdeline:
+UNIT Adeline Archer_F 0x00 Level(12,Ally,True) [0,1] 0x00 0x00 0x00 0x00 [SteelBow,IronLongbow] NoAI
 EndUnit
 
 //Label Chapter units
@@ -161,6 +177,8 @@ UNIT
 
 Cesarians:
 UNIT Blaine Halberdier Gerald Level(4,NPC,True) [2,13] 0x00 0x00 0x00 0x00 [Spear] GuardAI
+UNIT Remus Soldier Gerald Level(11,NPC,True) [1,11] 0x00 0x00 0x00 0x00 [SteelLance,Vulnerary] AttackIfCloseAI
+UNIT Adeline Archer_F Gerald Level(12,NPC,True) [0,13] 0x00 0x00 0x00 0x00 [SteelBow,IronLongbow] AttackIfCloseAI
 UNIT Cesarian Sniper Gerald Level(1,NPC,True) [6,8] 0x00 0x00 0x00 0x00 [SilverLongbow] GuardAI
 UNIT Cesarian Knight Gerald Level(14,NPC,True) [7,10] 0x00 0x00 0x00 0x00 [SteelAxe] GuardAI
 UNIT Cesarian Soldier Gerald Level(13,NPC,True) [7,10] 0x00 0x00 0x00 0x00 [KillerLance] AttackIfCloseAI
