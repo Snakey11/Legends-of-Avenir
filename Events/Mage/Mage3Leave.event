@@ -186,7 +186,7 @@ BottomRightHouse:
 MUSI
 Text(0x2,Mage3LeaveBottomRightHouseText)
 EnterStop
-GiveItem(Dasher,0xFFFF)
+GiveItem(BlueGem,0xFFFF)
 MUNO
 NoFade
 EndA2
@@ -214,7 +214,7 @@ UNIT Shizonian Mage Pascal Level(9,Enemy,True) [6,14] 0x00 0x00 0x00 0x00 [Fire]
 UNIT Shizonian Soldier Pascal Level(6,Enemy,True) [19,2] 0x00 0x00 0x00 0x00 [IronLance] AttackInRangeAI
 UNIT Shizonian Mercenary Pascal Level(9,Enemy,True) [22,2] 0x00 0x00 0x00 0x00 [SteelSword] ChaseOnceApproachedAI
 UNIT Shizonian Knight Pascal Level(6,Enemy,True) [16,5] 0x00 0x00 0x00 0x00 [HandAxe] GuardAI
-UNIT Shizonian Mage Pascal Level(7,Enemy,True) [16,8] Drop 0x00 0x00 0x00 [Elfire] AttackInRangeAI
+UNIT Shizonian Shaman Pascal Level(7,Enemy,True) [16,8] Drop 0x00 0x00 0x00 [Dulam] AttackInRangeAI
 UNIT Shizonian Fighter Pascal Level(8,Enemy,True) [15,9] 0x00 0x00 0x00 0x00 [PoisonAxe] DouseTorchesAI
 UNIT Shizonian Shaman Pascal Level(6,Enemy,True) [14,14] 0x00 0x00 0x00 0x00 [Flux] NoAI
 UNIT Shizonian Myrmidon Pascal Level(5,Enemy,True) [11,14] Drop 0x00 0x00 0x00 [LightBrand,Vulnerary] AttackInRangeAI

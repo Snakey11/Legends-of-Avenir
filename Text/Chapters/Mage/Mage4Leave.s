@@ -5,7 +5,7 @@
 [MidRight][LoadPlayer]What is it?
 [MidLeft]We need to move out.[CloseSpeech][MoveLeft][MidRight][MoveRight][FarRight][LoadArya][FarLeft][LoadAjax]
 It's still a few days ride to Bacrun and, unfortunately, most of that is through a warzone. We'll have to move quickly and quietly, which means moving in the early and late hours and trying to lay low during the day.
-[MidRight]What if we run into part of Arcanae's forces?
+[Right]What if we run into part of Arcanae's forces?
 [FarRight]Moving without being noticed is my specialty. Just follow my lead.
 [FarLeft]You can take the lead, Arya. I trust you know a good way to Bacrun from here too?
 [FarRight]Yeah, and we can easily steer clear of the major roadways on our way there too.
@@ -18,7 +18,7 @@ Why do we trust the assassin?
 [MidRight]We all have dark secrets, Zaheva. By all rights, none of us have reason to trust each other.
 [MidLeft]But we all escaped Arcanae together. She came with the intent to kill us.
 [MidRight]I know you're traumatized by the things of your past. But you have to count on all of us.
-[MidLeft]... Fine.[CloseSpeech][MidRight][MoveFarRight][MidLeft][MoveRight][ClearFace][LoadAjax][MidLeft][LoadXena]
+[MidLeft]... Fine.[CloseSpeech][MidRight][MoveFarRight][MidLeft][MoveRight][ClearFace][LoadZaheva][MidLeft][LoadXena]
 To Ajax's point, you and he sort of just appeared. I still don't know either of your motivations.
 [FarRight]My motivations are my own.
 [Right]I can't stand to watch Arcanae become the corrupt entity it has. If we can make a difference in that, I'm willing to help.
@@ -46,7 +46,7 @@ What about escaping? I thought the goal was to get away from this and figure out
 ## Mage4LeaveTactBlaineText
 [ConversationText]
 [MidRight][LoadPlayer][MidLeft][LoadBlaine]
-Who are you? What are you doing here[MoveRight] on a battlefield? State your business, quickly, before I cut you down, Arcanian dog.
+Who are you? What are you doing here[MoveLeft] on a battlefield? State your business, quickly, before I cut you down, Arcanian dog.
 [MidRight]I am [Tact], a former student of Arcanae. My friends and I are outcasts, betrayed by the Grand Magus Mistlain...
 [MidLeft]Betrayed? Hm. We do not have time to discuss this now. Here's your chance. Prove to me this isn't a trick. Assist me in killing the Arcanian commander of this battlefield, and perhaps I will hear you out... Remus! Adeline! Assist [Tact] here. You all are going to lead a counterassault against the Arcanian commander!
 [CloseSpeech][MoveLeft][FarLeft][LoadRemus]

@@ -20,7 +20,6 @@ TurnBasedEvents:
 END_MAIN
 
 //Label CharacterBasedEvents
-ALIGN 32
 CharacterBasedEvents:
 CHAR 0x10 TTactBlaine [0x00,Blaine] 0x0
 END_MAIN
@@ -53,6 +52,7 @@ EndUnit
 
 //Label BeginingScene
 BeginningScene:
+ENUT 0x14 // For multitilemarker.
 MUSC Dry_Trail
 CAM1 [9,9]
 LOAD2 0x1 Friends
@@ -68,6 +68,7 @@ STAL 0x30
 MUNO
 FADU 0x5
 Text(Mage4LeaveTrustText)
+EndConvo
 MUSC The_Devoted
 STAL 0x60
 CAM1 [8,18]
@@ -129,6 +130,7 @@ BEQ 0x1 0x0 0xC
 LABEL 0x1
 MUNO
 ENUT 0x13 // Disable escaping.
+ENUF 0x14 // Turn off the escape markers.
 NoFade
 ENDA
 
@@ -156,7 +158,7 @@ Meanies1:
 UNIT Gerald Mage Gerald Level(14,Enemy,True) [19,2] Drop 0x00 0x00 0x00 [Arcfire,MasterSeal] GuardAI
 UNIT Arcanian Cavalier Gerald Level(10,Enemy,True) [19,2] 0x00 0x00 0x00 0x00 [SteelSword] ChaseOnceApproachedAI
 UNIT Arcanian Cavalier Gerald Level(11,Enemy,True) [20,1] 0x00 0x00 0x00 0x00 [HeavySpear] ChaseOnceApproachedAI
-UNIT Arcanian BattleSage Gerald Level(2,Enemy,True) [17,4] 0x00 0x00 0x00 0x00 [IronBlade,Thunder] AttackIfCloseAI
+UNIT Arcanian BattleSage Gerald Level(2,Enemy,True) [17,4] 0x00 0x00 0x00 0x00 [IronBlade,Thunder] AttackInRangeAI
 UNIT Arcanian Mercenary Gerald Level(12,Enemy,True) [12,3] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
 UNIT Arcanian Sage Gerald Level(3,Enemy,True) [8,4] Drop 0x00 0x00 0x00 [Elaqua,GuidingRing] AttackInRangeAI
 UNIT Arcanian PegasusKnight Gerald Level(10,Enemy,True) [20,9] 0x00 0x00 0x00 0x00 [SlimLance] AttackInRangeAI
