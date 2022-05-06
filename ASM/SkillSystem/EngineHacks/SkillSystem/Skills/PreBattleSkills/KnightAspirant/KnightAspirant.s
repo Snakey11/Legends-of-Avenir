@@ -23,14 +23,14 @@ cmp r0, #0
 beq End
 
 
-mov r1, #0x5A
+/*mov r1, #0x5A
 ldrh r0, [r4, r1] @Damage
 add r0, #2
-strh r0, [r4,r1]
+strh r0, [r4,r1]*/
 
 mov r1, #0x62
 ldrh r0, [r4, r1] @Avoid
-add r0, #15
+add r0, #10
 strh r0, [r4,r1]
 
 End:

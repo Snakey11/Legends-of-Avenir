@@ -840,8 +840,8 @@ Mage Slayer: Gain +2 damage and +10%[N]
 crit when facing magical enemies.[X]
 
 ## SD_KnightAspirant
-Knight Aspirant: When above 75%[N]
-health, +2 damage, +15% avoid.[X]
+Knight Aspirant: When above[N]
+75% health, +10% avoid.[X]
 
 ## SD_Watchful
 Watchful: This unit cannot be[N]

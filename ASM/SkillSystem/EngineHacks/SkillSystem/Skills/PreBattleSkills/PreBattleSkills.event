@@ -121,7 +121,7 @@ WORD InsightID
 
 ALIGN 4
 KnightAspirant:
-#incbin "KnightAspirant/KnightAspirant.dmp"
+#include "KnightAspirant/KnightAspirant.lyn.event"
 POIN SkillTester
 WORD KnightAspirantID
 
