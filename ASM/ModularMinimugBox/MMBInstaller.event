@@ -64,7 +64,7 @@ After each set of module options are definitions that you can use to adjust the 
 // Unit name options
 
 	// Coordinates and widths are in 8x8 pixel tiles
-	#define MMBNameWidth 5
+	#define MMBNameWidth 6
 	#define MMBNameColor TextWhite
 	#define MMBNameX 7
 	#define MMBNameY 1
