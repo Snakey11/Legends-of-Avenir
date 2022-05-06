@@ -616,7 +616,9 @@ CAM1 [7,16]
 STAL 0x30
 LOAD1 0x1 LoadTurn13Wanderers
 ENUN
+STAL 0x10
 FlashCursor(Daniel,60)
+STAL 0x10
 Text(Merc6BanditDisbandDanielHereText)
 NoFade
 EndA2
@@ -681,7 +683,7 @@ UNIT
 
 LoadTurn13Wanderers:
 UNIT Wanderer Archer Daniel Level(10,Enemy,True) [1,20] 0x00 0x00 0x00 0x00 [IronShortbow] NoAI 
-UNIT Daniel Swordmaster Daniel Level(6,Enemy,True) [3,20] 0x00 0x00 0x00 0x00 [SilverSword] ChaseOnceApproachedAI
+UNIT Daniel Swordmaster Daniel Level(6,Enemy,True) [3,20] 0x00 0x00 0x1 REDA3R18 [SilverSword] ChaseOnceApproachedAI
 UNIT Wanderer MageKnight Daniel Level(4,Enemy,True) [5,20] 0x00 0x00 0x00 0x00 [Elwind] NoAI 
 UNIT
 
