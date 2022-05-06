@@ -9,14 +9,17 @@ rem does not call s2ea for files where the existing .event file is newer than th
 set FILE_MATCH=*.s
 set s2ea=s2ea.exe
 
+if not exist "Music/cache" ( mkdir "Music/cache" )
+
 for /R "%~dp0Music" %%F in (%FILE_MATCH%) do (
     set SHOULD_COMPILE=0
-    set EVENT_FILE="%%~dF%%~pF%%~nF%.event"
+    set EVENT_FILE="%%~dF%%~pFcache\%%~nF%.event"
     if exist "!EVENT_FILE!" (
-		for /F "Delims=" %%I in ('dir /b /OD "!EVENT_FILE!" "%%F" ^| more +1') do set NEWER=%%I
-		if "!NEWER!" == "%%~nxF" (
+		set NEWER=%%F
+		xcopy /DYLR "%%F" "!EVENT_FILE!" | findstr /BC:"0" >nul && set NEWER=!EVENT_FILE!
+		if "!NEWER!" == "%%F" (
 			set SHOULD_COMPILE=1
-		) 
+		)
 	) else (
 		set SHOULD_COMPILE=1
 	)
@@ -24,6 +27,8 @@ for /R "%~dp0Music" %%F in (%FILE_MATCH%) do (
 		echo Assembling "%%~nxF"...
 		cd "%%~dpF"
 		s2ea "%%~nxF"
+		rem Move the new event file to the cache.
+		move "%%~dF%%~pF%%~nF%.event" "!EVENT_FILE!"
     )
 )
 
