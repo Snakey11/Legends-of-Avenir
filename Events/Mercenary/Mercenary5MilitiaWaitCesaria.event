@@ -143,22 +143,44 @@ ENDA
 //Label Turn events
 Turn2:
 MUSC With_Us
-CAM1 [2,16]
-STAL 0x30
-LOAD2 0x1 FinocHere
-ENUN
-STAL 0x04
-LOAD2 0x1 ElanilHere
-ENUN
-REVEAL Elanil
-SVAL 0x1 0x1
-SET_STATE Elanil
-REVEAL Finoc
-SVAL 0x1 0x1
-SET_STATE Finoc
-STAL 0x10
-FlashCursor(Finoc,0x60)
-STAL 0x10
+CHECK_ALIVE Finoc
+BEQ 0x0 0x0 0xC
+	// Finoc is alive. Load him and Elanil if she is alive.
+	CAM1 [2,16]
+	STAL 0x30
+	LOAD2 0x1 FinocHere
+	ENUN
+	REVEAL Finoc
+	SVAL 0x1 0x1
+	SET_STATE Finoc
+	STAL 0x04
+	CHECK_ALIVE Elanil // Don't load Elanil if only she's dead.
+	BEQ 0x1 0x0 0xC
+		LOAD2 0x1 ElanilHere
+		ENUN
+		REVEAL Elanil
+		SVAL 0x1 0x1
+		SET_STATE Elanil
+	LABEL 0x1
+	STAL 0x10
+	FlashCursor(Finoc,60)
+	STAL 0x10
+	GOTO 0x2
+LABEL 0x0
+	CHECK_ALIVE Elanil // If Elanil isn't alive, don't load anyone.
+	BEQ 0x2 0x0 0xC
+		// Elanil is alive but Finoc isn't. Just have Elanil run in.
+		CAM1 [2,16]
+		STAL 0x30
+		LOAD2 0x1 ElanilHereFinocDead
+		ENUN
+		REVEAL Elanil
+		SVAL 0x1 0x1
+		SET_STATE Elanil
+		STAL 0x10
+		FlashCursor(Elanil,60)
+		STAL 0x10
+LABEL 0x2
 Text(Merc5MilitiaWaitCesariaAltiansJoinText)
 MURE 0x05
 NoFade
@@ -265,6 +287,10 @@ UNIT
 
 ElanilHere:
 UNIT Elanil 0x00 0x00 Level(5,Ally,True) [2,16] 0x00 0x00 0x01 REDA2R17 [0] NoAI
+UNIT
+
+ElanilHereFinocDead:
+UNIT Elanil 0x00 0x00 Level(5,Ally,True) [0,18] 0x00 0x00 0x01 REDA2R16 [0] NoAI
 UNIT
 
 Meanies1:
