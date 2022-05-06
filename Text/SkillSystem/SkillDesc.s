@@ -361,8 +361,8 @@ Camaraderie: Recover 10% HP each turn[N]
 if there are allies within 2 tiles.[X]
 
 ## SD_ForeignPrincess
-Foreign Princess: Foreign army units[N]
-take -2/+2 damage dealt/taken.[X]
+True Cesarian: Arcanian units[N]
+deal/take -2/+2 damage.[X]
 
 ## SD_SavageBlow
 Savage Blow: After attacking, enemies[N]
