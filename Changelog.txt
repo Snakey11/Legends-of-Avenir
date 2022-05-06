@@ -1,4 +1,16 @@
 v2.2 hotfixes
+Fixed Elanil and Finoc's rejoin in Mercenary 5 Cesaria
+Fixed promotion from the unit menu decrementing the top item of the unit's inventory
+Fixed not actually giving gold at the end of Mercenary 4 Militia Wait (yes, it is supposed to be 4,000 not the full amount)
+Fixed bad water battle backgrounds in Mercenary 5 Militia Wait Cesaria
+Fixed the minimug name box being a little too narrow in some cases
+Fixed Thunderstorm's stupid description
+Fixed crashing on turn 13 of Mercenary 6 Bandit Disband caused by Daniel not loading if a unit is on his load tile
+Fixed the escape markers in Assassin 7 not showing properly
+Fixed a missing gendered pronoun for Tact in 6 Assassin
+Fixed a rare case of Tact gendered pronouns being inverted
+Trample has been nerfed to 2 damage, and Knight Aspirant has been nerfed to only +10 avoid
+Foreign Princess has properly been turned into True Arcanian (This is one of Adeline's skills)
 Fixed mistakes in house text in 5 Merc Cesaria
 Fixed Arc loading as the wrong character ID as a mercenary, causing various bugs
 Fixed mastery skills being learned at level 3 instead of level 5
