@@ -811,8 +811,9 @@ Loyalty: When within 2 spaces of[N]
 a Lord, -3 damage taken, +15% hit.[X]
 
 ## SD_Thunderstorm
-Thunderstorm: If weapon weight > enemy[N]
-W. Weight, +2 dmg, +15% hit, +5% crit.[X]
+Thunderstorm: If weapon[N]
+weight > enemy weapon weight,[N]
++2 dmg, +15% hit, +5% crit.[X]
 
 ## SD_Outrider
 Outrider: Take -1 damage and[N]
