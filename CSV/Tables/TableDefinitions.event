@@ -92,7 +92,8 @@
 #endif
 #ifdef _FE8_
   #define Summoning 0x08
-  #define UnlockEirika 0x10
+  //#define UnlockEirika 0x10
+  #define IsArcanian 0x10 // Class/character ability 4 replacing Eirika lock for True Cesarian.
   #define UnlockEphraim 0x20
   #define UnlockLock3 0x40
   #define UnlockLock4 0x80

@@ -353,7 +353,7 @@ Opportunist: +4 damage[N]
 if the foe cannot counter.[X]
 
 ## SD_Trample
-Trample: +5 damage to[N]
+Trample: +2 damage to[N]
 unmounted units.[X]
 
 ## SD_Camaraderie
@@ -361,8 +361,8 @@ Camaraderie: Recover 10% HP each turn[N]
 if there are allies within 2 tiles.[X]
 
 ## SD_ForeignPrincess
-Foreign Princess: Foreign army units[N]
-take -2/+2 damage dealt/taken.[X]
+True Cesarian: Arcanian units[N]
+deal/take -2/+2 damage.[X]
 
 ## SD_SavageBlow
 Savage Blow: After attacking, enemies[N]
@@ -811,8 +811,9 @@ Loyalty: When within 2 spaces of[N]
 a Lord, -3 damage taken, +15% hit.[X]
 
 ## SD_Thunderstorm
-Thunderstorm: If weapon weight > enemy[N]
-W. Weight, +2 dmg, +15% hit, +5% crit.[X]
+Thunderstorm: If weapon[N]
+weight > enemy weapon weight,[N]
++2 dmg, +15% hit, +5% crit.[X]
 
 ## SD_Outrider
 Outrider: Take -1 damage and[N]
@@ -840,8 +841,8 @@ Mage Slayer: Gain +2 damage and +10%[N]
 crit when facing magical enemies.[X]
 
 ## SD_KnightAspirant
-Knight Aspirant: When above 75%[N]
-health, +2 damage, +15% avoid.[X]
+Knight Aspirant: When above[N]
+75% health, +10% avoid.[X]
 
 ## SD_Watchful
 Watchful: This unit cannot be[N]

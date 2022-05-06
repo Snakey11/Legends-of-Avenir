@@ -127,6 +127,7 @@ MUSC Advance
 CLEA 0x0
 CLEE 0x0
 CLEN 0x0
+GiveGoldSilent(4000)
 BNE 0x30 0xC 0x0
 	// Arcanae
 	LOAD1 0x1 LoadValHelmer
