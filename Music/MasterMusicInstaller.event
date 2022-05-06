@@ -15,357 +15,356 @@ voicegroup000:
 
 {
 SongTable(Town_of_Winds_and_Ruins,songTownOfWindsAndRuins)
-#include "TownOfWindsAndRuins.event"
+#include "cache/TownOfWindsAndRuins.event"
 }
 
 {
 SongTable(Derris_Kharlan_Appear,songDerrisKharlanAppear)
-#include "DerrisKharlanAppear.event"
+#include "cache/DerrisKharlanAppear.event"
 }
 
 {
 SongTable(Shihna,songShihna)
-#include "Shihna.event"
+#include "cache/Shihna.event"
 }
 
 {
 SongTable(Fatalize,songFatalize)
-#include "Fatalize.event"
+#include "cache/Fatalize.event"
 }
 
 {
 SongTable(Fighting_of_the_Spirit,songFightingOfTheSpirit)
-#include "FightingOfTheSpirit.event"
+#include "cache/FightingOfTheSpirit.event"
 }
 
 {
 SongTable(Anchoret,songAnchoret)
-#include "Anchoret.event"
+#include "cache/Anchoret.event"
 }
 
 {
 SongTable(Kratos,songKratos)
-#include "Kratos.event"
+#include "cache/Kratos.event"
 }
 
 {
 SongTable(Lloyd,songLloyd)
-#include "Lloyd.event"
+#include "cache/Lloyd.event"
 }
 
-
-/*//{
+/*/{
 SongTable(Beedles_Shop,songBeedlesShop)
-//#include "BeedlesShop.event"
+//#include "cache/BeedlesShop.event"
 }*/
 
 {
 SongTable(Dry_Trail,songDryTrail)
-#include "DryTrail.event"
+#include "cache/DryTrail.event"
 }
 
 {
 SongTable(Encounter_with_Renegades,songEncounterWithRenegades)
-#include "EncounterWithRenegades.event"
+#include "cache/EncounterWithRenegades.event"
 }
 
 {
 SongTable(Last_Battle_Decision,songLastBattleDecision)
-#include "LastBattleDecision.event"
+#include "cache/LastBattleDecision.event"
 }
 
 {
 SongTable(Mars_Lighthouse,songMarsLighthouse)
-#include "MarsLighthouse.event"
+#include "cache/MarsLighthouse.event"
 }
 
 {
 SongTable(Old_Familiar_Scent,songOldFamiliarScent)
-#include "OldFamiliarScent.event"
+#include "cache/OldFamiliarScent.event"
 }
 
 {
 SongTable(Rest_of_the_Heart,songRestOfTheHeart)
-#include "RestOfTheHeart.event"
+#include "cache/RestOfTheHeart.event"
 }
 
 {
 SongTable(Venus_Lighthouse,songVenusLighthouse)
-#include "VenusLighthouse.event"
+#include "cache/VenusLighthouse.event"
 }
 
 
 {
 SongTable(Burning_Fighting_Spirit,songBurningFightingSpirit)
-#include "BurningFightingSpirit.event"
+#include "cache/BurningFightingSpirit.event"
 }
 
 {
 SongTable(A_Tragic_Decision,songATragicDecision)
-#include "ATragicDecision.event"
+#include "cache/ATragicDecision.event"
 }
 
 {
 SongTable(Presidents_Office,songPresidentsOffice)
-#include "PresidentsOffice.event"
+#include "cache/PresidentsOffice.event"
 }
 
 {
 SongTable(Bloodpool,songBloodpool)
-#include "Bloodpool.event"
+#include "cache/Bloodpool.event"
 }
 
 {
 SongTable(Pub_Theme,songPubTheme)
-#include "PubTheme.event"
+#include "cache/PubTheme.event"
 }
 
 {
 SongTable(Snow_Battle,songSnowBattle)
-#include "SnowBattle.event"
+#include "cache/SnowBattle.event"
 }
 
 {
 SongTable(Wild_Fields,songWildFields)
-#include "WildFields.event"
+#include "cache/WildFields.event"
 }
 
 {
 SongTable(Marble_Corridor,songMarbleCorridor)
-#include "MarbleCorridor.event"
+#include "cache/MarbleCorridor.event"
 }
 
 {
 SongTable(Nara_and_Mara_Battle,songNaraAndMaraBattle)
-#include "NaraAndMaraBattle.event"
+#include "cache/NaraAndMaraBattle.event"
 }
 
 {
 SongTable(Nekonin,songNekonin)
-#include "Nekonin.event"
+#include "cache/Nekonin.event"
 }
 
 {
 SongTable(Ringabel,songRingabel)
-#include "Ringabel.event"
+#include "cache/Ringabel.event"
 }
 
 {
 SongTable(Victorys_Delight,songVictorysDelight)
-#include "VictorysDelight.event"
+#include "cache/VictorysDelight.event"
 }
 
 {
 SongTable(Zelos,songZelos)
-#include "Zelos.event"
+#include "cache/Zelos.event"
 }
 
 {
 SongTable(Stage_One,songStageOne)
-#include "StageOne.event"
+#include "cache/StageOne.event"
 }
 
 {
 SongTable(Full_Force,songFullForce)
-#include "FullForce.event"
+#include "cache/FullForce.event"
 }
 
 {
 SongTable(Fury_Sparks,songFurySparks)
-#include "FurySparks.event"
+#include "cache/FurySparks.event"
 }
 
 
 {
 SongTable(Church,songChurch)
-#include "Church.event"
+#include "cache/Church.event"
 }
 
 {
 SongTable(Kavoc,songKavoc)
-#include "Kavoc.event"
+#include "cache/Kavoc.event"
 }
 
 {
 SongTable(Like_a_Glint_of_Light,songLikeAGlintOfLight)
-#include "LikeAGlintOfLight.event"
+#include "cache/LikeAGlintOfLight.event"
 }
 
 {
 SongTable(Off_Key,songOffKey)
-#include "OffKey.event"
+#include "cache/OffKey.event"
 }
 
 {
 SongTable(The_Law_of_Battle,songTheLawOfBattle)
-#include "TheLawOfBattle.event"
+#include "cache/TheLawOfBattle.event"
 }
 
 {
 SongTable(Twinrova,songTwinrova)
-#include "Twinrova.event"
+#include "cache/Twinrova.event"
 }
 
 
 {
 SongTable(Agatio_and_Karst_Battle,songAgatioAndKarstBattle)
-#include "AgatioAndKarstBattle.event"
+#include "cache/AgatioAndKarstBattle.event"
 }
 
 {
 SongTable(Alachest_Final,songAlcahestFinal)
-#include "AlcahestFinal.event"
+#include "cache/AlcahestFinal.event"
 }
 
 {
 SongTable(Good_Song,songGoodSong)
-#include "GoodSong.event"
+#include "cache/GoodSong.event"
 }
 
 {
 SongTable(Satorl_Marsh,songSatorlMarsh)
-#include "SatorlMarsh.event"
+#include "cache/SatorlMarsh.event"
 }
 
 {
 SongTable(Stage_One_Conquest,songStageOneConquest)
-#include "StageOneConquest.event"
+#include "cache/StageOneConquest.event"
 }
 
 
 {
 SongTable(Cavern_of_Splendor,songCavernOfSplendor)
-#include "CavernOfSplendor.event"
+#include "cache/CavernOfSplendor.event"
 }
 
 {
 SongTable(Boss_Theme,songBossTheme)
-#include "BossTheme.event"
+#include "cache/BossTheme.event"
 }
 
 {
 SongTable(Bloody_Tears,songBloodyTears)
-#include "BloodyTears.event"
+#include "cache/BloodyTears.event"
 }
 
 {
 SongTable(Bergentruckung,songBergentruckung)
-#include "Bergentruckung.event"
+#include "cache/Bergentruckung.event"
 }
 
 {
 SongTable(Battle_Two,songBattleTwo)
-#include "BattleTwo.event"
+#include "cache/BattleTwo.event"
 }
 
 {
 SongTable(Battle_against_Demons,songBattleAgainstDemons)
-#include "BattleAgainstDemons.event"
+#include "cache/BattleAgainstDemons.event"
 }
 
 {
 SongTable(Isaac_Battle,songIsaacsBattleTheme)
-#include "IsaacsBattleTheme.event"
+#include "cache/IsaacsBattleTheme.event"
 } // Little too loud, and gets out of phase
 
 {
 SongTable(The_Devoted,songTheDevoted)
-#include "TheDevoted.event"
+#include "cache/TheDevoted.event"
 }
 
 {
 SongTable(March,songMarch)
-#include "March.event"
+#include "cache/March.event"
 }
 
 {
 SongTable(Ascent,songAscent)
-#include "Ascent.event"
+#include "cache/Ascent.event"
 }
 
 {
 SongTable(The_First_Campaign,songTheFirstCampaign)
-#include "TheFirstCampaign.event"
+#include "cache/TheFirstCampaign.event"
 }
 
 {
 SongTable(Heavens_Rock_Seat,songHeavensRockSeat)
-#include "HeavensRockSeat.event"
+#include "cache/HeavensRockSeat.event"
 }
 
 {
 SongTable(Heavens_Gate,songHeavensGate)
-#include "HeavensGate.event"
+#include "cache/HeavensGate.event"
 }
 
 {
 SongTable(Forbidden_Forest,songForbiddenForest)
-#include "ForbiddenForest.event"
+#include "cache/ForbiddenForest.event"
 }
 
 {
 SongTable(End_of_the_World,songEndOfTheWorld)
-#include "EndOfTheWorld.event"
+#include "cache/EndOfTheWorld.event"
 }
 
 {
 SongTable(Earthbound,songEarthbound)
-#include "Earthbound.event"
+#include "cache/Earthbound.event"
 }
 
 {
 SongTable(Chinese_Tea,songChineseTea)
-#include "ChineseTea.event"
+#include "cache/ChineseTea.event"
 }
 
 {
 SongTable(Zelda_Twighlight_Shop,songZeldaTwighlightShop)
-#include "ZeldaTwighlightShop.event"
+#include "cache/ZeldaTwighlightShop.event"
 }
 
 {
 SongTable(UN_Owen_Was_Her,songUNOwenWasHer)
-#include "U.N.OwenWasHer.event"
+#include "cache/U.N.OwenWasHer.event"
 }
 
 {
 SongTable(Showdown_with_Hector,songShowdownWithHector)
-#include "ShowdownWithHector.event"
+#include "cache/ShowdownWithHector.event"
 }
 
 {
 SongTable(Saturos_Battle,songSaturosBattle)
-#include "SaturosBattle.event"
+#include "cache/SaturosBattle.event"
 }
 
 {
 SongTable(Puppet_Ganon,songPuppetGanon)
-#include "PuppetGanon.event"
+#include "cache/PuppetGanon.event"
 }
 
 {
 SongTable(Ordon_Village,songOrdonVillage)
-#include "OrdonVillage.event"
+#include "cache/OrdonVillage.event"
 }
 
 {
 SongTable(Locked_Girl,songLockedGirl)
-#include "LockedGirl.event"
+#include "cache/LockedGirl.event"
 }
 
 {
 SongTable(Kakariko_Village,songKakarikoVillage)
-#include "KakarikoVillage.event"
+#include "cache/KakarikoVillage.event"
 }
 
 {
 SongTable(Hollow_Bastion,songHollowBastion)
-#include "HollowBastion.event"
+#include "cache/HollowBastion.event"
 }
 
 {
 SongTable(Inanimate_Dream,songInanimateDream)
-#include "InanimateDream.event"
+#include "cache/InanimateDream.event"
 }
 
 
@@ -373,379 +372,379 @@ SongTable(Inanimate_Dream,songInanimateDream)
 
 {
 SongTable(With_Us,songWithUs)
-#include "WithUs.event"
+#include "cache/WithUs.event"
 }
 
 {
 SongTable(A_Formidable_Foe_Stands_in_the_Way,songAFormidableFoeStandsInTheWay)
-#include "AFormidableFoeStandsInTheWay.event"
+#include "cache/AFormidableFoeStandsInTheWay.event"
 }
 
 {
 SongTable(Showdown_with_Hector_New,songShowdownWithHectorNew)
-#include "ShowdownWithHectorNew.event"
+#include "cache/ShowdownWithHectorNew.event"
 }
 
 {
 SongTable(A_Hero_Falls,songAHeroFalls)
-#include "AHeroFalls.event"
+#include "cache/AHeroFalls.event"
 }
 
 {
 SongTable(Emergency,songEmergency)
-#include "Emergency.event"
+#include "cache/Emergency.event"
 }
 
 {
 SongTable(We_Can_Handle_Em,songWeCanHandleEm)
-#include "WeCanHandleEm.event"
+#include "cache/WeCanHandleEm.event"
 }
 
 {
 SongTable(Overwhelming_Advance,songOverwhelmingAdvance)
-#include "OverwhelmingAdvance.event"
+#include "cache/OverwhelmingAdvance.event"
 }
 
 {
 SongTable(Encroaching_Foe,songEncroachingFoe)
-#include "EncroachingFoe.event"
+#include "cache/EncroachingFoe.event"
 }
 
 {
 SongTable(All_Is_Lost,songAllIsLost)
-#include "AllIsLost.event"
+#include "cache/AllIsLost.event"
 }
 
 {
 SongTable(Divine_Providence,songDivineProvidence)
-#include "DivineProvidence.event"
+#include "cache/DivineProvidence.event"
 }
 
 {
 SongTable(Fodlan_Winds,songFodlanWinds)
-#include "FodlanWinds.event"
+#include "cache/FodlanWinds.event"
 }
 
 {
 SongTable(Oil_Ocean,songOilOcean)
-#include "OilOcean.event"
+#include "cache/OilOcean.event"
 }
 
 {
 SongTable(Casino_Night,songCasinoNight)
-#include "CasinoNight.event"
+#include "cache/CasinoNight.event"
 }
 
 {
 SongTable(Aquatic_Ruin,songAquaticRuin)
-#include "AquaticRuin.event"
+#include "cache/AquaticRuin.event"
 }
 
 {
 SongTable(Hill_Top,songHillTop)
-#include "HillTop.event"
+#include "cache/HillTop.event"
 }
 
 {
 SongTable(Green_Emerald,songGreenEmerald)
-#include "GreenEmerald.event"
+#include "cache/GreenEmerald.event"
 }
 
 {
 SongTable(Chemical_Plant,songChemicalPlant)
-#include "ChemicalPlant.event"
+#include "cache/ChemicalPlant.event"
 }
 
 {
 SongTable(Metropolis,songMetropolis)
-#include "Metropolis.event"
+#include "cache/Metropolis.event"
 }
 
 {
 SongTable(Legends_of_Avenir,songLegendsOfAvenir)
-#include "LegendsOfAvenir.event"
+#include "cache/LegendsOfAvenir.event"
 }
 
 
 {
 SongTable(FE5_Advance,songFE5Advance)
-#include "FE5Advance.event"
+#include "cache/FE5Advance.event"
 }
 
 {
 SongTable(FE5_Adversity,songFE5Adversity)
-#include "FE5Adversity.event"
+#include "cache/FE5Adversity.event"
 }
 
 {
 SongTable(FE5_Destiny,songFE5Destiny)
-#include "FE5Destiny.event"
+#include "cache/FE5Destiny.event"
 }
 
 {
 SongTable(FE5_Field,songFE5Field)
-#include "FE5Field.event"
+#include "cache/FE5Field.event"
 }
 
 {
 SongTable(FE5_In_Search_of_Victory,songFE5InSearchOfVictory)
-#include "FE5InSearchOfVictory.event"
+#include "cache/FE5InSearchOfVictory.event"
 }
 
 {
 SongTable(FE5_Loptr_B,songFE5LoptrB)
-#include "FE5LoptrB.event"
+#include "cache/FE5LoptrB.event"
 }
 
 {
 SongTable(FE5_Map_A,songFE5MapA)
-#include "FE5MapA.event"
+#include "cache/FE5MapA.event"
 }
 
 {
 SongTable(FE5_Searching_the_Enemy,songFE5SearchingTheEnemy)
-#include "FE5SearchingTheEnemy.event"
+#include "cache/FE5SearchingTheEnemy.event"
 }
 
 {
 SongTable(FE5_Victory,songFE5Victory)
-#include "FE5Victory.event"
+#include "cache/FE5Victory.event"
 }
 
 {
 SongTable(FE5_Victory_Minor,songFE5VictoryMinor)
-#include "FE5VictoryMinor.event"
+#include "cache/FE5VictoryMinor.event"
 }
 
 
 {
 SongTable(Victory_March,songVictoryMarch)
-#include "VictoryMarch.event"
+#include "cache/VictoryMarch.event"
 }
 
 {
 SongTable(Battle_One,songBattleOne)
-#include "BattleOne.event"
+#include "cache/BattleOne.event"
 }
 
 {
 SongTable(Courage_and_Pride_from_the_Heart,songCourageAndPrideFromTheHeart)
-#include "CourageAndPrideFromTheHeart.event"
+#include "cache/CourageAndPrideFromTheHeart.event"
 }
 
 {
 SongTable(Cutting_Edge_of_Notion,songCuttingEdgeOfNotion)
-#include "CuttingEdgeOfNotion.event"
+#include "cache/CuttingEdgeOfNotion.event"
 }
 
 {
 SongTable(Hand_Combat,songHandCombat)
-#include "HandCombat.event"
+#include "cache/HandCombat.event"
 }
 
 {
 SongTable(Justice,songJustice)
-#include "Justice.event"
+#include "cache/Justice.event"
 }
 
 {
 SongTable(Team_Making,songTeamMaking)
-#include "TeamMaking.event"
+#include "cache/TeamMaking.event"
 }
 
 {
 SongTable(Dark_Clouds_Gather,songDarkCloudsGather)
-#include "DarkCloudsGather.event"
+#include "cache/DarkCloudsGather.event"
 }
 
 {
 SongTable(Wrath_Strike,songWrathStrike)
-#include "WrathStrike.event"
+#include "cache/WrathStrike.event"
 }
 
 {
 SongTable(Blindly_Charging,songBlindlyCharging)
-#include "BlindlyCharging.event"
+#include "cache/BlindlyCharging.event"
 }
 
 {
 SongTable(Darker,songDarker)
-#include "Darker.event"
+#include "cache/Darker.event"
 }
 
 {
 SongTable(Evil_Approaches,songEvilApproaches)
-#include "EvilApproaches.event"
+#include "cache/EvilApproaches.event"
 }
 
 {
 SongTable(Judgral_Calls,songJudgralCalls)
-#include "JudgralCalls.event"
+#include "cache/JudgralCalls.event"
 }
 
 {
 SongTable(Roar_of_Dominion,songRoarOfDominion)
-#include "RoarOfDominion.event"
+#include "cache/RoarOfDominion.event"
 }
 
 
 {
 SongTable(Annihilate_Em,songAnnihilateEm)
-#include "AnnihilateEm.event"
+#include "cache/AnnihilateEm.event"
 }
 
 {
 SongTable(Aquatic_Dystopia,songAquaticDystopia)
-#include "AquaticDystopia.event"
+#include "cache/AquaticDystopia.event"
 }
 
 {
 SongTable(Armories_of_Avenir,songArmoriesOfAvenir)
-#include "ArmoriesOfAvenir.event"
+#include "cache/ArmoriesOfAvenir.event"
 }
 
 {
 SongTable(Avenir_Healing,songAvenirHealing)
 SongTable(Avenir_Healing2,songAvenirHealing)
-#include "AvenirHealing.event"
+#include "cache/AvenirHealing.event"
 }
 
 {
 SongTable(Cataclysm,songCataclysm)
-#include "Cataclysm.event"
+#include "cache/Cataclysm.event"
 }
 
 {
 SongTable(Crossroads,songCrossroads)
-#include "Crossroads.event"
+#include "cache/Crossroads.event"
 }
 
 {
 SongTable(Drop_Em,songDropEm)
-#include "DropEm.event"
+#include "cache/DropEm.event"
 }
 
 {
 SongTable(End_Em,songEndEm)
-#include "EndEm.event"
+#include "cache/EndEm.event"
 }
 
 {
 SongTable(Fields_of_Avenir,songFieldsOfAvenir)
-#include "FieldsOfAvenir.event"
+#include "cache/FieldsOfAvenir.event"
 }
 
 {
 SongTable(I_Dont_Think_We_Can_Take_Em,songIDontThinkWeCanTakeEm)
-#include "IDontThinkWeCanTakeEm.event"
+#include "cache/IDontThinkWeCanTakeEm.event"
 }
 
 {
 SongTable(Knock_Em_Around,songKnockEmAround)
-#include "KnockEmAround.event"
+#include "cache/KnockEmAround.event"
 }
 
 {
 SongTable(Life_in_the_Military,songLifeInTheMilitary)
-#include "LifeInTheMilitary.event"
+#include "cache/LifeInTheMilitary.event"
 }
 
 {
 SongTable(Life_of_a_Mercenary,songLifeOfAMercenary)
-#include "LifeOfAMercenary.event"
+#include "cache/LifeOfAMercenary.event"
 }
 
 {
 SongTable(Light_Em_Up,songLightEmUp)
-#include "LightEmUp.event"
+#include "cache/LightEmUp.event"
 }
 
 {
 SongTable(Make_Em_Pay,songMakeEmPay)
-#include "MakeEmPay.event"
+#include "cache/MakeEmPay.event"
 }
 
 {
 SongTable(Promotions_of_Avenir,songPromotionsOfAvenir)
-#include "PromotionsOfAvenir.event"
+#include "cache/PromotionsOfAvenir.event"
 }
 
 {
 SongTable(Show_Em_Whats_What,songShowEmWhatsWhat)
-#include "ShowEmWhatsWhat.event"
+#include "cache/ShowEmWhatsWhat.event"
 }
 
 {
 SongTable(Sock_It_to_Em,songSockItToEm)
-#include "SockItToEm.event"
+#include "cache/SockItToEm.event"
 }
 
 {
 SongTable(Take_Em_Down,songTakeEmDown)
-#include "TakeEmDown.event"
+#include "cache/TakeEmDown.event"
 }
 
 {
 SongTable(Thrash_Em,songThrashEm)
-#include "ThrashEm.event"
+#include "cache/ThrashEm.event"
 }
 
 {
 SongTable(Vendors_of_Avenir,songVendorsOfAvenir)
-#include "VendorsOfAvenir.event"
+#include "cache/VendorsOfAvenir.event"
 }
 
 {
 SongTable(We_Stand,songWeStand)
-#include "WeStand.event"
+#include "cache/WeStand.event"
 }
 
 {
 SongTable(We_Strive,songWeStrive)
-#include "WeStrive.event"
+#include "cache/WeStrive.event"
 }
 
 {
 SongTable(We_Will_Endure,songWeWillEndure)
-#include "WeWillEndure.event"
+#include "cache/WeWillEndure.event"
 }
 
 {
 SongTable(We_Will_Hold_the_Line,songWeWillHoldTheLine)
-#include "WeWillHoldTheLine.event"
+#include "cache/WeWillHoldTheLine.event"
 }
 
 {
 SongTable(We_Will_Overcome,songWeWillOvercome)
-#include "WeWillOvercome.event"
+#include "cache/WeWillOvercome.event"
 }
 
 {
 SongTable(We_Will_Persevere,songWeWillPersevere)
-#include "WeWillPersevere.event"
+#include "cache/WeWillPersevere.event"
 }
 
 {
 SongTable(We_Wont_Give_In,songWeWontGiveIn)
-#include "WeWontGiveIn.event"
+#include "cache/WeWontGiveIn.event"
 }
 
 {
 SongTable(Winds_across_the_Plains_of_Avenir,songWindsAcrossThePlainsOfAvenir)
-#include "WindsAcrossThePlainsOfAvenir.event"
+#include "cache/WindsAcrossThePlainsOfAvenir.event"
 }
 
 {
 SongTable(A_Formidable_Friend_Joins_in_the_Fray,songAFormidableFriendJoinsInTheFray)
-#include "AFormidableFriendJoinsInTheFray.event"
+#include "cache/AFormidableFriendJoinsInTheFray.event"
 }
 
 {
 SongTable(Avatars_of_Avenir,songAvatarsOfAvenir)
-#include "AvatarsOfAvenir.event"
+#include "cache/AvatarsOfAvenir.event"
 }
 
 {
 SongTable(The_Guardian_Spirit,songTheGuardianSpirit)
-#include "TheGuardianSpirit.event"
+#include "cache/TheGuardianSpirit.event"
 }
