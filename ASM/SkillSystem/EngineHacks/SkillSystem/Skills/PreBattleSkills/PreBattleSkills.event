@@ -264,7 +264,7 @@ POIN Skill_Getter
 
 ALIGN 4
 Trample:
-#incbin "Trample/Trample.dmp"
+#include "Trample/Trample.lyn.event"
 POIN SkillTester
 WORD TrampleID
 

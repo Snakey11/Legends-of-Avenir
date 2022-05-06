@@ -353,7 +353,7 @@ Opportunist: +4 damage[N]
 if the foe cannot counter.[X]
 
 ## SD_Trample
-Trample: +5 damage to[N]
+Trample: +2 damage to[N]
 unmounted units.[X]
 
 ## SD_Camaraderie
