@@ -7,6 +7,8 @@
     .short 0xF800
 .endm
 
+.equ gActiveUnit, 0x03004E50
+
 .global AutoPromoteUsability
 .type AutoPromoteUsability, %function
 AutoPromoteUsability:
@@ -52,6 +54,20 @@ blh #0x0804EF20, r1 @ KillAllE_Menu
 ldr r0, =AutoPromoteTestEvents
 mov r1, #0x01
 blh #0x0800D07C, r2 @ Run events
+
+@ There is a bug where the top item in the unit's inventory gets its uses decremented during promotion.
+@ Let's do a hacky fix by incrementing it first!
+ldr r0, =gActiveUnit
+ldr r0, [ r0 ]
+ldrh r1, [ r0, #0x1E ]
+cmp r1, #0x00
+beq EndAutoPromoteEffect
+mov r2, #0x01
+lsl r2, r2, #0x08
+add r1, r1, r2 @ Increment the durability.
+strh r1, [ r0, #0x1E ]
+
+EndAutoPromoteEffect:
 mov r0, #0x21
 pop { r1 }
 bx r1
