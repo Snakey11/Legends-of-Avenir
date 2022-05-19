@@ -156,3 +156,22 @@ Prologue[X]
 
 ## Mage4LeaveNameText
 4: Caught in the Middle[X]
+
+## Mage5LeaveKillNameText
+5: Proving Loyalty[X]
+
+## Mage6LeaveKillNameText
+[X]
+
+## Mage7LeaveKillNameText
+[X]
+
+## Mage5LeaveLeaveNameText
+[X]
+
+## Mage6LeaveLeaveNameText
+[X]
+
+## Mage7LeaveLeaveNameText
+[X]
+

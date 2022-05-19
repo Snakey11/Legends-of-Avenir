@@ -224,3 +224,21 @@ Defeat Pascal.[X]
 Escape to the[NL]
 north or talk[NL]
 to Blaine[X]
+
+## Mage5LeaveKillStatusText
+Defeat Sean.[X]
+
+## Mage6LeaveKillStatusText
+[X]
+
+## Mage7LeaveKillStatusText
+[X]
+
+## Mage5LeaveLeaveStatusText
+[X]
+
+## Mage6LeaveLeaveStatusText
+[X]
+
+## Mage7LeaveLeaveStatusText
+[X]
