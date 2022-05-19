@@ -167,6 +167,24 @@ ENDB
 	{
 	#include "Mage/Mage4Leave.event"
 	}
+	{
+	#include "Mage/Mage5LeaveKill.event"
+	}
+	{
+	#include "Mage/Mage6LeaveKill.event"
+	}
+	{
+	#include "Mage/Mage7LeaveKill.event"
+	}
+	{
+	#include "Mage/Mage5LeaveLeave.event"
+	}
+	{
+	#include "Mage/Mage6LeaveLeave.event"
+	}
+	{
+	#include "Mage/Mage7LeaveLeave.event"
+	}
 #endif
 
 #include "Sassy.event"
