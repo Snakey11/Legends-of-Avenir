@@ -194,4 +194,9 @@ Mage2SearchEvents
 Mage2LeaveEvents
 Mage3LeaveEvents
 Mage4LeaveEvents
-
+Mage5LeaveKillEvents
+Mage6LeaveKillEvents
+Mage7LeaveKillEvents
+Mage5LeaveLeaveEvents
+Mage6LeaveLeaveEvents
+Mage7LeaveLeaveEvents
