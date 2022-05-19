@@ -117,3 +117,15 @@
 #include "Mage/Mage3Leave.s"
 
 #include "Mage/Mage4Leave.s"
+
+#include "Mage/Mage5LeaveKill.s"
+
+#include "Mage/Mage6LeaveKill.s"
+
+#include "Mage/Mage7LeaveKill.s"
+
+#include "Mage/Mage5LeaveLeave.s"
+
+#include "Mage/Mage6LeaveLeave.s"
+
+#include "Mage/Mage7LeaveLeave.s"
