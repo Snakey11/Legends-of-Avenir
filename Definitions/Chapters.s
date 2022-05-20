@@ -60,6 +60,7 @@ MageLeave2
 MageLeave3
 MageLeave4
 MageLeaveKill5
+MageLeaveKill5Alt
 MageLeaveKill6
 MageLeaveKill7
 MageLeaveLeave5

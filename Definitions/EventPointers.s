@@ -89,6 +89,7 @@ ArcanaeEscapeMap
 LooterBaseMap
 TorchAttackMap
 InTheMiddleMap
+SplitDeploymentMap
 
 @ Map changes.
 ArcanaeCapitalChanges
@@ -136,9 +137,9 @@ ArcanaeEscapeChanges
 LooterBaseChanges
 TorchAttackChanges
 InTheMiddleChanges
+SplitDeploymentChanges
 
 @ Events.
-
 PrologueEvent
 Merc1Events
 Merc2MilitiaEvents
@@ -195,6 +196,7 @@ Mage2LeaveEvents
 Mage3LeaveEvents
 Mage4LeaveEvents
 Mage5LeaveKillEvents
+Mage5LeaveKillAltEvents
 Mage6LeaveKillEvents
 Mage7LeaveKillEvents
 Mage5LeaveLeaveEvents
