@@ -1,5 +1,6 @@
 
 EventPointerTable(Mage5LeaveKillEvents,ThisChapter)
+EventPointerTable(Mage5LeaveKillAltEvents,AltChapter)
 
 //Label ThisChapter
 ThisChapter:
@@ -11,6 +12,18 @@ POIN EndMainPointer EndMainPointer EndMainPointer
 POIN EndMainPointer
 POIN TrapData TrapData
 POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+AltChapter: // This is used for alternate deployment slots depending on plyaer choice.
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN EndMainPointer EndMainPointer EndMainPointer
+POIN EndMainPointer
+POIN TrapData TrapData
+POIN UnitsAlt UnitsAlt
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 //LabelEnd
@@ -25,6 +38,9 @@ END_MAIN
 
 //Label LocationBasedEvents
 LocationBasedEvents:
+Door(10,6)
+Chest(MasterSeal,7,5)
+Chest(Spear,9,5)
 END_MAIN
 
 //Label MiscBasedEvents
@@ -39,21 +55,40 @@ ALIGN 4
 
 //Label Units
 Units:
+UNIT
+
+UnitsAlt:
 EndUnit
 
 //Label BeginingScene
 BeginningScene:
+CAM1 [3,11]
 MUSC Stage_One_Conquest
 SetBackground(0x21)
 Text(Mage5LeaveKillStartingText)
 MUSC Fields_of_Avenir
 SetBackground(0x18)
 Text(Mage5LeaveKillAngryText)
+EndConvo
 MUSC March
+STAL 0x40
+SetBackground(0x18)
 Text(Mage5LeaveKillTravelText)
 EnterStop
-
-ENDA
+STAL 0x20
+ASMC CallMage5LeaveKillMenu
+BNE 0x0 0x0 0xC
+	// Direct assault.
+	Text(Mage5LeaveKillDirectText)
+	FADI 0x5
+	GOTO 0x1
+LABEL 0x0
+	// Diversion tactic.
+	Text(Mage5LeaveKillDiversionText)
+	FADI 0x5
+	LOMA MageLeaveKill5Alt // This clone chapter has different deployment.
+LABEL 0x1
+GotoPrepScreen
 
 //Label EndingScene
 EndingScene:
