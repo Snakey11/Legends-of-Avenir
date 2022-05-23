@@ -73,14 +73,17 @@ strh r0, [ r2, r3 ]
 pop { r4 }
 
 @ End:
-ldr r0, =gAttackStruct
-add r0, r0, #0x6E
-mov r1, #0x00
-strb r1, [ r0 ]
-ldr r0, =gDefenseStruct
-add r0, r0, #0x6E
-mov r1, #0x00
-strb r1, [ r0 ]
+@ Addition: Zero out each battle struct's 0x7B field, zeroing out the WEXP multiplier. This will prevent WEXP gain during scripted battles.
+mov r0, #0x00
+ldr r2, =gAttackStruct
+ldr r3, =gDefenseStruct
+mov r1, #0x7B
+strb r0, [ r2, r1 ]
+strb r0, [ r3, r1 ]
+mov r1, #0x6E
+strb r0, [ r2, r1 ]
+strb r0, [ r3, r1 ]
+
 mov r0, r10
 lsl r0, r0, #0x18
 
