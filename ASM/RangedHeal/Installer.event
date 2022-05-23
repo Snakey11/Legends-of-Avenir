@@ -1,0 +1,12 @@
+#include "Extensions/Hack Installation.txt"
+
+PUSH
+
+ORG 0x610D8
+jumpToHack(RangedHeal)
+
+POP
+
+ALIGN 4
+RangedHeal:
+#incbin "RangedHeal.dmp"

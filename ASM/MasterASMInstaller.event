@@ -221,7 +221,9 @@ BYTE IronSword IronLance IronAxe IronShortbow 0x00 Wind Lightning Flux
 ALIGN 4
 #include "Raid/Raid.event"
 */
-ALIGN 4
+
+#include "RangedHeal/Installer.event"
+
 #include "RefreshAll/RefreshAll.lyn.event"
 
 #include "RemoveBallistae/RemoveBallistae.lyn.event"
