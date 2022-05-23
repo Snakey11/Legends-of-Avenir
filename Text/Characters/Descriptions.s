@@ -306,9 +306,9 @@ The calm, skilled, but caring Captain[NL]
 of the Cesarian Leopard Brigade.[X]
 
 ## SamDescText
-A greedy Altian bandit who has[NL]
-caught wind of the[NL]
-Anguis's voyage.[X]
+A greedy Altian bandit[NL]
+who has caught wind[NL]
+of the Anguis's voyage.[X]
 
 ## SamBanditDescText
 An Altian bandit[NL]
