@@ -1,4 +1,7 @@
 
 ALIGN 4
 CharacterForcerTable:
+ForceCharacter(Arya,MageLeaveKill5Alt)
+ForceCharacter(Zaheva,MageLeaveKill5Alt)
+ForceCharacter(Remus,MageLeaveKill5Alt)
 WORD 0x0

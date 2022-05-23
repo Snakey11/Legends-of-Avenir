@@ -55,13 +55,31 @@ ALIGN 4
 
 //Label Units
 Units:
+UNIT 0x00 0x00 0x00 Level(1,Ally,True) [16,7] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Xena 0x00 0x00 Level(1,Ally,True) [17,6] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [18,5] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Ajax 0x00 0x00 Level(1,Ally,True) [18,7] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Arya 0x00 0x00 Level(1,Ally,True) [17,8] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Adeline 0x00 0x00 Level(1,Ally,True) [18,9] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Remus 0x00 0x00 Level(1,Ally,True) [17,10] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 UnitsAlt:
+UNIT 0x00 0x00 0x00 Level(1,Ally,True) [16,7] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Xena 0x00 0x00 Level(1,Ally,True) [17,6] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Ajax 0x00 0x00 Level(1,Ally,True) [18,7] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Adeline 0x00 0x00 Level(1,Ally,True) [18,9] 0x00 0x00 0x00 0x00 [0] NoAI
+
+UNIT Arya 0x00 0x00 Level(1,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Zaheva 0x00 0x00 Level(1,Ally,True) [1,1] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Remus 0x00 0x00 Level(1,Ally,True) [2,0] 0x00 0x00 0x00 0x00 [0] NoAI
 EndUnit
 
 //Label BeginingScene
 BeginningScene:
+LOAD1 0x1 Meanies1
+LOAD1 0x1 Meanies2
+ENUN
 CAM1 [3,11]
 MUSC Stage_One_Conquest
 SetBackground(0x21)
@@ -117,4 +135,32 @@ ENDA
 //Label Cutscene units
 EndingYvette:
 UNIT Yvette PegasusKnight Yvette Level(13,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [KillerLance,Javelin,Vulnerary] NoAI
+EndUnit
+
+//Label Chapter units
+Meanies1:
+UNIT Sean Sentinel Sean Level(4,Enemy,True) [2,12] 0x00 0x00 0x00 0x00 [Tomahawk] GuardAI
+UNIT Arcanian Sage Sean Level(3,Enemy,True) [1,14] 0x00 0x00 0x00 0x00 [Arcwind] AttackInRangeAI
+UNIT Arcanian General Sean Level(4,Enemy,True) [6,13] 0x00 0x00 0x00 0x00 [ShortSpear] GuardAI
+UNIT Arcanian Mage Sean Level(14,Enemy,True) [8,14] 0x00 0x00 0x00 0x00 [Elthunder] ChaseOnceApproachedAI
+UNIT Arcanian Swordmaster Sean Level(2,Enemy,True) [8,10] Drop 0x00 0x00 0x00 [SteelSword,DoorKey] AttackInRangeAI
+UNIT Arcanian Soldier Sean Level(11,Enemy,True) [13,8] 0x00 0x00 0x00 0x00 [Javelin] NoAI
+UNIT Arcanian Myrmidon Sean Level(12,Enemy,True) [13,5] 0x00 0x00 0x00 0x00 [KillingEdge] NoAI
+UNIT Arcanian Sniper Sean Level(13,Enemy,True) [14,4] 0x00 0x00 0x00 0x00 [SilverBow] AttackIfCloseAI
+UNIT Arcanian Archer Sean Level(14,Enemy,True) [15,13] 0x00 0x00 0x00 0x00 [SteelBow] AttackIfCloseAI
+UNIT Arcanian Archer Sean Level(12,Enemy,True) [15,14] 0x00 0x00 0x00 0x00 [IronLongbow] AttackIfCloseAI
+UNIT Arcanian Shaman Sean Level(13,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [Flux] AttackInRangeAI
+UNIT
+
+Meanies2:
+UNIT Arcanian Spellsword Sean Level(12,Enemy,True) [12,12] 0x00 0x00 0x00 0x00 [SteelSword,Fire] NoAI
+UNIT Arcanian Archer Sean Level(14,Enemy,True) [2,6] 0x00 0x00 0x00 0x00 [IronBow] ChaseOnceApproachedAI
+UNIT Arcanian Cavalier Sean Level(15,Enemy,True) [4,5] 0x00 0x00 0x00 0x00 [Dragonspear] AttackInRangeAI
+UNIT Arcanian Cavalier Sean Level(13,Enemy,True) [1,10] 0x00 0x00 0x00 0x00 [ToxinSword] AttackInRangeAI
+UNIT Arcanian Cavalier Sean Level(12,Enemy,True) [2,9] Drop 0x00 0x00 0x00 [HeavySpear,SteelBlade] NoAI
+UNIT Arcanian Mage Sean Level(12,Enemy,True) [8,2] Drop 0x00 0x00 0x00 [Elwind,ChestKey] AttackInRangeAI
+UNIT Arcanian Monk Sean Level(13,Enemy,True) [7,4] Drop 0x00 0x00 0x00 [Elwind,Physic,ChestKey] HealAlliesAI
+UNIT Arcanian Druid Sean Level(2,Enemy,True) [8,5] 0x00 0x00 0x00 0x00 [Nosferatu] HealAlliesAI
+UNIT Arcanian Archer Sean Level(13,Enemy,True) [9,3] 0x00 0x00 0x00 0x00 [SteelLongbow] AttackIfCloseAI
+UNIT Arcanian Mage Sean Level(14,Enemy,True) [5,9] 0x00 0x00 0x00 0x00 [Thunder] AttackInRangeAI
 EndUnit
