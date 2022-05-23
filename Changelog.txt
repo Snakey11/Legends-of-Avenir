@@ -1,4 +1,5 @@
 v2.2 hotfixes
+Fixed WRank gains in scripted battles
 Fixed 2-range heal (presumably from staff savant) putting the heal orb in the wrong spot
 Fixed Elanil and Finoc's rejoin in Mercenary 5 Cesaria
 Fixed promotion from the unit menu decrementing the top item of the unit's inventory
