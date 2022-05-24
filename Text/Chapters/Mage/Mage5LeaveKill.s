@@ -13,7 +13,7 @@ My Vice-Captain has brought me up to speed. So, most of you are Arcanian deserte
 [Right]What is it you want?
 [MidLeft][Smile]There is a small fort on the far side of the border that Arcanians have been using as a hub to make brief excursions into our territory. Go there and eliminate the inhabitants.
 [Right]Very well. Thank you for your time, Captain.
-[MidLeft]Oh, one last thing... I'll be sending Corporal Adeline and Private Remus with you to observe. They are free to help you in battle, but I want to make sure someone is there observing.[X]
+[MidLeft]Oh, one last thing... I'll be sending Corporal Adeline and Private Remus with you to observe. They are free to help you in battle, but I want to make sure someone is there observing. I'm sending her with a small supply convoy. Use it well.[X]
 
 ## Mage5LeaveKillAngryText
 [ConversationText]
@@ -45,6 +45,12 @@ It doesn't look too well-defended...
 [FarLeft]Let's just deal with this. They won't be expecting us, so we should be able to take care of this cleanly and easily.
 [MidRight]Is it like Arcanians to just charge into a battle with no strategy? It could be smarter to split up. Most of us act as a diversion, with a few select individuals sneaking into the fort from the back to strike at their back.
 [FarLeft]Either could work well. What do you think [Tact]?[X]
+
+## Mage5LeaveKillDirectMenuText
+Use a direct assault[X]
+
+## Mage5LeaveKillDiversionMenuText
+Create a diversion[X]
 
 ## Mage5LeaveKillDirectText
 [ConversationText]

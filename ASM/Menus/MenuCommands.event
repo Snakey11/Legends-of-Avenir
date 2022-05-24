@@ -89,8 +89,8 @@ Mage1MenuCommands:
 EventMenuCommandEnd
 
 Mage5LeaveKillMenuCommands:
-	EventMenuCommand(Mage5LeaveKillDirectText,StoreMenuIndex)
-	EventMenuCommand(Mage5LeaveKillDiversionText,StoreMenuIndex)
+	EventMenuCommand(Mage5LeaveKillDirectMenuText,StoreMenuIndex)
+	EventMenuCommand(Mage5LeaveKillDiversionMenuText,StoreMenuIndex)
 EventMenuCommandEnd
 
 #include "StoreIndex.lyn.event"
