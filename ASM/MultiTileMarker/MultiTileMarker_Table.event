@@ -21,7 +21,7 @@ MultiTile(MageLeave2,15,6,0x00)
 MultiTile(MageLeave2,15,7,0x00)
 MultiTile(MageLeave2,15,8,0x00)
 
-MultiTile(MageLeave4,6,0,0x10)
-MultiTile(MageLeave4,7,0,0x10)
+MultiTile(MageLeave4,6,0,0x00) // Using an event ID here is unnecessary because our chapter ID switch handles this for us.
+MultiTile(MageLeave4,7,0,0x00)
 
 BYTE 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF

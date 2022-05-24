@@ -59,6 +59,7 @@ MageSearch2
 MageLeave2
 MageLeave3
 MageLeave4
+MageLeave4Alt
 MageLeaveKill5
 MageLeaveKill5Alt
 MageLeaveKill6

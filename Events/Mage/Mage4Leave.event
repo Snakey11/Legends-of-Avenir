@@ -52,7 +52,6 @@ EndUnit
 
 //Label BeginingScene
 BeginningScene:
-ENUT 0x14 // For multitilemarker.
 MUSC Dry_Trail
 CAM1 [9,9]
 LOAD2 0x1 Friends
@@ -85,17 +84,26 @@ FADI 0x5
 CLEA 0x0
 CLEE 0x0
 CLEN 0x0
+CHECK_EXISTS Remus // Load Remus and Adeline if they don't exist.
+BNE 0x0 0x0 0xC
+	LOAD1 0x1 EndingRemus
+LABEL 0x0
+CHECK_EXISTS Adeline
+BNE 0x1 0x0 0xC
+	LOAD1 0x1 EndingAdeline
+LABEL 0x1
+MUNO
 SetBackground(0x18)
 TEXTSTART
 CHECK_EVENTID 0x13
-BEQ 0x0 0x0 0xC
+BEQ 0x2 0x0 0xC
 	// Event ID 0x13 is set. Tact talked to Blaine.
 	TEXTSHOW Mage4LeaveKillTalkText
-	GOTO 0x1
-LABEL 0x0
+	GOTO 0x3
+LABEL 0x2
 	// Event ID 0x13 is unset. Tact did not talk to Blaine.
 	TEXTSHOW Mage4LeaveKillNoTalkText
-LABEL 0x1
+LABEL 0x3
 TEXTEND
 TEXTSHOW2 Mage4LeaveKillText
 TEXTEND
@@ -117,9 +125,13 @@ NoFade
 ENDA
 
 //Label Character events
-TTactBlaine:
+TTactBlaine: // TODO: Check what tilechanges are active and reset them under the fade. This is nontrivial :(
 MUSI
-Text(Mage4LeaveTactBlaineText)
+FADI 0x5
+LOMA MageLeave4Alt
+STAL 0x08
+CAM1 Blaine
+STAL 0x08
 CHECK_EXISTS Remus
 BEQ 0x0 0x0 0xC
 	TurnAlly(Remus)
@@ -128,9 +140,11 @@ CHECK_EXISTS Adeline
 BEQ 0x1 0x0 0xC
 	TurnAlly(Adeline)
 LABEL 0x1
+SetBackground(0x18)
+Text(Mage4LeaveTactBlaineText)
 MUNO
+EndConvo
 ENUT 0x13 // Disable escaping.
-ENUF 0x14 // Turn off the escape markers.
 NoFade
 ENDA
 

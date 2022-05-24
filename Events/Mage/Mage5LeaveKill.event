@@ -79,8 +79,9 @@ EndUnit
 BeginningScene:
 LOAD1 0x1 Meanies1
 LOAD1 0x1 Meanies2
+LOAD2 0x1 Friends
 ENUN
-CAM1 [3,11]
+CAM1 [17,3]
 MUSC Stage_One_Conquest
 SetBackground(0x21)
 Text(Mage5LeaveKillStartingText)
@@ -90,22 +91,30 @@ Text(Mage5LeaveKillAngryText)
 EndConvo
 MUSC March
 STAL 0x40
+CAM1 [5,11]
+STAL 0x80
+CAM1 [17,3]
+STAL 0x30
+CHECK_ALIVE Adeline
+BEQ 0x0 0x0 0xC
+	FlashCursor(Adeline,60)
+LABEL 0x0
 SetBackground(0x18)
 Text(Mage5LeaveKillTravelText)
 EnterStop
 STAL 0x20
-ASMC CallMage5LeaveKillMenu
-BNE 0x0 0x0 0xC
+ASMC CallMage5LeaveKillMenu|1
+BNE 0x1 0x0 0xC
 	// Direct assault.
 	Text(Mage5LeaveKillDirectText)
 	FADI 0x5
-	GOTO 0x1
-LABEL 0x0
+	GOTO 0x2
+LABEL 0x1
 	// Diversion tactic.
 	Text(Mage5LeaveKillDiversionText)
 	FADI 0x5
 	LOMA MageLeaveKill5Alt // This clone chapter has different deployment.
-LABEL 0x1
+LABEL 0x2
 GotoPrepScreen
 
 //Label EndingScene
@@ -133,6 +142,12 @@ ENDA
 	/*UNIT DATA*/
 
 //Label Cutscene units
+Friends:
+UNIT 0x00 0x00 0x00 Level(1,Ally,True) [17,1] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Adeline 0x00 0x00 Level(1,Ally,True) [18,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Xena 0x00 0x00 Level(1,Ally,True) [18,0] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
 EndingYvette:
 UNIT Yvette PegasusKnight Yvette Level(13,Ally,True) [0,0] 0x00 0x00 0x00 0x00 [KillerLance,Javelin,Vulnerary] NoAI
 EndUnit

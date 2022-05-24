@@ -225,6 +225,9 @@ Escape to the[NL]
 north or talk[NL]
 to Blaine[X]
 
+## Mage4LeaveAltStatusText
+Defeat Gerald.[X]
+
 ## Mage5LeaveKillStatusText
 Defeat Sean.[X]
 

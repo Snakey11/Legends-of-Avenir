@@ -46,7 +46,7 @@ What about escaping? I thought the goal was to get away from this and figure out
 ## Mage4LeaveTactBlaineText
 [ConversationText]
 [MidRight][LoadPlayer][MidLeft][LoadBlaine]
-Who are you? What are you doing here[MoveLeft] on a battlefield? State your business, quickly, before I cut you down, Arcanian dog.
+Who are you? What are you doing here[MoveMidLeft] on a battlefield? State your business, quickly, before I cut you down, Arcanian dog.
 [MidRight]I am [Tact], a former student of Arcanae. My friends and I are outcasts, betrayed by the Grand Magus Mistlain...
 [MidLeft]Betrayed? Hm. We do not have time to discuss this now. Here's your chance. Prove to me this isn't a trick. Assist me in killing the Arcanian commander of this battlefield, and perhaps I will hear you out... Remus! Adeline! Assist [Tact] here. You all are going to lead a counterassault against the Arcanian commander!
 [CloseSpeech][MoveLeft][FarLeft][LoadRemus]

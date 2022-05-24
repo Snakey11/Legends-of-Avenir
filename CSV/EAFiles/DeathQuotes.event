@@ -100,7 +100,9 @@ DeathQuote(Lakshmi,Mage1,0x02,Mage1LakshmiDeathText)
 DeathQuote(Arya,MageLeave3,0x13,Mage3LeaveAryaDeathText)
 DeathQuote(Pascal,MageLeave3,0x02,Mage3LeavePascalDeathText)
 DeathQuote(Gerald,MageLeave4,0x02,Mage4LeaveGeraldDeathText)
+DeathQuote(Gerald,MageLeave4Alt,0x02,Mage4LeaveGeraldDeathText)
 DeathQuote(Blaine,MageLeave4,0x00,Mage4LeaveBlaineDeathText)
+DeathQuote(Blaine,MageLeave4Alt,0x00,Mage4LeaveBlaineDeathText)
 
 // Nonspecific death quotes come after.
 DeathQuote(Vicar,AllChapters,0x00,VicarDeathText)

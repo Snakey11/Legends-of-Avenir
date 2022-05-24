@@ -25,7 +25,7 @@ Speak for yourself.
 [Left]We don't have any other choice. If any of you want to leave now, you can. But I think that if we go through with this and can make an ally of Cesaria, we can help them strike back against Arcanae in immense ways. We know the lay of the land, we know the capital, we know the leaders. This could be our way to get our revenge.
 [FarRight]I agree.
 [Right]I suppose you're right that we don't have much choice...
-[FarLeft]... Fine.[FarRight][ClearFace][LoadAdeline][ClearFace]
+[FarLeft]... Fine.[FarRight][ClearFace][LoadAdeline]
 You're the Arcanians?
 [Left]Corporal Adeline, I presume?
 [FarRight]Yes. I've been assigned to travel with you on this mission along with Corporal Remus. He's getting a few supplies ready right now, I thought I would swing by and make sure you're ready to leave.
