@@ -108,6 +108,14 @@ TEXTEND
 TEXTSHOW2 Mage4LeaveKillText
 TEXTEND
 REMA
+GiveToSupplySilent(SteelSword)
+GiveToSupplySilent(Wyrmslayer)
+GiveToSupplySilent(Javelin)
+GiveToSupplySilent(SteelAxe)
+GiveToSupplySilent(Worm)
+GiveToSupplySilent(Heal)
+GiveToSupplySilent(Vulnerary)
+GiveGoldSilent(3000)
 MoveToChapter(MageLeaveKill5)
 NoFade
 EndA2
