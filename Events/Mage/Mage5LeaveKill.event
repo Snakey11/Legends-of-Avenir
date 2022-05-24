@@ -77,6 +77,7 @@ EndUnit
 
 //Label BeginingScene
 BeginningScene:
+EnterStop
 LOAD1 0x1 Meanies1
 LOAD1 0x1 Meanies2
 LOAD2 0x1 Friends
@@ -89,6 +90,7 @@ MUSC Fields_of_Avenir
 SetBackground(0x18)
 Text(Mage5LeaveKillAngryText)
 EndConvo
+EnterStop
 MUSC March
 STAL 0x40
 CAM1 [5,11]
@@ -114,6 +116,7 @@ LABEL 0x1
 	Text(Mage5LeaveKillDiversionText)
 	FADI 0x5
 	LOMA MageLeaveKill5Alt // This clone chapter has different deployment.
+	STAL 0x10
 LABEL 0x2
 GotoPrepScreen
 
@@ -161,7 +164,7 @@ UNIT Arcanian Mage Sean Level(14,Enemy,True) [8,14] 0x00 0x00 0x00 0x00 [Elthund
 UNIT Arcanian Swordmaster Sean Level(2,Enemy,True) [8,10] Drop 0x00 0x00 0x00 [SteelSword,DoorKey] AttackInRangeAI
 UNIT Arcanian Soldier Sean Level(11,Enemy,True) [13,8] 0x00 0x00 0x00 0x00 [Javelin] NoAI
 UNIT Arcanian Myrmidon Sean Level(12,Enemy,True) [13,5] 0x00 0x00 0x00 0x00 [KillingEdge] NoAI
-UNIT Arcanian Sniper Sean Level(13,Enemy,True) [14,4] 0x00 0x00 0x00 0x00 [SilverBow] AttackIfCloseAI
+UNIT Arcanian Mage Sean Level(13,Enemy,True) [14,4] 0x00 0x00 0x00 0x00 [Elfire] AttackIfCloseAI
 UNIT Arcanian Archer Sean Level(14,Enemy,True) [15,13] 0x00 0x00 0x00 0x00 [SteelBow] AttackIfCloseAI
 UNIT Arcanian Archer Sean Level(12,Enemy,True) [15,14] 0x00 0x00 0x00 0x00 [IronLongbow] AttackIfCloseAI
 UNIT Arcanian Shaman Sean Level(13,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [Flux] AttackInRangeAI
