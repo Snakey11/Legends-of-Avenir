@@ -79,6 +79,8 @@ ALIGN 4
 
 #include "FillAIRangeMap/FillAIDangerMap.event"
 
+#include "FixPrepUnitAltLoading/FixPrepUnitAltLoading.lyn.event"
+
 #include "GenderedText/GenderedText.event"
 
 #include "GetBattleAnimationID/GetBattleAnimationID.lyn.event" // Rewriting this vanilla routine because I don't want to debug it lol.
