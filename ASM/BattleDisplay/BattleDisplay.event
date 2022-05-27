@@ -1,0 +1,12 @@
+
+#include "ProcDefinitions.event"
+// An XCOM-like battle preview showing where various stats are coming from on R press on the battle screen.
+
+#include "BattleDisplay.lyn.event"
+
+ALIGN 4
+gBattleDisplayProc:
+PROC_CALL_ROUTINE(BattleDisplayDraw)
+
+PROC_LOOP_ROUTINE(BattleDisplayHandlePresses) // Wait for B press, arrow presses...
+PROC_END

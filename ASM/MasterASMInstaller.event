@@ -34,6 +34,8 @@ ENDA
 
 #include "BattleCritCap/CritCap.event"
 
+#include "BattleDisplay/BattleDisplay.event"
+
 /*
 For 1 range, lower
   AS by 2,
