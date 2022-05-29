@@ -11,54 +11,163 @@ jumpToHack(BtlLoopParent)
 // SHORT 0x280C 0xD005
 POP
 
+BaseAttackText:
+String("Base attack") ; BYTE 0
+
+BaseDefenseText:
+String("Base defense") ; BYTE 0
+
+BaseHitText:
+String("Base hit") ; BYTE 0
+
+BaseAvoidText:
+String("Base avoid") ; BYTE 0
+
+BaseCritText:
+String("Base crit") ; BYTE 0
+
+BaseDodgeText:
+String("Base dodge") ; BYTE 0
+
+SupportTestText:
+String("Supports") ; BYTE 0
+
 ALIGN 4
 BtlLoopParent:
-#incbin "FE8_battle_calc_loop.dmp"
+SHORT 0x2200 // mov r2, #0x00.
+BtlLoopParentNoMov:
+//#incbin "FE8_battle_calc_loop.dmp"
+#include "FE8_battle_calc_loop.lyn.event"
 BtlLoopTable:
-POIN BC_DefRes BC_Power BC_ASpd BC_Hit BC_Avo BC_Crit CritUpSkill BC_Dodge BC_Support BC_WRank BC_Status //these are the existing battle calculation routines
-POIN Lull //This is effectively a stat modifier routine, so it has to go first
-POIN FaireCheck HolyAura
-POIN BreakerCheck MageSlayer
-POIN BlowCheck
-POIN DefendingCheck
-#ifdef LEADERSHIP_STARS
-  POIN LeadershipHook
-#endif //LEADERSHIP_STARS
-#ifdef BIORHYTHM
-  POIN BiorhythmFunc
-#endif //BIORHYTHM
-POIN Wrath SpurStr SpurMag SpurSpd SpurDef SpurRes
-POIN DriveStr DriveMag DriveSpd DriveDef DriveRes
-POIN LuckySeven OddRhythm EvenRhythm QuickBurn SlowBurn
-POIN Demoiselle Gentilhomme MaleficAura Intimidate Tantivy Focus Inspiration Charm Solidarity VoiceOfPeace Anathema LilysPoise Charisma Hex Loyalty Infiltrator
-POIN ElbowRoom NaturalCover Gamble FieryBlood LifeAndDeath WindDisciple Perfectionist Puissance Hawkeye LightWeight Trample Opportunist BattleVeteran SilentPride Thunderstorm Outrider HeavyStrikes Charge Vanity KnightAspirant AssassinateDamageBonus ArcaneBlade
-POIN Daunt BloodTide WhitePool NightTide Insight Prescience Vigilance DefiantAvo DefiantCrit TowerShield ShortShield IndoorFighter OutdoorFighter Deadeye Fortune
-POIN BlueFlame BlueFlameAura DoubleLion Cultured Thighdeology Thotslayer KeepUp Armorboost Horseguard Skyguard ForeignPrincess ChargePlus
-POIN Frenzy // This was moved here because Str/Mag Split conflict, and... I'm not sure why it wouldn't be here in the first place.
-POIN UpWithArch
-POIN AxefaithHit
-POIN StancesASM
-POIN BowDebuff
+POIN BC_DefRes BaseDefenseText
+POIN BC_Power BaseAttackText 
+POIN BC_ASpd 0
+POIN BC_Hit BaseHitText
+POIN BC_Avo BaseAvoidText
+POIN BC_Crit BaseCritText
+POIN CritUpSkill 0
+POIN BC_Dodge BaseDodgeText
+POIN BC_Support SupportTestText
+POIN BC_WRank 0
+POIN BC_Status 0 //these are the existing battle calculation routines
+
+POIN Lull 0 //This is effectively a stat modifier routine, so it has to go first
+POIN FaireCheck 0
+POIN HolyAura 0
+POIN BreakerCheck 0
+POIN MageSlayer 0
+POIN BlowCheck 0
+POIN DefendingCheck 0
+
+POIN Wrath 0
+POIN SpurStr 0
+POIN SpurMag 0
+POIN SpurSpd 0
+POIN SpurDef 0
+POIN SpurRes 0
+
+POIN DriveStr 0
+POIN DriveMag 0
+POIN DriveSpd 0
+POIN DriveDef 0
+POIN DriveRes 0
+
+POIN LuckySeven 0
+POIN OddRhythm 0
+POIN EvenRhythm 0
+POIN QuickBurn 0
+POIN SlowBurn 0
+
+POIN Demoiselle 0
+POIN Gentilhomme 0
+POIN MaleficAura 0
+POIN Intimidate 0
+POIN Tantivy 0
+POIN Focus 0
+POIN Inspiration 0
+POIN Charm 0
+POIN Solidarity 0
+POIN VoiceOfPeace 0
+POIN Anathema 0
+POIN LilysPoise 0
+POIN Charisma 0
+POIN Hex 0
+POIN Loyalty 0
+POIN Infiltrator 0
+
+POIN ElbowRoom 0
+POIN NaturalCover 0
+POIN Gamble 0
+POIN FieryBlood 0
+POIN LifeAndDeath 0
+POIN WindDisciple 0
+POIN Perfectionist 0
+POIN Puissance 0
+POIN Hawkeye 0
+POIN LightWeight 0
+POIN Trample 0
+POIN Opportunist 0
+POIN BattleVeteran 0
+POIN SilentPride 0
+POIN Thunderstorm 0
+POIN Outrider 0
+POIN HeavyStrikes 0
+POIN Charge 0
+POIN Vanity 0
+POIN KnightAspirant 0
+POIN AssassinateDamageBonus 0
+POIN ArcaneBlade 0
+
+POIN Daunt 0
+POIN BloodTide 0
+POIN WhitePool 0
+POIN NightTide 0
+POIN Insight 0
+POIN Prescience 0
+POIN Vigilance 0
+POIN DefiantAvo 0
+POIN DefiantCrit 0
+POIN TowerShield 0
+POIN ShortShield 0
+POIN IndoorFighter 0
+POIN OutdoorFighter 0
+POIN Deadeye 0
+POIN Fortune
+
+POIN BlueFlame 0
+POIN BlueFlameAura 0
+POIN DoubleLion 0
+POIN Cultured 0
+POIN Thighdeology 0
+POIN Thotslayer 0
+POIN KeepUp 0
+POIN Armorboost 0
+POIN Horseguard 0
+POIN Skyguard 0
+POIN ForeignPrincess 0
+POIN ChargePlus 0
+POIN Frenzy 0 // This was moved here because Str/Mag Split conflict, and... I'm not sure why it wouldn't be here in the first place.
+POIN AxefaithHit 0
+POIN StancesASM 0
+POIN BowDebuff 0
 #ifdef ENABLE_GBA_LETHALITY
-POIN LethalitySkill Bane
+POIN LethalitySkill 0
+POIN Bane 0
 #else
-POIN LethalitySkill NonGBALethalitySkill Bane
+POIN LethalitySkill 0
+POIN NonGBALethalitySkill 0
+POIN Bane 0
 #endif
 
-#ifdef MODULAR_PRE_BATTLE_SKILLS
-	POIN ModularPreBattleSkill 
-#endif // MODULAR_PRE_BATTLE_SKILLS
-//add any new ones before here
-
 //quick riposte goes after everything that might touch AS
-POIN QuickRiposte
+POIN QuickRiposte 0
 
 //tower shield plus needs to go after every other skill that may affect defender's attack
-POIN TowerShieldPlus
+POIN TowerShieldPlus 0
 // Because of how killing machine works, critical check should always be done last
-POIN CriticalCheck
+POIN CriticalCheck 0
 #ifdef CANNOT_CRIT
-	POIN NegateCritWeapons //This goes last, so that crit will always be set to 0 if set and never modified from there
+	POIN NegateCritWeapons 0 //This goes last, so that crit will always be set to 0 if set and never modified from there
 #endif // CANNOT_CRIT
 POIN 0
 
