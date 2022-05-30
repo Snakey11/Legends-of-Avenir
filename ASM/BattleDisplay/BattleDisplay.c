@@ -2,6 +2,8 @@
 #include <stddef.h>
 #include "FE-CLib-master/include/gbafe.h"
 
+// TODO: Various prebattle checks are packaged into unrelated routines (namely blow skills, there are a few others I need to hunt down).
+
 typedef struct Change Change;
 typedef struct BattleDisplayProc BattleDisplayProc;
 typedef struct PreBattleStats PreBattleStats;

@@ -3,6 +3,9 @@
 
 	/* Pre-battle calculation loop */
 
+// Edit: Each entry is now a pointer plus a name for the battle display.
+#define preCalc(fn,str) "PUSH ; FILL 24 ; POP ; PUSH ; POIN fn|1 ; String(str) ; POP ; ORG CURRENTOFFSET + 24"
+
 PUSH
 ORG 0x2a95c
 jumpToHack(BtlLoopParent)
@@ -11,27 +14,6 @@ jumpToHack(BtlLoopParent)
 // SHORT 0x280C 0xD005
 POP
 
-BaseAttackText:
-String("Base attack") ; BYTE 0
-
-BaseDefenseText:
-String("Base defense") ; BYTE 0
-
-BaseHitText:
-String("Base hit") ; BYTE 0
-
-BaseAvoidText:
-String("Base avoid") ; BYTE 0
-
-BaseCritText:
-String("Base crit") ; BYTE 0
-
-BaseDodgeText:
-String("Base dodge") ; BYTE 0
-
-SupportTestText:
-String("Supports") ; BYTE 0
-
 ALIGN 4
 BtlLoopParent:
 SHORT 0x2200 // mov r2, #0x00.
@@ -39,135 +21,132 @@ BtlLoopParentNoMov:
 //#incbin "FE8_battle_calc_loop.dmp"
 #include "FE8_battle_calc_loop.lyn.event"
 BtlLoopTable:
-POIN BC_DefRes BaseDefenseText
-POIN BC_Power BaseAttackText 
-POIN BC_ASpd 0
-POIN BC_Hit BaseHitText
-POIN BC_Avo BaseAvoidText
-POIN BC_Crit BaseCritText
-POIN CritUpSkill 0
-POIN BC_Dodge BaseDodgeText
-POIN BC_Support SupportTestText
-POIN BC_WRank 0
-POIN BC_Status 0 //these are the existing battle calculation routines
+preCalc(BC_DefRes,"Base defense")
+preCalc(BC_Power,"Base attack")
+preCalc(BC_ASpd,"Base attack speed")
+preCalc(BC_Hit,"Base hit")
+preCalc(BC_Avo,"Base avoid")
+preCalc(BC_Crit,"Base crit")
+preCalc(CritUpSkill,"Crit up")
+preCalc(BC_Dodge,"Base dodge")
+preCalc(BC_Support,"Supports")
+preCalc(BC_WRank,"Weapon rank")
+preCalc(BC_Status,"Status") //these are the existing battle calculation routines
 
-POIN Lull 0 //This is effectively a stat modifier routine, so it has to go first
-POIN FaireCheck 0
-POIN HolyAura 0
-POIN BreakerCheck 0
-POIN MageSlayer 0
-POIN BlowCheck 0
-POIN DefendingCheck 0
+preCalc(Lull,"Lull") //This is effectively a stat modifier routine, so it has to go first
+preCalc(FaireCheck,"Faire")
+preCalc(HolyAura,"Holy aura")
+preCalc(BreakerCheck,"Breaker")
+preCalc(MageSlayer,"Mage slayer")
+preCalc(BlowCheck,"Blows")
+preCalc(DefendingCheck,"") // ???
 
-POIN Wrath 0
-POIN SpurStr 0
-POIN SpurMag 0
-POIN SpurSpd 0
-POIN SpurDef 0
-POIN SpurRes 0
+preCalc(Wrath,"Wrath")
+preCalc(SpurStr,"Spur")
+preCalc(SpurMag,"Spur")
+preCalc(SpurSpd,"Spur")
+preCalc(SpurDef,"Spur")
+preCalc(SpurRes,"Spur")
 
-POIN DriveStr 0
-POIN DriveMag 0
-POIN DriveSpd 0
-POIN DriveDef 0
-POIN DriveRes 0
+preCalc(DriveStr,"Drive")
+preCalc(DriveMag,"Drive")
+preCalc(DriveSpd,"Drive")
+preCalc(DriveDef,"Drive")
+preCalc(DriveRes,"Drive")
 
-POIN LuckySeven 0
-POIN OddRhythm 0
-POIN EvenRhythm 0
-POIN QuickBurn 0
-POIN SlowBurn 0
+preCalc(LuckySeven,"Lucky seven")
+preCalc(OddRhythm,"Odd rhythm")
+preCalc(EvenRhythm,"Even rhythm")
+preCalc(QuickBurn,"Quick burn")
+preCalc(SlowBurn,"Slow burn")
 
-POIN Demoiselle 0
-POIN Gentilhomme 0
-POIN MaleficAura 0
-POIN Intimidate 0
-POIN Tantivy 0
-POIN Focus 0
-POIN Inspiration 0
-POIN Charm 0
-POIN Solidarity 0
-POIN VoiceOfPeace 0
-POIN Anathema 0
-POIN LilysPoise 0
-POIN Charisma 0
-POIN Hex 0
-POIN Loyalty 0
-POIN Infiltrator 0
+preCalc(Demoiselle,"Demoiselle")
+preCalc(Gentilhomme,"Gentilhomme")
+preCalc(MaleficAura,"Malefic aura")
+preCalc(Intimidate,"Intimidate")
+preCalc(Tantivy,"Tantivy")
+preCalc(Focus,"Focus")
+preCalc(Inspiration,"Inspiration")
+preCalc(Charm,"Charm")
+preCalc(Solidarity,"Solidarity")
+preCalc(VoiceOfPeace,"Voice of peace")
+preCalc(Anathema,"Anathema")
+preCalc(LilysPoise,"Lilly's poise")
+preCalc(Charisma,"Charisma")
+preCalc(Hex,"Hex")
+preCalc(Loyalty,"Loyalty")
+preCalc(Infiltrator,"Infiltrator")
 
-POIN ElbowRoom 0
-POIN NaturalCover 0
-POIN Gamble 0
-POIN FieryBlood 0
-POIN LifeAndDeath 0
-POIN WindDisciple 0
-POIN Perfectionist 0
-POIN Puissance 0
-POIN Hawkeye 0
-POIN LightWeight 0
-POIN Trample 0
-POIN Opportunist 0
-POIN BattleVeteran 0
-POIN SilentPride 0
-POIN Thunderstorm 0
-POIN Outrider 0
-POIN HeavyStrikes 0
-POIN Charge 0
-POIN Vanity 0
-POIN KnightAspirant 0
-POIN AssassinateDamageBonus 0
-POIN ArcaneBlade 0
+preCalc(ElbowRoom,"Elbow room")
+preCalc(NaturalCover,"Natural cover")
+preCalc(Gamble,"Gamble")
+preCalc(FieryBlood,"Fiery blood")
+preCalc(LifeAndDeath,"Life and death")
+preCalc(WindDisciple,"Wind disciple")
+preCalc(Perfectionist,"Perfectionist")
+preCalc(Puissance,"Puissance")
+preCalc(Hawkeye,"Hawkeye")
+preCalc(LightWeight,"Light weight")
+preCalc(Trample,"Trample")
+preCalc(Opportunist,"Opportunist")
+preCalc(BattleVeteran,"Battle veteran")
+preCalc(SilentPride,"Silent pride")
+preCalc(Thunderstorm,"Thunderstorm")
+preCalc(Outrider,"Outrider")
+preCalc(HeavyStrikes,"Heavy strikes")
+preCalc(Charge,"Charge")
+preCalc(Vanity,"Vanity")
+preCalc(KnightAspirant,"Knight aspirant")
+preCalc(AssassinateDamageBonus,"Assassinate")
+preCalc(ArcaneBlade,"Arcane blade")
 
-POIN Daunt 0
-POIN BloodTide 0
-POIN WhitePool 0
-POIN NightTide 0
-POIN Insight 0
-POIN Prescience 0
-POIN Vigilance 0
-POIN DefiantAvo 0
-POIN DefiantCrit 0
-POIN TowerShield 0
-POIN ShortShield 0
-POIN IndoorFighter 0
-POIN OutdoorFighter 0
-POIN Deadeye 0
-POIN Fortune
+preCalc(Daunt,"Daunt")
+preCalc(BloodTide,"Blood tide")
+preCalc(WhitePool,"White pool")
+preCalc(NightTide,"Night tide")
+preCalc(Insight,"Insight")
+preCalc(Prescience,"Prescience")
+preCalc(Vigilance,"Vigilance")
+preCalc(DefiantAvo,"Defiance")
+preCalc(DefiantCrit,"Defiance")
+preCalc(TowerShield,"Tower shield")
+preCalc(ShortShield,"Short shield")
+preCalc(IndoorFighter,"Indoor fighter")
+preCalc(OutdoorFighter,"Outdoor fighter")
+preCalc(Deadeye,"Deadeye")
+preCalc(Fortune,"Fortune")
 
-POIN BlueFlame 0
-POIN BlueFlameAura 0
-POIN DoubleLion 0
-POIN Cultured 0
-POIN Thighdeology 0
-POIN Thotslayer 0
-POIN KeepUp 0
-POIN Armorboost 0
-POIN Horseguard 0
-POIN Skyguard 0
-POIN ForeignPrincess 0
-POIN ChargePlus 0
-POIN Frenzy 0 // This was moved here because Str/Mag Split conflict, and... I'm not sure why it wouldn't be here in the first place.
-POIN AxefaithHit 0
-POIN StancesASM 0
-POIN BowDebuff 0
+preCalc(BlueFlame,"Blue flame")
+preCalc(BlueFlameAura,"Blue flame")
+preCalc(DoubleLion,"Double lion")
+preCalc(KeepUp 0,"Keep up")
+preCalc(Armorboost,"Armor boost")
+preCalc(Horseguard,"Horse guard")
+preCalc(Skyguard,"Sky guard")
+preCalc(ForeignPrincess,"True Cesarian")
+preCalc(ChargePlus,"Charge")
+preCalc(Frenzy,"Frenzy") // This was moved here because Str/Mag Split conflict, and... I'm not sure why it wouldn't be here in the first place.
+preCalc(AxefaithHit,"Axefaith")
+preCalc(StancesASM,"Stances")
+preCalc(BowDebuff,"Bow range")
 #ifdef ENABLE_GBA_LETHALITY
-POIN LethalitySkill 0
-POIN Bane 0
+preCalc(LethalitySkill,"Lethality")
+preCalc(Bane,"Bane")
 #else
-POIN LethalitySkill 0
-POIN NonGBALethalitySkill 0
-POIN Bane 0
+preCalc(LethalitySkill,"Lethality")
+preCalc(NonGBALethalitySkill,"Lethality")
+preCalc(Bane,"Bane")
 #endif
 
 //quick riposte goes after everything that might touch AS
-POIN QuickRiposte 0
+preCalc(QuickRiposte,"Quick riposte")
 
 //tower shield plus needs to go after every other skill that may affect defender's attack
-POIN TowerShieldPlus 0
+preCalc(TowerShieldPlus,"Tower shield")
 // Because of how killing machine works, critical check should always be done last
-POIN CriticalCheck 0
+preCalc(CriticalCheck,"Critical check") // ???
 #ifdef CANNOT_CRIT
-	POIN NegateCritWeapons 0 //This goes last, so that crit will always be set to 0 if set and never modified from there
+	preCalc(NegateCritWeapons,"No crit") //This goes last, so that crit will always be set to 0 if set and never modified from there
 #endif // CANNOT_CRIT
 POIN 0
 

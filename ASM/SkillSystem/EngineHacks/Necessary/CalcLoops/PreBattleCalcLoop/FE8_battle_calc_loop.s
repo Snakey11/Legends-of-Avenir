@@ -59,10 +59,10 @@ beq ReitLoop
 	mov r2, #0x10
 	add r0, r1, r2
 	mov r2, r4
-	ldr r3, [ r6, #0x04 ] @ Name (char*) for this effect.
+	add r3, r6, #0x04 @ Name (char*) for this effect.
 	.short 0xF800 @ This function compares the stats in the temporary buffers to the real battle stats and logs changes.
 ReitLoop:
-add r6,#8 @ Changed so each entry is a function pointer + a name!
+add r6,#24 @ Changed so each entry is a function pointer + 20-byte long string.
 b StartLoop
 EndLoop:
 
