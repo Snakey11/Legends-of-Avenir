@@ -7,6 +7,8 @@
 typedef struct Change Change;
 typedef struct BattleDisplayProc BattleDisplayProc;
 typedef struct PreBattleStats PreBattleStats;
+typedef struct Tile Tile;
+typedef struct TSA TSA;
 
 enum {
 	KEY_A = 1<<0,
@@ -37,7 +39,7 @@ enum {
 	STATS_DDG,
 };
 
-const char emptyStr[] = {'a',0};
+const char emptyStr[] = {0};
 
 struct Change { // An entry for a signle stat change.
 	s16 amount; // Amount a stat changed by.
@@ -49,6 +51,7 @@ struct Change { // An entry for a signle stat change.
 struct BattleDisplayProc {
 	PROC_HEADER
 	u8 status; // 0x29.
+	u16 tileStart; // 0x30.
 };
 
 struct PreBattleStats {
@@ -63,14 +66,28 @@ struct PreBattleStats {
 	short dodge;*/
 };
 
-extern u16 gBG0MapBuffer[32][32]; // 0x02022CA8. Ew why does FE-CLib-master not do it like this?
+struct Tile {
+	u16 tileID : 10;
+	u16 horizontalFlip : 1;
+	u16 verticalFlip : 1;
+	u16 paletteID : 4;
+};
+
+struct TSA {
+	u8 width, height;
+	Tile tiles[];
+};
+
+extern u16 gBG0MapBuffer[32][32]; // 0x02022CA8.
 extern u16 gBG1MapBuffer[32][32]; // 0x020234A8.
 extern u16 gBG2MapBuffer[32][32]; // 0x02023CA8.
+extern u8 gSpecialUiCharAllocationTable; // 0x02028E78. Wrong type but I only need to set this to 0xFF once.
 extern Change gChangeList[]; // Unit loading buffer (+8) should work.
 extern u8 gChangeListSize; // For convenience, put THIS at the offset of the unit loading buffer.
 const int CHANGE_LIST_MAX_SIZE = 63; // Dictated by available space in the unit loading buffer. 64 changes should be enough, right?
 
 extern ProcInstruction gBattleDisplayProc;
+extern TSA gBattleDisplayTSA;
 
 
 void BattleDisplayInitList(void);
@@ -81,8 +98,11 @@ int BattleDisplayFilterList(Change* change, int offset, int isActor);
 
 int BattleForecastRPress(struct TargetSelectionProc* proc, struct TargetEntry* entry);
 void BattleDisplayDraw(BattleDisplayProc* proc);
-int BattleDisplayDrawRow(Change* entry, int y, int tile, int shouldFlip);
-void BattleDisplayClear(BattleDisplayProc* proc);
+static void DrawLabel(int val, char* str);
+static void DrawName(int isActor);
+void BattleDisplayDrawRow(Change* entry, int y, int shouldFlip);
+void BattleDisplayClearText(BattleDisplayProc* proc);
+void BattleDisplayClearBG(BattleDisplayProc* proc);
 void BattleDisplayHandlePresses(BattleDisplayProc* proc);
 
 #include "ChangeList.c"
@@ -95,86 +115,121 @@ int BattleForecastRPress(struct TargetSelectionProc* proc, struct TargetEntry* e
 
 void BattleDisplayProcInit(BattleDisplayProc* proc) {
 	proc->status = STATUS_ATT_ATK;
+	proc->tileStart = gpCurrentFont->tileNext;
+}
+
+void BattleDisplayDrawBG(BattleDisplayProc* proc) {
+	BgMap_ApplyTsa(&gBG1MapBuffer[1][0],&gBattleDisplayTSA,0);
+	EnableBgSyncByMask(2);
 }
 
 void BattleDisplayDraw(BattleDisplayProc* proc) {
-	int tile = 0;
-	int y = 1;
+	int y1 = 2;
+	int y2 = 9;
 	
 	int size = 0;
 	Change* buffer = (Change*)(&gGenericBuffer);
 	switch ( proc->status ) {
 		case STATUS_ATT_ATK:
+			//DrawName(1);
+			DrawLabel(gBattleActor.battleAttack-gBattleTarget.battleDefense,"Might");
+			
 			size = BattleDisplayFilterList(buffer,STATS_ATK,1); // Get attack from the actor.
-			for ( int i = 0 ; i < size ; i++ ) { tile = BattleDisplayDrawRow(&buffer[i],y,tile,0); y += 2; }
+			for ( int i = 0 ; i < size ; i++ ) { BattleDisplayDrawRow(&buffer[i],y1,0); y1 += 2; }
 			size = BattleDisplayFilterList(buffer,STATS_DEF,0); // Get defense from target.
-			for ( int i = 0 ; i < size ; i++ ) { tile = BattleDisplayDrawRow(&buffer[i],y,tile,1); y += 2; }
+			for ( int i = 0 ; i < size ; i++ ) { BattleDisplayDrawRow(&buffer[i],y2,1); y2 += 2; }
 			break;
 		case STATUS_ATT_HIT:
+			//DrawName(1);
+			DrawLabel(gBattleActor.battleEffectiveHitRate,"Hit rate");
+			
 			size = BattleDisplayFilterList(buffer,STATS_HIT,1); // Get hit from the actor.
-			for ( int i = 0 ; i < size ; i++ ) { tile = BattleDisplayDrawRow(&buffer[i],y,tile,0); y += 2; }
+			for ( int i = 0 ; i < size ; i++ ) { BattleDisplayDrawRow(&buffer[i],y1,0); y1 += 2; }
 			size = BattleDisplayFilterList(buffer,STATS_AVD,0); // Get avoid from the target.
-			for ( int i = 0 ; i < size ; i++ ) { tile = BattleDisplayDrawRow(&buffer[i],y,tile,1); y += 2; }
+			for ( int i = 0 ; i < size ; i++ ) { BattleDisplayDrawRow(&buffer[i],y2,1); y2 += 2; }
 			break;
 		case STATUS_ATT_CRT:
+			//DrawName(1);
+			DrawLabel(gBattleActor.battleEffectiveCritRate,"Critical rate");
+			
 			size = BattleDisplayFilterList(buffer,STATS_CRT,1); // Get crit from the actor.
-			for ( int i = 0 ; i < size ; i++ ) { tile = BattleDisplayDrawRow(&buffer[i],y,tile,0); y += 2; }
+			for ( int i = 0 ; i < size ; i++ ) { BattleDisplayDrawRow(&buffer[i],y1,0); y1 += 2; }
 			size = BattleDisplayFilterList(buffer,STATS_DDG,0); // Get dodge from the target.
-			for ( int i = 0 ; i < size ; i++ ) { tile = BattleDisplayDrawRow(&buffer[i],y,tile,1); y += 2; }
+			for ( int i = 0 ; i < size ; i++ ) { BattleDisplayDrawRow(&buffer[i],y2,1); y2 += 2; }
 			break;
 			
 		case STATUS_DEF_ATK:
+			//DrawName(0);
+			DrawLabel(gBattleTarget.battleAttack-gBattleActor.battleDefense,"Might");
+			
 			size = BattleDisplayFilterList(buffer,STATS_ATK,0); // Get attack from the target.
-			for ( int i = 0 ; i < size ; i++ ) { tile = BattleDisplayDrawRow(&buffer[i],y,tile,0); y += 2; }
+			for ( int i = 0 ; i < size ; i++ ) { BattleDisplayDrawRow(&buffer[i],y1,0); y1 += 2; }
 			size = BattleDisplayFilterList(buffer,STATS_DEF,1); // Get defense from actor.
-			for ( int i = 0 ; i < size ; i++ ) { tile = BattleDisplayDrawRow(&buffer[i],y,tile,1); y += 2; }
+			for ( int i = 0 ; i < size ; i++ ) { BattleDisplayDrawRow(&buffer[i],y2,1); y2 += 2; }
 			break;
 		case STATUS_DEF_HIT:
+			//DrawName(0);
+			DrawLabel(gBattleTarget.battleEffectiveHitRate,"Hit rate");
+			
 			size = BattleDisplayFilterList(buffer,STATS_HIT,0); // Get hit from the target.
-			for ( int i = 0 ; i < size ; i++ ) { tile = BattleDisplayDrawRow(&buffer[i],y,tile,0); y += 2; }
+			for ( int i = 0 ; i < size ; i++ ) { BattleDisplayDrawRow(&buffer[i],y1,0); y1 += 2; }
 			size = BattleDisplayFilterList(buffer,STATS_AVD,1); // Get avoid from the actor.
-			for ( int i = 0 ; i < size ; i++ ) { tile = BattleDisplayDrawRow(&buffer[i],y,tile,1); y += 2; }
+			for ( int i = 0 ; i < size ; i++ ) { BattleDisplayDrawRow(&buffer[i],y2,1); y2 += 2; }
 			break;
 		case STATUS_DEF_CRT:
+			//DrawName(0);
+			DrawLabel(gBattleActor.battleEffectiveCritRate,"Critical rate");
+		
 			size = BattleDisplayFilterList(buffer,STATS_CRT,0); // Get crit from the target.
-			for ( int i = 0 ; i < size ; i++ ) { tile = BattleDisplayDrawRow(&buffer[i],y,tile,0); y += 2; }
+			for ( int i = 0 ; i < size ; i++ ) { BattleDisplayDrawRow(&buffer[i],y1,0); y1 += 2; }
 			size = BattleDisplayFilterList(buffer,STATS_DDG,1); // Get dodge from the actor.
-			for ( int i = 0 ; i < size ; i++ ) { tile = BattleDisplayDrawRow(&buffer[i],y,tile,1); y += 2; }
+			for ( int i = 0 ; i < size ; i++ ) { BattleDisplayDrawRow(&buffer[i],y2,1); y2 += 2; }
 			break;
 	}
 	EnableBgSyncByMask(1);
 }
 
+static void DrawLabel(int val, char* str) {
+	TextHandle handle;
+	Text_InitClear(&handle,8);
+	Text_InsertString(&handle,0,TEXT_COLOR_GOLD,str);
+	Text_Display(&handle,&gBG0MapBuffer[16][2]);
+	
+	DrawUiNumber(&gBG0MapBuffer[16][15],TEXT_COLOR_GOLD,val);
+}
+
+static void DrawName(int isActor) {
+	char* nameStr = GetStringFromIndex(isActor ? gBattleActor.unit.pCharacterData->nameTextId : gBattleTarget.unit.pCharacterData->nameTextId);
+	
+	TextHandle handle;
+	Text_InitClear(&handle,8);
+	Text_InsertString(&handle,0,TEXT_COLOR_GOLD,nameStr);
+	Text_Display(&handle,&gBG0MapBuffer[1][2]);
+}
+
 // Draw a row for the display. Return the next tile.
-int BattleDisplayDrawRow(Change* change, int y, int tile, int shouldFlip) {	
-	TextHandle handle = {
-		.tileIndexOffset = gpCurrentFont->tileNext+tile,
-		.tileWidth = 8,
-	};
-	tile += 8;
-	Text_Clear(&handle);
+void BattleDisplayDrawRow(Change* change, int y, int shouldFlip) {
+	int val = ( shouldFlip ? -change->amount : change->amount );
+	
+	TextHandle handle;
+	Text_InitClear(&handle,8);
 	Text_InsertString(&handle,0,TEXT_COLOR_NORMAL,change->text);
 	Text_Display(&handle,&gBG0MapBuffer[y][2]);
 	
-	// This is a little complicated but this just gives us +(val) or -(val).
-	int val = ( shouldFlip ? -change->amount : change->amount );
-	char numStr[] = {( val > 0 ? '+' : '-' ),0,0,0,0}; // Make a new short string for holding the amount changed.
-	String_FromNumber(val,numStr+1);
-	
-	TextHandle numHandle = {
-		.tileIndexOffset = gpCurrentFont->tileNext+tile,
-		.tileWidth = 8,
-	};
-	tile += 8;
-	Text_Clear(&numHandle);
-	Text_InsertString(&numHandle,0,( val > 0 ? TEXT_COLOR_GREEN : TEXT_COLOR_GRAY ),numStr);
-	Text_Display(&numHandle,&gBG0MapBuffer[y][10]);
-	
-	return tile;
+	DrawUiNumber(&gBG0MapBuffer[y][15],( val > 0 ? TEXT_COLOR_GREEN : TEXT_COLOR_GRAY ),change->amount);
 }
 
-void BattleDisplayClear(BattleDisplayProc* proc) {
-	BgMapFillRect(&gBG0MapBuffer[0][0],14,32,0);
+void BattleDisplayClearText(BattleDisplayProc* proc) {
+	BgMapFillRect(&gBG0MapBuffer[0][0],16,32,0);
+	EnableBgSyncByMask(1);
+	
+	gpCurrentFont->tileNext = proc->tileStart;
+	gSpecialUiCharAllocationTable = 0xFF;
+}
+
+void BattleDisplayClearBG(BattleDisplayProc* proc) {
+	BgMapFillRect(&gBG1MapBuffer[0][0],16,32,0);
+	EnableBgSyncByMask(2);
 }
 
 void BattleDisplayHandlePresses(BattleDisplayProc* proc) {
