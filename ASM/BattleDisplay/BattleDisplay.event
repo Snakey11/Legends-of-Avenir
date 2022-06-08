@@ -8,10 +8,10 @@
 ALIGN 4
 gBattleDisplayProc:
 PROC_CALL_ROUTINE(BattleDisplayProcInit)
-PROC_CALL_ROUTINE(BattleDisplayDrawBG)
 
 PROC_LABEL(0)
 PROC_CALL_ROUTINE(BattleDisplayClearText)
+PROC_CALL_ROUTINE(BattleDisplayDrawBG)
 PROC_YIELD
 PROC_CALL_ROUTINE(BattleDisplayDraw)
 PROC_LOOP_ROUTINE(BattleDisplayHandlePresses) // Wait for B press, arrow presses...
@@ -21,5 +21,8 @@ PROC_CALL_ROUTINE(BattleDisplayClearBG)
 PROC_END
 
 ALIGN 4
-gBattleDisplayTSA:
-#incbin "BattleDisplayTSA.dmp"
+gBattleDisplayBattleBox:
+#incbin "BattleDisplayBattleBox.dmp"
+ALIGN 4
+gBattleDisplayFooter:
+#incbin "BattleDisplayFooter.dmp"

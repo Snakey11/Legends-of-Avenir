@@ -39,6 +39,9 @@ preCalc(HolyAura,"Holy aura")
 preCalc(BreakerCheck,"Breaker")
 preCalc(MageSlayer,"Mage slayer")
 preCalc(BlowCheck,"Blows")
+preCalc(QuickDrawCheck,"Quick draw")
+preCalc(ChivalryCheck,"Chivalry")
+preCalc(PragmaticCheck,"Pragmatic")
 preCalc(DefendingCheck,"") // ???
 
 preCalc(Wrath,"Wrath")

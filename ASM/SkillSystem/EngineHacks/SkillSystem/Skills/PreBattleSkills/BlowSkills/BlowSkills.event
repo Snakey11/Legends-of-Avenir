@@ -4,6 +4,15 @@ BlowCheck:
 POIN SkillTester
 POIN BlowIDList
 
+#include "MoreBlowSkills.lyn.event"
+
 ALIGN 4
 BlowIDList:
-BYTE DuelistsBlowID DeathBlowID DartingBlowID WardingBlowID CertainBlowID ArmoredBlowID QuickDrawID ChivalryID PragmaticID HeroesDeathBlowID
+BYTE DuelistsBlowID DeathBlowID DartingBlowID WardingBlowID CertainBlowID ArmoredBlowID //QuickDrawID ChivalryID PragmaticID HeroesDeathBlowID
+
+gQuickDrawID:
+BYTE QuickDrawID
+gChivalryID:
+BYTE ChivalryID;
+gPragmaticID:
+BYTE PragmaticID

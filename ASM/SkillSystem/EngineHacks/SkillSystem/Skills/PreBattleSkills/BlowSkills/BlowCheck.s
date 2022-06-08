@@ -36,14 +36,14 @@ cmp     r4, #0x04
 beq     CertainSkill
 cmp     r4, #0x05
 beq     ArmoredSkill
-cmp     r4, #0x06
-beq     QuickDrawSkill
-cmp     r4, #0x07
-beq     ChivalrySkill
-cmp     r4, #0x08
-beq     PragmaticSkill
-cmp		r4, #0x09
-beq		HeroesDeathSkill
+@cmp     r4, #0x06
+@beq     QuickDrawSkill
+@cmp     r4, #0x07
+@beq     ChivalrySkill
+@cmp     r4, #0x08
+@beq     PragmaticSkill
+@cmp		r4, #0x09
+@beq		HeroesDeathSkill
 b SkillReturn
 EndProgram:		@I had to move this to stop out of range errors. - Darrman
 pop {r4-r7}
