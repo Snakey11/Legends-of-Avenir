@@ -94,6 +94,9 @@ SpecifiedBattleConvo(Xena,Pascal,MageLeave3,0x19,Mage3LeaveXenaPascalBattleText)
 SpecifiedBattleConvo(Zaheva,Gerald,MageLeave4,0x11,Mage4LeaveZahevaGeraldBattleText)
 UnspecifiedBattleConvo(Gerald,MageLeave4,0x12,Mage4LeaveGeraldBattleText)
 UnspecifiedBattleConvo(Gerald,MageLeave4Alt,0x12,Mage4LeaveGeraldBattleText)
+SpecifiedBattleConvo(0x00,Mistlain,0x10,Mage6LeaveTactMistlainBattleText)
+SpecifiedBattleConvo(Xena,Mistlain,0x11,Mage6LeaveXenaMistlainBattleText)
+UnspecifiedBattleConvo(Mistlain,0x12,Mage6LeaveMistlainBattleText)
 
 // This terminator deviates from vanilla because I changed the battle quote getter function.
 BYTE 0xF0 0xF0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Terminator

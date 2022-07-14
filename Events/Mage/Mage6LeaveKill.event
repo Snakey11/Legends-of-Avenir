@@ -30,6 +30,8 @@ END_MAIN
 //Label MiscBasedEvents
 MiscBasedEvents:
 CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
+AFEV 0x0 EndingCaptureCheck 0x0
 END_MAIN
 
 //Label TrapData
@@ -43,10 +45,66 @@ EndUnit
 
 //Label BeginingScene
 BeginningScene:
-ENDA
+MUSC Darker
+SetBackground(0x1B)
+Text(Mage6LeaveKillStartingText)
+FadeOutMusic
+FADI 0x5
+STAL 0x40
+MUSC Ordon_Village
+FADU 0x5
+TEXTSTART
+TEXTSHOW Mage6LeaveKillRestText
+TEXTEND
+MUSC Darker
+TEXTCONT
+TEXTEND
+REMA
+FadeOutMusic
+FADI 0x5
+STAL 0x30
+MUSC Derris_Kharlan_Appear
+EndConvo
+CAM1 Mistlain
+STAL 0x40
+FlashCursor(Mistlain,60)
+STAL 0x20
+Text(Mage6LeaveKillMistlainText)
+STAL 0x10
+MUSC The_Devoted
+CAM1 [
+STAL 0x40
+Text(Mage6LeaveKillStartBattleText)
+GotoPrepScreen
 
 //Label EndingScene
 EndingScene:
+// Mistlain is dead.
+MUSC Victory_Minor
+FADI 0x5
+CLEA 0x0
+CLEE 0x0
+SetBackground(0x1B)
+Text(Mage6LeaveKillMistlainDeadText)
+MoveToChapter(MageLeaveKill7)
+EndA2
+
+MistlainCaptured:
+// Check if Mistlain is currently captured.
+ASMC 0x1 IsMistlainCaptured
+BEQ 0x0 0x0 0xC
+	// Mistlain is captured. End.
+	FADI 0x5
+	MUSC Victory_Minor
+	DISA Mistlain
+	CLEA 0x0
+	CLEE 0x0
+	SetBackground(0x1B)
+	Text(Mage6LeaveKillMistlainCapturedText)
+	ENUT 0x6F // Used in the chapter 7 good/bad ending.
+	MoveToChapter(MageLeaveKill7)
+LABEL 0x0
+NoFade
 ENDA
 
 	/*UNIT DATA*/
