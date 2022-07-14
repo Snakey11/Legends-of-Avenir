@@ -2,11 +2,27 @@
 .org 0x0
 
 .equ WatchfulID, SkillTester+4
+.equ MistlainID, WatchfulID+4
+.equ YvetteID, MistlainID+4
 
 @checks if target unit is an enemy and can be rescued
 @r0=current target's data ptr
 push	{r4,r5,r14}
 mov		r4,r0
+
+ldr r0, [ r4 ]
+ldrb r0, [ r0, #0x04 ] @ Target's character ID.
+ldr r1, MistlainID
+cmp r0, r1
+bne GoBack @ Can't be captured if this isn't Mistlain being attacked.
+ldr r0, =0x03004E50
+ldr r0, [ r0 ]
+ldr r0, [ r0 ]
+ldrb r0, [ r0, #0x04 ] @ Active unit's character ID.
+ldr r1, YvetteID
+cmp r0, r1
+bne GoBack @ Can't be captured if this isn't Yvette driving.
+
 ldr		r1,WatchfulID
 ldr		r3,SkillTester
 mov		r14,r3
