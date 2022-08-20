@@ -108,6 +108,7 @@ Avatar: That was a little scary to witness, Yvette...
 Yvette: I apologize, [Tact]. Thankfully we didn't have to harm him more than necessary.
 Xena: The man is a coward. I'm not surprised he caved to you so easily.
 Yvette: Right. Let's get back to headquarters and tell the Captain what we found.
+[X]
 
 ## Mage6LeaveKillMistlainDeadText
 Yvette: Dammit, we needed him alive!
