@@ -119,6 +119,8 @@ ALIGN 4
 SpellswordERankList:
 BYTE SpellswordM SpellswordF 0x00
 
+#include "IsCaptured/IsCaptured.lyn.event"
+
 #include "MakeNotDead/MakeNotDead.lyn.event"
 
 #include "Menus/MenuCommands.event"
