@@ -31,10 +31,12 @@ ldr r0, =gChapterData
 ldrb r5, [ r0, #0x0E ] @ Current chapter.
 ldr r6, =EscapeQuoteList
 StartRefLoop:
-	@ Check for character ID matching.
-	ldrb r0, [ r6 ] @ Character ID for this entry.
+	ldr r0, [ r6 ]
 	cmp r0, #0x00
 	beq RefEscapeTableNotFound @ Terminator
+
+	@ Check for character ID matching.
+	ldrb r0, [ r6 ] @ Character ID for this entry.
 	
 	blh GetUnitStructFromEventParameter, r1
 	cmp r0, #0x00
