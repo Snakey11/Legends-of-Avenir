@@ -17,7 +17,7 @@ ARCH   := -mcpu=arm7tdmi -mthumb -mthumb-interwork
 CFLAGS := $(ARCH) $(LDLIBS) -Wall -O1 -mtune=arm7tdmi -fomit-frame-pointer -ffast-math -ffreestanding -mlong-calls
 
 # C to ASM rule
-%.s: %.c *.c Header.h
+%.s: %.c *.c
 	$(CC) $(CFLAGS) -S $< -o $@ -fverbose-asm
 
 # C to OBJ rule
