@@ -31,7 +31,7 @@ END_MAIN
 MiscBasedEvents:
 CauseGameOverIfLordDies
 DefeatBoss(EndingScene)
-AFEV 0x0 EndingCaptureCheck 0x0
+AFEV 0x0 MistlainCaptured 0x0
 END_MAIN
 
 //Label TrapData
@@ -72,7 +72,7 @@ STAL 0x20
 Text(Mage6LeaveKillMistlainText)
 STAL 0x10
 MUSC The_Devoted
-CAM1 [
+//CAM1 [
 STAL 0x40
 Text(Mage6LeaveKillStartBattleText)
 GotoPrepScreen
@@ -80,7 +80,7 @@ GotoPrepScreen
 //Label EndingScene
 EndingScene:
 // Mistlain is dead.
-MUSC Victory_Minor
+MUSC FE5_Victory_Minor
 FADI 0x5
 CLEA 0x0
 CLEE 0x0
@@ -91,11 +91,12 @@ EndA2
 
 MistlainCaptured:
 // Check if Mistlain is currently captured.
-ASMC 0x1 IsMistlainCaptured
+SVAL 0x1 Mistlain
+ASMC 0x1 IsCaptured|1
 BEQ 0x0 0x0 0xC
 	// Mistlain is captured. End.
 	FADI 0x5
-	MUSC Victory_Minor
+	MUSC FE5_Victory_Minor
 	DISA Mistlain
 	CLEA 0x0
 	CLEE 0x0

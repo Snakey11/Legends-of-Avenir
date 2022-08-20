@@ -90,7 +90,7 @@ STAL 0x30
 MOVE 0x0 Arya [13,11]
 ENUN
 CAM1 [13,11]
-STAL 0x20
+STAL 0x10
 ENUN
 STAL 0x10
 SVAL 0x1 Coords(12,11)
@@ -229,8 +229,8 @@ UNIT Shizonian Mage Pascal Level(8,Enemy,True) [24,17] 0x00 0x00 0x00 0x00 [Thun
 UNIT Shizonian Monk Pascal Level(8,Enemy,True) [3,15] Drop 0x00 0x00 0x00 [Exordium,SpiritDust] AttackInRangeAI
 UNIT Shizonian Knight Pascal Level(8,Enemy,True) [5,14] 0x00 0x00 0x00 0x00 [HandAxe] GuardAI
 UNIT Shizonian Soldier Pascal Level(6,Enemy,True) [4,11] 0x00 0x00 0x00 0x00 [IronLance] AttackInRangeAI
-UNIT Shizonian Fighter Pascal Level(7,Enemy,True) [8,10] 0x00 0x00 0x00 0x00 [DevilAxe] NoAI
-UNIT Shizonian Fighter Pascal Level(8,Enemy,True) [5,8] 0x00 0x00 0x00 0x00 [HandAxe] DouseTorchesAI
+UNIT Shizonian Fighter Pascal Level(7,Enemy,True) [8,10] 0x00 0x00 0x00 0x00 [HandAxe] AttackInRangeAI
+UNIT Shizonian Brigand Pascal Level(8,Enemy,True) [5,8] 0x00 0x00 0x00 0x00 [IronAxe] DouseTorchesAI
 UNIT Shizonian Soldier Pascal Level(9,Enemy,True) [6,5] 0x00 0x00 0x00 0x00 [IronLance] NoAI
 UNIT Arya Myrmidon_F Pascal Level(9,Enemy,True) [19,3] 0x00 0x00 0x00 0x00 [SteelSword,Shamshir] [TalkToTactAI1,DontMove,0x0,0x0]
 UNIT
