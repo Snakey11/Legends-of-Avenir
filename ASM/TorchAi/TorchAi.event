@@ -14,6 +14,7 @@ DouseTorchAiScript:
 		AiFunc(AiSetActionToDouse)
 		AiRestart
 	AiLabel(2)
+		AiAttack // Fallback - basically NoAi.
 		AiFunc(AiTelliusYield)
 		AiRestart
 //AiRestart
