@@ -103,7 +103,7 @@ DeathQuote(Gerald,MageLeave4,0x02,Mage4LeaveGeraldDeathText)
 DeathQuote(Gerald,MageLeave4Alt,0x02,Mage4LeaveGeraldDeathText)
 DeathQuote(Blaine,MageLeave4,0x00,Mage4LeaveBlaineDeathText)
 DeathQuote(Blaine,MageLeave4Alt,0x00,Mage4LeaveBlaineDeathText)
-DeathQuote(Mistlain,MageLeaveKill6,0x02,Mage6LeaveMistlainDeathText)
+DeathQuote(Mistlain,MageLeaveKill6,0x02,Mage6LeaveKillMistlainDeathText)
 
 // Nonspecific death quotes come after.
 DeathQuote(Vicar,AllChapters,0x00,VicarDeathText)
