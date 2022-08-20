@@ -129,7 +129,7 @@ SHORT The_First_Campaign
 gSupportMusic:
 SHORT Pub_Theme
 gPrepScreenMusic:
-SHORT 0 Life_of_a_Mercenary Life_in_the_Military Cavern_of_Splendor // Indexed by mode.
+SHORT 0 Life_of_a_Mercenary Life_in_the_Military Preppin_Spells // Indexed by mode.
 PUSH
 ORG $160AE
 SHORT 0x46C0
