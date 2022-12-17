@@ -1,0 +1,223 @@
+#ifdef ROTATE_WORLD_MAP
+//note: important, change the $21A0 at $C0886 to $219C
+//also remove the change at $BBD12
+    #define GM_maxX 320
+    #define GM_maxY 480
+    
+    #define BufferWidth 0x28 //was 0x3C
+    #define BufferHeight 0x3C //was 0x28
+    
+PUSH
+    //b9218
+    //@b9244: r0=camX-cursX (r0=relative pos)
+    //@b926C: if relative pos > 0xD0, scroll
+    //@b9288: r0=camY-cursY (r0=relative pos)
+    //@b926C: if relative pos > 0x80, scroll
+    ORG $B927C
+    WORD $11F0000
+    ORG $B9280
+    BYTE $50
+    /*
+    ORG $B92B8
+    WORD $1BF000
+    ORG $B92BC
+    BYTE $F0
+    */
+    //probably hook at b92a8 to set 0x140
+    ORG $B92AA
+    SHORT $20D9 $0440 $4281 $DA03 $1C20 $3880 $E002 $46C0 $209C $0040
+    //lsl r1, r4, #0x10
+    //mov r0, #0xE0
+    //lsl r0, #11 @0x1C00000
+    //cmp r1, r0
+    //bge Cap
+    //mov r0, r4
+    //sub r0, #0x80
+    //b Store
+    //nop
+    //Cap:
+    //mov r0, #0xA0
+    //lsl r0, r0, #1
+    //Store:
+    
+    //b93e0
+        //right: b949e
+        //left:  b94b4
+        //down:  b94c4
+        //up:    b94d8
+    ORG $B94F0
+    BYTE $12	//(map width -2) <<4
+    ORG $B94F4
+    BYTE $12	//(map width -2) <<4
+    
+    ORG $B9502
+    BYTE $1C	//(map height -1) <<4
+    ORG $B9506
+    BYTE $1C	//(map height -1) <<4
+    
+/*
+    //buffer stops at 0201affc. may have to change these functions to redo the buffer dimensions
+    BBC54, BBCC8, BBDA4
+    plus helper func BBBF4
+    offset 1A0 = [1C,03]
+    width is 0x78 (60*2byte tiles)
+    0x28 (40) rows
+    so, vanilla does (0x78*y)+(2*x);
+    we do (0x50*y)+(2*x), with 0x3C (60) rows
+*/
+
+    //clear buffer
+    ORG $BBC84
+    WORD $010012FC
+    ORG $BBC9C
+    BYTE BufferWidth
+    ORG $BBCD8
+    BYTE (BufferHeight-0x16)
+    ORG $BBCE6
+    BYTE BufferHeight
+    ORG $BBD02
+    SHORT $2028 $4360 $46C0
+    ORG $BBD02
+    BYTE BufferWidth
+    ORG $BBD12 //?
+    BYTE (BufferWidth/2)
+    ORG $BBD36
+    BYTE (BufferWidth*2)
+    ORG $BBD82
+    BYTE (BufferWidth*2)
+    ORG $BBDE2
+    SHORT $2028 $4350 $46C0
+    //left to right scrolling works fine(?). vertical scrolling gets fucky
+    //ORG $BBDC8
+    //BYTE (BufferWidth/2)
+    ORG $BBE0A
+    BYTE (BufferWidth*2)
+    //BBE38 has the y pos of the tile we want.
+    ORG $BBE48
+    SHORT $2028 $4350 $46C0
+    ORG $BBE48
+    BYTE BufferWidth
+    
+    //bg3 worldmap
+    ORG $BA686
+    SHORT $0088 $1840 $0200
+    
+    //ba458 and ba4d0 handle "wrapping" the map when loading a save/returning from status screen
+    ORG $BA4AE 
+    BYTE $A0
+    //ba8c2 and ba9c0 handle "wrapping" the map
+    ORG $BA94E
+    BYTE BufferHeight
+    ORG $BA960
+    BYTE (BufferHeight-1)
+    ORG $BA96A
+    BYTE BufferHeight
+    ORG $BAA24
+    BYTE BufferHeight
+    
+    ORG $BA92C
+    BYTE BufferWidth
+    ORG $BAA5A
+    BYTE BufferWidth
+    /*
+    +02 | short | camera x (in what units?)
+    +04 | short | camera y (in what units?)
+    +08 | word  | cursor x (pixels, increments by 0x10)
+    +0C | word  | cursor y (pixels, increments by 0x10)
+    */
+    
+    ORG $C0862
+    //BYTE (BufferWidth*2)
+    //BYTE $C8
+    ORG $C0872
+    BYTE $50
+    ORG $C0876
+    BYTE $50
+    //ORG $C087E
+    //BYTE (BufferHeight*2)
+    
+    ORG $C0886
+    SHORT $21A0 $0049 $4288 $DA02 $2800 $DA01 $2100 $1C08 $8018 $BC01 $4700
+
+/*
+    ORG $B9280
+    BYTE $50
+    //probably hook at b92a8 to set 0x140
+    ORG $B92AA
+    SHORT $20E0 $0440 $4281 $DA03 $1C20 $3880 $E002 $46C0 $20A0 $0040
+*/
+    //ORG $A3EE6E
+    //BYTE $04 $06
+    ORG $A3EE70
+    BYTE $04
+    
+    ORG $C3C2E
+    BYTE $0A //was $08
+    ORG $C3C6A
+    BYTE $0A //was $08
+    ORG $C3CAA
+    BYTE $0A //was $08
+    ORG $C3CC0
+    BYTE $0A //was $08
+    ORG $C3CDA
+    BYTE $0A //was $08
+    ORG $C3CF4
+    BYTE $0A //was $0C
+    ORG $C3CFA
+    BYTE $20
+    
+    ORG $C3CCC
+    WORD $2022F28
+    ORG $C3D18
+    WORD $2022F54
+    ORG $C3D1C
+    WORD $201B454
+    
+    ORG $C3A92
+    BYTE $06 //was $0C
+    ORG $C3A94
+    BYTE $0A //was $0C
+    ORG $C3D08
+    BYTE $0A //was $0C
+    
+    ORG $C3AB0
+    POIN GM_MinimapTSA
+POP
+
+//minimap stuff:
+//MASTER FUNC: C3A64
+    //c24ac
+    //c380c
+    //c38bc
+    //c3ab8
+    //c3b40
+    //c3be4
+
+//bg2 (roads) does not like this.
+//bbda4, called by bbf60 - proc+0x36/0x37 marks some coords...?
+//bbe16 checks the y position. values over 0x1f break it
+
+//part of the minimap buffer (201b518) gets written to bg2 by mistake. starts at b458 when on right
+//c3cd4 bottom right minimap draw offset, c3cd8 minimap dimensions
+
+    //bf198
+        
+    //bf2d8
+    //c0858
+    //c089c
+    
+    //b95b0?
+    //b961c?
+    //bab34?
+    //bebd4?
+    //becb8?
+    //bef6c?
+    //befb8?
+    //bf210?
+    //bf370?
+    //c11ac?
+    //c36e8?
+    //c3a64?
+    
+
+#endif
