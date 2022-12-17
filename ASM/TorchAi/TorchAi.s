@@ -118,6 +118,21 @@ pop { r1 }
 bx r1
 .ltorg
 
+.global AiDecideFallbackForTorch
+.type AiDecideFallbackForTorch, %function
+AiDecideFallbackForTorch:
+@ Get the AI2 byte.
+ldr r0, =gActiveUnit
+ldr r0, [ r0 ]
+mov r1, #0x44
+ldrb r1, [ r0, r1 ] @ Ai 2 byte. Using this for fallback boolean shouldChase.
+ldr r0, =gAiData
+add r0, r0, #0x66
+strb r0, [ r1 ]
+mov r0, #0x00 @ Script didn't end.
+bx lr
+.ltorg
+
 .global ActionDouseTelliusTorch
 .type ActionDouseTelliusTorch, %function
 ActionDouseTelliusTorch: @ The AI active unit should be adjacent to a Tellius torch. Douse it. Called by unit action rework.

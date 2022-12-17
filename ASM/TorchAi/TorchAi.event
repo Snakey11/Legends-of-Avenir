@@ -14,9 +14,15 @@ DouseTorchAiScript:
 		AiFunc(AiSetActionToDouse)
 		AiRestart
 	AiLabel(2)
-		AiAttack // Fallback - basically NoAi.
-		AiFunc(AiTelliusYield)
-		AiRestart
+		AiFunc(AiDecideFallbackForTorch)
+		AiGotoIfEQ(3,1)
+			AiAttack // Fallback - Attack in range.
+			AiFunc(AiTelliusYield)
+			AiRestart
+		AiLabel(3)
+			AiMoveTowardsEnemy
+			AiFunc(AiTelliusYield)
+			AiRestart
 //AiRestart
 //AiRestart
 InjectAi1(DouseTorchesAI1,DouseTorchAiScript)
