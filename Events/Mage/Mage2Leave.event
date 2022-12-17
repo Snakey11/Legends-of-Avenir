@@ -312,7 +312,7 @@ Meanies2:
 UNIT Arcanian Fighter 0x00 Level(5,Enemy,True) [10,12] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
 UNIT Arcanian Knight 0x00 Level(6,Enemy,True) [11,13] 0x00 0x00 0x00 0x00 [HandAxe] GuardAI
 UNIT Arcanian Knight 0x00 Level(7,Enemy,True) [13,12] 0x00 0x00 0x00 0x00 [Javelin] GuardAI
-UNIT Arcanian Mercenary 0x00 Level(7,Enemy,True) [14,7] Drop 0x00 0x00 0x00 [KillingEdge] ChaseOnceApproachedAI
+UNIT Arcanian Mercenary 0x00 Level(7,Enemy,True) [14,7] 0x00 0x00 0x00 0x00 [SteelBlade] ChaseOnceApproachedAI
 UNIT Arcanian Monk 0x00 Level(5,Enemy,True) [15,6] 0x00 0x00 0x00 0x00 [Lightning,Mend] HealAlliesAI
 UNIT Arcanian Mage 0x00 Level(3,Enemy,True) [14,5] 0x00 0x00 0x00 0x00 [Fire] AttackInRangeAI
 UNIT Arcanian Soldier 0x00 Level(4,Enemy,True) [12,1] 0x00 0x00 0x00 0x00 [IronLance] AttackInRangeAI

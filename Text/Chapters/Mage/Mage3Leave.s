@@ -45,7 +45,7 @@ What's the problem, Zaheva?
 [FarLeft]Mistlain wouldn't... Did he hire Shizonians?!
 [MidRight]Yes. I think they've set a trap for us ahead.[CloseSpeech][MoveRight][FarRight][LoadPlayer]
 Shizonians? The assassins from the isle south of Avenir?
-[FarLeft]The very same. This won't be easy... Ajax, you said you had torches, right? There are set up on the road ahead that we can use too.
+[FarLeft]The very same. This won't be easy... Ajax, you said you saw torches up ahead on the road, right?
 [Left]Yep. They'll give us advance notice of their approach, but if they douse them, we'll be fighting blind.
 [FarLeft]Save a few for us too.
 [Left]Right![X]
@@ -168,17 +168,20 @@ Zaheva! [Tact]! We've decided we're going to try and move towards Bacrun. We sho
 
 ## Mage3LeaveTopLeftHouseText
 [ConversationText]
-[MidRight][LoadCurrent]
-oof[X]
+[MidRight][LoadCurrent][MidLeft][LoadVillagerOldWoman]
+We have some torches dotted around the village for nighttime like this, but it never hurts to have a handheld one either. What? You don't have a handheld torch? Here, take it! Don't go starting any fires![X]
 
 ## Mage3LeaveTopRightHouseText
-[MidRight][LoadCurrent]
-oof[X]
+[ConversationText]
+[MidRight][LoadCurrent][MidLeft][LoadVillagerOldMan]
+I used to fight with the Cesarian army, until I met a beautiful young Arcanian lass... She encouraged me to move here and retire from war and I never looked back... I still have my old talisman that I'd wear to help ward off their damn spells. Here, take it. I haven't had use of it for a long time...[X]
 
 ## Mage3LeaveBottomRightHouseText
-[MidRight][LoadCurrent]
-oof[X]
+[ConversationText]
+[MidRight][LoadCurrent][MidLeft][LoadVillagerBoy]
+I've been trying to get into learning to cast spells from tomes, but I just can't get these dang incantations to work... Like, was I wrong to think I could just say "blah blah blah" and get a spell to work? ... I was horribly wrong? ... Dammit. Here, take it.[X]
 
 ## Mage3LeaveBottomLeftHouseText
-[MidRight][LoadCurrent]
-oof[X]
+[ConversationText]
+[MidRight][LoadCurrent][MidLeft][LoadVillagerMan2]
+Those assassins from Shizon go wherever they please... The Grand Magi and the Cesarian Captains need to make up so they can go eradicate Avenir of that blight...[X]

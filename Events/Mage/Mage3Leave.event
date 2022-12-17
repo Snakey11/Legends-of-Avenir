@@ -18,6 +18,8 @@ POIN BeginningScene EndingScene
 //Label TurnBasedEvents
 TurnBasedEvents:
 InfiniteTurnEventPlayer(0x11,TryTurnArya,2)
+TurnEventPlayer(0x00,Turn7,7)
+TurnEventPlayer(0x00,Turn9,9)
 END_MAIN
 
 //Label CharacterBasedEvents
@@ -107,8 +109,6 @@ BEQ 0x0 0x0 0xC
 LABEL 0x0
 STAL 0x30
 Text(Mage3LeaveTorchesUpText)
-STAL 0x10
-GiveItem(Torch,0x00)
 STAL 0x20
 NoFade
 GotoPrepScreen
@@ -146,6 +146,22 @@ LABEL 0x0
 	ENUF 0x11
 LABEL 0x1
 NoFade
+EndA2
+
+Turn7:
+CamON
+LOAD1 0x1 Turn7Units
+ENUN
+CamOFF
+NoFade
+EndA2
+
+Turn9:
+CamON
+LOAD1 0x1 Turn9Units
+ENUN
+CamOFF
+NoFade
 ENDA
 
 //Label Talk events
@@ -168,7 +184,7 @@ TopLeftHouse:
 MUSI
 Text(0x2,Mage3LeaveTopLeftHouseText)
 EnterStop
-GiveItem(KillingEdge,0xFFFF)
+GiveItem(Torch,0xFFFF)
 MUNO
 NoFade
 EndA2
@@ -177,7 +193,7 @@ TopRightHouse:
 MUSI
 Text(0x2,Mage3LeaveTopRightHouseText)
 EnterStop
-GiveItem(AngelicRobe,0xFFFF)
+GiveItem(Talisman,0xFFFF)
 MUNO
 NoFade
 EndA2
@@ -186,7 +202,7 @@ BottomRightHouse:
 MUSI
 Text(0x2,Mage3LeaveBottomRightHouseText)
 EnterStop
-GiveItem(BlueGem,0xFFFF)
+GiveItem(Elaqua,0xFFFF)
 MUNO
 NoFade
 EndA2
@@ -210,29 +226,42 @@ UNIT
 
 Meanies1:
 UNIT Pascal Sniper Pascal Level(1,Enemy,True) [23,3] Drop 0x00 0x00 0x00 [SteelShortbow,Dragonshield] GuardAI
-UNIT Shizonian Mage Pascal Level(9,Enemy,True) [6,14] 0x00 0x00 0x00 0x00 [Fire] DouseTorchesAI
-UNIT Shizonian Soldier Pascal Level(6,Enemy,True) [19,2] 0x00 0x00 0x00 0x00 [IronLance] AttackInRangeAI
-UNIT Shizonian Mercenary Pascal Level(9,Enemy,True) [22,2] 0x00 0x00 0x00 0x00 [SteelSword] ChaseOnceApproachedAI
-UNIT Shizonian Knight Pascal Level(6,Enemy,True) [16,5] 0x00 0x00 0x00 0x00 [HandAxe] GuardAI
-UNIT Shizonian Shaman Pascal Level(7,Enemy,True) [16,8] Drop 0x00 0x00 0x00 [Dulam] AttackInRangeAI
-UNIT Shizonian Fighter Pascal Level(8,Enemy,True) [15,9] 0x00 0x00 0x00 0x00 [PoisonAxe] DouseTorchesAI
-UNIT Shizonian Shaman Pascal Level(6,Enemy,True) [14,14] 0x00 0x00 0x00 0x00 [Flux] NoAI
-UNIT Shizonian Myrmidon Pascal Level(5,Enemy,True) [11,14] Drop 0x00 0x00 0x00 [LightBrand,Vulnerary] AttackInRangeAI
-UNIT Shizonian Archer Pascal Level(8,Enemy,True) [12,18] 0x00 0x00 0x00 0x00 [SteelBow] AttackInRangeAI
-UNIT Shizonian Mercenary Pascal Level(6,Enemy,True) [17,16] Drop 0x00 0x00 0x00 [ToxinSword] DouseTorchesAI
-UNIT Shizonian Cavalier Pascal Level(7,Enemy,True) [21,15] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
+UNIT Shizonian Mage Pascal Level(11,Enemy,True) [6,14] 0x00 0x00 0x00 0x00 [Fire] DouseTorchesAI
+UNIT Shizonian Soldier Pascal Level(8,Enemy,True) [19,2] 0x00 0x00 0x00 0x00 [IronLance] AttackInRangeAI
+UNIT Shizonian Mercenary Pascal Level(11,Enemy,True) [22,2] 0x00 0x00 0x00 0x00 [SteelSword] ChaseOnceApproachedAI
+UNIT Shizonian Knight Pascal Level(8,Enemy,True) [16,5] 0x00 0x00 0x00 0x00 [HandAxe] GuardAI
+UNIT Shizonian Shaman Pascal Level(9,Enemy,True) [16,8] Drop 0x00 0x00 0x00 [Dulam] AttackInRangeAI
+UNIT Shizonian Fighter Pascal Level(10,Enemy,True) [15,9] 0x00 0x00 0x00 0x00 [PoisonAxe] DouseTorchesAI
+UNIT Shizonian Shaman Pascal Level(8,Enemy,True) [14,14] 0x00 0x00 0x00 0x00 [Flux] ChaseOnceApproachedAI
+UNIT Shizonian Myrmidon Pascal Level(7,Enemy,True) [11,14] Drop 0x00 0x00 0x00 [LightBrand,Vulnerary] AttackInRangeAI
+UNIT Shizonian Archer Pascal Level(10,Enemy,True) [12,18] 0x00 0x00 0x00 0x00 [SteelBow] AttackInRangeAI
+UNIT Shizonian Mercenary Pascal Level(8,Enemy,True) [17,16] Drop 0x00 0x00 0x00 [ToxinSword] DouseTorchesAI
+UNIT Shizonian Cavalier Pascal Level(9,Enemy,True) [21,15] 0x00 0x00 0x00 0x00 [Javelin] AttackInRangeAI
 UNIT
 
 Meanies2:
-UNIT Shizonian Mercenary Pascal Level(9,Enemy,True) [24,15] Drop 0x00 0x00 0x00 [SteelBlade,RedGem] ChaseOnceApproachedAI
-UNIT Shizonian Mage Pascal Level(8,Enemy,True) [24,17] 0x00 0x00 0x00 0x00 [Thunder] AttackInRangeAI
-UNIT Shizonian Monk Pascal Level(8,Enemy,True) [3,15] Drop 0x00 0x00 0x00 [Exordium,SpiritDust] AttackInRangeAI
-UNIT Shizonian Knight Pascal Level(8,Enemy,True) [5,14] 0x00 0x00 0x00 0x00 [HandAxe] GuardAI
-UNIT Shizonian Soldier Pascal Level(6,Enemy,True) [4,11] 0x00 0x00 0x00 0x00 [IronLance] AttackInRangeAI
-UNIT Shizonian Fighter Pascal Level(7,Enemy,True) [8,10] 0x00 0x00 0x00 0x00 [HandAxe] AttackInRangeAI
-UNIT Shizonian Brigand Pascal Level(8,Enemy,True) [5,8] 0x00 0x00 0x00 0x00 [IronAxe] DouseTorchesAI
-UNIT Shizonian Soldier Pascal Level(9,Enemy,True) [6,5] 0x00 0x00 0x00 0x00 [IronLance] NoAI
-UNIT Arya Myrmidon_F Pascal Level(9,Enemy,True) [19,3] 0x00 0x00 0x00 0x00 [SteelSword,Shamshir] [TalkToTactAI1,DontMove,0x0,0x0]
+UNIT Shizonian Mercenary Pascal Level(11,Enemy,True) [24,15] Drop 0x00 0x00 0x00 [SteelBlade,RedGem] ChaseOnceApproachedAI
+UNIT Shizonian Mage Pascal Level(10,Enemy,True) [24,17] 0x00 0x00 0x00 0x00 [Thunder] AttackInRangeAI
+UNIT Shizonian Monk Pascal Level(10,Enemy,True) [3,15] Drop 0x00 0x00 0x00 [Exordium,SpiritDust] AttackInRangeAI
+UNIT Shizonian Knight Pascal Level(10,Enemy,True) [5,14] 0x00 0x00 0x00 0x00 [HandAxe] GuardAI
+UNIT Shizonian Soldier Pascal Level(8,Enemy,True) [4,11] 0x00 0x00 0x00 0x00 [IronLance] AttackInRangeAI
+UNIT Shizonian Fighter Pascal Level(9,Enemy,True) [8,10] 0x00 0x00 0x00 0x00 [HandAxe] AttackInRangeAI
+UNIT Shizonian Pirate Pascal Level(10,Enemy,True) [5,8] 0x00 0x00 0x00 0x00 [IronAxe] DouseTorchesAI
+UNIT Shizonian Soldier Pascal Level(11,Enemy,True) [6,5] 0x00 0x00 0x00 0x00 [IronLance] NoAI
+UNIT Arya Myrmidon_F Pascal Level(11,Enemy,True) [19,3] 0x00 0x00 0x00 0x00 [SteelSword,Shamshir] [TalkToTactAI1,DontMove,0x0,0x0]
+UNIT
+
+Turn7Units:
+UNIT Shizonian Soldier Pascal Level(13,Enemy,True) [0,0] 0x00 0x00 0x01 REDA6R3 [Javelin] NoAI
+UNIT Shizonian Soldier Pascal Level(14,Enemy,True) [0,1] 0x00 0x00 0x01 REDA6R4 [SteelLance] NoAI
+UNIT Shizonian Mage Pascal Level(14,Enemy,True) [1,0] 0x00 0x00 0x01 REDA4R3 [Elfire] DouseTorchesAndChaseAI
+UNIT
+
+Turn9Units:
+UNIT Shizonian Mercenary Pascal Level(13,Enemy,True) [0,0] 0x00 0x00 0x01 REDA6R3 [SteelSword] NoAI
+UNIT Shizonian Fighter Pascal Level(14,Enemy,True) [0,1] 0x00 0x00 0x01 REDA7R4 [IronAxe] NoAI
+UNIT Shizonian Archer Pascal Level(12,Enemy,True) [1,0] 0x00 0x00 0x01 REDA5R2 [SteelBow] NoAI
+UNIT Shizonian Shaman Pascal Level(12,Enemy,True) [0,2] 0x00 0x00 0x01 REDA6R4 [Flux] NoAI
 UNIT
 
 EndingArya:
